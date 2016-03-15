@@ -1,0 +1,5 @@
+name = Landportal Utility
+description = Landportal utility module that handles small theme implementations, hooks, and etc.
+core = 7.x
+package = Landportal
+version = 7.x-1.0

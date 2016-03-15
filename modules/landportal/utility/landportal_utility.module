@@ -1,0 +1,8 @@
+<?php
+/**
+ * @file
+ * landportal_utility.module file.
+ */
+
+module_load_include('inc', 'landportal_utility', '/includes/landportal_utility.hooks');
+module_load_include('inc', 'landportal_utility', '/includes/landportal_utility.helpers');

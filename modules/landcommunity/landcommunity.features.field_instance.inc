@@ -25,6 +25,12 @@ function landcommunity_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 6,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -67,6 +73,13 @@ function landcommunity_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 3,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -135,6 +148,12 @@ function landcommunity_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -174,6 +193,12 @@ function landcommunity_field_default_field_instances() {
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
+        'weight' => 5,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 5,
       ),
       'teaser' => array(
@@ -246,21 +271,21 @@ function landcommunity_field_default_field_instances() {
           ),
         ),
         'translations' => array(
-          'original' => 'und',
           'data' => array(
             'und' => array(
-              'entity_type' => 'taxonomy_term',
+              'changed' => 1450781511,
+              'created' => 1450781511,
               'entity_id' => 7112,
-              'revision_id' => 7112,
+              'entity_type' => 'taxonomy_term',
               'language' => 'und',
+              'revision_id' => 7112,
               'source' => '',
-              'uid' => 1,
               'status' => 1,
               'translate' => 0,
-              'created' => 1450781511,
-              'changed' => 1450781511,
+              'uid' => 1,
             ),
           ),
+          'original' => 'und',
         ),
       ),
     ),
@@ -273,6 +298,13 @@ function landcommunity_field_default_field_instances() {
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 2,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -318,6 +350,16 @@ function landcommunity_field_default_field_instances() {
         'settings' => array(
           'image_link' => '',
           'image_style' => 'large',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -382,6 +424,12 @@ function landcommunity_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 4,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -440,6 +488,12 @@ function landcommunity_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -476,6 +530,12 @@ function landcommunity_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 11,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -514,6 +574,13 @@ function landcommunity_field_default_field_instances() {
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -563,6 +630,12 @@ function landcommunity_field_default_field_instances() {
         'type' => 'entityreference_entity_view',
         'weight' => 7,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -607,6 +680,12 @@ function landcommunity_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(

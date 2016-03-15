@@ -63,6 +63,10 @@ function landdebate_strongarm() {
             'weight' => '7',
             'visible' => FALSE,
           ),
+          'listing' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),

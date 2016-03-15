@@ -58,6 +58,22 @@ function landdebate_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 3,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 3,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -108,6 +124,20 @@ function landdebate_field_default_field_instances() {
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
@@ -146,6 +176,26 @@ function landdebate_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'search_result' => array(
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
@@ -217,6 +267,20 @@ function landdebate_field_default_field_instances() {
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
@@ -261,6 +325,15 @@ function landdebate_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 7,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -314,6 +387,21 @@ function landdebate_field_default_field_instances() {
         ),
         'type' => 'date_default',
         'weight' => 2,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -377,6 +465,12 @@ function landdebate_field_default_field_instances() {
         'type' => 'entityreference_entity_view',
         'weight' => 3,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'teaser' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -421,6 +515,12 @@ function landdebate_field_default_field_instances() {
         'settings' => array(),
         'type' => 'file_default',
         'weight' => 8,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -481,6 +581,13 @@ function landdebate_field_default_field_instances() {
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 6,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
@@ -524,6 +631,16 @@ function landdebate_field_default_field_instances() {
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -589,6 +706,13 @@ function landdebate_field_default_field_instances() {
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
@@ -638,6 +762,12 @@ function landdebate_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
@@ -676,6 +806,15 @@ function landdebate_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 4,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -723,6 +862,13 @@ function landdebate_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 5,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -773,6 +919,21 @@ If it is only a one day event, the end date should be the same as the starting d
         ),
         'type' => 'date_default',
         'weight' => 1,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -831,6 +992,12 @@ If it is only a one day event, the end date should be the same as the starting d
         'settings' => array(),
         'type' => 'file_default',
         'weight' => 7,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -891,6 +1058,13 @@ If it is only a one day event, the end date should be the same as the starting d
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 3,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
@@ -937,6 +1111,16 @@ If it is only a one day event, the end date should be the same as the starting d
         ),
         'type' => 'image',
         'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -999,6 +1183,12 @@ If it is only a one day event, the end date should be the same as the starting d
         'type' => 'link_default',
         'weight' => 6,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1057,6 +1247,13 @@ If it is only a one day event, the end date should be the same as the starting d
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
@@ -1103,6 +1300,12 @@ If it is only a one day event, the end date should be the same as the starting d
         ),
         'type' => 'link_default',
         'weight' => 10,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1162,6 +1365,15 @@ If it is only a one day event, the end date should be the same as the starting d
         'type' => 'text_default',
         'weight' => 3,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -1206,6 +1418,12 @@ If it is only a one day event, the end date should be the same as the starting d
         'settings' => array(),
         'type' => 'file_default',
         'weight' => 5,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1262,6 +1480,13 @@ If it is only a one day event, the end date should be the same as the starting d
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
@@ -1305,6 +1530,16 @@ If it is only a one day event, the end date should be the same as the starting d
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -1375,6 +1610,12 @@ If it is only a one day event, the end date should be the same as the starting d
         'type' => 'hidden',
         'weight' => 6,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1412,6 +1653,12 @@ If it is only a one day event, the end date should be the same as the starting d
         'settings' => array(),
         'type' => 'link_default',
         'weight' => 4,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1469,6 +1716,13 @@ If it is only a one day event, the end date should be the same as the starting d
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
       ),
       'teaser' => array(

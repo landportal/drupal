@@ -194,7 +194,7 @@ function landportal_base_field_default_field_bases() {
       'entity_translation_sync' => array(
         0 => 'fid',
       ),
-      'profile2_private' => FALSE,
+      'profile2_private' => 0,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
