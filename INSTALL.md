@@ -2,6 +2,9 @@
 
 Here are the steps required to deploy the 'Landportal' theme and
 modules.
+See also the Drupal developer documentation at
+https://docs.google.com/document/d/1TF8s7_ZLaaAgYE7wvI4L-YZG9S0neiqvzvn-ZTl-e8o/edit#heading=h.v8i2zww174uj
+for more details.
 
 ## Get code
 
@@ -40,7 +43,12 @@ $databases['default']['landbook'] = array( ... );
 ```
 - settings.php
 
-Link to files & private (if 
+
+Create a symbolic link to "files" & "private" in your site
+directory ( /etc/drupal/7/sites/[SITENAME] )
+
+
+
 
 ### Web server / Apache
 
@@ -67,6 +75,12 @@ $options['l'] = '[SITENAME]';
 
 
 ## Drupal
+
+### Install require modules
+
+use drush make files (landportal.make and landportal-custom.make) to
+install all the modules required by the website.
+
 
 ### Bootstrap/Backup LP
 
