@@ -40,6 +40,7 @@ projects:
   - facetapi_collapsible
   - features
   - features_extra
+  - feeds_et
   - feeds_jsonpath_parser
   - feeds_tamper_conditional
   - feeds_tamper_php
