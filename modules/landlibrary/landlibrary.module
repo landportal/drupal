@@ -24,7 +24,7 @@ function landlibrary_menu() {
     $items['admin/content/library'] = array(
         'title' => 'Library',
         'type' => MENU_LOCAL_TASK,
-        'access arguments' => array('administer content'),
+        'access arguments' => array('administer nodes'),
         'weight' => 12,
         //'page callback' => 'landlibrary_admin_view_library',
     );

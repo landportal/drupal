@@ -33,7 +33,12 @@ The Landlibrary "module" / part have been added by Agroknow in June 2015.
     add better management/views for Administration, Organizations,
     User & profiles. Land Library breakup in multiple features.
     Small visual and code cleanup.
-
+- 2.3: Late 2015/early 2016
+    Lot of cleanup, news views and content types for future landbook
+    developments, land library getting more and more properly
+    integrated.
+    Few improvements to user accounts and profiles as well as organizations.
+    
 # Installation
 
 See INSTALL.md for virtualhost / website deployment
@@ -47,10 +52,12 @@ Aside of the Drupal 7.x install you need to have the following services accessib
    with the following 'entry point' configured
    - library
    - drupal
+And eventually (might be depreciated)
  - Landportal services: api, receiver
  - Web based service: CKAN, Wesby (by WESO)
 
-Refer to the Landportal Administrator handbook for further details.
+Refer to the LandPortal Drupal developer documentation for further details.
+
 
 # Components
 
@@ -97,7 +104,7 @@ Holds content_type definition for organization, main (public) profile.
 
 ## Other modules / Features
 
-### landportal_bo
+### landportal_admin
 
 Provide specialized (to LP), administrative views & helpers for the Landportal.
 

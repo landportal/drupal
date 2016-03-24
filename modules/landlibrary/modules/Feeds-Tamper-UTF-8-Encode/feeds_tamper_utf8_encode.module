@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * This module provides a UTF-8 encode plugin for feeds tamper module
+ */
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function feeds_tamper_utf8_encode_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'feeds_tamper' && $plugin_type == 'plugins') {
+    return 'plugins';
+  }
+}
