@@ -2399,6 +2399,7 @@ function landportal_permissions_user_default_permissions() {
     'name' => 'masquerade as admin',
     'roles' => array(
       'administrator' => 'administrator',
+      'landportal admin' => 'landportal admin',
     ),
     'module' => 'masquerade',
   );
@@ -2532,7 +2533,10 @@ function landportal_permissions_user_default_permissions() {
   // Exported permission: 'merge organization_relation terms'.
   $permissions['merge organization_relation terms'] = array(
     'name' => 'merge organization_relation terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'landportal admin' => 'landportal admin',
+    ),
     'module' => 'term_merge',
   );
 
@@ -2934,6 +2938,7 @@ function landportal_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'landportal admin' => 'landportal admin',
+      'landportal editor' => 'landportal editor',
     ),
     'module' => 'locale',
   );
