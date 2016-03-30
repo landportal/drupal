@@ -1,7 +1,9 @@
+<?php
+
 $view = new view();
 $view->name = 'resources_by_providers';
 $view->description = '';
-$view->tag = 'library, resources, browse';
+$view->tag = 'landlibrary';
 $view->base_table = 'node';
 $view->human_name = 'Resources by providers';
 $view->core = 7;
@@ -102,7 +104,7 @@ $handler->display->display_options['filters']['field_doc_country_tid']['vocabula
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page');
-$handler->display->display_options['path'] = 'library/providers';
+$handler->display->display_options['path'] = 'library/by-providers';
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
