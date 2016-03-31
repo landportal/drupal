@@ -41,16 +41,16 @@ function landdebate_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
         'language' => array(
-          'weight' => '5',
+          'weight' => '4',
         ),
       ),
       'display' => array(
@@ -61,10 +61,6 @@ function landdebate_strongarm() {
           ),
           'teaser' => array(
             'weight' => '7',
-            'visible' => FALSE,
-          ),
-          'listing' => array(
-            'weight' => '5',
             'visible' => FALSE,
           ),
         ),
@@ -104,6 +100,13 @@ function landdebate_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_blog_post_pt_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_blog_post_pt_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_blog_post_und_pattern';
   $strongarm->value = '';
   $export['pathauto_node_blog_post_und_pattern'] = $strongarm;
@@ -135,6 +138,13 @@ function landdebate_strongarm() {
   $strongarm->name = 'pathauto_node_debate_pattern';
   $strongarm->value = 'debates/[current-date:custom:Y]/[node:title]';
   $export['pathauto_node_debate_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_debate_pt_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_debate_pt_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -174,6 +184,13 @@ function landdebate_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_event_pt_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_event_pt_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_event_und_pattern';
   $strongarm->value = '';
   $export['pathauto_node_event_und_pattern'] = $strongarm;
@@ -205,6 +222,13 @@ function landdebate_strongarm() {
   $strongarm->name = 'pathauto_node_news_pattern';
   $strongarm->value = 'news/[current-date:custom:Y]/[current-date:custom:m]/[node:title]';
   $export['pathauto_node_news_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_news_pt_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_news_pt_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
