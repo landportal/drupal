@@ -400,6 +400,52 @@ function landportal_taxonomy_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'taxonomy_term-landportal_topics-description_field'.
+  $field_instances['taxonomy_term-landportal_topics-description_field'] = array(
+    'bundle' => 'landportal_topics',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'description_field',
+    'label' => 'Description',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => -5,
+    ),
+  );
+
+  // Exported field_instance:
   // 'taxonomy_term-landportal_topics-field_agrovoc_uri'.
   $field_instances['taxonomy_term-landportal_topics-field_agrovoc_uri'] = array(
     'bundle' => 'landportal_topics',
@@ -781,6 +827,7 @@ function landportal_taxonomy_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('AGROVOC URI');
+  t('Description');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('ISO3');
   t('Label');
