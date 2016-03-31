@@ -1432,6 +1432,7 @@ $entity_field[0][\'value\'] = $external_url;
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'entity_translation_sync' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
