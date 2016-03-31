@@ -224,6 +224,7 @@ features[variable][] = pathauto_node_landlibrary_resource_en_pattern
 features[variable][] = pathauto_node_landlibrary_resource_es_pattern
 features[variable][] = pathauto_node_landlibrary_resource_fr_pattern
 features[variable][] = pathauto_node_landlibrary_resource_pattern
+features[variable][] = pathauto_node_landlibrary_resource_pt_pattern
 features[variable][] = pathauto_node_landlibrary_resource_und_pattern
 features[variable][] = pathauto_node_person_pattern
 features_exclude[dependencies][i18n_taxonomy] = i18n_taxonomy
@@ -232,4 +233,7 @@ features_exclude[dependencies][synonyms] = synonyms
 features_exclude[field_base][title_field] = title_field
 features_exclude[taxonomy][regions] = regions
 features_exclude[taxonomy][keywords] = keywords
+<<<<<<< HEAD
 features_exclude[field_group][group_lptags|node|landlibrary_resource|form] = group_lptags|node|landlibrary_resource|form
+=======
+>>>>>>> master

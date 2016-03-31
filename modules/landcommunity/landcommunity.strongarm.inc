@@ -105,7 +105,7 @@ function landcommunity_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_webform';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['comment_webform'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -465,7 +465,6 @@ function landcommunity_strongarm() {
   $strongarm->name = 'node_options_webform';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_webform'] = $strongarm;
 
@@ -500,9 +499,44 @@ function landcommunity_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_organization_en_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_organization_en_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_organization_es_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_organization_es_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_organization_fr_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_organization_fr_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_organization_pattern';
   $strongarm->value = 'organization/[node:title]';
   $export['pathauto_node_organization_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_organization_pt_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_organization_pt_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_organization_und_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_organization_und_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -531,6 +565,13 @@ function landcommunity_strongarm() {
   $strongarm->name = 'pathauto_node_webform_pattern';
   $strongarm->value = '';
   $export['pathauto_node_webform_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_webform_pt_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_webform_pt_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

@@ -34,6 +34,13 @@ function landportal_taxonomy_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_domains_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_domains_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_format_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_format_pattern'] = $strongarm;
@@ -98,7 +105,7 @@ function landportal_taxonomy_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_pattern';
-  $strongarm->value = '[term:vocabulary]/[term:name]';
+  $strongarm->value = 'voc/[term:vocabulary]/[term:name]';
   $export['pathauto_taxonomy_term_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -128,6 +135,13 @@ function landportal_taxonomy_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_terms_of_use_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_terms_of_use_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_themes_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_themes_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

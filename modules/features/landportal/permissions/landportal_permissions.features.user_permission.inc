@@ -1062,6 +1062,7 @@ function landportal_permissions_user_default_permissions() {
   $permissions['create event content'] = array(
     'name' => 'create event content',
     'roles' => array(
+      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
       'editor' => 'editor',
       'landportal admin' => 'landportal admin',
@@ -1100,6 +1101,7 @@ function landportal_permissions_user_default_permissions() {
   $permissions['create news content'] = array(
     'name' => 'create news content',
     'roles' => array(
+      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
       'editor' => 'editor',
       'landportal admin' => 'landportal admin',
@@ -2036,6 +2038,7 @@ function landportal_permissions_user_default_permissions() {
   $permissions['edit own news content'] = array(
     'name' => 'edit own news content',
     'roles' => array(
+      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
       'editor' => 'editor',
       'landportal admin' => 'landportal admin',
@@ -3103,6 +3106,7 @@ function landportal_permissions_user_default_permissions() {
   $permissions['view any work_profile profile'] = array(
     'name' => 'view any work_profile profile',
     'roles' => array(
+      'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
@@ -3226,6 +3230,7 @@ function landportal_permissions_user_default_permissions() {
   $permissions['view own work_profile profile'] = array(
     'name' => 'view own work_profile profile',
     'roles' => array(
+      'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
