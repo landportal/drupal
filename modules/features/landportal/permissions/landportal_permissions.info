@@ -41,7 +41,6 @@ dependencies[] = media
 dependencies[] = media_wysiwyg
 dependencies[] = media_wysiwyg_view_mode
 dependencies[] = menu
-dependencies[] = module_filter
 dependencies[] = node
 dependencies[] = oauth_common
 dependencies[] = path
