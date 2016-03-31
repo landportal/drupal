@@ -15,7 +15,7 @@ function landbook_taxonomies_taxonomy_default_vocabularies() {
       'description' => 'Landbook Datasets',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => 0,
+      'weight' => 2,
       'language' => 'und',
       'i18n_mode' => 0,
       'rdf_mapping' => array(
@@ -40,7 +40,7 @@ function landbook_taxonomies_taxonomy_default_vocabularies() {
       'description' => 'Landbook Indicators',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => 0,
+      'weight' => 3,
       'language' => 'und',
       'i18n_mode' => 0,
       'rdf_mapping' => array(
