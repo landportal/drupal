@@ -97,6 +97,7 @@ projects:
   - uuid_features
   - variable
   - vertical_tabs_responsive
+  - video_filter
   - views
   - views_bulk_operations
   - views_distinct
