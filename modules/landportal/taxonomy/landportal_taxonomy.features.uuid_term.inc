@@ -5239,6 +5239,33 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_original' => '',
   );
   $terms[] = array(
+    'name' => 'Landportal Hub',
+    'description' => '',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => 'c5cbd6e0-889f-4de1-98bc-02531293fc1c',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'organization_relation',
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'entity_id' => 6122,
+          'revision_id' => 6122,
+          'language' => 'en',
+          'source' => '',
+          'uid' => 1,
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1442819331,
+          'changed' => 1442819331,
+        ),
+      ),
+    ),
+  );
+  $terms[] = array(
     'name' => 'agricultural and rural legislation',
     'description' => '',
     'format' => 'filtered_html',
