@@ -34,6 +34,7 @@ function gltn_documents_importer_feeds_importer_default() {
       'config' => array(
         'delimiter' => ',',
         'no_headers' => 0,
+        'encoding' => 'UTF-8',
       ),
     ),
     'processor' => array(
@@ -47,87 +48,98 @@ function gltn_documents_importer_feeds_importer_default() {
             'source' => 'Title',
             'target' => 'title',
             'unique' => 1,
+            'language' => 'und',
           ),
           1 => array(
             'source' => 'Title',
             'target' => 'field_doc_title',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           2 => array(
-            'source' => 'Title',
-            'target' => 'title_field:et:und',
-            'unique' => FALSE,
-          ),
-          3 => array(
             'source' => 'Principle Authors',
             'target' => 'field_doc_creator:label',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          4 => array(
+          3 => array(
             'source' => 'Contributors/Co-Authors',
             'target' => 'field_doc_contributor:label',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          5 => array(
+          4 => array(
             'source' => 'Language',
             'target' => 'field_doc_language',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          6 => array(
+          5 => array(
             'source' => 'Type',
             'target' => 'field_doc_type',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          7 => array(
+          6 => array(
             'source' => 'Topics',
             'target' => 'field_doc_subject',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          8 => array(
+          7 => array(
             'source' => 'Topics',
             'target' => 'field_doc_keyword',
             'term_search' => '0',
             'autocreate' => 1,
+            'language' => 'und',
           ),
-          9 => array(
+          8 => array(
             'source' => 'Copyright',
             'target' => 'field_doc_copyrights_statement',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          10 => array(
+          9 => array(
             'source' => 'Publisher',
             'target' => 'field_doc_publisher:label',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          11 => array(
+          10 => array(
             'source' => 'Link',
             'target' => 'field_doc_is_shown_by:url',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          12 => array(
+          11 => array(
             'source' => 'Year',
             'target' => 'field_doc_creation_date:start',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          13 => array(
+          12 => array(
             'source' => 'Provider',
             'target' => 'field_doc_provider:label',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          14 => array(
+          13 => array(
             'source' => 'Abstract',
             'target' => 'field_doc_description',
             'format' => 'plain_text',
+            'language' => 'und',
           ),
-          15 => array(
+          14 => array(
             'source' => 'doctitle',
             'target' => 'field_doc_identifier',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          16 => array(
+          15 => array(
             'source' => 'docid',
             'target' => 'field_doc_identifier',
             'unique' => FALSE,
+            'language' => 'und',
           ),
         ),
         'update_existing' => '2',
@@ -135,6 +147,8 @@ function gltn_documents_importer_feeds_importer_default() {
         'input_format' => 'plain_text',
         'skip_hash_check' => 0,
         'bundle' => 'landlibrary_resource',
+        'insert_new' => 1,
+        'language' => 'und',
       ),
     ),
     'content_type' => '',

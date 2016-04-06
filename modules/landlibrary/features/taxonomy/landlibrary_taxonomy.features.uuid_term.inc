@@ -14,7 +14,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Collection',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 27,
+    'weight' => 0,
     'uuid' => '01172560-0531-4432-936e-bfaed4a4ee5a',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -35,6 +35,9 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'changed' => 1431281909,
         ),
       ),
+    ),
+    'parent' => array(
+      0 => '9d98b84f-936d-4027-bb8b-b0b5965e537c',
     ),
   );
   $terms[] = array(
@@ -131,7 +134,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Report',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 42,
+    'weight' => 7,
     'uuid' => '0e00119d-b478-4d58-bb38-355e5273da31',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -153,12 +156,45 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => '0f06f322-cda7-4910-86fc-21d9160765ca',
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Document',
+    'description' => '',
+    'format' => 'filtered_html',
+    'weight' => 14,
+    'uuid' => '0f06f322-cda7-4910-86fc-21d9160765ca',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'entity_id' => 7412,
+          'revision_id' => 7412,
+          'language' => 'en',
+          'source' => '',
+          'uid' => 30,
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1459842669,
+          'changed' => 1459842669,
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'National Policies',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 0,
+    'weight' => 3,
     'uuid' => '12f974ab-0144-47ab-b77a-e984eb4f000c',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -188,7 +224,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'International Conventions or Treaties',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 3,
+    'weight' => 7,
     'uuid' => '14e2a781-b9d0-436b-be70-325f9aec7e53',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -308,7 +344,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Dataset',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 30,
+    'weight' => 2,
     'uuid' => '2c7a0b0d-b3d4-4239-9325-33ed4bfa359e',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -330,12 +366,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => '9d98b84f-936d-4027-bb8b-b0b5965e537c',
+    ),
   );
   $terms[] = array(
     'name' => 'Assessment',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 25,
+    'weight' => 2,
     'uuid' => '2d1cccb5-4433-46db-8804-b13e80223963',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -357,12 +396,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => '0f06f322-cda7-4910-86fc-21d9160765ca',
+    ),
   );
   $terms[] = array(
     'name' => 'Opinion Piece',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 45,
+    'weight' => 5,
     'uuid' => '330ec5c4-6380-44ad-8fb5-89cde87d4ebe',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -384,12 +426,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => '0f06f322-cda7-4910-86fc-21d9160765ca',
+    ),
   );
   $terms[] = array(
     'name' => 'Brief',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 26,
+    'weight' => 3,
     'uuid' => '36f58716-f562-4dc3-a3d4-be3bec439849',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -410,6 +455,9 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'changed' => 1431281909,
         ),
       ),
+    ),
+    'parent' => array(
+      0 => '0f06f322-cda7-4910-86fc-21d9160765ca',
     ),
   );
   $terms[] = array(
@@ -446,7 +494,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Event',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 32,
+    'weight' => 3,
     'uuid' => '4120a3a2-1cd1-4852-aec0-14aff4b37dc0',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -468,12 +516,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => '9d98b84f-936d-4027-bb8b-b0b5965e537c',
+    ),
   );
   $terms[] = array(
     'name' => 'Publication',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 11,
+    'weight' => 0,
     'uuid' => '4818326a-d794-4453-87a4-0ff1155af87c',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -530,7 +581,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Country Profile',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 44,
+    'weight' => 5,
     'uuid' => '4f84faa4-666f-4927-a9da-3bf6821e1c78',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -552,12 +603,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => '9d98b84f-936d-4027-bb8b-b0b5965e537c',
+    ),
   );
   $terms[] = array(
     'name' => 'Constitution',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 29,
+    'weight' => 0,
     'uuid' => '5be0c818-ca86-4232-89fb-9f3b0b238d4a',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -578,6 +632,9 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'changed' => 1431281909,
         ),
       ),
+    ),
+    'parent' => array(
+      0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
     ),
   );
   $terms[] = array(
@@ -644,7 +701,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Organisation Policies',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 2,
+    'weight' => 5,
     'uuid' => '6ec5c0b7-e3d4-4f45-9c90-df0da61c68ec',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -674,7 +731,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Issue brief',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 35,
+    'weight' => 0,
     'uuid' => '6fa75023-43b6-4922-9890-da8ec1b13920',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -695,6 +752,9 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'changed' => 1431281909,
         ),
       ),
+    ),
+    'parent' => array(
+      0 => '36f58716-f562-4dc3-a3d4-be3bec439849',
     ),
   );
   $terms[] = array(
@@ -731,7 +791,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Policy Brief',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 39,
+    'weight' => 1,
     'uuid' => '81d75724-1d7f-4ae5-8bfd-55f5e3f9f6a0',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -753,12 +813,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => '36f58716-f562-4dc3-a3d4-be3bec439849',
+    ),
   );
   $terms[] = array(
     'name' => 'Commentary',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 28,
+    'weight' => 1,
     'uuid' => '888a93ae-7273-4a96-a508-0cd2c345ea5b',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -780,12 +843,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => '9d98b84f-936d-4027-bb8b-b0b5965e537c',
+    ),
   );
   $terms[] = array(
     'name' => 'Tool',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 47,
+    'weight' => 30,
     'uuid' => '88d423e7-9956-4822-bd52-6ed84a1664b0',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -812,7 +878,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Peer-reviewed publication',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 38,
+    'weight' => 5,
     'uuid' => '8915ee67-2edc-4f9a-9c0e-69a13684844e',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -833,6 +899,9 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'changed' => 1431281909,
         ),
       ),
+    ),
+    'parent' => array(
+      0 => '4818326a-d794-4453-87a4-0ff1155af87c',
     ),
   );
   $terms[] = array(
@@ -869,7 +938,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Research Paper',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 20,
+    'weight' => 8,
     'uuid' => '8bc1c6cc-f49b-4436-9e8f-d9e69c012b92',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -891,12 +960,45 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => '0f06f322-cda7-4910-86fc-21d9160765ca',
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Other',
+    'description' => '',
+    'format' => 'filtered_html',
+    'weight' => 25,
+    'uuid' => '9d98b84f-936d-4027-bb8b-b0b5965e537c',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'entity_id' => 7411,
+          'revision_id' => 7411,
+          'language' => 'en',
+          'source' => '',
+          'uid' => 30,
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1459842608,
+          'changed' => 1459842608,
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'Policy document',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 40,
+    'weight' => 6,
     'uuid' => 'a0b9ddfa-1989-44e1-b3da-5c8b202464aa',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -918,12 +1020,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
+    ),
   );
   $terms[] = array(
     'name' => 'Discussion paper',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 31,
+    'weight' => 4,
     'uuid' => 'ae3e1105-d9af-4565-b7fb-3c7a5342d538',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -945,12 +1050,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => '0f06f322-cda7-4910-86fc-21d9160765ca',
+    ),
   );
   $terms[] = array(
     'name' => 'Paper',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 37,
+    'weight' => 6,
     'uuid' => 'ae4562e6-5a99-4876-aea1-7d672f976d11',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -971,6 +1079,9 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'changed' => 1431281909,
         ),
       ),
+    ),
+    'parent' => array(
+      0 => '0f06f322-cda7-4910-86fc-21d9160765ca',
     ),
   );
   $terms[] = array(
@@ -1037,7 +1148,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Guidelines',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 33,
+    'weight' => 1,
     'uuid' => 'c3a76572-fdef-47cf-913f-2216ecc10d63',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1059,12 +1170,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
+    ),
   );
   $terms[] = array(
     'name' => 'Indicator',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 34,
+    'weight' => 4,
     'uuid' => 'c7af279f-2c80-4b68-8333-723158efb792',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1086,12 +1200,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => '9d98b84f-936d-4027-bb8b-b0b5965e537c',
+    ),
   );
   $terms[] = array(
     'name' => 'Agreement',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 23,
+    'weight' => 0,
     'uuid' => 'c92b62d4-9ea0-4610-89d7-1b0b5c8b1d6e',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1112,6 +1229,9 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'changed' => 1431281909,
         ),
       ),
+    ),
+    'parent' => array(
+      0 => '0f06f322-cda7-4910-86fc-21d9160765ca',
     ),
   );
   $terms[] = array(
@@ -1148,7 +1268,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Analytical studies',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 24,
+    'weight' => 1,
     'uuid' => 'd253441e-51bf-4f92-8851-5db28d7ab23d',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1170,12 +1290,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => '0f06f322-cda7-4910-86fc-21d9160765ca',
+    ),
   );
   $terms[] = array(
     'name' => 'UN Resolutions',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 1,
+    'weight' => 4,
     'uuid' => 'e00ce92f-dadc-4d8a-8a92-b8ba2ca92244',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1205,7 +1328,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Regulation',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 41,
+    'weight' => 8,
     'uuid' => 'e14b20cf-5cba-4381-8cc4-abc5355582e8',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1227,12 +1350,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'parent' => array(
+      0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
+    ),
   );
   $terms[] = array(
     'name' => 'Policies and Guidelines',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 17,
+    'weight' => 9,
     'uuid' => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1289,7 +1415,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Multimedia',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 46,
+    'weight' => 20,
     'uuid' => 'f46e9a89-3241-4898-9354-6fb1af1098ad',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1316,7 +1442,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'name' => 'Legislation',
     'description' => '',
     'format' => 'plain_text',
-    'weight' => 36,
+    'weight' => 2,
     'uuid' => 'f49e4f01-aaa0-4af0-ac92-2afe31de85f7',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1337,6 +1463,9 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'changed' => 1431281909,
         ),
       ),
+    ),
+    'parent' => array(
+      0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
     ),
   );
   return $terms;
