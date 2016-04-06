@@ -38,7 +38,7 @@ function landlibrary_taxonomy_taxonomy_default_vocabularies() {
       'name' => 'Resource Type',
       'machine_name' => 'landlibrary_resource_type',
       'description' => '',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => -1,
       'language' => 'und',
