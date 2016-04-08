@@ -15,6 +15,16 @@ function landportal_utility_entity_info_alter(&$entity_info){
   ); 
 }
 
+/**********************
+** Implementation of hook_views_pre_render().
+***********************/
+function landportal_utility_views_pre_render(&$view){
+  if($view->name == 'taxonomy_term' && $view->current_display == 'page') {
+    $view->style_plugin->row_plugin->options['view_mode'] = 'listing';
+  }
+}
+
+
 /**
  * Implements hook_form_alter().
  */
