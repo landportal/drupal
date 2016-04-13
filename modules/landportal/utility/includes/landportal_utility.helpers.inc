@@ -44,7 +44,7 @@ function landportal_utility_taxonomy_get_tree_nested($vid, $parent = 0, $max_dep
 
 
 function landportal_utility_get_library_provider(){
-  $options = array(''=> '-All-');
+  $options = array('_none'=> '-None-');
 
   $query = db_select('node','n');
   $query->fields('n', array('nid', 'title'));
@@ -56,7 +56,7 @@ function landportal_utility_get_library_provider(){
 
   if (!empty($options)) {
     foreach ($results as $nid => $item) {
-      $options['node\:'.$nid] = $item->title;
+      $options['node:'.$nid] = $item->title;
     }
   }
   return $options;

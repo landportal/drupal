@@ -30,174 +30,201 @@ function landportal_utility_views_pre_render(&$view){
  */
 function landportal_utility_form_alter(&$form, &$form_state, $form_id){
   
-  switch ($form_id) {
-    case 'views_exposed_form':
+  // core_search
+  if (!empty($form['#search_page']['page_id']) && $form['#search_page']['page_id'] == 'core_search' && $form_id == 'apachesolr_search_custom_page_search_form') {
 
-      if ($form_state['view']->name == 'library_search') {
+    $form['#submit'][] = 'landportal_utility_custom_page_search_form';
 
-        $language_list = language_list();
-        $language_select_list = array('' => t('-All-'), 'und' => t('Language neutral'));
-        foreach ($language_list as $key => $value) {
-          $language_select_list[$value->language] = $value->name;
-        }
-        if (isset($form['ss_language'])) {
-          $form['ss_language'] = array(
-            '#type' => 'select',
-            '#options' => $language_select_list,
-            '#default_value' => ''
-          );
+    $env_id = $form['#search_page']['env_id'];
+    $all_types_list = array('_none' => t('-None-'));
+    foreach (entity_get_info() as $entity_type => $entity_info) {
+      if (!empty($entity_info['apachesolr']['indexable'])) {
+        $all_options = array();
+        foreach ($entity_info['bundles'] as $key => $info) {
+          $all_options[$key] = $info['label'];
         }
 
-        $provider_list = landportal_utility_get_library_provider();
-        if (isset($form['sm_field_doc_provider']) && !empty($provider_list)) {
-          $form['sm_field_doc_provider'] = array(
-            '#type' => 'select',
-            '#options' => $provider_list,
-            '#default_value' => ''
-          );
-        }
-
-        $field_list = array(
-          'im_field_doc_subject' => array(
-            'label' => 'Related topics',
-            'taxonomy' => 'landportal_topics'
-          ),
-          'im_field_doc_country' => array(
-            'label' => 'Countries',
-            'taxonomy' => 'countries'
-          ),
-          'im_field_doc_type' => array(
-            'label' => 'Resource Type',
-            'taxonomy' => 'landlibrary_resource_type'
-          )
-        );
-        foreach ($field_list as $key_field => $value_field) {
-          $taxonomy = taxonomy_vocabulary_machine_name_load($value_field['taxonomy']);
-          $terms = landportal_utility_taxonomy_get_tree_nested($taxonomy->vid);
-          $select_list = array('' => t('-All-'));
-          foreach ($terms as $key => $value) {
-            $select_list[$value->tid] = $value->name;
-            if (!empty($value->children)) {
-              foreach ($value->children as $children_key => $children_value) {
-                $select_list[$children_value->tid] = '-' . $children_value->name;
-              }
-            }
-          }
-          if (isset($form[$key_field])) {
-            $form[$key_field] = array(
-              '#type' => 'select',
-              '#options' => $select_list,
-              '#default_value' => '',
-            );
-          }
+        $selected_options = apachesolr_get_index_bundles($env_id, $entity_type);
+        foreach ($selected_options as $key => $value) {
+          $all_types_list['bundle:' . $value] = $all_options[$value];
         }
       }
-    break;
-    case 'apachesolr_search_custom_page_search_form':
-      $form['#submit'][] = 'landportal_utility_custom_page_search_form';
+    }
 
-      $env_id = $form['#search_page']['env_id'];
-      $all_types_list = array('_none' => t('-None-'));
-      foreach (entity_get_info() as $entity_type => $entity_info) {
-        if (!empty($entity_info['apachesolr']['indexable'])) {
-          $all_options = array();
-          foreach ($entity_info['bundles'] as $key => $info) {
-            $all_options[$key] = $info['label'];
-          }
+    if (isset($_GET['f'])) {
+      $default_content_type = key(array_intersect_key(array_flip($_GET['f']), $all_types_list));
+    }
+    else{
+      $default_content_type = '_none';
+    }
 
-          $selected_options = apachesolr_get_index_bundles($env_id, $entity_type);
-          foreach ($selected_options as $key => $value) {
-            $all_types_list['bundle:' . $value] = $all_options[$value];
+    $form['advanced_search'] = array(
+      '#type' => 'fieldset', 
+      '#title' => t('Advanced search'), 
+      '#weight' => 5, 
+      '#collapsible' => TRUE, 
+      '#collapsed' => FALSE,
+    );
+
+    $form['advanced_search']['search_content_type'] = array(
+      '#type' => 'select',
+      '#title' => t('Content Type'),
+      '#options' => $all_types_list,
+      '#default_value' => $default_content_type
+    );
+
+    $language_list = language_list();
+    $language_select_list = array('_none' => t('-None-'), 'ss_language:und' => t('Language neutral'));
+    foreach ($language_list as $key => $value) {
+      $language_select_list['ss_language:' . $value->language] = $value->name;
+    }
+
+    if (isset($_GET['f'])) {
+      $default_language = key(array_intersect_key(array_flip($_GET['f']), $language_select_list));
+    }
+    else{
+      $default_language = '_none';
+    }
+
+    $form['advanced_search']['search_language'] = array(
+      '#type' => 'select',
+      '#title' => t('Language'),
+      '#options' => $language_select_list,
+      '#default_value' => $default_language
+    );
+
+    $field_list = array(
+      'im_field_geographical_focus' => array(
+        'label' => 'Geographical focus',
+        'taxonomy' => 'regions'
+      ),
+      'im_field_related_topics' => array(
+        'label' => 'Related topics',
+        'taxonomy' => 'landportal_topics'
+      )
+    );
+
+    foreach ($field_list as $key_field => $value_field) {
+      $taxonomy = taxonomy_vocabulary_machine_name_load($value_field['taxonomy']);
+      $terms = landportal_utility_taxonomy_get_tree_nested($taxonomy->vid);
+      $select_list = array('_none' => t('-None-'));
+      foreach ($terms as $key => $value) {
+        $select_list[$key_field . ':' . $value->tid] = $value->name;
+        if (!empty($value->children)) {
+          foreach ($value->children as $children_key => $children_value) {
+            $select_list[$key_field . ':' . $children_value->tid] = '-' . $children_value->name;
           }
         }
       }
 
       if (isset($_GET['f'])) {
-        $default_content_type = key(array_intersect_key(array_flip($_GET['f']), $all_types_list));
+        $default_value = key(array_intersect_key(array_flip($_GET['f']), $select_list));
       }
       else{
-        $default_content_type = '_none';
+        $default_value = '_none';
       }
 
-      $form['advanced_search'] = array(
-        '#type' => 'fieldset', 
-        '#title' => t('Advanced search'), 
-        '#weight' => 5, 
-        '#collapsible' => TRUE, 
-        '#collapsed' => FALSE,
-      );
-
-      $form['advanced_search']['search_content_type'] = array(
+      $form['advanced_search']['search_' . $key_field] = array(
         '#type' => 'select',
-        '#title' => t('Content Type'),
-        '#options' => $all_types_list,
-        '#default_value' => $default_content_type
+        '#title' => t($value_field['label']),
+        '#options' => $select_list,
+        '#default_value' => $default_value
       );
-
-      $language_list = language_list();
-      $language_select_list = array('_none' => t('-None-'), 'ss_language:und' => t('Language neutral'));
-      foreach ($language_list as $key => $value) {
-        $language_select_list['ss_language:' . $value->language] = $value->name;
-      }
-
-      if (isset($_GET['f'])) {
-        $default_language = key(array_intersect_key(array_flip($_GET['f']), $language_select_list));
-      }
-      else{
-        $default_language = '_none';
-      }
-
-      $form['advanced_search']['search_language'] = array(
-        '#type' => 'select',
-        '#title' => t('Language'),
-        '#options' => $language_select_list,
-        '#default_value' => $default_language
-      );
-
-      $field_list = array(
-        'im_field_geographical_focus' => array(
-          'label' => 'Geographical focus',
-          'taxonomy' => 'regions'
-        ),
-        'im_field_related_topics' => array(
-          'label' => 'Related topics',
-          'taxonomy' => 'landportal_topics'
-        )
-      );
-
-      foreach ($field_list as $key_field => $value_field) {
-        $taxonomy = taxonomy_vocabulary_machine_name_load($value_field['taxonomy']);
-        $terms = landportal_utility_taxonomy_get_tree_nested($taxonomy->vid);
-        $select_list = array('_none' => t('-None-'));
-        foreach ($terms as $key => $value) {
-          $select_list[$key_field . ':' . $value->tid] = $value->name;
-          if (!empty($value->children)) {
-            foreach ($value->children as $children_key => $children_value) {
-              $select_list[$key_field . ':' . $children_value->tid] = '-' . $children_value->name;
-            }
-          }
-        }
-
-        if (isset($_GET['f'])) {
-          $default_value = key(array_intersect_key(array_flip($_GET['f']), $select_list));
-        }
-        else{
-          $default_value = '_none';
-        }
-
-        $form['advanced_search']['search_' . $key_field] = array(
-          '#type' => 'select',
-          '#title' => t($value_field['label']),
-          '#options' => $select_list,
-          '#default_value' => $default_value
-        );
-      }
-      break;
-    
-    default:
-      # code...
-      break;
+    }
   }
+
+  // library_search
+  if (!empty($form['#search_page']['page_id']) && $form['#search_page']['page_id'] == 'library_search' && $form_id == 'apachesolr_search_custom_page_search_form') {
+
+    $form['#submit'][] = 'landportal_utility_custom_page_search_form';
+
+    $form['advanced_search'] = array(
+      '#type' => 'fieldset', 
+      '#title' => t('Advanced search'), 
+      '#weight' => 5, 
+      '#collapsible' => TRUE, 
+      '#collapsed' => FALSE,
+    );
+
+    $language_list = language_list();
+    $language_select_list = array('_none' => t('-None-'), 'ss_language:und' => t('Language neutral'));
+    foreach ($language_list as $key => $value) {
+      $language_select_list['ss_language:' . $value->language] = $value->name;
+    }
+
+    if (isset($_GET['f'])) {
+      $default_language = key(array_intersect_key(array_flip($_GET['f']), $language_select_list));
+    }
+    else{
+      $default_language = '_none';
+    }
+
+    $form['advanced_search']['search_language'] = array(
+      '#type' => 'select',
+      '#title' => t('Language'),
+      '#options' => $language_select_list,
+      '#default_value' => $default_language
+    );
+
+    $provider_list = landportal_utility_get_library_provider();
+    if (isset($_GET['f'])) {
+      $default_provider = key(array_intersect_key(array_flip($_GET['f']), $provider_list));
+    }
+    else{
+      $default_provider = '_none';
+    }
+    $form['advanced_search']['search_sm_field_doc_provider'] = array(
+      '#type' => 'select',
+      '#title' => t('Provider'),
+      '#options' => $provider_list,
+      '#default_value' => $default_provider
+    );
+
+    $field_list = array(
+      'im_field_doc_country' => array(
+        'label' => 'Country',
+        'taxonomy' => 'countries'
+      ),
+      'im_field_doc_subject' => array(
+        'label' => 'Related topics',
+        'taxonomy' => 'landportal_topics'
+      ),
+      'im_field_doc_type' => array(
+        'label' => 'Resource Type',
+        'taxonomy' => 'landlibrary_resource_type'
+      )
+    );
+
+    foreach ($field_list as $key_field => $value_field) {
+      $taxonomy = taxonomy_vocabulary_machine_name_load($value_field['taxonomy']);
+      $terms = landportal_utility_taxonomy_get_tree_nested($taxonomy->vid);
+      $select_list = array('_none' => t('-None-'));
+      foreach ($terms as $key => $value) {
+        $select_list[$key_field . ':' . $value->tid] = $value->name;
+        if (!empty($value->children)) {
+          foreach ($value->children as $children_key => $children_value) {
+            $select_list[$key_field . ':' . $children_value->tid] = '-' . $children_value->name;
+          }
+        }
+      }
+
+      if (isset($_GET['f'])) {
+        $default_value = key(array_intersect_key(array_flip($_GET['f']), $select_list));
+      }
+      else{
+        $default_value = '_none';
+      }
+
+      $form['advanced_search']['search_' . $key_field] = array(
+        '#type' => 'select',
+        '#title' => t($value_field['label']),
+        '#options' => $select_list,
+        '#default_value' => $default_value
+      );
+    }
+
+  }
+
 }
 
 function landportal_utility_custom_page_search_form(&$form, &$form_state){
@@ -213,12 +240,16 @@ function landportal_utility_custom_page_search_form(&$form, &$form_state){
   $input_name_list = array(
     'search_content_type',
     'search_language',
+    'search_sm_field_doc_provider',
     'search_im_field_geographical_focus',
-    'search_im_field_related_topics'
+    'search_im_field_related_topics',
+    'search_im_field_doc_country',
+    'search_im_field_doc_subject',
+    'search_im_field_doc_type'
   );
 
   foreach ($input_name_list as $key => $name) {
-    if (($values[$name]) != '_none') {
+    if (!empty($values[$name]) && ($values[$name] != '_none')) {
       $get['f'][] = $values[$name];
     }
   }
