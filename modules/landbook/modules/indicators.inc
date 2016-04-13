@@ -33,6 +33,7 @@ function landbook_indicators($args=NULL) {
   }
   landbook_add_js_vars($args);
   landbook_add_js_css();
+  drupal_add_js(drupal_get_path('module', 'landbook').'/js/country_chart_options.js');
   drupal_add_js(drupal_get_path('module', 'landbook').'/js/controller/' . $template . '.js', array('scope'=>'footer'));
 
   return array('content' => array(
