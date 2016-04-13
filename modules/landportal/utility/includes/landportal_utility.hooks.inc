@@ -29,7 +29,70 @@ function landportal_utility_views_pre_render(&$view){
  * Implements hook_form_alter().
  */
 function landportal_utility_form_alter(&$form, &$form_state, $form_id){
+  
   switch ($form_id) {
+    case 'views_exposed_form':
+
+      if ($form_state['view']->name == 'library_search') {
+
+        $language_list = language_list();
+        $language_select_list = array('' => t('-All-'), 'und' => t('Language neutral'));
+        foreach ($language_list as $key => $value) {
+          $language_select_list[$value->language] = $value->name;
+        }
+        if (isset($form['ss_language'])) {
+          $form['ss_language'] = array(
+            '#type' => 'select',
+            '#options' => $language_select_list,
+            '#default_value' => ''
+          );
+        }
+
+        $provider_list = landportal_utility_get_library_provider();
+        if (isset($form['sm_field_doc_provider']) && !empty($provider_list)) {
+          $form['sm_field_doc_provider'] = array(
+            '#type' => 'select',
+            '#options' => $provider_list,
+            '#default_value' => ''
+          );
+        }
+
+        $field_list = array(
+          'im_field_doc_subject' => array(
+            'label' => 'Related topics',
+            'taxonomy' => 'landportal_topics'
+          ),
+          'im_field_doc_country' => array(
+            'label' => 'Countries',
+            'taxonomy' => 'countries'
+          ),
+          'im_field_doc_type' => array(
+            'label' => 'Resource Type',
+            'taxonomy' => 'landlibrary_resource_type'
+          )
+        );
+        foreach ($field_list as $key_field => $value_field) {
+          $taxonomy = taxonomy_vocabulary_machine_name_load($value_field['taxonomy']);
+          $terms = landportal_utility_taxonomy_get_tree_nested($taxonomy->vid);
+          $select_list = array('' => t('-All-'));
+          foreach ($terms as $key => $value) {
+            $select_list[$value->tid] = $value->name;
+            if (!empty($value->children)) {
+              foreach ($value->children as $children_key => $children_value) {
+                $select_list[$children_value->tid] = '-' . $children_value->name;
+              }
+            }
+          }
+          if (isset($form[$key_field])) {
+            $form[$key_field] = array(
+              '#type' => 'select',
+              '#options' => $select_list,
+              '#default_value' => '',
+            );
+          }
+        }
+      }
+    break;
     case 'apachesolr_search_custom_page_search_form':
       $form['#submit'][] = 'landportal_utility_custom_page_search_form';
 

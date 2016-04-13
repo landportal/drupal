@@ -148,6 +148,7 @@ $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
 $handler->display->display_options['filters']['keyword']['id'] = 'keyword';
 $handler->display->display_options['filters']['keyword']['table'] = 'apachesolr__landlibrary_search';
 $handler->display->display_options['filters']['keyword']['field'] = 'keyword';
+$handler->display->display_options['filters']['keyword']['group'] = 1;
 $handler->display->display_options['filters']['keyword']['exposed'] = TRUE;
 $handler->display->display_options['filters']['keyword']['expose']['operator_id'] = '';
 $handler->display->display_options['filters']['keyword']['expose']['operator'] = 'keyword_op';
@@ -156,6 +157,107 @@ $handler->display->display_options['filters']['keyword']['expose']['remember_rol
   2 => '2',
   1 => 0,
   111731461 => 0,
+  25521343 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+/* Filter criterion: Apache Solr: bundle */
+$handler->display->display_options['filters']['bundle']['id'] = 'bundle';
+$handler->display->display_options['filters']['bundle']['table'] = 'apachesolr__landlibrary_search';
+$handler->display->display_options['filters']['bundle']['field'] = 'bundle';
+$handler->display->display_options['filters']['bundle']['value'] = 'landlibrary_resource';
+$handler->display->display_options['filters']['bundle']['group'] = 1;
+/* Filter criterion: Apache Solr: sm_field_doc_provider */
+$handler->display->display_options['filters']['sm_field_doc_provider']['id'] = 'sm_field_doc_provider';
+$handler->display->display_options['filters']['sm_field_doc_provider']['table'] = 'apachesolr__landlibrary_search';
+$handler->display->display_options['filters']['sm_field_doc_provider']['field'] = 'sm_field_doc_provider';
+$handler->display->display_options['filters']['sm_field_doc_provider']['group'] = 1;
+$handler->display->display_options['filters']['sm_field_doc_provider']['exposed'] = TRUE;
+$handler->display->display_options['filters']['sm_field_doc_provider']['expose']['operator_id'] = 'sm_field_doc_provider_op';
+$handler->display->display_options['filters']['sm_field_doc_provider']['expose']['label'] = 'Provider';
+$handler->display->display_options['filters']['sm_field_doc_provider']['expose']['operator'] = 'sm_field_doc_provider_op';
+$handler->display->display_options['filters']['sm_field_doc_provider']['expose']['identifier'] = 'sm_field_doc_provider';
+$handler->display->display_options['filters']['sm_field_doc_provider']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903912 => 0,
+  25521343 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+/* Filter criterion: Apache Solr: im_field_doc_country */
+$handler->display->display_options['filters']['im_field_doc_country']['id'] = 'im_field_doc_country';
+$handler->display->display_options['filters']['im_field_doc_country']['table'] = 'apachesolr__landlibrary_search';
+$handler->display->display_options['filters']['im_field_doc_country']['field'] = 'im_field_doc_country';
+$handler->display->display_options['filters']['im_field_doc_country']['group'] = 1;
+$handler->display->display_options['filters']['im_field_doc_country']['exposed'] = TRUE;
+$handler->display->display_options['filters']['im_field_doc_country']['expose']['operator_id'] = '';
+$handler->display->display_options['filters']['im_field_doc_country']['expose']['label'] = 'Country';
+$handler->display->display_options['filters']['im_field_doc_country']['expose']['operator'] = 'im_field_doc_country_op';
+$handler->display->display_options['filters']['im_field_doc_country']['expose']['identifier'] = 'im_field_doc_country';
+$handler->display->display_options['filters']['im_field_doc_country']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903912 => 0,
+  25521343 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+/* Filter criterion: Apache Solr: ss_language */
+$handler->display->display_options['filters']['ss_language']['id'] = 'ss_language';
+$handler->display->display_options['filters']['ss_language']['table'] = 'apachesolr__landlibrary_search';
+$handler->display->display_options['filters']['ss_language']['field'] = 'ss_language';
+$handler->display->display_options['filters']['ss_language']['group'] = 1;
+$handler->display->display_options['filters']['ss_language']['exposed'] = TRUE;
+$handler->display->display_options['filters']['ss_language']['expose']['operator_id'] = 'ss_language_op';
+$handler->display->display_options['filters']['ss_language']['expose']['label'] = 'Language';
+$handler->display->display_options['filters']['ss_language']['expose']['operator'] = 'ss_language_op';
+$handler->display->display_options['filters']['ss_language']['expose']['identifier'] = 'ss_language';
+$handler->display->display_options['filters']['ss_language']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903912 => 0,
+  25521343 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+/* Filter criterion: Apache Solr: im_field_doc_type */
+$handler->display->display_options['filters']['im_field_doc_type']['id'] = 'im_field_doc_type';
+$handler->display->display_options['filters']['im_field_doc_type']['table'] = 'apachesolr__landlibrary_search';
+$handler->display->display_options['filters']['im_field_doc_type']['field'] = 'im_field_doc_type';
+$handler->display->display_options['filters']['im_field_doc_type']['group'] = 1;
+$handler->display->display_options['filters']['im_field_doc_type']['exposed'] = TRUE;
+$handler->display->display_options['filters']['im_field_doc_type']['expose']['operator_id'] = '';
+$handler->display->display_options['filters']['im_field_doc_type']['expose']['label'] = 'Resource Type';
+$handler->display->display_options['filters']['im_field_doc_type']['expose']['operator'] = 'im_field_doc_type_op';
+$handler->display->display_options['filters']['im_field_doc_type']['expose']['identifier'] = 'im_field_doc_type';
+$handler->display->display_options['filters']['im_field_doc_type']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903912 => 0,
+  25521343 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+/* Filter criterion: Apache Solr: im_field_doc_subject */
+$handler->display->display_options['filters']['im_field_doc_subject']['id'] = 'im_field_doc_subject';
+$handler->display->display_options['filters']['im_field_doc_subject']['table'] = 'apachesolr__landlibrary_search';
+$handler->display->display_options['filters']['im_field_doc_subject']['field'] = 'im_field_doc_subject';
+$handler->display->display_options['filters']['im_field_doc_subject']['group'] = 1;
+$handler->display->display_options['filters']['im_field_doc_subject']['exposed'] = TRUE;
+$handler->display->display_options['filters']['im_field_doc_subject']['expose']['operator_id'] = '';
+$handler->display->display_options['filters']['im_field_doc_subject']['expose']['label'] = 'Topics';
+$handler->display->display_options['filters']['im_field_doc_subject']['expose']['operator'] = 'im_field_doc_subject_op';
+$handler->display->display_options['filters']['im_field_doc_subject']['expose']['identifier'] = 'im_field_doc_subject';
+$handler->display->display_options['filters']['im_field_doc_subject']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903912 => 0,
   25521343 => 0,
   111903910 => 0,
   30037204 => 0,
@@ -184,5 +286,10 @@ $translatables['library_search'] = array(
   t('Displaying @start - @end of @total'),
   t('No results found.'),
   t('Keywords'),
+  t('Provider'),
+  t('Country'),
+  t('Language'),
+  t('Resource Type'),
+  t('Topics'),
   t('Page'),
 );

@@ -9273,6 +9273,13 @@ button.close {
   background-color: #fe2e2e;
 }
 
+/* line 57, ../scss/modules/_buttons.scss */
+.field-name-field-doc-type {
+  font-size: 1em;
+  background-color: #91594d;
+  font-weight: normal;
+}
+
 /* line 1, ../scss/modules/_links.scss */
 .links.inline {
   float: right;
@@ -12148,44 +12155,113 @@ html.js fieldset.collapsed {
   margin-bottom: 0.9em;
 }
 
-/* line 156, ../scss/modules/_search.scss */
+/* line 157, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search {
   margin-top: 20px;
 }
-/* line 158, ../scss/modules/_search.scss */
+/* line 159, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search legend {
   border: none;
   margin-bottom: 0px;
 }
-/* line 161, ../scss/modules/_search.scss */
+/* line 162, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search legend .fieldset-legend {
   background-position: 0 65%;
 }
-/* line 166, ../scss/modules/_search.scss */
+/* line 167, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search.collapsed .fieldset-legend {
   background-position: 0 50%;
 }
 @media only screen and (min-width: 992px) {
-  /* line 171, ../scss/modules/_search.scss */
+  /* line 172, ../scss/modules/_search.scss */
   #search-form #edit-advanced-search .fieldset-wrapper .form-item {
     float: left;
     width: 50%;
   }
 }
-/* line 176, ../scss/modules/_search.scss */
+/* line 177, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search .fieldset-wrapper .form-item label,
 #search-form #edit-advanced-search .fieldset-wrapper .form-item select {
   display: inline-block;
 }
-/* line 180, ../scss/modules/_search.scss */
+/* line 181, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search .fieldset-wrapper .form-item select {
   max-width: 200px;
   width: 100%;
 }
-/* line 184, ../scss/modules/_search.scss */
+/* line 185, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search .fieldset-wrapper .form-item label {
   min-width: 155px;
   padding: 5px 15px 5px 0;
+}
+
+/* line 194, ../scss/modules/_search.scss */
+#views-exposed-form-library-search-page select {
+  width: 100%;
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  /* line 198, ../scss/modules/_search.scss */
+  #views-exposed-form-library-search-page #edit-im-field-doc-country-wrapper,
+  #views-exposed-form-library-search-page #edit-sm-field-doc-provider-wrapper {
+    float: left;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 205, ../scss/modules/_search.scss */
+  #views-exposed-form-library-search-page #edit-im-field-doc-subject-wrapper,
+  #views-exposed-form-library-search-page #edit-im-field-doc-type-wrapper,
+  #views-exposed-form-library-search-page #edit-ss-language-wrapper {
+    float: left;
+    width: 33.3333%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 213, ../scss/modules/_search.scss */
+  #views-exposed-form-library-search-page #edit-im-field-doc-subject-wrapper {
+    padding-left: 1em;
+    padding-right: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 219, ../scss/modules/_search.scss */
+  #views-exposed-form-library-search-page #edit-im-field-doc-type-wrapper {
+    padding-left: 1em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 224, ../scss/modules/_search.scss */
+  #views-exposed-form-library-search-page #edit-im-field-doc-country-wrapper {
+    padding-left: 1em;
+    padding-right: 0;
+  }
+}
+/* line 231, ../scss/modules/_search.scss */
+#views-exposed-form-library-search-page .views-exposed-widgets {
+  position: relative;
+}
+/* line 234, ../scss/modules/_search.scss */
+#views-exposed-form-library-search-page #edit-keyword-wrapper {
+  width: 100%;
+  padding-right: 120px;
+}
+/* line 237, ../scss/modules/_search.scss */
+#views-exposed-form-library-search-page #edit-keyword-wrapper .form-text {
+  width: 100%;
+}
+/* line 241, ../scss/modules/_search.scss */
+#views-exposed-form-library-search-page .views-submit-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 0;
+}
+/* line 246, ../scss/modules/_search.scss */
+#views-exposed-form-library-search-page .views-submit-button .ajax-progress {
+  position: absolute;
+  top: 0;
+  right: 100%;
 }
 
 /* Landportal SCSS: menus */
