@@ -24,6 +24,7 @@
       display: inline-block;
       padding: 0.2em 0.5em;
       white-space: nowrap;
+      float:right;
     }
   }
   .information{
@@ -154,6 +155,12 @@
 }
 
 #search-form{
+  #edit-basic{
+    .keys{
+      width: 300px;
+    }
+  }
+
   #edit-advanced-search{
     margin-top: 20px;
     legend{
@@ -251,3 +258,4 @@
   }
 
 }
+

@@ -74,6 +74,12 @@ function landportal_preprocess_page(&$variables) {
         break;
     }
   }
+  if((arg(0) == 'search' && arg(1) == 'site') || (arg(0) == 'library' && arg(1) == 'search')){
+    drupal_set_title('');
+  }
+  if((arg(1) == 'search' && arg(2) == 'site') || (arg(1) == 'library' && arg(2) == 'search')){
+    drupal_set_title('');
+  }
 }
 
 /**

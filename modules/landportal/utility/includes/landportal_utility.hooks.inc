@@ -33,6 +33,11 @@ function landportal_utility_form_alter(&$form, &$form_state, $form_id){
   // core_search
   if (!empty($form['#search_page']['page_id']) && $form['#search_page']['page_id'] == 'core_search' && $form_id == 'apachesolr_search_custom_page_search_form') {
 
+    $form['basic']['keys']['#title']=t('Search');
+    $form['basic']['keys']['#attributes']['class']=array('form-control','keys');
+    $form['basic']['#attributes']['class'][]='form-inline';
+    //pa($form,1);
+    $form['basic']['submit']['#attributes']['class']=array('btn','btn-default');
     $form['#submit'][] = 'landportal_utility_custom_page_search_form';
 
     $env_id = $form['#search_page']['env_id'];
@@ -67,8 +72,8 @@ function landportal_utility_form_alter(&$form, &$form_state, $form_id){
       '#type' => 'fieldset',
       '#title' => t('Advanced search'),
       '#weight' => 5,
-      '#collapsible' => TRUE,
-      '#collapsed' => FALSE,
+      //'#collapsible' => TRUE,
+      //'#collapsed' => FALSE,
     );
 
     $form['advanced_search']['search_content_type'] = array(
@@ -149,14 +154,20 @@ function landportal_utility_form_alter(&$form, &$form_state, $form_id){
   // library_search
   if (!empty($form['#search_page']['page_id']) && $form['#search_page']['page_id'] == 'library_search' && $form_id == 'apachesolr_search_custom_page_search_form') {
 
+    $form['basic']['keys']['#title']=t('Search');
+    $form['basic']['keys']['#attributes']['class']=array('form-control','keys');
+    $form['basic']['#attributes']['class'][]='form-inline';
+    $form['basic']['submit']['#attributes']['class']=array('btn','btn-default');
+    $form['#submit'][] = 'landportal_utility_custom_page_search_form';
+
     $form['#submit'][] = 'landportal_utility_custom_page_search_form';
 
     $form['advanced_search'] = array(
       '#type' => 'fieldset',
       '#title' => t('Advanced search'),
       '#weight' => 5,
-      '#collapsible' => TRUE,
-      '#collapsed' => FALSE,
+      //'#collapsible' => TRUE,
+      //'#collapsed' => FALSE,
     );
 
     $language_list = language_list();
@@ -289,4 +300,13 @@ function landportal_utility_custom_page_search_form(&$form, &$form_state){
   }
   $form_state['values']['get'] = json_encode($get);
   $form_state['redirect'] = array($redirect, array('query' => $get));
+}
+
+function landportal_utility_menu_breadcrumb_alter(&$active_trail, $item){
+  if((arg(0) == 'search' && arg(1) == 'site') || (arg(0) == 'library' && arg(1) == 'search')){
+    if(count($active_trail)>3){
+      array_pop($active_trail);
+      array_pop($active_trail);
+    }
+  }
 }
