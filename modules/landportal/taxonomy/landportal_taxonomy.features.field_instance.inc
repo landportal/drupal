@@ -292,6 +292,50 @@ function landportal_taxonomy_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-domains-field_categories'.
+  $field_instances['taxonomy_term-domains-field_categories'] = array(
+    'bundle' => 'domains',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_categories',
+    'label' => 'Categories',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'synonyms',
+      'settings' => array(
+        'auto_creation' => 0,
+        'size' => 60,
+        'suggest_only_unique' => 0,
+        'suggestion_size' => 10,
+        'synonyms_autocomplete_path' => 'synonyms/autocomplete',
+      ),
+      'type' => 'synonyms_autocomplete',
+      'weight' => 33,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-domains-field_related_themes'.
   $field_instances['taxonomy_term-domains-field_related_themes'] = array(
     'bundle' => 'domains',
@@ -827,6 +871,7 @@ function landportal_taxonomy_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('AGROVOC URI');
+  t('Categories');
   t('Description');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('ISO3');

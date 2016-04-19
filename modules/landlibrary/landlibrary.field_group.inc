@@ -726,36 +726,6 @@ function landlibrary_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_lptags|node|landlibrary_resource|form';
-  $field_group->group_name = 'group_lptags';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'landlibrary_resource';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'LPTags',
-    'weight' => '2',
-    'children' => array(
-      0 => 'field_doc_country',
-      1 => 'field_doc_geographic_region',
-      2 => 'field_doc_keyword',
-      3 => 'field_doc_subject',
-    ),
-    'format_type' => 'fieldset',
-    'format_settings' => array(
-      'formatter' => 'collapsible',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-lptags field-group-fieldset',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $field_groups['group_lptags|node|landlibrary_resource|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_resource|node|landlibrary_resource|form';
   $field_group->group_name = 'group_resource';
   $field_group->entity_type = 'node';
@@ -793,7 +763,6 @@ function landlibrary_field_group_info() {
   t('Creator');
   t('Deprecated');
   t('Description Information');
-  t('LPTags');
   t('Location');
   t('Physical Characteristics');
   t('Publisher');

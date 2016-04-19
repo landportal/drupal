@@ -16,6 +16,7 @@ $handler->display->display_options['title'] = 'Topics terms management';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['group_by'] = TRUE;
 $handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['access']['perm'] = 'edit terms in 5';
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -197,10 +198,6 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'label' => '',
   ),
 );
-/* Sort criterion: Taxonomy edge: taxonomy hierarchy order */
-$handler->display->display_options['sorts']['term_sort_hierarchy']['id'] = 'term_sort_hierarchy';
-$handler->display->display_options['sorts']['term_sort_hierarchy']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['sorts']['term_sort_hierarchy']['field'] = 'term_sort_hierarchy';
 /* Filter criterion: Taxonomy vocabulary: Machine name */
 $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
 $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
@@ -228,7 +225,7 @@ $handler->display->display_options['filters']['name']['expose']['remember_roles'
   30037204 => 0,
 );
 
-/* Display: Terms management */
+/* Display: System */
 $handler = $view->new_display('system', 'System', 'system_1');
 $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
 $handler->display->display_options['defaults']['access'] = FALSE;
@@ -263,5 +260,5 @@ $translatables['admin_views_taxonomy_terms_topics'] = array(
   t('Lang'),
   t('Links'),
   t('- Choose an operation -'),
-  t('Page'),
+  t('System'),
 );
