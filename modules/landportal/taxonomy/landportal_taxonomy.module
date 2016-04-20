@@ -5,22 +5,24 @@
 
 include_once 'landportal_taxonomy.features.inc';
 
-function landportal_taxonomy_menu() {
-    /* $items['voc'] = array(); */
-    /* return $items; */
+/**
+ * Implements hook_views_api().
+ */
+function landportal_taxonomy_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
 }
 
 function landportal_taxonomy_menu_block_info() {
   $blocks = array(
     'domains_views' => array(
-      'info'        => t('Doma Footer'),
+      'info'        => t('Domains views'),
       'status'      => TRUE,
       'region'      => 'content',
       'visibility'  => BLOCK_VISIBILITY_LISTED,
       'pages'       => "voc",
     ),
-    'themes_' => array(
-      'info'        => t('Footer social icons'),
+    'themes_views' => array(
+      'info'        => t('Themes views'),
       'status'      => TRUE,
       'region'      => 'content',
       'visibility'  => BLOCK_VISIBILITY_LISTED,
