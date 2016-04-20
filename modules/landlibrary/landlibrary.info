@@ -232,7 +232,4 @@ features_exclude[dependencies][synonyms] = synonyms
 features_exclude[field_base][title_field] = title_field
 features_exclude[taxonomy][regions] = regions
 features_exclude[taxonomy][keywords] = keywords
-<<<<<<< HEAD
 features_exclude[field_group][group_lptags|node|landlibrary_resource|form] = group_lptags|node|landlibrary_resource|form
-=======
->>>>>>> master
