@@ -8,23 +8,20 @@
  * Implements hook_views_default_views().
  */
 function landlibrary_views_default_views() {
-  $export = array();
+    $export = array();
+    $views = array(
+        'search',
+        'browse',
+        'promoted',
+        'browse',
+        'resource_type',
+        'organizations',
+        'by_providers'
+    );
+    foreach ($views as $view_name) {
+        include 'views/'.$view_name . '.inc';
+        $export[$view->name] = $view;
 
-  /* View file in: MODULE/views/VIEWNAME.inc */
-  include_once 'views/search.inc';
-  $export[$view->name] = $view;
-  include_once 'views/admin.inc';
-  $export[$view->name] = $view;
-  include_once 'views/browse.inc';
-  $export[$view->name] = $view;
-  include_once 'views/promoted.inc';
-  $export[$view->name] = $view;
-  include_once 'views/resource_type.inc';
-  $export[$view->name] = $view;
-  include_once 'views/organizations.inc';
-  $export[$view->name] = $view;
-  include_once 'views/by_providers.inc';
-  $export[$view->name] = $view;
-
-  return $export;
+    }
+    return $export;
 }

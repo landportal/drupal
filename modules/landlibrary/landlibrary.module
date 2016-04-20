@@ -5,6 +5,12 @@
  */
 
 include_once 'landlibrary.features.inc';
+/**
+ * Implements hook_views_api().
+ */
+function landlibrary_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
 
 /* LandLibrary breadcrumbs */
 function landlibrary_node_view_alter(&$build) {

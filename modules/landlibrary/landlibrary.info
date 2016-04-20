@@ -51,7 +51,6 @@ features[ctools][] = facetapi:facetapi_defaults:1
 features[ctools][] = feeds:feeds_importer_default:1
 features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1
-features[ctools][] = views:views_default:3.0
 features[ds_layout_settings][] = node|landlibrary_resource|default
 features[features_api][] = api:2
 features[field_base][] = field_doc_alt_title
