@@ -13,7 +13,6 @@ function landlibrary_views_default_views() {
         'search',
         'browse',
         'promoted',
-        'browse',
         'resource_type',
         'organizations',
         'by_providers'
