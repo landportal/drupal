@@ -12,7 +12,7 @@ function landlibrary_views_default_views() {
     $views = array(
         'admin',
         'browse',
-        'by_providers'
+        'by_providers',
         'organizations',
         'promoted',
         'resource_type',
