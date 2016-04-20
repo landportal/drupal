@@ -1,12 +1,13 @@
 <?php
 /**
- * Override Drupal default views
+ * Add views to Drupal
  */
 
-function landportal_taxonomy_views_default_views() {
+function landportal_homepage_views_default_views() {
     $export = array();
     $views = array(
-        'domains', 'themes'
+        'front_page_promoted',
+        'front_page_teasers',
     );
     foreach ($views as $view_name) {
         include 'views/'.$view_name . '.inc';
