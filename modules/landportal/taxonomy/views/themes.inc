@@ -21,21 +21,15 @@ $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '25';
 $handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['uses_fields'] = TRUE;
-$handler->display->display_options['row_plugin'] = 'fields';
-/* Field: Taxonomy term: Name */
-$handler->display->display_options['fields']['name']['id'] = 'name';
-$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['fields']['name']['field'] = 'name';
-$handler->display->display_options['fields']['name']['label'] = '';
-$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
-$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-$handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-/* Field: Field: Related topics */
-$handler->display->display_options['fields']['field_related_topics']['id'] = 'field_related_topics';
-$handler->display->display_options['fields']['field_related_topics']['table'] = 'field_data_field_related_topics';
-$handler->display->display_options['fields']['field_related_topics']['field'] = 'field_related_topics';
-$handler->display->display_options['fields']['field_related_topics']['delta_offset'] = '0';
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'entity';
+/* Field: Taxonomy term: Rendered Taxonomy term */
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
 /* Filter criterion: Taxonomy vocabulary: Machine name */
 $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
 $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
@@ -55,6 +49,6 @@ $translatables['themes'] = array(
   t('Sort by'),
   t('Asc'),
   t('Desc'),
-  t('Related topics'),
+  t('Rendered Taxonomy term'),
   t('Block'),
 );

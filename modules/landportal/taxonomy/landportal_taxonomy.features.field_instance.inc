@@ -310,7 +310,7 @@ function landportal_taxonomy_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -344,13 +344,10 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'ds',
-        'settings' => array(
-          'taxonomy_term_reference_view_mode' => 'search_index',
-          'use_content_language' => 1,
-        ),
-        'type' => 'ds_taxonomy_view_mode',
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
       'full' => array(
@@ -360,9 +357,10 @@ function landportal_taxonomy_field_default_field_instances() {
         'weight' => 0,
       ),
       'search_index' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 0,
       ),
     ),
@@ -391,13 +389,10 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => 'Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'ds',
-        'settings' => array(
-          'taxonomy_term_reference_view_mode' => 'search_index',
-          'use_content_language' => 1,
-        ),
-        'type' => 'ds_taxonomy_view_mode',
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 2,
       ),
       'full' => array(
@@ -407,10 +402,11 @@ function landportal_taxonomy_field_default_field_instances() {
         'weight' => 2,
       ),
       'search_index' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -736,13 +732,10 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => 'Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'ds',
-        'settings' => array(
-          'taxonomy_term_reference_view_mode' => 'search_index',
-          'use_content_language' => 1,
-        ),
-        'type' => 'ds_taxonomy_view_mode',
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
       'search_index' => array(

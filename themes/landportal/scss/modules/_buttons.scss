@@ -14,8 +14,8 @@
     }
 }
 
-.field-type-taxonomy-term-reference { //.field-label-hidden {
-    display: inline;
+.field-type-taxonomy-term-reference {
+    //display: inline;
     .field-items {
         display: inline;
     }
@@ -25,6 +25,17 @@
         a {
             @extend .landportal-button;
         }
+    }
+}
+// pimp themes and domains terms
+.field-name-field-related-themes {
+    .field-item a {
+        background-color: #42B7CA;
+    }
+}
+.field-name-field-related-domains {
+    .field-item a {
+        background-color: #42CABD;
     }
 }
 
