@@ -10,12 +10,13 @@
 function landlibrary_views_default_views() {
     $export = array();
     $views = array(
-        'search',
+        'admin',
         'browse',
+        'by_providers'
+        'organizations',
         'promoted',
         'resource_type',
-        'organizations',
-        'by_providers'
+        'search',
     );
     foreach ($views as $view_name) {
         include 'views/'.$view_name . '.inc';

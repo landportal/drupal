@@ -18,7 +18,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Library Sources provider organizations';
+$handler->display->display_options['title'] = 'Sources Providers';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['group_by'] = TRUE;
 $handler->display->display_options['access']['type'] = 'perm';
@@ -212,9 +212,13 @@ $handler->display->display_options['relationships']['reverse_field_doc_provider_
 $handler->display->display_options['relationships']['reverse_field_doc_provider_node']['field'] = 'reverse_field_doc_provider_node';
 $handler->display->display_options['relationships']['reverse_field_doc_provider_node']['required'] = TRUE;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block_1');
+$handler->display->display_options['block_description'] = 'Sources Providers';
 $translatables['organizations_library'] = array(
   t('Master'),
-  t('Library Sources provider organizations'),
+  t('Sources Providers'),
   t('more'),
   t('Apply'),
   t('Reset'),
@@ -241,4 +245,5 @@ $translatables['organizations_library'] = array(
   t('library source provider'),
   t(' Organizations linked as provider to a LLResource'),
   t('Content referencing Content from field_doc_provider'),
+  t('Block'),
 );
