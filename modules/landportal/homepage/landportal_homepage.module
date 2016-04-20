@@ -1,0 +1,5 @@
+<?php
+/**
+ * Land Portal homepage module
+ */
+include_once 'landportal_homepage.views_default.inc';
