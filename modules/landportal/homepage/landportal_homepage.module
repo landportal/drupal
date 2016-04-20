@@ -2,4 +2,11 @@
 /**
  * Land Portal homepage module
  */
-include_once 'landportal_homepage.views_default.inc';
+//include_once 'landportal_homepage.views_default.inc';
+
+/**
+ * Implements hook_views_api().
+ */
+function landportal_homepage_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
