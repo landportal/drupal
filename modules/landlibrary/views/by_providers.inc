@@ -322,7 +322,7 @@ $handler->display->display_options['arguments']['field_doc_provider_target_id'][
 $handler->display->display_options['arguments']['field_doc_provider_target_id']['validate_options']['types'] = array(
   'organization' => 'organization',
 );
-$handler->display->display_options['block_description'] = 'docs_by_org';
+$handler->display->display_options['block_description'] = 'Library resources by providers';
 $translatables['by_providers'] = array(
   t('Master'),
   t('Resources'),
@@ -355,5 +355,5 @@ $translatables['by_providers'] = array(
   t('Page'),
   t('Block'),
   t('more'),
-  t('docs_by_org'),
+  t('Library resources by providers'),
 );

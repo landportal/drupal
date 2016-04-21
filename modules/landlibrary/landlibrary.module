@@ -40,3 +40,14 @@ function landlibrary_menu() {
 function landlibrary_admin_view_library() {
     return 'hallo<p>This should be replaced by admin_view_library system view</p>';
 }
+
+//
+function landlibrary_block_info_alter(&$blocks, $theme, $code_blocks) {
+    if ($theme == 'landportal') {
+        $blocks['views']['by_providers-block']['status'] = TRUE;
+        $blocks['views']['by_providers-block']['region'] = 'content';
+        $blocks['views']['by_providers-block']['visibility'] = BLOCK_VISIBILITY_LISTED;
+        $blocks['views']['by_providers-block']['pages'] = 'organization/*';
+    }
+    return $blocks;
+}
