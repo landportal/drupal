@@ -16,3 +16,5 @@ regions[footer] = Footer
 features[] = logo
 features[] = favicon
 features[] = main_menu
+
+scripts[] = 'js/main.js'

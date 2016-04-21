@@ -12199,14 +12199,19 @@ html.js fieldset.collapsed {
   min-width: 155px;
   padding: 5px 15px 5px 0;
 }
+/* line 196, ../scss/modules/_search.scss */
+#search-form #edit-advanced-search .fieldset-wrapper .form-item .chosen-container {
+  width: 65% !important;
+  max-width: 370px;
+}
 
-/* line 201, ../scss/modules/_search.scss */
+/* line 205, ../scss/modules/_search.scss */
 #views-exposed-form-library-search-page select {
   width: 100%;
   display: block;
 }
 @media only screen and (min-width: 768px) {
-  /* line 205, ../scss/modules/_search.scss */
+  /* line 209, ../scss/modules/_search.scss */
   #views-exposed-form-library-search-page #edit-im-field-doc-country-wrapper,
   #views-exposed-form-library-search-page #edit-sm-field-doc-provider-wrapper {
     float: left;
@@ -12214,7 +12219,7 @@ html.js fieldset.collapsed {
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 212, ../scss/modules/_search.scss */
+  /* line 216, ../scss/modules/_search.scss */
   #views-exposed-form-library-search-page #edit-im-field-doc-subject-wrapper,
   #views-exposed-form-library-search-page #edit-im-field-doc-type-wrapper,
   #views-exposed-form-library-search-page #edit-ss-language-wrapper {
@@ -12223,46 +12228,46 @@ html.js fieldset.collapsed {
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 220, ../scss/modules/_search.scss */
+  /* line 224, ../scss/modules/_search.scss */
   #views-exposed-form-library-search-page #edit-im-field-doc-subject-wrapper {
     padding-left: 1em;
     padding-right: 0;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 226, ../scss/modules/_search.scss */
+  /* line 230, ../scss/modules/_search.scss */
   #views-exposed-form-library-search-page #edit-im-field-doc-type-wrapper {
     padding-left: 1em;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 231, ../scss/modules/_search.scss */
+  /* line 235, ../scss/modules/_search.scss */
   #views-exposed-form-library-search-page #edit-im-field-doc-country-wrapper {
     padding-left: 1em;
     padding-right: 0;
   }
 }
-/* line 238, ../scss/modules/_search.scss */
+/* line 242, ../scss/modules/_search.scss */
 #views-exposed-form-library-search-page .views-exposed-widgets {
   position: relative;
 }
-/* line 241, ../scss/modules/_search.scss */
+/* line 245, ../scss/modules/_search.scss */
 #views-exposed-form-library-search-page #edit-keyword-wrapper {
   width: 100%;
   padding-right: 120px;
 }
-/* line 244, ../scss/modules/_search.scss */
+/* line 248, ../scss/modules/_search.scss */
 #views-exposed-form-library-search-page #edit-keyword-wrapper .form-text {
   width: 100%;
 }
-/* line 248, ../scss/modules/_search.scss */
+/* line 252, ../scss/modules/_search.scss */
 #views-exposed-form-library-search-page .views-submit-button {
   position: absolute;
   top: 0;
   right: 0;
   padding-right: 0;
 }
-/* line 253, ../scss/modules/_search.scss */
+/* line 257, ../scss/modules/_search.scss */
 #views-exposed-form-library-search-page .views-submit-button .ajax-progress {
   position: absolute;
   top: 0;

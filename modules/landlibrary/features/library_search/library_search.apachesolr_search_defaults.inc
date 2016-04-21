@@ -16,7 +16,7 @@ function library_search_apachesolr_search_default_searchers() {
   $searcher->page_id = 'library_search';
   $searcher->label = 'Library Search';
   $searcher->description = '';
-  $searcher->search_path = 'library/search';
+  $searcher->search_path = 'search/library';
   $searcher->page_title = '%value';
   $searcher->env_id = 'landlibrary_search';
   $searcher->settings = array(

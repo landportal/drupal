@@ -16,7 +16,7 @@ function landportal_search_apachesolr_search_default_searchers() {
   $searcher->page_id = 'core_search';
   $searcher->label = 'Search';
   $searcher->description = 'Land Portal site search';
-  $searcher->search_path = 'search/site';
+  $searcher->search_path = 'search/all';
   $searcher->page_title = '%terms';
   $searcher->env_id = 'solr';
   $searcher->settings = array(

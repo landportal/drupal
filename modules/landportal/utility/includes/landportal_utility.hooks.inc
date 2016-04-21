@@ -303,10 +303,57 @@ function landportal_utility_custom_page_search_form(&$form, &$form_state){
 }
 
 function landportal_utility_menu_breadcrumb_alter(&$active_trail, $item){
-  if((arg(0) == 'search' && arg(1) == 'site') || (arg(0) == 'library' && arg(1) == 'search')){
+  if((arg(0) == 'search' && arg(1) == 'all') || (arg(0) == 'search' && arg(1) == 'library')){
     if(count($active_trail)>3){
       array_pop($active_trail);
       array_pop($active_trail);
     }
+  }
+}
+
+function landportal_utility_form_user_register_form_alter(&$form, &$form_state,$form_id){
+  $form['lang_wrap']=array('#type'=>'fieldset','#weight'=>0.1);
+  $form['lang_wrap']['arab_lang']=array(
+    '#type' => 'checkbox',
+    '#title'=>t('Arabic'),
+  );
+  $form['lang_wrap']['eng_lang']=array(
+    '#type' => 'checkbox',
+    '#title'=>t('English'),
+    '#default_value'=>1,
+  );
+  $form['lang_wrap']['fr_lang']=array(
+    '#type' => 'checkbox',
+    '#title'=>t('French'),
+  );
+  $form['lang_wrap']['sp_lang']=array(
+    '#type' => 'checkbox',
+    '#title'=>t('Spanish'),
+  );
+  $form['#submit'][]='landportal_utility_update_mailchimp_user';
+}
+
+function landportal_utility_update_mailchimp_user(&$form, &$form_state){
+  $values=$form_state['values'];
+  $user=user_load($form_state['values']['uid']);
+  if($values['arab_lang']==1){
+    $user->field_arabic_language['und'][0]['value']=1;
+  }
+  if($values['eng_lang']==1){
+    $user->field_english_language['und'][0]['value']=1;
+  }
+  if($values['fr_lang']==1){
+    $user->field_french_language['und'][0]['value']=1;
+  }
+  if($values['sp_lang']==1){
+    $user->field_spanish_language['und'][0]['value']=1;
+  }
+  user_save($user);
+
+  $lists = mailchimp_lists_get_available_lists($user);
+  $mcapi = mailchimp_get_api_object();
+  foreach ($lists as $list){
+    $mergevars = _mailchimp_lists_build_update_mergevars($user, $list, $user->mail, $user->mail);
+    mailchimp_lists_execute_change('update', $list, $user->mail, $mergevars, NULL, $mcapi);
   }
 }
