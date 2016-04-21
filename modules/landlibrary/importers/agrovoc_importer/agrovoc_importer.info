@@ -1,0 +1,15 @@
+name = Agrovoc Importer
+description = Import Agrovoc Land terms(def,labels,translations,URI in Landportal Topics taxonomy from a sparql query(result in a csv format).
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = feeds
+dependencies[] = feeds_et
+dependencies[] = feeds_tamper
+dependencies[] = feeds_xpathparser
+dependencies[] = taxonomy
+features[ctools][] = feeds:feeds_importer_default:1
+features[ctools][] = feeds_tamper:feeds_tamper_default:2
+features[features_api][] = api:2
+features[feeds_importer][] = topic_taxonomy_land_terms_importer

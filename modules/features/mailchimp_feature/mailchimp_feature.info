@@ -13,7 +13,6 @@ dependencies[] = filter
 dependencies[] = mailchimp
 dependencies[] = mailchimp_campaign
 dependencies[] = mailchimp_lists
-dependencies[] = mailchimp_seg_custom
 dependencies[] = mailchimp_user_list
 dependencies[] = media_wysiwyg
 dependencies[] = restws
