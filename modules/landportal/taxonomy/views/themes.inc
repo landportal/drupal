@@ -20,14 +20,16 @@ $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '25';
-$handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['row_class_special'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'entity';
+$handler->display->display_options['style_plugin'] = 'grid';
+$handler->display->display_options['row_plugin'] = 'fields';
 /* Field: Taxonomy term: Rendered Taxonomy term */
 $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
 $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
 $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
 $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
 /* Filter criterion: Taxonomy vocabulary: Machine name */
@@ -49,6 +51,5 @@ $translatables['themes'] = array(
   t('Sort by'),
   t('Asc'),
   t('Desc'),
-  t('Rendered Taxonomy term'),
   t('Block'),
 );
