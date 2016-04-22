@@ -1,0 +1,9 @@
+#user-profile-form .group-landportal-newsletter,
+#user-profile-form .group-bulletin{
+  display:none;
+}
+
+#mailchimp-lists-user-subscribe-form fieldset{
+  padding-left:20px;
+  margin-top:-15px;
+}

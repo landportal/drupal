@@ -348,8 +348,145 @@ function landportal_utility_update_mailchimp_user(&$form, &$form_state){
   if($values['sp_lang']==1){
     $user->field_spanish_language['und'][0]['value']=1;
   }
+
   user_save($user);
 
+  $lists = mailchimp_lists_get_available_lists($user);
+  $mcapi = mailchimp_get_api_object();
+  foreach ($lists as $list){
+    $mergevars = _mailchimp_lists_build_update_mergevars($user, $list, $user->mail, $user->mail);
+    mailchimp_lists_execute_change('update', $list, $user->mail, $mergevars, NULL, $mcapi);
+  }
+}
+
+function landportal_utility_form_mailchimp_lists_user_subscribe_form_alter(&$form, &$form_state,$form_id){
+  drupal_add_js(drupal_get_path('module', 'landportal_utility') . '/js/main.js');
+  drupal_add_css(drupal_get_path('module', 'landportal_utility') . '/css/admin.css');
+  $user=$form['account']['#value'];
+  $default = field_get_items("user", $user, "field_legend_arabic_language");
+  $form['mailchimp_lists']['bull_lang_wrap']=array('#type'=>'fieldset','#weight'=>0);
+  $form['mailchimp_lists']['bull_lang_wrap']['bull_arab_lang']=array(
+    '#type' => 'checkbox',
+    '#title'=>t('Arabic'),
+    '#default_value'=>$default[0]['value'],
+  );
+  $default = field_get_items("user", $user, "field_legend_english_language");
+  $form['mailchimp_lists']['bull_lang_wrap']['bull_eng_lang']=array(
+    '#type' => 'checkbox',
+    '#title'=>t('English'),
+    '#default_value'=>$default[0]['value'],
+  );
+  $default = field_get_items("user", $user, "field_legend_french_language");
+  $form['mailchimp_lists']['bull_lang_wrap']['bull_fr_lang']=array(
+    '#type' => 'checkbox',
+    '#title'=>t('French'),
+   '#default_value'=>$default[0]['value'],
+  );
+  $default = field_get_items("user", $user, "field_legend_spanish_language");
+  $form['mailchimp_lists']['bull_lang_wrap']['bull_sp_lang']=array(
+    '#type' => 'checkbox',
+    '#title'=>t('Spanish'),
+    '#default_value'=>$default[0]['value'],
+  );
+
+  $default = field_get_items("user", $user, "field_arabic_language");
+  $form['mailchimp_lists']['lang_wrap']=array('#type'=>'fieldset','#weight'=>0.1);
+  $form['mailchimp_lists']['lang_wrap']['arab_lang']=array(
+    '#type' => 'checkbox',
+    '#title'=>t('Arabic'),
+    '#default_value'=>$default[0]['value'],
+  );
+  $default = field_get_items("user", $user, "field_english_language");
+  $form['mailchimp_lists']['lang_wrap']['eng_lang']=array(
+    '#type' => 'checkbox',
+    '#title'=>t('English'),
+    '#default_value'=>$default[0]['value'],
+  );
+  $default = field_get_items("user", $user, "field_french_language");
+  $form['mailchimp_lists']['lang_wrap']['fr_lang']=array(
+    '#type' => 'checkbox',
+    '#title'=>t('French'),
+    '#default_value'=>$default[0]['value'],
+  );
+  $default = field_get_items("user", $user, "field_spanish_language");
+  $form['mailchimp_lists']['lang_wrap']['sp_lang']=array(
+    '#type' => 'checkbox',
+    '#title'=>t('Spanish'),
+    '#default_value'=>$default[0]['value'],
+  );
+  $form['#submit'][0]='landportal_utility_user_subscribe_form_submit';
+  $form['#submit'][]='landportal_utility_update_mailchimp_newsletter';
+}
+function landportal_utility_form_user_profile_form_alter(&$form, &$form_state,$form_id){
+  drupal_add_css(drupal_get_path('module', 'landportal_utility') . '/css/admin.css');
+}
+
+function landportal_utility_user_subscribe_form_submit($form, &$form_state) {
+  $account = $form_state['values']['account'];
+  unset($form_state['values']['mailchimp_lists']['bull_lang_wrap']);
+  unset($form_state['values']['mailchimp_lists']['lang_wrap']);
+  mailchimp_lists_process_subscribe_form_choices($form_state['values']['mailchimp_lists'], $account);
+}
+
+
+function landportal_utility_update_mailchimp_newsletter(&$form, &$form_state){
+  $values=$form_state['input'];
+  $user=user_load($form_state['values']['account']->uid);
+  if($form_state['input']['mailchimp_lists']['mailchimp_land_portal_news_digest']['subscribe'] == 1 ){
+    if($values['mailchimp_lists']['lang_wrap']['arab_lang']==1){
+      $user->field_arabic_language['und'][0]['value']=1;
+    }
+    else{
+      $user->field_arabic_language['und'][0]['value']=0;
+    }
+    if($values['mailchimp_lists']['lang_wrap']['eng_lang']==1){
+      $user->field_english_language['und'][0]['value']=1;
+    }
+    else{
+      $user->field_english_language['und'][0]['value']=0;
+    }
+    if($values['mailchimp_lists']['lang_wrap']['fr_lang']==1){
+      $user->field_french_language['und'][0]['value']=1;
+    }
+    else{
+      $user->field_french_language['und'][0]['value']=0;
+    }
+    if($values['mailchimp_lists']['lang_wrap']['sp_lang']==1){
+      $user->field_spanish_language['und'][0]['value']=1;
+    }
+    else{
+      $user->field_spanish_language['und'][0]['value']=0;
+    }
+  }
+  if($form_state['input']['mailchimp_lists']['mailchimp_legend_bulletin']['subscribe'] == 1 ){
+    if($values['mailchimp_lists']['bull_lang_wrap']['bull_arab_lang']==1){
+      $user->field_legend_arabic_language['und'][0]['value']=1;
+    }
+    else{
+      $user->field_legend_arabic_language['und'][0]['value']=0;
+    }
+    if($values['mailchimp_lists']['bull_lang_wrap']['bull_eng_lang']==1){
+      $user->field_legend_english_language['und'][0]['value']=1;
+    }
+    else{
+      $user->field_legend_english_language['und'][0]['value']=0;
+    }
+    if($values['mailchimp_lists']['bull_lang_wrap']['bull_fr_lang']==1){
+      $user->field_legend_french_language['und'][0]['value']=1;
+    }
+    else{
+      $user->field_legend_french_language['und'][0]['value']=0;
+    }
+    if($values['mailchimp_lists']['bull_lang_wrap']['bull_sp_lang']==1){
+      $user->field_legend_spanish_language['und'][0]['value']=1;
+    }
+    else{
+      $user->field_legend_spanish_language['und'][0]['value']=0;
+    }
+  }
+
+
+  user_save($user);
   $lists = mailchimp_lists_get_available_lists($user);
   $mcapi = mailchimp_get_api_object();
   foreach ($lists as $list){

@@ -11,6 +11,9 @@ function mailchimp_feature_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "context" && $api == "context") {
     return array("version" => "3");
   }
+  if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -115,9 +118,27 @@ function mailchimp_feature_default_mailchimp_list() {
         "30037204" : 30037204,
         "1" : 1
       },
-      "mergefields" : { "EMAIL" : "mail", "FNAME" : "", "LNAME" : "", "MMERGE3" : "" },
-      "mergefields_display" : { "EMAIL" : true, "FNAME" : 1, "LNAME" : 1, "MMERGE3" : 1 },
-      "doublein" : 1,
+      "mergefields" : {
+        "EMAIL" : "mail",
+        "FNAME" : "",
+        "LNAME" : "",
+        "MMERGE3" : "",
+        "MMERGE4" : "field-legend-arabic-language",
+        "MMERGE5" : "field-legend-english-language",
+        "MMERGE6" : "field-legend-french-language",
+        "MMERGE7" : "field-legend-spanish-language"
+      },
+      "mergefields_display" : {
+        "EMAIL" : true,
+        "FNAME" : 1,
+        "LNAME" : 1,
+        "MMERGE3" : 1,
+        "MMERGE4" : 1,
+        "MMERGE5" : 1,
+        "MMERGE6" : 1,
+        "MMERGE7" : 1
+      },
+      "doublein" : 0,
       "show_register_form" : 0,
       "default_register_form_optin" : 0,
       "show_account_form" : 1,
