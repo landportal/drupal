@@ -363,8 +363,9 @@ function landportal_utility_form_mailchimp_lists_user_subscribe_form_alter(&$for
   drupal_add_js(drupal_get_path('module', 'landportal_utility') . '/js/main.js');
   drupal_add_css(drupal_get_path('module', 'landportal_utility') . '/css/admin.css');
   $user=$form['account']['#value'];
+  $form['mailchimp_lists']['mailchimp_legend_bulletin']['#weight']=10;
   $default = field_get_items("user", $user, "field_legend_arabic_language");
-  $form['mailchimp_lists']['bull_lang_wrap']=array('#type'=>'fieldset','#weight'=>0);
+  $form['mailchimp_lists']['bull_lang_wrap']=array('#type'=>'fieldset','#weight'=>11);
   $form['mailchimp_lists']['bull_lang_wrap']['bull_arab_lang']=array(
     '#type' => 'checkbox',
     '#title'=>t('Arabic'),
@@ -389,8 +390,9 @@ function landportal_utility_form_mailchimp_lists_user_subscribe_form_alter(&$for
     '#default_value'=>$default[0]['value'],
   );
 
+  $form['mailchimp_lists']['mailchimp_land_portal_news_digest']['#weight']=12;
   $default = field_get_items("user", $user, "field_arabic_language");
-  $form['mailchimp_lists']['lang_wrap']=array('#type'=>'fieldset','#weight'=>0.1);
+  $form['mailchimp_lists']['lang_wrap']=array('#type'=>'fieldset','#weight'=>13);
   $form['mailchimp_lists']['lang_wrap']['arab_lang']=array(
     '#type' => 'checkbox',
     '#title'=>t('Arabic'),
