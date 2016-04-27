@@ -292,7 +292,6 @@ $translatables['admin_views_taxonomy_terms_topics'] = array(
   t('Displaying @start - @end of @total'),
   t('field_related_topics'),
   t('Parent'),
-  t('Translations'),
   t('TID'),
   t('.'),
   t(','),
@@ -300,11 +299,20 @@ $translatables['admin_views_taxonomy_terms_topics'] = array(
   t('Taxonomy term'),
   t('Name'),
   t('Description'),
+  t('EN'),
+  t('[name_field_et] - [name_field_et-value]'),
+  t('FR'),
+  t('ES'),
+  t('PT'),
+  t('Translations'),
+  t('EN: [name_field_et]
+FR: [name_field_et_1]
+ES: [name_field_et_2]
+PT: [name_field_et_3]
+'),
   t('References'),
   t('linkedURI'),
   t('Links'),
   t('- Choose an operation -'),
-  t('Language'),
-  t('Label'),
   t('System'),
 );
