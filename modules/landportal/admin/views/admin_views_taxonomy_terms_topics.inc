@@ -14,7 +14,6 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['title'] = 'Topics terms management';
 $handler->display->display_options['use_more_always'] = FALSE;
-$handler->display->display_options['group_by'] = TRUE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['access']['perm'] = 'edit terms in 5';
 $handler->display->display_options['cache']['type'] = 'none';
@@ -109,15 +108,6 @@ $handler->display->display_options['relationships']['reverse_field_related_topic
 $handler->display->display_options['relationships']['parent']['id'] = 'parent';
 $handler->display->display_options['relationships']['parent']['table'] = 'taxonomy_term_hierarchy';
 $handler->display->display_options['relationships']['parent']['field'] = 'parent';
-/* Field: Draggableviews: Taxonomy term */
-$handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
-$handler->display->display_options['fields']['draggableviews']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
-$handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
-$handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
-$handler->display->display_options['fields']['draggableviews']['draggableviews']['hierarchy_handler'] = 'draggableviews_hierarchy_handler_native';
-$handler->display->display_options['fields']['draggableviews']['draggableviews']['save_button_label'] = 'Save order';
-$handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
 /* Field: Taxonomy term: Term ID */
 $handler->display->display_options['fields']['tid']['id'] = 'tid';
 $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
@@ -131,6 +121,15 @@ $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['relationship'] = 'parent';
 $handler->display->display_options['fields']['field_id']['label'] = 'PID';
 $handler->display->display_options['fields']['field_id']['exclude'] = TRUE;
+/* Field: Draggableviews: Taxonomy term */
+$handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+$handler->display->display_options['fields']['draggableviews']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+$handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
+$handler->display->display_options['fields']['draggableviews']['draggableviews']['hierarchy_handler'] = 'draggableviews_hierarchy_handler_native';
+$handler->display->display_options['fields']['draggableviews']['draggableviews']['save_button_label'] = 'Save order';
+$handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
 /* Field: Taxonomy term: Name */
 $handler->display->display_options['fields']['name']['id'] = 'name';
 $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
@@ -138,23 +137,67 @@ $handler->display->display_options['fields']['name']['field'] = 'name';
 $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-/* Field: Taxonomy term: Term description */
-$handler->display->display_options['fields']['description']['id'] = 'description';
-$handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['fields']['description']['field'] = 'description';
-$handler->display->display_options['fields']['description']['label'] = 'Description';
-/* Field: COUNT(DISTINCT Content: Nid) */
+/* Field: Taxonomy term: Description */
+$handler->display->display_options['fields']['description_field']['id'] = 'description_field';
+$handler->display->display_options['fields']['description_field']['table'] = 'field_data_description_field';
+$handler->display->display_options['fields']['description_field']['field'] = 'description_field';
+$handler->display->display_options['fields']['description_field']['link_to_entity'] = 0;
+/* Field: Entity translation: Name: translated */
+$handler->display->display_options['fields']['name_field_et']['id'] = 'name_field_et';
+$handler->display->display_options['fields']['name_field_et']['table'] = 'field_data_name_field';
+$handler->display->display_options['fields']['name_field_et']['field'] = 'name_field_et';
+$handler->display->display_options['fields']['name_field_et']['label'] = 'EN';
+$handler->display->display_options['fields']['name_field_et']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name_field_et']['alter']['text'] = '[name_field_et] - [name_field_et-value]';
+$handler->display->display_options['fields']['name_field_et']['language'] = 'en';
+/* Field: Entity translation: Name: translated */
+$handler->display->display_options['fields']['name_field_et_1']['id'] = 'name_field_et_1';
+$handler->display->display_options['fields']['name_field_et_1']['table'] = 'field_data_name_field';
+$handler->display->display_options['fields']['name_field_et_1']['field'] = 'name_field_et';
+$handler->display->display_options['fields']['name_field_et_1']['label'] = 'FR';
+$handler->display->display_options['fields']['name_field_et_1']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name_field_et_1']['language'] = 'fr';
+/* Field: Entity translation: Name: translated */
+$handler->display->display_options['fields']['name_field_et_2']['id'] = 'name_field_et_2';
+$handler->display->display_options['fields']['name_field_et_2']['table'] = 'field_data_name_field';
+$handler->display->display_options['fields']['name_field_et_2']['field'] = 'name_field_et';
+$handler->display->display_options['fields']['name_field_et_2']['label'] = 'ES';
+$handler->display->display_options['fields']['name_field_et_2']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name_field_et_2']['language'] = 'es';
+/* Field: Entity translation: Name: translated */
+$handler->display->display_options['fields']['name_field_et_3']['id'] = 'name_field_et_3';
+$handler->display->display_options['fields']['name_field_et_3']['table'] = 'field_data_name_field';
+$handler->display->display_options['fields']['name_field_et_3']['field'] = 'name_field_et';
+$handler->display->display_options['fields']['name_field_et_3']['label'] = 'PT';
+$handler->display->display_options['fields']['name_field_et_3']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name_field_et_3']['language'] = 'pt';
+/* Field: Entity translation: Name: translated */
+$handler->display->display_options['fields']['name_field_et_4']['id'] = 'name_field_et_4';
+$handler->display->display_options['fields']['name_field_et_4']['table'] = 'field_data_name_field';
+$handler->display->display_options['fields']['name_field_et_4']['field'] = 'name_field_et';
+$handler->display->display_options['fields']['name_field_et_4']['label'] = 'Translations';
+$handler->display->display_options['fields']['name_field_et_4']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['name_field_et_4']['alter']['text'] = 'EN: [name_field_et]
+FR: [name_field_et_1]
+ES: [name_field_et_2]
+PT: [name_field_et_3]
+';
+$handler->display->display_options['fields']['name_field_et_4']['alter']['nl2br'] = TRUE;
+/* Field: Content: Nid */
 $handler->display->display_options['fields']['nid']['id'] = 'nid';
 $handler->display->display_options['fields']['nid']['table'] = 'node';
 $handler->display->display_options['fields']['nid']['field'] = 'nid';
 $handler->display->display_options['fields']['nid']['relationship'] = 'reverse_field_related_topics_node';
 $handler->display->display_options['fields']['nid']['group_type'] = 'count_distinct';
 $handler->display->display_options['fields']['nid']['label'] = 'References';
-/* Field: Field: Language */
-$handler->display->display_options['fields']['field_language']['id'] = 'field_language';
-$handler->display->display_options['fields']['field_language']['table'] = 'field_data_field_language';
-$handler->display->display_options['fields']['field_language']['field'] = 'field_language';
-$handler->display->display_options['fields']['field_language']['label'] = 'Lang';
+/* Field: Taxonomy term: AGROVOC URI */
+$handler->display->display_options['fields']['field_agrovoc_uri']['id'] = 'field_agrovoc_uri';
+$handler->display->display_options['fields']['field_agrovoc_uri']['table'] = 'field_data_field_agrovoc_uri';
+$handler->display->display_options['fields']['field_agrovoc_uri']['field'] = 'field_agrovoc_uri';
+$handler->display->display_options['fields']['field_agrovoc_uri']['label'] = 'linkedURI';
+$handler->display->display_options['fields']['field_agrovoc_uri']['click_sort_column'] = 'url';
+$handler->display->display_options['fields']['field_agrovoc_uri']['type'] = 'link_url';
+$handler->display->display_options['fields']['field_agrovoc_uri']['group_column'] = 'entity_id';
 /* Field: Taxonomy term: Term edit link */
 $handler->display->display_options['fields']['edit_term']['id'] = 'edit_term';
 $handler->display->display_options['fields']['edit_term']['table'] = 'taxonomy_term_data';
@@ -249,16 +292,19 @@ $translatables['admin_views_taxonomy_terms_topics'] = array(
   t('Displaying @start - @end of @total'),
   t('field_related_topics'),
   t('Parent'),
-  t('Taxonomy term'),
+  t('Translations'),
   t('TID'),
   t('.'),
   t(','),
   t('PID'),
+  t('Taxonomy term'),
   t('Name'),
   t('Description'),
   t('References'),
-  t('Lang'),
+  t('linkedURI'),
   t('Links'),
   t('- Choose an operation -'),
+  t('Language'),
+  t('Label'),
   t('System'),
 );
