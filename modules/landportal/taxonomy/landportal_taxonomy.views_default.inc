@@ -6,7 +6,9 @@
 function landportal_taxonomy_views_default_views() {
     $export = array();
     $views = array(
-        'domains', 'themes'
+        'concepts',
+        'domains',
+        'themes'
     );
     foreach ($views as $view_name) {
         include 'views/'.$view_name . '.inc';
