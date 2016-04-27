@@ -33,6 +33,7 @@ $handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
 $handler->display->display_options['style_plugin'] = 'grid';
 $handler->display->display_options['style_options']['uses_fields'] = TRUE;
+$handler->display->display_options['style_options']['columns'] = '8';
 $handler->display->display_options['row_plugin'] = 'fields';
 /* Relationship: Entity Reference: Referencing entity */
 $handler->display->display_options['relationships']['reverse_field_doc_provider_node']['id'] = 'reverse_field_doc_provider_node';
@@ -47,7 +48,7 @@ $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Content: Rendered Node */
+/* Field: Content: Rendered Content */
 $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
 $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_node';
 $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
@@ -215,6 +216,40 @@ $handler->display->display_options['defaults']['arguments'] = FALSE;
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block_1');
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'grid';
+$handler->display->display_options['style_options']['uses_fields'] = TRUE;
+$handler->display->display_options['style_options']['columns'] = '8';
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Title */
+$handler->display->display_options['sorts']['title']['id'] = 'title';
+$handler->display->display_options['sorts']['title']['table'] = 'node';
+$handler->display->display_options['sorts']['title']['field'] = 'title';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'organization' => 'organization',
+);
+/* Filter criterion: Field: Image (field_image:fid) */
+$handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
+$handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
+$handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
+$handler->display->display_options['filters']['field_image_fid']['operator'] = 'not empty';
 $handler->display->display_options['block_description'] = 'Sources Providers';
 $translatables['organizations_library'] = array(
   t('Master'),
