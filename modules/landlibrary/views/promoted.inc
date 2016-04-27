@@ -56,6 +56,11 @@ $handler->display->display_options['fields']['field_doc_thumb']['settings'] = ar
   'image_style' => 'featured',
   'image_link' => 'content',
 );
+/* Sort criterion: Content: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
 /* Sort criterion: Content: Updated date */
 $handler->display->display_options['sorts']['changed']['id'] = 'changed';
 $handler->display->display_options['sorts']['changed']['table'] = 'node';
@@ -80,12 +85,20 @@ $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
   'landlibrary_resource' => 'landlibrary_resource',
 );
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+);
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page_1');
+$handler->display->display_options['enabled'] = FALSE;
 $handler->display->display_options['path'] = 'library';
 $translatables['landlibrary_promoted'] = array(
   t('Master'),
