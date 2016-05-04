@@ -109,11 +109,7 @@ function landdebate_field_default_field_instances() {
   // Exported field_instance: 'node-blog_post-field_geographical_focus'.
   $field_instances['node-blog_post-field_geographical_focus'] = array(
     'bundle' => 'blog_post',
-    'default_value' => array(
-      0 => array(
-        'tid' => 1542,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -122,28 +118,21 @@ function landdebate_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
-      ),
-      'search_result' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -158,14 +147,14 @@ function landdebate_field_default_field_instances() {
       'active' => 1,
       'module' => 'synonyms',
       'settings' => array(
-        'auto_creation' => 1,
+        'auto_creation' => 0,
         'size' => 60,
-        'suggest_only_unique' => FALSE,
+        'suggest_only_unique' => 0,
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'synonyms_autocomplete',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -566,11 +555,7 @@ function landdebate_field_default_field_instances() {
   // Exported field_instance: 'node-debate-field_geographical_focus'.
   $field_instances['node-debate-field_geographical_focus'] = array(
     'bundle' => 'debate',
-    'default_value' => array(
-      0 => array(
-        'tid' => 1530,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -579,21 +564,21 @@ function landdebate_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -608,9 +593,9 @@ function landdebate_field_default_field_instances() {
       'active' => 1,
       'module' => 'synonyms',
       'settings' => array(
-        'auto_creation' => 1,
+        'auto_creation' => 0,
         'size' => 60,
-        'suggest_only_unique' => FALSE,
+        'suggest_only_unique' => 0,
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
@@ -1043,11 +1028,7 @@ If it is only a one day event, the end date should be the same as the starting d
   // Exported field_instance: 'node-event-field_geographical_focus'.
   $field_instances['node-event-field_geographical_focus'] = array(
     'bundle' => 'event',
-    'default_value' => array(
-      0 => array(
-        'tid' => 543,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1085,9 +1066,9 @@ If it is only a one day event, the end date should be the same as the starting d
       'active' => 1,
       'module' => 'synonyms',
       'settings' => array(
-        'auto_creation' => 1,
+        'auto_creation' => 0,
         'size' => 60,
-        'suggest_only_unique' => FALSE,
+        'suggest_only_unique' => 0,
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
@@ -1478,21 +1459,21 @@ If it is only a one day event, the end date should be the same as the starting d
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -1507,9 +1488,9 @@ If it is only a one day event, the end date should be the same as the starting d
       'active' => 1,
       'module' => 'synonyms',
       'settings' => array(
-        'auto_creation' => 1,
+        'auto_creation' => 0,
         'size' => 60,
-        'suggest_only_unique' => FALSE,
+        'suggest_only_unique' => 0,
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
@@ -1634,7 +1615,9 @@ If it is only a one day event, the end date should be the same as the starting d
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
       'type' => 'options_select',
       'weight' => 8,
     ),
