@@ -11492,8 +11492,8 @@ html.js fieldset.collapsed {
   float: right;
 }
 /* line 271, ../scss/modules/_library.scss */
-.field-name-field-doc-type a {
-  background-color: #F7A492;
+.field-name-field-doc-type .field-item a {
+  background-color: rgba(218, 116, 56, 0.45);
 }
 
 @media (min-width: 768px) {

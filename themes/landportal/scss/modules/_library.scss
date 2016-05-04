@@ -268,7 +268,7 @@ margin-bottom:10px;
 .field-name-field-doc-type {
     float: right;
     @extend .landportal-button-red;
-    a { background-color: #F7A492; }
+    .field-item a { background-color: rgba(218, 116, 56, 0.45); }
 }
 
 @media (min-width:768px) {
