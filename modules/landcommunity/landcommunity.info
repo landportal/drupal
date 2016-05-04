@@ -169,6 +169,7 @@ features_exclude[taxonomy][organization_relation] = organization_relation
 features_exclude[taxonomy][interests] = interests
 features_exclude[taxonomy][regions] = regions
 features_exclude[dependencies][landlibrary] = landlibrary
+features_exclude[dependencies][landlibrary_resource] = landlibrary_resource
 features_exclude[variable][pathauto_taxonomy_term_organization_relation_pattern] = pathauto_taxonomy_term_organization_relation_pattern
 features_exclude[field_base][field_interests] = field_interests
 features_exclude[field_instance][profile2-main-field_interests] = profile2-main-field_interests

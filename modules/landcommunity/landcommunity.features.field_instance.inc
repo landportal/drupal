@@ -523,7 +523,14 @@ function landcommunity_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 1,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -535,7 +542,7 @@ function landcommunity_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_related_topics',
-    'label' => 'Related topics',
+    'label' => 'Related concepts',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -552,7 +559,7 @@ function landcommunity_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'synonyms_autocomplete',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -827,7 +834,7 @@ function landcommunity_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'profile2',
@@ -1122,16 +1129,30 @@ function landcommunity_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'profile2',
     'field_name' => 'field_related_topics',
-    'label' => 'Related topics',
+    'label' => 'Related concepts',
     'pcp_tag' => 1,
     'required' => 1,
     'settings' => array(
@@ -1142,10 +1163,14 @@ function landcommunity_field_default_field_instances() {
       'active' => 1,
       'module' => 'synonyms',
       'settings' => array(
-        'sort' => 'weight',
+        'auto_creation' => 0,
+        'size' => 60,
+        'suggest_only_unique' => 0,
+        'suggestion_size' => 10,
+        'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
-      'type' => 'synonyms_select',
-      'weight' => 4,
+      'type' => 'synonyms_autocomplete',
+      'weight' => 5,
     ),
   );
 
@@ -1387,7 +1412,7 @@ function landcommunity_field_default_field_instances() {
   t('People');
   t('People affiliated to this organization (require a Land Portal account)');
   t('Position');
-  t('Related topics');
+  t('Related concepts');
   t('Tell us where you are based.');
   t('Title');
   t('Website');

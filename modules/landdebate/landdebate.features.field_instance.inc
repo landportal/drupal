@@ -280,7 +280,7 @@ function landdebate_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_related_topics',
-    'label' => 'Related topics',
+    'label' => 'Related concepts',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -696,7 +696,14 @@ function landdebate_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 1,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -708,7 +715,7 @@ function landdebate_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_related_topics',
-    'label' => 'Related topics',
+    'label' => 'Related concepts',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -725,7 +732,7 @@ function landdebate_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'synonyms_autocomplete',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -1233,7 +1240,14 @@ If it is only a one day event, the end date should be the same as the starting d
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 0,
+        'weight' => 1,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1245,7 +1259,7 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
     'entity_type' => 'node',
     'field_name' => 'field_related_topics',
-    'label' => 'Related topics',
+    'label' => 'Related concepts',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1262,7 +1276,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'synonyms_autocomplete',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -1708,6 +1722,13 @@ If it is only a one day event, the end date should be the same as the starting d
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
       ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
@@ -1718,7 +1739,7 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
     'entity_type' => 'node',
     'field_name' => 'field_related_topics',
-    'label' => 'Related topics',
+    'label' => 'Related concepts',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1735,7 +1756,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'synonyms_autocomplete',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -1754,7 +1775,7 @@ If it is only a one day event, the end date should be the same as the starting d
   t('Image');
   t('Language');
   t('Official page');
-  t('Related topics');
+  t('Related concepts');
   t('Source');
   t('Status');
   t('The date in which the debate will be open to participate.');
