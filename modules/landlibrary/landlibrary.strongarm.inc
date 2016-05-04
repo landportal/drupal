@@ -141,6 +141,12 @@ function landlibrary_strongarm() {
       'library_source' => array(
         'custom_settings' => FALSE,
       ),
+      'listing' => array(
+        'custom_settings' => TRUE,
+      ),
+      'organization_resources' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
