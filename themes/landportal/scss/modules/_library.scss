@@ -218,9 +218,6 @@ margin-bottom:10px;
         display: inline-block;
         margin-right: 1em;
     }
-    .field-name-field-doc-type {
-        @extend .landportal-button-red;
-    }
 }
 
 .view-landlibrary-promoted {
@@ -268,6 +265,12 @@ margin-bottom:10px;
     }
 }
 
+.field-name-field-doc-type {
+    float: right;
+    @extend .landportal-button-red;
+    a { background-color: #F7A492; }
+}
+
 @media (min-width:768px) {
 .view-landlibrary-promoted .views-row {
     position: relative;
@@ -276,7 +279,9 @@ margin-bottom:10px;
   }
 }
 
+
 .node-landlibrary-resource.node-teaser.ds-2col-fluid {
+    padding: .5em 0;
     .group-left { width: 30%; }
     .group-right { width: 70%; }
 }

@@ -9204,7 +9204,7 @@ button.close {
 }
 
 /* line 19, ../scss/modules/_buttons.scss */
-.landportal-button-red .field-item a, .page-library .field-name-field-doc-type .field-item a {
+.landportal-button-red .field-item a, .field-name-field-doc-type .field-item a {
   padding: .5em;
   font-size: 1.2em;
   background-color: #91594d;
@@ -11439,22 +11439,22 @@ html.js fieldset.collapsed {
   margin-right: 1em;
 }
 
-/* line 226, ../scss/modules/_library.scss */
+/* line 223, ../scss/modules/_library.scss */
 .view-landlibrary-promoted {
   margin: 0;
   margin-bottom: 50px;
   width: 100%;
 }
-/* line 231, ../scss/modules/_library.scss */
+/* line 228, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-row {
   position: relative;
 }
-/* line 233, ../scss/modules/_library.scss */
+/* line 230, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-row a {
   text-decoration: none;
   color: white;
 }
-/* line 237, ../scss/modules/_library.scss */
+/* line 234, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-row .views-field-title {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -11462,44 +11462,57 @@ html.js fieldset.collapsed {
   padding: 0.5em 1em;
   bottom: 0;
 }
-/* line 245, ../scss/modules/_library.scss */
+/* line 242, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-row .views-field-doc-thumb {
   height: 200px;
   overflow: hidden;
   position: relative;
 }
-/* line 251, ../scss/modules/_library.scss */
+/* line 248, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-row img {
   width: 100%;
   height: auto;
 }
-/* line 257, ../scss/modules/_library.scss */
+/* line 254, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-field-field-image {
   width: 100%;
   padding: 5px 5px 5px 5px;
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
 }
-/* line 263, ../scss/modules/_library.scss */
+/* line 260, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-field-field-image img {
   max-height: 30px;
   max-width: 80px;
   float: right;
 }
 
+/* line 268, ../scss/modules/_library.scss */
+.field-name-field-doc-type {
+  float: right;
+}
+/* line 271, ../scss/modules/_library.scss */
+.field-name-field-doc-type a {
+  background-color: #F7A492;
+}
+
 @media (min-width: 768px) {
-  /* line 272, ../scss/modules/_library.scss */
+  /* line 275, ../scss/modules/_library.scss */
   .view-landlibrary-promoted .views-row {
     position: relative;
     float: left;
     width: 25%;
   }
 }
-/* line 280, ../scss/modules/_library.scss */
+/* line 283, ../scss/modules/_library.scss */
+.node-landlibrary-resource.node-teaser.ds-2col-fluid {
+  padding: .5em 0;
+}
+/* line 285, ../scss/modules/_library.scss */
 .node-landlibrary-resource.node-teaser.ds-2col-fluid .group-left {
   width: 30%;
 }
-/* line 281, ../scss/modules/_library.scss */
+/* line 286, ../scss/modules/_library.scss */
 .node-landlibrary-resource.node-teaser.ds-2col-fluid .group-right {
   width: 70%;
 }
