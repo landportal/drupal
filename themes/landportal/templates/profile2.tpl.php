@@ -15,8 +15,6 @@ hide($content['field_image']);
 hide($content['field_title']);
 hide($content['field_firstname']);
 hide($content['field_lastname']);
-
-//dpm($variables);
 ?>
 
 <article class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
@@ -24,7 +22,7 @@ hide($content['field_lastname']);
 <?php
 if ($variables['elements']['#view_mode'] == 'teaser') {
     echo '<a href="' . $variables['url'] . '">';
- }
+}
 print render($content['field_title']);
 print render($content['field_firstname']);
 print render($content['field_lastname']);
