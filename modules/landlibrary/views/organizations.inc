@@ -40,7 +40,11 @@ $handler->display->display_options['relationships']['reverse_field_doc_provider_
 $handler->display->display_options['relationships']['reverse_field_doc_provider_node']['table'] = 'node';
 $handler->display->display_options['relationships']['reverse_field_doc_provider_node']['field'] = 'reverse_field_doc_provider_node';
 $handler->display->display_options['relationships']['reverse_field_doc_provider_node']['label'] = 'Providers';
-$handler->display->display_options['relationships']['reverse_field_doc_provider_node']['required'] = TRUE;
+/* Relationship: Entity Reference: Referencing entity */
+$handler->display->display_options['relationships']['reverse_field_doc_publisher_node']['id'] = 'reverse_field_doc_publisher_node';
+$handler->display->display_options['relationships']['reverse_field_doc_publisher_node']['table'] = 'node';
+$handler->display->display_options['relationships']['reverse_field_doc_publisher_node']['field'] = 'reverse_field_doc_publisher_node';
+$handler->display->display_options['relationships']['reverse_field_doc_publisher_node']['label'] = 'Publisher';
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -58,15 +62,6 @@ $handler->display->display_options['fields']['rendered_entity']['link_to_entity'
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
 $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
-/* Field: COUNT(DISTINCT Content: Nid) */
-$handler->display->display_options['fields']['nid']['id'] = 'nid';
-$handler->display->display_options['fields']['nid']['table'] = 'node';
-$handler->display->display_options['fields']['nid']['field'] = 'nid';
-$handler->display->display_options['fields']['nid']['relationship'] = 'reverse_field_doc_provider_node';
-$handler->display->display_options['fields']['nid']['group_type'] = 'count_distinct';
-$handler->display->display_options['fields']['nid']['label'] = 'Library resources';
-$handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-$handler->display->display_options['fields']['nid']['separator'] = '';
 /* Sort criterion: Content: Title */
 $handler->display->display_options['sorts']['title']['id'] = 'title';
 $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -103,6 +98,64 @@ $handler->display->display_options['filters']['type']['value'] = array(
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page');
 $handler->display->display_options['defaults']['header'] = FALSE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['exclude'] = TRUE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+/* Field: Content: Rendered Content */
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+/* Field: COUNT(Content: Nid) */
+$handler->display->display_options['fields']['nid']['id'] = 'nid';
+$handler->display->display_options['fields']['nid']['table'] = 'node';
+$handler->display->display_options['fields']['nid']['field'] = 'nid';
+$handler->display->display_options['fields']['nid']['relationship'] = 'reverse_field_doc_provider_node';
+$handler->display->display_options['fields']['nid']['group_type'] = 'count';
+$handler->display->display_options['fields']['nid']['label'] = 'As provider';
+$handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+/* Field: COUNT(Content: Nid) */
+$handler->display->display_options['fields']['nid_1']['id'] = 'nid_1';
+$handler->display->display_options['fields']['nid_1']['table'] = 'node';
+$handler->display->display_options['fields']['nid_1']['field'] = 'nid';
+$handler->display->display_options['fields']['nid_1']['relationship'] = 'reverse_field_doc_publisher_node';
+$handler->display->display_options['fields']['nid_1']['group_type'] = 'count';
+$handler->display->display_options['fields']['nid_1']['label'] = 'As publisher';
+$handler->display->display_options['fields']['nid_1']['exclude'] = TRUE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'organization' => 'organization',
+);
+/* Filter criterion: COUNT(Content: Nid (reference filter)) */
+$handler->display->display_options['filters']['nid_entityreference_filter']['id'] = 'nid_entityreference_filter';
+$handler->display->display_options['filters']['nid_entityreference_filter']['table'] = 'node';
+$handler->display->display_options['filters']['nid_entityreference_filter']['field'] = 'nid_entityreference_filter';
+$handler->display->display_options['filters']['nid_entityreference_filter']['relationship'] = 'reverse_field_doc_provider_node';
+$handler->display->display_options['filters']['nid_entityreference_filter']['group_type'] = 'count';
+$handler->display->display_options['filters']['nid_entityreference_filter']['operator'] = '>';
+$handler->display->display_options['filters']['nid_entityreference_filter']['value']['value'] = '0';
 $handler->display->display_options['path'] = 'library/sources';
 
 /* Display: Attachment */
@@ -186,6 +239,13 @@ $handler->display->display_options['relationships']['reverse_field_doc_publisher
 $handler->display->display_options['relationships']['reverse_field_doc_publisher_node']['table'] = 'node';
 $handler->display->display_options['relationships']['reverse_field_doc_publisher_node']['field'] = 'reverse_field_doc_publisher_node';
 $handler->display->display_options['relationships']['reverse_field_doc_publisher_node']['required'] = TRUE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 
 /* Display: LLOrg provider EntityRef */
@@ -212,6 +272,22 @@ $handler->display->display_options['relationships']['reverse_field_doc_provider_
 $handler->display->display_options['relationships']['reverse_field_doc_provider_node']['table'] = 'node';
 $handler->display->display_options['relationships']['reverse_field_doc_provider_node']['field'] = 'reverse_field_doc_provider_node';
 $handler->display->display_options['relationships']['reverse_field_doc_provider_node']['required'] = TRUE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+/* Field: COUNT(DISTINCT Content: Nid) */
+$handler->display->display_options['fields']['nid']['id'] = 'nid';
+$handler->display->display_options['fields']['nid']['table'] = 'node';
+$handler->display->display_options['fields']['nid']['field'] = 'nid';
+$handler->display->display_options['fields']['nid']['relationship'] = 'reverse_field_doc_provider_node';
+$handler->display->display_options['fields']['nid']['group_type'] = 'count_distinct';
+$handler->display->display_options['fields']['nid']['label'] = 'Library resources';
+$handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['nid']['separator'] = '';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 
 /* Display: Block */
@@ -268,9 +344,11 @@ $translatables['organizations_library'] = array(
   t('next ›'),
   t('last »'),
   t('Providers'),
-  t('Library resources'),
+  t('Publisher'),
   t('All'),
   t('Page'),
+  t('As provider'),
+  t('As publisher'),
   t('Attachment'),
   t('LLOrg publisher EntityRef'),
   t('library publishers'),
@@ -280,5 +358,6 @@ $translatables['organizations_library'] = array(
   t('library source provider'),
   t(' Organizations linked as provider to a LLResource'),
   t('Content referencing Content from field_doc_provider'),
+  t('Library resources'),
   t('Block'),
 );
