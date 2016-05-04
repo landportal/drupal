@@ -16,20 +16,22 @@ hide($content['field_title']);
 hide($content['field_firstname']);
 hide($content['field_lastname']);
 
+//dpm($variables);
 ?>
 
-<?php /* if ($variables['elements']['#view_mode'] == 'teaser'): ?><a href="<?php print $url; ?>"><?php endif; */ ?>
 <article class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
 <?php if ($variables['elements']['#bundle'] == 'main'): ?><header>
 <?php
+if ($variables['elements']['#view_mode'] == 'teaser') {
+    echo '<a href="' . $variables['url'] . '">';
+ }
 print render($content['field_title']);
 print render($content['field_firstname']);
 print render($content['field_lastname']);
+if ($variables['elements']['#view_mode'] == 'teaser') { echo '</a>'; }
 ?>
 </header><?php endif; ?>
   <div class="content"<?php print $content_attributes; ?>>
     <?php print render($content); ?>
   </div>
 </article>
-<?php /* if ($variables['elements']['#view_mode']): ?></a><?php endif; */ ?>
