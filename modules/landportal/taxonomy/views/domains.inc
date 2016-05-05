@@ -5,14 +5,14 @@ $view->name = 'domains';
 $view->description = '';
 $view->tag = 'default';
 $view->base_table = 'taxonomy_term_data';
-$view->human_name = 'Domains';
+$view->human_name = 'Overarching categories';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Domains';
+$handler->display->display_options['title'] = 'Overarching categories';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
@@ -50,9 +50,13 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page_1');
+$handler->display->display_options['path'] = 'voc/domains';
 $translatables['domains'] = array(
   t('Master'),
-  t('Domains'),
+  t('Overarching categories'),
   t('more'),
   t('Apply'),
   t('Reset'),
@@ -62,4 +66,5 @@ $translatables['domains'] = array(
   t('Term ID'),
   t('.'),
   t('Block'),
+  t('Page'),
 );

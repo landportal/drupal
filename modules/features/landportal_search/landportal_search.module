@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the LandPortal Search feature.
+ */
+
+include_once 'landportal_search.features.inc';

@@ -135,6 +135,9 @@ function landcommunity_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'listing' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -161,7 +164,7 @@ function landcommunity_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '10',
+            'weight' => '1',
             'visible' => TRUE,
           ),
         ),
@@ -171,7 +174,7 @@ function landcommunity_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '2',
             'visible' => FALSE,
           ),
         ),

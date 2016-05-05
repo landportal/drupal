@@ -41,3 +41,23 @@ function landportal_utility_taxonomy_get_tree_nested($vid, $parent = 0, $max_dep
 
   return $nested;
 }
+
+
+function landportal_utility_get_library_provider(){
+  $options = array('_none'=> '-None-');
+
+  $query = db_select('node','n');
+  $query->fields('n', array('nid', 'title'));
+  $query->leftJoin('field_data_field_doc_provider','fdfdp','fdfdp.field_doc_provider_target_id = n.nid');
+  $query->condition('n.status', 1);
+  $query->isNotNull('fdfdp.field_doc_provider_target_id');
+  $query->orderBy('n.title','ASC');
+  $results = $query->execute()->fetchAllAssoc('nid');
+
+  if (!empty($options)) {
+    foreach ($results as $nid => $item) {
+      $options['node:'.$nid] = $item->title;
+    }
+  }
+  return $options;
+}

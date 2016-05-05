@@ -7,7 +7,6 @@ dependencies[] = ctools
 ; dependencies[] = devel
 dependencies[] = landportal_base
 dependencies[] = landportal_content_types
-dependencies[] = landportal_permissions
 dependencies[] = landportal_taxonomy
 dependencies[] = menu
 dependencies[] = views

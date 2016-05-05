@@ -393,8 +393,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(../scss/fonts/bootstrap/glyphicons-halflings-regular.eot?1460483831);
-  src: url(../scss/fonts/bootstrap/glyphicons-halflings-regular.eot?&1460483831#iefix) format("embedded-opentype"), url(../scss/fonts/bootstrap/glyphicons-halflings-regular.woff2?1460483831) format("woff2"), url(../scss/fonts/bootstrap/glyphicons-halflings-regular.woff?1460483831) format("woff"), url(../scss/fonts/bootstrap/glyphicons-halflings-regular.ttf?1460483831) format("truetype"), url(../scss/fonts/bootstrap/glyphicons-halflings-regular.svg?1460483831#glyphicons_halflingsregular) format("svg");
+  src: url(../scss/fonts/bootstrap/glyphicons-halflings-regular.eot?1462447638);
+  src: url(../scss/fonts/bootstrap/glyphicons-halflings-regular.eot?&1462447638#iefix) format("embedded-opentype"), url(../scss/fonts/bootstrap/glyphicons-halflings-regular.woff2?1462447638) format("woff2"), url(../scss/fonts/bootstrap/glyphicons-halflings-regular.woff?1462447638) format("woff"), url(../scss/fonts/bootstrap/glyphicons-halflings-regular.ttf?1462447638) format("truetype"), url(../scss/fonts/bootstrap/glyphicons-halflings-regular.svg?1462447638#glyphicons_halflingsregular) format("svg");
 }
 /* line 24, ../../../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.5.1/assets/stylesheets/bootstrap/_glyphicons.scss */
 .glyphicon {
@@ -9204,58 +9204,52 @@ button.close {
 }
 
 /* line 19, ../scss/modules/_buttons.scss */
-.field-type-taxonomy-term-reference .field-items {
-  display: inline;
-}
-/* line 22, ../scss/modules/_buttons.scss */
-.field-type-taxonomy-term-reference .field-item {
-  display: inline-block;
-  margin: .2em;
-}
-
-/* line 32, ../scss/modules/_buttons.scss */
-.field-name-field-related-themes .field-item a {
-  background-color: #42B7CA;
-}
-
-/* line 37, ../scss/modules/_buttons.scss */
-.field-name-field-related-domains .field-item a {
-  background-color: #42CABD;
-}
-
-/* line 44, ../scss/modules/_buttons.scss */
-.landportal-button-red .field-item a, .page-library .field-name-field-doc-type .field-item a {
+.landportal-button-red .field-item a, .field-name-field-doc-type .field-item a {
   padding: .5em;
   font-size: 1.2em;
   background-color: #91594d;
   font-weight: bold;
 }
 
-/* .field-name-field-related-topics, */
-/* .field-name-field-geographical-focus, */
-/* .field-name-field-status { */
-/* } */
-/* line 57, ../scss/modules/_buttons.scss */
+/**
+ * Taxonomy term
+ */
+/* line 32, ../scss/modules/_buttons.scss */
+.field-type-taxonomy-term-reference .field-items {
+  display: inline;
+}
+/* line 35, ../scss/modules/_buttons.scss */
+.field-type-taxonomy-term-reference .field-item {
+  display: inline-block;
+  margin: .2em;
+}
+
+/* Theme and Overarching (aka domains) terms */
+/* line 45, ../scss/modules/_buttons.scss */
+.field-name-field-related-themes .field-item a {
+  background-color: #42B7CA;
+}
+
+/* line 50, ../scss/modules/_buttons.scss */
+.field-name-field-related-domains .field-item a {
+  background-color: #42CABD;
+}
+
+/* Debate status */
+/* line 56, ../scss/modules/_buttons.scss */
 .field-name-field-status .field-item {
   margin: 1.5em 0;
   padding: .5em;
 }
 
-/* line 61, ../scss/modules/_buttons.scss */
+/* line 60, ../scss/modules/_buttons.scss */
 .field-name-field-status .field-item {
   float: none;
   border: 1px solid #888888;
 }
-/* line 64, ../scss/modules/_buttons.scss */
+/* line 63, ../scss/modules/_buttons.scss */
 .field-name-field-status .field-item .field-item[content="Closed"] {
   background-color: #fe2e2e;
-}
-
-/* line 68, ../scss/modules/_buttons.scss */
-.field-name-field-doc-type {
-  font-size: 1em;
-  background-color: #91594d;
-  font-weight: normal;
 }
 
 /* line 1, ../scss/modules/_links.scss */
@@ -11445,22 +11439,22 @@ html.js fieldset.collapsed {
   margin-right: 1em;
 }
 
-/* line 226, ../scss/modules/_library.scss */
+/* line 223, ../scss/modules/_library.scss */
 .view-landlibrary-promoted {
   margin: 0;
   margin-bottom: 50px;
   width: 100%;
 }
-/* line 231, ../scss/modules/_library.scss */
+/* line 228, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-row {
   position: relative;
 }
-/* line 233, ../scss/modules/_library.scss */
+/* line 230, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-row a {
   text-decoration: none;
   color: white;
 }
-/* line 237, ../scss/modules/_library.scss */
+/* line 234, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-row .views-field-title {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -11468,39 +11462,61 @@ html.js fieldset.collapsed {
   padding: 0.5em 1em;
   bottom: 0;
 }
-/* line 245, ../scss/modules/_library.scss */
+/* line 242, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-row .views-field-doc-thumb {
   height: 200px;
   overflow: hidden;
   position: relative;
 }
-/* line 251, ../scss/modules/_library.scss */
+/* line 248, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-row img {
   width: 100%;
   height: auto;
 }
-/* line 257, ../scss/modules/_library.scss */
+/* line 254, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-field-field-image {
   width: 100%;
   padding: 5px 5px 5px 5px;
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
 }
-/* line 263, ../scss/modules/_library.scss */
+/* line 260, ../scss/modules/_library.scss */
 .view-landlibrary-promoted .views-field-field-image img {
   max-height: 30px;
   max-width: 80px;
   float: right;
 }
 
+/* line 268, ../scss/modules/_library.scss */
+.field-name-field-doc-type {
+  float: right;
+}
+/* line 271, ../scss/modules/_library.scss */
+.field-name-field-doc-type .field-item a {
+  background-color: rgba(218, 116, 56, 0.45);
+}
+
 @media (min-width: 768px) {
-  /* line 272, ../scss/modules/_library.scss */
+  /* line 275, ../scss/modules/_library.scss */
   .view-landlibrary-promoted .views-row {
     position: relative;
     float: left;
     width: 25%;
   }
 }
+/* line 283, ../scss/modules/_library.scss */
+.node-landlibrary-resource.node-teaser.ds-2col-fluid {
+  padding: .5em 0;
+}
+/* line 285, ../scss/modules/_library.scss */
+.node-landlibrary-resource.node-teaser.ds-2col-fluid .group-left {
+  width: 30%;
+}
+/* line 286, ../scss/modules/_library.scss */
+.node-landlibrary-resource.node-teaser.ds-2col-fluid .group-right {
+  width: 70%;
+}
+
 /**
  * Landbook SCSS
  *
@@ -11987,32 +12003,33 @@ html.js fieldset.collapsed {
   display: inline-block;
   padding: 0.2em 0.5em;
   white-space: nowrap;
+  float: right;
 }
-/* line 29, ../scss/modules/_search.scss */
+/* line 30, ../scss/modules/_search.scss */
 .apachesolr_search-results .information {
   float: left;
   text-align: center;
   width: 30%;
 }
-/* line 33, ../scss/modules/_search.scss */
+/* line 34, ../scss/modules/_search.scss */
 .apachesolr_search-results .information img {
   height: auto;
   width: 100%;
   display: block;
 }
-/* line 38, ../scss/modules/_search.scss */
+/* line 39, ../scss/modules/_search.scss */
 .apachesolr_search-results .information .field-type-image {
   margin-bottom: 0.5em;
 }
-/* line 41, ../scss/modules/_search.scss */
+/* line 42, ../scss/modules/_search.scss */
 .apachesolr_search-results .information .field-name-field-date {
   margin-bottom: 0.5em;
 }
-/* line 45, ../scss/modules/_search.scss */
+/* line 46, ../scss/modules/_search.scss */
 .apachesolr_search-results .information .field-type-taxonomy-term-reference .field-item {
   margin-bottom: 0.9em;
 }
-/* line 49, ../scss/modules/_search.scss */
+/* line 50, ../scss/modules/_search.scss */
 .apachesolr_search-results .information .field-label {
   position: relative;
   color: #888888;
@@ -12021,7 +12038,7 @@ html.js fieldset.collapsed {
   position: relative;
   text-transform: uppercase;
 }
-/* line 56, ../scss/modules/_search.scss */
+/* line 57, ../scss/modules/_search.scss */
 .apachesolr_search-results .information .field-label::before {
   border-top: 1px solid #888888;
   content: "";
@@ -12031,7 +12048,7 @@ html.js fieldset.collapsed {
   width: 100%;
   z-index: -1;
 }
-/* line 65, ../scss/modules/_search.scss */
+/* line 66, ../scss/modules/_search.scss */
 .apachesolr_search-results .information .field-label span {
   background-color: #fff;
   color: #888888;
@@ -12039,32 +12056,32 @@ html.js fieldset.collapsed {
   font-weight: normal;
   padding: 0 1em;
 }
-/* line 74, ../scss/modules/_search.scss */
+/* line 75, ../scss/modules/_search.scss */
 .apachesolr_search-results .content {
   float: left;
   padding: 0 0 0 2em;
   width: 70%;
 }
 
-/* line 80, ../scss/modules/_search.scss */
+/* line 81, ../scss/modules/_search.scss */
 .node-listing {
   width: 100%;
   overflow: hidden;
   border-bottom: 1px dotted #888;
   padding: 2em 0;
 }
-/* line 85, ../scss/modules/_search.scss */
+/* line 86, ../scss/modules/_search.scss */
 .node-listing .node-title {
   margin-bottom: 1em;
   vertical-align: bottom;
 }
-/* line 88, ../scss/modules/_search.scss */
+/* line 89, ../scss/modules/_search.scss */
 .node-listing .node-title h2 {
   font-size: 1.8em;
   vertical-align: bottom;
   margin: 0;
 }
-/* line 93, ../scss/modules/_search.scss */
+/* line 94, ../scss/modules/_search.scss */
 .node-listing .node-title span.type {
   background-color: #8fcd1f;
   vertical-align: bottom;
@@ -12075,27 +12092,27 @@ html.js fieldset.collapsed {
   padding: 0.2em 0.5em;
   white-space: nowrap;
 }
-/* line 104, ../scss/modules/_search.scss */
+/* line 105, ../scss/modules/_search.scss */
 .node-listing .information {
   float: left;
   text-align: center;
   width: 30%;
 }
-/* line 108, ../scss/modules/_search.scss */
+/* line 109, ../scss/modules/_search.scss */
 .node-listing .information img {
   height: auto;
   margin: auto;
   display: block;
 }
-/* line 113, ../scss/modules/_search.scss */
+/* line 114, ../scss/modules/_search.scss */
 .node-listing .information .field-type-image {
   margin-bottom: 0.7em;
 }
-/* line 116, ../scss/modules/_search.scss */
+/* line 117, ../scss/modules/_search.scss */
 .node-listing .information .field-name-field-date {
   margin-bottom: 0.5em;
 }
-/* line 119, ../scss/modules/_search.scss */
+/* line 120, ../scss/modules/_search.scss */
 .node-listing .information .field-label {
   position: relative;
   color: #888888;
@@ -12104,7 +12121,7 @@ html.js fieldset.collapsed {
   position: relative;
   text-transform: uppercase;
 }
-/* line 126, ../scss/modules/_search.scss */
+/* line 127, ../scss/modules/_search.scss */
 .node-listing .information .field-label::before {
   border-top: 1px solid #888888;
   content: "";
@@ -12114,7 +12131,7 @@ html.js fieldset.collapsed {
   width: 100%;
   z-index: -1;
 }
-/* line 135, ../scss/modules/_search.scss */
+/* line 136, ../scss/modules/_search.scss */
 .node-listing .information .field-label span {
   background-color: #fff;
   color: #888888;
@@ -12122,55 +12139,133 @@ html.js fieldset.collapsed {
   font-weight: normal;
   padding: 0 1em;
 }
-/* line 144, ../scss/modules/_search.scss */
+/* line 145, ../scss/modules/_search.scss */
 .node-listing .content {
   float: left;
   padding: 0 0 0 2em;
   width: 70%;
 }
-/* line 150, ../scss/modules/_search.scss */
+/* line 151, ../scss/modules/_search.scss */
 .node-listing .field-type-taxonomy-term-reference .field-item {
   margin-bottom: 0.9em;
 }
 
-/* line 156, ../scss/modules/_search.scss */
+/* line 159, ../scss/modules/_search.scss */
+#search-form #edit-basic .keys {
+  width: 300px;
+}
+/* line 164, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search {
   margin-top: 20px;
 }
-/* line 158, ../scss/modules/_search.scss */
+/* line 166, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search legend {
   border: none;
   margin-bottom: 0px;
 }
-/* line 161, ../scss/modules/_search.scss */
+/* line 169, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search legend .fieldset-legend {
   background-position: 0 65%;
 }
-/* line 166, ../scss/modules/_search.scss */
+/* line 174, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search.collapsed .fieldset-legend {
   background-position: 0 50%;
 }
 @media only screen and (min-width: 992px) {
-  /* line 171, ../scss/modules/_search.scss */
+  /* line 179, ../scss/modules/_search.scss */
   #search-form #edit-advanced-search .fieldset-wrapper .form-item {
     float: left;
     width: 50%;
   }
 }
-/* line 176, ../scss/modules/_search.scss */
+/* line 184, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search .fieldset-wrapper .form-item label,
 #search-form #edit-advanced-search .fieldset-wrapper .form-item select {
   display: inline-block;
 }
-/* line 180, ../scss/modules/_search.scss */
+/* line 188, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search .fieldset-wrapper .form-item select {
   max-width: 200px;
   width: 100%;
 }
-/* line 184, ../scss/modules/_search.scss */
+/* line 192, ../scss/modules/_search.scss */
 #search-form #edit-advanced-search .fieldset-wrapper .form-item label {
   min-width: 155px;
   padding: 5px 15px 5px 0;
+}
+/* line 196, ../scss/modules/_search.scss */
+#search-form #edit-advanced-search .fieldset-wrapper .form-item .chosen-container {
+  width: 65% !important;
+  max-width: 370px;
+}
+
+/* line 205, ../scss/modules/_search.scss */
+#views-exposed-form-library-search-page select {
+  width: 100%;
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  /* line 209, ../scss/modules/_search.scss */
+  #views-exposed-form-library-search-page #edit-im-field-doc-country-wrapper,
+  #views-exposed-form-library-search-page #edit-sm-field-doc-provider-wrapper {
+    float: left;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 216, ../scss/modules/_search.scss */
+  #views-exposed-form-library-search-page #edit-im-field-doc-subject-wrapper,
+  #views-exposed-form-library-search-page #edit-im-field-doc-type-wrapper,
+  #views-exposed-form-library-search-page #edit-ss-language-wrapper {
+    float: left;
+    width: 33.3333%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 224, ../scss/modules/_search.scss */
+  #views-exposed-form-library-search-page #edit-im-field-doc-subject-wrapper {
+    padding-left: 1em;
+    padding-right: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 230, ../scss/modules/_search.scss */
+  #views-exposed-form-library-search-page #edit-im-field-doc-type-wrapper {
+    padding-left: 1em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 235, ../scss/modules/_search.scss */
+  #views-exposed-form-library-search-page #edit-im-field-doc-country-wrapper {
+    padding-left: 1em;
+    padding-right: 0;
+  }
+}
+/* line 242, ../scss/modules/_search.scss */
+#views-exposed-form-library-search-page .views-exposed-widgets {
+  position: relative;
+}
+/* line 245, ../scss/modules/_search.scss */
+#views-exposed-form-library-search-page #edit-keyword-wrapper {
+  width: 100%;
+  padding-right: 120px;
+}
+/* line 248, ../scss/modules/_search.scss */
+#views-exposed-form-library-search-page #edit-keyword-wrapper .form-text {
+  width: 100%;
+}
+/* line 252, ../scss/modules/_search.scss */
+#views-exposed-form-library-search-page .views-submit-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 0;
+}
+/* line 257, ../scss/modules/_search.scss */
+#views-exposed-form-library-search-page .views-submit-button .ajax-progress {
+  position: absolute;
+  top: 0;
+  right: 100%;
 }
 
 /* Landportal SCSS: menus */

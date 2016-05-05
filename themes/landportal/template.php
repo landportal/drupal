@@ -74,6 +74,12 @@ function landportal_preprocess_page(&$variables) {
         break;
     }
   }
+  if((arg(0) == 'search' && arg(1) == 'all') || (arg(0) == 'search' && arg(1) == 'library')){
+    drupal_set_title('');
+  }
+  /*if((arg(1) == 'search' && arg(2) == 'site') || (arg(1) == 'library' && arg(2) == 'search')){
+    drupal_set_title('');
+  }*/
 }
 
 /**
@@ -129,10 +135,10 @@ function landportal_preprocess_search_result(&$vars){
       unset($node->body['und'][0]['safe_value']);
       unset($node->body['und'][0]['safe_summary']);
     }
-    if (!empty($node->field_image)) $vars['content']['image'] = field_view_field('node', $node, 'field_image','teaser');
-    if (!empty($node->field_date)) $vars['content']['date'] = field_view_field('node', $node, 'field_date','teaser');
-    if (!empty($node->field_geographical_focus)) $vars['content']['regions'] = field_view_field('node', $node, 'field_geographical_focus','teaser');
-    if (!empty($node->field_related_topics)) $vars['content']['topics'] = field_view_field('node', $node, 'field_related_topics','teaser');
-    if (!empty($node->body)) $vars['content']['body'] = field_view_field('node', $node, 'body','teaser');
+    if (!empty($node->field_image)) $vars['content']['image'] = field_view_field('node', $node, 'field_image','listing');
+    if (!empty($node->field_date)) $vars['content']['date'] = field_view_field('node', $node, 'field_date','listing');
+    if (!empty($node->field_geographical_focus)) $vars['content']['regions'] = field_view_field('node', $node, 'field_geographical_focus','listing');
+    if (!empty($node->field_related_topics)) $vars['content']['topics'] = field_view_field('node', $node, 'field_related_topics','listing');
+    if (!empty($node->body)) $vars['content']['body'] = field_view_field('node', $node, 'body','listing');
   }
 }

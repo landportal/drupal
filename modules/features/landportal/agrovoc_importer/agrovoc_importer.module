@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Agrovoc Importer feature.
- */
-
-include_once 'agrovoc_importer.features.inc';
