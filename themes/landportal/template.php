@@ -118,27 +118,12 @@ function landportal_links__locale_block(&$vars) {
  * Override the search results page
  */
 function landportal_preprocess_search_result(&$vars){
-
-  $vars['content'] = array(
-    'type' => $vars['result']['type'],
-    'image' => array(),
-    'date' => array(),
-    'regions' => array(),
-    'topics' => array(),
-    'body' => array(),
-  );
+  $vars['content'] = array();
 
   if (!empty($vars['result']['node'])) {
     $node = node_load($vars['result']['node']->entity_id);
-    if ((!empty($node->body)) && $node->body['und'][0]['format'] == 'plain_text') {
-      $node->body['und'][0]['format'] = 'full_html';
-      unset($node->body['und'][0]['safe_value']);
-      unset($node->body['und'][0]['safe_summary']);
+    if (!empty($node)) {
+      $vars['content'] = node_view($node,'listing');
     }
-    if (!empty($node->field_image)) $vars['content']['image'] = field_view_field('node', $node, 'field_image','listing');
-    if (!empty($node->field_date)) $vars['content']['date'] = field_view_field('node', $node, 'field_date','listing');
-    if (!empty($node->field_geographical_focus)) $vars['content']['regions'] = field_view_field('node', $node, 'field_geographical_focus','listing');
-    if (!empty($node->field_related_topics)) $vars['content']['topics'] = field_view_field('node', $node, 'field_related_topics','listing');
-    if (!empty($node->body)) $vars['content']['body'] = field_view_field('node', $node, 'body','listing');
   }
 }
