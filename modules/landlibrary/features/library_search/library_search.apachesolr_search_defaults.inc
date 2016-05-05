@@ -14,10 +14,10 @@ function library_search_apachesolr_search_default_searchers() {
   $searcher->disabled = FALSE; /* Edit this to true to make a default searcher disabled initially */
   $searcher->api_version = 3;
   $searcher->page_id = 'library_search';
-  $searcher->label = 'Library Search';
+  $searcher->label = 'Library search';
   $searcher->description = '';
-  $searcher->search_path = 'search/library';
-  $searcher->page_title = '%value';
+  $searcher->search_path = 'library/search';
+  $searcher->page_title = 'Library search';
   $searcher->env_id = 'landlibrary_search';
   $searcher->settings = array(
     'fq' => array(
@@ -29,7 +29,7 @@ function library_search_apachesolr_search_default_searchers() {
     'apachesolr_search_spellcheck' => 1,
     'apachesolr_search_search_box' => 1,
     'apachesolr_search_allow_user_input' => 0,
-    'apachesolr_search_browse' => 'blocks',
+    'apachesolr_search_browse' => 'browse',
   );
   $export['library_search'] = $searcher;
 

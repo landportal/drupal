@@ -12,10 +12,10 @@ function library_search_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['facetapi-KvyelVd01cmBCZgIr0cCSC73iW3Gp67d'] = array(
+  $export['facetapi-Dz09BvvNFhfLdnmwFu0Zl165RuMvV0RW'] = array(
     'cache' => -1,
     'custom' => 0,
-    'delta' => 'KvyelVd01cmBCZgIr0cCSC73iW3Gp67d',
+    'delta' => 'Dz09BvvNFhfLdnmwFu0Zl165RuMvV0RW',
     'i18n_block_language' => array(),
     'i18n_mode' => 0,
     'module' => 'facetapi',
@@ -33,7 +33,7 @@ function library_search_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'landportal',
-        'weight' => -44,
+        'weight' => 0,
       ),
       'seven' => array(
         'region' => '',
@@ -46,10 +46,10 @@ function library_search_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['facetapi-Q01KZ01pgIWhRBhu0uMVfwMYKhC5heYa'] = array(
+  $export['facetapi-SweA5o2kLHcd6EJKAdto5pVuxtYrdlAs'] = array(
     'cache' => -1,
     'custom' => 0,
-    'delta' => 'Q01KZ01pgIWhRBhu0uMVfwMYKhC5heYa',
+    'delta' => 'SweA5o2kLHcd6EJKAdto5pVuxtYrdlAs',
     'i18n_block_language' => array(),
     'i18n_mode' => 0,
     'module' => 'facetapi',
@@ -67,7 +67,7 @@ function library_search_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'landportal',
-        'weight' => -43,
+        'weight' => 0,
       ),
       'seven' => array(
         'region' => '',
@@ -101,7 +101,7 @@ function library_search_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'landportal',
-        'weight' => -42,
+        'weight' => -39,
       ),
       'seven' => array(
         'region' => '',
@@ -112,142 +112,6 @@ function library_search_default_fe_block_settings() {
     ),
     'title' => '',
     'visibility' => 0,
-  );
-
-  $export['facetapi-cDfE5OkoU0iDC43SmoxbK4uMF4rfCzkk'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'cDfE5OkoU0iDC43SmoxbK4uMF4rfCzkk',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'landportal' => array(
-        'region' => '',
-        'status' => 1,
-        'theme' => 'landportal',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-eFKeawII0GOlxJzkJniBO3qQM1fKKp5C'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'eFKeawII0GOlxJzkJniBO3qQM1fKKp5C',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'landportal' => array(
-        'region' => '',
-        'status' => 1,
-        'theme' => 'landportal',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-sExDbyZ1jDdyvpX8YhDD9Lk1lseZud2X'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'sExDbyZ1jDdyvpX8YhDD9Lk1lseZud2X',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'landportal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'landportal',
-        'weight' => -41,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['facetapi-wOe0nIRMBfXKKYjKxRbxMcQLozcIJdhJ'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'wOe0nIRMBfXKKYjKxRbxMcQLozcIJdhJ',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'facetapi',
-    'node_types' => array(),
-    'pages' => 'library/search',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'landportal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'landportal',
-        'weight' => -45,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 1,
   );
 
   $export['facetapi-yUhemNJf8izLiuofmSC6AQ3PVGRxP5Hp'] = array(
@@ -271,7 +135,7 @@ function library_search_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'landportal',
-        'weight' => -48,
+        'weight' => -39,
       ),
       'seven' => array(
         'region' => '',
