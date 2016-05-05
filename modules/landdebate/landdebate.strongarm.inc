@@ -64,7 +64,7 @@ function landdebate_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '0',
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),
