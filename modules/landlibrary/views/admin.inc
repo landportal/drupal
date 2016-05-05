@@ -3,8 +3,7 @@
  * Landlibrary views: Admin
  *
  * View name: landlibrary_search
- * View URL: http://landportal.info/admin/structure/views/view/library_search/
- * View BO: http://landportal.ker/admin/structure/views/view/administration_library/export
+ * View URL: https://landportal.info/admin/structure/views/view/library_search/
  */
 
 $view = new view();
@@ -33,35 +32,23 @@ $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['pager']['options']['quantity'] = '25';
 $handler->display->display_options['style_plugin'] = 'table';
 $handler->display->display_options['style_options']['columns'] = array(
-  'views_bulk_operations' => 'views_bulk_operations',
   'nid' => 'nid',
   'edit_node' => 'edit_node',
   'path' => 'path',
   'title' => 'title',
-  'field_doc_title' => 'field_doc_title',
   'field_doc_type' => 'field_doc_type',
-  'delta' => 'delta',
+  'field_format' => 'field_format',
   'field_doc_publisher' => 'field_doc_publisher',
   'field_doc_provider' => 'field_doc_provider',
-  'field_doc_data_provider' => 'field_doc_data_provider',
-  'language' => 'language',
-  'field_doc_language' => 'field_doc_language',
   'changed' => 'changed',
-  'created' => 'created',
   'field_doc_creation_date' => 'field_doc_creation_date',
-  'field_format' => 'field_format',
-  'field_doc_geographic_region' => 'field_doc_geographic_region',
-  'field_doc_keyword' => 'field_doc_keyword',
-  'field_doc_subject' => 'field_doc_subject',
-  'field_doc_country' => 'field_doc_country',
+  'field_geographical_focus' => 'field_geographical_focus',
+  'field_related_domains' => 'field_related_domains',
+  'field_related_themes' => 'field_related_themes',
+  'field_related_topics' => 'field_related_topics',
 );
 $handler->display->display_options['style_options']['default'] = 'nid';
 $handler->display->display_options['style_options']['info'] = array(
-  'views_bulk_operations' => array(
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
   'nid' => array(
     'sortable' => 1,
     'default_sort_order' => 'desc',
@@ -86,17 +73,14 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_title' => array(
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
   'field_doc_type' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
-  'delta' => array(
+  'field_format' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -113,33 +97,7 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_data_provider' => array(
-    'sortable' => 1,
-    'default_sort_order' => 'asc',
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'language' => array(
-    'sortable' => 0,
-    'default_sort_order' => 'asc',
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'field_doc_language' => array(
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
   'changed' => array(
-    'sortable' => 1,
-    'default_sort_order' => 'asc',
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'created' => array(
     'sortable' => 1,
     'default_sort_order' => 'asc',
     'align' => '',
@@ -153,31 +111,22 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_format' => array(
-    'sortable' => 1,
-    'default_sort_order' => 'asc',
+  'field_geographical_focus' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_geographic_region' => array(
-    'sortable' => 0,
-    'default_sort_order' => 'asc',
+  'field_related_domains' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_keyword' => array(
+  'field_related_themes' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_subject' => array(
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'field_doc_country' => array(
+  'field_related_topics' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -188,65 +137,6 @@ $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
 $handler->display->display_options['header']['result']['empty'] = TRUE;
-/* Field: Bulk operations: Content */
-$handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
-$handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
-$handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
-$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
-$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
-$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['row_clickable'] = 1;
-$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
-$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
-$handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
-  'action::views_bulk_operations_delete_item' => array(
-    'selected' => 1,
-    'postpone_processing' => 0,
-    'skip_confirmation' => 1,
-    'override_label' => 0,
-    'label' => '',
-  ),
-  'action::views_bulk_operations_modify_action' => array(
-    'selected' => 1,
-    'postpone_processing' => 0,
-    'skip_confirmation' => 0,
-    'override_label' => 0,
-    'label' => '',
-    'settings' => array(
-      'show_all_tokens' => 1,
-      'display_values' => array(
-        '_all_' => '_all_',
-      ),
-    ),
-  ),
-  'action::node_promote_action' => array(
-    'selected' => 1,
-    'postpone_processing' => 0,
-    'skip_confirmation' => 0,
-    'override_label' => 0,
-    'label' => '',
-  ),
-  'action::node_publish_action' => array(
-    'selected' => 1,
-    'postpone_processing' => 0,
-    'skip_confirmation' => 0,
-    'override_label' => 0,
-    'label' => '',
-  ),
-  'action::node_unpromote_action' => array(
-    'selected' => 1,
-    'postpone_processing' => 0,
-    'skip_confirmation' => 0,
-    'override_label' => 0,
-    'label' => '',
-  ),
-  'action::node_unpublish_action' => array(
-    'selected' => 1,
-    'postpone_processing' => 0,
-    'skip_confirmation' => 0,
-    'override_label' => 0,
-    'label' => '',
-  ),
-);
 /* Field: Content: Nid */
 $handler->display->display_options['fields']['nid']['id'] = 'nid';
 $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -335,6 +225,86 @@ $handler->display->display_options['fields']['field_related_topics']['table'] = 
 $handler->display->display_options['fields']['field_related_topics']['field'] = 'field_related_topics';
 $handler->display->display_options['fields']['field_related_topics']['label'] = 'Concepts';
 $handler->display->display_options['fields']['field_related_topics']['delta_offset'] = '0';
+/* Field: Bulk operations: Content */
+$handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
+$handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
+$handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['row_clickable'] = 1;
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+  'action::node_make_sticky_action' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 1,
+    'override_label' => 0,
+    'label' => '',
+  ),
+  'action::node_make_unsticky_action' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 1,
+    'override_label' => 0,
+    'label' => '',
+  ),
+  'action::views_bulk_operations_modify_action' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 0,
+    'override_label' => 0,
+    'label' => '',
+    'settings' => array(
+      'show_all_tokens' => 1,
+      'display_values' => array(
+        '_all_' => '_all_',
+        'language' => 'language',
+        'landlibrary_resource::field_doc_provider' => 'landlibrary_resource::field_doc_provider',
+        'landlibrary_resource::field_doc_publisher' => 'landlibrary_resource::field_doc_publisher',
+        'landlibrary_resource::field_geographical_focus' => 'landlibrary_resource::field_geographical_focus',
+        'landlibrary_resource::field_related_topics' => 'landlibrary_resource::field_related_topics',
+        'landlibrary_resource::field_related_domains' => 'landlibrary_resource::field_related_domains',
+        'landlibrary_resource::field_related_themes' => 'landlibrary_resource::field_related_themes',
+      ),
+    ),
+  ),
+  'action::node_promote_action' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 1,
+    'override_label' => 0,
+    'label' => '',
+  ),
+  'action::node_publish_action' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 1,
+    'override_label' => 0,
+    'label' => '',
+  ),
+  'action::node_unpromote_action' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 1,
+    'override_label' => 0,
+    'label' => '',
+  ),
+  'action::node_unpublish_action' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 1,
+    'override_label' => 0,
+    'label' => '',
+  ),
+  'action::pathauto_node_update_action' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 0,
+    'override_label' => 0,
+    'label' => '',
+  ),
+);
 $handler->display->display_options['filter_groups']['groups'] = array(
   1 => 'AND',
   2 => 'AND',
@@ -439,13 +409,13 @@ $handler->display->display_options['filters']['field_doc_type_tid']['expose']['o
 $handler->display->display_options['filters']['field_doc_type_tid']['expose']['label'] = 'Resource type (field_doc_type)';
 $handler->display->display_options['filters']['field_doc_type_tid']['expose']['operator'] = 'field_doc_type_tid_op';
 $handler->display->display_options['filters']['field_doc_type_tid']['expose']['identifier'] = 'field_doc_type_tid';
+$handler->display->display_options['filters']['field_doc_type_tid']['expose']['multiple'] = TRUE;
 $handler->display->display_options['filters']['field_doc_type_tid']['expose']['remember_roles'] = array(
   2 => '2',
   1 => 0,
-  111731461 => 0,
   111903911 => 0,
-  25521343 => 0,
   111903912 => 0,
+  25521343 => 0,
   111903910 => 0,
   30037204 => 0,
 );
@@ -472,8 +442,6 @@ $translatables['admin_view_library'] = array(
   t('next ›'),
   t('last »'),
   t('Displaying @start - @end of @total'),
-  t('Content'),
-  t('- Choose an operation -'),
   t('Nid'),
   t('Edit link'),
   t('Path'),
@@ -488,6 +456,8 @@ $translatables['admin_view_library'] = array(
   t('Overarching'),
   t('Themes'),
   t('Concepts'),
+  t('Content'),
+  t('- Choose an operation -'),
   t('Published'),
   t('Resource type (field_doc_type)'),
   t('System'),
