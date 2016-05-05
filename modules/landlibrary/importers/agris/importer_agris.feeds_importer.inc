@@ -150,7 +150,7 @@ function importer_agris_feeds_importer_default() {
                     ),
                     6 => array(
                         'source' => 'xpathparser:6',
-                        'target' => 'field_doc_subject',
+                        'target' => 'field_related_topics',
                         'term_search' => '0',
                         'autocreate' => 0,
                     ),

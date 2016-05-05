@@ -112,12 +112,12 @@ function importer_fao_feeds_importer_default() {
                     'xpathparser:10' => 'arr[@name="fdr_author"]/str/text()',
                     'xpathparser:11' => '',
                     'xpathparser:12' => 'arr[@name="fdr_c_subject_classification"]/str/text()',
-                    'xpathparser:13' => '/response/lst[@name=\'fdr-related\']/lst[@name=\'$field_doc_subject\']/str[@name="label@en"]/text()',
+                    'xpathparser:13' => '/response/lst[@name=\'fdr-related\']/lst[@name=\'$field_related_topics\']/str[@name="label@en"]/text()',
                     'xpathparser:14' => '',
                     'xpathparser:15' => 'arr[@name="fdr_c_document_type"]/str/text()',
                     'xpathparser:16' => '/response/lst[@name=\'fdr-related\']/lst[@name=\'$field_doc_type\']/str[@name="label@en"]/text()',
                     'xpathparser:17' => 'arr[@name="fdr_c_concept"]/str/text()',
-                    'xpathparser:18' => '/response/lst[@name=\'fdr-related\']/lst[@name=\'$field_doc_subject\']/str[@name="label@en"]/text()',
+                    'xpathparser:18' => '/response/lst[@name=\'fdr-related\']/lst[@name=\'$field_related_topics\']/str[@name="label@en"]/text()',
                     'xpathparser:19' => '',
                     'xpathparser:20' => 'arr[@name="fdr_title@en"]/str/text()',
                     'xpathparser:21' => '',
@@ -247,13 +247,13 @@ function importer_fao_feeds_importer_default() {
                     ),
                     12 => array(
                         'source' => 'xpathparser:12',
-                        'target' => 'field_doc_subject',
+                        'target' => 'field_related_topics',
                         'term_search' => '0',
                         'autocreate' => 0,
                     ),
                     13 => array(
                         'source' => 'xpathparser:13',
-                        'target' => 'field_doc_subject',
+                        'target' => 'field_related_topics',
                         'unique' => FALSE,
                     ),
                     14 => array(
@@ -273,12 +273,12 @@ function importer_fao_feeds_importer_default() {
                     ),
                     17 => array(
                         'source' => 'xpathparser:17',
-                        'target' => 'field_doc_subject',
+                        'target' => 'field_related_topics',
                         'unique' => FALSE,
                     ),
                     18 => array(
                         'source' => 'xpathparser:18',
-                        'target' => 'field_doc_subject',
+                        'target' => 'field_related_topics',
                         'unique' => FALSE,
                     ),
                     19 => array(

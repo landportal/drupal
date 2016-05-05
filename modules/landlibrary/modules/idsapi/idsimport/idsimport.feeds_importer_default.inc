@@ -113,7 +113,7 @@ function idsimport_feeds_importer_default()
           ),
           15 => array(
             'source' => 'category_theme_array',
-            'target' => 'field_doc_subject',
+            'target' => 'field_related_topics',
             'unique' => FALSE
           ),
           16 => array(

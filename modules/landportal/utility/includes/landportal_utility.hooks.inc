@@ -217,7 +217,7 @@ function landportal_utility_form_alter(&$form, &$form_state, $form_id){
         'label' => 'Country',
         'taxonomy' => 'countries'
       ),
-      'im_field_doc_subject' => array(
+      'im_field_related_topics' => array(
         'label' => 'Related topics',
         'taxonomy' => 'landportal_topics'
       ),
@@ -275,7 +275,7 @@ function landportal_utility_custom_page_search_form(&$form, &$form_state){
     'search_im_field_geographical_focus',
     'search_im_field_related_topics',
     'search_im_field_doc_country',
-    'search_im_field_doc_subject',
+    'search_im_field_related_topics',
     'search_im_field_doc_type'
   );
 
