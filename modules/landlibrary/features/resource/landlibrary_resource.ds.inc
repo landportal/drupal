@@ -1,13 +1,57 @@
 <?php
 /**
  * @file
- * landlibrary.ds.inc
+ * landlibrary_resource.ds.inc
  */
+
+/**
+ * Implements hook_ds_field_settings_info().
+ */
+function landlibrary_resource_ds_field_settings_info() {
+  $export = array();
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|landlibrary_resource|default';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'landlibrary_resource';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'links' => array(
+      'weight' => '22',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['node|landlibrary_resource|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|landlibrary_resource|teaser';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'landlibrary_resource';
+  $ds_fieldsetting->view_mode = 'teaser';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '7',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h2',
+        'class' => '',
+      ),
+    ),
+  );
+  $export['node|landlibrary_resource|teaser'] = $ds_fieldsetting;
+
+  return $export;
+}
 
 /**
  * Implements hook_ds_layout_settings_info().
  */
-function landlibrary_ds_layout_settings_info() {
+function landlibrary_resource_ds_layout_settings_info() {
   $export = array();
 
   $ds_layout = new stdClass();
@@ -118,6 +162,56 @@ function landlibrary_ds_layout_settings_info() {
     'layout_disable_css' => 0,
   );
   $export['node|landlibrary_resource|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|landlibrary_resource|teaser';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'landlibrary_resource';
+  $ds_layout->view_mode = 'teaser';
+  $ds_layout->layout = 'ds_2col_fluid';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'field_doc_thumb',
+        1 => 'field_geographical_focus',
+        2 => 'field_doc_country',
+        3 => 'field_related_domains',
+        4 => 'field_related_themes',
+        5 => 'field_related_topics',
+      ),
+      'right' => array(
+        6 => 'field_doc_type',
+        7 => 'title',
+        8 => 'field_doc_creation_date',
+        9 => 'field_doc_description',
+      ),
+    ),
+    'fields' => array(
+      'field_doc_thumb' => 'left',
+      'field_geographical_focus' => 'left',
+      'field_doc_country' => 'left',
+      'field_related_domains' => 'left',
+      'field_related_themes' => 'left',
+      'field_related_topics' => 'left',
+      'field_doc_type' => 'right',
+      'title' => 'right',
+      'field_doc_creation_date' => 'right',
+      'field_doc_description' => 'right',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => 0,
+  );
+  $export['node|landlibrary_resource|teaser'] = $ds_layout;
 
   return $export;
 }
