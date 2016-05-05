@@ -38,7 +38,6 @@ dependencies[] = sparql
 dependencies[] = token
 features[context][] = library-menu-context
 features[ctools][] = context:context:3
-features[ctools][] = facetapi:facetapi_defaults:1
 features[ctools][] = feeds:feeds_importer_default:1
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
