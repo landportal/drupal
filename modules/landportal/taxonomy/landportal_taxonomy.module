@@ -18,7 +18,8 @@ function landportal_taxonomy_block_info_alter(&$blocks, $theme, $code_blocks) {
         $blocks['views']['domains-block']['status'] = TRUE;
         $blocks['views']['domains-block']['region'] = 'content';
         $blocks['views']['domains-block']['visibility'] = BLOCK_VISIBILITY_LISTED;
-        $blocks['views']['domains-block']['pages'] = 'voc';
+        $blocks['views']['domains-block']['pages'] = 'voc
+library';
 
         $blocks['views']['themes-block']['status'] = TRUE;
         $blocks['views']['themes-block']['region'] = 'content';
