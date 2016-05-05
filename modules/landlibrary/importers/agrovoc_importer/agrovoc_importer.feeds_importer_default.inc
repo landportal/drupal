@@ -33,6 +33,7 @@ function agrovoc_importer_feeds_importer_default() {
       'config' => array(
         'delimiter' => ',',
         'no_headers' => 0,
+        'encoding' => 'UTF-8',
       ),
     ),
     'processor' => array(
@@ -44,41 +45,73 @@ function agrovoc_importer_feeds_importer_default() {
             'source' => 's',
             'target' => 'field_agrovoc_uri:url',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           1 => array(
             'source' => 'enLabel',
             'target' => 'name',
-            'unique' => 0,
+            'unique' => 1,
+            'language' => 'und',
           ),
           2 => array(
             'source' => 'enLabel',
             'target' => 'name_field:et:en',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           3 => array(
             'source' => 'esLabel',
             'target' => 'name_field:et:es',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           4 => array(
             'source' => 'frLabel',
             'target' => 'name_field:et:fr',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           5 => array(
+            'source' => 'ptLabel',
+            'target' => 'name_field:et:pt',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          6 => array(
             'source' => 'defEN',
             'target' => 'description_field:et:en',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          6 => array(
+          7 => array(
             'source' => 'defFR',
             'target' => 'description_field:et:fr',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          7 => array(
+          8 => array(
             'source' => 'defES',
             'target' => 'description_field:et:es',
             'unique' => FALSE,
+            'language' => 'und',
+          ),
+          9 => array(
+            'source' => 'defPT',
+            'target' => 'description_field:et:pt',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          10 => array(
+            'source' => 'defEN',
+            'target' => 'description_field:et:und',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          11 => array(
+            'source' => 'defEN',
+            'target' => 'description',
+            'unique' => FALSE,
+            'language' => 'und',
           ),
         ),
         'update_existing' => '2',
@@ -86,6 +119,8 @@ function agrovoc_importer_feeds_importer_default() {
         'skip_hash_check' => 1,
         'bundle' => 'landportal_topics',
         'update_non_existent' => 'skip',
+        'insert_new' => '1',
+        'language' => 'und',
       ),
     ),
     'content_type' => '',

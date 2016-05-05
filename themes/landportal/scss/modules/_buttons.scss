@@ -14,8 +14,21 @@
     }
 }
 
-.field-type-taxonomy-term-reference { //.field-label-hidden {
-    display: inline;
+.landportal-button-red {
+    //margin-bottom: 1em;
+    .field-item a {
+        padding: .5em;
+        font-size: 1.2em;
+        background-color: $red;
+        font-weight: bold;
+    }
+}
+
+/**
+ * Taxonomy term
+ */
+.field-type-taxonomy-term-reference {
+    //display: inline;
     .field-items {
         display: inline;
     }
@@ -27,22 +40,19 @@
         }
     }
 }
-
-.landportal-button-red {
-    //margin-bottom: 1em;
+/* Theme and Overarching (aka domains) terms */
+.field-name-field-related-themes {
     .field-item a {
-        padding: .5em;
-        font-size: 1.2em;
-        background-color: $red;
-        font-weight: bold;
+        background-color: #42B7CA;
+    }
+}
+.field-name-field-related-domains {
+    .field-item a {
+        background-color: #42CABD;
     }
 }
 
-
-/* .field-name-field-related-topics, */
-/* .field-name-field-geographical-focus, */
-/* .field-name-field-status { */
-/* } */
+/* Debate status */
 .field-name-field-status .field-item {
     margin: 1.5em 0;
     padding: .5em;
@@ -53,9 +63,4 @@
     .field-item[content="Closed"] {
         background-color: $status-red;
     }
-}
-.field-name-field-doc-type {
-    font-size: 1em;
-    background-color: #91594d;
-    font-weight: normal;
 }

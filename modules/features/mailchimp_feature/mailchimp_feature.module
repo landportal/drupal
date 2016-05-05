@@ -5,3 +5,15 @@
  */
 
 include_once 'mailchimp_feature.features.inc';
+
+
+/**
+ * Creates a form override to edit an existing or create a new campaign and use a specific input format --> mailchimp_campaign .
+ * (Jules - 21/04/2016: Merged mailchimp_seg_custom here as this hook was the only purpose of this module)
+ */
+function mailchimp_feature_form_alter(&$form, &$form_state, $form_id) {
+    if($form_id == 'mailchimp_user_list_edit_campaign_form') {
+        $form['mailchimp_content']['#format'] = 'mailchimp_campaign';
+        return $form;
+    }
+}

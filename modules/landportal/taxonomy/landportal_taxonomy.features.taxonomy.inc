@@ -17,7 +17,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => -7,
       'language' => 'und',
-      'i18n_mode' => 0,
+      'i18n_mode' => 1,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -92,7 +92,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => -8,
       'language' => 'und',
-      'i18n_mode' => 0,
+      'i18n_mode' => 1,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

@@ -5,27 +5,25 @@
 
 include_once 'landportal_taxonomy.features.inc';
 
-function landportal_taxonomy_menu() {
-    /* $items['voc'] = array(); */
-    /* return $items; */
+/**
+ * Implements hook_views_api().
+ */
+function landportal_taxonomy_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
 }
 
-function landportal_taxonomy_menu_block_info() {
-  $blocks = array(
-    'domains_views' => array(
-      'info'        => t('Doma Footer'),
-      'status'      => TRUE,
-      'region'      => 'content',
-      'visibility'  => BLOCK_VISIBILITY_LISTED,
-      'pages'       => "voc",
-    ),
-    'themes_' => array(
-      'info'        => t('Footer social icons'),
-      'status'      => TRUE,
-      'region'      => 'content',
-      'visibility'  => BLOCK_VISIBILITY_LISTED,
-      'pages'       => "voc",
-    ),
-  );
-  return $blocks;
+function landportal_taxonomy_block_info_alter(&$blocks, $theme, $code_blocks) {
+    if ($theme == 'landportal') {
+        //dpm($blocks);
+        $blocks['views']['domains-block']['status'] = TRUE;
+        $blocks['views']['domains-block']['region'] = 'content';
+        $blocks['views']['domains-block']['visibility'] = BLOCK_VISIBILITY_LISTED;
+        $blocks['views']['domains-block']['pages'] = 'voc';
+
+        $blocks['views']['themes-block']['status'] = TRUE;
+        $blocks['views']['themes-block']['region'] = 'content';
+        $blocks['views']['themes-block']['visibility'] = BLOCK_VISIBILITY_LISTED;
+        $blocks['views']['themes-block']['pages'] = 'voc';
+    }
+    return $blocks;
 }

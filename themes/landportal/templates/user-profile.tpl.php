@@ -36,30 +36,10 @@
 
 $account = $variables['elements']['#account'];
 $print_account_name = FALSE;
-$user_dup_fields = array('field_title', 'field_firstname', 'field_lastname',
-'field_location', 'field_description');
-//dpm($account);
-if (array_key_exists('profile_main', $user_profile)) {
-    // TMP: 'copy' users fields value to profile main
-    list($pi, $p) = each($user_profile['profile_main']['view']['profile2']);
-    foreach ($user_dup_fields as $field_name) {
-        if (!array_key_exists($field_name, $p)
-        && array_key_exists($field_name, $user_profile)) {
-            $user_profile['profile_main']['view']['profile2'][$pi][$field_name]
-                = $user_profile[$field_name];
-            //$p[$field_name] = $user_profile[$field_name];
-        }
-        hide($user_profile[$field_name]);
-    }
-} else if (!array_key_exists('field_lastname', $user_profile)
-    && !array_key_exists('field_firstname', $user_profile)) {
-    // TMP Fix user where we only have a account->name
+// Check if public profile have a first or last name, otherwise print user account name
+list($pid, $profile) = each($user_profile['profile_main']['view']['profile2']);
+if (!$profile['field_lastname'][0]['#markup'] && !$profile['field_firstname'][0]['#markup']) {
     $print_account_name = TRUE;
-} else {
-    // Those would normally render in the user main profile aka Public
-    foreach (array('field_title', 'field_firstname', 'field_lastname') as $field_name) {
-        hide($user_profile[$field_name]);
-    }
 }
 
 hide($user_profile['user_picture']);
@@ -67,13 +47,14 @@ hide($user_profile['user_picture']);
 
 <div class="profile"<?php print $attributes; ?>>
 <?php print render($user_profile['user_picture']); ?>
-<?php if ($variables['elements']['#view_mode'] == 'teaser'): ?><a href="/user/<?php print $account->uid ?>"><?php endif; ?>
-<?php if (!array_key_exists('profile_main', $user_profile)): ?><header><?php
-    foreach (array('field_title', 'field_firstname', 'field_lastname') as $field_name) {
-        print render($user_profile[$field_name]);
-    }
-?></header><?php endif; ?>
-<?php if ($print_account_name): ?><div class="field account-name"><?php print $account->name; ?></div><?php endif; ?>
+<?php if ($print_account_name): ?><div class="field account-name">
+<?php
+if ($variables['elements']['#view_mode'] == 'teaser') {
+    echo '<a href="' . $variables['attributes_array']['about'] . '">';
+}
+print '<i>' . $account->name . '</i>';
+if ($variables['elements']['#view_mode'] == 'teaser') { echo '</a>'; }
+?>
+</div><?php endif; ?>
 <?php print render($user_profile); ?>
-<?php if ($variables['elements']['#view_mode']): ?></a><?php endif; ?>
 </div>

@@ -1,7 +1,0 @@
-core = "7.x"
-description = "A module used to override some mailchimp functionalities."
-name = "Mailchimp Seg Custom"
-dependencies[] = mailchimp
-dependencies[] = mailchimp_campaign
-dependencies[] = mailchimp_user_list
-dependencies[] = mailchimp_feature

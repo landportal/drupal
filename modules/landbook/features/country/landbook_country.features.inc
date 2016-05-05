@@ -19,9 +19,9 @@ function landbook_country_ctools_plugin_api($module = NULL, $api = NULL) {
 function landbook_country_node_info() {
   $items = array(
     'landbook_country' => array(
-      'name' => t('Landbook Country'),
+      'name' => t('Country narrative'),
       'base' => 'node_content',
-      'description' => t('Countries for the LandBook'),
+      'description' => t('Countries narratives for the Landbook'),
       'has_title' => '1',
       'title_label' => t('Name'),
       'help' => '',

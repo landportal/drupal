@@ -24,6 +24,12 @@ function landbook_country_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -66,6 +72,12 @@ function landbook_country_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 2,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -84,7 +96,9 @@ function landbook_country_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
       'type' => 'options_select',
       'weight' => 1,
     ),
@@ -104,6 +118,12 @@ function landbook_country_field_default_field_instances() {
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -121,12 +141,13 @@ function landbook_country_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'taxonomy',
+      'module' => 'synonyms',
       'settings' => array(
         'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
+        'sort' => 'weight',
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'synonyms_select',
       'weight' => 2,
     ),
   );

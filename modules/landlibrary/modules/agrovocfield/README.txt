@@ -15,7 +15,7 @@ SOAP library for PHP
 
 
 
-INSTRUCTIONS FOR VERSION 7.x-2.1
+INSTRUCTIONS FOR VERSION 7.x-3
  
 First time you install your module in your Drupal 7 :
  
@@ -29,14 +29,7 @@ and put (after uncompress it) inside folder named sites/all/modules/agrovocfield
 
 https://bitbucket.org/asanchez75/agrovocfield/downloads/agrovocfield_data.d7.sql.zip
 
-the steps to install Agrovoc module are:
-
-1)	Create Agrovoc taxonomy of type “Localize”
-2)	Install i18n_localize_taxonomy_fixes
-3)  Create the following taxonomy fields in Agrovoc vocabulary: 
-    - agrovoc_uri as link type 
-    - defined_in as text type
-    
+As soon as you enable the Agrovoc module you will be able to create a taxonomy term field in your content type linked to Agrovoc vocabulary(created by the module    
     
 
 Update the old version of Agrovoc for Drupal 7:
@@ -56,7 +49,7 @@ So the correct  steps to upgrade Agrovoc module to last version are:
 3)	Run update.php
 4)	Empty cache
 5)	Install i18n_localize_taxonomy_fixes
-6)  change the taxonomy fields: agrovoc_uri in link type and defined_in in text type, then run a bulk operation to save all the existing terms in order to recreate the related uri.
+
 
 
 

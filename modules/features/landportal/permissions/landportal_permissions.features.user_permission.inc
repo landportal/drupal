@@ -1005,15 +1005,6 @@ function landportal_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'clear countries_taxonomy_iso_and_external_uris_importer feeds'.
-  $permissions['clear countries_taxonomy_iso_and_external_uris_importer feeds'] = array(
-    'name' => 'clear countries_taxonomy_iso_and_external_uris_importer feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: 'clear topic_taxonomy_land_terms_importer feeds'.
   $permissions['clear topic_taxonomy_land_terms_importer feeds'] = array(
     'name' => 'clear topic_taxonomy_land_terms_importer feeds',
@@ -2370,15 +2361,6 @@ function landportal_permissions_user_default_permissions() {
     'module' => 'services',
   );
 
-  // Exported permission: 'import countries_taxonomy_iso_and_external_uris_importer feeds'.
-  $permissions['import countries_taxonomy_iso_and_external_uris_importer feeds'] = array(
-    'name' => 'import countries_taxonomy_iso_and_external_uris_importer feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: 'import topic_taxonomy_land_terms_importer feeds'.
   $permissions['import topic_taxonomy_land_terms_importer feeds'] = array(
     'name' => 'import topic_taxonomy_land_terms_importer feeds',
@@ -2873,15 +2855,6 @@ function landportal_permissions_user_default_permissions() {
     'module' => 'shortcut',
   );
 
-  // Exported permission: 'tamper countries_taxonomy_iso_and_external_uris_importer'.
-  $permissions['tamper countries_taxonomy_iso_and_external_uris_importer'] = array(
-    'name' => 'tamper countries_taxonomy_iso_and_external_uris_importer',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds_tamper',
-  );
-
   // Exported permission: 'tamper topic_taxonomy_land_terms_importer'.
   $permissions['tamper topic_taxonomy_land_terms_importer'] = array(
     'name' => 'tamper topic_taxonomy_land_terms_importer',
@@ -2977,15 +2950,6 @@ function landportal_permissions_user_default_permissions() {
       'landportal editor' => 'landportal editor',
     ),
     'module' => 'i18n_string',
-  );
-
-  // Exported permission: 'unlock countries_taxonomy_iso_and_external_uris_importer feeds'.
-  $permissions['unlock countries_taxonomy_iso_and_external_uris_importer feeds'] = array(
-    'name' => 'unlock countries_taxonomy_iso_and_external_uris_importer feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
   );
 
   // Exported permission: 'unlock topic_taxonomy_land_terms_importer feeds'.
