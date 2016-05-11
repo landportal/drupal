@@ -33,7 +33,7 @@ function landportal_footer_default_fe_block_settings() {
         'region' => 'footer',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -46,
+        'weight' => -42,
       ),
       'seven' => array(
         'region' => '',
@@ -67,7 +67,7 @@ function landportal_footer_default_fe_block_settings() {
         'region' => 'footer',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -47,
+        'weight' => -42,
       ),
       'seven' => array(
         'region' => '',
