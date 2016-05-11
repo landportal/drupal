@@ -159,7 +159,7 @@ $feeds_importer->config = array(
         ),
         15 => array(
           'source' => 'xpathparser:19',
-          'target' => 'field_doc_subject',
+          'target' => 'field_related_topics',
           'unique' => FALSE,
         ),
         16 => array(
@@ -216,7 +216,7 @@ $feeds_importer->config = array(
         ),
         26 => array(
           'source' => 'Blank source 7',
-          'target' => 'field_doc_geographic_region',
+          'target' => 'field_geographical_focus',
           'unique' => FALSE,
         ),
         27 => array(

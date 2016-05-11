@@ -292,30 +292,85 @@ function landportal_taxonomy_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-domains-field_image'.
+  $field_instances['taxonomy_term-domains-field_image'] = array(
+    'bundle' => 'domains',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_image',
+    'label' => 'Icon',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-domains-field_related_domains'.
   $field_instances['taxonomy_term-domains-field_related_domains'] = array(
     'bundle' => 'domains',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Classify this content with one or more overarching category.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'search_index' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_related_domains',
-    'label' => 'Domains',
+    'label' => 'Overarching categories',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -332,7 +387,7 @@ function landportal_taxonomy_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'synonyms_autocomplete',
-      'weight' => 33,
+      'weight' => 7,
     ),
   );
 
@@ -341,14 +396,14 @@ function landportal_taxonomy_field_default_field_instances() {
     'bundle' => 'domains',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Define which themes this content is covering',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'above',
@@ -361,12 +416,12 @@ function landportal_taxonomy_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_related_themes',
-    'label' => 'Related themes',
+    'label' => 'Themes',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -374,10 +429,12 @@ function landportal_taxonomy_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 2,
+      'module' => 'synonyms',
+      'settings' => array(
+        'sort' => 'weight',
+      ),
+      'type' => 'synonyms_select',
+      'weight' => 3,
     ),
   );
 
@@ -389,19 +446,26 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => 'Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 4,
       ),
-      'full' => array(
+      'listing' => array(
         'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'search_index' => array(
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 2,
       ),
-      'search_index' => array(
+      'search_result' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
@@ -418,7 +482,8 @@ function landportal_taxonomy_field_default_field_instances() {
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_related_topics',
-    'label' => 'Related topics',
+    'label' => 'Related concepts',
+    'pcp_tag' => 1,
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -449,9 +514,10 @@ function landportal_taxonomy_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'type' => 'text_default',
+        'weight' => 0,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -494,13 +560,11 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'link',
-        'settings' => array(
-          'conditions' => array(),
-        ),
+        'settings' => array(),
         'type' => 'link_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -564,12 +628,9 @@ function landportal_taxonomy_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -589,7 +650,9 @@ function landportal_taxonomy_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
       'type' => 'options_select',
       'weight' => 6,
     ),
@@ -647,13 +710,11 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => 'Please, enter the synonyms which should be related to this term.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
+        'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -732,17 +793,31 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => 'Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
       'search_index' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -754,7 +829,8 @@ function landportal_taxonomy_field_default_field_instances() {
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_related_topics',
-    'label' => 'Related topics',
+    'label' => 'Related concepts',
+    'pcp_tag' => 1,
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -771,26 +847,29 @@ function landportal_taxonomy_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'synonyms_autocomplete',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('AGROVOC URI');
+  t('Classify this content with one or more overarching category.');
+  t('Define which themes this content is covering');
   t('Description');
-  t('Domains');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('ISO3');
+  t('Icon');
   t('Label');
   t('Language');
   t('Linked URI');
   t('Name');
   t('Old Geopolitical Ontology URI');
+  t('Overarching categories');
   t('Please, enter the synonyms which should be related to this term.');
-  t('Related themes');
-  t('Related topics');
+  t('Related concepts');
   t('Synonyms');
+  t('Themes');
   t('This field is for the corresponding URI in the FAO Geopolitical Ontology');
   t('This is the old Geopolitical Ontology URI. Some external systems may still use it instead of the new one.');
 

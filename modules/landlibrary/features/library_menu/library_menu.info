@@ -1,7 +1,7 @@
 name = Library menu
 description = Provides section header menu
 core = 7.x
-package = F Landportal
+package = Landlibrary
 version = 7.x-1.0-beta1
 dependencies[] = features
 dependencies[] = menu

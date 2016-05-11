@@ -60,9 +60,9 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       ),
     ),
     'domains' => array(
-      'name' => 'Domains',
+      'name' => 'Overarching Categories',
       'machine_name' => 'domains',
-      'description' => 'Land Portal organizational taxonomy system for Themes, Categories',
+      'description' => 'Land Portal Overarching Categories (aka domains)',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => -10,
@@ -85,9 +85,9 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       ),
     ),
     'landportal_topics' => array(
-      'name' => 'Topics',
+      'name' => 'Concepts',
       'machine_name' => 'landportal_topics',
-      'description' => 'Topics for the LandPortal',
+      'description' => 'Land vocabulary concepts terms - linked to Agrovoc (aka Topics)',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => -8,

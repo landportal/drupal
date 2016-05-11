@@ -82,7 +82,7 @@ function gltn_documents_importer_feeds_importer_default() {
           ),
           6 => array(
             'source' => 'Topics',
-            'target' => 'field_doc_subject',
+            'target' => 'field_related_topics',
             'unique' => FALSE,
             'language' => 'und',
           ),

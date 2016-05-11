@@ -29,26 +29,26 @@ function landportal_taxonomy_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '30',
+          'weight' => '6',
         ),
         'name' => array(
-          'weight' => '-5',
-        ),
-        'description' => array(
           'weight' => '0',
         ),
+        'description' => array(
+          'weight' => '2',
+        ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '5',
         ),
       ),
       'display' => array(
         'description' => array(
           'search_index' => array(
-            'weight' => '2',
+            'weight' => '3',
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '0',
+            'weight' => '1',
             'visible' => TRUE,
           ),
         ),

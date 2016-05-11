@@ -203,7 +203,7 @@ Territorial Subdivision:
                     ),
                     /* 18 => array( */
                     /*     'source' => 'xpathparser:17', */
-                    /*     'target' => 'field_doc_geographic_region', */
+                    /*     'target' => 'field_geographical_focus', */
                     /*     'unique' => FALSE, */
                     /* ), */
                     /* 16 => array( */
