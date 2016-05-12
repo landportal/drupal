@@ -359,66 +359,67 @@ function landportal_utility_update_mailchimp_user(&$form, &$form_state){
   }
 }
 
-function landportal_utility_form_mailchimp_lists_user_subscribe_form_alter(&$form, &$form_state,$form_id){
-  drupal_add_js(drupal_get_path('module', 'landportal_utility') . '/js/main.js');
-  drupal_add_css(drupal_get_path('module', 'landportal_utility') . '/css/admin.css');
-  $user=$form['account']['#value'];
-  $form['mailchimp_lists']['mailchimp_legend_bulletin']['#weight']=10;
-  $default = field_get_items("user", $user, "field_legend_arabic_language");
-  $form['mailchimp_lists']['bull_lang_wrap']=array('#type'=>'fieldset','#weight'=>11);
-  $form['mailchimp_lists']['bull_lang_wrap']['bull_arab_lang']=array(
-    '#type' => 'checkbox',
-    '#title'=>t('Arabic'),
-    '#default_value'=>$default[0]['value'],
-  );
-  $default = field_get_items("user", $user, "field_legend_english_language");
-  $form['mailchimp_lists']['bull_lang_wrap']['bull_eng_lang']=array(
-    '#type' => 'checkbox',
-    '#title'=>t('English'),
-    '#default_value'=>$default[0]['value'],
-  );
-  $default = field_get_items("user", $user, "field_legend_french_language");
-  $form['mailchimp_lists']['bull_lang_wrap']['bull_fr_lang']=array(
-    '#type' => 'checkbox',
-    '#title'=>t('French'),
-   '#default_value'=>$default[0]['value'],
-  );
-  $default = field_get_items("user", $user, "field_legend_spanish_language");
-  $form['mailchimp_lists']['bull_lang_wrap']['bull_sp_lang']=array(
-    '#type' => 'checkbox',
-    '#title'=>t('Spanish'),
-    '#default_value'=>$default[0]['value'],
-  );
+/* function landportal_utility_form_mailchimp_lists_user_subscribe_form_alter(&$form, &$form_state,$form_id){ */
+/*   drupal_add_js(drupal_get_path('module', 'landportal_utility') . '/js/main.js'); */
+/*   drupal_add_css(drupal_get_path('module', 'landportal_utility') . '/css/admin.css'); */
+/*   $user=$form['account']['#value']; */
+/*   $form['mailchimp_lists']['mailchimp_legend_bulletin']['#weight']=10; */
+/*   $default = field_get_items("user", $user, "field_legend_arabic_language"); */
+/*   $form['mailchimp_lists']['bull_lang_wrap']=array('#type'=>'fieldset','#weight'=>11); */
+/*   $form['mailchimp_lists']['bull_lang_wrap']['bull_arab_lang']=array( */
+/*     '#type' => 'checkbox', */
+/*     '#title'=>t('Arabic'), */
+/*     '#default_value'=>$default[0]['value'], */
+/*   ); */
+/*   $default = field_get_items("user", $user, "field_legend_english_language"); */
+/*   $form['mailchimp_lists']['bull_lang_wrap']['bull_eng_lang']=array( */
+/*     '#type' => 'checkbox', */
+/*     '#title'=>t('English'), */
+/*     '#default_value'=>$default[0]['value'], */
+/*   ); */
+/*   $default = field_get_items("user", $user, "field_legend_french_language"); */
+/*   $form['mailchimp_lists']['bull_lang_wrap']['bull_fr_lang']=array( */
+/*     '#type' => 'checkbox', */
+/*     '#title'=>t('French'), */
+/*    '#default_value'=>$default[0]['value'], */
+/*   ); */
+/*   $default = field_get_items("user", $user, "field_legend_spanish_language"); */
+/*   $form['mailchimp_lists']['bull_lang_wrap']['bull_sp_lang']=array( */
+/*     '#type' => 'checkbox', */
+/*     '#title'=>t('Spanish'), */
+/*     '#default_value'=>$default[0]['value'], */
+/*   ); */
 
-  $form['mailchimp_lists']['mailchimp_land_portal_news_digest']['#weight']=12;
-  $default = field_get_items("user", $user, "field_arabic_language");
-  $form['mailchimp_lists']['lang_wrap']=array('#type'=>'fieldset','#weight'=>13);
-  $form['mailchimp_lists']['lang_wrap']['arab_lang']=array(
-    '#type' => 'checkbox',
-    '#title'=>t('Arabic'),
-    '#default_value'=>$default[0]['value'],
-  );
-  $default = field_get_items("user", $user, "field_english_language");
-  $form['mailchimp_lists']['lang_wrap']['eng_lang']=array(
-    '#type' => 'checkbox',
-    '#title'=>t('English'),
-    '#default_value'=>$default[0]['value'],
-  );
-  $default = field_get_items("user", $user, "field_french_language");
-  $form['mailchimp_lists']['lang_wrap']['fr_lang']=array(
-    '#type' => 'checkbox',
-    '#title'=>t('French'),
-    '#default_value'=>$default[0]['value'],
-  );
-  $default = field_get_items("user", $user, "field_spanish_language");
-  $form['mailchimp_lists']['lang_wrap']['sp_lang']=array(
-    '#type' => 'checkbox',
-    '#title'=>t('Spanish'),
-    '#default_value'=>$default[0]['value'],
-  );
-  $form['#submit'][0]='landportal_utility_user_subscribe_form_submit';
-  $form['#submit'][]='landportal_utility_update_mailchimp_newsletter';
-}
+/*   $form['mailchimp_lists']['mailchimp_land_portal_news_digest']['#weight']=12; */
+/*   $default = field_get_items("user", $user, "field_arabic_language"); */
+/*   $form['mailchimp_lists']['lang_wrap']=array('#type'=>'fieldset','#weight'=>13); */
+/*   $form['mailchimp_lists']['lang_wrap']['arab_lang']=array( */
+/*     '#type' => 'checkbox', */
+/*     '#title'=>t('Arabic'), */
+/*     '#default_value'=>$default[0]['value'], */
+/*   ); */
+/*   $default = field_get_items("user", $user, "field_english_language"); */
+/*   $form['mailchimp_lists']['lang_wrap']['eng_lang']=array( */
+/*     '#type' => 'checkbox', */
+/*     '#title'=>t('English'), */
+/*     '#default_value'=>$default[0]['value'], */
+/*   ); */
+/*   $default = field_get_items("user", $user, "field_french_language"); */
+/*   $form['mailchimp_lists']['lang_wrap']['fr_lang']=array( */
+/*     '#type' => 'checkbox', */
+/*     '#title'=>t('French'), */
+/*     '#default_value'=>$default[0]['value'], */
+/*   ); */
+/*   $default = field_get_items("user", $user, "field_spanish_language"); */
+/*   $form['mailchimp_lists']['lang_wrap']['sp_lang']=array( */
+/*     '#type' => 'checkbox', */
+/*     '#title'=>t('Spanish'), */
+/*     '#default_value'=>$default[0]['value'], */
+/*   ); */
+/*   $form['#submit'][0]='landportal_utility_user_subscribe_form_submit'; */
+/*   $form['#submit'][]='landportal_utility_update_mailchimp_newsletter'; */
+/* } */
+
 function landportal_utility_form_user_profile_form_alter(&$form, &$form_state,$form_id){
   drupal_add_css(drupal_get_path('module', 'landportal_utility') . '/css/admin.css');
 }
