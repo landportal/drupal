@@ -15,6 +15,7 @@
       vertical-align: bottom;
       margin: 0;
     }
+
     span.type{
       background-color: #8fcd1f;
       vertical-align: bottom;
@@ -24,7 +25,6 @@
       display: inline-block;
       padding: 0.2em 0.5em;
       white-space: nowrap;
-      float:right;
     }
   }
   .information{
@@ -153,12 +153,23 @@
     }
   }
 }
+.spelling-suggestions{
+    display: none;
+  }
 
 #search-form{
   #edit-basic{
     .keys{
-      width: 300px;
+      width: 100%;
+      max-width:455px;
     }
+  }
+
+  .spelling-suggestions{
+    display: none;
+  }
+  &.show{
+    display:block;
   }
 
   #edit-advanced-search{
@@ -261,5 +272,9 @@
     }
   }
 
+}
+
+p.total{
+  text-align: right;
 }
 

@@ -23,8 +23,10 @@
  * @ingroup themeable
  */
 ?>
+<?php global $pager_total_items;?>
 <?php if ($search_results): ?>
   <!--<h2><?php print t('Search results');?></h2>-->
+  <p class="total"><?php print $pager_total_items[0].' '.t('articles found'); ?></p>
   <ol class="search-results <?php print $module; ?>-results">
     <?php print $search_results; ?>
   </ol>
