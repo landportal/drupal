@@ -43,10 +43,11 @@ if (!$profile['field_lastname'][0]['#markup'] && !$profile['field_firstname'][0]
 }
 
 hide($user_profile['user_picture']);
+hide($user_profile['profile_work_profile']);//pa($user_profile,1);
 ?>
 
 <div class="profile"<?php print $attributes; ?>>
-<?php print render($user_profile['user_picture']); ?>
+<?php //print render($user_profile['user_picture']); ?>
 <?php if ($print_account_name): ?><div class="field account-name">
 <?php
 if ($variables['elements']['#view_mode'] == 'teaser') {

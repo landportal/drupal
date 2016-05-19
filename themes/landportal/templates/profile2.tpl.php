@@ -30,6 +30,7 @@ if ($variables['elements']['#view_mode'] == 'teaser') { echo '</a>'; }
 ?>
 </header><?php endif; ?>
   <div class="content"<?php print $content_attributes; ?>>
-    <?php print render($content); ?>
+    <?php print render($content);//pa($content,1); ?>
+    <?php print render($content['field_image']); ?>
   </div>
 </article>

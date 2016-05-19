@@ -321,6 +321,9 @@ function landportal_utility_menu_breadcrumb_alter(&$active_trail, $item){
 }
 
 function landportal_utility_form_user_register_form_alter(&$form, &$form_state,$form_id){
+  $form['mailchimp_lists']['#collapsible'] = TRUE;
+  $form['mailchimp_lists']['#collapsed'] = FALSE;
+  $form['mailchimp_lists']['mailchimp_land_portal_news_digest']['interest_groups'][1]['#default_value']=array('English' => 'English');
   $form['#validate'][]='landportal_utility_validate_mailchimp_lists_user_subscribe';
   $form['#submit'][]='landportal_utility_mailchimp_user_update';
 }
@@ -355,11 +358,10 @@ function landportal_utility_form_user_profile_form_alter(&$form, &$form_state,$f
 function landportal_utility_module_implements_alter(&$implementations, $hook) {
   // Name of the hook.
   if ($hook == 'form_alter') {
-
-  $module = 'landportal_utility';
-  $group = $implementations[$module];
-  unset($implementations[$module]);
-  $implementations[$module] = $group;
+    $module = 'landportal_utility';
+    $group = $implementations[$module];
+    unset($implementations[$module]);
+    $implementations[$module] = $group;
   }
 }
 
