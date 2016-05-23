@@ -1,0 +1,13 @@
+name = Landportal Multilingual
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = i18n_variable
+dependencies[] = variable_realm
+features[features_api][] = api:2
+features[variable_realm][] = global:default
+features[variable_realm][] = language:en
+features[variable_realm][] = language:es
+features[variable_realm][] = language:fr
+features[variable_realm][] = language:pt
+project path = sites/dev.landportal.info/modules/landlibrary/features
