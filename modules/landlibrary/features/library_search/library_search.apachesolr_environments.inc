@@ -19,6 +19,7 @@ function library_search_apachesolr_environments() {
   $environment->conf = array(
     'apachesolr_direct_commit' => 0,
     'apachesolr_read_only' => '0',
+    'apachesolr_search_facet_pages' => '',
     'apachesolr_soft_commit' => 0,
   );
   $environment->index_bundles = array(

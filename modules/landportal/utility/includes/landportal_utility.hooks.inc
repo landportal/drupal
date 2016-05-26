@@ -169,7 +169,7 @@ function landportal_utility_form_alter(&$form, &$form_state, $form_id){
     $form['basic']['submit']['#attributes']['class']=array('btn','btn-default');
     $form['#submit'][] = 'landportal_utility_custom_page_search_form';
 
-    $form['#submit'][] = 'landportal_utility_custom_page_search_form';
+    //$form['#submit'][] = 'landportal_utility_custom_page_search_form';
 
     $form['advanced_search'] = array(
       '#type' => 'fieldset',
@@ -208,8 +208,12 @@ function landportal_utility_form_alter(&$form, &$form_state, $form_id){
     }*/
     $default_provider=array();
       if (isset($_GET['f'])) {
-        foreach(array_intersect_key(array_flip($_GET['f']), $provider_list) as $key=>$item){
+        /*foreach(array_intersect_key(array_flip($_GET['f']), $provider_list) as $key=>$item){
             $default_provider[]=$key;
+        }*/
+        foreach(array_flip($_GET['f']) as $key=>$item){
+            $value=explode(':',$key);
+            $default_provider[]=$value[1].':'.$value[2];
         }
       }
     unset($provider_list['_none']);
@@ -296,9 +300,17 @@ function landportal_utility_custom_page_search_form(&$form, &$form_state){
         }
       }
       else{
+        /*if($name=='search_sm_field_doc_provider'){
+          pa($values,1);
+        }*/
         if(is_array($values[$name])){
           foreach($values[$name] as $item){
-            $get['f'][]=$item;
+            if($name=='search_sm_field_doc_provider'){
+              $get['f'][]='sm_field_doc_provider:'.$item;
+            }
+            else{
+              $get['f'][]=$item;
+            }
           }
         }
         else{
@@ -306,6 +318,9 @@ function landportal_utility_custom_page_search_form(&$form, &$form_state){
         }
       }
     }
+  }
+  if(!empty($get['f'])){
+    $get['f']=array_unique($get['f']);
   }
   $form_state['values']['get'] = json_encode($get);
   $form_state['redirect'] = array($redirect, array('query' => $get));
@@ -321,6 +336,9 @@ function landportal_utility_menu_breadcrumb_alter(&$active_trail, $item){
 }
 
 function landportal_utility_form_user_register_form_alter(&$form, &$form_state,$form_id){
+  $form['mailchimp_lists']['#collapsible'] = TRUE;
+  $form['mailchimp_lists']['#collapsed'] = FALSE;
+  $form['mailchimp_lists']['mailchimp_land_portal_news_digest']['interest_groups'][1]['#default_value']=array('English' => 'English');
   $form['#validate'][]='landportal_utility_validate_mailchimp_lists_user_subscribe';
   $form['#submit'][]='landportal_utility_mailchimp_user_update';
 }
@@ -355,11 +373,10 @@ function landportal_utility_form_user_profile_form_alter(&$form, &$form_state,$f
 function landportal_utility_module_implements_alter(&$implementations, $hook) {
   // Name of the hook.
   if ($hook == 'form_alter') {
-
-  $module = 'landportal_utility';
-  $group = $implementations[$module];
-  unset($implementations[$module]);
-  $implementations[$module] = $group;
+    $module = 'landportal_utility';
+    $group = $implementations[$module];
+    unset($implementations[$module]);
+    $implementations[$module] = $group;
   }
 }
 
