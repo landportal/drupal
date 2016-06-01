@@ -300,6 +300,18 @@ $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Entity Reference: Referencing entity */
+$handler->display->display_options['relationships']['reverse_field_doc_provider_node']['id'] = 'reverse_field_doc_provider_node';
+$handler->display->display_options['relationships']['reverse_field_doc_provider_node']['table'] = 'node';
+$handler->display->display_options['relationships']['reverse_field_doc_provider_node']['field'] = 'reverse_field_doc_provider_node';
+$handler->display->display_options['relationships']['reverse_field_doc_provider_node']['label'] = 'Providers';
+$handler->display->display_options['relationships']['reverse_field_doc_provider_node']['required'] = TRUE;
+/* Relationship: Entity Reference: Referencing entity */
+$handler->display->display_options['relationships']['reverse_field_doc_publisher_node']['id'] = 'reverse_field_doc_publisher_node';
+$handler->display->display_options['relationships']['reverse_field_doc_publisher_node']['table'] = 'node';
+$handler->display->display_options['relationships']['reverse_field_doc_publisher_node']['field'] = 'reverse_field_doc_publisher_node';
+$handler->display->display_options['relationships']['reverse_field_doc_publisher_node']['label'] = 'Publisher';
 $handler->display->display_options['defaults']['sorts'] = FALSE;
 /* Sort criterion: Content: Title */
 $handler->display->display_options['sorts']['title']['id'] = 'title';
