@@ -1,7 +1,7 @@
 name = FAOLEX importer
 description = From html table export hack
 core = 7.x
-package = CLandportal
+package = Landlibrary
 version = 7.x-2.2-rc1
 project = importer_faolex
 dependencies[] = ctools
