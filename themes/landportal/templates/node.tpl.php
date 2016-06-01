@@ -66,9 +66,11 @@
   <?php print render($title_suffix); ?>
 
   <?php if($node->type !='page'): ?>
-  <section class="lang">
-    <?php print render($content['links']['translation']); ?>
-  </section>
+    <?php if($view_mode =='full'): ?>
+    <section class="lang">
+      <?php print render($content['links']['translation']); ?>
+    </section>
+  <?php endif; ?>
   <?php unset($content['links']['translation']); ?>
 <?php endif; ?>
   <section class="information">
