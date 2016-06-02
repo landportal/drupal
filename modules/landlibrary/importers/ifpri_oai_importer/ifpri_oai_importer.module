@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the IFPRI OAI importer feature.
+ */
+
+include_once 'ifpri_oai_importer.features.inc';

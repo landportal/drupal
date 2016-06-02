@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Land Portal Importer feature.
+ */
+
+include_once 'land_portal_importer.features.inc';

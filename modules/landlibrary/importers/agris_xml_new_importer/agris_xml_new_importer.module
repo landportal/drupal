@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Agris XML new importer feature.
+ */
+
+include_once 'agris_xml_new_importer.features.inc';
