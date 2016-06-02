@@ -10919,11 +10919,11 @@ html.js fieldset.collapsed {
   min-width: 150px;
 }
 
-/* line 98, ../scss/modules/_forms.scss */
-#user-register-form .form-item label {
+/* line 97, ../scss/modules/_forms.scss */
+#user-register-form label {
   display: block;
 }
-/* line 103, ../scss/modules/_forms.scss */
+/* line 101, ../scss/modules/_forms.scss */
 #user-register-form #edit-mailchimp-lists label {
   display: inline-block;
 }
@@ -11736,8 +11736,17 @@ html.js fieldset.collapsed {
 .profile .field-type-taxonomy-term-reference {
   display: inline;
 }
+/* line 43, ../scss/modules/_users.scss */
+.profile article.entity-profile2 {
+  width: 100%;
+}
+/* line 45, ../scss/modules/_users.scss */
+.profile article.entity-profile2 .field-name-field-image {
+  margin: 0;
+  float: left;
+}
 
-/* line 46, ../scss/modules/_users.scss */
+/* line 53, ../scss/modules/_users.scss */
 .page-user .profile {
   min-height: 240px;
   border: 1px solid #cccccc;
@@ -11749,7 +11758,7 @@ html.js fieldset.collapsed {
   border-top-left-radius: 0;
   padding: .5em;
 }
-/* line 48, ../scss/modules/_users.scss */
+/* line 55, ../scss/modules/_users.scss */
 .page-user .profile .field-name-field-title,
 .page-user .profile .field-name-field-firstname,
 .page-user .profile .field-name-field-lastname {
@@ -11760,11 +11769,11 @@ html.js fieldset.collapsed {
   text-rendering: optimizelegibility;
   /* clear: both; */
 }
-/* line 62, ../scss/modules/_users.scss */
+/* line 69, ../scss/modules/_users.scss */
 .page-user .profile .user-picture {
   margin: -.5em 1em 1em -.5em;
 }
-/* line 67, ../scss/modules/_users.scss */
+/* line 74, ../scss/modules/_users.scss */
 .page-user .profile2-work-profile {
   border: 1px solid #cccccc;
   -moz-border-radius: 0.5em;
@@ -11781,7 +11790,7 @@ html.js fieldset.collapsed {
  *
  * When viewed as referenced entity
  */
-/* line 84, ../scss/modules/_users.scss */
+/* line 91, ../scss/modules/_users.scss */
 .view-users .profile,
 .field-type-entityreference .profile {
   /* width: 25%; */
@@ -11801,7 +11810,7 @@ html.js fieldset.collapsed {
   -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-/* line 96, ../scss/modules/_users.scss */
+/* line 103, ../scss/modules/_users.scss */
 .view-users .profile .field-type-image,
 .view-users .profile .user-picture,
 .field-type-entityreference .profile .field-type-image,
@@ -11812,40 +11821,40 @@ html.js fieldset.collapsed {
   float: right;
   margin: -.5em 0 0 0;
 }
-/* line 104, ../scss/modules/_users.scss */
+/* line 111, ../scss/modules/_users.scss */
 .view-users .profile h3,
 .field-type-entityreference .profile h3 {
   display: none;
 }
-/* line 105, ../scss/modules/_users.scss */
+/* line 112, ../scss/modules/_users.scss */
 .view-users .profile a,
 .field-type-entityreference .profile a {
   font-weight: bold;
   font-size: 1.2em;
   color: #2a6496;
 }
-/* line 110, ../scss/modules/_users.scss */
+/* line 117, ../scss/modules/_users.scss */
 .view-users .profile dl,
 .field-type-entityreference .profile dl {
   margin: 0;
 }
-/* line 113, ../scss/modules/_users.scss */
+/* line 120, ../scss/modules/_users.scss */
 .view-users .profile article,
 .field-type-entityreference .profile article {
   display: inline-block;
 }
-/* line 117, ../scss/modules/_users.scss */
+/* line 124, ../scss/modules/_users.scss */
 .view-users .field-name-field-affiliation,
 .field-type-entityreference .field-name-field-affiliation {
   font-weight: bold;
 }
-/* line 120, ../scss/modules/_users.scss */
+/* line 127, ../scss/modules/_users.scss */
 .view-users .field-name-field-position,
 .field-type-entityreference .field-name-field-position {
   font-weight: normal;
   font-style: italic;
 }
-/* line 124, ../scss/modules/_users.scss */
+/* line 131, ../scss/modules/_users.scss */
 .view-users .field-name-field-position,
 .view-users .field-name-field-affiliation,
 .field-type-entityreference .field-name-field-position,
@@ -11853,7 +11862,7 @@ html.js fieldset.collapsed {
   font-size: 0.8em;
   color: #444444;
 }
-/* line 129, ../scss/modules/_users.scss */
+/* line 136, ../scss/modules/_users.scss */
 .view-users:after,
 .field-type-entityreference:after {
   content: "";
@@ -11885,19 +11894,19 @@ html.js fieldset.collapsed {
 /******************************************
  *      Organizations style
  */
-/* line 160, ../scss/modules/_users.scss */
+/* line 167, ../scss/modules/_users.scss */
 .view table.views-view-grid {
   width: 100%;
   /* .node-organization.node-teaser { */
   /* } */
 }
 
-/* line 165, ../scss/modules/_users.scss */
+/* line 172, ../scss/modules/_users.scss */
 .view-organizations-overview tr {
   height: 250px;
 }
 
-/* line 170, ../scss/modules/_users.scss */
+/* line 177, ../scss/modules/_users.scss */
 .node-organization.node-teaser {
   text-align: center;
   /* height: 220px; */
@@ -11905,55 +11914,55 @@ html.js fieldset.collapsed {
   position: relative;
   overflow: hidden;
 }
-/* line 176, ../scss/modules/_users.scss */
+/* line 183, ../scss/modules/_users.scss */
 .node-organization.node-teaser .content {
   width: 100%;
   /* position: absolute; */
   /* bottom: 0; */
 }
-/* line 181, ../scss/modules/_users.scss */
+/* line 188, ../scss/modules/_users.scss */
 .node-organization.node-teaser h2 {
   margin-bottom: 1em;
   font-size: 2em;
   font-weight: bold;
 }
-/* line 186, ../scss/modules/_users.scss */
+/* line 193, ../scss/modules/_users.scss */
 .node-organization.node-teaser span {
   font-style: italic;
   font-size: .8em;
   padding-top: .2em;
 }
-/* line 191, ../scss/modules/_users.scss */
+/* line 198, ../scss/modules/_users.scss */
 .node-organization.node-teaser a {
   color: #888888;
 }
-/* line 194, ../scss/modules/_users.scss */
+/* line 201, ../scss/modules/_users.scss */
 .node-organization.node-teaser:after {
   content: " ";
   visibility: visible;
 }
 
-/* line 203, ../scss/modules/_users.scss */
+/* line 210, ../scss/modules/_users.scss */
 .page-node.node-type-organization #content {
   clear: both;
   position: relative;
 }
-/* line 207, ../scss/modules/_users.scss */
+/* line 214, ../scss/modules/_users.scss */
 .page-node.node-type-organization .node-organization {
   min-height: 500px;
 }
-/* line 209, ../scss/modules/_users.scss */
+/* line 216, ../scss/modules/_users.scss */
 .page-node.node-type-organization .node-organization .side {
   text-align: center;
   position: absolute;
   left: 0;
   width: 25%;
 }
-/* line 214, ../scss/modules/_users.scss */
+/* line 221, ../scss/modules/_users.scss */
 .page-node.node-type-organization .node-organization .side .field-type-taxonomy-term-reference {
   display: inline;
 }
-/* line 218, ../scss/modules/_users.scss */
+/* line 225, ../scss/modules/_users.scss */
 .page-node.node-type-organization .node-organization > .content {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjODg4ODg4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZGRkZGRkIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
@@ -11967,11 +11976,11 @@ html.js fieldset.collapsed {
   padding-left: 1em;
   margin-left: 25%;
 }
-/* line 225, ../scss/modules/_users.scss */
+/* line 232, ../scss/modules/_users.scss */
 .page-node.node-type-organization .node-organization > .content .field-name-body {
   padding: 1em 0;
 }
-/* line 229, ../scss/modules/_users.scss */
+/* line 236, ../scss/modules/_users.scss */
 .page-node.node-type-organization .node-organization .field-label {
   min-width: 70px;
   color: #888888;
@@ -11979,29 +11988,29 @@ html.js fieldset.collapsed {
   font-weight: normal;
   margin-right: .2em;
 }
-/* line 236, ../scss/modules/_users.scss */
+/* line 243, ../scss/modules/_users.scss */
 .page-node.node-type-organization .node-organization .field-label:after {
   content: ": ";
 }
-/* line 240, ../scss/modules/_users.scss */
+/* line 247, ../scss/modules/_users.scss */
 .page-node.node-type-organization .node-organization .field-name-field-organization-relationship {
   position: absolute;
   right: 0;
   top: 0;
 }
-/* line 244, ../scss/modules/_users.scss */
+/* line 251, ../scss/modules/_users.scss */
 .page-node.node-type-organization .node-organization .field-name-field-organization-relationship .field-items {
   text-align: right;
 }
-/* line 246, ../scss/modules/_users.scss */
+/* line 253, ../scss/modules/_users.scss */
 .page-node.node-type-organization .node-organization .field-name-field-organization-relationship .field-items .field-item {
   display: block;
 }
-/* line 248, ../scss/modules/_users.scss */
+/* line 255, ../scss/modules/_users.scss */
 .page-node.node-type-organization .node-organization .field-name-field-organization-relationship .field-items .field-item a {
   background-color: #e3ab03;
 }
-/* line 255, ../scss/modules/_users.scss */
+/* line 262, ../scss/modules/_users.scss */
 .page-node.node-type-organization .node-organization .field-name-field-user > .field-items > .field-item {
   margin: 0 1em 0 0;
   float: left;
