@@ -1,0 +1,10 @@
+name = Landlibrary rules
+core = 7.x
+package = Landlibrary
+version = 7.x-1.0-alpha
+dependencies[] = entity
+dependencies[] = rules
+dependencies[] = rules_autotag
+features[features_api][] = api:2
+features[rules_config][] = rules_add_country_automatically
+features[rules_config][] = rules_add_topic_automatically
