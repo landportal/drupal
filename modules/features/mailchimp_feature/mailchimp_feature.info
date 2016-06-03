@@ -47,4 +47,3 @@ features[variable][] = mailchimp_batch_limit
 features[variable][] = mailchimp_use_secure
 features_exclude[dependencies][menu] = menu
 features_exclude[menu_custom][management] = management
-project path = sites/dev.landportal.info/modules/features

@@ -74,4 +74,3 @@ features[fe_block_settings][] = facetapi-yUhemNJf8izLiuofmSC6AQ3PVGRxP5Hp
 features[features_api][] = api:2
 features[search_api_index][] = arc2_sparql_node_index_all_library_nodes
 features[variable][] = facetapi:block_cache:apachesolr@landlibrary_search
-project path = sites/dev.landportal.info/modules/landlibrary/features
