@@ -8,12 +8,12 @@
  * Implements hook_default_rules_configuration().
  */
 function landlibrary_rules_default_rules_configuration() {
-  $items = array();
-  $items['rules_add_country_automatically'] = entity_import('rules_config', '{ "rules_add_country_automatically" : {
+    $items = array();
+    $items['rules_add_country_automatically'] = entity_import('rules_config', '{ "rules_add_country_automatically" : {
       "LABEL" : "Add country automatically",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
-      "TAGS" : [ "autotag" ],
+      "TAGS" : [ "autotag", "landlibrary" ],
       "REQUIRES" : [ "rules" ],
       "ON" : { "node_presave--landlibrary_resource" : { "bundle" : "landlibrary_resource" } },
       "IF" : [
@@ -30,11 +30,29 @@ function landlibrary_rules_default_rules_configuration() {
       ]
     }
   }');
-  $items['rules_add_topic_automatically'] = entity_import('rules_config', '{ "rules_add_topic_automatically" : {
+    $items['rules_add_geo_automatically'] = entity_import('rules_config', '{ "rules_add_geo_automatically" : {
+    "LABEL" : "Add geo automatically",
+    "PLUGIN" : "reaction rule",
+    "OWNER" : "rules",
+    "TAGS" : [ "autotag", "landlibrary" ],
+    "REQUIRES" : [ "rules" ],
+    "ON" : { "node_presave--landlibrary_resource" : { "bundle" : "landlibrary_resource" } },
+    "DO" : [
+      { "component_rules_autotag_tag" : {
+          "text" : "[node:title] [node:field-doc-description] [node:field-doc-alt-title] [node:field-doc-title] ",
+          "vocabulary" : "regions",
+          "target_terms" : [ "node:field-geographical-focus" ]
+        }
+      }
+    ]
+  }
+}');
+
+    $items['rules_add_topic_automatically'] = entity_import('rules_config', '{ "rules_add_topic_automatically" : {
       "LABEL" : "Add concepts (aka topics) automatically",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
-      "TAGS" : [ "autotag" ],
+      "TAGS" : [ "autotag", "landlibrary" ],
       "REQUIRES" : [ "rules" ],
       "ON" : { "node_presave--landlibrary_resource" : { "bundle" : "landlibrary_resource" } },
       "IF" : [
