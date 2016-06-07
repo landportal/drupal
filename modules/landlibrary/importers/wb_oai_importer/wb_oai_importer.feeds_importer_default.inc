@@ -52,7 +52,7 @@ function wb_oai_importer_feeds_importer_default() {
           ),
           2 => array(
             'source' => 'subject',
-            'target' => 'field_doc_subject',
+            'target' => 'field_related_topics',
             'unique' => FALSE,
           ),
           3 => array(

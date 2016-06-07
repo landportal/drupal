@@ -96,7 +96,7 @@ function ckan_documents_importer_feeds_importer_default() {
           ),
           2 => array(
             'source' => 'jsonpath_parser:2',
-            'target' => 'field_doc_subject',
+            'target' => 'field_related_topics',
             'term_search' => '0',
             'autocreate' => 0,
           ),
