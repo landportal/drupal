@@ -38,15 +38,18 @@ $account = $variables['elements']['#account'];
 $print_account_name = FALSE;
 // Check if public profile have a first or last name, otherwise print user account name
 list($pid, $profile) = each($user_profile['profile_main']['view']['profile2']);
-if (!$profile['field_lastname'][0]['#markup'] && !$profile['field_firstname'][0]['#markup']) {
-    $print_account_name = TRUE;
+if(!empty($profile['field_lastname'])){
+  if (!$profile['field_lastname'][0]['#markup'] && !$profile['field_firstname'][0]['#markup']) {
+      $print_account_name = TRUE;
+  }
 }
 
 hide($user_profile['user_picture']);
+hide($user_profile['profile_work_profile']);//pa($user_profile,1);
 ?>
 
 <div class="profile"<?php print $attributes; ?>>
-<?php print render($user_profile['user_picture']); ?>
+<?php //print render($user_profile['user_picture']); ?>
 <?php if ($print_account_name): ?><div class="field account-name">
 <?php
 if ($variables['elements']['#view_mode'] == 'teaser') {

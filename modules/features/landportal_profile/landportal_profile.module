@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Landportal Profile feature.
+ */
+
+include_once 'landportal_profile.features.inc';
