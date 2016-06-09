@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the FAO Library importer feature.
+ */
+
+include_once 'fao_library_importer.features.inc';
