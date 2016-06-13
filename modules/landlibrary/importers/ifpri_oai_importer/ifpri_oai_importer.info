@@ -1,0 +1,14 @@
+name = IFPRI OAI importer
+description = Import IFPRI records from OAI-PMH
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = feeds
+dependencies[] = feeds_oai_pmh
+dependencies[] = feeds_tamper
+features[ctools][] = feeds:feeds_importer_default:1
+features[ctools][] = feeds_tamper:feeds_tamper_default:2
+features[features_api][] = api:2
+features[feeds_importer][] = ifpri_oai_importer
+features[feeds_tamper][] = ifpri_oai_importer-metadata_record_url-rewrite

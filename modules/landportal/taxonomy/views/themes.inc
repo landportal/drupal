@@ -12,7 +12,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Thematics';
+$handler->display->display_options['title'] = 'Themes';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
@@ -30,7 +30,7 @@ $handler->display->display_options['fields']['rendered_entity']['label'] = '';
 $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
-$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'search_index';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
 /* Filter criterion: Taxonomy vocabulary: Machine name */
 $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
@@ -44,7 +44,7 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
 $handler = $view->new_display('block', 'Block', 'block');
 $translatables['themes'] = array(
   t('Master'),
-  t('Thematics'),
+  t('Themes'),
   t('more'),
   t('Apply'),
   t('Reset'),

@@ -16,7 +16,7 @@
         margin-top: 5px;
         padding-left: 0;
     }
-    
+
     .form-item {
         @extend .form-group;
     }
@@ -26,10 +26,10 @@
         @extend .form-control;
     }
     .form-type-checkbox {
-        
+
     }
     .form-managed-file {
-        
+
     }
     .form-actions {
         input[type=submit] {
@@ -90,5 +90,16 @@ html.js fieldset.collapsed {
     label {
         display: inline-block;
         min-width: 150px;
+    }
+}
+
+#user-register-form{
+    label{
+        display:block;
+    }
+    #edit-mailchimp-lists{
+        label{
+            display:inline-block;
+        }
     }
 }

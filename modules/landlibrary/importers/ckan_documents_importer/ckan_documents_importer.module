@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the CKAN documents importer feature.
+ */
+
+include_once 'ckan_documents_importer.features.inc';

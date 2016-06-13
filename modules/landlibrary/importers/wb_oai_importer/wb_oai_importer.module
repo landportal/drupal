@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the WB OAI importer feature.
+ */
+
+include_once 'wb_oai_importer.features.inc';

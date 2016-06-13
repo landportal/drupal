@@ -389,10 +389,10 @@ function library_search_facetapi_default_facet_settings() {
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
   $facet->api_version = 1;
-  $facet->name = 'apachesolr@landlibrary_search:block:im_field_doc_geographic_region';
+  $facet->name = 'apachesolr@landlibrary_search:block:im_field_geographical_focus';
   $facet->searcher = 'apachesolr@landlibrary_search';
   $facet->realm = 'block';
-  $facet->facet = 'im_field_doc_geographic_region';
+  $facet->facet = 'im_field_geographical_focus';
   $facet->enabled = FALSE;
   $facet->settings = array(
     'weight' => 0,
@@ -420,7 +420,7 @@ function library_search_facetapi_default_facet_settings() {
     'nofollow' => 1,
     'show_expanded' => 0,
   );
-  $export['apachesolr@landlibrary_search:block:im_field_doc_geographic_region'] = $facet;
+  $export['apachesolr@landlibrary_search:block:im_field_geographical_focus'] = $facet;
 
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
@@ -569,10 +569,10 @@ function library_search_facetapi_default_facet_settings() {
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
   $facet->api_version = 1;
-  $facet->name = 'apachesolr@landlibrary_search:block:im_field_doc_subject';
+  $facet->name = 'apachesolr@landlibrary_search:block:im_field_related_topics';
   $facet->searcher = 'apachesolr@landlibrary_search';
   $facet->realm = 'block';
-  $facet->facet = 'im_field_doc_subject';
+  $facet->facet = 'im_field_related_topics';
   $facet->enabled = TRUE;
   $facet->settings = array(
     'weight' => 0,
@@ -610,7 +610,7 @@ function library_search_facetapi_default_facet_settings() {
       'format' => 'filtered_html',
     ),
   );
-  $export['apachesolr@landlibrary_search:block:im_field_doc_subject'] = $facet;
+  $export['apachesolr@landlibrary_search:block:im_field_related_topics'] = $facet;
 
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */

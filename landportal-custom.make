@@ -45,7 +45,8 @@ libraries:
   jsonpath:
     download:
       type: "file"
-      url: "http://jsonpath.googlecode.com/svn/trunk/src/php/jsonpath.php"
+      url: "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/jsonpath/jsonpath-0.8.1.php"
+      #url: "http://jsonpath.googlecode.com/svn/trunk/src/php/jsonpath.php"
   arc:
     subdir: "ARC2"
     download:
