@@ -8,4 +8,3 @@ features[ctools][] = field_group:field_group:1
 features[features_api][] = api:2
 features[field_group][] = group_profile_info|profile2|main|form
 features[field_group][] = group_profile_links|profile2|main|form
-project path = sites/dev.landportal.info/modules/features
