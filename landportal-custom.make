@@ -39,7 +39,7 @@ projects:
     patch:
       - "https://www.drupal.org/files/issues/multiple_replace-1525540-7.patch"
   feeds_oai_pmh:
-    version: "7.1.x-dev"
+    version: "1.x-dev"
     patch:
       - "https://www.drupal.org/files/issues/2383997-7.patch"
   jquery_update:
