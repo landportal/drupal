@@ -42,7 +42,7 @@ projects:
   - features_extra
   - feeds_et
   - feeds_jsonpath_parser
-  - feeds_oai_pmh
+#  - feeds_oai_pmh
   - feeds_tamper_conditional
   - feeds_tamper_php
   - feeds_tamper_string2id
