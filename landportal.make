@@ -106,6 +106,7 @@ projects:
   - views_tree
   - webform
   - disable_messages
+  - i18nviews
 
 includes:
   - "landportal-custom.make"
