@@ -26,8 +26,6 @@ projects:
     version: ~
     patch:
       - "https://www.drupal.org/files/issues/profile2--inherit-view_mode.patch"
-  feeds:
-    version: "2.0-beta1" #2.0-alpha8+85-dev"
   feeds_crawler:
     version: "2.x-dev"
   feeds_fetcher_directory:

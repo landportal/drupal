@@ -40,6 +40,7 @@ projects:
   - facetapi_collapsible
   - features
   - features_extra
+  - feeds
   - feeds_et
   - feeds_jsonpath_parser
 #  - feeds_oai_pmh
