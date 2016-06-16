@@ -1,0 +1,14 @@
+--- all/modules/rdf_indexer/service.virtuoso.inc	2016-06-16 16:49:04.915255117 +0200
++++ landportal.info/modules/landlibrary/modules/rdf_indexer/service.virtuoso.inc	2016-05-20 13:08:04.169608608 +0200
+@@ -167,2 +167,3 @@ class RdfIndexerVirtuosoService extends
+         foreach($value as $triple){
++          if (is_string($triple['value'])) {
+           $object = '';
+@@ -189,2 +190,7 @@ class RdfIndexerVirtuosoService extends
+         }
++          else {
++            watchdog('rdf_indexer', 'See uri = %uri . It can not convert %value into a string.  ', array('%uri' => $item->uri, '%value' => var_export($triple['value'], 1)));
++          }
++
++        }
+       }
