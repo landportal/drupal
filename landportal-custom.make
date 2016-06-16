@@ -42,6 +42,10 @@ projects:
       - "https://www.drupal.org/files/issues/2383997-7.patch"
   jquery_update:
     version: "3.0-alpha3"
+  rdf_indexer:
+    version: ~
+    patch:
+      - "https://www.drupal.org/files/issues/rdf_indexer-add_virtuoso_support-2029717-15.patch"
 
 libraries:
   jsonpath:
