@@ -18,7 +18,7 @@ function landbook_add_js_vars($args=NULL) {
       // TODO: Should be configurable through admin/settings/landbook/services,
       //  & have default values in local.settings.php or sum'thing
       'apiURL'          => $GLOBALS['landbook_urls']['api'],
-      'ckanURL'         => $GLOBALS['landbook_urls']['ckan'],
+      'ckanURL'         => '',//$GLOBALS['landbook_urls']['ckan'],
       'sparqlURL'       => $GLOBALS['landbook_urls']['sparql'], // not really used?
   )), 'setting'
   );
