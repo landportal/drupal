@@ -44,8 +44,16 @@ projects:
     version: "3.0-alpha3"
   rdf_indexer:
     version: ~
+    download:
+      working-copy: true
+#      type: git
+#      url: "git://git.drupal.org/project/rdf_indexer.git"
     patch:
-      - "https://www.drupal.org/files/issues/rdf_indexer-add_virtuoso_support-2029717-15.patch"
+      - "modules/landlibrary/modules/rdf_indexer/rdf_indexer-add_virtuoso_support-2029717-15.patch"
+# Antonella's changes?
+#      - "modules/landlibrary/modules/rdf_indexer/rdf_indexer-fix_virtuoso_support.patch"
+# Online patch is borken
+#      - "https://www.drupal.org/files/issues/rdf_indexer-add_virtuoso_support-2029717-15.patch"
 
 libraries:
   jsonpath:
