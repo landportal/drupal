@@ -11,4 +11,7 @@ features[ctools][] = feeds:feeds_importer_default:1
 features[ctools][] = feeds_tamper:feeds_tamper_default:2
 features[features_api][] = api:2
 features[feeds_importer][] = wb_oai_importer
+features[feeds_tamper][] = wb_oai_importer-blank_source_1-default_value
 features[feeds_tamper][] = wb_oai_importer-metadata_record_url-rewrite
+features[feeds_tamper][] = wb_oai_importer-publisher-php
+features[feeds_tamper][] = wb_oai_importer-source-php

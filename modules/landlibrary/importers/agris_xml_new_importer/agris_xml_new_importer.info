@@ -1,5 +1,5 @@
 name = Agris XML new importer
-description = Import from Agris records
+description = Import records from Agris xml files
 core = 7.x
 package = Features
 version = 7.x-1.0

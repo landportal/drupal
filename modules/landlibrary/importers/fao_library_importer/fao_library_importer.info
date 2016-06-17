@@ -1,5 +1,5 @@
 name = FAO Library importer
-description = Import only Fao records from Agris
+description = Import only Fao library records from Agris xml files
 core = 7.x
 package = Features
 version = 7.x-1.0

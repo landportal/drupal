@@ -59,6 +59,21 @@ function ckan_documents_importer_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'ckan_importer-blank_source_3-default_value';
+  $feeds_tamper->importer = 'ckan_importer';
+  $feeds_tamper->source = 'Blank source 3';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => 'importer_odm',
+    'only_if_empty' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Set value or default value';
+  $export['ckan_importer-blank_source_3-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'ckan_importer-jsonpath_parser_13-explode';
   $feeds_tamper->importer = 'ckan_importer';
   $feeds_tamper->source = 'jsonpath_parser:13';
@@ -195,19 +210,23 @@ function ckan_documents_importer_feeds_tamper_default() {
     'pairs' => array(
       0 => array(
         'source' => 'reports_journal_articles_and_research_papers',
-        'target' => 'Report',
+        'target' => '​Reports and Research',
       ),
       1 => array(
         'source' => 'advocacy_and_promotional_materials',
-        'target' => 'Text',
+        'target' => '​Manuals & Guidelines',
       ),
       2 => array(
         'source' => 'conference_workshops_proceedings_and_presentations',
-        'target' => 'Presentation',
+        'target' => 'Multimedia',
       ),
       3 => array(
         'source' => 'analysis_discussion_papers_and_blogs',
-        'target' => 'Paper',
+        'target' => '​Multimedia',
+      ),
+      4 => array(
+        'source' => '',
+        'target' => '',
       ),
     ),
   );

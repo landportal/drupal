@@ -146,159 +146,183 @@ function fao_library_importer_feeds_importer_default() {
             'source' => 'xpathparser:0',
             'target' => 'field_doc_title',
             'unique' => TRUE,
+            'language' => 'und',
           ),
           1 => array(
             'source' => 'xpathparser:1',
             'target' => 'title',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           2 => array(
             'source' => 'xpathparser:2',
             'target' => 'field_doc_keyword',
             'term_search' => '0',
             'autocreate' => 0,
+            'language' => 'und',
           ),
           3 => array(
             'source' => 'xpathparser:3',
             'target' => 'field_doc_description',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           4 => array(
             'source' => 'xpathparser:4',
             'target' => 'field_doc_language',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           5 => array(
             'source' => 'xpathparser:5',
             'target' => 'field_doc_pagination',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           6 => array(
-            'source' => 'xpathparser:6',
-            'target' => 'field_doc_subject',
-            'term_search' => '0',
-            'autocreate' => 0,
-          ),
-          7 => array(
             'source' => 'xpathparser:8',
             'target' => 'field_doc_publisher_place',
             'term_search' => '0',
             'autocreate' => 1,
+            'language' => 'und',
           ),
-          8 => array(
+          7 => array(
             'source' => 'xpathparser:12',
             'target' => 'field_doc_provider:label',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          9 => array(
+          8 => array(
             'source' => 'xpathparser:14',
             'target' => 'field_doc_creation_date:start',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          10 => array(
+          9 => array(
             'source' => 'xpathparser:16',
             'target' => 'language',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          11 => array(
+          10 => array(
             'source' => 'xpathparser:17',
             'target' => 'field_doc_identifier',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          12 => array(
+          11 => array(
             'source' => 'xpathparser:18',
             'target' => 'field_doc_is_shown_by:title',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          13 => array(
+          12 => array(
             'source' => 'xpathparser:20',
             'target' => 'field_doc_is_part_of:url',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          14 => array(
+          13 => array(
             'source' => 'xpathparser:21',
             'target' => 'field_doc_citation_number',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          15 => array(
+          14 => array(
             'source' => 'xpathparser:22',
             'target' => 'field_doc_citation_chronology:start',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          16 => array(
+          15 => array(
             'source' => 'xpathparser:23',
             'target' => 'field_doc_citation',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          17 => array(
+          16 => array(
             'source' => 'xpathparser:25',
             'target' => 'field_doc_is_shown_by:url',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          18 => array(
+          17 => array(
             'source' => 'xpathparser:26',
             'target' => 'title_field:et:en',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          19 => array(
+          18 => array(
             'source' => 'xpathparser:27',
             'target' => 'title',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          20 => array(
+          19 => array(
             'source' => 'xpathparser:29',
             'target' => 'field_doc_creator:person:entityreference_feeds:guid',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          21 => array(
+          20 => array(
             'source' => 'xpathparser:28',
             'target' => 'field_doc_creator:person:entityreference_feeds:title',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          22 => array(
+          21 => array(
             'source' => 'xpathparser:30',
             'target' => 'field_doc_publisher:organization:entityreference_feeds:guid',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          23 => array(
+          22 => array(
             'source' => 'xpathparser:31',
             'target' => 'field_doc_publisher:organization:entityreference_feeds:title',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          24 => array(
+          23 => array(
             'source' => 'xpathparser:32',
             'target' => 'field_doc_data_provider:organization:entityreference_feeds:guid',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          25 => array(
+          24 => array(
             'source' => 'xpathparser:33',
             'target' => 'field_doc_data_provider:organization:entityreference_feeds:title',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          26 => array(
+          25 => array(
             'source' => 'xpathparser:34',
             'target' => 'field_doc_conference:event:entityreference_feeds:guid',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          27 => array(
+          26 => array(
             'source' => 'xpathparser:35',
             'target' => 'field_doc_conference:event:entityreference_feeds:title',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          28 => array(
+          27 => array(
             'source' => 'xpathparser:38',
             'target' => 'field_doc_creator:organization:entityreference_feeds:guid',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          29 => array(
+          28 => array(
             'source' => 'xpathparser:37',
             'target' => 'field_doc_creator:organization:entityreference_feeds:title',
             'unique' => FALSE,
+            'language' => 'und',
           ),
-          30 => array(
+          29 => array(
             'source' => 'xpathparser:39',
             'target' => 'guid',
             'unique' => 1,
+            'language' => 'und',
           ),
         ),
         'update_existing' => '2',
@@ -306,6 +330,8 @@ function fao_library_importer_feeds_importer_default() {
         'skip_hash_check' => 0,
         'bundle' => 'landlibrary_resource',
         'update_non_existent' => 'skip',
+        'insert_new' => 1,
+        'language' => 'und',
       ),
     ),
     'content_type' => '',

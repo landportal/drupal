@@ -1,5 +1,5 @@
-name = CKAN documents importer
-description = Import documents from CKAN API
+name = ODM documents importer
+description = Import documents from ODM API
 core = 7.x
 package = Features
 version = 7.x-1.0
@@ -14,6 +14,7 @@ features[feeds_importer][] = ckan_importer
 features[feeds_tamper][] = ckan_importer-blank_source_1-copy
 features[feeds_tamper][] = ckan_importer-blank_source_1-truncate_text
 features[feeds_tamper][] = ckan_importer-blank_source_2-rewrite
+features[feeds_tamper][] = ckan_importer-blank_source_3-default_value
 features[feeds_tamper][] = ckan_importer-jsonpath_parser_13-explode
 features[feeds_tamper][] = ckan_importer-jsonpath_parser_16-default_value
 features[feeds_tamper][] = ckan_importer-jsonpath_parser_2-explode
