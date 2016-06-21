@@ -213,7 +213,9 @@ function landportal_utility_form_alter(&$form, &$form_state, $form_id){
         }*/
         foreach(array_flip($_GET['f']) as $key=>$item){
             $value=explode(':',$key);
-            $default_provider[]=$value[1].':'.$value[2];
+            if(count($value) ==3){
+              $default_provider[]=$value[1].':'.$value[2];
+            }
         }
       }
     unset($provider_list['_none']);

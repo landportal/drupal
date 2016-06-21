@@ -65,6 +65,14 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
+  <?php if($node->type !='page'): ?>
+    <?php if($view_mode =='full'): ?>
+    <section class="lang">
+      <?php print render($content['links']['translation']); ?>
+    </section>
+  <?php endif; ?>
+  <?php unset($content['links']['translation']); ?>
+<?php endif; ?>
   <section class="information">
     <?php print render($content['field_image']); ?>
     <?php print render($content['field_date']); ?>
@@ -77,6 +85,7 @@
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
+
       print render($content);
     ?>
 
@@ -86,9 +95,9 @@
     </div>
   <?php endif; ?>
   </section>
-
-  <?php print render($content['links']); ?>
-
+  <?php if($node->type !='page'): ?>
+    <?php print render($content['links']); ?>
+  <?php endif; ?>
   <?php print render($content['comments']); ?>
 
 </div>
