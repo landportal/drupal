@@ -53,7 +53,7 @@ function odm_library_importer_feeds_importer_default() {
                     'options' => array(
                         'context' => 0,
                         'jsonpath_parser:1' => 0,
-                        'jsonpath_parser:2' => 0,
+                        'jsonpath_parser:2' => 0,//'jsonpath_parser:2',
                         'jsonpath_parser:3' => 0,
                         'jsonpath_parser:4' => 0,
                         'jsonpath_parser:5' => 0,
@@ -63,10 +63,10 @@ function odm_library_importer_feeds_importer_default() {
                         'jsonpath_parser:9' => 0,
                         'jsonpath_parser:10' => 0,
                         'jsonpath_parser:11' => 0,
-                        'jsonpath_parser:12' => 'jsonpath_parser:12',
-                        'jsonpath_parser:13' => 'jsonpath_parser:13',
-                        'jsonpath_parser:14' => 'jsonpath_parser:14',
-                        'jsonpath_parser:15' => 'jsonpath_parser:15',
+                        'jsonpath_parser:12' => 0,
+                        'jsonpath_parser:13' => 0,
+                        'jsonpath_parser:14' => 0,
+                        'jsonpath_parser:15' => 0,
                     ),
                 ),
                 'allow_override' => 0,
@@ -150,62 +150,77 @@ function odm_library_importer_feeds_importer_default() {
                     ),
                     11 => array(
                         'source' => 'jsonpath_parser:12',
-                        'target' => 'field_doc_creator:person:entityreference_feeds:guid',
+                        'target' => 'field_doc_creator:label',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
                     12 => array(
-                        'source' => 'jsonpath_parser:12',
-                        'target' => 'field_doc_creator:person:entityreference_feeds:title',
-                        'unique' => FALSE,
-                        'language' => 'und',
-                    ),
-                    13 => array(
                         'source' => 'jsonpath_parser:13',
                         'target' => 'field_doc_publisher_place',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
+                    13 => array(
+                        'source' => 'jsonpath_parser:14',
+                        'target' => 'field_doc_publisher:label',
+                        'unique' => FALSE,
+                        'language' => 'und',
+                    ),
                     14 => array(
-                        'source' => 'jsonpath_parser:14',
-                        'target' => 'field_doc_publisher:organization:entityreference_feeds:guid',
-                        'unique' => FALSE,
-                        'language' => 'und',
-                    ),
-                    15 => array(
-                        'source' => 'jsonpath_parser:14',
-                        'target' => 'field_doc_publisher:organization:entityreference_feeds:title',
-                        'unique' => FALSE,
-                        'language' => 'und',
-                    ),
-                    16 => array(
                         'source' => 'jsonpath_parser:15',
-                        'target' => 'field_doc_provider:organization:entityreference_feeds:guid',
+                        'target' => 'field_doc_provider:label',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    17 => array(
-                        'source' => 'jsonpath_parser:15',
-                        'target' => 'field_doc_provider:organization:entityreference_feeds:title',
-                        'unique' => FALSE,
-                        'language' => 'und',
-                    ),
-                    18 => array(
+                    
+                    100 => array(
                         'source' => 'ODM url',
                         'target' => 'field_doc_is_shown_at:url',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    /* 17 => array( */
-                    /*     'source' => 'ODM author' */
-                    /*     'target' => 'name', */
-                    /*     'unique' => TRUE, */
-                    /* ), */
-                    /* 18 => array( */
-                    /*     'source' => 'ODM regorg', */
-                    /*     'target' => 'field_doc_provider', */
-                    /*     'unique' => FALSE, */
-                    /* ), */
+                    101 => array(
+                        'source' => 'ODM author',
+                        'target' => 'user_name',
+                        'unique' => TRUE,
+                    ),
+
+                    201 => array(
+                        'source' => 'ODM creators guid',
+                        'target' => 'field_doc_creator:person:entityreference_feeds:guid',
+                        'unique' => FALSE,
+                        'language' => 'und',
+                    ),
+                    202 => array(
+                        'source' => 'ODM creators',
+                        'target' => 'field_doc_creator:person:entityreference_feeds:title',
+                        'unique' => FALSE,
+                        'language' => 'und',
+                    ),
+                    300 => array(
+                        'source' => 'ODM publishers guid',
+                        'target' => 'field_doc_publisher:organization:entityreference_feeds:guid',
+                        'unique' => FALSE,
+                        'language' => 'und',
+                    ),
+                    301 => array(
+                        'source' => 'ODM publishers',
+                        'target' => 'field_doc_publisher:organization:entityreference_feeds:title',
+                        'unique' => FALSE,
+                        'language' => 'und',
+                    ),
+                    400 => array(
+                        'source' => 'ODM provider guid',
+                        'target' => 'field_doc_provider:organization:entityreference_feeds:guid',
+                        'unique' => FALSE,
+                        'language' => 'und',
+                    ),
+                    401 => array(
+                        'source' => 'ODM provider',
+                        'target' => 'field_doc_provider:organization:entityreference_feeds:title',
+                        'unique' => FALSE,
+                        'language' => 'und',
+                    ),
                 ),
                 'update_existing' => '2',
                 'update_non_existent' => 'skip',
