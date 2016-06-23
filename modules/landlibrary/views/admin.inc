@@ -33,23 +33,28 @@ $handler->display->display_options['pager']['options']['quantity'] = '25';
 $handler->display->display_options['style_plugin'] = 'table';
 $handler->display->display_options['style_options']['columns'] = array(
   'nid' => 'nid',
-  'edit_node' => 'edit_node',
   'path' => 'path',
+  'views_bulk_operations' => 'views_bulk_operations',
+  'edit_node' => 'edit_node',
+  'status' => 'status',
+  'promote' => 'promote',
+  'sticky' => 'sticky',
   'title' => 'title',
-  'field_doc_type' => 'field_doc_type',
-  'field_format' => 'field_format',
+  'field_doc_creator' => 'field_doc_creator',
   'field_doc_publisher' => 'field_doc_publisher',
   'field_doc_provider' => 'field_doc_provider',
-  'changed' => 'changed',
   'field_doc_creation_date' => 'field_doc_creation_date',
+  'field_doc_language' => 'field_doc_language',
+  'field_doc_type' => 'field_doc_type',
+  'field_format' => 'field_format',
   'field_doc_country' => 'field_doc_country',
   'field_geographical_focus' => 'field_geographical_focus',
   'field_related_domains' => 'field_related_domains',
   'field_related_themes' => 'field_related_themes',
   'field_related_topics' => 'field_related_topics',
-  'views_bulk_operations' => 'views_bulk_operations',
-  'uid' => 'uid',
+  'changed' => 'changed',
   'name' => 'name',
+  'language' => 'language',
 );
 $handler->display->display_options['style_options']['default'] = 'nid';
 $handler->display->display_options['style_options']['info'] = array(
@@ -60,12 +65,38 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
+  'path' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'views_bulk_operations' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
   'edit_node' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
-  'path' => array(
+  'status' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'promote' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'sticky' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -77,14 +108,7 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_type' => array(
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'field_format' => array(
-    'sortable' => 1,
-    'default_sort_order' => 'asc',
+  'field_doc_creator' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -101,15 +125,25 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'changed' => array(
-    'sortable' => 1,
+  'field_doc_creation_date' => array(
+    'sortable' => 0,
     'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_creation_date' => array(
-    'sortable' => 1,
+  'field_doc_language' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_doc_type' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_format' => array(
+    'sortable' => 0,
     'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
@@ -140,17 +174,21 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'views_bulk_operations' => array(
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'uid' => array(
+  'changed' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
   'name' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'language' => array(
     'sortable' => 1,
     'default_sort_order' => 'asc',
     'align' => '',
@@ -171,118 +209,14 @@ $handler->display->display_options['relationships']['uid']['field'] = 'uid';
 $handler->display->display_options['fields']['nid']['id'] = 'nid';
 $handler->display->display_options['fields']['nid']['table'] = 'node';
 $handler->display->display_options['fields']['nid']['field'] = 'nid';
-/* Field: Content: Published */
-$handler->display->display_options['fields']['status']['id'] = 'status';
-$handler->display->display_options['fields']['status']['table'] = 'node';
-$handler->display->display_options['fields']['status']['field'] = 'status';
-$handler->display->display_options['fields']['status']['exclude'] = TRUE;
-$handler->display->display_options['fields']['status']['type'] = 'unicode-yes-no';
-$handler->display->display_options['fields']['status']['not'] = 0;
-/* Field: Content: Promoted to front page */
-$handler->display->display_options['fields']['promote']['id'] = 'promote';
-$handler->display->display_options['fields']['promote']['table'] = 'node';
-$handler->display->display_options['fields']['promote']['field'] = 'promote';
-$handler->display->display_options['fields']['promote']['exclude'] = TRUE;
-$handler->display->display_options['fields']['promote']['type'] = 'unicode-yes-no';
-$handler->display->display_options['fields']['promote']['not'] = 0;
-/* Field: Content: Sticky */
-$handler->display->display_options['fields']['sticky']['id'] = 'sticky';
-$handler->display->display_options['fields']['sticky']['table'] = 'node';
-$handler->display->display_options['fields']['sticky']['field'] = 'sticky';
-$handler->display->display_options['fields']['sticky']['label'] = 'Pub|Pro|Sti';
-$handler->display->display_options['fields']['sticky']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['sticky']['alter']['text'] = '[status]|[promote]|[sticky]';
-$handler->display->display_options['fields']['sticky']['type'] = 'unicode-yes-no';
-$handler->display->display_options['fields']['sticky']['not'] = 0;
-/* Field: Content: Edit link */
-$handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
-$handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
-$handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+$handler->display->display_options['fields']['nid']['label'] = '';
+$handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
 /* Field: Content: Path */
 $handler->display->display_options['fields']['path']['id'] = 'path';
 $handler->display->display_options['fields']['path']['table'] = 'node';
 $handler->display->display_options['fields']['path']['field'] = 'path';
 $handler->display->display_options['fields']['path']['exclude'] = TRUE;
-/* Field: Content: Title */
-$handler->display->display_options['fields']['title']['id'] = 'title';
-$handler->display->display_options['fields']['title']['table'] = 'node';
-$handler->display->display_options['fields']['title']['field'] = 'title';
-$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-/* Field: Content: Resource type */
-$handler->display->display_options['fields']['field_doc_type']['id'] = 'field_doc_type';
-$handler->display->display_options['fields']['field_doc_type']['table'] = 'field_data_field_doc_type';
-$handler->display->display_options['fields']['field_doc_type']['field'] = 'field_doc_type';
-$handler->display->display_options['fields']['field_doc_type']['type'] = 'taxonomy_term_reference_plain';
-$handler->display->display_options['fields']['field_doc_type']['delta_offset'] = '0';
-/* Field: Content: Format */
-$handler->display->display_options['fields']['field_format']['id'] = 'field_format';
-$handler->display->display_options['fields']['field_format']['table'] = 'field_data_field_format';
-$handler->display->display_options['fields']['field_format']['field'] = 'field_format';
-$handler->display->display_options['fields']['field_format']['exclude'] = TRUE;
-/* Field: Content: Publisher */
-$handler->display->display_options['fields']['field_doc_publisher']['id'] = 'field_doc_publisher';
-$handler->display->display_options['fields']['field_doc_publisher']['table'] = 'field_data_field_doc_publisher';
-$handler->display->display_options['fields']['field_doc_publisher']['field'] = 'field_doc_publisher';
-$handler->display->display_options['fields']['field_doc_publisher']['settings'] = array(
-  'link' => 1,
-);
-$handler->display->display_options['fields']['field_doc_publisher']['delta_offset'] = '0';
-$handler->display->display_options['fields']['field_doc_publisher']['multi_type'] = 'ol';
-/* Field: Content: Provider */
-$handler->display->display_options['fields']['field_doc_provider']['id'] = 'field_doc_provider';
-$handler->display->display_options['fields']['field_doc_provider']['table'] = 'field_data_field_doc_provider';
-$handler->display->display_options['fields']['field_doc_provider']['field'] = 'field_doc_provider';
-$handler->display->display_options['fields']['field_doc_provider']['relationship'] = 'reverse_field_doc_provider_node';
-$handler->display->display_options['fields']['field_doc_provider']['settings'] = array(
-  'link' => 1,
-);
-/* Field: Content: Updated date */
-$handler->display->display_options['fields']['changed']['id'] = 'changed';
-$handler->display->display_options['fields']['changed']['table'] = 'node';
-$handler->display->display_options['fields']['changed']['field'] = 'changed';
-$handler->display->display_options['fields']['changed']['date_format'] = 'custom';
-$handler->display->display_options['fields']['changed']['custom_date_format'] = 'd/m/Y';
-$handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
-/* Field: Content: Publication date */
-$handler->display->display_options['fields']['field_doc_creation_date']['id'] = 'field_doc_creation_date';
-$handler->display->display_options['fields']['field_doc_creation_date']['table'] = 'field_data_field_doc_creation_date';
-$handler->display->display_options['fields']['field_doc_creation_date']['field'] = 'field_doc_creation_date';
-$handler->display->display_options['fields']['field_doc_creation_date']['settings'] = array(
-  'format_type' => 'month_and_year',
-  'fromto' => 'both',
-  'multiple_number' => '',
-  'multiple_from' => '',
-  'multiple_to' => '',
-  'show_remaining_days' => 0,
-  'show_repeat_rule' => 'show',
-);
-/* Field: Content: Country */
-$handler->display->display_options['fields']['field_doc_country']['id'] = 'field_doc_country';
-$handler->display->display_options['fields']['field_doc_country']['table'] = 'field_data_field_doc_country';
-$handler->display->display_options['fields']['field_doc_country']['field'] = 'field_doc_country';
-$handler->display->display_options['fields']['field_doc_country']['delta_offset'] = '0';
-/* Field: Field: Geographical focus */
-$handler->display->display_options['fields']['field_geographical_focus']['id'] = 'field_geographical_focus';
-$handler->display->display_options['fields']['field_geographical_focus']['table'] = 'field_data_field_geographical_focus';
-$handler->display->display_options['fields']['field_geographical_focus']['field'] = 'field_geographical_focus';
-$handler->display->display_options['fields']['field_geographical_focus']['delta_offset'] = '0';
-/* Field: Field: Overarching categories */
-$handler->display->display_options['fields']['field_related_domains']['id'] = 'field_related_domains';
-$handler->display->display_options['fields']['field_related_domains']['table'] = 'field_data_field_related_domains';
-$handler->display->display_options['fields']['field_related_domains']['field'] = 'field_related_domains';
-$handler->display->display_options['fields']['field_related_domains']['label'] = 'Overarching';
-$handler->display->display_options['fields']['field_related_domains']['delta_offset'] = '0';
-/* Field: Field: Themes */
-$handler->display->display_options['fields']['field_related_themes']['id'] = 'field_related_themes';
-$handler->display->display_options['fields']['field_related_themes']['table'] = 'field_data_field_related_themes';
-$handler->display->display_options['fields']['field_related_themes']['field'] = 'field_related_themes';
-/* Field: Field: Related concepts */
-$handler->display->display_options['fields']['field_related_topics']['id'] = 'field_related_topics';
-$handler->display->display_options['fields']['field_related_topics']['table'] = 'field_data_field_related_topics';
-$handler->display->display_options['fields']['field_related_topics']['field'] = 'field_related_topics';
-$handler->display->display_options['fields']['field_related_topics']['label'] = 'Concepts';
-$handler->display->display_options['fields']['field_related_topics']['delta_offset'] = '0';
 /* Field: Bulk operations: Content */
 $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
 $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
@@ -363,6 +297,148 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'label' => '',
   ),
 );
+/* Field: Content: Edit link */
+$handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+$handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+/* Field: Content: Published */
+$handler->display->display_options['fields']['status']['id'] = 'status';
+$handler->display->display_options['fields']['status']['table'] = 'node';
+$handler->display->display_options['fields']['status']['field'] = 'status';
+$handler->display->display_options['fields']['status']['exclude'] = TRUE;
+$handler->display->display_options['fields']['status']['type'] = 'unicode-yes-no';
+$handler->display->display_options['fields']['status']['not'] = 0;
+/* Field: Content: Promoted to front page */
+$handler->display->display_options['fields']['promote']['id'] = 'promote';
+$handler->display->display_options['fields']['promote']['table'] = 'node';
+$handler->display->display_options['fields']['promote']['field'] = 'promote';
+$handler->display->display_options['fields']['promote']['exclude'] = TRUE;
+$handler->display->display_options['fields']['promote']['type'] = 'unicode-yes-no';
+$handler->display->display_options['fields']['promote']['not'] = 0;
+/* Field: Content: Sticky */
+$handler->display->display_options['fields']['sticky']['id'] = 'sticky';
+$handler->display->display_options['fields']['sticky']['table'] = 'node';
+$handler->display->display_options['fields']['sticky']['field'] = 'sticky';
+$handler->display->display_options['fields']['sticky']['label'] = 'Pub|Pro|Sti';
+$handler->display->display_options['fields']['sticky']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['sticky']['alter']['text'] = '[status]|[promote]|[sticky]';
+$handler->display->display_options['fields']['sticky']['type'] = 'unicode-yes-no';
+$handler->display->display_options['fields']['sticky']['not'] = 0;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+/* Field: Content: Creator */
+$handler->display->display_options['fields']['field_doc_creator']['id'] = 'field_doc_creator';
+$handler->display->display_options['fields']['field_doc_creator']['table'] = 'field_data_field_doc_creator';
+$handler->display->display_options['fields']['field_doc_creator']['field'] = 'field_doc_creator';
+$handler->display->display_options['fields']['field_doc_creator']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_doc_creator']['settings'] = array(
+  'link' => 0,
+);
+$handler->display->display_options['fields']['field_doc_creator']['delta_offset'] = '0';
+/* Field: Content: Publisher */
+$handler->display->display_options['fields']['field_doc_publisher']['id'] = 'field_doc_publisher';
+$handler->display->display_options['fields']['field_doc_publisher']['table'] = 'field_data_field_doc_publisher';
+$handler->display->display_options['fields']['field_doc_publisher']['field'] = 'field_doc_publisher';
+$handler->display->display_options['fields']['field_doc_publisher']['settings'] = array(
+  'link' => 1,
+);
+$handler->display->display_options['fields']['field_doc_publisher']['delta_offset'] = '0';
+$handler->display->display_options['fields']['field_doc_publisher']['multi_type'] = 'ol';
+/* Field: Content: Provider */
+$handler->display->display_options['fields']['field_doc_provider']['id'] = 'field_doc_provider';
+$handler->display->display_options['fields']['field_doc_provider']['table'] = 'field_data_field_doc_provider';
+$handler->display->display_options['fields']['field_doc_provider']['field'] = 'field_doc_provider';
+$handler->display->display_options['fields']['field_doc_provider']['relationship'] = 'reverse_field_doc_provider_node';
+$handler->display->display_options['fields']['field_doc_provider']['settings'] = array(
+  'link' => 1,
+);
+/* Field: Content: Publication date */
+$handler->display->display_options['fields']['field_doc_creation_date']['id'] = 'field_doc_creation_date';
+$handler->display->display_options['fields']['field_doc_creation_date']['table'] = 'field_data_field_doc_creation_date';
+$handler->display->display_options['fields']['field_doc_creation_date']['field'] = 'field_doc_creation_date';
+$handler->display->display_options['fields']['field_doc_creation_date']['label'] = '';
+$handler->display->display_options['fields']['field_doc_creation_date']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_doc_creation_date']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_doc_creation_date']['settings'] = array(
+  'format_type' => 'month_and_year',
+  'fromto' => 'both',
+  'multiple_number' => '',
+  'multiple_from' => '',
+  'multiple_to' => '',
+  'show_remaining_days' => 0,
+  'show_repeat_rule' => 'show',
+);
+/* Field: Content: Resource type */
+$handler->display->display_options['fields']['field_doc_type']['id'] = 'field_doc_type';
+$handler->display->display_options['fields']['field_doc_type']['table'] = 'field_data_field_doc_type';
+$handler->display->display_options['fields']['field_doc_type']['field'] = 'field_doc_type';
+$handler->display->display_options['fields']['field_doc_type']['label'] = '';
+$handler->display->display_options['fields']['field_doc_type']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_doc_type']['alter']['text'] = '[field_doc_creation_date] [field_doc_type] ([field_doc_language])';
+$handler->display->display_options['fields']['field_doc_type']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_doc_type']['empty'] = '-NO RT-';
+$handler->display->display_options['fields']['field_doc_type']['hide_alter_empty'] = FALSE;
+$handler->display->display_options['fields']['field_doc_type']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_doc_type']['delta_offset'] = '0';
+/* Field: Content: Language */
+$handler->display->display_options['fields']['field_doc_language']['id'] = 'field_doc_language';
+$handler->display->display_options['fields']['field_doc_language']['table'] = 'field_data_field_doc_language';
+$handler->display->display_options['fields']['field_doc_language']['field'] = 'field_doc_language';
+$handler->display->display_options['fields']['field_doc_language']['label'] = 'Meta';
+$handler->display->display_options['fields']['field_doc_language']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_doc_language']['alter']['text'] = '[field_doc_creation_date] [field_doc_type] ([field_doc_language])';
+$handler->display->display_options['fields']['field_doc_language']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_doc_language']['hide_alter_empty'] = FALSE;
+$handler->display->display_options['fields']['field_doc_language']['delta_offset'] = '0';
+/* Field: Content: Country */
+$handler->display->display_options['fields']['field_doc_country']['id'] = 'field_doc_country';
+$handler->display->display_options['fields']['field_doc_country']['table'] = 'field_data_field_doc_country';
+$handler->display->display_options['fields']['field_doc_country']['field'] = 'field_doc_country';
+$handler->display->display_options['fields']['field_doc_country']['delta_offset'] = '0';
+/* Field: Field: Geographical focus */
+$handler->display->display_options['fields']['field_geographical_focus']['id'] = 'field_geographical_focus';
+$handler->display->display_options['fields']['field_geographical_focus']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['fields']['field_geographical_focus']['field'] = 'field_geographical_focus';
+$handler->display->display_options['fields']['field_geographical_focus']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_geographical_focus']['delta_offset'] = '0';
+/* Field: Field: Overarching categories */
+$handler->display->display_options['fields']['field_related_domains']['id'] = 'field_related_domains';
+$handler->display->display_options['fields']['field_related_domains']['table'] = 'field_data_field_related_domains';
+$handler->display->display_options['fields']['field_related_domains']['field'] = 'field_related_domains';
+$handler->display->display_options['fields']['field_related_domains']['label'] = '';
+$handler->display->display_options['fields']['field_related_domains']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_related_domains']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_related_domains']['delta_offset'] = '0';
+/* Field: Field: Themes */
+$handler->display->display_options['fields']['field_related_themes']['id'] = 'field_related_themes';
+$handler->display->display_options['fields']['field_related_themes']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['fields']['field_related_themes']['field'] = 'field_related_themes';
+$handler->display->display_options['fields']['field_related_themes']['label'] = '';
+$handler->display->display_options['fields']['field_related_themes']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_related_themes']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_related_themes']['delta_offset'] = '0';
+/* Field: Field: Related concepts */
+$handler->display->display_options['fields']['field_related_topics']['id'] = 'field_related_topics';
+$handler->display->display_options['fields']['field_related_topics']['table'] = 'field_data_field_related_topics';
+$handler->display->display_options['fields']['field_related_topics']['field'] = 'field_related_topics';
+$handler->display->display_options['fields']['field_related_topics']['label'] = 'LandVoc';
+$handler->display->display_options['fields']['field_related_topics']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_related_topics']['alter']['text'] = '[field_related_domains] [field_related_themes] [field_related_topics]';
+$handler->display->display_options['fields']['field_related_topics']['delta_offset'] = '0';
+/* Field: Updated */
+$handler->display->display_options['fields']['changed']['id'] = 'changed';
+$handler->display->display_options['fields']['changed']['table'] = 'node';
+$handler->display->display_options['fields']['changed']['field'] = 'changed';
+$handler->display->display_options['fields']['changed']['ui_name'] = 'Updated';
+$handler->display->display_options['fields']['changed']['label'] = 'Updated';
+$handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['changed']['date_format'] = 'short';
+$handler->display->display_options['fields']['changed']['custom_date_format'] = 'd/m/Y';
+$handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
 /* Field: User: Name */
 $handler->display->display_options['fields']['name']['id'] = 'name';
 $handler->display->display_options['fields']['name']['table'] = 'users';
@@ -372,13 +448,8 @@ $handler->display->display_options['fields']['name']['relationship'] = 'uid';
 $handler->display->display_options['fields']['language']['id'] = 'language';
 $handler->display->display_options['fields']['language']['table'] = 'node';
 $handler->display->display_options['fields']['language']['field'] = 'language';
-$handler->display->display_options['fields']['language']['label'] = 'L';
-/* Field: Content: Language */
-$handler->display->display_options['fields']['field_doc_language']['id'] = 'field_doc_language';
-$handler->display->display_options['fields']['field_doc_language']['table'] = 'field_data_field_doc_language';
-$handler->display->display_options['fields']['field_doc_language']['field'] = 'field_doc_language';
-$handler->display->display_options['fields']['field_doc_language']['label'] = 'LL';
-$handler->display->display_options['fields']['field_doc_language']['delta_offset'] = '0';
+$handler->display->display_options['fields']['language']['label'] = 'Lang';
+$handler->display->display_options['fields']['language']['element_label_colon'] = FALSE;
 $handler->display->display_options['filter_groups']['groups'] = array(
   1 => 'AND',
   3 => 'AND',
@@ -681,30 +752,28 @@ $translatables['admin_view_library'] = array(
   t('last »'),
   t('Displaying @start - @end of @total'),
   t('author'),
-  t('Nid'),
+  t('Path'),
+  t('Content'),
+  t('- Choose an operation -'),
+  t('Edit link'),
   t('Published'),
   t('Promoted to front page'),
   t('Pub|Pro|Sti'),
   t('[status]|[promote]|[sticky]'),
-  t('Edit link'),
-  t('Path'),
   t('Title'),
-  t('Resource type'),
-  t('Format'),
+  t('Creator'),
   t('Publisher'),
   t('Provider'),
-  t('Updated date'),
-  t('Publication date'),
+  t('[field_doc_creation_date] [field_doc_type] ([field_doc_language])'),
+  t('-NO RT-'),
+  t('Meta'),
   t('Country'),
   t('Geographical focus'),
-  t('Overarching'),
-  t('Themes'),
-  t('Concepts'),
-  t('Content'),
-  t('- Choose an operation -'),
+  t('LandVoc'),
+  t('[field_related_domains] [field_related_themes] [field_related_topics]'),
+  t('Updated'),
   t('Name'),
-  t('L'),
-  t('LL'),
+  t('Lang'),
   t('Sticky'),
   t('Author Name (user)'),
   t('Resource type (field_doc_type)'),
