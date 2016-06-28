@@ -77,7 +77,7 @@ function odm_library_importer_feeds_importer_default() {
             'plugin_key' => 'FeedsNodeProcessor',
             'config' => array(
                 'expire' => '-1',
-                'author' => '9221',
+                'author' => '',
                 'authorize' => 1,
                 'mappings' => array(
                     0 => array(

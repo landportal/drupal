@@ -3,7 +3,5 @@ description = Provides views for LP home/landing page
 core = 7.x
 package = A Landportal
 version = 7.x-1.0
-dependencies[] = landdebate
-dependencies[] = landportal_content_types
 dependencies[] = views
 files[] = landportal_homepage.view_default.inc
