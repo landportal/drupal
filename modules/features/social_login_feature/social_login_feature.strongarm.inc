@@ -751,15 +751,15 @@ After that, you will be able to log in at [site:login-url] using your [user:hybr
   $strongarm->api_version = 1;
   $strongarm->name = 'pcp_enabled_fields';
   $strongarm->value = array(
-    'profile2:main:field_firstname' => 'profile2:main:field_firstname',
-    'profile2:main:field_lastname' => 'profile2:main:field_lastname',
     'profile2:main:field_geographical_focus' => 'profile2:main:field_geographical_focus',
-    'profile2:main:field_related_topics' => 'profile2:main:field_related_topics',
     'profile2:main:field_description' => 'profile2:main:field_description',
     'profile2:main:field_interests' => 'profile2:main:field_interests',
     'profile2:main:field_location' => 'profile2:main:field_location',
     'profile2:main:field_image' => 'profile2:main:field_image',
     'profile2:main:field_link' => 'profile2:main:field_link',
+    'profile2:main:field_related_topics' => 'profile2:main:field_related_topics',
+    'profile2:main:field_firstname' => 'profile2:main:field_firstname',
+    'profile2:main:field_lastname' => 'profile2:main:field_lastname',
   );
   $export['pcp_enabled_fields'] = $strongarm;
 

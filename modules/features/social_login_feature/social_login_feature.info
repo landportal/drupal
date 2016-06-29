@@ -1,8 +1,8 @@
 name = Social Login & Complete Profile Feature
 description = Social Login Feature managing HybridAuth settings
 core = 7.x
-package = F Landportal
-version = 7.x-1.0-rc3
+package = Landportal Comm
+version = 7.x-2.3-rc
 dependencies[] = complete_profile
 dependencies[] = ctools
 dependencies[] = entity

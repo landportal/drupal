@@ -1,7 +1,7 @@
 name = Mailchimp Feature
 description = Mailchimp feature for campaign, list and user list management
 core = 7.x
-package = F Landportal
+package = Landportal Comm
 version = 7.x-1.3
 dependencies[] = ckeditor
 dependencies[] = context
