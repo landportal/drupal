@@ -1,8 +1,8 @@
 name = Users Menu
 description = Users + contributors menu
 core = 7.x
-package = F Landportal
-version = 7.x-1.0-rc3
+package = Landportal Comm
+version = 7.x-2.3-rc
 dependencies[] = context
 dependencies[] = ctools
 dependencies[] = fe_block
