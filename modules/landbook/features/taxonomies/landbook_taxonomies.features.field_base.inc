@@ -10,33 +10,63 @@
 function landbook_taxonomies_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_dataset'.
-  $field_bases['field_dataset'] = array(
+  // Exported field_base: 'field_max'.
+  $field_bases['field_max'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_dataset',
-    'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
-      ),
-    ),
+    'field_name' => 'field_max',
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'taxonomy',
+    'module' => 'number',
     'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'datasets',
-          'parent' => 0,
-        ),
-      ),
       'entity_translation_sync' => FALSE,
-      'options_list_callback' => 'i18n_taxonomy_allowed_values',
       'profile2_private' => FALSE,
     ),
     'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
+    'type' => 'number_integer',
+  );
+
+  // Exported field_base: 'field_min'.
+  $field_bases['field_min'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_min',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'number_integer',
+  );
+
+  // Exported field_base: 'field_unit'.
+  $field_bases['field_unit'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_unit',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 100,
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 1,
+    'type' => 'text',
   );
 
   return $field_bases;
