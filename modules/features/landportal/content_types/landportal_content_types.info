@@ -1,8 +1,8 @@
-name = Landportal Content Types
-description = Landportal content types: event, debate, news, organizations and blog posts.
+name = Landportal Content Types - DEPREC
+description = This feature is replaced by the ones in Landportal CT packages
 core = 7.x
-package = B Landportal
-version = 7.x-2.2-rc1
+package = Cleanup
+version = 7.x-2.3-deprec
 project = landportal_content_types
 dependencies[] = ctools
 dependencies[] = date
