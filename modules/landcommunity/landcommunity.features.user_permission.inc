@@ -10,151 +10,31 @@
 function landcommunity_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'access user profiles'.
-  $permissions['access user profiles'] = array(
-    'name' => 'access user profiles',
+  // Exported permission: 'access comments'.
+  $permissions['access comments'] = array(
+    'name' => 'access comments',
     'roles' => array(
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'editor' => 'editor',
       'landportal admin' => 'landportal admin',
       'landportal editor' => 'landportal editor',
     ),
-    'module' => 'user',
+    'module' => 'comment',
   );
 
-  // Exported permission: 'administer permissions'.
-  $permissions['administer permissions'] = array(
-    'name' => 'administer permissions',
+  // Exported permission: 'post comments'.
+  $permissions['post comments'] = array(
+    'name' => 'post comments',
     'roles' => array(
       'administrator' => 'administrator',
-    ),
-    'module' => 'user',
-  );
-
-  // Exported permission: 'administer user locations'.
-  $permissions['administer user locations'] = array(
-    'name' => 'administer user locations',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-    ),
-    'module' => 'location_user',
-  );
-
-  // Exported permission: 'administer users'.
-  $permissions['administer users'] = array(
-    'name' => 'administer users',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-    ),
-    'module' => 'user',
-  );
-
-  // Exported permission: 'cancel account'.
-  $permissions['cancel account'] = array(
-    'name' => 'cancel account',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'user',
-  );
-
-  // Exported permission: 'change own username'.
-  $permissions['change own username'] = array(
-    'name' => 'change own username',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'user',
-  );
-
-  // Exported permission: 'create organization content'.
-  $permissions['create organization content'] = array(
-    'name' => 'create organization content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete any organization content'.
-  $permissions['delete any organization content'] = array(
-    'name' => 'delete any organization content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own organization content'.
-  $permissions['delete own organization content'] = array(
-    'name' => 'delete own organization content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit any organization content'.
-  $permissions['edit any organization content'] = array(
-    'name' => 'edit any organization content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit own organization content'.
-  $permissions['edit own organization content'] = array(
-    'name' => 'edit own organization content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'select account cancellation method'.
-  $permissions['select account cancellation method'] = array(
-    'name' => 'select account cancellation method',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'user',
-  );
-
-  // Exported permission: 'set own user location'.
-  $permissions['set own user location'] = array(
-    'name' => 'set own user location',
-    'roles' => array(
-      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+      'editor' => 'editor',
       'landportal admin' => 'landportal admin',
       'landportal editor' => 'landportal editor',
     ),
-    'module' => 'location_user',
-  );
-
-  // Exported permission: 'view all user locations'.
-  $permissions['view all user locations'] = array(
-    'name' => 'view all user locations',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
-    ),
-    'module' => 'location_user',
-  );
-
-  // Exported permission: 'view own user location'.
-  $permissions['view own user location'] = array(
-    'name' => 'view own user location',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
-    ),
-    'module' => 'location_user',
-  );
-
-  // Exported permission: 'view user location table'.
-  $permissions['view user location table'] = array(
-    'name' => 'view user location table',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-    ),
-    'module' => 'location',
+    'module' => 'comment',
   );
 
   return $permissions;
