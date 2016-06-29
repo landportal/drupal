@@ -1,14 +1,11 @@
-name = User Profile Sync
-description = VBO views and rules to create profile2 entities and to sync fields with vbo and tokens
+name = User Profile Sync - DEPREC
+description = This was a one time thing to create public profiles and cleanup user account
 core = 7.x
 package = Cleanup
-version = 7.x-1.0-beta3
+version = 7.x-1.0-deprec
 dependencies[] = ctools
 dependencies[] = entity
 dependencies[] = rules
 dependencies[] = views
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
-features[rules_config][] = rules_create_profile
-features[views_view][] = create_profile
-features[views_view][] = user_profile
