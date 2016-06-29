@@ -1,8 +1,10 @@
-name = Landlibrary rules
+name = Landlibrary Rules
 core = 7.x
 package = Landlibrary
-version = 7.x-1.0-alpha
+version = 7.x-2.3-beta
 dependencies[] = entity
+dependencies[] = landlibrary_resource
+dependencies[] = landlibrary_taxonomy
 dependencies[] = rules
 dependencies[] = rules_autotag
 features[features_api][] = api:2
