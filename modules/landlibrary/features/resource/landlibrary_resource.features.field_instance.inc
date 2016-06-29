@@ -582,9 +582,8 @@ constitute its legislative or governing body.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 2,
       ),
       'full' => array(
@@ -597,16 +596,16 @@ constitute its legislative or governing body.',
         'weight' => 4,
       ),
       'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 38,
-      ),
-      'teaser' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 38,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 5,
       ),
     ),
@@ -1380,9 +1379,8 @@ constitute its legislative or governing body.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'hidden',
         'weight' => 36,
       ),
       'full' => array(
@@ -1454,9 +1452,8 @@ constitute its legislative or governing body.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'hidden',
         'weight' => 38,
       ),
       'full' => array(
@@ -1528,9 +1525,8 @@ constitute its legislative or governing body.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'hidden',
         'weight' => 39,
       ),
       'full' => array(
@@ -2557,9 +2553,8 @@ constitute its legislative or governing body.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'hidden',
         'weight' => 37,
       ),
       'full' => array(
@@ -2630,9 +2625,8 @@ constitute its legislative or governing body.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'hidden',
         'weight' => 40,
       ),
       'full' => array(
@@ -3067,7 +3061,7 @@ constitute its legislative or governing body.',
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
-      'type' => 'synonyms_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 112,
     ),
   );
@@ -3168,7 +3162,7 @@ constitute its legislative or governing body.',
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
-      'type' => 'synonyms_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 109,
     ),
   );
@@ -3216,7 +3210,7 @@ constitute its legislative or governing body.',
       'settings' => array(
         'sort' => 'weight',
       ),
-      'type' => 'synonyms_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 110,
     ),
   );
@@ -3276,7 +3270,7 @@ constitute its legislative or governing body.',
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
-      'type' => 'synonyms_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 111,
     ),
   );
