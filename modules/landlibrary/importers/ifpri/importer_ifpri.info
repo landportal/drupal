@@ -1,7 +1,7 @@
 name = IFPRI Importer
 description = IFPRI importer for the Landlibrary
 core = 7.x
-package = CLandportal
+package = Landlibrary Importers
 version = 7.x-2.0-beta
 project = importer_ifpri
 files[] = importer_ifpri.feeds_importer.inc

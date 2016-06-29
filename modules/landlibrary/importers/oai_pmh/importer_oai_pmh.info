@@ -1,7 +1,7 @@
 name = OAI PMH Importer
 description = Sample OAI PMH importer
 core = 7.x
-package = CLandportal
+package = Landlibrary Importers
 version = 7.x-1.1
 project = importer_oai_pmh
 ; files[] = importer_oai_pmh.feeds_importer.inc

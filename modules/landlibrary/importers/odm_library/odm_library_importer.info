@@ -1,7 +1,7 @@
 name = ODM library importer
 description = Import ODM library documents from a CKAN API in JSON format.
 core = 7.x
-package = Landlibrary
+package = Landlibrary Importers
 version = 7.x-1.0-beta
 project = odm_library_importer
 dependencies[] = ctools

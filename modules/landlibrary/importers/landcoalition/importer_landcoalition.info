@@ -1,7 +1,7 @@
 name = LandCoalition Importer
 description = Land Coalition importer for the Land Library
 core = 7.x
-package = CLandportal
+package = Landlibrary Importers
 version = 7.x-1.0-beta
 project = importer_landcoalition
 files[] = importer_landcoalition.feeds_importer.inc

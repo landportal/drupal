@@ -1,7 +1,7 @@
 name = WB OAI importer
 description = Import world bank data from OAI-PMH
 core = 7.x
-package = Features
+package = Landlibrary Importers
 version = 7.x-1.0
 dependencies[] = ctools
 dependencies[] = feeds

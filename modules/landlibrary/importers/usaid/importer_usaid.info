@@ -1,7 +1,7 @@
 name = USAID Importer
 description = USAID RSS Importer
 core = 7.x
-package = CLandportal
+package = Landlibrary Importers
 version = 7.x-1.0
 project = importer_usaid
 files[] = importer_usaid.feeds_importer.inc

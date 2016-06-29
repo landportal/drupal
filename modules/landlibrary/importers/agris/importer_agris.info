@@ -1,7 +1,7 @@
 name = Agris Importer
 description = Land Library Agris importer, provides configuration and settings for Agris feeds
 core = 7.x
-package = CLandportal
+package = Landlibrary Importers
 version = 7.x-2.0-beta3
 project = importer_agris
 files[] = importer_agris.feeds_importer.inc

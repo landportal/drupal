@@ -1,7 +1,7 @@
 name = Agris XML new importer
 description = Import records from Agris xml files
 core = 7.x
-package = Features
+package = Landlibrary Importers
 version = 7.x-1.0
 dependencies[] = ctools
 dependencies[] = feeds

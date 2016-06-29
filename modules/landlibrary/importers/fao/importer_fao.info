@@ -1,7 +1,7 @@
 name = FAO importer
 description = From search API
 core = 7.x
-package = CLandportal
+package = Landlibrary Importers
 version = 7.x-1.0
 project = importer_fao
 files[] = importer_fao.feeds_importer.inc

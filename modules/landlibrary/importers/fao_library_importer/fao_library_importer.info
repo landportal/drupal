@@ -1,7 +1,7 @@
 name = FAO Library importer
 description = Import only Fao library records from Agris xml files
 core = 7.x
-package = Features
+package = Landlibrary Importers
 version = 7.x-1.0
 dependencies[] = ctools
 dependencies[] = feeds
