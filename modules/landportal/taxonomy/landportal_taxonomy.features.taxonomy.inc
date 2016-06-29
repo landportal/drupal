@@ -42,7 +42,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => -6,
       'language' => 'und',
-      'i18n_mode' => 4,
+      'i18n_mode' => 1,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -59,34 +59,9 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'domains' => array(
-      'name' => 'Overarching Categories',
-      'machine_name' => 'domains',
-      'description' => 'Land Portal Overarching Categories (aka domains)',
-      'hierarchy' => 0,
-      'module' => 'taxonomy',
-      'weight' => -10,
-      'language' => 'und',
-      'i18n_mode' => 0,
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
-    ),
-    'landportal_topics' => array(
+    'landvoc_concepts' => array(
       'name' => 'Concepts',
-      'machine_name' => 'landportal_topics',
+      'machine_name' => 'landvoc_concepts',
       'description' => 'Land vocabulary concepts terms - linked to Agrovoc (aka Topics)',
       'hierarchy' => 0,
       'module' => 'taxonomy',
@@ -192,7 +167,32 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => -2,
       'language' => 'und',
-      'i18n_mode' => 0,
+      'i18n_mode' => 1,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'overarching_categories' => array(
+      'name' => 'Overarching Categories',
+      'machine_name' => 'overarching_categories',
+      'description' => 'Land Portal Overarching Categories (aka domains)',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => -10,
+      'language' => 'und',
+      'i18n_mode' => 1,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -217,7 +217,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => -9,
       'language' => 'und',
-      'i18n_mode' => 0,
+      'i18n_mode' => 1,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
