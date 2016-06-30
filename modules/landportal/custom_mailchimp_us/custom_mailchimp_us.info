@@ -1,0 +1,9 @@
+name = Custom mailchimp page for users lists
+description = Custom mailchimp page for users lists.
+core = 7.x
+package = Landportal
+version = 7.x-1.0
+
+
+dependencies[] = mailchimp
+dependencies[] = mailchimp_user_list

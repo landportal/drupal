@@ -1,0 +1,126 @@
+<?php
+
+function custom_mailchimp_us_menu(){
+  $items['admin/config/services/mailchimp/mailchimp-users-list'] = array(
+    'title' => 'Mailchimp User Lists',
+    'page callback' => 'drupal_get_form',
+    'page arguments'=>array('custom_mailchimp_us_form'),
+    'access arguments' => array(
+      'administer mailchimp user lists',
+    ),
+    'type' => MENU_LOCAL_TASK,
+    'weight'=>1000,
+  );
+  return $items;
+}
+
+function custom_mailchimp_us_form_validate(&$form, &$form_state){
+  if($form_state['values']['operation']==0){
+    form_set_error('operation', $message = t('Choose Action'));
+  }
+  if(empty($form_state['values']['lists'])){
+    form_set_error('lists', $message = t('Choose List'));
+  }
+}
+
+function custom_mailchimp_us_form_submit(&$form, &$form_state){
+  foreach ($form_state['input'] as $key => $uid) {
+    if(stripos($key,'user') !== FALSE){
+      $old_lists=array();
+      $results=mailchimp_user_list_query($uid);
+      foreach ($results as $key => $result) {
+        $list_ids=explode('|',$result->list_ids);
+        if(!empty($list_ids)){
+          foreach ($list_ids as $list_id) {
+            $old_lists[]=$list_id;
+          }
+        }
+      };
+      if($form_state['values']['operation'] == 1){
+        $lists=array_merge($old_lists,$form_state['input']['lists']);
+      }
+      if($form_state['values']['operation'] == 2){
+        $lists=array_diff($old_lists, $form_state['input']['lists']);
+      }
+      $lists = array_unique($lists);
+      $user_lists=implode('|', $lists);
+      $user_templates='';
+      mailchimp_user_list_save_user_to_db($uid, $user_lists, $user_templates);
+    }
+  }
+}
+
+function custom_mailchimp_us_form($form, &$form_state){
+  $form['#attached']['js'][] = drupal_get_path('module', 'custom_mailchimp_us') . '/js/main.js';
+  $lists = mailchimp_get_lists();
+  $options = array('0' => t('-- Select --'));
+  foreach ($lists as $mc_list) {
+    $options[$mc_list['id']] = $mc_list['name'];
+  }
+  $form['lists']=array(
+    '#type' => 'select',
+    '#options' => $options,
+    '#multiple'=>TRUE,
+    '#title'=>t('Choose mailchimp list'),
+  );
+  $form['operation']=array(
+    '#type' => 'select',
+    '#options' => array('0'=>'-- Select --','1'=>'Add','2'=>'Remove'),
+    '#title'=>t('Action'),
+  );
+  $form['button']=array(
+    '#type'=>'submit',
+    '#value'=>'Execute',
+  );
+
+  $rows=custom_mailchimp_us_get_users();
+
+  $result = array(
+    'header' => array(
+      '<input type="checkbox" class="vbo-table-select-all form-checkbox">',
+      t('User ID'),
+      t('User Name'),
+      t('List IDs'),
+    ),
+    'rows' => $rows,
+  );
+  $mailchimp_results=theme('table', $result);
+  $mailchimp_results .= theme('pager');
+
+  $form['results']=array(
+    '#type'=>'markup',
+    '#markup'=>$mailchimp_results,
+  );
+
+  return $form;
+}
+
+function custom_mailchimp_us_get_user_lists($uid){
+  $output='';
+  $results=mailchimp_user_list_query($uid);
+  foreach ($results as $key => $result) {
+    $list_ids=explode('|',$result->list_ids);
+    if(!empty($list_ids)){
+      foreach ($list_ids as $list_id) {
+        $output.=mailchimp_user_list_list_title($list_id).'<br>';
+      }
+    }
+  }
+  return $output;
+}
+
+function custom_mailchimp_us_get_users(){
+  $query = db_select('users', 'u')
+  ->fields('u')
+  ->condition('u.uid',0,'>')
+  ->orderBy('u.uid', 'ASC')
+  ->extend('PagerDefault')
+  ->limit(50);
+  $result = $query->execute();
+  $output = array();
+  foreach($result as $row) {
+      $checkbox='<input type="checkbox" id="user-'.$row->uid.'" name="user-'.$row->uid.'" value="'.$row->uid.'" class="vbo-select form-checkbox">';
+      $output[]= array($checkbox,$row->uid,l($row->name,'user/'.$row->uid.'/edit'),custom_mailchimp_us_get_user_lists($row->uid));
+  }
+  return $output;
+}
