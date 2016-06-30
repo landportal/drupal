@@ -1,6 +1,6 @@
 name = LandPortal Search
 core = 7.x
-package = Features
+package = Landportal
 version = 7.x-1.4
 dependencies[] = apachesolr_search
 dependencies[] = chosen
