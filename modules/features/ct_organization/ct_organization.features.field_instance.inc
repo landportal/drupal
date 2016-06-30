@@ -702,10 +702,12 @@ function ct_organization_field_default_field_instances() {
     'entity_type' => 'node',
     'entityconnect_icon_add' => 0,
     'entityconnect_icon_edit' => 0,
+    'entityconnect_show_add_icon' => 0,
+    'entityconnect_show_edit_icon' => 0,
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_user',
-    'label' => 'People',
+    'label' => 'Members',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -735,11 +737,11 @@ function ct_organization_field_default_field_instances() {
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Geographical focus');
   t('Logo');
+  t('Members');
   t('Organisation contact');
   t('Organization relationship');
   t('Organization type');
   t('Overarching categories');
-  t('People');
   t('People affiliated to this organization (require a Land Portal account)');
   t('Related concepts');
   t('Themes');
