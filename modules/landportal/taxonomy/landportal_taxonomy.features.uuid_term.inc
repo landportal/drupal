@@ -478,6 +478,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -2468,6 +2469,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -2773,6 +2775,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -4459,6 +4462,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -4720,6 +4724,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -5876,6 +5881,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -6284,7 +6290,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_original' => 'Legal provisions applying in case of territorial succession. ',
   );
   $terms[] = array(
-    'name' => 'Landportal Partner',
+    'name' => 'Land Portal Partner',
     'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
@@ -6301,13 +6307,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'revision_id' => 6119,
           'language' => 'en',
           'source' => '',
-          'uid' => 1,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1442819270,
-          'changed' => 1442819270,
+          'created' => 1467288331,
+          'changed' => 1467288331,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -6358,6 +6367,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -7551,6 +7561,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -7919,7 +7930,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Library content provider',
+    'name' => 'LandLibrary content provider',
     'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
@@ -7936,13 +7947,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'revision_id' => 6121,
           'language' => 'en',
           'source' => '',
-          'uid' => 1,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1442819321,
-          'changed' => 1442819321,
+          'created' => 1467288128,
+          'changed' => 1467288128,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -8868,6 +8882,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -9723,7 +9738,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_original' => NULL,
   );
   $terms[] = array(
-    'name' => 'Data source provider',
+    'name' => 'LandBook data provider',
     'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
@@ -9740,13 +9755,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'revision_id' => 6120,
           'language' => 'en',
           'source' => '',
-          'uid' => 1,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1442819283,
-          'changed' => 1442819283,
+          'created' => 1467288309,
+          'changed' => 1467288309,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -10780,7 +10798,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_original' => '',
   );
   $terms[] = array(
-    'name' => 'Landportal Hub',
+    'name' => 'Land Portal Hub',
     'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
@@ -10797,13 +10815,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'revision_id' => 6122,
           'language' => 'en',
           'source' => '',
-          'uid' => 1,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1442819331,
-          'changed' => 1442819331,
+          'created' => 1467288323,
+          'changed' => 1467288323,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -12063,6 +12084,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -12250,6 +12272,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(

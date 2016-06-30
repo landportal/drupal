@@ -135,7 +135,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       ),
     ),
     'organization_relation' => array(
-      'name' => 'Organization relation',
+      'name' => 'LandPortal relation to organization',
       'machine_name' => 'organization_relation',
       'description' => 'Relationship to the Landportal',
       'hierarchy' => 0,
@@ -191,6 +191,31 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => -10,
+      'language' => 'und',
+      'i18n_mode' => 1,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'regions' => array(
+      'name' => 'Regions',
+      'machine_name' => 'regions',
+      'description' => 'Regions',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 7,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(

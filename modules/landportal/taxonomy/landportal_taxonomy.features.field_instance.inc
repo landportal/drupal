@@ -63,7 +63,7 @@ function landportal_taxonomy_field_default_field_instances() {
     'bundle' => 'countries',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'This field is for the corresponding URI in the FAO Geopolitical Ontology',
+    'description' => 'This field is for the \'same as\' concepts linked to that one',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -83,7 +83,7 @@ function landportal_taxonomy_field_default_field_instances() {
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_linked_uris',
-    'label' => 'Linked URI',
+    'label' => 'External Linked URI',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
@@ -115,72 +115,6 @@ function landportal_taxonomy_field_default_field_instances() {
       'settings' => array(),
       'type' => 'link_field',
       'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'taxonomy_term-countries-field_old_geopolitical_ontology_'.
-  $field_instances['taxonomy_term-countries-field_old_geopolitical_ontology_'] = array(
-    'bundle' => 'countries',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'This is the old Geopolitical Ontology URI. Some external systems may still use it instead of the new one.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'link',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'link_url',
-        'weight' => 2,
-      ),
-      'search_index' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_old_geopolitical_ontology_',
-    'label' => 'Old Geopolitical Ontology URI',
-    'required' => 0,
-    'settings' => array(
-      'absolute_url' => 1,
-      'attributes' => array(
-        'class' => '',
-        'configurable_class' => 0,
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 0,
-      'entity_translation_sync' => FALSE,
-      'fc' => array(
-        'fc_allow_empty' => FALSE,
-        'fc_check_zero' => 0,
-        'fc_include' => 0,
-      ),
-      'rel_remove' => 'default',
-      'title' => 'none',
-      'title_label_use_field_label' => 0,
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 0,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 4,
     ),
   );
 
@@ -790,6 +724,57 @@ function landportal_taxonomy_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-themes-field_image'.
+  $field_instances['taxonomy_term-themes-field_image'] = array(
+    'bundle' => 'themes',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 2,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_image',
+    'label' => 'Icon',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'medium',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-themes-field_related_topics'.
   $field_instances['taxonomy_term-themes-field_related_topics'] = array(
     'bundle' => 'themes',
@@ -854,7 +839,7 @@ function landportal_taxonomy_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
       'type' => 'synonyms_select_taxonomy_term',
-      'weight' => 5,
+      'weight' => 3,
     ),
   );
 
@@ -865,20 +850,18 @@ function landportal_taxonomy_field_default_field_instances() {
   t('Define which themes this content is covering');
   t('Description');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
+  t('External Linked URI');
   t('ISO3');
   t('Icon');
   t('Label');
   t('Language');
-  t('Linked URI');
   t('Name');
-  t('Old Geopolitical Ontology URI');
   t('Overarching categories');
   t('Please, enter the synonyms which should be related to this term.');
   t('Related concepts');
   t('Synonyms');
   t('Themes');
-  t('This field is for the corresponding URI in the FAO Geopolitical Ontology');
-  t('This is the old Geopolitical Ontology URI. Some external systems may still use it instead of the new one.');
+  t('This field is for the \'same as\' concepts linked to that one');
 
   return $field_instances;
 }

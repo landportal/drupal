@@ -29,16 +29,16 @@ function landportal_taxonomy_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '30',
+          'weight' => '5',
         ),
         'name' => array(
-          'weight' => '-5',
-        ),
-        'description' => array(
           'weight' => '0',
         ),
+        'description' => array(
+          'weight' => '1',
+        ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '4',
         ),
       ),
       'display' => array(
@@ -246,6 +246,16 @@ function landportal_taxonomy_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_taxonomy_term_organization_relation';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_taxonomy_term_organization_relation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_taxonomy_term_organization_types';
   $strongarm->value = array(
     'status' => '0',
@@ -399,6 +409,16 @@ function landportal_taxonomy_strongarm() {
     'priority' => '0.5',
   );
   $export['xmlsitemap_settings_taxonomy_term_overarching_categories'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_taxonomy_term_regions';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_taxonomy_term_regions'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
