@@ -198,7 +198,6 @@ function landportal_multilingual_strongarm() {
     'filtered_html' => 'filtered_html',
     'full_html' => 'full_html',
     'plain_text' => 'plain_text',
-    'mailchimp_campaign' => 0,
   );
   $export['i18n_string_allowed_formats'] = $strongarm;
 
