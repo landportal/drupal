@@ -53,7 +53,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_domains',

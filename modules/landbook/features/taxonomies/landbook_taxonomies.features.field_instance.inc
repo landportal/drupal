@@ -401,6 +401,51 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-indicators-field_hascodedvalue'.
+  $field_instances['taxonomy_term-indicators-field_hascodedvalue'] = array(
+    'bundle' => 'indicators',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'The values for this indicator is taken from some controlled term list (could be characters, colors, strings, numbers...)
+<a href="https://www.w3.org/TR/vocab-data-cube/#schemes">Read more</a>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 8,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_hascodedvalue',
+    'label' => 'has Coded Value',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-indicators-field_id'.
   $field_instances['taxonomy_term-indicators-field_id'] = array(
     'bundle' => 'indicators',
@@ -768,7 +813,10 @@ function landbook_taxonomies_field_default_field_instances() {
   t('Organization');
   t('Overarching categories');
   t('Related concepts');
+  t('The values for this indicator is taken from some controlled term list (could be characters, colors, strings, numbers...)
+<a href="https://www.w3.org/TR/vocab-data-cube/#schemes">Read more</a>');
   t('Themes');
+  t('has Coded Value');
   t('max');
   t('min');
 
