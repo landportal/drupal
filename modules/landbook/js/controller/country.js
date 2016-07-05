@@ -204,7 +204,7 @@ wesCountry.stateful.start({
 		selector.selectedIndex = optionSameRegion && optionSameRegion.index ? optionSameRegion.index: option;
 
 		selectors['#country-comparing-select'].refresh();
-		
+
 		*/
 
 		// Show fixed charts
@@ -300,36 +300,36 @@ wesCountry.stateful.start({
 			selectedIndex: function(parameters, selectors) {
 				var selector = selectors['#country-comparing-select'];
 				var comparing = parameters["comparing-country"];
-				
+
 				if (comparing && comparing != "" && comparing != Drupal.settings.landbook.countryCode)  {
 					var option = selector.querySelector(String.format('option[value={0}]', comparing));
-					
+
 					if (option && option.index)
 						return option.index;
 				}
-				
+
 				// Avoid selecting an unselectable option for country-comparing-select
 				// We select the first selectable country of the same region of this country
-				
+
 				var thisCountryOption = selector.querySelector(String.format('option[value={0}]', Drupal.settings.landbook.countryCode));
 
 				var region = thisCountryOption && thisCountryOption.hasAttribute("data-region") ? thisCountryOption.getAttribute("data-region") : "";
-				
+
 				var selectorOptions = selector.options;
 				var optionSameRegion = null;
-				
+
 				for (var i = 0; i < selectorOptions.length; i++) {
 					var option = selectorOptions[i];
-					
+
 					if (option.disabled)
 						continue;
-					
+
 					if (option.value == Drupal.settings.landbook.countryCode)
 						continue;
-					
+
 					if (!optionSameRegion)
 						optionSameRegion = option;
-						
+
 					if (option.getAttribute("data-region") == region) {
 						optionSameRegion = option;
 						break;
@@ -374,18 +374,18 @@ function loadComparingTimeline(parameters) {
 	var country1 = Drupal.settings.landbook.countryCode;
 	var country2 = parameters["comparing-country"];
 	var indicator = parameters["indicator"];
-	
+
 	if (!country1 || country1 == "" || !country2 || country2 == "" || !indicator || indicator == "")
 		return;
-		
+
 	console.log(String.format("load Data country:{0}, comparing:{1}, indicator:{2}", country1, country2, indicator));
-	
+
 	timelineLoader.load({
 		url: Drupal.settings.landbook.ajaxURL + '/observations_by_country.php',
 		parameters: String.format("country1={0}&country2={1}&indicator={2}&language={3}",
 															country1, country2, indicator, Drupal.settings.landbook.languageCode),
 	});
-	
+
 	// Fill call stack
 	callStack = [];
 
@@ -398,7 +398,7 @@ function loadComparingTimeline(parameters) {
 																		country1, country2, indicator, Drupal.settings.landbook.languageCode),
 			}
 		});
-		
+
 	loadSmallChartFromStack();
 }
 
@@ -407,7 +407,7 @@ function loadComparingTimeline(parameters) {
 function loadSmallChartFromStack() {
 	if (callStack.length > 0) {
 		var options = callStack.shift();
-		
+
 		starredLoaderList[options.indicator].load(options.ajaxOptions);
 	}
 }

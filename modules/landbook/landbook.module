@@ -87,6 +87,12 @@ function landbook_menu() {
     'page arguments'    => array('book/regions'),
   );
   $translatables['book'][] = t($items['book']['title']);
+
+  $items['admin/fill_regions_terms'] = array(
+    'access callback'   => TRUE,
+    'page callback' => 'landbook_fill_regions_terms',
+  );
+
   return $items;
 }
 
@@ -168,5 +174,49 @@ function landbook_page_build(&$page) {
         $page['sidebar_second']['landbook_regions_selectors']['#markup'] =
             landbook_regions_selectors($data);
         $page['sidebar_second']['#sorted'] = FALSE;
+    }
+}
+
+
+function landbook_views_query_alter(&$view, &$query){
+    if($view->name=='book_latest_blocks'){
+        if(arg(0)=='book' && arg(1) == 'countries'){
+            $tid=landbook_get_region_iso(arg(2));
+            $query->where[0]['conditions'][0]['value']=$tid;
+        }
+    }
+}
+
+
+function landbook_get_region_iso($iso){
+    $tid = db_select('field_data_field_iso3', 't')
+      ->fields('t', array('entity_id'))
+      ->condition('t.field_iso3_value', $iso)
+      ->condition('t.bundle', 'regions')
+      ->execute()
+      ->fetchField();
+    return $tid;
+}
+
+
+function landbook_fill_regions_terms(){
+    $terms=taxonomy_get_tree(3);
+    //pa($terms,1);
+    foreach ($terms as $key => $term) {
+        $tid = db_select('taxonomy_term_data', 't')
+          ->fields('t', array('tid'))
+          ->condition('t.name', $term->name)
+          ->condition('t.vid', '7')
+          ->execute()
+          ->fetchField();
+        $old_term=taxonomy_term_load($term->tid);
+        $reg_term=taxonomy_term_load($tid);
+        $reg_term->field_iso3['und'][0]['value']=$old_term->field_iso3['und'][0]['value'];
+        try{
+            taxonomy_term_save($reg_term);
+        }catch(Exception $e){
+            
+        }
+
     }
 }

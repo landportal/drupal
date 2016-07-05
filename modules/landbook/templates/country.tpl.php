@@ -9,7 +9,7 @@
  * Drupal refactoring: Jules <jules@ker.bz>
  */
 ?>
-
+<?php //pa($data,1); ?>
 <input type="hidden" id="entity-id" value="<?php echo $data['entity-id']; ?>" />
 <input type="hidden" id="path" value="<?php echo drupal_get_path('module', 'landbook'); ?>" />
 <input type="hidden" id="continent-id" value="<?php echo $data['info']['region']['un_code']; ?>" />
@@ -18,7 +18,7 @@
 <input type="hidden" id="un-code" value="<?php echo $data['info']['iso3']; ?>" />
 <input type="hidden" id="starred-indicators" value="<?php $si=''; foreach($data['starred']['indicators'] as $indicators): $si .= ($si? ',':'').$indicators['id']; endforeach; echo $si; ?>" />
 
-
+<!--
   <div class="row">
     <div class="col-sm-12">
       <h1 class="country-name"><span class="country-name no-margin flag"><img id="flag" class="flag" src="/<?php echo drupal_get_path('theme', 'landportal'); ?>/images/flags/<?php echo $data['info']['iso3']; ?>.png" /><?php echo $data['info']['name']; ?></span></h1>
@@ -84,3 +84,150 @@
   <?php endforeach; ?>
       </div>
 <?php endforeach; /* starred/topics */ ?>
+
+<h2 class=="fos txt-small m-xs-top" data-localize="global.media">Media</h2>
+-->
+
+<section>
+    <div class="container">
+        <div class="row main">
+            <div class="col-md-offset-2 col-md-8">
+                <div class="country-flag">
+                    <img src="/<?php echo drupal_get_path('theme', 'landportal'); ?>/images/flags/<?php echo $data['info']['iso3']; ?>.png" />
+                </div>
+                <h2><?php echo $data['info']['name']; ?></h2>
+            </div>
+        </div>
+        <nav class="nav-top txt-c group m-l-bottom ">
+            <ul class="nav-inside-country fos">
+                <li class="nic-item">
+                  <a href="#">The Country</a>
+                </li>
+                <li class="nic-item">
+                  <a href="#indicators">Indicators</a>
+                </li>
+                <li class="nic-item">
+                  <a href="#infographic">Infographic</a>
+                </li>
+                <li class="nic-item">
+                  <a href="#mapping">Mapping</a>
+                </li>
+                <li class="nic-item">
+                  <a href="#rankings">Rankings</a>
+                </li>
+                <li class="nic-item">
+                  <a href="#media">Media</a>
+                </li>
+                <li class="nic-item">
+                  <a href="#partners">Partners</a>
+                </li>
+                <li class="nic-item">
+                  <a href="#library">Library</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <a id="indicators"></a>
+                <h2 class="indicators section-title">Indicators</h2>
+            </div>
+        </div>
+    </div>
+        <?php if ($data['charts']['tableIndicators']): ?>
+        <div class="socioeconomic-values chart-content">
+           <?php echo landbook_table_render($data['charts']['tableIndicators']); ?>
+        </div>
+        <?php endif; ?>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <a id="infographic"></a>
+                <h2 class="infographics section-title">Infographics</h2>
+                <p>grafics</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <a id="mapping"></a>
+                <h2 class="mapping section-title">Mapping</h2>
+                <p>Very big map :)</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <a id="rankings"></a>
+                <h2 class="rankings section-title">Rankings</h2>
+                <p>rankings</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <a id="media"></a>
+                <h2 class="media section-title">Media</h2>
+            </div>
+        </div>
+        <?php  $block = block_load('views', 'book_latest_blocks-block_3');
+          $block = _block_render_blocks(array($block));
+          $block_build = _block_get_renderable_array($block);
+          echo drupal_render($block_build);
+        ?>
+
+        <?php  $block = block_load('views', 'book_latest_blocks-block_1');
+          $block = _block_render_blocks(array($block));
+          $block_build = _block_get_renderable_array($block);
+          echo drupal_render($block_build);
+        ?>
+        <?php  $block = block_load('views', 'book_latest_blocks-block_2');
+          $block = _block_render_blocks(array($block));
+          $block_build = _block_get_renderable_array($block);
+          echo drupal_render($block_build);
+        ?>
+
+        <?php  $block = block_load('views', 'book_latest_blocks-block');
+          $block = _block_render_blocks(array($block));
+          $block_build = _block_get_renderable_array($block);
+          echo drupal_render($block_build);
+        ?>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <a id="partners"></a>
+                <h2 class="partners section-title">Partners</h2>
+                <p>partners</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <a id="library"></a>
+                <h2 class="library section-title">Library</h2>
+                <p>library</p>
+            </div>
+        </div>
+    </div>
+</section>

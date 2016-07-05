@@ -16,7 +16,7 @@ class CacheHelper {
 	function __construct($name, $params) {
 		$this->key = hash($this->hash_algorithm, $name . implode($params));
 
-                $this->c = new Memcached();
+                $this->c = new Memcache();
                 $this->c->addServer('localhost', '11211');
         }
 
