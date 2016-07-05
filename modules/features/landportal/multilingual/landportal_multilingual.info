@@ -1,7 +1,7 @@
 name = Landportal Multilingual
 core = 7.x
 package = Landportal
-version = 7.x-2.3-rc
+version = 7.x-2.3-rc1
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = i18n_variable
@@ -54,7 +54,6 @@ features[variable][] = i18n_sync_node_type_person
 features[variable][] = i18n_sync_node_type_syspage
 features[variable][] = i18n_sync_node_type_type_browse
 features[variable][] = i18n_sync_node_type_webform
-features[variable_realm][] = global:default
 features[variable_realm][] = language:en
 features[variable_realm][] = language:es
 features[variable_realm][] = language:fr
