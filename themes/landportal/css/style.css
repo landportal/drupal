@@ -11934,20 +11934,21 @@ html.js fieldset.collapsed {
   margin-top: 0;
   text-align: left;
   line-height: 0;
+  margin-bottom: 5px;
 }
-/* line 345, ../scss/modules/_book.scss */
+/* line 346, ../scss/modules/_book.scss */
 .page-book-countries section .node-teaser .node-intro h3 a {
   color: #91b135;
   font-size: 16px;
   line-height: 1.42857;
   font-family: "Open Sans",sans-serif;
 }
-/* line 351, ../scss/modules/_book.scss */
+/* line 352, ../scss/modules/_book.scss */
 .page-book-countries section .node-teaser .node-intro h3 a:hover {
   color: #617724;
   text-decoration: none;
 }
-/* line 357, ../scss/modules/_book.scss */
+/* line 358, ../scss/modules/_book.scss */
 .page-book-countries section .node-teaser .node-intro span {
   color: #999;
   font-size: 14px;
@@ -11955,7 +11956,7 @@ html.js fieldset.collapsed {
   line-height: 1.42857;
   font-family: "Open Sans",sans-serif;
 }
-/* line 364, ../scss/modules/_book.scss */
+/* line 365, ../scss/modules/_book.scss */
 .page-book-countries section .node-teaser .node-intro .text {
   margin-top: 5px;
   font-family: "Merriweather",serif;
@@ -11963,11 +11964,11 @@ html.js fieldset.collapsed {
   font-size: 16px;
   line-height: 1.42857;
 }
-/* line 371, ../scss/modules/_book.scss */
+/* line 372, ../scss/modules/_book.scss */
 .page-book-countries section .node-teaser .node-intro .text p {
   font-size: 16px;
 }
-/* line 375, ../scss/modules/_book.scss */
+/* line 376, ../scss/modules/_book.scss */
 .page-book-countries section .node-teaser .node-intro .date {
   background-image: url("../images/ico-cal.png");
   background-position: left center;
@@ -11979,7 +11980,7 @@ html.js fieldset.collapsed {
   padding-top: 5px;
   font-size: 14px;
 }
-/* line 386, ../scss/modules/_book.scss */
+/* line 387, ../scss/modules/_book.scss */
 .page-book-countries section .node-teaser .node-intro .location {
   background-image: url("../images/ico-loc.png");
   background-position: left center;
@@ -11991,7 +11992,7 @@ html.js fieldset.collapsed {
   padding-top: 5px;
   font-size: 14px;
 }
-/* line 401, ../scss/modules/_book.scss */
+/* line 402, ../scss/modules/_book.scss */
 .page-book-countries section:nth-child(even) {
   background: #F8F8F8;
 }
