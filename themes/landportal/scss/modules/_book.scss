@@ -101,6 +101,64 @@
     }
 }
 
+.page-book{
+	#block-search-form{
+		display:none;
+	}
+
+	#block-menu-landbook-menu{
+		.menu-top{
+			padding: 50px 50px;
+
+			h2{
+				text-shadow:none;
+				font-family: "News Cycle",sans-serif;
+				padding:0;
+				font-size: 36px;
+				font-weight: 300;
+				letter-spacing: 0;
+				margin-bottom: 5px;
+			}
+
+			p{
+				margin-top:0;
+				letter-spacing: 0;
+				font-size:20px;
+				font-family: "News Cycle",sans-serif;
+				margin-bottom:0;
+			}
+		}
+
+		.menu-wrapper{
+			border-top:1px solid #ffffff;
+			border-bottom:1px solid #ffffff;
+			background: #766054;
+
+			.menu{
+				li{
+					background: #766054 !important;
+					border:none;
+
+					&.active-trail{
+						background: #A3C642 !important;
+					}
+
+					a{
+						padding:10px 0;
+						letter-spacing: 0;
+						text-decoration: none;
+						font-size:14px;
+						line-height: normal;
+
+						&.active{
+							border-bottom:none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 .page-book-countries{
 	section{

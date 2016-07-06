@@ -18,6 +18,26 @@
  * @ingroup themeable
  */
 ?>
+<?php if(arg(0)== 'book'): ?>
+<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+	<div class="container menu-top">
+	  	<?php print render($title_prefix); ?>
+		<?php if ($block->subject): ?>
+		  <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
+		<?php endif; ?>
+		  <?php print render($title_suffix); ?>
+		 <?php if (isset($block->description)) : ?>
+		  <p><?php print render($block->description); ?></p>
+		<?php endif; ?>
+	</div>
+	<div class="menu-wrapper content"<?php print $content_attributes; ?>>
+		<div class="container">
+	    	<?php print $content ?>
+	    </div>
+	</div>
+</div>
+
+<?php else: ?>
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
@@ -32,3 +52,5 @@
     <?php print $content ?>
   </div>
 </div>
+
+<?php endif; ?>
