@@ -38,14 +38,14 @@ function landlibrary_rules_default_rules_configuration() {
       "REQUIRES" : [ "rules" ],
       "ON" : { "node_presave--landlibrary_resource" : { "bundle" : "landlibrary_resource" } },
       "IF" : [
-        { "entity_has_field" : { "entity" : [ "node" ], "field" : "field_doc_subject" } },
-        { "data_is_empty" : { "data" : [ "node:field-doc-subject" ] } }
+        { "entity_has_field" : { "entity" : [ "node" ], "field" : "field_related_topics" } },
+        { "data_is_empty" : { "data" : [ "node:field-related-topics" ] } }
       ],
       "DO" : [
         { "component_rules_autotag_tag" : {
             "text" : "[node:title] [node:field-doc-description] [node:field-doc-alt-title] [node:field-doc-title] ",
             "vocabulary" : "landportal_topics",
-            "target_terms" : [ "node:field-doc-subject" ]
+            "target_terms" : [ "node:field-related-topics" ]
           }
         }
       ]
