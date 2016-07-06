@@ -37,7 +37,7 @@ function odm_library_importer_feeds_importer_default() {
                     'jsonpath_parser:2' => 'title',
                     'jsonpath_parser:3' => 'resources[0].name',
                     'jsonpath_parser:4' => 'notes',
-                    'jsonpath_parser:5' => 'resources[0].url',
+                    'jsonpath_parser:5' => 'resources..url',
                     'jsonpath_parser:6' => 'taxonomy',
                     'jsonpath_parser:7' => 'taxonomy',
                     'jsonpath_parser:8' => 'odm_copyright',
@@ -53,7 +53,7 @@ function odm_library_importer_feeds_importer_default() {
                     'options' => array(
                         'context' => 0,
                         'jsonpath_parser:1' => 0,
-                        'jsonpath_parser:2' => 0,//'jsonpath_parser:2',
+                        'jsonpath_parser:2' => 0,
                         'jsonpath_parser:3' => 0,
                         'jsonpath_parser:4' => 0,
                         'jsonpath_parser:5' => 0,
@@ -172,7 +172,6 @@ function odm_library_importer_feeds_importer_default() {
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    
                     100 => array(
                         'source' => 'ODM url',
                         'target' => 'field_doc_is_shown_at:url',
@@ -184,7 +183,6 @@ function odm_library_importer_feeds_importer_default() {
                         'target' => 'user_name',
                         'unique' => TRUE,
                     ),
-
                     201 => array(
                         'source' => 'ODM creators guid',
                         'target' => 'field_doc_creator:person:entityreference_feeds:guid',
@@ -240,5 +238,5 @@ function odm_library_importer_feeds_importer_default() {
     );
     $export[$feeds_importer->id] = $feeds_importer;
 
-  return $export;
+    return $export;
 }
