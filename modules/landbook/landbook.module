@@ -220,3 +220,12 @@ function landbook_fill_regions_terms(){
 
     }
 }
+
+
+function landbook_preprocess_page(&$vars){
+    if(arg(0)=='book' && arg(1) == 'countries'){
+        if(!empty(arg(2))){
+            $vars['theme_hook_suggestions'][] = 'page__book_country';
+        }
+    }
+}

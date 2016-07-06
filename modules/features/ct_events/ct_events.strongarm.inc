@@ -83,6 +83,12 @@ function ct_events_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'listing' => array(
+        'custom_settings' => TRUE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

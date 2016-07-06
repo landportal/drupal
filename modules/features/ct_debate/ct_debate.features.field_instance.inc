@@ -37,7 +37,7 @@ function ct_debate_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'trim_length' => 600,
+          'trim_length' => 200,
         ),
         'type' => 'text_summary_or_trimmed',
         'weight' => 6,
@@ -300,8 +300,9 @@ function ct_debate_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'synonyms',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => '',
         'auto_creation' => 0,
         'size' => 60,
         'sort' => 'weight',
@@ -309,7 +310,7 @@ function ct_debate_field_default_field_instances() {
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'synonyms_select_taxonomy_term',
+      'type' => 'options_select',
       'weight' => 5,
     ),
   );
@@ -345,7 +346,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'medium',
+          'image_style' => '600x400',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -426,8 +427,9 @@ function ct_debate_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'synonyms',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => '',
         'auto_creation' => 1,
         'size' => 60,
         'sort' => 'weight',
@@ -435,7 +437,7 @@ function ct_debate_field_default_field_instances() {
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
-      'type' => 'synonyms_select_taxonomy_term',
+      'type' => 'options_select',
       'weight' => 109,
     ),
   );
@@ -479,11 +481,12 @@ function ct_debate_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'synonyms',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => '',
         'sort' => 'weight',
       ),
-      'type' => 'synonyms_select_taxonomy_term',
+      'type' => 'options_select',
       'weight' => 110,
     ),
   );
@@ -534,8 +537,9 @@ function ct_debate_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'synonyms',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => '',
         'auto_creation' => 0,
         'size' => 60,
         'sort' => 'weight',
@@ -543,7 +547,7 @@ function ct_debate_field_default_field_instances() {
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'synonyms_select_taxonomy_term',
+      'type' => 'options_select',
       'weight' => 5,
     ),
   );

@@ -138,6 +138,7 @@
 			font-size: 1.8em;
 			margin-top:5px;
 			text-align:center;
+			margin-bottom: 35px;
 
 			&.indicators{
 				background: url('../images/indicators.png') no-repeat 50% 0;
@@ -160,6 +161,183 @@
 			&.library{
 				background: url('../images/library.png') no-repeat 50% 0;
 			}
+		}
+		.adj-blog{
+			margin-left:30px;
+		}
+		.nav-inside-country{
+			margin-top:20px;
+			border: 1px solid #a3c642;
+		    display: inline-block;
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    font-family: "Open Sans",sans-serif;
+		    margin-bottom: 20px;
+
+		    li{
+		    	display: block;
+    			float: left;
+
+    			a{
+    				border-right: 1px solid #a3c642;
+    				padding: 10px 15px;
+    				text-transform: uppercase;
+    				color: #91b135;
+    				text-decoration: none;
+    				display:block;
+    				font-size:0.75em;
+    			}
+    			a:hover,a:focus{
+    				color:#617724;
+    			}
+    			&:last-child{
+    				a{
+    					border-right: none;
+    				}
+    			}
+		    }
+		}
+		.bg-gray{
+			background: rgba(0, 0, 0, 0) -moz-linear-gradient(left center , #f7f7f7 0px, #f7f7f7 40%, transparent 40%) repeat scroll 0 0;
+
+			.bg-media{
+				background: #f7f7f7;
+			}
+
+			/*@media only screen and (max-width: 992px){
+			    	padding-left:15px;
+			    	padding-right:15px;
+			}*/
+		}
+		.bg-white{
+			background-color: #fff;
+		}
+
+		.block{
+			padding:40px 0;
+
+			h2{
+				margin-bottom: 11px;
+    			margin-top: 22px;
+    			font-size: 22px;
+    			font-family: "Open Sans",sans-serif;
+
+    			@media only screen and (max-width: 992px){
+			    	padding-left:15px;
+			    	padding-right:15px;
+			    }
+			}
+			.blog{
+				.node-intro{
+					display: inline-block;
+    				width: 218px;
+
+    				@media only screen and (max-width: 992px){
+				    	width:100%;
+				    }
+				}
+				.node-image{
+					margin-bottom:15px;
+					padding-left:0;
+			    	padding-right:0;
+					/*img{
+				    	background: #efefef none repeat scroll 0 0;
+	    				box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+				    }*/
+				}
+			}
+			.partners{
+				a{
+					font-family: "Open Sans",sans-serif;
+					font-size: 12px;
+					text-align: center;
+					color: #91b135;
+    				text-decoration: none;
+
+    				&:hover{
+				    	color:#617724;
+				    }
+				}
+			}
+		}
+		.node-teaser{
+			padding: 20px 0;
+
+			.node-image{
+				/*display: inline-block;
+			    background: #efefef none repeat scroll 0 0;
+			    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);*/
+			    padding:0;
+			    overflow: hidden;
+			    height: 122px;
+
+			    @media only screen and (max-width: 992px){
+			    	padding-left:15px;
+			    	padding-right:15px;
+			    	margin-bottom: 15px;
+			    }
+
+			}
+			.node-intro{
+				h3{
+					margin-top:0;
+					text-align: left;
+					line-height: 0;
+					a{
+						color: #91b135;
+						font-size: 16px;
+						line-height: 1.42857;
+						font-family: "Open Sans",sans-serif;
+
+						&:hover{
+							color:#617724;
+							text-decoration: none;
+						}
+					}
+				}
+				span{
+					color: #999;
+					font-size: 14px;
+					margin-top: 5px;
+					line-height: 1.42857;
+					font-family: "Open Sans",sans-serif;
+				}
+				.text{
+					margin-top: 5px;
+					font-family: "Merriweather",serif;
+					color: #333;
+				    font-size: 16px;
+				    line-height: 1.42857;
+
+				    p{
+				    	font-size: 16px;
+				    }
+				}
+				.date{
+					background-image: url("../images/ico-cal.png");
+				    background-position: left center;
+				    background-repeat: no-repeat;
+				    padding-left: 25px;
+				    font-family: "Open Sans",sans-serif;
+				    border-bottom: 1px solid #f0f0f0;
+				    padding-bottom: 5px;
+				    padding-top: 5px;
+				    font-size: 14px;
+				}
+				.location{
+					background-image: url("../images/ico-loc.png");
+				    background-position: left center;
+				    background-repeat: no-repeat;
+				    padding-left: 25px;
+				    font-family: "Open Sans",sans-serif;
+				    border-bottom: 1px solid #f0f0f0;
+				    padding-bottom: 5px;
+				    padding-top: 5px;
+				    font-size: 14px;
+				}
+			}
+
 		}
 	}
 	section:nth-child(even){

@@ -1,19 +1,16 @@
 <?php
+
 /**
  * @file
- * Debate node implementation
+ * Default theme implementation to display a node.
  *
- * Do not show the following elements:
- * - submitted
- *
+ * @see node.tpl.php
  * @see template_preprocess()
  * @see template_preprocess_node()
  * @see template_process()
  *
  * @ingroup themeable
  */
-
-
 ?>
 <?php switch ($view_mode) : ?>
 <?php case 'listing' : ?>
@@ -29,9 +26,14 @@
 
   <?php $information = '' ?>
   <?php $information = render($content['field_image']); ?>
+  <?php $information = render($content['field_doc_thumb']); ?>
   <?php $information .= render($content['field_date']); ?>
   <?php $information .= render($content['field_geographical_focus']); ?>
   <?php $information .= render($content['field_related_topics']); ?>
+  <?php $information .= render($content['field_doc_geographic_region']); ?>
+  <?php $information .= render($content['field_doc_country']); ?>
+  <?php $information .= render($content['field_doc_subject']); ?>
+  <?php //$information .= render($content['field_doc_keyword']); ?>
   <?php $contet_class = 'full-content'; ?>
   <?php if (!empty($information)) : ?>
     <section class="information">
@@ -49,31 +51,26 @@
     ?>
 
 </div>
+
 <?php break; ?>
 
 <?php case 'teaser' : ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix new p-l-top p-l-bottom group"<?php print $attributes; ?>>
-    <div class="node-image group col-md-5">
+    <div class="node-image group col-md-12">
       <?php print render($content['field_image']); ?>
     </div>
-    <div class="node-intro displayb col-md-7">
+    <div class="node-intro displayb">
         <?php print render($title_prefix); ?>
         <?php print render($title_suffix); ?>
         <h3><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
-        <?php if(!empty($node->field_date)): ?>
-        <?php  $field_values = field_get_items('node', $node, 'field_date');
-          $date_start=date('F jS',strtotime($field_values[0]['value']));
-          $date_end=date('F jS, Y',strtotime($field_values[0]['value2']));
-        ?>
-        <div class="date"><?php print $date_start.' - '.$date_end; ?></div>
-      <?php endif; ?>
+        <span class="created"><?php print t('On ').date('D j, Y',$node->created); ?></span>
     </div>
 </article>
 
 <?php break; ?>
 
 <?php default: ?>
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print $user_picture; ?>
 
@@ -83,21 +80,19 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-  <?php /* if ($display_submitted): ?> */
-  /*   <div class="submitted"> */
-  /*     <?php print $submitted; ?> */
-  /*   </div> */
-  /* <?php endif; */ ?>
-
-
+  <?php if($node->type !='page'): ?>
+    <?php if($view_mode =='full'): ?>
+    <section class="lang">
+      <?php print render($content['links']['translation']); ?>
+    </section>
+  <?php endif; ?>
+  <?php unset($content['links']['translation']); ?>
+<?php endif; ?>
   <section class="information">
-    <?php
-      // We hide the comments and links now so that we can render them later.
-    foreach(array('image', 'status', 'date', 'facilitators') as $fn) {
-        hide($content['field_'.$fn]);
-        print render($content['field_'.$fn]);
-    }
-    ?>
+    <?php print render($content['field_image']); ?>
+    <?php print render($content['field_date']); ?>
+    <?php print render($content['field_geographical_focus']); ?>
+    <?php print render($content['field_related_topics']); ?>
   </section>
 
   <section class="content"<?php print $content_attributes; ?>>
@@ -105,14 +100,21 @@
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
+
       print render($content);
     ?>
+
+  <?php if ($display_submitted): ?>
+  <div class="submitted">
+      <?php print $submitted; ?>
+    </div>
+  <?php endif; ?>
   </section>
-
-  <?php print render($content['links']); ?>
-
+  <?php if($node->type !='page'): ?>
+    <?php print render($content['links']); ?>
+  <?php endif; ?>
   <?php print render($content['comments']); ?>
 
-</article>
+</div>
 <?php break; ?>
 <?php endswitch; ?>

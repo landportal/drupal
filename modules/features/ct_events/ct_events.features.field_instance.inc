@@ -37,7 +37,7 @@ function ct_events_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'trim_length' => 600,
+          'trim_length' => 200,
         ),
         'type' => 'text_trimmed',
         'weight' => 5,
@@ -153,7 +153,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'weight' => 3,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
@@ -296,8 +296,9 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'synonyms',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => '',
         'auto_creation' => 0,
         'size' => 60,
         'sort' => 'weight',
@@ -305,7 +306,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'synonyms_select_taxonomy_term',
+      'type' => 'options_select',
       'weight' => 5,
     ),
   );
@@ -341,7 +342,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'medium',
+          'image_style' => '600x400',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -486,8 +487,9 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'synonyms',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => '',
         'auto_creation' => 1,
         'size' => 60,
         'sort' => 'weight',
@@ -495,7 +497,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
-      'type' => 'synonyms_select_taxonomy_term',
+      'type' => 'options_select',
       'weight' => 109,
     ),
   );
@@ -539,11 +541,12 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'synonyms',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => '',
         'sort' => 'weight',
       ),
-      'type' => 'synonyms_select_taxonomy_term',
+      'type' => 'options_select',
       'weight' => 110,
     ),
   );
@@ -594,8 +597,9 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'synonyms',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => '',
         'auto_creation' => 0,
         'size' => 60,
         'sort' => 'weight',
@@ -603,7 +607,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'synonyms_select_taxonomy_term',
+      'type' => 'options_select',
       'weight' => 5,
     ),
   );

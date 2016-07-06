@@ -96,38 +96,40 @@
                     <img src="/<?php echo drupal_get_path('theme', 'landportal'); ?>/images/flags/<?php echo $data['info']['iso3']; ?>.png" />
                 </div>
                 <h2><?php echo $data['info']['name']; ?></h2>
+                <nav class="nav-top txt-c group m-l-bottom ">
+                    <ul class="nav-inside-country fos">
+                        <li class="nic-item">
+                          <a href="#">The Country</a>
+                        </li>
+                        <li class="nic-item">
+                          <a href="#indicators">Indicators</a>
+                        </li>
+                        <li class="nic-item">
+                          <a href="#infographic">Infographic</a>
+                        </li>
+                        <li class="nic-item">
+                          <a href="#mapping">Mapping</a>
+                        </li>
+                        <li class="nic-item">
+                          <a href="#rankings">Rankings</a>
+                        </li>
+                        <li class="nic-item">
+                          <a href="#media">Media</a>
+                        </li>
+                        <li class="nic-item">
+                          <a href="#partners">Partners</a>
+                        </li>
+                        <li class="nic-item">
+                          <a href="#library">Library</a>
+                        </li>
+                    </ul>
+                </nav>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
-        <nav class="nav-top txt-c group m-l-bottom ">
-            <ul class="nav-inside-country fos">
-                <li class="nic-item">
-                  <a href="#">The Country</a>
-                </li>
-                <li class="nic-item">
-                  <a href="#indicators">Indicators</a>
-                </li>
-                <li class="nic-item">
-                  <a href="#infographic">Infographic</a>
-                </li>
-                <li class="nic-item">
-                  <a href="#mapping">Mapping</a>
-                </li>
-                <li class="nic-item">
-                  <a href="#rankings">Rankings</a>
-                </li>
-                <li class="nic-item">
-                  <a href="#media">Media</a>
-                </li>
-                <li class="nic-item">
-                  <a href="#partners">Partners</a>
-                </li>
-                <li class="nic-item">
-                  <a href="#library">Library</a>
-                </li>
-            </ul>
-        </nav>
     </div>
 </section>
+
 <section>
     <div class="container">
         <div class="row">
@@ -136,47 +138,58 @@
                 <h2 class="indicators section-title">Indicators</h2>
             </div>
         </div>
-    </div>
         <?php if ($data['charts']['tableIndicators']): ?>
-        <div class="socioeconomic-values chart-content">
-           <?php echo landbook_table_render($data['charts']['tableIndicators']); ?>
+        <div class="row">
+            <div class="socioeconomic-values chart-content">
+               <?php echo landbook_table_render($data['charts']['tableIndicators']); ?>
+            </div>
         </div>
         <?php endif; ?>
     </div>
 </section>
+
 <section>
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <a id="infographic"></a>
                 <h2 class="infographics section-title">Infographics</h2>
-                <p>grafics</p>
             </div>
+        </div>
+        <div class="row">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
     </div>
 </section>
+
 <section>
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <a id="mapping"></a>
                 <h2 class="mapping section-title">Mapping</h2>
-                <p>Very big map :)</p>
             </div>
+        </div>
+        <div class="row">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
     </div>
 </section>
+
 <section>
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <a id="rankings"></a>
                 <h2 class="rankings section-title">Rankings</h2>
-                <p>rankings</p>
             </div>
+        </div>
+        <div class="row">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
     </div>
 </section>
+
 <section>
     <div class="container">
         <div class="row">
@@ -185,49 +198,77 @@
                 <h2 class="media section-title">Media</h2>
             </div>
         </div>
-        <?php  $block = block_load('views', 'book_latest_blocks-block_3');
-          $block = _block_render_blocks(array($block));
-          $block_build = _block_get_renderable_array($block);
-          echo drupal_render($block_build);
-        ?>
-
-        <?php  $block = block_load('views', 'book_latest_blocks-block_1');
-          $block = _block_render_blocks(array($block));
-          $block_build = _block_get_renderable_array($block);
-          echo drupal_render($block_build);
-        ?>
-        <?php  $block = block_load('views', 'book_latest_blocks-block_2');
-          $block = _block_render_blocks(array($block));
-          $block_build = _block_get_renderable_array($block);
-          echo drupal_render($block_build);
-        ?>
-
-        <?php  $block = block_load('views', 'book_latest_blocks-block');
-          $block = _block_render_blocks(array($block));
-          $block_build = _block_get_renderable_array($block);
-          echo drupal_render($block_build);
-        ?>
+    </div>
+    <div class="bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-xs-12 bg-media">
+                    <?php  $block = block_load('views', 'book_latest_blocks-block_3');
+                      $block = _block_render_blocks(array($block));
+                      $block_build = _block_get_renderable_array($block);
+                      echo drupal_render($block_build);
+                    ?>
+                </div>
+                <div class="col-md-4 col-xs-12 bg-white">
+                    <div class="adj-blog">
+                        <?php  $block = block_load('views', 'book_latest_blocks-block_1');
+                          $block = _block_render_blocks(array($block));
+                          $block_build = _block_get_renderable_array($block);
+                          echo drupal_render($block_build);
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <?php  $block = block_load('views', 'book_latest_blocks-block_2');
+                  $block = _block_render_blocks(array($block));
+                  $block_build = _block_get_renderable_array($block);
+                  echo drupal_render($block_build);
+                ?>
+            </div>
+            <div class="col-md-6">
+                <?php  $block = block_load('views', 'book_latest_blocks-block');
+                  $block = _block_render_blocks(array($block));
+                  $block_build = _block_get_renderable_array($block);
+                  echo drupal_render($block_build);
+                ?>
+            </div>
+        </div>
     </div>
 </section>
+
 <section>
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <a id="partners"></a>
                 <h2 class="partners section-title">Partners</h2>
-                <p>partners</p>
             </div>
+        </div>
+        <div class="row">
+          <?php  $block = block_load('views', 'book_latest_blocks-block_4');
+                  $block = _block_render_blocks(array($block));
+                  $block_build = _block_get_renderable_array($block);
+                  echo drupal_render($block_build);
+                ?>
         </div>
     </div>
 </section>
+
 <section>
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <a id="library"></a>
                 <h2 class="library section-title">Library</h2>
-                <p>library</p>
             </div>
+        </div>
+        <div class="row">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
     </div>
 </section>
