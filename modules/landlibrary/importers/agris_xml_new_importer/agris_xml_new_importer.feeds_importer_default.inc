@@ -21,7 +21,7 @@ function agris_xml_new_importer_feeds_importer_default() {
           'plugin_key' => 'feeds_fetcher_directory_fetcher',
           'config' => array(
               'recursive' => TRUE,
-              'filemask' => '/\\.txt$/',
+              'filemask' => '/\\.xml$/',
               'updated_files' => FALSE,
           ),
       ),
@@ -324,6 +324,11 @@ function agris_xml_new_importer_feeds_importer_default() {
                       'target' => 'guid',
                       'unique' => 1,
                       'language' => 'und',
+                  ),
+                  101 => array(
+                      'source' => 'AGRIS author',
+                      'target' => 'user_name',
+                      'unique' => TRUE,
                   ),
               ),
               'update_existing' => '2',
