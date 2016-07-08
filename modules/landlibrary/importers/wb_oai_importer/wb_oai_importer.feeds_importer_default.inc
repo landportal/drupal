@@ -83,7 +83,7 @@ function wb_oai_importer_feeds_importer_default() {
                       'language' => 'und',
                   ),
                   7 => array(
-                      'source' => 'identifier',
+                      'source' => 'url',
                       'target' => 'field_doc_is_shown_by:url',
                       'unique' => FALSE,
                       'language' => 'und',
