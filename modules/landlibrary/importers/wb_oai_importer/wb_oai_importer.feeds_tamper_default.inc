@@ -13,6 +13,24 @@ function wb_oai_importer_feeds_tamper_default() {
     $feeds_tamper = new stdClass();
     $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
     $feeds_tamper->api_version = 2;
+    $feeds_tamper->id = 'wb_oai_importer-publisher-find_replace_regex';
+    $feeds_tamper->importer = 'wb_oai_importer';
+    $feeds_tamper->source = 'publisher';
+    $feeds_tamper->plugin_id = 'find_replace_regex';
+    $feeds_tamper->settings = array(
+        'find' => '/^(.*:)?([^,]+).*$/',
+        'replace' => '$2',
+        'limit' => '',
+        'real_limit' => -1,
+    );
+    $feeds_tamper->weight = 0;
+    $feeds_tamper->description = 'Find replace REGEX';
+
+    $export[$feeds_tamper->id] = $feeds_tamper;
+
+    $feeds_tamper = new stdClass();
+    $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+    $feeds_tamper->api_version = 2;
     $feeds_tamper->id = 'wb_oai_importer-blank_source_1-default_value';
     $feeds_tamper->importer = 'wb_oai_importer';
     $feeds_tamper->source = 'Blank source 1';
@@ -73,29 +91,6 @@ function wb_oai_importer_feeds_tamper_default() {
     );
     $feeds_tamper->weight = 0;
     $feeds_tamper->description = 'Implode';
-
-    $export[$feeds_tamper->id] = $feeds_tamper;
-
-    $feeds_tamper = new stdClass();
-    $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-    $feeds_tamper->api_version = 2;
-    $feeds_tamper->id = 'wb_oai_importer-publisher-php';
-    $feeds_tamper->importer = 'wb_oai_importer';
-    $feeds_tamper->source = 'publisher';
-    $feeds_tamper->plugin_id = 'php';
-    $feeds_tamper->settings = array(
-        'php' => '$pos = strpos($field, "World Bank");
-
-
-if ($pos == true) {
-    $field="World Bank Group";
- 
-} 
-return $field;
-',
-    );
-    $feeds_tamper->weight = 0;
-    $feeds_tamper->description = 'Execute php code';
 
     $export[$feeds_tamper->id] = $feeds_tamper;
 
