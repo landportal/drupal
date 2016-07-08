@@ -90,19 +90,13 @@ function wb_oai_importer_feeds_importer_default() {
                   ),
                   8 => array(
                       'source' => 'creator',
-                      'target' => 'field_doc_contributor:person:entityreference_feeds:guid',
-                      'unique' => FALSE,
-                      'language' => 'und',
-                  ),
-                  9 => array(
-                      'source' => 'creator',
-                      'target' => 'field_doc_contributor:person:entityreference_feeds:title',
+                      'target' => 'field_doc_people',
                       'unique' => FALSE,
                       'language' => 'und',
                   ),
                   10 => array(
                       'source' => 'contributor',
-                      'target' => 'field_doc_contributor:person:entityreference_feeds:title',
+                      'target' => 'field_doc_people',
                       'unique' => FALSE,
                       'language' => 'und',
                   ),
@@ -118,12 +112,6 @@ function wb_oai_importer_feeds_importer_default() {
                       'unique' => FALSE,
                       'language' => 'und',
                   ),
-                  13 => array(
-                      'source' => 'format',
-                      'target' => 'field_format',
-                      'unique' => FALSE,
-                      'language' => 'und',
-                  ),
                   14 => array(
                       'source' => 'guid',
                       'target' => 'field_doc_identifier',
@@ -131,30 +119,12 @@ function wb_oai_importer_feeds_importer_default() {
                       'language' => 'und',
                   ),
                   15 => array(
-                      'source' => 'source',
-                      'target' => 'field_doc_data_provider:organization:entityreference_feeds:guid',
-                      'unique' => FALSE,
-                      'language' => 'und',
-                  ),
-                  16 => array(
-                      'source' => 'source',
-                      'target' => 'field_doc_data_provider:organization:entityreference_feeds:title',
+                      'source' => 'WB source',
+                      'target' => 'field_doc_provider:organization:label',
                       'unique' => FALSE,
                       'language' => 'und',
                   ),
                   17 => array(
-                      'source' => 'metadata_record_url',
-                      'target' => 'field_doc_provider:organization:entityreference_feeds:guid',
-                      'unique' => FALSE,
-                      'language' => 'und',
-                  ),
-                  18 => array(
-                      'source' => 'metadata_record_url',
-                      'target' => 'field_doc_provider:organization:entityreference_feeds:title',
-                      'unique' => FALSE,
-                      'language' => 'und',
-                  ),
-                  19 => array(
                       'source' => 'Blank source 1',
                       'target' => 'user_name',
                       'unique' => FALSE,

@@ -29,15 +29,50 @@ function wb_oai_importer_feeds_tamper_default() {
     $feeds_tamper = new stdClass();
     $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
     $feeds_tamper->api_version = 2;
-    $feeds_tamper->id = 'wb_oai_importer-metadata_record_url-rewrite';
+    $feeds_tamper->id = 'wb_oai_importer-wb_source-default_value';
     $feeds_tamper->importer = 'wb_oai_importer';
-    $feeds_tamper->source = 'metadata_record_url';
-    $feeds_tamper->plugin_id = 'rewrite';
+    $feeds_tamper->source = 'WB source';
+    $feeds_tamper->plugin_id = 'default_value';
     $feeds_tamper->settings = array(
-        'text' => 'World Bank Group',
+        'default_value' => 'World Bank Group',
+        'only_if_empty' => 0,
     );
     $feeds_tamper->weight = 0;
-    $feeds_tamper->description = 'Rewrite';
+    $feeds_tamper->description = 'Set "World Bank" value';
+
+    $export[$feeds_tamper->id] = $feeds_tamper;
+
+    $feeds_tamper = new stdClass();
+    $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+    $feeds_tamper->api_version = 2;
+    $feeds_tamper->id = 'wb_oai_importer-creator-implode';
+    $feeds_tamper->importer = 'wb_oai_importer';
+    $feeds_tamper->source = 'creator';
+    $feeds_tamper->plugin_id = 'implode';
+    $feeds_tamper->settings = array(
+        'glue' => '%n',
+        'real_glue' => '
+',
+    );
+    $feeds_tamper->weight = 0;
+    $feeds_tamper->description = 'Implode';
+
+    $export[$feeds_tamper->id] = $feeds_tamper;
+
+    $feeds_tamper = new stdClass();
+    $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+    $feeds_tamper->api_version = 2;
+    $feeds_tamper->id = 'wb_oai_importer-contributor-implode';
+    $feeds_tamper->importer = 'wb_oai_importer';
+    $feeds_tamper->source = 'contributor';
+    $feeds_tamper->plugin_id = 'implode';
+    $feeds_tamper->settings = array(
+        'glue' => '%n',
+        'real_glue' => '
+',
+    );
+    $feeds_tamper->weight = 0;
+    $feeds_tamper->description = 'Implode';
 
     $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -64,28 +99,6 @@ return $field;
 
     $export[$feeds_tamper->id] = $feeds_tamper;
 
-    $feeds_tamper = new stdClass();
-    $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-    $feeds_tamper->api_version = 2;
-    $feeds_tamper->id = 'wb_oai_importer-source-php';
-    $feeds_tamper->importer = 'wb_oai_importer';
-    $feeds_tamper->source = 'source';
-    $feeds_tamper->plugin_id = 'php';
-    $feeds_tamper->settings = array(
-        'php' => '$pos = strpos($field, "World Bank");
-
-
-if ($pos == true) {
-    $field="World Bank Group";
- 
-} 
-return $field;
-',
-    );
-    $feeds_tamper->weight = 0;
-    $feeds_tamper->description = 'Execute php code';
-
-    $export[$feeds_tamper->id] = $feeds_tamper;
-  return $export;
+    return $export;
 
 }
