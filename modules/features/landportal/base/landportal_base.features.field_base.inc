@@ -473,7 +473,7 @@ function landportal_base_field_default_field_bases() {
       ),
       'enable_tokens' => 1,
       'entity_translation_sync' => FALSE,
-      'profile2_private' => 0,
+      'profile2_private' => FALSE,
       'title' => 'optional',
       'title_maxlength' => 128,
       'title_value' => '',
@@ -556,7 +556,7 @@ function landportal_base_field_default_field_bases() {
   // Exported field_base: 'field_orgref'.
   $field_bases['field_orgref'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_orgref',
