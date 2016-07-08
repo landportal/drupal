@@ -120,7 +120,7 @@ function wb_oai_importer_feeds_importer_default() {
                   ),
                   15 => array(
                       'source' => 'WB source',
-                      'target' => 'field_doc_provider:organization:label',
+                      'target' => 'field_doc_provider:label',
                       'unique' => FALSE,
                       'language' => 'und',
                   ),
