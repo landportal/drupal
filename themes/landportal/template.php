@@ -124,3 +124,14 @@ function landportal_preprocess_search_result(&$vars){
     }
   }
 }
+
+function landportal_menu_tree($variables) {
+  if($variables['theme_hook_original']=='menu_tree__landdebate_menu' || $variables['theme_hook_original']=='menu_tree__menu_landlibrary_menu'|| $variables['theme_hook_original']=='menu_tree__landbook_menu'){
+  $menu_type = str_replace('menu_tree__menu_', '', $variables['theme_hook_original']);  
+  return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul>';
+  }
+  else{
+    return '<ul class="menu">' . $variables['tree'] . '</ul>';
+  }
+}
+

@@ -14,6 +14,7 @@ function landportal_footer_default_fe_block_settings() {
 
   $export['landportal_blocks-landportal_footer'] = array(
     'cache' => 1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'landportal_footer',
     'i18n_block_language' => array(),
@@ -24,14 +25,14 @@ function landportal_footer_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
-        'region' => 'footer',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'bartik',
         'weight' => 0,
       ),
       'landportal' => array(
-        'region' => 'footer',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'landportal',
         'weight' => -42,
       ),
@@ -48,6 +49,7 @@ function landportal_footer_default_fe_block_settings() {
 
   $export['landportal_blocks-lp_footer_social'] = array(
     'cache' => 1,
+    'css_class' => 'col-md-3',
     'custom' => 0,
     'delta' => 'lp_footer_social',
     'i18n_block_language' => array(),
@@ -67,7 +69,7 @@ function landportal_footer_default_fe_block_settings() {
         'region' => 'footer',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -42,
+        'weight' => -45,
       ),
       'seven' => array(
         'region' => '',
@@ -82,6 +84,7 @@ function landportal_footer_default_fe_block_settings() {
 
   $export['menu-menu-footer-menu'] = array(
     'cache' => -1,
+    'css_class' => 'col-md-6 .col-md-offset-1',
     'custom' => 0,
     'delta' => 'menu-footer-menu',
     'i18n_block_language' => array(),
@@ -101,7 +104,7 @@ function landportal_footer_default_fe_block_settings() {
         'region' => 'footer',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => 0,
+        'weight' => -46,
       ),
       'seven' => array(
         'region' => '',

@@ -70,8 +70,12 @@
 <?php echo views_embed_view('news', 'block_1'); ?>
 <?php echo views_embed_view('front_page_teasers', 'block'); ?>
 
-    <div id="footer"><div class="section">
-      <?php print render($page['footer']); ?>
-    </div></div> <!-- /.section, /#footer -->
+    <div id="footer">
+        <div class="section container">
+            <div class="row">
+                <?php print render($page['footer']); ?>
+            </div>
+        </div>
+    </div>
 
   </div></div> <!-- /#page, /#page-wrapper -->

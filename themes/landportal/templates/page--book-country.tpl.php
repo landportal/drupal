@@ -14,7 +14,7 @@
  */
 ?>
   <div id="page-wrapper"><div id="page">
-
+  <div class="container">
     <div id="header"><div class="section clearfix">
 
       <?php if ($logo): ?>
@@ -44,7 +44,7 @@
       <?php endif; ?>
 
       <?php print render($page['header']); ?>
-    </div></div> <!-- /.section, /#header -->
+    </div></div> <!-- /.section, /#header --></div>
 
     <div id="section-header"><div class="section clearfix">
       <?php print render($page['section_header']); ?>
@@ -71,9 +71,13 @@
         </div> <!-- /.section, /#content --
 
     <!--</div>--></div> <!-- /#main, /#main-wrapper -->
-<!--
-    <div id="footer"><div class="section">
-      <?php print render($page['footer']); ?>
-    </div></div> <!-- /.section, /#footer -->
+
+    <div id="footer">
+        <div class="section container">
+            <div class="row">
+                <?php print render($page['footer']); ?>
+            </div>
+        </div>
+    </div>
 
   </div></div> <!-- /#page, /#page-wrapper -->

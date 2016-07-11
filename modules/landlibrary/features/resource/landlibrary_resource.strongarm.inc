@@ -77,7 +77,7 @@ function landlibrary_resource_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_landlibrary_resource';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['comment_preview_landlibrary_resource'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -93,7 +93,6 @@ function landlibrary_resource_strongarm() {
   $strongarm->name = 'ds_extras_view_modes_landlibrary_resource';
   $strongarm->value = array(
     0 => 'default',
-    1 => 'teaser',
   );
   $export['ds_extras_view_modes_landlibrary_resource'] = $strongarm;
 

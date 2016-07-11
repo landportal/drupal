@@ -19,7 +19,7 @@ function landbook_countries($args=NULL) {
     $data = $r->get($language, $args);
     drupal_set_title($data['info']['name']);
     //dpm($data, 'data from Country '.$args);
-    //drupal_add_js(array('landbook' => array('countryCode' => $args)), 'setting');
+    drupal_add_js(array('landbook' => array('countryCode' => $args)), 'setting');
     drupal_add_js(drupal_get_path('module', 'landbook').'/js/country_chart_options.js');
     drupal_add_js(drupal_get_path('module', 'landbook').'/js/controller/country.js', array('scope'=>'footer'));
   } else {

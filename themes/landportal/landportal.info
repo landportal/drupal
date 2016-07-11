@@ -17,4 +17,5 @@ features[] = logo
 features[] = favicon
 features[] = main_menu
 
+scripts[] = 'js/bootstrap.min.js'
 scripts[] = 'js/main.js'

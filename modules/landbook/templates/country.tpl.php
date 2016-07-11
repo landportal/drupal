@@ -17,8 +17,8 @@
 <input type="hidden" id="country-name" value="<?php echo $data['info']['name']; ?>" />
 <input type="hidden" id="un-code" value="<?php echo $data['info']['iso3']; ?>" />
 <input type="hidden" id="starred-indicators" value="<?php $si=''; foreach($data['starred']['indicators'] as $indicators): $si .= ($si? ',':'').$indicators['id']; endforeach; echo $si; ?>" />
-
 <!--
+
   <div class="row">
     <div class="col-sm-12">
       <h1 class="country-name"><span class="country-name no-margin flag"><img id="flag" class="flag" src="/<?php echo drupal_get_path('theme', 'landportal'); ?>/images/flags/<?php echo $data['info']['iso3']; ?>.png" /><?php echo $data['info']['name']; ?></span></h1>
@@ -88,15 +88,17 @@
 <h2 class=="fos txt-small m-xs-top" data-localize="global.media">Media</h2>
 -->
 
-<section>
+<div id="mapDiv" style="height:500px"></div>
+<section class="country-section">
     <div class="container">
         <div class="row main">
-            <div class="col-md-offset-2 col-md-8">
+            <div class="col-md-12">
                 <div class="country-flag">
                     <img src="/<?php echo drupal_get_path('theme', 'landportal'); ?>/images/flags/<?php echo $data['info']['iso3']; ?>.png" />
                 </div>
                 <h2><?php echo $data['info']['name']; ?></h2>
                 <nav class="nav-top txt-c group m-l-bottom ">
+                    <span class="ul-wrap">
                     <ul class="nav-inside-country fos">
                         <li class="nic-item">
                           <a href="#">The Country</a>
@@ -123,6 +125,7 @@
                           <a href="#library">Library</a>
                         </li>
                     </ul>
+                    </span>
                 </nav>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
@@ -130,7 +133,7 @@
     </div>
 </section>
 
-<section>
+<section class="country-section">
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
@@ -148,7 +151,7 @@
     </div>
 </section>
 
-<section>
+<section class="country-section">
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
@@ -162,7 +165,7 @@
     </div>
 </section>
 
-<section>
+<section class="country-section">
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
@@ -176,7 +179,7 @@
     </div>
 </section>
 
-<section>
+<section class="country-section">
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
@@ -190,7 +193,7 @@
     </div>
 </section>
 
-<section>
+<section class="country-section">
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
@@ -223,14 +226,14 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 col-xs-12">
                 <?php  $block = block_load('views', 'book_latest_blocks-block_2');
                   $block = _block_render_blocks(array($block));
                   $block_build = _block_get_renderable_array($block);
                   echo drupal_render($block_build);
                 ?>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-xs-12">
                 <?php  $block = block_load('views', 'book_latest_blocks-block');
                   $block = _block_render_blocks(array($block));
                   $block_build = _block_get_renderable_array($block);
@@ -241,7 +244,7 @@
     </div>
 </section>
 
-<section>
+<section class="country-section">
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
@@ -259,7 +262,7 @@
     </div>
 </section>
 
-<section>
+<section class="country-section">
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
@@ -268,7 +271,11 @@
             </div>
         </div>
         <div class="row">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <?php  $block = block_load('views', 'book_latest_blocks-block_5');
+                  $block = _block_render_blocks(array($block));
+                  $block_build = _block_get_renderable_array($block);
+                  echo drupal_render($block_build);
+                ?>
         </div>
     </div>
 </section>

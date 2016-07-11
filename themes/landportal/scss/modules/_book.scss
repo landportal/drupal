@@ -3,6 +3,9 @@
  *
  * Author: Jules <jules@ker.bz>
  */
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+ 
 .landbook-header-bg {
     background-color: $green-dark;
     background-image: url(../images/header/grass-medium.png);
@@ -101,65 +104,6 @@
     }
 }
 
-.page-book{
-	#block-search-form{
-		display:none;
-	}
-
-	#block-menu-landbook-menu{
-		.menu-top{
-			padding: 50px 50px;
-
-			h2{
-				text-shadow:none;
-				font-family: "News Cycle",sans-serif;
-				padding:0;
-				font-size: 36px;
-				font-weight: 300;
-				letter-spacing: 0;
-				margin-bottom: 5px;
-			}
-
-			p{
-				margin-top:0;
-				letter-spacing: 0;
-				font-size:20px;
-				font-family: "News Cycle",sans-serif;
-				margin-bottom:0;
-			}
-		}
-
-		.menu-wrapper{
-			border-top:1px solid #ffffff;
-			border-bottom:1px solid #ffffff;
-			background: #766054;
-
-			.menu{
-				li{
-					background: #766054 !important;
-					border:none;
-
-					&.active-trail{
-						background: #A3C642 !important;
-					}
-
-					a{
-						padding:10px 0;
-						letter-spacing: 0;
-						text-decoration: none;
-						font-size:14px;
-						line-height: normal;
-
-						&.active{
-							border-bottom:none;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
 .page-book-countries{
 	section{
 		min-height:400px;
@@ -223,38 +167,60 @@
 		.adj-blog{
 			margin-left:30px;
 		}
-		.nav-inside-country{
-			margin-top:20px;
-			border: 1px solid #a3c642;
-		    display: inline-block;
-		    list-style-type: none;
-		    margin: 0;
-		    padding: 0;
-		    font-family: "Open Sans",sans-serif;
-		    margin-bottom: 20px;
+		.ul-wrap{
+			display:table;
+			margin:0 auto;
+			.nav-inside-country{
+				margin-top:20px;
+				border: 1px solid $green-light;
+			    display: inline-block;
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    font-family: "Open Sans",sans-serif;
+			    margin-bottom: 20px;
 
-		    li{
-		    	display: block;
-    			float: left;
+			    li{
+			    	display: block;
+	    			float: left;
 
-    			a{
-    				border-right: 1px solid #a3c642;
-    				padding: 10px 15px;
-    				text-transform: uppercase;
-    				color: #91b135;
-    				text-decoration: none;
-    				display:block;
-    				font-size:0.75em;
-    			}
-    			a:hover,a:focus{
-    				color:#617724;
-    			}
-    			&:last-child{
-    				a{
-    					border-right: none;
-    				}
-    			}
-		    }
+	    			a{
+	    				border-right: 1px solid $green-light;
+	    				padding: 10px 15px;
+	    				text-transform: uppercase;
+	    				color: #91b135;
+	    				text-decoration: none;
+	    				display:block;
+	    				font-size:0.75em;
+	    			}
+	    			a:hover,a:focus{
+	    				color:#617724;
+	    			}
+	    			&:last-child{
+	    				a{
+	    					border-right: none;
+	    				}
+	    			}
+			    }
+			}
+			@media only screen and (max-width: 720px){
+				width:150px;
+				.nav-inside-country{
+					li{
+						width:100%;
+						border-bottom:1px solid $green-light;
+
+						&:last-child{
+							border-bottom:none;
+						}
+
+						a{
+							text-align: center;
+							border-right: none;
+						}
+					}
+				}
+			}
 		}
 		.bg-gray{
 			background: rgba(0, 0, 0, 0) -moz-linear-gradient(left center , #f7f7f7 0px, #f7f7f7 40%, transparent 40%) repeat scroll 0 0;
@@ -338,7 +304,7 @@
 
 			}
 			.node-intro{
-				h3{
+				>h3{
 					margin-top:0;
 					text-align: left;
 					line-height: 0;
@@ -399,7 +365,7 @@
 
 		}
 	}
-	section:nth-child(even){
+	.country-section:nth-child(odd){
 		background:#F8F8F8;
 	}
 

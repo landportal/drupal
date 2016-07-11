@@ -13,7 +13,7 @@
  * Dirty shit that should be converted to a rendered block
  * this would also mean tweaking the data structure and so on...
  */
-function landbook_table_render($data) {
+function landbook_table_render($data) {//pa($data,1);
   //if ($data) dpm($data, 'table_render');
   $str = '
 <div class="table-responsive">

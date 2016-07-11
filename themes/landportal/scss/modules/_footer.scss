@@ -1,0 +1,55 @@
+body{
+	#footer{
+		margin:0;
+		border:none;
+		background: $green-light;
+		padding-top:25px;
+		padding-bottom:25px;
+		.section{
+			.content{
+				background: none;
+				border:none;
+				margin: 0;
+				padding:0;
+
+				.menu{
+					li.expanded{
+						padding-top:0;
+						margin-bottom: 20px;
+						a{
+							display: block;
+							text-align: left;
+							text-transform: uppercase;
+							font-size:14px;
+							font-family: "Open Sans",sans-serif;
+						}
+						.menu{
+							li{
+								padding-left:0;
+								margin-left:0;
+								a{
+									color:$white;
+									text-transform: none;
+									font-weight: 300;
+								}
+							}
+						}
+					}
+				}
+			}
+			#block-landportal-blocks-lp-footer-social{
+				li{
+					width:50px;
+					height: 50px;
+					border-radius: 50px;
+					border:2px solid $white;
+					background: $green-light;
+
+					.fa{
+						line-height: 2;
+					}
+				}
+			}
+		}
+	}
+}

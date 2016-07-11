@@ -108,7 +108,6 @@ a {
     /*     } */
     /* } */
     .block-menu {
-        float: none;
         clear: both;
         &:before { @extend .clearfix; }
         .content {

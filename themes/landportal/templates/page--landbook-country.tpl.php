@@ -92,8 +92,12 @@
 
     </div></div> <!-- /#main, /#main-wrapper -->
 
-    <div id="footer"><div class="section">
-      <?php print render($page['footer']); ?>
-    </div></div> <!-- /.section, /#footer -->
+    <div id="footer">
+        <div class="section container">
+            <div class="row">
+                <?php print render($page['footer']); ?>
+            </div>
+        </div>
+    </div>
 
   </div></div> <!-- /#page, /#page-wrapper -->

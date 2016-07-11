@@ -18,7 +18,6 @@
  * @ingroup themeable
  */
 ?>
-<?php if(arg(0)== 'book'): ?>
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 	<div class="container menu-top">
 	  	<?php print render($title_prefix); ?>
@@ -30,27 +29,19 @@
 		  <p><?php print render($block->description); ?></p>
 		<?php endif; ?>
 	</div>
-	<div class="menu-wrapper content"<?php print $content_attributes; ?>>
+
+	<div class="menu-wrapper content navbar navbar-inverse" role="navigation">
 		<div class="container">
-	    	<?php print $content ?>
+			<div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		    </div>
+		    <div class="collapse navbar-collapse" id="header-menu">
+	    		<?php print $content ?>
+	    	</div>
 	    </div>
 	</div>
 </div>
-
-<?php else: ?>
-<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-
-  <?php print render($title_prefix); ?>
-<?php if ($block->subject): ?>
-  <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
-<?php endif; ?>
-  <?php print render($title_suffix); ?>
- <?php if (isset($block->description)) : ?>
-  <p><?php print render($block->description); ?></p>
-<?php endif; ?>
-  <div class="content"<?php print $content_attributes; ?>>
-    <?php print $content ?>
-  </div>
-</div>
-
-<?php endif; ?>
