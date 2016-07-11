@@ -234,7 +234,7 @@ function landportal_utility_form_alter(&$form, &$form_state, $form_id){
       ),
       'im_field_related_topics' => array(
         'label' => 'Related topics',
-        'taxonomy' => 'landportal_topics'
+        'taxonomy' => 'landvoc_concepts'
       ),
       'im_field_doc_type' => array(
         'label' => 'Resource Type',
