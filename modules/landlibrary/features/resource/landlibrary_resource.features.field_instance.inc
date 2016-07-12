@@ -123,67 +123,7 @@ function landlibrary_resource_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 124,
-    ),
-  );
-
-  // Exported field_instance: 'node-landlibrary_resource-field_doc_contributor'.
-  $field_instances['node-landlibrary_resource-field_doc_contributor'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'An entity with a contributing role to the creation of the intellectual content of the resource.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 41,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'conditions' => array(),
-          'links' => 0,
-          'view_mode' => 'default',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 12,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-    ),
-    'entity_type' => 'node',
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
-    'field_name' => 'field_doc_contributor',
-    'label' => 'Contributor',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 147,
+      'weight' => 125,
     ),
   );
 
@@ -426,146 +366,7 @@ function landlibrary_resource_field_default_field_instances() {
         'year_range' => '-5000:+10',
       ),
       'type' => 'date_select',
-      'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance: 'node-landlibrary_resource-field_doc_creator'.
-  $field_instances['node-landlibrary_resource-field_doc_creator'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'default_value_function' => 'entityreference_prepopulate_field_default_value',
-    'deleted' => 0,
-    'description' => 'The (corporate) author(s) of the resource. A corporate author is linked to an organizational profile on the Land Portal; if an author is a person, a person or user profile needs to be created. ',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'conditions' => array(),
-          'links' => 0,
-          'view_mode' => 'resource',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 17,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 39,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 37,
-      ),
-    ),
-    'entity_type' => 'node',
-    'entityconnect_show_add_icon' => 0,
-    'entityconnect_show_edit_icon' => 0,
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
-    'field_name' => 'field_doc_creator',
-    'label' => '(Corporate) Author(s)',
-    'required' => 0,
-    'settings' => array(
-      'behaviors' => array(
-        'prepopulate' => array(
-          'action' => 'none',
-          'action_on_edit' => 0,
-          'fallback' => 'none',
-          'providers' => array(
-            'og_context' => FALSE,
-            'url' => 1,
-          ),
-          'skip_perm' => 0,
-          'status' => 1,
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 146,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'node-landlibrary_resource-field_doc_data_provider'.
-  $field_instances['node-landlibrary_resource-field_doc_data_provider'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'The provider of the resource (that hosts it online), but not the source of the resource (if applicable). E.g.: Land Portal. The provider has to have an organizational profile on the Land Portal.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 45,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 61,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 46,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 38,
-      ),
-    ),
-    'entity_type' => 'node',
-    'entityconnect_show_add_icon' => 0,
-    'entityconnect_show_edit_icon' => 0,
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
-    'field_name' => 'field_doc_data_provider',
-    'label' => 'Data Provider',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'fc' => array(
-        'fc_allow_empty' => 0,
-        'fc_check_entities' => 0,
-        'fc_include' => 0,
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 141,
+      'weight' => 4,
     ),
   );
 
@@ -662,7 +463,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'An ISBN or another unique label that identifies the resource. (If your resource does not have a unique label, please enter the first six letters of the organization - first six letters of the title - YYYYMM.E.g.: Landpo-Firsts-201607).',
+    'description' => 'An ISBN or another unique label that identifies the resource. (If your resource does not have a unique label, please enter the first six letters of the publisher - first six letters of the title - YYYYMM.E.g.: Landpo-Firsts-201607).',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -695,8 +496,8 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_identifier',
-    'label' => 'ISBN / Document ID',
-    'required' => 1,
+    'label' => 'ISBN / Resource ID',
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -735,7 +536,7 @@ function landlibrary_resource_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 127,
     ),
   );
 
@@ -1107,7 +908,7 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_language',
-    'label' => 'Language',
+    'label' => 'Resource Language',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1120,7 +921,7 @@ function landlibrary_resource_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 5,
     ),
   );
 
@@ -1294,7 +1095,7 @@ function landlibrary_resource_field_default_field_instances() {
         'size' => 25,
       ),
       'type' => 'text_textfield',
-      'weight' => 125,
+      'weight' => 126,
     ),
     'widget_type' => 'text_textfield',
   );
@@ -1369,7 +1170,7 @@ function landlibrary_resource_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 123,
+      'weight' => 124,
     ),
   );
 
@@ -1378,7 +1179,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The organization that created/published the resource (needs to be linked to an organizational profile on the Land Portal).',
+    'description' => 'The organization that makes the resource available (needs to be linked to an organizational profile on the Land Portal).',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1420,8 +1221,8 @@ function landlibrary_resource_field_default_field_instances() {
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 0,
     'field_name' => 'field_doc_provider',
-    'label' => 'Provider / Publisher',
-    'required' => 1,
+    'label' => 'Data Provider',
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'fc' => array(
@@ -1440,7 +1241,7 @@ function landlibrary_resource_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 2,
+      'weight' => 122,
     ),
   );
 
@@ -1449,7 +1250,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The creator/publisher of the resource.',
+    'description' => 'The organization that published the resource (needs to be linked to an organizational profile on the Land Portal).',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1492,7 +1293,7 @@ function landlibrary_resource_field_default_field_instances() {
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_doc_publisher',
     'label' => 'Publisher',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -1874,7 +1675,7 @@ function landlibrary_resource_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 2,
     ),
     'widget_type' => 'options_select',
   );
@@ -2025,7 +1826,7 @@ function landlibrary_resource_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 122,
+      'weight' => 125,
     ),
   );
 
@@ -2180,71 +1981,16 @@ function landlibrary_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-landlibrary_resource-field_user'.
-  $field_instances['node-landlibrary_resource-field_user'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'The author(s) of the resource (only people). A user profile needs to be created in order to add the author.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 39,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 32,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 32,
-      ),
-    ),
-    'entity_type' => 'node',
-    'entityconnect_show_add_icon' => 0,
-    'entityconnect_show_edit_icon' => 0,
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 1,
-    'field_name' => 'field_user',
-    'label' => 'Authors',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 145,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
-  t('(Corporate) Author(s)');
   t('A related resource in which the described resource is physically or logically included.');
   t('A related resource.');
   t('Abstract or Description');
   t('Add information about the license under which the resource is published. Please note that this does not apply to the <b>metadata</b> of the resource. <a href="/page/terms-and-conditions-use">Read more here</a>.');
   t('Add one (or more) of the Land Portal\'s <a href="/voc/landvoc">Themes</a> to classify the topical subject of the resource.');
-  t('An ISBN or another unique label that identifies the resource. (If your resource does not have a unique label, please enter the first six letters of the organization - first six letters of the title - YYYYMM.E.g.: Landpo-Firsts-201607).');
-  t('An entity with a contributing role to the creation of the intellectual content of the resource.');
+  t('An ISBN or another unique label that identifies the resource. (If your resource does not have a unique label, please enter the first six letters of the publisher - first six letters of the title - YYYYMM.E.g.: Landpo-Firsts-201607).');
   t('Author(s), editor(s), contributor(s)');
-  t('Authors');
   t('Comment');
-  t('Contributor');
   t('Copyright');
   t('Corporate Author(s)');
   t('Country');
@@ -2255,10 +2001,9 @@ function landlibrary_resource_field_default_field_instances() {
   t('Enter one (or several) of the Land Portal\'s <a href="/voc/landvoc">Overarching Categories</a> to classify the topical subject of the resource.');
   t('File Upload');
   t('Geographical focus');
-  t('ISBN / Document ID');
+  t('ISBN / Resource ID');
   t('Is part of');
   t('Keyword');
-  t('Language');
   t('License of the resource');
   t('Local file URL');
   t('Location Source');
@@ -2268,29 +2013,26 @@ function landlibrary_resource_field_default_field_instances() {
   t('Pages / Duration');
   t('People who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]"
 ');
-  t('Provider / Publisher');
   t('Published at');
   t('Publisher');
   t('Related Concepts');
   t('Relation');
+  t('Resource Language');
   t('Resource URL');
   t('Resource title');
   t('Resource type');
   t('Select the most appropriate type for the resource.');
   t('Subtitle');
-  t('The (corporate) author(s) of the resource. A corporate author is linked to an organizational profile on the Land Portal; if an author is a person, a person or user profile needs to be created. ');
   t('The URL to the resource on the publisher\'s website (e.g.: http://landportal.info/sites/landportal.info/files/GECDiscussionReport-Final.pdf)');
   t('The abstract of the resource or a description of the resource.');
-  t('The author(s) of the resource (only people). A user profile needs to be created in order to add the author.');
-  t('The creator/publisher of the resource.');
   t('The date of publication of the resource (YYYY/MM).');
   t('The geographical focus of the resource (possible to select several).');
   t('The language of the resource');
   t('The location of the source.');
   t('The organization / person that owns the resource.');
-  t('The organization that created/published the resource (needs to be linked to an organizational profile on the Land Portal).');
+  t('The organization that makes the resource available (needs to be linked to an organizational profile on the Land Portal).');
+  t('The organization that published the resource (needs to be linked to an organizational profile on the Land Portal).');
   t('The page on the website of the publisher where the resource is presented (e.g.: http://landportal.info/library/resources/report-sharing-best-practices-and-lessons-learned-supporting-women%E2%80%99s-land-rights).');
-  t('The provider of the resource (that hosts it online), but not the source of the resource (if applicable). E.g.: Land Portal. The provider has to have an organizational profile on the Land Portal.');
   t('The subtitle of the resource (if applicable).');
   t('Themes');
   t('This is a hidden field storing the value of the URL of the local file (the upload field cannot be mapped to RDF properties).');
