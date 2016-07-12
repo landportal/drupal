@@ -150,7 +150,7 @@ function odm_library_importer_feeds_importer_default() {
                     ),
                     11 => array(
                         'source' => 'jsonpath_parser:12',
-                        'target' => 'field_doc_creator:label',
+                        'target' => 'field_doc_people',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
@@ -183,15 +183,9 @@ function odm_library_importer_feeds_importer_default() {
                         'target' => 'user_name',
                         'unique' => TRUE,
                     ),
-                    201 => array(
-                        'source' => 'ODM creators guid',
-                        'target' => 'field_doc_creator:person:entityreference_feeds:guid',
-                        'unique' => FALSE,
-                        'language' => 'und',
-                    ),
                     202 => array(
                         'source' => 'ODM creators',
-                        'target' => 'field_doc_creator:person:entityreference_feeds:title',
+                        'target' => 'field_doc_people',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),

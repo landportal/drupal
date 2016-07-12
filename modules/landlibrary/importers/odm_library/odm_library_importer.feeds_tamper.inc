@@ -400,25 +400,6 @@ function odm_library_importer_feeds_tamper_default() {
     $feeds_tamper = new stdClass();
     $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
     $feeds_tamper->api_version = 2;
-    $feeds_tamper->id = 'odm_library_importer-odm_publishers_guid-find';
-    $feeds_tamper->importer = 'odm_library_importer';
-    $feeds_tamper->source = 'ODM publishers guid';
-    $feeds_tamper->plugin_id = 'efq_finder';
-    $feeds_tamper->settings = array(
-        'update' => 'Update',
-        'entity_type' => 'node',
-        'bundle' => 'person',
-        'field' => 'title',
-        'property' => TRUE,
-    );
-    $feeds_tamper->weight = 1;
-    $feeds_tamper->description = 'Find publisher';
-
-    $export[$feeds_tamper->id] = $feeds_tamper;
-
-    $feeds_tamper = new stdClass();
-    $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-    $feeds_tamper->api_version = 2;
     $feeds_tamper->id = 'odm_library_importer-odm_url-rewrite';
     $feeds_tamper->importer = 'odm_library_importer';
     $feeds_tamper->source = 'ODM url';
