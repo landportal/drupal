@@ -44,10 +44,7 @@ function library_search_default_search_api_index() {
           "settings" : {
             "default" : "0",
             "bundles" : {
-              "event" : "event",
               "landlibrary_resource" : "landlibrary_resource",
-              "organization" : "organization",
-              "person" : "person"
             }
           }
         },
