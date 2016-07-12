@@ -2,17 +2,17 @@
 
 $view = new view();
 $view->name = 'admin_views_taxonomy_terms_topics';
-$view->description = '';
-$view->tag = 'default';
+$view->description = 'Provide an administrative view to manage Landvoc concepts';
+$view->tag = 'landportal, taxonomies';
 $view->base_table = 'taxonomy_term_data';
-$view->human_name = 'Topics terms management';
+$view->human_name = 'Landvoc Concepts management';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Topics terms management';
+$handler->display->display_options['title'] = 'Landvoc Concepts management';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['access']['perm'] = 'edit terms in 5';
@@ -26,35 +26,23 @@ $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['style_plugin'] = 'table';
 $handler->display->display_options['style_options']['columns'] = array(
-  'draggableviews' => 'draggableviews',
-  'views_bulk_operations' => 'views_bulk_operations',
-  'name' => 'name',
   'tid' => 'tid',
   'field_id' => 'field_id',
-  'weight' => 'weight',
+  'draggableviews' => 'draggableviews',
+  'name' => 'name',
+  'description_field' => 'description_field',
+  'name_field_et' => 'name_field_et',
+  'name_field_et_1' => 'name_field_et_1',
+  'name_field_et_2' => 'name_field_et_2',
+  'name_field_et_3' => 'name_field_et_3',
+  'name_field_et_4' => 'name_field_et_4',
   'nid' => 'nid',
-  'field_language' => 'field_language',
+  'field_agrovoc_uri' => 'field_agrovoc_uri',
   'edit_term' => 'edit_term',
+  'views_bulk_operations' => 'views_bulk_operations',
 );
 $handler->display->display_options['style_options']['default'] = '-1';
 $handler->display->display_options['style_options']['info'] = array(
-  'draggableviews' => array(
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'views_bulk_operations' => array(
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'name' => array(
-    'sortable' => 1,
-    'default_sort_order' => 'asc',
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
   'tid' => array(
     'sortable' => 0,
     'default_sort_order' => 'asc',
@@ -69,7 +57,54 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'weight' => array(
+  'draggableviews' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'description_field' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name_field_et' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name_field_et_1' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name_field_et_2' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name_field_et_3' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name_field_et_4' => array(
     'sortable' => 0,
     'default_sort_order' => 'asc',
     'align' => '',
@@ -83,8 +118,8 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_language' => array(
-    'sortable' => 0,
+  'field_agrovoc_uri' => array(
+    'sortable' => 1,
     'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
@@ -95,12 +130,17 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
+  'views_bulk_operations' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
 );
 /* Header: Global: Result summary */
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
-/* Relationship: Taxonomy term: Content using Related topics */
+/* Relationship: Taxonomy term: Content using Related concepts */
 $handler->display->display_options['relationships']['reverse_field_related_topics_node']['id'] = 'reverse_field_related_topics_node';
 $handler->display->display_options['relationships']['reverse_field_related_topics_node']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['relationships']['reverse_field_related_topics_node']['field'] = 'reverse_field_related_topics_node';
@@ -114,7 +154,7 @@ $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_da
 $handler->display->display_options['fields']['tid']['field'] = 'tid';
 $handler->display->display_options['fields']['tid']['label'] = 'TID';
 $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
-/* Field: Field: ID */
+/* Field: Taxonomy term: ID */
 $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
 $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
@@ -246,7 +286,7 @@ $handler->display->display_options['filters']['machine_name']['id'] = 'machine_n
 $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
 $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
 $handler->display->display_options['filters']['machine_name']['value'] = array(
-  'landportal_topics' => 'landportal_topics',
+  'landvoc_concepts' => 'landvoc_concepts',
 );
 /* Filter criterion: Taxonomy term: Name */
 $handler->display->display_options['filters']['name']['id'] = 'name';
@@ -273,46 +313,3 @@ $handler = $view->new_display('system', 'System', 'system_1');
 $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
 $handler->display->display_options['defaults']['access'] = FALSE;
 $handler->display->display_options['path'] = 'admin/structure/taxonomy/terms/topics';
-$translatables['admin_views_taxonomy_terms_topics'] = array(
-  t('Master'),
-  t('Topics terms management'),
-  t('more'),
-  t('Apply'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Items per page'),
-  t('- All -'),
-  t('Offset'),
-  t('« first'),
-  t('‹ previous'),
-  t('next ›'),
-  t('last »'),
-  t('Displaying @start - @end of @total'),
-  t('field_related_topics'),
-  t('Parent'),
-  t('TID'),
-  t('.'),
-  t(','),
-  t('PID'),
-  t('Taxonomy term'),
-  t('Name'),
-  t('Description'),
-  t('EN'),
-  t('[name_field_et] - [name_field_et-value]'),
-  t('FR'),
-  t('ES'),
-  t('PT'),
-  t('Translations'),
-  t('EN: [name_field_et]
-FR: [name_field_et_1]
-ES: [name_field_et_2]
-PT: [name_field_et_3]
-'),
-  t('References'),
-  t('linkedURI'),
-  t('Links'),
-  t('- Choose an operation -'),
-  t('System'),
-);
