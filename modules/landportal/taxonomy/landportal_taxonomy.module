@@ -12,19 +12,31 @@ function landportal_taxonomy_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
-function landportal_taxonomy_block_info_alter(&$blocks, $theme, $code_blocks) {
-    if ($theme == 'landportal') {
-        //dpm($blocks);
-        $blocks['views']['domains-block']['status'] = TRUE;
-        $blocks['views']['domains-block']['region'] = 'content';
-        $blocks['views']['domains-block']['visibility'] = BLOCK_VISIBILITY_LISTED;
-        $blocks['views']['domains-block']['pages'] = 'voc
-library';
-
-        $blocks['views']['themes-block']['status'] = TRUE;
-        $blocks['views']['themes-block']['region'] = 'content';
-        $blocks['views']['themes-block']['visibility'] = BLOCK_VISIBILITY_LISTED;
-        $blocks['views']['themes-block']['pages'] = 'voc';
-    }
+function landportal_taxonomy_block_info() {
+    $blocks = array();
+    $blocks['domains-block'] = array(
+        'info' => t('Landvoc Overarching categories'),
+        'region' => 'content',
+        'status' => TRUE,
+        'weight' => 10,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'voc/landvoc'
+    );
+    $blocks['themes-block'] = array(
+        'info' => t('Landvoc Themes'),
+        'region' => 'content',
+        'status' => TRUE,
+        'weight' => 11,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'voc/landvoc'
+    );
+    $blocks['concepts-block'] = array(
+        'info' => t('Landvoc Concepts'),
+        'region' => 'content',
+        'status' => TRUE,
+        'weight' => 12,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'voc/landvoc'
+    );
     return $blocks;
 }
