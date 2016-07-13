@@ -86,13 +86,8 @@ function ct_organization_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => 'content',
-          'title_style' => '_none',
-        ),
-        'type' => 'title_linked',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
     ),
