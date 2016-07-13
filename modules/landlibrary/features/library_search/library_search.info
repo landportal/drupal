@@ -1,8 +1,8 @@
 name = Library search
-description = Land Library apache search
+description = Land Library search settings for solr and indexing for virtuoso
 core = 7.x
 package = Landlibrary
-version = 7.x-2.3-rc2
+version = 7.x-2.3-rc3
 dependencies[] = apachesolr_search
 dependencies[] = chosen
 dependencies[] = ctools
@@ -52,4 +52,5 @@ features[fe_block_settings][] = facetapi-bNQti3i1QvYnpxR8B11gXwNRUVDR3Loz
 features[fe_block_settings][] = facetapi-yUhemNJf8izLiuofmSC6AQ3PVGRxP5Hp
 features[features_api][] = api:2
 features[search_api_index][] = arc2_sparql_node_index_all_library_nodes
+features[search_api_index][] = arc2_sparql_term_index
 features[variable][] = facetapi:block_cache:apachesolr@landlibrary_search
