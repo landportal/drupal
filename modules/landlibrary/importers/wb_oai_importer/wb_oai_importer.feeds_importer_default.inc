@@ -59,81 +59,87 @@ function wb_oai_importer_feeds_importer_default() {
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    4 => array(
-                        'source' => 'WB Publisher',
-                        'target' => 'field_doc_publisher:organization:entityreference_feeds:guid',
-                        'unique' => FALSE,
-                        'language' => 'und',
-                    ),
-                    6 => array(
-                        'source' => 'publisher',
-                        'target' => 'field_doc_publisher:organization:entityreference_feeds:title',
-                        'unique' => FALSE,
-                        'language' => 'und',
-                    ),
-                    7 => array(
+                    3 => array(
                         'source' => 'rights',
                         'target' => 'field_doc_copyrights_statement',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    8 => array(
+                    4 => array(
                         'source' => 'language',
                         'target' => 'field_doc_language',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    9 => array(
+                    5 => array(
                         'source' => 'url',
                         'target' => 'field_doc_is_shown_by:url',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    10 => array(
+                    6 => array(
                         'source' => 'creator',
                         'target' => 'field_doc_people',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    11 => array(
+                    7 => array(
                         'source' => 'contributor',
                         'target' => 'field_doc_people',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    12 => array(
+                    8 => array(
                         'source' => 'date',
                         'target' => 'field_doc_creation_date:start',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    13 => array(
+                    9 => array(
                         'source' => 'description',
                         'target' => 'field_doc_description',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    14 => array(
+                    10 => array(
                         'source' => 'guid',
                         'target' => 'field_doc_identifier',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    15 => array(
+                    11 => array(
                         'source' => 'WB source',
                         'target' => 'field_doc_provider:label',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    16 => array(
-                        'source' => 'Blank source 1',
+                    12 => array(
+                        'source' => 'WB user',
                         'target' => 'user_name',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
-                    17 => array(
+                    13 => array(
                         'source' => 'subject',
                         'target' => 'field_doc_keyword',
+                        'unique' => FALSE,
+                        'language' => 'und',
+                    ),
+                    14 => array(
+                        'source' => 'publisher',
+                        'target' => 'field_doc_publisher:organization:entityreference_feeds:title',
+                        'unique' => FALSE,
+                        'language' => 'und',
+                    ),
+                    15 => array(
+                        'source' => 'ER publisher',
+                        'target' => 'entityreference:field_doc_publisher',
+                        'unique' => FALSE,
+                        'language' => 'und',
+                    ),
+                    16 => array(
+                        'source' => 'ERF publisher guid',
+                        'target' => 'field_doc_publisher:organization:entityreference_feeds:guid',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),

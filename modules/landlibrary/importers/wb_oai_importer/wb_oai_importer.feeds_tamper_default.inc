@@ -15,16 +15,67 @@ function wb_oai_importer_feeds_tamper_default() {
     $feeds_tamper = new stdClass();
     $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
     $feeds_tamper->api_version = 2;
-    $feeds_tamper->id = 'wb_oai_importer-blank_source_1-default_value';
+    $feeds_tamper->id = 'wb_oai_importer-erf_publisher_guid-copy';
     $feeds_tamper->importer = 'wb_oai_importer';
-    $feeds_tamper->source = 'Blank source 1';
-    $feeds_tamper->plugin_id = 'default_value';
+    $feeds_tamper->source = 'ERF publisher guid';
+    $feeds_tamper->plugin_id = 'copy';
     $feeds_tamper->settings = array(
-        'default_value' => 'importer_wb',
-        'only_if_empty' => 0,
+        'to_from' => 'from',
+        'source' => 'publisher',
+    );
+    $feeds_tamper->weight = 1;
+    $feeds_tamper->description = 'Copy source value';
+
+    $export[$feeds_tamper->id] = $feeds_tamper;
+
+    $feeds_tamper = new stdClass();
+    $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+    $feeds_tamper->api_version = 2;
+    $feeds_tamper->id = 'wb_oai_importer-erf_publisher_guid-feeds_tamper_conditional';
+    $feeds_tamper->importer = 'wb_oai_importer';
+    $feeds_tamper->source = 'ERF publisher guid';
+    $feeds_tamper->plugin_id = 'feeds_tamper_conditional';
+    $feeds_tamper->settings = array(
+        'conditional_field' => 'Blank source 3',
+        'operator' => 'equals',
+        'value' => '0',
     );
     $feeds_tamper->weight = 0;
-    $feeds_tamper->description = 'Set value or default value';
+    $feeds_tamper->description = 'Conditional';
+
+    $export[$feeds_tamper->id] = $feeds_tamper;
+
+    $feeds_tamper = new stdClass();
+    $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+    $feeds_tamper->api_version = 2;
+    $feeds_tamper->id = 'wb_oai_importer-ef_publisher-copy';
+    $feeds_tamper->importer = 'wb_oai_importer';
+    $feeds_tamper->source = 'ER publisher';
+    $feeds_tamper->plugin_id = 'copy';
+    $feeds_tamper->settings = array(
+        'to_from' => 'from',
+        'source' => 'publisher',
+    );
+    $feeds_tamper->weight = 0;
+    $feeds_tamper->description = 'Copy source value';
+
+    $export[$feeds_tamper->id] = $feeds_tamper;
+
+    $feeds_tamper = new stdClass();
+    $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+    $feeds_tamper->api_version = 2;
+    $feeds_tamper->id = 'wb_oai_importer-publisher-find_replace_regex2';
+    $feeds_tamper->importer = 'wb_oai_importer';
+    $feeds_tamper->source = 'publisher';
+    $feeds_tamper->plugin_id = 'find_replace_regex';
+    $feeds_tamper->settings = array(
+        'find' => '/^\\s?([Tt]he )?\\s?(Wo(rl|lr)d Bank|[Ww]ashington)\\s?;?\\s?$/',
+        'replace' => 'World Bank Group',
+        'limit' => '',
+        'real_limit' => -1,
+    );
+    $feeds_tamper->weight = 5;
+    $feeds_tamper->description = 'Find replace WB / cleanup title';
 
     $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -59,6 +110,22 @@ function wb_oai_importer_feeds_tamper_default() {
     );
     $feeds_tamper->weight = 2;
     $feeds_tamper->description = 'Convert string into entity ID';
+
+    $export[$feeds_tamper->id] = $feeds_tamper;
+
+    $feeds_tamper = new stdClass();
+    $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+    $feeds_tamper->api_version = 2;
+    $feeds_tamper->id = 'wb_oai_importer-wb_user-default_value';
+    $feeds_tamper->importer = 'wb_oai_importer';
+    $feeds_tamper->source = 'WB user';
+    $feeds_tamper->plugin_id = 'default_value';
+    $feeds_tamper->settings = array(
+        'default_value' => 'importer_wb',
+        'only_if_empty' => 0,
+    );
+    $feeds_tamper->weight = 0;
+    $feeds_tamper->description = 'Set importer_wb to user_name';
 
     $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -168,24 +235,6 @@ function wb_oai_importer_feeds_tamper_default() {
     $feeds_tamper = new stdClass();
     $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
     $feeds_tamper->api_version = 2;
-    $feeds_tamper->id = 'wb_oai_importer-publisher-find_replace_regex2';
-    $feeds_tamper->importer = 'wb_oai_importer';
-    $feeds_tamper->source = 'publisher';
-    $feeds_tamper->plugin_id = 'find_replace_regex';
-    $feeds_tamper->settings = array(
-        'find' => '/^\\s?((the )?Wo(rl|lr)d Bank|[Ww]ashington)\\s?;?\\s?$/',
-        'replace' => 'World Bank Group',
-        'limit' => '',
-        'real_limit' => -1,
-    );
-    $feeds_tamper->weight = 5;
-    $feeds_tamper->description = 'Find replace WB';
-
-    $export[$feeds_tamper->id] = $feeds_tamper;
-
-    $feeds_tamper = new stdClass();
-    $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-    $feeds_tamper->api_version = 2;
     $feeds_tamper->id = 'wb_oai_importer-publisher-trim';
     $feeds_tamper->importer = 'wb_oai_importer';
     $feeds_tamper->source = 'publisher';
@@ -214,7 +263,6 @@ function wb_oai_importer_feeds_tamper_default() {
     $feeds_tamper->description = 'Set "World Bank Group" value';
 
     $export[$feeds_tamper->id] = $feeds_tamper;
-
     // End of Paste
     return $export;
 }
