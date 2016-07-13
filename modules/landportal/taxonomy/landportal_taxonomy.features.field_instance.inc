@@ -20,9 +20,7 @@ function landportal_taxonomy_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 0,
       ),
@@ -68,9 +66,7 @@ function landportal_taxonomy_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(
-          'conditions' => array(),
-        ),
+        'settings' => array(),
         'type' => 'link_url',
         'weight' => 1,
       ),
@@ -194,9 +190,7 @@ function landportal_taxonomy_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 3,
       ),

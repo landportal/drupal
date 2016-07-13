@@ -3399,6 +3399,37 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_original' => 'Disagreement over land, where specific individual or collective interests related to land are in opposition. ',
   );
   $terms[] = array(
+    'name' => 'Governmental institution',
+    'description' => '<p>Local, provincial or nationla governmental institutions.</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => '36446160-b9d7-49ae-8357-03819751e8e1',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'organization_types',
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'entity_id' => 7883,
+          'revision_id' => 7883,
+          'language' => 'en',
+          'source' => '',
+          'uid' => 7082,
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1467905087,
+          'changed' => 1467905087,
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
     'name' => 'protected areas',
     'description' => ' Protected areas refer to areas of at least 1,000 hectares as scientific and natural reserves and strict nature reserves, national parks of national and international reputation, natural monuments and landscapes.',
     'format' => 'filtered_html',
