@@ -412,7 +412,7 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
     'entity_type' => 'node',
     'field_name' => 'field_link',
-    'label' => 'Official page',
+    'label' => 'More information (Webpages)',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
@@ -619,7 +619,7 @@ If it is only a one day event, the end date should be the same as the starting d
   t('Give the name, eventually the email of the contact organiser.
 ');
   t('Image');
-  t('Official page');
+  t('More information (Webpages)');
   t('Overarching categories');
   t('Related concepts');
   t('Themes');

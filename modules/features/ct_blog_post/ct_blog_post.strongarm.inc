@@ -112,7 +112,7 @@ function ct_blog_post_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '4',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'listing' => array(
