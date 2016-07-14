@@ -689,7 +689,7 @@ $handler->display->display_options['filters']['field_related_topics_tid']['expos
   30037204 => 0,
 );
 $handler->display->display_options['filters']['field_related_topics_tid']['type'] = 'synonyms_select';
-$handler->display->display_options['filters']['field_related_topics_tid']['vocabulary'] = 'landportal_topics';
+$handler->display->display_options['filters']['field_related_topics_tid']['vocabulary'] = 'landvoc_concepts';
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';

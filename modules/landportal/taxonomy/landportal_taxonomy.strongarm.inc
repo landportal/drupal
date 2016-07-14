@@ -157,12 +157,12 @@ function landportal_taxonomy_strongarm() {
   $strongarm->name = 'xmlsitemap_settings_taxonomy_term_landvoc_concepts';
   $strongarm->value = array(
     'entity' => 'taxonomy_term',
-    'bundle' => 'landportal_topics',
+    'bundle' => 'landvoc_concepts',
     'info' => array(
       'label' => 'Concepts',
       'admin' => array(
         'path' => 'admin/structure/taxonomy/%taxonomy_vocabulary_machine_name/edit',
-        'real path' => 'admin/structure/taxonomy/landportal_topics/edit',
+        'real path' => 'admin/structure/taxonomy/landvoc_concepts/edit',
         'bundle argument' => 3,
         'access arguments' => array(
           0 => 'administer taxonomy',
@@ -223,7 +223,7 @@ function landportal_taxonomy_strongarm() {
       ),
       'xmlsitemap' => array(
         'entity' => 'taxonomy_term',
-        'bundle' => 'landportal_topics',
+        'bundle' => 'landvoc_concepts',
         'status' => '0',
         'priority' => '0.5',
       ),
