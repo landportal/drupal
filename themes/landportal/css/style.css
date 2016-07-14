@@ -10913,29 +10913,32 @@ html.js fieldset.collapsed {
   display: inline-block;
 }
 
-/* line 1, ../scss/modules/_lists.scss */
-.view .views-row {
+/* Only enable on specific views for now
+ * Promoted view (at least the one from LL) relies on views-row to apply their style...
+ */
+/* line 5, ../scss/modules/_lists.scss */
+.view-by-providers .views-row {
   margin-top: 1em;
   padding-top: 1em;
   border-top: 1px dotted lightgrey;
 }
-/* line 5, ../scss/modules/_lists.scss */
-.view .views-row:first-of-type {
+/* line 9, ../scss/modules/_lists.scss */
+.view-by-providers .views-row:first-of-type {
   border-top: 0;
   margin-top: 0;
   padding-top: 0;
 }
 
-/* line 13, ../scss/modules/_lists.scss */
+/* line 17, ../scss/modules/_lists.scss */
 .view-resource-type .view-content > .item-list > ul > li {
   font-size: 1.2em;
   margin-left: 0;
 }
-/* line 23, ../scss/modules/_lists.scss */
+/* line 27, ../scss/modules/_lists.scss */
 .view-resource-type .view-content > .item-list > ul > li ul {
   margin-bottom: 0;
 }
-/* line 26, ../scss/modules/_lists.scss */
+/* line 30, ../scss/modules/_lists.scss */
 .view-resource-type .view-content > .item-list > ul > li ul li {
   border-top-right-radius: 0 !important;
   border-top-left-radius: 0 !important;
@@ -10945,12 +10948,12 @@ html.js fieldset.collapsed {
   border-left: 0;
   margin: 0 0 -1px 0;
 }
-/* line 37, ../scss/modules/_lists.scss */
+/* line 41, ../scss/modules/_lists.scss */
 .view-resource-type .view-content > .item-list > ul > li .field-content span {
   margin: 0 0 0 1em;
 }
 
-/* line 44, ../scss/modules/_lists.scss */
+/* line 48, ../scss/modules/_lists.scss */
 .views-view-grid td {
   padding: 1em 3em 0 0;
 }
