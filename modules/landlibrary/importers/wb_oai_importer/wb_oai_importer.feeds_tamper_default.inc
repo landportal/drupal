@@ -36,9 +36,9 @@ function wb_oai_importer_feeds_tamper_default() {
     $feeds_tamper->source = 'ERF publisher guid';
     $feeds_tamper->plugin_id = 'feeds_tamper_conditional';
     $feeds_tamper->settings = array(
-        'conditional_field' => 'Blank source 3',
+        'conditional_field' => 'ERF publisher',
         'operator' => 'equals',
-        'value' => '0',
+        'value' => '',
     );
     $feeds_tamper->weight = 0;
     $feeds_tamper->description = 'Conditional';
@@ -48,9 +48,9 @@ function wb_oai_importer_feeds_tamper_default() {
     $feeds_tamper = new stdClass();
     $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
     $feeds_tamper->api_version = 2;
-    $feeds_tamper->id = 'wb_oai_importer-ef_publisher-copy';
+    $feeds_tamper->id = 'wb_oai_importer-erf_publisher-copy';
     $feeds_tamper->importer = 'wb_oai_importer';
-    $feeds_tamper->source = 'ER publisher';
+    $feeds_tamper->source = 'ERF publisher';
     $feeds_tamper->plugin_id = 'copy';
     $feeds_tamper->settings = array(
         'to_from' => 'from',

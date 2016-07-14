@@ -127,13 +127,13 @@ function wb_oai_importer_feeds_importer_default() {
                     ),
                     14 => array(
                         'source' => 'publisher',
-                        'target' => 'field_doc_publisher:organization:entityreference_feeds:title',
+                        'target' => 'entityreference:field_doc_publisher',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
                     15 => array(
-                        'source' => 'ER publisher',
-                        'target' => 'entityreference:field_doc_publisher',
+                        'source' => 'ERF publisher',
+                        'target' => 'field_doc_publisher:organization:entityreference_feeds:title',
                         'unique' => FALSE,
                         'language' => 'und',
                     ),
