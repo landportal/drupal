@@ -1,3 +1,19 @@
+/**
+ * Library resource - Teaser view
+ */
+.node-landlibrary-resource.node-teaser {
+    .field-name-field-doc-provider {
+        float: right;
+        width: 150px;
+        margin-left: 1em;
+        .node-organization.node-teaser { overflow: visible; }
+    }
+    h2 {
+        clear: left;
+    }
+}
+
+
 /****** Agro-Know ********/
 
 /* #views-exposed-form-library-search-page { */
@@ -266,8 +282,7 @@ margin-bottom:10px;
 }
 
 .field-name-field-doc-type {
-    float: right;
-    @extend .landportal-button-red;
+/*     @extend .landportal-button-red; */
     .field-item a { background-color: rgba(218, 116, 56, 0.45); }
 }
 

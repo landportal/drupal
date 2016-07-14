@@ -25,12 +25,13 @@ $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'full';
-$handler->display->display_options['pager']['options']['items_per_page'] = '32';
+$handler->display->display_options['pager']['options']['items_per_page'] = '36';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['style_plugin'] = 'grid';
 $handler->display->display_options['style_options']['uses_fields'] = TRUE;
+$handler->display->display_options['style_options']['columns'] = '6';
 $handler->display->display_options['row_plugin'] = 'entity';
 $handler->display->display_options['row_options']['view_mode'] = 'teaser';
 /* Field: Content: Title */
@@ -139,25 +140,50 @@ $handler = $view->new_display('block', 'Block by country', 'block_2');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Organizations';
 $handler->display->display_options['defaults']['group_by'] = FALSE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Content: Taxonomy terms on node */
+$handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+$handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+$handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+$handler->display->display_options['relationships']['term_node_tid']['label'] = 'geoterm';
+$handler->display->display_options['relationships']['term_node_tid']['required'] = TRUE;
+$handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+  'countries' => 'countries',
+  'regions' => 'regions',
+  'domains' => 0,
+  'themes' => 0,
+  'landportal_topics' => 0,
+  'debate_status' => 0,
+  'format' => 0,
+  'licences' => 0,
+  'organization_relation' => 0,
+  'organization_types' => 0,
+  'landlibrary_resource_type' => 0,
+  'terms_of_use' => 0,
+  'languages' => 0,
+  'datasets' => 0,
+  'indicators' => 0,
+  'keywords' => 0,
+  'interests' => 0,
+  'tags' => 0,
+  'continents' => 0,
+);
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Name */
 $handler->display->display_options['arguments']['name']['id'] = 'name';
 $handler->display->display_options['arguments']['name']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['arguments']['name']['field'] = 'name';
-$handler->display->display_options['arguments']['name']['relationship'] = 'field_geographical_focus_tid';
+$handler->display->display_options['arguments']['name']['relationship'] = 'term_node_tid';
 $handler->display->display_options['arguments']['name']['default_action'] = 'default';
 $handler->display->display_options['arguments']['name']['title_enable'] = TRUE;
 $handler->display->display_options['arguments']['name']['title'] = 'Organizations working in %1';
-$handler->display->display_options['arguments']['name']['breadcrumb_enable'] = TRUE;
 $handler->display->display_options['arguments']['name']['breadcrumb'] = '%1';
 $handler->display->display_options['arguments']['name']['default_argument_type'] = 'raw';
 $handler->display->display_options['arguments']['name']['default_argument_options']['index'] = '2';
-$handler->display->display_options['arguments']['name']['default_argument_options']['use_alias'] = TRUE;
 $handler->display->display_options['arguments']['name']['summary']['number_of_records'] = '0';
 $handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
 $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
 $handler->display->display_options['arguments']['name']['limit'] = '0';
-$handler->display->display_options['arguments']['name']['case'] = 'ucfirst';
 
 /* Display: Page community */
 $handler = $view->new_display('page', 'Page community', 'page_1');
@@ -304,31 +330,3 @@ $handler->display->display_options['filters']['field_organization_relationship_t
 );
 $handler->display->display_options['filters']['field_organization_relationship_tid']['vocabulary'] = 'organization_relation';
 $handler->display->display_options['path'] = 'book/sources2';
-$translatables['organizations_overview'] = array(
-  t('Master'),
-  t('Organizations'),
-  t('more'),
-  t('Apply'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Items per page'),
-  t('- All -'),
-  t('Offset'),
-  t('« first'),
-  t('‹ previous'),
-  t('next ›'),
-  t('last »'),
-  t('All'),
-  t('Page'),
-  t('Alpha filter'),
-  t('Block by country'),
-  t('Organizations working in %1'),
-  t('%1'),
-  t('Page community'),
-  t('Land Portal Community'),
-  t('Alpha filter community'),
-  t('Page book'),
-  t('Land Book Sources'),
-);
