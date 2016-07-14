@@ -97,8 +97,8 @@ $handler->display->display_options['arguments']['name']['summary_options']['item
 $handler->display->display_options['arguments']['name']['limit'] = '0';
 $handler->display->display_options['path'] = 'library/browse/by-country';
 
-/* Display: Res byC */
-$handler = $view->new_display('block', 'Res byC', 'block_1');
+/* Display: Resource by country */
+$handler = $view->new_display('block', 'Resource by country', 'block_1');
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -128,30 +128,3 @@ $handler->display->display_options['arguments']['name']['summary']['format'] = '
 $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
 $handler->display->display_options['arguments']['name']['limit'] = '0';
 $handler->display->display_options['arguments']['name']['case'] = 'ucfirst';
-$translatables['library'] = array(
-  t('Master'),
-  t('Land Library resources'),
-  t('Find more on the Library'),
-  t('Apply'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Items per page'),
-  t('- All -'),
-  t('Offset'),
-  t('« first'),
-  t('‹ previous'),
-  t('next ›'),
-  t('last »'),
-  t('Displaying @start - @end of @total'),
-  t('Page'),
-  t('more'),
-  t('Block'),
-  t('Page by country'),
-  t('term from field_doc_country'),
-  t('All'),
-  t('Library resources about %1'),
-  t('Res byC'),
-  t('%1'),
-);
