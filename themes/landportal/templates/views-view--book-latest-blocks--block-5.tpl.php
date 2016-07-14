@@ -45,9 +45,10 @@
     </div>
   <?php endif; ?>
 
-  <div class="view-content col-md-8">
+  <div class="view-content col-md-7">
   <?php if ($rows): ?>
     <div class="view-content">
+      <h2><?php print t('Resources from the land library'); ?></h2>
       <?php print $rows; ?>
     </div>
   <?php elseif ($empty): ?>
@@ -58,7 +59,8 @@
   </div>
 
   <?php if ($exposed): ?>
-    <div class="view-filters col-md-4">
+    <div class="view-filters col-md-4 col-md-offset-1">
+      <h2><?php print t('Refine results'); ?></h2>
       <?php print $exposed; ?>
     </div>
   <?php endif; ?>

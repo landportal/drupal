@@ -9,7 +9,7 @@
  * Drupal refactoring: Jules <jules@ker.bz>
  */
 ?>
-<?php //pa($data,1); ?>
+<?php //pa($data['charts']['gaugeIndicators'],1); ?>
 <input type="hidden" id="entity-id" value="<?php echo $data['entity-id']; ?>" />
 <input type="hidden" id="path" value="<?php echo drupal_get_path('module', 'landbook'); ?>" />
 <input type="hidden" id="continent-id" value="<?php echo $data['info']['region']['un_code']; ?>" />
@@ -88,8 +88,8 @@
 <h2 class=="fos txt-small m-xs-top" data-localize="global.media">Media</h2>
 -->
 
-<div id="mapDiv" style="height:500px"></div>
-<section class="country-section">
+<div id="mapDiv" data-highcharts-map="0"></div>
+<section class="country-section grey">
     <div class="container">
         <div class="row main">
             <div class="col-md-12">
@@ -133,6 +133,20 @@
     </div>
 </section>
 
+<section id="disclaimer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-offset-1 col-xs-10">
+            <?php  $block = block_load('block', '2');
+                $block = _block_render_blocks(array($block));
+                $block_build = _block_get_renderable_array($block);
+                echo drupal_render($block_build);
+            ?>
+          </div>
+        </div>
+      </div>
+</section>
+
 <section class="country-section">
     <div class="container">
         <div class="row">
@@ -151,22 +165,26 @@
     </div>
 </section>
 
-<section class="country-section">
+<section class="country-section grey">
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
-                <a id="infographic"></a>
-                <h2 class="infographics section-title">Infographics</h2>
+                <a id="compare"></a>
+                <h2 class="infographics section-title">Compare countries</h2>
             </div>
         </div>
         <div class="row">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <?php  $block = block_load('landbook', 'compare_block');
+                  $block = _block_render_blocks(array($block));
+                  $block_build = _block_get_renderable_array($block);
+                  echo drupal_render($block_build);
+                ?>
         </div>
     </div>
 </section>
 
 <section class="country-section">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <a id="mapping"></a>
@@ -174,21 +192,46 @@
             </div>
         </div>
         <div class="row">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div id="wrapper-mapping" data-highcharts-map="1"></div> 
         </div>
     </div>
 </section>
 
-<section class="country-section">
+<section class="country-section grey">
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
-                <a id="rankings"></a>
-                <h2 class="rankings section-title">Rankings</h2>
+                <a id="infographic"></a>
+                <h2 class="rankings section-title">Infographics</h2>
             </div>
         </div>
         <div class="row">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <?php  $block = block_load('landbook', 'infografic_block');
+                  $block = _block_render_blocks(array($block));
+                  $block_build = _block_get_renderable_array($block);
+                  echo drupal_render($block_build);
+                ?>
+        </div>
+        <div class="row">
+        <?php  $block = block_load('block', '4');
+                  $block = _block_render_blocks(array($block));
+                  $block_build = _block_get_renderable_array($block);
+                  echo drupal_render($block_build);
+                ?>
+        </div>
+        <div class="row">
+            <?php  drupal_add_js(array('landbook' => array('data_land' => $data['charts']['gaugeIndicators'])), 'setting'); ?>
+            <div class="col-md-6">
+              <div id="wrapper-piechart" data-highcharts-chart="1"></div>
+            </div>
+            <div class="col-md-6 sep-left-charts">
+              <div id="wrapper-spiderchart" data-highcharts-chart="2"></div>
+              <?php  $block = block_load('block', '3');
+                  $block = _block_render_blocks(array($block));
+                  $block_build = _block_get_renderable_array($block);
+                  echo drupal_render($block_build);
+                ?>
+            </div>
         </div>
     </div>
 </section>
@@ -244,7 +287,7 @@
     </div>
 </section>
 
-<section class="country-section">
+<section class="country-section grey">
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">

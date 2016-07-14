@@ -28,6 +28,13 @@ function landbook_block_info() {
     $blocks['regions_selectors']['info'] = t('Regions selector snippet');
     $translatables['book'][] = t('Country maps and graphs');
     $translatables['book'][] = t('Country selectors');
+
+    $blocks['infografic_block'] = array(
+      'info' => t('Infografic Block'),
+    );
+    $blocks['compare_block'] = array(
+      'info' => t('Compare Block'),
+    );
     return $blocks;
 }
 
@@ -53,6 +60,12 @@ function landbook_block_view($delta = '') {
         case 'country_sidebar_second':
             $block['content'] = landbook_country_sidebar_second();
             break;
+        case 'infografic_block' :
+          $block['content'] = landbook_infografic_block_view();
+          break;
+        case 'compare_block' :
+          $block['content'] = landbook_compare_block_view();
+          break;
     }
     return $block;
 }
@@ -103,6 +116,13 @@ function landbook_indicator_sidebar_second($data=NULL) {
   return theme('indicator-sidebar-second', array('data' => $data));
 }
 
+function landbook_infografic_block_view(){
+  return drupal_get_form('landbook_infografic_block_form');
+}
+
+function landbook_compare_block_view(){
+  return drupal_get_form('landbook_compare_block_form');
+}
 
 /**
  * LandBook blocks display settings for Landportal theme
@@ -149,4 +169,73 @@ function landbook_block_info_alter(&$blocks, $theme, $code_blocks) {
         $blocks['landbook']['indicator_sidebar_second']['pages'] = "book/indicators/*";
     }
     return $blocks;
+}
+
+
+function landbook_infografic_block_form($form,$form_state){
+  $form['title']=array(
+    '#type'=>'markup',
+    '#markup'=>'<h3 class="form-title">Land Governance Assessment Framework (LGAF)</h3>',
+  );
+  $years=array("all"=>'Select year',"2016"=>"2016","2015"=>"2015","2014"=>"2014");
+  $form['years']=array(
+    '#type'=>'select',
+    '#options'=>$years,
+    '#prefix'=>'<div class="col-md-2">',
+    '#suffix'=>'</div>'
+  );
+  $panel=array("all"=>'Select Panel...',"WB-LGAF2016-1"=>"Land tenure recognition","WB-LGAF2016-3"=>"Urban land use, planning, and development");
+  $form['panel']=array(
+    '#type'=>'select',
+    '#options'=>$panel,
+    '#prefix'=>'<div class="col-md-5">',
+    '#suffix'=>'</div>'
+  );
+  $subpanel=array("all"=>'Select Sub-Panel...',"WB-LGAF2016-1.1"=>"Recognition of a continuum of rights","WB-LGAF2016-1.2"=>"Respect for and enforcement of rights");
+  $form['subpanel']=array(
+    '#type'=>'select',
+    '#options'=>$subpanel,
+    '#prefix'=>'<div class="col-md-5">',
+    '#suffix'=>'</div>'
+  );
+  return $form;
+}
+
+function landbook_compare_block_form($form,$form_state){
+  $years=array("all"=>'Rural Population');
+  $form['indicator']=array(
+    '#type'=>'select',
+    '#options'=>$years,
+    '#prefix'=>'<div class="col-md-3">',
+    '#suffix'=>'</div>'
+  );
+  $country=array("all"=>'Select Country...');
+  $form['country']=array(
+    '#type'=>'select',
+    '#options'=>$country,
+    '#prefix'=>'<div class="col-md-3">',
+    '#suffix'=>'</div>'
+  );
+  $start_year=array("all"=>'From Year...');
+  $form['start_year']=array(
+    '#type'=>'select',
+    '#options'=>$start_year,
+    '#prefix'=>'<div class="col-md-2">',
+    '#suffix'=>'</div>'
+  );
+  $endt_year=array("all"=>'To Year...');
+  $form['end_year']=array(
+    '#type'=>'select',
+    '#options'=>$endt_year,
+    '#prefix'=>'<div class="col-md-2">',
+    '#suffix'=>'</div>'
+  );
+  $form['add_to']=array(
+    '#type'=>'button',
+    '#value'=>'Add to Compare',
+    '#prefix'=>'<div class="col-md-2 form-item">',
+    '#suffix'=>'</div>',
+    '#attributes' => array('class' => array('button')),
+  );
+  return $form;
 }

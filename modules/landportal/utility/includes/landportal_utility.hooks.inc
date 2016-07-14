@@ -29,7 +29,6 @@ function landportal_utility_views_pre_render(&$view){
  * Implements hook_form_alter().
  */
 function landportal_utility_form_alter(&$form, &$form_state, $form_id){
-
   // core_search
   if (!empty($form['#search_page']['page_id']) && $form['#search_page']['page_id'] == 'core_search' && $form_id == 'apachesolr_search_custom_page_search_form') {
 
@@ -271,6 +270,11 @@ function landportal_utility_form_alter(&$form, &$form_state, $form_id){
 
   }
 
+  if($form['#id']=='views-exposed-form-book-latest-blocks-block-5'){
+    //pa($form,1);
+    $form['field_doc_type_tid']['#options']['All']=t('Select research type ...');
+  }
+
 }
 
 function landportal_utility_custom_page_search_form(&$form, &$form_state){
@@ -403,4 +407,8 @@ function landportal_utility_mailchimp_user_update($form, &$form_state){
     mailchimp_lists_execute_change('update', $list, $account->mail, $mergevars, NULL, $mcapi);
     }
   }
+}
+
+function landportal_utility_form_search_block_form_alter(&$form, &$form_state){
+  $form['search_block_form']['#attributes'] = array('placeholder' => array(t('Type here...')));
 }

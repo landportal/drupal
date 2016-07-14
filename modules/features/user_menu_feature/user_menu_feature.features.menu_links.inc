@@ -240,7 +240,7 @@ function user_menu_feature_menu_default_menu_links() {
       'identifier' => 'user-menu_contribute:node/add',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 1,
     'expanded' => 0,

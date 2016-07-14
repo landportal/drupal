@@ -5,6 +5,15 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
 
+section a{
+	color:$green-light !important;
+	font-family: "Open Sans",sans-serif;
+
+	&:hover{
+		text-decoration: none  !important;
+		color: $green-dark  !important;
+	}
+}
  
 .landbook-header-bg {
     background-color: $green-dark;
@@ -105,7 +114,7 @@
 }
 
 .page-book-countries{
-	section{
+	.country-section{
 		min-height:400px;
 		border-bottom: 1px solid #f0f0f0;
 		padding-top: 60px;
@@ -362,11 +371,144 @@
 				    font-size: 14px;
 				}
 			}
+			&.node-landlibrary-resource{
+				padding-bottom: 0;
+				border-bottom:1px solid #f0f0f0;
+				.description-resource{
+
+					padding-top:0;
+					p{	
+						font-family: "Merriweather",serif !important;
+						color: #999;
+						margin:5px 0;
+						font-size: 16px;
+					}
+				}
+				.keywords{
+					span{
+						font-family: "Open Sans",sans-serif;
+						text-transform: uppercase;
+						color: #999;
+						font-size: 12px;
+					}
+					a{
+						color:#91b135;
+						font-size: 16px;
+
+						&:hover{
+							color:#617724;
+							text-decoration: none;
+						}
+					}
+
+				}
+			}
 
 		}
+		&.grey{
+			background:#F8F8F8;
+		}
+		.sep-left-charts{
+			border-left:1px solid #ccc;
+	
+		}
+
+		.spider-note{
+			padding:0;
+			font-family: "Open Sans",sans-serif;
+			color:#999;
+			font-size:12px;
+
+			.no-m-bottom{
+				margin:0;
+			}
+		}
+		.note-infografic{
+			border-bottom:1px solid #ccc;
+			margin-bottom:30px;
+			font-family: "Open Sans",sans-serif;
+			color:#999;
+			font-size:12px;
+		}
 	}
-	.country-section:nth-child(odd){
-		background:#F8F8F8;
+	
+	#disclaimer{
+		background:$green-light;
+		padding:15px 0;
+		color:$white;
+		font-size: 12px;
+
+		p{
+			margin:0;
+			strong{
+				font-weight: bold;
+			}
+
+			&.no-m-bottom{
+				margin:0;
+			}
+		}
 	}
 
 }
+
+.block{
+	.form-title{
+		font-size: 16px;
+		font-family: "Open Sans",sans-serif;
+	}
+	.views-exposed-widget{
+		padding:10px 0 20px 0;
+		.views-widget{
+			.description{
+				display: none;
+			}
+			select{
+				background: #f7f7f7 none repeat scroll 0 0;
+				min-width:300px;
+			}
+		}
+	}
+	select{
+		-moz-appearance: none;
+	    border: medium none;
+	    border-radius: 0;
+	    display: table-cell;
+	    padding: 0.5em 1.2em 0.5em 0.5em;
+	    width: 100%;
+		background: #ffffff none repeat scroll 0 0;
+		background-image: url("../images/toggle-arrow.png");
+	    background-position: right 10px center;
+	    background-repeat: no-repeat;
+	    box-shadow: 4px 5px 0 0 #6e872a;
+	}
+	.button{
+		background-color: #a3c642;
+    	color: #fff;
+    	box-shadow: 4px 5px 0 0 #6e872a;
+    	width:100%;
+    	border: medium none;
+	    display: inline-block;
+	    line-height: 43px;
+	    outline: 0 none !important;
+	    padding: 0 1em;
+	    text-align: center;
+	    text-decoration: none;
+	    transition: background-color 300ms linear 0s;
+	    font-family: "Open Sans",sans-serif;
+	    font-size:14px;
+	}
+}
+
+
+#mapDiv{
+	height: 468px;
+}
+
+#wrapper-piechart{
+	height: 400px;
+}
+#wrapper-mapping {
+    height: 768px;
+}
+
