@@ -205,9 +205,9 @@ function wb_oai_importer_feeds_tamper_default() {
     $feeds_tamper->source = 'publisher';
     $feeds_tamper->plugin_id = 'explode';
     $feeds_tamper->settings = array(
-        'separator' => 'and',
+        'separator' => '%sand%s',
         'limit' => '',
-        'real_separator' => 'and',
+        'real_separator' => ' and ',
     );
     $feeds_tamper->weight = 2;
     $feeds_tamper->description = 'Explode';
