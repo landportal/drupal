@@ -6,12 +6,12 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
 
 section a{
-	color:$green-light !important;
+	color:$green-light;
 	font-family: "Open Sans",sans-serif;
 
 	&:hover{
-		text-decoration: none  !important;
-		color: $green-dark  !important;
+		text-decoration: none;
+		color: $green-dark;
 	}
 }
  
@@ -232,7 +232,7 @@ section a{
 			}
 		}
 		.bg-gray{
-			background: rgba(0, 0, 0, 0) -moz-linear-gradient(left center , #f7f7f7 0px, #f7f7f7 40%, transparent 40%) repeat scroll 0 0;
+			background: rgba(0, 0, 0, 0) -moz-linear-gradient(left center , #f7f7f7 0px, #f7f7f7 80%, transparent 40%) repeat scroll 0 0;
 
 			.bg-media{
 				background: #f7f7f7;
@@ -298,12 +298,12 @@ section a{
 			padding: 20px 0;
 
 			.node-image{
-				/*display: inline-block;
-			    background: #efefef none repeat scroll 0 0;
-			    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);*/
 			    padding:0;
-			    overflow: hidden;
 			    height: 122px;
+			    a{
+			    	box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+			    	display: inline-block;
+			    }
 
 			    @media only screen and (max-width: 992px){
 			    	padding-left:15px;
@@ -340,7 +340,7 @@ section a{
 				.text{
 					margin-top: 5px;
 					font-family: "Merriweather",serif;
-					color: #333;
+					color: $text-color;
 				    font-size: 16px;
 				    line-height: 1.42857;
 
@@ -449,6 +449,25 @@ section a{
 			}
 		}
 	}
+	.table-responsive{
+		box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+
+		table{
+			thead{
+				tr{
+					th{
+						border-right: 1px solid #f0f0f0;
+					    font-weight: lighter;
+					    padding: 10px;
+					    background-color: #a3c642;
+    					color: $white;
+    					font-family: "Open Sans",sans-serif;
+    					font-size: 12px;
+					}
+				}
+			}
+		}
+	}
 
 }
 
@@ -466,6 +485,9 @@ section a{
 			select{
 				background: #f7f7f7 none repeat scroll 0 0;
 				min-width:300px;
+				background-image: url("../images/toggle-arrow.png"); 
+				background-position: right 10px center;
+	   			background-repeat: no-repeat;
 			}
 		}
 	}

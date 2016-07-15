@@ -1,3 +1,9 @@
+#header{
+	#logo{
+		margin-top:3px;
+	}
+}
+
 #block-menu-landbook-menu,
 #block-menu-menu-landlibrary-menu,
 #block-menu-landdebate-menu{
@@ -95,7 +101,7 @@
 		&.active{
 
 			a{
-				color:#333333 !important;
+				color:$text-color !important;
 			}
 		}
 

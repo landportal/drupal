@@ -17,6 +17,7 @@ require_once(drupal_get_path('module', 'landbook').'/includes/landbook.block.inc
 require_once(drupal_get_path('module', 'landbook').'/includes/landbook.scripts.inc');
 require_once(drupal_get_path('module', 'landbook').'/includes/landbook.theme.inc');
 require_once(drupal_get_path('module', 'landbook').'/modules/countries.inc');
+require_once(drupal_get_path('module', 'landbook').'/modules/indicators.inc');
 
 function landbook_help($path, $arg) {
   switch ($path) {
@@ -100,14 +101,6 @@ function landbook_menu() {
  * Rebuild/override breadcrumbs for Landbook pages
  */
 function landbook_page_alter(&$page) {
-    drupal_add_js(drupal_get_path('module', 'landbook').'/js/libraries/map_data.js');
-    //drupal_add_js('http://code.highcharts.com/highcharts.js', 'external');
-    //drupal_add_js('http://code.highcharts.com/maps/highmaps.js', 'external');
-    drupal_add_js('http://code.highcharts.com/stock/highstock.js', 'external');
-    drupal_add_js('https://code.highcharts.com/maps/modules/map.js', 'external');
-    drupal_add_js('https://code.highcharts.com/highcharts-more.js', 'external');
-    drupal_add_js('https://code.highcharts.com/modules/exporting.js', 'external');
-
     $e = explode('/', $_GET['q']);
     if ($e[0] == 'book') {
         $data = (isset($page['content']['system_main']['content']['#data']) ?

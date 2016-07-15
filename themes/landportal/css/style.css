@@ -11562,13 +11562,13 @@ html.js fieldset.collapsed {
  */
 /* line 8, ../scss/modules/_book.scss */
 section a {
-  color: #91b135 !important;
+  color: #91b135;
   font-family: "Open Sans",sans-serif;
 }
 /* line 12, ../scss/modules/_book.scss */
 section a:hover {
-  text-decoration: none  !important;
-  color: #617724 !important;
+  text-decoration: none;
+  color: #617724;
 }
 
 /* line 18, ../scss/modules/_book.scss */
@@ -11826,7 +11826,7 @@ section a:hover {
 }
 /* line 234, ../scss/modules/_book.scss */
 .page-book-countries .country-section .bg-gray {
-  background: transparent -moz-linear-gradient(left center, #f7f7f7 0px, #f7f7f7 40%, transparent 40%) repeat scroll 0 0;
+  background: transparent -moz-linear-gradient(left center, #f7f7f7 0px, #f7f7f7 80%, transparent 40%) repeat scroll 0 0;
   /*@media only screen and (max-width: 992px){
       	padding-left:15px;
       	padding-right:15px;
@@ -11897,12 +11897,13 @@ section a:hover {
 }
 /* line 300, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-image {
-  	/*display: inline-block;
-      background: #efefef none repeat scroll 0 0;
-      box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);*/
   padding: 0;
-  overflow: hidden;
   height: 122px;
+}
+/* line 303, ../scss/modules/_book.scss */
+.page-book-countries .country-section .node-teaser .node-image a {
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+  display: inline-block;
 }
 @media only screen and (max-width: 992px) {
   /* line 300, ../scss/modules/_book.scss */
@@ -11943,7 +11944,7 @@ section a:hover {
 .page-book-countries .country-section .node-teaser .node-intro .text {
   margin-top: 5px;
   font-family: "Merriweather",serif;
-  color: #333;
+  color: #333333;
   font-size: 16px;
   line-height: 1.42857;
 }
@@ -12054,26 +12055,43 @@ section a:hover {
 .page-book-countries #disclaimer p.no-m-bottom {
   margin: 0;
 }
+/* line 452, ../scss/modules/_book.scss */
+.page-book-countries .table-responsive {
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+}
+/* line 458, ../scss/modules/_book.scss */
+.page-book-countries .table-responsive table thead tr th {
+  border-right: 1px solid #f0f0f0;
+  font-weight: lighter;
+  padding: 10px;
+  background-color: #a3c642;
+  color: #ffffff;
+  font-family: "Open Sans",sans-serif;
+  font-size: 12px;
+}
 
-/* line 456, ../scss/modules/_book.scss */
+/* line 475, ../scss/modules/_book.scss */
 .block .form-title {
   font-size: 16px;
   font-family: "Open Sans",sans-serif;
 }
-/* line 460, ../scss/modules/_book.scss */
+/* line 479, ../scss/modules/_book.scss */
 .block .views-exposed-widget {
   padding: 10px 0 20px 0;
 }
-/* line 463, ../scss/modules/_book.scss */
+/* line 482, ../scss/modules/_book.scss */
 .block .views-exposed-widget .views-widget .description {
   display: none;
 }
-/* line 466, ../scss/modules/_book.scss */
+/* line 485, ../scss/modules/_book.scss */
 .block .views-exposed-widget .views-widget select {
   background: #f7f7f7 none repeat scroll 0 0;
   min-width: 300px;
+  background-image: url("../images/toggle-arrow.png");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
 }
-/* line 472, ../scss/modules/_book.scss */
+/* line 494, ../scss/modules/_book.scss */
 .block select {
   -moz-appearance: none;
   border: medium none;
@@ -12087,7 +12105,7 @@ section a:hover {
   background-repeat: no-repeat;
   box-shadow: 4px 5px 0 0 #6e872a;
 }
-/* line 485, ../scss/modules/_book.scss */
+/* line 507, ../scss/modules/_book.scss */
 .block .button {
   background-color: #a3c642;
   color: #fff;
@@ -12105,17 +12123,17 @@ section a:hover {
   font-size: 14px;
 }
 
-/* line 504, ../scss/modules/_book.scss */
+/* line 526, ../scss/modules/_book.scss */
 #mapDiv {
   height: 468px;
 }
 
-/* line 508, ../scss/modules/_book.scss */
+/* line 530, ../scss/modules/_book.scss */
 #wrapper-piechart {
   height: 400px;
 }
 
-/* line 511, ../scss/modules/_book.scss */
+/* line 533, ../scss/modules/_book.scss */
 #wrapper-mapping {
   height: 768px;
 }
@@ -13137,18 +13155,19 @@ body #footer .section .content .menu li.expanded a {
 body #footer .section .content .menu li.expanded .menu li {
   padding-left: 0;
   margin-left: 0;
+  margin: 6px 0;
 }
-/* line 30, ../scss/modules/_footer.scss */
+/* line 31, ../scss/modules/_footer.scss */
 body #footer .section .content .menu li.expanded .menu li a {
   color: #ffffff;
   text-transform: none;
   font-weight: 300;
 }
-/* line 40, ../scss/modules/_footer.scss */
+/* line 41, ../scss/modules/_footer.scss */
 body #footer .section #block-landportal-blocks-lp-footer-social {
   margin-top: 30px;
 }
-/* line 42, ../scss/modules/_footer.scss */
+/* line 43, ../scss/modules/_footer.scss */
 body #footer .section #block-landportal-blocks-lp-footer-social li {
   width: 50px;
   height: 50px;
@@ -13157,22 +13176,27 @@ body #footer .section #block-landportal-blocks-lp-footer-social li {
   background: #91b135;
   overflow: hidden;
 }
-/* line 50, ../scss/modules/_footer.scss */
+/* line 51, ../scss/modules/_footer.scss */
 body #footer .section #block-landportal-blocks-lp-footer-social li a {
   padding: 5px 12px;
 }
-/* line 52, ../scss/modules/_footer.scss */
+/* line 53, ../scss/modules/_footer.scss */
 body #footer .section #block-landportal-blocks-lp-footer-social li a .fa {
   line-height: 2;
 }
 
-/* line 4, ../scss/modules/_header.scss */
+/* line 2, ../scss/modules/_header.scss */
+#header #logo {
+  margin-top: 3px;
+}
+
+/* line 10, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-top,
 #block-menu-menu-landlibrary-menu .menu-top,
 #block-menu-landdebate-menu .menu-top {
   padding: 50px 50px;
 }
-/* line 7, ../scss/modules/_header.scss */
+/* line 13, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-top h2,
 #block-menu-menu-landlibrary-menu .menu-top h2,
 #block-menu-landdebate-menu .menu-top h2 {
@@ -13184,7 +13208,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social li a .fa {
   letter-spacing: 0;
   margin-bottom: 5px;
 }
-/* line 17, ../scss/modules/_header.scss */
+/* line 23, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-top p,
 #block-menu-menu-landlibrary-menu .menu-top p,
 #block-menu-landdebate-menu .menu-top p {
@@ -13194,7 +13218,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social li a .fa {
   font-family: "News Cycle",sans-serif;
   margin-bottom: 0;
 }
-/* line 26, ../scss/modules/_header.scss */
+/* line 32, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper,
 #block-menu-menu-landlibrary-menu .menu-wrapper,
 #block-menu-landdebate-menu .menu-wrapper {
@@ -13203,27 +13227,27 @@ body #footer .section #block-landportal-blocks-lp-footer-social li a .fa {
   background: #766054;
   min-height: 30px;
 }
-/* line 32, ../scss/modules/_header.scss */
+/* line 38, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar,
 #block-menu-landdebate-menu .menu-wrapper.navbar {
   min-height: auto;
   margin-bottom: 0;
 }
-/* line 36, ../scss/modules/_header.scss */
+/* line 42, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu {
   border-top: none;
   padding: 0;
 }
-/* line 40, ../scss/modules/_header.scss */
+/* line 46, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu {
   width: 100%;
 }
-/* line 42, ../scss/modules/_header.scss */
+/* line 48, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li {
@@ -13232,25 +13256,25 @@ body #footer .section #block-landportal-blocks-lp-footer-social li a .fa {
   width: auto !important;
   min-width: 12.5%;
 }
-/* line 48, ../scss/modules/_header.scss */
+/* line 54, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li.active-trail,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li.active-trail,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li.active-trail {
   background: #91b135 !important;
 }
-/* line 51, ../scss/modules/_header.scss */
+/* line 57, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover {
   background: #91b135 !important;
 }
-/* line 56, ../scss/modules/_header.scss */
+/* line 62, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li:hover,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li:hover,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li:hover {
   background: #766054 !important;
 }
-/* line 60, ../scss/modules/_header.scss */
+/* line 66, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li a,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li a,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a {
@@ -13260,38 +13284,38 @@ body #footer .section #block-landportal-blocks-lp-footer-social li a .fa {
   font-size: 14px;
   line-height: normal;
 }
-/* line 67, ../scss/modules/_header.scss */
+/* line 73, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li a.active,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li a.active,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a.active {
   border-bottom: none;
   text-decoration: none;
 }
-/* line 71, ../scss/modules/_header.scss */
+/* line 77, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li a:hover,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li a:hover,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a:hover {
   background: #766054 !important;
 }
 
-/* line 83, ../scss/modules/_header.scss */
+/* line 89, ../scss/modules/_header.scss */
 #header {
   padding: 12px 0 0 0 !important;
 }
-/* line 86, ../scss/modules/_header.scss */
+/* line 92, ../scss/modules/_header.scss */
 #header .block {
   float: left !important;
   margin-bottom: 12px;
 }
-/* line 92, ../scss/modules/_header.scss */
+/* line 98, ../scss/modules/_header.scss */
 #header li::before {
   content: none;
 }
-/* line 97, ../scss/modules/_header.scss */
+/* line 103, ../scss/modules/_header.scss */
 #header li.active a {
   color: #333333 !important;
 }
-/* line 102, ../scss/modules/_header.scss */
+/* line 108, ../scss/modules/_header.scss */
 #header li a {
   color: #26AAE7 !important;
   font-size: 14px;
@@ -13299,18 +13323,18 @@ body #footer .section #block-landportal-blocks-lp-footer-social li a .fa {
   content: none;
   font-family: "Open Sans",sans-serif;
 }
-/* line 109, ../scss/modules/_header.scss */
+/* line 115, ../scss/modules/_header.scss */
 #header li a::before {
   content: none !important;
 }
-/* line 117, ../scss/modules/_header.scss */
+/* line 123, ../scss/modules/_header.scss */
 #header .social-top ul {
   margin-top: 5px;
   padding: 0;
   list-style: none;
   margin-bottom: 0;
 }
-/* line 122, ../scss/modules/_header.scss */
+/* line 128, ../scss/modules/_header.scss */
 #header .social-top ul li {
   width: 30px;
   height: 30px;
@@ -13320,59 +13344,59 @@ body #footer .section #block-landportal-blocks-lp-footer-social li a .fa {
   float: left;
   margin: 0 5px;
 }
-/* line 131, ../scss/modules/_header.scss */
+/* line 137, ../scss/modules/_header.scss */
 #header .social-top ul li.twitter {
   border: 1px solid #1AC8F3;
 }
-/* line 134, ../scss/modules/_header.scss */
+/* line 140, ../scss/modules/_header.scss */
 #header .social-top ul li.twitter i {
   color: #1AC8F3;
 }
-/* line 138, ../scss/modules/_header.scss */
+/* line 144, ../scss/modules/_header.scss */
 #header .social-top ul li.facebook {
   border: 1px solid #6186B5;
 }
-/* line 140, ../scss/modules/_header.scss */
+/* line 146, ../scss/modules/_header.scss */
 #header .social-top ul li.facebook a {
   padding: 5px 10px;
 }
-/* line 142, ../scss/modules/_header.scss */
+/* line 148, ../scss/modules/_header.scss */
 #header .social-top ul li.facebook a i {
   color: #6186B5;
 }
-/* line 147, ../scss/modules/_header.scss */
+/* line 153, ../scss/modules/_header.scss */
 #header .social-top ul li.google-plus {
   border: 1px solid #E95835;
 }
-/* line 150, ../scss/modules/_header.scss */
+/* line 156, ../scss/modules/_header.scss */
 #header .social-top ul li.google-plus i {
   color: #E95835;
 }
-/* line 155, ../scss/modules/_header.scss */
+/* line 161, ../scss/modules/_header.scss */
 #header .social-top ul li a {
   padding: 5px 8px;
 }
-/* line 157, ../scss/modules/_header.scss */
+/* line 163, ../scss/modules/_header.scss */
 #header .social-top ul li a .fa {
   line-height: 2;
 }
-/* line 164, ../scss/modules/_header.scss */
+/* line 170, ../scss/modules/_header.scss */
 #header .main-menu {
   margin-top: 10px;
 }
-/* line 167, ../scss/modules/_header.scss */
+/* line 173, ../scss/modules/_header.scss */
 #header .main-menu ul li {
   font-size: 14px;
 }
-/* line 169, ../scss/modules/_header.scss */
+/* line 175, ../scss/modules/_header.scss */
 #header .main-menu ul li::before {
   content: none;
 }
-/* line 175, ../scss/modules/_header.scss */
+/* line 181, ../scss/modules/_header.scss */
 #header .search-form {
   margin-bottom: 0;
 }
-/* line 178, ../scss/modules/_header.scss */
+/* line 184, ../scss/modules/_header.scss */
 #header .search-form .form-type-textfield input {
   background: #F7F7F7;
   border-radius: 20px;
@@ -13382,7 +13406,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social li a .fa {
   color: #A7A7A7;
   font-weight: bold;
 }
-/* line 189, ../scss/modules/_header.scss */
+/* line 195, ../scss/modules/_header.scss */
 #header .search-form .form-actions .form-submit {
   background: url("../images/icon-search.png") no-repeat 0 0;
   cursor: pointer;
@@ -13395,16 +13419,16 @@ body #footer .section #block-landportal-blocks-lp-footer-social li a .fa {
   border: none;
   width: 25px;
 }
-/* line 203, ../scss/modules/_header.scss */
+/* line 209, ../scss/modules/_header.scss */
 #header .block-nice-menus {
   margin-top: 10px;
 }
-/* line 206, ../scss/modules/_header.scss */
+/* line 212, ../scss/modules/_header.scss */
 #header .block-nice-menus li a {
   margin: 0;
   padding: 0;
 }
-/* line 212, ../scss/modules/_header.scss */
+/* line 218, ../scss/modules/_header.scss */
 #header .block-locale {
   margin-top: 10px;
 }

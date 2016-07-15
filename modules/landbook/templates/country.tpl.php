@@ -157,7 +157,7 @@
         </div>
         <?php if ($data['charts']['tableIndicators']): ?>
         <div class="row">
-            <div class="socioeconomic-values chart-content">
+            <div class="socioeconomic-values chart-content"><?php //pa($data['charts']['tableIndicators'],1); ?>
                <?php echo landbook_table_render($data['charts']['tableIndicators']); ?>
             </div>
         </div>

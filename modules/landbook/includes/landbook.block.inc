@@ -202,14 +202,21 @@ function landbook_infografic_block_form($form,$form_state){
 }
 
 function landbook_compare_block_form($form,$form_state){
-  $years=array("all"=>'Rural Population');
+  global $language;
+  $i = new Indicators();
+  $data_indicator = $i->get($language);//pa($data_indicator,1);
+  $indicators=array("all"=>'Rural Population');
   $form['indicator']=array(
     '#type'=>'select',
-    '#options'=>$years,
+    '#options'=>$indicators,
     '#prefix'=>'<div class="col-md-3">',
     '#suffix'=>'</div>'
   );
-  $country=array("all"=>'Select Country...');
+  $r = new Countries();
+
+  $data = $r->get($language);
+  $result=$r->getCountryArray($data);
+  $country=array_merge(array("all"=>'Select Country...'),$result);
   $form['country']=array(
     '#type'=>'select',
     '#options'=>$country,

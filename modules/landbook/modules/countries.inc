@@ -19,6 +19,11 @@ function landbook_countries($args=NULL) {
     $data = $r->get($language, $args);
     drupal_set_title($data['info']['name']);
     //dpm($data, 'data from Country '.$args);
+    drupal_add_js(drupal_get_path('module', 'landbook').'/js/libraries/map_data.js');
+    drupal_add_js('http://code.highcharts.com/stock/highstock.js', 'external');
+    drupal_add_js('https://code.highcharts.com/maps/modules/map.js', 'external');
+    drupal_add_js('https://code.highcharts.com/highcharts-more.js', 'external');
+    drupal_add_js('https://code.highcharts.com/modules/exporting.js', 'external');
     drupal_add_js(array('landbook' => array('countryCode' => $args)), 'setting');
     drupal_add_js(drupal_get_path('module', 'landbook').'/js/country_chart_options.js');
     drupal_add_js(drupal_get_path('module', 'landbook').'/js/controller/country.js', array('scope'=>'footer'));
@@ -517,5 +522,13 @@ class Countries {
 			));
 		}
 		return array("continents" => array_values($regions), "countries" => $countries);
+	}
+
+	public function getCountryArray($result){
+		$values=array();
+		foreach ($result['countries'] as $key => $value) {
+			$values[$value['iso3']]=$value['name'];
+		}
+		return $values;
 	}
 }
