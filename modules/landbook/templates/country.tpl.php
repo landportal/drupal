@@ -107,6 +107,9 @@
                           <a href="#indicators">Indicators</a>
                         </li>
                         <li class="nic-item">
+                          <a href="#compare">Compare Countries</a>
+                        </li>
+                        <li class="nic-item">
                           <a href="#infographic">Infographic</a>
                         </li>
                         <li class="nic-item">
@@ -127,7 +130,29 @@
                     </ul>
                     </span>
                 </nav>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <?php $description_country=load_country_description($data['info']['name']); ?>
+                <?php if(empty($description_country)):?>
+                  <div class="col-md-offset-2 col-md-8">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                <?php else: ?>
+                  <?php print render($description_country); ?>
+                <?php endif; ?>
+                <?php $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));?>
+                <div class="info-bottom col-md-12">
+                <div class="col-sm-offset-2 col-sm-4 txt-c cb-right-2">
+                <a class="displayb" href="#">
+                <img class="c-obj" alt="Download PDF country" src="/<?php print $theme_path?>/images/ico-download.svg">
+                <span class="displayb txt-m m-s-top fos" data-localize="global.download">Download PDF</span>
+                </a>
+                </div>
+                <div class="col-sm-4 txt-c">
+                <a class="displayb" href="/contact-us">
+                <img class="c-obj" alt="Download PDF country" src="/<?php print $theme_path?>/images/ico-feedback.svg">
+                <span class="displayb txt-m m-s-top fos" data-localize="global.feedback">Give us your feedback</span>
+                </a>
+                </div>
+              </div>
             </div>
         </div>
     </div>
@@ -155,13 +180,7 @@
                 <h2 class="indicators section-title">Indicators</h2>
             </div>
         </div>
-        <?php if ($data['charts']['tableIndicators']): ?>
-        <div class="row">
-            <div class="socioeconomic-values chart-content"><?php //pa($data['charts']['tableIndicators'],1); ?>
-               <?php echo landbook_table_render($data['charts']['tableIndicators']); ?>
-            </div>
-        </div>
-        <?php endif; ?>
+        <?php print theme('indicators-table',array('data' => '')); ?>
     </div>
 </section>
 
@@ -173,13 +192,7 @@
                 <h2 class="infographics section-title">Compare countries</h2>
             </div>
         </div>
-        <div class="row">
-        <?php  $block = block_load('landbook', 'compare_block');
-                  $block = _block_render_blocks(array($block));
-                  $block_build = _block_get_renderable_array($block);
-                  echo drupal_render($block_build);
-                ?>
-        </div>
+        <?php print theme('compare-contries',array('data' => '')); ?>
     </div>
 </section>
 
@@ -191,9 +204,7 @@
                 <h2 class="mapping section-title">Mapping</h2>
             </div>
         </div>
-        <div class="row">
-            <div id="wrapper-mapping" data-highcharts-map="1"></div> 
-        </div>
+        <?php print theme('mapping',array('data' => '')); ?>
     </div>
 </section>
 
@@ -205,34 +216,7 @@
                 <h2 class="rankings section-title">Infographics</h2>
             </div>
         </div>
-        <div class="row">
-          <?php  $block = block_load('landbook', 'infografic_block');
-                  $block = _block_render_blocks(array($block));
-                  $block_build = _block_get_renderable_array($block);
-                  echo drupal_render($block_build);
-                ?>
-        </div>
-        <div class="row">
-        <?php  $block = block_load('block', '4');
-                  $block = _block_render_blocks(array($block));
-                  $block_build = _block_get_renderable_array($block);
-                  echo drupal_render($block_build);
-                ?>
-        </div>
-        <div class="row">
-            <?php  drupal_add_js(array('landbook' => array('data_land' => $data['charts']['gaugeIndicators'])), 'setting'); ?>
-            <div class="col-md-6">
-              <div id="wrapper-piechart" data-highcharts-chart="1"></div>
-            </div>
-            <div class="col-md-6 sep-left-charts">
-              <div id="wrapper-spiderchart" data-highcharts-chart="2"></div>
-              <?php  $block = block_load('block', '3');
-                  $block = _block_render_blocks(array($block));
-                  $block_build = _block_get_renderable_array($block);
-                  echo drupal_render($block_build);
-                ?>
-            </div>
-        </div>
+        <?php print theme('infographics',array('data' => '')); ?>
     </div>
 </section>
 

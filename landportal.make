@@ -108,6 +108,7 @@ projects:
   - webform
   - disable_messages
   - i18nviews
+  - field_collection
 
 includes:
   - "landportal-custom.make"

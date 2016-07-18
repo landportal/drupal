@@ -42,7 +42,11 @@ function landbook_theme($existing, $type, $theme, $path) {
         'datasources'       => $struct + array('template' => 'datasources'),
         'indicator'         => $struct + array('template' => 'indicator', 'indicator' => NULL),
         'indicators'        => $struct + array('template' => 'indicators'),
+        'indicators-table'  => $struct + array('template' => 'indicators-table'),
         'reuse'             => $struct + array('template' => 'reuse'),
         'widgets'           => $struct + array('template' => 'widgets'),
+        'compare-contries'  => $struct + array('template' => 'compare-contries'),
+        'infographics'  => $struct + array('template' => 'infographics'),
+        'mapping'  => $struct + array('template' => 'mapping'),
     );
 }

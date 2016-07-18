@@ -86,11 +86,14 @@ function landbook_country_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'listing' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'title' => array(
           'weight' => '1',

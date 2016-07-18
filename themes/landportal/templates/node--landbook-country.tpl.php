@@ -11,6 +11,15 @@
  * @ingroup themeable
  */
 ?>
+<?php switch ($view_mode) : ?>
+<?php case 'teaser' : ?>
+    <?php hide($content['links']); ?>
+    <div class="col-md-offset-2 col-md-8 country-description">
+      <?php print render($content); ?>
+    </div>
+<?php break; ?>
+
+<?php default: ?>
 <aside class="col-md-4">
     <article>
       <h2 class="section"><span><?php echo t('Country map'); ?></span></h2>
@@ -60,3 +69,5 @@
   <?php print render($content['comments']); ?>
 
 </div>
+<?php break; ?>
+<?php endswitch; ?>

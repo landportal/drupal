@@ -228,5 +228,26 @@ function landbook_preprocess_page(&$vars){
         if(!empty(arg(2))){
             $vars['theme_hook_suggestions'][] = 'page__book_country';
         }
+        $vars['country_description']="XAXA";
     }
+}
+
+
+function load_country_description($title){
+
+    $nid = db_select('node', 'n')
+  ->fields('n', array('nid'))
+  ->condition('n.title', $title)
+  ->condition('n.type', 'landbook_country')
+  ->execute()
+  ->fetchField();
+
+  if(empty($nid)){
+    return '';
+  }
+  else{
+    $node = node_load($nid);
+    $description=node_view($node, 'teaser'); 
+    return $description ;
+  }
 }
