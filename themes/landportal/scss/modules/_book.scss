@@ -23,7 +23,7 @@ section a{
  
 .landbook-header-bg {
     background-color: $green-dark;
-    background-image: url(../images/header/grass-medium.png);
+    background-image: url('../images/header/grass-medium.png');
 }
 
 .content .content.container {
@@ -158,25 +158,25 @@ section a{
 			margin-bottom: 35px;
 
 			&.indicators{
-				background: url('../images/indicators.png') no-repeat 50% 0;
+				background:url('../images/indicators.png') no-repeat 50% 0;
 			}
 			&.infographics{
-				background: url('../images/infographics.png') no-repeat 50% 0;
+				background:url('../images/infographics.png') no-repeat 50% 0;
 			}
 			&.mapping{
-				background: url('../images/mapping.png') no-repeat 50% 0;
+				background:url('../images/mapping.png') no-repeat 50% 0;
 			}
 			&.rankings{
-				background: url('../images/rankings.png') no-repeat 50% 0;
+				background:url('../images/rankings.png') no-repeat 50% 0;
 			}
 			&.media{
-				background: url('../images/media.png') no-repeat 50% 0;
+				background:url('../images/media.png') no-repeat 50% 0;
 			}
 			&.partners{
-				background: url('../images/partners.png') no-repeat 50% 0;
+				background:url('../images/partners.png') no-repeat 50% 0;
 			}
 			&.library{
-				background: url('../images/library.png') no-repeat 50% 0;
+				background:url('../images/library.png') no-repeat 50% 0;
 			}
 		}
 		.adj-blog{
@@ -355,7 +355,7 @@ section a{
 				    }
 				}
 				.date{
-					background-image: url("../images/ico-cal.png");
+					background-image:url("../images/ico-cal.png");
 				    background-position: left center;
 				    background-repeat: no-repeat;
 				    padding-left: 25px;
@@ -366,7 +366,7 @@ section a{
 				    font-size: 14px;
 				}
 				.location{
-					background-image: url("../images/ico-loc.png");
+					background-image:url("../images/ico-loc.png");
 				    background-position: left center;
 				    background-repeat: no-repeat;
 				    padding-left: 25px;
@@ -500,9 +500,19 @@ section a{
 			tbody{
 				.t_indicators_body_loader {
 				    height: 310px;
-				    position: relative;
-
-				    
+				    position: relative;   
+				}
+				tr{
+					&:nth-child(2n) {
+					    background: #f2f2f2 none repeat scroll 0 0;
+					}
+					td{
+						border-bottom: 1px solid #f0f0f0;
+					    border-right: 1px solid #f0f0f0;
+					    padding: 10px;
+					    font-size:16px;
+					    font-family: "Merriweather",serif !important;
+					}
 				}
 			}
 
@@ -536,7 +546,7 @@ section a{
 					}
 
 					.mic-i-control{
-						background-image: url("../images/icon-open-info.png");
+						background-image:url("../images/icon-open-info.png");
 					    background-position: center center;
 					    background-repeat: no-repeat;
 					    display: block;
@@ -610,7 +620,7 @@ section a{
 			select{
 				background: #f7f7f7 none repeat scroll 0 0;
 				min-width:300px;
-				background-image: url("../images/toggle-arrow.png"); 
+				background-image:url("../images/toggle-arrow.png"); 
 				background-position: right 10px center;
 	   			background-repeat: no-repeat;
 			}
@@ -624,7 +634,7 @@ section a{
 	    padding: 9px 12px 9px 10px;
 	    width: 100%;
 		background: #ffffff none repeat scroll 0 0;
-		background-image: url("../images/toggle-arrow.png");
+		background-image:url("../images/toggle-arrow.png");
 	    background-position: right 10px center;
 	    background-repeat: no-repeat;
 	    box-shadow: 4px 5px 0 0 #6e872a;
@@ -892,4 +902,52 @@ section a{
 
 .cbtn-s-dis:hover, .cbtn-s-dis:focus, .cbtn-s-dis:active {
   background-color: #CCC;
+}
+.hddn {
+    display: none;
+}
+
+
+
+
+.social-block{
+	position: fixed;
+	right: 0px;
+	top: 50%;
+	width: 45px !important;
+	transform: translate(0px, -50%);
+
+	.addtoany_list{
+		a{
+			float:left;
+			padding:0;
+
+			&.a2a_button_facebook{
+				background:#4d70a8;
+			}
+
+			&.a2a_button_twitter{
+				background:#00baf2;
+			}
+			&.a2a_button_google_plus{
+				background:#e2411d;
+			}
+
+			span{
+				border-radius: 0 !important;
+				display:block;
+
+				&.a2a_s_facebook{ 
+				background:url('../images/sh-facebook.png') no-repeat 0 0;
+				}
+
+				&.a2a_s_twitter{
+					background:url('../images/sh-twitter.png') no-repeat 0 0;
+				}
+				&.a2a_s_google_plus{
+					background:url('../images/sh-googleplus.png') no-repeat 0 0;
+				}
+			}
+		}
+	}
 }

@@ -82,6 +82,41 @@ function land_util_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['landportal_blocks-lp_share'] = array(
+    'cache' => 1,
+    'css_class' => 'social-block',
+    'custom' => 0,
+    'delta' => 'lp_share',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'landportal_blocks',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => 'footer',
+        'status' => 1,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'landportal' => array(
+        'region' => 'footer',
+        'status' => 1,
+        'theme' => 'landportal',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['search-form'] = array(
     'cache' => -1,
     'css_class' => 'col-lg-2 search-form',

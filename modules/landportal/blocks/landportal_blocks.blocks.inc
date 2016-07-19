@@ -50,6 +50,11 @@ function landportal_blocks_block_info() {
       'visibility'      => BLOCK_VISIBILITY_LISTED,
       'pages'           => "debate/debates/*\ndebate/news/*\ndebate/event/*",
     ),
+    'lp_share' => array(
+      'info'            => t('Share Buttons Block'),
+      'status'          => TRUE,
+      'region'          => 'footer',
+    ),
   );
   return $blocks;
 }
@@ -171,6 +176,9 @@ function landportal_blocks_block_view($delta = '') {
     $str = preg_replace('/(<a[^>]+>)([^<]*)/', '\1<i class="fa fa-\2"></i>', $esi);
     $block['content'] = array('#type' => 'markup', '#markup' => $str);
     break;
+  case 'lp_share':
+    $text = addtoany_create_node_buttons(menu_get_object());
+    $block['content'] = $text;
   }
   return $block;
 }

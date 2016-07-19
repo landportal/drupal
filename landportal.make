@@ -109,6 +109,7 @@ projects:
   - disable_messages
   - i18nviews
   - field_collection
+  - addtoany
 
 includes:
   - "landportal-custom.make"

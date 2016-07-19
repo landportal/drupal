@@ -1,14 +1,15 @@
-(function($) {
+var $ = jQuery.noConflict();
+//(function($) {
 var countryCode=Drupal.settings.landbook.countryCode;
 var dataLand=Drupal.settings.landbook.data_land;
+var theme_path=Drupal.settings.landbook.path;
 
-/*
 var lang = getUrlVars()["lang"];
 
 if(lang ==undefined || lang=="") {
 	lang = "en";
 }
-
+/*
 var jsonLGAF_values = 'json/LGAF_values.json'
 $.ajax({
       async: false,
@@ -18,11 +19,12 @@ $.ajax({
       success : function(data) {
       		window.LGAF_values = data;
       }
-});
-*/
+});*/
+
 
 //CURRENT COUNTRY ISO3 CODE
-var current_country_iso3 = countryCode; //"TZA";//"CHN";//"BWA"; //Tanzania
+//var current_country_iso3 = getUrlVars()["_country"]; //"TZA";//"CHN";//"BWA"; //Tanzania
+var current_country_iso3 = countryCode; 
 var country_URL_root = "http://data.landportal.info/geo/";
 var current_country_URL = country_URL_root + current_country_iso3;
 var series_color = ["#1f77b4", "#aec7e8", "#ff7f0e", "#ffbb78", "#2ca02c", "#98df8a", "#d62728", "#ff9896", "#9467bd", "#c5b0d5", "#8c564b", "#c49c94", "#e377c2", "#f7b6d2", "#7f7f7f", "#c7c7c7", "#bcbd22", "#dbdb8d", "#17becf", "#9edae5"];
@@ -583,10 +585,41 @@ function setDataURLs(){
 	//Obtenemos informaciГіn completa de un indicador
 	query_get_indicator_info_URL = URL_prefix + encodeURIComponent(query_get_indicator_info) + URL_suffix; 
 
+	//console.log(query_map_URL);
+
+
 }
 
 
 setDataURLs();
+//console.log(query_pie_URL);
+//console.log(query_map_URL);
+//console.log(query_spider_URL);
+//console.log(query_line_URL);
+
+
+//CARGA DE INDICADORES EN SELECTS
+// function set_all_indicators() {
+
+// 	var $selIndicator = $(".sindicator");
+// 	$selIndicator.html('');
+
+// 	$.getJSON(query_all_indicators_URL, function (data) {
+// 		for(i=0; i < data.results.bindings.length; i++){
+// 			//info_indicator_country.push(data.results.bindings[i].datasetLabel.value);
+// 			//info_all_indicators.push(data.results.bindings[i].indicatorUrl.value);
+// 			info_all_indicators.push({'name':data.results.bindings[i].label.value,'URL':data.results.bindings[i].indicatorUrl.value});
+// 			global_select_indicators += '<option value="'+data.results.bindings[i].indicatorUrl.value+'">'+data.results.bindings[i].label.value+'</option>';
+// 			//info_all_indicators.push();
+// 		}
+// 	});
+
+// 	$selIndicator.append(global_select_indicators);
+// }
+
+//set_all_indicators();
+
+
 
 function getIndicatorInfo() {
 
@@ -641,6 +674,10 @@ function set_country_indicators() {
 				info_country_indicators.push({'name':data.results.bindings[i].indicatorLabel.value,'URL':data.results.bindings[i].indicatorURL.value});
 				global_select_indicators += '<option value="'+data.results.bindings[i].indicatorURL.value+'">'+truncateString(data.results.bindings[i].indicatorLabel.value, 40, ' ', '...')+'</option>';
 			}
+			// if(!$.isNumeric(EndIndicator)) {
+			// 	info_country_indicators.push({'name':data.results.bindings[i].indicatorLabel.value,'URL':data.results.bindings[i].indicatorURL.value});
+			// 	global_select_indicators += '<option value="'+data.results.bindings[i].indicatorURL.value+'">'+data.results.bindings[i].indicatorLabel.value+'</option>';
+			// }
 			
 		}
 
@@ -668,6 +705,8 @@ function loadDefaultTableIndicators(){
 		var indicatorIndex;
 		for(j=0;j<data.results.bindings.length;j++){
 			for(i=0;i<data.head.vars.length;i++){
+				//indicatorIndex = default_table_indicators.containsIndicator(data.results.bindings[j].indicatorURL.value);
+				//console.log("Indicator-index:" + indicatorIndex);
 				item_type = data.head.vars[i];
 				switch(item_type){
 					case "obs": 						break;
@@ -677,9 +716,20 @@ function loadDefaultTableIndicators(){
 														break;
 					case "indicatorDescription": 		newIndicator.description = data.results.bindings[j][item_type].value;
 														break;
-					case "year": 						newIndicator.year = data.results.bindings[j][item_type].value;
+					case "year": 						/*if(indicatorIndex!=-1){
+															indicators[indicatorIndex].years.push(data.results.bindings[j][item_type].value);
+														}
+														else{
+															newIndicator.years = new Array();*/
+															newIndicator.year = data.results.bindings[j][item_type].value;
+														//}
 														break;
-					case "value": 						newIndicator.value = data.results.bindings[j][item_type].value;
+					case "value": 						/*if(indicatorIndex!=-1){
+															indicators[indicatorIndex].values.push(data.results.bindings[j][item_type].value);
+														}
+														else{*/
+															newIndicator.value = data.results.bindings[j][item_type].value;
+														//}
 														break;
 					case "unitLabel": 					newIndicator.unit_label = data.results.bindings[j][item_type].value;
 														break;
@@ -694,7 +744,9 @@ function loadDefaultTableIndicators(){
 					default:							break;
 				}
 			}
+			//if(indicatorIndex==-1){
 				default_table_indicators.push(newIndicator);
+			//	}
 				newIndicator = {};
 		}
 
@@ -706,7 +758,7 @@ function loadDefaultTableIndicators(){
                     <td class="t-td txt-ar">'+default_table_indicators[i].value.replace(/\B(?=(\d{3})+(?!\d))/g, ",")+'</td>\
                     <td class="t-td">'+default_table_indicators[i].unit_label+'</td>\
                     <td class="t-td"><a href="'+default_table_indicators[i].dataset_URL+'" target="_blank">'+default_table_indicators[i].dataset_label+'</a> (<a href="'+default_table_indicators[i].source_URL+'" target="_blank">'+default_table_indicators[i].source_label+'</a>)</td>\
-                    <td class="t-td txt-c"><a href="#" class="r-row del-row" data-ord=""><img src="img/ico-trash.svg" class="c-obj"></a></td>\
+                    <td class="t-td txt-c"><a href="#" class="r-row del-row" data-ord=""><img src="/'+theme_path+'/images/ico-trash.svg" class="c-obj"></a></td>\
                   </tr>';
 
             $("table#tindicators tbody").append(row);
@@ -828,7 +880,7 @@ function loadELGAFvalues() {
 
 					//console.log(indicatorRoot+"--"+JsonID);
 
-					if(indicatorRoot === JsonID) {
+					if(indicatorRoot === JsonID){
 						if(iURL == jsonIDraw){
 							indicatorsValues.push({
 					            id: iURL, 
@@ -883,12 +935,14 @@ function loadYearsIndicatorCountry(){
 			//console.log(iop);
 		});
 		$("#isyear").append(iop);
-		if(iop!="") {
+		if(iop!=""){
 			$("#isyear").removeClass("cinput-disabled");
 			$("#isyear").prop( "disabled", false );
 		}
 	});
 }
+
+
 
 function loadYearsIndicatorMap(){
 	
@@ -908,7 +962,7 @@ function loadYearsIndicatorMap(){
 		});
 		$("#msyear").html('<option value="0" data-localize="inputs.syear">Select year ...</option>');
 		$("#msyear").append(miop);
-		if(miop!="") {
+		if(miop!=""){
 			$("#msyear").removeClass("cinput-disabled");
 			$("#msyear").prop( "disabled", false );
 		}
@@ -959,18 +1013,18 @@ function loadCountryIndicatorInfo(){
 				
 		}
 
-		/*var addrow = '<tr>\
+		var addrow = '<tr>\
 			<td class="t-td" data-id="'+selected_indicator_id+'"><a href="'+selected_indicator_id+'" target="_blank">'+current_indicator_name+'</a> <span class="info-bubble txt-s fright" data-toggle="tooltip" data-placement="top" title="'+info_indicator_country["7"]+'">i</span></td>\
 		    <td class="t-td txt-c year" data-year="'+info_indicator_country["1"]+'">'+info_indicator_country["1"]+'</td>\
 		    <td class="t-td txt-ar">'+info_indicator_country["2"].replace(/\B(?=(\d{3})+(?!\d))/g, ",")+'</td>\
 		    <td class="t-td">'+info_indicator_country["3"]+'</td>\
 		    <td class="t-td"><a href="'+info_indicator_country["5"]+'" target="_blank">'+info_indicator_country["0"]+'</a> (<a href="'+info_indicator_country["6"]+'" target="_blank">'+info_indicator_country["4"]+'</a>)</td>\
-		    <td class="t-td txt-c"><a href="#" class="r-row del-row" data-ord=""><img src="img/ico-trash.svg" class="c-obj"></a></td>\
+		    <td class="t-td txt-c"><a href="#" class="r-row del-row" data-ord=""><img src="/'+theme_path+'/images/ico-trash.svg" class="c-obj"></a></td>\
 		    </tr>';
 		$("table#tindicators tbody").append(addrow);
-*/
+
 		$(function () {
-		  $('[data-toggle="tooltip"]').tooltip();
+		  $('[data-toggle="tooltip"]').tooltip()
 		})
 
 	});
@@ -996,7 +1050,7 @@ function loadCountriesPerIndicators(){
 
 		$("#lscountry").append(iop);
 
-		if(iop!="") {
+		if(iop!=""){
 			$("#lscountry").removeClass("cinput-disabled");
 			$("#lscountry").prop( "disabled", false );
 		}
@@ -1005,114 +1059,94 @@ function loadCountriesPerIndicators(){
 
 }
 
+
+//console.log(default_table_indicators);
+//GENERACIГ“N DE GRГЃFICAS
+
 function loadPieChart(){
-	$('#wrapper-piechart').highcharts({
-	    chart: {
-	        plotBackgroundColor: null,
-	        plotBorderWidth: null,
-	        plotShadow: false,
-	        type: 'pie',
-	        backgroundColor: '#F8F8F8',
-	    },
-	    title: {
-				text: '<span class="displayb txt-c">Land Use</span><div class="txt-m displayb txt-c">Total land area: ' + 10000 + '  (1000 Ha) <span class="displayb c-g40">' + 2012 + '</span></div>',
+	//PIE CHART
+	$.getJSON(query_pie_URL, function (data) {
+		//console.log(data);
+
+
+	var chart_series = new Array();
+	var chart_series_labels = data.head.vars;
+	var serie_name;
+	var serie_color;
+	for(i=0; i<chart_series_labels.length-2; i++){
+		switch (chart_series_labels[i]){
+			case "ArableLandPer": 					serie_name = "Arable Land";
+													serie_color = "#8c6d31";
+													break;
+			case "PermanentCropsPer": 				serie_name = "Permanent crops";
+													serie_color = "#e7ba52";
+													break;
+			case "PermanentPasturesAndMedowsPer": 	serie_name = "Permanent pastures and meadows";
+													serie_color = "#b5cf6b";
+													break;
+			case "ForestLandPer": 					serie_name = "Forest Land";
+													serie_color = "#637939";
+													break;
+			case "OtherPer": 						serie_name = "Other";
+													serie_color = "#9c9ede";
+													break;
+			default:								serie_name = "UNKNOWN_SERIE_NAME_ERROR";
+													serie_color = "#000000";
+													break;
+		}
+		chart_series.push({name:serie_name, y:parseFloat(data.results.bindings[0][chart_series_labels[i]].value), color:serie_color});
+	}
+	var country_land_area = data.results.bindings[0][chart_series_labels[chart_series_labels.length-2]].value;
+	var country_land_area_str = country_land_area.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	var datatime = new Date(data.results.bindings[0][chart_series_labels[chart_series_labels.length-1]].value);
+	var data_year = datatime.getFullYear();
+	//console.log(chart_series);
+
+		//## Pie chart
+		var pieChart_init;
+		var $divPie = $('#wrapper-piechart');
+		var CharPieOp = {
+			chart: {
+				plotBackgroundColor: null,
+				plotBorderWidth: null,
+				renderTo: $divPie[0],
+				plotShadow: false,
+				type: 'pie',
+				backgroundColor: 'transparent'
+			},
+			credits:{
+				enabled:false
+			},
+			title: {
+				text: '<span class="displayb txt-c">Land Use</span><div class="txt-m displayb txt-c">Total land area: ' + country_land_area_str + '  (1000 Ha) <span class="displayb c-g40">' + data_year + '</span></div>',
 				useHTML: true
 			},
-	    tooltip: {
-	        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-	    },
-	    plotOptions: {
-	        pie: {
-	            allowPointSelect: true,
-	            cursor: 'pointer',
-	            dataLabels: {
-	                enabled: false
-	            },
-	            showInLegend: true
-	        }
-	    },
-	    series: [{
-	        name: '',
-	        colorByPoint: true,
-	        data: [{
-	            name: 'Arable Land',
-	            y: 56.33,
-	            color : "#8c6d31",
-	        }, {
-	            name: 'Permanent crops',
-	            y: 24.03,
-	            sliced: true,
-	            selected: true,
-	            color : "#e7ba52",
-	        }, {
-	            name: 'Permanent pastures and meadows',
-	            y: 10.38,
-	            color : "#b5cf6b",
-	        }, {
-	            name: 'Forest Land',
-	            y: 4.77,
-	            color : "#637939",
-	        }, {
-	            name: 'Other',
-	            y: 2,
-	            color : "#9c9ede",
-	        }]
-	    }]
+			tooltip: {
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			},
+			legend: {
+	            itemWidth: 300
+	        },
+			plotOptions: {
+				pie: {
+					allowPointSelect: true,
+					cursor: 'pointer',
+					dataLabels: {
+						enabled: false
+					},
+					showInLegend: true
+				}
+			},
+			series: [{
+				name: ' ',
+				colorByPoint: true,
+				data: chart_series
+			}]
+		};
+
+		pieChart_init = new Highcharts.Chart(CharPieOp);
 	});
 }
-
-function loadSpiderChart(){
-	$('#wrapper-spiderchart').highcharts({
-
-	    chart: {
-	    	backgroundColor: '#F8F8F8',
-	        polar: true,
-	        type: 'line',
-	    },
-
-	    title: {
-	        text: 'Main Indexes',
-	        x: -80
-	    },
-
-	    pane: {
-	        size: '70%'
-	    },
-
-	    xAxis: {
-	        categories: ['SIGI(2014)', 'GINI index (2012)', 'HDI (2014)', 'GHI (2015)'],
-	        tickmarkPlacement: 'on',
-	        lineWidth: 0
-	    },
-
-	    yAxis: {
-	        gridLineInterpolation: 'polygon',
-	        lineWidth: 0,
-	        min: 0
-	    },
-
-	    tooltip: {
-	        shared: true,
-	        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
-	    },
-
-	    legend: {
-	        align: 'right',
-	        verticalAlign: 'top',
-	        y: 70,
-	        layout: 'vertical'
-	    },
-
-	    series: [{
-	        name: 'Name',
-	        data: [81, 61, 67, 85],
-	        pointPlacement: 'on'
-	    }]
-
-	});
-
-}
-
 function initMapTop(){
 	$('#mapDiv').highcharts('Map', {	  
 	    chart: {
@@ -1201,8 +1235,52 @@ function initMapTop(){
 	$('#mapDiv').highcharts().mapZoom(3);
 }
 
+
 function loadMapChart(){
-	$('#wrapper-mapping').highcharts('Map', {
+	//#Mapping graph
+	$("#maparea .pos_loader_data").removeClass("hddn");
+
+	indicator_id_more_info = map_selected_indicator_URL;
+	setDataURLs();
+	getIndicatorInfo();
+
+	$.getJSON(query_map_URL, function (data) {
+
+		
+		$(".tit-mapping").html('<p class="m-s-top m-xs-bottom txt-sh-dark displayb txt-c fos">'+indicator_info["0"].name+' ('+map_current_year+')</p><p class="txt-sh-dark txt-c fos"><a href="'+indicator_info["0"].datasetURL+'" target="_blank">'+indicator_info["0"].datasetLabel+'</a> (<a href="'+indicator_info["0"].sourceOrgURL+'" target="_blank">'+indicator_info["0"].sourceOrgLabel+'</a>)</p>');
+
+		//console.log(data.results.bindings[i].countryISO3.value);
+		//console.log(data);
+		var data_values = new Array();
+		var data_value;
+		var data_value_min;
+		var data_value_max;
+		for(i=0; i < data.results.bindings.length; i++){
+			if(data.results.bindings[i].year.value == map_current_year){
+				var data_value = parseFloat(data.results.bindings[i].value.value);
+				if ((data_value>data_value_max)||(data_value_max == null)){
+					data_value_max = data_value;
+				}
+				if ((data_value<data_value_min)||(data_value_min == null)){
+					data_value_min = data_value;
+				}
+				data_values.push({code:data.results.bindings[i].countryISO3.value, value:data_value});
+			}
+		}
+		//console.log(data_values);
+		//console.log("Range: " + data_value_min + ", " + data_value_max);
+	
+	  // var data = [{
+	  //   "color": "#a3c642",
+	  //   "code": "ES"
+	  // }];
+
+	  /*$.each(data, function() {
+	    this.id = this.code;
+	  });
+		*/
+
+	  $('#wrapper-mapping').highcharts('Map', {
 	    chart: {
 	      backgroundColor: '#ffffff',
 	      margin: 0,
@@ -1254,8 +1332,8 @@ function loadMapChart(){
 	    },
 
 	    colorAxis: {
-	      min: 0,
-	      max: 100,
+	      min: data_value_min,
+	      max: data_value_max,
 	      minorTickLength: 0,
 	      //type: 'logarithmic',
 	      maxColor: "#45551A",
@@ -1263,13 +1341,13 @@ function loadMapChart(){
 	    },
 
 	    series: [{
-	      data: [],
+	      data: data_values,
 	      allowPointSelect: true,
 	      nullColor: '#bbd6d8',
 	      borderColor: 'white',
 	      mapData: map_data,//Highcharts.maps['custom/world'],
 	      joinBy: ['id', 'code'],
-	      name: ''/*indicator_info["0"].name*/, //current_indicator_name,
+	      name: indicator_info["0"].name, //current_indicator_name,
 	      states: {
 	        hover: {
 	          color: '#F5A623'
@@ -1281,13 +1359,144 @@ function loadMapChart(){
 	        }
 	      },
 	      tooltip: {
-	        pointFormat: '{point.name} <b>' + '{point.value}'.replace(/\B(?=(\d{3})+(?!\d))/g, ",")+' '+''/*indicator_info["0"].unit*/+'</b>',
+	        pointFormat: '{point.name} <b>' + '{point.value}'.replace(/\B(?=(\d{3})+(?!\d))/g, ",")+' '+indicator_info["0"].unit+'</b>',
 	        //valueSuffix: '/kmВІ'
 	      }
 	    }]
 
-	 });
+	  });
+
+	  //$('#wrapper-mapping').highcharts().get(current_country_iso3).select();
+	  //$('#wrapper-mapping').highcharts().get(country).zoomTo();
+	  //$('#wrapper-mapping').highcharts().mapZoom(12);
+	  $("#maparea .pos_loader_data").addClass("hddn");
+	});
+
+	
+	//alert("go");
+	//chart.redraw();
 }
+
+
+function loadSpiderChart(){
+ //#Spider chart
+	$.getJSON(query_spider_URL, function (data) {
+		//console.log("Spider");
+		var chart_series = new Array();
+		var chart_series_labels = data.head.vars;
+		var serie_name;
+		var serie_value;
+		var serie_year;
+		var categories_names = new Array();
+		
+		for(i=0; i<chart_series_labels.length; i++){
+			switch (chart_series_labels[i]){
+				case "sigiTo100":	if (typeof data.results.bindings[0][chart_series_labels[2]] !== "undefined"){
+										serie_name = "SIGI "+"("+data.results.bindings[0][chart_series_labels[2]].value+")";
+									}
+									break;
+				// case "sigiYear":	serie_year = "("+data.results.bindings[0][chart_series_labels[i]].value+")";
+				// 					break;
+				case "giniTo100": 	if (typeof data.results.bindings[0][chart_series_labels[5]] !== "undefined"){
+										serie_name = "GINI Index "+"("+data.results.bindings[0][chart_series_labels[5]].value+")";
+									}
+									break;
+				// case "giniYear":	serie_year = chart_series_labels[i].value;
+				// 					break;
+				case "hdiTo100": 	if (typeof data.results.bindings[0][chart_series_labels[8]] !== "undefined"){
+										serie_name = "HDI "+"("+data.results.bindings[0][chart_series_labels[8]].value+")";
+									}
+									break;
+				// case "hdiYear":		serie_year = chart_series_labels[i].value;
+				// 					break;
+				case "ghiTo100": 	if (typeof data.results.bindings[0][chart_series_labels[11]] !== "undefined"){
+										serie_name = "GHI "+"("+data.results.bindings[0][chart_series_labels[11]].value+")";
+									}
+									break;
+				// case "ghiYear":		serie_year = chart_series_labels[i].value;
+				// 					break;
+				default:			serie_name = "notused";
+									break;
+			}
+
+			if(serie_name!="notused"){
+				categories_names.push(serie_name);
+				if(data.results.bindings[0][chart_series_labels[i]]!=undefined){
+					serie_value = data.results.bindings[0][chart_series_labels[i]].value;
+				}
+				else{
+					serie_value = null;
+				}
+				if(data.results.bindings[0] != undefined){
+					chart_series.push(parseFloat(serie_value));
+				}
+				else{
+					//console.log("pusheando null...");
+					chart_series.push(null);
+				}
+			}
+		}
+		//alert(chart_series);
+		var spiderChart_init;
+		var $divSpider = $('#wrapper-spiderchart');
+		var CharSpiderOp = {
+			chart: {
+				polar: true,
+				type: 'line',
+				renderTo: $divSpider[0],
+				backgroundColor: 'transparent'
+			},
+
+			credits:{
+				enabled:false
+			},
+
+			title: {
+				text: '<div class="txt-m displayb txt-c">Main Indexes</div>',
+				useHTML: true
+			},
+
+			pane: {
+				size: '80%'
+			},
+
+			xAxis: {
+				categories: categories_names,
+				tickmarkPlacement: 'on',
+				lineWidth: 0
+			},
+
+			yAxis: {
+				gridLineInterpolation: 'polygon',
+				lineWidth: 0,
+				min: 0
+			},
+
+			tooltip: {
+				shared: true,
+				pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+			},
+
+			legend: {
+			   // align: 'right',
+				//verticalAlign: 'top',
+				//y: 70,
+				//layout: 'vertical'
+			},
+
+			series: [{
+				showInLegend:false,
+				name: setNameCountry(current_country_iso3),
+				data: chart_series,
+				pointPlacement: 'on'
+			}]
+		};
+
+		spiderChart_init = new Highcharts.Chart(CharSpiderOp);
+	});
+}
+
+
 function loadLineChart(){
 //## LINE CHART
 	
@@ -1399,12 +1608,17 @@ function loadLineChart(){
 	});
 }
 
+function loadAllCharts(){
+	initMapTop();
+	loadPieChart();
+	loadMapChart();	
+	loadSpiderChart();
+	loadLineChart();
 
-loadCountryIndicatorInfo();
-loadPieChart();
-initMapTop();
-loadSpiderChart();
-loadMapChart();
+	//$("[data-localize]").localize("lang/lp_labels", { language: lang });
+}
+
+loadAllCharts();
 
 
 //Funcion para recoger las variables de la URL
@@ -1443,7 +1657,7 @@ function load_lgaf_defaults () {
 	$(".egsyear").prop('selectedIndex', 1);
 	var yearsel = $(".egsyear").prop('selectedIndex', 1).val();
 
-	if(yearsel == undefined || yearsel == "") {
+	if(yearsel == undefined || yearsel == ""){
 		$(".LGAF_area").addClass("hddn");
 		return false;
 	}else{
@@ -1516,12 +1730,37 @@ function loadLineDefaults() {
 		var date_ini = years_indicator_country["0"];
 		var date_end = years_indicator_country[years_indicator_country.length - 1];
 		current_range_years_selected.push(parseInt(date_end),parseInt(date_ini));
-		loadLineChart();
+		loadLineChart()
+		//alert(date_end);
+		//current_range_years_selected;
 	},600);
 
 }
 
+function selectSetPanels(year) {
+	var $selPanels = $(".egspanel");
+	$.getJSON("json/LGAF_panels.json",function(data){
+		$selPanels.html('');
+		$selPanels.append('<option value="0">Select panel ...</option>');
+		$.each(data[year].panels, function(key,val){
+			$selPanels.append('<option value="'+val.id+'" name="'+val.name+'">'+val.name+'</option>');
+		});
+	});
+}
 
-})( jQuery );
+window.ELGAF_indicators = new Array();
+function selectSetIndicators(id) {
 
+	var $selIndEG = $(".egsindicator");
+	$.getJSON("json/LGAF_indicators.json",function(data){
+		$selIndEG.html('');
+		$selIndEG.append('<option value="0">Select Sub-panel ...</option>');
+		$.each(data[id].indicators, function(key,val){
+			$selIndEG.append('<option value="'+val.id+'" name="'+val.name+'">'+val.name+'</option>');
+			window.ELGAF_indicators.push(val.id);
+		});
+	})
+	
+}
 
+//})( jQuery );
