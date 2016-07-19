@@ -72,7 +72,7 @@ $(document).ready(function() {
 			$("#tindicators tbody tr").each(function(){
 				var indicatorTable = $(this).find("td").attr("data-id");
 				var yearTable = parseInt($(this).find("td.year").text());
-				console.log(yearsel+':'+indicatorsel+" - "+yearTable+':'+indicatorTable);
+				//console.log(yearsel+':'+indicatorsel+" - "+yearTable+':'+indicatorTable);
 				if (indicatorTable == indicatorsel && yearTable == yearsel){
 					exist ++;
 				}
@@ -145,8 +145,8 @@ $(document).ready(function() {
 			var newCountry = $("#lscountry").val();
 			var dateFrom = parseInt($("#lsperiod_from").val());
 			var dateTo = parseInt($("#lsperiod_to").val());
-
-			if(current_compared_countries_iso3.contains(newCountry)) {
+			//console.log(newCountry);
+			if(current_compared_countries_iso3 == newCountry) {
 				alert("This country is already selected!");
 				return false;
 			}

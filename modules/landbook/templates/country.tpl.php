@@ -87,6 +87,40 @@
 
 <h2 class=="fos txt-small m-xs-top" data-localize="global.media">Media</h2>
 -->
+<?php  $block = block_load('views', 'book_latest_blocks-block_3');
+  $block = _block_render_blocks(array($block));
+  $block_build = _block_get_renderable_array($block);
+  $news=drupal_render($block_build);
+?>
+<?php  $block = block_load('views', 'book_latest_blocks-block_1');
+  $block = _block_render_blocks(array($block));
+  $block_build = _block_get_renderable_array($block);
+  $blog=drupal_render($block_build);
+?>
+<?php  $block = block_load('views', 'book_latest_blocks-block_2');
+  $block = _block_render_blocks(array($block));
+  $block_build = _block_get_renderable_array($block);
+  $events=drupal_render($block_build);
+?>
+<?php  $block = block_load('views', 'book_latest_blocks-block');
+  $block = _block_render_blocks(array($block));
+  $block_build = _block_get_renderable_array($block);
+  $debates=drupal_render($block_build);
+?>
+
+<?php $block = block_load('views', 'book_latest_blocks-block_4');
+  $block = _block_render_blocks(array($block));
+  $block_build = _block_get_renderable_array($block);
+  $partners=drupal_render($block_build);
+?>
+<?php  $block = block_load('views', 'book_latest_blocks-block_5');
+    $block = _block_render_blocks(array($block));
+    $block_build = _block_get_renderable_array($block);
+    $library=drupal_render($block_build);
+?>
+
+
+
 
 <div id="mapDiv" data-highcharts-map="0"></div>
 <section class="country-section grey">
@@ -118,15 +152,21 @@
                         <li class="nic-item">
                           <a href="#rankings">Rankings</a>
                         </li>
-                        <li class="nic-item">
-                          <a href="#media">Media</a>
-                        </li>
-                        <li class="nic-item">
-                          <a href="#partners">Partners</a>
-                        </li>
+                        <?php if(!empty($news) || !empty($blog) || !empty($events) || !empty($debates) ): ?>
+                          <li class="nic-item">
+                            <a href="#media">Media</a>
+                          </li>
+                        <?php endif; ?>
+                        <?php if(!empty($partners)): ?>
+                          <li class="nic-item">
+                            <a href="#partners">Partners</a>
+                          </li>
+                        <?php endif; ?>
+                        <?php if(!empty($library)): ?>
                         <li class="nic-item">
                           <a href="#library">Library</a>
                         </li>
+                        <?php endif; ?>
                     </ul>
                     </span>
                 </nav>
@@ -220,28 +260,6 @@
     </div>
 </section>
 
-
-
-<?php  $block = block_load('views', 'book_latest_blocks-block_3');
-  $block = _block_render_blocks(array($block));
-  $block_build = _block_get_renderable_array($block);
-  $news=drupal_render($block_build);
-?>
-<?php  $block = block_load('views', 'book_latest_blocks-block_1');
-  $block = _block_render_blocks(array($block));
-  $block_build = _block_get_renderable_array($block);
-  $blog=drupal_render($block_build);
-?>
-<?php  $block = block_load('views', 'book_latest_blocks-block_2');
-  $block = _block_render_blocks(array($block));
-  $block_build = _block_get_renderable_array($block);
-  $events=drupal_render($block_build);
-?>
-<?php  $block = block_load('views', 'book_latest_blocks-block');
-  $block = _block_render_blocks(array($block));
-  $block_build = _block_get_renderable_array($block);
-  $debates=drupal_render($block_build);
-?>
 <?php if(!empty($news) || !empty($blog) || !empty($events) || !empty($debates) ): ?>
 <section class="country-section">
     <div class="container">
@@ -281,12 +299,6 @@
 </section>
 <?php endif; ?>
 
-<?php 
-$block = block_load('views', 'book_latest_blocks-block_4');
-$block = _block_render_blocks(array($block));
-$block_build = _block_get_renderable_array($block);
-$partners=drupal_render($block_build);
-?>
 <?php if(!empty($partners)): ?>
 <section class="country-section grey">
     <div class="container">
@@ -303,11 +315,6 @@ $partners=drupal_render($block_build);
 </section>
 <?php endif; ?>
 
-<?php  $block = block_load('views', 'book_latest_blocks-block_5');
-    $block = _block_render_blocks(array($block));
-    $block_build = _block_get_renderable_array($block);
-    $library=drupal_render($block_build);
-?>
 <?php if(!empty($library)): ?>
 <section class="country-section">
     <div class="container">
