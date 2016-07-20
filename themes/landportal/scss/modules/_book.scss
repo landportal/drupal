@@ -717,6 +717,11 @@ section a{
 	h2:first-child{
 		display:none;
 	}
+	.block-views{
+		h2{
+			display:block;
+		}
+	}
 }
 
 
