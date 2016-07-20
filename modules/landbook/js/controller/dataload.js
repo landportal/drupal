@@ -12,7 +12,7 @@ $(document).ready(function() {
 	});*/
 	//Iniciamos el carousel de fotos de country
 	$('.carousel-photo-gallery').owlCarousel({
-		center: true,
+		/*center: true,*/
 		items:3,
 		loop:false,
 		margin:1,
