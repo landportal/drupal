@@ -45,8 +45,13 @@ function landbook_theme($existing, $type, $theme, $path) {
         'indicators-table'  => $struct + array('template' => 'indicators-table'),
         'reuse'             => $struct + array('template' => 'reuse'),
         'widgets'           => $struct + array('template' => 'widgets'),
-        'compare-contries'  => $struct + array('template' => 'compare-contries'),
-        'infographics'  => $struct + array('template' => 'infographics'),
-        'mapping'  => $struct + array('template' => 'mapping'),
+        'country-info-block'  => $struct + array('template' => 'country-info-block','data' => NULL),
+        'indicators-block'  => $struct + array('template' => 'indicators-block',array('title'=>NULL)),
+        'compare-countries-block'  => $struct + array('template' => 'compare-countries-block',array('title'=>NULL)),
+        'infographics-block'  => $struct + array('template' => 'infographics-block',array('title'=>NULL)),
+        'mapping-block'  => $struct + array('template' => 'mapping-block',array('title'=>NULL)),
+        'media-block'  => $struct + array('template' => 'media-block',array('title'=>NULL)),
+        'partners-block'  => $struct + array('template' => 'partners-block',array('title'=>NULL)),
+        'library-block'  => $struct + array('template' => 'library-block',array('title'=>NULL)),
     );
 }

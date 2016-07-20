@@ -11,7 +11,7 @@ $(document).ready(function() {
 		"transitionSpeed": 400
 	});*/
 	//Iniciamos el carousel de fotos de country
-	/*$('.carousel-photo-gallery').owlCarousel({
+	$('.carousel-photo-gallery').owlCarousel({
 		center: true,
 		items:3,
 		loop:false,
@@ -26,8 +26,8 @@ $(document).ready(function() {
 			1200:{
 				items:3
 			}
-		}
-	});*/
+		},
+	});
 	//###EVENTOS####//
 	//Borramos item de la tabla indicadores
 	$(document).delegate(".del-row","click", function(e){

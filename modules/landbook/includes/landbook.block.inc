@@ -29,11 +29,29 @@ function landbook_block_info() {
     $translatables['book'][] = t('Country maps and graphs');
     $translatables['book'][] = t('Country selectors');
 
-    $blocks['infografic_block'] = array(
-      'info' => t('Infografic Block'),
+    $blocks['country_block'] = array(
+      'info' => t('Country Block'),
+    );
+    $blocks['indicators_block'] = array(
+      'info' => t('Indicators Block'),
     );
     $blocks['compare_block'] = array(
       'info' => t('Compare Block'),
+    );
+    $blocks['mapping_block'] = array(
+      'info' => t('Mapping Block'),
+    );
+    $blocks['infografic_block'] = array(
+      'info' => t('Infografic Block'),
+    );
+    $blocks['media_block'] = array(
+      'info' => t('Media Block'),
+    );
+    $blocks['partners_block'] = array(
+      'info' => t('Partners Block'),
+    );
+    $blocks['library_block'] = array(
+      'info' => t('Library Block'),
     );
     return $blocks;
 }
@@ -60,11 +78,29 @@ function landbook_block_view($delta = '') {
         case 'country_sidebar_second':
             $block['content'] = landbook_country_sidebar_second();
             break;
-        case 'infografic_block' :
-          $block['content'] = landbook_infografic_block_view();
+        case 'country_block' :
+          $block['content'] = landbook_country_block_view();
+          break;
+        case 'indicators_block' :
+          $block['content'] = landbook_indicators_block_view();
           break;
         case 'compare_block' :
           $block['content'] = landbook_compare_block_view();
+          break;
+        case 'mapping_block' :
+          $block['content'] = landbook_mapping_block_view();
+          break;
+        case 'infografic_block' :
+          $block['content'] = landbook_infografic_block_view();
+          break;
+        case 'media_block' :
+          $block['content'] = landbook_media_block_view();
+          break;
+        case 'partners_block' :
+          $block['content'] = landbook_partners_block_view();
+          break;
+        case 'library_block' :
+          $block['content'] = landbook_library_block_view();
           break;
     }
     return $block;
@@ -115,13 +151,44 @@ function landbook_indicator_sidebar_second($data=NULL) {
   if (!$data) return '';
   return theme('indicator-sidebar-second', array('data' => $data));
 }
-
-function landbook_infografic_block_view(){
-  return drupal_get_form('landbook_infografic_block_form');
+function landbook_country_block_view(){
+  global $language;
+  if(arg(0)=='book' && arg(1)=='countries'){
+  $iso=arg(2);
+  $r = new Country();
+  $data = $r->get($language, $iso);
+  return theme('country-info-block',array('data'=>$data));
+  }
+}
+function landbook_indicators_block_view(){
+  $block = block_load('landbook', 'indicators_block');
+  return theme('indicators-block',array('title'=>$block->title));
 }
 
 function landbook_compare_block_view(){
-  return drupal_get_form('landbook_compare_block_form');
+  $block = block_load('landbook', 'compare_block');
+  return theme('compare-countries-block',array('title'=>$block->title));
+}
+function landbook_mapping_block_view(){
+  $block = block_load('landbook', 'mapping_block');
+  return theme('mapping-block',array('title'=>$block->title));
+}
+function landbook_infografic_block_view(){
+  $block = block_load('landbook', 'infografic_block');
+  return theme('infographics-block',array('title'=>$block->title));
+}
+function landbook_media_block_view(){
+  $block = block_load('landbook', 'media_block');
+  return theme('media-block',array('title'=>$block->title));
+}
+function landbook_partners_block_view(){
+  $block = block_load('landbook', 'partners_block');
+  return theme('partners-block',array('title'=>$block->title));
+}
+
+function landbook_library_block_view(){
+  $block = block_load('landbook', 'library_block');
+  return theme('library-block',array('title'=>$block->title));
 }
 
 /**
@@ -169,80 +236,4 @@ function landbook_block_info_alter(&$blocks, $theme, $code_blocks) {
         $blocks['landbook']['indicator_sidebar_second']['pages'] = "book/indicators/*";
     }
     return $blocks;
-}
-
-
-function landbook_infografic_block_form($form,$form_state){
-  $form['title']=array(
-    '#type'=>'markup',
-    '#markup'=>'<h3 class="form-title">Land Governance Assessment Framework (LGAF)</h3>',
-  );
-  $years=array("all"=>'Select year',"2016"=>"2016","2015"=>"2015","2014"=>"2014");
-  $form['years']=array(
-    '#type'=>'select',
-    '#options'=>$years,
-    '#prefix'=>'<div class="col-md-2">',
-    '#suffix'=>'</div>'
-  );
-  $panel=array("all"=>'Select Panel...',"WB-LGAF2016-1"=>"Land tenure recognition","WB-LGAF2016-3"=>"Urban land use, planning, and development");
-  $form['panel']=array(
-    '#type'=>'select',
-    '#options'=>$panel,
-    '#prefix'=>'<div class="col-md-5">',
-    '#suffix'=>'</div>'
-  );
-  $subpanel=array("all"=>'Select Sub-Panel...',"WB-LGAF2016-1.1"=>"Recognition of a continuum of rights","WB-LGAF2016-1.2"=>"Respect for and enforcement of rights");
-  $form['subpanel']=array(
-    '#type'=>'select',
-    '#options'=>$subpanel,
-    '#prefix'=>'<div class="col-md-5">',
-    '#suffix'=>'</div>'
-  );
-  return $form;
-}
-
-function landbook_compare_block_form($form,$form_state){
-  global $language;
-  $i = new Indicators();
-  $data_indicator = $i->get($language);//pa($data_indicator,1);
-  $indicators=array("all"=>'Rural Population');
-  $form['indicator']=array(
-    '#type'=>'select',
-    '#options'=>$indicators,
-    '#prefix'=>'<div class="col-md-3">',
-    '#suffix'=>'</div>'
-  );
-  $r = new Countries();
-
-  $data = $r->get($language);
-  $result=$r->getCountryArray($data);
-  $country=array_merge(array("all"=>'Select Country...'),$result);
-  $form['country']=array(
-    '#type'=>'select',
-    '#options'=>$country,
-    '#prefix'=>'<div class="col-md-3">',
-    '#suffix'=>'</div>'
-  );
-  $start_year=array("all"=>'From Year...');
-  $form['start_year']=array(
-    '#type'=>'select',
-    '#options'=>$start_year,
-    '#prefix'=>'<div class="col-md-2">',
-    '#suffix'=>'</div>'
-  );
-  $endt_year=array("all"=>'To Year...');
-  $form['end_year']=array(
-    '#type'=>'select',
-    '#options'=>$endt_year,
-    '#prefix'=>'<div class="col-md-2">',
-    '#suffix'=>'</div>'
-  );
-  $form['add_to']=array(
-    '#type'=>'button',
-    '#value'=>'Add to Compare',
-    '#prefix'=>'<div class="col-md-2 form-item">',
-    '#suffix'=>'</div>',
-    '#attributes' => array('class' => array('button')),
-  );
-  return $form;
 }

@@ -41,5 +41,20 @@ function land_util_image_default_styles() {
     ),
   );
 
+  // Exported image style: country_promoted.
+  $styles['country_promoted'] = array(
+    'label' => 'country promoted',
+    'effects' => array(
+      7 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 527,
+          'height' => 260,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }

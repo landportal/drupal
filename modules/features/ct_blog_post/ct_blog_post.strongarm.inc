@@ -112,11 +112,15 @@ function ct_blog_post_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '4',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'listing' => array(
             'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'promoted_country_page' => array(
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),

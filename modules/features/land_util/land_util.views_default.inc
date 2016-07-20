@@ -335,6 +335,59 @@ function land_util_views_default_views() {
   $handler->display->display_options['filters']['field_doc_creation_date_value']['granularity'] = 'year';
   $handler->display->display_options['filters']['field_doc_creation_date_value']['year_range'] = '-26:+0';
   $handler->display->display_options['block_caching'] = '-1';
+
+  /* Display: Promoted nodes */
+  $handler = $view->new_display('block', 'Promoted nodes', 'block_6');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'promoted_country_page';
+  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'blog_post' => 'blog_post',
+    'debate' => 'debate',
+    'event' => 'event',
+    'news' => 'news',
+  );
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
+  /* Filter criterion: Content: Promoted to country page (field_promoted_to_country_page) */
+  $handler->display->display_options['filters']['field_promoted_to_country_page_value']['id'] = 'field_promoted_to_country_page_value';
+  $handler->display->display_options['filters']['field_promoted_to_country_page_value']['table'] = 'field_data_field_promoted_to_country_page';
+  $handler->display->display_options['filters']['field_promoted_to_country_page_value']['field'] = 'field_promoted_to_country_page_value';
+  $handler->display->display_options['filters']['field_promoted_to_country_page_value']['value'] = array(
+    1 => '1',
+  );
   $export['book_latest_blocks'] = $view;
 
   return $export;

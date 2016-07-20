@@ -9,8 +9,8 @@ var lang = getUrlVars()["lang"];
 if(lang ==undefined || lang=="") {
 	lang = "en";
 }
-/*
-var jsonLGAF_values = 'json/LGAF_values.json'
+
+/*var jsonLGAF_values = 'json/LGAF_values.json'
 $.ajax({
       async: false,
       type: "GET",
@@ -791,7 +791,7 @@ function loadELGAFyears() {
 		}
 
 		setTimeout(function(){
-			load_lgaf_defaults();
+			//load_lgaf_defaults();
 		},750);
 		//alert(egop);
 
@@ -990,6 +990,7 @@ function loadYearsIndicatorCountryCompare(){
 		$("#lsperiod_from").html('<option value="0" data-localize="inputs.speriodfrom">From year ...</option>');
 		$("#lsperiod_to").html('<option value="0" data-localize="inputs.speriodto">To year ...</option>');
 		$("#lsperiod_from, #lsperiod_to").append(iop);
+		$(".speriod").append(iop);
 	});
 }
 
@@ -1052,7 +1053,7 @@ function loadCountriesPerIndicators(){
 
 		if(iop!=""){
 			$("#lscountry").removeClass("cinput-disabled");
-			$("#lscountry").prop( "disabled", false );
+			$("#lscountry").prop("disabled", false );
 		}
 
 	});
@@ -1762,5 +1763,4 @@ function selectSetIndicators(id) {
 	})
 	
 }
-
 //})( jQuery );

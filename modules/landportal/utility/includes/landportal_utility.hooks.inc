@@ -13,6 +13,10 @@ function landportal_utility_entity_info_alter(&$entity_info){
     'label' => t('Listing'),
     'custom settings' => TRUE,
   );
+  $entity_info['node']['view modes']['promoted_country_page'] = array(
+    'label' => t('Promoted to country page'),
+    'custom settings' => TRUE,
+  );
 }
 
 /**********************

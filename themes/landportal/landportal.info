@@ -5,7 +5,9 @@ version = 7.x-2.2-beta
 core = 7.x
 engine = phptemplate
 stylesheets[all][] = css/style.css
+stylesheets[all][] = css/owl.carousel.css
 regions[content] = Content
+regions[content_country] = Content Country Page
 regions[header] = Header
 regions[section_header] = Section Header
 regions[help] = Help
@@ -18,4 +20,5 @@ features[] = favicon
 features[] = main_menu
 
 scripts[] = 'js/bootstrap.min.js'
+scripts[] = 'js/owl.carousel.min.js'
 scripts[] = 'js/main.js'

@@ -86,6 +86,9 @@ function ct_news_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'listing' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -93,13 +96,13 @@ function ct_news_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '10',
+          'weight' => '7',
         ),
         'path' => array(
-          'weight' => '9',
+          'weight' => '6',
         ),
         'language' => array(
-          'weight' => '11',
+          'weight' => '8',
         ),
         'xmlsitemap' => array(
           'weight' => '30',
@@ -108,7 +111,7 @@ function ct_news_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '0',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -117,6 +120,10 @@ function ct_news_strongarm() {
           ),
           'listing' => array(
             'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'promoted_country_page' => array(
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),

@@ -14,7 +14,7 @@ function land_util_default_fe_block_settings() {
 
   $export['landbook-compare_block'] = array(
     'cache' => 1,
-    'css_class' => '',
+    'css_class' => 'section-block',
     'custom' => 0,
     'delta' => 'compare_block',
     'i18n_block_language' => array(),
@@ -31,10 +31,45 @@ function land_util_default_fe_block_settings() {
         'weight' => 0,
       ),
       'landportal' => array(
+        'region' => 'content_country',
+        'status' => 1,
+        'theme' => 'landportal',
+        'weight' => -52,
+      ),
+      'seven' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'landportal',
+        'theme' => 'seven',
         'weight' => 0,
+      ),
+    ),
+    'title' => 'Compare countries',
+    'visibility' => 0,
+  );
+
+  $export['landbook-country_block'] = array(
+    'cache' => 1,
+    'css_class' => 'gray',
+    'custom' => 0,
+    'delta' => 'country_block',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'landbook',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'landportal' => array(
+        'region' => 'content_country',
+        'status' => 1,
+        'theme' => 'landportal',
+        'weight' => -54,
       ),
       'seven' => array(
         'region' => '',
@@ -47,9 +82,44 @@ function land_util_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['landbook-indicators_block'] = array(
+    'cache' => 1,
+    'css_class' => 'section-block',
+    'custom' => 0,
+    'delta' => 'indicators_block',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'landbook',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'landportal' => array(
+        'region' => 'content_country',
+        'status' => 1,
+        'theme' => 'landportal',
+        'weight' => -53,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Indicators',
+    'visibility' => 0,
+  );
+
   $export['landbook-infografic_block'] = array(
     'cache' => 1,
-    'css_class' => '',
+    'css_class' => 'section-block',
     'custom' => 0,
     'delta' => 'infografic_block',
     'i18n_block_language' => array(),
@@ -66,10 +136,10 @@ function land_util_default_fe_block_settings() {
         'weight' => 0,
       ),
       'landportal' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'content_country',
+        'status' => 1,
         'theme' => 'landportal',
-        'weight' => 0,
+        'weight' => -50,
       ),
       'seven' => array(
         'region' => '',
@@ -78,7 +148,147 @@ function land_util_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '',
+    'title' => 'Infographics',
+    'visibility' => 0,
+  );
+
+  $export['landbook-library_block'] = array(
+    'cache' => 1,
+    'css_class' => 'section-block',
+    'custom' => 0,
+    'delta' => 'library_block',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'landbook',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'landportal' => array(
+        'region' => 'content_country',
+        'status' => 1,
+        'theme' => 'landportal',
+        'weight' => -47,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Library',
+    'visibility' => 0,
+  );
+
+  $export['landbook-mapping_block'] = array(
+    'cache' => 1,
+    'css_class' => 'section-block',
+    'custom' => 0,
+    'delta' => 'mapping_block',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'landbook',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'landportal' => array(
+        'region' => 'content_country',
+        'status' => 1,
+        'theme' => 'landportal',
+        'weight' => -51,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Mapping',
+    'visibility' => 0,
+  );
+
+  $export['landbook-media_block'] = array(
+    'cache' => 1,
+    'css_class' => 'section-block',
+    'custom' => 0,
+    'delta' => 'media_block',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'landbook',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'landportal' => array(
+        'region' => 'content_country',
+        'status' => 1,
+        'theme' => 'landportal',
+        'weight' => -49,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Media',
+    'visibility' => 0,
+  );
+
+  $export['landbook-partners_block'] = array(
+    'cache' => 1,
+    'css_class' => 'section-block',
+    'custom' => 0,
+    'delta' => 'partners_block',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'landbook',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'landportal' => array(
+        'region' => 'content_country',
+        'status' => 1,
+        'theme' => 'landportal',
+        'weight' => -48,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Partners',
     'visibility' => 0,
   );
 
