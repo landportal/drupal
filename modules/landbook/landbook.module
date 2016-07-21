@@ -186,12 +186,6 @@ function landbook_views_query_alter(&$view, &$query){
             $query->where[0]['conditions'][0]['value']=$tid;
         }
     }
-    if($view->name=='country_promoted_nodes'){
-      if(arg(0)=='book' && arg(1) == 'countries'){//pa($query,1);
-        //$nid=landbook_get_country_narrative_nid('Viet Nam');
-        //$query->where[0]['conditions'][2]['value']=$nid;
-      }
-    }
 }
 
 
@@ -234,7 +228,7 @@ function landbook_preprocess_page(&$vars){
         if(!empty(arg(2))){
             $vars['theme_hook_suggestions'][] = 'page__book_country';
         }
-        $vars['country_description']="XAXA";
+        
     }
 }
 function landbook_get_country_narrative_nid($title){

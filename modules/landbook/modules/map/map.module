@@ -26,7 +26,7 @@ function map_block_view($delta = '') {
 
 function map_region_map_block_view(){
   global $language;
-  if(arg(0)=='book' && arg(1)=='countries'){
+  if(arg(0)=='book' && arg(1)=='countries' && !empty(arg(2))){
   $iso=arg(2);
   $r = new Country();
   $data = $r->get($language, $iso);

@@ -43,6 +43,7 @@ section a{
     #section-header {
         border-top: 0;
         @extend .landbook-header-bg;
+        background-color: $green-light;
     }
 }
 
@@ -195,6 +196,7 @@ section a{
 			padding-top:0;
 		}
 
+		background: $white;
 		border-bottom: 1px solid #f0f0f0;
 		padding-top: 60px;
 		padding-bottom: 60px;
@@ -543,7 +545,7 @@ section a{
 						border-right: 1px solid #f0f0f0;
 					    font-weight: lighter;
 					    padding: 10px;
-					    background-color: #a3c642;
+					    background-color: $green-light;
     					color: $white;
     					font-family: "Open Sans",sans-serif;
     					font-size: 12px;
@@ -573,7 +575,7 @@ section a{
 
 			tfoot{
 				.t-th-green, .t-tf-green {
-				    background-color: #a3c642;
+				    background-color: $green-light;
 				    color: #fff;
 				    padding: 5px 10px;
 				}
@@ -660,6 +662,9 @@ section a{
 	}
 
 }
+.block-map{
+	background:#f8f8f8;
+}
 
 .block{
 	.form-title{
@@ -696,7 +701,7 @@ section a{
 	    margin-bottom:5px;
 	}
 	.button{
-		background-color: #a3c642;
+		background-color: $green-light;
     	color: #fff;
     	box-shadow: 4px 5px 0 0 #6e872a;
     	width:100%;
@@ -778,7 +783,7 @@ section a{
 	    	.sk-child{
 	    		-webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
 				animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
-			    background-color: #a3c642;
+			    background-color: $green-light;
 			    border-radius: 100%;
 			    display: inline-block;
 			    height: 20px;
@@ -822,6 +827,9 @@ section a{
 }
 .p-l-bottom{
 	padding-bottom: 20px;
+}
+.cb-right-2 {
+    border-right: 1px solid #d6dbdc;
 }
 
 
@@ -904,13 +912,13 @@ section a{
 }
 
 .cbtn-l-acc {
-  border-color: #A3C642;
-  color: #A3C642;
+  border-color: $green-light;
+  color: $green-light;
 }
 
 .cbtn-l-acc:hover, .cbtn-l-acc:focus, .cbtn-l-acc:active {
   border-color: #b6d269;
-  background-color: #A3C642;
+  background-color: $green-light;
   color: #fff;
 }
 
@@ -935,7 +943,7 @@ section a{
 }
 
 .cbtn-s-acc {
-  background-color: #A3C642;
+  background-color: $green-light;
   color: #fff;
   text-transform: uppercase;
 }
