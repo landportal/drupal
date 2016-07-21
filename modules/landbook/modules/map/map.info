@@ -1,0 +1,7 @@
+name = Map
+description = Submodule landbook for display maps on country page.
+package = Landportal
+core = 7.x
+version = 7.x-1
+dependencies[] = landbook
+

@@ -1,0 +1,6 @@
+name = Graph
+description = Submodule landbook with blocks for each of the following graphs..
+package = Landportal
+core = 7.x
+version = 7.x-1
+dependencies[] = landbook

@@ -1,0 +1,29 @@
+<?php
+
+function indicators_block_info() {
+  $blocks['indicators_block'] = array(
+    'info' => t('Indicators Block'),
+  );
+  return $blocks;
+}
+
+function indicators_block_view($delta = '') {
+    $block = array();
+    switch ($delta) {
+        case 'indicators_block' :
+          $block['content'] = indicators_table_block_view();
+          break;
+    }
+    return $block;
+}
+
+function indicators_table_block_view(){
+  $block = block_load('indicators', 'indicators_block');
+  return theme('indicators-block',array('title'=>$block->title));
+}
+
+function indicators_theme($existing, $type, $theme, $path){
+  return array(
+    'indicators-block'  => array('template' => 'indicators-block','data' => NULL),
+  );
+}

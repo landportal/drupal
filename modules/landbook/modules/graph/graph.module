@@ -1,0 +1,40 @@
+<?php
+
+function graph_block_info() {
+     $blocks['compare_block'] = array(
+      'info' => t('Compare Block'),
+    );
+    $blocks['infografic_block'] = array(
+      'info' => t('Infografic Block'),
+    );
+  return $blocks;
+}
+
+function graph_block_view($delta = '') {
+    $block = array();
+    switch ($delta) {
+        case 'compare_block' :
+          $block['content'] = graph_compare_block_view();
+          break;
+        case 'infografic_block' :
+          $block['content'] = graph_infografic_block_view();
+          break;
+    }
+    return $block;
+}
+
+function graph_compare_block_view(){
+  $block = block_load('graph', 'compare_block');
+  return theme('compare-countries-block',array('title'=>$block->title));
+}
+function graph_infografic_block_view(){
+  $block = block_load('graph', 'infografic_block');
+  return theme('infographics-block',array('title'=>$block->title));
+}
+
+function graph_theme($existing, $type, $theme, $path){
+  return array(
+    'compare-countries-block'  => array('template' => 'compare-countries-block',array('title'=>NULL)),
+    'infographics-block'  => array('template' => 'infographics-block',array('title'=>NULL)),
+  );
+}

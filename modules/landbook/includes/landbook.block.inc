@@ -29,21 +29,6 @@ function landbook_block_info() {
     $translatables['book'][] = t('Country maps and graphs');
     $translatables['book'][] = t('Country selectors');
 
-    $blocks['country_block'] = array(
-      'info' => t('Country Block'),
-    );
-    $blocks['indicators_block'] = array(
-      'info' => t('Indicators Block'),
-    );
-    $blocks['compare_block'] = array(
-      'info' => t('Compare Block'),
-    );
-    $blocks['mapping_block'] = array(
-      'info' => t('Mapping Block'),
-    );
-    $blocks['infografic_block'] = array(
-      'info' => t('Infografic Block'),
-    );
     $blocks['media_block'] = array(
       'info' => t('Media Block'),
     );
@@ -78,21 +63,6 @@ function landbook_block_view($delta = '') {
         case 'country_sidebar_second':
             $block['content'] = landbook_country_sidebar_second();
             break;
-        case 'country_block' :
-          $block['content'] = landbook_country_block_view();
-          break;
-        case 'indicators_block' :
-          $block['content'] = landbook_indicators_block_view();
-          break;
-        case 'compare_block' :
-          $block['content'] = landbook_compare_block_view();
-          break;
-        case 'mapping_block' :
-          $block['content'] = landbook_mapping_block_view();
-          break;
-        case 'infografic_block' :
-          $block['content'] = landbook_infografic_block_view();
-          break;
         case 'media_block' :
           $block['content'] = landbook_media_block_view();
           break;
@@ -151,32 +121,7 @@ function landbook_indicator_sidebar_second($data=NULL) {
   if (!$data) return '';
   return theme('indicator-sidebar-second', array('data' => $data));
 }
-function landbook_country_block_view(){
-  global $language;
-  if(arg(0)=='book' && arg(1)=='countries'){
-  $iso=arg(2);
-  $r = new Country();
-  $data = $r->get($language, $iso);
-  return theme('country-info-block',array('data'=>$data));
-  }
-}
-function landbook_indicators_block_view(){
-  $block = block_load('landbook', 'indicators_block');
-  return theme('indicators-block',array('title'=>$block->title));
-}
 
-function landbook_compare_block_view(){
-  $block = block_load('landbook', 'compare_block');
-  return theme('compare-countries-block',array('title'=>$block->title));
-}
-function landbook_mapping_block_view(){
-  $block = block_load('landbook', 'mapping_block');
-  return theme('mapping-block',array('title'=>$block->title));
-}
-function landbook_infografic_block_view(){
-  $block = block_load('landbook', 'infografic_block');
-  return theme('infographics-block',array('title'=>$block->title));
-}
 function landbook_media_block_view(){
   $block = block_load('landbook', 'media_block');
   return theme('media-block',array('title'=>$block->title));
