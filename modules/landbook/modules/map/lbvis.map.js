@@ -1,19 +1,8 @@
 /*
-var lbvisMap = (function (args = {}) {
-    var ISO3 = args.iso3;
-    return {
-        current_year: args.year || 2014,
-        current_indicator: {},
-        selected_indicator: args.indicator || 'FAO-23045-6083',
-        years: []
-    };
-
-});
-*/
-/*
 //Inicializamos el mapa segun el indicador por defecto facilitado: WB-SP.RUR.TOTL.ZS (Rural population)
 function loadMapDefaults() {
 	$("select#msindicator option").each(function(){
+		//console.log("here");
 		var indicatorID = $(this).val();
 		var iID = indicatorID.split("/").pop();
 		if(iID === "WB-SP.RUR.TOTL.ZS") {
@@ -185,37 +174,39 @@ function loadMapChart(){
 	  $("#maparea .pos_loader_data").addClass("hddn");
 	});
 }
-
+*/
 
 
 //## MAPPING EVENTS
 $(document).ready(function() {
 
     $(document).delegate("#msindicator", "change", function(e){
-	e.preventDefault();
-	if($(this).val()!=0){
-	    $("#msyear").html("");
-	    $("#msyear").removeClass("cinput-disabled");
-	    $("#msyear").prop( "disabled", false );
-	    LBM.current_indicator.name = $(this).find("option:selected").text();
-	    LBM.selected_indicator = $(this).val();
-	    //setDataURLs();
-	    loadYearsIndicatorMap();
-	}else{
-	    $("#msyear").val(0);
-	    $("#msyear").addClass("cinput-disabled");
-	    $("#msyear").prop( "disabled", true );
-	}
-    });
+		e.preventDefault();
+		if($(this).val()!=0){
+			$("#msyear").html("");
+			$("#msyear").removeClass("cinput-disabled");
+			$("#msyear").prop( "disabled", false );
+			current_indicator_name = $(this).find("option:selected").text();
+			table_selected_indicator = $(this).val();
+			map_selected_indicator_URL = $(this).val();
+			setDataURLs();
+			loadYearsIndicatorMap();
+		}else{
+			$("#msyear").val(0);
+			$("#msyear").addClass("cinput-disabled");
+			$("#msyear").prop( "disabled", true );
+		}
 
-    $(document).delegate("#msyear", "change", function(e){
-	e.preventDefault();
-	if($(this).val()!=0){
-	    LBM.current_year = $(this).val();
-	    //setDataURLs();
-	    loadMapChart();
-	}
-    });
+	});
+
+	$(document).delegate("#msyear", "change", function(e){
+		e.preventDefault();
+		if($(this).val()!=0){
+			map_current_year = $(this).val();
+			setDataURLs();
+			loadMapChart();
+		}
+
+	});
 
 });
-*/

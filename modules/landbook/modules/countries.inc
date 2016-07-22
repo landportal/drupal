@@ -32,10 +32,14 @@ function landbook_countries($args=NULL) {
 
     drupal_add_js(array('landbook' => array('path' => $theme_path)), 'setting');
     drupal_add_js(array('landbook' => array('countryCode' => $args)), 'setting');
-    drupal_add_js(drupal_get_path('module', 'landbook').'/js/country_chart_options.js');
+    drupal_add_js(drupal_get_path('module', 'landbook').'/js/controller/chartsdata.js');
     //drupal_add_js(drupal_get_path('module', 'landbook').'/js/controller/country.js', array('scope'=>'footer'));
     drupal_add_js(drupal_get_path('module', 'landbook').'/js/controller/chartsdata.js', array('scope'=>'footer'));
     drupal_add_js(drupal_get_path('module', 'landbook').'/js/controller/dataload.js', array('scope'=>'footer'));
+
+    //drupal_add_js(drupal_get_path('module', 'landbook').'/js/controller/lbvis.js');
+    //drupal_add_js(drupal_get_path('module', 'landbook').'/js/controller/lbvis.data.js');
+    
   } else {
     $template = 'countries';
     $r = new Countries();

@@ -44,3 +44,7 @@ function map_theme($existing, $type, $theme, $path){
     'world-map'  => array('template' => 'world-map',array('title'=>NULL)),
   );
 }
+
+function map_page_alter(&$page){
+  //drupal_add_js(drupal_get_path('module', 'map').'/lbvis.map.js');
+}

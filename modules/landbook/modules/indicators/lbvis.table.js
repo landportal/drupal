@@ -1,5 +1,3 @@
-'use strict';
-
 var lbvisT = (function (args = {}) {
     return {
         indicators: [],

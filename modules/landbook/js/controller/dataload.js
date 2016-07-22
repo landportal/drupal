@@ -94,7 +94,7 @@ $(document).ready(function() {
 		}
 	})*/
 	//SecciГіn infographics
-	$(document).delegate("#lsindicador", "change", function(){
+	/*$(document).delegate("#lsindicador", "change", function(){
 		if($(this).val()!=0){
 			$("#lscountry").html("");
 			$("#lscountry").removeClass("cinput-disabled");
@@ -195,7 +195,7 @@ $(document).ready(function() {
         current_compared_countries_iso3 = stringToArray;
         setDataURLs();
 		loadLineChart();
-	})
+	})*/
 
 	//## MAPPING EVENTS
 	$(document).delegate("#msindicator", "change", function(e){

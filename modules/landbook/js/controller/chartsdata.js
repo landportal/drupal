@@ -970,7 +970,7 @@ function loadYearsIndicatorMap(){
 }
 
 
-
+/*
 function loadYearsIndicatorCountryCompare(){
 	
 	while(years_indicator_country.length > 0) {
@@ -993,7 +993,7 @@ function loadYearsIndicatorCountryCompare(){
 		$(".speriod").append(iop);
 	});
 }
-
+*/
 
 /*
 function loadCountryIndicatorInfo(){
@@ -1033,7 +1033,7 @@ function loadCountryIndicatorInfo(){
 }
 */
 
-
+/*
 function loadCountriesPerIndicators(){
 
 	//Vaciamos el array
@@ -1059,7 +1059,7 @@ function loadCountriesPerIndicators(){
 	});
 
 }
-
+*/
 
 //console.log(default_table_indicators);
 //GENERACIГ“N DE GRГЃFICAS
@@ -1481,7 +1481,7 @@ function loadSpiderChart(){
 	});
 }
 */
-
+/*
 function loadLineChart(){
 //## LINE CHART
 	
@@ -1592,6 +1592,7 @@ function loadLineChart(){
 		$("#igraphics .pos_loader_data").addClass("hddn");
 	});
 }
+*/
 
 function loadAllCharts(){
 	initMapTop();
@@ -1698,7 +1699,7 @@ function loadMapDefaults() {
 	});
 }
 
-
+/*
 function loadLineDefaults() {
 	//line_selected_indicator_URL;
 	table_selected_indicator = line_selected_indicator_URL;
@@ -1721,7 +1722,7 @@ function loadLineDefaults() {
 	},600);
 
 }
-
+*/
 function selectSetPanels(year) {
 	var $selPanels = $(".egspanel");
 	$.getJSON("json/LGAF_panels.json",function(data){
