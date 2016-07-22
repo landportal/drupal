@@ -321,9 +321,17 @@ function land_util_views_default_views() {
   $handler->display->display_options['filters']['field_doc_creation_date_value']['field'] = 'field_doc_creation_date_value';
   $handler->display->display_options['filters']['field_doc_creation_date_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['operator_id'] = 'field_doc_creation_date_value_op';
-  $handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['label'] = 'Publication date (field_doc_creation_date)';
   $handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['operator'] = 'field_doc_creation_date_value_op';
   $handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['identifier'] = 'field_doc_creation_date_value';
+  $handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    111903911 => 0,
+    111903912 => 0,
+    25521343 => 0,
+    111903910 => 0,
+    30037204 => 0,
+  );
   $handler->display->display_options['filters']['field_doc_creation_date_value']['granularity'] = 'year';
   $handler->display->display_options['filters']['field_doc_creation_date_value']['year_range'] = '-26:+0';
   $handler->display->display_options['block_caching'] = '-1';
