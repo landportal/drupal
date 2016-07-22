@@ -30,7 +30,7 @@ $(document).ready(function() {
 	});
 	//###EVENTOS####//
 	//Borramos item de la tabla indicadores
-	$(document).delegate(".del-row","click", function(e){
+	/*$(document).delegate(".del-row","click", function(e){
 		e.preventDefault();
 		$(this).parent().parent().remove().fadeOut("fast");
 	})
@@ -92,7 +92,7 @@ $(document).ready(function() {
 		}else{
 			alert("Select indicator and year");
 		}
-	})
+	})*/
 	//SecciГіn infographics
 	$(document).delegate("#lsindicador", "change", function(){
 		if($(this).val()!=0){

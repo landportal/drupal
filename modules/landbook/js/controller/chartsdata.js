@@ -696,7 +696,7 @@ function set_country_indicators() {
 
 set_country_indicators();
 
-
+/*
 //CARGA DE VARIABLES INDICADORES; AГ‘OS...
 function loadDefaultTableIndicators(){
 	$.getJSON(query_default_table_indicators_URL, function (data) {
@@ -721,14 +721,14 @@ function loadDefaultTableIndicators(){
 														}
 														else{
 															newIndicator.years = new Array();*/
-															newIndicator.year = data.results.bindings[j][item_type].value;
+															//newIndicator.year = data.results.bindings[j][item_type].value;
 														//}
-														break;
+														/*break;
 					case "value": 						/*if(indicatorIndex!=-1){
 															indicators[indicatorIndex].values.push(data.results.bindings[j][item_type].value);
 														}
 														else{*/
-															newIndicator.value = data.results.bindings[j][item_type].value;
+															/*newIndicator.value = data.results.bindings[j][item_type].value;
 														//}
 														break;
 					case "unitLabel": 					newIndicator.unit_label = data.results.bindings[j][item_type].value;
@@ -769,7 +769,7 @@ function loadDefaultTableIndicators(){
 		})
 	});
 }
-
+*/
 loadDefaultTableIndicators();
 
 function loadELGAFyears() {
@@ -917,7 +917,7 @@ function loadELGAFvalues() {
 }
 
 
-
+/*
 function loadYearsIndicatorCountry(){
 	
 	while(years_indicator_country.length > 0) {
@@ -941,7 +941,7 @@ function loadYearsIndicatorCountry(){
 		}
 	});
 }
-
+*/
 
 
 function loadYearsIndicatorMap(){
@@ -995,7 +995,7 @@ function loadYearsIndicatorCountryCompare(){
 }
 
 
-
+/*
 function loadCountryIndicatorInfo(){
 
 	//Vaciamos el array
@@ -1031,7 +1031,7 @@ function loadCountryIndicatorInfo(){
 	});
 
 }
-
+*/
 
 
 function loadCountriesPerIndicators(){
@@ -1063,7 +1063,7 @@ function loadCountriesPerIndicators(){
 
 //console.log(default_table_indicators);
 //GENERACIГ“N DE GRГЃFICAS
-
+/*
 function loadPieChart(){
 	//PIE CHART
 	$.getJSON(query_pie_URL, function (data) {
@@ -1147,7 +1147,7 @@ function loadPieChart(){
 
 		pieChart_init = new Highcharts.Chart(CharPieOp);
 	});
-}
+}*/
 function initMapTop(){
 	$('#mapDiv').highcharts('Map', {	  
 	    chart: {
@@ -1268,19 +1268,7 @@ function loadMapChart(){
 				data_values.push({code:data.results.bindings[i].countryISO3.value, value:data_value});
 			}
 		}
-		//console.log(data_values);
-		//console.log("Range: " + data_value_min + ", " + data_value_max);
-	
-	  // var data = [{
-	  //   "color": "#a3c642",
-	  //   "code": "ES"
-	  // }];
-
-	  /*$.each(data, function() {
-	    this.id = this.code;
-	  });
-		*/
-
+		
 	  $('#wrapper-mapping').highcharts('Map', {
 	    chart: {
 	      backgroundColor: '#ffffff',
@@ -1372,13 +1360,9 @@ function loadMapChart(){
 	  //$('#wrapper-mapping').highcharts().mapZoom(12);
 	  $("#maparea .pos_loader_data").addClass("hddn");
 	});
-
-	
-	//alert("go");
-	//chart.redraw();
 }
 
-
+/*
 function loadSpiderChart(){
  //#Spider chart
 	$.getJSON(query_spider_URL, function (data) {
@@ -1496,7 +1480,7 @@ function loadSpiderChart(){
 		spiderChart_init = new Highcharts.Chart(CharSpiderOp);
 	});
 }
-
+*/
 
 function loadLineChart(){
 //## LINE CHART

@@ -27,3 +27,7 @@ function indicators_theme($existing, $type, $theme, $path){
     'indicators-block'  => array('template' => 'indicators-block','data' => NULL),
   );
 }
+
+function indicators_page_alter(&$page){
+  drupal_add_js(drupal_get_path('module', 'indicators').'/lbvis.table.js');
+}

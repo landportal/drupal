@@ -7,7 +7,6 @@ engine = phptemplate
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/owl.carousel.css
 regions[content] = Content
-regions[content_country] = Content Country Page
 regions[header] = Header
 regions[section_header] = Section Header
 regions[help] = Help
