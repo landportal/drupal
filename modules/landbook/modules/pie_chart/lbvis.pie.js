@@ -1,4 +1,9 @@
-'use strict';
+var $ = jQuery.noConflict();
+$(document).ready(function() {
+	loadPieChart();
+
+});//End document ready
+
 
 function loadPieChart(){
     var query_url = LBD.sparqlURL(LBD.queries.pie_chart);

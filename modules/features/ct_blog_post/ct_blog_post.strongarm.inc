@@ -120,7 +120,7 @@ function ct_blog_post_strongarm() {
             'visible' => FALSE,
           ),
           'promoted_country_page' => array(
-            'weight' => '1',
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),

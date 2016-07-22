@@ -123,7 +123,7 @@ function ct_events_strongarm() {
             'visible' => FALSE,
           ),
           'promoted_country_page' => array(
-            'weight' => '1',
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
