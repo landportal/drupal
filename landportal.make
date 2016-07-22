@@ -110,6 +110,7 @@ projects:
   - i18nviews
   - field_collection
   - addtoany
+  - custom_pub
 
 includes:
   - "landportal-custom.make"

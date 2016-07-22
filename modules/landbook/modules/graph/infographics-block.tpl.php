@@ -63,10 +63,6 @@
                   <span class="cqdata-il cqdata-na"></span> <span data-localize="label.ndata">Missing Value</span> 
                 </div>
             </div>
-
-            <div class="col-xs-12 m-l-top">
-                <div class="txt-s c-g40 fos">Note: Some Indicators might have multiple values (e.g. Green-Orange), which might refers to different localities or categories of people. For more information please refers to specific country reports and to the methodology made available by the original data source/provider: <a href="http://go.worldbank.org/21M7S7AZO0" target="_blank">The Land GovernanceAssessment Framework (LGAF) website of the World Bank</a></div>
-            </div>
             
           </div>
         </div>
@@ -81,10 +77,10 @@
         <div class="row">
             <?php //drupal_add_js(array('landbook' => array('data_land' => $data['charts']['gaugeIndicators'])), 'setting'); ?>
             <div class="col-md-6">
-              <div id="wrapper-piechart" data-highcharts-chart="1"></div>
+              <?php print theme('pie-chart',array());?>
             </div>
             <div class="col-md-6 sep-left-charts">
-              <div id="wrapper-spiderchart" data-highcharts-chart="2"></div>
+              <?php print theme('spider-graph',array()); ?>
               <?php  $block = block_load('block', '3');
                   $block = _block_render_blocks(array($block));
                   $block_build = _block_get_renderable_array($block);

@@ -1000,6 +1000,7 @@ section a{
 	top: 50%;
 	width: 45px !important;
 	transform: translate(0px, -50%);
+	z-index:1000;
 
 	.addtoany_list{
 		a{

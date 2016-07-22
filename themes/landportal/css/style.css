@@ -12653,38 +12653,39 @@ section a:focus {
   top: 50%;
   width: 45px !important;
   transform: translate(0px, -50%);
+  z-index: 1000;
 }
-/* line 1005, ../scss/modules/_book.scss */
+/* line 1006, ../scss/modules/_book.scss */
 .social-block .addtoany_list a {
   float: left;
   padding: 0;
 }
-/* line 1009, ../scss/modules/_book.scss */
+/* line 1010, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_facebook {
   background: #4d70a8;
 }
-/* line 1013, ../scss/modules/_book.scss */
+/* line 1014, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_twitter {
   background: #00baf2;
 }
-/* line 1016, ../scss/modules/_book.scss */
+/* line 1017, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_google_plus {
   background: #e2411d;
 }
-/* line 1020, ../scss/modules/_book.scss */
+/* line 1021, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span {
   border-radius: 0 !important;
   display: block;
 }
-/* line 1024, ../scss/modules/_book.scss */
+/* line 1025, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_facebook {
   background: url("../images/sh-facebook.png") no-repeat 0 0;
 }
-/* line 1028, ../scss/modules/_book.scss */
+/* line 1029, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_twitter {
   background: url("../images/sh-twitter.png") no-repeat 0 0;
 }
-/* line 1031, ../scss/modules/_book.scss */
+/* line 1032, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_google_plus {
   background: url("../images/sh-googleplus.png") no-repeat 0 0;
 }

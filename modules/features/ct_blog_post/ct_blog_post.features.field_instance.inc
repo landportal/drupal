@@ -37,7 +37,7 @@ function ct_blog_post_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 0,
       ),
       'search_result' => array(
         'label' => 'hidden',
@@ -129,7 +129,7 @@ function ct_blog_post_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -191,13 +191,9 @@ function ct_blog_post_field_default_field_instances() {
         'weight' => 0,
       ),
       'promoted_country_page' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => 'content',
-          'image_style' => 'country_promoted',
-        ),
-        'type' => 'image',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'search_result' => array(
@@ -258,61 +254,6 @@ function ct_blog_post_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog_post-field_promoted_to_country_page'.
-  $field_instances['node-blog_post-field_promoted_to_country_page'] = array(
-    'bundle' => 'blog_post',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_promoted_to_country_page',
-    'label' => 'Promoted to country page',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 4,
-    ),
-  );
-
   // Exported field_instance: 'node-blog_post-field_related_domains'.
   $field_instances['node-blog_post-field_related_domains'] = array(
     'bundle' => 'blog_post',
@@ -338,7 +279,7 @@ function ct_blog_post_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -398,7 +339,7 @@ function ct_blog_post_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -453,7 +394,7 @@ function ct_blog_post_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 0,
       ),
       'search_result' => array(
         'label' => 'hidden',
@@ -502,7 +443,6 @@ function ct_blog_post_field_default_field_instances() {
   t('Geographical focus');
   t('Image');
   t('Overarching categories');
-  t('Promoted to country page');
   t('Related concepts');
   t('Themes');
 

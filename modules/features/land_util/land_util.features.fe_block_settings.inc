@@ -34,7 +34,7 @@ function land_util_default_fe_block_settings() {
         'region' => 'content_country',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -55,
+        'weight' => -53,
       ),
       'seven' => array(
         'region' => '',
@@ -69,7 +69,7 @@ function land_util_default_fe_block_settings() {
         'region' => 'content_country',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -53,
+        'weight' => -51,
       ),
       'seven' => array(
         'region' => '',
@@ -104,7 +104,7 @@ function land_util_default_fe_block_settings() {
         'region' => 'content_country',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -56,
+        'weight' => -54,
       ),
       'seven' => array(
         'region' => '',
@@ -139,7 +139,7 @@ function land_util_default_fe_block_settings() {
         'region' => 'content_country',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -50,
+        'weight' => -48,
       ),
       'seven' => array(
         'region' => '',
@@ -174,7 +174,7 @@ function land_util_default_fe_block_settings() {
         'region' => 'content_country',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -52,
+        'weight' => -50,
       ),
       'seven' => array(
         'region' => '',
@@ -209,7 +209,7 @@ function land_util_default_fe_block_settings() {
         'region' => 'content_country',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -51,
+        'weight' => -49,
       ),
       'seven' => array(
         'region' => '',
@@ -279,7 +279,7 @@ function land_util_default_fe_block_settings() {
         'region' => 'content_country',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -57,
+        'weight' => -55,
       ),
       'seven' => array(
         'region' => '',
@@ -314,7 +314,7 @@ function land_util_default_fe_block_settings() {
         'region' => 'content_country',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -54,
+        'weight' => -52,
       ),
       'seven' => array(
         'region' => '',

@@ -321,17 +321,9 @@ function land_util_views_default_views() {
   $handler->display->display_options['filters']['field_doc_creation_date_value']['field'] = 'field_doc_creation_date_value';
   $handler->display->display_options['filters']['field_doc_creation_date_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['operator_id'] = 'field_doc_creation_date_value_op';
+  $handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['label'] = 'Publication date (field_doc_creation_date)';
   $handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['operator'] = 'field_doc_creation_date_value_op';
   $handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['identifier'] = 'field_doc_creation_date_value';
-  $handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    111903911 => 0,
-    111903912 => 0,
-    25521343 => 0,
-    111903910 => 0,
-    30037204 => 0,
-  );
   $handler->display->display_options['filters']['field_doc_creation_date_value']['granularity'] = 'year';
   $handler->display->display_options['filters']['field_doc_creation_date_value']['year_range'] = '-26:+0';
   $handler->display->display_options['block_caching'] = '-1';
@@ -355,6 +347,17 @@ function land_util_views_default_views() {
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['argument'] = '1';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -381,13 +384,11 @@ function land_util_views_default_views() {
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  /* Filter criterion: Content: Promoted to country page (field_promoted_to_country_page) */
-  $handler->display->display_options['filters']['field_promoted_to_country_page_value']['id'] = 'field_promoted_to_country_page_value';
-  $handler->display->display_options['filters']['field_promoted_to_country_page_value']['table'] = 'field_data_field_promoted_to_country_page';
-  $handler->display->display_options['filters']['field_promoted_to_country_page_value']['field'] = 'field_promoted_to_country_page_value';
-  $handler->display->display_options['filters']['field_promoted_to_country_page_value']['value'] = array(
-    1 => '1',
-  );
+  /* Filter criterion: Content: Promoted to country page */
+  $handler->display->display_options['filters']['promoted_to_country_page']['id'] = 'promoted_to_country_page';
+  $handler->display->display_options['filters']['promoted_to_country_page']['table'] = 'node';
+  $handler->display->display_options['filters']['promoted_to_country_page']['field'] = 'promoted_to_country_page';
+  $handler->display->display_options['filters']['promoted_to_country_page']['value'] = '1';
   $export['book_latest_blocks'] = $view;
 
   return $export;

@@ -1,0 +1,8 @@
+<?php
+
+
+function pie_chart_theme($existing, $type, $theme, $path){
+  return array(
+    'pie-chart'  => array('template' => 'pie-chart','data' => NULL),
+  );
+}

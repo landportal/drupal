@@ -24,7 +24,6 @@ features[field_instance][] = node-news-field_geographical_focus
 features[field_instance][] = node-news-field_image
 features[field_instance][] = node-news-field_language
 features[field_instance][] = node-news-field_link
-features[field_instance][] = node-news-field_promoted_to_country_page
 features[field_instance][] = node-news-field_related_domains
 features[field_instance][] = node-news-field_related_themes
 features[field_instance][] = node-news-field_related_topics
