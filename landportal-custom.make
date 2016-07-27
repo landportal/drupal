@@ -88,3 +88,7 @@ libraries:
     download:
       type: "file"
       url: "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip"
+  lbvis:
+    download:
+      type: "git"
+      url: "https://github.com/landportal/js-view-coda"

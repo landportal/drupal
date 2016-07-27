@@ -24,7 +24,10 @@ function graph_block_view($delta = '') {
 }
 
 function graph_compare_block_view(){
-  drupal_add_js(drupal_get_path('module', 'graph').'/lbvis.linechart.js');
+  $library_path = libraries_get_path('lbvis');
+  drupal_add_js($library_path . '/js/lbvis.linechart.js');
+  drupal_add_js($library_path . '/js/lbvis.lgaf.js');
+  drupal_add_js(drupal_get_path('module', 'graph').'/main.js');
   $block = block_load('graph', 'compare_block');
   return theme('compare-countries-block',array('title'=>$block->title));
 }

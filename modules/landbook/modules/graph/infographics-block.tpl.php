@@ -6,38 +6,32 @@
                 <h2 class="rankings section-title"><?php print $title;?></h2>
             </div>
         </div>
-        <div class="LGAF_area hddn">
-
+        <div id="lgaf" class="LGAF_area hddn">
           <div class="row m-l-top p-xl-bottom cb-bottom-lh">
-
             <div class="col-xs-12 m-l-top m-s-bottom">
               <p class="displayb txt-c fos">Land Governance Assessment Framework (LGAF)</p>
             </div>
-            
-            <div class="col-md-offset-1 col-md-2">
-              <select class="egsyear fos cinput cinput-s-arrow cinput-sh">
-                  <option value="0" selected="selected">Select year ...</option>
+            <form>
+              <div class="col-md-offset-1 col-md-2">
+              <select name="year" class="years egsyear fos cinput cinput-s-arrow cinput-sh">
+                  <option data-localize="inputs.subpanels">Year</option>
                 </select>
             </div>
-
             <div class="col-md-4">
-              <select class="egspanel fos cinput cinput-s-arrow cinput-sh cbtn-dis cinput-disabled" disabled="disabled">
-                  <option value="0">Select panel...</option>
+              <select name="panel" class="panels egspanel fos cinput cinput-s-arrow cinput-sh">
+                  <option data-localize="inputs.subpanels">Panel</option>
                 </select>
             </div>
-
             <div class="col-md-4">
-              <select class="egsindicator fos cinput cinput-s-arrow cinput-sh cinput-disabled" disabled="disabled">
-                  <option value="0">Select Sub-panel ...</option>
+              <select name="subpanel" class="subpanels egsindicator fos cinput cinput-s-arrow cinput-sh">
+                  <option data-localize="inputs.subpanels">Sub-panel</option>
                 </select>
             </div>
+            <form>
 
           </div>
-
           <div class="row p-l-bottom">
-
             <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8 r-pos" id="quality-info">
-              
               <ul class="quality-list">
                 <li class="item-q fos r-pos txt-c c-g40">Please, select year and panels to show the info.</li>
               </ul>
@@ -51,9 +45,7 @@
                     <p class="txt-s c-g40 uppc txt-c fos no-m-top m-xs-top" data-localize="feedback.loading">Loading data ...</p>
                 </div>
               </div>
-
             </div>
-
             <div class="col-xs-12">
                 <div class="quality-legend fos txt-c txt-s">
                   <span class="cqdata-il cqdata-a"></span> <span data-localize="label.vgp">Very Good Practice</span> &nbsp; 
@@ -63,7 +55,6 @@
                   <span class="cqdata-il cqdata-na"></span> <span data-localize="label.ndata">Missing Value</span> 
                 </div>
             </div>
-            
           </div>
         </div>
 

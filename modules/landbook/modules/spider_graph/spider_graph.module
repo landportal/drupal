@@ -8,4 +8,5 @@ function spider_graph_theme($existing, $type, $theme, $path){
 
 function spider_graph_page_alter(&$page){
 	drupal_add_js(drupal_get_path('module', 'spider_graph').'/lbvis.spider.js');
+	drupal_add_js(drupal_get_path('module', 'spider_graph').'/main.js');
 }

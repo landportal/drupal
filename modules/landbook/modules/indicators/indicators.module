@@ -29,5 +29,7 @@ function indicators_theme($existing, $type, $theme, $path){
 }
 
 function indicators_page_alter(&$page){
-  drupal_add_js(drupal_get_path('module', 'indicators').'/lbvis.table.js');
+  $library_path = libraries_get_path('lbvis');
+  drupal_add_js($library_path . '/js/lbvis.table.js');
+  drupal_add_js(drupal_get_path('module', 'indicators').'/main.js');
 }

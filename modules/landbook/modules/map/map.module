@@ -46,5 +46,7 @@ function map_theme($existing, $type, $theme, $path){
 }
 
 function map_page_alter(&$page){
-  //drupal_add_js(drupal_get_path('module', 'map').'/lbvis.map.js');
+  $library_path = libraries_get_path('lbvis');
+  drupal_add_js($library_path . '/js/lbvis.map.js');
+  //drupal_add_js(drupal_get_path('module', 'map').'/main.js');
 }

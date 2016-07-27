@@ -7,5 +7,7 @@ function pie_chart_theme($existing, $type, $theme, $path){
 }
 
 function pie_chart_page_alter(&$page){
-	drupal_add_js(drupal_get_path('module', 'pie_chart').'/lbvis.pie.js');
+  $library_path = libraries_get_path('lbvis');
+  drupal_add_js($library_path . '/js/lbvis.pie.js');
+  drupal_add_js(drupal_get_path('module', 'pie_chart').'/main.js');
 }
