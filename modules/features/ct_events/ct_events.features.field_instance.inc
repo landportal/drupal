@@ -22,7 +22,7 @@ function ct_events_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -33,17 +33,11 @@ function ct_events_field_default_field_instances() {
         'type' => 'text_summary_or_trimmed',
         'weight' => 5,
       ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'trim_length' => 200,
+          'trim_length' => 600,
         ),
         'type' => 'text_trimmed',
         'weight' => 5,
@@ -84,7 +78,7 @@ function ct_events_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -92,12 +86,6 @@ function ct_events_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 4,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -164,14 +152,8 @@ If it is only a one day event, the end date should be the same as the starting d
         'type' => 'date_default',
         'weight' => 3,
       ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
       'teaser' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
@@ -226,19 +208,13 @@ If it is only a one day event, the end date should be the same as the starting d
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 9,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 9,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -302,12 +278,6 @@ If it is only a one day event, the end date should be the same as the starting d
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
@@ -326,9 +296,8 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
         'auto_creation' => 0,
         'size' => 60,
         'sort' => 'weight',
@@ -336,7 +305,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 5,
     ),
   );
@@ -367,22 +336,12 @@ If it is only a one day event, the end date should be the same as the starting d
         'type' => 'image',
         'weight' => 0,
       ),
-      'promoted_country_page' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => 'content',
-          'image_style' => 'country_promoted',
-        ),
-        'type' => 'image',
-        'weight' => 0,
-      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => '600x400',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -436,19 +395,13 @@ If it is only a one day event, the end date should be the same as the starting d
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 8,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -506,7 +459,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -514,12 +467,6 @@ If it is only a one day event, the end date should be the same as the starting d
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 2,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -539,9 +486,8 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
         'auto_creation' => 1,
         'size' => 60,
         'sort' => 'weight',
@@ -549,7 +495,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 109,
     ),
   );
@@ -566,7 +512,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -574,12 +520,6 @@ If it is only a one day event, the end date should be the same as the starting d
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 3,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -599,12 +539,11 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
         'sort' => 'weight',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 110,
     ),
   );
@@ -621,7 +560,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -629,12 +568,6 @@ If it is only a one day event, the end date should be the same as the starting d
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 2,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
       ),
       'search_result' => array(
         'label' => 'hidden',
@@ -661,9 +594,8 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
         'auto_creation' => 0,
         'size' => 60,
         'sort' => 'weight',
@@ -671,7 +603,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 5,
     ),
   );

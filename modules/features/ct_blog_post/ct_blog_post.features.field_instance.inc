@@ -44,7 +44,7 @@ function ct_blog_post_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'trim_length' => 200,
+          'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
         'weight' => 3,
