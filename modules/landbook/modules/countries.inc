@@ -36,7 +36,7 @@ function landbook_countries($args=NULL) {
     drupal_add_js($library_path . '/js/map_data.js');
     drupal_add_js($library_path . '/js/lbvis.js');
     drupal_add_js($library_path . '/js/lbvis.data.js');
-    drupal_add_js(drupal_get_path('module', 'landbook').'/modules/js/main.js');
+    drupal_add_js(drupal_get_path('module', 'landbook').'/js/view-coda.js');
   } else {
     $template = 'countries';
     $r = new Countries();
