@@ -1,50 +1,57 @@
-<section class="country-section grey">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-offset-2 col-md-8">
-                <a id="compare"></a>
-                <h2 class="infographics section-title"><?php print $title;?></h2>
-            </div>
-        </div>
-        <div class="row m-l-top">
-          <div class="col-md-3">
-              <select class="sindicator fos cinput cinput-s-arrow cinput-sh" id="lsindicador"></select>
-          </div>
-          <div class="col-md-3">
-              <select class="scountry fos cinput cinput-s-arrow cinput-sh cinput-disabled" id="lscountry" disabled="disabled">
-                <option value="0" data-localize="inputs.scountry">Select country ...</option>
-              </select>
-          </div>
-          <div class="col-md-2">
-              <select class="speriod fos cinput cinput-s-arrow cinput-sh cinput-disabled" id="lsperiod_from" disabled="disabled">
-                <option value="0" data-localize="inputs.speriodfrom">From year ...</option>
-              </select>
-          </div>
-          <div class="col-md-2">
-              <select class="speriod fos cinput cinput-s-arrow cinput-sh cinput-disabled" id="lsperiod_to" disabled="disabled">
-                <option value="0" data-localize="inputs.speriodto">To year ...</option>
-              </select>
-          </div>
-          <div class="col-md-2">
-              <a href="#" class="txt-s uppc txt-c cbtn cbtn-block cbtn-s-acc cbtn-s-sh2 fos cbtn-ladd-compare" data-localize="inputs.addtocompare">Add to Compare</a>
-          </div>
-        </div>
-        <div class="row m-xl-top" id="igraphics">
-          <div class="col-xs-12 r-pos">
-            <div id="wrapper-igraphics"></div>
-
-            <div class="pos_loader_data hddn">
-              <div class="pos_spinkit">
-                <div class="sk-three-bounce no-m-bottom">
-                  <div class="sk-child sk-bounce1"></div>
-                  <div class="sk-child sk-bounce2"></div>
-                  <div class="sk-child sk-bounce3"></div>
-                </div>
-                <p class="txt-s c-g40 uppc txt-c fos no-m-top m-xs-top" data-localize="feedback.loading">Loading data ...</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
+<section id="compare" class="container-fluid">
+  <header class="row">
+    <div class="col-md-offset-2 col-md-8 text-center">
+      <?php $library_path = libraries_get_path('lbvis');?>
+      <img src="<?php print base_path() . $library_path . '/'?>img/ico-h2-infographics.png" alt="Compare">
+      <h2 class="" data-localize="global.compare"><?php print $title;?></h2>
     </div>
+  </header>
+
+  <div class="row">
+    <form>
+      <div class="form-group col-xs-6 col-sm-3">
+        <select name="indicator" class="form-control">
+          <option data-localize="inputs.indicators">Select an indicator...</option>
+        </select>
+      </div>
+      <div class="form-group col-xs-6 col-sm-3">
+        <select name="country" class="form-control" disabled="disabled">
+          <option data-localize="inputs.scountry">Select country ...</option>
+        </select>
+      </div>
+      <div class="form-group col-xs-3 col-sm-2">
+        <select name="year[from]" class="form-control" disabled="disabled">
+          <option data-localize="inputs.speriodfrom">From year ...</option>
+        </select>
+      </div>
+      <div class="form-group col-xs-3 col-sm-2">
+        <select name="year[to]" class="form-control" disabled="disabled">
+          <option data-localize="inputs.speriodto">To year ...</option>
+        </select>
+      </div>
+      <div class="form-group col-xs-3 col-sm-2">
+        <input type="submit" name="add" value="Add country" class="btn btn-primary" data-localize="inputs.addtocompare"/>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-center" id="labels-compare">
+      <span class="hidden">Remove countries added</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="compare-chart"></div>
+      <div class="loading">
+        <div class="pos_spinkit">
+          <div class="sk-three-bounce no-m-bottom">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+          </div>
+          <p class="text-center" data-localize="feedback.loading">Loading data ...</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

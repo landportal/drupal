@@ -32,7 +32,10 @@
 ?>
 
 <section class="top-hero grey">
-  <div id="mapDiv" data-highcharts-map="0"></div>
+  <section id="map-local">
+    <h2 class="text-center" data-localize="global.map">Local map</h2>
+    <div id="map-local-wrapper"></div>
+  </section>  
   <div class="photo-gallery">
     <div class="cover-pg r-pos">
         <?php  $block = block_load('views', 'book_latest_blocks-block_6');

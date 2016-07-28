@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * land_util.views_default.inc
+ * lviews_book_latest_blocks.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function land_util_views_default_views() {
+function views_book_latest_blocks_views_default_views() {
   $export = array();
 
   $view = new view();

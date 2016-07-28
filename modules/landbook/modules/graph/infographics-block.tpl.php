@@ -1,83 +1,83 @@
-<section class="country-section grey">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-offset-2 col-md-8">
-                <a id="infographic"></a>
-                <h2 class="rankings section-title"><?php print $title;?></h2>
-            </div>
-        </div>
-        <div id="lgaf" class="LGAF_area hddn">
-          <div class="row m-l-top p-xl-bottom cb-bottom-lh">
-            <div class="col-xs-12 m-l-top m-s-bottom">
-              <p class="displayb txt-c fos">Land Governance Assessment Framework (LGAF)</p>
-            </div>
-            <form>
-              <div class="col-md-offset-1 col-md-2">
-              <select name="year" class="years egsyear fos cinput cinput-s-arrow cinput-sh">
-                  <option data-localize="inputs.subpanels">Year</option>
-                </select>
-            </div>
-            <div class="col-md-4">
-              <select name="panel" class="panels egspanel fos cinput cinput-s-arrow cinput-sh">
-                  <option data-localize="inputs.subpanels">Panel</option>
-                </select>
-            </div>
-            <div class="col-md-4">
-              <select name="subpanel" class="subpanels egsindicator fos cinput cinput-s-arrow cinput-sh">
-                  <option data-localize="inputs.subpanels">Sub-panel</option>
-                </select>
-            </div>
-            <form>
-
-          </div>
-          <div class="row p-l-bottom">
-            <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8 r-pos" id="quality-info">
-              <ul class="quality-list">
-                <li class="item-q fos r-pos txt-c c-g40">Please, select year and panels to show the info.</li>
-              </ul>
-              <div class="pos_loader_data hddn">
-                <div class="pos_spinkit">
-                    <div class="sk-three-bounce no-m-bottom">
-                      <div class="sk-child sk-bounce1"></div>
-                      <div class="sk-child sk-bounce2"></div>
-                      <div class="sk-child sk-bounce3"></div>
-                    </div>
-                    <p class="txt-s c-g40 uppc txt-c fos no-m-top m-xs-top" data-localize="feedback.loading">Loading data ...</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12">
-                <div class="quality-legend fos txt-c txt-s">
-                  <span class="cqdata-il cqdata-a"></span> <span data-localize="label.vgp">Very Good Practice</span> &nbsp; 
-                  <span class="cqdata-il cqdata-b"></span> <span data-localize="label.gp">Good Practice</span> &nbsp; 
-                  <span class="cqdata-il cqdata-c"></span> <span data-localize="label.wp">Weak Practice</span> &nbsp;
-                  <span class="cqdata-il cqdata-d"></span> <span data-localize="label.vwp">Very Weak Practice </span> &nbsp;
-                  <span class="cqdata-il cqdata-na"></span> <span data-localize="label.ndata">Missing Value</span> 
-                </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-        <?php  $block = block_load('block', '4');
-                  $block = _block_render_blocks(array($block));
-                  $block_build = _block_get_renderable_array($block);
-                  echo drupal_render($block_build);
-                ?>
-        </div>
-        <div class="row">
-            <?php //drupal_add_js(array('landbook' => array('data_land' => $data['charts']['gaugeIndicators'])), 'setting'); ?>
-            <div class="col-md-6">
-              <?php print theme('pie-chart',array());?>
-            </div>
-            <div class="col-md-6 sep-left-charts">
-              <?php print theme('spider-graph',array()); ?>
-              <?php  $block = block_load('block', '3');
-                  $block = _block_render_blocks(array($block));
-                  $block_build = _block_get_renderable_array($block);
-                  echo drupal_render($block_build);
-                ?>
-            </div>
-        </div>
+<section id="lgaf" class="container-fluid">
+  <header class="row text-center">
+    <div class="col-xs-12">
+      <?php $library_path = libraries_get_path('lbvis');?>
+      <img src="<?php print base_path() . $library_path . '/'?>img/ico-h2-rankings.png" alt="inforgraphics">
+      <h2 data-localize="global.rankings"><?php print $title;?></h2>
     </div>
+    <div class="col-xs-12">
+      <h3>Land Governance Assessment Framework (LGAF)</h3>
+    </div>
+  </header>
+  <div class="row">
+    <form>
+      <div class="form-group col-xs-3 col-sm-2">
+        <select name="year" class="form-control" disabled="disabled">
+          <option data-localize="inputs.subpanels">Year</option>
+        </select>
+      </div>
+      <div class="form-group col-xs-9 col-sm-5">
+        <select name="panel" class="form-control">
+          <option data-localize="inputs.subpanels">Panel</option>
+        </select>
+      </div>
+      <div class="form-group col-xs-12 col-sm-5">
+        <select name="subpanel" class="form-control">
+          <option data-localize="inputs.subpanels">Sub-panel</option>
+        </select>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-offset-2 col-md-8">
+      <div class="loading hidden">
+        <div class="sk-three-bounce">
+          <div class="sk-child sk-bounce1"></div>
+          <div class="sk-child sk-bounce2"></div>
+          <div class="sk-child sk-bounce3"></div>
+        </div>
+        <p class="text-center" data-localize="feedback.loading">Loading data ...</p>
+      </div>
+      <ul id="lgaf-values" class="list-unstyled">
+        <li>Please, select year and panels to show the info.</li>
+      </ul>
+    </div>
+    <div class="col-xs-12 text-center">
+      <ul id="lgaf-legend" class="list-unstyled list-inline">
+        <li><span class="lgaf-value-a"></span> <span data-localize="label.vgp">Very Good Practice</span></li>
+        <li><span class="lgaf-value-b"></span> <span data-localize="label.gp">Good Practice</span></li>
+        <li><span class="lgaf-value-c"></span> <span data-localize="label.wp">Weak Practice</span></li>
+        <li><span class="lgaf-value-d"></span> <span data-localize="label.vwp">Very Weak Practice </span></li>
+        <li><span class="lgaf-value-na"></span> <span data-localize="label.ndata">Missing Value</span></li>
+      </ul>
+    </div>
+    <div class="col-xs-12">
+    <?php  $block = block_load('block', '4');
+      $block = _block_render_blocks(array($block));
+      $block_build = _block_get_renderable_array($block);
+      echo drupal_render($block_build);
+    ?>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <!-- js-view-coda: Pie -->
+      <div id="wrapper-piechart"></div>
+    </div>
+
+    <div class="col-sm-6">
+      <!-- js-view-coda: Spider -->
+      <div id="wrapper-spiderchart"></div>
+      <div class="row">
+        <div class="col-xs-12">
+          <?php  $block = block_load('block', '3');
+              $block = _block_render_blocks(array($block));
+              $block_build = _block_get_renderable_array($block);
+              echo drupal_render($block_build);
+          ?>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

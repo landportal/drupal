@@ -20,15 +20,19 @@ function landbook_countries($args=NULL) {
     drupal_set_title($data['info']['name']);
     $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
     $library_path = libraries_get_path('lbvis');
+
+    drupal_add_css($library_path . '/css/screen.css', array('group' => CSS_DEFAULT));
+    drupal_add_css($library_path . '/css/spinkit.css', array('group' => CSS_DEFAULT));
+
     drupal_add_js(array('landbook' => array('path' => $theme_path)), 'setting');
     drupal_add_js(array('landbook' => array('libraryPath' => base_path() . $library_path)), 'setting');
     drupal_add_js(array('landbook' => array('countryCode' => $args)), 'setting');
 
-    drupal_add_js($library_path . '/js/vendor/highcharts-more.js');
     drupal_add_js($library_path . '/js/vendor/randomColor.js');
     drupal_add_js($library_path . '/js/vendor/highstock.js');
     drupal_add_js($library_path . '/js/vendor/highmaps.js');
-    
+    drupal_add_js($library_path . '/js/vendor/highcharts-more.js');
+
     drupal_add_js($library_path . '/js/map_data.js');
     drupal_add_js($library_path . '/js/lbvis.js');
     drupal_add_js($library_path . '/js/lbvis.data.js');

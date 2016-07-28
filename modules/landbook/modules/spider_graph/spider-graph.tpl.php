@@ -1,1 +1,1 @@
-<div id="wrapper-spiderchart" data-highcharts-chart="2"></div>
+<div id="wrapper-spiderchart"></div>
