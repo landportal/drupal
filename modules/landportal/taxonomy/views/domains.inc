@@ -45,26 +45,14 @@ $handler->display->display_options['filters']['machine_name']['id'] = 'machine_n
 $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
 $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
 $handler->display->display_options['filters']['machine_name']['value'] = array(
-  'domains' => 'domains',
+  'overarching_categories' => 'overarching_categories',
 );
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Overarching categories';
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page_1');
-$handler->display->display_options['path'] = 'voc/domains';
-$translatables['domains'] = array(
-  t('Master'),
-  t('Overarching categories'),
-  t('more'),
-  t('Apply'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Term ID'),
-  t('.'),
-  t('Block'),
-  t('Page'),
-);
+$handler->display->display_options['path'] = 'voc/landvoc/overarching-category';

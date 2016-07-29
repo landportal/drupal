@@ -29,7 +29,7 @@ function library_search_apachesolr_search_default_searchers() {
     'apachesolr_search_spellcheck' => 1,
     'apachesolr_search_search_box' => 1,
     'apachesolr_search_allow_user_input' => 0,
-    'apachesolr_search_browse' => 'none',
+    'apachesolr_search_browse' => 'browse',
   );
   $export['library_search'] = $searcher;
 

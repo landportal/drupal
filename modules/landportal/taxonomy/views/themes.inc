@@ -21,6 +21,10 @@ $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '25';
 $handler->display->display_options['style_plugin'] = 'grid';
+$handler->display->display_options['style_options']['row_class'] = 'align-top';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['style_options']['columns'] = '3';
 $handler->display->display_options['row_plugin'] = 'fields';
 /* Field: Taxonomy term: Rendered Taxonomy term */
 $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
@@ -42,14 +46,7 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
-$translatables['themes'] = array(
-  t('Master'),
-  t('Themes'),
-  t('more'),
-  t('Apply'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Block'),
-);
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page_1');
+$handler->display->display_options['path'] = 'voc/landvoc/theme';

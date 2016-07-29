@@ -40,7 +40,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'Status of a debate',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -6,
+      'weight' => -5,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -215,7 +215,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'Regions',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => 7,
+      'weight' => -6,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(

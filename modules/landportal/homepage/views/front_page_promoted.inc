@@ -39,11 +39,6 @@ $handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_style' => 'large',
   'image_link' => 'content',
 );
-/* Sort criterion: Content: Updated date */
-$handler->display->display_options['sorts']['changed']['id'] = 'changed';
-$handler->display->display_options['sorts']['changed']['table'] = 'node';
-$handler->display->display_options['sorts']['changed']['field'] = 'changed';
-$handler->display->display_options['sorts']['changed']['order'] = 'DESC';
 /* Sort criterion: Content: Post date */
 $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -82,15 +77,3 @@ $handler->display->display_options['filters']['language']['value'] = array(
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
-$translatables['front_page_promoted'] = array(
-  t('Master'),
-  t('Promoted to front page'),
-  t('more'),
-  t('Apply'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Image'),
-  t('Block'),
-);

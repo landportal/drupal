@@ -9,4 +9,5 @@ dependencies[] = feeds
 dependencies[] = feeds_crawler
 dependencies[] = feeds_tamper
 dependencies[] = feeds_xpathparser
-dependencies[] = landlibrary
+dependencies[] = landlibrary_resource
+dependencies[] = landlibrary_taxonomy

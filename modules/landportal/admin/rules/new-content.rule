@@ -2,7 +2,7 @@
 /* This is exported directly from the rules export Drupal interface */
 
 $rule = '{ "rules_new_content" : {
-    "LABEL" : "New content",
+    "LABEL" : "New unpublished content",
     "PLUGIN" : "reaction rule",
     "OWNER" : "rules",
     "TAGS" : [ "content", "moderation" ],
@@ -11,7 +11,7 @@ $rule = '{ "rules_new_content" : {
     "IF" : [ { "NOT node_is_published" : { "node" : [ "node" ] } } ],
     "DO" : [
       { "mail" : {
-          "to" : "admin@landportal.info",
+          "to" : "admin@landportal.info, team-comm@landportal.info",
           "subject" : "New content on the Landportal",
           "message" : "Hi there!\r\n\r\nIt looks like [node:author] created:\r\n[node:title] \/ [node:url]\r\nTo publish it, go to\r\n[node:edit-url]\r\ncheck the text, tags, link etc... tick the \u0022published\u0022 option then save.\r\n\r\nThat\u0027s all for now...\r\n--\r\nYour beloved Landportal site.",
           "language" : [ "" ]

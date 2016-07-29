@@ -45,7 +45,7 @@ $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['alter']['max_length'] = '70';
 $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Content: Thumb */
+/* Field: Content: Thumbnail of the resource */
 $handler->display->display_options['fields']['field_doc_thumb']['id'] = 'field_doc_thumb';
 $handler->display->display_options['fields']['field_doc_thumb']['table'] = 'field_data_field_doc_thumb';
 $handler->display->display_options['fields']['field_doc_thumb']['field'] = 'field_doc_thumb';
@@ -91,24 +91,8 @@ $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  'und' => 'und',
 );
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
-
-/* Display: Page */
-$handler = $view->new_display('page', 'Page', 'page_1');
-$handler->display->display_options['enabled'] = FALSE;
-$handler->display->display_options['path'] = 'library';
-$translatables['landlibrary_promoted'] = array(
-  t('Master'),
-  t('more'),
-  t('Apply'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Content entity referenced from field_doc_provider'),
-  t('Block'),
-  t('Page'),
-);
