@@ -13,55 +13,6 @@ function ct_debate_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_debate';
-  $strongarm->value = 0;
-  $export['comment_anonymous_debate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_debate';
-  $strongarm->value = '2';
-  $export['comment_debate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_debate';
-  $strongarm->value = 1;
-  $export['comment_default_mode_debate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_debate';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_debate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_debate';
-  $strongarm->value = 1;
-  $export['comment_form_location_debate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_debate';
-  $strongarm->value = '1';
-  $export['comment_preview_debate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_debate';
-  $strongarm->value = 1;
-  $export['comment_subject_field_debate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__debate';
   $strongarm->value = array(
     'view_modes' => array(
@@ -86,20 +37,17 @@ function ct_debate_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
-      'listing' => array(
-        'custom_settings' => TRUE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '7',
+          'weight' => '5',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '6',
         ),
         'language' => array(
           'weight' => '4',
@@ -108,7 +56,7 @@ function ct_debate_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '10',
+            'weight' => '9',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -119,59 +67,11 @@ function ct_debate_strongarm() {
             'weight' => '6',
             'visible' => FALSE,
           ),
-          'promoted_country_page' => array(
-            'weight' => '10',
-            'visible' => FALSE,
-          ),
         ),
       ),
     ),
   );
   $export['field_bundle_settings_node__debate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_debate';
-  $strongarm->value = '2';
-  $export['language_content_type_debate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_debate';
-  $strongarm->value = array(
-    0 => 'landdebate-menu',
-  );
-  $export['menu_options_debate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_debate';
-  $strongarm->value = 'landdebate-menu:0';
-  $export['menu_parent_debate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_debate';
-  $strongarm->value = array();
-  $export['node_options_debate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_debate';
-  $strongarm->value = '1';
-  $export['node_preview_debate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_debate';
-  $strongarm->value = 1;
-  $export['node_submitted_debate'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
