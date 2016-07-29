@@ -41,12 +41,11 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
         'sort' => 'weight',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 112,
     ),
   );
@@ -220,9 +219,8 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
         'auto_creation' => 1,
         'size' => 60,
         'sort' => 'weight',
@@ -230,7 +228,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 109,
     ),
   );
@@ -266,12 +264,11 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
         'sort' => 'weight',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 110,
     ),
   );
@@ -307,12 +304,11 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
         'sort' => 'weight',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 111,
     ),
   );
@@ -396,12 +392,11 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
         'sort' => 'weight',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 112,
     ),
   );
@@ -642,9 +637,8 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
         'auto_creation' => 1,
         'size' => 60,
         'sort' => 'weight',
@@ -652,7 +646,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 109,
     ),
   );
@@ -688,12 +682,11 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
         'sort' => 'weight',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 110,
     ),
   );
@@ -729,12 +722,11 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
         'sort' => 'weight',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 111,
     ),
   );
