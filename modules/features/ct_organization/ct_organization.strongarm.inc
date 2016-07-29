@@ -59,7 +59,7 @@ function ct_organization_strongarm() {
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '4',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           'default' => array(
