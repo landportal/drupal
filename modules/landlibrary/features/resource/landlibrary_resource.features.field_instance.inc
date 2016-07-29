@@ -50,7 +50,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'An alternative title for the resource.',
+    'description' => 'The subtitle of the resource (if applicable).',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -72,220 +72,25 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 56,
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 35,
+        'weight' => 30,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_alt_title',
-    'label' => 'Alternative Title',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'node-landlibrary_resource-field_doc_citation'.
-  $field_instances['node-landlibrary_resource-field_doc_citation'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'The serial title, also known as the key-title, is a name ascribed to a serial publication and is inseparably
-associated with its ISSN.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 13,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'text_default',
-        'weight' => 5,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 42,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 54,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_doc_citation',
-    'label' => 'Citation Title',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 13,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'node-landlibrary_resource-field_doc_citation_chronology'.
-  $field_instances['node-landlibrary_resource-field_doc_citation_chronology'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => FALSE,
-          'show_repeat_rule' => 'show',
-        ),
-        'type' => 'date_default',
-        'weight' => 15,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'conditions' => array(),
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => FALSE,
-          'show_repeat_rule' => 'show',
-        ),
-        'type' => 'date_default',
-        'weight' => 8,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 49,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_doc_citation_chronology',
-    'label' => 'Citation Chronology',
-    'required' => FALSE,
-    'settings' => array(
-      'default_value' => 'now',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'date',
-      'settings' => array(
-        'increment' => 15,
-        'input_format' => 'm/d/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'repeat_collapsed' => 0,
-        'text_parts' => array(),
-        'year_range' => '-3:+3',
-      ),
-      'type' => 'date_select',
-      'weight' => 15,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'node-landlibrary_resource-field_doc_citation_number'.
-  $field_instances['node-landlibrary_resource-field_doc_citation_number'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'The issue, part or number which denotes a particular issue of a journal, as it appears on the cover. In many
-cases this indicates a part of a journal volume.
-',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 14,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'text_default',
-        'weight' => 7,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 45,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 42,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_doc_citation_number',
-    'label' => 'Citation Number',
+    'label' => 'Subtitle',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'mailchimp_campaign' => 'mailchimp_campaign',
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -293,13 +98,16 @@ cases this indicates a part of a journal volume.
         'default_order_wrapper' => array(
           'formats' => array(
             'filtered_html' => array(
-              'weight' => 0,
+              'weight' => -10,
             ),
             'full_html' => array(
-              'weight' => 1,
+              'weight' => -9,
+            ),
+            'mailchimp_campaign' => array(
+              'weight' => -9,
             ),
             'plain_text' => array(
-              'weight' => 10,
+              'weight' => -8,
             ),
           ),
         ),
@@ -315,130 +123,7 @@ cases this indicates a part of a journal volume.
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 14,
-    ),
-  );
-
-  // Exported field_instance: 'node-landlibrary_resource-field_doc_conference'.
-  $field_instances['node-landlibrary_resource-field_doc_conference'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'An entity responsible for the resources derived from a meeting of individuals or representatives of various bodies for the purpose of
-discussing and acting on topics of common interest, or meetings of representatives of a corporate body that
-constitute its legislative or governing body.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 18,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 59,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 41,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
-      ),
-    ),
-    'entity_type' => 'node',
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
-    'field_name' => 'field_doc_conference',
-    'label' => 'Conference',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-landlibrary_resource-field_doc_contributor'.
-  $field_instances['node-landlibrary_resource-field_doc_contributor'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'An entity with a contributing role to the creation of the intellectual content of the resource.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 9,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'conditions' => array(),
-          'links' => 0,
-          'view_mode' => 'default',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 12,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-    ),
-    'entity_type' => 'node',
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
-    'field_name' => 'field_doc_contributor',
-    'label' => 'Contributor',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 125,
     ),
   );
 
@@ -446,9 +131,13 @@ constitute its legislative or governing body.',
   // 'node-landlibrary_resource-field_doc_copyrights_statement'.
   $field_instances['node-landlibrary_resource-field_doc_copyrights_statement'] = array(
     'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => '©',
+      ),
+    ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The organization / person that owns the resource.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -470,20 +159,46 @@ constitute its legislative or governing body.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 37,
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 32,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_copyrights_statement',
-    'label' => 'Copyrights Statement',
+    'label' => 'Copyright',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'mailchimp_campaign' => 'mailchimp_campaign',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -10,
+            ),
+            'full_html' => array(
+              'weight' => -9,
+            ),
+            'mailchimp_campaign' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -492,10 +207,10 @@ constitute its legislative or governing body.',
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 1,
       ),
       'type' => 'text_textarea',
-      'weight' => 72,
+      'weight' => 13,
     ),
   );
 
@@ -510,7 +225,7 @@ constitute its legislative or governing body.',
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 38,
       ),
       'full' => array(
         'label' => 'above',
@@ -523,16 +238,15 @@ constitute its legislative or governing body.',
       ),
       'listing' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 38,
+        'type' => 'hidden',
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 21,
       ),
     ),
     'entity_type' => 'node',
@@ -550,7 +264,7 @@ constitute its legislative or governing body.',
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 12,
+      'weight' => 140,
     ),
   );
 
@@ -559,7 +273,7 @@ constitute its legislative or governing body.',
   $field_instances['node-landlibrary_resource-field_doc_creation_date'] = array(
     'bundle' => 'landlibrary_resource',
     'deleted' => 0,
-    'description' => 'A point or period of time associated with an event in the lifecycle of the resource.',
+    'description' => 'The date of publication of the resource (YYYY/MM).',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -574,7 +288,7 @@ constitute its legislative or governing body.',
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 23,
+        'weight' => 21,
       ),
       'full' => array(
         'label' => 'above',
@@ -605,7 +319,7 @@ constitute its legislative or governing body.',
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 7,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'inline',
@@ -625,8 +339,8 @@ constitute its legislative or governing body.',
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_creation_date',
-    'label' => 'Publication date',
-    'required' => 0,
+    'label' => 'Date of publication',
+    'required' => 1,
     'settings' => array(
       'default_value' => 'blank',
       'default_value2' => 'same',
@@ -641,7 +355,7 @@ constitute its legislative or governing body.',
       'settings' => array(
         'increment' => 15,
         'input_format' => 'custom',
-        'input_format_custom' => 'Y-m-d',
+        'input_format_custom' => 'Y/m',
         'label_position' => 'above',
         'no_fieldset' => 0,
         'repeat_collapsed' => 0,
@@ -650,146 +364,8 @@ constitute its legislative or governing body.',
         ),
         'year_range' => '-5000:+10',
       ),
-      'type' => 'date_text',
-      'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance: 'node-landlibrary_resource-field_doc_creator'.
-  $field_instances['node-landlibrary_resource-field_doc_creator'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'default_value_function' => 'entityreference_prepopulate_field_default_value',
-    'deleted' => 0,
-    'description' => 'An entity responsible for making the content of the resource.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 8,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'conditions' => array(),
-          'links' => 0,
-          'view_mode' => 'resource',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 17,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 39,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 37,
-      ),
-    ),
-    'entity_type' => 'node',
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
-    'field_name' => 'field_doc_creator',
-    'label' => 'Creator',
-    'required' => 0,
-    'settings' => array(
-      'behaviors' => array(
-        'prepopulate' => array(
-          'action' => 'none',
-          'action_on_edit' => 0,
-          'fallback' => 'none',
-          'providers' => array(
-            'og_context' => FALSE,
-            'url' => 1,
-          ),
-          'skip_perm' => 0,
-          'status' => 1,
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'node-landlibrary_resource-field_doc_data_provider'.
-  $field_instances['node-landlibrary_resource-field_doc_data_provider'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'The name of the organisation that holds or owns the original or digitised object.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 61,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 46,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 38,
-      ),
-    ),
-    'entity_type' => 'node',
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
-    'field_name' => 'field_doc_data_provider',
-    'label' => 'Data Provider',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'fc' => array(
-        'fc_allow_empty' => 0,
-        'fc_check_entities' => 0,
-        'fc_include' => 0,
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 12,
+      'type' => 'date_select',
+      'weight' => 4,
     ),
   );
 
@@ -798,7 +374,7 @@ constitute its legislative or governing body.',
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'A textual description of the content of the resource.',
+    'description' => 'The abstract of the resource or a description of the resource.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -832,14 +408,40 @@ constitute its legislative or governing body.',
           'trim_length' => 200,
         ),
         'type' => 'text_trimmed',
-        'weight' => 9,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_description',
-    'label' => 'Description',
-    'required' => 0,
+    'label' => 'Abstract or Description',
+    'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'mailchimp_campaign' => 'mailchimp_campaign',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -10,
+            ),
+            'full_html' => array(
+              'weight' => -9,
+            ),
+            'mailchimp_campaign' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -855,113 +457,19 @@ constitute its legislative or governing body.',
     ),
   );
 
-  // Exported field_instance: 'node-landlibrary_resource-field_doc_edition'.
-  $field_instances['node-landlibrary_resource-field_doc_edition'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Enter the information identifying the edition or version to which the resource belongs. Use only when the resource is a second or subsequent edition.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 17,
-      ),
-      'full' => array(
-        'label' => 'inline',
-        'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'text_default',
-        'weight' => 11,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 53,
-      ),
-      'rss' => array(
-        'label' => 'inline',
-        'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'text_plain',
-        'weight' => 6,
-      ),
-      'search_index' => array(
-        'label' => 'inline',
-        'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'text_default',
-        'weight' => 6,
-      ),
-      'search_result' => array(
-        'label' => 'inline',
-        'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'text_default',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 55,
-      ),
-      'token' => array(
-        'label' => 'inline',
-        'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'text_plain',
-        'weight' => 6,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_doc_edition',
-    'label' => 'Edition',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'weight' => 6,
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 10,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 9,
-    ),
-    'widget_type' => 'text_textfield',
-  );
-
   // Exported field_instance: 'node-landlibrary_resource-field_doc_identifier'.
   $field_instances['node-landlibrary_resource-field_doc_identifier'] = array(
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Unique label that identifies the resource.',
+    'description' => 'An ISBN or another unique label that identifies the resource. (If your resource does not have a unique label, please enter the first six letters of the publisher - first six letters of the title - YYYYMM.E.g.: Landpo-Firsts-201607).',
     'display' => array(
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 22,
+        'weight' => 20,
       ),
       'full' => array(
         'label' => 'above',
@@ -976,20 +484,46 @@ constitute its legislative or governing body.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 51,
+        'weight' => 34,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 50,
+        'weight' => 35,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_identifier',
-    'label' => 'Document Id',
-    'required' => 1,
+    'label' => 'ISBN / Resource ID',
+    'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'mailchimp_campaign' => 'mailchimp_campaign',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -10,
+            ),
+            'full_html' => array(
+              'weight' => -9,
+            ),
+            'mailchimp_campaign' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1001,7 +535,7 @@ constitute its legislative or governing body.',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 127,
     ),
   );
 
@@ -1017,7 +551,7 @@ constitute its legislative or governing body.',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 31,
+        'weight' => 29,
       ),
       'full' => array(
         'label' => 'above',
@@ -1032,13 +566,13 @@ constitute its legislative or governing body.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
+        'weight' => 33,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 34,
       ),
     ),
     'entity_type' => 'node',
@@ -1074,7 +608,7 @@ constitute its legislative or governing body.',
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 91,
+      'weight' => 143,
     ),
   );
 
@@ -1083,14 +617,14 @@ constitute its legislative or governing body.',
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'An unambiguous URL reference to the resource on the provider’s location in its full information context.',
+    'description' => 'The page on the website of the publisher where the resource is presented (e.g.: http://landportal.info/library/resources/report-sharing-best-practices-and-lessons-learned-supporting-women%E2%80%99s-land-rights).',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 25,
+        'weight' => 23,
       ),
       'full' => array(
         'label' => 'above',
@@ -1102,13 +636,13 @@ constitute its legislative or governing body.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 33,
       ),
     ),
     'entity_type' => 'node',
@@ -1131,10 +665,10 @@ constitute its legislative or governing body.',
       'enable_tokens' => 1,
       'entity_translation_sync' => FALSE,
       'rel_remove' => 'default',
-      'title' => 'none',
+      'title' => 'value',
       'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
-      'title_value' => '',
+      'title_value' => 'Access original publishing page',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,
@@ -1144,7 +678,7 @@ constitute its legislative or governing body.',
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 11,
+      'weight' => 4,
     ),
   );
 
@@ -1153,14 +687,14 @@ constitute its legislative or governing body.',
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'An unambiguous URL reference to the resource on the provider’s repository',
+    'description' => 'The URL to the resource on the publisher\'s website (e.g.: http://landportal.info/sites/landportal.info/files/GECDiscussionReport-Final.pdf)',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 26,
+        'weight' => 24,
       ),
       'full' => array(
         'label' => 'above',
@@ -1172,13 +706,13 @@ constitute its legislative or governing body.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 35,
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 31,
       ),
     ),
     'entity_type' => 'node',
@@ -1201,10 +735,10 @@ constitute its legislative or governing body.',
       'enable_tokens' => 1,
       'entity_translation_sync' => FALSE,
       'rel_remove' => 'default',
-      'title' => 'none',
+      'title' => 'value',
       'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
-      'title_value' => '',
+      'title_value' => 'Click here to access the resource',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,
@@ -1214,7 +748,7 @@ constitute its legislative or governing body.',
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 10,
+      'weight' => 1,
     ),
   );
 
@@ -1223,38 +757,31 @@ constitute its legislative or governing body.',
   $field_instances['node-landlibrary_resource-field_doc_is_shown_by_file'] = array(
     'bundle' => 'landlibrary_resource',
     'deleted' => 0,
-    'description' => 'Upload the file for the Land Portal resource',
+    'description' => 'Upload the resource to the Land Portal\'s server.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 27,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 27,
+        'weight' => 25,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 28,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_is_shown_by_file',
-    'label' => 'File',
+    'label' => 'File Upload',
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
@@ -1271,7 +798,7 @@ constitute its legislative or governing body.',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 12,
+      'weight' => 5,
     ),
   );
 
@@ -1286,7 +813,7 @@ constitute its legislative or governing body.',
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 44,
       ),
       'full' => array(
         'label' => 'above',
@@ -1303,13 +830,13 @@ constitute its legislative or governing body.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 23,
       ),
     ),
     'entity_type' => 'node',
@@ -1339,7 +866,7 @@ constitute its legislative or governing body.',
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 
@@ -1348,13 +875,13 @@ constitute its legislative or governing body.',
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The language of the intellectual content of the resource.',
+    'description' => 'The language of the resource',
     'display' => array(
       'default' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 46,
       ),
       'full' => array(
         'label' => 'above',
@@ -1369,7 +896,7 @@ constitute its legislative or governing body.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1380,7 +907,7 @@ constitute its legislative or governing body.',
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_language',
-    'label' => 'Language',
+    'label' => 'Resource Language',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1402,14 +929,14 @@ constitute its legislative or governing body.',
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Provide info about the license used.',
+    'description' => 'Add information about the license under which the resource is published. Please note that this does not apply to the <b>metadata</b> of the resource. <a href="/page/terms-and-conditions-use">Read more here</a>.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 12,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'above',
@@ -1424,18 +951,18 @@ constitute its legislative or governing body.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 26,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_licencing',
-    'label' => 'Licencing',
+    'label' => 'License of the resource',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1448,7 +975,7 @@ constitute its legislative or governing body.',
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 12,
     ),
   );
 
@@ -1457,14 +984,14 @@ constitute its legislative or governing body.',
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The size of the resource as free text (eg. number of pages).',
+    'description' => 'Number of pages of the resource (if applicable) or the duration of a video.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 24,
+        'weight' => 22,
       ),
       'full' => array(
         'label' => 'inline',
@@ -1479,7 +1006,7 @@ constitute its legislative or governing body.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 22,
       ),
       'rss' => array(
         'label' => 'inline',
@@ -1512,7 +1039,7 @@ constitute its legislative or governing body.',
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 56,
+        'weight' => 36,
       ),
       'token' => array(
         'label' => 'inline',
@@ -1526,9 +1053,35 @@ constitute its legislative or governing body.',
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_pagination',
-    'label' => 'Pages / volumes',
+    'label' => 'Pages / Duration',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'mailchimp_campaign' => 'mailchimp_campaign',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -10,
+            ),
+            'full_html' => array(
+              'weight' => -9,
+            ),
+            'mailchimp_campaign' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1541,9 +1094,83 @@ constitute its legislative or governing body.',
         'size' => 25,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 126,
     ),
     'widget_type' => 'text_textfield',
+  );
+
+  // Exported field_instance: 'node-landlibrary_resource-field_doc_people'.
+  $field_instances['node-landlibrary_resource-field_doc_people'] = array(
+    'bundle' => 'landlibrary_resource',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'People who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]"
+',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 15,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_doc_people',
+    'label' => 'Author(s), editor(s), contributor(s)',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'mailchimp_campaign' => 'mailchimp_campaign',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -10,
+            ),
+            'full_html' => array(
+              'weight' => -9,
+            ),
+            'mailchimp_campaign' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 124,
+    ),
   );
 
   // Exported field_instance: 'node-landlibrary_resource-field_doc_provider'.
@@ -1551,7 +1178,7 @@ constitute its legislative or governing body.',
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The name of the organization (aggregator) that delivers data.',
+    'description' => 'The organization that makes the resource available (needs to be linked to an organizational profile on the Land Portal).',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1561,7 +1188,7 @@ constitute its legislative or governing body.',
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 11,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'above',
@@ -1575,24 +1202,34 @@ constitute its legislative or governing body.',
         'weight' => 13,
       ),
       'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 17,
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 19,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 23,
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
+    'entityconnect_show_add_icon' => 0,
+    'entityconnect_show_edit_icon' => 0,
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 0,
     'field_name' => 'field_doc_provider',
-    'label' => 'Provider',
-    'required' => 1,
+    'label' => 'Data Provider',
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'fc' => array(
@@ -1611,7 +1248,7 @@ constitute its legislative or governing body.',
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 11,
+      'weight' => 122,
     ),
   );
 
@@ -1620,7 +1257,7 @@ constitute its legislative or governing body.',
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'An entity responsible for making the resource available',
+    'description' => 'The organization that published the resource (needs to be linked to an organizational profile on the Land Portal).',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1630,7 +1267,7 @@ constitute its legislative or governing body.',
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 10,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
@@ -1647,13 +1284,16 @@ constitute its legislative or governing body.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 19,
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'node',
@@ -1663,7 +1303,7 @@ constitute its legislative or governing body.',
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_doc_publisher',
     'label' => 'Publisher',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -1677,7 +1317,7 @@ constitute its legislative or governing body.',
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 121,
     ),
   );
 
@@ -1687,14 +1327,14 @@ constitute its legislative or governing body.',
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The place where the resource was published',
+    'description' => 'The location of the source.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 20,
+        'weight' => 13,
       ),
       'full' => array(
         'label' => 'above',
@@ -1709,18 +1349,18 @@ constitute its legislative or governing body.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 24,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_publisher_place',
-    'label' => 'Publisher Place',
+    'label' => 'Location Source',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1730,22 +1370,11 @@ constitute its legislative or governing body.',
       'active' => 0,
       'module' => 'taxonomy',
       'settings' => array(
-        'agrovocfield' => array(
-          'autocomplete' => array(
-            'agrovocfield_autocomplete' => array(
-              'agrovocfield_agrovoc_uri' => 'http://aims.fao.org/aos/agrovoc/c_',
-              'agrovocfield_agrovoc_ws_uri' => 'AgrovocWS',
-              'agrovocfield_agrovoc_ws_url' => 'http://agrovoc.fao.org/axis/services/SKOSWS',
-              'agrovocfield_connection' => 'remote',
-              'agrovocfield_enable' => TRUE,
-            ),
-          ),
-        ),
         'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 10,
+      'weight' => 144,
     ),
   );
 
@@ -1761,7 +1390,7 @@ constitute its legislative or governing body.',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_separate',
-        'weight' => 30,
+        'weight' => 28,
       ),
       'full' => array(
         'label' => 'above',
@@ -1776,13 +1405,13 @@ constitute its legislative or governing body.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 25,
       ),
     ),
     'entity_type' => 'node',
@@ -1818,79 +1447,7 @@ constitute its legislative or governing body.',
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 90,
-    ),
-  );
-
-  // Exported field_instance: 'node-landlibrary_resource-field_doc_replaces'.
-  $field_instances['node-landlibrary_resource-field_doc_replaces'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'The described resource supplants, displaces, or supersedes the referenced resource.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 41,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'link',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'link_default',
-        'weight' => 35,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 28,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 28,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_doc_replaces',
-    'label' => 'Replaces',
-    'required' => 0,
-    'settings' => array(
-      'absolute_url' => 1,
-      'attributes' => array(
-        'class' => '',
-        'configurable_class' => 0,
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'entity_translation_sync' => FALSE,
-      'rel_remove' => 'default',
-      'title' => 'none',
-      'title_label_use_field_label' => 0,
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 99,
+      'weight' => 142,
     ),
   );
 
@@ -1898,7 +1455,7 @@ constitute its legislative or governing body.',
   $field_instances['node-landlibrary_resource-field_doc_thumb'] = array(
     'bundle' => 'landlibrary_resource',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload a small picture of the first page of the resource (recommended).',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1938,7 +1495,7 @@ constitute its legislative or governing body.',
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_thumb',
-    'label' => 'Thumb',
+    'label' => 'Thumbnail of the resource',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -1960,7 +1517,7 @@ constitute its legislative or governing body.',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 4,
+      'weight' => 2,
     ),
   );
 
@@ -1975,32 +1532,52 @@ constitute its legislative or governing body.',
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 47,
       ),
       'listing' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 22,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_title',
-    'label' => 'Title',
+    'label' => 'Resource title',
     'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'mailchimp_campaign' => 'mailchimp_campaign',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -10,
+            ),
+            'full_html' => array(
+              'weight' => -9,
+            ),
+            'mailchimp_campaign' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -2012,7 +1589,7 @@ constitute its legislative or governing body.',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 139,
     ),
   );
 
@@ -2028,7 +1605,7 @@ constitute its legislative or governing body.',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 21,
+        'weight' => 19,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -2046,7 +1623,7 @@ constitute its legislative or governing body.',
           'linked' => FALSE,
         ),
         'type' => 'shs_default',
-        'weight' => 5,
+        'weight' => 1,
       ),
       'rss' => array(
         'label' => 'inline',
@@ -2076,11 +1653,11 @@ constitute its legislative or governing body.',
         'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 4,
       ),
       'token' => array(
         'label' => 'hidden',
@@ -2095,7 +1672,7 @@ constitute its legislative or governing body.',
     'entity_type' => 'node',
     'field_name' => 'field_doc_type',
     'label' => 'Resource type',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -2108,64 +1685,9 @@ constitute its legislative or governing body.',
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 2,
     ),
     'widget_type' => 'options_select',
-  );
-
-  // Exported field_instance: 'node-landlibrary_resource-field_format'.
-  $field_instances['node-landlibrary_resource-field_format'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'The physical or digital manifestation of the resource.',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 29,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 20,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 29,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 33,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_format',
-    'label' => 'Format',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 5,
-    ),
   );
 
   // Exported field_instance:
@@ -2174,16 +1696,9 @@ constitute its legislative or governing body.',
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The geographical focus of the resource (possible to select several).',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 1,
-      ),
-      'full' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
@@ -2195,14 +1710,14 @@ constitute its legislative or governing body.',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -2215,17 +1730,11 @@ constitute its legislative or governing body.',
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
-        'auto_creation' => 0,
-        'size' => 60,
-        'sort' => 'weight',
-        'suggest_only_unique' => 0,
-        'suggestion_size' => 10,
-        'synonyms_autocomplete_path' => 'synonyms/autocomplete',
+        'sort' => 'name',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 112,
     ),
   );
@@ -2241,26 +1750,19 @@ constitute its legislative or governing body.',
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_markup',
-        'weight' => 28,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'computed_field',
-        'settings' => array(),
-        'type' => 'computed_field_markup',
-        'weight' => 28,
+        'weight' => 26,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 29,
       ),
     ),
     'entity_type' => 'node',
@@ -2281,49 +1783,47 @@ constitute its legislative or governing body.',
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 13,
+      'weight' => 6,
     ),
   );
 
-  // Exported field_instance: 'node-landlibrary_resource-field_related_domains'.
-  $field_instances['node-landlibrary_resource-field_related_domains'] = array(
+  // Exported field_instance: 'node-landlibrary_resource-field_orgref'.
+  $field_instances['node-landlibrary_resource-field_orgref'] = array(
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Organization cited as Author of this material  (linked to an organizational profile on the Land Portal).',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 2,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 2,
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 14,
       ),
       'listing' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
+        'label' => 'above',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 2,
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
+        'label' => 'above',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'type' => 'hidden',
+        'weight' => 20,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_related_domains',
-    'label' => 'Overarching categories',
+    'entityconnect_show_add_icon' => 0,
+    'entityconnect_show_edit_icon' => 0,
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 1,
+    'field_name' => 'field_orgref',
+    'label' => 'Corporate Author(s)',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -2333,16 +1833,58 @@ constitute its legislative or governing body.',
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => '',
-        'auto_creation' => 1,
-        'size' => 60,
-        'sort' => 'weight',
-        'suggest_only_unique' => 0,
-        'suggestion_size' => 10,
-        'synonyms_autocomplete_path' => 'synonyms/autocomplete',
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 109,
+      'weight' => 125,
+    ),
+  );
+
+  // Exported field_instance: 'node-landlibrary_resource-field_related_domains'.
+  $field_instances['node-landlibrary_resource-field_related_domains'] = array(
+    'bundle' => 'landlibrary_resource',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter one (or several) of the Land Portal\'s <a href="/voc/landvoc">Overarching Categories</a> to classify the topical subject of the resource.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 7,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_related_domains',
+    'label' => 'Overarching Categories',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'synonyms',
+      'settings' => array(
+        'sort' => 'weight',
+      ),
+      'type' => 'synonyms_select_taxonomy_term',
+      'weight' => 114,
     ),
   );
 
@@ -2351,16 +1893,9 @@ constitute its legislative or governing body.',
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Add one (or more) of the Land Portal\'s <a href="/voc/landvoc">Themes</a> to classify the topical subject of the resource.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 3,
-      ),
-      'full' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
@@ -2372,14 +1907,14 @@ constitute its legislative or governing body.',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -2392,13 +1927,12 @@ constitute its legislative or governing body.',
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
         'sort' => 'weight',
       ),
-      'type' => 'options_select',
-      'weight' => 110,
+      'type' => 'synonyms_select_taxonomy_term',
+      'weight' => 115,
     ),
   );
 
@@ -2407,16 +1941,9 @@ constitute its legislative or governing body.',
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.',
+    'description' => 'Enter a concept term from Land Portal\'s <a href="/voc/landvoc">LandVoc</a> thesaurus to classify the topical subject of the resource.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
-      ),
-      'full' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
@@ -2428,7 +1955,7 @@ constitute its legislative or governing body.',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 7,
       ),
       'search_result' => array(
         'label' => 'hidden',
@@ -2442,12 +1969,12 @@ constitute its legislative or governing body.',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_related_topics',
-    'label' => 'Related concepts',
+    'label' => 'Related Concepts',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -2455,161 +1982,74 @@ constitute its legislative or governing body.',
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
-        'apply_chosen' => '',
-        'auto_creation' => 0,
-        'size' => 60,
         'sort' => 'weight',
-        'suggest_only_unique' => 0,
-        'suggestion_size' => 10,
-        'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
-      'type' => 'options_select',
-      'weight' => 111,
-    ),
-  );
-
-  // Exported field_instance: 'node-landlibrary_resource-field_user'.
-  $field_instances['node-landlibrary_resource-field_user'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Who actually wrote or created this material',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 1,
-          'view_mode' => 'teaser',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 7,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 1,
-          'view_mode' => 'teaser',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 7,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 32,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 32,
-      ),
-    ),
-    'entity_type' => 'node',
-    'entityconnect_show_add_icon' => 0,
-    'entityconnect_show_edit_icon' => 0,
-    'entityconnect_unload_add' => 1,
-    'entityconnect_unload_edit' => 1,
-    'field_name' => 'field_user',
-    'label' => 'Authors',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 6,
+      'type' => 'synonyms_select_taxonomy_term',
+      'weight' => 113,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('A point or period of time associated with an event in the lifecycle of the resource.');
   t('A related resource in which the described resource is physically or logically included.');
   t('A related resource.');
-  t('A textual description of the content of the resource.');
-  t('Alternative Title');
-  t('An alternative title for the resource.');
-  t('An entity responsible for making the content of the resource.');
-  t('An entity responsible for making the resource available');
-  t('An entity responsible for the resources derived from a meeting of individuals or representatives of various bodies for the purpose of
-discussing and acting on topics of common interest, or meetings of representatives of a corporate body that
-constitute its legislative or governing body.');
-  t('An entity with a contributing role to the creation of the intellectual content of the resource.');
-  t('An unambiguous URL reference to the resource on the provider’s location in its full information context.');
-  t('An unambiguous URL reference to the resource on the provider’s repository');
-  t('Authors');
-  t('Citation Chronology');
-  t('Citation Number');
-  t('Citation Title');
+  t('Abstract or Description');
+  t('Add information about the license under which the resource is published. Please note that this does not apply to the <b>metadata</b> of the resource. <a href="/page/terms-and-conditions-use">Read more here</a>.');
+  t('Add one (or more) of the Land Portal\'s <a href="/voc/landvoc">Themes</a> to classify the topical subject of the resource.');
+  t('An ISBN or another unique label that identifies the resource. (If your resource does not have a unique label, please enter the first six letters of the publisher - first six letters of the title - YYYYMM.E.g.: Landpo-Firsts-201607).');
+  t('Author(s), editor(s), contributor(s)');
   t('Comment');
-  t('Conference');
-  t('Contributor');
-  t('Copyrights Statement');
+  t('Copyright');
+  t('Corporate Author(s)');
   t('Country');
   t('Country to which this resource applies.');
-  t('Creator');
   t('Data Provider');
-  t('Description');
-  t('Document Id');
-  t('Edition');
-  t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
-  t('Enter the information identifying the edition or version to which the resource belongs. Use only when the resource is a second or subsequent edition.');
-  t('File');
-  t('Format');
+  t('Date of publication');
+  t('Enter a concept term from Land Portal\'s <a href="/voc/landvoc">LandVoc</a> thesaurus to classify the topical subject of the resource.');
+  t('Enter one (or several) of the Land Portal\'s <a href="/voc/landvoc">Overarching Categories</a> to classify the topical subject of the resource.');
+  t('File Upload');
   t('Geographical focus');
+  t('ISBN / Resource ID');
   t('Is part of');
   t('Keyword');
-  t('Language');
-  t('Licencing');
+  t('License of the resource');
   t('Local file URL');
-  t('Overarching categories');
-  t('Pages / volumes');
-  t('Provide info about the license used.');
-  t('Provider');
-  t('Publication date');
+  t('Location Source');
+  t('Number of pages of the resource (if applicable) or the duration of a video.');
+  t('Organization cited as Author of this material  (linked to an organizational profile on the Land Portal).');
+  t('Overarching Categories');
+  t('Pages / Duration');
+  t('People who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]"
+');
   t('Published at');
   t('Publisher');
-  t('Publisher Place');
-  t('Related concepts');
+  t('Related Concepts');
   t('Relation');
-  t('Replaces');
+  t('Resource Language');
   t('Resource URL');
+  t('Resource title');
   t('Resource type');
   t('Select the most appropriate type for the resource.');
-  t('The described resource supplants, displaces, or supersedes the referenced resource.');
-  t('The issue, part or number which denotes a particular issue of a journal, as it appears on the cover. In many
-cases this indicates a part of a journal volume.
-');
-  t('The language of the intellectual content of the resource.');
-  t('The name of the organisation that holds or owns the original or digitised object.');
-  t('The name of the organization (aggregator) that delivers data.');
-  t('The physical or digital manifestation of the resource.');
-  t('The place where the resource was published');
-  t('The serial title, also known as the key-title, is a name ascribed to a serial publication and is inseparably
-associated with its ISSN.');
-  t('The size of the resource as free text (eg. number of pages).');
+  t('Subtitle');
+  t('The URL to the resource on the publisher\'s website (e.g.: http://landportal.info/sites/landportal.info/files/GECDiscussionReport-Final.pdf)');
+  t('The abstract of the resource or a description of the resource.');
+  t('The date of publication of the resource (YYYY/MM).');
+  t('The geographical focus of the resource (possible to select several).');
+  t('The language of the resource');
+  t('The location of the source.');
+  t('The organization / person that owns the resource.');
+  t('The organization that makes the resource available (needs to be linked to an organizational profile on the Land Portal).');
+  t('The organization that published the resource (needs to be linked to an organizational profile on the Land Portal).');
+  t('The page on the website of the publisher where the resource is presented (e.g.: http://landportal.info/library/resources/report-sharing-best-practices-and-lessons-learned-supporting-women%E2%80%99s-land-rights).');
+  t('The subtitle of the resource (if applicable).');
   t('Themes');
   t('This is a hidden field storing the value of the URL of the local file (the upload field cannot be mapped to RDF properties).');
-  t('Thumb');
-  t('Title');
+  t('Thumbnail of the resource');
   t('Title of the resource i.e. the name by which the resource is formally known.');
-  t('Unique label that identifies the resource.');
-  t('Upload the file for the Land Portal resource');
-  t('Who actually wrote or created this material');
+  t('Upload a small picture of the first page of the resource (recommended).');
+  t('Upload the resource to the Land Portal\'s server.');
 
   return $field_instances;
 }

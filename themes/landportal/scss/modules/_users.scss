@@ -133,7 +133,7 @@
         font-size: 0.8em;
         color: $grey;
     }
-    &:after { content: ""; display: block; float: none; clear: both; }
+    //&:after { content: ""; display: block; float: none; clear: both; }
 }
 
 
@@ -164,27 +164,18 @@
  *      Organizations style
  */
 
-.view table.views-view-grid {
-    width: 100%;
-    /* .node-organization.node-teaser { */
-    /* } */
-}
-.view-organizations-overview tr {
-    height: 250px;
+.view-organizations-overview,
+.view-organizations-library {
+    table.views-view-grid {
+        width: 100%;
+        td { text-align: center; padding: 2em; }
+    }
 }
 
 .node-organization {
     &.node-teaser {
-        text-align: center;
-        /* height: 220px; */
-        /* width: 200px; */
         position: relative;
         overflow: hidden;
-        .content {
-            width: 100%;
-            /* position: absolute; */
-            /* bottom: 0; */
-        }
         h2 {
             margin-bottom: 1em;
             font-size: 2em;
@@ -198,10 +189,10 @@
         a {
             color: $grey-light;
         }
-        &:after {
-            content: " ";
-            visibility: visible;
-        }
+        /* &:after { */
+        /*     content: " "; */
+        /*     visibility: visible; */
+        /* } */
     }
 }
 
@@ -212,7 +203,7 @@
         position: relative;
     }
     .node-organization {
-        min-height: 500px;
+        //min-height: 500px;
         .side {
             text-align: center;
             position: absolute;

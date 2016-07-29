@@ -28,14 +28,17 @@
  * Taxonomy term
  */
 .field-type-taxonomy-term-reference {
-    //display: inline;
-    .field-items {
-        display: inline;
-    }
+    /* .field-items { */
+    /*     display: inline; */
+    /* } */
     .field-item {
-        display: inline-block;
-        margin: .2em;
+        float: left;
+        //display: inline-block;
+        margin: 0 .2em;
         a {
+            font-size: .8em;
+            text-decoration: none;
+            text-transform: uppercase;
             @extend .landportal-button;
         }
     }
@@ -50,6 +53,11 @@
     .field-item a {
         background-color: #42CABD;
     }
+}
+
+.group-landvoc {
+    .field { display: inline; }
+    @extend .clearfix;
 }
 
 /* Debate status */

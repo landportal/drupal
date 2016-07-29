@@ -1,3 +1,19 @@
+/* Only enable on specific views for now
+ * Promoted view (at least the one from LL) relies on views-row to apply their style...
+ */
+//.view .views-row,
+.view-by-providers .views-row {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px dotted lightgrey;
+    &:first-of-type {
+        border-top: 0;
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+
 .view-resource-type .view-content>.item-list>ul>li {
     @extend .panel;
     @extend .panel-default;

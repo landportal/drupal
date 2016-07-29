@@ -90,13 +90,6 @@ function landportal_multilingual_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'i18n_node_extended_person';
-  $strongarm->value = 1;
-  $export['i18n_node_extended_person'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_webform';
   $strongarm->value = '1';
   $export['i18n_node_extended_webform'] = $strongarm;
@@ -154,8 +147,7 @@ function landportal_multilingual_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_options_news';
   $strongarm->value = array(
-    0 => 'required',
-    1 => 'lock',
+    0 => 'current',
   );
   $export['i18n_node_options_news'] = $strongarm;
 
@@ -179,13 +171,6 @@ function landportal_multilingual_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'i18n_node_options_person';
-  $strongarm->value = array();
-  $export['i18n_node_options_person'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_options_webform';
   $strongarm->value = array();
   $export['i18n_node_options_webform'] = $strongarm;
@@ -198,6 +183,7 @@ function landportal_multilingual_strongarm() {
     'filtered_html' => 'filtered_html',
     'full_html' => 'full_html',
     'plain_text' => 'plain_text',
+    'mailchimp_campaign' => 0,
   );
   $export['i18n_string_allowed_formats'] = $strongarm;
 
@@ -291,13 +277,6 @@ function landportal_multilingual_strongarm() {
   $strongarm->name = 'i18n_sync_node_type_page';
   $strongarm->value = array();
   $export['i18n_sync_node_type_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'i18n_sync_node_type_person';
-  $strongarm->value = array();
-  $export['i18n_sync_node_type_person'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

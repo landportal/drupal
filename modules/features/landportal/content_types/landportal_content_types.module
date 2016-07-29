@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Landportal content types feature.
- */
-
-include_once 'landportal_content_types.features.inc';

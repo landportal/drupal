@@ -9,13 +9,13 @@
  */
 function landlibrary_taxonomy_taxonomy_default_vocabularies() {
   return array(
-    'format' => array(
-      'name' => 'Format',
-      'machine_name' => 'format',
-      'description' => '',
+    'keywords' => array(
+      'name' => 'Keywords',
+      'machine_name' => 'keywords',
+      'description' => 'For the Landlibrary - internal use only',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -5,
+      'weight' => 0,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(

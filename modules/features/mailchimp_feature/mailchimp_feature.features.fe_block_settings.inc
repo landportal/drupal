@@ -67,7 +67,7 @@ function mailchimp_feature_default_fe_block_settings() {
         'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -23,
+        'weight' => -37,
       ),
       'seven' => array(
         'region' => '',

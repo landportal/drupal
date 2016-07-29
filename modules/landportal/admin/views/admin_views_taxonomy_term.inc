@@ -26,17 +26,27 @@ $handler->display->display_options['pager']['options']['items_per_page'] = '100'
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['pager']['options']['quantity'] = '9';
+$handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
+$handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '20, 50, 100, 200';
 $handler->display->display_options['style_plugin'] = 'table';
 $handler->display->display_options['style_options']['columns'] = array(
   'name_1' => 'name_1',
+  'draggableviews' => 'draggableviews',
   'name' => 'name',
+  'nid' => 'nid',
   'tid' => 'tid',
+  'views_bulk_operations' => 'views_bulk_operations',
 );
 $handler->display->display_options['style_options']['default'] = 'name';
 $handler->display->display_options['style_options']['info'] = array(
   'name_1' => array(
     'sortable' => 0,
     'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'draggableviews' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -48,9 +58,21 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
+  'nid' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
   'tid' => array(
     'sortable' => 0,
     'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'views_bulk_operations' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -65,12 +87,17 @@ $handler->display->display_options['header']['result']['field'] = 'result';
 $handler->display->display_options['relationships']['parent']['id'] = 'parent';
 $handler->display->display_options['relationships']['parent']['table'] = 'taxonomy_term_hierarchy';
 $handler->display->display_options['relationships']['parent']['field'] = 'parent';
+/* Relationship: Taxonomy term: Content with term */
+$handler->display->display_options['relationships']['nid']['id'] = 'nid';
+$handler->display->display_options['relationships']['nid']['table'] = 'taxonomy_index';
+$handler->display->display_options['relationships']['nid']['field'] = 'nid';
 /* Field: Taxonomy vocabulary: Name */
 $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
 $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_vocabulary';
 $handler->display->display_options['fields']['name_1']['field'] = 'name';
 $handler->display->display_options['fields']['name_1']['label'] = '';
 $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
 /* Field: Draggableviews: Taxonomy term */
 $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
 $handler->display->display_options['fields']['draggableviews']['table'] = 'taxonomy_term_data';
@@ -86,11 +113,13 @@ $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_d
 $handler->display->display_options['fields']['name']['field'] = 'name';
 $handler->display->display_options['fields']['name']['label'] = 'Term';
 $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-/* Field: Taxonomy term: Term description */
-$handler->display->display_options['fields']['description']['id'] = 'description';
-$handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['fields']['description']['field'] = 'description';
-$handler->display->display_options['fields']['description']['label'] = 'Description';
+/* Field: COUNT(DISTINCT Content: Nid) */
+$handler->display->display_options['fields']['nid']['id'] = 'nid';
+$handler->display->display_options['fields']['nid']['table'] = 'node';
+$handler->display->display_options['fields']['nid']['field'] = 'nid';
+$handler->display->display_options['fields']['nid']['relationship'] = 'nid';
+$handler->display->display_options['fields']['nid']['group_type'] = 'count_distinct';
+$handler->display->display_options['fields']['nid']['label'] = 'Content';
 /* Field: Taxonomy term: Term ID */
 $handler->display->display_options['fields']['tid']['id'] = 'tid';
 $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
@@ -139,14 +168,11 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'label' => '',
   ),
 );
-/* Sort criterion: Taxonomy edge: taxonomy hierarchy order */
-$handler->display->display_options['sorts']['term_sort_hierarchy']['id'] = 'term_sort_hierarchy';
-$handler->display->display_options['sorts']['term_sort_hierarchy']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['sorts']['term_sort_hierarchy']['field'] = 'term_sort_hierarchy';
 /* Contextual filter: Taxonomy vocabulary: Machine name */
 $handler->display->display_options['arguments']['machine_name']['id'] = 'machine_name';
 $handler->display->display_options['arguments']['machine_name']['table'] = 'taxonomy_vocabulary';
 $handler->display->display_options['arguments']['machine_name']['field'] = 'machine_name';
+$handler->display->display_options['arguments']['machine_name']['default_action'] = 'empty';
 $handler->display->display_options['arguments']['machine_name']['title_enable'] = TRUE;
 $handler->display->display_options['arguments']['machine_name']['title'] = 'Terms in %1';
 $handler->display->display_options['arguments']['machine_name']['breadcrumb_enable'] = TRUE;
@@ -156,39 +182,7 @@ $handler->display->display_options['arguments']['machine_name']['summary']['numb
 $handler->display->display_options['arguments']['machine_name']['summary']['format'] = 'default_summary';
 $handler->display->display_options['arguments']['machine_name']['summary_options']['items_per_page'] = '25';
 $handler->display->display_options['arguments']['machine_name']['specify_validation'] = TRUE;
-$handler->display->display_options['arguments']['machine_name']['validate']['fail'] = 'ignore';
 $handler->display->display_options['arguments']['machine_name']['limit'] = '0';
-/* Filter criterion: Taxonomy term: Vocabulary */
-$handler->display->display_options['filters']['vid']['id'] = 'vid';
-$handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['filters']['vid']['field'] = 'vid';
-$handler->display->display_options['filters']['vid']['value'] = array(
-  'all' => 'all',
-  3 => '3',
-  4 => '4',
-  17 => '17',
-  20 => '20',
-  22 => '22',
-  15 => '15',
-  19 => '19',
-  21 => '21',
-  5 => '5',
-  6 => '6',
-  24 => '24',
-  25 => '25',
-  23 => '23',
-  13 => '13',
-  18 => '18',
-  8 => '8',
-  7 => '7',
-  2 => '2',
-);
-$handler->display->display_options['filters']['vid']['group'] = '0';
-$handler->display->display_options['filters']['vid']['expose']['operator_id'] = 'vid_op';
-$handler->display->display_options['filters']['vid']['expose']['label'] = 'Vocabulary';
-$handler->display->display_options['filters']['vid']['expose']['operator'] = 'vid_op';
-$handler->display->display_options['filters']['vid']['expose']['identifier'] = 'vid';
-$handler->display->display_options['filters']['vid']['expose']['remember'] = TRUE;
 /* Filter criterion: Taxonomy term: Name */
 $handler->display->display_options['filters']['name']['id'] = 'name';
 $handler->display->display_options['filters']['name']['table'] = 'taxonomy_term_data';
@@ -203,39 +197,6 @@ $handler->display->display_options['filters']['name']['expose']['remember'] = TR
 
 /* Display: System */
 $handler = $view->new_display('system', 'System', 'system_1');
-$handler->display->display_options['enabled'] = FALSE;
 $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
 $handler->display->display_options['defaults']['access'] = FALSE;
 $handler->display->display_options['path'] = 'admin/structure/taxonomy/%';
-$translatables['admin_views_taxonomy_term'] = array(
-  t('Defaults'),
-  t('Terms'),
-  t('more'),
-  t('Apply'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Items per page'),
-  t('- All -'),
-  t('Offset'),
-  t('« first'),
-  t('‹ previous'),
-  t('next ›'),
-  t('last »'),
-  t('Displaying @start - @end of @total'),
-  t('Parent'),
-  t('Term'),
-  t('Description'),
-  t('Operations'),
-  t('edit'),
-  t('.'),
-  t('Taxonomy term'),
-  t('- Choose an operation -'),
-  t('All'),
-  t('Terms in %1'),
-  t('%1'),
-  t('Vocabulary'),
-  t('Name'),
-  t('System'),
-);

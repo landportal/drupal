@@ -12,7 +12,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
 
   $terms[] = array(
     'name' => 'forestry',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '017c77ae-a64c-4038-b4bd-e61ce092c167',
@@ -83,9 +83,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'safe_summary' => '',
         ),
       ),
+      'und' => array(
+        0 => array(
+          'value' => '',
+          'summary' => NULL,
+          'format' => 'filtered_html',
+          'safe_value' => '',
+          'safe_summary' => '',
+        ),
+      ),
     ),
-    'name_original' => 'forestry',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1256-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -151,6 +158,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'forestry',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1256-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -253,8 +262,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'land dispute',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3726-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -320,11 +327,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'land dispute',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3726-0',
     'description_original' => 'a land dispute is a disagreement over land.',
   );
   $terms[] = array(
     'name' => 'common lands',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '03267af4-c264-4e0d-a04a-22ce90ef099b',
@@ -389,8 +398,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'common lands',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7442-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -456,6 +463,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'common lands',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7442-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -479,9 +488,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
     ),
     'field_image' => array(),
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -498,6 +504,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'changed' => 1465223878,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -605,8 +614,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'grazing land rights',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3716-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -672,11 +679,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'grazing land rights',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3716-0',
     'description_original' => 'grazing land rights refer to the rights to use pastoral land for the survival and nourishment of livestock.',
   );
   $terms[] = array(
     'name' => 'forest conservation',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '0af65510-05b9-49c1-b04d-356df98ef517',
@@ -741,8 +750,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'forest conservation',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3813-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -808,11 +815,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'forest conservation',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3813-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'rangelands',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '0d92bcc5-4916-4968-9de2-3c31a35a3ec8',
@@ -884,8 +893,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'rangelands',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3843-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -951,6 +958,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'rangelands',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3843-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -1034,8 +1043,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'land environment',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3727-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -1101,6 +1108,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'land environment',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3727-0',
     'description_original' => 'Spatial context of land use. ',
   );
   $terms[] = array(
@@ -1200,8 +1209,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'rights of clearance',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3764-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -1267,6 +1274,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'rights of clearance',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3764-0',
     'description_original' => 'Right of clearance is the agreement granted by the first occupant for cutting bush and continuously cultivating.',
     'path' => array(
       'pathauto' => 1,
@@ -1274,7 +1283,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'climate change',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '12ad2539-cd65-4f06-8cd6-caf6e1580885',
@@ -1346,8 +1355,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'climate change',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1245-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -1413,6 +1420,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'climate change',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1245-0',
     'description_original' => '',
     'path' => array(
       'pathauto' => 1,
@@ -1420,7 +1429,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'urbanization',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '12de1588-7958-4800-9433-074f1de729d2',
@@ -1500,8 +1509,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'urbanization',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3849-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -1567,6 +1574,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'urbanization',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3849-0',
     'description_original' => '',
     'path' => array(
       'pathauto' => 1,
@@ -1581,9 +1590,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -1601,10 +1607,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'slums',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '16b6e4b4-a615-47e3-ad76-131648d90899',
@@ -1662,8 +1671,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'slums',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7331-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -1729,6 +1736,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'slums',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7331-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -1820,8 +1829,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'manure contract',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3742-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -1887,6 +1894,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'manure contract',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3742-0',
     'description_original' => 'a manure contract is an agreement where the herders supply the animals\' manure to the farmers\' land.',
   );
   $terms[] = array(
@@ -1978,8 +1987,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'pastoral land rights',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3752-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -2045,6 +2052,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'pastoral land rights',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3752-0',
     'description_original' => 'pastoral land rights refer to the right to use specific pastoral land.',
   );
   $terms[] = array(
@@ -2136,8 +2145,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'riparian rights',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3767-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -2203,6 +2210,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'riparian rights',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3767-0',
     'description_original' => 'riparian rights are those rights in respect of the use and entitlement to water enjoyed by a riparian owner whose land is contiguous with a river or a stream.',
   );
   $terms[] = array(
@@ -2303,8 +2312,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'town and country planning',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3779-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -2370,6 +2377,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'town and country planning',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3779-0',
     'description_original' => 'Town and country planning is the planning framework within which decisions are made about how land is to be used.',
   );
   $terms[] = array(
@@ -2381,9 +2390,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -2400,6 +2406,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'changed' => 1453893930,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -2429,50 +2438,44 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'tid' => 'b278ae20-4491-449c-aabb-bedc8d27eff2',
         ),
         4 => array(
-          'tid' => 'da161d46-383a-4f7d-974e-55b2b09688ba',
-        ),
-        5 => array(
           'tid' => '017c77ae-a64c-4038-b4bd-e61ce092c167',
         ),
-        6 => array(
+        5 => array(
           'tid' => 'c15a4f33-9704-48f0-b354-e6bc0a021dad',
         ),
-        7 => array(
+        6 => array(
           'tid' => '0af65510-05b9-49c1-b04d-356df98ef517',
         ),
-        8 => array(
+        7 => array(
           'tid' => '9f394331-4b1f-4b1a-b429-b785b011f80c',
         ),
-        9 => array(
+        8 => array(
           'tid' => 'c2340e93-1076-4ecf-9a04-a070d3f77d87',
         ),
-        10 => array(
+        9 => array(
           'tid' => '81260e71-964d-47ae-a44a-5e8b01f22755',
         ),
-        11 => array(
+        10 => array(
           'tid' => 'f11c96a6-4bfb-4fa8-8fb6-665b93320d35',
         ),
-        12 => array(
+        11 => array(
           'tid' => 'a0e1cc30-96fa-407b-b019-e50b4fa9cef6',
         ),
-        13 => array(
+        12 => array(
           'tid' => '8b044a2a-7560-49c3-9fcc-dc43c937d0ca',
         ),
-        14 => array(
+        13 => array(
           'tid' => 'ff9a0b46-76e1-4868-a4a9-03e3768c0972',
         ),
-        15 => array(
+        14 => array(
           'tid' => 'dd13caa6-b566-4d0c-9021-c7138abededa',
         ),
-        16 => array(
+        15 => array(
           'tid' => '8b750c7d-6dbf-4731-93c0-833598104a99',
         ),
       ),
     ),
     'field_image' => array(),
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -2490,10 +2493,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'land economics',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '278fcd9b-8eb1-438d-b4b4-62c6903a3a3b',
@@ -2565,8 +2571,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'land economics',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3829-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -2632,11 +2636,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'land economics',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3829-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'land deals',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '2c7396db-a39f-4f51-90c0-0c06adc1a7ec',
@@ -2687,8 +2693,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'land deals',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-6894-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -2754,6 +2758,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'land deals',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-6894-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -2776,9 +2782,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
     ),
     'field_image' => array(),
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -2796,10 +2799,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'urban population',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '31738ba0-1faa-4828-b3db-c2e2d8dcdb76',
@@ -2871,8 +2877,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'urban population',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3869-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -2938,11 +2942,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'urban population',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3869-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'indigenous peoples',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '339c8905-0e1b-4599-8831-1a9973717948',
@@ -3020,8 +3026,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'indigenous peoples',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1259-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -3087,6 +3091,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'indigenous peoples',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1259-0',
     'description_original' => '',
     'path' => array(
       'pathauto' => 1,
@@ -3094,7 +3100,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'urban planning',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '33bb3b85-465c-4d93-a574-b87d5cffc1df',
@@ -3166,8 +3172,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'urban planning',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3848-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -3233,118 +3237,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'description_original' => '',
-  );
-  $terms[] = array(
-    'name' => 'Conflict',
-    'description' => NULL,
-    'format' => 'plain_text',
-    'weight' => 0,
-    'uuid' => '33bd506e-e8eb-41f0-963e-0fb0b1e34673',
-    'language' => 'und',
-    'i18n_tsid' => 0,
-    'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
-    'field_agrovoc_uri' => array(
-      'und' => array(
-        0 => array(
-          'url' => '',
-          'title' => NULL,
-          'attributes' => array(),
-        ),
-      ),
-    ),
-    'name_field' => array(
-      'en' => array(
-        0 => array(
-          'value' => 'Conflict',
-          'format' => 'plain_text',
-          'safe_value' => 'Conflict',
-        ),
-      ),
-      'es' => array(
-        0 => array(
-          'value' => 'Conflict',
-          'format' => 'plain_text',
-          'safe_value' => 'Conflict',
-        ),
-      ),
-      'fr' => array(
-        0 => array(
-          'value' => 'Conflict',
-          'format' => 'plain_text',
-          'safe_value' => 'Conflict',
-        ),
-      ),
-      'und' => array(
-        0 => array(
-          'value' => 'Conflict',
-          'format' => 'plain_text',
-          'safe_value' => 'Conflict',
-        ),
-      ),
-    ),
-    'synonyms_synonyms' => array(),
-    'description_field' => array(
-      'und' => array(
-        0 => array(
-          'value' => '',
-          'summary' => NULL,
-          'format' => 'plain_text',
-          'safe_value' => '',
-          'safe_summary' => '',
-        ),
-      ),
-    ),
-    'name_original' => 'Conflict',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1249-0',
-    'translations' => array(
-      'original' => NULL,
-      'data' => array(
-        'es' => array(
-          'entity_type' => 'taxonomy_term',
-          'entity_id' => 1249,
-          'revision_id' => 1249,
-          'language' => 'es',
-          'source' => 'en',
-          'uid' => 1,
-          'status' => 1,
-          'translate' => 0,
-          'created' => 1431355175,
-          'changed' => 1431355543,
-        ),
-        'fr' => array(
-          'entity_type' => 'taxonomy_term',
-          'entity_id' => 1249,
-          'revision_id' => 1249,
-          'language' => 'fr',
-          'source' => 'en',
-          'uid' => 1,
-          'status' => 1,
-          'translate' => 0,
-          'created' => 1431355175,
-          'changed' => 1431355543,
-        ),
-        'und' => array(
-          'entity_type' => 'taxonomy_term',
-          'entity_id' => 1249,
-          'revision_id' => 1249,
-          'language' => 'und',
-          'source' => 'en',
-          'uid' => 1,
-          'status' => 1,
-          'translate' => 0,
-          'created' => 1431355175,
-          'changed' => 1431355543,
-        ),
-      ),
-    ),
+    'name_original' => 'urban planning',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3848-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -3435,8 +3329,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'land conflicts',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3725-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -3502,7 +3394,40 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'land conflicts',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3725-0',
     'description_original' => 'Disagreement over land, where specific individual or collective interests related to land are in opposition. ',
+  );
+  $terms[] = array(
+    'name' => 'Governmental institution',
+    'description' => '<p>Local, provincial or nationla governmental institutions.</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => '36446160-b9d7-49ae-8357-03819751e8e1',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'organization_types',
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'entity_id' => 7883,
+          'revision_id' => 7883,
+          'language' => 'en',
+          'source' => '',
+          'uid' => 7082,
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1467905087,
+          'changed' => 1467905087,
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'protected areas',
@@ -3589,8 +3514,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'protected areas',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3871-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -3656,11 +3579,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'protected areas',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3871-0',
     'description_original' => ' Protected areas refer to areas of at least 1,000 hectares as scientific and natural reserves and strict nature reserves, national parks of national and international reputation, natural monuments and landscapes.',
   );
   $terms[] = array(
     'name' => 'adjudication',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '3dfe9c07-cd72-4a6d-834d-9b9db6182d41',
@@ -3704,8 +3629,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'adjudication',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7445-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -3771,11 +3694,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'adjudication',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7445-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'land dispute resolution',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '3e1edd7d-4a64-4cce-a73c-98ef28d4a901',
@@ -3819,8 +3744,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'land dispute resolution',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7446-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -3886,6 +3809,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'land dispute resolution',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7446-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -3984,8 +3909,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'land acquisitions',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3723-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -4051,6 +3974,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'land acquisitions',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3723-0',
     'description_original' => 'Obtainment of land property/land use. ',
     'path' => array(
       'pathauto' => 1,
@@ -4065,9 +3990,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'path' => array(
-      'pathauto' => 0,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -4084,6 +4006,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'changed' => 1461586271,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 0,
     ),
   );
   $terms[] = array(
@@ -4184,8 +4109,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'matrilineal',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3743-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -4251,6 +4174,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'matrilineal',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3743-0',
     'description_original' => 'A matrilineal lineage group is one where the line of descent and membership is transmitted by the female.',
   );
   $terms[] = array(
@@ -4341,8 +4266,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'indigenous tenure',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3721-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -4408,6 +4331,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'indigenous tenure',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3721-0',
     'description_original' => 'Specific land access and land use principles, in force in particular traditional ethnic groups. ',
   );
   $terms[] = array(
@@ -4463,9 +4388,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
     ),
     'field_image' => array(),
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -4482,6 +4404,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'changed' => 1463063842,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -4502,8 +4427,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'English',
-    'entity_translation_handler_id' => 'taxonomy_term-languages-eid-540-0',
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -4521,6 +4444,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'English',
+    'entity_translation_handler_id' => 'taxonomy_term-languages-eid-540-0',
     'path' => array(
       'pathauto' => 0,
     ),
@@ -4630,8 +4555,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'agroforestry systems',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3790-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -4697,6 +4620,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'agroforestry systems',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3790-0',
     'description_original' => 'An agroforestry system is a form of multiple land use where woody perennials (trees, shrubs, bamboos, palm trees, woody lianas) are grown on the same land management unit with crops and/or animals.',
   );
   $terms[] = array(
@@ -4725,9 +4650,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
     ),
     'field_image' => array(),
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -4745,10 +4667,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'grazing lands',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '5848a214-8158-4578-a6b4-0cf9187672cb',
@@ -4820,8 +4745,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'grazing lands',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3800-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -4887,11 +4810,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'grazing lands',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3800-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'gender equity in access to land',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '59bf9a9e-726d-4ca3-9a5c-7afc975d250e',
@@ -4918,12 +4843,46 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'en' => array(
         0 => array(
           'value' => 'gender equity in access to land',
-          'format' => 'filtered_html',
+          'format' => NULL,
           'safe_value' => 'gender equity in access to land',
         ),
       ),
+      'es' => array(
+        0 => array(
+          'value' => 'Gender',
+          'format' => 'plain_text',
+          'safe_value' => 'Gender',
+        ),
+      ),
+      'fr' => array(
+        0 => array(
+          'value' => 'gender',
+          'format' => NULL,
+          'safe_value' => 'gender',
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Gender',
+          'format' => 'plain_text',
+          'safe_value' => 'Gender',
+        ),
+      ),
     ),
-    'synonyms_synonyms' => array(),
+    'synonyms_synonyms' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'women, marital',
+          'format' => NULL,
+          'safe_value' => 'women, marital',
+        ),
+        1 => array(
+          'value' => 'gender',
+          'format' => NULL,
+          'safe_value' => 'gender',
+        ),
+      ),
+    ),
     'description_field' => array(
       'en' => array(
         0 => array(
@@ -4935,8 +4894,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'gender equity in access to land',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7450-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -4950,7 +4907,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'status' => 1,
           'translate' => 0,
           'created' => 1460557403,
-          'changed' => 1460557403,
+          'changed' => 1467793416,
         ),
         'es' => array(
           'entity_type' => 'taxonomy_term',
@@ -5002,12 +4959,17 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'gender equity in access to land',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7450-0',
     'description_original' => '',
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
-    'name' => 'communal land',
-    'description' => NULL,
-    'format' => NULL,
+    'name' => 'communal lands',
+    'description' => '',
+    'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '5c7c94f4-a902-4db9-990e-98cc5de45875',
     'language' => 'und',
@@ -5020,13 +4982,21 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_agrovoc_uri' => array(),
+    'field_agrovoc_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://aims.fao.org/aos/agrovoc/c_1782',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => 'communal land',
+          'value' => 'communal lands',
           'format' => NULL,
-          'safe_value' => 'communal land',
+          'safe_value' => 'communal lands',
         ),
       ),
     ),
@@ -5036,12 +5006,12 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => '',
           'summary' => NULL,
-          'format' => NULL,
+          'format' => 'filtered_html',
+          'safe_value' => '',
+          'safe_summary' => '',
         ),
       ),
     ),
-    'name_original' => 'communal land',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7327-0',
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -5054,16 +5024,21 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'uid' => 7082,
           'status' => 1,
           'translate' => 0,
-          'created' => 1455265702,
-          'changed' => 1455265702,
+          'created' => 1467796330,
+          'changed' => 1467796330,
         ),
       ),
     ),
-    'description_original' => NULL,
+    'name_original' => 'communal lands',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7327-0',
+    'description_original' => '',
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'scrublands',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '5e0b272e-94fa-42ac-98e7-ca5761f2af6b',
@@ -5135,8 +5110,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'scrublands',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3844-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -5202,11 +5175,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'scrublands',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3844-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'indigenous land rights',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '5e573bf4-a5e4-4eaa-bef1-d78a217f8e12',
@@ -5257,8 +5232,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'indigenous land rights',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7245-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -5324,6 +5297,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'indigenous land rights',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7245-0',
     'description_original' => '',
     'path' => array(
       'pathauto' => 1,
@@ -5358,7 +5333,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'rural population',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '5fb9de42-f11d-45f3-b58c-96dcda4c7368',
@@ -5430,8 +5405,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'rural population',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3868-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -5497,11 +5470,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'rural population',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3868-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'deforestation',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '6018cfd1-4850-4d34-89dd-e8ef13bd1c05',
@@ -5573,8 +5548,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'deforestation',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3862-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -5640,6 +5613,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'deforestation',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3862-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -5651,9 +5626,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -5670,6 +5642,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'changed' => 1461586220,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -5761,8 +5736,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'pastoral lands',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3751-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -5828,6 +5801,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'pastoral lands',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3751-0',
     'description_original' => 'Pastoral land is land used by pastoralists and shepherds for grazing livestock.',
   );
   $terms[] = array(
@@ -5882,9 +5857,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
     ),
     'field_image' => array(),
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -5902,10 +5874,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
-    'name' => 'forest lands',
-    'description' => NULL,
+    'name' => 'forest land',
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '65328f0f-acfd-4923-95e3-7ac9a5df25d9',
@@ -5919,13 +5894,21 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_agrovoc_uri' => array(),
+    'field_agrovoc_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://aims.fao.org/aos/agrovoc/c_24843',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => 'forest lands',
+          'value' => 'forest land',
           'format' => NULL,
-          'safe_value' => 'forest lands',
+          'safe_value' => 'forest land',
         ),
       ),
     ),
@@ -5941,8 +5924,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'forest lands',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7301-0',
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -5952,14 +5933,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'revision_id' => 7301,
           'language' => 'und',
           'source' => '',
-          'uid' => 8157,
+          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
-          'created' => 1467035447,
-          'changed' => 1467035447,
+          'created' => 1467795929,
+          'changed' => 1467795929,
         ),
       ),
     ),
+    'name_original' => 'forest land',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7301-0',
     'description_original' => '',
     'path' => array(
       'pathauto' => 0,
@@ -6063,8 +6046,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'grazing contracts',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3715-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -6130,6 +6111,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'grazing contracts',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3715-0',
     'description_original' => 'A grazing contract or licence is a legal contract for an agreement, for example between a farmer and a grazier, specifying the terms under which the latter can use the identified land of the former for grazing purposes.',
   );
   $terms[] = array(
@@ -6220,8 +6203,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'land inheritance rights',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3730-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -6287,6 +6268,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'land inheritance rights',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3730-0',
     'description_original' => 'Legal provisions applying in case of territorial succession. ',
   );
   $terms[] = array(
@@ -6298,9 +6281,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_relation',
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -6317,6 +6297,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'changed' => 1467288331,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -6336,13 +6319,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'field_related_topics' => array(
       'und' => array(
         0 => array(
-          'tid' => '990a1ba9-8e6b-467d-b3ab-836cb2ef2098',
+          'tid' => '59bf9a9e-726d-4ca3-9a5c-7afc975d250e',
         ),
         1 => array(
           'tid' => 'c214617a-6bd6-4662-a5f2-b98e7740019f',
         ),
         2 => array(
-          'tid' => 'b0f06864-74ad-47c5-be33-ddcbc8f2b7f8',
+          'tid' => 7311,
         ),
         3 => array(
           'tid' => '6f22d7fe-e23b-4a4e-9995-a5b16def62bc',
@@ -6362,15 +6345,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
         8 => array(
           'tid' => 'b7312d35-e143-4a91-a88d-09413aef749c',
         ),
-        9 => array(
-          'tid' => '59bf9a9e-726d-4ca3-9a5c-7afc975d250e',
-        ),
       ),
     ),
     'field_image' => array(),
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -6387,6 +6364,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'changed' => 1463066342,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -6474,8 +6454,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'green belts',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3870-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -6541,6 +6519,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'green belts',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3870-0',
     'description_original' => 'Areas of land whose main purpose it to curb the outward expansion of a large urban area and in which development is strictly controlled.',
   );
   $terms[] = array(
@@ -6631,8 +6611,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'CEDAW',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3692-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -6698,6 +6676,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'CEDAW',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3692-0',
     'description_original' => 'Convention on the Elimination of all Forms Discrimination Against Women. ',
   );
   $terms[] = array(
@@ -6729,7 +6709,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'land development (urbanization)',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '758c989a-4826-4219-a002-c60b8d8bc2cf',
@@ -6801,8 +6781,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'land development (urbanization)',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3833-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -6868,6 +6846,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'land development (urbanization)',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3833-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -6879,9 +6859,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'path' => array(
-      'pathauto' => 0,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -6899,10 +6876,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 0,
+    ),
   );
   $terms[] = array(
     'name' => 'forest monitoring and assessment',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '81260e71-964d-47ae-a44a-5e8b01f22755',
@@ -6967,8 +6947,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'forest monitoring and assessment',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3815-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -7034,11 +7012,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'forest monitoring and assessment',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3815-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'pastoralists',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '83d6a8cb-6b26-407b-a41d-a841c57950bb',
@@ -7089,8 +7069,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'pastoralists',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1264-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -7156,6 +7134,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'pastoralists',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1264-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -7167,9 +7147,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -7186,6 +7163,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'changed' => 1461586590,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -7277,8 +7257,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'private forests',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3758-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -7344,11 +7322,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'private forests',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3758-0',
     'description_original' => 'Private forests where the detailed operations are controlled by the common rules for all forest land, including felling permits.',
   );
   $terms[] = array(
     'name' => 'urban forestry',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '8b750c7d-6dbf-4731-93c0-833598104a99',
@@ -7420,8 +7400,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'urban forestry',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3847-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -7487,6 +7465,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'urban forestry',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3847-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -7562,9 +7542,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
     ),
     'field_image' => array(),
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -7582,6 +7559,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'Philanthropic foundation',
@@ -7592,9 +7572,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -7612,10 +7589,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'land degradation',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '8cf95e12-39ef-474b-b73c-0a674fc9e546',
@@ -7687,8 +7667,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'land degradation',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3826-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -7754,11 +7732,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'land degradation',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3826-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'food security',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '8da4c998-80c1-43bc-9d70-da898d251edf',
@@ -7830,8 +7810,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'food security',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1255-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -7897,6 +7875,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'food security',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1255-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -7908,9 +7888,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'path' => array(
-      'pathauto' => 0,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -7928,6 +7905,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 0,
+    ),
   );
   $terms[] = array(
     'name' => 'LandLibrary content provider',
@@ -7938,9 +7918,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_relation',
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -7958,10 +7935,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'agropastoral systems',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '94f8635f-68be-4c04-86da-6dd69ab326f4',
@@ -8041,8 +8021,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'agropastoral systems',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3686-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -8108,6 +8086,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'agropastoral systems',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3686-0',
     'description_original' => '',
     'path' => array(
       'pathauto' => 1,
@@ -8201,8 +8181,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'marital property rights',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3741-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -8268,119 +8246,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'marital property rights',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3741-0',
     'description_original' => 'Entitlement to enjoy ownership advantages, due to marital status. ',
-  );
-  $terms[] = array(
-    'name' => 'Gender',
-    'description' => NULL,
-    'format' => 'filtered_html',
-    'weight' => 0,
-    'uuid' => '990a1ba9-8e6b-467d-b3ab-836cb2ef2098',
-    'language' => 'und',
-    'i18n_tsid' => 0,
-    'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
-    'field_agrovoc_uri' => array(),
-    'name_field' => array(
-      'en' => array(
-        0 => array(
-          'value' => 'Gender',
-          'format' => 'plain_text',
-          'safe_value' => 'Gender',
-        ),
-      ),
-      'es' => array(
-        0 => array(
-          'value' => 'Gender',
-          'format' => 'plain_text',
-          'safe_value' => 'Gender',
-        ),
-      ),
-      'fr' => array(
-        0 => array(
-          'value' => 'Gender',
-          'format' => NULL,
-          'safe_value' => 'Gender',
-        ),
-      ),
-      'und' => array(
-        0 => array(
-          'value' => 'Gender',
-          'format' => 'plain_text',
-          'safe_value' => 'Gender',
-        ),
-      ),
-    ),
-    'synonyms_synonyms' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'women, marital',
-          'format' => NULL,
-          'safe_value' => 'women, marital',
-        ),
-      ),
-    ),
-    'description_field' => array(
-      'und' => array(
-        0 => array(
-          'value' => '',
-          'summary' => NULL,
-          'format' => 'filtered_html',
-          'safe_value' => '',
-          'safe_summary' => '',
-        ),
-      ),
-    ),
-    'name_original' => 'Gender',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1257-0',
-    'translations' => array(
-      'original' => NULL,
-      'data' => array(
-        'es' => array(
-          'entity_type' => 'taxonomy_term',
-          'entity_id' => 1257,
-          'revision_id' => 1257,
-          'language' => 'es',
-          'source' => 'en',
-          'uid' => 1,
-          'status' => 1,
-          'translate' => 0,
-          'created' => 1431355180,
-          'changed' => 1431355543,
-        ),
-        'fr' => array(
-          'entity_type' => 'taxonomy_term',
-          'entity_id' => 1257,
-          'revision_id' => 1257,
-          'language' => 'fr',
-          'source' => 'en',
-          'uid' => 1,
-          'status' => 1,
-          'translate' => 0,
-          'created' => 1431355180,
-          'changed' => 1442250605,
-        ),
-        'und' => array(
-          'entity_type' => 'taxonomy_term',
-          'entity_id' => 1257,
-          'revision_id' => 1257,
-          'language' => 'und',
-          'source' => 'en',
-          'uid' => 1,
-          'status' => 1,
-          'translate' => 0,
-          'created' => 1431355180,
-          'changed' => 1431355543,
-        ),
-      ),
-    ),
-    'description_original' => '',
   );
   $terms[] = array(
     'name' => 'urban areas',
@@ -8467,8 +8335,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'urban areas',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3874-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -8534,6 +8400,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'urban areas',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3874-0',
     'description_original' => ' Urban areas as defined by the Census Bureau are densely-populated areas with at least 50,000 people ("urbanized areas") and densely-populated areas with 2,500 to 50,000 people ("urban clusters").',
   );
   $terms[] = array(
@@ -8621,8 +8489,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'forest grazing',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3816-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -8688,11 +8554,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'forest grazing',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3816-0',
     'description_original' => 'The combined use of forestland or woodland for both wood production and animal production by grazing of the coexisting indigenous forage, or vegetation that is managed like indigenous forage.Also called as silvopastoral system.',
   );
   $terms[] = array(
     'name' => 'forestry policies',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'a0e1cc30-96fa-407b-b019-e50b4fa9cef6',
@@ -8764,8 +8632,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'forestry policies',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3867-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -8831,6 +8697,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'forestry policies',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3867-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -8883,9 +8751,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
     ),
     'field_image' => array(),
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -8903,6 +8768,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'Private sector',
@@ -8913,9 +8781,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -8932,6 +8797,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'changed' => 1461586556,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -8963,7 +8831,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'environment',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'ac0bc2d3-74b5-4b3d-95ea-389d2802aea3',
@@ -9035,8 +8903,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'environment',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1251-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -9102,11 +8968,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'environment',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1251-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'grazing',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'ac2d7f08-8dc2-45de-87e9-469471a1b9dd',
@@ -9178,8 +9046,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'grazing',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3799-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -9245,11 +9111,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'grazing',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3799-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'community land rights',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'acdbd82a-f6e5-462f-932c-1cb848360336',
@@ -9300,8 +9168,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'community land rights',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7041-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -9367,11 +9233,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'community land rights',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7041-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'suburban agriculture',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'aeaff481-12a3-4929-bca3-55e87d43d8a4',
@@ -9443,8 +9311,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'suburban agriculture',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3842-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -9510,6 +9376,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'suburban agriculture',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3842-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -9611,8 +9479,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'patrilineal',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3753-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -9678,64 +9544,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'patrilineal',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3753-0',
     'description_original' => 'A patrilineal lineage group is one where the line of descent and membership is transmitted by the male.',
-  );
-  $terms[] = array(
-    'name' => 'discriminatory tenure',
-    'description' => NULL,
-    'format' => NULL,
-    'weight' => 0,
-    'uuid' => 'b0f06864-74ad-47c5-be33-ddcbc8f2b7f8',
-    'language' => 'und',
-    'i18n_tsid' => 0,
-    'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
-    'field_agrovoc_uri' => array(),
-    'name_field' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'discriminatory tenure',
-          'format' => NULL,
-          'safe_value' => 'discriminatory tenure',
-        ),
-      ),
-    ),
-    'synonyms_synonyms' => array(),
-    'description_field' => array(
-      'und' => array(
-        0 => array(
-          'value' => '',
-          'summary' => NULL,
-          'format' => NULL,
-        ),
-      ),
-    ),
-    'name_original' => 'discriminatory tenure',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7311-0',
-    'translations' => array(
-      'original' => 'und',
-      'data' => array(
-        'und' => array(
-          'entity_type' => 'taxonomy_term',
-          'entity_id' => 7311,
-          'revision_id' => 7311,
-          'language' => 'und',
-          'source' => '',
-          'uid' => 7082,
-          'status' => 1,
-          'translate' => 0,
-          'created' => 1455095189,
-          'changed' => 1455095189,
-        ),
-      ),
-    ),
-    'description_original' => NULL,
   );
   $terms[] = array(
     'name' => 'LandBook data provider',
@@ -9746,9 +9557,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_relation',
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -9765,6 +9573,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'changed' => 1467288309,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -9856,8 +9667,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'forest law',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3712-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -9923,6 +9732,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'forest law',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3712-0',
     'description_original' => 'Forest law comprises the package of laws and regulations governing production and protection of forests, as well as those that regulate the powers of the administration in forests subject to the forest law.',
   );
   $terms[] = array(
@@ -10033,8 +9844,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'rights in divorce',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3763-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -10100,11 +9909,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'rights in divorce',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3763-0',
     'description_original' => 'Legal framework and provisions applying in case of separation/divorce. ',
   );
   $terms[] = array(
     'name' => 'development agencies',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'baa9738d-bbf6-4a05-834e-1f055123208e',
@@ -10176,8 +9987,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'development agencies',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3808-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -10243,6 +10052,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'development agencies',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3808-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -10337,8 +10148,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'non indigenous peoples',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7438-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -10404,11 +10213,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'non indigenous peoples',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7438-0',
     'description_original' => 'Non-indigenous refers to an entity or concept that originally comes from outside the area specified.',
   );
   $terms[] = array(
     'name' => 'community forestry',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'c15a4f33-9704-48f0-b354-e6bc0a021dad',
@@ -10480,8 +10291,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'community forestry',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3801-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -10547,12 +10356,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'community forestry',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3801-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'Women',
-    'description' => NULL,
-    'format' => 'plain_text',
+    'description' => '',
+    'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'c214617a-6bd6-4662-a5f2-b98e7740019f',
     'language' => 'und',
@@ -10568,7 +10379,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
-          'url' => '',
+          'url' => 'http://aims.fao.org/aos/agrovoc/c_8420',
           'title' => NULL,
           'attributes' => array(),
         ),
@@ -10591,16 +10402,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
       'fr' => array(
         0 => array(
-          'value' => 'Women',
-          'format' => 'plain_text',
-          'safe_value' => 'Women',
+          'value' => 'women',
+          'format' => NULL,
+          'safe_value' => 'women',
         ),
       ),
       'und' => array(
         0 => array(
-          'value' => 'Women',
+          'value' => 'women',
           'format' => 'plain_text',
-          'safe_value' => 'Women',
+          'safe_value' => 'women',
         ),
       ),
     ),
@@ -10610,14 +10421,12 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => '',
           'summary' => NULL,
-          'format' => 'plain_text',
+          'format' => 'filtered_html',
           'safe_value' => '',
           'safe_summary' => '',
         ),
       ),
     ),
-    'name_original' => 'Women',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1271-0',
     'translations' => array(
       'original' => NULL,
       'data' => array(
@@ -10643,7 +10452,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'status' => 1,
           'translate' => 0,
           'created' => 1431355180,
-          'changed' => 1431355543,
+          'changed' => 1467793592,
         ),
         'und' => array(
           'entity_type' => 'taxonomy_term',
@@ -10659,11 +10468,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'women',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1271-0',
     'description_original' => '',
+    'path' => array(
+      'pathauto' => 0,
+    ),
   );
   $terms[] = array(
     'name' => 'forest management plans',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'c2340e93-1076-4ecf-9a04-a070d3f77d87',
@@ -10728,8 +10542,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'forest management plans',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3814-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -10795,6 +10607,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'forest management plans',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3814-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -10806,9 +10620,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_relation',
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -10825,6 +10636,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'changed' => 1467288323,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -10926,8 +10740,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'right of first occupancy',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3765-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -10993,11 +10805,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'right of first occupancy',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3765-0',
     'description_original' => 'the right of first occupancy traditionally derives from the arrival and installation of people in an unoccupied area.',
   );
   $terms[] = array(
     'name' => 'compulsory acquisitions',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'c6f94f76-f677-4979-9a0c-8c485d460b41',
@@ -11041,8 +10855,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'compulsory acquisitions',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7462-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -11108,6 +10920,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'compulsory acquisitions',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7462-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -11198,8 +11012,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'indigenous lands',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3719-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -11265,11 +11077,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'indigenous lands',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3719-0',
     'description_original' => 'territory whose owners legitimacy is drawn from prior occupancy (founding fathers). ',
   );
   $terms[] = array(
     'name' => 'informal settlements',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'cba39812-c91f-4655-8d9c-b13ff37f9807',
@@ -11320,8 +11134,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'informal settlements',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7271-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -11387,11 +11199,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'informal settlements',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7271-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'common property',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'cc9a4931-94e9-49b4-b3b4-e4fa582ae73c',
@@ -11463,8 +11277,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'common property',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1247-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -11530,11 +11342,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'common property',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-1247-0',
     'description_original' => '',
   );
   $terms[] = array(
     'name' => 'sustainable land management',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'd1034b93-1c0b-46e1-906a-b70b3f300aeb',
@@ -11606,8 +11420,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'sustainable land management',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3863-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -11673,6 +11485,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'sustainable land management',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3863-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -11684,9 +11498,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'path' => array(
-      'pathauto' => 0,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -11704,6 +11515,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 0,
+    ),
   );
   $terms[] = array(
     'name' => 'University or Research Institution',
@@ -11714,9 +11528,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -11734,10 +11545,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'sustainable land use',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'd8792d68-2bbe-4dc1-a794-7dde4cb0db69',
@@ -11781,8 +11595,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'sustainable land use',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7460-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -11848,68 +11660,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'sustainable land use',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7460-0',
     'description_original' => '',
   );
   $terms[] = array(
-    'name' => 'Forest Rights',
-    'description' => NULL,
-    'format' => NULL,
-    'weight' => 0,
-    'uuid' => 'da161d46-383a-4f7d-974e-55b2b09688ba',
-    'language' => 'und',
-    'i18n_tsid' => 0,
-    'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
-    'field_agrovoc_uri' => array(),
-    'name_field' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'Forest Rights',
-          'format' => NULL,
-          'safe_value' => 'Forest Rights',
-        ),
-      ),
-    ),
-    'synonyms_synonyms' => array(),
-    'description_field' => array(
-      'und' => array(
-        0 => array(
-          'value' => '',
-          'summary' => NULL,
-          'format' => NULL,
-        ),
-      ),
-    ),
-    'name_original' => 'Forest Rights',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7284-0',
-    'translations' => array(
-      'original' => 'und',
-      'data' => array(
-        'und' => array(
-          'entity_type' => 'taxonomy_term',
-          'entity_id' => 7284,
-          'revision_id' => 7284,
-          'language' => 'und',
-          'source' => '',
-          'uid' => 7082,
-          'status' => 1,
-          'translate' => 0,
-          'created' => 1453911601,
-          'changed' => 1453911601,
-        ),
-      ),
-    ),
-    'description_original' => NULL,
-  );
-  $terms[] = array(
     'name' => 'state forests',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'dd13caa6-b566-4d0c-9021-c7138abededa',
@@ -11981,8 +11738,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'state forests',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3845-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -12048,6 +11803,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'state forests',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3845-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -12065,29 +11822,23 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'field_related_topics' => array(
       'und' => array(
         0 => array(
-          'tid' => '33bd506e-e8eb-41f0-963e-0fb0b1e34673',
-        ),
-        1 => array(
           'tid' => '33c542bc-fdbe-4374-8ff3-1db8c7535205',
         ),
-        2 => array(
+        1 => array(
           'tid' => '02afb854-359d-4686-9613-f0cdcd666d16',
         ),
-        3 => array(
+        2 => array(
           'tid' => '3dfe9c07-cd72-4a6d-834d-9b9db6182d41',
         ),
-        4 => array(
+        3 => array(
           'tid' => 'c6f94f76-f677-4979-9a0c-8c485d460b41',
         ),
-        5 => array(
+        4 => array(
           'tid' => '3e1edd7d-4a64-4cce-a73c-98ef28d4a901',
         ),
       ),
     ),
     'field_image' => array(),
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -12105,10 +11856,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'sustainable development',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'e2d4d37e-28c8-4ca5-a20b-1937dbe71208',
@@ -12180,8 +11934,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'sustainable development',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7210-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -12247,6 +11999,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'sustainable development',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7210-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -12273,9 +12027,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
     ),
     'field_image' => array(),
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -12293,10 +12044,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'forest regulations',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'f11c96a6-4bfb-4fa8-8fb6-665b93320d35',
@@ -12368,8 +12122,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'forest regulations',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3817-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -12435,6 +12187,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'forest regulations',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3817-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -12446,9 +12200,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'path' => array(
-      'pathauto' => 0,
-    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -12466,10 +12217,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'path' => array(
+      'pathauto' => 0,
+    ),
   );
   $terms[] = array(
     'name' => 'local community',
-    'description' => 'Local community is a traditional collectivity with a range of powers covering a certain geographical area and an autonomous management structure. ',
+    'description' => '<p>Local community is a traditional collectivity with a range of powers covering a certain geographical area and an autonomous management structure.</p>
+',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'f5b1524f-72c6-4574-9f5e-8cca9c33877d',
@@ -12496,7 +12251,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'en' => array(
         0 => array(
           'value' => 'local community',
-          'format' => 'filtered_html',
+          'format' => NULL,
           'safe_value' => 'local community',
         ),
       ),
@@ -12522,12 +12277,31 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'synonyms_synonyms' => array(),
+    'synonyms_synonyms' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'community',
+          'format' => NULL,
+          'safe_value' => 'community',
+        ),
+        1 => array(
+          'value' => 'communities',
+          'format' => NULL,
+          'safe_value' => 'communities',
+        ),
+        2 => array(
+          'value' => 'local communities',
+          'format' => NULL,
+          'safe_value' => 'local communities',
+        ),
+      ),
+    ),
     'description_field' => array(
       'en' => array(
         0 => array(
-          'value' => 'Local community is a traditional collectivity with a range of powers covering a certain geographical area and an autonomous management structure. ',
-          'summary' => NULL,
+          'value' => '<p>Local community is a traditional collectivity with a range of powers covering a certain geographical area and an autonomous management structure.</p>
+',
+          'summary' => '',
           'format' => 'filtered_html',
           'safe_value' => '<p>Local community is a traditional collectivity with a range of powers covering a certain geographical area and an autonomous management structure.</p>
 ',
@@ -12556,8 +12330,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'local community',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3739-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -12571,7 +12343,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'status' => 1,
           'translate' => 0,
           'created' => 1431355070,
-          'changed' => 1431355070,
+          'changed' => 1467794188,
         ),
         'es' => array(
           'entity_type' => 'taxonomy_term',
@@ -12623,11 +12395,17 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'description_original' => 'Local community is a traditional collectivity with a range of powers covering a certain geographical area and an autonomous management structure. ',
+    'name_original' => 'local community',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3739-0',
+    'description_original' => '<p>Local community is a traditional collectivity with a range of powers covering a certain geographical area and an autonomous management structure.</p>
+',
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
     'name' => 'squatters',
-    'description' => NULL,
+    'description' => '',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'f9c7fdff-5432-41e5-8f2b-18fc7961b084',
@@ -12671,8 +12449,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'squatters',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7458-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -12738,6 +12514,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'squatters',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-7458-0',
     'description_original' => '',
   );
   $terms[] = array(
@@ -12750,9 +12528,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'path' => array(
-      'pathauto' => 1,
-    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -12769,6 +12544,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'changed' => 1460120020,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -12860,8 +12638,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
-    'name_original' => 'sacred woods',
-    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3768-0',
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -12927,6 +12703,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'sacred woods',
+    'entity_translation_handler_id' => 'taxonomy_term-landvoc_concepts-eid-3768-0',
     'description_original' => 'A sacred wood is a wood which has a spiritual significance where the land is held by the local spirits and its spiritual character is venerated.',
   );
   return $terms;

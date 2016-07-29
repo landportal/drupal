@@ -29,7 +29,7 @@ $handler->display->display_options['row_options']['default_field_elements'] = FA
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
-/* Relationship: Taxonomy term: Content using Related topics */
+/* Relationship: Taxonomy term: Content using Related concepts */
 $handler->display->display_options['relationships']['reverse_field_related_topics_node']['id'] = 'reverse_field_related_topics_node';
 $handler->display->display_options['relationships']['reverse_field_related_topics_node']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['relationships']['reverse_field_related_topics_node']['field'] = 'reverse_field_related_topics_node';
@@ -63,7 +63,7 @@ $handler->display->display_options['filters']['machine_name']['id'] = 'machine_n
 $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
 $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
 $handler->display->display_options['filters']['machine_name']['value'] = array(
-  'landportal_topics' => 'landportal_topics',
+  'landvoc_concepts' => 'landvoc_concepts',
 );
 /* Filter criterion: Taxonomy term: Name (name_field:language) */
 $handler->display->display_options['filters']['language']['id'] = 'language';
@@ -75,29 +75,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page');
-$handler->display->display_options['path'] = 'voc/concepts';
+$handler->display->display_options['path'] = 'voc/landvoc/concept';
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block_1');
-$translatables['landvoc_concepts'] = array(
-  t('Master'),
-  t('Land-related concepts'),
-  t('more'),
-  t('Apply'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Items per page'),
-  t('- All -'),
-  t('Offset'),
-  t('« first'),
-  t('‹ previous'),
-  t('next ›'),
-  t('last »'),
-  t('Displaying @start - @end of @total'),
-  t('field_related_topics'),
-  t('[name_field] ([nid])'),
-  t('Page'),
-  t('Block'),
-);

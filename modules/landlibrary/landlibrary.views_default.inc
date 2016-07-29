@@ -16,7 +16,6 @@ function landlibrary_views_default_views() {
         'organizations',
         'promoted',
         'resource_type',
-        'search',
     );
     foreach ($views as $view_name) {
         include 'views/'.$view_name . '.inc';

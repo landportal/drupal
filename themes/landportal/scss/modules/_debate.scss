@@ -105,15 +105,6 @@
                 text-transform: uppercase;
                 color: $grey-light;
                 position: relative;
-                &:before {
-                    width: 100%;
-                    left: 0;
-                    top: .6em;
-                    content: "";
-                    position: absolute;
-                    border-top: 1px solid $grey-light;
-                    z-index: -1;
-                }
                 span {
                     font-size: 0.9em;
                     color: $grey-light;

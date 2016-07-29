@@ -475,47 +475,22 @@ $handler->display->display_options['filters']['name']['expose']['remember_roles'
   111903910 => 0,
   30037204 => 0,
 );
-$handler->display->display_options['path'] = 'admin/content';
-$translatables['admin_views_node'] = array(
-  t('Defaults'),
-  t('Content'),
-  t('more'),
-  t('Apply'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Items per page'),
-  t('- All -'),
-  t('Offset'),
-  t('« first'),
-  t('‹ previous'),
-  t('next ›'),
-  t('last »'),
-  t('Displaying @start - @end of @total'),
-  t('No content available.'),
-  t('author'),
-  t('term'),
-  t('- Choose an operation -'),
-  t('Change author'),
-  t('Delete'),
-  t('Change value'),
-  t('Stick'),
-  t('Unstick'),
-  t('Promote to front page'),
-  t('Publish'),
-  t('Demote from front page'),
-  t('Unpublish'),
-  t('Title'),
-  t('Type'),
-  t('Author'),
-  t('Published'),
-  t('Updated'),
-  t('Operations'),
-  t('Language'),
-  t('Vocabulary'),
-  t('System'),
-  t('Sticky'),
-  t('Promoted'),
-  t('Term / Tag'),
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['exposed'] = TRUE;
+$handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
+$handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
+$handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
+$handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
+$handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903912 => 0,
+  25521343 => 0,
+  111903910 => 0,
+  30037204 => 0,
 );
+$handler->display->display_options['path'] = 'admin/content';
