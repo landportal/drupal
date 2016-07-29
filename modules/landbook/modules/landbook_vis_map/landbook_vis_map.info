@@ -1,4 +1,4 @@
-name = Map
+name = Landbook vis map
 description = Submodule landbook for display maps on country page.
 package = Landportal
 core = 7.x

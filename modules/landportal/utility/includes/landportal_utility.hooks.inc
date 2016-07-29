@@ -275,10 +275,16 @@ function landportal_utility_form_alter(&$form, &$form_state, $form_id){
   }
 
   if($form['#id']=='views-exposed-form-book-latest-blocks-block-5'){
-    //pa($form,1);
     $form['field_doc_type_tid']['#options']['All']=t('Select research type ...');
   }
 
+  if ($form['#id'] == 'lang-dropdown-form') {
+    if (!empty($form['lang_dropdown_select']['#options'])) {
+      foreach ($form['lang_dropdown_select']['#options'] as $key => &$value) {
+        $value = strtoupper(t($key));
+      }
+    }
+  }
 }
 
 function landportal_utility_custom_page_search_form(&$form, &$form_state){

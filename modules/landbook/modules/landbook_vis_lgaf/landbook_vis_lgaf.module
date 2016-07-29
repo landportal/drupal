@@ -1,6 +1,6 @@
 <?php
 
-function graph_block_info() {
+function landbook_vis_lgaf_block_info() {
      $blocks['compare_block'] = array(
       'info' => t('Compare Block'),
     );
@@ -10,33 +10,33 @@ function graph_block_info() {
   return $blocks;
 }
 
-function graph_block_view($delta = '') {
+function landbook_vis_lgaf_block_view($delta = '') {
     $block = array();
     switch ($delta) {
         case 'compare_block' :
-          $block['content'] = graph_compare_block_view();
+          $block['content'] = landbook_vis_lgaf_compare_block_view();
           break;
         case 'infografic_block' :
-          $block['content'] = graph_infografic_block_view();
+          $block['content'] = landbook_vis_lgaf_infografic_block_view();
           break;
     }
     return $block;
 }
 
-function graph_compare_block_view(){
+function landbook_vis_lgaf_compare_block_view(){
   $library_path = libraries_get_path('lbvis');
   drupal_add_js($library_path . '/js/lbvis.linechart.js');
   drupal_add_js($library_path . '/js/lbvis.lgaf.js');
-  drupal_add_js(drupal_get_path('module', 'graph').'/main.js');
-  $block = block_load('graph', 'compare_block');
+  drupal_add_js(drupal_get_path('module', 'landbook_vis_lgaf').'/main.js');
+  $block = block_load('landbook_vis_lgaf', 'compare_block');
   return theme('compare-countries-block',array('title'=>$block->title));
 }
-function graph_infografic_block_view(){
-  $block = block_load('graph', 'infografic_block');
+function landbook_vis_lgaf_infografic_block_view(){
+  $block = block_load('landbook_vis_lgaf', 'infografic_block');
   return theme('infographics-block',array('title'=>$block->title));
 }
 
-function graph_theme($existing, $type, $theme, $path){
+function landbook_vis_lgaf_theme($existing, $type, $theme, $path){
   return array(
     'compare-countries-block'  => array('template' => 'compare-countries-block',array('title'=>NULL)),
     'infographics-block'  => array('template' => 'infographics-block',array('title'=>NULL)),

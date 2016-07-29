@@ -1,10 +1,10 @@
 name = Views Book Latest Blocks
 core = 7.x
-package = Landportal Views
+package = Landbook
 version = 7.x-1.0
 dependencies[] = land_util
 dependencies[] = views
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features_exclude[dependencies][ctools] = ctools
-project path = sites/dev.landportal.info/modules/features
+project path = sites/dev.landportal.info/modules/views

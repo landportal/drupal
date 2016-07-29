@@ -1,8 +1,8 @@
-name = Pie Chart
+name = Landbook vis pie
 description = Submodule landbook for display some information in the pie.
 package = Landportal
 core = 7.x
 version = 7.x-1
 dependencies[] = landbook
-dependencies[] = graph
+dependencies[] = landbook_vis_lgaf
 

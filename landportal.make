@@ -111,6 +111,7 @@ projects:
   - field_collection
   - addtoany
   - custom_pub
+  - lang_dropdown
 
 includes:
   - "landportal-custom.make"

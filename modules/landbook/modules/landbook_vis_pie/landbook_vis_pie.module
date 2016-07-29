@@ -1,0 +1,13 @@
+<?php
+
+function landbook_vis_pie_theme($existing, $type, $theme, $path){
+  return array(
+    'landbook-vis-pie'  => array('template' => 'landbook-vis-pie','data' => NULL),
+  );
+}
+
+function landbook_vis_pie_page_alter(&$page){
+  $library_path = libraries_get_path('lbvis');
+  drupal_add_js($library_path . '/js/lbvis.pie.js');
+  drupal_add_js(drupal_get_path('module', 'landbook_vis_pie').'/main.js');
+}

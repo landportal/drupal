@@ -1,0 +1,13 @@
+<?php
+
+function landbook_vis_spide_theme($existing, $type, $theme, $path){
+  return array(
+    'landbook-vis-spide'  => array('template' => 'landbook-vis-spide',array('title'=>NULL)),
+  );
+}
+
+function landbook_vis_spide_page_alter(&$page){
+  $library_path = libraries_get_path('lbvis');
+  drupal_add_js($library_path . '/js/lbvis.spider.js');
+  drupal_add_js(drupal_get_path('module', 'landbook_vis_spide').'/main.js');
+}

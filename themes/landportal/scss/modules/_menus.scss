@@ -233,8 +233,19 @@ ul.menu {
     }
 
     #block-menu-user-signin {
-        li { width: 50%; }
+        li {
+          width: 50%;
+          float: left;
+          @media only screen and (max-width: 720px){
+            width: 100%;
+            float: none;
+            border: none;
+          }
+        }
     }
+}
+#lang-dropdown-select-language{
+  width: 60px !important;
 }
 
 

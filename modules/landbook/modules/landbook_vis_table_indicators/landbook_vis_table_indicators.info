@@ -1,4 +1,4 @@
-name = Indicators
+name = Landbook vis table indicators
 description = Submodule landbook for display indicators on country page.
 package = Landportal
 core = 7.x

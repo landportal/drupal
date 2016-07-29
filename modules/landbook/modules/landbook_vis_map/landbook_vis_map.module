@@ -1,6 +1,6 @@
 <?php
 
-function map_block_info() {
+function landbook_vis_map_block_info() {
   $blocks['region_map_block'] = array(
     'info' => t('Region Map Block'),
   );
@@ -11,20 +11,20 @@ function map_block_info() {
   return $blocks;
 }
 
-function map_block_view($delta = '') {
+function landbook_vis_map_block_view($delta = '') {
     $block = array();
     switch ($delta) {
         case 'region_map_block' :
-          $block['content'] = map_region_map_block_view();
+          $block['content'] = landbook_vis_map_region_map_block_view();
           break;
         case 'world_map_block' :
-          $block['content'] = map_world_map_block_view();
+          $block['content'] = landbook_vis_map_world_map_block_view();
           break;
     }
     return $block;
 }
 
-function map_region_map_block_view(){
+function landbook_vis_map_region_map_block_view(){
   global $language;
   if(arg(0)=='book' && arg(1)=='countries' && !empty(arg(2))){
   $iso=arg(2);
@@ -33,20 +33,20 @@ function map_region_map_block_view(){
   return theme('region-map',array('data'=>$data));
   }
 }
-function map_world_map_block_view(){
-  $block = block_load('map', 'world_map_block');
+function landbook_vis_map_world_map_block_view(){
+  $block = block_load('landbook_vis_map', 'world_map_block');
   return theme('world-map',array('title'=>$block->title));
 }
 
-function map_theme($existing, $type, $theme, $path){
+function landbook_vis_map_theme($existing, $type, $theme, $path){
   return array(
     'region-map'  => array('template' => 'region-map','data' => NULL),
     'world-map'  => array('template' => 'world-map',array('title'=>NULL)),
   );
 }
 
-function map_page_alter(&$page){
+function landbook_vis_map_page_alter(&$page){
   $library_path = libraries_get_path('lbvis');
   drupal_add_js($library_path . '/js/lbvis.map.js');
-  drupal_add_js(drupal_get_path('module', 'map').'/main.js');
+  drupal_add_js(drupal_get_path('module', 'landbook_vis_map').'/main.js');
 }

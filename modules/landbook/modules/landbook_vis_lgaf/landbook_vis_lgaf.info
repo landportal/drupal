@@ -1,4 +1,4 @@
-name = Graph
+name = Landbook vis lgaf
 description = Submodule landbook with blocks for each of the following graphs..
 package = Landportal
 core = 7.x
