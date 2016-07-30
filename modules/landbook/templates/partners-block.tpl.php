@@ -1,4 +1,4 @@
-<?php $block = block_load('views', 'book_latest_blocks-block_4');
+<?php $block = block_load('views', 'landbook_countries_related-block_4');
   $block = _block_render_blocks(array($block));
   $block_build = _block_get_renderable_array($block);
   $partners=drupal_render($block_build);
