@@ -1,8 +1,7 @@
 <?php
 
 // DO NOT OVERRIDE $block IN A BLOCK TEMPLATE!!!
-print_r ($block);
-print_r ($content);
+//print_r ($block);
 
 $views = [
     'news' => 'landbook_countries_related-block_3',
