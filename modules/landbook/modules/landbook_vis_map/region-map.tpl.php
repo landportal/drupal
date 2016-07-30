@@ -1,31 +1,31 @@
-<?php  $block = block_load('views', 'book_latest_blocks-block_3');
+<?php  $block = block_load('views', 'landbook_countries_related-block_3');
   $block = _block_render_blocks(array($block));
   $block_build = _block_get_renderable_array($block);
   $news=drupal_render($block_build);
 ?>
-<?php  $block = block_load('views', 'book_latest_blocks-block_1');
+<?php  $block = block_load('views', 'landbook_countries_related-block_1');
   $block = _block_render_blocks(array($block));
   $block_build = _block_get_renderable_array($block);
   $blog=drupal_render($block_build);
 ?>
-<?php  $block = block_load('views', 'book_latest_blocks-block_2');
+<?php  $block = block_load('views', 'landbook_countries_related-block_2');
   $block = _block_render_blocks(array($block));
   $block_build = _block_get_renderable_array($block);
   $events=drupal_render($block_build);
 ?>
-<?php  $block = block_load('views', 'book_latest_blocks-block');
+<?php  $block = block_load('views', 'landbook_countries_related-block');
   $block = _block_render_blocks(array($block));
   $block_build = _block_get_renderable_array($block);
   $debates=drupal_render($block_build);
 ?>
 
-<?php $block = block_load('views', 'book_latest_blocks-block_4');
+<?php $block = block_load('views', 'landbook_countries_related-block_4');
   $block = _block_render_blocks(array($block));
   $block_build = _block_get_renderable_array($block);
   $partners=drupal_render($block_build);
 ?>
 
-<?php  $block = block_load('views', 'book_latest_blocks-block_5');
+<?php  $block = block_load('views', 'landbook_countries_related-block_5');
     $block = _block_render_blocks(array($block));
     $block_build = _block_get_renderable_array($block);
     $library=drupal_render($block_build);
@@ -38,7 +38,7 @@
   </section>  
   <div class="photo-gallery">
     <div class="cover-pg r-pos">
-        <?php  $block = block_load('views', 'book_latest_blocks-block_6');
+        <?php  $block = block_load('views', 'landbook_countries_related-block_6');
         $block = _block_render_blocks(array($block));
         $block_build = _block_get_renderable_array($block);
         print drupal_render($block_build);
