@@ -1,9 +1,7 @@
 <section id="map-global" class="container-fluid">
   <header class="row">
     <div class="col-md-offset-2 col-md-8 text-center">
-      <?php $library_path = libraries_get_path('lbvis');?>
-      <img src="<?php print base_path() . $library_path . '/'?>img/ico-h2-mapping.png" alt="mapping">
-      <h2 class="fos txt-small m-xs-top" data-localize="global.mapping"><?php print $title;?></h2>
+      <h2 data-localize="global.mapping"><?php print $block->subject; ?></h2>
     </div>
   </header>
 
