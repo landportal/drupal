@@ -58,9 +58,6 @@ function landbook_vis_map_block_view($delta = '') {
                     array('landbook', 'lbvis.map'),
                 ),
                 'js' =>  array(
-                    /* $library_path . '/js/map_data.js' =>  array('weight' => 1), */
-                    /* $library_path . '/js/map_data.js' =>  array('weight' => 1), */
-                    /* $book_path . '/js/view-coda.js' =>  array('weight' => 2), */
                     $module_path . '/region-map.js' =>  array('weight' => 3, 'requires_jquery' => TRUE),
                 )
             )
@@ -71,26 +68,15 @@ function landbook_vis_map_block_view($delta = '') {
         $block['content'] = array(
             '#theme' => 'world_map',
             '#attached' => array(
-                //'js' => $lbl,
-                /* 'js' =>  array( */
-                /*     $library_path . '/js/map_data.js' =>  array('weight' => 1), */
-                /*     $book_path . '/js/view-coda.js' =>  array('weight' => 2), */
-                /*     $module_path . '/world-map.js' =>  array('weight' => 3), */
-                /* ) */
+                'library' => array(
+                    array('landbook', 'lbvis.map'),
+                ),
+                'js' =>  array(
+                    $module_path . '/world-map.js' =>  array('weight' => 3, 'requires_jquery' => TRUE),
+                )
             )
         );
         break;
     }
     return $block;
 }
-
-/* function landbook_vis_map_region_map_block_view(){ */
-/*     global $language; */
-/*     if(arg(0)=='book' && arg(1)=='countries' && !empty(arg(2))){ */
-/*         $iso=arg(2); */
-/*         $r = new Country(); */
-/*         $data = $r->get($language, $iso); */
-/*         return theme('region-map',array('data'=>$data)); */
-/*     } */
-/* } */
-
