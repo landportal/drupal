@@ -1,0 +1,6 @@
+name = Landbook View Coda
+description = Provide js-view-coda interface to Drupal
+package = Landbook
+core = 7.x
+version = 7.x-2.3-beta
+dependencies[] = landbook_taxonomies

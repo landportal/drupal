@@ -14,7 +14,7 @@ $BOOK_PATH = drupal_get_path('module', 'landbook');
 require_once($BOOK_PATH . '/includes/landbook.menu.inc');
 require_once($BOOK_PATH . '/includes/landbook.block.inc');
 require_once($BOOK_PATH . '/includes/landbook.theme.inc');
-require_once($BOOK_PATH . '/includes/landbook.library.inc');
+//require_once($BOOK_PATH . '/includes/landbook.library.inc');
 require_once($BOOK_PATH . '/includes/landbook.views_default.inc');
 
 function landbook_views_api($module = NULL, $api = NULL) {

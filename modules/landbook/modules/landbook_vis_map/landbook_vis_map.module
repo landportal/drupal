@@ -41,21 +41,17 @@ function landbook_vis_map_block_info() {
 }
 
 function landbook_vis_map_block_view($delta = '') {
-    //$library_path = libraries_get_path('lbvis');
-    //$book_path   = drupal_get_path('module', 'landbook');
     $module_path = drupal_get_path('module', 'landbook_vis_map');
 
     $block = array();
     switch ($delta) {
     case 'region_map' :
-        $lbl = drupal_get_library('landbook', 'lbvis.map');
-        //dpm($lbl);
         $block['subject'] = '';
         $block['content'] = array(
             '#theme' => 'region_map',
             '#attached' => array(
                 'library' => array(
-                    array('landbook', 'lbvis.map'),
+                    array('landbook_view_coda', 'lbvis.map'),
                 ),
                 'js' =>  array(
                     $module_path . '/region-map.js' =>  array('weight' => 3, 'requires_jquery' => TRUE),
@@ -69,7 +65,7 @@ function landbook_vis_map_block_view($delta = '') {
             '#theme' => 'world_map',
             '#attached' => array(
                 'library' => array(
-                    array('landbook', 'lbvis.map'),
+                    array('landbook_view_coda', 'lbvis.map'),
                 ),
                 'js' =>  array(
                     $module_path . '/world-map.js' =>  array('weight' => 3, 'requires_jquery' => TRUE),
