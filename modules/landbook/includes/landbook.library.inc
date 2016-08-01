@@ -44,6 +44,7 @@ function landbook_library() {
         ),
         'dependencies' => array(
             array('system', 'jquery'),
+            array('landbook', 'lbvis.highcharts'),
             array('landbook', 'lbvis.data'),
         ),
     );
@@ -59,13 +60,62 @@ function landbook_library() {
         'title' => 'view-coda map', 
         'version' => '0.0.1', 
         'js' => array(
-            $LBVIS_PATH . '/js/vendor/highmaps.js' => array(), 
+            //$LBVIS_PATH . '/js/vendor/highmaps.js' => array(), 
             $LBVIS_PATH . '/js/lbvis.map.js' => array(), 
-      ), 
+        ),
         'dependencies' => array(
             array('landbook', 'view-coda'),
-            array('landbook', 'lbvis.highcharts'),
             array('landbook', 'lbvis.map_data'),
+        ),
+    );
+    $libraries['lbvis.table'] = array(
+        'title' => 'view-coda table', 
+        'version' => '0.0.1', 
+        'js' => array(
+            $LBVIS_PATH . '/js/lbvis.table.js' => array(), 
+        ),
+        'dependencies' => array(
+            array('landbook', 'view-coda'),
+        ),
+    );
+    $libraries['lbvis.linechart'] = array(
+        'title' => 'view-coda linechart', 
+        'version' => '0.0.1', 
+        'js' => array(
+            $LBVIS_PATH . '/js/lbvis.linechart.js' => array(), 
+        ),
+        'dependencies' => array(
+            array('landbook', 'view-coda'),
+        ),
+    );
+    $libraries['lbvis.lgaf'] = array(
+        'title' => 'view-coda lgaf', 
+        'version' => '0.0.1', 
+        'js' => array(
+            $LBVIS_PATH . '/js/lbvis.lgaf.js' => array(), 
+        ),
+        'dependencies' => array(
+            array('landbook', 'view-coda'),
+        ),
+    );
+    $libraries['lbvis.pie'] = array(
+        'title' => 'view-coda pie', 
+        'version' => '0.0.1', 
+        'js' => array(
+            $LBVIS_PATH . '/js/lbvis.pie.js' => array(), 
+        ),
+        'dependencies' => array(
+            array('landbook', 'view-coda'),
+        ),
+    );
+    $libraries['lbvis.spider'] = array(
+        'title' => 'view-coda spider', 
+        'version' => '0.0.1', 
+        'js' => array(
+            $LBVIS_PATH . '/js/lbvis.spider.js' => array(), 
+        ),
+        'dependencies' => array(
+            array('landbook', 'view-coda'),
         ),
     );
     return $libraries;
