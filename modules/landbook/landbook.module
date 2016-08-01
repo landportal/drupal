@@ -5,19 +5,21 @@
  *
  * The Landportal landbook
  *
- * Original work by: WESO (http://www.weso.es/)
  * Drupal refactoring: Jules <jules@ker.bz>
  */
 
-require_once(drupal_get_path('module', 'landbook').'/utils/database_helper.php');
-require_once(drupal_get_path('module', 'landbook').'/utils/cache_helper.php');
-require_once(drupal_get_path('module', 'landbook').'/includes/landbook.utils.inc');
-require_once(drupal_get_path('module', 'landbook').'/includes/landbook.menu.inc');
-require_once(drupal_get_path('module', 'landbook').'/includes/landbook.block.inc');
-require_once(drupal_get_path('module', 'landbook').'/includes/landbook.scripts.inc');
-require_once(drupal_get_path('module', 'landbook').'/includes/landbook.theme.inc');
-require_once(drupal_get_path('module', 'landbook').'/modules/countries.inc');
-require_once(drupal_get_path('module', 'landbook').'/modules/indicators.inc');
+
+$BOOK_PATH = drupal_get_path('module', 'landbook');
+
+require_once($BOOK_PATH . '/includes/landbook.menu.inc');
+require_once($BOOK_PATH . '/includes/landbook.block.inc');
+require_once($BOOK_PATH . '/includes/landbook.theme.inc');
+require_once($BOOK_PATH . '/includes/landbook.library.inc');
+require_once($BOOK_PATH . '/includes/landbook.views_default.inc');
+
+function landbook_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
 
 function landbook_help($path, $arg) {
   switch ($path) {
@@ -32,164 +34,43 @@ function landbook_help($path, $arg) {
   }
 }
 
-/**
- * If we are looking at a CT landbook_country, load indicators data
- * (re-use WESO Country object) but load it globally...
- * This should also improve performances.
- */
-function landbook_init() {
-    global $language, $databases, $conn;
-    if ($node = menu_get_object()) {
-        if ($node->type == 'landbook_country') {
-            //error_log('[LB: '.$node->type.']');
-            $data = array();
-            // Get country ISO3 code (from field_countries)
-            $country_field = field_get_items('node', $node, 'field_countries');
-            $country_term = taxonomy_term_load($country_field[0]['tid']);
-            $iso = field_get_items('taxonomy_term', $country_term, 'field_iso3');
-            $data['iso3'] = $iso[0]['value'];
-            // Load Country data
-            $data['C'] = new Country();
-            $data['data'] = $data['C']->get($language, $data['iso3']);
-
-            /* $result = db_query("SELECT c.iso3, t.value year, o.id, o.dataset_id, o.indicator_id, v.value, o.indicator_group_id, o.computation_id, issued_id,slice_id FROM {landportal.observations} o LEFT JOIN {landportal.countries} c ON o.region_id=c.id LEFT JOIN {landportal.values} v ON o.value_id=v.id LEFT JOIN {landportal.intervals} t ON o.ref_time_id=t.id WHERE c.iso3='".$data['iso3']."' ORDER BY year;"); */
-            /* $data['mylb'] = $result->fetchAll(); */
-
-            unset($data['data']['starred']);
-            //unset($data['data']['charts']['trafficLights']);
-            unset($data['data']['charts']['gaugeIndicators']);
-            // Stuff it in the node->book
-            /* $path = current_path(); */
-            /* dpm($node, 'LBinit '.$path); */
-            $node->book = $data;                        
-        }
-    }
-}
-
-/**
- * Implement hook_menu
- *
- * Landbook menus consists of:
- *  - a main-menu entry pointing to book
- *  - a 'header-section' menu to navigate the landbook modules
- *  - an admin menu to manage the module settings
- */
-function landbook_menu() {
-  $items = array();
-  landbook_menu_admin($items);
-  landbook_menu_build($items);
-  // Landbook main-menu link
-  $items['book'] = array(
-    'title'		=> 'Landbook',
-    'menu_name'		=> 'main-menu',
-    'type'              => MENU_NORMAL_ITEM,
-    'access callback'	=> TRUE,
-    'page callback'	=> 'drupal_goto',
-    'page arguments'    => array('book/regions'),
-  );
-  $translatables['book'][] = t($items['book']['title']);
-
-  $items['admin/fill_regions_terms'] = array(
-    'access callback'   => TRUE,
-    'page callback' => 'landbook_fill_regions_terms',
-  );
-
-  return $items;
-}
-
-/**
- * Rebuild/override breadcrumbs for Landbook pages
- */
-function landbook_page_alter(&$page) {
-    $e = explode('/', $_GET['q']);
-    if ($e[0] == 'book') {
-        $data = (isset($page['content']['system_main']['content']['#data']) ?
-        $page['content']['system_main']['content']['#data'] :
-        (isset($page['content']['system_main']['#data']) ?
-        $page['content']['system_main']['#data']  : ''));
-        $breadcrumb = drupal_get_breadcrumb();
-        $breadcrumb[0] = l(t('Landbook'), 'book');
-        if ($e[1] == 'countries' && $e[count($e)-1] == 'details') {
-            $breadcrumb[2] = l($data['info']['name'], 'book/countries/'.$e[2]);
-        }
-        $breadcrumb[] = l(t(drupal_get_title()), $_GET['q']);
-        drupal_set_breadcrumb($breadcrumb);
-    }
-}
-
-/**
- * Fill up sidebar blocks for Landbook pages
- *
- * This is a nasty way to build those blocks content after the page is built
- *
- * They need information pulled by the landbook page callback to be build.
- * Usually pages (such as country detail, regions...) would depend on them
- * to work properly (the dynamic content being build by JS relying on those
- * blocks to pull / display content.
- */
+// Hook country narrative page
 function landbook_page_build(&$page) {
-    // In a 'single' page node
-    if ($node = menu_get_object('node', 1)) {
-        // This node is a landbook_country
-        if ($node->type === 'landbook_country') {
-            landbook_add_js_vars($node->book['iso3']);
-            landbook_add_css();
-            landbook_add_js();
-            landbook_add_js_country();
-
-            $breadcrumb[0] = l(t('Landbook'), 'book');
-            $breadcrumb[1] = l(t('Countries'), 'countries');
-            //$breadcrumb[2] = l(, 'book');
-            drupal_set_breadcrumb($breadcrumb);
-        }
-    }
-
-    // If we don't have a 'data' elements in the content, it is probably not a landbook page.
-    // THIS IS REALLY BAD, block should 'stay' dumb or be able to build themselve (or not)
-    // before the page is built. (?)
-    if (!isset($page['content']['system_main']['content']['#data'])) return;
-    $data = $page['content']['system_main']['content']['#data'];
-    $type = (isset($page['content']['system_main']['content']['#theme']) ?
-    $page['content']['system_main']['content']['#theme'] :
-    (isset($page['content']['system_main']['#theme']) ?
-    $page['content']['system_main']['#theme'] :
-    $page['#type']));
-
-    // Country pages
-    if ($type == 'country' && isset($data['entity-id'])) {
-        $page['sidebar_first']['landbook_country_sidebar_first']['#markup'] =
-            landbook_country_sidebar_first($data);
-        $page['sidebar_second']['landbook_country_sidebar_second']['#markup'] =
-            landbook_country_sidebar_second($data);
-        $page['sidebar_first']['#sorted'] = FALSE;
-        $page['sidebar_second']['#sorted'] = FALSE;
-    }
-    // Indicator
-    if ($type == 'indicator') {
-        $page['sidebar_second']['landbook_indicator_sidebar_second']['#markup'] =
-            landbook_indicator_sidebar_second($data);
-        $page['sidebar_second']['#sorted'] = FALSE;
-    }
-    // Regions
-    if ($type == 'regions') {
-        $page['sidebar_second']['landbook_regions_selectors']['#markup'] =
-            landbook_regions_selectors($data);
-        $page['sidebar_second']['#sorted'] = FALSE;
+    $e = explode('/', $_GET['q']);
+    if ($e[0] == 'book' && $e[1] == 'countries') {
+        landbook_country_narrative($e[2]);
     }
 }
 
+function landbook_country_narrative($iso3) {
+    global $LBVIS_PATH;
+    $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
+    // TODO: should be added by hook_library while declaring view-coda (aka lbvis)
+    // TODO: add css with #attached (see vis_map module)
+    drupal_add_css($LBVIS_PATH . '/css/screen.css', array('group' => CSS_DEFAULT));
+    drupal_add_css($LBVIS_PATH . '/css/spinkit.css', array('group' => CSS_DEFAULT));
+    drupal_add_js(array(
+        'landbook' => array(
+            //'path'          => $theme_path,
+            'libraryPath'   => $LBVIS_PATH,
+            'countryCode'   => $iso3
+        )
+    ), 'setting');
+}
 
+/**
+ * Note: Webcoding
+ * Explain AND document all the following functions
+ * most of it seems overkill, un-necessary
+ */
 function landbook_views_query_alter(&$view, &$query){
-  if (isset($view->name)) {
-    if($view->name=='book_latest_blocks'){
+    if($view->name=='landbook_countries_related'){
         if(arg(0)=='book' && arg(1) == 'countries'){
             $tid=landbook_get_region_iso(arg(2));
             $query->where[0]['conditions'][0]['value']=$tid;
         }
     }
-  }
 }
-
 
 function landbook_get_region_iso($iso){
     $tid = db_select('field_data_field_iso3', 't')
@@ -201,10 +82,8 @@ function landbook_get_region_iso($iso){
     return $tid;
 }
 
-
 function landbook_fill_regions_terms(){
     $terms=taxonomy_get_tree(3);
-    //pa($terms,1);
     foreach ($terms as $key => $term) {
         $tid = db_select('taxonomy_term_data', 't')
           ->fields('t', array('tid'))
@@ -215,24 +94,14 @@ function landbook_fill_regions_terms(){
         $old_term=taxonomy_term_load($term->tid);
         $reg_term=taxonomy_term_load($tid);
         $reg_term->field_iso3['und'][0]['value']=$old_term->field_iso3['und'][0]['value'];
-        try{
+        try {
             taxonomy_term_save($reg_term);
-        }catch(Exception $e){
-            
+        } catch(Exception $e) {
+            error_log('LB fill regions terms');
         }
-
     }
 }
 
-
-function landbook_preprocess_page(&$vars){
-    if(arg(0)=='book' && arg(1) == 'countries'){
-        if(!empty(arg(2))){
-            $vars['theme_hook_suggestions'][] = 'page__book_country';
-        }
-        
-    }
-}
 function landbook_get_country_narrative_nid($title){
   $nid = db_select('node', 'n')
   ->fields('n', array('nid'))
@@ -240,19 +109,16 @@ function landbook_get_country_narrative_nid($title){
   ->condition('n.type', 'landbook_country')
   ->execute()
   ->fetchField();
-
   return $nid;
 }
 
 function load_country_description($title){
-
   $nid = db_select('node', 'n')
   ->fields('n', array('nid'))
   ->condition('n.title', $title)
   ->condition('n.type', 'landbook_country')
   ->execute()
   ->fetchField();
-
   if(empty($nid)){
     return '';
   }
