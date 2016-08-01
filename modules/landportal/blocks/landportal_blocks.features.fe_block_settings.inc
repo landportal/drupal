@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * landbook_taxonomies.features.fe_block_settings.inc
+ * landportal_blocks.features.fe_block_settings.inc
  */
 
 /**
  * Implements hook_default_fe_block_settings().
  */
-function landbook_taxonomies_default_fe_block_settings() {
+function landportal_blocks_default_fe_block_settings() {
   $export = array();
 
   $export['version'] = '2.0';

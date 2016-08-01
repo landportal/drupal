@@ -3,3 +3,4 @@
  * @file
  */
 include 'landportal_blocks.blocks.inc';
+include 'landportal_blocks.features.fe_block_settings.inc';
