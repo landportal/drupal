@@ -2,7 +2,7 @@
 
 function landbook_vis_table_indicators_block_info() {
     $blocks['lbvt_country'] = array(
-        'info' => t('Country page Indicators table'),
+        'info' => t('Country page: Indicators table'),
         'status' => TRUE,
         'region' => 'content',
         'visibility'      => BLOCK_VISIBILITY_LISTED,
@@ -23,7 +23,7 @@ function landbook_vis_table_indicators_block_view($delta = '') {
             '#theme' => 'lbvt_country',
             '#attached' => array(
                 'library' => array(
-                    array('landbook', 'lbvis.table'),
+                    array('landbook_view_coda', 'lbvis.table'),
                 ),
                 'js' =>  array(
                     $module_path . '/country.js' => array('weight' => 3, 'requires_jquery' => TRUE)

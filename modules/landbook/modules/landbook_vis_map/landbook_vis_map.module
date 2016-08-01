@@ -22,7 +22,7 @@ function landbook_vis_map_library() {
 
 function landbook_vis_map_block_info() {
     $blocks['region_map'] = array(
-        'info' => t('Landbook country Region map'),
+        'info' => t('Country page: Region map'),
         'status' => TRUE,
         'region' => 'content',
         'visibility'      => BLOCK_VISIBILITY_LISTED,
@@ -30,12 +30,12 @@ function landbook_vis_map_block_info() {
         'weight'      => -42
     );
     $blocks['world_map'] = array(
-        'info' => t('Landbook country World map'),
+        'info' => t('Country page: World map'),
         'status' => TRUE,
         'region' => 'content',
         'visibility'      => BLOCK_VISIBILITY_LISTED,
         'pages'           => "book/countries/*",
-        'weight'      => 10
+        'weight'      => 11
   );
   return $blocks;
 }

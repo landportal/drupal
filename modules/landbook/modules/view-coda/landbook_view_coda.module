@@ -127,15 +127,15 @@ function landbook_view_coda_block_info() {
         'region'    => 'content',
         'visibility'=> BLOCK_VISIBILITY_LISTED,
         'pages'     => "book/countries/*",
-        'weight'    => 10
+        'weight'    => 12
     );
     $blocks['lbcp_lgaf'] = array(
-        'info'      => t('Country page: Spider'),
+        'info'      => t('Country page: LGAF'),
         'status'    => TRUE,
         'region'    => 'content',
         'visibility'=> BLOCK_VISIBILITY_LISTED,
         'pages'     => "book/countries/*",
-        'weight'    => 11
+        'weight'    => 13
     );
     $blocks['lbcp_pie'] = array(
         'info'      => t('Country page: Pie chart'),
@@ -143,7 +143,7 @@ function landbook_view_coda_block_info() {
         'region'    => 'content',
         'visibility'=> BLOCK_VISIBILITY_LISTED,
         'pages'     => "book/countries/*",
-        'weight'    => 12
+        'weight'    => 14
     );
     $blocks['lbcp_spider'] = array(
         'info'      => t('Country page: Spider'),
@@ -151,12 +151,12 @@ function landbook_view_coda_block_info() {
         'region'    => 'content',
         'visibility'=> BLOCK_VISIBILITY_LISTED,
         'pages'     => "book/countries/*",
-        'weight'    => 13
+        'weight'    => 15
     );
     return $blocks;
 }
 
-function landbook_vis_lgaf_block_view($delta = '') {
+function landbook_view_coda_block_view($delta = '') {
     $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
     $block = array();
 
@@ -171,7 +171,7 @@ function landbook_vis_lgaf_block_view($delta = '') {
                 'js' => array(
                      array(
                          'type' => 'inline',
-                         'data' => 'jQuery(document).ready(function () { COMP = new lbvisLineChart({vis: LBV }); COMP.init() });'
+                         'data' => 'jQuery(document).ready(function () { COMP = new lbvisLC({vis: LBV}); COMP.init() });'
                      )
                 )
             )
@@ -185,13 +185,13 @@ function landbook_vis_lgaf_block_view($delta = '') {
                     array('landbook_view_coda', 'lbvis.lgaf')
                 ),
                 'js' => array(
-                    array(
-                        'type' => 'setting',
-                        'data' => array('pathJSON' => $LBVIS_PATH . '/json/')
-                    ),
+                    /* array( */
+                    /*     'type' => 'setting', */
+                    /*     'data' => array('landbook' => array('pathJSON' => )) */
+                    /* ), */
                     array(
                         'type' => 'inline',
-                        'data' => 'jQuery(document).ready(function () { LGAF = new lbvisLGAF({vis: LBV }); LGAF.init() });'
+                        'data' => 'jQuery(document).ready(function () { LGAF = new lbvisLGAF({jsonPath: "'.$LBVIS_PATH . '/json/", vis: LBV}); LGAF.init() });'
                     )
                 )
             )
@@ -207,7 +207,7 @@ function landbook_vis_lgaf_block_view($delta = '') {
                 'js' => array(
                     array(
                         'type' => 'inline',
-                        'data' => 'jQuery(document).ready(function () { PIE = new lbvisPie({vis: LBV }); PIE.init() });'
+                        'data' => 'jQuery(document).ready(function () { PIE = new lbvisPie({vis: LBV}); PIE.init() });'
                     )
                 )
             )
@@ -223,7 +223,7 @@ function landbook_vis_lgaf_block_view($delta = '') {
                 'js' => array(
                     array(
                          'type' => 'inline',
-                         'data' => 'jQuery(document).ready(function () { SPIDER = new lbvisSpider({vis: LBV }); SPIDER.init() });'
+                         'data' => 'jQuery(document).ready(function () { SPIDER = new lbvisSpider({vis: LBV}); SPIDER.init() });'
                      ),
                 )
             )
