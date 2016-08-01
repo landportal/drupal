@@ -1,1 +1,0 @@
-<div id="wrapper-piechart" data-highcharts-chart="1"></div>
