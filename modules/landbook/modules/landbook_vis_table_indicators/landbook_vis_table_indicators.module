@@ -1,35 +1,35 @@
 <?php
 
 function landbook_vis_table_indicators_block_info() {
-  $blocks['indicators_block'] = array(
-    'info' => t('Indicators Block'),
-  );
-  return $blocks;
+    $blocks['lbvt_country'] = array(
+        'info' => t('Country page Indicators table'),
+        'status' => TRUE,
+        'region' => 'content',
+        'visibility'      => BLOCK_VISIBILITY_LISTED,
+        'pages'           => "book/countries/*",
+        'weight'      => 10
+    );
+    return $blocks;
 }
 
 function landbook_vis_table_indicators_block_view($delta = '') {
+    $module_path = drupal_get_path('module', 'landbook_vis_table_indicators');
+
     $block = array();
     switch ($delta) {
-        case 'indicators_block' :
-          $block['content'] = landbook_vis_table_indicators_block_view_output();
-          break;
+    case 'lbvt_country' :
+        $block['subject'] = t('Indicators');
+        $block['content'] = array(
+            '#theme' => 'lbvt_country',
+            '#attached' => array(
+                'library' => array(
+                    array('landbook', 'lbvis.table'),
+                ),
+                'js' =>  array(
+                    $module_path . '/country.js' => array('weight' => 3, 'requires_jquery' => TRUE)
+                )
+            )
+        );          break;
     }
     return $block;
-}
-
-function landbook_vis_table_indicators_block_view_output(){
-  $block = block_load('landbook_vis_table_indicators', 'indicators_block');
-  return theme('indicators-block',array('title'=>$block->title));
-}
-
-function landbook_vis_table_indicators_theme($existing, $type, $theme, $path){
-  return array(
-    'indicators-block'  => array('template' => 'landbook-vis-table-indicators','data' => NULL),
-  );
-}
-
-function landbook_vis_table_indicators_page_alter(&$page){
-  $library_path = libraries_get_path('lbvis');
-  drupal_add_js($library_path . '/js/lbvis.table.js');
-  drupal_add_js(drupal_get_path('module', 'landbook_vis_table_indicators').'/main.js');
 }

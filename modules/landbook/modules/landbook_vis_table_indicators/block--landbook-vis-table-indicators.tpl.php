@@ -1,9 +1,7 @@
 <section id="table-indicators" class="container-fluid">
   <header class="row">
     <div class="col-md-offset-2 col-md-8 text-center">
-      <?php $library_path = libraries_get_path('lbvis');?>
-      <img src="<?php print base_path() . $library_path . '/'?>img/ico-h2-indicators.png" alt="indicators">
-      <h2 data-localize="global.indicators"><?php print $title;?></h2>
+      <h2 data-localize="global.indicators"><?php print $block->subject;?></h2>
     </div>
   </header>
   <div class="row">
