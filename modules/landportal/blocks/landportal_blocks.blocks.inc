@@ -71,7 +71,13 @@ Contact&nbsp;<a href="mailto:hello@landportal.info">hello@landportal.info</a>&nb
     'lp_header_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li class="google-plus"><a href="https://plus.google.com/107805891674805739531"><i class="fa fa-google-plus"></i></a></li></ul>',
   );
 
-  return variable_get($name, $default[$name]);
+  //$default: The default value to use if this variable has never been set.
+  $output = variable_get($name, $default[$name]);
+  if (empty($output)) {
+    $output = $default[$name];
+  }
+
+  return $output;
 }
 
 function landportal_blocks_block_configure($delta='') {

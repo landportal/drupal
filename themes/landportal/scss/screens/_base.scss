@@ -134,29 +134,32 @@ a {
             text-align: center;
         }
     }
-    #block-landportal-blocks-lp-footer-social
-    ul {
-        float: right;
-        @media only screen and (max-width: 768px){
-          float: none;
-        }
-        font-size: 1.8em;
-        padding: 0;
-        li {
-            height: 1.4em;
-            width: 1.4em;
-            border-radius: 0.7em;
-            background-color: $grey;
-            list-style-type: none;
-            text-align: center;
-            float: left;
-            padding: 0;
-            margin: 0 0 0 .5em;
-            &:first-of-type {
-                margin: 0;
-            }
-            a {
-                color: $white;
+    #block-landportal-blocks-lp-footer-social{
+        .content{
+            ul {
+                float: right;
+                @media only screen and (max-width: 768px){
+                  float: none;
+                }
+                font-size: 1.8em;
+                padding: 0;
+                li {
+                    height: 1.4em;
+                    width: 1.4em;
+                    border-radius: 0.7em;
+                    background-color: $grey;
+                    list-style-type: none;
+                    text-align: center;
+                    float: left;
+                    padding: 0;
+                    margin: 0 0 0 .5em;
+                    &:first-of-type {
+                        margin: 0;
+                    }
+                    a {
+                        color: $white;
+                    }
+                }
             }
         }
     }

@@ -40,18 +40,20 @@ body{
 			}
 			#block-landportal-blocks-lp-footer-social{
 				margin-top:30px;
-				li{
-					width:50px;
-					height: 50px;
-					border-radius: 50px;
-					border:2px solid $white;
-					background: $green-light;
-					overflow: hidden;
+				.content{
+					li{
+						width:50px;
+						height: 50px;
+						border-radius: 50%;
+						border:2px solid $white;
+						background: $green-light;
+						overflow: hidden;
 
-					a{
-						padding: 5px 12px;
-						.fa{
-							line-height: 2;
+						a{
+							display: block;
+							.fa{
+								line-height: 1.8;
+							}
 						}
 					}
 				}
