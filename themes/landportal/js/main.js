@@ -5,6 +5,7 @@
         Drupal.behaviors.landportal.initSearchSuggestions(context, settings);
         Drupal.behaviors.landportal.initScrollTo(context, settings);
         Drupal.behaviors.landportal.initShowInfo(context, settings);
+        Drupal.behaviors.landportal.initSearchBlock(context, settings);
       },
       initRegistrationForm: function(context, settings){
         isVisibleNewsletterLanguage();
@@ -39,6 +40,25 @@
           else{
             $($parent).find('.mic-content').slideUp();
           }
+        });
+      },
+      initSearchBlock: function(context, settings){
+        $('#header .search-form', context).once('search-form', function(){
+          var $form = $(this);
+
+          $form.hover(
+            function() {
+              $( this ).addClass( "active" );
+            }, function() {
+              if(!$form.find('.form-text').is( ":focus" )){
+                $( this ).removeClass( "active" );
+              }
+            }
+          );
+
+          $form.find('.form-text').focusout(function(){
+            $form.removeClass( "active" );
+          });
         });
       }
     };

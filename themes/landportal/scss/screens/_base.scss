@@ -24,14 +24,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     }
 }
 h1 {
-	font-size: 2.5em;
-	font-weight: normal;
-	color: #333;
-	padding-bottom: 0.2em;
+  font-size: 2.5em;
+  font-weight: normal;
+  color: #333;
+  padding-bottom: 0.2em;
 }
 h2 {
-	font-size: 2em;
-	font-weight: normal;
+  font-size: 2em;
+  font-weight: normal;
 }
 img {
     max-width: 100%;
@@ -60,15 +60,11 @@ a {
  */
 
 #logo {
-    float: left;
+    display: block;
     margin: 0 2em 0 0;
 }
 
 #header .block {
-    float: right;
-    &:first-of-type {
-        float: left;
-    }
     &:after {
         position: relative;
         clear: both;
@@ -141,6 +137,9 @@ a {
     #block-landportal-blocks-lp-footer-social
     ul {
         float: right;
+        @media only screen and (max-width: 768px){
+          float: none;
+        }
         font-size: 1.8em;
         padding: 0;
         li {

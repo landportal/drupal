@@ -79,8 +79,12 @@ function landportal_preprocess_page(&$variables) {
     drupal_set_title('');
   }
   
-  $variables['page']['header']['lang_dropdown_language']['#weight'] = -60;
-  $variables['page']['header']['nice_menus_1']['#weight'] = -60;
+  if (isset($variables['page']['header']['lang_dropdown_language']['#weight'])) {
+    $variables['page']['header']['lang_dropdown_language']['#weight'] = -60;
+  }
+  if (isset($variables['page']['header']['nice_menus_1']['#weight'])) {
+    $variables['page']['header']['nice_menus_1']['#weight'] = -60;
+  }
 }
 
 /**

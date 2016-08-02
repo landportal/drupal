@@ -47,4 +47,7 @@
 
 .views-view-grid td {
     padding: 1em 3em 0 0;
+    @media only screen and (max-width: 720px){
+      padding-right: 0px;
+    }
 }

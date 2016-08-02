@@ -202,6 +202,30 @@ function user_menu_feature_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'user-menu_add-content:node/add',
   );
+  // Exported menu link: user-menu_add-person:node/add/person.
+  $menu_links['user-menu_add-person:node/add/person'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'node/add/person',
+    'router_path' => 'node/add/person',
+    'link_title' => 'Add Person',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'user-menu_add-person:node/add/person',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -43,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_add-content:node/add',
+  );
   // Exported menu link: user-menu_contribute:node/add.
   $menu_links['user-menu_contribute:node/add'] = array(
     'menu_name' => 'user-menu',
@@ -351,6 +375,7 @@ function user_menu_feature_menu_default_menu_links() {
   t('Add Landlibrary Resource');
   t('Add News');
   t('Add Page');
+  t('Add Person');
   t('Contribute');
   t('Docs');
   t('Forms management');

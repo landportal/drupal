@@ -47,6 +47,41 @@ function landbook_blocks_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['lang_dropdown-language'] = array(
+    'cache' => -1,
+    'css_class' => 'col-md-2',
+    'custom' => 0,
+    'delta' => 'language',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'lang_dropdown',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'landportal' => array(
+        'region' => 'header',
+        'status' => 1,
+        'theme' => 'landportal',
+        'weight' => -50,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['search-form'] = array(
     'cache' => -1,
     'css_class' => 'col-md-2 search-form',
