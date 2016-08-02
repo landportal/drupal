@@ -83,23 +83,38 @@ function landbook_get_region_iso($iso){
 }
 
 function landbook_fill_regions_terms(){
-    $terms=taxonomy_get_tree(3);
-    foreach ($terms as $key => $term) {
-        $tid = db_select('taxonomy_term_data', 't')
-          ->fields('t', array('tid'))
-          ->condition('t.name', $term->name)
-          ->condition('t.vid', '7')
-          ->execute()
-          ->fetchField();
-        $old_term=taxonomy_term_load($term->tid);
-        $reg_term=taxonomy_term_load($tid);
-        $reg_term->field_iso3['und'][0]['value']=$old_term->field_iso3['und'][0]['value'];
-        try {
-            taxonomy_term_save($reg_term);
-        } catch(Exception $e) {
-            error_log('LB fill regions terms');
-        }
+  //strange country name
+  $hard_country_name = 'Viet Nam';
+  $fixed_hard_country_name = 'Vietnam';
+  $vid_country = 3;
+
+  $country_terms = taxonomy_get_tree($vid_country);
+  foreach ($country_terms as $key => $term) {
+    if ($term->name == $hard_country_name) {
+      $term->name = $fixed_hard_country_name;
     }
+    $tids = db_select('taxonomy_term_data', 't')
+      ->fields('t', array('tid'))
+      ->condition('t.name', $term->name)
+      ->condition('t.vid', '7')
+      ->execute()
+      ->fetchCol();
+
+    if (!empty($tids)) {
+      $old_term = taxonomy_term_load($term->tid);
+      foreach ($tids as $tid_key => $tid_value) {
+        $reg_term = taxonomy_term_load($tid_value);
+        $reg_term->field_iso3[LANGUAGE_NONE][0] = array(
+          'value' => $old_term->field_iso3[LANGUAGE_NONE][0]['value']
+        );
+        try {
+          taxonomy_term_save($reg_term);
+        } catch(Exception $e) {
+          error_log('LB fill regions terms');
+        }
+      }
+    }
+  }
 }
 
 function landbook_get_country_narrative_nid($title){
