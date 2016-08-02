@@ -67,8 +67,8 @@ function landportal_blocks_block_default_body($name) {
     'landportal_footer' => '<p>Copyright © 2014-' . date('Y') . '&nbsp;Land Portal Foundation /&nbsp;RSIN 854330045<br />
 Contact&nbsp;<a href="mailto:hello@landportal.info">hello@landportal.info</a>&nbsp;/&nbsp;Read more <a href="/about">about us</a>&nbsp;/ See our <a href="/about/privacy-policy">privacy&nbsp;policy</a><br />
 &nbsp;</p>',
-    'lp_footer_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li class="google-plus"><a href="https://plus.google.com/107805891674805739531">google-plus</a></li></ul>',
-    'lp_header_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li class="google-plus"><a href="https://plus.google.com/107805891674805739531">google-plus</a></li></ul>',
+    'lp_footer_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li class="google-plus"><a href="https://plus.google.com/107805891674805739531"><i class="fa fa-google-plus"></i></a></li></ul>',
+    'lp_header_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li class="google-plus"><a href="https://plus.google.com/107805891674805739531"><i class="fa fa-google-plus"></i></a></li></ul>',
   );
 
   return variable_get($name, $default[$name]);
@@ -157,8 +157,7 @@ function landportal_blocks_block_view($delta = '') {
     $block['content'] = $text;
     break;
   case 'lp_footer_social':
-    $esi = landportal_blocks_block_default_body('lp_footer_social');
-    $str = preg_replace('/(<a[^>]+>)([^<]*)/', '\1<i class="fa fa-\2"></i>', $esi);
+    $str = landportal_blocks_block_default_body('lp_footer_social');
     $block['content'] = array('#type' => 'markup', '#markup' => $str);
     break;
   case 'lp_twitter':
@@ -172,8 +171,8 @@ function landportal_blocks_block_view($delta = '') {
     $block['content'] = variable_get('lp_shareit', '');
     break;
   case 'lp_header_social':
-    $esi = landportal_blocks_block_default_body('lp_header_social');
-    $str = preg_replace('/(<a[^>]+>)([^<]*)/', '\1<i class="fa fa-\2"></i>', $esi);
+    $str = landportal_blocks_block_default_body('lp_header_social');
+    //$str = preg_replace('/(<a[^>]+>)([^<]*)/', '\1<i class="fa fa-\2"></i>', $esi);
     $block['content'] = array('#type' => 'markup', '#markup' => $str);
     break;
   case 'lp_share':

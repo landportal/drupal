@@ -222,22 +222,6 @@ li.nic-item:last-child a.a-nic {
 }
 
 
-//## TABLE ##//
-.reset_table {
-	width: 100%;
-	height: 100%;
-    border: 0px; //1px solid;
-    border-collapse: inherit;
-    border-spacing: 0;
-    border-color: none; //$c-g20;
-    vertical-align: inherit;
-    text-align: left;
-    font-weight: inherit;
-    -webkit-border-horizontal-spacing: 0;
-    -webkit-border-vertical-spacing: 0;
-    background-color: $ccontrast;
-}
-
 .info-bubble {
 	display: inline-block;
 	width: 20px;
@@ -249,43 +233,6 @@ li.nic-item:last-child a.a-nic {
 	border-radius: 50em;
 	margin-right: 5px;
 }
-
-.table-responsive {
-	box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.15)!important;
-}
-
-.t-th {
-	padding: 10px 10px;
-	font-weight: lighter;
-	border-right: 1px solid $c-g10;
-}
-
-.t-th-green, .t-tf-green {
-	background-color: $cprimary;
-	color: $ccontrast;
-}
-
-.t-tf-dkgreen {
-	background-color: darken( $cprimary, 30% )
-}
-
-tr:nth-child(even) {
-	background: $c-g05;
-}
-
-.t-td {
-	padding: 10px 10px;
-	border-right: 1px solid $c-g10;
-	border-bottom: 1px solid $c-g10;
-}
-
-th.t-th:last-child, td.t-td:last-child {
-	border-right: none;
-}
-
-.t-tf {
-	padding: 5px 10px;
-} 
 
 .t_indicators_body_loader {
 	height: 310px;
@@ -349,3 +296,57 @@ th.t-th:last-child, td.t-td:last-child {
 }
 
 
+/******************************************
+ *              Table
+ */
+.reset_table {
+	width: 100%;
+	height: 100%;
+    border: 0px; //1px solid;
+    border-collapse: inherit;
+    border-spacing: 0;
+    border-color: none; //$c-g20;
+    vertical-align: inherit;
+    text-align: left;
+    font-weight: inherit;
+    -webkit-border-horizontal-spacing: 0;
+    -webkit-border-vertical-spacing: 0;
+    background-color: $ccontrast;
+}
+
+.table-responsive {
+	box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.15)!important;
+}
+
+.t-th {
+	padding: 10px 10px;
+	font-weight: lighter;
+	border-right: 1px solid $c-g10;
+}
+
+.t-th-green, .t-tf-green {
+	background-color: $cprimary;
+	color: $ccontrast;
+}
+
+.t-tf-dkgreen {
+	background-color: darken( $cprimary, 30% )
+}
+
+tr:nth-child(even) {
+	background: $c-g05;
+}
+
+.t-td {
+	padding: 10px 10px;
+	border-right: 1px solid $c-g10;
+	border-bottom: 1px solid $c-g10;
+}
+
+th.t-th:last-child, td.t-td:last-child {
+	border-right: none;
+}
+
+.t-tf {
+	padding: 5px 10px;
+} 

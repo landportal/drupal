@@ -15,8 +15,12 @@ To rebuild automatically (on changes) the CSS, use something like:
 
 /* IMPORT: Partials */
 @import "partials/variables";
-//@import "partials/functions";
 @import "partials/normalize";
+
+$fa-font-path: "../fonts/font-awesome/";
+
+@import "font-awesome-compass";
+@import "font-awesome";
 
 
 /* IMPORT: Modules */
@@ -32,7 +36,6 @@ To rebuild automatically (on changes) the CSS, use something like:
 @import "modules/links";
 @import "modules/flags";
 @import "modules/forms";
-//@import "modules/elements";
 @import "modules/lists";
 
 // Landportal modules
@@ -44,7 +47,7 @@ To rebuild automatically (on changes) the CSS, use something like:
 @import "modules/menus";
 @import "modules/footer";
 @import "modules/header";
-@import "modules/m-generales";
+/* @import "modules/m-generales"; */
 
 
 /* IMPORT: Screens */

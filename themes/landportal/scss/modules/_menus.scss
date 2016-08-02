@@ -1,3 +1,7 @@
+div#breadcrumb {
+    @extend .sr-only;
+}
+
 /* Landportal SCSS: menus */
 ul.language-switcher-locale-url,
 ul.menu {
