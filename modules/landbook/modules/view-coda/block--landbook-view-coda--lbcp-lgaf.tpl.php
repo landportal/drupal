@@ -1,12 +1,14 @@
     <section id="lgaf" class="container-fluid">
-      <header class="row text-center">
-        <div class="col-xs-12">
-         <h2 data-localize="global.rankings"><?php print $block->subject; ?></h2>
-        </div>
-        <div class="col-xs-12">
-          <h3>Land Governance Assessment Framework (LGAF)</h3>
-        </div>
-      </header>
+      <?php if(!empty($block->subject)): ?>
+        <header class="row text-center">
+          <div class="col-xs-12">
+           <h2 data-localize="global.rankings"><?php print $block->subject; ?></h2>
+          </div>
+          <div class="col-xs-12">
+            <h3>Land Governance Assessment Framework (LGAF)</h3>
+          </div>
+        </header>
+      <?php endif;?>
       <div class="row">
         <form>
           <div class="form-group col-xs-3 col-sm-2">

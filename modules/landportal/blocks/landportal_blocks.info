@@ -3,6 +3,5 @@ description = LP custom blocks (Twitter, FB widgets...)
 core = 7.x
 project = landportal_blocks
 version = 7.x-2.2-alpha
-dependencies[] = blocks
 dependencies[] = features
 features[features_api][] = api:2

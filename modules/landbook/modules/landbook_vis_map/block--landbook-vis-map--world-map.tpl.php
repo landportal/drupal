@@ -1,9 +1,11 @@
 <section id="map-global" class="container-fluid">
-  <header class="row">
-    <div class="col-md-offset-2 col-md-8 text-center">
-      <h2 data-localize="global.mapping"><?php print $block->subject; ?></h2>
-    </div>
-  </header>
+  <?php if(!empty($block->subject)): ?>
+    <header class="row">
+      <div class="col-md-offset-2 col-md-8 text-center">
+        <h2 data-localize="global.mapping"><?php print $block->subject; ?></h2>
+      </div>
+    </header>
+  <?php endif;?>
 
   <div class="row">
     <form class="text-center">

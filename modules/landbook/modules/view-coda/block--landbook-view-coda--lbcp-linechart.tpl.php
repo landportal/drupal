@@ -1,9 +1,11 @@
     <section id="compare" class="container-fluid">
-      <header class="row">
-        <div class="col-md-offset-2 col-md-8 text-center">
-         <h2 class="" data-localize="global.compare"><?php print $block->subject ?></h2>
-        </div>
-      </header>
+      <?php if(!empty($block->subject)): ?>
+        <header class="row">
+          <div class="col-md-offset-2 col-md-8 text-center">
+           <h2 class="" data-localize="global.compare"><?php print $block->subject ?></h2>
+          </div>
+        </header>
+      <?php endif;?>
 
       <div class="row">
         <form>

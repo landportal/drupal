@@ -60,7 +60,7 @@ function landbook_vis_map_block_view($delta = '') {
         );
         break;
     case 'world_map' :
-        $block['subject'] = 'Mapping';
+        $block['subject'] = t('Mapping');
         $block['content'] = array(
             '#theme' => 'world_map',
             '#attached' => array(

@@ -64,7 +64,7 @@ function landbook_country_narrative($iso3) {
  * most of it seems overkill, un-necessary
  */
 function landbook_views_query_alter(&$view, &$query){
-    if($view->name=='landbook_countries_related'){
+    if(!empty($view->name) && $view->name=='landbook_countries_related'){
         if(arg(0)=='book' && arg(1) == 'countries'){
             $tid=landbook_get_region_iso(arg(2));
             $query->where[0]['conditions'][0]['value']=$tid;

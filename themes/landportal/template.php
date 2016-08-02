@@ -78,12 +78,9 @@ function landportal_preprocess_page(&$variables) {
   if((arg(0) == 'search' && arg(1) == 'all') || (arg(0) == 'library' && arg(1) == 'search')){
     drupal_set_title('');
   }
-  $variables['page']['header']['nice_menus_1']['#weight']=5;
-  $variables['page']['header']['nice_menus_1']['#block']->weight=5;
-  $variables['page']['header']['search_form']['#weight']=10;
-  $variables['page']['header']['search_form']['#block']->weight=-10;
-  $variables['page']['header']['landportal_blocks_lp_header_social']['#weight']=15;
-  $variables['page']['header']['landportal_blocks_lp_header_social']['#block']->weight=15;
+  
+  $variables['page']['header']['lang_dropdown_language']['#weight'] = -60;
+  $variables['page']['header']['nice_menus_1']['#weight'] = -60;
 }
 
 /**
