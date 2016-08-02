@@ -18,7 +18,7 @@ http_path = "/"
 css_dir = "../css"
 sass_dir = "./"
 images_dir = "../images"
-fonts_path = "../fonts"
+fonts_dir = "../fonts"
 #javascripts_dir = "../js"
 #additional_import_paths = [ "../libs/compass" ]
 relative_assets = true
@@ -31,9 +31,8 @@ preferred_syntax = :scss
 #       Environments
 #
 
-# DEV
-environment = :development
-sourcemap = true
-output_style = :expanded
-line_comments = true
-
+# PROD
+environment = :production
+sourcemap = false
+output_style = :compressed
+line_comments = false
