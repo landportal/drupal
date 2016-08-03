@@ -3,7 +3,7 @@
 $view = new view();
 $view->name = 'landbook_countries';
 $view->description = 'Landbook countries, list all known countries from taxonomy, link to country pages';
-$view->tag = 'default';
+$view->tag = 'taxonomy, landbook';
 $view->base_table = 'taxonomy_term_data';
 $view->human_name = 'Landbook Countries';
 $view->core = 7;

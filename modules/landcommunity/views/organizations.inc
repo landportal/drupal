@@ -177,7 +177,6 @@ $handler->display->display_options['arguments']['name']['relationship'] = 'term_
 $handler->display->display_options['arguments']['name']['default_action'] = 'default';
 $handler->display->display_options['arguments']['name']['title_enable'] = TRUE;
 $handler->display->display_options['arguments']['name']['title'] = 'Organizations working in %1';
-$handler->display->display_options['arguments']['name']['breadcrumb_enable'] = TRUE;
 $handler->display->display_options['arguments']['name']['breadcrumb'] = '%1';
 $handler->display->display_options['arguments']['name']['default_argument_type'] = 'raw';
 $handler->display->display_options['arguments']['name']['default_argument_options']['index'] = '2';
@@ -333,7 +332,7 @@ $handler->display->display_options['filters']['field_organization_relationship_t
 $handler->display->display_options['path'] = 'book/sources';
 $handler->display->display_options['menu']['type'] = 'normal';
 $handler->display->display_options['menu']['title'] = 'Sources';
-$handler->display->display_options['menu']['weight'] = '0';
+$handler->display->display_options['menu']['weight'] = '4';
 $handler->display->display_options['menu']['name'] = 'landbook-menu';
 $handler->display->display_options['menu']['context'] = 0;
 $handler->display->display_options['menu']['context_only_inline'] = 0;
