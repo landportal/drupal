@@ -15858,6 +15858,8 @@ section a:focus {
 /* line 699, ../scss/modules/_book.scss */
 .block select {
   -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   border: medium none;
   border-radius: 0;
   display: table-cell;
@@ -15870,7 +15872,7 @@ section a:focus {
   box-shadow: 4px 5px 0 0 #6e872a;
   margin-bottom: 5px;
 }
-/* line 713, ../scss/modules/_book.scss */
+/* line 715, ../scss/modules/_book.scss */
 .block .button {
   background-color: #A3C642;
   color: #fff;
@@ -15888,58 +15890,58 @@ section a:focus {
   font-size: 14px;
 }
 
-/* line 732, ../scss/modules/_book.scss */
+/* line 734, ../scss/modules/_book.scss */
 .section-block h2:first-child {
   display: none;
 }
-/* line 736, ../scss/modules/_book.scss */
+/* line 738, ../scss/modules/_book.scss */
 .section-block .block-views h2 {
   display: block;
 }
 
-/* line 743, ../scss/modules/_book.scss */
+/* line 745, ../scss/modules/_book.scss */
 #mapDiv {
   height: 468px;
 }
 
-/* line 747, ../scss/modules/_book.scss */
+/* line 749, ../scss/modules/_book.scss */
 #wrapper-piechart {
   height: 400px;
 }
 
-/* line 750, ../scss/modules/_book.scss */
+/* line 752, ../scss/modules/_book.scss */
 #maparea {
   position: relative;
 }
 
-/* line 753, ../scss/modules/_book.scss */
+/* line 755, ../scss/modules/_book.scss */
 #wrapper-mapping {
   height: 768px;
 }
 
-/* line 756, ../scss/modules/_book.scss */
+/* line 758, ../scss/modules/_book.scss */
 #igraphics {
   margin-top: 5px;
 }
 
-/* line 759, ../scss/modules/_book.scss */
+/* line 761, ../scss/modules/_book.scss */
 #wrapper-igraphics {
   height: 400px;
   width: 100%;
 }
 
-/* line 764, ../scss/modules/_book.scss */
+/* line 766, ../scss/modules/_book.scss */
 .labels-compare {
   display: none;
 }
 
-/* line 768, ../scss/modules/_book.scss */
+/* line 770, ../scss/modules/_book.scss */
 .tit-mapping {
   display: none;
 }
 
 /* loader */
-/* line 773, ../scss/modules/_book.scss */
+/* line 775, ../scss/modules/_book.scss */
 .pos_loader_data {
   background-color: rgba(255, 255, 255, 0.4);
   height: 100%;
@@ -15949,20 +15951,20 @@ section a:focus {
   transform: translate(-50%, -50%);
   width: 100%;
 }
-/* line 782, ../scss/modules/_book.scss */
+/* line 784, ../scss/modules/_book.scss */
 .pos_loader_data .pos_spinkit {
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 788, ../scss/modules/_book.scss */
+/* line 790, ../scss/modules/_book.scss */
 .pos_loader_data .pos_spinkit .sk-three-bounce {
   margin: 40px auto 0;
   text-align: center;
   width: 80px;
 }
-/* line 793, ../scss/modules/_book.scss */
+/* line 795, ../scss/modules/_book.scss */
 .pos_loader_data .pos_spinkit .sk-three-bounce .sk-child {
   -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
   animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
@@ -15972,12 +15974,12 @@ section a:focus {
   height: 20px;
   width: 20px;
 }
-/* line 802, ../scss/modules/_book.scss */
+/* line 804, ../scss/modules/_book.scss */
 .pos_loader_data .pos_spinkit .sk-three-bounce .sk-child.sk-bounce1 {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
-/* line 806, ../scss/modules/_book.scss */
+/* line 808, ../scss/modules/_book.scss */
 .pos_loader_data .pos_spinkit .sk-three-bounce .sk-child.sk-bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
@@ -16002,7 +16004,7 @@ section a:focus {
     transform: scale(1);
   }
 }
-/* line 830, ../scss/modules/_book.scss */
+/* line 832, ../scss/modules/_book.scss */
 .pos_loader_data .pos_spinkit p {
   font-family: "Open Sans",sans-serif;
   color: #999;
@@ -16010,23 +16012,23 @@ section a:focus {
   text-transform: uppercase;
 }
 
-/* line 838, ../scss/modules/_book.scss */
+/* line 840, ../scss/modules/_book.scss */
 .p-l-bottom {
   padding-bottom: 20px;
 }
 
-/* line 841, ../scss/modules/_book.scss */
+/* line 843, ../scss/modules/_book.scss */
 .cb-right-2 {
   border-right: 1px solid #d6dbdc;
 }
 
 /* help classes */
-/* line 847, ../scss/modules/_book.scss */
+/* line 849, ../scss/modules/_book.scss */
 .m-l-top {
   margin-top: 20px;
 }
 
-/* line 850, ../scss/modules/_book.scss */
+/* line 852, ../scss/modules/_book.scss */
 .cbtn, .ctn-icon {
   display: inline-block;
   padding: 0 1em;
@@ -16044,57 +16046,57 @@ section a:focus {
   box-shadow: 4px 5px 0 0 #6e872a;
 }
 
-/* line 867, ../scss/modules/_book.scss */
+/* line 869, ../scss/modules/_book.scss */
 .cbtn:hover, .ctn-icon:hover, .cbtn:active, .ctn-icon:active, .cbtn:focus, .ctn-icon:focus, .cbtn:visited, .ctn-icon:visited {
   text-decoration: none;
 }
 
-/* line 871, ../scss/modules/_book.scss */
+/* line 873, ../scss/modules/_book.scss */
 .ctn-icon {
   line-height: 15px !important;
 }
 
-/* line 875, ../scss/modules/_book.scss */
+/* line 877, ../scss/modules/_book.scss */
 .cbtn-search {
   height: 45px;
 }
 
-/* line 879, ../scss/modules/_book.scss */
+/* line 881, ../scss/modules/_book.scss */
 .cbtn-block {
   width: 100%;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* line 884, ../scss/modules/_book.scss */
+  /* line 886, ../scss/modules/_book.scss */
   .cbtn, .ctn-icon {
     line-height: 45px;
   }
 }
-/* line 888, ../scss/modules/_book.scss */
+/* line 890, ../scss/modules/_book.scss */
 .cbtn-corner {
   border-radius: 4px;
 }
 
-/* line 892, ../scss/modules/_book.scss */
+/* line 894, ../scss/modules/_book.scss */
 .cbtn-round {
   border-radius: 50em;
 }
 
-/* line 896, ../scss/modules/_book.scss */
+/* line 898, ../scss/modules/_book.scss */
 .cbtn-round-st {
   width: 60px;
   height: 60px;
   line-height: 60px;
 }
 
-/* line 902, ../scss/modules/_book.scss */
+/* line 904, ../scss/modules/_book.scss */
 .cbtn-adj-ico-rst-med {
   position: relative;
   top: 6px;
   left: -5px;
 }
 
-/* line 908, ../scss/modules/_book.scss */
+/* line 910, ../scss/modules/_book.scss */
 .cbtn-st-pos-right {
   position: fixed;
   right: 10px;
@@ -16103,115 +16105,115 @@ section a:focus {
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
-/* line 916, ../scss/modules/_book.scss */
+/* line 918, ../scss/modules/_book.scss */
 .cbtn-rounded {
   border-radius: 50px;
 }
 
-/* line 920, ../scss/modules/_book.scss */
+/* line 922, ../scss/modules/_book.scss */
 .cbtn-line {
   border: 2px solid;
 }
 
-/* line 924, ../scss/modules/_book.scss */
+/* line 926, ../scss/modules/_book.scss */
 .cbtn-l-acc {
   border-color: #A3C642;
   color: #A3C642;
 }
 
-/* line 929, ../scss/modules/_book.scss */
+/* line 931, ../scss/modules/_book.scss */
 .cbtn-l-acc:hover, .cbtn-l-acc:focus, .cbtn-l-acc:active {
   border-color: #b6d269;
   background-color: #A3C642;
   color: #fff;
 }
 
-/* line 935, ../scss/modules/_book.scss */
+/* line 937, ../scss/modules/_book.scss */
 .cbtn-l-dis {
   cursor: default;
   border-color: #CCC;
   color: #CCC;
 }
 
-/* line 941, ../scss/modules/_book.scss */
+/* line 943, ../scss/modules/_book.scss */
 .cbtn-l-dis:hover, .cbtn-l-dis:focus, .cbtn-l-dis:active {
   color: #CCC;
 }
 
-/* line 945, ../scss/modules/_book.scss */
+/* line 947, ../scss/modules/_book.scss */
 .cbtn-s-sh {
   position: relative;
   top: 10px;
   box-shadow: 0px 2px 1px 0px #356300;
 }
 
-/* line 951, ../scss/modules/_book.scss */
+/* line 953, ../scss/modules/_book.scss */
 .cbtn-s-sh2 {
   box-shadow: 4px 5px 0px 0px #6E872A;
 }
 
-/* line 955, ../scss/modules/_book.scss */
+/* line 957, ../scss/modules/_book.scss */
 .cbtn-s-acc {
   background-color: #A3C642;
   color: #fff;
   text-transform: uppercase;
 }
 
-/* line 961, ../scss/modules/_book.scss */
+/* line 963, ../scss/modules/_book.scss */
 .cbtn-s-acc:hover, .cbtn-s-acc:focus, .cbtn-s-acc:active {
   color: #fff;
   background-color: #b6d269;
 }
 
-/* line 965, ../scss/modules/_book.scss */
+/* line 967, ../scss/modules/_book.scss */
 .cbtn-s-acc:active {
   /* Rectangle 86 Copy 3: */
   background-color: #85a431;
   box-shadow: inset 0px 3px 1px 0px #396407;
 }
 
-/* line 971, ../scss/modules/_book.scss */
+/* line 973, ../scss/modules/_book.scss */
 .cbtn-s-succ {
   background-color: #2ECC71;
   color: #fff;
 }
 
-/* line 976, ../scss/modules/_book.scss */
+/* line 978, ../scss/modules/_book.scss */
 .cbtn-s-succ:hover, .cbtn-s-succ:focus, .cbtn-s-succ:active {
   color: #fff;
   background-color: black;
 }
 
-/* line 981, ../scss/modules/_book.scss */
+/* line 983, ../scss/modules/_book.scss */
 .cbtn-s-cancel {
   background-color: #F0F0F0;
   color: #666;
 }
 
-/* line 986, ../scss/modules/_book.scss */
+/* line 988, ../scss/modules/_book.scss */
 .cbtn-s-cancel:hover, .cbtn-s-cancel:focus, .cbtn-s-cancel:active {
   color: #666;
   background-color: #fff;
 }
 
-/* line 991, ../scss/modules/_book.scss */
+/* line 993, ../scss/modules/_book.scss */
 .cbtn-s-dis {
   cursor: default;
   background-color: #CCC;
   color: #fff;
 }
 
-/* line 997, ../scss/modules/_book.scss */
+/* line 999, ../scss/modules/_book.scss */
 .cbtn-s-dis:hover, .cbtn-s-dis:focus, .cbtn-s-dis:active {
   background-color: #CCC;
 }
 
-/* line 1000, ../scss/modules/_book.scss */
+/* line 1002, ../scss/modules/_book.scss */
 .hddn {
   display: none;
 }
 
-/* line 1007, ../scss/modules/_book.scss */
+/* line 1009, ../scss/modules/_book.scss */
 .social-block {
   position: fixed;
   right: 0px;
@@ -16220,37 +16222,37 @@ section a:focus {
   transform: translate(0px, -50%);
   z-index: 1000;
 }
-/* line 1016, ../scss/modules/_book.scss */
+/* line 1018, ../scss/modules/_book.scss */
 .social-block .addtoany_list a {
   float: left;
   padding: 0;
 }
-/* line 1020, ../scss/modules/_book.scss */
+/* line 1022, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_facebook {
   background: #4d70a8;
 }
-/* line 1024, ../scss/modules/_book.scss */
+/* line 1026, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_twitter {
   background: #00baf2;
 }
-/* line 1027, ../scss/modules/_book.scss */
+/* line 1029, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_google_plus {
   background: #e2411d;
 }
-/* line 1031, ../scss/modules/_book.scss */
+/* line 1033, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span {
   border-radius: 0 !important;
   display: block;
 }
-/* line 1035, ../scss/modules/_book.scss */
+/* line 1037, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_facebook {
   background: url("../images/sh-facebook.png") no-repeat 0 0;
 }
-/* line 1039, ../scss/modules/_book.scss */
+/* line 1041, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_twitter {
   background: url("../images/sh-twitter.png") no-repeat 0 0;
 }
-/* line 1042, ../scss/modules/_book.scss */
+/* line 1044, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_google_plus {
   background: url("../images/sh-googleplus.png") no-repeat 0 0;
 }

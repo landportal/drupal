@@ -698,6 +698,8 @@ section a{
   }
   select{
     -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
       border: medium none;
       border-radius: 0;
       display: table-cell;
