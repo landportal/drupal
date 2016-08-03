@@ -20,30 +20,9 @@ function landbook_menu() {
         'type'              => MENU_NORMAL_ITEM,
         'access callback'	=> TRUE,
         'page callback'	=> 'drupal_goto',
-        'page arguments'    => array('book'),
+        'page arguments'    => array('book/countries'),
     );
-
-    /**
-     * Landbook menu (landbook-menu)
-     */
-    /* $items['book'] = array( */
-    /*   'title'		=> 'Landbook', */
-    /*   'menu_name'		=> 'landbook-menu', */
-    /*   'type'              => MENU_NORMAL_ITEM, */
-    /*   'access callback'	=> TRUE, */
-    /*   'page callback'	=> 'drupal_goto', */
-    /*   'page arguments'    => array('book/countries'), */
-    /*   'weight'         => -10 */
-    /* ); */
-    $items['book/<front>'] = array(
-        'title'		=> 'Home',
-        'menu_name'		=> 'landbook-menu',
-        'type'              => MENU_NORMAL_ITEM,
-        'access callback'	=> TRUE,
-        'page callback'	=> 'drupal_goto',
-        'page arguments'    => array('<front>'),
-        'weight'         => -11
-    );
+    $translatables['book'][] = t('Landbook');
 
     // Admin menu for the Landbook
     landbook_menu_admin($items);
@@ -56,9 +35,6 @@ function landbook_menu() {
         'access callback'   => TRUE,
         'page callback' => 'landbook_fill_regions_terms',
     );
-
-    $translatables['book'][] = t('Landbook');
-    $translatables['book'][] = t('Home');
     return $items;
 }
 
