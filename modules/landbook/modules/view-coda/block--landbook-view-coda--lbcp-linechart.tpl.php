@@ -1,4 +1,4 @@
-    <section id="compare" class="container-fluid">
+    <section id="compare" class="container">
       <?php if(!empty($block->subject)): ?>
         <header class="row">
           <div class="col-md-offset-2 col-md-8 text-center">

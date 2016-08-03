@@ -1,4 +1,4 @@
-    <section id="lgaf" class="container-fluid">
+    <section id="lgaf" class="container">
       <?php if(!empty($block->subject)): ?>
         <header class="row text-center">
           <div class="col-xs-12">

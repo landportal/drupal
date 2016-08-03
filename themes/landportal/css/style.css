@@ -15270,28 +15270,185 @@ section a:focus {
 }
 
 /* line 135, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper {
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+/* line 140, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+/* line 143, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section .btn, .page-book-countries #main-wrapper .region-content section .webform-client-form .form-actions input[type=submit], .webform-client-form .form-actions .page-book-countries #main-wrapper .region-content section input[type=submit] {
+  background-color: #A3C642;
+  color: #fff;
+  box-shadow: 4px 5px 0 0 #6e872a;
+  width: 100%;
+  border: medium none;
+  display: inline-block;
+  line-height: 43px;
+  outline: 0 none !important;
+  padding: 0 1em;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 300ms linear 0s;
+  font-family: "Open Sans",sans-serif;
+  font-size: 12px;
+  border-radius: 0px;
+  text-transform: uppercase;
+}
+/* line 160, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section .btn:focus, .page-book-countries #main-wrapper .region-content section .webform-client-form .form-actions input[type=submit]:focus, .webform-client-form .form-actions .page-book-countries #main-wrapper .region-content section input[type=submit]:focus, .page-book-countries #main-wrapper .region-content section .btn:hover, .page-book-countries #main-wrapper .region-content section .webform-client-form .form-actions input[type=submit]:hover, .webform-client-form .form-actions .page-book-countries #main-wrapper .region-content section input[type=submit]:hover, .page-book-countries #main-wrapper .region-content section .btn:active, .page-book-countries #main-wrapper .region-content section .webform-client-form .form-actions input[type=submit]:active, .webform-client-form .form-actions .page-book-countries #main-wrapper .region-content section input[type=submit]:active, .page-book-countries #main-wrapper .region-content section .btn:visited, .page-book-countries #main-wrapper .region-content section .webform-client-form .form-actions input[type=submit]:visited, .webform-client-form .form-actions .page-book-countries #main-wrapper .region-content section input[type=submit]:visited {
+  background-color: #b6d269;
+  color: #fff;
+}
+/* line 168, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: medium none;
+  border-radius: 0;
+  display: table-cell;
+  padding: 9px 12px 9px 10px;
+  width: 100%;
+  height: auto;
+  background: #f7f7f7 none repeat scroll 0 0;
+  background-image: url("../images/toggle-arrow.png");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  box-shadow: 4px 5px 0 0 #6e872a;
+  margin-bottom: 5px;
+  font-family: "Open Sans",sans-serif;
+  font-size: 16px;
+}
+/* line 188, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section header h2 {
+  padding-top: 65px;
+  font-family: "Open Sans",sans-serif;
+  font-size: 29px;
+  margin-top: 5px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+/* line 199, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section#table-indicators header h2 {
+  background: url("../images/indicators.png") no-repeat 50% 0;
+}
+/* line 206, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section#map-global header h2 {
+  background: url("../images/mapping.png") no-repeat 50% 0;
+}
+/* line 213, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section#compare header h2 {
+  background: url("../images/infographics.png") no-repeat 50% 0;
+}
+/* line 220, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section#lgaf header h2 {
+  background: url("../images/rankings.png") no-repeat 50% 0;
+}
+/* line 226, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section#lgaf #lgaf-values li {
+  padding: 15px 20px;
+  border-bottom: 2px solid #F2F2F2;
+  background-color: #FFFFFF;
+}
+/* line 231, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section#lgaf #lgaf-values li span:first-of-type {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+/* line 243, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section#lgaf #lgaf-legend li span:first-of-type {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+/* line 252, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section#lgaf .lgaf-value-a {
+  background-color: #7ED321;
+}
+/* line 255, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section#lgaf .lgaf-value-b {
+  background-color: #F8E71C;
+}
+/* line 258, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section#lgaf .lgaf-value-c {
+  background-color: #F5A623;
+}
+/* line 261, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section#lgaf .lgaf-value-d {
+  background-color: #F6112D;
+}
+/* line 264, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section#lgaf .lgaf-value-na {
+  background-color: #444444;
+}
+/* line 268, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section .table {
+  background-color: #fff;
+  border: 0 none;
+  border-collapse: inherit;
+  border-spacing: 0;
+  font-weight: inherit;
+  height: 100%;
+  text-align: left;
+  vertical-align: inherit;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+/* line 281, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section .table thead tr th {
+  border-right: 1px solid #f0f0f0;
+  border-bottom: none;
+  font-weight: lighter;
+  padding: 10px;
+  background-color: #A3C642;
+  color: #ffffff;
+  font-family: "Open Sans",sans-serif;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 297, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section .table tbody tr:nth-child(2n) {
+  background: #f2f2f2 none repeat scroll 0 0;
+}
+/* line 300, ../scss/modules/_book.scss */
+.page-book-countries #main-wrapper .region-content section .table tbody tr td {
+  border-bottom: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Merriweather",serif !important;
+}
+/* line 323, ../scss/modules/_book.scss */
 .page-book-countries #block-landbook-country-block {
   background: #F8F8F8;
 }
-/* line 138, ../scss/modules/_book.scss */
-.page-book-countries .top-hero {
-  margin-bottom: 220px;
-  position: relative;
-}
-/* line 142, ../scss/modules/_book.scss */
-.page-book-countries .top-hero .photo-gallery {
+/* line 326, ../scss/modules/_book.scss */
+.page-book-countries .photo-gallery {
   bottom: -131px;
   height: 260px;
   left: 0;
   position: absolute;
   width: 100%;
 }
-/* line 150, ../scss/modules/_book.scss */
-.page-book-countries .top-hero .photo-gallery .carousel-photo-gallery .c-item {
+/* line 334, ../scss/modules/_book.scss */
+.page-book-countries .photo-gallery .carousel-photo-gallery .c-item {
   height: 260px;
 }
-/* line 152, ../scss/modules/_book.scss */
-.page-book-countries .top-hero .photo-gallery .carousel-photo-gallery .c-item .pos-txt-img-carousel {
+/* line 336, ../scss/modules/_book.scss */
+.page-book-countries .photo-gallery .carousel-photo-gallery .c-item .pos-txt-img-carousel {
   bottom: 30px;
   left: 15px;
   position: absolute;
@@ -15300,8 +15457,8 @@ section a:focus {
   font-family: "Open Sans",sans-serif;
   font-size: 16px;
 }
-/* line 161, ../scss/modules/_book.scss */
-.page-book-countries .top-hero .photo-gallery .carousel-photo-gallery .c-item .cover-img-carousel {
+/* line 345, ../scss/modules/_book.scss */
+.page-book-countries .photo-gallery .carousel-photo-gallery .c-item .cover-img-carousel {
   background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
   left: 0;
@@ -15309,8 +15466,8 @@ section a:focus {
   top: 0;
   width: 100%;
 }
-/* line 171, ../scss/modules/_book.scss */
-.page-book-countries .top-hero .photo-gallery .country-intro {
+/* line 355, ../scss/modules/_book.scss */
+.page-book-countries .photo-gallery .country-intro {
   bottom: -75px;
   left: 50%;
   position: absolute;
@@ -15318,8 +15475,8 @@ section a:focus {
   width: 768px;
   z-index: 5;
 }
-/* line 179, ../scss/modules/_book.scss */
-.page-book-countries .top-hero .photo-gallery .country-intro .country-flag {
+/* line 363, ../scss/modules/_book.scss */
+.page-book-countries .photo-gallery .country-intro .country-flag {
   border: 4px solid #fff;
   border-radius: 50em;
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.5);
@@ -15328,30 +15485,30 @@ section a:focus {
   width: 50px;
   margin: 0 auto;
 }
-/* line 188, ../scss/modules/_book.scss */
-.page-book-countries .top-hero .photo-gallery .country-intro .country-flag img {
+/* line 372, ../scss/modules/_book.scss */
+.page-book-countries .photo-gallery .country-intro .country-flag img {
   width: 50px;
   height: auto;
   border: none;
 }
-/* line 194, ../scss/modules/_book.scss */
-.page-book-countries .top-hero .photo-gallery .country-intro h2 {
+/* line 378, ../scss/modules/_book.scss */
+.page-book-countries .photo-gallery .country-intro h2 {
   font-size: 34px;
   display: block;
   text-align: center;
 }
-/* line 204, ../scss/modules/_book.scss */
+/* line 398, ../scss/modules/_book.scss */
 .page-book-countries .country-section {
   background: #ffffff;
   border-bottom: 1px solid #f0f0f0;
   padding-top: 60px;
   padding-bottom: 60px;
 }
-/* line 205, ../scss/modules/_book.scss */
+/* line 399, ../scss/modules/_book.scss */
 .page-book-countries .country-section.nopadding {
   padding-top: 0;
 }
-/* line 219, ../scss/modules/_book.scss */
+/* line 408, ../scss/modules/_book.scss */
 .page-book-countries .country-section h2.section-title {
   padding-top: 65px;
   font-family: "Open Sans",sans-serif;
@@ -15360,44 +15517,28 @@ section a:focus {
   text-align: center;
   margin-bottom: 35px;
 }
-/* line 227, ../scss/modules/_book.scss */
-.page-book-countries .country-section h2.section-title.indicators {
-  background: url("../images/indicators.png") no-repeat 50% 0;
-}
-/* line 230, ../scss/modules/_book.scss */
-.page-book-countries .country-section h2.section-title.infographics {
-  background: url("../images/infographics.png") no-repeat 50% 0;
-}
-/* line 233, ../scss/modules/_book.scss */
-.page-book-countries .country-section h2.section-title.mapping {
-  background: url("../images/mapping.png") no-repeat 50% 0;
-}
-/* line 236, ../scss/modules/_book.scss */
-.page-book-countries .country-section h2.section-title.rankings {
-  background: url("../images/rankings.png") no-repeat 50% 0;
-}
-/* line 239, ../scss/modules/_book.scss */
+/* line 415, ../scss/modules/_book.scss */
 .page-book-countries .country-section h2.section-title.media {
   background: url("../images/media.png") no-repeat 50% 0;
 }
-/* line 242, ../scss/modules/_book.scss */
+/* line 418, ../scss/modules/_book.scss */
 .page-book-countries .country-section h2.section-title.partners {
   background: url("../images/partners.png") no-repeat 50% 0;
 }
-/* line 245, ../scss/modules/_book.scss */
+/* line 421, ../scss/modules/_book.scss */
 .page-book-countries .country-section h2.section-title.library {
   background: url("../images/library.png") no-repeat 50% 0;
 }
-/* line 249, ../scss/modules/_book.scss */
+/* line 425, ../scss/modules/_book.scss */
 .page-book-countries .country-section .adj-blog {
   margin-left: 30px;
 }
-/* line 252, ../scss/modules/_book.scss */
+/* line 428, ../scss/modules/_book.scss */
 .page-book-countries .country-section .ul-wrap {
   display: table;
   margin: 0 auto;
 }
-/* line 255, ../scss/modules/_book.scss */
+/* line 431, ../scss/modules/_book.scss */
 .page-book-countries .country-section .ul-wrap .nav-inside-country {
   margin-top: 20px;
   border: 1px solid #A3C642;
@@ -15408,12 +15549,12 @@ section a:focus {
   font-family: "Open Sans",sans-serif;
   margin-bottom: 20px;
 }
-/* line 265, ../scss/modules/_book.scss */
+/* line 441, ../scss/modules/_book.scss */
 .page-book-countries .country-section .ul-wrap .nav-inside-country li {
   display: block;
   float: left;
 }
-/* line 269, ../scss/modules/_book.scss */
+/* line 445, ../scss/modules/_book.scss */
 .page-book-countries .country-section .ul-wrap .nav-inside-country li a {
   border-right: 1px solid #A3C642;
   padding: 10px 15px;
@@ -15423,35 +15564,35 @@ section a:focus {
   display: block;
   font-size: 0.75em;
 }
-/* line 278, ../scss/modules/_book.scss */
+/* line 454, ../scss/modules/_book.scss */
 .page-book-countries .country-section .ul-wrap .nav-inside-country li a:hover, .page-book-countries .country-section .ul-wrap .nav-inside-country li a:focus {
   color: #617724;
 }
-/* line 282, ../scss/modules/_book.scss */
+/* line 458, ../scss/modules/_book.scss */
 .page-book-countries .country-section .ul-wrap .nav-inside-country li:last-child a {
   border-right: none;
 }
 @media only screen and (max-width: 720px) {
-  /* line 252, ../scss/modules/_book.scss */
+  /* line 428, ../scss/modules/_book.scss */
   .page-book-countries .country-section .ul-wrap {
     width: 150px;
   }
-  /* line 291, ../scss/modules/_book.scss */
+  /* line 467, ../scss/modules/_book.scss */
   .page-book-countries .country-section .ul-wrap .nav-inside-country li {
     width: 100%;
     border-bottom: 1px solid #A3C642;
   }
-  /* line 295, ../scss/modules/_book.scss */
+  /* line 471, ../scss/modules/_book.scss */
   .page-book-countries .country-section .ul-wrap .nav-inside-country li:last-child {
     border-bottom: none;
   }
-  /* line 299, ../scss/modules/_book.scss */
+  /* line 475, ../scss/modules/_book.scss */
   .page-book-countries .country-section .ul-wrap .nav-inside-country li a {
     text-align: center;
     border-right: none;
   }
 }
-/* line 307, ../scss/modules/_book.scss */
+/* line 483, ../scss/modules/_book.scss */
 .page-book-countries .country-section .bg-gray {
   background: transparent -moz-linear-gradient(left center, #f7f7f7 0px, #f7f7f7 63%, transparent 40%) repeat scroll 0 0;
   /*@media only screen and (max-width: 992px){
@@ -15459,19 +15600,19 @@ section a:focus {
         padding-right:15px;
   }*/
 }
-/* line 310, ../scss/modules/_book.scss */
+/* line 486, ../scss/modules/_book.scss */
 .page-book-countries .country-section .bg-gray .bg-media {
   background: #f7f7f7;
 }
-/* line 319, ../scss/modules/_book.scss */
+/* line 495, ../scss/modules/_book.scss */
 .page-book-countries .country-section .bg-white {
   background-color: #fff;
 }
-/* line 323, ../scss/modules/_book.scss */
+/* line 499, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block {
   padding: 40px 0;
 }
-/* line 326, ../scss/modules/_book.scss */
+/* line 502, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block h2 {
   margin-bottom: 11px;
   margin-top: 22px;
@@ -15479,24 +15620,24 @@ section a:focus {
   font-family: "Open Sans",sans-serif;
 }
 @media only screen and (max-width: 992px) {
-  /* line 326, ../scss/modules/_book.scss */
+  /* line 502, ../scss/modules/_book.scss */
   .page-book-countries .country-section .block h2 {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
-/* line 338, ../scss/modules/_book.scss */
+/* line 514, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block .blog .node-intro {
   display: inline-block;
   width: 218px;
 }
 @media only screen and (max-width: 992px) {
-  /* line 338, ../scss/modules/_book.scss */
+  /* line 514, ../scss/modules/_book.scss */
   .page-book-countries .country-section .block .blog .node-intro {
     width: 100%;
   }
 }
-/* line 346, ../scss/modules/_book.scss */
+/* line 522, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block .blog .node-image {
   margin-bottom: 15px;
   padding-left: 0;
@@ -15506,7 +15647,7 @@ section a:focus {
       box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
     }*/
 }
-/* line 357, ../scss/modules/_book.scss */
+/* line 533, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block .partners a {
   font-family: "Open Sans",sans-serif;
   font-size: 12px;
@@ -15514,52 +15655,52 @@ section a:focus {
   color: #91b135;
   text-decoration: none;
 }
-/* line 364, ../scss/modules/_book.scss */
+/* line 540, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block .partners a:hover {
   color: #617724;
 }
-/* line 370, ../scss/modules/_book.scss */
+/* line 546, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser {
   padding: 20px 0;
 }
-/* line 373, ../scss/modules/_book.scss */
+/* line 549, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-image {
   padding: 0;
   height: 122px;
 }
-/* line 376, ../scss/modules/_book.scss */
+/* line 552, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-image a {
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
   display: inline-block;
 }
 @media only screen and (max-width: 992px) {
-  /* line 373, ../scss/modules/_book.scss */
+  /* line 549, ../scss/modules/_book.scss */
   .page-book-countries .country-section .node-teaser .node-image {
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 15px;
   }
 }
-/* line 389, ../scss/modules/_book.scss */
+/* line 565, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro > h3 {
   margin-top: 0;
   text-align: left;
   line-height: 0;
   margin-bottom: 5px;
 }
-/* line 394, ../scss/modules/_book.scss */
+/* line 570, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro > h3 a {
   color: #91b135;
   font-size: 16px;
   line-height: 1.42857;
   font-family: "Open Sans",sans-serif;
 }
-/* line 400, ../scss/modules/_book.scss */
+/* line 576, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro > h3 a:hover {
   color: #617724;
   text-decoration: none;
 }
-/* line 406, ../scss/modules/_book.scss */
+/* line 582, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro span {
   color: #999;
   font-size: 14px;
@@ -15567,7 +15708,7 @@ section a:focus {
   line-height: 1.42857;
   font-family: "Open Sans",sans-serif;
 }
-/* line 413, ../scss/modules/_book.scss */
+/* line 589, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro .text {
   margin-top: 5px;
   font-family: "Merriweather",serif;
@@ -15575,11 +15716,11 @@ section a:focus {
   font-size: 16px;
   line-height: 1.42857;
 }
-/* line 420, ../scss/modules/_book.scss */
+/* line 596, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro .text p {
   font-size: 16px;
 }
-/* line 424, ../scss/modules/_book.scss */
+/* line 600, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro .date {
   background-image: url("../images/ico-cal.png");
   background-position: left center;
@@ -15591,7 +15732,7 @@ section a:focus {
   padding-top: 5px;
   font-size: 14px;
 }
-/* line 435, ../scss/modules/_book.scss */
+/* line 611, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro .location {
   background-image: url("../images/ico-loc.png");
   background-position: left center;
@@ -15603,73 +15744,73 @@ section a:focus {
   padding-top: 5px;
   font-size: 14px;
 }
-/* line 447, ../scss/modules/_book.scss */
+/* line 623, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource {
   padding-bottom: 0;
   border-bottom: 1px solid #f0f0f0;
 }
-/* line 450, ../scss/modules/_book.scss */
+/* line 626, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .description-resource {
   padding-top: 0;
 }
-/* line 453, ../scss/modules/_book.scss */
+/* line 629, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .description-resource p {
   font-family: "Merriweather",serif !important;
   color: #999;
   margin: 5px 0;
   font-size: 16px;
 }
-/* line 461, ../scss/modules/_book.scss */
+/* line 637, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .keywords span {
   font-family: "Open Sans",sans-serif;
   text-transform: uppercase;
   color: #999;
   font-size: 12px;
 }
-/* line 467, ../scss/modules/_book.scss */
+/* line 643, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .keywords a {
   color: #91b135;
   font-size: 16px;
 }
-/* line 471, ../scss/modules/_book.scss */
+/* line 647, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .keywords a:hover {
   color: #617724;
   text-decoration: none;
 }
-/* line 481, ../scss/modules/_book.scss */
+/* line 657, ../scss/modules/_book.scss */
 .page-book-countries .country-section select {
   background: #f7f7f7 none repeat scroll 0 0;
   background-image: url("../images/toggle-arrow.png");
   background-position: right 10px center;
   background-repeat: no-repeat;
 }
-/* line 488, ../scss/modules/_book.scss */
+/* line 664, ../scss/modules/_book.scss */
 .page-book-countries .country-section.grey {
   background: #F8F8F8;
 }
-/* line 490, ../scss/modules/_book.scss */
+/* line 666, ../scss/modules/_book.scss */
 .page-book-countries .country-section.grey select {
   background: #ffffff none repeat scroll 0 0;
   background-image: url("../images/toggle-arrow.png");
   background-position: right 10px center;
   background-repeat: no-repeat;
 }
-/* line 497, ../scss/modules/_book.scss */
+/* line 673, ../scss/modules/_book.scss */
 .page-book-countries .country-section .sep-left-charts {
   border-left: 1px solid #ccc;
 }
-/* line 502, ../scss/modules/_book.scss */
+/* line 678, ../scss/modules/_book.scss */
 .page-book-countries .country-section .spider-note {
   padding: 0;
   font-family: "Open Sans",sans-serif;
   color: #999;
   font-size: 12px;
 }
-/* line 508, ../scss/modules/_book.scss */
+/* line 684, ../scss/modules/_book.scss */
 .page-book-countries .country-section .spider-note .no-m-bottom {
   margin: 0;
 }
-/* line 512, ../scss/modules/_book.scss */
+/* line 688, ../scss/modules/_book.scss */
 .page-book-countries .country-section .note-infografic {
   border-bottom: 1px solid #ccc;
   margin-bottom: 30px;
@@ -15677,99 +15818,48 @@ section a:focus {
   color: #999;
   font-size: 12px;
 }
-/* line 521, ../scss/modules/_book.scss */
+/* line 697, ../scss/modules/_book.scss */
 .page-book-countries #disclaimer {
   background: #A3C642;
   padding: 15px 0;
   color: #ffffff;
   font-size: 12px;
 }
-/* line 527, ../scss/modules/_book.scss */
+/* line 703, ../scss/modules/_book.scss */
 .page-book-countries #disclaimer p {
   margin: 0;
 }
-/* line 529, ../scss/modules/_book.scss */
+/* line 705, ../scss/modules/_book.scss */
 .page-book-countries #disclaimer p strong {
   font-weight: bold;
 }
-/* line 533, ../scss/modules/_book.scss */
+/* line 709, ../scss/modules/_book.scss */
 .page-book-countries #disclaimer p.no-m-bottom {
   margin: 0;
 }
-/* line 538, ../scss/modules/_book.scss */
-.page-book-countries .table-responsive {
-  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
-}
-/* line 541, ../scss/modules/_book.scss */
-.page-book-countries .table-responsive table {
-  background-color: #fff;
-  border: 0 none;
-  border-collapse: inherit;
-  border-spacing: 0;
-  font-weight: inherit;
-  height: 100%;
-  text-align: left;
-  vertical-align: inherit;
-  width: 100%;
-}
-/* line 554, ../scss/modules/_book.scss */
-.page-book-countries .table-responsive table thead tr th {
-  border-right: 1px solid #f0f0f0;
-  font-weight: lighter;
-  padding: 10px;
-  background-color: #A3C642;
-  color: #ffffff;
-  font-family: "Open Sans",sans-serif;
-  font-size: 12px;
-  text-align: center;
-  text-transform: uppercase;
-}
-/* line 568, ../scss/modules/_book.scss */
-.page-book-countries .table-responsive table tbody .t_indicators_body_loader {
-  height: 310px;
-  position: relative;
-}
-/* line 573, ../scss/modules/_book.scss */
-.page-book-countries .table-responsive table tbody tr:nth-child(2n) {
-  background: #f2f2f2 none repeat scroll 0 0;
-}
-/* line 576, ../scss/modules/_book.scss */
-.page-book-countries .table-responsive table tbody tr td {
-  border-bottom: 1px solid #f0f0f0;
-  border-right: 1px solid #f0f0f0;
-  padding: 10px;
-  font-size: 16px;
-  font-family: "Merriweather",serif !important;
-}
-/* line 587, ../scss/modules/_book.scss */
-.page-book-countries .table-responsive table tfoot .t-th-green, .page-book-countries .table-responsive table tfoot .t-tf-green {
-  background-color: #A3C642;
-  color: #fff;
-  padding: 5px 10px;
-}
-/* line 595, ../scss/modules/_book.scss */
+/* line 715, ../scss/modules/_book.scss */
 .page-book-countries .country-description {
   color: #666;
   font-family: "Merriweather",serif;
   font-size: 16px;
   line-height: 1.42857;
 }
-/* line 602, ../scss/modules/_book.scss */
+/* line 722, ../scss/modules/_book.scss */
 .page-book-countries .country-description .field-name-field-country-info .field-collection-item-field-country-info {
   border-bottom: 1px solid #f0f0f0;
   font-size: 16px;
 }
-/* line 606, ../scss/modules/_book.scss */
+/* line 726, ../scss/modules/_book.scss */
 .page-book-countries .country-description .field-name-field-country-info .field-collection-item-field-country-info .content {
   position: relative;
 }
-/* line 609, ../scss/modules/_book.scss */
+/* line 729, ../scss/modules/_book.scss */
 .page-book-countries .country-description .field-name-field-country-info .field-collection-item-field-country-info .content .mic-i-a {
   display: block;
   padding: 10px 0;
   font-family: "Merriweather",serif;
 }
-/* line 615, ../scss/modules/_book.scss */
+/* line 735, ../scss/modules/_book.scss */
 .page-book-countries .country-description .field-name-field-country-info .field-collection-item-field-country-info .content .mic-i-control {
   background-image: url("../images/icon-open-info.png");
   background-position: center center;
@@ -15782,17 +15872,17 @@ section a:focus {
   width: 20px;
   cursor: pointer;
 }
-/* line 627, ../scss/modules/_book.scss */
+/* line 747, ../scss/modules/_book.scss */
 .page-book-countries .country-description .field-name-field-country-info .field-collection-item-field-country-info .content .mic-content {
   display: none;
 }
-/* line 633, ../scss/modules/_book.scss */
+/* line 753, ../scss/modules/_book.scss */
 .page-book-countries .country-description .sources {
   border-bottom: 1px solid #f0f0f0;
   padding-top: 20px;
   padding-bottom: 10px;
 }
-/* line 638, ../scss/modules/_book.scss */
+/* line 758, ../scss/modules/_book.scss */
 .page-book-countries .country-description .sources .field-label {
   font-family: "Open Sans",sans-serif;
   color: #999;
@@ -15807,47 +15897,47 @@ section a:focus {
       font-size: 12px;
   }*/
 }
-/* line 655, ../scss/modules/_book.scss */
+/* line 775, ../scss/modules/_book.scss */
 .page-book-countries .info-bottom {
   padding-top: 40px;
 }
-/* line 658, ../scss/modules/_book.scss */
+/* line 778, ../scss/modules/_book.scss */
 .page-book-countries .info-bottom .txt-c {
   text-align: center;
 }
-/* line 661, ../scss/modules/_book.scss */
+/* line 781, ../scss/modules/_book.scss */
 .page-book-countries .info-bottom .txt-c .displayb {
   display: block;
 }
-/* line 663, ../scss/modules/_book.scss */
+/* line 783, ../scss/modules/_book.scss */
 .page-book-countries .info-bottom .txt-c .displayb .c-obj {
   margin: 0 auto;
   vertical-align: middle;
 }
-/* line 667, ../scss/modules/_book.scss */
+/* line 787, ../scss/modules/_book.scss */
 .page-book-countries .info-bottom .txt-c .displayb .m-s-top {
   margin-top: 10px;
 }
 
-/* line 675, ../scss/modules/_book.scss */
+/* line 795, ../scss/modules/_book.scss */
 .block-map {
   background: #f8f8f8;
 }
 
-/* line 680, ../scss/modules/_book.scss */
+/* line 800, ../scss/modules/_book.scss */
 .block .form-title {
   font-size: 16px;
   font-family: "Open Sans",sans-serif;
 }
-/* line 684, ../scss/modules/_book.scss */
+/* line 804, ../scss/modules/_book.scss */
 .block .views-exposed-widget {
   padding: 10px 0 20px 0;
 }
-/* line 687, ../scss/modules/_book.scss */
+/* line 807, ../scss/modules/_book.scss */
 .block .views-exposed-widget .views-widget .description {
   display: none;
 }
-/* line 690, ../scss/modules/_book.scss */
+/* line 810, ../scss/modules/_book.scss */
 .block .views-exposed-widget .views-widget select {
   background: #f7f7f7 none repeat scroll 0 0;
   min-width: 300px;
@@ -15855,7 +15945,7 @@ section a:focus {
   background-position: right 10px center;
   background-repeat: no-repeat;
 }
-/* line 699, ../scss/modules/_book.scss */
+/* line 819, ../scss/modules/_book.scss */
 .block select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -15872,7 +15962,7 @@ section a:focus {
   box-shadow: 4px 5px 0 0 #6e872a;
   margin-bottom: 5px;
 }
-/* line 715, ../scss/modules/_book.scss */
+/* line 835, ../scss/modules/_book.scss */
 .block .button {
   background-color: #A3C642;
   color: #fff;
@@ -15890,97 +15980,80 @@ section a:focus {
   font-size: 14px;
 }
 
-/* line 734, ../scss/modules/_book.scss */
+/* line 854, ../scss/modules/_book.scss */
 .section-block h2:first-child {
   display: none;
 }
-/* line 738, ../scss/modules/_book.scss */
+/* line 858, ../scss/modules/_book.scss */
 .section-block .block-views h2 {
   display: block;
 }
 
-/* line 745, ../scss/modules/_book.scss */
+/* line 865, ../scss/modules/_book.scss */
 #mapDiv {
   height: 468px;
 }
 
-/* line 749, ../scss/modules/_book.scss */
+/* line 869, ../scss/modules/_book.scss */
 #wrapper-piechart {
   height: 400px;
 }
 
-/* line 752, ../scss/modules/_book.scss */
+/* line 872, ../scss/modules/_book.scss */
 #maparea {
   position: relative;
 }
 
-/* line 755, ../scss/modules/_book.scss */
+/* line 875, ../scss/modules/_book.scss */
 #wrapper-mapping {
   height: 768px;
 }
 
-/* line 758, ../scss/modules/_book.scss */
+/* line 878, ../scss/modules/_book.scss */
 #igraphics {
   margin-top: 5px;
 }
 
-/* line 761, ../scss/modules/_book.scss */
+/* line 881, ../scss/modules/_book.scss */
 #wrapper-igraphics {
   height: 400px;
   width: 100%;
 }
 
-/* line 766, ../scss/modules/_book.scss */
+/* line 886, ../scss/modules/_book.scss */
 .labels-compare {
   display: none;
 }
 
-/* line 770, ../scss/modules/_book.scss */
+/* line 890, ../scss/modules/_book.scss */
 .tit-mapping {
   display: none;
 }
 
 /* loader */
-/* line 775, ../scss/modules/_book.scss */
-.pos_loader_data {
-  background-color: rgba(255, 255, 255, 0.4);
-  height: 100%;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
-/* line 784, ../scss/modules/_book.scss */
-.pos_loader_data .pos_spinkit {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-/* line 790, ../scss/modules/_book.scss */
-.pos_loader_data .pos_spinkit .sk-three-bounce {
-  margin: 40px auto 0;
-  text-align: center;
+/* line 896, ../scss/modules/_book.scss */
+.loading .sk-three-bounce {
+  margin: 40px auto;
   width: 80px;
+  text-align: center;
 }
-/* line 795, ../scss/modules/_book.scss */
-.pos_loader_data .pos_spinkit .sk-three-bounce .sk-child {
-  -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
-  animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
+/* line 900, ../scss/modules/_book.scss */
+.loading .sk-three-bounce .sk-child {
+  width: 20px;
+  height: 20px;
   background-color: #A3C642;
   border-radius: 100%;
   display: inline-block;
-  height: 20px;
-  width: 20px;
+  -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
+  animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
 }
-/* line 804, ../scss/modules/_book.scss */
-.pos_loader_data .pos_spinkit .sk-three-bounce .sk-child.sk-bounce1 {
+/* line 908, ../scss/modules/_book.scss */
+.loading .sk-three-bounce .sk-bounce1 {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
-/* line 808, ../scss/modules/_book.scss */
-.pos_loader_data .pos_spinkit .sk-three-bounce .sk-child.sk-bounce2 {
+/* line 911, ../scss/modules/_book.scss */
+.loading .sk-three-bounce .sk-bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
@@ -16004,31 +16077,31 @@ section a:focus {
     transform: scale(1);
   }
 }
-/* line 832, ../scss/modules/_book.scss */
-.pos_loader_data .pos_spinkit p {
+/* line 931, ../scss/modules/_book.scss */
+.loading p {
   font-family: "Open Sans",sans-serif;
   color: #999;
   font-size: 12px;
   text-transform: uppercase;
 }
 
-/* line 840, ../scss/modules/_book.scss */
+/* line 938, ../scss/modules/_book.scss */
 .p-l-bottom {
   padding-bottom: 20px;
 }
 
-/* line 843, ../scss/modules/_book.scss */
+/* line 941, ../scss/modules/_book.scss */
 .cb-right-2 {
   border-right: 1px solid #d6dbdc;
 }
 
 /* help classes */
-/* line 849, ../scss/modules/_book.scss */
+/* line 947, ../scss/modules/_book.scss */
 .m-l-top {
   margin-top: 20px;
 }
 
-/* line 852, ../scss/modules/_book.scss */
+/* line 950, ../scss/modules/_book.scss */
 .cbtn, .ctn-icon {
   display: inline-block;
   padding: 0 1em;
@@ -16046,57 +16119,57 @@ section a:focus {
   box-shadow: 4px 5px 0 0 #6e872a;
 }
 
-/* line 869, ../scss/modules/_book.scss */
+/* line 967, ../scss/modules/_book.scss */
 .cbtn:hover, .ctn-icon:hover, .cbtn:active, .ctn-icon:active, .cbtn:focus, .ctn-icon:focus, .cbtn:visited, .ctn-icon:visited {
   text-decoration: none;
 }
 
-/* line 873, ../scss/modules/_book.scss */
+/* line 971, ../scss/modules/_book.scss */
 .ctn-icon {
   line-height: 15px !important;
 }
 
-/* line 877, ../scss/modules/_book.scss */
+/* line 975, ../scss/modules/_book.scss */
 .cbtn-search {
   height: 45px;
 }
 
-/* line 881, ../scss/modules/_book.scss */
+/* line 979, ../scss/modules/_book.scss */
 .cbtn-block {
   width: 100%;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* line 886, ../scss/modules/_book.scss */
+  /* line 984, ../scss/modules/_book.scss */
   .cbtn, .ctn-icon {
     line-height: 45px;
   }
 }
-/* line 890, ../scss/modules/_book.scss */
+/* line 988, ../scss/modules/_book.scss */
 .cbtn-corner {
   border-radius: 4px;
 }
 
-/* line 894, ../scss/modules/_book.scss */
+/* line 992, ../scss/modules/_book.scss */
 .cbtn-round {
   border-radius: 50em;
 }
 
-/* line 898, ../scss/modules/_book.scss */
+/* line 996, ../scss/modules/_book.scss */
 .cbtn-round-st {
   width: 60px;
   height: 60px;
   line-height: 60px;
 }
 
-/* line 904, ../scss/modules/_book.scss */
+/* line 1002, ../scss/modules/_book.scss */
 .cbtn-adj-ico-rst-med {
   position: relative;
   top: 6px;
   left: -5px;
 }
 
-/* line 910, ../scss/modules/_book.scss */
+/* line 1008, ../scss/modules/_book.scss */
 .cbtn-st-pos-right {
   position: fixed;
   right: 10px;
@@ -16105,115 +16178,115 @@ section a:focus {
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
-/* line 918, ../scss/modules/_book.scss */
+/* line 1016, ../scss/modules/_book.scss */
 .cbtn-rounded {
   border-radius: 50px;
 }
 
-/* line 922, ../scss/modules/_book.scss */
+/* line 1020, ../scss/modules/_book.scss */
 .cbtn-line {
   border: 2px solid;
 }
 
-/* line 926, ../scss/modules/_book.scss */
+/* line 1024, ../scss/modules/_book.scss */
 .cbtn-l-acc {
   border-color: #A3C642;
   color: #A3C642;
 }
 
-/* line 931, ../scss/modules/_book.scss */
+/* line 1029, ../scss/modules/_book.scss */
 .cbtn-l-acc:hover, .cbtn-l-acc:focus, .cbtn-l-acc:active {
   border-color: #b6d269;
   background-color: #A3C642;
   color: #fff;
 }
 
-/* line 937, ../scss/modules/_book.scss */
+/* line 1035, ../scss/modules/_book.scss */
 .cbtn-l-dis {
   cursor: default;
   border-color: #CCC;
   color: #CCC;
 }
 
-/* line 943, ../scss/modules/_book.scss */
+/* line 1041, ../scss/modules/_book.scss */
 .cbtn-l-dis:hover, .cbtn-l-dis:focus, .cbtn-l-dis:active {
   color: #CCC;
 }
 
-/* line 947, ../scss/modules/_book.scss */
+/* line 1045, ../scss/modules/_book.scss */
 .cbtn-s-sh {
   position: relative;
   top: 10px;
   box-shadow: 0px 2px 1px 0px #356300;
 }
 
-/* line 953, ../scss/modules/_book.scss */
+/* line 1051, ../scss/modules/_book.scss */
 .cbtn-s-sh2 {
   box-shadow: 4px 5px 0px 0px #6E872A;
 }
 
-/* line 957, ../scss/modules/_book.scss */
+/* line 1055, ../scss/modules/_book.scss */
 .cbtn-s-acc {
   background-color: #A3C642;
   color: #fff;
   text-transform: uppercase;
 }
 
-/* line 963, ../scss/modules/_book.scss */
+/* line 1061, ../scss/modules/_book.scss */
 .cbtn-s-acc:hover, .cbtn-s-acc:focus, .cbtn-s-acc:active {
   color: #fff;
   background-color: #b6d269;
 }
 
-/* line 967, ../scss/modules/_book.scss */
+/* line 1065, ../scss/modules/_book.scss */
 .cbtn-s-acc:active {
   /* Rectangle 86 Copy 3: */
   background-color: #85a431;
   box-shadow: inset 0px 3px 1px 0px #396407;
 }
 
-/* line 973, ../scss/modules/_book.scss */
+/* line 1071, ../scss/modules/_book.scss */
 .cbtn-s-succ {
   background-color: #2ECC71;
   color: #fff;
 }
 
-/* line 978, ../scss/modules/_book.scss */
+/* line 1076, ../scss/modules/_book.scss */
 .cbtn-s-succ:hover, .cbtn-s-succ:focus, .cbtn-s-succ:active {
   color: #fff;
   background-color: black;
 }
 
-/* line 983, ../scss/modules/_book.scss */
+/* line 1081, ../scss/modules/_book.scss */
 .cbtn-s-cancel {
   background-color: #F0F0F0;
   color: #666;
 }
 
-/* line 988, ../scss/modules/_book.scss */
+/* line 1086, ../scss/modules/_book.scss */
 .cbtn-s-cancel:hover, .cbtn-s-cancel:focus, .cbtn-s-cancel:active {
   color: #666;
   background-color: #fff;
 }
 
-/* line 993, ../scss/modules/_book.scss */
+/* line 1091, ../scss/modules/_book.scss */
 .cbtn-s-dis {
   cursor: default;
   background-color: #CCC;
   color: #fff;
 }
 
-/* line 999, ../scss/modules/_book.scss */
+/* line 1097, ../scss/modules/_book.scss */
 .cbtn-s-dis:hover, .cbtn-s-dis:focus, .cbtn-s-dis:active {
   background-color: #CCC;
 }
 
-/* line 1002, ../scss/modules/_book.scss */
+/* line 1100, ../scss/modules/_book.scss */
 .hddn {
   display: none;
 }
 
-/* line 1009, ../scss/modules/_book.scss */
+/* line 1107, ../scss/modules/_book.scss */
 .social-block {
   position: fixed;
   right: 0px;
@@ -16222,37 +16295,37 @@ section a:focus {
   transform: translate(0px, -50%);
   z-index: 1000;
 }
-/* line 1018, ../scss/modules/_book.scss */
+/* line 1116, ../scss/modules/_book.scss */
 .social-block .addtoany_list a {
   float: left;
   padding: 0;
 }
-/* line 1022, ../scss/modules/_book.scss */
+/* line 1120, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_facebook {
   background: #4d70a8;
 }
-/* line 1026, ../scss/modules/_book.scss */
+/* line 1124, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_twitter {
   background: #00baf2;
 }
-/* line 1029, ../scss/modules/_book.scss */
+/* line 1127, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_google_plus {
   background: #e2411d;
 }
-/* line 1033, ../scss/modules/_book.scss */
+/* line 1131, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span {
   border-radius: 0 !important;
   display: block;
 }
-/* line 1037, ../scss/modules/_book.scss */
+/* line 1135, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_facebook {
   background: url("../images/sh-facebook.png") no-repeat 0 0;
 }
-/* line 1041, ../scss/modules/_book.scss */
+/* line 1139, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_twitter {
   background: url("../images/sh-twitter.png") no-repeat 0 0;
 }
-/* line 1044, ../scss/modules/_book.scss */
+/* line 1142, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_google_plus {
   background: url("../images/sh-googleplus.png") no-repeat 0 0;
 }
