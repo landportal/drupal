@@ -17301,16 +17301,18 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   margin-top: 3px;
 }
 
-/* line 10, ../scss/modules/_header.scss */
+/* line 11, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-top,
 #block-menu-menu-landlibrary-menu .menu-top,
-#block-menu-landdebate-menu .menu-top {
+#block-menu-landdebate-menu .menu-top,
+#block-menu-user-signin .menu-top {
   padding: 50px 50px;
 }
-/* line 13, ../scss/modules/_header.scss */
+/* line 14, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-top h2,
 #block-menu-menu-landlibrary-menu .menu-top h2,
-#block-menu-landdebate-menu .menu-top h2 {
+#block-menu-landdebate-menu .menu-top h2,
+#block-menu-user-signin .menu-top h2 {
   text-shadow: none;
   font-family: "News Cycle",sans-serif;
   padding: 0;
@@ -17319,113 +17321,125 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   letter-spacing: 0;
   margin-bottom: 5px;
 }
-/* line 23, ../scss/modules/_header.scss */
+/* line 24, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-top p,
 #block-menu-menu-landlibrary-menu .menu-top p,
-#block-menu-landdebate-menu .menu-top p {
+#block-menu-landdebate-menu .menu-top p,
+#block-menu-user-signin .menu-top p {
   margin-top: 0;
   letter-spacing: 0;
   font-size: 20px;
   font-family: "News Cycle",sans-serif;
   margin-bottom: 0;
 }
-/* line 32, ../scss/modules/_header.scss */
+/* line 33, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper,
 #block-menu-menu-landlibrary-menu .menu-wrapper,
-#block-menu-landdebate-menu .menu-wrapper {
+#block-menu-landdebate-menu .menu-wrapper,
+#block-menu-user-signin .menu-wrapper {
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
   background: #766054;
   min-height: 30px;
 }
-/* line 38, ../scss/modules/_header.scss */
+/* line 39, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar,
-#block-menu-landdebate-menu .menu-wrapper.navbar {
+#block-menu-landdebate-menu .menu-wrapper.navbar,
+#block-menu-user-signin .menu-wrapper.navbar {
   min-height: auto;
   margin-bottom: 0;
 }
-/* line 42, ../scss/modules/_header.scss */
+/* line 43, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu,
-#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu {
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu {
   border-top: none;
   padding: 0;
 }
-/* line 46, ../scss/modules/_header.scss */
+/* line 47, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu,
-#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu {
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu {
   width: 100%;
 }
-/* line 48, ../scss/modules/_header.scss */
+/* line 49, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li,
-#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li {
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li {
   background: #766054 !important;
   border: none;
   width: auto !important;
   min-width: 12.5%;
 }
-/* line 54, ../scss/modules/_header.scss */
+/* line 55, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li.active-trail,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li.active-trail,
-#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li.active-trail {
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li.active-trail,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li.active-trail {
   background: #A3C642 !important;
 }
-/* line 57, ../scss/modules/_header.scss */
+/* line 58, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover,
-#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover {
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover {
   background: #A3C642 !important;
 }
-/* line 62, ../scss/modules/_header.scss */
+/* line 63, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li:hover,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li:hover,
-#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li:hover {
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li:hover,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li:hover {
   background: #766054 !important;
 }
-/* line 66, ../scss/modules/_header.scss */
+/* line 67, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li a,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li a,
-#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a {
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li a {
   padding: 10px 0;
   letter-spacing: 0;
   text-decoration: none;
   font-size: 14px;
   line-height: normal;
 }
-/* line 73, ../scss/modules/_header.scss */
+/* line 74, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li a.active,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li a.active,
-#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a.active {
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a.active,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li a.active {
   border-bottom: none;
   text-decoration: none;
 }
-/* line 77, ../scss/modules/_header.scss */
+/* line 78, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li a:hover,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li a:hover,
-#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a:hover {
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a:hover,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li a:hover {
   background: #766054 !important;
 }
 
-/* line 88, ../scss/modules/_header.scss */
+/* line 89, ../scss/modules/_header.scss */
 #header {
   padding: 12px 0 0 0 !important;
 }
-/* line 91, ../scss/modules/_header.scss */
+/* line 92, ../scss/modules/_header.scss */
 #header .block {
   margin-bottom: 12px;
 }
-/* line 96, ../scss/modules/_header.scss */
+/* line 97, ../scss/modules/_header.scss */
 #header li::before {
   content: none;
 }
-/* line 101, ../scss/modules/_header.scss */
+/* line 102, ../scss/modules/_header.scss */
 #header li.active a {
   color: #333333 !important;
 }
-/* line 106, ../scss/modules/_header.scss */
+/* line 107, ../scss/modules/_header.scss */
 #header li a {
   color: #26AAE7 !important;
   font-size: 14px;
@@ -17433,18 +17447,18 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   content: none;
   font-family: "Open Sans",sans-serif;
 }
-/* line 113, ../scss/modules/_header.scss */
+/* line 114, ../scss/modules/_header.scss */
 #header li a::before {
   content: none !important;
 }
-/* line 121, ../scss/modules/_header.scss */
+/* line 122, ../scss/modules/_header.scss */
 #header .social-top ul {
   margin-top: 5px;
   padding: 0;
   list-style: none;
   margin-bottom: 0;
 }
-/* line 126, ../scss/modules/_header.scss */
+/* line 127, ../scss/modules/_header.scss */
 #header .social-top ul li {
   width: 30px;
   height: 30px;
@@ -17454,61 +17468,61 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   float: left;
   margin: 0 5px;
 }
-/* line 135, ../scss/modules/_header.scss */
+/* line 136, ../scss/modules/_header.scss */
 #header .social-top ul li.twitter {
   border: 1px solid #1AC8F3;
 }
-/* line 138, ../scss/modules/_header.scss */
+/* line 139, ../scss/modules/_header.scss */
 #header .social-top ul li.twitter i {
   color: #1AC8F3;
 }
-/* line 142, ../scss/modules/_header.scss */
+/* line 143, ../scss/modules/_header.scss */
 #header .social-top ul li.facebook {
   border: 1px solid #6186B5;
 }
-/* line 144, ../scss/modules/_header.scss */
+/* line 145, ../scss/modules/_header.scss */
 #header .social-top ul li.facebook a {
   padding: 5px 10px;
 }
-/* line 146, ../scss/modules/_header.scss */
+/* line 147, ../scss/modules/_header.scss */
 #header .social-top ul li.facebook a i {
   color: #6186B5;
 }
-/* line 151, ../scss/modules/_header.scss */
+/* line 152, ../scss/modules/_header.scss */
 #header .social-top ul li.google-plus {
   border: 1px solid #E95835;
 }
-/* line 154, ../scss/modules/_header.scss */
+/* line 155, ../scss/modules/_header.scss */
 #header .social-top ul li.google-plus i {
   color: #E95835;
 }
-/* line 159, ../scss/modules/_header.scss */
+/* line 160, ../scss/modules/_header.scss */
 #header .social-top ul li a {
   padding: 5px 8px;
 }
-/* line 161, ../scss/modules/_header.scss */
+/* line 162, ../scss/modules/_header.scss */
 #header .social-top ul li a .fa {
   line-height: 2;
 }
-/* line 168, ../scss/modules/_header.scss */
+/* line 169, ../scss/modules/_header.scss */
 #header .main-menu {
   margin-top: 10px;
 }
 @media only screen and (max-width: 992px) {
-  /* line 168, ../scss/modules/_header.scss */
+  /* line 169, ../scss/modules/_header.scss */
   #header .main-menu {
     float: left;
   }
 }
-/* line 174, ../scss/modules/_header.scss */
+/* line 175, ../scss/modules/_header.scss */
 #header .main-menu ul li {
   font-size: 14px;
 }
-/* line 176, ../scss/modules/_header.scss */
+/* line 177, ../scss/modules/_header.scss */
 #header .main-menu ul li::before {
   content: none;
 }
-/* line 182, ../scss/modules/_header.scss */
+/* line 183, ../scss/modules/_header.scss */
 #header .search-form {
   margin-bottom: 0;
   float: right;
@@ -17516,18 +17530,18 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   transition-property: width;
   transition-duration: 0.5s;
 }
-/* line 183, ../scss/modules/_header.scss */
+/* line 184, ../scss/modules/_header.scss */
 #header .search-form form {
   margin: 0;
 }
 @media only screen and (max-width: 992px) {
-  /* line 182, ../scss/modules/_header.scss */
+  /* line 183, ../scss/modules/_header.scss */
   #header .search-form {
     margin-bottom: 15px;
     float: none;
   }
 }
-/* line 193, ../scss/modules/_header.scss */
+/* line 194, ../scss/modules/_header.scss */
 #header .search-form .form-type-textfield input {
   background: #F7F7F7;
   border-radius: 20px;
@@ -17538,17 +17552,17 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   font-weight: bold;
   width: 100%;
 }
-/* line 207, ../scss/modules/_header.scss */
+/* line 208, ../scss/modules/_header.scss */
 #header .search-form.active {
   width: 230px;
 }
 @media only screen and (max-width: 992px) {
-  /* line 207, ../scss/modules/_header.scss */
+  /* line 208, ../scss/modules/_header.scss */
   #header .search-form.active {
     width: 90% !important;
   }
 }
-/* line 214, ../scss/modules/_header.scss */
+/* line 215, ../scss/modules/_header.scss */
 #header .search-form .form-actions .form-submit {
   background: url("../images/icon-search.png") no-repeat 0 0;
   cursor: pointer;
@@ -17561,44 +17575,44 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   border: none;
   width: 25px;
 }
-/* line 228, ../scss/modules/_header.scss */
+/* line 229, ../scss/modules/_header.scss */
 #header .block-nice-menus {
   margin-top: 10px;
 }
-/* line 231, ../scss/modules/_header.scss */
+/* line 232, ../scss/modules/_header.scss */
 #header .block-nice-menus li a {
   margin: 0;
   padding: 0;
 }
-/* line 237, ../scss/modules/_header.scss */
+/* line 238, ../scss/modules/_header.scss */
 #header .block-locale {
   margin-top: 10px;
 }
 
-/* line 241, ../scss/modules/_header.scss */
+/* line 242, ../scss/modules/_header.scss */
 #block-nice-menus-1 {
   width: 90px !important;
   float: right;
 }
 @media only screen and (max-width: 992px) {
-  /* line 241, ../scss/modules/_header.scss */
+  /* line 242, ../scss/modules/_header.scss */
   #block-nice-menus-1 {
     float: none;
   }
 }
 
-/* line 248, ../scss/modules/_header.scss */
+/* line 249, ../scss/modules/_header.scss */
 #block-lang-dropdown-language {
   width: 96px !important;
   float: right;
 }
 @media only screen and (max-width: 992px) {
-  /* line 248, ../scss/modules/_header.scss */
+  /* line 249, ../scss/modules/_header.scss */
   #block-lang-dropdown-language {
     float: none;
   }
 }
-/* line 254, ../scss/modules/_header.scss */
+/* line 255, ../scss/modules/_header.scss */
 #block-lang-dropdown-language form {
   margin: 0;
 }
