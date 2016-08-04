@@ -7,6 +7,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 $grey-bglight: #f0f0f0;
+$green-bg: #A3C642;
 
 /******************************************
  * Global stuff that shouldn't be here
@@ -154,6 +155,20 @@ section a{
     #block-system-main {
         @extend .clearfix;
         background-color: $grey-bglight;
+    }
+
+    
+    #block-landbook-disclaimer {
+        background: $green-light;
+        padding: 15px 0;
+        color: $white;
+        @extend .clearfix;
+        .content {
+            @extend .col-xs-12; 
+            @extend .col-md-8;
+            @extend .col-md-offset-2;
+        }
+        //font-size: 12px;
     }
     
     #main-wrapper{
@@ -714,21 +729,6 @@ section a{
         }
     }
     
-    #disclaimer{
-        background:$green-light;
-        padding:15px 0;
-        color:$white;
-        font-size: 12px;
-        p{
-            margin:0;
-            strong{
-                font-weight: bold;
-            }
-            &.no-m-bottom{
-                margin:0;
-            }
-        }
-    }
 
     .country-description{
         color: #666;
