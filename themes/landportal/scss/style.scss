@@ -17,7 +17,8 @@ To rebuild automatically (on changes) the CSS, use something like:
 @import "partials/variables";
 @import "partials/normalize";
 
-$fa-font-path: "../fonts/font-awesome/";
+// Will prepend 'fonts_path' variable from config.rb
+$fa-font-path: "font-awesome/";
 
 @import "font-awesome-compass";
 @import "font-awesome";

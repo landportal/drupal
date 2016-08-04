@@ -1,31 +1,41 @@
-img.flag {
-	border: 0.03em solid #ccc;
-	width: 0.9em;
-	height: 0.9em;
-	background-color: #fff;
-	vertical-align: top;
-	margin-top: 0.25em;
+span.flag {
+    width: 50px;
+    height: 50px;
+    border-radius: 50em;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+    display: block;
+    margin: 0 auto;
 }
+/* img.flag { */
+/* 	border: 0.03em solid #ccc; */
+/* 	width: 0.9em; */
+/* 	height: 0.9em; */
+/* 	background-color: #fff; */
+/* 	vertical-align: top; */
+/* 	margin-top: 0.25em; */
+/* } */
 
-span.flag img.flag {
-	margin-right: 0.2em;
-}
+/* span.flag img.flag { */
+/* 	margin-right: 0.2em; */
+/* } */
 
-.countries img.flag {
-    width: 2em;
-    height: 2em;
-    margin-top: 0;
-    margin-right: 1em;
-    border: 0.1em solid #ccc;
-    vertical-align: middle;
-    background-size: 100%;
-}
+/* .countries img.flag { */
+/*     width: 2em; */
+/*     height: 2em; */
+/*     margin-top: 0; */
+/*     margin-right: 1em; */
+/*     border: 0.1em solid #ccc; */
+/*     vertical-align: middle; */
+/*     background-size: 100%; */
+/* } */
 
-.table img.flag {
-	width: 1.5em;
-	height: 1.5em;
-	margin-right: 1em;
-}
+/* .table img.flag { */
+/* 	width: 1.5em; */
+/* 	height: 1.5em; */
+/* 	margin-right: 1em; */
+/* } */
 
 .flag-ABW, .flag-AFG, .flag-AGO, .flag-AIA, .flag-ALB,
 .flag-AND, .flag-ARE, .flag-ARG, .flag-ARM, .flag-ASM,
