@@ -55,31 +55,4 @@
           <p>Note: Some Indicators might have multiple values (e.g. Green-Orange), which might refers to different localities or categories of people. For more information please refers to specific country reports and to the methodology made available by the original data source/provider: <a href="http://go.worldbank.org/21M7S7AZO0" target="_blank">The Land GovernanceAssessment Framework (LGAF) website of the World Bank</a></p>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-          <!-- js-view-coda: Pie -->
-          <div id="wrapper-piechart"></div>
-        </div>
-
-        <div class="col-sm-6">
-          <!-- js-view-coda: Spider -->
-          <div id="wrapper-spiderchart"></div>
-          <div class="row">
-            <div class="col-xs-12">
-              <p>Note: This spider chart reflects the level of development of a country on four dimensions, which are
-                measured using four internationally accepted indexes:</p>
-              <ul class="list-unstyled">
-                <li><a href="https://landportal.info/book/indicators/oecd-sigi">The Social Institutions and Gender Index (SIGI) by OECD</a></li>
-                <li><a href="https://landportal.info/book/indicators/wb-sipovgini">The GINI Index by the World Bank</a></li>
-                <li><a href="https://landportal.info/book/indicators/undp-hdi-index">The Human Development Index (HDI) by UNDP</a></li>
-                <li><a href="https://landportal.info/book/indicators/ifpri-ghi">The Global Hunger Index (GHI) by IFPRI</a></li>
-              </ul>
-              <p>All original values for the indexes have been rescaled from 0 to 100, where 0 reflects low development
-                levels and 100 reflects high development levels. For each index the value for the most recent available
-                year is selected by default.</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>

@@ -1,1 +1,1 @@
-<div id="wrapper-spiderchart"></div>
+<div id="wrapper-spiderchart" class="col-sm-6"></div>
