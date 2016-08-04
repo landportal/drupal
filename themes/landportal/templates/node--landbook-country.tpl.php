@@ -27,7 +27,7 @@ $iso3 = $country->field_iso3['und'][0]['value'];
  <span class="flag flag-<?php print $iso3; ?>"></span>
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+    <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 </header>

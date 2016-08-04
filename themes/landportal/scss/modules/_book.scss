@@ -6,6 +6,7 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+$grey-bglight: #f0f0f0;
 
 /******************************************
  * Global stuff that shouldn't be here
@@ -64,93 +65,97 @@ section a{
 
 
 /******************************************
- * Header section
+ * Country (narrative) page
  */
 
-.page-node.node-type-landbook-country {
-    /* @media(min-width:992px){ */
-    /*     #breadcrumb, */
-    /*     #main-wrapper{ width: 95%; } */
-    /* } */
-    article.indicators-table { margin: 5em 0; }
-    #indicators-display { margin-top: 6em; }
-    #comparison-form {
-        margin-bottom: 1.4em;
-        .form-group { max-width: 33%; }
+/* .page-node.node-type-landbook-country { */
+/*     /\* @media(min-width:992px){ *\/ */
+/*     /\*     #breadcrumb, *\/ */
+/*     /\*     #main-wrapper{ width: 95%; } *\/ */
+/*     /\* } *\/ */
+/*     article.indicators-table { margin: 5em 0; } */
+/*     #indicators-display { margin-top: 6em; } */
+/*     #comparison-form { */
+/*         margin-bottom: 1.4em; */
+/*         .form-group { max-width: 33%; } */
+/*     } */
+/*     div.compare-legend { margin: -3.6em 0 6em 11em; } */
+/*     table { */
+/*         tbody { border: 0px; } */
+/*         .indicatorCode { display: none; } */
+/*     } */
+/*     div.map-medium { */
+/*         @extend .clearfix; */
+/*         /\* margin: 4em 0 5em 0; *\/ */
+/*         /\* height: 26em; *\/ */
+/*     } */
+/*     h1.title { */
+/*         &:before { */
+/*             /\* border: 1px solid $green; *\/ */
+/*             content: ' '; */
+/*             background-color: $green; */
+/*             display: block; */
+/*             width: 100%; */
+/*             height: 1px; */
+/*             position: absolute; */
+/*             top: .9em; */
+/*             z-index: -1; */
+/*         } */
+/*         span { padding-right: .5em; background-color: white; } */
+/*         img { */
+/*             vertical-align: baseline; */
+/*             margin-right: 10px; */
+/*         } */
+/*     } */
+/*     .block-views>h2 { */
+/*         border-bottom: 1px solid $green; */
+/*         //padding-top: .5em; */
+/*     } */
+/*     .node-teaser>h2 { */
+/*         font-size: 1.4em; */
+/*     } */
+/*     /\* Narative (left) aside element *\/ */
+/*     /\* aside { *\/ */
+/*     /\*     .btn { width: 100%; } *\/ */
+/*     /\*     div.country-map { *\/ */
+/*     /\*         height: 200px; *\/ */
+/*     /\*         width: 100%; *\/ */
+/*     /\*     } *\/ */
+/*     /\* } *\/ */
+/*     /\* /\\* Sidebar elements *\\/ *\/ */
+/*     /\* .field-type-taxonomy-term-reference { *\/ */
+/*     /\*     display: none; *\/ */
+/*     /\* } *\/ */
+/*     /\* .node-news.node-teaser { *\/ */
+/*     /\*     img { *\/ */
+/*     /\*         width: 35%; *\/ */
+/*     /\*         margin: 0 5px 5px 0; *\/ */
+/*     /\*         float: left; *\/ */
+/*     /\*     } *\/ */
+/*     /\*     .submitted, .links { display: none; } *\/ */
+/*     /\*     .content { font-size: .8em; } *\/ */
+/*     /\* } *\/ */
+/* } */
+
+
+.section-block{
+    h2:first-child{
+        display:none;
     }
-    div.compare-legend { margin: -3.6em 0 6em 11em; }
-    table {
-        tbody { border: 0px; }
-        .indicatorCode { display: none; }
-    }
-    div.map-medium {
-        @extend .clearfix;
-        /* margin: 4em 0 5em 0; */
-        /* height: 26em; */
-    }
-    h1.title {
-        &:before {
-            /* border: 1px solid $green; */
-            content: ' ';
-            background-color: $green;
-            display: block;
-            width: 100%;
-            height: 1px;
-            position: absolute;
-            top: .9em;
-            z-index: -1;
+    .block-views{
+        h2{
+            display:block;
         }
-        span { padding-right: .5em; background-color: white; }
-        img {
-            vertical-align: baseline;
-            margin-right: 10px;
-        }
     }
-    .block-views>h2 {
-        border-bottom: 1px solid $green;
-        //padding-top: .5em;
-    }
-    .node-teaser>h2 {
-        font-size: 1.4em;
-    }
-    /* Narative (left) aside element */
-    /* aside { */
-    /*     .btn { width: 100%; } */
-    /*     div.country-map { */
-    /*         height: 200px; */
-    /*         width: 100%; */
-    /*     } */
-    /* } */
-    /* /\* Sidebar elements *\/ */
-    /* .field-type-taxonomy-term-reference { */
-    /*     display: none; */
-    /* } */
-    /* .node-news.node-teaser { */
-    /*     img { */
-    /*         width: 35%; */
-    /*         margin: 0 5px 5px 0; */
-    /*         float: left; */
-    /*     } */
-    /*     .submitted, .links { display: none; } */
-    /*     .content { font-size: .8em; } */
-    /* } */
 }
 
-
 .page-book-countries{
-    /* TMP overrides to make the country page looks good. */
-    #page-title {
-        display: none;
-    }
-    .node-landbook-country {
-        //@extend .row;        
-        header h2 {
-            @extend .text-center;
-        }
 
+    #block-system-main {
+        @extend .clearfix;
+        background-color: $grey-bglight;
     }
-    #map-local { padding: 0; }
-
+    
     #main-wrapper{
         width: 100%;
         padding-left: 0px;
@@ -298,7 +303,7 @@ section a{
                     thead{
                         tr{
                             th{
-                                border-right: 1px solid #f0f0f0;
+                                border-right: 1px solid $grey-bglight;
                                 border-bottom: none;
                                 font-weight: lighter;
                                 padding: 10px;
@@ -317,8 +322,8 @@ section a{
                                 background: #f2f2f2 none repeat scroll 0 0;
                             }
                             td{
-                                border-bottom: 1px solid #f0f0f0;
-                                border-right: 1px solid #f0f0f0;
+                                border-bottom: 1px solid $grey-bglight;
+                                border-right: 1px solid $grey-bglight;
                                 padding: 10px;
                                 font-size:16px;
                                 font-family: "Merriweather",serif !important;
@@ -420,7 +425,7 @@ section a{
         }
 
         background: $white;
-        border-bottom: 1px solid #f0f0f0;
+        border-bottom: 1px solid $grey-bglight;
         padding-top: 60px;
         padding-bottom: 60px;
 
@@ -622,7 +627,7 @@ section a{
                     background-repeat: no-repeat;
                     padding-left: 25px;
                     font-family: "Open Sans",sans-serif;
-                    border-bottom: 1px solid #f0f0f0;
+                    border-bottom: 1px solid $grey-bglight;
                     padding-bottom: 5px;
                     padding-top: 5px;
                     font-size: 14px;
@@ -633,7 +638,7 @@ section a{
                     background-repeat: no-repeat;
                     padding-left: 25px;
                     font-family: "Open Sans",sans-serif;
-                    border-bottom: 1px solid #f0f0f0;
+                    border-bottom: 1px solid $grey-bglight;
                     padding-bottom: 5px;
                     padding-top: 5px;
                     font-size: 14px;
@@ -641,7 +646,7 @@ section a{
             }
             &.node-landlibrary-resource{
                 padding-bottom: 0;
-                border-bottom:1px solid #f0f0f0;
+                border-bottom:1px solid $grey-bglight;
                 .description-resource{
 
                     padding-top:0;
@@ -671,7 +676,6 @@ section a{
 
                 }
             }
-
         }
         select{
             background: #f7f7f7 none repeat scroll 0 0;
@@ -679,7 +683,6 @@ section a{
             background-position: right 10px center;
             background-repeat: no-repeat;
         }
-
         &.grey{
             background:#F8F8F8;
             select{
@@ -691,9 +694,7 @@ section a{
         }
         .sep-left-charts{
             border-left:1px solid #ccc;
-            
         }
-
         .spider-note{
             padding:0;
             font-family: "Open Sans",sans-serif;
@@ -718,13 +719,11 @@ section a{
         padding:15px 0;
         color:$white;
         font-size: 12px;
-
         p{
             margin:0;
             strong{
                 font-weight: bold;
             }
-
             &.no-m-bottom{
                 margin:0;
             }
@@ -739,7 +738,7 @@ section a{
 
         .field-name-field-country-info{
             .field-collection-item-field-country-info{
-                border-bottom: 1px solid #f0f0f0;
+                border-bottom: 1px solid $grey-bglight;
                 font-size: 16px;
 
                 .content{
@@ -770,7 +769,7 @@ section a{
             } 
         }
         .sources{
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid $grey-bglight;
             padding-top: 20px;
             padding-bottom: 10px;
 
@@ -782,39 +781,58 @@ section a{
                 font-style: normal;
                 text-transform: uppercase;
 
-/*span{
-          display: block;
-            padding: 10px 0;
-            font-family: "Merriweather",serif;
-            font-size: 12px;
-        }*/
+                /* span{ */
+                /*     display: block; */
+                /*     padding: 10px 0; */
+                /*     font-family: "Merriweather",serif; */
+                /*     font-size: 12px; */
+                /* } */
             }
         }
     }
-    .info-bottom{
-        padding-top: 40px;
+    /* .info-bottom{ */
+    /*     padding-top: 40px; */
+    /*     .txt-c{ */
+    /*         text-align: center; */
+    /*         .displayb{ */
+    /*             display:block; */
+    /*             .c-obj{ */
+    /*                 margin: 0 auto; */
+    /*                 vertical-align: middle; */
+    /*             } */
+    /*             .m-s-top { */
+    /*                 margin-top: 10px; */
+    /*             } */
+    /*         } */
+    /*     } */
+    /* } */
 
-        .txt-c{
-            text-align: center;
 
-            .displayb{
-                display:block;
-                .c-obj{
-                    margin: 0 auto;
-                    vertical-align: middle;
-                }
-                .m-s-top {
-                    margin-top: 10px;
-                }
-            }
-        }
+
+    /* TMP overrides to make the country page looks good. */
+    #page-title {
+        display: none;
     }
+    .node-landbook-country {
+        //@extend .row;        
+        header h2 {
+            @extend .text-center;
+        }
 
-}
-.block-map{
-    background:#f8f8f8;
+    }
+    #map-local { padding: 0; }
+
+
+    /* End of Country narrative content */
 }
 
+
+
+
+
+/******************************************
+ *      Form styling
+ */
 .block{
     .form-title{
         font-size: 16px;
@@ -869,46 +887,38 @@ section a{
     }
 }
 
-.section-block{
-    h2:first-child{
-        display:none;
-    }
-    .block-views{
-        h2{
-            display:block;
-        }
-    }
-}
+
+/* .block-map{ */
+/*     background:#f8f8f8; */
+/* } */
+/* #mapDiv{ */
+/*     height: 468px; */
+/* } */
+/* #wrapper-piechart{ */
+/*     height: 400px; */
+/* } */
+/* #maparea{ */
+/*     position:relative; */
+/* } */
+/* #wrapper-mapping { */
+/*     height: 768px; */
+/* } */
+/* #igraphics{ */
+/*     margin-top:5px; */
+/* } */
+/* #wrapper-igraphics { */
+/*     height: 400px; */
+/*     width: 100%; */
+/* } */
+/* .labels-compare{ */
+/*     display:none; */
+/* } */
+/* .tit-mapping{ */
+/*     display:none; */
+/* } */
 
 
-#mapDiv{
-    height: 468px;
-}
 
-#wrapper-piechart{
-    height: 400px;
-}
-#maparea{
-    position:relative;
-}
-#wrapper-mapping {
-    height: 768px;
-}
-#igraphics{
-    margin-top:5px;
-}
-#wrapper-igraphics {
-    height: 400px;
-    width: 100%;
-}
-
-.labels-compare{
-    display:none;
-}
-
-.tit-mapping{
-    display:none;
-}
 
 /* loader */
 .loading {
@@ -1094,7 +1104,7 @@ section a{
 /*   background-color: black; */
 /* } */
 /* .cbtn-s-cancel { */
-/*   background-color: #F0F0F0; */
+/*   background-color: $grey-bglight; */
 /*   color: #666; */
 /* } */
 /* .cbtn-s-cancel:hover, .cbtn-s-cancel:focus, .cbtn-s-cancel:active { */
