@@ -500,61 +500,6 @@ section a{
         .adj-blog{
             margin-left:30px;
         }
-        .ul-wrap{
-            display:table;
-            margin:0 auto;
-            .nav-inside-country{
-                margin-top:20px;
-                border: 1px solid $green-light;
-                display: inline-block;
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                font-family: "Open Sans",sans-serif;
-                margin-bottom: 20px;
-
-                li{
-                    display: block;
-                    float: left;
-
-                    a{
-                        border-right: 1px solid $green-light;
-                        padding: 10px 15px;
-                        text-transform: uppercase;
-                        color: #91b135;
-                        text-decoration: none;
-                        display:block;
-                        font-size:0.75em;
-                    }
-                    a:hover,a:focus{
-                                color:#617724;
-                            }
-                    &:last-child{
-                        a{
-                            border-right: none;
-                        }
-                    }
-                }
-            }
-            @media only screen and (max-width: 720px){
-                width:150px;
-                .nav-inside-country{
-                    li{
-                        width:100%;
-                        border-bottom:1px solid $green-light;
-
-                        &:last-child{
-                            border-bottom:none;
-                        }
-
-                        a{
-                            text-align: center;
-                            border-right: none;
-                        }
-                    }
-                }
-            }
-        }
         .bg-gray{
             background: rgba(0, 0, 0, 0) -moz-linear-gradient(left center , #f7f7f7 0px, #f7f7f7 63%, transparent 40%) repeat scroll 0 0;
 
@@ -802,6 +747,61 @@ section a{
 }
 
 .node-landbook-country {
+    .ul-wrap{
+        display:table;
+        margin:0 auto;
+        .nav-inside-country{
+          margin-top:20px;
+          border: 1px solid $green-light;
+          display: inline-block;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          font-family: "Open Sans",sans-serif;
+          margin-bottom: 20px;
+
+          li{
+            display: block;
+            float: left;
+
+            a{
+              border-right: 1px solid $green-light;
+              padding: 10px 15px;
+              text-transform: uppercase;
+              color: #91b135;
+              text-decoration: none;
+              display:block;
+              font-size:0.75em;
+            }
+            a:hover,
+            a:focus{
+              color:#617724;
+            }
+            &:last-child{
+              a{
+                border-right: none;
+              }
+            }
+          }
+        }
+        @media only screen and (max-width: 720px){
+        width:150px;
+        .nav-inside-country{
+          li{
+            width:100%;
+            border-bottom:1px solid $green-light;
+            &:last-child{
+              border-bottom:none;
+            }
+
+            a{
+              text-align: center;
+              border-right: none;
+            }
+          }
+        }
+      }
+    }
     .field-collection-container{
         color: #666;
         font-family: "Merriweather",serif;

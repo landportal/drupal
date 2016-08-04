@@ -21,12 +21,26 @@
         }
       },
       initScrollTo: function(context, settings){
-        $('.nic-item a').click(function(event){
-          event.preventDefault();
-          var scrollTo=$(this).attr('href');
-          $('html, body').animate({
+        $('.node-landbook-country .ul-wrap', context).once('nav-country', function(){
+          var $navContainer = $(this);
+          var $link = $navContainer.find('a');
+          $link.each(function(index, el) {
+            var idSection = $(el).attr('href');
+            if (idSection != '#') {
+              if ($(idSection).length == 0) {
+                $(el).remove();
+              }
+            }
+          });
+
+
+          $link.on('click', function(event) {
+            event.preventDefault();
+            var scrollTo = $(this).attr('href');
+            $('html, body').animate({
               scrollTop: $(scrollTo).offset().top
-          }, 1000);
+            }, 1000);
+          });
         });
       },
       initShowInfo: function(context, settings){
