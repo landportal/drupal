@@ -89,6 +89,12 @@ function landbook_country_strongarm() {
       'listing' => array(
         'custom_settings' => TRUE,
       ),
+      'promoted_country_page' => array(
+        'custom_settings' => TRUE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

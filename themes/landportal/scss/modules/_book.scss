@@ -397,14 +397,6 @@ section a{
     }
 
 
-
-
-
-
-
-
-
-
     #block-landbook-country-block{
         background:#F8F8F8;
     }
@@ -817,8 +809,9 @@ section a{
             .field-collection-view{
                 padding: 0px;
                 margin: 0px;
+                border-bottom: none;
                 .field-collection-item-field-country-info{
-                    border-bottom: 1px solid #f0f0f0;
+                    border-bottom: 1px solid #d3d7d9;
                     font-size: 16px;
 
                         .content{
@@ -849,31 +842,26 @@ section a{
                     }
                 } 
         }
-        .sources{
-            border-bottom: 1px solid $grey-bglight;
-            padding-top: 20px;
-            padding-bottom: 10px;
+    }
+    .sources{
+        border-bottom: 1px solid #d3d7d9;
+        padding-top: 20px;
+        padding-bottom: 10px;
 
-            .field-label{
-                font-family: "Open Sans",sans-serif;
-                color: #999;
-                font-size:12px;
-                font-weight: none;
-                font-style: normal;
-                text-transform: uppercase;
-
-                /* span{ */
-                /*     display: block; */
-                /*     padding: 10px 0; */
-                /*     font-family: "Merriweather",serif; */
-                /*     font-size: 12px; */
-                /* } */
-            }
+        .field-label{
+            font-family: "Open Sans",sans-serif;
+            color: #999;
+            font-size:12px;
+            font-weight: none;
+            font-style: normal;
+            text-transform: uppercase;
+        }
+        span{
+            font-family: "Merriweather",serif;
+            font-size: 16px;
         }
     }
 }
-
-
 
 
 /******************************************
