@@ -177,8 +177,45 @@ section a{
         padding-right: 0px;
         .region-content{
             section{
-                //padding-top: 60px;
                 padding-bottom: 60px;
+                &#reletad-content{
+                  margin-top: -60px;
+                  .views-row {
+                    position: relative;
+                    @media(min-width:768px){
+                      position: relative;
+                      float: left;
+                      width: 25%;
+                    }
+
+                    .views-field-title {
+                      width: 100%;
+                      background-color: rgba(.3, .3, .3, .6);
+                      position: absolute;
+                      padding: 0.5em 1em;
+                      bottom: 0;
+                    }
+                    a {
+                      text-decoration: none;
+                      color: $white;
+                    }
+                    .views-field-field-image {
+                      height: 200px;
+                      overflow: hidden; 
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                  }
+                  &:after {
+                      position: relative;
+                      clear: both;
+                      display: table;
+                      content: " ";
+                      visibility: hidden;
+                  }
+                }
                 .btn{
                     background-color: $green-light;
                     color: #fff;

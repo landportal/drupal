@@ -1,5 +1,4 @@
 <?php
-
 $view = new view();
 $view->name = 'landbook_countries_related';
 $view->description = 'Landbook countries related content. For each LP content type, show the latest nodes tagged with a given country';
@@ -59,14 +58,14 @@ $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
-    'debate' => 'debate',
+  'debate' => 'debate',
 );
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
 
 /* Display: Latest Debate */
@@ -93,21 +92,21 @@ $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
-    'debate' => 'debate',
+  'debate' => 'debate',
 );
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language_1']['id'] = 'language_1';
 $handler->display->display_options['filters']['language_1']['table'] = 'node';
 $handler->display->display_options['filters']['language_1']['field'] = 'language';
 $handler->display->display_options['filters']['language_1']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
 
 /* Display: Latest Blog */
@@ -134,14 +133,14 @@ $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
-    'blog_post' => 'blog_post',
+  'blog_post' => 'blog_post',
 );
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
 
 /* Display: Latest Events */
@@ -168,14 +167,14 @@ $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
-    'event' => 'event',
+  'event' => 'event',
 );
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
 
 /* Display: Latest News */
@@ -200,14 +199,14 @@ $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
-    'news' => 'news',
+  'news' => 'news',
 );
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
 
 /* Display: Partners */
@@ -240,7 +239,7 @@ $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
-    'organization' => 'organization',
+  'organization' => 'organization',
 );
 
 /* Display: Library */
@@ -277,14 +276,14 @@ $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
-    'landlibrary_resource' => 'landlibrary_resource',
+  'landlibrary_resource' => 'landlibrary_resource',
 );
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
 /* Filter criterion: Content: Resource type (field_doc_type) */
 $handler->display->display_options['filters']['field_doc_type_tid']['id'] = 'field_doc_type_tid';
@@ -295,13 +294,13 @@ $handler->display->display_options['filters']['field_doc_type_tid']['expose']['o
 $handler->display->display_options['filters']['field_doc_type_tid']['expose']['operator'] = 'field_doc_type_tid_op';
 $handler->display->display_options['filters']['field_doc_type_tid']['expose']['identifier'] = 'field_doc_type_tid';
 $handler->display->display_options['filters']['field_doc_type_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    111903911 => 0,
-    111903912 => 0,
-    25521343 => 0,
-    111903910 => 0,
-    30037204 => 0,
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903912 => 0,
+  25521343 => 0,
+  111903910 => 0,
+  30037204 => 0,
 );
 $handler->display->display_options['filters']['field_doc_type_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_doc_type_tid']['vocabulary'] = 'landlibrary_resource_type';
@@ -314,13 +313,13 @@ $handler->display->display_options['filters']['field_doc_creation_date_value']['
 $handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['operator'] = 'field_doc_creation_date_value_op';
 $handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['identifier'] = 'field_doc_creation_date_value';
 $handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    111903911 => 0,
-    111903912 => 0,
-    25521343 => 0,
-    111903910 => 0,
-    30037204 => 0,
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903912 => 0,
+  25521343 => 0,
+  111903910 => 0,
+  30037204 => 0,
 );
 $handler->display->display_options['filters']['field_doc_creation_date_value']['granularity'] = 'year';
 $handler->display->display_options['filters']['field_doc_creation_date_value']['year_range'] = '-26:+0';
@@ -334,17 +333,28 @@ $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'node';
-$handler->display->display_options['row_options']['view_mode'] = 'promoted_country_page';
-$handler->display->display_options['row_options']['links'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
-/* Field: Content: Nid */
-$handler->display->display_options['fields']['nid']['id'] = 'nid';
-$handler->display->display_options['fields']['nid']['table'] = 'node';
-$handler->display->display_options['fields']['nid']['field'] = 'nid';
-$handler->display->display_options['fields']['nid']['label'] = '';
-$handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['max_length'] = '60';
+$handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+/* Field: Field: Image */
+$handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+$handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+$handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+$handler->display->display_options['fields']['field_image']['label'] = '';
+$handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image']['settings'] = array(
+  'image_style' => 'large',
+  'image_link' => 'content',
+);
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Content: Has taxonomy term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -370,17 +380,17 @@ $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
-    'blog_post' => 'blog_post',
-    'debate' => 'debate',
-    'event' => 'event',
-    'news' => 'news',
+  'blog_post' => 'blog_post',
+  'debate' => 'debate',
+  'event' => 'event',
+  'news' => 'news',
 );
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
 /* Filter criterion: Content: Promoted to country page */
 $handler->display->display_options['filters']['promoted_to_country_page']['id'] = 'promoted_to_country_page';

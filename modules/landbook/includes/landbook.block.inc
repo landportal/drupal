@@ -47,6 +47,14 @@ function landbook_block_info() {
         'pages'           => "book/countries/*",
         'weight'      => 25
     );
+    $blocks['country_promoted_nodes_block'] = array(
+        'info' => t('Landbook country page promoted nodes'),
+        'status' => TRUE,
+        'region' => 'content',
+        'visibility'      => BLOCK_VISIBILITY_LISTED,
+        'pages'           => "book/countries/*",
+        'weight'      => -41
+    );
     return $blocks;
 }
 
@@ -74,6 +82,10 @@ function landbook_block_view($delta = '') {
     case 'library_block' :
         $block['subject'] = t('Library');
         $block['content'] = array('#theme' => 'library_block');
+        break;
+    case 'country_promoted_nodes_block' :
+        $block['subject'] = '';
+        $block['content'] = array('#theme' => 'country_promoted_nodes_block');
         break;
     }
     return $block;
