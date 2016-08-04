@@ -14466,6 +14466,12 @@ html.js fieldset.collapsed {
   display: inline-block;
 }
 
+/* Show checkboxes as blocks */
+/* line 108, ../scss/modules/_forms.scss */
+div.form-type-checkbox {
+  display: block !important;
+}
+
 /* Only enable on specific views for now
  * Promoted view (at least the one from LL) relies on views-row to apply their style...
  */

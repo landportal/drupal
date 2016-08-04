@@ -103,3 +103,8 @@ html.js fieldset.collapsed {
         }
     }
 }
+
+/* Show checkboxes as blocks */
+div.form-type-checkbox{
+	display:block !important
+}
