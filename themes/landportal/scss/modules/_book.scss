@@ -523,22 +523,19 @@ section a{
                 }
             }
             .blog{
-                .node-intro{
-                    display: inline-block;
+                .view-content{
                     width: 218px;
-
                     @media only screen and (max-width: 992px){
                         width:100%;
                     }
+                }
+                .node-intro{
+                    display: inline-block;
                 }
                 .node-image{
                     margin-bottom:15px;
                     padding-left:0;
                     padding-right:0;
-/*img{
-              background: #efefef none repeat scroll 0 0;
-              box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
-            }*/
                 }
             }
             .partners{
@@ -560,10 +557,14 @@ section a{
 
             .node-image{
                 padding:0;
-                height: 122px;
                 a{
                     box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
                     display: inline-block;
+                    img{
+                        max-width: 100%;
+                        max-height: 122px;
+                        height: auto;
+                    }
                 }
 
                 @media only screen and (max-width: 992px){

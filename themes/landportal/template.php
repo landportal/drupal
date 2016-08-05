@@ -32,6 +32,7 @@ function landportal_user_view_alter(&$build) {
  * The right place to add common css & js for all pages
  */
 function landportal_preprocess_html(&$variables) {
+  global $user;
   drupal_add_css(
     "//fonts.googleapis.com/css?family=News+Cycle|Source+Sans+Pro:300,400|Josefin+Sans:300",
     array('type' => 'external')
@@ -54,6 +55,15 @@ function landportal_preprocess_html(&$variables) {
     $variables['classes_array'][] = 'page-library';
   }
 
+  if ($user->uid > 0) {
+    $role_class = '';
+    foreach ($user->roles as $key => $value) {
+      if ($value != 'authenticated user') {
+        $role_class = $value . '-role';
+        $variables['classes_array'][] = $role_class;
+      }
+    }
+  }
 }
 
 /**

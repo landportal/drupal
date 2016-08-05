@@ -1,9 +1,3 @@
-#header{
-  #logo{
-    margin-top:3px;
-  }
-}
-
 #block-menu-landbook-menu,
 #block-menu-menu-landlibrary-menu,
 #block-menu-landdebate-menu,
@@ -86,9 +80,37 @@
 
   }
 }
+.contributor-role{
+  #header{
+    >.section{
+      >.col-lg-8{
+        @media only screen and (max-width: 1700px){
+          width: 100%;
+        }
+      }
+      >.col-lg-2{
+        @media only screen and (max-width: 1700px){
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+}
+
 #header{
   padding:12px 0 0 0 !important;
-
+  >.section{
+    >.col-lg-8{
+      @media only screen and (max-width: 1400px){
+        width: 100%;
+      }
+    }
+    >.col-lg-2{
+      @media only screen and (max-width: 1400px){
+        margin-left: 0px;
+      }
+    }
+  }
   .block{
     margin-bottom: 12px;
   }
@@ -97,8 +119,8 @@
     &::before{
       content: none;
     }
-    &.active{
-
+    &.active,
+    &.active-trail{
       a{
         color:$text-color !important;
       }
@@ -110,7 +132,9 @@
       font-weight: 600;
       content: none;
       font-family: "Open Sans",sans-serif;
-
+      &:hover{
+        color:$text-color !important;
+      }
       &::before{
         content: none !important;
       }
@@ -170,13 +194,10 @@
     @media only screen and (max-width: 992px){
       float: left;
     }
-    margin-top:10px;
+    margin-top:12px;
     ul{
       li{
-        font-size:14px; 
-        &::before{
-          content: none;
-        }
+        font-size:14px;
       }
     }
   }
@@ -187,7 +208,6 @@
     margin-bottom: 0;
     float: right;
     @media only screen and (max-width: 992px){
-      margin-bottom: 15px;
       float: none;
     }
     .form-type-textfield{
@@ -206,28 +226,30 @@
     transition-property: width;
     transition-duration: 0.5s;
     &.active{
-      width: 230px;
+      width: 220px;
       @media only screen and (max-width: 992px){
         width: 90% !important;
       }
     }
     .form-actions{
+      position: absolute;
+      top: 8px;
+      left: 22px;
+      width: 25px;
+      height: 25px;
       .form-submit{
         background: url("../images/icon-search.png") no-repeat 0 0;
-        cursor:pointer;
-        position: absolute;
-        top:8px;
-        left:22px;
-        width:25px;
-        height: 25px;
-        text-indent:-9999px;
-        border:none;
-        width:25px;
+        cursor: pointer;
+        text-indent: -9999px;
+        border: none;
+        display: block;
+        width: 100%;
+        height: 100%;
       }
     }
   }
   .block-nice-menus{
-    margin-top:10px;
+    margin-top:12px;
     li{
       a{
         margin:0;
@@ -244,6 +266,11 @@
   float: right;
   @media only screen and (max-width: 992px){
     float: none;
+  }
+}
+.logged-in{
+  #block-nice-menus-1{
+    width: 190px !important;
   }
 }
 #block-lang-dropdown-language{

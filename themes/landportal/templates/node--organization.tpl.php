@@ -54,10 +54,13 @@
 
 <?php case 'teaser' : ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-      <?php print render($title_prefix); ?>
-      <?php print render($title_suffix); ?>
+    <?php print render($title_prefix); ?>
+    <?php print render($title_suffix); ?>
+    <?php if (!empty($content['field_image'])): ?>
       <?php print render($content['field_image']); ?>
+    <?php else: ?>
       <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
+    <?php endif; ?>
 </article>
 
 <?php break; ?>

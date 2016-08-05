@@ -143,3 +143,15 @@ function load_country_description($title){
     return $description ;
   }
 }
+
+/**
+ * Implements hook_translated_menu_link_alter().
+ */
+function landbook_translated_menu_link_alter(&$item, $map) {
+  global $user;
+  if ($item['menu_name'] == 'user-menu' && $item['link_path'] == 'node/add') {
+    if (!in_array('contributor', $user->roles) && !path_is_admin(current_path())) {
+      $item['access'] = FALSE;
+    }
+  }
+}

@@ -15645,27 +15645,26 @@ section a:focus {
   }
 }
 /* line 526, ../scss/modules/_book.scss */
-.page-book-countries .country-section .block .blog .node-intro {
-  display: inline-block;
+.page-book-countries .country-section .block .blog .view-content {
   width: 218px;
 }
 @media only screen and (max-width: 992px) {
   /* line 526, ../scss/modules/_book.scss */
-  .page-book-countries .country-section .block .blog .node-intro {
+  .page-book-countries .country-section .block .blog .view-content {
     width: 100%;
   }
 }
-/* line 534, ../scss/modules/_book.scss */
+/* line 532, ../scss/modules/_book.scss */
+.page-book-countries .country-section .block .blog .node-intro {
+  display: inline-block;
+}
+/* line 535, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block .blog .node-image {
   margin-bottom: 15px;
   padding-left: 0;
   padding-right: 0;
-  /*img{
-                background: #efefef none repeat scroll 0 0;
-                box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
-              }*/
 }
-/* line 545, ../scss/modules/_book.scss */
+/* line 542, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block .partners a {
   font-family: "Open Sans",sans-serif;
   font-size: 12px;
@@ -15673,52 +15672,57 @@ section a:focus {
   color: #91b135;
   text-decoration: none;
 }
-/* line 552, ../scss/modules/_book.scss */
+/* line 549, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block .partners a:hover {
   color: #617724;
 }
-/* line 558, ../scss/modules/_book.scss */
+/* line 555, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser {
   padding: 20px 0;
 }
-/* line 561, ../scss/modules/_book.scss */
+/* line 558, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-image {
   padding: 0;
-  height: 122px;
 }
-/* line 564, ../scss/modules/_book.scss */
+/* line 560, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-image a {
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
   display: inline-block;
 }
+/* line 563, ../scss/modules/_book.scss */
+.page-book-countries .country-section .node-teaser .node-image a img {
+  max-width: 100%;
+  max-height: 122px;
+  height: auto;
+}
 @media only screen and (max-width: 992px) {
-  /* line 561, ../scss/modules/_book.scss */
+  /* line 558, ../scss/modules/_book.scss */
   .page-book-countries .country-section .node-teaser .node-image {
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 15px;
   }
 }
-/* line 577, ../scss/modules/_book.scss */
+/* line 578, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro > h3 {
   margin-top: 0;
   text-align: left;
   line-height: 0;
   margin-bottom: 5px;
 }
-/* line 582, ../scss/modules/_book.scss */
+/* line 583, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro > h3 a {
   color: #91b135;
   font-size: 16px;
   line-height: 1.42857;
   font-family: "Open Sans",sans-serif;
 }
-/* line 588, ../scss/modules/_book.scss */
+/* line 589, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro > h3 a:hover {
   color: #617724;
   text-decoration: none;
 }
-/* line 594, ../scss/modules/_book.scss */
+/* line 595, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro span {
   color: #999;
   font-size: 14px;
@@ -15726,7 +15730,7 @@ section a:focus {
   line-height: 1.42857;
   font-family: "Open Sans",sans-serif;
 }
-/* line 601, ../scss/modules/_book.scss */
+/* line 602, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro .text {
   margin-top: 5px;
   font-family: "Merriweather",serif;
@@ -15734,11 +15738,11 @@ section a:focus {
   font-size: 16px;
   line-height: 1.42857;
 }
-/* line 608, ../scss/modules/_book.scss */
+/* line 609, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro .text p {
   font-size: 16px;
 }
-/* line 612, ../scss/modules/_book.scss */
+/* line 613, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro .date {
   background-image: url("../images/ico-cal.png");
   background-position: left center;
@@ -15750,7 +15754,7 @@ section a:focus {
   padding-top: 5px;
   font-size: 14px;
 }
-/* line 623, ../scss/modules/_book.scss */
+/* line 624, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro .location {
   background-image: url("../images/ico-loc.png");
   background-position: left center;
@@ -15762,73 +15766,73 @@ section a:focus {
   padding-top: 5px;
   font-size: 14px;
 }
-/* line 635, ../scss/modules/_book.scss */
+/* line 636, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource {
   padding-bottom: 0;
   border-bottom: 1px solid #f0f0f0;
 }
-/* line 638, ../scss/modules/_book.scss */
+/* line 639, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .description-resource {
   padding-top: 0;
 }
-/* line 641, ../scss/modules/_book.scss */
+/* line 642, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .description-resource p {
   font-family: "Merriweather",serif !important;
   color: #999;
   margin: 5px 0;
   font-size: 16px;
 }
-/* line 649, ../scss/modules/_book.scss */
+/* line 650, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .keywords span {
   font-family: "Open Sans",sans-serif;
   text-transform: uppercase;
   color: #999;
   font-size: 12px;
 }
-/* line 655, ../scss/modules/_book.scss */
+/* line 656, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .keywords a {
   color: #91b135;
   font-size: 16px;
 }
-/* line 659, ../scss/modules/_book.scss */
+/* line 660, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .keywords a:hover {
   color: #617724;
   text-decoration: none;
 }
-/* line 668, ../scss/modules/_book.scss */
+/* line 669, ../scss/modules/_book.scss */
 .page-book-countries .country-section select {
   background: #f7f7f7 none repeat scroll 0 0;
   background-image: url("../images/toggle-arrow.png");
   background-position: right 10px center;
   background-repeat: no-repeat;
 }
-/* line 674, ../scss/modules/_book.scss */
+/* line 675, ../scss/modules/_book.scss */
 .page-book-countries .country-section.grey {
   background: #F8F8F8;
 }
-/* line 676, ../scss/modules/_book.scss */
+/* line 677, ../scss/modules/_book.scss */
 .page-book-countries .country-section.grey select {
   background: #ffffff none repeat scroll 0 0;
   background-image: url("../images/toggle-arrow.png");
   background-position: right 10px center;
   background-repeat: no-repeat;
 }
-/* line 683, ../scss/modules/_book.scss */
+/* line 684, ../scss/modules/_book.scss */
 .page-book-countries .country-section .sep-left-charts {
   border-left: 1px solid #ccc;
 }
-/* line 686, ../scss/modules/_book.scss */
+/* line 687, ../scss/modules/_book.scss */
 .page-book-countries .country-section .spider-note {
   padding: 0;
   font-family: "Open Sans",sans-serif;
   color: #999;
   font-size: 12px;
 }
-/* line 692, ../scss/modules/_book.scss */
+/* line 693, ../scss/modules/_book.scss */
 .page-book-countries .country-section .spider-note .no-m-bottom {
   margin: 0;
 }
-/* line 696, ../scss/modules/_book.scss */
+/* line 697, ../scss/modules/_book.scss */
 .page-book-countries .country-section .note-infografic {
   border-bottom: 1px solid #ccc;
   margin-bottom: 30px;
@@ -15836,21 +15840,21 @@ section a:focus {
   color: #999;
   font-size: 12px;
 }
-/* line 725, ../scss/modules/_book.scss */
+/* line 726, ../scss/modules/_book.scss */
 .page-book-countries #page-title {
   display: none;
 }
-/* line 735, ../scss/modules/_book.scss */
+/* line 736, ../scss/modules/_book.scss */
 .page-book-countries #map-local {
   padding: 0;
 }
 
-/* line 742, ../scss/modules/_book.scss */
+/* line 743, ../scss/modules/_book.scss */
 .node-landbook-country .ul-wrap {
   display: table;
   margin: 0 auto;
 }
-/* line 745, ../scss/modules/_book.scss */
+/* line 746, ../scss/modules/_book.scss */
 .node-landbook-country .ul-wrap .nav-inside-country {
   margin-top: 20px;
   border: 1px solid #A3C642;
@@ -15861,12 +15865,12 @@ section a:focus {
   font-family: "Open Sans",sans-serif;
   margin-bottom: 20px;
 }
-/* line 755, ../scss/modules/_book.scss */
+/* line 756, ../scss/modules/_book.scss */
 .node-landbook-country .ul-wrap .nav-inside-country li {
   display: block;
   float: left;
 }
-/* line 759, ../scss/modules/_book.scss */
+/* line 760, ../scss/modules/_book.scss */
 .node-landbook-country .ul-wrap .nav-inside-country li a {
   border-right: 1px solid #A3C642;
   padding: 10px 15px;
@@ -15876,36 +15880,36 @@ section a:focus {
   display: block;
   font-size: 0.75em;
 }
-/* line 768, ../scss/modules/_book.scss */
+/* line 769, ../scss/modules/_book.scss */
 .node-landbook-country .ul-wrap .nav-inside-country li a:hover,
 .node-landbook-country .ul-wrap .nav-inside-country li a:focus {
   color: #617724;
 }
-/* line 773, ../scss/modules/_book.scss */
+/* line 774, ../scss/modules/_book.scss */
 .node-landbook-country .ul-wrap .nav-inside-country li:last-child a {
   border-right: none;
 }
 @media only screen and (max-width: 720px) {
-  /* line 742, ../scss/modules/_book.scss */
+  /* line 743, ../scss/modules/_book.scss */
   .node-landbook-country .ul-wrap {
     width: 150px;
   }
-  /* line 782, ../scss/modules/_book.scss */
+  /* line 783, ../scss/modules/_book.scss */
   .node-landbook-country .ul-wrap .nav-inside-country li {
     width: 100%;
     border-bottom: 1px solid #A3C642;
   }
-  /* line 785, ../scss/modules/_book.scss */
+  /* line 786, ../scss/modules/_book.scss */
   .node-landbook-country .ul-wrap .nav-inside-country li:last-child {
     border-bottom: none;
   }
-  /* line 789, ../scss/modules/_book.scss */
+  /* line 790, ../scss/modules/_book.scss */
   .node-landbook-country .ul-wrap .nav-inside-country li a {
     text-align: center;
     border-right: none;
   }
 }
-/* line 797, ../scss/modules/_book.scss */
+/* line 798, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container {
   color: #666;
   font-family: "Merriweather",serif;
@@ -15915,32 +15919,32 @@ section a:focus {
   margin-bottom: 0px;
   border-bottom: none;
 }
-/* line 806, ../scss/modules/_book.scss */
+/* line 807, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-label {
   display: none;
 }
-/* line 809, ../scss/modules/_book.scss */
+/* line 810, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view {
   padding: 0px;
   margin: 0px;
   border-bottom: none;
 }
-/* line 813, ../scss/modules/_book.scss */
+/* line 814, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info {
   border-bottom: 1px solid #d3d7d9;
   font-size: 16px;
 }
-/* line 817, ../scss/modules/_book.scss */
+/* line 818, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info .content {
   position: relative;
 }
-/* line 820, ../scss/modules/_book.scss */
+/* line 821, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info .content .mic-i-a {
   display: block;
   padding: 10px 0;
   font-family: "Open Sans",sans-serif;
 }
-/* line 826, ../scss/modules/_book.scss */
+/* line 827, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info .content .mic-i-control {
   background-image: url("../images/icon-open-info.png");
   background-position: center center;
@@ -15953,17 +15957,17 @@ section a:focus {
   width: 20px;
   cursor: pointer;
 }
-/* line 838, ../scss/modules/_book.scss */
+/* line 839, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info .content .mic-content {
   display: none;
 }
-/* line 846, ../scss/modules/_book.scss */
+/* line 847, ../scss/modules/_book.scss */
 .node-landbook-country .sources {
   border-bottom: 1px solid #d3d7d9;
   padding-top: 20px;
   padding-bottom: 10px;
 }
-/* line 851, ../scss/modules/_book.scss */
+/* line 852, ../scss/modules/_book.scss */
 .node-landbook-country .sources .field-label {
   font-family: "Open Sans",sans-serif;
   color: #999;
@@ -15972,7 +15976,7 @@ section a:focus {
   font-style: normal;
   text-transform: uppercase;
 }
-/* line 859, ../scss/modules/_book.scss */
+/* line 860, ../scss/modules/_book.scss */
 .node-landbook-country .sources span {
   font-family: "Merriweather",serif;
   font-size: 16px;
@@ -15981,20 +15985,20 @@ section a:focus {
 /******************************************
  *      Form styling
  */
-/* line 871, ../scss/modules/_book.scss */
+/* line 872, ../scss/modules/_book.scss */
 .block .form-title {
   font-size: 16px;
   font-family: "Open Sans",sans-serif;
 }
-/* line 875, ../scss/modules/_book.scss */
+/* line 876, ../scss/modules/_book.scss */
 .block .views-exposed-widget {
   padding: 10px 0 20px 0;
 }
-/* line 878, ../scss/modules/_book.scss */
+/* line 879, ../scss/modules/_book.scss */
 .block .views-exposed-widget .views-widget .description {
   display: none;
 }
-/* line 881, ../scss/modules/_book.scss */
+/* line 882, ../scss/modules/_book.scss */
 .block .views-exposed-widget .views-widget select {
   background: #f7f7f7 none repeat scroll 0 0;
   min-width: 300px;
@@ -16002,7 +16006,7 @@ section a:focus {
   background-position: right 10px center;
   background-repeat: no-repeat;
 }
-/* line 890, ../scss/modules/_book.scss */
+/* line 891, ../scss/modules/_book.scss */
 .block select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -16019,7 +16023,7 @@ section a:focus {
   box-shadow: 4px 5px 0 0 #6e872a;
   margin-bottom: 5px;
 }
-/* line 906, ../scss/modules/_book.scss */
+/* line 907, ../scss/modules/_book.scss */
 .block .button {
   background-color: #A3C642;
   color: #fff;
@@ -16066,13 +16070,13 @@ section a:focus {
 /*     display:none; */
 /* } */
 /* loader */
-/* line 959, ../scss/modules/_book.scss */
+/* line 960, ../scss/modules/_book.scss */
 .loading .sk-three-bounce {
   margin: 40px auto;
   width: 80px;
   text-align: center;
 }
-/* line 963, ../scss/modules/_book.scss */
+/* line 964, ../scss/modules/_book.scss */
 .loading .sk-three-bounce .sk-child {
   width: 20px;
   height: 20px;
@@ -16082,12 +16086,12 @@ section a:focus {
   -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
   animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
 }
-/* line 971, ../scss/modules/_book.scss */
+/* line 972, ../scss/modules/_book.scss */
 .loading .sk-three-bounce .sk-bounce1 {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
-/* line 974, ../scss/modules/_book.scss */
+/* line 975, ../scss/modules/_book.scss */
 .loading .sk-three-bounce .sk-bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
@@ -16112,7 +16116,7 @@ section a:focus {
     transform: scale(1);
   }
 }
-/* line 994, ../scss/modules/_book.scss */
+/* line 995, ../scss/modules/_book.scss */
 .loading p {
   font-family: "Open Sans",sans-serif;
   color: #999;
@@ -16120,18 +16124,18 @@ section a:focus {
   text-transform: uppercase;
 }
 
-/* line 1006, ../scss/modules/_book.scss */
+/* line 1007, ../scss/modules/_book.scss */
 .p-l-bottom {
   padding-bottom: 20px;
 }
 
-/* line 1009, ../scss/modules/_book.scss */
+/* line 1010, ../scss/modules/_book.scss */
 .cb-right-2 {
   border-right: 1px solid #d6dbdc;
 }
 
 /* help classes */
-/* line 1015, ../scss/modules/_book.scss */
+/* line 1016, ../scss/modules/_book.scss */
 .m-l-top {
   margin-top: 20px;
 }
@@ -16265,7 +16269,7 @@ section a:focus {
 /*     display: none; */
 /* } */
 /* WFT is this doing here? is it landbook specific? no */
-/* line 1162, ../scss/modules/_book.scss */
+/* line 1163, ../scss/modules/_book.scss */
 .social-block {
   position: fixed;
   right: 0px;
@@ -16274,37 +16278,37 @@ section a:focus {
   transform: translate(0px, -50%);
   z-index: 1000;
 }
-/* line 1171, ../scss/modules/_book.scss */
+/* line 1172, ../scss/modules/_book.scss */
 .social-block .addtoany_list a {
   float: left;
   padding: 0;
 }
-/* line 1175, ../scss/modules/_book.scss */
+/* line 1176, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_facebook {
   background: #4d70a8;
 }
-/* line 1179, ../scss/modules/_book.scss */
+/* line 1180, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_twitter {
   background: #00baf2;
 }
-/* line 1182, ../scss/modules/_book.scss */
+/* line 1183, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_google_plus {
   background: #e2411d;
 }
-/* line 1186, ../scss/modules/_book.scss */
+/* line 1187, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span {
   border-radius: 0 !important;
   display: block;
 }
-/* line 1190, ../scss/modules/_book.scss */
+/* line 1191, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_facebook {
   background: url("../images/sh-facebook.png") no-repeat 0 0;
 }
-/* line 1194, ../scss/modules/_book.scss */
+/* line 1195, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_twitter {
   background: url("../images/sh-twitter.png") no-repeat 0 0;
 }
-/* line 1197, ../scss/modules/_book.scss */
+/* line 1198, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_google_plus {
   background: url("../images/sh-googleplus.png") no-repeat 0 0;
 }
@@ -16973,57 +16977,76 @@ ul.menu > li li a.active-trail {
   line-height: inherit;
 }
 
-/* line 29, ../scss/modules/_menus.scss */
+/* line 30, ../scss/modules/_menus.scss */
+.contributor-role #header #block-nice-menus-1 {
+  width: 380px !important;
+}
+/* line 33, ../scss/modules/_menus.scss */
+.contributor-role #header #block-nice-menus-1 .nice-menu ul {
+  top: 1.5em;
+}
+/* line 36, ../scss/modules/_menus.scss */
+.contributor-role #header #block-nice-menus-1 .nice-menu ul li ul {
+  top: -1px;
+}
+/* line 42, ../scss/modules/_menus.scss */
+.contributor-role #header #block-nice-menus-1 .nice-menu.nice-menu-down .menuparent {
+  background-position: 100% 50%;
+  padding-right: 15px !important;
+  margin-right: -8px !important;
+}
+
+/* line 53, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url,
 #header ul.nice-menu,
 #header ul.menu {
   top: initial;
   /* For the so called 'nice-menu' */
 }
-/* line 33, ../scss/modules/_menus.scss */
+/* line 57, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url > li,
 #header ul.nice-menu > li,
 #header ul.menu > li {
   background-color: inherit;
-  margin: 0 0 0 .5em;
+  margin: 0 0 0 0.5em;
   padding: 0;
   list-style-type: none;
   list-style-image: none;
   border: 0px;
   float: left;
 }
-/* line 41, ../scss/modules/_menus.scss */
+/* line 65, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url > li > a,
 #header ul.nice-menu > li > a,
 #header ul.menu > li > a {
   padding-top: 0;
 }
-/* line 43, ../scss/modules/_menus.scss */
+/* line 67, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url > li > a:before,
 #header ul.nice-menu > li > a:before,
 #header ul.menu > li > a:before {
   font-family: FontAwesome;
   padding-right: 3px;
 }
-/* line 47, ../scss/modules/_menus.scss */
+/* line 71, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url > li > a[href="/user"]:before,
 #header ul.nice-menu > li > a[href="/user"]:before,
 #header ul.menu > li > a[href="/user"]:before {
   content: "\f007";
 }
-/* line 50, ../scss/modules/_menus.scss */
+/* line 74, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url > li > a[href="/user/logout"]:before,
 #header ul.nice-menu > li > a[href="/user/logout"]:before,
 #header ul.menu > li > a[href="/user/logout"]:before {
   content: "\f08b";
 }
-/* line 53, ../scss/modules/_menus.scss */
+/* line 77, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url > li > a[href="/node/add"]:before,
 #header ul.nice-menu > li > a[href="/node/add"]:before,
 #header ul.menu > li > a[href="/node/add"]:before {
   content: "\f016";
 }
-/* line 57, ../scss/modules/_menus.scss */
+/* line 81, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url > li a,
 #header ul.nice-menu > li a,
 #header ul.menu > li a {
@@ -17031,19 +17054,28 @@ ul.menu > li li a.active-trail {
   text-decoration: none;
   text-transform: lowercase;
 }
-/* line 62, ../scss/modules/_menus.scss */
+/* line 86, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url > li:before,
 #header ul.nice-menu > li:before,
 #header ul.menu > li:before {
   content: "| ";
+  display: inline-block;
+  padding-right: 6px;
 }
-/* line 65, ../scss/modules/_menus.scss */
+/* line 91, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url > li:first-of-type:before,
 #header ul.nice-menu > li:first-of-type:before,
 #header ul.menu > li:first-of-type:before {
   content: "";
+  padding-right: 0px;
 }
-/* line 70, ../scss/modules/_menus.scss */
+/* line 95, ../scss/modules/_menus.scss */
+#header ul.language-switcher-locale-url > li:first-of-type,
+#header ul.nice-menu > li:first-of-type,
+#header ul.menu > li:first-of-type {
+  margin-left: 0px;
+}
+/* line 100, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url li li,
 #header ul.nice-menu li li,
 #header ul.menu li li {
@@ -17051,23 +17083,23 @@ ul.menu > li li a.active-trail {
   border-right: 0;
   background-color: rgba(250, 250, 250, 0.95);
 }
-/* line 74, ../scss/modules/_menus.scss */
+/* line 104, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url li li a:first-letter,
 #header ul.nice-menu li li a:first-letter,
 #header ul.menu li li a:first-letter {
   text-transform: uppercase;
 }
-/* line 77, ../scss/modules/_menus.scss */
+/* line 107, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url li li:hover,
 #header ul.nice-menu li li:hover,
 #header ul.menu li li:hover {
   background-color: white;
 }
-/* line 82, ../scss/modules/_menus.scss */
+/* line 112, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url {
   margin-right: 1em;
 }
-/* line 84, ../scss/modules/_menus.scss */
+/* line 114, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url li a {
   display: inline-block;
   padding: 0;
@@ -17075,12 +17107,12 @@ ul.menu > li li a.active-trail {
   background-color: inherit;
   color: #0165C3;
 }
-/* line 90, ../scss/modules/_menus.scss */
+/* line 120, ../scss/modules/_menus.scss */
 #header ul.language-switcher-locale-url li a.active {
   color: #444444;
 }
 
-/* line 97, ../scss/modules/_menus.scss */
+/* line 127, ../scss/modules/_menus.scss */
 .not-logged-in #header #block-system-user-menu ul.menu li.first a:before {
   font-family: FontAwesome;
   content: "\f007";
@@ -17088,13 +17120,13 @@ ul.menu > li li a.active-trail {
   margin-right: .5em;
 }
 
-/* line 104, ../scss/modules/_menus.scss */
+/* line 134, ../scss/modules/_menus.scss */
 #section-header {
   margin: 0;
   padding: 0;
   /* min-height: 120px; */
 }
-/* line 109, ../scss/modules/_menus.scss */
+/* line 139, ../scss/modules/_menus.scss */
 #section-header h2 {
   font-family: 'Source Sans Pro',sans-serif;
   clear: left;
@@ -17106,7 +17138,7 @@ ul.menu > li li a.active-trail {
   letter-spacing: .1em;
   text-shadow: #444444 0 0.04em 0;
 }
-/* line 120, ../scss/modules/_menus.scss */
+/* line 150, ../scss/modules/_menus.scss */
 #section-header p {
   font-size: 1.3em;
   letter-spacing: .1em;
@@ -17115,14 +17147,14 @@ ul.menu > li li a.active-trail {
   font-weight: 300;
   font-family: 'Source Sans Pro',sans-serif;
 }
-/* line 129, ../scss/modules/_menus.scss */
+/* line 159, ../scss/modules/_menus.scss */
 #section-header ul.primary,
 #section-header ul.menu {
   clear: both;
   margin: 0;
   padding: 0;
 }
-/* line 134, ../scss/modules/_menus.scss */
+/* line 164, ../scss/modules/_menus.scss */
 #section-header ul.primary li,
 #section-header ul.menu li {
   text-align: center;
@@ -17132,27 +17164,27 @@ ul.menu > li li a.active-trail {
   list-style-image: none;
   border-right: 1px solid #ffffff;
 }
-/* line 141, ../scss/modules/_menus.scss */
+/* line 171, ../scss/modules/_menus.scss */
 #section-header ul.primary li:last-of-type,
 #section-header ul.menu li:last-of-type {
   border-right: 0;
 }
-/* line 147, ../scss/modules/_menus.scss */
+/* line 177, ../scss/modules/_menus.scss */
 #section-header ul.primary li:nth-child(3n+1),
 #section-header ul.menu li:nth-child(3n+1) {
   background-color: rgba(1, 169, 219, 0.3);
 }
-/* line 150, ../scss/modules/_menus.scss */
+/* line 180, ../scss/modules/_menus.scss */
 #section-header ul.primary li:nth-child(3n+2),
 #section-header ul.menu li:nth-child(3n+2) {
   background-color: rgba(46, 100, 254, 0.3);
 }
-/* line 153, ../scss/modules/_menus.scss */
+/* line 183, ../scss/modules/_menus.scss */
 #section-header ul.primary li:nth-child(3n+3),
 #section-header ul.menu li:nth-child(3n+3) {
   background-color: rgba(10, 104, 172, 0.3);
 }
-/* line 156, ../scss/modules/_menus.scss */
+/* line 186, ../scss/modules/_menus.scss */
 #section-header ul.primary li a,
 #section-header ul.menu li a {
   text-decoration: none;
@@ -17167,14 +17199,14 @@ ul.menu > li li a.active-trail {
   line-height: 1.2em;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 }
-/* line 168, ../scss/modules/_menus.scss */
+/* line 198, ../scss/modules/_menus.scss */
 #section-header ul.primary li a.active,
 #section-header ul.menu li a.active {
   border-bottom: 0.5em solid #f1db11;
   padding-bottom: 0.8em;
   text-decoration: underline;
 }
-/* line 176, ../scss/modules/_menus.scss */
+/* line 206, ../scss/modules/_menus.scss */
 #section-header ul.primary:after,
 #section-header ul.menu:after {
   display: block;
@@ -17183,27 +17215,27 @@ ul.menu > li li a.active-trail {
   visibility: none;
 }
 
-/* line 188, ../scss/modules/_menus.scss */
+/* line 218, ../scss/modules/_menus.scss */
 #block-menu-menu-landlibrary-menu ul.menu li:nth-child(3n+1) {
   background-color: rgba(219, 51, 1, 0.3);
 }
 
-/* line 192, ../scss/modules/_menus.scss */
+/* line 222, ../scss/modules/_menus.scss */
 #block-menu-menu-landlibrary-menu ul.menu li:nth-child(3n+2) {
   background-color: rgba(157, 85, 63, 0.3);
 }
 
-/* line 196, ../scss/modules/_menus.scss */
+/* line 226, ../scss/modules/_menus.scss */
 #block-menu-menu-landlibrary-menu ul.menu li:nth-child(3n+3) {
   background-color: rgba(218, 66, 20, 0.3);
 }
 
-/* line 201, ../scss/modules/_menus.scss */
+/* line 231, ../scss/modules/_menus.scss */
 #section-header {
   border-top: 0;
 }
 
-/* line 217, ../scss/modules/_menus.scss */
+/* line 247, ../scss/modules/_menus.scss */
 .node-type-organization #section-header,
 .node-type-news #section-header,
 .node-type-debate #section-header,
@@ -17220,22 +17252,22 @@ ul.menu > li li a.active-trail {
   background-image: url(../images/header/pebbles-medium.png);
 }
 
-/* line 227, ../scss/modules/_menus.scss */
+/* line 257, ../scss/modules/_menus.scss */
 #section-header #block-menu-landbook-menu li {
   width: 12.49%;
 }
-/* line 234, ../scss/modules/_menus.scss */
+/* line 264, ../scss/modules/_menus.scss */
 #section-header #block-menu-menu-landlibrary-menu li,
 #section-header #block-menu-landdebate-menu li {
   width: 16.65%;
 }
-/* line 240, ../scss/modules/_menus.scss */
+/* line 270, ../scss/modules/_menus.scss */
 #section-header #block-menu-user-signin li {
   width: 50%;
   float: left;
 }
 @media only screen and (max-width: 720px) {
-  /* line 240, ../scss/modules/_menus.scss */
+  /* line 270, ../scss/modules/_menus.scss */
   #section-header #block-menu-user-signin li {
     width: 100%;
     float: none;
@@ -17243,21 +17275,21 @@ ul.menu > li li a.active-trail {
   }
 }
 
-/* line 251, ../scss/modules/_menus.scss */
+/* line 281, ../scss/modules/_menus.scss */
 #lang-dropdown-select-language {
   width: 60px !important;
 }
 
-/* line 258, ../scss/modules/_menus.scss */
+/* line 288, ../scss/modules/_menus.scss */
 ul.tabs li a {
   border: 0;
 }
-/* line 260, ../scss/modules/_menus.scss */
+/* line 290, ../scss/modules/_menus.scss */
 ul.tabs li a.active {
   border: 0;
 }
 
-/* line 265, ../scss/modules/_menus.scss */
+/* line 295, ../scss/modules/_menus.scss */
 ul.primary.tabs,
 ul.secondary.tabs {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -17267,20 +17299,20 @@ ul.secondary.tabs {
   padding: 1em 0;
   margin: 0;
 }
-/* line 267, ../scss/modules/_menus.scss */
+/* line 297, ../scss/modules/_menus.scss */
 ul.primary.tabs a.active,
 ul.secondary.tabs a.active {
   border-bottom: 0;
   /*3px solid $blue-dark;*/
 }
 
-/* line 277, ../scss/modules/_menus.scss */
+/* line 307, ../scss/modules/_menus.scss */
 li a.active,
 a.active {
   color: #2a6496;
 }
 
-/* line 281, ../scss/modules/_menus.scss */
+/* line 311, ../scss/modules/_menus.scss */
 a:not([href]) {
   color: inherit;
   text-decoration: none;
@@ -17348,19 +17380,14 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   line-height: 1.8;
 }
 
-/* line 2, ../scss/modules/_header.scss */
-#header #logo {
-  margin-top: 3px;
-}
-
-/* line 11, ../scss/modules/_header.scss */
+/* line 5, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-top,
 #block-menu-menu-landlibrary-menu .menu-top,
 #block-menu-landdebate-menu .menu-top,
 #block-menu-user-signin .menu-top {
   padding: 50px 50px;
 }
-/* line 14, ../scss/modules/_header.scss */
+/* line 8, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-top h2,
 #block-menu-menu-landlibrary-menu .menu-top h2,
 #block-menu-landdebate-menu .menu-top h2,
@@ -17373,7 +17400,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   letter-spacing: 0;
   margin-bottom: 5px;
 }
-/* line 24, ../scss/modules/_header.scss */
+/* line 18, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-top p,
 #block-menu-menu-landlibrary-menu .menu-top p,
 #block-menu-landdebate-menu .menu-top p,
@@ -17384,7 +17411,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   font-family: "News Cycle",sans-serif;
   margin-bottom: 0;
 }
-/* line 33, ../scss/modules/_header.scss */
+/* line 27, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper,
 #block-menu-menu-landlibrary-menu .menu-wrapper,
 #block-menu-landdebate-menu .menu-wrapper,
@@ -17394,7 +17421,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   background: #766054;
   min-height: 30px;
 }
-/* line 39, ../scss/modules/_header.scss */
+/* line 33, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar,
 #block-menu-landdebate-menu .menu-wrapper.navbar,
@@ -17402,7 +17429,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   min-height: auto;
   margin-bottom: 0;
 }
-/* line 43, ../scss/modules/_header.scss */
+/* line 37, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu,
@@ -17410,14 +17437,14 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   border-top: none;
   padding: 0;
 }
-/* line 47, ../scss/modules/_header.scss */
+/* line 41, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu,
 #block-menu-user-signin .menu-wrapper.navbar #header-menu .menu {
   width: 100%;
 }
-/* line 49, ../scss/modules/_header.scss */
+/* line 43, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li,
@@ -17427,28 +17454,28 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   width: auto !important;
   min-width: 12.5%;
 }
-/* line 55, ../scss/modules/_header.scss */
+/* line 49, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li.active-trail,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li.active-trail,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li.active-trail,
 #block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li.active-trail {
   background: #A3C642 !important;
 }
-/* line 58, ../scss/modules/_header.scss */
+/* line 52, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover,
 #block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover {
   background: #A3C642 !important;
 }
-/* line 63, ../scss/modules/_header.scss */
+/* line 57, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li:hover,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li:hover,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li:hover,
 #block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li:hover {
   background: #766054 !important;
 }
-/* line 67, ../scss/modules/_header.scss */
+/* line 61, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li a,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li a,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a,
@@ -17459,7 +17486,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   font-size: 14px;
   line-height: normal;
 }
-/* line 74, ../scss/modules/_header.scss */
+/* line 68, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li a.active,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li a.active,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a.active,
@@ -17467,7 +17494,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   border-bottom: none;
   text-decoration: none;
 }
-/* line 78, ../scss/modules/_header.scss */
+/* line 72, ../scss/modules/_header.scss */
 #block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li a:hover,
 #block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li a:hover,
 #block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a:hover,
@@ -17475,23 +17502,48 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   background: #766054 !important;
 }
 
-/* line 89, ../scss/modules/_header.scss */
+@media only screen and (max-width: 1700px) {
+  /* line 86, ../scss/modules/_header.scss */
+  .contributor-role #header > .section > .col-lg-8 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1700px) {
+  /* line 91, ../scss/modules/_header.scss */
+  .contributor-role #header > .section > .col-lg-2 {
+    margin-left: 0px;
+  }
+}
+
+/* line 100, ../scss/modules/_header.scss */
 #header {
   padding: 12px 0 0 0 !important;
 }
-/* line 92, ../scss/modules/_header.scss */
+@media only screen and (max-width: 1400px) {
+  /* line 103, ../scss/modules/_header.scss */
+  #header > .section > .col-lg-8 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  /* line 108, ../scss/modules/_header.scss */
+  #header > .section > .col-lg-2 {
+    margin-left: 0px;
+  }
+}
+/* line 114, ../scss/modules/_header.scss */
 #header .block {
   margin-bottom: 12px;
 }
-/* line 97, ../scss/modules/_header.scss */
+/* line 119, ../scss/modules/_header.scss */
 #header li::before {
   content: none;
 }
-/* line 102, ../scss/modules/_header.scss */
-#header li.active a {
+/* line 124, ../scss/modules/_header.scss */
+#header li.active a, #header li.active-trail a {
   color: #333333 !important;
 }
-/* line 107, ../scss/modules/_header.scss */
+/* line 129, ../scss/modules/_header.scss */
 #header li a {
   color: #26AAE7 !important;
   font-size: 14px;
@@ -17499,18 +17551,22 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   content: none;
   font-family: "Open Sans",sans-serif;
 }
-/* line 114, ../scss/modules/_header.scss */
+/* line 135, ../scss/modules/_header.scss */
+#header li a:hover {
+  color: #333333 !important;
+}
+/* line 138, ../scss/modules/_header.scss */
 #header li a::before {
   content: none !important;
 }
-/* line 122, ../scss/modules/_header.scss */
+/* line 146, ../scss/modules/_header.scss */
 #header .social-top ul {
   margin-top: 5px;
   padding: 0;
   list-style: none;
   margin-bottom: 0;
 }
-/* line 127, ../scss/modules/_header.scss */
+/* line 151, ../scss/modules/_header.scss */
 #header .social-top ul li {
   width: 30px;
   height: 30px;
@@ -17520,61 +17576,57 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   float: left;
   margin: 0 5px;
 }
-/* line 136, ../scss/modules/_header.scss */
+/* line 160, ../scss/modules/_header.scss */
 #header .social-top ul li.twitter {
   border: 1px solid #1AC8F3;
 }
-/* line 139, ../scss/modules/_header.scss */
+/* line 163, ../scss/modules/_header.scss */
 #header .social-top ul li.twitter i {
   color: #1AC8F3;
 }
-/* line 143, ../scss/modules/_header.scss */
+/* line 167, ../scss/modules/_header.scss */
 #header .social-top ul li.facebook {
   border: 1px solid #6186B5;
 }
-/* line 145, ../scss/modules/_header.scss */
+/* line 169, ../scss/modules/_header.scss */
 #header .social-top ul li.facebook a {
   padding: 5px 10px;
 }
-/* line 147, ../scss/modules/_header.scss */
+/* line 171, ../scss/modules/_header.scss */
 #header .social-top ul li.facebook a i {
   color: #6186B5;
 }
-/* line 152, ../scss/modules/_header.scss */
+/* line 176, ../scss/modules/_header.scss */
 #header .social-top ul li.google-plus {
   border: 1px solid #E95835;
 }
-/* line 155, ../scss/modules/_header.scss */
+/* line 179, ../scss/modules/_header.scss */
 #header .social-top ul li.google-plus i {
   color: #E95835;
 }
-/* line 160, ../scss/modules/_header.scss */
+/* line 184, ../scss/modules/_header.scss */
 #header .social-top ul li a {
   padding: 5px 8px;
 }
-/* line 162, ../scss/modules/_header.scss */
+/* line 186, ../scss/modules/_header.scss */
 #header .social-top ul li a .fa {
   line-height: 2;
 }
-/* line 169, ../scss/modules/_header.scss */
+/* line 193, ../scss/modules/_header.scss */
 #header .main-menu {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 @media only screen and (max-width: 992px) {
-  /* line 169, ../scss/modules/_header.scss */
+  /* line 193, ../scss/modules/_header.scss */
   #header .main-menu {
     float: left;
   }
 }
-/* line 175, ../scss/modules/_header.scss */
+/* line 199, ../scss/modules/_header.scss */
 #header .main-menu ul li {
   font-size: 14px;
 }
-/* line 177, ../scss/modules/_header.scss */
-#header .main-menu ul li::before {
-  content: none;
-}
-/* line 183, ../scss/modules/_header.scss */
+/* line 204, ../scss/modules/_header.scss */
 #header .search-form {
   margin-bottom: 0;
   float: right;
@@ -17582,18 +17634,17 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   transition-property: width;
   transition-duration: 0.5s;
 }
-/* line 184, ../scss/modules/_header.scss */
+/* line 205, ../scss/modules/_header.scss */
 #header .search-form form {
   margin: 0;
 }
 @media only screen and (max-width: 992px) {
-  /* line 183, ../scss/modules/_header.scss */
+  /* line 204, ../scss/modules/_header.scss */
   #header .search-form {
-    margin-bottom: 15px;
     float: none;
   }
 }
-/* line 194, ../scss/modules/_header.scss */
+/* line 214, ../scss/modules/_header.scss */
 #header .search-form .form-type-textfield input {
   background: #F7F7F7;
   border-radius: 20px;
@@ -17604,67 +17655,77 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   font-weight: bold;
   width: 100%;
 }
-/* line 208, ../scss/modules/_header.scss */
+/* line 228, ../scss/modules/_header.scss */
 #header .search-form.active {
-  width: 230px;
+  width: 220px;
 }
 @media only screen and (max-width: 992px) {
-  /* line 208, ../scss/modules/_header.scss */
+  /* line 228, ../scss/modules/_header.scss */
   #header .search-form.active {
     width: 90% !important;
   }
 }
-/* line 215, ../scss/modules/_header.scss */
-#header .search-form .form-actions .form-submit {
-  background: url("../images/icon-search.png") no-repeat 0 0;
-  cursor: pointer;
+/* line 234, ../scss/modules/_header.scss */
+#header .search-form .form-actions {
   position: absolute;
   top: 8px;
   left: 22px;
   width: 25px;
   height: 25px;
+}
+/* line 240, ../scss/modules/_header.scss */
+#header .search-form .form-actions .form-submit {
+  background: url("../images/icon-search.png") no-repeat 0 0;
+  cursor: pointer;
   text-indent: -9999px;
   border: none;
-  width: 25px;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-/* line 229, ../scss/modules/_header.scss */
+/* line 251, ../scss/modules/_header.scss */
 #header .block-nice-menus {
-  margin-top: 10px;
+  margin-top: 12px;
 }
-/* line 232, ../scss/modules/_header.scss */
+/* line 254, ../scss/modules/_header.scss */
 #header .block-nice-menus li a {
   margin: 0;
   padding: 0;
 }
-/* line 238, ../scss/modules/_header.scss */
+/* line 260, ../scss/modules/_header.scss */
 #header .block-locale {
   margin-top: 10px;
 }
 
-/* line 242, ../scss/modules/_header.scss */
+/* line 264, ../scss/modules/_header.scss */
 #block-nice-menus-1 {
   width: 90px !important;
   float: right;
 }
 @media only screen and (max-width: 992px) {
-  /* line 242, ../scss/modules/_header.scss */
+  /* line 264, ../scss/modules/_header.scss */
   #block-nice-menus-1 {
     float: none;
   }
 }
 
-/* line 249, ../scss/modules/_header.scss */
+/* line 272, ../scss/modules/_header.scss */
+.logged-in #block-nice-menus-1 {
+  width: 190px !important;
+}
+
+/* line 276, ../scss/modules/_header.scss */
 #block-lang-dropdown-language {
   width: 96px !important;
   float: right;
 }
 @media only screen and (max-width: 992px) {
-  /* line 249, ../scss/modules/_header.scss */
+  /* line 276, ../scss/modules/_header.scss */
   #block-lang-dropdown-language {
     float: none;
   }
 }
-/* line 255, ../scss/modules/_header.scss */
+/* line 282, ../scss/modules/_header.scss */
 #block-lang-dropdown-language form {
   margin: 0;
 }
