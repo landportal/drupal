@@ -63,17 +63,26 @@
         <?php print render($title_prefix); ?>
         <?php print render($title_suffix); ?>
         <h3><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
-        <?php  $field_values = field_get_items('node', $node, 'field_date');
-          $date_start=date('F jS',strtotime($field_values[0]['value']));
-          $date_end=date('F jS, Y',strtotime($field_values[0]['value2']));
+        <?php $field_values = field_get_items('node', $node, 'field_date');
+          $date_start = date('F jS',strtotime($field_values[0]['value']));
+          $date_end = date('F jS, Y',strtotime($field_values[0]['value2']));
         ?>
         <div class="date"><?php print $date_start.' - '.$date_end; ?></div>
         <?php if(!empty($node->location['name'])): ?>
-            <?php $location=$node->location['name']; ?>
+            <?php $location = $node->location['name']; ?>
         <?php else: ?>
-            <?php $location=t($node->location['city'].' ,'.$node->location['country']); ?>
+            <?php $location = t($node->location['city'].' ,'.$node->location['country']); ?>
         <?php endif; ?>
         <div class="location"><?php print $location; ?></div>
+        <?php
+        // We hide the comments and links now so that we can render them later.
+          hide($content['comments']);
+          hide($content['links']);
+          hide($content['field_image']);
+          hide($content['field_date']);
+          hide($content['location']);
+          print render($content);
+        ?>
     </div>
 </article>
 

@@ -53,20 +53,29 @@
 
 <?php case 'teaser' : ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix new p-l-top p-l-bottom group"<?php print $attributes; ?>>
-    <div class="node-image group col-md-5">
+    <div class="node-image group col-md-4">
       <?php print render($content['field_image']); ?>
     </div>
-    <div class="node-intro displayb col-md-7">
+    <div class="node-intro displayb col-md-8">
         <?php print render($title_prefix); ?>
         <?php print render($title_suffix); ?>
         <h3><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
         <?php if(!empty($node->field_date)): ?>
-        <?php  $field_values = field_get_items('node', $node, 'field_date');
+        <?php $field_values = field_get_items('node', $node, 'field_date');
           $date_start=date('F jS',strtotime($field_values[0]['value']));
           $date_end=date('F jS, Y',strtotime($field_values[0]['value2']));
         ?>
         <div class="date"><?php print $date_start.' - '.$date_end; ?></div>
       <?php endif; ?>
+
+      <?php
+      // We hide the comments and links now so that we can render them later.
+        hide($content['comments']);
+        hide($content['links']);
+        hide($content['field_image']);
+        hide($content['field_date']);
+        print render($content);
+      ?>
     </div>
 </article>
 

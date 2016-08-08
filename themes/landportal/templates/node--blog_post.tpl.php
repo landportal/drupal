@@ -64,6 +64,13 @@
         <?php print render($title_suffix); ?>
         <h3><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
         <span class="created"><?php print t('On ').date('D j, Y',$node->created); ?></span>
+        <?php
+        // We hide the comments and links now so that we can render them later.
+          hide($content['comments']);
+          hide($content['links']);
+          hide($content['field_image']);
+          print render($content);
+        ?>
     </div>
 </article>
 
