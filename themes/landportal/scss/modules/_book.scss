@@ -391,6 +391,62 @@ section a{
                             }
                         }
                     }
+                    @media only screen and (max-width: 767px){
+                        display: block;
+                        thead{
+                            display: none !important;
+                        }
+                        tbody{
+                            display: block;
+                            tr{
+                                display: block;
+                                td{
+                                    display: block;
+                                    -moz-border-bottom-colors: none;
+                                    -moz-border-left-colors: none;
+                                    -moz-border-right-colors: none;
+                                    -moz-border-top-colors: none;
+                                    border-color: -moz-use-text-color -moz-use-text-color #eee;
+                                    border-image: none;
+                                    border-style: none none solid;
+                                    border-width: medium medium 1px;
+                                    padding-left: 50%;
+                                    position: relative;
+
+                                    &:before{
+                                        left: 6px;
+                                        padding-right: 10px;
+                                        position: absolute;
+                                        top: 11px;
+                                        white-space: nowrap;
+                                        width: 45%;
+                                    }
+                                    &.indicator::before {
+                                        content: "Indicators";
+                                    }
+                                    &:nth-of-type(2)::before {
+                                        content: "Year";
+                                    }
+                                    &:nth-of-type(3)::before {
+                                        content: "Value";
+                                    }
+                                    &:nth-of-type(4)::before {
+                                        content: "Unit";
+                                    }
+                                    &:nth-of-type(5)::before {
+                                        content: "Dataset";
+                                    }
+                                    &:nth-of-type(6)::before {
+                                        content: "Source";
+                                    }
+                                    &:nth-of-type(7)::before {
+                                        content: "Remove";
+                                    }
+
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -739,6 +795,23 @@ section a{
     /* End of Country narrative content */
 }
 
+.node-teaser{
+    .node-image{
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 15px;
+    }
+    .node-intro{
+        .field{
+            clear: both;
+            &.field-type-taxonomy-term-reference{
+                .field-item{
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
 .node-landbook-country {
     .ul-wrap{
         display:table;
