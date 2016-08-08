@@ -9,6 +9,7 @@
 $grey-bglight: #f0f0f0;
 $green-bg: #A3C642;
 
+
 /******************************************
  * Global stuff that shouldn't be here
  */
@@ -563,6 +564,7 @@ section a{
         }
         .bg-gray{
             background: rgba(0, 0, 0, 0) -moz-linear-gradient(left center , #f7f7f7 0px, #f7f7f7 63%, transparent 40%) repeat scroll 0 0;
+            overflow-x:hidden;
 
             .bg-media{
                 background: #f7f7f7;
@@ -825,62 +827,65 @@ section a{
     /* End of Country narrative content */
 }
 
-.node-landbook-country {
-    .ul-wrap{
-        display:table;
-        margin:0 auto;
-        .nav-inside-country{
-          margin-top:20px;
-          border: 1px solid $green-light;
-          display: inline-block;
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          font-family: "Open Sans",sans-serif;
-          margin-bottom: 20px;
+#country-navigation{
+  .ul-wrap{
+      display:table;
+      margin:0 auto;
+      .nav-inside-country{
+        margin-top:20px;
+        border: 1px solid $green-light;
+        display: inline-block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans",sans-serif;
+        margin-bottom: 20px;
 
-          li{
-            display: block;
-            float: left;
+        li{
+          display: block;
+          float: left;
 
-            a{
-              border-right: 1px solid $green-light;
-              padding: 10px 15px;
-              text-transform: uppercase;
-              color: #91b135;
-              text-decoration: none;
-              display:block;
-              font-size:0.75em;
-            }
-            a:hover,
-            a:focus{
-              color:#617724;
-            }
-            &:last-child{
-              a{
-                border-right: none;
-              }
-            }
+          a{
+            border-right: 1px solid $green-light;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            color: #91b135;
+            text-decoration: none;
+            display:block;
+            font-size:0.75em;
           }
-        }
-        @media only screen and (max-width: 720px){
-        width:150px;
-        .nav-inside-country{
-          li{
-            width:100%;
-            border-bottom:1px solid $green-light;
-            &:last-child{
-              border-bottom:none;
-            }
-
+          a:hover,
+          a:focus{
+            color:#617724;
+          }
+          &:last-child{
             a{
-              text-align: center;
               border-right: none;
             }
           }
         }
       }
+      @media only screen and (max-width: 720px){
+      width:150px;
+      .nav-inside-country{
+        li{
+          width:100%;
+          border-bottom:1px solid $green-light;
+          &:last-child{
+            border-bottom:none;
+          }
+
+          a{
+            text-align: center;
+            border-right: none;
+          }
+        }
+      }
     }
+  }
+}
+
+.node-landbook-country {
     .field-collection-container{
         color: #666;
         font-family: "Merriweather",serif;
@@ -931,7 +936,7 @@ section a{
         }
     }
     .sources{
-        border-bottom: 1px solid #d3d7d9;
+        /*border-bottom: 1px solid #d3d7d9;*/
         padding-top: 20px;
         padding-bottom: 10px;
 
