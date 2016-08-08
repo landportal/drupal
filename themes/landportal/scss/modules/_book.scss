@@ -35,14 +35,24 @@ section a{
 }
 
 .node-teaser{
+    .field{
+        clear: both;
+        &.field-type-taxonomy-term-reference{
+            .field-item{
+                margin-bottom: 5px;
+            }
+        }
+    }
     .node-image{
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 15px;
         a{
             box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
             display: inline-block;
         }
     }
 }
-
 
 
 /******************************************
@@ -183,9 +193,12 @@ section a{
                     >header{
                         margin-top: -25px;
                     }
+                    >.content{
+                        overflow:hidden;
+                    }
                 }
             }
-            section{
+            >section{
                 padding-bottom: 60px;
                 &#reletad-content{
                   margin-top: -60px;
@@ -567,7 +580,7 @@ section a{
         .block{
             padding:40px 0;
 
-            h2{
+            >h2{
                 margin-bottom: 11px;
                 margin-top: 22px;
                 font-size: 22px;
@@ -690,6 +703,23 @@ section a{
                 }
             }
             &.node-landlibrary-resource{
+                >h2{
+                    margin-top:0;
+                    text-align: left;
+                    line-height: 0;
+                    margin-bottom: 5px;
+                    a{
+                        color: #91b135;
+                        font-size: 16px;
+                        line-height: 1.42857;
+                        font-family: "Open Sans",sans-serif;
+
+                        &:hover{
+                            color:#617724;
+                            text-decoration: none;
+                        }
+                    }
+                }
                 padding-bottom: 0;
                 border-bottom:1px solid $grey-bglight;
                 .description-resource{
@@ -795,23 +825,6 @@ section a{
     /* End of Country narrative content */
 }
 
-.node-teaser{
-    .node-image{
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-bottom: 15px;
-    }
-    .node-intro{
-        .field{
-            clear: both;
-            &.field-type-taxonomy-term-reference{
-                .field-item{
-                    margin-bottom: 5px;
-                }
-            }
-        }
-    }
-}
 .node-landbook-country {
     .ul-wrap{
         display:table;
@@ -1275,4 +1288,26 @@ section a{
         }
     }
 }
+/*
+#block-views-landbook-countries-related-block-4{
+    @media only screen and (max-width: 767px){
+        .views-view-grid{
+            td{
+                padding:0 15px;
+                min-width: 200px;
+                display:block;
+                float:left;
+                min-height: 220px;
 
+                article{
+                    display: inline-block;
+                    line-height: 130px;
+                }
+            }
+        }
+    }
+}
+
+.messages.error{
+    overflow: hidden;
+}*/
