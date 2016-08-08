@@ -83,6 +83,12 @@ function ct_events_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'listing' => array(
+        'custom_settings' => TRUE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -93,10 +99,10 @@ function ct_events_strongarm() {
           'weight' => '5',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
         'language' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
         'xmlsitemap' => array(
           'weight' => '8',
@@ -105,15 +111,19 @@ function ct_events_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '7',
+            'weight' => '11',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '6',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           'listing' => array(
             'weight' => '6',
+            'visible' => FALSE,
+          ),
+          'promoted_country_page' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
