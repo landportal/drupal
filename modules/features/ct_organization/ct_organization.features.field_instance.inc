@@ -34,6 +34,12 @@ function ct_organization_field_default_field_instances() {
         'type' => 'text_trimmed',
         'weight' => 4,
       ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -84,11 +90,17 @@ function ct_organization_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -156,6 +168,12 @@ function ct_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -202,6 +220,12 @@ function ct_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
+      ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -250,6 +274,12 @@ function ct_organization_field_default_field_instances() {
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 2,
       ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -267,8 +297,9 @@ function ct_organization_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'synonyms',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => '',
         'auto_creation' => 0,
         'size' => 60,
         'sort' => 'weight',
@@ -276,7 +307,7 @@ function ct_organization_field_default_field_instances() {
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'synonyms_select_taxonomy_term',
+      'type' => 'options_select',
       'weight' => 5,
     ),
   );
@@ -306,6 +337,12 @@ function ct_organization_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
+        'weight' => 0,
+      ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -374,6 +411,12 @@ function ct_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 11,
       ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -438,6 +481,12 @@ function ct_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -480,6 +529,12 @@ function ct_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 10,
+      ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -528,11 +583,17 @@ function ct_organization_field_default_field_instances() {
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 2,
       ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -545,8 +606,9 @@ function ct_organization_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'synonyms',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => '',
         'auto_creation' => 1,
         'size' => 60,
         'sort' => 'weight',
@@ -554,7 +616,7 @@ function ct_organization_field_default_field_instances() {
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
-      'type' => 'synonyms_select_taxonomy_term',
+      'type' => 'options_select',
       'weight' => 109,
     ),
   );
@@ -580,11 +642,17 @@ function ct_organization_field_default_field_instances() {
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 3,
       ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -597,11 +665,12 @@ function ct_organization_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'synonyms',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => '',
         'sort' => 'weight',
       ),
-      'type' => 'synonyms_select_taxonomy_term',
+      'type' => 'options_select',
       'weight' => 110,
     ),
   );
@@ -627,6 +696,12 @@ function ct_organization_field_default_field_instances() {
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 3,
       ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'search_result' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
@@ -638,7 +713,7 @@ function ct_organization_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -651,8 +726,9 @@ function ct_organization_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'synonyms',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => '',
         'auto_creation' => 0,
         'size' => 60,
         'sort' => 'weight',
@@ -660,7 +736,7 @@ function ct_organization_field_default_field_instances() {
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'synonyms_select_taxonomy_term',
+      'type' => 'options_select',
       'weight' => 5,
     ),
   );
@@ -687,6 +763,12 @@ function ct_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
+      ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
