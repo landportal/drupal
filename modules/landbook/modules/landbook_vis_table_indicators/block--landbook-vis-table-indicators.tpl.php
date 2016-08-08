@@ -44,12 +44,12 @@
           <option data-localize="inputs.indicators">Select an indicator...</option>
         </select>
       </div>
-      <div class="form-group col-xs-3 col-sm-3">
+      <div class="form-group col-xs-5 col-sm-3">
         <select name="year" class="form-control" disabled="disabled">
           <option data-localize="inputs.years">Year...</option>
         </select>
       </div>
-      <div class="form-group col-xs-2 col-sm-3">
+      <div class="form-group col-xs-7 col-sm-3">
         <input type="submit" name="add" value="Add" class="btn btn-primary" data-localize="inputs.addindicator"/>
       </div>
     </form>

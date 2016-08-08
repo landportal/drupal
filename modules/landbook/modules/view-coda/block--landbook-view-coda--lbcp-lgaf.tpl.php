@@ -11,7 +11,7 @@
       <?php endif;?>
       <div class="row">
         <form>
-          <div class="form-group col-xs-3 col-sm-2">
+          <div class="form-group col-xs-6 col-sm-2">
             <select name="year" class="form-control" disabled="disabled">
               <option data-localize="inputs.subpanels">Year</option>
             </select>

@@ -19,17 +19,17 @@
               <option data-localize="inputs.scountry">Select country ...</option>
             </select>
           </div>
-          <div class="form-group col-xs-3 col-sm-2">
+          <div class="form-group col-xs-6 col-sm-2">
             <select name="year[from]" class="form-control" disabled="disabled">
               <option data-localize="inputs.speriodfrom">From year ...</option>
             </select>
           </div>
-          <div class="form-group col-xs-3 col-sm-2">
+          <div class="form-group col-xs-6 col-sm-2">
             <select name="year[to]" class="form-control" disabled="disabled">
               <option data-localize="inputs.speriodto">To year ...</option>
             </select>
           </div>
-          <div class="form-group col-xs-3 col-sm-2">
+          <div class="form-group col-xs-6 col-sm-2">
             <input type="submit" name="add" value="Add country" class="btn btn-primary" data-localize="inputs.addtocompare"/>
           </div>
         </form>
