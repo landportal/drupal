@@ -16419,29 +16419,27 @@ section a:focus {
   background: url("../images/sh-googleplus.png") no-repeat 0 0;
 }
 
-/*
-#block-views-landbook-countries-related-block-4{
-    @media only screen and (max-width: 767px){
-        .views-view-grid{
-            td{
-                padding:0 15px;
-                min-width: 200px;
-                display:block;
-                float:left;
-                min-height: 220px;
-
-                article{
-                    display: inline-block;
-                    line-height: 130px;
-                }
-            }
-        }
-    }
+@media only screen and (max-width: 767px) {
+  /* line 1295, ../scss/modules/_book.scss */
+  #block-views-landbook-countries-related-block-4 .views-view-grid td {
+    padding: 0 15px;
+    min-width: 200px;
+    display: block;
+    float: left;
+    min-height: 220px;
+  }
+  /* line 1302, ../scss/modules/_book.scss */
+  #block-views-landbook-countries-related-block-4 .views-view-grid td article {
+    display: inline-block;
+    line-height: 130px;
+  }
 }
 
-.messages.error{
-    overflow: hidden;
-}*/
+/* line 1311, ../scss/modules/_book.scss */
+.messages.error {
+  overflow: hidden;
+}
+
 /* line 1, ../scss/modules/_users.scss */
 .profile {
   text-align: left;
