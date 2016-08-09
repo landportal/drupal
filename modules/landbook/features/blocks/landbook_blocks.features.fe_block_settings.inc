@@ -47,6 +47,76 @@ function landbook_blocks_default_fe_block_settings() {
     'visibility' => 1,
   );
 
+  $export['block-infografic'] = array(
+    'cache' => -1,
+    'css_class' => ' note-infografic note',
+    'custom' => 0,
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'machine_name' => 'infografic',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'landportal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'landportal',
+        'weight' => -18,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
+  $export['block-spider_note'] = array(
+    'cache' => -1,
+    'css_class' => 'spider-note note col-md-10 col-md-offset-1',
+    'custom' => 0,
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'machine_name' => 'spider_note',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'landportal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'landportal',
+        'weight' => -10,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
   $export['landportal_blocks-lp_share'] = array(
     'cache' => 1,
     'css_class' => 'social-block',

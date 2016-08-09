@@ -16483,6 +16483,26 @@ section a:focus {
   margin-bottom: 60px;
 }
 
+/* line 1347, ../scss/modules/_book.scss */
+.note {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 60px;
+}
+/* line 1352, ../scss/modules/_book.scss */
+.note p {
+  margin: 5px 0 0 0;
+}
+/* line 1356, ../scss/modules/_book.scss */
+.note a {
+  color: #A3C642;
+}
+/* line 1359, ../scss/modules/_book.scss */
+.note a:hover {
+  color: #617724;
+  text-decoration: none;
+}
+
 /* line 1, ../scss/modules/_users.scss */
 .profile {
   text-align: left;

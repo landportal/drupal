@@ -52,7 +52,10 @@
           </ul>
         </div>
         <div class="col-xs-12">
-          <p>Note: Some Indicators might have multiple values (e.g. Green-Orange), which might refers to different localities or categories of people. For more information please refers to specific country reports and to the methodology made available by the original data source/provider: <a href="http://go.worldbank.org/21M7S7AZO0" target="_blank">The Land GovernanceAssessment Framework (LGAF) website of the World Bank</a></p>
+         <?php $block = block_load('block', 4);
+          $block = _block_render_blocks(array($block));
+          $block_build = _block_get_renderable_array($block);
+          echo drupal_render($block_build);?>
         </div>
       </div>
     </section>

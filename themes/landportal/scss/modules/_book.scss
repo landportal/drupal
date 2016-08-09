@@ -1343,3 +1343,22 @@ section a{
     padding:15px 0 5px 0;
     margin-bottom: 60px;
 }
+
+.note{
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 60px;
+
+    p{
+        margin:5px 0 0 0;
+    }
+
+    a{
+        color:$green-light;
+
+        &:hover{
+            color:$green-dark;
+            text-decoration: none;
+        }
+    }
+}
