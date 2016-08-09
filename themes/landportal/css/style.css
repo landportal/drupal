@@ -16124,7 +16124,7 @@ section a:focus {
 }
 /* line 978, ../scss/modules/_book.scss */
 .node-landbook-country .sources {
-  /*border-bottom: 1px solid #d3d7d9;*/
+  border-bottom: 1px solid #d6dbdc;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -16533,6 +16533,39 @@ section a:focus {
 .note a:hover {
   color: #617724;
   text-decoration: none;
+}
+
+/* line 1394, ../scss/modules/_book.scss */
+.pdf-block {
+  background: #F0F0F0;
+  padding-top: 40px;
+  border-top: 1px solid #f0f0f0;
+  padding-bottom: 42px;
+}
+/* line 1400, ../scss/modules/_book.scss */
+.pdf-block .cb-right-2 {
+  border-right: 1px solid #d6dbdc;
+}
+/* line 1403, ../scss/modules/_book.scss */
+.pdf-block .txt-c {
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+}
+/* line 1407, ../scss/modules/_book.scss */
+.pdf-block .txt-c a {
+  color: #A3C642;
+}
+/* line 1410, ../scss/modules/_book.scss */
+.pdf-block .txt-c a:hover {
+  color: #617724;
+  text-decoration: none;
+}
+/* line 1414, ../scss/modules/_book.scss */
+.pdf-block .txt-c a img {
+  margin: 0 auto;
+  vertical-align: middle;
+  display: block;
+  margin-bottom: 10px;
 }
 
 /* line 1, ../scss/modules/_users.scss */

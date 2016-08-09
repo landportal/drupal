@@ -64,6 +64,23 @@ function landportal_preprocess_html(&$variables) {
       }
     }
   }
+
+  if (!empty($_GET['pdf'])) {
+    $meta = array(
+      'url' => url(current_path(), array('absolute' => true)),
+      'name' => 'author',
+      'title' => drupal_get_title(),
+      'node' => new stdClass()
+    );
+    module_load_include('inc', 'print_pdf');
+    header('Cache-Control: private');
+    header('Content-Type: application/pdf');
+
+    $html = render($variables['page']['content']);
+    print print_pdf_generate_html($html, $meta);
+
+    flush();
+  }
 }
 
 /**

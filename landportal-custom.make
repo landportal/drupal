@@ -92,3 +92,7 @@ libraries:
     download:
       type: "git"
       url: "https://github.com/landportal/js-view-coda"
+  dompdf:
+    download:
+      type: "file"
+      url: "https://github.com/dompdf/dompdf/releases/download/v0.6.2/dompdf-0.6.2.zip"

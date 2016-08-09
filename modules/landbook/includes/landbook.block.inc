@@ -55,6 +55,14 @@ function landbook_block_info() {
         'pages'           => "book/countries/*",
         'weight'      => -40
     );
+    $blocks['country_pdf_block'] = array(
+        'info' => t('Landbook country page pdf block'),
+        'status' => TRUE,
+        'region' => 'content',
+        'visibility'      => BLOCK_VISIBILITY_LISTED,
+        'pages'           => "book/countries/*",
+        'weight'      => -48
+    );
     return $blocks;
 }
 
@@ -82,8 +90,19 @@ function landbook_block_view($delta = '') {
         $block['content'] = array('#theme' => 'country_navigation_block');
         $block['country_info'] = landbook_get_country_info();
         break;
+    case 'country_pdf_block' :
+        $block['subject'] = '';
+        $block['content'] = array('#theme' => 'country_pdf_block');
+        $block['pdf_url'] = landbook_get_pdf_url();
+        break;
     }
     return $block;
+}
+
+function landbook_get_pdf_url(){
+    $info = landbook_get_country_info();
+    $output = 'book/countries/'.$info['iso'].'?pdf=1';
+    return $output;
 }
 
 function landbook_get_country_info(){
