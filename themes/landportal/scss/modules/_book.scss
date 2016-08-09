@@ -533,7 +533,7 @@ section a{
 
 
     .country-section{
-        overflow-x:hidden;
+        /*overflow-x:hidden;*/
         &.nopadding{
             padding-top:0;
         }
@@ -1311,6 +1311,9 @@ section a{
             }
         }
     }
+}
+#block-views-landbook-countries-related-block-5{
+    overflow-x:hidden; 
 }
 
 .messages.error{

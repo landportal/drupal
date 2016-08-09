@@ -14806,6 +14806,11 @@ div.form-type-checkbox {
   border-bottom: 0;
 }
 
+/* line 168, ../scss/modules/_debate.scss */
+.page-debate #page {
+  overflow-x: hidden;
+}
+
 /**
  * Library resource - Teaser view
  */
@@ -15663,7 +15668,7 @@ section a:focus {
 }
 /* line 535, ../scss/modules/_book.scss */
 .page-book-countries .country-section {
-  overflow-x: hidden;
+  /*overflow-x:hidden;*/
   background: #ffffff;
   border-bottom: 1px solid #f0f0f0;
   padding-top: 60px;
@@ -16438,7 +16443,12 @@ section a:focus {
   }
 }
 
-/* line 1316, ../scss/modules/_book.scss */
+/* line 1315, ../scss/modules/_book.scss */
+#block-views-landbook-countries-related-block-5 {
+  overflow-x: hidden;
+}
+
+/* line 1319, ../scss/modules/_book.scss */
 .messages.error {
   overflow: hidden;
 }
