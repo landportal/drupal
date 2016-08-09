@@ -15,14 +15,6 @@
  * Each block (template file) calls countries_related content view(s)
  */
 function landbook_block_info() {
-    $blocks['disclaimer'] = array(
-        'info' => t('Landbook country page disclaimer'),
-        'status' => TRUE,
-        'region' => 'content',
-        'visibility'      => BLOCK_VISIBILITY_LISTED,
-        'pages'           => "book/countries/*",
-        'weight'      => -10
-    );
     $blocks['media_block'] = array(
         'info' => t('Landbook country page Media'),
         'status' => TRUE,
@@ -55,22 +47,20 @@ function landbook_block_info() {
         'pages'           => "book/countries/*",
         'weight'      => -41
     );
+    $blocks['country_navigation_block'] = array(
+        'info' => t('Landbook country page navigation'),
+        'status' => TRUE,
+        'region' => 'content',
+        'visibility'      => BLOCK_VISIBILITY_LISTED,
+        'pages'           => "book/countries/*",
+        'weight'      => -40
+    );
     return $blocks;
 }
 
 function landbook_block_view($delta = '') {
     $block = array();
     switch ($delta) {
-    case 'disclaimer' :
-        $block['classes'] = 'bg-green';
-        $block['subject'] = '';//t('Disclaimer');
-        $block['content'] = array(
-            '#markup' => landbook_block_body($delta),
-            /* '#attached' => array( */
-            /*     'css' */
-            /* ) */
-        );
-        break;
     case 'media_block' :
         $block['subject'] = t('Media');
         $block['content'] = array('#theme' => 'media_block');
@@ -87,8 +77,29 @@ function landbook_block_view($delta = '') {
         $block['subject'] = '';
         $block['content'] = array('#theme' => 'country_promoted_nodes_block');
         break;
+    case 'country_navigation_block' :
+        $block['subject'] = '';
+        $block['content'] = array('#theme' => 'country_navigation_block');
+        $block['country_info'] = landbook_get_country_info();
+        break;
     }
     return $block;
+}
+
+function landbook_get_country_info(){
+    $output = array();
+    $args = arg();
+    if ($args[0] == 'book' && $args[1] == 'countries' && !empty($args[2])) {
+        $iso = $args[2];
+        $output['iso'] = $iso;
+        $tid = landbook_get_region_iso($iso);
+        $term = taxonomy_term_load($tid);
+        if ($term) {
+            $output['country_name'] = $term->name;
+        }
+    }
+
+    return $output;
 }
 
 function landbook_block_body($name) {

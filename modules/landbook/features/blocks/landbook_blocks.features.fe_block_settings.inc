@@ -12,6 +12,41 @@ function landbook_blocks_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['block-disclaimer_block'] = array(
+    'cache' => -1,
+    'css_class' => 'disclaimer-block',
+    'custom' => 0,
+    'i18n_block_language' => array(),
+    'i18n_mode' => 1,
+    'machine_name' => 'disclaimer_block',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => 'book/countries/*',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'landportal' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'landportal',
+        'weight' => -46,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 1,
+  );
+
   $export['landportal_blocks-lp_share'] = array(
     'cache' => 1,
     'css_class' => 'social-block',

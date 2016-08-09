@@ -21,7 +21,7 @@
         }
       },
       initScrollTo: function(context, settings){
-        $('.node-landbook-country .ul-wrap', context).once('nav-country', function(){
+        $('#country-navigation .ul-wrap', context).once('nav-country', function(){
           var $navContainer = $(this);
           var $link = $navContainer.find('a');
           $link.each(function(index, el) {
@@ -32,7 +32,6 @@
               }
             }
           });
-
 
           $link.on('click', function(event) {
             event.preventDefault();
