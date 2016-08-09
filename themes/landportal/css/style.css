@@ -15747,7 +15747,7 @@ section a:focus {
 }
 /* line 603, ../scss/modules/_book.scss */
 .page-book-countries .country-section .bg-gray {
-  background: transparent -moz-linear-gradient(left center, #f7f7f7 0px, #f7f7f7 62%, transparent 40%) repeat scroll 0 0;
+  background: transparent -moz-linear-gradient(left center, #f7f7f7 0px, #f7f7f7 62.5%, transparent 40%) repeat scroll 0 0;
   overflow-x: hidden;
   /*@media only screen and (max-width: 992px){
               padding-left:15px;
