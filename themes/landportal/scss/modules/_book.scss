@@ -418,6 +418,27 @@ section a{
                                 padding: 10px;
                                 font-size:16px;
                                 font-family: "Merriweather",serif !important;
+                                color:#666;
+
+                                a{
+                                    font-family: "Merriweather",serif;
+                                }
+                                .glyphicon-info-sign{
+                                    background-color: #a3c642;
+                                    border-radius: 50em;
+                                    color: #fff;
+                                    display: inline-block;
+                                    height: 20px;
+                                    line-height: 14px;
+                                    margin-right: 5px;
+                                    text-align: center;
+                                    width: 20px;
+                                    float:right;
+
+                                    &::before{
+                                        content:"i" !important;
+                                    }
+                                }
                             }
                         }
                     }
@@ -580,7 +601,7 @@ section a{
             margin-left:30px;
         }
         .bg-gray{
-            background: rgba(0, 0, 0, 0) -moz-linear-gradient(left center , #f7f7f7 0px, #f7f7f7 63%, transparent 40%) repeat scroll 0 0;
+            background: rgba(0, 0, 0, 0) -moz-linear-gradient(left center , #f7f7f7 0px, #f7f7f7 62%, transparent 40%) repeat scroll 0 0;
             overflow-x:hidden; 
 
             .bg-media{
@@ -853,7 +874,6 @@ section a{
         border: 1px solid $green-light;
         display: inline-block;
         list-style-type: none;
-        margin: 0;
         padding: 0;
         font-family: "Open Sans",sans-serif;
         margin-bottom: 20px;
@@ -869,7 +889,7 @@ section a{
             color: #91b135;
             text-decoration: none;
             display:block;
-            font-size:0.75em;
+            font-size:12px;
           }
           a:hover,
           a:focus{
@@ -903,6 +923,9 @@ section a{
 }
 
 .node-landbook-country {
+    font-size:16px;
+    font-family: "Merriweather",serif;
+    color:#666;
     .field-collection-container{
         color: #666;
         font-family: "Merriweather",serif;
@@ -954,20 +977,25 @@ section a{
     }
     .sources{
         /*border-bottom: 1px solid #d3d7d9;*/
-        padding-top: 20px;
+        padding-top: 10px;
         padding-bottom: 10px;
 
         .field-label{
             font-family: "Open Sans",sans-serif;
             color: #999;
             font-size:12px;
-            font-weight: none;
+            font-weight: 400;
             font-style: normal;
             text-transform: uppercase;
         }
         span{
             font-family: "Merriweather",serif;
             font-size: 16px;
+
+            a{
+                font-family: "Merriweather",serif;
+                font-size: 16px;
+            }
         }
     }
 }
