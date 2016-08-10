@@ -36,9 +36,9 @@ function landbook_help($path, $arg) {
 
 // Hook country narrative page
 function landbook_page_build(&$page) {
-    $e = explode('/', $_GET['q']);
-    if ($e[0] == 'book' && $e[1] == 'countries') {
-        landbook_country_narrative($e[2]);
+  $args = arg();
+    if ($args[0] == 'book' && $args[1] == 'countries') {
+        landbook_country_narrative($args[2]);
     }
 }
 

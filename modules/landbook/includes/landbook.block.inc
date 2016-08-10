@@ -101,7 +101,7 @@ function landbook_block_view($delta = '') {
 
 function landbook_get_pdf_url(){
     $info = landbook_get_country_info();
-    $output = 'book/countries/'.$info['iso'].'?pdf=1';
+    $output = $info['iso'].'?pdf=1';
     return $output;
 }
 

@@ -76,7 +76,15 @@ function landportal_preprocess_html(&$variables) {
     header('Cache-Control: private');
     header('Content-Type: application/pdf');
 
-    $html = render($variables['page']['content']);
+    $html = '';
+    $exclude_blocks = array('landbook_vis_map_region_map', 'landbook_country_pdf_block', 'landbook_vis_map_world_map');
+    foreach ($variables['page']['content'] as $key => $value) {
+      if (!in_array($key, $exclude_blocks)) {
+        $html.= drupal_render($value);
+      }
+    }
+
+    $html = '<html><body>' . $html . '</body></html>';
     print print_pdf_generate_html($html, $meta);
 
     flush();
