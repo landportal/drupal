@@ -16564,8 +16564,11 @@ section a:focus {
 .pdf-block .txt-c a img {
   margin: 0 auto;
   vertical-align: middle;
-  display: block;
   margin-bottom: 10px;
+}
+/* line 1419, ../scss/modules/_book.scss */
+.pdf-block .txt-c a span {
+  display: block;
 }
 
 /* line 1, ../scss/modules/_users.scss */

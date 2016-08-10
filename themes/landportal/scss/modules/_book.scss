@@ -1414,8 +1414,10 @@ section a{
             img{
                 margin: 0 auto;
                 vertical-align: middle;
-                display:block;
                 margin-bottom: 10px;
+            }
+            span{
+                display:block;
             }
         }
     }
