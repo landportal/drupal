@@ -1339,6 +1339,9 @@ section a{
 }
 
 #block-views-landbook-countries-related-block-4{
+    .views-view-grid{
+        margin: 0 auto;
+    }
     @media only screen and (max-width: 767px){
         .views-view-grid{
             td{
