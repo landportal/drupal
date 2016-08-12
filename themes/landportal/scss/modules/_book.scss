@@ -1361,7 +1361,10 @@ section a{
 }
 #block-views-landbook-countries-related-block-5{
     overflow-x:hidden; 
-
+    .field-name-title{
+        margin-top:10px;  
+        clear:none;
+    }
     .field-name-field-doc-description{
         p{
             color: #999;
@@ -1371,6 +1374,7 @@ section a{
     }
     .field-name-field-doc-creation-date{
         margin:3px 0;
+        clear:none;
         span{
             color: #999;
             font-family: "Merriweather",serif;
@@ -1381,6 +1385,9 @@ section a{
         color: #999;
         font-family: "Merriweather",serif;
         font-size: 16px;
+    }
+    .field-name-field-doc-type{
+        clear:none;
     }
     .more-link{
         float:left;
