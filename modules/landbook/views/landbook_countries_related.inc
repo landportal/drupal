@@ -1,4 +1,4 @@
-<?php 
+<?php
 $view = new view();
 $view->name = 'landbook_countries_related';
 $view->description = 'Landbook countries related content. For each LP content type, show the latest nodes tagged with a given country';
@@ -262,6 +262,7 @@ $handler->display->display_options['defaults']['use_more_always'] = FALSE;
 $handler->display->display_options['defaults']['use_more_always'] = FALSE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+$handler->display->display_options['use_more_text'] = 'Find more resources in the Land Library';
 $handler->display->display_options['defaults']['link_display'] = FALSE;
 $handler->display->display_options['link_display'] = 'custom_url';
 $handler->display->display_options['defaults']['exposed_form'] = FALSE;

@@ -761,7 +761,6 @@ section a{
                         }
                     }
                 }
-                padding-bottom: 0;
                 border-bottom:1px solid $grey-bglight;
                 .description-resource{
 
@@ -1359,6 +1358,28 @@ section a{
 }
 #block-views-landbook-countries-related-block-5{
     overflow-x:hidden; 
+
+    .field-name-field-doc-description{
+        p{
+            color: #999;
+            font-family: "Merriweather",serif;
+            font-size: 16px;
+        }
+    }
+    .field-name-field-doc-creation-date{
+        margin:3px 0;
+        span{
+            color: #999;
+            font-family: "Merriweather",serif;
+            font-size: 16px;
+        }
+    }
+    .more-link{
+        float:left;
+        clear:both;
+        margin-left: 15px;
+        margin-top: 5px;
+    }
 }
 
 .messages.error{
