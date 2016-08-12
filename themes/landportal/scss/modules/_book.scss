@@ -205,6 +205,7 @@ section a{
                     padding-bottom: 0px;
                   .views-row {
                     position: relative;
+                    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
                     @media(min-width:768px){
                       position: relative;
                       float: left;
