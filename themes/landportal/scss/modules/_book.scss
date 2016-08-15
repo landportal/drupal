@@ -1365,6 +1365,12 @@ section a{
         margin-top:10px;  
         clear:none;
     }
+    .field-name-field-doc-provider{
+        @media(max-width:768px){
+            margin-left:0;
+            float: left;
+        }
+    }
     .field-name-field-doc-description{
         p{
             color: #999;
