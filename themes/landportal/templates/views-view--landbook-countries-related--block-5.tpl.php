@@ -45,21 +45,21 @@
     </div>
   <?php endif; ?>
 
+  <?php if ($exposed): ?>
+    <div class="view-filters col-md-4 left-col">
+      <h2><?php print t('Refine results'); ?></h2>
+      <?php print $exposed; ?>
+    </div>
+  <?php endif; ?>
+
   <?php if ($rows): ?>
-    <div class="view-content col-md-8">
+    <div class="view-content col-md-8 right-col">
       <h2><?php print t('Resources from the land library'); ?></h2>
       <?php print $rows; ?>
     </div>
   <?php elseif ($empty): ?>
-    <div class="view-empty col-md-8">
+    <div class="view-empty col-md-8 right-col">
       <?php print $empty; ?>
-    </div>
-  <?php endif; ?>
-
-  <?php if ($exposed): ?>
-    <div class="view-filters col-md-4">
-      <h2><?php print t('Refine results'); ?></h2>
-      <?php print $exposed; ?>
     </div>
   <?php endif; ?>
 

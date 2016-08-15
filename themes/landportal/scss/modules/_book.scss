@@ -1402,10 +1402,16 @@ section a{
         clear:none;
     }
     .more-link{
-        float:left;
+        float:right;
         clear:both;
         margin-left: 15px;
         margin-top: 5px;
+    }
+    .left-col{
+        float:right;
+        @media only screen and (max-width: 767px){
+            float:left;
+        }
     }
     @media only screen and (max-width: 767px){
         .view-filters{

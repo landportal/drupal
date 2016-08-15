@@ -287,8 +287,8 @@ $handler->display->display_options['empty']['area']['id'] = 'area';
 $handler->display->display_options['empty']['area']['table'] = 'views';
 $handler->display->display_options['empty']['area']['field'] = 'area';
 $handler->display->display_options['empty']['area']['empty'] = TRUE;
-$handler->display->display_options['empty']['area']['content'] = 'No result';
-$handler->display->display_options['empty']['area']['format'] = 'filtered_html';
+$handler->display->display_options['empty']['area']['content'] = 'Currently there are no resources in the Land Library for this country. <a href=" /library/contribute">Help us populate the Land Library by contributing!</a>';
+$handler->display->display_options['empty']['area']['format'] = 'full_html';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
