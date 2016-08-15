@@ -16609,27 +16609,33 @@ section a:focus {
 .pdf-block .cb-right-2 {
   border-right: 1px solid #d6dbdc;
 }
-/* line 1453, ../scss/modules/_book.scss */
+@media only screen and (max-width: 767px) {
+  /* line 1450, ../scss/modules/_book.scss */
+  .pdf-block .cb-right-2 {
+    margin-bottom: 20px;
+  }
+}
+/* line 1456, ../scss/modules/_book.scss */
 .pdf-block .txt-c {
   font-family: "Open Sans",sans-serif;
   font-size: 14px;
 }
-/* line 1457, ../scss/modules/_book.scss */
+/* line 1460, ../scss/modules/_book.scss */
 .pdf-block .txt-c a {
   color: #A3C642;
 }
-/* line 1460, ../scss/modules/_book.scss */
+/* line 1463, ../scss/modules/_book.scss */
 .pdf-block .txt-c a:hover {
   color: #617724;
   text-decoration: none;
 }
-/* line 1464, ../scss/modules/_book.scss */
+/* line 1467, ../scss/modules/_book.scss */
 .pdf-block .txt-c a img {
   margin: 0 auto;
   vertical-align: middle;
   margin-bottom: 10px;
 }
-/* line 1469, ../scss/modules/_book.scss */
+/* line 1472, ../scss/modules/_book.scss */
 .pdf-block .txt-c a span {
   display: block;
 }
