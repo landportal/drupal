@@ -298,5 +298,10 @@ margin-bottom:10px;
 .node-landlibrary-resource.node-teaser.ds-2col-fluid {
     padding: .5em 0;
     .group-left { width: 30%; }
-    .group-right { width: 70%; }
+    .group-right { width: 70%;
+      @media only screen and (max-width: 767px){
+        width: 65%;
+        margin-left: 10px;
+      }
+    }
 }

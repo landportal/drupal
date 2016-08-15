@@ -206,7 +206,7 @@ function user_menu_feature_menu_default_menu_links() {
   $menu_links['user-menu_add-person:node/add/person'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'node/add/person',
-    'router_path' => 'node/add/person',
+    'router_path' => 'node/add',
     'link_title' => 'Add Person',
     'options' => array(
       'attributes' => array(
@@ -240,7 +240,7 @@ function user_menu_feature_menu_default_menu_links() {
       'identifier' => 'user-menu_contribute:node/add',
     ),
     'module' => 'menu',
-    'hidden' => 1,
+    'hidden' => 0,
     'external' => 0,
     'has_children' => 1,
     'expanded' => 0,

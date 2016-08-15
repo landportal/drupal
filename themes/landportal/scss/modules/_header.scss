@@ -5,6 +5,10 @@
   .menu-top{
     padding: 50px 50px;
 
+    @media only screen and (max-width: 767px){
+      padding: 50px 0px;
+    }
+
     h2{
       text-shadow:none;
       font-family: "News Cycle",sans-serif;
@@ -105,7 +109,8 @@
         width: 100%;
       }
     }
-    >.col-lg-2{
+    >.col-lg-2,
+    >.col-md-2{
       #logo{
         img{
           margin-top:5px;
@@ -283,6 +288,11 @@
   float: right;
   @media only screen and (max-width: 992px){
     float: none;
+  }
+  @media only screen and (max-width: 768px){
+    position: absolute;
+    right: 0;
+    top: -35px;
   }
   form{
     margin: 0;
