@@ -15453,7 +15453,7 @@ section a:focus {
 }
 /* line 306, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#reletad-content {
-  margin-bottom: -130px;
+  margin-bottom: 130px;
 }
 /* line 309, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#country-navigation {
