@@ -10,7 +10,7 @@
           </a>
         </div>
         <div class="col-sm-4 txt-c">
-          <a class="displayb" href="#">
+          <a class="displayb" href="/contact-us">
           <img class="c-obj" alt="Download PDF country" src="<?php print '/'.$theme_path.'/images/ico-feedback.svg';?>">
           <span class="displayb txt-m m-s-top fos" data-localize="global.feedback">Give us your feedback</span>
           </a>
