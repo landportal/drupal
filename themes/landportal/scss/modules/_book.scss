@@ -1365,6 +1365,12 @@ section a{
         margin-top:10px;  
         clear:none;
     }
+    .node-landlibrary-resource.node-teaser{
+        h2{
+            font-size: 16px;
+            line-height: 1.42857;
+        }
+    }
     .field-name-field-doc-provider{
         @media(max-width:768px){
             margin-left:0;
