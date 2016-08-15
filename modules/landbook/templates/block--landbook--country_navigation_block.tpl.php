@@ -19,7 +19,7 @@
             <div class="ul-wrap">
               <ul class="nav-inside-country">
                 <li>
-                  <a href="#"><?php print t('The country'); ?></a>
+                  <a href="#"><?php print t('Country Narrative'); ?></a>
                 </li>
                 <li>
                   <a href="#table-indicators"><?php print t('Indicators'); ?></a>
