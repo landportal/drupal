@@ -206,6 +206,7 @@ function landbook_views_pre_render(&$view) {
 
 function landbook_form_alter(&$form, &$form_state, $form_id){
   if($form_id == 'news_node_form'  || $form_id == 'blog_post_node_form' || $form_id == 'debate_node_form' || $form_id == 'event_node_form'){
+    drupal_add_js(drupal_get_path('module', 'landbook') . '/js/landbook.js');
     $terms=array('0'=>'--None--');
     $countries=taxonomy_get_tree(3);
     foreach ($countries as $country) {
