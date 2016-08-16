@@ -257,7 +257,7 @@ $handler->display->display_options['defaults']['use_more'] = FALSE;
 $handler->display->display_options['use_more'] = TRUE;
 $handler->display->display_options['defaults']['use_more_always'] = FALSE;
 $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['use_more_always'] = TRUE;
 $handler->display->display_options['defaults']['use_more_text'] = FALSE;
 $handler->display->display_options['use_more_text'] = 'Find more resources in the Land Library';
 $handler->display->display_options['defaults']['link_display'] = FALSE;
@@ -368,13 +368,6 @@ $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['empty'] = FALSE;
-/* No results behavior: Global: Text area */
-$handler->display->display_options['empty']['area']['id'] = 'area';
-$handler->display->display_options['empty']['area']['table'] = 'views';
-$handler->display->display_options['empty']['area']['field'] = 'area';
-$handler->display->display_options['empty']['area']['empty'] = TRUE;
-$handler->display->display_options['empty']['area']['content'] = ' ';
-$handler->display->display_options['empty']['area']['format'] = 'filtered_html';
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -396,16 +389,6 @@ $handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_link' => 'content',
 );
 $handler->display->display_options['defaults']['arguments'] = FALSE;
-/* Contextual filter: Content: Has taxonomy term ID */
-$handler->display->display_options['arguments']['tid']['id'] = 'tid';
-$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-$handler->display->display_options['arguments']['tid']['field'] = 'tid';
-$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
-$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-$handler->display->display_options['arguments']['tid']['default_argument_options']['argument'] = '1';
-$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
@@ -438,3 +421,11 @@ $handler->display->display_options['filters']['promoted_to_country_page']['id'] 
 $handler->display->display_options['filters']['promoted_to_country_page']['table'] = 'node';
 $handler->display->display_options['filters']['promoted_to_country_page']['field'] = 'promoted_to_country_page';
 $handler->display->display_options['filters']['promoted_to_country_page']['value'] = '1';
+/* Filter criterion: Content: Country Promoted (field_country_promoted) */
+$handler->display->display_options['filters']['field_country_promoted_tid']['id'] = 'field_country_promoted_tid';
+$handler->display->display_options['filters']['field_country_promoted_tid']['table'] = 'field_data_field_country_promoted';
+$handler->display->display_options['filters']['field_country_promoted_tid']['field'] = 'field_country_promoted_tid';
+$handler->display->display_options['filters']['field_country_promoted_tid']['value'] = array(
+  0 => '13',
+);
+$handler->display->display_options['filters']['field_country_promoted_tid']['vocabulary'] = 'countries';

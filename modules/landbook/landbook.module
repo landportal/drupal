@@ -66,8 +66,14 @@ function landbook_country_narrative($iso3) {
 function landbook_views_query_alter(&$view, &$query){
     if(!empty($view->name) && $view->name=='landbook_countries_related'){
         if(arg(0)=='book' && arg(1) == 'countries'){
-            $tid=landbook_get_region_iso(arg(2));
-            $query->where[0]['conditions'][0]['value']=$tid;
+            if($view->current_display != 'block_6'){
+              $tid=landbook_get_region_iso(arg(2));
+              $query->where[0]['conditions'][0]['value']=$tid;//pa($query,1);
+            }
+            else{
+              $tid=landbook_get_country_iso(arg(2));
+              $query->where[1]['conditions'][4]['value']=$tid;
+            }
         }
     }
 }
@@ -77,6 +83,16 @@ function landbook_get_region_iso($iso){
       ->fields('t', array('entity_id'))
       ->condition('t.field_iso3_value', $iso)
       ->condition('t.bundle', 'regions')
+      ->execute()
+      ->fetchField();
+    return $tid;
+}
+
+function landbook_get_country_iso($iso){
+    $tid = db_select('field_data_field_iso3', 't')
+      ->fields('t', array('entity_id'))
+      ->condition('t.field_iso3_value', $iso)
+      ->condition('t.bundle', 'countries')
       ->execute()
       ->fetchField();
     return $tid;
@@ -185,5 +201,36 @@ function landbook_views_pre_render(&$view) {
         }
       }
     }
+  }
+}
+
+function landbook_form_alter(&$form, &$form_state, $form_id){
+  if($form_id == 'news_node_form'  || $form_id == 'blog_post_node_form' || $form_id == 'debate_node_form' || $form_id == 'event_node_form'){
+    $terms=array('0'=>'--None--');
+    $countries=taxonomy_get_tree(3);
+    foreach ($countries as $country) {
+      $terms[$country->tid]=$country->name;
+    }
+    $default_values=$form['#node']->field_country_promoted['und'];
+    foreach ($default_values as $value) {
+      $default[]=$value['tid'];
+    }
+    $form['options']['promoted_nodes']=array(
+      '#type'=>'select',
+      '#weight'=>6,
+      '#options'=>$terms,
+      '#multiple'=>TRUE,
+      '#default_value'=>$default,
+    );
+    array_unshift($form['#submit'],'landbook_save_promoted_nodes');
+    //unset($form['field_country_promoted']);
+    $form['field_country_promoted']['#access']=FALSE;
+  }
+}
+
+function landbook_save_promoted_nodes(&$form, &$form_state){
+  $form_state['values']['field_country_promoted']['und']=array();
+  foreach($form_state['values']['promoted_nodes'] as $value){
+    $form_state['values']['field_country_promoted']['und'][]['tid']=$value;
   }
 }
