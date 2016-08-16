@@ -203,18 +203,22 @@ section a{
                 padding-bottom: 60px;
                 &#reletad-content{
                     padding-bottom: 0px;
-                  .views-row {
-                    position: relative;
-                    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
-                    @media(min-width:768px){
-                      position: relative;
-                      float: left;
-                      width: 33.25%;
-                      margin-right: 1px;
+                    .view-content{
+                        text-align: center;
+                      .views-row {
+                        position: relative;
+                        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+                        @media(min-width:768px){
+                          position: relative;
+                          /*float: left;*/
+                          width: 33.25%;
+                          margin-right: -3px;
+                          display:inline-block;
 
-                      &:last-child{
-                        margin-right: 0;
-                      }
+                          &:last-child{
+                            margin-right: 0;
+                          }
+                        }
                     }
 
                     .views-field-title {
@@ -224,6 +228,7 @@ section a{
                       padding: 0.5em 1em;
                       padding-bottom:30px;
                       bottom: 0;
+                      text-align: left;
                     }
                     a {
                       text-decoration: none;
@@ -234,8 +239,12 @@ section a{
                       overflow: hidden; 
                     }
                     img {
-                        width: 100%;
+                        width: auto;
                         height: auto;
+                        min-height: 260px;
+                        @media(max-width:768px){
+                            width: 100%;
+                        }
                     }
                   }
                   &:after {
@@ -304,11 +313,13 @@ section a{
                     padding-bottom: 0px;
                 }
                 &#reletad-content{
-                    margin-bottom: 130px;
+                    margin-top:-130px;
+                    min-height: 260px;
                 }
                 &#country-navigation{
                     background-color: $grey-bglight;
-                    margin-top: -130px;
+                    margin-top: -135px;
+                    padding-top: 130px;
                     header{
                         margin-top: -25px;
                         h2{
@@ -1496,4 +1507,8 @@ section a{
             }
         }
     }
+}
+
+#map-local-wrapper{
+    height: 470px;
 }
