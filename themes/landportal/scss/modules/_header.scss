@@ -86,7 +86,7 @@
 }
 .contributor-role{
   #header{
-    padding:12px 4em 0 0;
+    padding:6px 50px  10px 0 !important;
     >.section{
       >.col-lg-8{
         @media only screen and (max-width: 1700px){
@@ -103,7 +103,7 @@
 }
 
 #header{
-  padding:12px 0 0 0;
+  padding:6px 0  10px 0 !important;
   @media only screen and (max-width: 768px){
     padding:0.8em 0.5em !important;
   }
@@ -117,7 +117,7 @@
     >.col-md-2{
       #logo{
         img{
-          margin-top:7px;
+          margin-top:9px;
         }
       }
       @media only screen and (max-width: 1400px){
@@ -126,7 +126,7 @@
     }
   }
   .block{
-    margin-bottom: 12px;
+    /*margin-bottom: 12px;*/
   }
 
   li{
@@ -207,8 +207,12 @@
   .main-menu{
     @media only screen and (max-width: 992px){
       float: left;
+      margin-top:5px;
     }
-    margin-top:14px;
+    margin-top:15px;
+    @media only screen and (max-width: 1200px){
+      margin-left:0;
+    }
     ul{
       li{
         font-size:14px;
@@ -219,7 +223,7 @@
     form{
       margin: 0;
     }
-    margin-top: 6px;
+    margin-top: 4px;
     margin-bottom: 0;
     float: right;
     @media only screen and (max-width: 992px){
@@ -230,7 +234,7 @@
         background: #F7F7F7;
         border-radius: 20px;
         border: 1px solid #a7a7a7;
-        padding: 10px 10px;
+        padding: 9px 9px;
         padding-left: 30px;
         color:#A7A7A7;
         font-weight: bold;
@@ -293,8 +297,6 @@
   float: right;
   @media only screen and (max-width: 992px){
     float: none;
-  }
-  @media only screen and (max-width: 768px){
     position: absolute;
     right: 0;
     top: -35px;
