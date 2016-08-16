@@ -63,7 +63,7 @@
         <?php print render($title_prefix); ?>
         <?php print render($title_suffix); ?>
         <h3><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
-        <span class="created"><?php print t('On ').date('D j, M, Y',$node->created); ?></span>
+        <span class="created"><?php print t('On ').date('D, M j, Y',$node->created); ?></span>
         <div class="text">
             <?php print render($content['body']); ?>
         </div>
