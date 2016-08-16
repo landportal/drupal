@@ -205,6 +205,7 @@ section a{
                     padding-bottom: 0px;
                     .view-content{
                         text-align: center;
+                        margin-bottom: -5px;
                       .views-row {
                         position: relative;
                         box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
@@ -319,7 +320,7 @@ section a{
                 &#country-navigation{
                     background-color: $grey-bglight;
                     margin-top: -135px;
-                    padding-top: 130px;
+                    padding-top: 135px;
                     header{
                         margin-top: -25px;
                         h2{
