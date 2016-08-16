@@ -6,6 +6,7 @@
         Drupal.behaviors.landportal.initScrollTo(context, settings);
         Drupal.behaviors.landportal.initShowInfo(context, settings);
         Drupal.behaviors.landportal.initSearchBlock(context, settings);
+        Drupal.behaviors.landportal.showSpiderBlock(context, settings);
       },
       initRegistrationForm: function(context, settings){
         isVisibleNewsletterLanguage();
@@ -73,6 +74,18 @@
             $form.removeClass( "active" );
           });
         });
+      },
+      showSpiderBlock: function(context, settings){
+        $.ajax({
+        success: function(){
+          if($('#wrapper-spiderchart').html() == ''){
+            $('.spider-note').hide();
+          }
+          else{
+            $('.spider-note').show();
+          }
+        }
+      });
       }
     };
     function isVisibleNewsletterLanguage(){
