@@ -5,7 +5,7 @@
         Drupal.behaviors.landportal.initSearchSuggestions(context, settings);
         Drupal.behaviors.landportal.initScrollTo(context, settings);
         Drupal.behaviors.landportal.initShowInfo(context, settings);
-        Drupal.behaviors.landportal.initSearchBlock(context, settings);
+        //Drupal.behaviors.landportal.initSearchBlock(context, settings);
         Drupal.behaviors.landportal.showSpiderBlock(context, settings);
       },
       initRegistrationForm: function(context, settings){

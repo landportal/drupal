@@ -420,5 +420,5 @@ function landportal_utility_mailchimp_user_update($form, &$form_state){
 }
 
 function landportal_utility_form_search_block_form_alter(&$form, &$form_state){
-  $form['search_block_form']['#attributes'] = array('placeholder' => array(t('Type here...')));
+  $form['search_block_form']['#attributes'] = array('placeholder' => array(t('Search')));
 }
