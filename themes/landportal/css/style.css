@@ -17433,7 +17433,7 @@ ul.menu > li li a.active-trail {
 #header ul.language-switcher-locale-url > li:before,
 #header ul.nice-menu > li:before,
 #header ul.menu > li:before {
-  content: "| ";
+  content: "  ";
   display: inline-block;
   padding-right: 6px;
 }

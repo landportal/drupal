@@ -84,7 +84,7 @@ ul.menu {
                 text-transform: lowercase;
             }
             &:before {
-                content: "| ";
+                content: "  ";
                 display: inline-block;
                 padding-right: 6px;
             }
