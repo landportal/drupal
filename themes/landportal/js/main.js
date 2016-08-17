@@ -76,16 +76,17 @@
         });
       },
       showSpiderBlock: function(context, settings){
-        $.ajax({
-        success: function(){
+        var timerId = setInterval(function() {
           if($('#wrapper-spiderchart').html() == ''){
-            $('.spider-note').hide();
-          }
-          else{
-            $('.spider-note').show();
-          }
-        }
-      });
+              $('.spider-note').hide();
+            }
+            else{
+              $('.spider-note').show();
+              setTimeout(function() {
+                clearInterval(timerId);
+              }, 100);
+            }
+        }, 500);
       }
     };
     function isVisibleNewsletterLanguage(){
