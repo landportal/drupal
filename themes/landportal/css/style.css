@@ -16587,7 +16587,7 @@ section a:focus {
 }
 /* line 1428, ../scss/modules/_book.scss */
 #block-views-landbook-countries-related-block-5 .more-link {
-  float: right;
+  float: left;
   clear: both;
   margin-left: 15px;
   margin-top: 5px;
