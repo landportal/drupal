@@ -7,6 +7,8 @@ span.flag {
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
     display: block;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 /* img.flag { */
 /* 	border: 0.03em solid #ccc; */

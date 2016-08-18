@@ -7,6 +7,7 @@
         Drupal.behaviors.landportal.initShowInfo(context, settings);
         //Drupal.behaviors.landportal.initSearchBlock(context, settings);
         Drupal.behaviors.landportal.showSpiderBlock(context, settings);
+        Drupal.behaviors.landportal.initCarousel(context, settings);
       },
       initRegistrationForm: function(context, settings){
         isVisibleNewsletterLanguage();
@@ -87,6 +88,26 @@
               }, 100);
             }
         }, 500);
+      },
+      initCarousel: function(context, settings){
+        $('.view-landbook-countries-related.view-display-id-block_6 .view-content').owlCarousel({
+          center: true,
+          items:3,
+          loop:true,
+          margin:1,
+          responsive:{
+              320:{
+                items:1,
+                loop: false,
+              },
+              768:{
+                items:2
+              },
+              1200:{
+                items:3
+              }
+          }
+        });
       }
     };
     function isVisibleNewsletterLanguage(){

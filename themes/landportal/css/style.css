@@ -12846,6 +12846,8 @@ span.flag {
   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
   display: block;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 /* img.flag { */
@@ -12873,7 +12875,7 @@ span.flag {
 /* 	height: 1.5em; */
 /* 	margin-right: 1em; */
 /* } */
-/* line 40, ../scss/modules/_flags.scss */
+/* line 42, ../scss/modules/_flags.scss */
 .flag-ABW, .flag-AFG, .flag-AGO, .flag-AIA, .flag-ALB,
 .flag-AND, .flag-ARE, .flag-ARG, .flag-ARM, .flag-ASM,
 .flag-ATA, .flag-ATC, .flag-ATF, .flag-ATG, .flag-AUS,
@@ -12928,1459 +12930,1459 @@ span.flag {
   background-image: url("../images/flags.png");
 }
 
-/* line 94, ../scss/modules/_flags.scss */
+/* line 96, ../scss/modules/_flags.scss */
 .flag-ABW {
   background-position: 0 0%;
   background-size: 100%;
 }
 
-/* line 95, ../scss/modules/_flags.scss */
+/* line 97, ../scss/modules/_flags.scss */
 .flag-AFG {
   background-position: 0 0.413223%;
   background-size: 100%;
 }
 
-/* line 96, ../scss/modules/_flags.scss */
+/* line 98, ../scss/modules/_flags.scss */
 .flag-AGO {
   background-position: 0 0.826446%;
   background-size: 100%;
 }
 
-/* line 97, ../scss/modules/_flags.scss */
+/* line 99, ../scss/modules/_flags.scss */
 .flag-AIA {
   background-position: 0 1.239669%;
   background-size: 100%;
 }
 
-/* line 98, ../scss/modules/_flags.scss */
+/* line 100, ../scss/modules/_flags.scss */
 .flag-ALB {
   background-position: 0 1.652893%;
   background-size: 100%;
 }
 
-/* line 99, ../scss/modules/_flags.scss */
+/* line 101, ../scss/modules/_flags.scss */
 .flag-AND {
   background-position: 0 2.066116%;
   background-size: 100%;
 }
 
-/* line 100, ../scss/modules/_flags.scss */
+/* line 102, ../scss/modules/_flags.scss */
 .flag-ARE {
   background-position: 0 2.479339%;
   background-size: 100%;
 }
 
-/* line 101, ../scss/modules/_flags.scss */
+/* line 103, ../scss/modules/_flags.scss */
 .flag-ARG {
   background-position: 0 2.892562%;
   background-size: 100%;
 }
 
-/* line 102, ../scss/modules/_flags.scss */
+/* line 104, ../scss/modules/_flags.scss */
 .flag-ARM {
   background-position: 0 3.305785%;
   background-size: 100%;
 }
 
-/* line 103, ../scss/modules/_flags.scss */
+/* line 105, ../scss/modules/_flags.scss */
 .flag-ASM {
   background-position: 0 3.719008%;
   background-size: 100%;
 }
 
-/* line 104, ../scss/modules/_flags.scss */
+/* line 106, ../scss/modules/_flags.scss */
 .flag-ATA {
   background-position: 0 4.132231%;
   background-size: 100%;
 }
 
-/* line 105, ../scss/modules/_flags.scss */
+/* line 107, ../scss/modules/_flags.scss */
 .flag-ATC {
   background-position: 0 4.545455%;
   background-size: 100%;
 }
 
-/* line 106, ../scss/modules/_flags.scss */
+/* line 108, ../scss/modules/_flags.scss */
 .flag-ATF {
   background-position: 0 4.958678%;
   background-size: 100%;
 }
 
-/* line 107, ../scss/modules/_flags.scss */
+/* line 109, ../scss/modules/_flags.scss */
 .flag-ATG {
   background-position: 0 5.371901%;
   background-size: 100%;
 }
 
-/* line 108, ../scss/modules/_flags.scss */
+/* line 110, ../scss/modules/_flags.scss */
 .flag-AUS {
   background-position: 0 5.785124%;
   background-size: 100%;
 }
 
-/* line 109, ../scss/modules/_flags.scss */
+/* line 111, ../scss/modules/_flags.scss */
 .flag-AUT {
   background-position: 0 6.198347%;
   background-size: 100%;
 }
 
-/* line 110, ../scss/modules/_flags.scss */
+/* line 112, ../scss/modules/_flags.scss */
 .flag-AZE {
   background-position: 0 6.61157%;
   background-size: 100%;
 }
 
-/* line 111, ../scss/modules/_flags.scss */
+/* line 113, ../scss/modules/_flags.scss */
 .flag-BDI {
   background-position: 0 7.024793%;
   background-size: 100%;
 }
 
-/* line 112, ../scss/modules/_flags.scss */
+/* line 114, ../scss/modules/_flags.scss */
 .flag-BEL {
   background-position: 0 7.438017%;
   background-size: 100%;
 }
 
-/* line 113, ../scss/modules/_flags.scss */
+/* line 115, ../scss/modules/_flags.scss */
 .flag-BEN {
   background-position: 0 7.85124%;
   background-size: 100%;
 }
 
-/* line 114, ../scss/modules/_flags.scss */
+/* line 116, ../scss/modules/_flags.scss */
 .flag-BES {
   background-position: 0 8.264463%;
   background-size: 100%;
 }
 
-/* line 115, ../scss/modules/_flags.scss */
+/* line 117, ../scss/modules/_flags.scss */
 .flag-BFA {
   background-position: 0 8.677686%;
   background-size: 100%;
 }
 
-/* line 116, ../scss/modules/_flags.scss */
+/* line 118, ../scss/modules/_flags.scss */
 .flag-BGD {
   background-position: 0 9.090909%;
   background-size: 100%;
 }
 
-/* line 117, ../scss/modules/_flags.scss */
+/* line 119, ../scss/modules/_flags.scss */
 .flag-BGR {
   background-position: 0 9.504132%;
   background-size: 100%;
 }
 
-/* line 118, ../scss/modules/_flags.scss */
+/* line 120, ../scss/modules/_flags.scss */
 .flag-BHR {
   background-position: 0 9.917355%;
   background-size: 100%;
 }
 
-/* line 119, ../scss/modules/_flags.scss */
+/* line 121, ../scss/modules/_flags.scss */
 .flag-BHS {
   background-position: 0 10.330579%;
   background-size: 100%;
 }
 
-/* line 120, ../scss/modules/_flags.scss */
+/* line 122, ../scss/modules/_flags.scss */
 .flag-BIH {
   background-position: 0 10.743802%;
   background-size: 100%;
 }
 
-/* line 121, ../scss/modules/_flags.scss */
+/* line 123, ../scss/modules/_flags.scss */
 .flag-BLM {
   background-position: 0 11.157025%;
   background-size: 100%;
 }
 
-/* line 122, ../scss/modules/_flags.scss */
+/* line 124, ../scss/modules/_flags.scss */
 .flag-BLR {
   background-position: 0 11.570248%;
   background-size: 100%;
 }
 
-/* line 123, ../scss/modules/_flags.scss */
+/* line 125, ../scss/modules/_flags.scss */
 .flag-BLZ {
   background-position: 0 11.983471%;
   background-size: 100%;
 }
 
-/* line 124, ../scss/modules/_flags.scss */
+/* line 126, ../scss/modules/_flags.scss */
 .flag-BMU {
   background-position: 0 12.396694%;
   background-size: 100%;
 }
 
-/* line 125, ../scss/modules/_flags.scss */
+/* line 127, ../scss/modules/_flags.scss */
 .flag-BOL {
   background-position: 0 12.809917%;
   background-size: 100%;
 }
 
-/* line 126, ../scss/modules/_flags.scss */
+/* line 128, ../scss/modules/_flags.scss */
 .flag-BRA {
   background-position: 0 13.22314%;
   background-size: 100%;
 }
 
-/* line 127, ../scss/modules/_flags.scss */
+/* line 129, ../scss/modules/_flags.scss */
 .flag-BRB {
   background-position: 0 13.636364%;
   background-size: 100%;
 }
 
-/* line 128, ../scss/modules/_flags.scss */
+/* line 130, ../scss/modules/_flags.scss */
 .flag-BRN {
   background-position: 0 14.049587%;
   background-size: 100%;
 }
 
-/* line 129, ../scss/modules/_flags.scss */
+/* line 131, ../scss/modules/_flags.scss */
 .flag-BTN {
   background-position: 0 14.46281%;
   background-size: 100%;
 }
 
-/* line 130, ../scss/modules/_flags.scss */
+/* line 132, ../scss/modules/_flags.scss */
 .flag-BWA {
   background-position: 0 14.876033%;
   background-size: 100%;
 }
 
-/* line 131, ../scss/modules/_flags.scss */
+/* line 133, ../scss/modules/_flags.scss */
 .flag-CAF {
   background-position: 0 15.289256%;
   background-size: 100%;
 }
 
-/* line 132, ../scss/modules/_flags.scss */
+/* line 134, ../scss/modules/_flags.scss */
 .flag-CAN {
   background-position: 0 15.702479%;
   background-size: 100%;
 }
 
-/* line 133, ../scss/modules/_flags.scss */
+/* line 135, ../scss/modules/_flags.scss */
 .flag-CHE {
   background-position: 0 16.115702%;
   background-size: 100%;
 }
 
-/* line 134, ../scss/modules/_flags.scss */
+/* line 136, ../scss/modules/_flags.scss */
 .flag-CHL {
   background-position: 0 16.528926%;
   background-size: 100%;
 }
 
-/* line 135, ../scss/modules/_flags.scss */
+/* line 137, ../scss/modules/_flags.scss */
 .flag-CHN {
   background-position: 0 16.942149%;
   background-size: 100%;
 }
 
-/* line 136, ../scss/modules/_flags.scss */
+/* line 138, ../scss/modules/_flags.scss */
 .flag-CIV {
   background-position: 0 17.355372%;
   background-size: 100%;
 }
 
-/* line 137, ../scss/modules/_flags.scss */
+/* line 139, ../scss/modules/_flags.scss */
 .flag-CMR {
   background-position: 0 17.768595%;
   background-size: 100%;
 }
 
-/* line 138, ../scss/modules/_flags.scss */
+/* line 140, ../scss/modules/_flags.scss */
 .flag-COD {
   background-position: 0 18.181818%;
   background-size: 100%;
 }
 
-/* line 139, ../scss/modules/_flags.scss */
+/* line 141, ../scss/modules/_flags.scss */
 .flag-COG {
   background-position: 0 18.595041%;
   background-size: 100%;
 }
 
-/* line 140, ../scss/modules/_flags.scss */
+/* line 142, ../scss/modules/_flags.scss */
 .flag-COK {
   background-position: 0 19.008264%;
   background-size: 100%;
 }
 
-/* line 141, ../scss/modules/_flags.scss */
+/* line 143, ../scss/modules/_flags.scss */
 .flag-COL {
   background-position: 0 19.421488%;
   background-size: 100%;
 }
 
-/* line 142, ../scss/modules/_flags.scss */
+/* line 144, ../scss/modules/_flags.scss */
 .flag-COM {
   background-position: 0 19.834711%;
   background-size: 100%;
 }
 
-/* line 143, ../scss/modules/_flags.scss */
+/* line 145, ../scss/modules/_flags.scss */
 .flag-CPV {
   background-position: 0 20.247934%;
   background-size: 100%;
 }
 
-/* line 144, ../scss/modules/_flags.scss */
+/* line 146, ../scss/modules/_flags.scss */
 .flag-CRI {
   background-position: 0 20.661157%;
   background-size: 100%;
 }
 
-/* line 145, ../scss/modules/_flags.scss */
+/* line 147, ../scss/modules/_flags.scss */
 .flag-CUB {
   background-position: 0 21.07438%;
   background-size: 100%;
 }
 
-/* line 146, ../scss/modules/_flags.scss */
+/* line 148, ../scss/modules/_flags.scss */
 .flag-CUW {
   background-position: 0 21.487603%;
   background-size: 100%;
 }
 
-/* line 147, ../scss/modules/_flags.scss */
+/* line 149, ../scss/modules/_flags.scss */
 .flag-CYM {
   background-position: 0 21.900826%;
   background-size: 100%;
 }
 
-/* line 148, ../scss/modules/_flags.scss */
+/* line 150, ../scss/modules/_flags.scss */
 .flag-CYN {
   background-position: 0 22.31405%;
   background-size: 100%;
 }
 
-/* line 149, ../scss/modules/_flags.scss */
+/* line 151, ../scss/modules/_flags.scss */
 .flag-CYP {
   background-position: 0 22.727273%;
   background-size: 100%;
 }
 
-/* line 150, ../scss/modules/_flags.scss */
+/* line 152, ../scss/modules/_flags.scss */
 .flag-CZE {
   background-position: 0 23.140496%;
   background-size: 100%;
 }
 
-/* line 151, ../scss/modules/_flags.scss */
+/* line 153, ../scss/modules/_flags.scss */
 .flag-DEU {
   background-position: 0 23.553719%;
   background-size: 100%;
 }
 
-/* line 152, ../scss/modules/_flags.scss */
+/* line 154, ../scss/modules/_flags.scss */
 .flag-DJI {
   background-position: 0 23.966942%;
   background-size: 100%;
 }
 
-/* line 153, ../scss/modules/_flags.scss */
+/* line 155, ../scss/modules/_flags.scss */
 .flag-DMA {
   background-position: 0 24.380165%;
   background-size: 100%;
 }
 
-/* line 154, ../scss/modules/_flags.scss */
+/* line 156, ../scss/modules/_flags.scss */
 .flag-DNK {
   background-position: 0 24.793388%;
   background-size: 100%;
 }
 
-/* line 155, ../scss/modules/_flags.scss */
+/* line 157, ../scss/modules/_flags.scss */
 .flag-DOM {
   background-position: 0 25.206612%;
   background-size: 100%;
 }
 
-/* line 156, ../scss/modules/_flags.scss */
+/* line 158, ../scss/modules/_flags.scss */
 .flag-DZA {
   background-position: 0 25.619835%;
   background-size: 100%;
 }
 
-/* line 157, ../scss/modules/_flags.scss */
+/* line 159, ../scss/modules/_flags.scss */
 .flag-ECU {
   background-position: 0 26.033058%;
   background-size: 100%;
 }
 
-/* line 158, ../scss/modules/_flags.scss */
+/* line 160, ../scss/modules/_flags.scss */
 .flag-EGY {
   background-position: 0 26.446281%;
   background-size: 100%;
 }
 
-/* line 159, ../scss/modules/_flags.scss */
+/* line 161, ../scss/modules/_flags.scss */
 .flag-ERI {
   background-position: 0 26.859504%;
   background-size: 100%;
 }
 
-/* line 160, ../scss/modules/_flags.scss */
+/* line 162, ../scss/modules/_flags.scss */
 .flag-ESP {
   background-position: 0 27.272727%;
   background-size: 100%;
 }
 
-/* line 161, ../scss/modules/_flags.scss */
+/* line 163, ../scss/modules/_flags.scss */
 .flag-EST {
   background-position: 0 27.68595%;
   background-size: 100%;
 }
 
-/* line 162, ../scss/modules/_flags.scss */
+/* line 164, ../scss/modules/_flags.scss */
 .flag-ETH {
   background-position: 0 28.099174%;
   background-size: 100%;
 }
 
-/* line 163, ../scss/modules/_flags.scss */
+/* line 165, ../scss/modules/_flags.scss */
 .flag-FIN {
   background-position: 0 28.512397%;
   background-size: 100%;
 }
 
-/* line 164, ../scss/modules/_flags.scss */
+/* line 166, ../scss/modules/_flags.scss */
 .flag-FJI {
   background-position: 0 28.92562%;
   background-size: 100%;
 }
 
-/* line 165, ../scss/modules/_flags.scss */
+/* line 167, ../scss/modules/_flags.scss */
 .flag-FLK {
   background-position: 0 29.338843%;
   background-size: 100%;
 }
 
-/* line 166, ../scss/modules/_flags.scss */
+/* line 168, ../scss/modules/_flags.scss */
 .flag-FRA {
   background-position: 0 29.752066%;
   background-size: 100%;
 }
 
-/* line 167, ../scss/modules/_flags.scss */
+/* line 169, ../scss/modules/_flags.scss */
 .flag-FRO {
   background-position: 0 30.165289%;
   background-size: 100%;
 }
 
-/* line 168, ../scss/modules/_flags.scss */
+/* line 170, ../scss/modules/_flags.scss */
 .flag-FSM {
   background-position: 0 30.578512%;
   background-size: 100%;
 }
 
-/* line 169, ../scss/modules/_flags.scss */
+/* line 171, ../scss/modules/_flags.scss */
 .flag-GAB {
   background-position: 0 30.991736%;
   background-size: 100%;
 }
 
-/* line 170, ../scss/modules/_flags.scss */
+/* line 172, ../scss/modules/_flags.scss */
 .flag-GBR {
   background-position: 0 31.404959%;
   background-size: 100%;
 }
 
-/* line 171, ../scss/modules/_flags.scss */
+/* line 173, ../scss/modules/_flags.scss */
 .flag-GEO {
   background-position: 0 31.818182%;
   background-size: 100%;
 }
 
-/* line 172, ../scss/modules/_flags.scss */
+/* line 174, ../scss/modules/_flags.scss */
 .flag-GGY {
   background-position: 0 32.231405%;
   background-size: 100%;
 }
 
-/* line 173, ../scss/modules/_flags.scss */
+/* line 175, ../scss/modules/_flags.scss */
 .flag-GHA {
   background-position: 0 32.644628%;
   background-size: 100%;
 }
 
-/* line 174, ../scss/modules/_flags.scss */
+/* line 176, ../scss/modules/_flags.scss */
 .flag-GIB {
   background-position: 0 33.057851%;
   background-size: 100%;
 }
 
-/* line 175, ../scss/modules/_flags.scss */
+/* line 177, ../scss/modules/_flags.scss */
 .flag-GIN {
   background-position: 0 33.471074%;
   background-size: 100%;
 }
 
-/* line 176, ../scss/modules/_flags.scss */
+/* line 178, ../scss/modules/_flags.scss */
 .flag-GLP {
   background-position: 0 33.884298%;
   background-size: 100%;
 }
 
-/* line 177, ../scss/modules/_flags.scss */
+/* line 179, ../scss/modules/_flags.scss */
 .flag-GMB {
   background-position: 0 34.297521%;
   background-size: 100%;
 }
 
-/* line 178, ../scss/modules/_flags.scss */
+/* line 180, ../scss/modules/_flags.scss */
 .flag-GNB {
   background-position: 0 34.710744%;
   background-size: 100%;
 }
 
-/* line 179, ../scss/modules/_flags.scss */
+/* line 181, ../scss/modules/_flags.scss */
 .flag-GNQ {
   background-position: 0 35.123967%;
   background-size: 100%;
 }
 
-/* line 180, ../scss/modules/_flags.scss */
+/* line 182, ../scss/modules/_flags.scss */
 .flag-GRC {
   background-position: 0 35.53719%;
   background-size: 100%;
 }
 
-/* line 181, ../scss/modules/_flags.scss */
+/* line 183, ../scss/modules/_flags.scss */
 .flag-GRD {
   background-position: 0 35.950413%;
   background-size: 100%;
 }
 
-/* line 182, ../scss/modules/_flags.scss */
+/* line 184, ../scss/modules/_flags.scss */
 .flag-GRL {
   background-position: 0 36.363636%;
   background-size: 100%;
 }
 
-/* line 183, ../scss/modules/_flags.scss */
+/* line 185, ../scss/modules/_flags.scss */
 .flag-GTM {
   background-position: 0 36.77686%;
   background-size: 100%;
 }
 
-/* line 184, ../scss/modules/_flags.scss */
+/* line 186, ../scss/modules/_flags.scss */
 .flag-GUF {
   background-position: 0 37.190083%;
   background-size: 100%;
 }
 
-/* line 185, ../scss/modules/_flags.scss */
+/* line 187, ../scss/modules/_flags.scss */
 .flag-GUM {
   background-position: 0 37.603306%;
   background-size: 100%;
 }
 
-/* line 186, ../scss/modules/_flags.scss */
+/* line 188, ../scss/modules/_flags.scss */
 .flag-GUY {
   background-position: 0 38.016529%;
   background-size: 100%;
 }
 
-/* line 187, ../scss/modules/_flags.scss */
+/* line 189, ../scss/modules/_flags.scss */
 .flag-HMD {
   background-position: 0 38.429752%;
   background-size: 100%;
 }
 
-/* line 188, ../scss/modules/_flags.scss */
+/* line 190, ../scss/modules/_flags.scss */
 .flag-HND {
   background-position: 0 38.842975%;
   background-size: 100%;
 }
 
-/* line 189, ../scss/modules/_flags.scss */
+/* line 191, ../scss/modules/_flags.scss */
 .flag-HRV {
   background-position: 0 39.256198%;
   background-size: 100%;
 }
 
-/* line 190, ../scss/modules/_flags.scss */
+/* line 192, ../scss/modules/_flags.scss */
 .flag-HTI {
   background-position: 0 39.669421%;
   background-size: 100%;
 }
 
-/* line 191, ../scss/modules/_flags.scss */
+/* line 193, ../scss/modules/_flags.scss */
 .flag-HUN {
   background-position: 0 40.082645%;
   background-size: 100%;
 }
 
-/* line 192, ../scss/modules/_flags.scss */
+/* line 194, ../scss/modules/_flags.scss */
 .flag-IDN {
   background-position: 0 40.495868%;
   background-size: 100%;
 }
 
-/* line 193, ../scss/modules/_flags.scss */
+/* line 195, ../scss/modules/_flags.scss */
 .flag-IMN {
   background-position: 0 40.909091%;
   background-size: 100%;
 }
 
-/* line 194, ../scss/modules/_flags.scss */
+/* line 196, ../scss/modules/_flags.scss */
 .flag-IND {
   background-position: 0 41.322314%;
   background-size: 100%;
 }
 
-/* line 195, ../scss/modules/_flags.scss */
+/* line 197, ../scss/modules/_flags.scss */
 .flag-IOA {
   background-position: 0 41.735537%;
   background-size: 100%;
 }
 
-/* line 196, ../scss/modules/_flags.scss */
+/* line 198, ../scss/modules/_flags.scss */
 .flag-IOT {
   background-position: 0 42.14876%;
   background-size: 100%;
 }
 
-/* line 197, ../scss/modules/_flags.scss */
+/* line 199, ../scss/modules/_flags.scss */
 .flag-IRL {
   background-position: 0 42.561983%;
   background-size: 100%;
 }
 
-/* line 198, ../scss/modules/_flags.scss */
+/* line 200, ../scss/modules/_flags.scss */
 .flag-IRN {
   background-position: 0 42.975207%;
   background-size: 100%;
 }
 
-/* line 199, ../scss/modules/_flags.scss */
+/* line 201, ../scss/modules/_flags.scss */
 .flag-IRQ {
   background-position: 0 43.38843%;
   background-size: 100%;
 }
 
-/* line 200, ../scss/modules/_flags.scss */
+/* line 202, ../scss/modules/_flags.scss */
 .flag-ISL {
   background-position: 0 43.801653%;
   background-size: 100%;
 }
 
-/* line 201, ../scss/modules/_flags.scss */
+/* line 203, ../scss/modules/_flags.scss */
 .flag-ISR {
   background-position: 0 44.214876%;
   background-size: 100%;
 }
 
-/* line 202, ../scss/modules/_flags.scss */
+/* line 204, ../scss/modules/_flags.scss */
 .flag-ITA {
   background-position: 0 44.628099%;
   background-size: 100%;
 }
 
-/* line 203, ../scss/modules/_flags.scss */
+/* line 205, ../scss/modules/_flags.scss */
 .flag-JAM {
   background-position: 0 45.041322%;
   background-size: 100%;
 }
 
-/* line 204, ../scss/modules/_flags.scss */
+/* line 206, ../scss/modules/_flags.scss */
 .flag-JEY {
   background-position: 0 45.454545%;
   background-size: 100%;
 }
 
-/* line 205, ../scss/modules/_flags.scss */
+/* line 207, ../scss/modules/_flags.scss */
 .flag-JOR {
   background-position: 0 45.867769%;
   background-size: 100%;
 }
 
-/* line 206, ../scss/modules/_flags.scss */
+/* line 208, ../scss/modules/_flags.scss */
 .flag-JPN {
   background-position: 0 46.280992%;
   background-size: 100%;
 }
 
-/* line 207, ../scss/modules/_flags.scss */
+/* line 209, ../scss/modules/_flags.scss */
 .flag-KAS {
   background-position: 0 46.694215%;
   background-size: 100%;
 }
 
-/* line 208, ../scss/modules/_flags.scss */
+/* line 210, ../scss/modules/_flags.scss */
 .flag-KAZ {
   background-position: 0 47.107438%;
   background-size: 100%;
 }
 
-/* line 209, ../scss/modules/_flags.scss */
+/* line 211, ../scss/modules/_flags.scss */
 .flag-KEN {
   background-position: 0 47.520661%;
   background-size: 100%;
 }
 
-/* line 210, ../scss/modules/_flags.scss */
+/* line 212, ../scss/modules/_flags.scss */
 .flag-KGZ {
   background-position: 0 47.933884%;
   background-size: 100%;
 }
 
-/* line 211, ../scss/modules/_flags.scss */
+/* line 213, ../scss/modules/_flags.scss */
 .flag-KHM {
   background-position: 0 48.347107%;
   background-size: 100%;
 }
 
-/* line 212, ../scss/modules/_flags.scss */
+/* line 214, ../scss/modules/_flags.scss */
 .flag-KIR {
   background-position: 0 48.760331%;
   background-size: 100%;
 }
 
-/* line 213, ../scss/modules/_flags.scss */
+/* line 215, ../scss/modules/_flags.scss */
 .flag-KNA {
   background-position: 0 49.173554%;
   background-size: 100%;
 }
 
-/* line 214, ../scss/modules/_flags.scss */
+/* line 216, ../scss/modules/_flags.scss */
 .flag-KOR {
   background-position: 0 49.586777%;
   background-size: 100%;
 }
 
-/* line 215, ../scss/modules/_flags.scss */
+/* line 217, ../scss/modules/_flags.scss */
 .flag-KOS {
   background-position: 0 50%;
   background-size: 100%;
 }
 
-/* line 216, ../scss/modules/_flags.scss */
+/* line 218, ../scss/modules/_flags.scss */
 .flag-KWT {
   background-position: 0 50.413223%;
   background-size: 100%;
 }
 
-/* line 217, ../scss/modules/_flags.scss */
+/* line 219, ../scss/modules/_flags.scss */
 .flag-LAO {
   background-position: 0 50.826446%;
   background-size: 100%;
 }
 
-/* line 218, ../scss/modules/_flags.scss */
+/* line 220, ../scss/modules/_flags.scss */
 .flag-LBN {
   background-position: 0 51.239669%;
   background-size: 100%;
 }
 
-/* line 219, ../scss/modules/_flags.scss */
+/* line 221, ../scss/modules/_flags.scss */
 .flag-LBR {
   background-position: 0 51.652893%;
   background-size: 100%;
 }
 
-/* line 220, ../scss/modules/_flags.scss */
+/* line 222, ../scss/modules/_flags.scss */
 .flag-LBY {
   background-position: 0 52.066116%;
   background-size: 100%;
 }
 
-/* line 221, ../scss/modules/_flags.scss */
+/* line 223, ../scss/modules/_flags.scss */
 .flag-LCA {
   background-position: 0 52.479339%;
   background-size: 100%;
 }
 
-/* line 222, ../scss/modules/_flags.scss */
+/* line 224, ../scss/modules/_flags.scss */
 .flag-LIE {
   background-position: 0 52.892562%;
   background-size: 100%;
 }
 
-/* line 223, ../scss/modules/_flags.scss */
+/* line 225, ../scss/modules/_flags.scss */
 .flag-LKA {
   background-position: 0 53.305785%;
   background-size: 100%;
 }
 
-/* line 224, ../scss/modules/_flags.scss */
+/* line 226, ../scss/modules/_flags.scss */
 .flag-LSO {
   background-position: 0 53.719008%;
   background-size: 100%;
 }
 
-/* line 225, ../scss/modules/_flags.scss */
+/* line 227, ../scss/modules/_flags.scss */
 .flag-LTU {
   background-position: 0 54.132231%;
   background-size: 100%;
 }
 
-/* line 226, ../scss/modules/_flags.scss */
+/* line 228, ../scss/modules/_flags.scss */
 .flag-LUX {
   background-position: 0 54.545455%;
   background-size: 100%;
 }
 
-/* line 227, ../scss/modules/_flags.scss */
+/* line 229, ../scss/modules/_flags.scss */
 .flag-LVA {
   background-position: 0 54.958678%;
   background-size: 100%;
 }
 
-/* line 228, ../scss/modules/_flags.scss */
+/* line 230, ../scss/modules/_flags.scss */
 .flag-MAF {
   background-position: 0 55.371901%;
   background-size: 100%;
 }
 
-/* line 229, ../scss/modules/_flags.scss */
+/* line 231, ../scss/modules/_flags.scss */
 .flag-MAR {
   background-position: 0 55.785124%;
   background-size: 100%;
 }
 
-/* line 230, ../scss/modules/_flags.scss */
+/* line 232, ../scss/modules/_flags.scss */
 .flag-MCO {
   background-position: 0 56.198347%;
   background-size: 100%;
 }
 
-/* line 231, ../scss/modules/_flags.scss */
+/* line 233, ../scss/modules/_flags.scss */
 .flag-MDA {
   background-position: 0 56.61157%;
   background-size: 100%;
 }
 
-/* line 232, ../scss/modules/_flags.scss */
+/* line 234, ../scss/modules/_flags.scss */
 .flag-MDG {
   background-position: 0 57.024793%;
   background-size: 100%;
 }
 
-/* line 233, ../scss/modules/_flags.scss */
+/* line 235, ../scss/modules/_flags.scss */
 .flag-MDV {
   background-position: 0 57.438017%;
   background-size: 100%;
 }
 
-/* line 234, ../scss/modules/_flags.scss */
+/* line 236, ../scss/modules/_flags.scss */
 .flag-MEX {
   background-position: 0 57.85124%;
   background-size: 100%;
 }
 
-/* line 235, ../scss/modules/_flags.scss */
+/* line 237, ../scss/modules/_flags.scss */
 .flag-MHL {
   background-position: 0 58.264463%;
   background-size: 100%;
 }
 
-/* line 236, ../scss/modules/_flags.scss */
+/* line 238, ../scss/modules/_flags.scss */
 .flag-MKD {
   background-position: 0 58.677686%;
   background-size: 100%;
 }
 
-/* line 237, ../scss/modules/_flags.scss */
+/* line 239, ../scss/modules/_flags.scss */
 .flag-MLI {
   background-position: 0 59.090909%;
   background-size: 100%;
 }
 
-/* line 238, ../scss/modules/_flags.scss */
+/* line 240, ../scss/modules/_flags.scss */
 .flag-MLT {
   background-position: 0 59.504132%;
   background-size: 100%;
 }
 
-/* line 239, ../scss/modules/_flags.scss */
+/* line 241, ../scss/modules/_flags.scss */
 .flag-MMR {
   background-position: 0 59.917355%;
   background-size: 100%;
 }
 
-/* line 240, ../scss/modules/_flags.scss */
+/* line 242, ../scss/modules/_flags.scss */
 .flag-MNE {
   background-position: 0 60.330579%;
   background-size: 100%;
 }
 
-/* line 241, ../scss/modules/_flags.scss */
+/* line 243, ../scss/modules/_flags.scss */
 .flag-MNG {
   background-position: 0 60.743802%;
   background-size: 100%;
 }
 
-/* line 242, ../scss/modules/_flags.scss */
+/* line 244, ../scss/modules/_flags.scss */
 .flag-MNP {
   background-position: 0 61.157025%;
   background-size: 100%;
 }
 
-/* line 243, ../scss/modules/_flags.scss */
+/* line 245, ../scss/modules/_flags.scss */
 .flag-MOZ {
   background-position: 0 61.570248%;
   background-size: 100%;
 }
 
-/* line 244, ../scss/modules/_flags.scss */
+/* line 246, ../scss/modules/_flags.scss */
 .flag-MRT {
   background-position: 0 61.983471%;
   background-size: 100%;
 }
 
-/* line 245, ../scss/modules/_flags.scss */
+/* line 247, ../scss/modules/_flags.scss */
 .flag-MSR {
   background-position: 0 62.396694%;
   background-size: 100%;
 }
 
-/* line 246, ../scss/modules/_flags.scss */
+/* line 248, ../scss/modules/_flags.scss */
 .flag-MUS {
   background-position: 0 62.809917%;
   background-size: 100%;
 }
 
-/* line 247, ../scss/modules/_flags.scss */
+/* line 249, ../scss/modules/_flags.scss */
 .flag-MWI {
   background-position: 0 63.22314%;
   background-size: 100%;
 }
 
-/* line 248, ../scss/modules/_flags.scss */
+/* line 250, ../scss/modules/_flags.scss */
 .flag-MYS {
   background-position: 0 63.636364%;
   background-size: 100%;
 }
 
-/* line 249, ../scss/modules/_flags.scss */
+/* line 251, ../scss/modules/_flags.scss */
 .flag-NAM {
   background-position: 0 64.049587%;
   background-size: 100%;
 }
 
-/* line 250, ../scss/modules/_flags.scss */
+/* line 252, ../scss/modules/_flags.scss */
 .flag-NCL {
   background-position: 0 64.46281%;
   background-size: 100%;
 }
 
-/* line 251, ../scss/modules/_flags.scss */
+/* line 253, ../scss/modules/_flags.scss */
 .flag-NER {
   background-position: 0 64.876033%;
   background-size: 100%;
 }
 
-/* line 252, ../scss/modules/_flags.scss */
+/* line 254, ../scss/modules/_flags.scss */
 .flag-NFK {
   background-position: 0 65.289256%;
   background-size: 100%;
 }
 
-/* line 253, ../scss/modules/_flags.scss */
+/* line 255, ../scss/modules/_flags.scss */
 .flag-NGA {
   background-position: 0 65.702479%;
   background-size: 100%;
 }
 
-/* line 254, ../scss/modules/_flags.scss */
+/* line 256, ../scss/modules/_flags.scss */
 .flag-NIC {
   background-position: 0 66.115702%;
   background-size: 100%;
 }
 
-/* line 255, ../scss/modules/_flags.scss */
+/* line 257, ../scss/modules/_flags.scss */
 .flag-NIU {
   background-position: 0 66.528926%;
   background-size: 100%;
 }
 
-/* line 256, ../scss/modules/_flags.scss */
+/* line 258, ../scss/modules/_flags.scss */
 .flag-NLD {
   background-position: 0 66.942149%;
   background-size: 100%;
 }
 
-/* line 257, ../scss/modules/_flags.scss */
+/* line 259, ../scss/modules/_flags.scss */
 .flag-NOR {
   background-position: 0 67.355372%;
   background-size: 100%;
 }
 
-/* line 258, ../scss/modules/_flags.scss */
+/* line 260, ../scss/modules/_flags.scss */
 .flag-NPL {
   background-position: 0 67.768595%;
   background-size: 100%;
 }
 
-/* line 259, ../scss/modules/_flags.scss */
+/* line 261, ../scss/modules/_flags.scss */
 .flag-NRU {
   background-position: 0 68.181818%;
   background-size: 100%;
 }
 
-/* line 260, ../scss/modules/_flags.scss */
+/* line 262, ../scss/modules/_flags.scss */
 .flag-NZL {
   background-position: 0 68.595041%;
   background-size: 100%;
 }
 
-/* line 261, ../scss/modules/_flags.scss */
+/* line 263, ../scss/modules/_flags.scss */
 .flag-OMN {
   background-position: 0 69.008264%;
   background-size: 100%;
 }
 
-/* line 262, ../scss/modules/_flags.scss */
+/* line 264, ../scss/modules/_flags.scss */
 .flag-PAK {
   background-position: 0 69.421488%;
   background-size: 100%;
 }
 
-/* line 263, ../scss/modules/_flags.scss */
+/* line 265, ../scss/modules/_flags.scss */
 .flag-PAN {
   background-position: 0 69.834711%;
   background-size: 100%;
 }
 
-/* line 264, ../scss/modules/_flags.scss */
+/* line 266, ../scss/modules/_flags.scss */
 .flag-PCN {
   background-position: 0 70.247934%;
   background-size: 100%;
 }
 
-/* line 265, ../scss/modules/_flags.scss */
+/* line 267, ../scss/modules/_flags.scss */
 .flag-PER {
   background-position: 0 70.661157%;
   background-size: 100%;
 }
 
-/* line 266, ../scss/modules/_flags.scss */
+/* line 268, ../scss/modules/_flags.scss */
 .flag-PHL {
   background-position: 0 71.07438%;
   background-size: 100%;
 }
 
-/* line 267, ../scss/modules/_flags.scss */
+/* line 269, ../scss/modules/_flags.scss */
 .flag-PLW {
   background-position: 0 71.487603%;
   background-size: 100%;
 }
 
-/* line 268, ../scss/modules/_flags.scss */
+/* line 270, ../scss/modules/_flags.scss */
 .flag-PNG {
   background-position: 0 71.900826%;
   background-size: 100%;
 }
 
-/* line 269, ../scss/modules/_flags.scss */
+/* line 271, ../scss/modules/_flags.scss */
 .flag-POL {
   background-position: 0 72.31405%;
   background-size: 100%;
 }
 
-/* line 270, ../scss/modules/_flags.scss */
+/* line 272, ../scss/modules/_flags.scss */
 .flag-PRI {
   background-position: 0 72.727273%;
   background-size: 100%;
 }
 
-/* line 271, ../scss/modules/_flags.scss */
+/* line 273, ../scss/modules/_flags.scss */
 .flag-PRK {
   background-position: 0 73.140496%;
   background-size: 100%;
 }
 
-/* line 272, ../scss/modules/_flags.scss */
+/* line 274, ../scss/modules/_flags.scss */
 .flag-PRT {
   background-position: 0 73.553719%;
   background-size: 100%;
 }
 
-/* line 273, ../scss/modules/_flags.scss */
+/* line 275, ../scss/modules/_flags.scss */
 .flag-PRY {
   background-position: 0 73.966942%;
   background-size: 100%;
 }
 
-/* line 274, ../scss/modules/_flags.scss */
+/* line 276, ../scss/modules/_flags.scss */
 .flag-PSX {
   background-position: 0 74.380165%;
   background-size: 100%;
 }
 
-/* line 275, ../scss/modules/_flags.scss */
+/* line 277, ../scss/modules/_flags.scss */
 .flag-PYF {
   background-position: 0 74.793388%;
   background-size: 100%;
 }
 
-/* line 276, ../scss/modules/_flags.scss */
+/* line 278, ../scss/modules/_flags.scss */
 .flag-QAT {
   background-position: 0 75.206612%;
   background-size: 100%;
 }
 
-/* line 277, ../scss/modules/_flags.scss */
+/* line 279, ../scss/modules/_flags.scss */
 .flag-ROU {
   background-position: 0 75.619835%;
   background-size: 100%;
 }
 
-/* line 278, ../scss/modules/_flags.scss */
+/* line 280, ../scss/modules/_flags.scss */
 .flag-RUS {
   background-position: 0 76.033058%;
   background-size: 100%;
 }
 
-/* line 279, ../scss/modules/_flags.scss */
+/* line 281, ../scss/modules/_flags.scss */
 .flag-RWA {
   background-position: 0 76.446281%;
   background-size: 100%;
 }
 
-/* line 280, ../scss/modules/_flags.scss */
+/* line 282, ../scss/modules/_flags.scss */
 .flag-SAH {
   background-position: 0 76.859504%;
   background-size: 100%;
 }
 
-/* line 281, ../scss/modules/_flags.scss */
+/* line 283, ../scss/modules/_flags.scss */
 .flag-SAU {
   background-position: 0 77.272727%;
   background-size: 100%;
 }
 
-/* line 282, ../scss/modules/_flags.scss */
+/* line 284, ../scss/modules/_flags.scss */
 .flag-SDN {
   background-position: 0 77.68595%;
   background-size: 100%;
 }
 
-/* line 283, ../scss/modules/_flags.scss */
+/* line 285, ../scss/modules/_flags.scss */
 .flag-SEN {
   background-position: 0 78.099174%;
   background-size: 100%;
 }
 
-/* line 284, ../scss/modules/_flags.scss */
+/* line 286, ../scss/modules/_flags.scss */
 .flag-SGP {
   background-position: 0 78.512397%;
   background-size: 100%;
 }
 
-/* line 285, ../scss/modules/_flags.scss */
+/* line 287, ../scss/modules/_flags.scss */
 .flag-SGS {
   background-position: 0 78.92562%;
   background-size: 100%;
 }
 
-/* line 286, ../scss/modules/_flags.scss */
+/* line 288, ../scss/modules/_flags.scss */
 .flag-SHN {
   background-position: 0 79.338843%;
   background-size: 100%;
 }
 
-/* line 287, ../scss/modules/_flags.scss */
+/* line 289, ../scss/modules/_flags.scss */
 .flag-SLB {
   background-position: 0 79.752066%;
   background-size: 100%;
 }
 
-/* line 288, ../scss/modules/_flags.scss */
+/* line 290, ../scss/modules/_flags.scss */
 .flag-SLE {
   background-position: 0 80.165289%;
   background-size: 100%;
 }
 
-/* line 289, ../scss/modules/_flags.scss */
+/* line 291, ../scss/modules/_flags.scss */
 .flag-SLV {
   background-position: 0 80.578512%;
   background-size: 100%;
 }
 
-/* line 290, ../scss/modules/_flags.scss */
+/* line 292, ../scss/modules/_flags.scss */
 .flag-SMR {
   background-position: 0 80.991736%;
   background-size: 100%;
 }
 
-/* line 291, ../scss/modules/_flags.scss */
+/* line 293, ../scss/modules/_flags.scss */
 .flag-SOM {
   background-position: 0 81.404959%;
   background-size: 100%;
 }
 
-/* line 292, ../scss/modules/_flags.scss */
+/* line 294, ../scss/modules/_flags.scss */
 .flag-SPM {
   background-position: 0 81.818182%;
   background-size: 100%;
 }
 
-/* line 293, ../scss/modules/_flags.scss */
+/* line 295, ../scss/modules/_flags.scss */
 .flag-SRB {
   background-position: 0 82.231405%;
   background-size: 100%;
 }
 
-/* line 294, ../scss/modules/_flags.scss */
+/* line 296, ../scss/modules/_flags.scss */
 .flag-SSD {
   background-position: 0 82.644628%;
   background-size: 100%;
 }
 
-/* line 295, ../scss/modules/_flags.scss */
+/* line 297, ../scss/modules/_flags.scss */
 .flag-STP {
   background-position: 0 83.057851%;
   background-size: 100%;
 }
 
-/* line 296, ../scss/modules/_flags.scss */
+/* line 298, ../scss/modules/_flags.scss */
 .flag-SUR {
   background-position: 0 83.471074%;
   background-size: 100%;
 }
 
-/* line 297, ../scss/modules/_flags.scss */
+/* line 299, ../scss/modules/_flags.scss */
 .flag-SVK {
   background-position: 0 83.884298%;
   background-size: 100%;
 }
 
-/* line 298, ../scss/modules/_flags.scss */
+/* line 300, ../scss/modules/_flags.scss */
 .flag-SVN {
   background-position: 0 84.297521%;
   background-size: 100%;
 }
 
-/* line 299, ../scss/modules/_flags.scss */
+/* line 301, ../scss/modules/_flags.scss */
 .flag-SWE {
   background-position: 0 84.710744%;
   background-size: 100%;
 }
 
-/* line 300, ../scss/modules/_flags.scss */
+/* line 302, ../scss/modules/_flags.scss */
 .flag-SWZ {
   background-position: 0 85.123967%;
   background-size: 100%;
 }
 
-/* line 301, ../scss/modules/_flags.scss */
+/* line 303, ../scss/modules/_flags.scss */
 .flag-SXM {
   background-position: 0 85.53719%;
   background-size: 100%;
 }
 
-/* line 302, ../scss/modules/_flags.scss */
+/* line 304, ../scss/modules/_flags.scss */
 .flag-SYC {
   background-position: 0 85.950413%;
   background-size: 100%;
 }
 
-/* line 303, ../scss/modules/_flags.scss */
+/* line 305, ../scss/modules/_flags.scss */
 .flag-SYR {
   background-position: 0 86.363636%;
   background-size: 100%;
 }
 
-/* line 304, ../scss/modules/_flags.scss */
+/* line 306, ../scss/modules/_flags.scss */
 .flag-TCA {
   background-position: 0 86.77686%;
   background-size: 100%;
 }
 
-/* line 305, ../scss/modules/_flags.scss */
+/* line 307, ../scss/modules/_flags.scss */
 .flag-TCD {
   background-position: 0 87.190083%;
   background-size: 100%;
 }
 
-/* line 306, ../scss/modules/_flags.scss */
+/* line 308, ../scss/modules/_flags.scss */
 .flag-TGO {
   background-position: 0 87.603306%;
   background-size: 100%;
 }
 
-/* line 307, ../scss/modules/_flags.scss */
+/* line 309, ../scss/modules/_flags.scss */
 .flag-THA {
   background-position: 0 88.016529%;
   background-size: 100%;
 }
 
-/* line 308, ../scss/modules/_flags.scss */
+/* line 310, ../scss/modules/_flags.scss */
 .flag-TJK {
   background-position: 0 88.429752%;
   background-size: 100%;
 }
 
-/* line 309, ../scss/modules/_flags.scss */
+/* line 311, ../scss/modules/_flags.scss */
 .flag-TKL {
   background-position: 0 88.842975%;
   background-size: 100%;
 }
 
-/* line 310, ../scss/modules/_flags.scss */
+/* line 312, ../scss/modules/_flags.scss */
 .flag-TKM {
   background-position: 0 89.256198%;
   background-size: 100%;
 }
 
-/* line 311, ../scss/modules/_flags.scss */
+/* line 313, ../scss/modules/_flags.scss */
 .flag-TLS {
   background-position: 0 89.669421%;
   background-size: 100%;
 }
 
-/* line 312, ../scss/modules/_flags.scss */
+/* line 314, ../scss/modules/_flags.scss */
 .flag-TON {
   background-position: 0 90.082645%;
   background-size: 100%;
 }
 
-/* line 313, ../scss/modules/_flags.scss */
+/* line 315, ../scss/modules/_flags.scss */
 .flag-TTO {
   background-position: 0 90.495868%;
   background-size: 100%;
 }
 
-/* line 314, ../scss/modules/_flags.scss */
+/* line 316, ../scss/modules/_flags.scss */
 .flag-TUN {
   background-position: 0 90.909091%;
   background-size: 100%;
 }
 
-/* line 315, ../scss/modules/_flags.scss */
+/* line 317, ../scss/modules/_flags.scss */
 .flag-TUR {
   background-position: 0 91.322314%;
   background-size: 100%;
 }
 
-/* line 316, ../scss/modules/_flags.scss */
+/* line 318, ../scss/modules/_flags.scss */
 .flag-TWN {
   background-position: 0 91.735537%;
   background-size: 100%;
 }
 
-/* line 317, ../scss/modules/_flags.scss */
+/* line 319, ../scss/modules/_flags.scss */
 .flag-TZA {
   background-position: 0 92.14876%;
   background-size: 100%;
 }
 
-/* line 318, ../scss/modules/_flags.scss */
+/* line 320, ../scss/modules/_flags.scss */
 .flag-UGA {
   background-position: 0 92.561983%;
   background-size: 100%;
 }
 
-/* line 319, ../scss/modules/_flags.scss */
+/* line 321, ../scss/modules/_flags.scss */
 .flag-UKR {
   background-position: 0 92.975207%;
   background-size: 100%;
 }
 
-/* line 320, ../scss/modules/_flags.scss */
+/* line 322, ../scss/modules/_flags.scss */
 .flag-URY {
   background-position: 0 93.38843%;
   background-size: 100%;
 }
 
-/* line 321, ../scss/modules/_flags.scss */
+/* line 323, ../scss/modules/_flags.scss */
 .flag-USA {
   background-position: 0 93.801653%;
   background-size: 100%;
 }
 
-/* line 322, ../scss/modules/_flags.scss */
+/* line 324, ../scss/modules/_flags.scss */
 .flag-UZB {
   background-position: 0 94.214876%;
   background-size: 100%;
 }
 
-/* line 323, ../scss/modules/_flags.scss */
+/* line 325, ../scss/modules/_flags.scss */
 .flag-VAT {
   background-position: 0 94.628099%;
   background-size: 100%;
 }
 
-/* line 324, ../scss/modules/_flags.scss */
+/* line 326, ../scss/modules/_flags.scss */
 .flag-VCT {
   background-position: 0 95.041322%;
   background-size: 100%;
 }
 
-/* line 325, ../scss/modules/_flags.scss */
+/* line 327, ../scss/modules/_flags.scss */
 .flag-VEN {
   background-position: 0 95.454545%;
   background-size: 100%;
 }
 
-/* line 326, ../scss/modules/_flags.scss */
+/* line 328, ../scss/modules/_flags.scss */
 .flag-VGB {
   background-position: 0 95.867769%;
   background-size: 100%;
 }
 
-/* line 327, ../scss/modules/_flags.scss */
+/* line 329, ../scss/modules/_flags.scss */
 .flag-VIR {
   background-position: 0 96.280992%;
   background-size: 100%;
 }
 
-/* line 328, ../scss/modules/_flags.scss */
+/* line 330, ../scss/modules/_flags.scss */
 .flag-VNM {
   background-position: 0 96.694215%;
   background-size: 100%;
 }
 
-/* line 329, ../scss/modules/_flags.scss */
+/* line 331, ../scss/modules/_flags.scss */
 .flag-VUT {
   background-position: 0 97.107438%;
   background-size: 100%;
 }
 
-/* line 330, ../scss/modules/_flags.scss */
+/* line 332, ../scss/modules/_flags.scss */
 .flag-WLF {
   background-position: 0 97.520661%;
   background-size: 100%;
 }
 
-/* line 331, ../scss/modules/_flags.scss */
+/* line 333, ../scss/modules/_flags.scss */
 .flag-WSM {
   background-position: 0 97.933884%;
   background-size: 100%;
 }
 
-/* line 332, ../scss/modules/_flags.scss */
+/* line 334, ../scss/modules/_flags.scss */
 .flag-YEM {
   background-position: 0 98.347107%;
   background-size: 100%;
 }
 
-/* line 333, ../scss/modules/_flags.scss */
+/* line 335, ../scss/modules/_flags.scss */
 .flag-ZAF {
   background-position: 0 98.760331%;
   background-size: 100%;
 }
 
-/* line 334, ../scss/modules/_flags.scss */
+/* line 336, ../scss/modules/_flags.scss */
 .flag-ZMB {
   background-position: 0 99.173554%;
   background-size: 100%;
 }
 
-/* line 335, ../scss/modules/_flags.scss */
+/* line 337, ../scss/modules/_flags.scss */
 .flag-ZWE {
   background-position: 0 99.586777%;
   background-size: 100%;
 }
 
-/* line 336, ../scss/modules/_flags.scss */
+/* line 338, ../scss/modules/_flags.scss */
 .flag-no-flag {
   background-position: 0 100%;
   background-size: 100%;
@@ -15353,22 +15355,23 @@ section a:focus {
 .page-book-countries #main-wrapper .region-content > section#reletad-content .view-content .views-row {
   position: relative;
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) {
   /* line 209, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section#reletad-content .view-content .views-row {
     position: relative;
     /*float: left;*/
-    width: 33.25%;
-    margin-right: -3px;
+    /*width: 33.25%;*/
+    /*margin-right: -3px;*/
     display: inline-block;
   }
-  /* line 219, ../scss/modules/_book.scss */
+  /* line 220, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section#reletad-content .view-content .views-row:last-child {
     margin-right: 0;
   }
 }
-/* line 225, ../scss/modules/_book.scss */
+/* line 226, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#reletad-content .view-content .views-field-title {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -15377,30 +15380,31 @@ section a:focus {
   padding-bottom: 30px;
   bottom: 0;
   text-align: left;
+  z-index: 1;
 }
-/* line 234, ../scss/modules/_book.scss */
+/* line 236, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#reletad-content .view-content a {
   text-decoration: none;
   color: #ffffff;
 }
-/* line 238, ../scss/modules/_book.scss */
+/* line 240, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#reletad-content .view-content .views-field-field-image {
   height: 260px;
   overflow: hidden;
 }
-/* line 242, ../scss/modules/_book.scss */
+/* line 244, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#reletad-content .view-content img {
   width: auto;
   height: auto;
   min-height: 260px;
 }
 @media (max-width: 768px) {
-  /* line 242, ../scss/modules/_book.scss */
+  /* line 244, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section#reletad-content .view-content img {
     width: 100%;
   }
 }
-/* line 251, ../scss/modules/_book.scss */
+/* line 253, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#reletad-content:after {
   position: relative;
   clear: both;
@@ -15408,7 +15412,7 @@ section a:focus {
   content: " ";
   visibility: hidden;
 }
-/* line 259, ../scss/modules/_book.scss */
+/* line 261, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section .btn, .page-book-countries #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit], .webform-client-form .form-actions .page-book-countries #main-wrapper .region-content > section input[type=submit] {
   background-color: #A3C642;
   color: #fff;
@@ -15427,12 +15431,12 @@ section a:focus {
   border-radius: 0px;
   text-transform: uppercase;
 }
-/* line 276, ../scss/modules/_book.scss */
+/* line 278, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section .btn:focus, .page-book-countries #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit]:focus, .webform-client-form .form-actions .page-book-countries #main-wrapper .region-content > section input[type=submit]:focus, .page-book-countries #main-wrapper .region-content > section .btn:hover, .page-book-countries #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit]:hover, .webform-client-form .form-actions .page-book-countries #main-wrapper .region-content > section input[type=submit]:hover, .page-book-countries #main-wrapper .region-content > section .btn:active, .page-book-countries #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit]:active, .webform-client-form .form-actions .page-book-countries #main-wrapper .region-content > section input[type=submit]:active, .page-book-countries #main-wrapper .region-content > section .btn:visited, .page-book-countries #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit]:visited, .webform-client-form .form-actions .page-book-countries #main-wrapper .region-content > section input[type=submit]:visited {
   background-color: #b6d269;
   color: #fff;
 }
-/* line 284, ../scss/modules/_book.scss */
+/* line 286, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -15452,7 +15456,7 @@ section a:focus {
   font-family: "Open Sans",sans-serif;
   font-size: 16px;
 }
-/* line 304, ../scss/modules/_book.scss */
+/* line 306, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section header h2 {
   padding-top: 65px;
   font-family: "Open Sans",sans-serif;
@@ -15461,26 +15465,26 @@ section a:focus {
   text-align: center;
   margin-bottom: 35px;
 }
-/* line 313, ../scss/modules/_book.scss */
+/* line 315, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#map-local {
   padding-bottom: 0px;
 }
-/* line 316, ../scss/modules/_book.scss */
+/* line 318, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#reletad-content {
   margin-top: -130px;
   min-height: 260px;
 }
-/* line 320, ../scss/modules/_book.scss */
+/* line 322, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#country-navigation {
   background-color: #f0f0f0;
   margin-top: -135px;
   padding-top: 135px;
 }
-/* line 324, ../scss/modules/_book.scss */
+/* line 326, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#country-navigation header {
   margin-top: -25px;
 }
-/* line 326, ../scss/modules/_book.scss */
+/* line 328, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#country-navigation header h2 {
   font-family: "News Cycle",sans-serif;
   margin-top: 0;
@@ -15488,29 +15492,29 @@ section a:focus {
   font-size: 2em;
   padding-top: 0px;
 }
-/* line 337, ../scss/modules/_book.scss */
+/* line 339, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#table-indicators header h2 {
   background: url("../images/indicators.png") no-repeat 50% 0;
 }
-/* line 344, ../scss/modules/_book.scss */
+/* line 346, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#map-global header h2 {
   background: url("../images/mapping.png") no-repeat 50% 0;
 }
-/* line 351, ../scss/modules/_book.scss */
+/* line 353, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#compare header h2 {
   background: url("../images/infographics.png") no-repeat 50% 0;
 }
-/* line 358, ../scss/modules/_book.scss */
+/* line 360, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#lgaf header h2 {
   background: url("../images/rankings.png") no-repeat 50% 0;
 }
-/* line 364, ../scss/modules/_book.scss */
+/* line 366, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#lgaf #lgaf-values li {
   padding: 15px 20px;
   border-bottom: 2px solid #F2F2F2;
   background-color: #FFFFFF;
 }
-/* line 369, ../scss/modules/_book.scss */
+/* line 371, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#lgaf #lgaf-values li span:first-of-type {
   width: 1em;
   height: 1em;
@@ -15519,7 +15523,7 @@ section a:focus {
   -webkit-border-radius: 20px;
   border-radius: 20px;
 }
-/* line 381, ../scss/modules/_book.scss */
+/* line 383, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#lgaf #lgaf-legend li span:first-of-type {
   width: 1em;
   height: 1em;
@@ -15528,27 +15532,27 @@ section a:focus {
   -webkit-border-radius: 20px;
   border-radius: 20px;
 }
-/* line 390, ../scss/modules/_book.scss */
+/* line 392, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#lgaf .lgaf-value-a {
   background-color: #7ED321;
 }
-/* line 393, ../scss/modules/_book.scss */
+/* line 395, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#lgaf .lgaf-value-b {
   background-color: #F8E71C;
 }
-/* line 396, ../scss/modules/_book.scss */
+/* line 398, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#lgaf .lgaf-value-c {
   background-color: #F5A623;
 }
-/* line 399, ../scss/modules/_book.scss */
+/* line 401, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#lgaf .lgaf-value-d {
   background-color: #F6112D;
 }
-/* line 402, ../scss/modules/_book.scss */
+/* line 404, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section#lgaf .lgaf-value-na {
   background-color: #444444;
 }
-/* line 406, ../scss/modules/_book.scss */
+/* line 408, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section .table {
   background-color: #fff;
   border: 0 none;
@@ -15561,7 +15565,7 @@ section a:focus {
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
   width: 100%;
 }
-/* line 419, ../scss/modules/_book.scss */
+/* line 421, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section .table thead tr th {
   border-right: 1px solid #f0f0f0;
   border-bottom: none;
@@ -15574,11 +15578,11 @@ section a:focus {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 435, ../scss/modules/_book.scss */
+/* line 437, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section .table tbody tr:nth-child(2n) {
   background: #f2f2f2 none repeat scroll 0 0;
 }
-/* line 438, ../scss/modules/_book.scss */
+/* line 440, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section .table tbody tr td {
   border-bottom: 1px solid #f0f0f0;
   border-right: 1px solid #f0f0f0;
@@ -15587,11 +15591,11 @@ section a:focus {
   font-family: "Merriweather",serif !important;
   color: #666;
 }
-/* line 446, ../scss/modules/_book.scss */
+/* line 448, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section .table tbody tr td a {
   font-family: "Merriweather",serif;
 }
-/* line 449, ../scss/modules/_book.scss */
+/* line 451, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section .table tbody tr td .glyphicon-info-sign {
   background-color: #a3c642;
   border-radius: 50em;
@@ -15604,28 +15608,28 @@ section a:focus {
   width: 20px;
   float: right;
 }
-/* line 461, ../scss/modules/_book.scss */
+/* line 463, ../scss/modules/_book.scss */
 .page-book-countries #main-wrapper .region-content > section .table tbody tr td .glyphicon-info-sign::before {
   content: "i" !important;
 }
 @media only screen and (max-width: 767px) {
-  /* line 406, ../scss/modules/_book.scss */
+  /* line 408, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section .table {
     display: block;
   }
-  /* line 470, ../scss/modules/_book.scss */
+  /* line 472, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section .table thead {
     display: none !important;
   }
-  /* line 473, ../scss/modules/_book.scss */
+  /* line 475, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section .table tbody {
     display: block;
   }
-  /* line 475, ../scss/modules/_book.scss */
+  /* line 477, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section .table tbody tr {
     display: block;
   }
-  /* line 477, ../scss/modules/_book.scss */
+  /* line 479, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section .table tbody tr td {
     display: block;
     -moz-border-bottom-colors: none;
@@ -15639,7 +15643,7 @@ section a:focus {
     padding-left: 50%;
     position: relative;
   }
-  /* line 490, ../scss/modules/_book.scss */
+  /* line 492, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section .table tbody tr td:before {
     left: 6px;
     padding-right: 10px;
@@ -15648,40 +15652,40 @@ section a:focus {
     white-space: nowrap;
     width: 45%;
   }
-  /* line 498, ../scss/modules/_book.scss */
+  /* line 500, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section .table tbody tr td.indicator::before {
     content: "Indicators";
   }
-  /* line 501, ../scss/modules/_book.scss */
+  /* line 503, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section .table tbody tr td:nth-of-type(2)::before {
     content: "Year";
   }
-  /* line 504, ../scss/modules/_book.scss */
+  /* line 506, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section .table tbody tr td:nth-of-type(3)::before {
     content: "Value";
   }
-  /* line 507, ../scss/modules/_book.scss */
+  /* line 509, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section .table tbody tr td:nth-of-type(4)::before {
     content: "Unit";
   }
-  /* line 510, ../scss/modules/_book.scss */
+  /* line 512, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section .table tbody tr td:nth-of-type(5)::before {
     content: "Dataset";
   }
-  /* line 513, ../scss/modules/_book.scss */
+  /* line 515, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section .table tbody tr td:nth-of-type(6)::before {
     content: "Source";
   }
-  /* line 516, ../scss/modules/_book.scss */
+  /* line 518, ../scss/modules/_book.scss */
   .page-book-countries #main-wrapper .region-content > section .table tbody tr td:nth-of-type(7)::before {
     content: "Remove";
   }
 }
-/* line 530, ../scss/modules/_book.scss */
+/* line 532, ../scss/modules/_book.scss */
 .page-book-countries #block-landbook-country-block {
   background: #F8F8F8;
 }
-/* line 533, ../scss/modules/_book.scss */
+/* line 535, ../scss/modules/_book.scss */
 .page-book-countries .photo-gallery {
   bottom: -131px;
   height: 260px;
@@ -15689,11 +15693,11 @@ section a:focus {
   position: absolute;
   width: 100%;
 }
-/* line 541, ../scss/modules/_book.scss */
+/* line 543, ../scss/modules/_book.scss */
 .page-book-countries .photo-gallery .carousel-photo-gallery .c-item {
   height: 260px;
 }
-/* line 543, ../scss/modules/_book.scss */
+/* line 545, ../scss/modules/_book.scss */
 .page-book-countries .photo-gallery .carousel-photo-gallery .c-item .pos-txt-img-carousel {
   bottom: 30px;
   left: 15px;
@@ -15703,7 +15707,7 @@ section a:focus {
   font-family: "Open Sans",sans-serif;
   font-size: 16px;
 }
-/* line 552, ../scss/modules/_book.scss */
+/* line 554, ../scss/modules/_book.scss */
 .page-book-countries .photo-gallery .carousel-photo-gallery .c-item .cover-img-carousel {
   background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
@@ -15712,7 +15716,7 @@ section a:focus {
   top: 0;
   width: 100%;
 }
-/* line 562, ../scss/modules/_book.scss */
+/* line 564, ../scss/modules/_book.scss */
 .page-book-countries .photo-gallery .country-intro {
   bottom: -75px;
   left: 50%;
@@ -15721,7 +15725,7 @@ section a:focus {
   width: 768px;
   z-index: 5;
 }
-/* line 570, ../scss/modules/_book.scss */
+/* line 572, ../scss/modules/_book.scss */
 .page-book-countries .photo-gallery .country-intro .country-flag {
   border: 4px solid #fff;
   border-radius: 50em;
@@ -15731,19 +15735,19 @@ section a:focus {
   width: 50px;
   margin: 0 auto;
 }
-/* line 579, ../scss/modules/_book.scss */
+/* line 581, ../scss/modules/_book.scss */
 .page-book-countries .photo-gallery .country-intro .country-flag img {
   width: 50px;
   height: auto;
   border: none;
 }
-/* line 585, ../scss/modules/_book.scss */
+/* line 587, ../scss/modules/_book.scss */
 .page-book-countries .photo-gallery .country-intro h2 {
   font-size: 34px;
   display: block;
   text-align: center;
 }
-/* line 595, ../scss/modules/_book.scss */
+/* line 597, ../scss/modules/_book.scss */
 .page-book-countries .country-section {
   /*overflow-x:hidden;*/
   background: #ffffff;
@@ -15751,11 +15755,11 @@ section a:focus {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-/* line 597, ../scss/modules/_book.scss */
+/* line 599, ../scss/modules/_book.scss */
 .page-book-countries .country-section.nopadding {
   padding-top: 0;
 }
-/* line 606, ../scss/modules/_book.scss */
+/* line 608, ../scss/modules/_book.scss */
 .page-book-countries .country-section h2.section-title {
   padding-top: 65px;
   font-family: "Open Sans",sans-serif;
@@ -15764,23 +15768,23 @@ section a:focus {
   text-align: center;
   margin-bottom: 35px;
 }
-/* line 613, ../scss/modules/_book.scss */
+/* line 615, ../scss/modules/_book.scss */
 .page-book-countries .country-section h2.section-title.media {
   background: url("../images/media.png") no-repeat 50% 0;
 }
-/* line 616, ../scss/modules/_book.scss */
+/* line 618, ../scss/modules/_book.scss */
 .page-book-countries .country-section h2.section-title.partners {
   background: url("../images/partners.png") no-repeat 50% 0;
 }
-/* line 619, ../scss/modules/_book.scss */
+/* line 621, ../scss/modules/_book.scss */
 .page-book-countries .country-section h2.section-title.library {
   background: url("../images/library.png") no-repeat 50% 0;
 }
-/* line 623, ../scss/modules/_book.scss */
+/* line 625, ../scss/modules/_book.scss */
 .page-book-countries .country-section .adj-blog {
   margin-left: 30px;
 }
-/* line 626, ../scss/modules/_book.scss */
+/* line 628, ../scss/modules/_book.scss */
 .page-book-countries .country-section .bg-gray {
   background: transparent -moz-linear-gradient(left center, #f7f7f7 0px, #f7f7f7 62.5%, transparent 40%) repeat scroll 0 0;
   overflow-x: hidden;
@@ -15789,19 +15793,19 @@ section a:focus {
               padding-right:15px;
         }*/
 }
-/* line 630, ../scss/modules/_book.scss */
+/* line 632, ../scss/modules/_book.scss */
 .page-book-countries .country-section .bg-gray .bg-media {
   background: #f7f7f7;
 }
-/* line 639, ../scss/modules/_book.scss */
+/* line 641, ../scss/modules/_book.scss */
 .page-book-countries .country-section .bg-white {
   background-color: #fff;
 }
-/* line 643, ../scss/modules/_book.scss */
+/* line 645, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block {
   padding: 40px 0;
 }
-/* line 646, ../scss/modules/_book.scss */
+/* line 648, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block > h2 {
   margin-bottom: 11px;
   margin-top: 22px;
@@ -15809,33 +15813,33 @@ section a:focus {
   font-family: "Open Sans",sans-serif;
 }
 @media only screen and (max-width: 992px) {
-  /* line 646, ../scss/modules/_book.scss */
+  /* line 648, ../scss/modules/_book.scss */
   .page-book-countries .country-section .block > h2 {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
-/* line 658, ../scss/modules/_book.scss */
+/* line 660, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block .blog .view-content {
   width: 218px;
 }
 @media only screen and (max-width: 992px) {
-  /* line 658, ../scss/modules/_book.scss */
+  /* line 660, ../scss/modules/_book.scss */
   .page-book-countries .country-section .block .blog .view-content {
     width: 100%;
   }
 }
-/* line 664, ../scss/modules/_book.scss */
+/* line 666, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block .blog .node-intro {
   display: inline-block;
 }
-/* line 667, ../scss/modules/_book.scss */
+/* line 669, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block .blog .node-image {
   margin-bottom: 15px;
   padding-left: 0;
   padding-right: 0;
 }
-/* line 674, ../scss/modules/_book.scss */
+/* line 676, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block .partners a {
   font-family: "Open Sans",sans-serif;
   font-size: 12px;
@@ -15843,57 +15847,57 @@ section a:focus {
   color: #91b135;
   text-decoration: none;
 }
-/* line 681, ../scss/modules/_book.scss */
+/* line 683, ../scss/modules/_book.scss */
 .page-book-countries .country-section .block .partners a:hover {
   color: #617724;
 }
-/* line 687, ../scss/modules/_book.scss */
+/* line 689, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser {
   padding: 20px 0;
 }
-/* line 690, ../scss/modules/_book.scss */
+/* line 692, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-image {
   padding: 0;
 }
-/* line 692, ../scss/modules/_book.scss */
+/* line 694, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-image a {
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
   display: inline-block;
 }
-/* line 695, ../scss/modules/_book.scss */
+/* line 697, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-image a img {
   max-width: 100%;
   max-height: 122px;
   height: auto;
 }
 @media only screen and (max-width: 992px) {
-  /* line 690, ../scss/modules/_book.scss */
+  /* line 692, ../scss/modules/_book.scss */
   .page-book-countries .country-section .node-teaser .node-image {
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 15px;
   }
 }
-/* line 710, ../scss/modules/_book.scss */
+/* line 712, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro > h3 {
   margin-top: 0;
   text-align: left;
   line-height: 0;
   margin-bottom: 5px;
 }
-/* line 715, ../scss/modules/_book.scss */
+/* line 717, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro > h3 a {
   color: #91b135;
   font-size: 16px;
   line-height: 1.42857;
   font-family: "Open Sans",sans-serif;
 }
-/* line 721, ../scss/modules/_book.scss */
+/* line 723, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro > h3 a:hover {
   color: #617724;
   text-decoration: none;
 }
-/* line 727, ../scss/modules/_book.scss */
+/* line 729, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro span {
   color: #999;
   font-size: 14px;
@@ -15901,7 +15905,7 @@ section a:focus {
   line-height: 1.42857;
   font-family: "Open Sans",sans-serif;
 }
-/* line 734, ../scss/modules/_book.scss */
+/* line 736, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro .text {
   margin-top: 5px;
   font-family: "Merriweather",serif;
@@ -15909,11 +15913,11 @@ section a:focus {
   font-size: 16px;
   line-height: 1.42857;
 }
-/* line 741, ../scss/modules/_book.scss */
+/* line 743, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro .text p {
   font-size: 16px;
 }
-/* line 745, ../scss/modules/_book.scss */
+/* line 747, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro .date {
   background-image: url("../images/ico-cal.png");
   background-position: left center;
@@ -15925,7 +15929,7 @@ section a:focus {
   padding-top: 5px;
   font-size: 14px;
 }
-/* line 756, ../scss/modules/_book.scss */
+/* line 758, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser .node-intro .location {
   background-image: url("../images/ico-loc.png");
   background-position: left center;
@@ -15937,80 +15941,80 @@ section a:focus {
   padding-top: 5px;
   font-size: 14px;
 }
-/* line 768, ../scss/modules/_book.scss */
+/* line 770, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource {
   border-bottom: 1px solid #f0f0f0;
 }
-/* line 769, ../scss/modules/_book.scss */
+/* line 771, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource > h2 {
   margin-top: 0;
   text-align: left;
   line-height: 0;
   margin-bottom: 5px;
 }
-/* line 774, ../scss/modules/_book.scss */
+/* line 776, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource > h2 a {
   color: #91b135;
   font-size: 16px;
   line-height: 1.42857;
   font-family: "Open Sans",sans-serif;
 }
-/* line 780, ../scss/modules/_book.scss */
+/* line 782, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource > h2 a:hover {
   color: #617724;
   text-decoration: none;
 }
-/* line 787, ../scss/modules/_book.scss */
+/* line 789, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .description-resource {
   padding-top: 0;
 }
-/* line 790, ../scss/modules/_book.scss */
+/* line 792, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .description-resource p {
   font-family: "Merriweather",serif !important;
   color: #999;
   margin: 5px 0;
   font-size: 16px;
 }
-/* line 798, ../scss/modules/_book.scss */
+/* line 800, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .keywords span {
   font-family: "Open Sans",sans-serif;
   text-transform: uppercase;
   color: #999;
   font-size: 12px;
 }
-/* line 804, ../scss/modules/_book.scss */
+/* line 806, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .keywords a {
   color: #91b135;
   font-size: 16px;
 }
-/* line 808, ../scss/modules/_book.scss */
+/* line 810, ../scss/modules/_book.scss */
 .page-book-countries .country-section .node-teaser.node-landlibrary-resource .keywords a:hover {
   color: #617724;
   text-decoration: none;
 }
-/* line 817, ../scss/modules/_book.scss */
+/* line 819, ../scss/modules/_book.scss */
 .page-book-countries .country-section select {
   background: #f7f7f7 none repeat scroll 0 0;
   background-image: url("../images/toggle-arrow.png");
   background-position: right 10px center;
   background-repeat: no-repeat;
 }
-/* line 823, ../scss/modules/_book.scss */
+/* line 825, ../scss/modules/_book.scss */
 .page-book-countries .country-section.grey {
   background: #F8F8F8;
 }
-/* line 825, ../scss/modules/_book.scss */
+/* line 827, ../scss/modules/_book.scss */
 .page-book-countries .country-section.grey select {
   background: #ffffff none repeat scroll 0 0;
   background-image: url("../images/toggle-arrow.png");
   background-position: right 10px center;
   background-repeat: no-repeat;
 }
-/* line 832, ../scss/modules/_book.scss */
+/* line 834, ../scss/modules/_book.scss */
 .page-book-countries .country-section .sep-left-charts {
   border-left: 1px solid #ccc;
 }
-/* line 835, ../scss/modules/_book.scss */
+/* line 837, ../scss/modules/_book.scss */
 .page-book-countries .country-section .spider-note {
   display: none;
   padding: 0;
@@ -16018,11 +16022,11 @@ section a:focus {
   color: #999;
   font-size: 12px;
 }
-/* line 842, ../scss/modules/_book.scss */
+/* line 844, ../scss/modules/_book.scss */
 .page-book-countries .country-section .spider-note .no-m-bottom {
   margin: 0;
 }
-/* line 846, ../scss/modules/_book.scss */
+/* line 848, ../scss/modules/_book.scss */
 .page-book-countries .country-section .note-infografic {
   border-bottom: 1px solid #ccc;
   margin-bottom: 30px;
@@ -16030,21 +16034,21 @@ section a:focus {
   color: #999;
   font-size: 12px;
 }
-/* line 875, ../scss/modules/_book.scss */
+/* line 877, ../scss/modules/_book.scss */
 .page-book-countries #page-title {
   display: none;
 }
-/* line 885, ../scss/modules/_book.scss */
+/* line 887, ../scss/modules/_book.scss */
 .page-book-countries #map-local {
   padding: 0;
 }
 
-/* line 892, ../scss/modules/_book.scss */
+/* line 894, ../scss/modules/_book.scss */
 #country-navigation .ul-wrap {
   display: table;
   margin: 0 auto;
 }
-/* line 895, ../scss/modules/_book.scss */
+/* line 897, ../scss/modules/_book.scss */
 #country-navigation .ul-wrap .nav-inside-country {
   margin-top: 20px;
   border: 1px solid #A3C642;
@@ -16054,12 +16058,12 @@ section a:focus {
   font-family: "Open Sans",sans-serif;
   margin-bottom: 20px;
 }
-/* line 904, ../scss/modules/_book.scss */
+/* line 906, ../scss/modules/_book.scss */
 #country-navigation .ul-wrap .nav-inside-country li {
   display: block;
   float: left;
 }
-/* line 908, ../scss/modules/_book.scss */
+/* line 910, ../scss/modules/_book.scss */
 #country-navigation .ul-wrap .nav-inside-country li a {
   border-right: 1px solid #A3C642;
   padding: 10px 15px;
@@ -16069,43 +16073,43 @@ section a:focus {
   display: block;
   font-size: 12px;
 }
-/* line 917, ../scss/modules/_book.scss */
+/* line 919, ../scss/modules/_book.scss */
 #country-navigation .ul-wrap .nav-inside-country li a:hover,
 #country-navigation .ul-wrap .nav-inside-country li a:focus {
   color: #617724;
 }
-/* line 922, ../scss/modules/_book.scss */
+/* line 924, ../scss/modules/_book.scss */
 #country-navigation .ul-wrap .nav-inside-country li:last-child a {
   border-right: none;
 }
 @media only screen and (max-width: 720px) {
-  /* line 892, ../scss/modules/_book.scss */
+  /* line 894, ../scss/modules/_book.scss */
   #country-navigation .ul-wrap {
     width: 150px;
   }
-  /* line 931, ../scss/modules/_book.scss */
+  /* line 933, ../scss/modules/_book.scss */
   #country-navigation .ul-wrap .nav-inside-country li {
     width: 100%;
     border-bottom: 1px solid #A3C642;
   }
-  /* line 934, ../scss/modules/_book.scss */
+  /* line 936, ../scss/modules/_book.scss */
   #country-navigation .ul-wrap .nav-inside-country li:last-child {
     border-bottom: none;
   }
-  /* line 938, ../scss/modules/_book.scss */
+  /* line 940, ../scss/modules/_book.scss */
   #country-navigation .ul-wrap .nav-inside-country li a {
     text-align: center;
     border-right: none;
   }
 }
 
-/* line 948, ../scss/modules/_book.scss */
+/* line 950, ../scss/modules/_book.scss */
 .node-landbook-country {
   font-size: 16px;
   font-family: "Merriweather",serif;
   color: #666;
 }
-/* line 952, ../scss/modules/_book.scss */
+/* line 954, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container {
   color: #666;
   font-family: "Merriweather",serif;
@@ -16115,32 +16119,32 @@ section a:focus {
   margin-bottom: 0px;
   border-bottom: none;
 }
-/* line 961, ../scss/modules/_book.scss */
+/* line 963, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-label {
   display: none;
 }
-/* line 964, ../scss/modules/_book.scss */
+/* line 966, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view {
   padding: 0px;
   margin: 0px;
   border-bottom: none;
 }
-/* line 968, ../scss/modules/_book.scss */
+/* line 970, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info {
   border-bottom: 1px solid #d3d7d9;
   font-size: 16px;
 }
-/* line 972, ../scss/modules/_book.scss */
+/* line 974, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info .content {
   position: relative;
 }
-/* line 975, ../scss/modules/_book.scss */
+/* line 977, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info .content .mic-i-a {
   display: block;
   padding: 10px 0;
   font-family: "Open Sans",sans-serif;
 }
-/* line 981, ../scss/modules/_book.scss */
+/* line 983, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info .content .mic-i-control {
   background-image: url("../images/icon-open-info.png");
   background-position: center center;
@@ -16153,17 +16157,17 @@ section a:focus {
   width: 20px;
   cursor: pointer;
 }
-/* line 993, ../scss/modules/_book.scss */
+/* line 995, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info .content .mic-content {
   display: none;
 }
-/* line 1001, ../scss/modules/_book.scss */
+/* line 1003, ../scss/modules/_book.scss */
 .node-landbook-country .sources {
   border-bottom: 1px solid #d6dbdc;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-/* line 1006, ../scss/modules/_book.scss */
+/* line 1008, ../scss/modules/_book.scss */
 .node-landbook-country .sources .field-label {
   font-family: "Open Sans",sans-serif;
   color: #999;
@@ -16172,12 +16176,12 @@ section a:focus {
   font-style: normal;
   text-transform: uppercase;
 }
-/* line 1014, ../scss/modules/_book.scss */
+/* line 1016, ../scss/modules/_book.scss */
 .node-landbook-country .sources span {
   font-family: "Merriweather",serif;
   font-size: 16px;
 }
-/* line 1018, ../scss/modules/_book.scss */
+/* line 1020, ../scss/modules/_book.scss */
 .node-landbook-country .sources span a {
   font-family: "Merriweather",serif;
   font-size: 16px;
@@ -16186,20 +16190,20 @@ section a:focus {
 /******************************************
  *      Form styling
  */
-/* line 1031, ../scss/modules/_book.scss */
+/* line 1033, ../scss/modules/_book.scss */
 .block .form-title {
   font-size: 16px;
   font-family: "Open Sans",sans-serif;
 }
-/* line 1035, ../scss/modules/_book.scss */
+/* line 1037, ../scss/modules/_book.scss */
 .block .views-exposed-widget {
   padding: 10px 0 20px 0;
 }
-/* line 1038, ../scss/modules/_book.scss */
+/* line 1040, ../scss/modules/_book.scss */
 .block .views-exposed-widget .views-widget .description {
   display: none;
 }
-/* line 1041, ../scss/modules/_book.scss */
+/* line 1043, ../scss/modules/_book.scss */
 .block .views-exposed-widget .views-widget select {
   background: #f7f7f7 none repeat scroll 0 0;
   min-width: 300px;
@@ -16207,7 +16211,7 @@ section a:focus {
   background-position: right 10px center;
   background-repeat: no-repeat;
 }
-/* line 1050, ../scss/modules/_book.scss */
+/* line 1052, ../scss/modules/_book.scss */
 .block select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -16224,7 +16228,7 @@ section a:focus {
   box-shadow: 4px 5px 0 0 #6e872a;
   margin-bottom: 5px;
 }
-/* line 1066, ../scss/modules/_book.scss */
+/* line 1068, ../scss/modules/_book.scss */
 .block .button {
   background-color: #A3C642;
   color: #fff;
@@ -16271,13 +16275,13 @@ section a:focus {
 /*     display:none; */
 /* } */
 /* loader */
-/* line 1118, ../scss/modules/_book.scss */
+/* line 1120, ../scss/modules/_book.scss */
 .loading .sk-three-bounce {
   margin: 40px auto;
   width: 80px;
   text-align: center;
 }
-/* line 1122, ../scss/modules/_book.scss */
+/* line 1124, ../scss/modules/_book.scss */
 .loading .sk-three-bounce .sk-child {
   width: 20px;
   height: 20px;
@@ -16287,12 +16291,12 @@ section a:focus {
   -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
   animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
 }
-/* line 1130, ../scss/modules/_book.scss */
+/* line 1132, ../scss/modules/_book.scss */
 .loading .sk-three-bounce .sk-bounce1 {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
-/* line 1133, ../scss/modules/_book.scss */
+/* line 1135, ../scss/modules/_book.scss */
 .loading .sk-three-bounce .sk-bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
@@ -16317,7 +16321,7 @@ section a:focus {
     transform: scale(1);
   }
 }
-/* line 1153, ../scss/modules/_book.scss */
+/* line 1155, ../scss/modules/_book.scss */
 .loading p {
   font-family: "Open Sans",sans-serif;
   color: #999;
@@ -16325,18 +16329,18 @@ section a:focus {
   text-transform: uppercase;
 }
 
-/* line 1165, ../scss/modules/_book.scss */
+/* line 1167, ../scss/modules/_book.scss */
 .p-l-bottom {
   padding-bottom: 20px;
 }
 
-/* line 1168, ../scss/modules/_book.scss */
+/* line 1170, ../scss/modules/_book.scss */
 .cb-right-2 {
   border-right: 1px solid #d6dbdc;
 }
 
 /* help classes */
-/* line 1174, ../scss/modules/_book.scss */
+/* line 1176, ../scss/modules/_book.scss */
 .m-l-top {
   margin-top: 20px;
 }
@@ -16470,7 +16474,7 @@ section a:focus {
 /*     display: none; */
 /* } */
 /* WFT is this doing here? is it landbook specific? no */
-/* line 1321, ../scss/modules/_book.scss */
+/* line 1323, ../scss/modules/_book.scss */
 .social-block {
   position: fixed;
   right: 0px;
@@ -16479,47 +16483,47 @@ section a:focus {
   transform: translate(0px, -50%);
   z-index: 1000;
 }
-/* line 1330, ../scss/modules/_book.scss */
+/* line 1332, ../scss/modules/_book.scss */
 .social-block .addtoany_list a {
   float: left;
   padding: 0;
 }
-/* line 1334, ../scss/modules/_book.scss */
+/* line 1336, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_facebook {
   background: #4d70a8;
 }
-/* line 1338, ../scss/modules/_book.scss */
+/* line 1340, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_twitter {
   background: #00baf2;
 }
-/* line 1341, ../scss/modules/_book.scss */
+/* line 1343, ../scss/modules/_book.scss */
 .social-block .addtoany_list a.a2a_button_google_plus {
   background: #e2411d;
 }
-/* line 1345, ../scss/modules/_book.scss */
+/* line 1347, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span {
   border-radius: 0 !important;
   display: block;
 }
-/* line 1349, ../scss/modules/_book.scss */
+/* line 1351, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_facebook {
   background: url("../images/sh-facebook.png") no-repeat 0 0;
 }
-/* line 1353, ../scss/modules/_book.scss */
+/* line 1355, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_twitter {
   background: url("../images/sh-twitter.png") no-repeat 0 0;
 }
-/* line 1356, ../scss/modules/_book.scss */
+/* line 1358, ../scss/modules/_book.scss */
 .social-block .addtoany_list a span.a2a_s_google_plus {
   background: url("../images/sh-googleplus.png") no-repeat 0 0;
 }
 
-/* line 1365, ../scss/modules/_book.scss */
+/* line 1367, ../scss/modules/_book.scss */
 #block-views-landbook-countries-related-block-4 .views-view-grid {
   margin: 0 auto;
 }
 @media only screen and (max-width: 767px) {
-  /* line 1370, ../scss/modules/_book.scss */
+  /* line 1372, ../scss/modules/_book.scss */
   #block-views-landbook-countries-related-block-4 .views-view-grid td {
     padding: 0 15px;
     min-width: 200px;
@@ -16527,91 +16531,91 @@ section a:focus {
     float: left;
     min-height: 220px;
   }
-  /* line 1377, ../scss/modules/_book.scss */
+  /* line 1379, ../scss/modules/_book.scss */
   #block-views-landbook-countries-related-block-4 .views-view-grid td article {
     display: inline-block;
     line-height: 130px;
   }
 }
 
-/* line 1385, ../scss/modules/_book.scss */
+/* line 1387, ../scss/modules/_book.scss */
 #block-views-landbook-countries-related-block-5 {
   overflow-x: hidden;
 }
-/* line 1387, ../scss/modules/_book.scss */
+/* line 1389, ../scss/modules/_book.scss */
 #block-views-landbook-countries-related-block-5 .field-name-title {
   margin-top: 10px;
   clear: none;
 }
-/* line 1392, ../scss/modules/_book.scss */
+/* line 1394, ../scss/modules/_book.scss */
 #block-views-landbook-countries-related-block-5 .node-landlibrary-resource.node-teaser h2 {
   font-size: 16px;
   line-height: 1.42857;
 }
 @media (max-width: 768px) {
-  /* line 1397, ../scss/modules/_book.scss */
+  /* line 1399, ../scss/modules/_book.scss */
   #block-views-landbook-countries-related-block-5 .field-name-field-doc-provider {
     margin-left: 0;
     float: left;
   }
 }
-/* line 1404, ../scss/modules/_book.scss */
+/* line 1406, ../scss/modules/_book.scss */
 #block-views-landbook-countries-related-block-5 .field-name-field-doc-description p {
   color: #999;
   font-family: "Merriweather",serif;
   font-size: 16px;
 }
-/* line 1410, ../scss/modules/_book.scss */
+/* line 1412, ../scss/modules/_book.scss */
 #block-views-landbook-countries-related-block-5 .field-name-field-doc-creation-date {
   margin: 3px 0;
   clear: none;
 }
-/* line 1413, ../scss/modules/_book.scss */
+/* line 1415, ../scss/modules/_book.scss */
 #block-views-landbook-countries-related-block-5 .field-name-field-doc-creation-date span {
   color: #999;
   font-family: "Merriweather",serif;
   font-size: 16px;
 }
-/* line 1419, ../scss/modules/_book.scss */
+/* line 1421, ../scss/modules/_book.scss */
 #block-views-landbook-countries-related-block-5 .field-name-field-doc-publisher {
   color: #999;
   font-family: "Merriweather",serif;
   font-size: 16px;
 }
-/* line 1424, ../scss/modules/_book.scss */
+/* line 1426, ../scss/modules/_book.scss */
 #block-views-landbook-countries-related-block-5 .field-name-field-doc-type {
   clear: none;
 }
-/* line 1427, ../scss/modules/_book.scss */
+/* line 1429, ../scss/modules/_book.scss */
 #block-views-landbook-countries-related-block-5 .more-link {
   float: right;
   clear: both;
   margin-left: 15px;
   margin-top: 5px;
 }
-/* line 1433, ../scss/modules/_book.scss */
+/* line 1435, ../scss/modules/_book.scss */
 #block-views-landbook-countries-related-block-5 .left-col {
   float: right;
 }
 @media only screen and (max-width: 767px) {
-  /* line 1433, ../scss/modules/_book.scss */
+  /* line 1435, ../scss/modules/_book.scss */
   #block-views-landbook-countries-related-block-5 .left-col {
     float: left;
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 1441, ../scss/modules/_book.scss */
+  /* line 1443, ../scss/modules/_book.scss */
   #block-views-landbook-countries-related-block-5 .view-filters h2 {
     padding-top: 20px;
   }
 }
 
-/* line 1448, ../scss/modules/_book.scss */
+/* line 1450, ../scss/modules/_book.scss */
 .messages.error {
   overflow: hidden;
 }
 
-/* line 1451, ../scss/modules/_book.scss */
+/* line 1453, ../scss/modules/_book.scss */
 .disclaimer-block {
   font-size: 12px;
   color: #ffffff;
@@ -16621,71 +16625,76 @@ section a:focus {
   margin-bottom: 60px;
 }
 
-/* line 1460, ../scss/modules/_book.scss */
+/* line 1462, ../scss/modules/_book.scss */
 .note {
   font-size: 12px;
   color: #999;
   margin-bottom: 60px;
 }
-/* line 1465, ../scss/modules/_book.scss */
+/* line 1467, ../scss/modules/_book.scss */
 .note p {
   margin: 5px 0 0 0;
 }
-/* line 1469, ../scss/modules/_book.scss */
+/* line 1471, ../scss/modules/_book.scss */
 .note a {
   color: #A3C642;
 }
-/* line 1472, ../scss/modules/_book.scss */
+/* line 1474, ../scss/modules/_book.scss */
 .note a:hover {
   color: #617724;
   text-decoration: none;
 }
 
-/* line 1479, ../scss/modules/_book.scss */
+/* line 1481, ../scss/modules/_book.scss */
 .pdf-block {
   background: #F0F0F0;
   padding-top: 40px;
   border-top: 1px solid #f0f0f0;
   padding-bottom: 42px;
 }
-/* line 1485, ../scss/modules/_book.scss */
+/* line 1487, ../scss/modules/_book.scss */
 .pdf-block .cb-right-2 {
   border-right: 1px solid #d6dbdc;
 }
 @media only screen and (max-width: 767px) {
-  /* line 1485, ../scss/modules/_book.scss */
+  /* line 1487, ../scss/modules/_book.scss */
   .pdf-block .cb-right-2 {
     margin-bottom: 20px;
   }
 }
-/* line 1491, ../scss/modules/_book.scss */
+/* line 1493, ../scss/modules/_book.scss */
 .pdf-block .txt-c {
   font-family: "Open Sans",sans-serif;
   font-size: 14px;
 }
-/* line 1495, ../scss/modules/_book.scss */
+/* line 1497, ../scss/modules/_book.scss */
 .pdf-block .txt-c a {
   color: #A3C642;
 }
-/* line 1498, ../scss/modules/_book.scss */
+/* line 1500, ../scss/modules/_book.scss */
 .pdf-block .txt-c a:hover {
   color: #617724;
   text-decoration: none;
 }
-/* line 1502, ../scss/modules/_book.scss */
+/* line 1504, ../scss/modules/_book.scss */
 .pdf-block .txt-c a img {
   margin: 0 auto;
   vertical-align: middle;
   margin-bottom: 10px;
 }
-/* line 1507, ../scss/modules/_book.scss */
+/* line 1509, ../scss/modules/_book.scss */
 .pdf-block .txt-c a span {
   display: block;
 }
 
-/* line 1514, ../scss/modules/_book.scss */
+/* line 1516, ../scss/modules/_book.scss */
 #map-local-wrapper {
   height: 470px;
+}
+
+/* line 1520, ../scss/modules/_book.scss */
+.owl-carousel.owl-loaded {
+  position: absolute;
 }
 
 /* line 1, ../scss/modules/_users.scss */
