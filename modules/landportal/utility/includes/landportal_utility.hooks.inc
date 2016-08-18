@@ -285,6 +285,9 @@ function landportal_utility_form_alter(&$form, &$form_state, $form_id){
       }
     }
   }
+  if($form_id  == 'i18n_string_translate_page_form'){
+    drupal_add_css(drupal_get_path('module', 'landportal_utility') . '/css/admin.css');
+  }
 }
 
 function landportal_utility_custom_page_search_form(&$form, &$form_state){
