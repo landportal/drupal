@@ -88,6 +88,18 @@
               }, 100);
             }
         }, 500);
+        $('#wrapper-piechart').hide();
+        var timer_landId = setInterval(function() {
+          if($('.highcharts-subtitle tspan').text() == 'Land Area: undefined (Hectares)'){
+              $('#wrapper-piechart').hide();
+              setTimeout(function() {
+                clearInterval(timer_landId);
+              }, 100);
+          }
+          else{
+            $('#wrapper-piechart').show();
+          }
+        }, 100);
       },
       initCarousel: function(context, settings){
         $('.view-landbook-countries-related.view-display-id-block_6 .view-content').owlCarousel({
