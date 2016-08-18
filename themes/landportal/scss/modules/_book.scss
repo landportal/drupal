@@ -208,8 +208,7 @@ section a{
                         margin-bottom: -5px;
                       .views-row {
                         position: relative;
-                        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
-                        margin-bottom: 15px;
+                        /*box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);*/
                         @media(min-width:768px){
                           position: relative;
                           /*float: left;*/
@@ -1515,8 +1514,4 @@ section a{
 
 #map-local-wrapper{
     height: 470px;
-}
-
-.owl-carousel.owl-loaded{
-    position: absolute;
 }
