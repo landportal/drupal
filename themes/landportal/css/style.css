@@ -5270,7 +5270,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333333;
+  color: #666;
   background-color: #fff;
 }
 
@@ -7982,7 +7982,7 @@ select[multiple].input-lg,
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #a6a6a6;
 }
 
 @media (min-width: 768px) {
@@ -10476,7 +10476,7 @@ a.badge:hover, a.badge:focus {
 /* line 27, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_thumbnails.scss */
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #666;
 }
 
 /* line 34, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_thumbnails.scss */
@@ -15908,7 +15908,7 @@ section a:focus {
 .page-book-countries .country-section .node-teaser .node-intro .text {
   margin-top: 5px;
   font-family: "Merriweather",serif;
-  color: #333333;
+  color: #666;
   font-size: 16px;
   line-height: 1.42857;
 }
@@ -17953,7 +17953,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 }
 /* line 138, ../scss/modules/_header.scss */
 #header li.active a, #header li.active-trail a {
-  color: #333333 !important;
+  color: #666 !important;
 }
 /* line 143, ../scss/modules/_header.scss */
 #header li a {
@@ -17965,7 +17965,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 }
 /* line 149, ../scss/modules/_header.scss */
 #header li a:hover {
-  color: #333333 !important;
+  color: #666 !important;
 }
 /* line 152, ../scss/modules/_header.scss */
 #header li a::before {
@@ -18177,7 +18177,7 @@ body {
 /* line 13, ../scss/screens/_base.scss */
 body {
   font-family: "Merriweather",serif;
-  color: #333333;
+  color: #666;
 }
 
 /* line 17, ../scss/screens/_base.scss */
