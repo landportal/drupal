@@ -25,10 +25,10 @@
                   <a href="#table-indicators"><?php print t('Indicators'); ?></a>
                 </li>
                 <li>
-                  <a href="#map-global"><?php print t('Mapping'); ?></a>
+                  <a href="#compare"><?php print t('Compare countries'); ?></a>
                 </li>
                 <li>
-                  <a href="#compare"><?php print t('Compare countries'); ?></a>
+                  <a href="#map-global"><?php print t('Mapping'); ?></a>
                 </li>
                 <li>
                   <a href="#lgaf"><?php print t('Infographic'); ?></a>

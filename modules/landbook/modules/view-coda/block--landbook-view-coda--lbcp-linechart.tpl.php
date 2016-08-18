@@ -1,4 +1,5 @@
-    <section id="compare" class="container">
+    <section id="compare" class="country-section">
+      <div class="container">
       <?php if(!empty($block->subject)): ?>
         <header class="row">
           <div class="col-md-offset-2 col-md-8 text-center">
@@ -53,5 +54,6 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>

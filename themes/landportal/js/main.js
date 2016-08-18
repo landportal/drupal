@@ -102,6 +102,14 @@
         }, 100);
       },
       initCarousel: function(context, settings){
+        if($('#reletad-content .view-display-id-block_6 .empty').is('#reletad-content .view-display-id-block_6 .empty')){
+            $('#reletad-content').addClass('empty');
+        }
+        else{
+          $('#country-navigation').addClass('no-reletad-content-empty');
+        }
+
+
         $('.view-landbook-countries-related.view-display-id-block_6 .view-content').owlCarousel({
           center: true,
           items:3,

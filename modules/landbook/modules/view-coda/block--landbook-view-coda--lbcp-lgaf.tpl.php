@@ -1,4 +1,5 @@
-    <section id="lgaf" class="container">
+    <section id="lgaf" class="country-section">
+      <div class="container">
       <?php if(!empty($block->subject)): ?>
         <header class="row text-center">
           <div class="col-xs-12">
@@ -44,11 +45,11 @@
         </div>
         <div class="col-xs-12 text-center">
           <ul id="lgaf-legend" class="list-unstyled list-inline">
-            <li><span class="lgaf-value-a"></span> <span data-localize="label.vgp">Very Good Practice</span></li>
-            <li><span class="lgaf-value-b"></span> <span data-localize="label.gp">Good Practice</span></li>
-            <li><span class="lgaf-value-c"></span> <span data-localize="label.wp">Weak Practice</span></li>
-            <li><span class="lgaf-value-d"></span> <span data-localize="label.vwp">Very Weak Practice </span></li>
-            <li><span class="lgaf-value-na"></span> <span data-localize="label.ndata">Missing Value</span></li>
+            <li><span class="lgaf-value-a lgaf-value"></span> <span data-localize="label.vgp">Very Good Practice</span></li>
+            <li><span class="lgaf-value-b lgaf-value"></span> <span data-localize="label.gp">Good Practice</span></li>
+            <li><span class="lgaf-value-c lgaf-value"></span> <span data-localize="label.wp">Weak Practice</span></li>
+            <li><span class="lgaf-value-d lgaf-value"></span> <span data-localize="label.vwp">Very Weak Practice </span></li>
+            <li><span class="lgaf-value-na lgaf-value"></span> <span data-localize="label.ndata">Missing Value</span></li>
           </ul>
         </div>
         <div class="col-xs-12">
@@ -58,4 +59,13 @@
           echo drupal_render($block_build);?>
         </div>
       </div>
+      </div>
+      <?php $block = block_load('landbook_view_coda', 'lbcp_pie');
+          $block = _block_render_blocks(array($block));
+          $block_build = _block_get_renderable_array($block);
+          echo drupal_render($block_build);?>
+      <?php $block = block_load('landbook_view_coda', 'lbcp_spider');
+          $block = _block_render_blocks(array($block));
+          $block_build = _block_get_renderable_array($block);
+          echo drupal_render($block_build);?>
     </section>

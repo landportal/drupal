@@ -1,4 +1,5 @@
-<section id="map-global" class="container-fluid">
+<section id="map-global" class="country-section">
+  <div class="container-fluid">
   <?php if(!empty($block->subject)): ?>
     <header class="row">
       <div class="col-md-offset-2 col-md-8 text-center">
@@ -39,4 +40,5 @@
       </ul>
     </div>
   </div>
+</div>
 </section>

@@ -1,4 +1,5 @@
-<section id="table-indicators" class="container">
+<section id="table-indicators" class="country-section">
+  <div class="container">
   <?php if(!empty($block->subject)): ?>
     <header class="row">
       <div class="col-md-offset-2 col-md-8 text-center">
@@ -53,5 +54,6 @@
         <input type="submit" name="add" value="Add" class="btn btn-primary" data-localize="inputs.addindicator"/>
       </div>
     </form>
+  </div>
   </div>
 </section>

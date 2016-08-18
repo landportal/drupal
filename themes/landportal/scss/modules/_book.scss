@@ -202,13 +202,17 @@ section a{
             >section{
                 padding-bottom: 60px;
                 &#reletad-content{
+                    &.empty{
+                        margin-top: -260px;
+                    }
                     padding-bottom: 0px;
                     .view-content{
                         text-align: center;
                         margin-bottom: -5px;
                       .views-row {
                         position: relative;
-                        /*box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);*/
+                        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+                        margin-bottom:15px;
                         @media(min-width:768px){
                           position: relative;
                           /*float: left;*/
@@ -322,6 +326,9 @@ section a{
                     background-color: $grey-bglight;
                     margin-top: -135px;
                     padding-top: 135px;
+                    &.no-reletad-content-empty{
+                        margin-top: -145px;
+                    }
                     header{
                         margin-top: -25px;
                         h2{
@@ -594,6 +601,7 @@ section a{
 
 
     .country-section{
+        clear:both;
         /*overflow-x:hidden;*/
         &.nopadding{
             padding-top:0;
@@ -850,6 +858,7 @@ section a{
             font-family: "Open Sans",sans-serif;
             color:#999;
             font-size:12px;
+            padding-top:0;
         }
     }
     
@@ -1455,7 +1464,6 @@ section a{
     font-family: "Merriweather",serif;
     background: $green-light;
     padding:15px 0 5px 0;
-    margin-bottom: 60px;
 }
 
 .note{
@@ -1514,4 +1522,63 @@ section a{
 
 #map-local-wrapper{
     height: 470px;
+}
+
+.country-section:nth-child(even),
+.grey{
+    background:#F8F8F8;
+
+    #map-global-wrapper{
+        background:#F8F8F8;
+    }
+}
+
+#lgaf{
+    &.country-section{
+        border-bottom:none;
+    }
+    #lgaf-legend{
+        li{
+            span{
+                font-size: 12px;
+
+                &.lgaf-value{
+                    width:14px;
+                    height:14px;
+                    left: 0;
+                    position: relative;
+                    top: 2px;
+                }
+            }
+        }
+    }
+    #lgaf-values{
+        li{
+            position:relative;
+            padding: 15px 20px 15px 40px !important;
+            .lgaf-value-a,
+            .lgaf-value-b,
+            .lgaf-value-c,
+            .lgaf-value-d,
+            .lgaf-value-na,{
+                height: 20px !important;
+                left: 10px;
+                line-height: 20px;
+                position: absolute;
+                text-align: center;
+                top: 15px;
+                width: 20px !important;
+            }
+        }
+    }
+}
+
+.graphics-wrapper {
+    background: #f8f8f8;
+    display: block;
+    overflow: hidden;
+}
+
+#lgaf{
+    overflow: hidden;
 }
