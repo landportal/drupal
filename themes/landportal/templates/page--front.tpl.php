@@ -14,6 +14,7 @@
  */
 ?>
   <div id="page-wrapper"><div id="page">
+    <div class="container-wrapper">
       <div class="container">
           <div class="row">
             <div id="header"><div class="section clearfix">
@@ -53,6 +54,7 @@
             </div>
           </div>
       </div>
+    </div>
     </div>
 
     <?php print $messages; ?>

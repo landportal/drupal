@@ -16930,6 +16930,11 @@ section a:focus {
   margin-bottom: 0;
 }
 
+/* line 1754, ../scss/modules/_book.scss */
+.container-wrapper {
+  border-bottom: 0.36em solid #8fcd1f;
+}
+
 /* line 1, ../scss/modules/_users.scss */
 .profile {
   text-align: left;
@@ -18801,7 +18806,7 @@ body.overlay html[dir=rtl] #admin-menu {
 }
 /* line 303, ../scss/screens/_base.scss */
 .front #header {
-  border-bottom: 0.36em solid #8fcd1f;
+  /*border-bottom: .36em solid $green;*/
 }
 /* line 306, ../scss/screens/_base.scss */
 .front #main {
