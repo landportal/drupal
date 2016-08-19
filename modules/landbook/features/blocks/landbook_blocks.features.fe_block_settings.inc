@@ -504,7 +504,7 @@ function landbook_blocks_default_fe_block_settings() {
 
   $export['lang_dropdown-language'] = array(
     'cache' => -1,
-    'css_class' => 'col-md-1',
+    'css_class' => 'col-md-1 col-xs-1',
     'custom' => 0,
     'delta' => 'language',
     'i18n_block_language' => array(),
@@ -539,7 +539,7 @@ function landbook_blocks_default_fe_block_settings() {
 
   $export['search-form'] = array(
     'cache' => -1,
-    'css_class' => 'col-md-2 search-form',
+    'css_class' => 'col-md-3 search-form col-xs-3',
     'custom' => 0,
     'delta' => 'form',
     'i18n_block_language' => array(),

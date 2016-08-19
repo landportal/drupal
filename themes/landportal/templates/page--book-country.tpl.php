@@ -14,12 +14,12 @@
  */
 ?>
   <div id="page-wrapper"><div id="page">
-      <div class="container-fluid">
+      <div class="container">
           <div class="row">
             <div id="header"><div class="section clearfix">
 
               <?php if ($logo): ?>
-                <div class="col-lg-2 col-lg-offset-1">
+                <div class="col-lg-3">
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
                   <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
                 </a>
@@ -45,7 +45,7 @@
                   <?php endif; ?>
                 </div> <!-- /#name-and-slogan -->
               <?php endif; ?>
-              <div class="col-lg-8">
+              <div class="col-lg-9">
                 <div class="row">
                   <?php print render($page['header']); ?>
                 </div>

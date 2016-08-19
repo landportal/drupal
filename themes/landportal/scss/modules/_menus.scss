@@ -28,7 +28,13 @@ ul.menu {
 //.contributor-role{
     #header{
         #block-nice-menus-1{
+            margin-left:10px;
             /*width: 380px !important;*/
+            @media only screen and (max-width: 768px){
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-left:0;
+            }
             .nice-menu{
                 ul{
                     top: 1.5em;
@@ -43,6 +49,19 @@ ul.menu {
                         background-position: 100% 50%;
                         padding-right: 15px !important;
                         margin-right: -8px !important;
+
+                        li{
+                            margin:0 !important;
+                            padding:0 !important;
+                            width:100px !important;
+                            a{
+                                font-size: 12px;
+                            }
+                            ul{
+                                width:100px !important;
+                                left:100px;
+                            }
+                        }
                     }
                 }
             }

@@ -202,6 +202,10 @@ section a{
             >section{
                 padding-bottom: 60px;
                 &#reletad-content{
+                    .views-field-field-doc-thumb{
+                        max-height: 260px;
+                        overflow: hidden;
+                    }
                     &.empty{
                         margin-top: -260px;
                     }
@@ -1728,4 +1732,21 @@ section a{
     .location{
         font-size:16px;
     }
+
+    
+    .field-name-field-geographical-focus,
+    .field-name-field-related-topics{
+        margin-bottom:0 !important;
+        .field-items,
+        .field-item{
+            margin-bottom: 5px;
+            a{
+                font-family: "Open Sans",sans-serif;
+            }
+        }
+        .field-items{
+            margin-bottom: 0;
+        }
+    }
+
 }

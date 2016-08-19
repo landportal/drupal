@@ -108,6 +108,14 @@
     padding:0.8em 0.5em !important;
   }
   >.section{
+    #logo{
+        @media only screen and (max-width: 768px){
+          margin-bottom:10px;
+        }
+        img{
+          margin-top:9px;
+        }
+      }
     >.col-lg-8{
       @media only screen and (max-width: 1400px){
         width: 100%;
@@ -205,9 +213,10 @@
     }
   }
   .main-menu{
-    @media only screen and (max-width: 992px){
+    @media only screen and (max-width: 768px){
       float: left;
-      margin-top:5px;
+      margin-top:15px;
+      min-width: 280px;
     }
     margin-top:15px;
     @media only screen and (max-width: 1200px){
@@ -226,8 +235,8 @@
     margin-top: 4px;
     margin-bottom: 0;
     float: right;
-    @media only screen and (max-width: 992px){
-      float: none;
+    @media only screen and (max-width: 768px){
+      float: left;
     }
     .form-type-textfield{
       input{
@@ -242,14 +251,14 @@
       }
     }
     /*width: 220px;*/
-    @media only screen and (max-width: 992px){
+    @media only screen and (max-width: 768px){
         width: 220px !important;
       }
     transition-property: width;
     transition-duration: 0.5s;
     &.active{
       width: 220px;
-      @media only screen and (max-width: 992px){
+      @media only screen and (max-width: 768px){
         width: 90% !important;
       }
     }
@@ -271,7 +280,8 @@
     }
   }
   .block-nice-menus{
-    margin-top:14px;
+    margin-top:15px;
+    margin-bottom:8px;
     li{
       a{
         margin:0;
@@ -287,19 +297,19 @@
   /*width: 90px !important;*/
   float: right;
   /*overflow: hidden;*/
-  @media only screen and (max-width: 992px){
-    float: none;
+  @media only screen and (max-width: 768px){
+    float: left;
   }
 }
 
 #block-lang-dropdown-language{
   min-width: 90px;
   float: right;
-  @media only screen and (max-width: 992px){
+  @media only screen and (max-width: 768px){
     float: none;
     position: absolute;
     right: 0;
-    top: -37px;
+    top: -47px;
   }
   form{
     margin: 0;
