@@ -73,8 +73,10 @@
     </div>
   <?php endif; ?>
 
-  <?php if ($more): ?>
-    <?php print $more; ?>
+  <?php if ($rows): ?>
+    <?php if ($more): ?>
+      <?php print $more; ?>
+    <?php endif; ?>
   <?php endif; ?>
 
   <?php if ($footer): ?>
