@@ -504,7 +504,7 @@ function landbook_blocks_default_fe_block_settings() {
 
   $export['lang_dropdown-language'] = array(
     'cache' => -1,
-    'css_class' => 'col-md-2',
+    'css_class' => 'col-md-1',
     'custom' => 0,
     'delta' => 'language',
     'i18n_block_language' => array(),

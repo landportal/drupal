@@ -14,7 +14,7 @@ function user_menu_feature_default_fe_block_settings() {
 
   $export['nice_menus-1'] = array(
     'cache' => -1,
-    'css_class' => 'col-md-1',
+    'css_class' => 'col-md-3',
     'custom' => 0,
     'delta' => 1,
     'i18n_block_language' => array(),

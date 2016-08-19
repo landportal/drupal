@@ -17726,26 +17726,25 @@ ul.menu > li li a.active-trail {
 #lang-dropdown-select-language {
   width: 60px !important;
   padding-top: 10px;
-  padding-bottom: 3px;
   margin: 0;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* line 288, ../scss/modules/_menus.scss */
+  /* line 287, ../scss/modules/_menus.scss */
   #lang-dropdown-select-language {
     margin-top: 3px;
   }
 }
-/* line 296, ../scss/modules/_menus.scss */
+/* line 295, ../scss/modules/_menus.scss */
 ul.tabs li a {
   border: 0;
 }
-/* line 298, ../scss/modules/_menus.scss */
+/* line 297, ../scss/modules/_menus.scss */
 ul.tabs li a.active {
   border: 0;
 }
 
-/* line 303, ../scss/modules/_menus.scss */
+/* line 302, ../scss/modules/_menus.scss */
 ul.primary.tabs,
 ul.secondary.tabs {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -17755,20 +17754,20 @@ ul.secondary.tabs {
   padding: 1em 0;
   margin: 0;
 }
-/* line 305, ../scss/modules/_menus.scss */
+/* line 304, ../scss/modules/_menus.scss */
 ul.primary.tabs a.active,
 ul.secondary.tabs a.active {
   border-bottom: 0;
   /*3px solid $blue-dark;*/
 }
 
-/* line 315, ../scss/modules/_menus.scss */
+/* line 314, ../scss/modules/_menus.scss */
 li a.active,
 a.active {
   color: #2a6496;
 }
 
-/* line 319, ../scss/modules/_menus.scss */
+/* line 318, ../scss/modules/_menus.scss */
 a:not([href]) {
   color: inherit;
   text-decoration: none;
@@ -17967,26 +17966,26 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   background: #766054 !important;
 }
 
-/* line 88, ../scss/modules/_header.scss */
-.contributor-role #header {
-  padding: 6px 50px  10px 0 !important;
-}
-@media only screen and (max-width: 1700px) {
-  /* line 91, ../scss/modules/_header.scss */
-  .contributor-role #header > .section > .col-lg-8 {
-    width: 100%;
+/*.contributor-role{
+  #header{
+    padding:6px 50px  10px 0 !important;
+    >.section{
+      >.col-lg-8{
+        @media only screen and (max-width: 1700px){
+          width: 100%;
+        }
+      }
+      >.col-lg-2{
+        @media only screen and (max-width: 1700px){
+          margin-left: 0px;
+        }
+      }
+    }
   }
-}
-@media only screen and (max-width: 1700px) {
-  /* line 96, ../scss/modules/_header.scss */
-  .contributor-role #header > .section > .col-lg-2 {
-    margin-left: 0px;
-  }
-}
-
+}*/
 /* line 105, ../scss/modules/_header.scss */
 #header {
-  padding: 6px 0  10px 0 !important;
+  padding: 6px 0  10px 0;
 }
 @media only screen and (max-width: 768px) {
   /* line 105, ../scss/modules/_header.scss */
@@ -18194,8 +18193,9 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 
 /* line 286, ../scss/modules/_header.scss */
 #block-nice-menus-1 {
-  width: 90px !important;
+  /*width: 90px !important;*/
   float: right;
+  overflow: hidden;
 }
 @media only screen and (max-width: 992px) {
   /* line 286, ../scss/modules/_header.scss */
@@ -18204,30 +18204,31 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   }
 }
 
-/* line 294, ../scss/modules/_header.scss */
-.logged-in #block-nice-menus-1 {
-  width: 190px !important;
-}
-
-/* line 298, ../scss/modules/_header.scss */
+/* line 295, ../scss/modules/_header.scss */
 #block-lang-dropdown-language {
-  width: 96px !important;
+  min-width: 90px;
   float: right;
 }
 @media only screen and (max-width: 992px) {
-  /* line 298, ../scss/modules/_header.scss */
+  /* line 295, ../scss/modules/_header.scss */
   #block-lang-dropdown-language {
     float: none;
     position: absolute;
     right: 0;
-    top: -35px;
+    top: -37px;
   }
 }
-/* line 307, ../scss/modules/_header.scss */
+/* line 304, ../scss/modules/_header.scss */
 #block-lang-dropdown-language form {
   margin: 0;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* line 310, ../scss/modules/_header.scss */
+  #block-lang-dropdown-language {
+    margin-top: -3px;
+  }
+}
 /* @import "modules/m-generales"; */
 /* IMPORT: Screens */
 /**
@@ -18427,7 +18428,7 @@ a {
 
 /* line 168, ../scss/screens/_base.scss */
 #header {
-  padding: 0.8em 5em 0.5em;
+  /*padding: 0.8em 5em 0.5em;*/
   /* height: 44px; */
 }
 

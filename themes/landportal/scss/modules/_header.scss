@@ -84,7 +84,7 @@
 
   }
 }
-.contributor-role{
+/*.contributor-role{
   #header{
     padding:6px 50px  10px 0 !important;
     >.section{
@@ -100,10 +100,10 @@
       }
     }
   }
-}
+}*/
 
 #header{
-  padding:6px 0  10px 0 !important;
+  padding:6px 0  10px 0;
   @media only screen and (max-width: 768px){
     padding:0.8em 0.5em !important;
   }
@@ -284,27 +284,30 @@
   }
 }
 #block-nice-menus-1{
-  width: 90px !important;
+  /*width: 90px !important;*/
   float: right;
+  overflow: hidden;
   @media only screen and (max-width: 992px){
     float: none;
   }
 }
-.logged-in{
-  #block-nice-menus-1{
-    width: 190px !important;
-  }
-}
+
 #block-lang-dropdown-language{
-  width: 96px !important;
+  min-width: 90px;
   float: right;
   @media only screen and (max-width: 992px){
     float: none;
     position: absolute;
     right: 0;
-    top: -35px;
+    top: -37px;
   }
   form{
     margin: 0;
   }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #block-lang-dropdown-language{
+      margin-top:-3px;
+    }
 }
