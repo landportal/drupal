@@ -89,6 +89,12 @@ function ct_debate_strongarm() {
       'listing' => array(
         'custom_settings' => TRUE,
       ),
+      'promoted_country_page' => array(
+        'custom_settings' => TRUE,
+      ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

@@ -390,8 +390,20 @@ $handler->display->display_options['fields']['field_image']['table'] = 'field_da
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['label'] = '';
 $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image']['hide_empty'] = TRUE;
 $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['field_image']['settings'] = array(
+  'image_style' => 'country_promoted',
+  'image_link' => 'content',
+);
+/* Field: Content: Thumbnail of the resource */
+$handler->display->display_options['fields']['field_doc_thumb']['id'] = 'field_doc_thumb';
+$handler->display->display_options['fields']['field_doc_thumb']['table'] = 'field_data_field_doc_thumb';
+$handler->display->display_options['fields']['field_doc_thumb']['field'] = 'field_doc_thumb';
+$handler->display->display_options['fields']['field_doc_thumb']['label'] = '';
+$handler->display->display_options['fields']['field_doc_thumb']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_doc_thumb']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_doc_thumb']['settings'] = array(
   'image_style' => 'country_promoted',
   'image_link' => 'content',
 );
@@ -413,6 +425,7 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'blog_post' => 'blog_post',
   'debate' => 'debate',
   'event' => 'event',
+  'landlibrary_resource' => 'landlibrary_resource',
   'news' => 'news',
 );
 /* Filter criterion: Content: Language */

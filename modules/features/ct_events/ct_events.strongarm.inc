@@ -89,6 +89,12 @@ function ct_events_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'promoted_country_page' => array(
+        'custom_settings' => TRUE,
+      ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

@@ -22,7 +22,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -77,10 +77,9 @@ function ct_debate_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 9,
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'listing' => array(
         'label' => 'above',
@@ -139,7 +138,7 @@ function ct_debate_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -213,7 +212,7 @@ function ct_debate_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 3,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'above',
@@ -276,7 +275,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'listing' => array(
         'label' => 'above',
@@ -343,7 +342,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -481,7 +480,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -540,7 +539,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -664,7 +663,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'inline',

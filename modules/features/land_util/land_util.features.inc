@@ -33,6 +33,7 @@ function land_util_custom_pub_defaults() {
       'blog_post' => t('Blog post'),
       'debate' => t('Debate'),
       'event' => t('Event'),
+      'landlibrary_resource' => t('LandLibrary Resource'),
       'news' => t('News'),
     ),
   );

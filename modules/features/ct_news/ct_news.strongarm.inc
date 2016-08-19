@@ -89,6 +89,12 @@ function ct_news_strongarm() {
       'listing' => array(
         'custom_settings' => TRUE,
       ),
+      'promoted_country_page' => array(
+        'custom_settings' => TRUE,
+      ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -111,7 +117,7 @@ function ct_news_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '8',
+            'weight' => '10',
             'visible' => FALSE,
           ),
           'teaser' => array(

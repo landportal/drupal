@@ -225,5 +225,25 @@ function land_util_strongarm() {
   $strongarm->value = 1;
   $export['chosen_use_theme'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'custom_pub_types';
+  $strongarm->value = array(
+    'promoted_to_country_page' => array(
+      'type' => 'promoted_to_country_page',
+      'name' => 'Promoted to country page',
+      'default' => TRUE,
+      'node_types' => array(
+        'blog_post' => 'Blog post',
+        'debate' => 'Debate',
+        'event' => 'Event',
+        'landlibrary_resource' => 'LandLibrary Resource',
+        'news' => 'News',
+      ),
+    ),
+  );
+  $export['custom_pub_types'] = $strongarm;
+
   return $export;
 }

@@ -1,7 +1,7 @@
 name = Land Utility
 core = 7.x
 package = Landportal
-version = 7.x-1.7
+version = 7.x-1.8
 dependencies[] = addtoany
 dependencies[] = block_class
 dependencies[] = chosen
@@ -51,3 +51,4 @@ features[variable][] = chosen_placeholder_text_multiple
 features[variable][] = chosen_placeholder_text_single
 features[variable][] = chosen_search_contains
 features[variable][] = chosen_use_theme
+features[variable][] = custom_pub_types
