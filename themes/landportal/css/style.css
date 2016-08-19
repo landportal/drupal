@@ -17425,19 +17425,19 @@ ul.menu > li li a.active-trail {
 }
 
 /* line 30, ../scss/modules/_menus.scss */
-.contributor-role #header #block-nice-menus-1 {
+#header #block-nice-menus-1 {
   /*width: 380px !important;*/
 }
 /* line 33, ../scss/modules/_menus.scss */
-.contributor-role #header #block-nice-menus-1 .nice-menu ul {
+#header #block-nice-menus-1 .nice-menu ul {
   top: 1.5em;
 }
 /* line 36, ../scss/modules/_menus.scss */
-.contributor-role #header #block-nice-menus-1 .nice-menu ul li ul {
+#header #block-nice-menus-1 .nice-menu ul li ul {
   top: -1px;
 }
 /* line 42, ../scss/modules/_menus.scss */
-.contributor-role #header #block-nice-menus-1 .nice-menu.nice-menu-down .menuparent {
+#header #block-nice-menus-1 .nice-menu.nice-menu-down .menuparent {
   background-position: 100% 50%;
   padding-right: 15px !important;
   margin-right: -8px !important;
@@ -18195,7 +18195,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 #block-nice-menus-1 {
   /*width: 90px !important;*/
   float: right;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 @media only screen and (max-width: 992px) {
   /* line 286, ../scss/modules/_header.scss */
