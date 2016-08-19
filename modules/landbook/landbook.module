@@ -163,6 +163,7 @@ function load_country_description($title){
 /**
  * Implements hook_translated_menu_link_alter().
  */
+/*
 function landbook_translated_menu_link_alter(&$item, $map) {
   global $user;
   if ($item['menu_name'] == 'user-menu' && $item['link_path'] == 'node/add') {
@@ -170,7 +171,7 @@ function landbook_translated_menu_link_alter(&$item, $map) {
       $item['access'] = FALSE;
     }
   }
-}
+}*/
 
 /**
  * Implements hook_views_pre_render().
