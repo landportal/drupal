@@ -9,7 +9,6 @@
 $grey-bglight: #f0f0f0;
 $green-bg: #A3C642;
 
-
 /******************************************
  * Global stuff that shouldn't be here
  */
@@ -186,6 +185,7 @@ section a{
         width: 100%;
         padding-left: 0px;
         padding-right: 0px;
+        margin-top: 0;
         .region-content{
             #block-system-main{
                 margin-top: -60px;
@@ -337,7 +337,7 @@ section a{
                     header{
                         margin-top: -25px;
                         h2{
-                            font-family: "News Cycle",sans-serif;
+                            font-family: "Open Sans",sans-serif;
                             margin-top: 0;
                             margin-bottom: 10px;
                             font-size: 2em;
@@ -1787,9 +1787,10 @@ section a{
         font-size:16px;
     }
 
-    
+    .field-type-taxonomy-term-reference,
     .field-name-field-geographical-focus,
-    .field-name-field-related-topics{
+    .field-name-field-related-topics,
+    .field-name-field-doc-licencing{
         margin-bottom:0 !important;
         .field-items,
         .field-item{
