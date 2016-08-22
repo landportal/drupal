@@ -87,13 +87,17 @@
         var timerId = setInterval(function() {
           if($('#wrapper-spiderchart').html() == ''){
               $('.spider-note').hide();
-              $('#wrapper-spiderchart').hide();
-              $('#wrapper-piechart').css({'float':'none','margin':'0 auto'})
+              if($(window).width()>=768){
+                $('#wrapper-piechart').addClass('centered');
+                $('.spiderchart').addClass('hide');
+              }
             }
             else{
               $('.spider-note').show();
-              $('#wrapper-spiderchart').show();
-              $('#wrapper-piechart').css({'float':'left','margin':'0'})
+              if($(window).width()>=768){
+                $('#wrapper-piechart').removeClass('centered');
+                $('.spiderchart').removeClass('hide');
+              }
               setTimeout(function() {
                 clearInterval(timerId);
               }, 100);

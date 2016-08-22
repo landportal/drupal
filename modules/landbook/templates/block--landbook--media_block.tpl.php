@@ -32,13 +32,25 @@ foreach ($views as $vid => $view) {
                 </div>
             </div>
         </div>
-        <div class="bg-gray">
+
+        <?php $full_width=''; ?>
+        <?php $centerred=''; ?>
+        <?php if(empty($render['news'])):?>
+            <?php $col1='hide '; ?>
+            <?php $col2='centered'; ?>
+        <?php endif; ?>
+        <?php if(empty($render['blog'])):?>
+            <?php $col2='hide '; ?>
+            <?php $col1='centered'; ?>
+            <?php $full_width='full-width'; ?>
+        <?php endif; ?>
+        <div class="bg-gray <?php print $full_width; ?>">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-xs-12 bg-media">
+                    <div class="col-md-8 col-xs-12 bg-media <?php print $col1; ?>">
                         <?php print ($render['news']); ?>
                     </div>
-                    <div class="col-md-4 col-xs-12 bg-white">
+                    <div class="col-md-4 col-xs-12 bg-white <?php print $col1; ?>">
                         <div class="adj-blog">
                             <?php print ($render['blog']); ?>
                         </div>
@@ -48,10 +60,21 @@ foreach ($views as $vid => $view) {
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-xs-12">
+                <?php $col1=''; ?>
+                <?php $col2=''; ?>
+                <?php $centerred=''; ?>
+                <?php if(empty($render['events'])):?>
+                    <?php $col1='hide '; ?>
+                    <?php $col2='centered'; ?>
+                <?php endif; ?>
+                <?php if(empty($render['debates'])):?>
+                    <?php $col2='hide '; ?>
+                    <?php $col1='centered'; ?>
+                <?php endif; ?>
+                <div class="col-md-6 col-xs-12 <?php print $col1; ?>">
                     <?php print ($render['events']); ?>
                 </div>
-                <div class="col-md-6 col-xs-12">
+                <div class="col-md-6 col-xs-12 <?php print $col2; ?>">
                     <?php print ($render['debates']); ?>
                 </div>
             </div>
