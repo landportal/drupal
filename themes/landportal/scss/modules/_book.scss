@@ -317,6 +317,7 @@ section a{
                         margin-top:5px;
                         text-align:center;
                         margin-bottom: 35px;
+                        color:#333;
                     }
                 }
                 &#map-local{
@@ -623,6 +624,7 @@ section a{
             margin-top:5px;
             text-align:center;
             margin-bottom: 35px;
+            color:#333;
             &.media{
                 background:url('../images/media.png') no-repeat 50% 0;
             }
@@ -656,11 +658,19 @@ section a{
         .block{
             padding:40px 0;
 
+            &.note-infografic,
+            &.spider-note{
+                padding:0;
+                margin:0;
+                width: 100%;
+            }
+
             >h2{
                 margin-bottom: 11px;
                 margin-top: 22px;
                 font-size: 22px;
                 font-family: "Open Sans",sans-serif;
+                color:#333;
 
                 @media only screen and (max-width: 992px){
                     padding-left:15px;
@@ -696,9 +706,6 @@ section a{
                     }
                 }
             }
-        }
-        &.note-infografic{
-            padding:0;
         }
         /*.node-teaser{
             padding: 20px 0;
@@ -896,6 +903,7 @@ section a{
         //@extend .row;        
         header h2 {
             @extend .text-center;
+            color:#333;
         }
 
     }
@@ -1426,6 +1434,10 @@ section a{
         margin-top:10px;  
         clear:none;
     }
+    h2{
+        color:#333;
+        font-family: "Open Sans",sans-serif;
+    }
     .node-landlibrary-resource.node-teaser{
         h2{
             font-size: 16px;
@@ -1498,6 +1510,7 @@ section a{
     font-size: 12px;
     color: #999;
     margin-bottom: 60px;
+    font-family: "Open Sans",sans-serif;
 
     p{
         margin:5px 0 0 0;
@@ -1562,17 +1575,26 @@ section a{
 }
 
 #lgaf{
+    overflow: hidden;
+
     &.country-section{
         border-bottom:none;
     }
+    .piechart{
+        margin-top: 30px;
+        padding-top: 40px;
+        border-top: 1px solid #d6dbdc;
+    }
     #lgaf-legend{
         li{
+            padding:0; 
             span{
                 font-size: 12px;
+                font-family: "Open Sans",sans-serif;
 
                 &.lgaf-value{
-                    width:14px;
-                    height:14px;
+                    width:14px !important;
+                    height:14px !important;
                     left: 0;
                     position: relative;
                     top: 2px;
@@ -1584,6 +1606,8 @@ section a{
         li{
             position:relative;
             padding: 15px 20px 15px 40px !important;
+            font-family: "Open Sans",sans-serif;
+            font-size: 16px;
             .lgaf-value-a,
             .lgaf-value-b,
             .lgaf-value-c,
@@ -1594,7 +1618,7 @@ section a{
                 line-height: 20px;
                 position: absolute;
                 text-align: center;
-                top: 15px;
+                top: 17px;
                 width: 20px !important;
             }
         }
@@ -1604,10 +1628,6 @@ section a{
 .graphics-wrapper {
     background: #f8f8f8;
     display: block;
-    overflow: hidden;
-}
-
-#lgaf{
     overflow: hidden;
 }
 
