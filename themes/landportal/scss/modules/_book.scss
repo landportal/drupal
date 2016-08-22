@@ -697,6 +697,9 @@ section a{
                 }
             }
         }
+        &.note-infografic{
+            padding:0;
+        }
         /*.node-teaser{
             padding: 20px 0;
 
@@ -957,6 +960,27 @@ section a{
       }
     }
   }
+}
+
+#table-indicators{
+    tbody{
+        td{
+            text-align: center;
+
+            .glyphicon-trash::before {
+                color:#D31129;
+            }
+
+            &.indicator,
+            &.year,
+            &.value,
+            &.unit,
+            &.dataset,
+            &.sourceOrg{
+                text-align: left;
+            }
+        }
+    }
 }
 
 .node-landbook-country {
