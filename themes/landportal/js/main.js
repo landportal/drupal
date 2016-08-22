@@ -87,9 +87,13 @@
         var timerId = setInterval(function() {
           if($('#wrapper-spiderchart').html() == ''){
               $('.spider-note').hide();
+              $('#wrapper-spiderchart').hide();
+              $('#wrapper-piechart').css({'float':'none','margin':'0 auto'})
             }
             else{
               $('.spider-note').show();
+              $('#wrapper-spiderchart').show();
+              $('#wrapper-piechart').css({'float':'left','margin':'0'})
               setTimeout(function() {
                 clearInterval(timerId);
               }, 100);
