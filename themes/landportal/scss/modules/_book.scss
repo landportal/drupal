@@ -9,7 +9,6 @@
 $grey-bglight: #f0f0f0;
 $green-bg: #A3C642;
 
-
 /******************************************
  * Global stuff that shouldn't be here
  */
@@ -186,6 +185,7 @@ section a{
         width: 100%;
         padding-left: 0px;
         padding-right: 0px;
+        margin-top: 0;
         .region-content{
             #block-system-main{
                 margin-top: -60px;
@@ -317,6 +317,7 @@ section a{
                         margin-top:5px;
                         text-align:center;
                         margin-bottom: 35px;
+                        color:#333;
                     }
                 }
                 &#map-local{
@@ -336,7 +337,7 @@ section a{
                     header{
                         margin-top: -25px;
                         h2{
-                            font-family: "News Cycle",sans-serif;
+                            font-family: "Open Sans",sans-serif;
                             margin-top: 0;
                             margin-bottom: 10px;
                             font-size: 2em;
@@ -623,6 +624,7 @@ section a{
             margin-top:5px;
             text-align:center;
             margin-bottom: 35px;
+            color:#333;
             &.media{
                 background:url('../images/media.png') no-repeat 50% 0;
             }
@@ -636,9 +638,19 @@ section a{
         .adj-blog{
             margin-left:30px;
         }
+        @media only screen and (min-width: 768px){
+            .centered{
+                margin: 0 auto;
+                float: none;
+            }
+        }
         .bg-gray{
-            background: rgba(0, 0, 0, 0) -moz-linear-gradient(left center , #f7f7f7 0px, #f7f7f7 62.5%, transparent 40%) repeat scroll 0 0;
+            background: rgba(0, 0, 0, 0) -moz-linear-gradient(left center , #f7f7f7 0px, #f7f7f7 62.3%, transparent 40%) repeat scroll 0 0;
             overflow-x:hidden; 
+
+            &.full-width{
+                background: #f7f7f7;
+            }
 
             .bg-media{
                 background: #f7f7f7;
@@ -656,11 +668,19 @@ section a{
         .block{
             padding:40px 0;
 
+            &.note-infografic,
+            &.spider-note{
+                padding:0;
+                margin:0;
+                width: 100%;
+            }
+
             >h2{
                 margin-bottom: 11px;
                 margin-top: 22px;
                 font-size: 22px;
                 font-family: "Open Sans",sans-serif;
+                color:#333;
 
                 @media only screen and (max-width: 992px){
                     padding-left:15px;
@@ -893,6 +913,7 @@ section a{
         //@extend .row;        
         header h2 {
             @extend .text-center;
+            color:#333;
         }
 
     }
@@ -957,6 +978,28 @@ section a{
       }
     }
   }
+}
+
+#table-indicators{
+    tbody{
+        td{
+            text-align: center;
+            vertical-align: middle;
+
+            .glyphicon-trash::before {
+                color:#D31129;
+            }
+
+            &.indicator,
+            &.year,
+            &.value,
+            &.unit,
+            &.dataset,
+            &.sourceOrg{
+                text-align: left;
+            }
+        }
+    }
 }
 
 .node-landbook-country {
@@ -1402,6 +1445,10 @@ section a{
         margin-top:10px;  
         clear:none;
     }
+    h2{
+        color:#333;
+        font-family: "Open Sans",sans-serif;
+    }
     .node-landlibrary-resource.node-teaser{
         h2{
             font-size: 16px;
@@ -1474,6 +1521,7 @@ section a{
     font-size: 12px;
     color: #999;
     margin-bottom: 60px;
+    font-family: "Open Sans",sans-serif;
 
     p{
         margin:5px 0 0 0;
@@ -1538,17 +1586,26 @@ section a{
 }
 
 #lgaf{
+    overflow: hidden;
+
     &.country-section{
         border-bottom:none;
     }
+    .piechart{
+        margin-top: 30px;
+        padding-top: 40px;
+        border-top: 1px solid #d6dbdc;
+    }
     #lgaf-legend{
         li{
+            padding:0; 
             span{
                 font-size: 12px;
+                font-family: "Open Sans",sans-serif;
 
                 &.lgaf-value{
-                    width:14px;
-                    height:14px;
+                    width:14px !important;
+                    height:14px !important;
                     left: 0;
                     position: relative;
                     top: 2px;
@@ -1560,6 +1617,8 @@ section a{
         li{
             position:relative;
             padding: 15px 20px 15px 40px !important;
+            font-family: "Open Sans",sans-serif;
+            font-size: 16px;
             .lgaf-value-a,
             .lgaf-value-b,
             .lgaf-value-c,
@@ -1570,7 +1629,7 @@ section a{
                 line-height: 20px;
                 position: absolute;
                 text-align: center;
-                top: 15px;
+                top: 17px;
                 width: 20px !important;
             }
         }
@@ -1580,10 +1639,6 @@ section a{
 .graphics-wrapper {
     background: #f8f8f8;
     display: block;
-    overflow: hidden;
-}
-
-#lgaf{
     overflow: hidden;
 }
 
@@ -1598,6 +1653,13 @@ section a{
 
 .node-teaser{
     padding: 20px 0;
+
+    .field-name-body{
+        font-size:16px;
+        h3{
+            font-size:16px;
+        }
+    }
 
     .node-image{
         padding:0;
@@ -1733,9 +1795,10 @@ section a{
         font-size:16px;
     }
 
-    
+    .field-type-taxonomy-term-reference,
     .field-name-field-geographical-focus,
-    .field-name-field-related-topics{
+    .field-name-field-related-topics,
+    .field-name-field-doc-licencing{
         margin-bottom:0 !important;
         .field-items,
         .field-item{

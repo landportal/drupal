@@ -30,7 +30,7 @@
         </form>
       </div>
       <div class="row">
-        <div class="col-xs-12 col-md-offset-2 col-md-8">
+        <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
           <div class="loading hidden">
             <div class="sk-three-bounce">
               <div class="sk-child sk-bounce1"></div>
@@ -43,7 +43,7 @@
             <li>Please, select year and panels to show the info.</li>
           </ul>
         </div>
-        <div class="col-xs-12 text-center">
+        <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8 text-center">
           <ul id="lgaf-legend" class="list-unstyled list-inline">
             <li><span class="lgaf-value-a lgaf-value"></span> <span data-localize="label.vgp">Very Good Practice</span></li>
             <li><span class="lgaf-value-b lgaf-value"></span> <span data-localize="label.gp">Good Practice</span></li>
@@ -60,6 +60,7 @@
         </div>
       </div>
       </div>
+      <div class="container piechart">
       <?php $block = block_load('landbook_view_coda', 'lbcp_pie');
           $block = _block_render_blocks(array($block));
           $block_build = _block_get_renderable_array($block);

@@ -38,9 +38,16 @@
           $link.on('click', function(event) {
             event.preventDefault();
             var scrollTo = $(this).attr('href');
-            $('html, body').animate({
-              scrollTop: $(scrollTo).offset().top
-            }, 1000);
+            if($('body').hasClass('logged-in') && $(this).attr('href') == '#narrative'){
+              $('html, body').animate({
+                scrollTop: $(scrollTo).offset().top-20
+              }, 1000);
+            }
+            else{
+              $('html, body').animate({
+                scrollTop: $(scrollTo).offset().top
+              }, 1000);
+            }
           });
         });
       },
@@ -80,9 +87,17 @@
         var timerId = setInterval(function() {
           if($('#wrapper-spiderchart').html() == ''){
               $('.spider-note').hide();
+              if($(window).width()>=768){
+                $('#wrapper-piechart').addClass('centered');
+                $('.spiderchart').addClass('hide');
+              }
             }
             else{
               $('.spider-note').show();
+              if($(window).width()>=768){
+                $('#wrapper-piechart').removeClass('centered');
+                $('.spiderchart').removeClass('hide');
+              }
               setTimeout(function() {
                 clearInterval(timerId);
               }, 100);
@@ -111,9 +126,9 @@
 
 
         $('.view-landbook-countries-related.view-display-id-block_6 .view-content').owlCarousel({
-          center: true,
+          center: false,
           items:3,
-          loop:true,
+          loop:false,
           margin:1,
           responsive:{
               320:{
