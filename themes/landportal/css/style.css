@@ -16822,48 +16822,56 @@ section a:focus {
   padding: 20px 0;
 }
 /* line 1656, ../scss/modules/_book.scss */
+.node-teaser .field-name-body {
+  font-size: 16px;
+}
+/* line 1658, ../scss/modules/_book.scss */
+.node-teaser .field-name-body h3 {
+  font-size: 16px;
+}
+/* line 1663, ../scss/modules/_book.scss */
 .node-teaser .node-image {
   padding: 0;
 }
-/* line 1658, ../scss/modules/_book.scss */
+/* line 1665, ../scss/modules/_book.scss */
 .node-teaser .node-image a {
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
   display: inline-block;
 }
-/* line 1661, ../scss/modules/_book.scss */
+/* line 1668, ../scss/modules/_book.scss */
 .node-teaser .node-image a img {
   max-width: 100%;
   max-height: 122px;
   height: auto;
 }
 @media only screen and (max-width: 992px) {
-  /* line 1656, ../scss/modules/_book.scss */
+  /* line 1663, ../scss/modules/_book.scss */
   .node-teaser .node-image {
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 15px;
   }
 }
-/* line 1676, ../scss/modules/_book.scss */
+/* line 1683, ../scss/modules/_book.scss */
 .node-teaser .node-intro > h3 {
   margin-top: 0;
   text-align: left;
   line-height: 0;
   margin-bottom: 5px;
 }
-/* line 1681, ../scss/modules/_book.scss */
+/* line 1688, ../scss/modules/_book.scss */
 .node-teaser .node-intro > h3 a {
   color: #91b135;
   font-size: 16px;
   line-height: 1.42857;
   font-family: "Open Sans",sans-serif;
 }
-/* line 1687, ../scss/modules/_book.scss */
+/* line 1694, ../scss/modules/_book.scss */
 .node-teaser .node-intro > h3 a:hover {
   color: #617724;
   text-decoration: none;
 }
-/* line 1693, ../scss/modules/_book.scss */
+/* line 1700, ../scss/modules/_book.scss */
 .node-teaser .node-intro span {
   color: #999;
   font-size: 14px;
@@ -16871,7 +16879,7 @@ section a:focus {
   line-height: 1.42857;
   font-family: "Open Sans",sans-serif;
 }
-/* line 1700, ../scss/modules/_book.scss */
+/* line 1707, ../scss/modules/_book.scss */
 .node-teaser .node-intro .text {
   margin-top: 5px;
   font-family: "Merriweather",serif;
@@ -16879,11 +16887,11 @@ section a:focus {
   font-size: 16px;
   line-height: 1.42857;
 }
-/* line 1707, ../scss/modules/_book.scss */
+/* line 1714, ../scss/modules/_book.scss */
 .node-teaser .node-intro .text p {
   font-size: 16px;
 }
-/* line 1711, ../scss/modules/_book.scss */
+/* line 1718, ../scss/modules/_book.scss */
 .node-teaser .node-intro .date {
   background-image: url("../images/ico-cal.png");
   background-position: left center;
@@ -16895,7 +16903,7 @@ section a:focus {
   padding-top: 5px;
   font-size: 14px;
 }
-/* line 1722, ../scss/modules/_book.scss */
+/* line 1729, ../scss/modules/_book.scss */
 .node-teaser .node-intro .location {
   background-image: url("../images/ico-loc.png");
   background-position: left center;
@@ -16907,71 +16915,71 @@ section a:focus {
   padding-top: 5px;
   font-size: 14px;
 }
-/* line 1734, ../scss/modules/_book.scss */
+/* line 1741, ../scss/modules/_book.scss */
 .node-teaser.node-landlibrary-resource {
   border-bottom: 1px solid #f0f0f0;
 }
-/* line 1735, ../scss/modules/_book.scss */
+/* line 1742, ../scss/modules/_book.scss */
 .node-teaser.node-landlibrary-resource > h2 {
   margin-top: 0;
   text-align: left;
   line-height: 0;
   margin-bottom: 5px;
 }
-/* line 1740, ../scss/modules/_book.scss */
+/* line 1747, ../scss/modules/_book.scss */
 .node-teaser.node-landlibrary-resource > h2 a {
   color: #91b135;
   font-size: 16px;
   line-height: 1.42857;
   font-family: "Open Sans",sans-serif;
 }
-/* line 1746, ../scss/modules/_book.scss */
+/* line 1753, ../scss/modules/_book.scss */
 .node-teaser.node-landlibrary-resource > h2 a:hover {
   color: #617724;
   text-decoration: none;
 }
-/* line 1753, ../scss/modules/_book.scss */
+/* line 1760, ../scss/modules/_book.scss */
 .node-teaser.node-landlibrary-resource .description-resource {
   padding-top: 0;
 }
-/* line 1756, ../scss/modules/_book.scss */
+/* line 1763, ../scss/modules/_book.scss */
 .node-teaser.node-landlibrary-resource .description-resource p {
   font-family: "Merriweather",serif !important;
   color: #999;
   margin: 5px 0;
   font-size: 16px;
 }
-/* line 1764, ../scss/modules/_book.scss */
+/* line 1771, ../scss/modules/_book.scss */
 .node-teaser.node-landlibrary-resource .keywords span {
   font-family: "Open Sans",sans-serif;
   text-transform: uppercase;
   color: #999;
   font-size: 12px;
 }
-/* line 1770, ../scss/modules/_book.scss */
+/* line 1777, ../scss/modules/_book.scss */
 .node-teaser.node-landlibrary-resource .keywords a {
   color: #91b135;
   font-size: 16px;
 }
-/* line 1774, ../scss/modules/_book.scss */
+/* line 1781, ../scss/modules/_book.scss */
 .node-teaser.node-landlibrary-resource .keywords a:hover {
   color: #617724;
   text-decoration: none;
 }
 
-/* line 1785, ../scss/modules/_book.scss */
+/* line 1792, ../scss/modules/_book.scss */
 .node .field,
 .node .location {
   font-size: 16px;
 }
-/* line 1790, ../scss/modules/_book.scss */
+/* line 1797, ../scss/modules/_book.scss */
 .node .field-type-taxonomy-term-reference,
 .node .field-name-field-geographical-focus,
 .node .field-name-field-related-topics,
 .node .field-name-field-doc-licencing {
   margin-bottom: 0 !important;
 }
-/* line 1795, ../scss/modules/_book.scss */
+/* line 1802, ../scss/modules/_book.scss */
 .node .field-type-taxonomy-term-reference .field-items,
 .node .field-type-taxonomy-term-reference .field-item,
 .node .field-name-field-geographical-focus .field-items,
@@ -16982,7 +16990,7 @@ section a:focus {
 .node .field-name-field-doc-licencing .field-item {
   margin-bottom: 5px;
 }
-/* line 1798, ../scss/modules/_book.scss */
+/* line 1805, ../scss/modules/_book.scss */
 .node .field-type-taxonomy-term-reference .field-items a,
 .node .field-type-taxonomy-term-reference .field-item a,
 .node .field-name-field-geographical-focus .field-items a,
@@ -16993,7 +17001,7 @@ section a:focus {
 .node .field-name-field-doc-licencing .field-item a {
   font-family: "Open Sans",sans-serif;
 }
-/* line 1802, ../scss/modules/_book.scss */
+/* line 1809, ../scss/modules/_book.scss */
 .node .field-type-taxonomy-term-reference .field-items,
 .node .field-name-field-geographical-focus .field-items,
 .node .field-name-field-related-topics .field-items,
@@ -17001,7 +17009,7 @@ section a:focus {
   margin-bottom: 0;
 }
 
-/* line 1809, ../scss/modules/_book.scss */
+/* line 1816, ../scss/modules/_book.scss */
 .container-wrapper {
   border-bottom: 0.36em solid #8fcd1f;
 }
