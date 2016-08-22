@@ -43,15 +43,29 @@
         }
     }
 }
-/* Theme and Overarching (aka domains) terms */
+
+/* Geographical focus*/
+.field-name-field-geographical-focus {
+    .field-item a {
+        background-color: #428B3F;
+    }
+}
+
+/* Overarching categories (aka domains), themes, topics (concepts) LandVoc terms */
 .field-name-field-related-themes {
     .field-item a {
         background-color: #42B7CA;
     }
 }
+
 .field-name-field-related-domains {
     .field-item a {
         background-color: #42CABD;
+    }
+}
+.field-name-field-related-topics {
+    .field-item a {
+        background-color: #428BCA;
     }
 }
 
