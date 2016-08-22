@@ -111,9 +111,9 @@
 
 
         $('.view-landbook-countries-related.view-display-id-block_6 .view-content').owlCarousel({
-          center: true,
+          center: false,
           items:3,
-          loop:true,
+          loop:false,
           margin:1,
           responsive:{
               320:{
