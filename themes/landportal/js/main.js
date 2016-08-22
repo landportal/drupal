@@ -38,9 +38,16 @@
           $link.on('click', function(event) {
             event.preventDefault();
             var scrollTo = $(this).attr('href');
-            $('html, body').animate({
-              scrollTop: $(scrollTo).offset().top
-            }, 1000);
+            if($('body').hasClass('logged-in') && $(this).attr('href') == '#narrative'){
+              $('html, body').animate({
+                scrollTop: $(scrollTo).offset().top-20
+              }, 1000);
+            }
+            else{
+              $('html, body').animate({
+                scrollTop: $(scrollTo).offset().top
+              }, 1000);
+            }
           });
         });
       },
