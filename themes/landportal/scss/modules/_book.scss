@@ -160,7 +160,7 @@ section a{
     }
 }
 
-.page-book-countries{
+body[class*="page-book-countries-"] {
 
     #block-system-main {
         @extend .clearfix;
