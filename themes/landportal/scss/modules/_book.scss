@@ -165,6 +165,10 @@ section a{
     #block-system-main {
         @extend .clearfix;
         background-color: $grey-bglight;
+
+        .field-collection-container{
+            text-align: left;
+        }
     }
 
     
@@ -528,6 +532,7 @@ section a{
                                     }
                                     &:nth-of-type(7)::before {
                                         content: "Remove";
+                                        text-align: left;
                                     }
 
                                 }
@@ -1454,6 +1459,19 @@ section a{
             font-size: 16px;
             line-height: 1.42857;
         }
+        .field-name-field-doc-thumb{
+            margin-top: 15px;
+
+            a{
+                box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+                display: inline-block;
+            }
+        }
+        .field-type-taxonomy-term-reference{
+            .field-items{
+                float: none;
+            }
+        }
     }
     .field-name-field-doc-provider{
         @media(max-width:768px){
@@ -1481,7 +1499,47 @@ section a{
         color: #999;
         font-family: "Merriweather",serif;
         font-size: 16px;
+        font-size: 16px;
+        margin-left: 1em;
+        width: 150px;
+        float:right;
+        @media only screen and (max-width: 767px){
+            float:none;
+            margin-left:0;
+        }
+        .field-item{
+            display:none;
+
+            &:first-child{
+                display:block;
+            }
+        }
     }
+    .group-landvoc{
+        .description{
+            font-weight: bold;
+            color:#888888;
+            /*font-style: italic;*/
+            font-family: "Merriweather",serif;
+            font-size: 16px;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            padding-right: 100px;
+
+            a{
+                &:hover{
+                    color: $green;
+                }
+                span{
+                    position: absolute;
+                    right: 80px;
+                    top: 5px;
+                }
+            }
+        }
+    }
+
     .field-name-field-doc-type{
         clear:none;
     }
@@ -1816,4 +1874,18 @@ section a{
 
 .container-wrapper{
     border-bottom:0.36em solid $green;
+}
+
+.field-type-taxonomy-term-reference,{
+    margin-bottom:0 !important;
+    .field-items,
+    .field-item{
+        margin-bottom: 5px;
+        a{
+            font-family: "Open Sans",sans-serif;
+        }
+    }
+    .field-items{
+        margin-bottom: 0;
+    }
 }

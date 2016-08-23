@@ -1,6 +1,7 @@
 ;(function ($) {
     Drupal.behaviors.landportal = {
       attach : function(context, settings) {
+        $('[data-toggle="tooltip"]').tooltip();
         Drupal.behaviors.landportal.initRegistrationForm(context, settings);
         Drupal.behaviors.landportal.initSearchSuggestions(context, settings);
         Drupal.behaviors.landportal.initScrollTo(context, settings);
