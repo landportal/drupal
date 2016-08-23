@@ -205,7 +205,7 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'landvoc',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_related_topics',
       1 => 'field_related_domains',
@@ -217,7 +217,8 @@ function landlibrary_resource_field_group_info() {
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-landvoc field-group-div',
-        'description' => '',
+        'description' => 'LandVoc classification <a href="/voc/landvoc"><span class="glyphicon glyphicon-info-sign" title="www.landportal.info/voc/landvoc"  data-placement="top" data-toggle="tooltip" data-original-title=""></span></a>
+',
         'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
@@ -241,10 +242,7 @@ function landlibrary_resource_field_group_info() {
     'label' => 'remove',
     'weight' => '145',
     'children' => array(
-      0 => 'field_doc_contributor',
-      1 => 'field_doc_creator',
-      2 => 'field_doc_publisher_place',
-      3 => 'field_user',
+      0 => 'field_doc_publisher_place',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
