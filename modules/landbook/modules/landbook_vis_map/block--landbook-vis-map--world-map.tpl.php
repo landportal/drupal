@@ -1,26 +1,23 @@
-<section id="map-global" class="country-section">
-  <div class="container-fluid">
+<section id="map-global" class="country-section row">
   <?php if(!empty($block->subject)): ?>
-    <header class="row">
-      <div class="col-md-offset-2 col-md-8 text-center">
-        <h2 data-localize="global.mapping"><?php print $block->subject; ?></h2>
-      </div>
+    <header class="col-md-offset-2 col-md-8 text-center">
+      <h2 data-localize="global.mapping"><?php print $block->subject; ?></h2>
     </header>
   <?php endif;?>
 
-  <div class="row">
-    <form class="text-center">
-      <div class="form-group col-xs-8 col-lg-offset-2 col-lg-5">
-        <select name="indicator" class="form-control"></select>
-      </div>
-      <div class="form-group col-xs-4 col-lg-3">
-        <select name="year" class="form-control" disabled="disabled">
-          <option data-localize="inputs.syear">Select year ...</option>
-        </select>
-      </div>
-    </form>
-  </div>
-  <div class="row">
+        <nav class="text-center">
+          <form>
+            <div class="form-group col-xs-8 col-lg-offset-2 col-lg-5">
+              <select name="indicator" class="form-control" disabled="disabled"></select>
+            </div>
+            <div class="form-group col-xs-4 col-lg-3">
+              <select name="year" class="form-control" disabled="disabled"></select>
+            </div>
+          </form>
+        </nav>
+
+        <div class="col-xs-12">
+
     <div style="position: absolute; z-index: 200; width: 100%; margin-top: -30px;">
     <div class="loading">
       <div class="sk-three-bounce no-m-bottom">
@@ -31,14 +28,10 @@
       <p class="text-center" data-localize="feedback.loading">Loading data ...</p>
     </div>
     </div>
-    <div id="map-global-wrapper" class="col-xs-12"></div>
-  </div>
-  <div class="row hidden year-navigation">
-    <div class="col-xs-12">
-      <ul class="nav-years">
-        <li><a href="#">2008</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+
+          <div class="map-fluid">
+            <div id="map-global-wrapper" class="map-fluid-wrapper"></div>
+          </div>
+        </div>
+
 </section>
