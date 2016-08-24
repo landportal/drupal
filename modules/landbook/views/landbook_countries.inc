@@ -61,6 +61,45 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
 
 /* Display: Page countries */
 $handler = $view->new_display('page', 'Page countries', 'page');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'text-center';
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'grid';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['style_options']['columns'] = '6';
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: ISO3 */
+$handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
+$handler->display->display_options['fields']['field_iso3']['table'] = 'field_data_field_iso3';
+$handler->display->display_options['fields']['field_iso3']['field'] = 'field_iso3';
+$handler->display->display_options['fields']['field_iso3']['label'] = '';
+$handler->display->display_options['fields']['field_iso3']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_iso3']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_iso3']['element_default_classes'] = FALSE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name_field']['id'] = 'name_field';
+$handler->display->display_options['fields']['name_field']['table'] = 'field_data_name_field';
+$handler->display->display_options['fields']['name_field']['field'] = 'name_field';
+$handler->display->display_options['fields']['name_field']['label'] = '';
+$handler->display->display_options['fields']['name_field']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['name_field']['alter']['text'] = '<span class="flag flag-[field_iso3]"></span> [name_field]';
+$handler->display->display_options['fields']['name_field']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['name_field']['alter']['path'] = 'book/countries/[field_iso3]';
+$handler->display->display_options['fields']['name_field']['alter']['absolute'] = TRUE;
+$handler->display->display_options['fields']['name_field']['element_type'] = 'div';
+$handler->display->display_options['fields']['name_field']['element_class'] = 'text-center';
+$handler->display->display_options['fields']['name_field']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name_field']['element_wrapper_type'] = '0';
+$handler->display->display_options['fields']['name_field']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
 $handler->display->display_options['path'] = 'book/countries';
 $handler->display->display_options['menu']['type'] = 'normal';
 $handler->display->display_options['menu']['title'] = 'Countries';
