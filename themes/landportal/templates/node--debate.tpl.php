@@ -59,7 +59,7 @@
     <div class="node-intro displayb col-md-8">
         <?php print render($title_prefix); ?>
         <?php print render($title_suffix); ?>
-        <h3><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
+        <h2><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
         <?php if(!empty($node->field_date)): ?>
         <?php $field_values = field_get_items('node', $node, 'field_date');
           $date_start=date('F jS',strtotime($field_values[0]['value']));

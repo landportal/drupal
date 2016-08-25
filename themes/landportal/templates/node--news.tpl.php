@@ -62,7 +62,7 @@
     <div class="node-intro displayb col-md-8">
         <?php print render($title_prefix); ?>
         <?php print render($title_suffix); ?>
-        <h3><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
+        <h2><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
         <span class="created"><?php print t('On ').date('D, M j, Y',$node->created); ?></span>
         <div class="text">
             <?php print render($content['body']); ?>

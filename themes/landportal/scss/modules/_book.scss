@@ -800,8 +800,9 @@ body[class*="page-book-countries-"] {
     }
     .node-landlibrary-resource.node-teaser{
         h2{
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.42857;
+            font-weight: 600;
         }
         .field-name-field-doc-thumb{
             margin-top: 15px;
@@ -1058,4 +1059,8 @@ body[class*="page-book-countries-"] {
 // WTF
 .messages.error{
     overflow: hidden;
+}
+
+.btn-more {
+    margin-top: 14px;
 }
