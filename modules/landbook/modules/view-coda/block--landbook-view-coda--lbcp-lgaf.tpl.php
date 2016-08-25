@@ -1,15 +1,12 @@
     <section id="lgaf" class="country-section">
       <div class="container">
-      <?php if(!empty($block->subject)): ?>
         <header class="row text-center">
+      <?php if(!empty($block->subject)): ?>
           <div class="col-xs-12">
            <h2 data-localize="global.rankings"><?php print $block->subject; ?></h2>
           </div>
-          <div class="col-xs-12">
-            <h3>Land Governance Assessment Framework (LGAF)</h3>
-          </div>
-        </header>
       <?php endif;?>
+        </header>
       <div class="row">
         <form>
           <div class="form-group col-xs-6 col-sm-2">
@@ -39,7 +36,7 @@
             </div>
             <p class="text-center" data-localize="feedback.loading">Loading data ...</p>
           </div>
-          <ul id="lgaf-values" class="list-unstyled">
+          <ul id="lgaf-wrapper" class="list-unstyled">
             <li>Please, select year and panels to show the info.</li>
           </ul>
         </div>
@@ -69,4 +66,5 @@
           $block = _block_render_blocks(array($block));
           $block_build = _block_get_renderable_array($block);
           echo drupal_render($block_build);?>
+      </div>
     </section>
