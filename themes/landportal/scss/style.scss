@@ -48,8 +48,8 @@ $fa-font-path: "font-awesome/";
 @import "modules/menus";
 @import "modules/footer";
 @import "modules/header";
-/* @import "modules/m-generales"; */
-
+@import "modules/node-teasers";
+@import "modules/visualizations";
 
 /* IMPORT: Screens */
 @import "screens/base";

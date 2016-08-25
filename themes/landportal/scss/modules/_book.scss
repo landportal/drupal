@@ -12,7 +12,6 @@ $green-bg: #A3C642;
 /******************************************
  * Global stuff that shouldn't be here
  */
-
 section a{
     color:$green-light;
     font-family: "Open Sans",sans-serif;
@@ -28,30 +27,9 @@ section a{
         text-decoration: none;
     }
 }
-
 .content .content.container {
     padding: 0;
     width: 100%;
-}
-
-.node-teaser{
-    .field{
-        clear: both;
-        &.field-type-taxonomy-term-reference{
-            .field-item{
-                margin-bottom: 5px;
-            }
-        }
-    }
-    .node-image{
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-bottom: 15px;
-        a{
-            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
-            display: inline-block;
-        }
-    }
 }
 
 
@@ -63,7 +41,6 @@ section a{
     background-color: $green-dark;
     background-image: url('../images/header/grass-medium.png');
 }
-
 .node-type-landbook-country,
 .page-book {
     #section-header {
@@ -78,77 +55,6 @@ section a{
 /******************************************
  * Country (narrative) page
  */
-
-/* .page-node.node-type-landbook-country { */
-/*     /\* @media(min-width:992px){ *\/ */
-/*     /\*     #breadcrumb, *\/ */
-/*     /\*     #main-wrapper{ width: 95%; } *\/ */
-/*     /\* } *\/ */
-/*     article.indicators-table { margin: 5em 0; } */
-/*     #indicators-display { margin-top: 6em; } */
-/*     #comparison-form { */
-/*         margin-bottom: 1.4em; */
-/*         .form-group { max-width: 33%; } */
-/*     } */
-/*     div.compare-legend { margin: -3.6em 0 6em 11em; } */
-/*     table { */
-/*         tbody { border: 0px; } */
-/*         .indicatorCode { display: none; } */
-/*     } */
-/*     div.map-medium { */
-/*         @extend .clearfix; */
-/*         /\* margin: 4em 0 5em 0; *\/ */
-/*         /\* height: 26em; *\/ */
-/*     } */
-/*     h1.title { */
-/*         &:before { */
-/*             /\* border: 1px solid $green; *\/ */
-/*             content: ' '; */
-/*             background-color: $green; */
-/*             display: block; */
-/*             width: 100%; */
-/*             height: 1px; */
-/*             position: absolute; */
-/*             top: .9em; */
-/*             z-index: -1; */
-/*         } */
-/*         span { padding-right: .5em; background-color: white; } */
-/*         img { */
-/*             vertical-align: baseline; */
-/*             margin-right: 10px; */
-/*         } */
-/*     } */
-/*     .block-views>h2 { */
-/*         border-bottom: 1px solid $green; */
-/*         //padding-top: .5em; */
-/*     } */
-/*     .node-teaser>h2 { */
-/*         font-size: 1.4em; */
-/*     } */
-/*     /\* Narative (left) aside element *\/ */
-/*     /\* aside { *\/ */
-/*     /\*     .btn { width: 100%; } *\/ */
-/*     /\*     div.country-map { *\/ */
-/*     /\*         height: 200px; *\/ */
-/*     /\*         width: 100%; *\/ */
-/*     /\*     } *\/ */
-/*     /\* } *\/ */
-/*     /\* /\\* Sidebar elements *\\/ *\/ */
-/*     /\* .field-type-taxonomy-term-reference { *\/ */
-/*     /\*     display: none; *\/ */
-/*     /\* } *\/ */
-/*     /\* .node-news.node-teaser { *\/ */
-/*     /\*     img { *\/ */
-/*     /\*         width: 35%; *\/ */
-/*     /\*         margin: 0 5px 5px 0; *\/ */
-/*     /\*         float: left; *\/ */
-/*     /\*     } *\/ */
-/*     /\*     .submitted, .links { display: none; } *\/ */
-/*     /\*     .content { font-size: .8em; } *\/ */
-/*     /\* } *\/ */
-/* } */
-
-
 .section-block{
     h2:first-child{
         display:none;
@@ -161,16 +67,26 @@ section a{
 }
 
 body[class*="page-book-countries-"] {
+    &#table-indicators header h2 {
+        background:url('../images/indicators.png') no-repeat 50% 0;
+    }
+    &#map-global header h2 {
+        background:url('../images/mapping.png') no-repeat 50% 0;
+    }
+    &#compare header h2 {
+        background:url('../images/infographics.png') no-repeat 50% 0;
+    }
+    &#lgaf header h2 {
+        background:url('../images/rankings.png') no-repeat 50% 0;
+    }
 
     #block-system-main {
         @extend .clearfix;
         background-color: $grey-bglight;
-
         .field-collection-container{
             text-align: left;
         }
     }
-
     
     #block-landbook-disclaimer {
         background: $green-light;
@@ -182,7 +98,6 @@ body[class*="page-book-countries-"] {
             @extend .col-md-8;
             @extend .col-md-offset-2;
         }
-        //font-size: 12px;
     }
     
     #main-wrapper{
@@ -223,11 +138,7 @@ body[class*="page-book-countries-"] {
                         margin-bottom:15px;
                         @media(min-width:768px){
                           position: relative;
-                          /*float: left;*/
-                          /*width: 33.25%;*/
-                          /*margin-right: -3px;*/
                           display:inline-block;
-
                           &:last-child{
                             margin-right: 0;
                           }
@@ -346,201 +257,6 @@ body[class*="page-book-countries-"] {
                             margin-bottom: 10px;
                             font-size: 2em;
                             padding-top: 0px;
-                        }
-                    }
-                }
-                &#table-indicators{
-                    header{
-                        h2{
-                            background:url('../images/indicators.png') no-repeat 50% 0;
-                        }
-                    }
-                }
-                &#map-global{
-                    header{
-                        h2{
-                            background:url('../images/mapping.png') no-repeat 50% 0;
-                        }
-                    }
-                }
-                &#compare{
-                    header{
-                        h2{
-                            background:url('../images/infographics.png') no-repeat 50% 0;
-                        }
-                    }
-                }
-                &#lgaf{
-                    header{
-                        h2{
-                            background:url('../images/rankings.png') no-repeat 50% 0;
-                        }
-                    }
-
-                    #lgaf-values{
-                        li{
-                            padding: 15px 20px;
-                            border-bottom: 2px solid #F2F2F2;
-                            background-color: #FFFFFF;
-                            span{
-                                
-                                    width: 1em;
-                                    height: 1em;
-                                    display: inline-block;
-                                    @include border-radius(20px);
-                                &:nth-child(2) {
-                                    width: .5em;
-                                    margin-left: -.5em;
-                                    @include border-radius(0 20px 20px 0);
-                                }
-                            }
-                        }
-                    }
-                    #lgaf-legend{
-                        li{
-                            span{
-                                &:first-of-type{
-                                    width: 1em;
-                                    height: 1em;
-                                    display: inline-block;
-                                    @include border-radius(20px);
-                                }
-                            }
-                        }
-                    }
-                    .lgaf-value-a {
-                        background-color: #7ED321;
-                    }
-                    .lgaf-value-b {
-                        background-color: #F8E71C;
-                    }
-                    .lgaf-value-c {
-                        background-color: #F5A623;
-                    }
-                    .lgaf-value-d {
-                        background-color: #F6112D;
-                    }
-                    .lgaf-value-na {
-                        background-color: #CCC;
-                    }
-                }
-                .table{
-                    background-color: #fff;
-                    border: 0 none;
-                    border-collapse: inherit;
-                    border-spacing: 0;
-                    font-weight: inherit;
-                    height: 100%;
-                    text-align: left;
-                    vertical-align: inherit;
-                    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
-                    width: 100%;
-                    thead{
-                        tr{
-                            th{
-                                border-right: 1px solid $grey-bglight;
-                                border-bottom: none;
-                                font-weight: lighter;
-                                padding: 10px;
-                                background-color: $green-light;
-                                color: $white;
-                                font-family: "Open Sans",sans-serif;
-                                font-size: 12px;
-                                text-align: center;
-                                text-transform: uppercase;
-                            }
-                        }
-                    }
-                    tbody{
-                        tr{
-                            &:nth-child(2n) {
-                                background: #f2f2f2 none repeat scroll 0 0;
-                            }
-                            td{
-                                border-bottom: 1px solid $grey-bglight;
-                                border-right: 1px solid $grey-bglight;
-                                padding: 10px;
-                                font-size:16px;
-                                font-family: "Merriweather",serif !important;
-                                color:#666;
-
-                                a{
-                                    font-family: "Merriweather",serif;
-                                }
-                                .glyphicon-info-sign{
-                                    background-color: #a3c642;
-                                    border-radius: 50em;
-                                    color: #fff;
-                                    display: inline-block;
-                                    height: 20px;
-                                    line-height: 14px;
-                                    margin-right: 5px;
-                                    text-align: center;
-                                    width: 20px;
-                                    float:right;
-
-                                    &::before{
-                                        content:"i" !important;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    @media only screen and (max-width: 767px){
-                        display: block;
-                        thead{
-                            display: none !important;
-                        }
-                        tbody{
-                            display: block;
-                            tr{
-                                display: block;
-                                td{
-                                    display: block;
-                                    -moz-border-bottom-colors: none;
-                                    -moz-border-left-colors: none;
-                                    -moz-border-right-colors: none;
-                                    -moz-border-top-colors: none;
-                                    border-color: -moz-use-text-color -moz-use-text-color #eee;
-                                    border-image: none;
-                                    border-style: none none solid;
-                                    border-width: medium medium 1px;
-                                    padding-left: 50%;
-                                    position: relative;
-
-                                    &:before{
-                                        left: 6px;
-                                        padding-right: 10px;
-                                        position: absolute;
-                                        top: 11px;
-                                        white-space: nowrap;
-                                        width: 45%;
-                                    }
-                                    &.indicator::before {
-                                        content: "Indicators";
-                                    }
-                                    &:nth-of-type(2)::before {
-                                        content: "Year";
-                                    }
-                                    &:nth-of-type(3)::before {
-                                        content: "Value";
-                                    }
-                                    &:nth-of-type(4)::before {
-                                        content: "Unit";
-                                    }
-                                    &:nth-of-type(5)::before {
-                                        content: "Dataset";
-                                    }
-                                    &:nth-of-type(6)::before {
-                                        content: "Source";
-                                    }
-                                    &:nth-of-type(7)::before {
-                                        content: "Remove";
-                                        text-align: left;
-                                    }
-
-                                }
-                            }
                         }
                     }
                 }
@@ -726,192 +442,7 @@ body[class*="page-book-countries-"] {
                 }
             }
         }
-        /*.node-teaser{
-            padding: 20px 0;
-
-            .node-image{
-                padding:0;
-                a{
-                    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
-                    display: inline-block;
-                    img{
-                        max-width: 100%;
-                        max-height: 122px;
-                        height: auto;
-                    }
-                }
-
-                @media only screen and (max-width: 992px){
-                    padding-left:15px;
-                    padding-right:15px;
-                    margin-bottom: 15px;
-                }
-
-            }
-            .node-intro{
-                >h3{
-                    margin-top:0;
-                    text-align: left;
-                    line-height: 0;
-                    margin-bottom: 5px;
-                    a{
-                        color: #91b135;
-                        font-size: 16px;
-                        line-height: 1.42857;
-                        font-family: "Open Sans",sans-serif;
-
-                        &:hover{
-                            color:#617724;
-                            text-decoration: none;
-                        }
-                    }
-                }
-                span{
-                    color: #999;
-                    font-size: 14px;
-                    margin-top: 5px;
-                    line-height: 1.42857;
-                    font-family: "Open Sans",sans-serif;
-                }
-                .text{
-                    margin-top: 5px;
-                    font-family: "Merriweather",serif;
-                    color: $text-color;
-                    font-size: 16px;
-                    line-height: 1.42857;
-
-                    p{
-                        font-size: 16px;
-                    }
-                }
-                .date{
-                    background-image:url("../images/ico-cal.png");
-                    background-position: left center;
-                    background-repeat: no-repeat;
-                    padding-left: 25px;
-                    font-family: "Open Sans",sans-serif;
-                    border-bottom: 1px solid $grey-bglight;
-                    padding-bottom: 5px;
-                    padding-top: 5px;
-                    font-size: 14px;
-                }
-                .location{
-                    background-image:url("../images/ico-loc.png");
-                    background-position: left center;
-                    background-repeat: no-repeat;
-                    padding-left: 25px;
-                    font-family: "Open Sans",sans-serif;
-                    border-bottom: 1px solid $grey-bglight;
-                    padding-bottom: 5px;
-                    padding-top: 5px;
-                    font-size: 14px;
-                }
-            }
-            &.node-landlibrary-resource{
-                >h2{
-                    margin-top:0;
-                    text-align: left;
-                    line-height: 0;
-                    margin-bottom: 5px;
-                    a{
-                        color: #91b135;
-                        font-size: 16px;
-                        line-height: 1.42857;
-                        font-family: "Open Sans",sans-serif;
-
-                        &:hover{
-                            color:#617724;
-                            text-decoration: none;
-                        }
-                    }
-                }
-                border-bottom:1px solid $grey-bglight;
-                .description-resource{
-
-                    padding-top:0;
-                    p{  
-                        font-family: "Merriweather",serif !important;
-                        color: #999;
-                        margin:5px 0;
-                        font-size: 16px;
-                    }
-                }
-                .keywords{
-                    span{
-                        font-family: "Open Sans",sans-serif;
-                        text-transform: uppercase;
-                        color: #999;
-                        font-size: 12px;
-                    }
-                    a{
-                        color:#91b135;
-                        font-size: 16px;
-
-                        &:hover{
-                            color:#617724;
-                            text-decoration: none;
-                        }
-                    }
-
-                }
-            }
-        }
-        select{
-            background: #f7f7f7 none repeat scroll 0 0;
-            background-image:url("../images/toggle-arrow.png");
-            background-position: right 10px center;
-            background-repeat: no-repeat;
-        }
-        &.grey{
-            background:#F8F8F8;
-            select{
-                background: #ffffff none repeat scroll 0 0; 
-                background-image:url("../images/toggle-arrow.png");
-                background-position: right 10px center;
-                background-repeat: no-repeat;
-            }
-        }
-        .sep-left-charts{
-            border-left:1px solid #ccc;
-        }
-        .spider-note{
-            display: none;
-            padding:0;
-            font-family: "Open Sans",sans-serif;
-            color:#999;
-            font-size:12px;
-
-            .no-m-bottom{
-                margin:0;
-            }
-        }
-        .note-infografic{
-            border-bottom:1px solid #ccc;
-            margin-bottom:30px;
-            font-family: "Open Sans",sans-serif;
-            color:#999;
-            font-size:12px;
-            padding-top:0;
-        }*/
     }
-    
-    /* .info-bottom{ */
-    /*     padding-top: 40px; */
-    /*     .txt-c{ */
-    /*         text-align: center; */
-    /*         .displayb{ */
-    /*             display:block; */
-    /*             .c-obj{ */
-    /*                 margin: 0 auto; */
-    /*                 vertical-align: middle; */
-    /*             } */
-    /*             .m-s-top { */
-    /*                 margin-top: 10px; */
-    /*             } */
-    /*         } */
-    /*     } */
-    /* } */
-
 
 
     /* TMP overrides to make the country page looks good. */
@@ -928,9 +459,10 @@ body[class*="page-book-countries-"] {
     }
     #map-local { padding: 0; }
 
-
     /* End of Country narrative content */
 }
+
+
 
 #country-navigation{
   .ul-wrap{
@@ -989,28 +521,15 @@ body[class*="page-book-countries-"] {
   }
 }
 
-#table-indicators{
-    tbody{
-        td{
-            text-align: center;
-            vertical-align: middle;
-
-            .glyphicon-trash::before {
-                color:#D31129;
-            }
-
-            &.indicator,
-            &.year,
-            &.value,
-            &.unit,
-            &.dataset,
-            &.sourceOrg{
-                text-align: left;
-            }
-        }
+#table-indicators {
+    td {
+        vertical-align: middle;
     }
 }
 
+/******************************************
+ * Country narative nodes
+ */
 .node-landbook-country {
     font-size:16px;
     font-family: "Merriweather",serif;
@@ -1147,35 +666,6 @@ body[class*="page-book-countries-"] {
     }
 }
 
-/* .block-map{ */
-/*     background:#f8f8f8; */
-/* } */
-/* #mapDiv{ */
-/*     height: 468px; */
-/* } */
-/* #wrapper-piechart{ */
-/*     height: 400px; */
-/* } */
-/* #maparea{ */
-/*     position:relative; */
-/* } */
-/* #wrapper-mapping { */
-/*     height: 768px; */
-/* } */
-/* #igraphics{ */
-/*     margin-top:5px; */
-/* } */
-/* #wrapper-igraphics { */
-/*     height: 400px; */
-/*     width: 100%; */
-/* } */
-/* .labels-compare{ */
-/*     display:none; */
-/* } */
-/* .tit-mapping{ */
-/*     display:none; */
-/* } */
-
 
 
 
@@ -1228,160 +718,6 @@ body[class*="page-book-countries-"] {
 
 
 
-.p-l-bottom{
-    padding-bottom: 20px;
-}
-.cb-right-2 {
-    border-right: 1px solid #d6dbdc;
-}
-
-
-/* help classes */
-.m-l-top {
-    margin-top: 20px;
-}
-
-
-/* .cbtn, .ctn-icon { */
-/*   display: inline-block; */
-/*   padding: 0 1em; */
-/*   text-decoration: none; */
-/*   text-align: center; */
-/*   line-height: 43px; */
-/*   -webkit-transition: background-color 300ms linear; */
-/*   -moz-transition: background-color 300ms linear; */
-/*   -o-transition: background-color 300ms linear; */
-/*   -ms-transition: background-color 300ms linear; */
-/*   transition: background-color 300ms linear; */
-/*   border: none; */
-/*   background: transparent; */
-/*   outline: 0 none !important; */
-/*   box-shadow: 4px 5px 0 0 #6e872a; */
-/* } */
-
-/* .cbtn:hover, .ctn-icon:hover, .cbtn:active, .ctn-icon:active, .cbtn:focus, .ctn-icon:focus, .cbtn:visited, .ctn-icon:visited { */
-/*   text-decoration: none; */
-/* } */
-
-/* .ctn-icon { */
-/*   line-height: 15px !important; */
-/* } */
-
-/* .cbtn-search { */
-/*   height: 45px; */
-/* } */
-
-/* .cbtn-block { */
-/*   width: 100%; */
-/* } */
-
-/* @media screen and (-webkit-min-device-pixel-ratio: 0) { */
-/*   .cbtn, .ctn-icon { */
-/*     line-height: 45px; */
-/*   } */
-/* } */
-/* .cbtn-corner { */
-/*   border-radius: 4px; */
-/* } */
-
-/* .cbtn-round { */
-/*   border-radius: 50em; */
-/* } */
-
-/* .cbtn-round-st { */
-/*   width: 60px; */
-/*   height: 60px; */
-/*   line-height: 60px; */
-/* } */
-
-/* .cbtn-adj-ico-rst-med { */
-/*   position: relative; */
-/*   top: 6px; */
-/*   left: -5px; */
-/* } */
-
-/* .cbtn-st-pos-right { */
-/*   position: fixed; */
-/*   right: 10px; */
-/*   bottom: 10px; */
-/*   z-index: 30; */
-/*   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.3); */
-/* } */
-
-/* .cbtn-rounded { */
-/*   border-radius: 50px; */
-/* } */
-
-/* .cbtn-line { */
-/*   border: 2px solid; */
-/* } */
-/* .cbtn-l-acc { */
-/*   border-color: $green-light; */
-/*   color: $green-light; */
-/* } */
-/* .cbtn-l-acc:hover, .cbtn-l-acc:focus, .cbtn-l-acc:active { */
-/*   border-color: #b6d269; */
-/*   background-color: $green-light; */
-/*   color: #fff; */
-/* } */
-/* .cbtn-l-dis { */
-/*   cursor: default; */
-/*   border-color: #CCC; */
-/*   color: #CCC; */
-/* } */
-/* .cbtn-l-dis:hover, .cbtn-l-dis:focus, .cbtn-l-dis:active { */
-/*   color: #CCC; */
-/* } */
-/* .cbtn-s-sh { */
-/*   position: relative; */
-/*   top: 10px; */
-/*   box-shadow: 0px 2px 1px 0px #356300; */
-/* } */
-/* .cbtn-s-sh2 { */
-/*   box-shadow: 4px 5px 0px 0px #6E872A; */
-/* } */
-/* .cbtn-s-acc { */
-/*   background-color: $green-light; */
-/*   color: #fff; */
-/*   text-transform: uppercase; */
-/* } */
-/* .cbtn-s-acc:hover, .cbtn-s-acc:focus, .cbtn-s-acc:active { */
-/*   color: #fff; */
-/*   background-color: #b6d269; */
-/* } */
-/* .cbtn-s-acc:active { */
-/*   /\* Rectangle 86 Copy 3: *\/ */
-/*   background-color: #85a431; */
-/*   box-shadow: inset 0px 3px 1px 0px #396407; */
-/* } */
-/* .cbtn-s-succ { */
-/*   background-color: #2ECC71; */
-/*   color: #fff; */
-/* } */
-/* .cbtn-s-succ:hover, .cbtn-s-succ:focus, .cbtn-s-succ:active { */
-/*   color: #fff; */
-/*   background-color: black; */
-/* } */
-/* .cbtn-s-cancel { */
-/*   background-color: $grey-bglight; */
-/*   color: #666; */
-/* } */
-/* .cbtn-s-cancel:hover, .cbtn-s-cancel:focus, .cbtn-s-cancel:active { */
-/*   color: #666; */
-/*   background-color: #fff; */
-/* } */
-/* .cbtn-s-dis { */
-/*   cursor: default; */
-/*   background-color: #CCC; */
-/*   color: #fff; */
-/* } */
-/* .cbtn-s-dis:hover, .cbtn-s-dis:focus, .cbtn-s-dis:active { */
-/*   background-color: #CCC; */
-/* } */
-/* .hddn { */
-/*     display: none; */
-/* } */
-
 
 /* WFT is this doing here? is it landbook specific? no */
 .social-block{
@@ -1427,6 +763,7 @@ body[class*="page-book-countries-"] {
     }
 }
 
+// WTF is block-4
 #block-views-landbook-countries-related-block-4{
     .views-view-grid{
         margin: 0 auto;
@@ -1448,6 +785,9 @@ body[class*="page-book-countries-"] {
         }
     }
 }
+
+
+// WTF is block-5 ?
 #block-views-landbook-countries-related-block-5{
     overflow-x:hidden; 
     .field-name-title{
@@ -1568,9 +908,6 @@ body[class*="page-book-countries-"] {
     }
 }
 
-.messages.error{
-    overflow: hidden;
-}
 .disclaimer-block{
     font-size: 12px;
     color:$white;
@@ -1584,14 +921,11 @@ body[class*="page-book-countries-"] {
     color: #999;
     margin-bottom: 60px;
     font-family: "Open Sans",sans-serif;
-
     p{
         margin:5px 0 0 0;
     }
-
     a{
         color:$green-light;
-
         &:hover{
             color:$green-dark;
             text-decoration: none;
@@ -1599,6 +933,7 @@ body[class*="page-book-countries-"] {
     }
 }
 
+// What an aweful class...
 .pdf-block{
     background: #F0F0F0;
     padding-top: 40px;
@@ -1614,10 +949,8 @@ body[class*="page-book-countries-"] {
     .txt-c{
         font-family: "Open Sans",sans-serif;
         font-size: 14px;
-
         a{  
             color:$green-light;
-
             &:hover{
                 color:$green-dark;
                 text-decoration: none;
@@ -1634,67 +967,11 @@ body[class*="page-book-countries-"] {
     }
 }
 
-#map-local-wrapper{
-    height: 470px;
-}
-
 .country-section:nth-child(even),
 .grey{
     background:#F8F8F8;
-
     #map-global-wrapper{
         background:#F8F8F8;
-    }
-}
-
-#lgaf{
-    overflow: hidden;
-
-    &.country-section{
-        border-bottom:none;
-    }
-    .piechart{
-        margin-top: 30px;
-        padding-top: 40px;
-        border-top: 1px solid #d6dbdc;
-    }
-    #lgaf-legend{
-        li{
-            padding:0; 
-            span{
-                font-size: 12px;
-                font-family: "Open Sans",sans-serif;
-
-                &.lgaf-value{
-                    width:14px !important;
-                    height:14px !important;
-                    left: 0;
-                    position: relative;
-                    top: 2px;
-                }
-            }
-        }
-    }
-    #lgaf-values{
-        li{
-            position:relative;
-            padding: 15px 20px 15px 40px !important;
-            font-family: "Open Sans",sans-serif;
-            font-size: 16px;
-            .lgaf-value-a,
-            .lgaf-value-b,
-            .lgaf-value-c,
-            .lgaf-value-d,
-            .lgaf-value-na,{
-                height: 20px !important;
-                left: 10px;
-                line-height: 20px;
-                position: absolute;
-                text-align: center;
-                top: 17px;
-                width: 20px !important;
-            }
-        }
     }
 }
 
@@ -1704,159 +981,33 @@ body[class*="page-book-countries-"] {
     overflow: hidden;
 }
 
-.node-intro{
-    display: inline-block;
-}
-.node-image{
-    margin-bottom:15px;
-    padding-left:0;
-    padding-right:0;
-}
 
-.node-teaser{
-    padding: 20px 0;
 
-    .field-name-body{
-        font-size:16px;
-        h3{
-            font-size:16px;
-        }
-    }
 
-    .node-image{
-        padding:0;
+
+/******************************************
+ * TODO Cleanup / put those in the right place
+ */
+.field-type-taxonomy-term-reference {
+    margin-bottom:0 !important;
+    .field-items,
+    .field-item{
+        margin-bottom: 5px;
         a{
-            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
-            display: inline-block;
-            img{
-                max-width: 100%;
-                max-height: 122px;
-                height: auto;
-            }
-        }
-
-        @media only screen and (max-width: 992px){
-            padding-left:15px;
-            padding-right:15px;
-            margin-bottom: 15px;
-        }
-
-    }
-    .node-intro{
-        >h3{
-            margin-top:0;
-            text-align: left;
-            line-height: 0;
-            margin-bottom: 5px;
-            a{
-                color: #91b135;
-                font-size: 16px;
-                line-height: 1.42857;
-                font-family: "Open Sans",sans-serif;
-
-                &:hover{
-                    color:#617724;
-                    text-decoration: none;
-                }
-            }
-        }
-        span{
-            color: #999;
-            font-size: 14px;
-            margin-top: 5px;
-            line-height: 1.42857;
             font-family: "Open Sans",sans-serif;
-        }
-        .text{
-            margin-top: 5px;
-            font-family: "Merriweather",serif;
-            color: $text-color;
-            font-size: 16px;
-            line-height: 1.42857;
-
-            p{
-                font-size: 16px;
-            }
-        }
-        .date{
-            background-image:url("../images/ico-cal.png");
-            background-position: left center;
-            background-repeat: no-repeat;
-            padding-left: 25px;
-            font-family: "Open Sans",sans-serif;
-            border-bottom: 1px solid $grey-bglight;
-            padding-bottom: 5px;
-            padding-top: 5px;
-            font-size: 14px;
-        }
-        .location{
-            background-image:url("../images/ico-loc.png");
-            background-position: left center;
-            background-repeat: no-repeat;
-            padding-left: 25px;
-            font-family: "Open Sans",sans-serif;
-            border-bottom: 1px solid $grey-bglight;
-            padding-bottom: 5px;
-            padding-top: 5px;
-            font-size: 14px;
         }
     }
-    &.node-landlibrary-resource{
-        >h2{
-            margin-top:0;
-            text-align: left;
-            line-height: 0;
-            margin-bottom: 5px;
-            a{
-                color: #91b135;
-                font-size: 16px;
-                line-height: 1.42857;
-                font-family: "Open Sans",sans-serif;
-
-                &:hover{
-                    color:#617724;
-                    text-decoration: none;
-                }
-            }
-        }
-        border-bottom:1px solid $grey-bglight;
-        .description-resource{
-
-            padding-top:0;
-            p{  
-                font-family: "Merriweather",serif !important;
-                color: #999;
-                margin:5px 0;
-                font-size: 16px;
-            }
-        }
-        .keywords{
-            span{
-                font-family: "Open Sans",sans-serif;
-                text-transform: uppercase;
-                color: #999;
-                font-size: 12px;
-            }
-            a{
-                color:#91b135;
-                font-size: 16px;
-
-                &:hover{
-                    color:#617724;
-                    text-decoration: none;
-                }
-            }
-
-        }
+    .field-items{
+        margin-bottom: 0;
     }
 }
 
+// WTF why are we overriding node style here?
 .node{
     .field,
     .location{
         font-size:16px;
     }
-
     .field-type-taxonomy-term-reference,
     .field-name-field-geographical-focus,
     .field-name-field-related-topics,
@@ -1873,31 +1024,38 @@ body[class*="page-book-countries-"] {
             margin-bottom: 0;
         }
     }
-
+}
+.node-intro{
+    display: inline-block;
+}
+.node-image{
+    margin-bottom:15px;
+    padding-left:0;
+    padding-right:0;
 }
 
+
+
+/******************************************
+ * TODO Cleanup / remove those class
+ * At best they are useless or
+ *   it is very likely that they will disturb have bad side effects and
+ *   conflicts on other part of the website
+ */
+.p-l-bottom{
+    padding-bottom: 20px;
+}
+.cb-right-2 {
+    border-right: 1px solid #d6dbdc;
+}
+.m-l-top {
+    margin-top: 20px;
+}
 .container-wrapper{
     border-bottom:0.36em solid $green;
 }
 
-.field-type-taxonomy-term-reference,{
-    margin-bottom:0 !important;
-    .field-items,
-    .field-item{
-        margin-bottom: 5px;
-        a{
-            font-family: "Open Sans",sans-serif;
-        }
-    }
-    .field-items{
-        margin-bottom: 0;
-    }
-}
-.map-fluid {
-  position: relative;
-  padding-bottom: 50%;
-}
-.map-fluid .map-fluid-wrapper {
-  position: absolute;
-  width: 100%; height: 100%;
+// WTF
+.messages.error{
+    overflow: hidden;
 }
