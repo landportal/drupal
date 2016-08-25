@@ -1,19 +1,11 @@
 (function($) {
     $(document).ready(function() {
-        LBV.ready().done(function () {
-            // Global heatmap
-            var LBMG = new lbvisMap({
-                target: '#map-global',
-                map_data: map_data,
-                iso3: Drupal.settings.landbook.countryCode,
-                title: true,
-                subtitle: true,//function () { return this.indicator.label; },
-                legend: true,
-                indicators: true,
-                indicator: 'WB-SL.AGR.EMPL.ZS',
-                vis: LBV
-            });
-            LBMG.init();
+        LBMap = new lbvisMap({
+            map_data: map_data,
+            selectable: true,
+            tooltip: function () { return 'Click to visit '+this.point.name; },
+            events: { click: function () { window.location.href = '/book/countries/' + this.id; } }
         });
+        LBMap.init();
     });
 })(jQuery);

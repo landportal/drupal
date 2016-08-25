@@ -2,6 +2,6 @@ name = Landbook vis map
 description = Submodule landbook for display maps on country page.
 package = Landportal
 core = 7.x
-version = 7.x-1
+version = 7.x-1.1
 dependencies[] = landbook_taxonomies
 dependencies[] = landbook_view_coda

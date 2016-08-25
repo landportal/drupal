@@ -1,41 +1,40 @@
 <?php
-
+/**
+ * This module provide blocks to display js-view-coda maps
+ *
+ */
 function landbook_vis_map_theme($existing, $type, $theme, $path){
     return array(
         'region_map' => array('template' => 'block--landbook-vis-map--region-map'),
         'world_map'  => array('template' => 'block--landbook-vis-map--world-map'),
+        'compare_map'=> array('template' => 'block--landbook-vis-map--compare-map'),
     );
-}
-function landbook_vis_map_library() {    
-    $libraries['region-map'] = array(
-        'title' => 'LBV region map', 
-        'version' => '0.0.1',
-        'js' => array(
-            'js/region-mpa.js' => array(),
-        ),
-        'dependencies' => array(
-            array('landbook', 'lbvis.map'),
-        ),
-    );
-    return $libraries;
 }
 
 function landbook_vis_map_block_info() {
     $blocks['region_map'] = array(
-        'info' => t('Country page: Region map'),
-        'status' => TRUE,
-        'region' => 'content',
-        'visibility'      => BLOCK_VISIBILITY_LISTED,
-        'pages'           => "book/countries/*",
-        'weight'      => -42
+        'info'          => t('Landbook: Country page: Region map'),
+        'status'        => TRUE,
+        'region'        => 'content',
+        'visibility'    => BLOCK_VISIBILITY_LISTED,
+        'pages'         => "book/countries/*",
+        'weight'        => -42
+    );
+    $blocks['compare_map'] = array(
+        'info'          => t('Landbook: Country page: Compare map'),
+        'status'        => TRUE,
+        'region'        => 'content',
+        'visibility'    => BLOCK_VISIBILITY_LISTED,
+        'pages'         => "book/countries/*",
+        'weight'        => 11
     );
     $blocks['world_map'] = array(
-        'info' => t('Country page: World map'),
-        'status' => TRUE,
-        'region' => 'content',
-        'visibility'      => BLOCK_VISIBILITY_LISTED,
-        'pages'           => "book/countries/*",
-        'weight'      => 11
+        'info'          => t('Landbook: Countries: World map'),
+        'status'        => TRUE,
+        'region'        => 'content',
+        'visibility'    => BLOCK_VISIBILITY_LISTED,
+        'pages'         => "book/countries",
+        'weight'        => -42
   );
   return $blocks;
 }
@@ -55,6 +54,20 @@ function landbook_vis_map_block_view($delta = '') {
                 ),
                 'js' =>  array(
                     $module_path . '/region-map.js' =>  array('weight' => 3, 'requires_jquery' => TRUE),
+                )
+            )
+        );
+        break;
+    case 'compare_map' :
+        $block['subject'] = '';
+        $block['content'] = array(
+            '#theme' => 'compare_map',
+            '#attached' => array(
+                'library' => array(
+                    array('landbook_view_coda', 'lbvis.map'),
+                ),
+                'js' =>  array(
+                    $module_path . '/compare-map.js' =>  array('weight' => 3, 'requires_jquery' => TRUE),
                 )
             )
         );
