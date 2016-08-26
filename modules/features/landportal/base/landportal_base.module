@@ -1,7 +1,11 @@
 <?php
 /**
  * @file
- * Code for the Landportal base feature.
+ * Code for the Landportal Base feature.
  */
 
 include_once 'landportal_base.features.inc';
+/**
+ * @file
+ * Code for the Landportal base feature.
+ */
