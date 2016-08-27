@@ -1,4 +1,5 @@
 
+
 .node-teaser{
 
     padding: 20px 0;
@@ -154,4 +155,10 @@
 
         }
     }
+}
+/* For datasets taxonomy terms
+ * Organization teasers float on left
+ */
+.taxonomy-term.vocabulary-datasets .node-organization.node-teaser {
+    float: right;
 }

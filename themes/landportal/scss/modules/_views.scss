@@ -1,0 +1,19 @@
+/* This could be anyviews in theory */
+
+.view.view-landbook-indicators,
+.view.view-landbook-catalog {
+    @extend .row;
+    .view-filters {
+        @extend .col-sm-4;
+        float: right;
+    }
+    .view-content {
+        @extend .col-sm-8;
+    }
+    .views-row {
+        @extend .clearfix;
+        margin: 1em 0;
+        border-bottom: 1px solid #f0f0f0;
+        &:last-of-type { border-bottom: 0; }
+    }
+}

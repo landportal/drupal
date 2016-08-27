@@ -48,7 +48,11 @@ $fa-font-path: "font-awesome/";
 @import "modules/menus";
 @import "modules/footer";
 @import "modules/header";
+
+/* New stuff */
+@import "modules/taxonomies";
 @import "modules/node-teasers";
+@import "modules/views";
 @import "modules/visualizations";
 
 /* IMPORT: Screens */
