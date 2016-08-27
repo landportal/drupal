@@ -34,12 +34,26 @@ function landbook_help($path, $arg) {
   }
 }
 
-// Hook country narrative page
+/**
+ * Landbook pages hook
+ */
 function landbook_page_build(&$page) {
-  $args = arg();
-    if ($args[0] == 'book' && $args[1] == 'countries') {
+    $args = arg();
+    // Country pages
+    if ($args[0] != 'book' && $args[1] == 'countries') {
         landbook_country_narrative($args[2]);
     }
+}
+function landbook_taxonomy_term_view($term, $view_mode, $langcode) {
+    if (!in_array($term->vocabulary_machine_name, array('indicators', 'catalogs')))
+        return;
+    dpm($term, $view_mode);
+    drupal_add_js(array(
+        'landbook' => array(
+            'type' => $term->vocabulary_machine_name,
+            'id'   => $term->field_id['und'][0]['value']
+        )
+    ), 'setting');
 }
 
 function landbook_country_narrative($iso3) {
@@ -77,7 +91,7 @@ function landbook_views_query_alter(&$view, &$query){
         }
     }
 }
-
+// TMP?
 function landbook_get_region_iso($iso){
     $tid = db_select('field_data_field_iso3', 't')
       ->fields('t', array('entity_id'))
@@ -87,7 +101,7 @@ function landbook_get_region_iso($iso){
       ->fetchField();
     return $tid;
 }
-
+// TMP?
 function landbook_get_country_iso($iso){
     $tid = db_select('field_data_field_iso3', 't')
       ->fields('t', array('entity_id'))
@@ -97,7 +111,7 @@ function landbook_get_country_iso($iso){
       ->fetchField();
     return $tid;
 }
-
+// TMP?
 function landbook_fill_regions_terms(){
   //strange country name
   $hard_country_name = 'Viet Nam';
@@ -204,7 +218,7 @@ function landbook_views_pre_render(&$view) {
     }
   }
 }
-
+// WTF
 function landbook_form_alter(&$form, &$form_state, $form_id){
   if($form_id == 'news_node_form'  || $form_id == 'blog_post_node_form' || $form_id == 'debate_node_form' || $form_id == 'event_node_form' || $form_id == 'landlibrary_resource_node_form'){
     drupal_add_js(drupal_get_path('module', 'landbook') . '/js/landbook.js');
