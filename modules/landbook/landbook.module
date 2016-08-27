@@ -8,13 +8,10 @@
  * Drupal refactoring: Jules <jules@ker.bz>
  */
 
-
 $BOOK_PATH = drupal_get_path('module', 'landbook');
-
 require_once($BOOK_PATH . '/includes/landbook.menu.inc');
 require_once($BOOK_PATH . '/includes/landbook.block.inc');
 require_once($BOOK_PATH . '/includes/landbook.theme.inc');
-//require_once($BOOK_PATH . '/includes/landbook.library.inc');
 require_once($BOOK_PATH . '/includes/landbook.views_default.inc');
 
 function landbook_views_api($module = NULL, $api = NULL) {
@@ -38,16 +35,14 @@ function landbook_help($path, $arg) {
  * Landbook pages hook
  */
 function landbook_page_build(&$page) {
-    $args = arg();
-    // Country pages
-    if ($args[0] != 'book' && $args[1] == 'countries') {
-        landbook_country_narrative($args[2]);
+    // Country pages (aka naratives)
+    if (arg(0) == 'book' && arg(1) == 'countries') {
+        landbook_country_narrative(arg(2));
     }
 }
 function landbook_taxonomy_term_view($term, $view_mode, $langcode) {
     if (!in_array($term->vocabulary_machine_name, array('indicators', 'catalogs')))
         return;
-    dpm($term, $view_mode);
     drupal_add_js(array(
         'landbook' => array(
             'type' => $term->vocabulary_machine_name,
@@ -84,14 +79,16 @@ function landbook_views_query_alter(&$view, &$query){
               $tid=landbook_get_region_iso(arg(2));
               $query->where[0]['conditions'][0]['value']=$tid;//pa($query,1);
             }
+            // WTF is block6?
             else{
               $tid=landbook_get_country_iso(arg(2));
+              // WTFWTF?
               $query->where[1]['conditions'][4]['value']=$tid;
             }
         }
     }
 }
-// TMP?
+// TMP? 
 function landbook_get_region_iso($iso){
     $tid = db_select('field_data_field_iso3', 't')
       ->fields('t', array('entity_id'))
@@ -111,6 +108,7 @@ function landbook_get_country_iso($iso){
       ->fetchField();
     return $tid;
 }
+
 // TMP?
 function landbook_fill_regions_terms(){
   //strange country name
@@ -147,6 +145,7 @@ function landbook_fill_regions_terms(){
   }
 }
 
+// Un-used?
 function landbook_get_country_narrative_nid($title){
   $nid = db_select('node', 'n')
   ->fields('n', array('nid'))
@@ -156,7 +155,7 @@ function landbook_get_country_narrative_nid($title){
   ->fetchField();
   return $nid;
 }
-
+// Un-used?
 function load_country_description($title){
   $nid = db_select('node', 'n')
   ->fields('n', array('nid'))
@@ -175,21 +174,9 @@ function load_country_description($title){
 }
 
 /**
- * Implements hook_translated_menu_link_alter().
- */
-/*
-function landbook_translated_menu_link_alter(&$item, $map) {
-  global $user;
-  if ($item['menu_name'] == 'user-menu' && $item['link_path'] == 'node/add') {
-    if (!in_array('contributor', $user->roles) && !path_is_admin(current_path())) {
-      $item['access'] = FALSE;
-    }
-  }
-}*/
-
-/**
  * Implements hook_views_pre_render().
  */
+// WFT is going on there?
 function landbook_views_pre_render(&$view) {
   // We target the views and probably the display we want to customize.
   if (!empty($view->name) && $view->name === 'landbook_countries_related' && $view->current_display === 'block_5') {
@@ -218,7 +205,11 @@ function landbook_views_pre_render(&$view) {
     }
   }
 }
-// WTF
+
+
+// Implement country promoted stuff
+// WTF?
+// So this is both here and in land_util(ity?)?
 function landbook_form_alter(&$form, &$form_state, $form_id){
   if($form_id == 'news_node_form'  || $form_id == 'blog_post_node_form' || $form_id == 'debate_node_form' || $form_id == 'event_node_form' || $form_id == 'landlibrary_resource_node_form'){
     drupal_add_js(drupal_get_path('module', 'landbook') . '/js/landbook.js');
@@ -243,7 +234,6 @@ function landbook_form_alter(&$form, &$form_state, $form_id){
     $form['field_country_promoted']['#access']=FALSE;
   }
 }
-
 function landbook_save_promoted_nodes(&$form, &$form_state){
   $form_state['values']['field_country_promoted']['und']=array();
   foreach($form_state['values']['promoted_nodes'] as $value){
