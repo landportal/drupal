@@ -1,124 +1,5 @@
 <?php
-
-function landbook_view_coda_library() {
-    $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
-    
-    $libraries['view-coda'] = array(
-        'title' => 'JS View Country Data', 
-        'website' => 'https://github.com/landportal/js-view-coda/', 
-        'version' => '0.0.1',
-        'js' => array(
-            drupal_get_path('module', 'landbook_view_coda') . '/view-coda.js' => array(),
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'lbvis'),
-        ),
-    );
-
-    // Vendor stuff
-    $libraries['lbvis.highcharts'] = array(
-        'title' => 'view-coda vendor libs', 
-        'version' => '0.0.1', 
-        'js' => array(
-            $LBVIS_PATH . '/js/vendor/highstock.js' => array('weight' => 0), 
-            $LBVIS_PATH . '/js/vendor/highmaps.js' => array('weight' => 1), 
-            $LBVIS_PATH . '/js/vendor/highcharts-more.js' => array('weight' => 2), 
-      ), 
-    );
-    $libraries['lbvis.map_data'] = array(
-        'title' => 'Map data for highmaps', 
-        'website' => 'https://github.com/landportal/js-view-coda/', 
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/map_data.js' => array(),
-        ),
-    );
-
-    $libraries['lbvis'] = array(
-        'title' => 'JS View Country Data', 
-        'website' => 'https://github.com/landportal/js-view-coda/', 
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.js' => array(),
-        ),
-        'dependencies' => array(
-            array('system', 'jquery'),
-            array('landbook_view_coda', 'lbvis.highcharts'),
-            array('landbook_view_coda', 'lbvis.data'),
-        ),
-    );
-    $libraries['lbvis.data'] = array(
-        'title' => 'JS View Country Data', 
-        'website' => 'https://github.com/landportal/js-view-coda/', 
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.data.js' => array(),
-        ),
-    );
-    $libraries['lbvis.map'] = array(
-        'title' => 'view-coda map', 
-        'version' => '0.0.1', 
-        'js' => array(
-            //$LBVIS_PATH . '/js/vendor/highmaps.js' => array(), 
-            $LBVIS_PATH . '/js/lbvis.map.js' => array(), 
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-            array('landbook_view_coda', 'lbvis.map_data'),
-        ),
-    );
-    $libraries['lbvis.table'] = array(
-        'title' => 'view-coda table', 
-        'version' => '0.0.1', 
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.table.js' => array(), 
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-        ),
-    );
-    $libraries['lbvis.linechart'] = array(
-        'title' => 'view-coda linechart', 
-        'version' => '0.0.1', 
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.linechart.js' => array(), 
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-        ),
-    );
-    $libraries['lbvis.lgaf'] = array(
-        'title' => 'view-coda lgaf', 
-        'version' => '0.0.1', 
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.lgaf.js' => array(), 
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-        ),
-    );
-    $libraries['lbvis.pie'] = array(
-        'title' => 'view-coda pie', 
-        'version' => '0.0.1', 
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.pie.js' => array(), 
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-        ),
-    );
-    $libraries['lbvis.spider'] = array(
-        'title' => 'view-coda spider', 
-        'version' => '0.0.1', 
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.spider.js' => array(), 
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-        ),
-    );
-    return $libraries;
-}
+include 'landbook_view_coda.library.inc';
 
 function landbook_view_coda_block_info() {
     $blocks['lbcp_linechart'] = array(
@@ -152,6 +33,14 @@ function landbook_view_coda_block_info() {
         'visibility'=> BLOCK_VISIBILITY_LISTED,
         'pages'     => "book/countries/*",
         'weight'    => 15
+    );
+    $blocks['lbcp_spider_note'] = array(
+        'info'      => t('Country page: Spider note'),
+        'status'    => TRUE,
+        'region'    => 'content',
+        'visibility'=> BLOCK_VISIBILITY_LISTED,
+        'pages'     => "book/countries/*",
+        'weight'    => 16
     );
     return $blocks;
 }
@@ -191,10 +80,6 @@ function landbook_view_coda_block_view($delta = '') {
                     array('landbook_view_coda', 'lbvis.lgaf')
                 ),
                 'js' => array(
-                    /* array( */
-                    /*     'type' => 'setting', */
-                    /*     'data' => array('landbook' => array('pathJSON' => )) */
-                    /* ), */
                     array(
                         'type' => 'inline',
                         'data' => landbook_view_coda_lbvis_ready_callback(
@@ -221,8 +106,12 @@ function landbook_view_coda_block_view($delta = '') {
             )
         );
         break;
+    case 'lbcp_spider_note' :
+        $block['subject'] = '';
+        $block['content'] = array('#theme' => 'disclaimer_block');
+        break;
     case 'lbcp_spider' :
-        //$block['subject'] = t('');
+        $block['subject'] = '';
         $block['content'] = array(
             '#attached' => array(
                 'library' => array(
@@ -239,4 +128,26 @@ function landbook_view_coda_block_view($delta = '') {
         break;
     }
     return $block;
+}
+
+function landbook_view_coda_block_body($name) {
+    $default = array(
+        'lbcp_spider_note' => 'Note: This spider chart reflects the level of development of a country on four dimensions, which are measured using four internationally accepted indexes:
+<p class="m-xs-top no-m-bottom"><a href="https://landportal.info/book/indicators/oecd-sigi">The Social Institutions and Gender Index (SIGI) by OECD</a></p>
+
+<p class="no-m-top no-m-bottom"><a href="https://landportal.info/book/indicators/wb-sipovgini">The GINI Index by the World Bank</a></p>
+
+<p class="no-m-top no-m-bottom"><a href="https://landportal.info/book/indicators/undp-hdi-index">The Human Development Index (HDI) by UNDP</a></p>
+
+<p><a href="https://landportal.info/book/indicators/ifpri-ghi">The Global Hunger Index (GHI) by IFPRI</a></p>
+
+<p>All original values for the indexes have been rescaled from 0 to 100, where 0 reflects low development levels and 100 reflects high development levels.For each index the value for the most recent available year is selected by default".</p>'
+    );
+
+    //$default: The default value to use if this variable has never been set.
+    $output = variable_get('landbook-' . $name, $default[$name]);
+    if (empty($output)) {
+        $output = $default[$name];
+    }
+    return $output;
 }
