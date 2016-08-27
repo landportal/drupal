@@ -10,12 +10,10 @@
 function landcommunity_views_default_views() {
   $export = array();
 
-  // Paste more views here...
-  include 'views/organizations.inc';
-  $export[$view->name] = $view;
-
-  include 'views/users.inc';
-  $export[$view->name] = $view;
+  foreach (['orgs', 'organizations', 'users'] as $v) {
+      include 'views/' . $v . '.inc';
+      $export[$view->name] = $view;
+  }
 
   return $export;
 }
