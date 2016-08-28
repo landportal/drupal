@@ -8,8 +8,11 @@
             subtitle: true, // '{indicator.description}'
             legend: true,
             tooltip: true, // '{indicator.label}'
-            indicators: true,
-            indicator: 'WB-SL.AGR.EMPL.ZS',
+            years: true,
+            indicators: (Drupal.settings.landbook.type == 'indicators' ? false : true),
+            indicator: (Drupal.settings.landbook.type == 'indicators' && Drupal.settings.landbook.id
+                        ? Drupal.settings.landbook.id
+                        : 'WB-SL.AGR.EMPL.ZS'),
             vis: LBV
         });
         LBV.ready().done(function () {

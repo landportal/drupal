@@ -18,14 +18,14 @@ function landbook_vis_map_block_info() {
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/countries/*",
-        'weight'        => -42
+        'weight'        => -52
     );
     $blocks['compare_map'] = array(
         'info'          => t('Landbook: Country page: Compare map'),
         'status'        => TRUE,
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
-        'pages'         => "book/countries/*",
+        'pages'         => "book/countries/*\nbook/indicators/*",
         'weight'        => 11
     );
     $blocks['world_map'] = array(
@@ -34,7 +34,7 @@ function landbook_vis_map_block_info() {
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/countries",
-        'weight'        => -42
+        'weight'        => -52
   );
   return $blocks;
 }
