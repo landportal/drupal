@@ -9,6 +9,7 @@
         //Drupal.behaviors.landportal.initSearchBlock(context, settings);
         Drupal.behaviors.landportal.showSpiderBlock(context, settings);
         Drupal.behaviors.landportal.initCarousel(context, settings);
+        Drupal.behaviors.landportal.initReadMore(context, settings);
       },
       initRegistrationForm: function(context, settings){
         isVisibleNewsletterLanguage();
@@ -143,6 +144,15 @@
                 items:3
               }
           }
+        });
+      },
+      initReadMore: function(context, settings){
+        $('.node-landlibrary-resource.node-teaser .field-name-field-doc-description').readmore({
+          speed: 1000,
+          lessLink: '<a href="#">(-) Less</a>',
+          moreLink: '<a class="btn-more" href="#">(+) More</a>',
+          collapsedHeight:110,
+          heightMargin: 100
         });
       }
     };

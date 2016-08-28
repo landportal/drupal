@@ -165,10 +165,6 @@ function landlibrary_resource_ds_layout_settings_info() {
         3 => 'field_doc_creation_date',
         4 => 'field_geographical_focus',
         5 => 'field_doc_description',
-        6 => 'field_related_domains',
-        7 => 'group_landvoc',
-        8 => 'field_related_themes',
-        9 => 'field_related_topics',
       ),
     ),
     'fields' => array(
@@ -178,10 +174,6 @@ function landlibrary_resource_ds_layout_settings_info() {
       'field_doc_creation_date' => 'right',
       'field_geographical_focus' => 'right',
       'field_doc_description' => 'right',
-      'field_related_domains' => 'right',
-      'group_landvoc' => 'right',
-      'field_related_themes' => 'right',
-      'field_related_topics' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(

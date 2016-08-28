@@ -20,4 +20,5 @@ features[] = main_menu
 
 scripts[] = 'js/bootstrap.min.js'
 scripts[] = 'js/owl.carousel.min.js'
+scripts[] = 'js/readmore.min.js'
 scripts[] = 'js/main.js'
