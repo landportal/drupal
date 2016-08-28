@@ -67,17 +67,26 @@ section a{
 }
 
 body[class*="page-book-countries-"] {
-    &#table-indicators header h2 {
+    #table-indicators header h2 {
         background:url('../images/indicators.png') no-repeat 50% 0;
     }
-    &#map-global header h2 {
+    #map-global header h2 {
         background:url('../images/mapping.png') no-repeat 50% 0;
     }
-    &#compare header h2 {
+    #compare header h2 {
         background:url('../images/infographics.png') no-repeat 50% 0;
     }
-    &#lgaf header h2 {
+    #lgaf header h2 {
         background:url('../images/rankings.png') no-repeat 50% 0;
+    }
+    h2.media{
+        background:url('../images/media.png') no-repeat 50% 0;
+    }
+    h2.partners{
+        background:url('../images/partners.png') no-repeat 50% 0;
+    }
+    h2.library{
+        background:url('../images/library.png') no-repeat 50% 0;
     }
 
     #block-system-main {
@@ -120,14 +129,16 @@ body[class*="page-book-countries-"] {
             }
             >section{
                 padding-bottom: 60px;
+                // WTF!!!
                 &#reletad-content{
                     .views-field-field-doc-thumb{
                         max-height: 260px;
                         overflow: hidden;
                     }
-                    &.empty{
-                        margin-top: -260px;
-                    }
+                    // WTFWTF
+                    /* &.empty{ */
+                    /*     margin-top: -260px; */
+                    /* } */
                     padding-bottom: 0px;
                     .view-content{
                         text-align: center;
@@ -350,15 +361,6 @@ body[class*="page-book-countries-"] {
             text-align:center;
             margin-bottom: 35px;
             color:#333;
-            &.media{
-                background:url('../images/media.png') no-repeat 50% 0;
-            }
-            &.partners{
-                background:url('../images/partners.png') no-repeat 50% 0;
-            }
-            &.library{
-                background:url('../images/library.png') no-repeat 50% 0;
-            }
         }
         .adj-blog{
             margin-left:30px;
@@ -967,7 +969,8 @@ body[class*="page-book-countries-"] {
     }
 }
 
-.country-section:nth-child(even),
+// TODO : fix, use proper, named, blocks/regions
+//.country-section:nth-child(even),
 .grey{
     background:#F8F8F8;
     #map-global-wrapper{
