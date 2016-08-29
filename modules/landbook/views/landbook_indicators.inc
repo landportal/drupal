@@ -179,3 +179,87 @@ $handler->display->display_options['menu']['weight'] = '3';
 $handler->display->display_options['menu']['name'] = 'landbook-menu';
 $handler->display->display_options['menu']['context'] = 0;
 $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+/* Display: Dataset indicators */
+$handler = $view->new_display('block', 'Dataset indicators', 'block_1');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Dataset indicators';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Field: Themes (field_related_themes) (translated) */
+$handler->display->display_options['relationships']['field_related_themes_tid_i18n']['id'] = 'field_related_themes_tid_i18n';
+$handler->display->display_options['relationships']['field_related_themes_tid_i18n']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['relationships']['field_related_themes_tid_i18n']['field'] = 'field_related_themes_tid_i18n';
+$handler->display->display_options['relationships']['field_related_themes_tid_i18n']['label'] = 'themes';
+/* Relationship: Field: Overarching categories (field_related_domains) (translated) */
+$handler->display->display_options['relationships']['field_related_domains_tid_i18n']['id'] = 'field_related_domains_tid_i18n';
+$handler->display->display_options['relationships']['field_related_domains_tid_i18n']['table'] = 'field_data_field_related_domains';
+$handler->display->display_options['relationships']['field_related_domains_tid_i18n']['field'] = 'field_related_domains_tid_i18n';
+$handler->display->display_options['relationships']['field_related_domains_tid_i18n']['label'] = 'domains';
+/* Relationship: Taxonomy term: Dataset (field_dataset) */
+$handler->display->display_options['relationships']['field_dataset_tid']['id'] = 'field_dataset_tid';
+$handler->display->display_options['relationships']['field_dataset_tid']['table'] = 'field_data_field_dataset';
+$handler->display->display_options['relationships']['field_dataset_tid']['field'] = 'field_dataset_tid';
+$handler->display->display_options['relationships']['field_dataset_tid']['label'] = 'Dataset';
+$handler->display->display_options['relationships']['field_dataset_tid']['required'] = TRUE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: ID */
+$handler->display->display_options['fields']['field_id']['id'] = 'field_id';
+$handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
+$handler->display->display_options['fields']['field_id']['field'] = 'field_id';
+$handler->display->display_options['fields']['field_id']['label'] = '';
+$handler->display->display_options['fields']['field_id']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_id']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['path'] = 'book/indicators/[field_id]';
+$handler->display->display_options['fields']['name']['alter']['absolute'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: Rendered Taxonomy term */
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Taxonomy term: Term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['relationship'] = 'field_dataset_tid';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+$handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+  'datasets' => 'datasets',
+  'indicators' => 'indicators',
+);
+$handler->display->display_options['arguments']['tid']['validate']['fail'] = 'access denied';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Taxonomy vocabulary: Machine name */
+$handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+$handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['value'] = array(
+  'indicators' => 'indicators',
+);

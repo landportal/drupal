@@ -3,6 +3,7 @@ description = The landbook section of the landportal. For this module to work pr
 package = Landportal
 core = 7.x
 version = 7.x-2.3-beta
+dependencies[] = context
 dependencies[] = ctools
 dependencies[] = landportal_taxonomy
 dependencies[] = landbook_taxonomies

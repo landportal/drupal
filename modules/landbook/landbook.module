@@ -9,10 +9,21 @@
  */
 
 $BOOK_PATH = drupal_get_path('module', 'landbook');
-require_once($BOOK_PATH . '/includes/landbook.menu.inc');
 require_once($BOOK_PATH . '/includes/landbook.block.inc');
+require_once($BOOK_PATH . '/includes/landbook.context.inc');
+require_once($BOOK_PATH . '/includes/landbook.menu.inc');
 require_once($BOOK_PATH . '/includes/landbook.theme.inc');
 require_once($BOOK_PATH . '/includes/landbook.views_default.inc');
+
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function landbook_ctools_plugin_api($module = NULL, $api = NULL) {
+    if ($module == "context" && $api == "context") {
+        return array("version" => "3");
+    }
+}
 
 function landbook_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
