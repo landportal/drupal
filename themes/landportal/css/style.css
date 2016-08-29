@@ -18037,16 +18037,25 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 }
 /* line 13, ../scss/modules/_visualizations.scss */
 #ranking-wrapper li span.flag {
+  overflow: hidden;
   vertical-align: middle;
-  margin: 10px;
   color: transparent;
+  width: 50px;
+  height: 48px;
+  display: inline-block;
+  margin: 10px;
+  border: 4px solid #FFFFFF;
+  z-index: 1;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
 }
-/* line 18, ../scss/modules/_visualizations.scss */
+/* line 25, ../scss/modules/_visualizations.scss */
 #ranking-wrapper li:first-of-type div,
 #ranking-wrapper li div:nth-child(2) {
   line-height: 70px;
 }
-/* line 25, ../scss/modules/_visualizations.scss */
+/* line 32, ../scss/modules/_visualizations.scss */
 #ranking-wrapper span.rank {
   position: absolute;
   border: 2px solid #FFFFFF;
@@ -18055,7 +18064,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   display: inline-block;
   height: 32px;
   width: 32px;
-  padding-top: 3px;
+  padding-top: 4px;
   text-align: center;
   font-weight: bold;
   z-index: 2;
@@ -18063,28 +18072,15 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   -webkit-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 40, ../scss/modules/_visualizations.scss */
-#ranking-wrapper span.flag {
-  width: 50px;
-  height: 48px;
-  display: inline-block;
-  overflow: hidden;
-  border: 4px solid #FFFFFF;
-  margin: 0 auto;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-  /* box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5); */
-}
 
 /* Map viualization */
-/* line 55, ../scss/modules/_visualizations.scss */
+/* line 51, ../scss/modules/_visualizations.scss */
 .map-fluid {
   position: relative;
   padding-bottom: 50%;
 }
 
-/* line 59, ../scss/modules/_visualizations.scss */
+/* line 55, ../scss/modules/_visualizations.scss */
 .map-fluid .map-fluid-wrapper {
   position: absolute;
   width: 100%;
@@ -18092,7 +18088,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 }
 
 /* Indicators table */
-/* line 68, ../scss/modules/_visualizations.scss */
+/* line 64, ../scss/modules/_visualizations.scss */
 .table {
   background-color: #fff;
   border: 0 none;
@@ -18105,7 +18101,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
   width: 100%;
 }
-/* line 81, ../scss/modules/_visualizations.scss */
+/* line 77, ../scss/modules/_visualizations.scss */
 .table thead tr th {
   border-right: 1px solid #f0f0f0;
   border-bottom: none;
@@ -18118,11 +18114,11 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   text-align: center;
   text-transform: uppercase;
 }
-/* line 97, ../scss/modules/_visualizations.scss */
+/* line 93, ../scss/modules/_visualizations.scss */
 .table tbody tr:nth-child(2n) {
   background: #f2f2f2 none repeat scroll 0 0;
 }
-/* line 100, ../scss/modules/_visualizations.scss */
+/* line 96, ../scss/modules/_visualizations.scss */
 .table tbody tr td {
   border-bottom: 1px solid #f0f0f0;
   border-right: 1px solid #f0f0f0;
@@ -18131,11 +18127,11 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   font-family: "Merriweather",serif !important;
   color: #666;
 }
-/* line 107, ../scss/modules/_visualizations.scss */
+/* line 103, ../scss/modules/_visualizations.scss */
 .table tbody tr td a {
   font-family: "Merriweather",serif;
 }
-/* line 110, ../scss/modules/_visualizations.scss */
+/* line 106, ../scss/modules/_visualizations.scss */
 .table tbody tr td .glyphicon-info-sign {
   background-color: #a3c642;
   border-radius: 50em;
@@ -18148,28 +18144,28 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   width: 20px;
   float: right;
 }
-/* line 121, ../scss/modules/_visualizations.scss */
+/* line 117, ../scss/modules/_visualizations.scss */
 .table tbody tr td .glyphicon-info-sign::before {
   content: "i" !important;
 }
 @media only screen and (max-width: 767px) {
-  /* line 68, ../scss/modules/_visualizations.scss */
+  /* line 64, ../scss/modules/_visualizations.scss */
   .table {
     display: block;
   }
-  /* line 130, ../scss/modules/_visualizations.scss */
+  /* line 126, ../scss/modules/_visualizations.scss */
   .table thead {
     display: none !important;
   }
-  /* line 133, ../scss/modules/_visualizations.scss */
+  /* line 129, ../scss/modules/_visualizations.scss */
   .table tbody {
     display: block;
   }
-  /* line 135, ../scss/modules/_visualizations.scss */
+  /* line 131, ../scss/modules/_visualizations.scss */
   .table tbody tr {
     display: block;
   }
-  /* line 137, ../scss/modules/_visualizations.scss */
+  /* line 133, ../scss/modules/_visualizations.scss */
   .table tbody tr td {
     display: block;
     -moz-border-bottom-colors: none;
@@ -18183,7 +18179,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
     padding-left: 50%;
     position: relative;
   }
-  /* line 149, ../scss/modules/_visualizations.scss */
+  /* line 145, ../scss/modules/_visualizations.scss */
   .table tbody tr td:before {
     left: 6px;
     padding-right: 10px;
@@ -18192,31 +18188,31 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
     white-space: nowrap;
     width: 45%;
   }
-  /* line 157, ../scss/modules/_visualizations.scss */
+  /* line 153, ../scss/modules/_visualizations.scss */
   .table tbody tr td.indicator::before {
     content: "Indicators";
   }
-  /* line 160, ../scss/modules/_visualizations.scss */
+  /* line 156, ../scss/modules/_visualizations.scss */
   .table tbody tr td:nth-of-type(2)::before {
     content: "Year";
   }
-  /* line 163, ../scss/modules/_visualizations.scss */
+  /* line 159, ../scss/modules/_visualizations.scss */
   .table tbody tr td:nth-of-type(3)::before {
     content: "Value";
   }
-  /* line 166, ../scss/modules/_visualizations.scss */
+  /* line 162, ../scss/modules/_visualizations.scss */
   .table tbody tr td:nth-of-type(4)::before {
     content: "Unit";
   }
-  /* line 169, ../scss/modules/_visualizations.scss */
+  /* line 165, ../scss/modules/_visualizations.scss */
   .table tbody tr td:nth-of-type(5)::before {
     content: "Dataset";
   }
-  /* line 172, ../scss/modules/_visualizations.scss */
+  /* line 168, ../scss/modules/_visualizations.scss */
   .table tbody tr td:nth-of-type(6)::before {
     content: "Source";
   }
-  /* line 175, ../scss/modules/_visualizations.scss */
+  /* line 171, ../scss/modules/_visualizations.scss */
   .table tbody tr td:nth-of-type(7)::before {
     content: "Remove";
     text-align: left;
@@ -18224,30 +18220,30 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 }
 
 /* LGAF Chart */
-/* line 188, ../scss/modules/_visualizations.scss */
+/* line 184, ../scss/modules/_visualizations.scss */
 #lgaf {
   overflow: hidden;
 }
-/* line 191, ../scss/modules/_visualizations.scss */
+/* line 187, ../scss/modules/_visualizations.scss */
 #lgaf.country-section {
   border-bottom: none;
 }
-/* line 194, ../scss/modules/_visualizations.scss */
+/* line 190, ../scss/modules/_visualizations.scss */
 #lgaf .piechart {
   margin-top: 30px;
   padding-top: 40px;
   border-top: 1px solid #d6dbdc;
 }
-/* line 200, ../scss/modules/_visualizations.scss */
+/* line 196, ../scss/modules/_visualizations.scss */
 #lgaf #lgaf-legend li {
   padding: 0;
 }
-/* line 202, ../scss/modules/_visualizations.scss */
+/* line 198, ../scss/modules/_visualizations.scss */
 #lgaf #lgaf-legend li span {
   font-size: 12px;
   font-family: "Open Sans",sans-serif;
 }
-/* line 206, ../scss/modules/_visualizations.scss */
+/* line 202, ../scss/modules/_visualizations.scss */
 #lgaf #lgaf-legend li span.lgaf-value {
   width: 14px !important;
   height: 14px !important;
@@ -18255,14 +18251,14 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   position: relative;
   top: 2px;
 }
-/* line 217, ../scss/modules/_visualizations.scss */
+/* line 213, ../scss/modules/_visualizations.scss */
 #lgaf #lgaf-wrapper li {
   position: relative;
   padding: 15px 20px 15px 40px !important;
   font-family: "Open Sans",sans-serif;
   font-size: 16px;
 }
-/* line 222, ../scss/modules/_visualizations.scss */
+/* line 218, ../scss/modules/_visualizations.scss */
 #lgaf #lgaf-wrapper li .lgaf-value-a,
 #lgaf #lgaf-wrapper li .lgaf-value-b,
 #lgaf #lgaf-wrapper li .lgaf-value-c,
@@ -18276,13 +18272,13 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   top: 17px;
   width: 20px !important;
 }
-/* line 237, ../scss/modules/_visualizations.scss */
+/* line 233, ../scss/modules/_visualizations.scss */
 #lgaf #lgaf-wrapper li {
   padding: 15px 20px;
   border-bottom: 2px solid #F2F2F2;
   background-color: #FFFFFF;
 }
-/* line 241, ../scss/modules/_visualizations.scss */
+/* line 237, ../scss/modules/_visualizations.scss */
 #lgaf #lgaf-wrapper li span {
   width: 1em;
   height: 1em;
@@ -18291,7 +18287,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   -webkit-border-radius: 20px;
   border-radius: 20px;
 }
-/* line 247, ../scss/modules/_visualizations.scss */
+/* line 243, ../scss/modules/_visualizations.scss */
 #lgaf #lgaf-wrapper li span:nth-child(2) {
   width: .5em;
   margin-left: -.5em;
@@ -18299,7 +18295,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   -webkit-border-radius: 0;
   border-radius: 0 20px 20px 0;
 }
-/* line 258, ../scss/modules/_visualizations.scss */
+/* line 254, ../scss/modules/_visualizations.scss */
 #lgaf #lgaf-legend li span:first-of-type {
   width: 1em;
   height: 1em;
@@ -18308,23 +18304,23 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   -webkit-border-radius: 20px;
   border-radius: 20px;
 }
-/* line 267, ../scss/modules/_visualizations.scss */
+/* line 263, ../scss/modules/_visualizations.scss */
 #lgaf .lgaf-value-a {
   background-color: #7ED321;
 }
-/* line 270, ../scss/modules/_visualizations.scss */
+/* line 266, ../scss/modules/_visualizations.scss */
 #lgaf .lgaf-value-b {
   background-color: #F8E71C;
 }
-/* line 273, ../scss/modules/_visualizations.scss */
+/* line 269, ../scss/modules/_visualizations.scss */
 #lgaf .lgaf-value-c {
   background-color: #F5A623;
 }
-/* line 276, ../scss/modules/_visualizations.scss */
+/* line 272, ../scss/modules/_visualizations.scss */
 #lgaf .lgaf-value-d {
   background-color: #F6112D;
 }
-/* line 279, ../scss/modules/_visualizations.scss */
+/* line 275, ../scss/modules/_visualizations.scss */
 #lgaf .lgaf-value-na {
   background-color: #CCC;
 }
