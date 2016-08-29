@@ -42,6 +42,15 @@ function landbook_view_coda_block_info() {
         'pages'     => "book/countries/*",
         'weight'    => 16
     );
+
+    $blocks['landbook_vis_ranking'] = array(
+        'info'      => t('Indicator page: Ranking chart'),
+        'status'    => TRUE,
+        'region'    => 'content',
+        'visibility'=> BLOCK_VISIBILITY_LISTED,
+        'pages'     => "book/indicators/*",
+        'weight'    => 14
+    );
     return $blocks;
 }
 
@@ -54,6 +63,7 @@ function landbook_view_coda_block_view($delta = '') {
     $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
     $block = array();
     $jsAttr = 'vis: LBV, iso3: Drupal.settings.landbook.countryCode';
+    $jsAttrIndicators = 'vis: LBV, type: "indicators", indicator: Drupal.settings.landbook.id';
     $jsCB = '';
     switch ($delta) {
     case 'lbcp_linechart' :
@@ -120,8 +130,26 @@ function landbook_view_coda_block_view($delta = '') {
                 'js' => array(
                     array(
                          'type' => 'inline',
-                         'data' => landbook_view_coda_lbvis_ready_callback('SPIDER = new lbvisSpider({' . $jsAttr . '}); SPIDER.init();')
+                         'data' => landbook_view_coda_lbvis_ready_callback(
+                             'SPIDER = new lbvisSpider({' . $jsAttr . '}); SPIDER.init();')
                      ),
+                )
+            )
+        );
+        break;
+    case 'landbook_vis_ranking' :
+        $block['subject'] = t('Ranking');
+        $block['content'] = array(
+            '#attached' => array(
+                'library' => array(
+                    array('landbook_view_coda', 'lbvis.ranking')
+                ),
+                'js' => array(
+                    array(
+                        'type' => 'inline',
+                        'data' => landbook_view_coda_lbvis_ready_callback(
+                            'RANKING = new lbvisRanking({' . $jsAttrIndicators . '}); RANKING.init();')
+                    ),
                 )
             )
         );

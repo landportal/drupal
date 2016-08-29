@@ -119,5 +119,15 @@ function landbook_view_coda_library() {
             array('landbook_view_coda', 'view-coda'),
         ),
     );
+    $libraries['lbvis.ranking'] = array(
+        'title' => 'view-coda ranking', 
+        'version' => '0.0.1', 
+        'js' => array(
+            $LBVIS_PATH . '/js/lbvis.ranking.js' => array(), 
+        ),
+        'dependencies' => array(
+            array('landbook_view_coda', 'view-coda'),
+        ),
+    );
     return $libraries;
 }
