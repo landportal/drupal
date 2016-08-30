@@ -1,63 +1,70 @@
 body{
-	#footer{
-		margin:0;
+    #block-menu-menu-footer-menu {
+        @extend .col-md-6;
+        @extend .col-md-offset-1;
+    }
+    
+    #footer{
+	margin:0;
+	border:none;
+	background: #A3C642;
+	padding-top:25px;
+	padding-bottom:25px;
+	.section{
+	    .content{
+		background: none;
 		border:none;
-		background: #A3C642;
-		padding-top:25px;
-		padding-bottom:25px;
-		.section{
-			.content{
-				background: none;
-				border:none;
-				margin: 0;
-				padding:0;
+		margin: 0;
+		padding:0;
 
-				.menu{
-					li.expanded{
-						padding-top:0;
-						margin-bottom: 20px;
-						a{
-							display: block;
-							text-align: left;
-							text-transform: uppercase;
-							font-size:14px;
-							font-family: "Open Sans",sans-serif;
-						}
-						.menu{
-							li{
-								padding-left:0;
-								margin-left:0;
-								margin:6px 0;
-								a{
-									color:$white;
-									text-transform: none;
-									font-weight: 300;
-								}
-							}
-						}
-					}
-				}
+		.menu{
+		    li.expanded{
+			padding-top:0;
+			margin-bottom: 20px;
+			a{
+			    display: block;
+			    text-align: left;
+			    text-transform: uppercase;
+			    font-size:14px;
+			    font-family: "Open Sans",sans-serif;
 			}
-			#block-landportal-blocks-lp-footer-social{
-				margin-top:30px;
-				.content{
-					li{
-						width:50px;
-						height: 50px;
-						border-radius: 50%;
-						border:2px solid $white;
-						background: $green-light;
-						overflow: hidden;
-
-						a{
-							display: block;
-							.fa{
-								line-height: 1.8;
-							}
-						}
-					}
+			.menu{
+			    li{
+				padding-left:0;
+				margin-left:0;
+				margin:6px 0;
+				a{
+				    color:$white;
+				    text-transform: none;
+				    font-weight: 300;
 				}
+			    }
 			}
+		    }
 		}
+	    }
+	    #block-landportal-blocks-lp-footer-social{
+        @extend .col-md-3;
+
+		margin-top:30px;
+		.content{
+		    li{
+			width:50px;
+			height: 50px;
+			border-radius: 50%;
+			border:2px solid $white;
+			background: $green-light;
+			overflow: hidden;
+
+			a{
+			    display: block;
+			    .fa{
+				line-height: 1.8;
+			    }
+			}
+		    }
+		}
+	    }
 	}
+    }
 }

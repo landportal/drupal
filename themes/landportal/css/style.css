@@ -5967,8 +5967,8 @@ pre code {
 }
 
 /* line 11, ../../../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, #header #block-search-form, .col-sm-3, .webform-client-form .webform-component-number label, #footer .block-menu .content > ul > li, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .view.view-landbook-indicators .view-filters,
-.view.view-landbook-catalog .view-filters, .col-md-4, .col-lg-4, .col-xs-5, #header #block-system-main-menu, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .view.view-landbook-indicators .view-content,
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, #header #block-search-form, .col-sm-3, .webform-client-form .webform-component-number label, #footer .block-menu .content > ul > li, .col-md-3, body #footer .section #block-landportal-blocks-lp-footer-social, .col-lg-3, .col-xs-4, .col-sm-4, .view.view-landbook-indicators .view-filters,
+.view.view-landbook-catalog .view-filters, .col-md-4, .col-lg-4, .col-xs-5, #header #block-system-main-menu, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, body #block-menu-menu-footer-menu, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .view.view-landbook-indicators .view-content,
 .view.view-landbook-catalog .view-content, .col-md-8, body[class*="page-book-countries-"] #block-landbook-disclaimer .content, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, body[class*="page-book-countries-"] #block-landbook-disclaimer .content, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
@@ -6503,7 +6503,7 @@ pre code {
 }
 @media (min-width: 992px) {
   /* line 27, ../../../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, body[class*="page-book-countries-"] #block-landbook-disclaimer .content, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, body #footer .section #block-landportal-blocks-lp-footer-social, .col-md-4, .col-md-5, .col-md-6, body #block-menu-menu-footer-menu, .col-md-7, .col-md-8, body[class*="page-book-countries-"] #block-landbook-disclaimer .content, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
 
@@ -6518,7 +6518,7 @@ pre code {
   }
 
   /* line 35, ../../../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-3 {
+  .col-md-3, body #footer .section #block-landportal-blocks-lp-footer-social {
     width: 25%;
   }
 
@@ -6533,7 +6533,7 @@ pre code {
   }
 
   /* line 35, ../../../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-6 {
+  .col-md-6, body #block-menu-menu-footer-menu {
     width: 50%;
   }
 
@@ -6703,7 +6703,7 @@ pre code {
   }
 
   /* line 60, ../../../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-offset-1 {
+  .col-md-offset-1, body #block-menu-menu-footer-menu {
     margin-left: 8.33333333%;
   }
 
@@ -17350,7 +17350,7 @@ a:not([href]) {
   text-decoration: none;
 }
 
-/* line 2, ../scss/modules/_footer.scss */
+/* line 7, ../scss/modules/_footer.scss */
 body #footer {
   margin: 0;
   border: none;
@@ -17358,19 +17358,19 @@ body #footer {
   padding-top: 25px;
   padding-bottom: 25px;
 }
-/* line 9, ../scss/modules/_footer.scss */
+/* line 14, ../scss/modules/_footer.scss */
 body #footer .section .content {
   background: none;
   border: none;
   margin: 0;
   padding: 0;
 }
-/* line 16, ../scss/modules/_footer.scss */
+/* line 21, ../scss/modules/_footer.scss */
 body #footer .section .content .menu li.expanded {
   padding-top: 0;
   margin-bottom: 20px;
 }
-/* line 19, ../scss/modules/_footer.scss */
+/* line 24, ../scss/modules/_footer.scss */
 body #footer .section .content .menu li.expanded a {
   display: block;
   text-align: left;
@@ -17378,23 +17378,23 @@ body #footer .section .content .menu li.expanded a {
   font-size: 14px;
   font-family: "Open Sans",sans-serif;
 }
-/* line 27, ../scss/modules/_footer.scss */
+/* line 32, ../scss/modules/_footer.scss */
 body #footer .section .content .menu li.expanded .menu li {
   padding-left: 0;
   margin-left: 0;
   margin: 6px 0;
 }
-/* line 31, ../scss/modules/_footer.scss */
+/* line 36, ../scss/modules/_footer.scss */
 body #footer .section .content .menu li.expanded .menu li a {
   color: #ffffff;
   text-transform: none;
   font-weight: 300;
 }
-/* line 41, ../scss/modules/_footer.scss */
+/* line 46, ../scss/modules/_footer.scss */
 body #footer .section #block-landportal-blocks-lp-footer-social {
   margin-top: 30px;
 }
-/* line 44, ../scss/modules/_footer.scss */
+/* line 51, ../scss/modules/_footer.scss */
 body #footer .section #block-landportal-blocks-lp-footer-social .content li {
   width: 50px;
   height: 50px;
@@ -17403,11 +17403,11 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li {
   background: #A3C642;
   overflow: hidden;
 }
-/* line 52, ../scss/modules/_footer.scss */
+/* line 59, ../scss/modules/_footer.scss */
 body #footer .section #block-landportal-blocks-lp-footer-social .content li a {
   display: block;
 }
-/* line 54, ../scss/modules/_footer.scss */
+/* line 61, ../scss/modules/_footer.scss */
 body #footer .section #block-landportal-blocks-lp-footer-social .content li a .fa {
   line-height: 1.8;
 }
