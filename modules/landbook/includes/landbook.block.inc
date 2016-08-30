@@ -21,7 +21,7 @@ function landbook_block_info() {
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/countries/*",
-        'weight'        => 23
+        'weight'        => -39
     );
     $blocks['infographic_block'] = array(
         'info'          => t('Landbook country page Infographic'),
@@ -61,7 +61,7 @@ function landbook_block_info() {
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/countries/*",
-        'weight'        => -41
+        'weight'        => -43
     );
     $blocks['country_navigation_block'] = array(
         'info'          => t('Landbook country page navigation'),
@@ -69,7 +69,7 @@ function landbook_block_info() {
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/countries/*",
-        'weight'        => -40
+        'weight'        => -42
     );
     $blocks['country_pdf_block'] = array(
         'info'          => t('Landbook country page pdf block'),
@@ -77,7 +77,7 @@ function landbook_block_info() {
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/countries/*",
-        'weight'        => -48
+        'weight'        => -40
     );
     return $blocks;
 }
