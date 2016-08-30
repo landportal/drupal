@@ -196,7 +196,8 @@
       }
     }
   }
-  .main-menu{
+  #block-system-main-menu{
+      @extend .col-xs-5;
     @media only screen and (max-width: 768px){
       float: left;
       margin-top:15px;
