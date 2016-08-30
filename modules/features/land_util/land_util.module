@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Land Utility feature.
- */
-
-include_once 'land_util.features.inc';
