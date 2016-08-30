@@ -84,23 +84,7 @@
 
   }
 }
-/*.contributor-role{
-  #header{
-    padding:6px 50px  10px 0 !important;
-    >.section{
-      >.col-lg-8{
-        @media only screen and (max-width: 1700px){
-          width: 100%;
-        }
-      }
-      >.col-lg-2{
-        @media only screen and (max-width: 1700px){
-          margin-left: 0px;
-        }
-      }
-    }
-  }
-}*/
+
 
 #header{
   padding:6px 0  10px 0;
@@ -228,7 +212,9 @@
       }
     }
   }
-  .search-form{
+
+  #block-search-form{
+      @extend .col-xs-3;
     form{
       margin: 0;
     }
