@@ -1,0 +1,12 @@
+name = Landbook Country Page
+description = Provide country pages section for the landbook
+package = Landbook
+core = 7.x
+version = 7.x-2.3-alpha
+dependencies[] = custom_pub
+dependencies[] = image
+dependencies[] = landbook_country
+dependencies[] = landbook_taxonomies
+features[custom_pub][] = promoted_to_country_page
+features[features_api][] = api:2
+features[image][] = country_promoted
