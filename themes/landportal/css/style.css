@@ -16970,45 +16970,32 @@ ul.menu > li li a.active-trail {
 /* .block-nice-menus { */
 /*     line-height: inherit; */
 /* } */
-/* line 31, ../scss/modules/_menus.scss */
-#header #block-nice-menus-1 {
-  margin-left: 10px;
-  /*width: 380px !important;*/
-}
-@media only screen and (max-width: 768px) {
-  /* line 31, ../scss/modules/_menus.scss */
-  #header #block-nice-menus-1 {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: 0;
-  }
-}
-/* line 40, ../scss/modules/_menus.scss */
-#header #block-nice-menus-1 .nice-menu ul {
+/* line 32, ../scss/modules/_menus.scss */
+#header .nice-menu ul {
   top: 1.5em;
 }
-/* line 43, ../scss/modules/_menus.scss */
-#header #block-nice-menus-1 .nice-menu ul li ul {
+/* line 35, ../scss/modules/_menus.scss */
+#header .nice-menu ul li ul {
   top: -1px;
 }
-/* line 49, ../scss/modules/_menus.scss */
-#header #block-nice-menus-1 .nice-menu.nice-menu-down .menuparent {
+/* line 41, ../scss/modules/_menus.scss */
+#header .nice-menu.nice-menu-down .menuparent {
   background-position: 100% 50%;
   padding-right: 15px !important;
   margin-right: -8px !important;
 }
-/* line 54, ../scss/modules/_menus.scss */
-#header #block-nice-menus-1 .nice-menu.nice-menu-down .menuparent li {
+/* line 46, ../scss/modules/_menus.scss */
+#header .nice-menu.nice-menu-down .menuparent li {
   margin: 0 !important;
   padding: 0 !important;
   width: 100px !important;
 }
-/* line 58, ../scss/modules/_menus.scss */
-#header #block-nice-menus-1 .nice-menu.nice-menu-down .menuparent li a {
+/* line 50, ../scss/modules/_menus.scss */
+#header .nice-menu.nice-menu-down .menuparent li a {
   font-size: 12px;
 }
-/* line 61, ../scss/modules/_menus.scss */
-#header #block-nice-menus-1 .nice-menu.nice-menu-down .menuparent li ul {
+/* line 53, ../scss/modules/_menus.scss */
+#header .nice-menu.nice-menu-down .menuparent li ul {
   width: 100px !important;
   left: 100px;
 }
@@ -17019,13 +17006,13 @@ ul.menu > li li a.active-trail {
 /*     font-size: 1.2em; */
 /*     margin-right: .5em; */
 /* } */
-/* line 80, ../scss/modules/_menus.scss */
+/* line 71, ../scss/modules/_menus.scss */
 #section-header {
   margin: 0;
   padding: 0;
   /* min-height: 120px; */
 }
-/* line 85, ../scss/modules/_menus.scss */
+/* line 76, ../scss/modules/_menus.scss */
 #section-header h2 {
   font-family: "Open Sans",sans-serif;
   clear: left;
@@ -17037,7 +17024,7 @@ ul.menu > li li a.active-trail {
   letter-spacing: .1em;
   text-shadow: #444444 0 0.04em 0;
 }
-/* line 96, ../scss/modules/_menus.scss */
+/* line 87, ../scss/modules/_menus.scss */
 #section-header p {
   font-size: 1.3em;
   letter-spacing: .1em;
@@ -17046,14 +17033,14 @@ ul.menu > li li a.active-trail {
   font-weight: 300;
   font-family: "Open Sans",sans-serif;
 }
-/* line 105, ../scss/modules/_menus.scss */
+/* line 96, ../scss/modules/_menus.scss */
 #section-header ul.primary,
 #section-header ul.menu {
   clear: both;
   margin: 0;
   padding: 0;
 }
-/* line 110, ../scss/modules/_menus.scss */
+/* line 101, ../scss/modules/_menus.scss */
 #section-header ul.primary li,
 #section-header ul.menu li {
   text-align: center;
@@ -17063,27 +17050,27 @@ ul.menu > li li a.active-trail {
   list-style-image: none;
   border-right: 1px solid #ffffff;
 }
-/* line 117, ../scss/modules/_menus.scss */
+/* line 108, ../scss/modules/_menus.scss */
 #section-header ul.primary li:last-of-type,
 #section-header ul.menu li:last-of-type {
   border-right: 0;
 }
-/* line 123, ../scss/modules/_menus.scss */
+/* line 114, ../scss/modules/_menus.scss */
 #section-header ul.primary li:nth-child(3n+1),
 #section-header ul.menu li:nth-child(3n+1) {
   background-color: rgba(1, 169, 219, 0.3);
 }
-/* line 126, ../scss/modules/_menus.scss */
+/* line 117, ../scss/modules/_menus.scss */
 #section-header ul.primary li:nth-child(3n+2),
 #section-header ul.menu li:nth-child(3n+2) {
   background-color: rgba(46, 100, 254, 0.3);
 }
-/* line 129, ../scss/modules/_menus.scss */
+/* line 120, ../scss/modules/_menus.scss */
 #section-header ul.primary li:nth-child(3n+3),
 #section-header ul.menu li:nth-child(3n+3) {
   background-color: rgba(10, 104, 172, 0.3);
 }
-/* line 132, ../scss/modules/_menus.scss */
+/* line 123, ../scss/modules/_menus.scss */
 #section-header ul.primary li a,
 #section-header ul.menu li a {
   text-decoration: none;
@@ -17098,14 +17085,14 @@ ul.menu > li li a.active-trail {
   line-height: 1.2em;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 }
-/* line 144, ../scss/modules/_menus.scss */
+/* line 135, ../scss/modules/_menus.scss */
 #section-header ul.primary li a.active,
 #section-header ul.menu li a.active {
   border-bottom: 0.5em solid #f1db11;
   padding-bottom: 0.8em;
   text-decoration: underline;
 }
-/* line 152, ../scss/modules/_menus.scss */
+/* line 143, ../scss/modules/_menus.scss */
 #section-header ul.primary:after,
 #section-header ul.menu:after {
   display: block;
@@ -17114,27 +17101,27 @@ ul.menu > li li a.active-trail {
   visibility: none;
 }
 
-/* line 164, ../scss/modules/_menus.scss */
+/* line 155, ../scss/modules/_menus.scss */
 #block-menu-menu-landlibrary-menu ul.menu li:nth-child(3n+1) {
   background-color: rgba(219, 51, 1, 0.3);
 }
 
-/* line 168, ../scss/modules/_menus.scss */
+/* line 159, ../scss/modules/_menus.scss */
 #block-menu-menu-landlibrary-menu ul.menu li:nth-child(3n+2) {
   background-color: rgba(157, 85, 63, 0.3);
 }
 
-/* line 172, ../scss/modules/_menus.scss */
+/* line 163, ../scss/modules/_menus.scss */
 #block-menu-menu-landlibrary-menu ul.menu li:nth-child(3n+3) {
   background-color: rgba(218, 66, 20, 0.3);
 }
 
-/* line 177, ../scss/modules/_menus.scss */
+/* line 168, ../scss/modules/_menus.scss */
 #section-header {
   border-top: 0;
 }
 
-/* line 193, ../scss/modules/_menus.scss */
+/* line 184, ../scss/modules/_menus.scss */
 .node-type-organization #section-header,
 .node-type-news #section-header,
 .node-type-debate #section-header,
@@ -17151,22 +17138,22 @@ ul.menu > li li a.active-trail {
   background-image: url(../images/header/pebbles-medium.png);
 }
 
-/* line 203, ../scss/modules/_menus.scss */
+/* line 194, ../scss/modules/_menus.scss */
 #section-header #block-menu-landbook-menu li {
   width: 12.49%;
 }
-/* line 210, ../scss/modules/_menus.scss */
+/* line 201, ../scss/modules/_menus.scss */
 #section-header #block-menu-menu-landlibrary-menu li,
 #section-header #block-menu-landdebate-menu li {
   width: 16.65%;
 }
-/* line 216, ../scss/modules/_menus.scss */
+/* line 207, ../scss/modules/_menus.scss */
 #section-header #block-menu-user-signin li {
   width: 50%;
   float: left;
 }
 @media only screen and (max-width: 720px) {
-  /* line 216, ../scss/modules/_menus.scss */
+  /* line 207, ../scss/modules/_menus.scss */
   #section-header #block-menu-user-signin li {
     width: 100%;
     float: none;
@@ -17174,7 +17161,7 @@ ul.menu > li li a.active-trail {
   }
 }
 
-/* line 227, ../scss/modules/_menus.scss */
+/* line 218, ../scss/modules/_menus.scss */
 #lang-dropdown-select-language {
   width: 60px !important;
   padding-top: 10px;
@@ -17182,21 +17169,21 @@ ul.menu > li li a.active-trail {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* line 233, ../scss/modules/_menus.scss */
+  /* line 224, ../scss/modules/_menus.scss */
   #lang-dropdown-select-language {
     margin-top: 3px;
   }
 }
-/* line 241, ../scss/modules/_menus.scss */
+/* line 232, ../scss/modules/_menus.scss */
 ul.tabs li a {
   border: 0;
 }
-/* line 243, ../scss/modules/_menus.scss */
+/* line 234, ../scss/modules/_menus.scss */
 ul.tabs li a.active {
   border: 0;
 }
 
-/* line 248, ../scss/modules/_menus.scss */
+/* line 239, ../scss/modules/_menus.scss */
 ul.primary.tabs,
 ul.secondary.tabs {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -17206,20 +17193,20 @@ ul.secondary.tabs {
   padding: 1em 0;
   margin: 0;
 }
-/* line 250, ../scss/modules/_menus.scss */
+/* line 241, ../scss/modules/_menus.scss */
 ul.primary.tabs a.active,
 ul.secondary.tabs a.active {
   border-bottom: 0;
   /*3px solid $blue-dark;*/
 }
 
-/* line 260, ../scss/modules/_menus.scss */
+/* line 251, ../scss/modules/_menus.scss */
 li a.active,
 a.active {
   color: #2a6496;
 }
 
-/* line 264, ../scss/modules/_menus.scss */
+/* line 255, ../scss/modules/_menus.scss */
 a:not([href]) {
   color: inherit;
   text-decoration: none;
@@ -17287,24 +17274,392 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   line-height: 1.8;
 }
 
-/* line 19, ../scss/modules/_header.scss */
+/* line 5, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-top,
+#block-menu-menu-landlibrary-menu .menu-top,
+#block-menu-landdebate-menu .menu-top,
+#block-menu-user-signin .menu-top {
+  padding: 50px 50px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 5, ../scss/modules/_header.scss */
+  #block-menu-landbook-menu .menu-top,
+  #block-menu-menu-landlibrary-menu .menu-top,
+  #block-menu-landdebate-menu .menu-top,
+  #block-menu-user-signin .menu-top {
+    padding: 50px 0px;
+  }
+}
+/* line 12, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-top h2,
+#block-menu-menu-landlibrary-menu .menu-top h2,
+#block-menu-landdebate-menu .menu-top h2,
+#block-menu-user-signin .menu-top h2 {
+  text-shadow: none;
+  font-family: "Open Sans",sans-serif;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: 0;
+  margin-bottom: 5px;
+}
+/* line 22, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-top p,
+#block-menu-menu-landlibrary-menu .menu-top p,
+#block-menu-landdebate-menu .menu-top p,
+#block-menu-user-signin .menu-top p {
+  margin-top: 0;
+  letter-spacing: 0;
+  font-size: 20px;
+  font-family: "Open Sans",sans-serif;
+  margin-bottom: 0;
+}
+/* line 31, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-wrapper,
+#block-menu-menu-landlibrary-menu .menu-wrapper,
+#block-menu-landdebate-menu .menu-wrapper,
+#block-menu-user-signin .menu-wrapper {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background: #766054;
+  min-height: 30px;
+}
+/* line 37, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-wrapper.navbar,
+#block-menu-menu-landlibrary-menu .menu-wrapper.navbar,
+#block-menu-landdebate-menu .menu-wrapper.navbar,
+#block-menu-user-signin .menu-wrapper.navbar {
+  min-height: auto;
+  margin-bottom: 0;
+}
+/* line 41, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-wrapper.navbar #header-menu,
+#block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu,
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu {
+  border-top: none;
+  padding: 0;
+}
+/* line 45, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu,
+#block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu,
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu {
+  width: 100%;
+}
+/* line 47, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li,
+#block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li,
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li {
+  background: #766054 !important;
+  border: none;
+  width: auto !important;
+  min-width: 12.5%;
+}
+/* line 53, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li.active-trail,
+#block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li.active-trail,
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li.active-trail,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li.active-trail {
+  background: #A3C642 !important;
+}
+/* line 56, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover,
+#block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover,
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li.active-trail a:hover {
+  background: #A3C642 !important;
+}
+/* line 61, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li:hover,
+#block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li:hover,
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li:hover,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li:hover {
+  background: #766054 !important;
+}
+/* line 65, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li a,
+#block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li a,
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li a {
+  padding: 10px 0;
+  letter-spacing: 0;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: normal;
+}
+/* line 72, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li a.active,
+#block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li a.active,
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a.active,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li a.active {
+  border-bottom: none;
+  text-decoration: none;
+}
+/* line 76, ../scss/modules/_header.scss */
+#block-menu-landbook-menu .menu-wrapper.navbar #header-menu .menu li a:hover,
+#block-menu-menu-landlibrary-menu .menu-wrapper.navbar #header-menu .menu li a:hover,
+#block-menu-landdebate-menu .menu-wrapper.navbar #header-menu .menu li a:hover,
+#block-menu-user-signin .menu-wrapper.navbar #header-menu .menu li a:hover {
+  background: #766054 !important;
+}
+
+/* line 89, ../scss/modules/_header.scss */
+#header {
+  padding: 6px 0  10px 0;
+  /*   #block-search-form{ */
+  /* //@      @extend .col-xs-3; */
+  /*     form{ */
+  /*       margin: 0; */
+  /*     } */
+  /*     margin-top: 4px; */
+  /*     margin-bottom: 0; */
+  /*     float: right; */
+  /*     @media only screen and (max-width: 768px){ */
+  /*       float: left; */
+  /*     } */
+  /*     .form-type-textfield{ */
+  /*       input{ */
+  /*         background: #F7F7F7; */
+  /*         border-radius: 20px; */
+  /*         border: 1px solid #a7a7a7; */
+  /*         padding: 9px 9px; */
+  /*         padding-left: 30px; */
+  /*         color:#A7A7A7; */
+  /*         font-weight: bold; */
+  /*         width: 100%; */
+  /*       } */
+  /*     } */
+  /*     /\*width: 220px;*\/ */
+  /*     @media only screen and (max-width: 768px){ */
+  /*         width: 220px !important; */
+  /*       } */
+  /*     transition-property: width; */
+  /*     transition-duration: 0.5s; */
+  /*     &.active{ */
+  /*       width: 220px; */
+  /*       @media only screen and (max-width: 768px){ */
+  /*         width: 90% !important; */
+  /*       } */
+  /*     } */
+  /*     .form-actions{ */
+  /*       position: absolute; */
+  /*       top: 8px; */
+  /*       left: 22px; */
+  /*       width: 25px; */
+  /*       height: 25px; */
+  /*       .form-submit{ */
+  /*         background: url("../images/icon-search.png") no-repeat 0 0; */
+  /*         cursor: pointer; */
+  /*         text-indent: -9999px; */
+  /*         border: none; */
+  /*         display: block; */
+  /*         width: 100%; */
+  /*         height: 100%; */
+  /*       } */
+  /*     } */
+  /*   } */
+  /* .block-nice-menus{ */
+  /*   margin-top:15px; */
+  /*   margin-bottom:8px; */
+  /*   li{ */
+  /*     a{ */
+  /*       margin:0; */
+  /*       padding:0; */
+  /*     } */
+  /*   } */
+  /* } */
+  /* .block-locale{ */
+  /*   margin-top:10px; */
+  /* } */
+}
+@media only screen and (max-width: 768px) {
+  /* line 89, ../scss/modules/_header.scss */
+  #header {
+    padding: 0.8em 0.5em !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 95, ../scss/modules/_header.scss */
+  #header > .section #logo {
+    margin-bottom: 10px;
+  }
+}
+/* line 99, ../scss/modules/_header.scss */
+#header > .section #logo img {
+  margin-top: 9px;
+}
+@media only screen and (max-width: 1400px) {
+  /* line 103, ../scss/modules/_header.scss */
+  #header > .section > .col-lg-8 {
+    width: 100%;
+  }
+}
+/* line 111, ../scss/modules/_header.scss */
+#header > .section > .col-lg-2 #logo img,
+#header > .section > .col-md-2 #logo img,
+#header > .section > #block-lang-dropdown-language #logo img,
+#header > .section > #block-system-user-menu #logo img {
+  margin-top: 9px;
+}
+@media only screen and (max-width: 1400px) {
+  /* line 108, ../scss/modules/_header.scss */
+  #header > .section > .col-lg-2,
+  #header > .section > .col-md-2,
+  #header > .section > #block-lang-dropdown-language,
+  #header > .section > #block-system-user-menu {
+    margin-left: 0px;
+  }
+}
+/* line 120, ../scss/modules/_header.scss */
+#header .block {
+  /*margin-bottom: 12px;*/
+}
+/* line 125, ../scss/modules/_header.scss */
+#header li::before {
+  content: none;
+}
+/* line 130, ../scss/modules/_header.scss */
+#header li.active a, #header li.active-trail a {
+  color: #666 !important;
+}
+/* line 135, ../scss/modules/_header.scss */
+#header li a {
+  color: #26AAE7 !important;
+  font-size: 14px;
+  font-weight: 600;
+  content: none;
+  font-family: "Open Sans",sans-serif;
+}
+/* line 141, ../scss/modules/_header.scss */
+#header li a:hover {
+  color: #666 !important;
+}
+/* line 144, ../scss/modules/_header.scss */
+#header li a::before {
+  content: none !important;
+}
+/* line 152, ../scss/modules/_header.scss */
+#header .social-top ul {
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+/* line 157, ../scss/modules/_header.scss */
+#header .social-top ul li {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background: #ffffff;
+  overflow: hidden;
+  float: left;
+  margin: 0 5px;
+}
+/* line 166, ../scss/modules/_header.scss */
+#header .social-top ul li.twitter {
+  border: 1px solid #1AC8F3;
+}
+/* line 169, ../scss/modules/_header.scss */
+#header .social-top ul li.twitter i {
+  color: #1AC8F3;
+}
+/* line 173, ../scss/modules/_header.scss */
+#header .social-top ul li.facebook {
+  border: 1px solid #6186B5;
+}
+/* line 175, ../scss/modules/_header.scss */
+#header .social-top ul li.facebook a {
+  padding: 5px 10px;
+}
+/* line 177, ../scss/modules/_header.scss */
+#header .social-top ul li.facebook a i {
+  color: #6186B5;
+}
+/* line 182, ../scss/modules/_header.scss */
+#header .social-top ul li.google-plus {
+  border: 1px solid #E95835;
+}
+/* line 185, ../scss/modules/_header.scss */
+#header .social-top ul li.google-plus i {
+  color: #E95835;
+}
+/* line 190, ../scss/modules/_header.scss */
+#header .social-top ul li a {
+  padding: 5px 8px;
+}
+/* line 192, ../scss/modules/_header.scss */
+#header .social-top ul li a .fa {
+  line-height: 2;
+}
+/* line 199, ../scss/modules/_header.scss */
+#header #block-system-main-menu {
+  margin-top: 15px;
+}
+@media only screen and (max-width: 768px) {
+  /* line 199, ../scss/modules/_header.scss */
+  #header #block-system-main-menu {
+    float: left;
+    margin-top: 15px;
+    min-width: 280px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  /* line 199, ../scss/modules/_header.scss */
+  #header #block-system-main-menu {
+    margin-left: 0;
+  }
+}
+/* line 211, ../scss/modules/_header.scss */
+#header #block-system-main-menu ul li {
+  font-size: 14px;
+}
+
+/* #block-nice-menus-1{ */
+/*   /\*width: 90px !important;*\/ */
+/*   float: right; */
+/*   /\*overflow: hidden;*\/ */
+/*   @media only screen and (max-width: 768px){ */
+/*     float: left; */
+/*   } */
+/* } */
+/* #block-lang-dropdown-language{ */
+/*   min-width: 90px; */
+/*   float: right; */
+/*   @media only screen and (max-width: 768px){ */
+/*     float: none; */
+/*     position: absolute; */
+/*     right: 0; */
+/*     top: -47px; */
+/*   } */
+/*   form{ */
+/*     margin: 0; */
+/*   } */
+/* } */
+/* @media screen and (-webkit-min-device-pixel-ratio:0) { */
+/*     #block-lang-dropdown-language{ */
+/*       margin-top:-3px; */
+/*     } */
+/* } */
+/* line 334, ../scss/modules/_header.scss */
 #header #block-system-user-menu ul.menu li a:before {
   font-family: FontAwesome;
   padding-right: 3px;
 }
-/* line 23, ../scss/modules/_header.scss */
+/* line 338, ../scss/modules/_header.scss */
 #header #block-system-user-menu ul.menu li a[href="/user"]:before {
   content: "\f007";
 }
-/* line 26, ../scss/modules/_header.scss */
+/* line 341, ../scss/modules/_header.scss */
 #header #block-system-user-menu ul.menu li a[href="/user/logout"]:before {
   content: "\f08b";
 }
-/* line 29, ../scss/modules/_header.scss */
+/* line 344, ../scss/modules/_header.scss */
 #header #block-system-user-menu ul.menu li a[href="/node/add"]:before {
   content: "\f016";
 }
-/* line 39, ../scss/modules/_header.scss */
+/* line 354, ../scss/modules/_header.scss */
 #header #block-search-form .form-type-textfield input {
   background: #F7F7F7;
   border-radius: 20px;
@@ -17315,7 +17670,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   font-weight: bold;
   width: 100%;
 }
-/* line 49, ../scss/modules/_header.scss */
+/* line 364, ../scss/modules/_header.scss */
 #header #block-search-form .form-actions {
   position: absolute;
   top: 8px;
@@ -17323,7 +17678,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   width: 25px;
   height: 25px;
 }
-/* line 55, ../scss/modules/_header.scss */
+/* line 370, ../scss/modules/_header.scss */
 #header #block-search-form .form-actions .form-submit {
   background: url("../images/icon-search.png") no-repeat 0 0;
   cursor: pointer;
@@ -17334,362 +17689,6 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   height: 100%;
 }
 
-/* /\* From _menu.scss *\/ */
-/* #header { */
-/*     ul.language-switcher-locale-url, */
-/*     ul.nice-menu, */
-/*     ul.menu { */
-/*         top: initial; */
-/*         & > li { */
-/*             background-color: inherit; */
-/*             margin: 0 0 0 0.5em; */
-/*             padding: 0; */
-/*             list-style-type: none; */
-/*             list-style-image: none; */
-/*             border: 0px; */
-/*             float: left; */
-/*             & > a { */
-/*                 padding-top: 0; */
-/*                 &:before { */
-/*                     font-family: FontAwesome; */
-/*                     padding-right: 3px; */
-/*                 } */
-/*                 &[href="/user"]:before { */
-/*                     content: "\f007"; // the dude */
-/*                 } */
-/*                 &[href="/user/logout"]:before { */
-/*                     content: "\f08b;"; // logout */
-/*                 } */
-/*                 &[href="/node/add"]:before { */
-/*                     content: "\f016"; // page */
-/*                 } */
-/*             } */
-/*             a { */
-/*                 display: inline-block; */
-/*                 text-decoration: none; */
-/*                 text-transform: lowercase; */
-/*             } */
-/*             &:before { */
-/*                 content: " "; */
-/*                 display: inline-block; */
-/*                 padding-right: 6px; */
-/*             } */
-/*             &:first-of-type:before { */
-/*                 content: ""; */
-/*                 padding-right: 0px; */
-/*             } */
-/*             &:first-of-type { */
-/*                 margin-left: 0px; */
-/*             } */
-/*         } */
-/*         /\* /\* For the so called 'nice-menu' *\/ *\/ */
-/*         /\* li li { *\/ */
-/*         /\*     border-left: 0; *\/ */
-/*         /\*     border-right: 0; *\/ */
-/*         /\*     background-color: rgba(250, 250, 250, .95); *\/ */
-/*         /\*     &:hover { *\/ */
-/*         /\*         background-color: white; *\/ */
-/*         /\*     } *\/ */
-/*         /\* } *\/ */
-/*     } */
-/*     /\* ul.language-switcher-locale-url { *\/ */
-/*     /\*     margin-right: 1em; *\/ */
-/*     /\*     li a { *\/ */
-/*     /\*         display: inline-block; *\/ */
-/*     /\*         padding: 0; *\/ */
-/*     /\*         border: 0; *\/ */
-/*     /\*         background-color: inherit; *\/ */
-/*     /\*         color: $blue; *\/ */
-/*     /\*         &.active { *\/ */
-/*     /\*             color: $grey; *\/ */
-/*     /\*         } *\/ */
-/*     /\*     } *\/ */
-/*     /\* } *\/ */
-/* } */
-/* #block-menu-landbook-menu, */
-/* #block-menu-menu-landlibrary-menu, */
-/* #block-menu-landdebate-menu, */
-/* #block-menu-user-signin{ */
-/*   .menu-top{ */
-/*     padding: 50px 50px; */
-/*     @media only screen and (max-width: 767px){ */
-/*       padding: 50px 0px; */
-/*     } */
-/*     h2{ */
-/*       text-shadow:none; */
-/*       font-family: "Open Sans",sans-serif; */
-/*       padding:0; */
-/*       font-size: 36px; */
-/*       font-weight: 300; */
-/*       letter-spacing: 0; */
-/*       margin-bottom: 5px; */
-/*     } */
-/*     p{ */
-/*       margin-top:0; */
-/*       letter-spacing: 0; */
-/*       font-size:20px; */
-/*       font-family: "Open Sans",sans-serif;        */
-/*       margin-bottom:0; */
-/*     } */
-/*   } */
-/*   .menu-wrapper{ */
-/*     border-top:1px solid #ffffff; */
-/*     border-bottom:1px solid #ffffff; */
-/*     background: #766054; */
-/*     min-height: 30px; */
-/*     &.navbar{ */
-/*       min-height: auto; */
-/*       margin-bottom:0; */
-/*       #header-menu{ */
-/*         border-top:none; */
-/*         padding: 0; */
-/*         .menu{ */
-/*           width:100%; */
-/*           li{ */
-/*             background: #766054 !important; */
-/*             border:none; */
-/*             width:auto !important; */
-/*             min-width: 12.5%; */
-/*             &.active-trail{            */
-/*               background: $green-light !important; */
-/*               a:hover{ */
-/*                 background: $green-light !important; */
-/*               } */
-/*             } */
-/*             &:hover{ */
-/*               background: #766054 !important; */
-/*             } */
-/*             a{ */
-/*               padding:10px 0; */
-/*               letter-spacing: 0; */
-/*               text-decoration: none; */
-/*               font-size:14px; */
-/*               line-height: normal; */
-/*               &.active{ */
-/*                 border-bottom:none; */
-/*                 text-decoration: none; */
-/*               } */
-/*               &:hover{ */
-/*                 background: #766054 !important; */
-/*               } */
-/*             } */
-/*           } */
-/*         } */
-/*       } */
-/*     } */
-/*   } */
-/* } */
-/* #header{ */
-/*   /\* padding:6px 0  10px 0; *\/ */
-/*   /\* @media only screen and (max-width: 768px){ *\/ */
-/*   /\*   padding:0.8em 0.5em !important; *\/ */
-/*   /\* } *\/ */
-/*   /\* >.section{ *\/ */
-/*   /\*   #logo{ *\/ */
-/*   /\*       @media only screen and (max-width: 768px){ *\/ */
-/*   /\*         margin-bottom:10px; *\/ */
-/*   /\*       } *\/ */
-/*   /\*       img{ *\/ */
-/*   /\*         margin-top:9px; *\/ */
-/*   /\*       } *\/ */
-/*   /\*     } *\/ */
-/*   /\*   >.col-lg-8{ *\/ */
-/*   /\*     @media only screen and (max-width: 1400px){ *\/ */
-/*   /\*       width: 100%; *\/ */
-/*   /\*     } *\/ */
-/*   /\*   } *\/ */
-/*   /\*   >.col-lg-2, *\/ */
-/*   /\*   >.col-md-2{ *\/ */
-/*   /\*     #logo{ *\/ */
-/*   /\*       img{ *\/ */
-/*   /\*         margin-top:9px; *\/ */
-/*   /\*       } *\/ */
-/*   /\*     } *\/ */
-/*   /\*     @media only screen and (max-width: 1400px){ *\/ */
-/*   /\*       margin-left: 0px; *\/ */
-/*   /\*     } *\/ */
-/*   /\*   } *\/ */
-/*   /\* } *\/ */
-/*   /\* .block{ *\/ */
-/*   /\*   /\*margin-bottom: 12px;*\/ *\/ */
-/*   /\* } *\/ */
-/*   /\* li{ *\/ */
-/*   /\*   &::before{ *\/ */
-/*   /\*     content: none; *\/ */
-/*   /\*   } *\/ */
-/*   /\*   &.active, *\/ */
-/*   /\*   &.active-trail{ *\/ */
-/*   /\*     a{ *\/ */
-/*   /\*       color:$text-color !important; *\/ */
-/*   /\*     } *\/ */
-/*   /\*   } *\/ */
-/*   /\*   a{ *\/ */
-/*   /\*     color:$blue-bright !important; *\/ */
-/*   /\*     font-size: 14px; *\/ */
-/*   /\*     font-weight: 600; *\/ */
-/*   /\*     content: none; *\/ */
-/*   /\*     font-family: "Open Sans",sans-serif; *\/ */
-/*   /\*     &:hover{ *\/ */
-/*   /\*       color:$text-color !important; *\/ */
-/*   /\*     } *\/ */
-/*   /\*     &::before{ *\/ */
-/*   /\*       content: none !important; *\/ */
-/*   /\*     } *\/ */
-/*   /\*   } *\/ */
-/*   /\* } *\/ */
-/*   /\* .social-top{ *\/ */
-/*   /\*   ul{ *\/ */
-/*   /\*     margin-top:5px; *\/ */
-/*   /\*     padding:0; *\/ */
-/*   /\*     list-style: none; *\/ */
-/*   /\*     margin-bottom:0; *\/ */
-/*   /\*     li{ *\/ */
-/*   /\*       width:30px; *\/ */
-/*   /\*       height: 30px; *\/ */
-/*   /\*       border-radius: 30px; *\/ */
-/*   /\*       background: $white; *\/ */
-/*   /\*       overflow: hidden; *\/ */
-/*   /\*       float:left; *\/ */
-/*   /\*       margin:0 5px; *\/ */
-/*   /\*       &.twitter{ *\/ */
-/*   /\*         border:1px solid #1AC8F3; *\/ */
-/*   /\*         i{ *\/ */
-/*   /\*           color: #1AC8F3; *\/ */
-/*   /\*         } *\/ */
-/*   /\*       } *\/ */
-/*   /\*       &.facebook{ *\/ */
-/*   /\*         border:1px solid #6186B5; *\/ */
-/*   /\*         a{ *\/ */
-/*   /\*           padding: 5px 10px; *\/ */
-/*   /\*           i{ *\/ */
-/*   /\*             color: #6186B5; *\/ */
-/*   /\*           } *\/ */
-/*   /\*         } *\/ */
-/*   /\*       } *\/ */
-/*   /\*       &.google-plus{ *\/ */
-/*   /\*         border:1px solid #E95835; *\/ */
-/*   /\*         i{ *\/ */
-/*   /\*           color: #E95835; *\/ */
-/*   /\*         } *\/ */
-/*   /\*       } *\/ */
-/*   /\*       a{ *\/ */
-/*   /\*         padding: 5px 8px; *\/ */
-/*   /\*         .fa{ *\/ */
-/*   /\*           line-height: 2; *\/ */
-/*   /\*         } *\/ */
-/*   /\*       } *\/ */
-/*   /\*     } *\/ */
-/*   /\*   } *\/ */
-/*   /\* } *\/ */
-/*   /\* #block-system-main-menu{ *\/ */
-/*   /\*     @extend .col-xs-5; *\/ */
-/*   /\*   @media only screen and (max-width: 768px){ *\/ */
-/*   /\*     float: left; *\/ */
-/*   /\*     margin-top:15px; *\/ */
-/*   /\*     min-width: 280px; *\/ */
-/*   /\*   } *\/ */
-/*   /\*   margin-top:15px; *\/ */
-/*   /\*   @media only screen and (max-width: 1200px){ *\/ */
-/*   /\*     margin-left:0; *\/ */
-/*   /\*   } *\/ */
-/*   /\*   ul{ *\/ */
-/*   /\*     li{ *\/ */
-/*   /\*       font-size:14px; *\/ */
-/*   /\*     } *\/ */
-/*   /\*   } *\/ */
-/*   /\* } *\/ */
-/*   #block-search-form{ */
-/*       @extend .col-xs-3; */
-/*     /\* form{ *\/ */
-/*     /\*   margin: 0; *\/ */
-/*     /\* } *\/ */
-/*     /\* margin-top: 4px; *\/ */
-/*     /\* margin-bottom: 0; *\/ */
-/*     /\* float: right; *\/ */
-/*     /\* @media only screen and (max-width: 768px){ *\/ */
-/*     /\*   float: left; *\/ */
-/*     /\* } *\/ */
-/*     .form-type-textfield{ */
-/*       input{ */
-/*         background: #F7F7F7; */
-/*         border-radius: 20px; */
-/*         border: 1px solid #a7a7a7; */
-/*         padding: 9px 9px; */
-/*         padding-left: 30px; */
-/*         color:#A7A7A7; */
-/*         font-weight: bold; */
-/*         width: 100%; */
-/*       } */
-/*     } */
-/*     /\* /\*width: 220px;*\/ *\/ */
-/*     /\* @media only screen and (max-width: 768px){ *\/ */
-/*     /\*     width: 220px !important; *\/ */
-/*     /\*   } *\/ */
-/*     transition-property: width; */
-/*     transition-duration: 0.5s; */
-/*     /\* &.active{ *\/ */
-/*     /\*   width: 220px; *\/ */
-/*     /\*   @media only screen and (max-width: 768px){ *\/ */
-/*     /\*     width: 90% !important; *\/ */
-/*     /\*   } *\/ */
-/*     /\* } *\/ */
-/*     .form-actions{ */
-/*       position: absolute; */
-/*       top: 8px; */
-/*       left: 22px; */
-/*       width: 25px; */
-/*       height: 25px; */
-/*       .form-submit{ */
-/*         background: url("../images/icon-search.png") no-repeat 0 0; */
-/*         cursor: pointer; */
-/*         text-indent: -9999px; */
-/*         border: none; */
-/*         display: block; */
-/*         width: 100%; */
-/*         height: 100%; */
-/*       } */
-/*     } */
-/*   } */
-/*   /\* .block-nice-menus{ *\/ */
-/*   /\*   margin-top:15px; *\/ */
-/*   /\*   margin-bottom:8px; *\/ */
-/*   /\*   li{ *\/ */
-/*   /\*     a{ *\/ */
-/*   /\*       margin:0; *\/ */
-/*   /\*       padding:0; *\/ */
-/*   /\*     } *\/ */
-/*   /\*   } *\/ */
-/*   /\* } *\/ */
-/*   /\* .block-locale{ *\/ */
-/*   /\*   margin-top:10px; *\/ */
-/*   /\* } *\/ */
-/* } */
-/* /\* #block-nice-menus-1{ *\/ */
-/* /\*   /\*width: 90px !important;*\/ *\/ */
-/* /\*   float: right; *\/ */
-/* /\*   /\*overflow: hidden;*\/ *\/ */
-/* /\*   @media only screen and (max-width: 768px){ *\/ */
-/* /\*     float: left; *\/ */
-/* /\*   } *\/ */
-/* /\* } *\/ */
-/* /\* #block-lang-dropdown-language{ *\/ */
-/* /\*   min-width: 90px; *\/ */
-/* /\*   float: right; *\/ */
-/* /\*   @media only screen and (max-width: 768px){ *\/ */
-/* /\*     float: none; *\/ */
-/* /\*     position: absolute; *\/ */
-/* /\*     right: 0; *\/ */
-/* /\*     top: -47px; *\/ */
-/* /\*   } *\/ */
-/* /\*   form{ *\/ */
-/* /\*     margin: 0; *\/ */
-/* /\*   } *\/ */
-/* /\* } *\/ */
-/* /\* @media screen and (-webkit-min-device-pixel-ratio:0) { *\/ */
-/* /\*     #block-lang-dropdown-language{ *\/ */
-/* /\*       margin-top:-3px; *\/ */
-/* /\*     } *\/ */
-/* /\* } *\/ */
 /* New stuff */
 /* Make terms in "Topics & Regions" group display in one line for each taxonomy */
 /* line 3, ../scss/modules/_taxonomies.scss */
