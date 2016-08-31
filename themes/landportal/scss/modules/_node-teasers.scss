@@ -2,6 +2,14 @@
 
 .node-teaser{
 
+    .node-organization.node-teaser {
+        .field-name-field-image img {
+            max-height: 70px;
+            max-width: 150px;
+            width: auto;
+        }
+    }
+
     padding: 20px 0;
 
     .field{
