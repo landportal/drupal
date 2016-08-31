@@ -12,7 +12,7 @@
             indicators: (Drupal.settings.landbook.type == 'indicators' ? false : true),
             indicator: (Drupal.settings.landbook.type == 'indicators' && Drupal.settings.landbook.id
                         ? Drupal.settings.landbook.id
-                        : 'WB-SL.AGR.EMPL.ZS'),
+                        : 'WB-SP.RUR.TOTL.ZS'),
             vis: LBV
         });
         LBV.ready().done(function () {
