@@ -148,7 +148,6 @@ function landportal_blocks_block_save($delta = '', $edit = array()) {
   case 'lp_shareit' :
     variable_set('lp_shareit', $edit['text_body']['value']);
     break;
-
   case 'lp_header_social' :
     variable_set('lp_header_social', $edit['text_body']['value']);
     break;
@@ -183,7 +182,7 @@ function landportal_blocks_block_view($delta = '') {
     break;
   case 'lp_share':
       $text = landportal_blocks_block_default_body('lp_share');
-    $block['content'] = $text;
+      $block['content'] = addtoany_create_node_buttons($text);
   }
   return $block;
 }
