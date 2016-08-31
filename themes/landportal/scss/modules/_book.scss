@@ -119,9 +119,10 @@ body[class*="page-book-countries-"] {
                 margin-top: -60px;
                 /*margin-bottom: 60px;*/
                 .node-landbook-country{
-                    >header{
-                        margin-top: -25px;
-                    }
+                    /* WTF? seems to make the footer buggy */
+                    /* >header{ */
+                    /*     margin-top: -25px; */
+                    /* } */
                     >.content{
                         overflow:hidden;
                     }
@@ -722,7 +723,7 @@ body[class*="page-book-countries-"] {
 
 
 /* WFT is this doing here? is it landbook specific? no */
-.social-block{
+#block-landportal-blocks-lp-share {
     position: fixed;
     right: 0px;
     top: 50%;
@@ -730,7 +731,7 @@ body[class*="page-book-countries-"] {
     transform: translate(0px, -50%);
     z-index:1000;
 
-    .addtoany_list{
+    .content {
         a{
             float:left;
             padding:0;
@@ -848,7 +849,7 @@ body[class*="page-book-countries-"] {
         font-size: 16px;
         font-size: 16px;
         margin-left: 1em;
-        width: 150px;
+        //width: 150px;
         float:right;
         @media only screen and (max-width: 767px){
             float:none;
