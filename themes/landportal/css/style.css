@@ -5967,7 +5967,10 @@ pre code {
 }
 
 /* line 11, ../../../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-1, #header #block-lang-dropdown-language, .col-sm-1, #header #block-lang-dropdown-language, .col-md-1, .col-lg-1, .col-xs-2, #header #block-search-form, .col-sm-2, .col-md-2, #header #block-lang-dropdown-language, #header #block-system-user-menu, .col-lg-2, .col-xs-3, #header #block-system-user-menu, .col-sm-3, .webform-client-form .webform-component-number label, #footer .block-menu .content > ul > li, .col-md-3, body #footer .section #block-landportal-blocks-lp-footer-social, #header #block-search-form, .col-lg-3, .col-xs-4, .col-sm-4, .view.view-landbook-indicators .view-filters,
+.col-xs-1, #header #block-lang-dropdown-language-content,
+#header #block-lang-dropdown-language, .col-sm-1, #header #block-lang-dropdown-language-content,
+#header #block-lang-dropdown-language, .col-md-1, .col-lg-1, .col-xs-2, #header #block-search-form, .col-sm-2, .col-md-2, #header #block-lang-dropdown-language-content,
+#header #block-lang-dropdown-language, #header #block-system-user-menu, .col-lg-2, .col-xs-3, #header #block-system-user-menu, .col-sm-3, .webform-client-form .webform-component-number label, #footer .block-menu .content > ul > li, .col-md-3, body #footer .section #block-landportal-blocks-lp-footer-social, #header #block-search-form, .col-lg-3, .col-xs-4, .col-sm-4, .view.view-landbook-indicators .view-filters,
 .view.view-landbook-catalog .view-filters, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, #header #block-system-main-menu, .col-lg-5, .col-xs-6, #header #block-system-main-menu, .col-sm-6, .col-md-6, body #block-menu-menu-footer-menu, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .view.view-landbook-indicators .view-content,
 .view.view-landbook-catalog .view-content, .col-md-8, body[class*="page-book-countries-"] #block-landbook-disclaimer .content, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, body[class*="page-book-countries-"] #block-landbook-disclaimer .content, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
@@ -5977,12 +5980,14 @@ pre code {
 }
 
 /* line 27, ../../../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-1, #header #block-lang-dropdown-language, .col-xs-2, #header #block-search-form, .col-xs-3, #header #block-system-user-menu, .col-xs-4, .col-xs-5, .col-xs-6, #header #block-system-main-menu, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, body[class*="page-book-countries-"] #block-landbook-disclaimer .content {
+.col-xs-1, #header #block-lang-dropdown-language-content,
+#header #block-lang-dropdown-language, .col-xs-2, #header #block-search-form, .col-xs-3, #header #block-system-user-menu, .col-xs-4, .col-xs-5, .col-xs-6, #header #block-system-main-menu, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, body[class*="page-book-countries-"] #block-landbook-disclaimer .content {
   float: left;
 }
 
 /* line 35, ../../../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-1, #header #block-lang-dropdown-language {
+.col-xs-1, #header #block-lang-dropdown-language-content,
+#header #block-lang-dropdown-language {
   width: 8.33333333%;
 }
 
@@ -6238,14 +6243,16 @@ pre code {
 
 @media (min-width: 768px) {
   /* line 27, ../../../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-sm-1, #header #block-lang-dropdown-language, .col-sm-2, .col-sm-3, .webform-client-form .webform-component-number label, #footer .block-menu .content > ul > li, .col-sm-4, .view.view-landbook-indicators .view-filters,
+  .col-sm-1, #header #block-lang-dropdown-language-content,
+  #header #block-lang-dropdown-language, .col-sm-2, .col-sm-3, .webform-client-form .webform-component-number label, #footer .block-menu .content > ul > li, .col-sm-4, .view.view-landbook-indicators .view-filters,
   .view.view-landbook-catalog .view-filters, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .view.view-landbook-indicators .view-content,
   .view.view-landbook-catalog .view-content, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
   }
 
   /* line 35, ../../../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-sm-1, #header #block-lang-dropdown-language {
+  .col-sm-1, #header #block-lang-dropdown-language-content,
+  #header #block-lang-dropdown-language {
     width: 8.33333333%;
   }
 
@@ -6503,7 +6510,8 @@ pre code {
 }
 @media (min-width: 992px) {
   /* line 27, ../../../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-1, .col-md-2, #header #block-lang-dropdown-language, #header #block-system-user-menu, .col-md-3, body #footer .section #block-landportal-blocks-lp-footer-social, #header #block-search-form, .col-md-4, .col-md-5, #header #block-system-main-menu, .col-md-6, body #block-menu-menu-footer-menu, .col-md-7, .col-md-8, body[class*="page-book-countries-"] #block-landbook-disclaimer .content, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, #header #block-lang-dropdown-language-content,
+  #header #block-lang-dropdown-language, #header #block-system-user-menu, .col-md-3, body #footer .section #block-landportal-blocks-lp-footer-social, #header #block-search-form, .col-md-4, .col-md-5, #header #block-system-main-menu, .col-md-6, body #block-menu-menu-footer-menu, .col-md-7, .col-md-8, body[class*="page-book-countries-"] #block-landbook-disclaimer .content, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
 
@@ -6513,7 +6521,8 @@ pre code {
   }
 
   /* line 35, ../../../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-2, #header #block-lang-dropdown-language, #header #block-system-user-menu {
+  .col-md-2, #header #block-lang-dropdown-language-content,
+  #header #block-lang-dropdown-language, #header #block-system-user-menu {
     width: 16.66666667%;
   }
 
@@ -17499,6 +17508,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 /* line 111, ../scss/modules/_header.scss */
 #header > .section > .col-lg-2 #logo img,
 #header > .section > .col-md-2 #logo img,
+#header > .section > #block-lang-dropdown-language-content #logo img,
 #header > .section > #block-lang-dropdown-language #logo img,
 #header > .section > #block-system-user-menu #logo img {
   margin-top: 9px;
@@ -17507,6 +17517,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   /* line 108, ../scss/modules/_header.scss */
   #header > .section > .col-lg-2,
   #header > .section > .col-md-2,
+  #header > .section > #block-lang-dropdown-language-content,
   #header > .section > #block-lang-dropdown-language,
   #header > .section > #block-system-user-menu {
     margin-left: 0px;
@@ -17642,24 +17653,24 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 /*       margin-top:-3px; */
 /*     } */
 /* } */
-/* line 334, ../scss/modules/_header.scss */
+/* line 335, ../scss/modules/_header.scss */
 #header #block-system-user-menu ul.menu li a:before {
   font-family: FontAwesome;
   padding-right: 3px;
 }
-/* line 338, ../scss/modules/_header.scss */
+/* line 339, ../scss/modules/_header.scss */
 #header #block-system-user-menu ul.menu li a[href="/user"]:before {
   content: "\f007";
 }
-/* line 341, ../scss/modules/_header.scss */
+/* line 342, ../scss/modules/_header.scss */
 #header #block-system-user-menu ul.menu li a[href="/user/logout"]:before {
   content: "\f08b";
 }
-/* line 344, ../scss/modules/_header.scss */
+/* line 345, ../scss/modules/_header.scss */
 #header #block-system-user-menu ul.menu li a[href="/node/add"]:before {
   content: "\f016";
 }
-/* line 354, ../scss/modules/_header.scss */
+/* line 355, ../scss/modules/_header.scss */
 #header #block-search-form .form-type-textfield input {
   background: #F7F7F7;
   border-radius: 20px;
@@ -17670,7 +17681,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   font-weight: bold;
   width: 100%;
 }
-/* line 364, ../scss/modules/_header.scss */
+/* line 365, ../scss/modules/_header.scss */
 #header #block-search-form .form-actions {
   position: absolute;
   top: 8px;
@@ -17678,7 +17689,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   width: 25px;
   height: 25px;
 }
-/* line 370, ../scss/modules/_header.scss */
+/* line 371, ../scss/modules/_header.scss */
 #header #block-search-form .form-actions .form-submit {
   background: url("../images/icon-search.png") no-repeat 0 0;
   cursor: pointer;
