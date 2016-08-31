@@ -9,6 +9,9 @@
  * Drupal refactoring: Jules <jules@ker.bz>
  */
 
+
+require_once 'includes/menus.php';
+
 function landportal_theme($existing, $type, $theme, $path) {
   $items = array();
   return $items;
@@ -114,12 +117,12 @@ function landportal_preprocess_page(&$variables) {
     drupal_set_title('');
   }
   
-  if (isset($variables['page']['header']['lang_dropdown_language']['#weight'])) {
-    $variables['page']['header']['lang_dropdown_language']['#weight'] = -60;
-  }
-  if (isset($variables['page']['header']['nice_menus_1']['#weight'])) {
-    $variables['page']['header']['nice_menus_1']['#weight'] = -60;
-  }
+  /* if (isset($variables['page']['header']['lang_dropdown_language']['#weight'])) { */
+  /*   $variables['page']['header']['lang_dropdown_language']['#weight'] = -60; */
+  /* } */
+  /* if (isset($variables['page']['header']['nice_menus_1']['#weight'])) { */
+  /*   $variables['page']['header']['nice_menus_1']['#weight'] = -60; */
+  /* } */
 }
 
 /**
@@ -143,18 +146,6 @@ function landportal_page_alter(&$page) {
 }
 
 /**
- * Override the 'language switcher' block links
- * Display ISO 2 letters code instead of the full language name.
- */
-function landportal_links__locale_block(&$vars) {
-  foreach($vars['links'] as $language => $langInfo) {
-        $vars['links'][$language]['title'] = $vars['links'][$language]['language']->language;
-  }
-  $content = theme_links($vars);
-  return $content;
-}
-
-/**
  * Override the search results page
  */
 function landportal_preprocess_search_result(&$vars){
@@ -167,14 +158,3 @@ function landportal_preprocess_search_result(&$vars){
     }
   }
 }
-
-function landportal_menu_tree($variables) {
-  if($variables['theme_hook_original']=='menu_tree__landdebate_menu' || $variables['theme_hook_original']=='menu_tree__menu_landlibrary_menu'|| $variables['theme_hook_original']=='menu_tree__landbook_menu'){
-  $menu_type = str_replace('menu_tree__menu_', '', $variables['theme_hook_original']);  
-  return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul>';
-  }
-  else{
-    return '<ul class="menu">' . $variables['tree'] . '</ul>';
-  }
-}
-
