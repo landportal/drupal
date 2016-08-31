@@ -69,7 +69,7 @@ Contact&nbsp;<a href="mailto:hello@landportal.info">hello@landportal.info</a>&nb
 &nbsp;</p>',
     'lp_footer_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li class="google-plus"><a href="https://plus.google.com/107805891674805739531"><i class="fa fa-google-plus"></i></a></li></ul>',
     'lp_header_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li class="google-plus"><a href="https://plus.google.com/107805891674805739531"><i class="fa fa-google-plus"></i></a></li></ul>',
-    'lp_social' => '<a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_google_plus"></a>'
+    'lp_share' => '<a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_google_plus"></a>'
   );
 
   //$default: The default value to use if this variable has never been set.
