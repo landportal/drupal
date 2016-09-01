@@ -97,17 +97,6 @@ body[class*="page-book-countries-"] {
         }
     }
     
-    #block-landbook-disclaimer {
-        background: $green-light;
-        padding: 15px 0;
-        color: $white;
-        @extend .clearfix;
-        .content {
-            @extend .col-xs-12; 
-            @extend .col-md-8;
-            @extend .col-md-offset-2;
-        }
-    }
     
     #main-wrapper{
         width: 100%;
@@ -396,8 +385,7 @@ body[class*="page-book-countries-"] {
         .block{
             padding:40px 0;
 
-            &.note-infografic,
-            &.spider-note{
+            &.note-infografic {
                 padding:0;
                 margin:0;
                 width: 100%;
@@ -1067,4 +1055,22 @@ body[class*="page-book-countries-"] {
 
 .btn-more {
     margin-top: 14px;
+}
+
+
+#block-landbook-view-coda-lbcp-spider-note {
+    @extend .col-sm-6;
+    @extend .pull-right;
+}
+
+#block-landbook-disclaimer-block {
+    background: $green-light;
+    padding: 15px 0;
+    color: $white;
+    @extend .clearfix;
+    .content {
+        @extend .col-xs-12;
+        @extend .col-md-8;
+        @extend .col-md-offset-2;
+    }
 }
