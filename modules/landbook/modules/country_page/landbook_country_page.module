@@ -1,6 +1,10 @@
 <?php
+/**
+ * @file
+ * Code for the Landbook Country Page feature.
+ */
 
-
+include_once 'landbook_country_page.features.inc';
 
 function landbook_country_page_image_default_styles() {
   $styles = array();

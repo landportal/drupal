@@ -1,8 +1,8 @@
 name = Landbook Country Page
-description = Provide country pages section for the landbook
-package = Landbook
+description = Provide country pages related options
 core = 7.x
-version = 7.x-2.3-alpha
+package = Landbook
+version = 7.x-2.3-beta
 dependencies[] = custom_pub
 dependencies[] = image
 dependencies[] = landbook_country
