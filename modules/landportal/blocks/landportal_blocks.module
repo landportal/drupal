@@ -1,6 +1,12 @@
 <?php
 /**
  * @file
+ * Code for the Landportal Blocks feature.
+ */
+
+include_once 'landportal_blocks.features.inc';
+/**
+ * @file
  */
 include 'landportal_blocks.blocks.inc';
 include 'landportal_blocks.features.fe_block_settings.inc';
