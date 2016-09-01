@@ -1,0 +1,89 @@
+<?php
+
+/* function landportal_blocks_enable() { */
+/* } */
+function landportal_blocks_update_7200() {
+}
+
+/**
+ * Reset some block positioning / display
+ */
+function landportal_blocks_update_7204() {
+    $blocks = array();
+
+    $block = array(
+        'status' => 0,
+        'weight' => 20,
+        'region' => '',
+        'visibility' => 0,
+        'pages' => '',
+        'module' => 'landportal_blocks',
+        'delta' => 'lp_header_social',
+        'theme' => 'landportal',
+        'cache' => DRUPAL_CACHE_GLOBAL,
+        'title' => '<none>'
+    );
+    array_push($blocks, $block);
+
+    // Search form block (provided by search module)
+    $block = array(
+        'status' => 1,
+        'weight' => -1,
+        'region' => 'header',
+        'visibility' => 0,
+        'pages' => '',
+        'module' => 'search',
+        'delta' => 'form',
+        'theme' => 'landportal',
+        'cache' => DRUPAL_CACHE_GLOBAL,
+        'title' => '<none>'
+    );
+    array_push($blocks, $block);
+
+    // Search form block (provided by search module)
+    $block = array(
+        'status' => 1,
+        'weight' => 1,
+        'region' => 'header',
+        'visibility' => 0,
+        'pages' => '',
+        'module' => 'lang_dropdown',
+        'delta' => 'language',
+        'theme' => 'landportal',
+        'cache' => DRUPAL_CACHE_PER_PAGE,
+        'title' => '<none>'
+    );
+    array_push($blocks, $block);
+
+    // Search form block (provided by search module)
+    $block = array(
+        'status' => 1,
+        'weight' => 2,
+        'region' => 'header',
+        'visibility' => 0,
+        'pages' => '',
+        'module' => 'nice_menus',
+        'delta' => '1',
+        'theme' => 'landportal',
+        'cache' => DRUPAL_CACHE_PER_USER,
+        'title' => '<none>'
+    );
+    array_push($blocks, $block);
+
+    foreach($blocks as $block){
+        db_merge('block')
+            ->key(array(
+                'module'=>$block['module'],
+                'delta'=> $block['delta'],
+                'theme'=> $block['theme']
+            ))
+            ->fields(array(
+                'status' => $block['status'],
+                'weight' => $block['weight'],
+                'region' => $block['region'],
+                'visibility' => $block['visibility'],
+                'pages' => $block['pages'],
+            ))
+            ->execute();
+    }
+}
