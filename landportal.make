@@ -113,6 +113,9 @@ projects:
   - custom_pub
   - lang_dropdown
   - print
+  # - facebook_login
+  # - twitter_login
+  # - mailchimp_signup
 
 includes:
   - "landportal-custom.make"
