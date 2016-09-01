@@ -1,16 +1,13 @@
 <?php
 
-/* function landportal_blocks_enable() { */
-/* } */
-function landportal_blocks_update_7200() {
-}
-
 /**
+ * For LP 2.3 release
  * Reset some block positioning / display
  */
-function landportal_blocks_update_7204() {
+function landportal_blocks_update_7200() {
     $blocks = array();
 
+    // Social block
     $block = array(
         'status' => 0,
         'weight' => 20,
@@ -40,7 +37,7 @@ function landportal_blocks_update_7204() {
     );
     array_push($blocks, $block);
 
-    // Search form block (provided by search module)
+    // Language blocks
     $block = array(
         'status' => 1,
         'weight' => 1,
@@ -54,8 +51,21 @@ function landportal_blocks_update_7204() {
         'title' => '<none>'
     );
     array_push($blocks, $block);
+    $block = array(
+        'status' => 0,
+        'weight' => 1,
+        'region' => -1,
+        'visibility' => 0,
+        'pages' => '',
+        'module' => 'locale',
+        'delta' => 'language',
+        'theme' => 'landportal',
+        'cache' => DRUPAL_CACHE_PER_PAGE,
+        'title' => '<none>'
+    );
+    array_push($blocks, $block);
 
-    // Search form block (provided by search module)
+    // User menus
     $block = array(
         'status' => 1,
         'weight' => 2,
