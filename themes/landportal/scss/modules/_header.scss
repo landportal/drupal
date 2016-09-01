@@ -328,6 +328,10 @@
         @extend .col-sm-1;
         @extend .col-md-2;
     }
+
+    /* TMP: while user menu isn't re-implemented properly */
+    /* (with boostrap navbar dropdown for instance) */
+    #block-nice-menus-1,
     #block-system-user-menu {
         @extend .col-xs-3;
         @extend .col-md-2;
