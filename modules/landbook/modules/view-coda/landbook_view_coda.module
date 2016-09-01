@@ -118,7 +118,7 @@ function landbook_view_coda_block_view($delta = '') {
         break;
     case 'lbcp_spider_note' :
         $block['subject'] = '';
-        $block['content'] = array('#theme' => 'disclaimer_block');
+        $block['content'] = landbook_view_coda_block_body($delta);
         break;
     case 'lbcp_spider' :
         $block['subject'] = '';
