@@ -26,15 +26,6 @@ function landbook_menu() {
 
     // Admin menu for the Landbook
     landbook_menu_admin($items);
-
-    /**
-     * Other menus
-     */
-    // TMP HACK / TODO remove
-    $items['admin/fill_regions_terms'] = array(
-        'access callback'   => TRUE,
-        'page callback' => 'landbook_fill_regions_terms',
-    );
     return $items;
 }
 
