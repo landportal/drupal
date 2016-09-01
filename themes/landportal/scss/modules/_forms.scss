@@ -108,3 +108,65 @@ html.js fieldset.collapsed {
 div.form-type-checkbox{
 	display:block !important
 }
+
+
+
+
+/******************************************
+ *      Form styling
+ *
+ * sept. 2016 new LB
+ */
+.block{
+    .form-title{
+        font-size: 16px;
+        font-family: "Open Sans",sans-serif;
+    }
+    .views-exposed-widget{
+        padding:10px 0 20px 0;
+        .views-widget{
+            .description{
+                display: none;
+            }
+            select{
+                background: #f7f7f7 none repeat scroll 0 0;
+                min-width:300px;
+                background-image:url("../images/toggle-arrow.png");
+                background-position: right 10px center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    select{
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        border: medium none;
+        border-radius: 0;
+        display: table-cell;
+        padding: 9px 12px 9px 10px;
+        width: 100%;
+        background: #ffffff none repeat scroll 0 0;
+        background-image:url("../images/toggle-arrow.png");
+        background-position: right 10px center;
+        background-repeat: no-repeat;
+        box-shadow: 4px 5px 0 0 #6e872a;
+        margin-bottom:5px;
+    }
+    .button{
+        background-color: $green-light;
+        color: #fff;
+        box-shadow: 4px 5px 0 0 #6e872a;
+        width:100%;
+        border: medium none;
+        display: inline-block;
+        line-height: 43px;
+        outline: 0 none !important;
+        padding: 0 1em;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 300ms linear 0s;
+        font-family: "Open Sans",sans-serif;
+        font-size:14px;
+    }
+}

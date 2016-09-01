@@ -10,7 +10,23 @@
         Drupal.behaviors.landportal.showSpiderBlock(context, settings);
         Drupal.behaviors.landportal.initCarousel(context, settings);
         Drupal.behaviors.landportal.initReadMore(context, settings);
+        Drupal.behaviors.landportal.nice_menu_direction(context);
       },
+
+        nice_menu_direction: function (context) {
+  $("ul.nice-menu-down li li").mouseover(function(){ 
+    if($(this).children('ul').length == 1) {
+      var parent = $(this);
+      var child_menu = $(this).children('ul');
+      if( $(parent).offset().left + $(parent).width() + $(child_menu).width() > $(window).width() ){
+        $(child_menu).css('left', '-' + $(parent).width() + 'px');
+      } else {
+        $(child_menu).css('left', $(parent).width() + 'px');
+      }
+    }
+  });
+        },
+        
       initRegistrationForm: function(context, settings){
         isVisibleNewsletterLanguage();
         $('.form-item-mailchimp-lists-mailchimp-land-portal-news-digest-subscribe input').bind("change click",function(){
