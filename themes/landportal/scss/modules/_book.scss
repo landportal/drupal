@@ -746,11 +746,11 @@ body[class*="page-book-countries-"] {
                 display: inline-block;
             }
         }
-        .field-type-taxonomy-term-reference{
-            .field-items{
-                float: none;
-            }
-        }
+        /* .field-type-taxonomy-term-reference{ */
+        /*     .field-items{ */
+        /*         float: none; */
+        /*     } */
+        /* } */
     }
     .field-name-field-doc-provider{
         @media(max-width:768px){
@@ -1016,4 +1016,10 @@ body[class*="page-book-countries-"] {
         @extend .col-md-8;
         @extend .col-md-offset-2;
     }
+}
+
+/* Nasty hack for avoid field clearfix */
+.node-teaser .clearfix:after {
+    //display: none;
+    clear: left;
 }

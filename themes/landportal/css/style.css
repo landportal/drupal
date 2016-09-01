@@ -16017,6 +16017,14 @@ body[class*="page-book-countries-"] #map-local {
   color: #333;
   font-family: "Open Sans",sans-serif;
 }
+/* line 735, ../scss/modules/_book.scss */
+#block-views-landbook-countries-related-block-5 .node-landlibrary-resource.node-teaser {
+  /* .field-type-taxonomy-term-reference{ */
+  /*     .field-items{ */
+  /*         float: none; */
+  /*     } */
+  /* } */
+}
 /* line 736, ../scss/modules/_book.scss */
 #block-views-landbook-countries-related-block-5 .node-landlibrary-resource.node-teaser h2 {
   font-size: 18px;
@@ -16031,10 +16039,6 @@ body[class*="page-book-countries-"] #map-local {
 #block-views-landbook-countries-related-block-5 .node-landlibrary-resource.node-teaser .field-name-field-doc-thumb a {
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
   display: inline-block;
-}
-/* line 750, ../scss/modules/_book.scss */
-#block-views-landbook-countries-related-block-5 .node-landlibrary-resource.node-teaser .field-type-taxonomy-term-reference .field-items {
-  float: none;
 }
 @media (max-width: 768px) {
   /* line 755, ../scss/modules/_book.scss */
@@ -16339,6 +16343,14 @@ body[class*="page-book-countries-"] #map-local {
   background: #A3C642;
   padding: 15px 0;
   color: #ffffff;
+}
+
+/* Nasty hack for avoid field clearfix */
+/* line 1022, ../scss/modules/_book.scss */
+.node-teaser .clearfix:after, .node-teaser .group-landvoc:after, .node-teaser body[class*="page-book-countries-"] #block-system-main:after, body[class*="page-book-countries-"] .node-teaser #block-system-main:after, .node-teaser #block-landbook-disclaimer-block:after, .node-teaser .view.view-landbook-indicators .views-row:after, .view.view-landbook-indicators .node-teaser .views-row:after,
+.node-teaser .view.view-landbook-catalog .views-row:after,
+.view.view-landbook-catalog .node-teaser .views-row:after {
+  clear: left;
 }
 
 /* line 1, ../scss/modules/_users.scss */
@@ -17794,7 +17806,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 }
 /* line 15, ../scss/modules/_node-teasers.scss */
 .node-teaser .field {
-  clear: both;
+  clear: left;
 }
 /* line 18, ../scss/modules/_node-teasers.scss */
 .node-teaser .field.field-type-taxonomy-term-reference .field-item {
