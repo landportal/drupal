@@ -10,29 +10,67 @@
  */
 
 
-function landbook_enable() {
-  watchdog('Landbook', 'Adding landbook-menu');
-  $menu = array(
-    'menu_name'       => 'landbook-menu',
-    'title'           => "Get information by country",
-    'description'     => "The Land Book presents comprehensive country and thematic pages with linked open data on land governance from diverse sources around the world.",
-  );
+/* function landbook_enable() { */
+/*   watchdog('Landbook', 'Adding landbook-menu'); */
+/*   $menu = array( */
+/*     'menu_name'       => 'landbook-menu', */
+/*     'title'           => "Get information by country", */
+/*     'description'     => "The Land Book presents comprehensive country and thematic pages with linked open data on land governance from diverse sources around the world.", */
+/*   ); */
 
-  if (!menu_load($menu['menu_name'])) {
-    drupal_set_message('Landbook', 'Adding ' . $menu['menu_name']);
-    menu_save($menu);
-    cache_clear_all('*', 'cache_menu', TRUE);
+/*   if (!menu_load($menu['menu_name'])) { */
+/*     drupal_set_message('Landbook', 'Adding ' . $menu['menu_name']); */
+/*     menu_save($menu); */
+/*     cache_clear_all('*', 'cache_menu', TRUE); */
+/*   } */
+/*   cache_clear_all(); */
+
+/*   $translatables['book'] = array( */
+/*     t($menu['title']), */
+/*     t($menu['description']), */
+/*   ); */
+/* } */
+
+/* function landbook_disable() { */
+/*   watchdog('Landbook', 'Removing landbook-menu'); */
+/*   menu_delete(array('menu_name' => 'landbook-menu')); */
+/*   cache_clear_all(); */
+/* } */
+
+/* Fill out regions terms with iso code from countries taxonomy */
+function landbook_update_7200() {
+
+  //strange country name
+  $hard_country_name = 'Viet Nam';
+  $fixed_hard_country_name = 'Vietnam';
+  $vid_country = 3;
+
+  $country_terms = taxonomy_get_tree($vid_country);
+  foreach ($country_terms as $key => $term) {
+    if ($term->name == $hard_country_name) {
+      $term->name = $fixed_hard_country_name;
+    }
+    $tids = db_select('taxonomy_term_data', 't')
+      ->fields('t', array('tid'))
+      ->condition('t.name', $term->name)
+      ->condition('t.vid', '7')
+      ->execute()
+      ->fetchCol();
+
+    if (!empty($tids)) {
+      $old_term = taxonomy_term_load($term->tid);
+      foreach ($tids as $tid_key => $tid_value) {
+        $reg_term = taxonomy_term_load($tid_value);
+        $reg_term->field_iso3[LANGUAGE_NONE][0] = array(
+          'value' => $old_term->field_iso3[LANGUAGE_NONE][0]['value']
+        );
+        try {
+          taxonomy_term_save($reg_term);
+        } catch(Exception $e) {
+          error_log('LB fill regions terms');
+        }
+      }
+    }
   }
-  cache_clear_all();
 
-  $translatables['book'] = array(
-    t($menu['title']),
-    t($menu['description']),
-  );
-}
-
-function landbook_disable() {
-  watchdog('Landbook', 'Removing landbook-menu');
-  menu_delete(array('menu_name' => 'landbook-menu'));
-  cache_clear_all();
 }
