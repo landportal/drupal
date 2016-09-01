@@ -83,7 +83,6 @@ function landportal_menu_tree($variables) {
 function landportal_links__locale_block($vars) {
   global $language_url;
 
-  dpm($vars, 'LANG SW');
   $content = '';
   $languages = $vars['links'];
   $items = array();
