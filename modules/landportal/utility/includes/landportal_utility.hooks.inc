@@ -4,29 +4,14 @@
  * Hooks function for the landportal_utility module.
  */
 
-/**********************
-** Implementation of hook_entity_info_alter().
-***********************/
-
-function landportal_utility_entity_info_alter(&$entity_info){
-  $entity_info['node']['view modes']['listing'] = array(
-    'label' => t('Listing'),
-    'custom settings' => TRUE,
-  );
-  $entity_info['node']['view modes']['promoted_country_page'] = array(
-    'label' => t('Promoted to country page'),
-    'custom settings' => TRUE,
-  );
-}
-
-/**********************
-** Implementation of hook_views_pre_render().
-***********************/
-function landportal_utility_views_pre_render(&$view){
-  if($view->name == 'taxonomy_term' && $view->current_display == 'page') {
-    $view->style_plugin->row_plugin->options['view_mode'] = 'listing';
-  }
-}
+/* /\********************** */
+/* ** Implementation of hook_views_pre_render(). */
+/* ***********************\/ */
+/* function landportal_utility_views_pre_render(&$view){ */
+/*   if($view->name == 'taxonomy_term' && $view->current_display == 'page') { */
+/*     $view->style_plugin->row_plugin->options['view_mode'] = 'listing'; */
+/*   } */
+/* } */
 
 
 /**
