@@ -1,0 +1,18 @@
+<?php
+/**
+ * LP upgrade hooks
+ * Great place for 1 time actions upon release ...
+ * 
+ */
+
+/**
+ * Clean up modules that have been removed brutally
+ */
+function landportal_admin_update_7200() {
+    $modules = array ('auto_nodetitle', 'fc', 'fc_progress', 'fc_incomplete', 'fc_field_groups', 'antispam', 'batch_add_terms', 'feeds_sql', 'feeds_youtube', 'ccl', 'ckan_integration_endpoint', 'connector', 'content_access', 'emvideo', 'emvideo_youtube', 'fb', 'fb_likebox', 'imce', 'themekey', 'http_client', 'http_client_oauth', 'delete_all', 'druser_resource', 'field_permissions', 'unit_testing', 'session_resource', 'node_export', 'wysiwyg', 'social_buttons', 'taxonomy_csv', 'og', 'og_ui', 'og_access', 'video', 'shortcode_video', 'shortcode', 'user_profile_sync', 'user_account_fields', 'oauthconnector', 'oauth2_common', 'migrate', 'migrate_ui', 'migrate_d2d', 'migrate_d2d_ui', 'references_dialog', 'role_export', 'imce_filefield', 'imce_wysiwyg', 'jira_issue_collector', 'landbook_nodes', 'landbook_nodes_access', 'landbook_nodes_importers', 'landdebate_content_types', 'landdebate_permissions', 'landdebate_views', 'landportal_api_auth', 'landportal_bo', 'landportal_content_types', 'landportal_ct_organization', 'landportal_field_base', 'landportal_extra', 'landportal_permissions', 'landportal_migration', 'landportal_uris', 'landportal_users', 'mailchimp_seg_custom');
+  
+    db_delete('system')
+        ->condition('name', $modules, 'IN')
+        ->condition('type', 'module')
+        ->execute();
+}
