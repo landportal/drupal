@@ -5,3 +5,19 @@
  */
 
 include_once 'landportal_display.features.inc';
+
+
+/**********************
+** Implementation of hook_entity_info_alter().
+***********************/
+
+function landportal_display_entity_info_alter(&$entity_info){
+  $entity_info['node']['view modes']['listing'] = array(
+    'label' => t('Listing'),
+    'custom settings' => TRUE,
+  );
+  $entity_info['node']['view modes']['promoted_country_page'] = array(
+    'label' => t('Promoted to country page'),
+    'custom settings' => TRUE,
+  );
+}
