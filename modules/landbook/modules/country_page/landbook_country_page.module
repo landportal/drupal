@@ -4,8 +4,6 @@
  * Code for the Landbook Country Page feature.
  */
 
-include_once 'landbook_country_page.features.inc';
-
 function landbook_country_page_image_default_styles() {
   $styles = array();
 
@@ -27,9 +25,6 @@ function landbook_country_page_image_default_styles() {
   return $styles;
 }
 
-/* function landbook_country_page_HOOK() { */
-/* } */
-
 /**
  * Implements hook_custom_pub_defaults().
  */
@@ -49,24 +44,3 @@ function landbook_country_page_custom_pub_defaults() {
     );
     return $options;
 }
-
-
-  /* $strongarm = new stdClass(); */
-  /* $strongarm->disabled = FALSE; /\* Edit this to true to make a default strongarm disabled initially *\/ */
-  /* $strongarm->api_version = 1; */
-  /* $strongarm->name = 'custom_pub_types'; */
-  /* $strongarm->value = array( */
-  /*   'promoted_to_country_page' => array( */
-  /*     'type' => 'promoted_to_country_page', */
-  /*     'name' => 'Promoted to country page', */
-  /*     'default' => TRUE, */
-  /*     'node_types' => array( */
-  /*       'blog_post' => 'Blog post', */
-  /*       'debate' => 'Debate', */
-  /*       'event' => 'Event', */
-  /*       'landlibrary_resource' => 'LandLibrary Resource', */
-  /*       'news' => 'News', */
-  /*     ), */
-  /*   ), */
-  /* ); */
-  /* $export['custom_pub_types'] = $strongarm; */
