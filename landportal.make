@@ -74,7 +74,6 @@ projects:
   - oauth
   - pathauto
   - pcp
-  - rdfx
   - recaptcha
   - references
   - restws

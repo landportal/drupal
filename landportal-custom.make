@@ -42,6 +42,14 @@ projects:
       - "https://www.drupal.org/files/issues/2383997-7.patch"
   jquery_update:
     version: "3.0-alpha3"
+# get latest development release (no changes since 2014)
+# fixed the Wrong url for taxonomy terms in rdf
+# https://www.drupal.org/project/rdfx
+  rdfx:
+    download:
+      type: "git"
+      branch: "7.x-2.x"
+      url: "git://git.drupal.org/project/rdfx.git"
   rdf_indexer:
     version: ~
     download:
@@ -52,8 +60,9 @@ projects:
       - "modules/landlibrary/modules/rdf_indexer/rdf_indexer-add_virtuoso_support-2029717-15.patch"
 # Antonella's changes?
 #      - "modules/landlibrary/modules/rdf_indexer/rdf_indexer-fix_virtuoso_support.patch"
-# Online patch is borken
+# Online patch is broken
 #      - "https://www.drupal.org/files/issues/rdf_indexer-add_virtuoso_support-2029717-15.patch"
+
 
 libraries:
   jsonpath:
