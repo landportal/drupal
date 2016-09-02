@@ -4625,10 +4625,30 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_original' => 'An agroforestry system is a form of multiple land use where woody perennials (trees, shrubs, bamboos, palm trees, woody lianas) are grown on the same land management unit with crops and/or animals.',
   );
   $terms[] = array(
-    'name' => 'Large-scale Land Acquisitions',
-    'description' => '<p>&nbsp;Large scale Land Acquisitions is the buying or leasing of large pieces of land in&nbsp;developing countries, by domestic and&nbsp;transnational companies, governments, and individuals.&nbsp;</p>
-
-<p>Source:&nbsp;&nbsp;<a href="http://www.tandfonline.com/doi/full/10.1080/03066150.2011.559005" rel="nofollow">"Towards a better understanding of global land grabbing: an editorial introduction"</a>.&nbsp;<a href="https://en.wikipedia.org/wiki/Journal_of_Peasant_Studies" title="Journal of Peasant Studies">Journal of Peasant Studies</a>&nbsp;38&nbsp;(2): 209.<a href="https://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a href="https://dx.doi.org/10.1080%2F03066150.2011.559005" rel="nofollow">10.1080/03066150.2011.559005</a>. Retrieved&nbsp;8 February&nbsp;2012.</p>
+    'name' => 'Commercial Pressures on Land',
+    'description' => '<p>Commercial pressures, land grabs, investments, etc.—the words vary according to the positions of those who use them (...).<br />
+<br />
+The rapid changes in prices on certain markets and anticipation of probable estimated price rises are at the root of the taking control of large amounts of land and manifestations of interest in the purchase or long-term rental of land that we have been seeing for several months. These goods are essentially the following:<br />
+<br />
+<strong>Agrofuels </strong><br />
+An increasingly large global market has emerged around agrofuels, as a substitutes for fossil energy. The demand for and price of agrofuels still depend heavily on the public policies of certain states that make it mandatory to include a percentage of these products in the fuel used for transport, or that grant them tax advantages and subsidies. Otherwise, the development of agrofuels is directly linked to the price of oil.<br />
+<br />
+<strong>Staple Foods</strong><br />
+The prices of the principal food products rose sharply in 2007 and early 2008 for various reasons including notably the growth of agrofuels, weather problems in previous years, a reduction in security stores, and an increase in demand among the middle classes of some emerging countries. This rise reverses a 100-year-long downward trend that had been interrupted in the mid-1970s by a fleeting period of rising prices.<br />
+<br />
+<strong>Forest Resources </strong><br />
+Here, we must distinguish between two types of goods of very different natures: (1) timber and non-wood forest products, the demand for which has increased with the growth of emerging countries, as has the demand for mineral commodities; and (2) environmental services, with the establishment of markets for pollution rights, carbon credits, that make it possible to obtain resources in exchange for planting trees or through mechanisms—which are for now still voluntary— based on promises not to cut down forests (REDD mechanisms).<br />
+<br />
+What is more, for a more or less long time, a certain number of other markets have generated pressures on land.<br />
+<br />
+<strong>Tourism</strong><br />
+Already, the growth of tourism has long generated increasing interest in coastal zones and all areas of particular interest because of the beauty of the landscape, the wealth of flora and fauna, and/or the possibility of engaging in specific leisure activities. Mining and Energy Resources This is not new, but the sharp rise in demand from emerging countries has increased pressure on regions and countries that have mineral or oil wealth.<br />
+<br />
+<strong>Urbanization </strong><br />
+The large increase in the percentage of the population living in cities is causing urban zones to expand, usually spilling over onto farm land. This can create conflicts and very strong pressures<br />
+<br />
+<br />
+Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documents/resources/ilc_commercial_pressures_on_land_eng.pdf">Commercial Pressures on Land Worldwide. Issues and Conceptual Framework</a>". AGTER and International Land Coalition, &nbsp;April 2009, page 4.</p>
 ',
     'format' => 'full_html',
     'weight' => 0,
@@ -4639,13 +4659,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'field_related_topics' => array(
       'und' => array(
         0 => array(
-          'tid' => '3e8370bb-1ef7-46d2-afeb-86edad772c95',
+          'tid' => 'c6f94f76-f677-4979-9a0c-8c485d460b41',
         ),
         1 => array(
-          'tid' => '2c7396db-a39f-4f51-90c0-0c06adc1a7ec',
+          'tid' => '3e8370bb-1ef7-46d2-afeb-86edad772c95',
         ),
         2 => array(
-          'tid' => 'c6f94f76-f677-4979-9a0c-8c485d460b41',
+          'tid' => '2c7396db-a39f-4f51-90c0-0c06adc1a7ec',
         ),
       ),
     ),
@@ -4662,8 +4682,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'uid' => 7082,
           'status' => 1,
           'translate' => 0,
-          'created' => 1463066948,
-          'changed' => 1463066948,
+          'created' => 1471344115,
+          'changed' => 1471344115,
         ),
       ),
     ),
@@ -5933,11 +5953,11 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'revision_id' => 7301,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1467795929,
-          'changed' => 1467795929,
+          'created' => 1469716790,
+          'changed' => 1469716790,
         ),
       ),
     ),
