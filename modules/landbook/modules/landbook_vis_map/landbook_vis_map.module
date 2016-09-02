@@ -59,7 +59,7 @@ function landbook_vis_map_block_view($delta = '') {
         );
         break;
     case 'compare_map' :
-        $block['subject'] = '';
+        $block['subject'] = t('Mapping');
         $block['content'] = array(
             '#theme' => 'compare_map',
             '#attached' => array(
@@ -73,7 +73,7 @@ function landbook_vis_map_block_view($delta = '') {
         );
         break;
     case 'world_map' :
-        $block['subject'] = t('Mapping');
+        $block['subject'] = '';
         $block['content'] = array(
             '#theme' => 'world_map',
             '#attached' => array(
