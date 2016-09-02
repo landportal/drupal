@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * landbook_country_page.features.inc
+ */
+
+/**
+ * Implements hook_custom_pub_defaults().
+ */
+function landbook_country_page_custom_pub_defaults() {
+    $options = array();
+    // Exported option: promoted_to_country_page
+    $options['promoted_to_country_page'] = array(
+        'type' => 'promoted_to_country_page',
+        'name' => t('Promoted to country page'),
+        'node_types' => array(
+            'blog_post' => t('Blog post'),
+            'debate' => t('Debate'),
+            'event' => t('Event'),
+            'landlibrary_resource' => t('LandLibrary Resource'),
+            'news' => t('News'),
+        ),
+    );
+    return $options;
+}
