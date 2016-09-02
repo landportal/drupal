@@ -177,6 +177,7 @@ $handler->display->display_options['arguments']['name']['relationship'] = 'term_
 $handler->display->display_options['arguments']['name']['default_action'] = 'default';
 $handler->display->display_options['arguments']['name']['title_enable'] = TRUE;
 $handler->display->display_options['arguments']['name']['title'] = 'Organizations working in %1';
+$handler->display->display_options['arguments']['name']['breadcrumb_enable'] = TRUE;
 $handler->display->display_options['arguments']['name']['breadcrumb'] = '%1';
 $handler->display->display_options['arguments']['name']['default_argument_type'] = 'raw';
 $handler->display->display_options['arguments']['name']['default_argument_options']['index'] = '2';
@@ -304,6 +305,13 @@ $handler->display->display_options['inherit_arguments'] = FALSE;
 $handler = $view->new_display('page', 'Page book', 'page_2');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Land Book Sources';
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Entity Reference: Referencing entity */
+$handler->display->display_options['relationships']['reverse_field_orgref_taxonomy_term']['id'] = 'reverse_field_orgref_taxonomy_term';
+$handler->display->display_options['relationships']['reverse_field_orgref_taxonomy_term']['table'] = 'node';
+$handler->display->display_options['relationships']['reverse_field_orgref_taxonomy_term']['field'] = 'reverse_field_orgref_taxonomy_term';
+$handler->display->display_options['relationships']['reverse_field_orgref_taxonomy_term']['label'] = 'Dataset';
+$handler->display->display_options['relationships']['reverse_field_orgref_taxonomy_term']['required'] = TRUE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
@@ -321,14 +329,6 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'organization' => 'organization',
 );
 $handler->display->display_options['filters']['type']['group'] = 1;
-/* Filter criterion: Content: Organization relationship (field_organization_relationship) */
-$handler->display->display_options['filters']['field_organization_relationship_tid']['id'] = 'field_organization_relationship_tid';
-$handler->display->display_options['filters']['field_organization_relationship_tid']['table'] = 'field_data_field_organization_relationship';
-$handler->display->display_options['filters']['field_organization_relationship_tid']['field'] = 'field_organization_relationship_tid';
-$handler->display->display_options['filters']['field_organization_relationship_tid']['value'] = array(
-  0 => '6120',
-);
-$handler->display->display_options['filters']['field_organization_relationship_tid']['vocabulary'] = 'organization_relation';
 $handler->display->display_options['path'] = 'book/sources';
 $handler->display->display_options['menu']['type'] = 'normal';
 $handler->display->display_options['menu']['title'] = 'Sources';
