@@ -26,7 +26,7 @@ function landbook_vis_map_block_info() {
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/countries/*\nbook/indicators/*",
-        'weight'        => 11
+        'weight'        => 12
     );
     $blocks['world_map'] = array(
         'info'          => t('Landbook: Countries: World map'),

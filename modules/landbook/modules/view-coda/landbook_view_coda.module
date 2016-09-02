@@ -8,7 +8,7 @@ function landbook_view_coda_block_info() {
         'region'    => 'content',
         'visibility'=> BLOCK_VISIBILITY_LISTED,
         'pages'     => "book/countries/*",
-        'weight'    => 10
+        'weight'    => 11
     );
     $blocks['lbcp_lgaf'] = array(
         'info'      => t('Country page: LGAF'),

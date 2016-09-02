@@ -23,7 +23,7 @@ foreach ($views as $vid => $view) {
 ?>
 
 <?php if(!empty($render['news']) || !empty($render['blog']) || !empty($render['events']) || !empty($render['debates'])):?>
-    <section class="country-section">
+    <section id="media-block" class="country-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
@@ -44,7 +44,7 @@ foreach ($views as $vid => $view) {
             <?php $col1='centered'; ?>
             <?php $full_width='full-width'; ?>
         <?php endif; ?>
-        <div class="bg-gray <?php print $full_width; ?>">
+        <div class="media-block-content <?php print $full_width; ?>">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-xs-12 bg-media <?php print $col1; ?>">
