@@ -124,9 +124,12 @@ function landbook_block_view($delta = '') {
 }
 
 function landbook_get_pdf_url(){
-    $info = landbook_get_country_info();
-    $output = $info['iso'].'?pdf=1';
-    return $output;
+    $iso3 = arg(2);
+    //$info = landbook_get_country_info();
+    if (in_array($iso3, ['KHM', 'LAO', 'MMR', 'THA', 'VNM'])) {
+        return file_create_url('public://2016/countries/' . $iso3 . '.pdf');
+    }
+    return ;
 }
 
 function landbook_get_country_info(){
