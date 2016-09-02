@@ -6,7 +6,7 @@ $render = _block_get_renderable_array(_block_render_blocks(array($v)));
 $output = drupal_render($render);
 ?>
 <?php if(!empty($output)):?>
-    <section class="country-section grey">
+    <section id="partners-block" class="country-section grey">
         <div class="container">
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
