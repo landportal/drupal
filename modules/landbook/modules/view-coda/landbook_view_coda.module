@@ -21,25 +21,25 @@ function landbook_view_coda_block_info() {
     $blocks['lbcp_pie'] = array(
         'info'      => t('Country page: Pie chart'),
         'status'    => TRUE,
-        'region'    => 'content',
+        'region'    => -1,
         'visibility'=> BLOCK_VISIBILITY_LISTED,
-        'pages'     => "book/countries/*",
+        'pages'     => "",
         'weight'    => 14
     );
     $blocks['lbcp_spider'] = array(
         'info'      => t('Country page: Spider'),
         'status'    => TRUE,
-        'region'    => 'content',
+        'region'    => -1,
         'visibility'=> BLOCK_VISIBILITY_LISTED,
-        'pages'     => "book/countries/*",
+        'pages'     => "",
         'weight'    => 15
     );
     $blocks['lbcp_spider_note'] = array(
         'info'      => t('Country page: Spider note'),
         'status'    => TRUE,
-        'region'    => 'content',
+        'region'    => -1,
         'visibility'=> BLOCK_VISIBILITY_LISTED,
-        'pages'     => "book/countries/*",
+        'pages'     => "",
         'weight'    => 16
     );
 
