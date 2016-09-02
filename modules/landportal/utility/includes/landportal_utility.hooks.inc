@@ -216,9 +216,9 @@ function landportal_utility_form_alter(&$form, &$form_state, $form_id){
     );
 
     $field_list = array(
-      'im_field_doc_country' => array(
-        'label' => 'Country',
-        'taxonomy' => 'countries'
+      'im_field_geographical_focus' => array(
+        'label' => 'Geographical focus',
+        'taxonomy' => 'regions'
       ),
       'im_field_related_topics' => array(
         'label' => 'Related topics',

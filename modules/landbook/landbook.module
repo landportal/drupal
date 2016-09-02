@@ -164,7 +164,7 @@ function landbook_views_pre_render(&$view) {
         $query->fields('t', array('tid'));
         $query->leftJoin('field_data_field_iso3', 'fdfi', 'fdfi.entity_id = t.tid');
         $query->condition('fdfi.field_iso3_value', $args[2]);
-        $query->condition('t.vid', '3');
+        $query->condition('t.vid', '7');
         $tid = $query->execute()->fetchField();
 
         if ($tid) {
@@ -174,7 +174,7 @@ function landbook_views_pre_render(&$view) {
           // Change the link url.
 
           $view->display_handler->set_option('link_url', 'library/search');
-          $view->exposed_raw_input['f[0]'] = 'im_field_doc_country:' . $tid;
+          $view->exposed_raw_input['f[0]'] = 'im_field_geographical_focus:' . $tid;
         }
       }
     }
