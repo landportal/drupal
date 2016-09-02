@@ -126,7 +126,10 @@ body[class*="page-book-countries-"] {
     #compare {
         background-color: $grey-bglight;
     }
-    
+    #media-block {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
     
     #main-wrapper{
         width: 100%;
