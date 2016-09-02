@@ -212,37 +212,37 @@
     #lgaf-wrapper {
         li{
             position:relative;
-            padding: 15px 20px 15px 40px !important;
+            //padding: 15px 20px 15px 40px !important;
             font-family: "Open Sans",sans-serif;
             font-size: 16px;
-            .lgaf-value-a,
-            .lgaf-value-b,
-            .lgaf-value-c,
-            .lgaf-value-d,
-            .lgaf-value-na,{
-                height: 20px !important;
-                left: 10px;
-                line-height: 20px;
-                position: absolute;
-                text-align: center;
-                top: 17px;
-                width: 20px !important;
-            }
-        }
 
-        li{
             padding: 15px 20px;
             border-bottom: 2px solid #F2F2F2;
             background-color: #FFFFFF;
+
+            /* .lgaf-value-a, */
+            /* .lgaf-value-b, */
+            /* .lgaf-value-c, */
+            /* .lgaf-value-d, */
+            /* .lgaf-value-na,{ */
+            /*     height: 20px !important; */
+            /*     left: 10px; */
+            /*     line-height: 20px; */
+            /*     position: absolute; */
+            /*     text-align: center; */
+            /*     top: 17px; */
+            /*     width: 20px !important; */
+            /* } */
+
             span{
-                
+                margin-right: .5em;
                 width: 1em;
                 height: 1em;
                 display: inline-block;
                 @include border-radius(20px);
                 &:nth-child(2) {
                     width: .5em;
-                    margin-left: -.5em;
+                    margin-left: -1em;
                     @include border-radius(0 20px 20px 0);
                 }
             }
