@@ -50,7 +50,7 @@
           </ul>
         </div>
         <div class="col-xs-12">
-         <?php $block = block_load('block', 4);
+         <?php $block = block_load('landbook', 'lgaf_block');
           $block = _block_render_blocks(array($block));
           $block_build = _block_get_renderable_array($block);
           echo drupal_render($block_build);?>

@@ -23,12 +23,12 @@ function landbook_block_info() {
         'pages'         => "book/countries/*",
         'weight'        => -39
     );
-    $blocks['infographic_block'] = array(
-        'info'          => t('Landbook country page Infographic'),
+    $blocks['lgaf_block'] = array(
+        'info'          => t('Landbook country page: LGAF note'),
         'status'        => TRUE,
-        'region'        => 'content',
+        'region'        => -1,
         'visibility'    => BLOCK_VISIBILITY_LISTED,
-        'pages'         => "book/countries/*",
+        'pages'         => "",
         'weight'        => 23
     );
     $blocks['media_block'] = array(
@@ -89,7 +89,7 @@ function landbook_block_view($delta = '') {
         $block['subject'] = '';
         $block['content'] = landbook_block_body($delta);
         break;
-    case 'infographic_block' :
+    case 'lgaf_block' :
         $block['subject'] = '';
         $block['content'] = landbook_block_body($delta);
         break;
@@ -148,7 +148,7 @@ function landbook_get_country_info(){
 function landbook_block_body($name) {
     $default = array(
         'disclaimer_block' => '<b>Disclaimer:</b> The data displayed on the Land Portal is provided by third parts indicated as the data source or as the data provider. The Land Portal team is constantly working to ensure the highest possible standard of data quality and accuracy, yet the data is by its nature approximate and will contain some inaccuracies. The data may contain errors introduced by the data provider(s) and/or by the Land Portal team. In addition, this page allows you to compare data from different sources, but not all indicators are necessarily statistically comparable. The Land Portal Foundation (A) expressly disclaims the accuracy, adequacy, or completeness of any data and (B) shall not be liable for any errors, omissions or other defects in, delays or interruptions in such data, or for any actions taken in reliance thereon. Neither the Land Portal Foundation nor any of its data providers will be liable for any damages relating to your use of the data provided herein.',
-        'infographic_block' => 'Note: Some Indicators might have multiple values (e.g. Green-Orange), which might refers to different localities or categories of people. For more information please refers to specific country reports and to the methodology made available by the original data source/provider: <a href="http://go.worldbank.org/21M7S7AZO0" target="_blank">The Land GovernanceAssessment Framework (LGAF) website of the World Bank</a>'
+        'lgaf_block' => 'Note: Some Indicators might have multiple values (e.g. Green-Orange), which might refers to different localities or categories of people. For more information please refers to specific country reports and to the methodology made available by the original data source/provider: <a href="http://go.worldbank.org/21M7S7AZO0" target="_blank">The Land GovernanceAssessment Framework (LGAF) website of the World Bank</a>'
     );
     
     //$default: The default value to use if this variable has never been set.

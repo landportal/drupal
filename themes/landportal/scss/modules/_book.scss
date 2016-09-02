@@ -93,12 +93,16 @@ body[class*="page-book-countries-"] {
         @extend .clearfix;
     }
 
+    #block-landbook-lgaf-block,
     #block-landbook-view-coda-lbcp-spider-note {
-        @extend .col-sm-6;
-        @extend .pull-right;
+        padding: 0;
         font-size: 12px;
         color: #999;
         font-family: "Open Sans",sans-serif;
+    }
+    #block-landbook-view-coda-lbcp-spider-note {
+        @extend .col-sm-6;
+        @extend .pull-right;
     }
 
     #block-landbook-disclaimer-block {
