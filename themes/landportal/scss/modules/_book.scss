@@ -997,6 +997,10 @@ body[class*="page-book-countries-"] {
 #block-landbook-view-coda-lbcp-spider-note {
     @extend .col-sm-6;
     @extend .pull-right;
+    font-size: 12px;
+    color: #999;
+    font-family: "Open Sans",sans-serif;
+
 }
 
 #block-landbook-disclaimer-block {
@@ -1019,4 +1023,14 @@ body[class*="page-book-countries-"] {
 .node-teaser .clearfix:after {
     //display: none;
     clear: left;
+}
+
+.page-book-countries #content {
+    a{
+        color:$green-light;
+        &:hover{
+            color:$green-dark;
+            text-decoration: none;
+        }
+    }
 }

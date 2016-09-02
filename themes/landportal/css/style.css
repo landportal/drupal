@@ -12809,46 +12809,52 @@ button.close {
 }
 /* line 33, ../scss/modules/_buttons.scss */
 .field-type-taxonomy-term-reference .field-item a {
+  color: white !important;
   font-size: .8em;
   text-decoration: none;
   text-transform: uppercase;
 }
+/* line 39, ../scss/modules/_buttons.scss */
+.field-type-taxonomy-term-reference .field-item a:hover {
+  color: #F8F8F8 !important;
+  text-decoration: none;
+}
 
 /* Geographical focus*/
-/* line 44, ../scss/modules/_buttons.scss */
+/* line 49, ../scss/modules/_buttons.scss */
 .field-name-field-geographical-focus .field-item a {
   background-color: #428B3F;
 }
 
 /* Overarching categories (aka domains), themes, topics (concepts) LandVoc terms */
-/* line 51, ../scss/modules/_buttons.scss */
+/* line 56, ../scss/modules/_buttons.scss */
 .field-name-field-related-themes .field-item a {
   background-color: #42B7CA;
 }
 
-/* line 57, ../scss/modules/_buttons.scss */
+/* line 62, ../scss/modules/_buttons.scss */
 .field-name-field-related-domains .field-item a {
   background-color: #42CABD;
 }
 
-/* line 62, ../scss/modules/_buttons.scss */
+/* line 67, ../scss/modules/_buttons.scss */
 .field-name-field-related-topics .field-item a {
   background-color: #428BCA;
 }
 
-/* line 68, ../scss/modules/_buttons.scss */
+/* line 73, ../scss/modules/_buttons.scss */
 .group-landvoc .field {
   display: inline;
 }
 
 /* Debate status */
-/* line 73, ../scss/modules/_buttons.scss */
+/* line 78, ../scss/modules/_buttons.scss */
 .field-name-field-status .field-item {
   margin: 1.5em 0;
   padding: .5em;
 }
 
-/* line 77, ../scss/modules/_buttons.scss */
+/* line 82, ../scss/modules/_buttons.scss */
 .field-name-field-status .field-item {
   float: none;
   border: 1px solid #888888;
@@ -16333,7 +16339,14 @@ body[class*="page-book-countries-"] #map-local {
   margin-top: 14px;
 }
 
-/* line 1002, ../scss/modules/_book.scss */
+/* line 997, ../scss/modules/_book.scss */
+#block-landbook-view-coda-lbcp-spider-note {
+  font-size: 12px;
+  color: #999;
+  font-family: "Open Sans",sans-serif;
+}
+
+/* line 1006, ../scss/modules/_book.scss */
 #block-landbook-disclaimer-block {
   background: #A3C642;
   padding: 15px 0;
@@ -16342,11 +16355,21 @@ body[class*="page-book-countries-"] #map-local {
 }
 
 /* Nasty hack for avoid field clearfix */
-/* line 1019, ../scss/modules/_book.scss */
+/* line 1023, ../scss/modules/_book.scss */
 .node-teaser .clearfix:after, .node-teaser .group-landvoc:after, .node-teaser body[class*="page-book-countries-"] #block-system-main:after, body[class*="page-book-countries-"] .node-teaser #block-system-main:after, .node-teaser #block-landbook-disclaimer-block:after, .node-teaser .view.view-landbook-indicators .views-row:after, .view.view-landbook-indicators .node-teaser .views-row:after,
 .node-teaser .view.view-landbook-catalog .views-row:after,
 .view.view-landbook-catalog .node-teaser .views-row:after {
   clear: left;
+}
+
+/* line 1029, ../scss/modules/_book.scss */
+.page-book-countries #content a {
+  color: #A3C642;
+}
+/* line 1031, ../scss/modules/_book.scss */
+.page-book-countries #content a:hover {
+  color: #617724;
+  text-decoration: none;
 }
 
 /* line 1, ../scss/modules/_users.scss */

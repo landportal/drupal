@@ -31,10 +31,15 @@
     .field-item {
         margin: 0 .2em;
         a {
+            color: white !important;
             font-size: .8em;
             text-decoration: none;
             text-transform: uppercase;
             @extend .landportal-button;
+            &:hover {
+                color: #F8F8F8 !important;
+                text-decoration: none;
+            }
         }
     }
 }
