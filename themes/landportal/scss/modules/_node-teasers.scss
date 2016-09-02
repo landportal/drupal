@@ -1,12 +1,16 @@
 
 
 .node-teaser{
+    .field-name-field-image img {
+        max-height: 150px;
+        max-width: 150px;
+        width: auto;
+        height: auto;
+    }
 
     .node-organization.node-teaser {
         .field-name-field-image img {
             max-height: 70px;
-            max-width: 150px;
-            width: auto;
         }
     }
 
