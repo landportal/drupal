@@ -67,7 +67,7 @@ function landportal_blocks_block_default_body($name) {
     'landportal_footer' => '<p>Copyright © 2014-' . date('Y') . '&nbsp;Land Portal Foundation /&nbsp;RSIN 854330045<br />
 Contact&nbsp;<a href="mailto:hello@landportal.info">hello@landportal.info</a>&nbsp;/&nbsp;Read more <a href="/about">about us</a>&nbsp;/ See our <a href="/about/privacy-policy">privacy&nbsp;policy</a><br />
 &nbsp;</p>',
-    'lp_footer_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li class="google-plus"><a href="https://plus.google.com/107805891674805739531"><i class="fa fa-google-plus"></i></a></li></ul>',
+    'lp_footer_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li class="google-plus"><a href="https://plus.google.com/107805891674805739531"><i class="fa fa-google-plus"></i></a></li><li><a href="https://www.youtube.com/channel/UCXi7yRaXT0DYrY8drhpekwQ" target="_blank"><i class="fa fa-youtube"></i></a></li></ul>',
     'lp_header_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li class="google-plus"><a href="https://plus.google.com/107805891674805739531"><i class="fa fa-google-plus"></i></a></li></ul>',
     'lp_share' => '<a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_google_plus"></a>'
   );
@@ -77,7 +77,6 @@ Contact&nbsp;<a href="mailto:hello@landportal.info">hello@landportal.info</a>&nb
   if (empty($output)) {
     $output = $default[$name];
   }
-
   return $output;
 }
 
