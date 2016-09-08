@@ -54,14 +54,15 @@ projects:
     version: ~
     download:
       working-copy: true
-#      type: git
-#      url: "git://git.drupal.org/project/rdf_indexer.git"
+      type: git
+      branch: "7.x-1.x"
+      url: "git://git.drupal.org/project/rdf_indexer.git"
     patch:
-      - "modules/landlibrary/modules/rdf_indexer/rdf_indexer-add_virtuoso_support-2029717-15.patch"
+      - "https://www.drupal.org/files/issues/rdf_indexer-add_virtuoso_support-2029717-15.patch"
+# Local backup of the patch
+#      - "modules/landlibrary/modules/rdf_indexer/rdf_indexer-add_virtuoso_support-2029717-15.patch"
 # Antonella's changes?
 #      - "modules/landlibrary/modules/rdf_indexer/rdf_indexer-fix_virtuoso_support.patch"
-# Online patch is broken
-#      - "https://www.drupal.org/files/issues/rdf_indexer-add_virtuoso_support-2029717-15.patch"
 
 
 libraries:
