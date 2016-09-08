@@ -18,7 +18,7 @@ function landdebate_enable() {
   $menu = array(
     'menu_name'		=> $GLOBALS['landdebate_menu'],
     'title'		=> "Debate with others",
-    'description'       => "Land debate serves to stimulate debate with others in the land community through sharing news and events, blog posts and online discussions.",
+    'description'       => "Land Debate serves to stimulate debate with others in the land community through sharing news and events, blog posts and online discussions.",
                              );
   if (!menu_load($GLOBALS['landdebate_menu'])) {
     drupal_set_message('Landdebate', 'Adding ' . $GLOBALS['landdebate_menu']);
