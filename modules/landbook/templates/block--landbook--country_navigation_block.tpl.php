@@ -31,7 +31,7 @@
                   <a href="#map-global"><?php print t('Mapping'); ?></a>
                 </li>
                 <li>
-                  <a href="#lgaf"><?php print t('Infographic'); ?></a>
+                  <a href="#lgaf"><?php print t('Infographics'); ?></a>
                 </li>
                 <li>
                   <a href="#media"><?php print t('Media'); ?></a>
