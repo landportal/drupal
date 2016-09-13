@@ -11,7 +11,7 @@
 <?php } ?>
                </div>
         <div class="col-sm-4 txt-c">
-          <a class="displayb" href="/contact-us">
+          <a class="displayb" href="/about/contact-us">
           <img class="c-obj" alt="Feedback" src="<?php print '/'.$theme_path.'/images/ico-feedback.svg';?>">
           <span class="displayb txt-m m-s-top fos" data-localize="global.feedback">Give us your feedback</span>
           </a>
