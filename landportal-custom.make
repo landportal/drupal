@@ -42,9 +42,10 @@ projects:
       - "https://www.drupal.org/files/issues/2383997-7.patch"
   jquery_update:
     version: "3.0-alpha3"
-# get latest development release (no changes since 2014)
-# fixed the Wrong url for taxonomy terms in rdf
-# https://www.drupal.org/project/rdfx
+  link:
+    version: ~
+    patch:
+      - "https://www.drupal.org/files/issues/validate_url-2299657-46.patch"
   rdfx:
     download:
       type: "git"
