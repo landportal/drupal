@@ -37,7 +37,7 @@ $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'node';
 $handler->display->display_options['sorts']['created']['field'] = 'created';
 $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-/* Contextual filter: Content: Provider (field_doc_provider) */
+/* Contextual filter: Content: Data Provider (field_doc_provider) */
 $handler->display->display_options['arguments']['field_doc_provider_target_id']['id'] = 'field_doc_provider_target_id';
 $handler->display->display_options['arguments']['field_doc_provider_target_id']['table'] = 'field_data_field_doc_provider';
 $handler->display->display_options['arguments']['field_doc_provider_target_id']['field'] = 'field_doc_provider_target_id';
@@ -88,7 +88,7 @@ $handler->display->display_options['filters']['title']['expose']['remember_roles
   111903910 => 0,
   30037204 => 0,
 );
-/* Filter criterion: Content: Publication date (field_doc_creation_date) */
+/* Filter criterion: Content: Date of publication (field_doc_creation_date) */
 $handler->display->display_options['filters']['field_doc_creation_date_value']['id'] = 'field_doc_creation_date_value';
 $handler->display->display_options['filters']['field_doc_creation_date_value']['table'] = 'field_data_field_doc_creation_date';
 $handler->display->display_options['filters']['field_doc_creation_date_value']['field'] = 'field_doc_creation_date_value';
@@ -110,29 +110,6 @@ $handler->display->display_options['filters']['field_doc_creation_date_value']['
 $handler->display->display_options['filters']['field_doc_creation_date_value']['granularity'] = 'year';
 $handler->display->display_options['filters']['field_doc_creation_date_value']['form_type'] = 'date_text';
 $handler->display->display_options['filters']['field_doc_creation_date_value']['year_range'] = '-10:+10';
-/* Filter criterion: Content: Country (field_doc_country) */
-$handler->display->display_options['filters']['field_doc_country_tid']['id'] = 'field_doc_country_tid';
-$handler->display->display_options['filters']['field_doc_country_tid']['table'] = 'field_data_field_doc_country';
-$handler->display->display_options['filters']['field_doc_country_tid']['field'] = 'field_doc_country_tid';
-$handler->display->display_options['filters']['field_doc_country_tid']['value'] = '';
-$handler->display->display_options['filters']['field_doc_country_tid']['group'] = 1;
-$handler->display->display_options['filters']['field_doc_country_tid']['exposed'] = TRUE;
-$handler->display->display_options['filters']['field_doc_country_tid']['expose']['operator_id'] = 'field_doc_country_tid_op';
-$handler->display->display_options['filters']['field_doc_country_tid']['expose']['label'] = 'Geographic Focus';
-$handler->display->display_options['filters']['field_doc_country_tid']['expose']['operator'] = 'field_doc_country_tid_op';
-$handler->display->display_options['filters']['field_doc_country_tid']['expose']['identifier'] = 'field_doc_country_tid';
-$handler->display->display_options['filters']['field_doc_country_tid']['expose']['remember'] = TRUE;
-$handler->display->display_options['filters']['field_doc_country_tid']['expose']['remember_roles'] = array(
-  2 => 0,
-  1 => 0,
-  111903911 => 0,
-  111903912 => 0,
-  25521343 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
-$handler->display->display_options['filters']['field_doc_country_tid']['vocabulary'] = 'countries';
-$handler->display->display_options['filters']['field_doc_country_tid']['error_message'] = FALSE;
 /* Filter criterion: Content: Resource type (field_doc_type) */
 $handler->display->display_options['filters']['field_doc_type_tid_1']['id'] = 'field_doc_type_tid_1';
 $handler->display->display_options['filters']['field_doc_type_tid_1']['table'] = 'field_data_field_doc_type';
@@ -188,7 +165,7 @@ $handler->display->display_options['row_plugin'] = 'node';
 $handler->display->display_options['row_options']['links'] = FALSE;
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
-/* Contextual filter: Content: Provider (field_doc_provider) */
+/* Contextual filter: Content: Data Provider (field_doc_provider) */
 $handler->display->display_options['arguments']['field_doc_provider_target_id']['id'] = 'field_doc_provider_target_id';
 $handler->display->display_options['arguments']['field_doc_provider_target_id']['table'] = 'field_data_field_doc_provider';
 $handler->display->display_options['arguments']['field_doc_provider_target_id']['field'] = 'field_doc_provider_target_id';
@@ -205,31 +182,3 @@ $handler->display->display_options['arguments']['field_doc_provider_target_id'][
   'organization' => 'organization',
 );
 $handler->display->display_options['block_description'] = 'Library resources by providers';
-$translatables['by_providers'] = array(
-  t('Master'),
-  t('Resources'),
-  t('more...'),
-  t('Search'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Items per page'),
-  t('- All -'),
-  t('Offset'),
-  t('« first'),
-  t('‹ previous'),
-  t('next ›'),
-  t('last »'),
-  t('Displaying @start - @end of @total'),
-  t('All'),
-  t('%1 Resources'),
-  t('Title'),
-  t('Publication year'),
-  t('Geographic Focus'),
-  t('Resource type'),
-  t('Page'),
-  t('Block'),
-  t('more'),
-  t('Library resources by providers'),
-);
