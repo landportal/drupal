@@ -7,6 +7,9 @@
           </div>
       <?php endif;?>
         </header>
+      <div class="col-xs-12 ldaf-title">
+            <p class="displayb txt-c fos"><?php print t('Land Governance Assessment Framework (LGAF)');?></p>
+      </div>
       <div class="row">
         <form>
           <div class="form-group col-xs-6 col-sm-2">
