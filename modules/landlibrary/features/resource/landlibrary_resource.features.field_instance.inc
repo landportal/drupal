@@ -1325,8 +1325,8 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'entityconnect_show_add_icon' => 0,
     'entityconnect_show_edit_icon' => 0,
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
+    'entityconnect_unload_add' => 1,
+    'entityconnect_unload_edit' => 1,
     'field_name' => 'field_doc_provider',
     'label' => 'Data Provider',
     'required' => 0,
@@ -1341,13 +1341,11 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'options',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'options_select',
       'weight' => 122,
     ),
   );
@@ -1427,13 +1425,11 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'options',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'options_select',
       'weight' => 121,
     ),
   );
@@ -1995,7 +1991,7 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'entityconnect_show_add_icon' => 0,
     'entityconnect_show_edit_icon' => 0,
-    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_orgref',
     'label' => 'Corporate Author(s)',

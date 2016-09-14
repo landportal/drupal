@@ -365,7 +365,7 @@ function landlibrary_resource_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Topics & Regions',
+    'label' => '',
     'weight' => '1',
     'children' => array(
       0 => 'field_geographical_focus',
@@ -375,12 +375,13 @@ function landlibrary_resource_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => '',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-topics-regions field-group-fieldset',
         'id' => '',
+        'classes' => 'group-topics-regions field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_topics_regions|node|landlibrary_resource|default'] = $field_group;
@@ -457,7 +458,6 @@ function landlibrary_resource_field_group_info() {
   t('Settings');
   t('Source information');
   t('Subject of the resource');
-  t('Topics & Regions');
   t('landvoc');
   t('remove');
 

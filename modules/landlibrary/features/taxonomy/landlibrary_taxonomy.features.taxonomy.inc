@@ -15,7 +15,7 @@ function landlibrary_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'For the Landlibrary - internal use only',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => 0,
+      'weight' => -1,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -38,9 +38,9 @@ function landlibrary_taxonomy_taxonomy_default_vocabularies() {
       'name' => 'Landlibrary Resource Type',
       'machine_name' => 'landlibrary_resource_type',
       'description' => '',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
-      'weight' => -1,
+      'weight' => -2,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
