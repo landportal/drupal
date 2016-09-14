@@ -25,7 +25,7 @@ function landportal_display_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'chosen_disable_search';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['chosen_disable_search'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -39,7 +39,7 @@ function landportal_display_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'chosen_jquery_selector';
-  $strongarm->value = '.search-form .form-select,.node-form .form-select,.taxonomy-form-term .form-select';
+  $strongarm->value = '.search-form .form-select,.node-form .form-select,.taxonomy-form-term .form-select, #taxonomy-form-term .form-select';
   $export['chosen_jquery_selector'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -88,7 +88,7 @@ function landportal_display_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'chosen_search_contains';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['chosen_search_contains'] = $strongarm;
 
   $strongarm = new stdClass();
