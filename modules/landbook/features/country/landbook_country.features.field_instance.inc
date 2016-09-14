@@ -454,63 +454,10 @@ function landbook_country_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'node-landlibrary_resource-field_country_promoted'.
-  $field_instances['node-landlibrary_resource-field_country_promoted'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 48,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_country_promoted',
-    'label' => 'Country Promoted',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 146,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Bind this narrative to the proper country.');
   t('Country');
-  t('Country Promoted');
   t('Country narrative');
   t('Description');
   t('Indicators');
