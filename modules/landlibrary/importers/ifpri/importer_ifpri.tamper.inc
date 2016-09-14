@@ -196,22 +196,6 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'ifpri_importer-blank_source_8-copy';
-$feeds_tamper->importer = 'ifpri_importer';
-$feeds_tamper->source = 'Blank source 8';
-$feeds_tamper->plugin_id = 'copy';
-$feeds_tamper->settings = array(
-  'to_from' => 'from',
-  'source' => 'xpathparser:22',
-);
-$feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Copy source value';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_importer-xpathparser_0-explode';
 $feeds_tamper->importer = 'ifpri_importer';
 $feeds_tamper->source = 'xpathparser:0';

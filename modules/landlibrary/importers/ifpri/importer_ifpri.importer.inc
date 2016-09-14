@@ -219,11 +219,6 @@ $feeds_importer->config = array(
           'target' => 'field_geographical_focus',
           'unique' => FALSE,
         ),
-        27 => array(
-          'source' => 'Blank source 8',
-          'target' => 'field_doc_country',
-          'unique' => FALSE,
-        ),
       ),
       'update_existing' => '2',
       'input_format' => 'plain_text',
