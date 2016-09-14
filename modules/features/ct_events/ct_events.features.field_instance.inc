@@ -123,57 +123,6 @@ function ct_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_country_promoted'.
-  $field_instances['node-event-field_country_promoted'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 10,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_country_promoted',
-    'label' => 'Country Promoted',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 112,
-    ),
-  );
-
   // Exported field_instance: 'node-event-field_date'.
   $field_instances['node-event-field_date'] = array(
     'bundle' => 'event',
@@ -720,7 +669,6 @@ If it is only a one day event, the end date should be the same as the starting d
   t('Attach a  file');
   t('Body');
   t('Contact / Event organiser');
-  t('Country Promoted');
   t('Date');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Geographical focus');

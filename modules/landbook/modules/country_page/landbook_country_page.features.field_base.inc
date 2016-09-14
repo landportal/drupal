@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ct_blog_post.features.field_base.inc
+ * landbook_country_page.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function ct_blog_post_field_default_field_bases() {
+function landbook_country_page_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'field_country_promoted'.
