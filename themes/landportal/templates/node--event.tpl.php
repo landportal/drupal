@@ -30,10 +30,6 @@
   <?php $information .= render($content['field_date']); ?>
   <?php $information .= render($content['field_geographical_focus']); ?>
   <?php $information .= render($content['field_related_topics']); ?>
-  <?php $information .= render($content['field_doc_geographic_region']); ?>
-  <?php $information .= render($content['field_doc_country']); ?>
-  <?php $information .= render($content['field_doc_subject']); ?>
-  <?php //$information .= render($content['field_doc_keyword']); ?>
   <?php $contet_class = 'full-content'; ?>
   <?php if (!empty($information)) : ?>
     <section class="information">
