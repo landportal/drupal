@@ -226,66 +226,6 @@ function landlibrary_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-landlibrary_resource-field_doc_country'.
-  $field_instances['node-landlibrary_resource-field_doc_country'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Country to which this resource applies.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 35,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
-      ),
-      'listing' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 32,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 20,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_doc_country',
-    'label' => 'Country',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 140,
-    ),
-  );
-
   // Exported field_instance:
   // 'node-landlibrary_resource-field_doc_creation_date'.
   $field_instances['node-landlibrary_resource-field_doc_creation_date'] = array(
@@ -648,7 +588,7 @@ function landlibrary_resource_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 143,
+      'weight' => 146,
     ),
   );
 
@@ -1572,7 +1512,7 @@ function landlibrary_resource_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 142,
+      'weight' => 145,
     ),
   );
 
@@ -1649,84 +1589,6 @@ function landlibrary_resource_field_default_field_instances() {
       ),
       'type' => 'image_image',
       'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-landlibrary_resource-field_doc_title'.
-  $field_instances['node-landlibrary_resource-field_doc_title'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Title of the resource i.e. the name by which the resource is formally known.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 38,
-      ),
-      'listing' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 18,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 21,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_doc_title',
-    'label' => 'Resource title Deprec',
-    'required' => 0,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'mailchimp_campaign' => 'mailchimp_campaign',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => -10,
-            ),
-            'full_html' => array(
-              'weight' => -9,
-            ),
-            'mailchimp_campaign' => array(
-              'weight' => -9,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-          ),
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 139,
     ),
   );
 
@@ -2192,8 +2054,6 @@ function landlibrary_resource_field_default_field_instances() {
   t('Comment');
   t('Copyright');
   t('Corporate Author(s)');
-  t('Country');
-  t('Country to which this resource applies.');
   t('Data Provider');
   t('Date of publication');
   t('Enter a concept term from Land Portal\'s <a href="/voc/landvoc">LandVoc</a> thesaurus to classify the topical subject of the resource.');
@@ -2218,7 +2078,6 @@ function landlibrary_resource_field_default_field_instances() {
   t('Relation');
   t('Resource Language');
   t('Resource URL');
-  t('Resource title Deprec');
   t('Resource type');
   t('Select the most appropriate type for the resource.');
   t('Subtitle');
@@ -2236,7 +2095,6 @@ function landlibrary_resource_field_default_field_instances() {
   t('Themes');
   t('This is a hidden field storing the value of the URL of the local file (the upload field cannot be mapped to RDF properties).');
   t('Thumbnail of the resource');
-  t('Title of the resource i.e. the name by which the resource is formally known.');
   t('Upload a small picture of the first page of the resource (recommended).');
   t('Upload the resource to the Land Portal\'s server.');
 
