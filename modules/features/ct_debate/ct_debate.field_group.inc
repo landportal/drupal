@@ -79,7 +79,7 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '5',
+    'weight' => '4',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_topics',

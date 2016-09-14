@@ -86,26 +86,17 @@ function ct_debate_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
-      'listing' => array(
-        'custom_settings' => TRUE,
-      ),
-      'promoted_country_page' => array(
-        'custom_settings' => TRUE,
-      ),
-      'print' => array(
-        'custom_settings' => FALSE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '7',
+          'weight' => '5',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '6',
         ),
         'language' => array(
           'weight' => '4',
@@ -114,19 +105,15 @@ function ct_debate_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '10',
+            'weight' => '9',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '9',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'listing' => array(
             'weight' => '6',
-            'visible' => FALSE,
-          ),
-          'promoted_country_page' => array(
-            'weight' => '10',
             'visible' => FALSE,
           ),
         ),

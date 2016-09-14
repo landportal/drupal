@@ -29,18 +29,17 @@ function ct_debate_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'handler' => 'views',
+      'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
           'views-select-list' => array(
             'status' => 0,
           ),
         ),
-        'view' => array(
-          'args' => array(),
-          'display_name' => 'entityreference_1',
-          'view_name' => 'users',
+        'sort' => array(
+          'type' => 'none',
         ),
+        'target_bundles' => array(),
       ),
       'target_type' => 'user',
     ),
