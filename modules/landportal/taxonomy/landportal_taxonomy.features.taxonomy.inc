@@ -15,7 +15,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'Countries',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -7,
+      'weight' => 5,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -40,7 +40,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'Status of a debate',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -5,
+      'weight' => -6,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -90,7 +90,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => 1,
+      'weight' => 0,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -115,7 +115,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -4,
+      'weight' => -5,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -140,7 +140,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'Relationship to the Landportal',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -3,
+      'weight' => -4,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -165,7 +165,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'Specific types for organizations (needs rework)',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -2,
+      'weight' => -3,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -215,7 +215,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'Regions',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -6,
+      'weight' => -7,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
