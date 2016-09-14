@@ -36,6 +36,7 @@ $handler->display->display_options['style_options']['columns'] = array(
   'nid' => 'nid',
   'tid' => 'tid',
   'views_bulk_operations' => 'views_bulk_operations',
+  'field_iso3' => 'field_iso3',
 );
 $handler->display->display_options['style_options']['default'] = 'name';
 $handler->display->display_options['style_options']['info'] = array(
@@ -73,6 +74,13 @@ $handler->display->display_options['style_options']['info'] = array(
     'empty_column' => 0,
   ),
   'views_bulk_operations' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_iso3' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -168,6 +176,14 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'label' => '',
   ),
 );
+/* Field: Taxonomy term: ISO3 */
+$handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
+$handler->display->display_options['fields']['field_iso3']['table'] = 'field_data_field_iso3';
+$handler->display->display_options['fields']['field_iso3']['field'] = 'field_iso3';
+/* Sort criterion: Taxonomy term: Name */
+$handler->display->display_options['sorts']['name']['id'] = 'name';
+$handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['name']['field'] = 'name';
 /* Contextual filter: Taxonomy vocabulary: Machine name */
 $handler->display->display_options['arguments']['machine_name']['id'] = 'machine_name';
 $handler->display->display_options['arguments']['machine_name']['table'] = 'taxonomy_vocabulary';
