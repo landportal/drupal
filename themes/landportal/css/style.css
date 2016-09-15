@@ -17923,10 +17923,12 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   line-height: 1.42857;
 }
 /* line 96, ../scss/modules/_node-teasers.scss */
-.node-teaser .node-intro .text p {
+.node-teaser .node-intro .text p, .node-teaser .node-intro .text h1, .node-teaser .node-intro .text h2, .node-teaser .node-intro .text h3, .node-teaser .node-intro .text h4, .node-teaser .node-intro .text h5 {
   font-size: 16px;
+  font-family: "Merriweather",serif;
+  line-height: 1.42857;
 }
-/* line 100, ../scss/modules/_node-teasers.scss */
+/* line 103, ../scss/modules/_node-teasers.scss */
 .node-teaser .node-intro .date {
   background-image: url("../images/ico-cal.png");
   background-position: left center;
@@ -17938,7 +17940,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   padding-top: 5px;
   font-size: 14px;
 }
-/* line 111, ../scss/modules/_node-teasers.scss */
+/* line 114, ../scss/modules/_node-teasers.scss */
 .node-teaser .node-intro .location {
   background-image: url("../images/ico-loc.png");
   background-position: left center;
@@ -17950,53 +17952,53 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   padding-top: 5px;
   font-size: 14px;
 }
-/* line 123, ../scss/modules/_node-teasers.scss */
+/* line 126, ../scss/modules/_node-teasers.scss */
 .node-teaser.node-landlibrary-resource {
   border-bottom: 1px solid #f0f0f0;
 }
-/* line 124, ../scss/modules/_node-teasers.scss */
+/* line 127, ../scss/modules/_node-teasers.scss */
 .node-teaser.node-landlibrary-resource > h2 {
   margin-top: 0;
   text-align: left;
   line-height: 0;
   margin-bottom: 5px;
 }
-/* line 129, ../scss/modules/_node-teasers.scss */
+/* line 132, ../scss/modules/_node-teasers.scss */
 .node-teaser.node-landlibrary-resource > h2 a {
   color: #91b135;
   font-size: 16px;
   line-height: 1.42857;
   font-family: "Open Sans",sans-serif;
 }
-/* line 135, ../scss/modules/_node-teasers.scss */
+/* line 138, ../scss/modules/_node-teasers.scss */
 .node-teaser.node-landlibrary-resource > h2 a:hover {
   color: #617724;
   text-decoration: none;
 }
-/* line 142, ../scss/modules/_node-teasers.scss */
+/* line 145, ../scss/modules/_node-teasers.scss */
 .node-teaser.node-landlibrary-resource .description-resource {
   padding-top: 0;
 }
-/* line 145, ../scss/modules/_node-teasers.scss */
+/* line 148, ../scss/modules/_node-teasers.scss */
 .node-teaser.node-landlibrary-resource .description-resource p {
   font-family: "Merriweather",serif !important;
   color: #999;
   margin: 5px 0;
   font-size: 16px;
 }
-/* line 153, ../scss/modules/_node-teasers.scss */
+/* line 156, ../scss/modules/_node-teasers.scss */
 .node-teaser.node-landlibrary-resource .keywords span {
   font-family: "Open Sans",sans-serif;
   text-transform: uppercase;
   color: #999;
   font-size: 12px;
 }
-/* line 159, ../scss/modules/_node-teasers.scss */
+/* line 162, ../scss/modules/_node-teasers.scss */
 .node-teaser.node-landlibrary-resource .keywords a {
   color: #91b135;
   font-size: 16px;
 }
-/* line 163, ../scss/modules/_node-teasers.scss */
+/* line 166, ../scss/modules/_node-teasers.scss */
 .node-teaser.node-landlibrary-resource .keywords a:hover {
   color: #617724;
   text-decoration: none;
@@ -18005,7 +18007,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 /* For datasets taxonomy terms
  * Organization teasers float on left
  */
-/* line 175, ../scss/modules/_node-teasers.scss */
+/* line 178, ../scss/modules/_node-teasers.scss */
 .taxonomy-term.vocabulary-datasets .node-organization.node-teaser {
   float: right;
 }
