@@ -75,9 +75,8 @@
           $(this).parent().toggleClass("show");
           $parent=$(this).parent();
           if($(this).parent().hasClass('show')){
-            var height=$parent.find('.mic-content .field-item').height();
-            console.log(height);
-           $('.show .mic-content').animate({height:height});
+            var height=$($parent).find('.mic-content .field-item').height();
+           $($parent).find('.mic-content').animate({height:height});
           }
           else{
             $($parent).find('.mic-content').animate({height:0});
