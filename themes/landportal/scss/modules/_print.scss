@@ -48,14 +48,25 @@ span.flag{
 }
 #page{
     margin-top: 130px;
-    padding-left:80px;
-    padding-right:80px;
+    /*padding-left:80px;
+    padding-right:80px;*/
     
+    .region.region-content{
+        >section:first-child{
+            padding: 0;
+        }
+        >section,
+        >div{
+           padding-left:80px;
+           padding-right:80px; 
+        }
+    }
     
     .print-organization{
         position: absolute;
         top:10px;
         right: 20px;
+        display:block !important;
         p{
             float:left;
             color:#79655A !important;
@@ -221,16 +232,17 @@ input.btn.btn-primary{
     page-break-before: always !important;
 }
 
-#piechart{
+.piechart{
     width:100% !important;
     #wrapper-piechart,
     .spiderchart{
-        width:300px !important;
+        width:400px !important;
         float:left !important;
     }
     #block-landbook-view-coda-lbcp-spider-note{
+        clear:both;
         float:rigth !important;
-        width:300px !important;
+        width:500px !important;
     }
 }
 

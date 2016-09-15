@@ -217,7 +217,33 @@ function landbook_save_promoted_nodes(&$form, &$form_state){
 }
 
 function landbook_get_narrative(){
-    $tid=landbook_get_country_iso('VNM');
-    $term=taxonomy_term_load($tid);//pa($tid,1);
-    return $term->name;
+    if (arg(0) == 'book' && arg(1) == 'countries') {
+        global $language;
+        $tid=landbook_get_region_iso(arg(2));
+        $term=taxonomy_term_load($tid);
+        $node_id=landbook_get_country_narrative_nid($term->name);
+        $node=node_load($node_id);
+        $items = field_get_items('node', $node, 'field_orgref');
+        $item = array_shift($items);
+        if(isset($item['entity'])){
+            $items = field_get_items('node', $item['entity'], 'field_image');
+            $url=$items[0]['uri'];
+            $params = array(
+                'style_name' => 'medium',
+                'path' => $url,
+              );
+            $image=theme('image_style', $params);
+        }
+        else{
+            $image='';
+        }
+        return $image;
+    }
+}
+
+function landbook_preprocess_page(&$variables){
+    $image=landbook_get_narrative();
+    if(!empty($image)){
+       $variables['print_logo_image']='<div class="print-organization"><p>'.t('Country page powered by').'</p>'.$image.'</div>';
+    }
 }
