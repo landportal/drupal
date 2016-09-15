@@ -16380,6 +16380,11 @@ body[class*="page-book-countries-"] #map-local {
   text-decoration: none;
 }
 
+/* line 1044, ../scss/modules/_book.scss */
+#highcharts-0 {
+  width: 100% !important;
+}
+
 /* line 1, ../scss/modules/_users.scss */
 .profile {
   text-align: left;
