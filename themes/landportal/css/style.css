@@ -18039,6 +18039,24 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   border-bottom: 0;
 }
 
+/* line 24, ../scss/modules/_views.scss */
+.view-organizations-overview.view-display-id-page_1 .views-row, .view-organizations-overview.view-display-id-page .views-row {
+  height: 190px;
+  margin: 15px 0;
+  text-align: center;
+  width: auto;
+  clear: none;
+  min-width: 180px;
+}
+/* line 31, ../scss/modules/_views.scss */
+.view-organizations-overview.view-display-id-page_1 .views-row .node-organization.node-teaser, .view-organizations-overview.view-display-id-page .views-row .node-organization.node-teaser {
+  line-height: 150px;
+}
+/* line 34, ../scss/modules/_views.scss */
+.view-organizations-overview.view-display-id-page_1 .views-row .node-organization.node-teaser img, .view-organizations-overview.view-display-id-page .views-row .node-organization.node-teaser img {
+  min-width: 0;
+}
+
 /* Ranking viualization */
 /* line 4, ../scss/modules/_visualizations.scss */
 #ranking-wrapper li {
