@@ -13,8 +13,7 @@ function landbook_views_default_views() {
         'landbook_countries',
         'landbook_countries_related',
         'landbook_catalog',
-        'landbook_indicators',
-        'organizations_overview'
+        'landbook_indicators'
     );
     foreach ($views as $view_name) {
         include drupal_get_path('module', 'landbook').'/views/'.$view_name . '.inc';
