@@ -71,6 +71,7 @@
       },
       initShowInfo: function(context, settings){
         $('.mic-i-a,.mic-i-control').click(function(event){
+          $('.mic-content').addClass('click');
           event.preventDefault();
           $(this).parent().toggleClass("show");
           $parent=$(this).parent();

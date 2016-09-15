@@ -8,6 +8,10 @@
     margin-top:0;
 }
 
+a[href]:after {
+    content: none !important;
+}
+
 #section-header,
 #footer,
 #block-views-landbook-countries-related-block-6,
@@ -85,7 +89,8 @@ span.flag{
 
 .field-name-field-country-info{
     .mic-content{
-        display:inline-block;
+        /*display:inline-block;*/
+        height: auto !important;
 
     }
     .field-collection-view-links{
@@ -131,11 +136,18 @@ span.flag{
                     background-color: #a3c642 !important;
                     color:#ffffff !important;
                 }
+                th:last-child{
+                    display:none !important;
+                }
             }
             tbody{
                 tr{
                     display: table-row;
                     text-align:center;
+                    
+                    td:last-child{
+                        display:none !important;
+                    }
                     a{
                         color:#a3c642 !important;
                     }
@@ -182,7 +194,7 @@ input.btn.btn-primary{
 
 
 #map-local{
-    margin-left:-30%;
+    /*margin-left:-30%;*/
 }
 
 .map-fluid{
