@@ -79,14 +79,14 @@ hide($content['field_geographical_focus']);
 hide($content['locations']);
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <aside>
+  <aside class="col-sm-4 col-lg-3">
 <?php print render($content['field_image']); ?>
 <?php if ($page):
 print render($content['field_related_topics']);
 print render($content['field_geographical_focus']);
 endif ?>
   </aside>
-  <div class="content"<?php print $content_attributes; ?>>
+  <div class="content col-sm-8 col-lg-9"<?php print $content_attributes; ?>>
 <?php print render($title_prefix); ?>
 <?php if ($page): ?>
     <h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>

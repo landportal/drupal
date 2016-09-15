@@ -183,7 +183,15 @@
 /* LGAF Chart */
 #lgaf{
     overflow: hidden;
-
+    .ldaf-title{
+        margin: 20px 0 10px 0;
+        p{
+            font-family: "Open Sans",sans-serif;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.42857;
+        }
+    }
     &.country-section{
         border-bottom:none;
     }

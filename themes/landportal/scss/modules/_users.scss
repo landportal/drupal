@@ -204,6 +204,16 @@
     }
     .node-organization {
         //min-height: 500px;
+        aside{
+            .field-type-image{
+                margin-bottom:5px;
+                img{
+                    width: 220px;
+                    height: auto;
+                }
+            }
+        }
+        
         .side {
             text-align: center;
             position: absolute;
@@ -216,10 +226,10 @@
         &>.content {
             @include background-image(linear-gradient(#dddddd, $grey-light 50%, #dddddd));
             background-size: 1px 90%;
-            background-position: 0 90%;
+            background-position: 0 5px;
             background-repeat: no-repeat;
             padding-left: 1em;
-            margin-left: 25%;
+            /*margin-left: 25%;*/
             .field-name-body {
                 padding: 1em 0;
             }
