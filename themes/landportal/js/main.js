@@ -71,15 +71,16 @@
       },
       initShowInfo: function(context, settings){
         $('.mic-i-a,.mic-i-control').click(function(event){
-          $('.mic-content').addClass('click');
           event.preventDefault();
           $(this).parent().toggleClass("show");
           $parent=$(this).parent();
           if($(this).parent().hasClass('show')){
-           $('.show .mic-content').slideDown();
+            var height=$parent.find('.mic-content .field-item').height();
+            console.log(height);
+           $('.show .mic-content').animate({height:height});
           }
           else{
-            $($parent).find('.mic-content').slideUp();
+            $($parent).find('.mic-content').animate({height:0});
           }
         });
       },

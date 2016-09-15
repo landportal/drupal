@@ -15875,6 +15875,10 @@ body[class*="page-book-countries-"] #map-local {
 /* line 587, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info .content {
   position: relative;
+  /*.mic-content.click{
+      display:none;
+      height: auto;
+  }*/
 }
 /* line 590, ../scss/modules/_book.scss */
 .node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info .content .mic-i-a {
@@ -15900,11 +15904,6 @@ body[class*="page-book-countries-"] #map-local {
   /*display:none;*/
   height: 0;
   overflow: hidden;
-}
-/* line 613, ../scss/modules/_book.scss */
-.node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info .content .mic-content.click {
-  display: none;
-  height: auto;
 }
 /* line 622, ../scss/modules/_book.scss */
 .node-landbook-country .sources {
