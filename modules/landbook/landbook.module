@@ -215,3 +215,9 @@ function landbook_save_promoted_nodes(&$form, &$form_state){
     $form_state['values']['field_country_promoted']['und'][]['tid']=$value;
   }
 }
+
+function landbook_get_narrative(){
+    $tid=landbook_get_country_iso('VNM');
+    $term=taxonomy_term_load($tid);//pa($tid,1);
+    return $term->name;
+}

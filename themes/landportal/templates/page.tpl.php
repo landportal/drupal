@@ -54,7 +54,16 @@
       <?php endif; ?>
 
     </div></div> <!-- /#main, /#main-wrapper -->
-
+    
+    <?php if($title == 'Countries'): ?>
+    <div class="print-organization">
+        <?php $tid=landbook_get_narrative(); ?>
+        <?php //pa($tid,1); ?>
+        <?php //pa(landbook_get_country_narrative_nid($country_title),1); ?>
+        <p><?php print t('Country page powered by'); ?></p>
+        <img src="http://dev.landportal.drupal7.dev/sites/dev.landportal.info/files/styles/medium/public/ODV-logo.png?itok=4bJDndLx">
+    </div>
+    <?php endif; ?>
     <div id="footer">
         <div class="section container">
             <div class="row">

@@ -1,7 +1,7 @@
 
 
 @page{
-    margin:50px 80px 50px 80px;
+    margin:50px 0 50px 0;
 }
 
 @page:first{
@@ -33,20 +33,43 @@ span.flag{
 
 
 #header{
-    height:100px;
-    border-bottom:1px solid #706057 !important;
+    height:120px;
+    border-bottom:1px solid #D4CECA !important;
     position:absolute;
     top:0;
+    left:0;
     width:100%;
     display:block;
     z-index:9999 !important;
-    padding-top:30px;
+    padding-top:40px;
     .row{
         display:none;
     }
 }
 #page{
-    margin-top: 120px;
+    margin-top: 130px;
+    padding-left:80px;
+    padding-right:80px;
+    
+    
+    .print-organization{
+        position: absolute;
+        top:10px;
+        right: 20px;
+        p{
+            float:left;
+            color:#79655A !important;
+            font-size:22px;
+            margin-right:20px;
+            margin-top: 50px;
+        }
+        img{
+            width:100px;
+            height:auto;
+            float:right;
+        }
+    }
+
 }
 
 .field-name-field-country-info{
