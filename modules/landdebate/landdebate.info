@@ -17,7 +17,6 @@ dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = landcommunity
-dependencies[] = landportal_blocks
 dependencies[] = landportal_utility
 dependencies[] = menu
 dependencies[] = options

@@ -5,7 +5,6 @@ version = 7.x-2.4
 dependencies[] = ctools
 dependencies[] = fe_block
 dependencies[] = features
-dependencies[] = landportal_blocks
 dependencies[] = menu
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
