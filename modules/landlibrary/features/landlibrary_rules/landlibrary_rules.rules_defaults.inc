@@ -52,7 +52,7 @@ function landlibrary_rules_default_rules_configuration() {
     }
   }');
   $items['rules_add_topic_automatically'] = entity_import('rules_config', '{ "rules_add_topic_automatically" : {
-      "LABEL" : "Add topic automatically",
+      "LABEL" : "Add LandVoc concept automatically",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
       "TAGS" : [ "landlibrary", "autotag" ],
