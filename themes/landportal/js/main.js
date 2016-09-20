@@ -136,11 +136,8 @@
         }, 100);
       },
       initCarousel: function(context, settings){
-        url = window.location;
-        urlParts = /^(?:\w+\:\/\/)?([^\/]+)(.*)$/.exec(url);
-        hostname = urlParts[1]; // www.example.com
-        path = urlParts[2]; // /path/to/somwhere
-        var url_parts=path.split('/');
+        url = window.location.href;
+        var url_parts=url.split('/');console.log(url_parts);
         if(url_parts[url_parts.length-1]!='pdf'){
             if($('#reletad-content .view-display-id-block_6 .empty').is('#reletad-content .view-display-id-block_6 .empty')){
                 $('#reletad-content').addClass('empty');
