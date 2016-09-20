@@ -136,32 +136,39 @@
         }, 100);
       },
       initCarousel: function(context, settings){
-        if($('#reletad-content .view-display-id-block_6 .empty').is('#reletad-content .view-display-id-block_6 .empty')){
-            $('#reletad-content').addClass('empty');
-        }
-        else{
-          $('#country-navigation').addClass('no-reletad-content-empty');
-        }
+        url = window.location;
+        urlParts = /^(?:\w+\:\/\/)?([^\/]+)(.*)$/.exec(url);
+        hostname = urlParts[1]; // www.example.com
+        path = urlParts[2]; // /path/to/somwhere
+        var url_parts=path.split('/');
+        if(url_parts[url_parts.length-1]!='pdf'){
+            if($('#reletad-content .view-display-id-block_6 .empty').is('#reletad-content .view-display-id-block_6 .empty')){
+                $('#reletad-content').addClass('empty');
+            }
+            else{
+              $('#country-navigation').addClass('no-reletad-content-empty');
+            }
 
 
-        $('.view-landbook-countries-related.view-display-id-block_6 .view-content').owlCarousel({
-          center: false,
-          items:3,
-          loop:false,
-          margin:1,
-          responsive:{
-              320:{
-                items:1,
-                loop: false,
-              },
-              768:{
-                items:2
-              },
-              1200:{
-                items:3
+            $('.view-landbook-countries-related.view-display-id-block_6 .view-content').owlCarousel({
+              center: false,
+              items:3,
+              loop:false,
+              margin:1,
+              responsive:{
+                  320:{
+                    items:1,
+                    loop: false,
+                  },
+                  768:{
+                    items:2
+                  },
+                  1200:{
+                    items:3
+                  }
               }
-          }
-        });
+            });
+        }
       },
       initReadMore: function(context, settings){
         $('.node-landlibrary-resource.node-teaser .field-name-field-doc-description').readmore({
