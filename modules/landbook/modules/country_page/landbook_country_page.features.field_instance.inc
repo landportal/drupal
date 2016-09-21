@@ -212,7 +212,7 @@ function landbook_country_page_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 146,
+      'weight' => 10,
     ),
   );
 
