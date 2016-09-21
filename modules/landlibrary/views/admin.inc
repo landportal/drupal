@@ -2,8 +2,8 @@
 /**
  * Landlibrary views: Admin
  *
- * View name: landlibrary_search
- * View URL: https://landportal.info/admin/structure/views/view/library_search/
+ * View name: admin_view_landlibrary
+ * View URL: https://landportal.info/admin/structure/views/view/admin_view_library
  */
 
 $view = new view();
@@ -40,21 +40,24 @@ $handler->display->display_options['style_options']['columns'] = array(
   'promote' => 'promote',
   'sticky' => 'sticky',
   'title' => 'title',
-  'field_doc_creator' => 'field_doc_creator',
+  'field_doc_people' => 'field_doc_people',
+  'field_orgref' => 'field_orgref',
   'field_doc_publisher' => 'field_doc_publisher',
   'field_doc_provider' => 'field_doc_provider',
-  'field_doc_creation_date' => 'field_doc_creation_date',
-  'field_doc_language' => 'field_doc_language',
   'field_doc_type' => 'field_doc_type',
-  'field_format' => 'field_format',
-  'field_doc_country' => 'field_doc_country',
+  'field_doc_creation_date' => 'field_doc_creation_date',
   'field_geographical_focus' => 'field_geographical_focus',
   'field_related_domains' => 'field_related_domains',
   'field_related_themes' => 'field_related_themes',
   'field_related_topics' => 'field_related_topics',
+  'field_doc_language' => 'field_doc_language',
   'changed' => 'changed',
   'name' => 'name',
+  'field_doc_thumb' => 'field_doc_thumb',
   'language' => 'language',
+  'field_doc_country' => 'field_doc_country',
+  'field_doc_copyrights_statement' => 'field_doc_copyrights_statement',
+  'field_doc_is_shown_by' => 'field_doc_is_shown_by',
 );
 $handler->display->display_options['style_options']['default'] = 'nid';
 $handler->display->display_options['style_options']['info'] = array(
@@ -108,7 +111,14 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_creator' => array(
+  'field_doc_people' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_orgref' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -125,31 +135,14 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_creation_date' => array(
-    'sortable' => 0,
-    'default_sort_order' => 'asc',
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'field_doc_language' => array(
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
   'field_doc_type' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_format' => array(
-    'sortable' => 0,
+  'field_doc_creation_date' => array(
+    'sortable' => 1,
     'default_sort_order' => 'asc',
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'field_doc_country' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -174,6 +167,11 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
+  'field_doc_language' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
   'changed' => array(
     'sortable' => 1,
     'default_sort_order' => 'asc',
@@ -188,8 +186,34 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
+  'field_doc_thumb' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
   'language' => array(
     'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_doc_country' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_doc_copyrights_statement' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_doc_is_shown_by' => array(
+    'sortable' => 0,
     'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
@@ -330,6 +354,25 @@ $handler->display->display_options['fields']['title']['table'] = 'node';
 $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+/* Field: Content: Abstract or Description */
+$handler->display->display_options['fields']['field_doc_description']['id'] = 'field_doc_description';
+$handler->display->display_options['fields']['field_doc_description']['table'] = 'field_data_field_doc_description';
+$handler->display->display_options['fields']['field_doc_description']['field'] = 'field_doc_description';
+$handler->display->display_options['fields']['field_doc_description']['alter']['max_length'] = '200';
+$handler->display->display_options['fields']['field_doc_description']['alter']['trim'] = TRUE;
+/* Field: Content: Author(s), editor(s), contributor(s) */
+$handler->display->display_options['fields']['field_doc_people']['id'] = 'field_doc_people';
+$handler->display->display_options['fields']['field_doc_people']['table'] = 'field_data_field_doc_people';
+$handler->display->display_options['fields']['field_doc_people']['field'] = 'field_doc_people';
+/* Field: Field: Organization */
+$handler->display->display_options['fields']['field_orgref']['id'] = 'field_orgref';
+$handler->display->display_options['fields']['field_orgref']['table'] = 'field_data_field_orgref';
+$handler->display->display_options['fields']['field_orgref']['field'] = 'field_orgref';
+$handler->display->display_options['fields']['field_orgref']['label'] = 'Corporate Authors';
+$handler->display->display_options['fields']['field_orgref']['settings'] = array(
+  'link' => 1,
+);
+$handler->display->display_options['fields']['field_orgref']['delta_offset'] = '0';
 /* Field: Content: Publisher */
 $handler->display->display_options['fields']['field_doc_publisher']['id'] = 'field_doc_publisher';
 $handler->display->display_options['fields']['field_doc_publisher']['table'] = 'field_data_field_doc_publisher';
@@ -338,7 +381,6 @@ $handler->display->display_options['fields']['field_doc_publisher']['settings'] 
   'link' => 1,
 );
 $handler->display->display_options['fields']['field_doc_publisher']['delta_offset'] = '0';
-$handler->display->display_options['fields']['field_doc_publisher']['multi_type'] = 'ol';
 /* Field: Content: Data Provider */
 $handler->display->display_options['fields']['field_doc_provider']['id'] = 'field_doc_provider';
 $handler->display->display_options['fields']['field_doc_provider']['table'] = 'field_data_field_doc_provider';
@@ -347,6 +389,16 @@ $handler->display->display_options['fields']['field_doc_provider']['relationship
 $handler->display->display_options['fields']['field_doc_provider']['settings'] = array(
   'link' => 1,
 );
+/* Field: Content: Resource type */
+$handler->display->display_options['fields']['field_doc_type']['id'] = 'field_doc_type';
+$handler->display->display_options['fields']['field_doc_type']['table'] = 'field_data_field_doc_type';
+$handler->display->display_options['fields']['field_doc_type']['field'] = 'field_doc_type';
+$handler->display->display_options['fields']['field_doc_type']['alter']['text'] = '[field_doc_creation_date] [field_doc_type] ([field_doc_language])';
+$handler->display->display_options['fields']['field_doc_type']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_doc_type']['empty'] = '-NO RT-';
+$handler->display->display_options['fields']['field_doc_type']['hide_alter_empty'] = FALSE;
+$handler->display->display_options['fields']['field_doc_type']['type'] = 'taxonomy_term_reference_link';
+$handler->display->display_options['fields']['field_doc_type']['delta_offset'] = '0';
 /* Field: Content: Date of publication */
 $handler->display->display_options['fields']['field_doc_creation_date']['id'] = 'field_doc_creation_date';
 $handler->display->display_options['fields']['field_doc_creation_date']['table'] = 'field_data_field_doc_creation_date';
@@ -363,42 +415,49 @@ $handler->display->display_options['fields']['field_doc_creation_date']['setting
   'show_remaining_days' => 0,
   'show_repeat_rule' => 'show',
 );
-/* Field: Content: Resource type */
-$handler->display->display_options['fields']['field_doc_type']['id'] = 'field_doc_type';
-$handler->display->display_options['fields']['field_doc_type']['table'] = 'field_data_field_doc_type';
-$handler->display->display_options['fields']['field_doc_type']['field'] = 'field_doc_type';
-$handler->display->display_options['fields']['field_doc_type']['label'] = '';
-$handler->display->display_options['fields']['field_doc_type']['exclude'] = TRUE;
-$handler->display->display_options['fields']['field_doc_type']['alter']['text'] = '[field_doc_creation_date] [field_doc_type] ([field_doc_language])';
-$handler->display->display_options['fields']['field_doc_type']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['field_doc_type']['empty'] = '-NO RT-';
-$handler->display->display_options['fields']['field_doc_type']['hide_alter_empty'] = FALSE;
-$handler->display->display_options['fields']['field_doc_type']['type'] = 'taxonomy_term_reference_plain';
-$handler->display->display_options['fields']['field_doc_type']['delta_offset'] = '0';
+/* Field: Field: Geographical focus */
+$handler->display->display_options['fields']['field_geographical_focus']['id'] = 'field_geographical_focus';
+$handler->display->display_options['fields']['field_geographical_focus']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['fields']['field_geographical_focus']['field'] = 'field_geographical_focus';
+$handler->display->display_options['fields']['field_geographical_focus']['delta_offset'] = '0';
 /* Field: Field: Overarching categories */
 $handler->display->display_options['fields']['field_related_domains']['id'] = 'field_related_domains';
 $handler->display->display_options['fields']['field_related_domains']['table'] = 'field_data_field_related_domains';
 $handler->display->display_options['fields']['field_related_domains']['field'] = 'field_related_domains';
-$handler->display->display_options['fields']['field_related_domains']['label'] = '';
-$handler->display->display_options['fields']['field_related_domains']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_related_domains']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_related_domains']['delta_offset'] = '0';
 /* Field: Field: Themes */
 $handler->display->display_options['fields']['field_related_themes']['id'] = 'field_related_themes';
 $handler->display->display_options['fields']['field_related_themes']['table'] = 'field_data_field_related_themes';
 $handler->display->display_options['fields']['field_related_themes']['field'] = 'field_related_themes';
-$handler->display->display_options['fields']['field_related_themes']['label'] = '';
-$handler->display->display_options['fields']['field_related_themes']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_related_themes']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_related_themes']['delta_offset'] = '0';
 /* Field: Field: Related concepts */
 $handler->display->display_options['fields']['field_related_topics']['id'] = 'field_related_topics';
 $handler->display->display_options['fields']['field_related_topics']['table'] = 'field_data_field_related_topics';
 $handler->display->display_options['fields']['field_related_topics']['field'] = 'field_related_topics';
-$handler->display->display_options['fields']['field_related_topics']['label'] = 'LandVoc';
-$handler->display->display_options['fields']['field_related_topics']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_related_topics']['label'] = 'Related Concepts';
 $handler->display->display_options['fields']['field_related_topics']['alter']['text'] = '[field_related_domains] [field_related_themes] [field_related_topics]';
+$handler->display->display_options['fields']['field_related_topics']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_related_topics']['delta_offset'] = '0';
+/* Field: Content: Resource Language */
+$handler->display->display_options['fields']['field_doc_language']['id'] = 'field_doc_language';
+$handler->display->display_options['fields']['field_doc_language']['table'] = 'field_data_field_doc_language';
+$handler->display->display_options['fields']['field_doc_language']['field'] = 'field_doc_language';
+$handler->display->display_options['fields']['field_doc_language']['delta_offset'] = '0';
+/* Field: Content: Copyright owner */
+$handler->display->display_options['fields']['field_doc_copyrights_statement']['id'] = 'field_doc_copyrights_statement';
+$handler->display->display_options['fields']['field_doc_copyrights_statement']['table'] = 'field_data_field_doc_copyrights_statement';
+$handler->display->display_options['fields']['field_doc_copyrights_statement']['field'] = 'field_doc_copyrights_statement';
+/* Field: Content: Resource URL */
+$handler->display->display_options['fields']['field_doc_is_shown_by']['id'] = 'field_doc_is_shown_by';
+$handler->display->display_options['fields']['field_doc_is_shown_by']['table'] = 'field_data_field_doc_is_shown_by';
+$handler->display->display_options['fields']['field_doc_is_shown_by']['field'] = 'field_doc_is_shown_by';
+$handler->display->display_options['fields']['field_doc_is_shown_by']['click_sort_column'] = 'url';
+$handler->display->display_options['fields']['field_doc_is_shown_by']['type'] = 'link_domain';
+$handler->display->display_options['fields']['field_doc_is_shown_by']['settings'] = array(
+  'strip_www' => 0,
+);
 /* Field: Updated */
 $handler->display->display_options['fields']['changed']['id'] = 'changed';
 $handler->display->display_options['fields']['changed']['table'] = 'node';
@@ -414,15 +473,20 @@ $handler->display->display_options['fields']['name']['id'] = 'name';
 $handler->display->display_options['fields']['name']['table'] = 'users';
 $handler->display->display_options['fields']['name']['field'] = 'name';
 $handler->display->display_options['fields']['name']['relationship'] = 'uid';
+$handler->display->display_options['fields']['name']['label'] = 'Username';
+/* Field: Content: Thumbnail of the resource */
+$handler->display->display_options['fields']['field_doc_thumb']['id'] = 'field_doc_thumb';
+$handler->display->display_options['fields']['field_doc_thumb']['table'] = 'field_data_field_doc_thumb';
+$handler->display->display_options['fields']['field_doc_thumb']['field'] = 'field_doc_thumb';
+$handler->display->display_options['fields']['field_doc_thumb']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_doc_thumb']['settings'] = array(
+  'image_style' => 'thumbnail',
+  'image_link' => '',
+);
 /* Field: Content: Language */
 $handler->display->display_options['fields']['language']['id'] = 'language';
 $handler->display->display_options['fields']['language']['table'] = 'node';
 $handler->display->display_options['fields']['language']['field'] = 'language';
-/* Field: Field: Geographical focus */
-$handler->display->display_options['fields']['field_geographical_focus']['id'] = 'field_geographical_focus';
-$handler->display->display_options['fields']['field_geographical_focus']['table'] = 'field_data_field_geographical_focus';
-$handler->display->display_options['fields']['field_geographical_focus']['field'] = 'field_geographical_focus';
-$handler->display->display_options['fields']['field_geographical_focus']['delta_offset'] = '0';
 /* Field: Content: Country */
 $handler->display->display_options['fields']['field_doc_country']['id'] = 'field_doc_country';
 $handler->display->display_options['fields']['field_doc_country']['table'] = 'field_data_field_doc_country';
@@ -654,3 +718,4 @@ $handler->display->display_options['filters']['field_doc_country_tid']['vocabula
 $handler = $view->new_display('system', 'System', 'system_1');
 $handler->display->display_options['defaults']['access'] = FALSE;
 $handler->display->display_options['path'] = 'admin/content/library';
+
