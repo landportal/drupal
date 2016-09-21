@@ -1,8 +1,8 @@
 GLTN Simple LP CSV importer
 ===========================
 
-:URL: https://landportal.info/admin/structure/feeds/gltn_simple_land_portal_csv_importer
-:source code: https://github.com/landportal/drupal/tree/master/modules/landlibrary/importers/gltn_simple_land_portal_csv_importer
+:URL: https://landportal.info/admin/structure/feeds/gltn_simple_lp_csv_importer
+:source code: https://github.com/landportal/drupal/tree/master/modules/landlibrary/importers/gltn_simple_lp_csv_importer
 :Author: Carlos Tejo-Alonso (based on the work of Antonella and Jules)
 
 This importer is based on the Simple LP CSV importer
@@ -10,7 +10,7 @@ This importer is based on the Simple LP CSV importer
 
 
 Workflow GLTN Simple LP CSV importer
-===================================================
+====================================
 
 - Populate the excel file
 - Export as .csv (; separated)
