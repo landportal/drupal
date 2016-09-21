@@ -3,7 +3,7 @@ body{
 }
 
 #main-wrapper{
-    padding-top: 80px !important;
+    padding-top: 130px !important;
 }
 /*
 #compare,
@@ -14,8 +14,9 @@ body{
 
 #header{
     position:fixed !important;
-    top:-50px !important;
+    top:0px !important;
     left:0 !important;
+    height:120px !important;
 
 }
 /*

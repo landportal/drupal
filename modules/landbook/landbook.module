@@ -60,7 +60,7 @@ function landbook_page_build(&$page) {
             $pdf->setOptions(array(
                 'page-size'=>'A4',
                 'javascript-delay' => 10000,
-                'margin-top'=>10,
+                'margin-top'=>0,
                 'margin-left'=>0,
                 'margin-right'=>0,
                 'user-style-sheet'=>path_to_theme() . '/css/printpdf.css',
