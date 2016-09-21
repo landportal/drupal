@@ -55,7 +55,6 @@ $handler->display->display_options['style_options']['columns'] = array(
   'name' => 'name',
   'field_doc_thumb' => 'field_doc_thumb',
   'language' => 'language',
-  'field_doc_country' => 'field_doc_country',
   'field_doc_copyrights_statement' => 'field_doc_copyrights_statement',
   'field_doc_is_shown_by' => 'field_doc_is_shown_by',
 );
