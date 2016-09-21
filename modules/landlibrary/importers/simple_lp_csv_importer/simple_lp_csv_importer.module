@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Simple Land Portal CSV importer feature.
+ */
+
+include_once 'simple_lp_csv_importer.features.inc';
