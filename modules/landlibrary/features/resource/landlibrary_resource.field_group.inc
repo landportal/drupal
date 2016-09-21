@@ -305,10 +305,11 @@ function landlibrary_resource_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_doc_keyword',
-      1 => 'locations',
-      2 => 'path',
-      3 => 'xmlsitemap',
-      4 => 'language',
+      1 => 'field_country_promoted',
+      2 => 'locations',
+      3 => 'path',
+      4 => 'xmlsitemap',
+      5 => 'language',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

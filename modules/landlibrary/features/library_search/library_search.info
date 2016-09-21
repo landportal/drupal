@@ -42,7 +42,6 @@ features[facetapi][] = apachesolr@landlibrary_search:block:sm_field_doc_edition
 features[facetapi][] = apachesolr@landlibrary_search:block:sm_field_doc_identifier
 features[facetapi][] = apachesolr@landlibrary_search:block:sm_field_doc_provider
 features[facetapi][] = apachesolr@landlibrary_search:block:sm_field_doc_publisher
-features[facetapi][] = apachesolr@landlibrary_search:block:sm_field_doc_title
 features[facetapi][] = apachesolr@landlibrary_search:block:sm_field_id
 features[facetapi][] = apachesolr@landlibrary_search:block:sm_field_orgref
 features[facetapi][] = apachesolr@landlibrary_search:block:sm_field_referenced_type

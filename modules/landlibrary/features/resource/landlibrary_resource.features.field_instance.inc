@@ -143,7 +143,7 @@ function landlibrary_resource_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'The organization / person that owns the resource.',
+    'description' => 'The organization / person that owns the copyrights of the resource.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -182,7 +182,7 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_copyrights_statement',
-    'label' => 'Copyright',
+    'label' => 'Copyright owner',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -2052,7 +2052,7 @@ function landlibrary_resource_field_default_field_instances() {
   t('An ISBN or another unique label that identifies the resource. (If your resource does not have a unique label, please enter the first six letters of the publisher - first six letters of the title - YYYYMM.E.g.: Landpo-Firsts-201607).');
   t('Author(s), editor(s), contributor(s)');
   t('Comment');
-  t('Copyright');
+  t('Copyright owner');
   t('Corporate Author(s)');
   t('Data Provider');
   t('Date of publication');
@@ -2087,7 +2087,7 @@ function landlibrary_resource_field_default_field_instances() {
   t('The geographical focus of the resource (possible to select several).');
   t('The language of the resource');
   t('The location of the source.');
-  t('The organization / person that owns the resource.');
+  t('The organization / person that owns the copyrights of the resource.');
   t('The organization that makes the resource available (needs to be linked to an organizational profile on the Land Portal).');
   t('The organization that published the resource (needs to be linked to an organizational profile on the Land Portal).');
   t('The page on the website of the publisher where the resource is presented (e.g.: http://landportal.info/library/resources/report-sharing-best-practices-and-lessons-learned-supporting-women%E2%80%99s-land-rights).');

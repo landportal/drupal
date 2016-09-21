@@ -22,7 +22,7 @@ function landlibrary_rules_default_rules_configuration() {
       ],
       "DO" : [
         { "component_rules_autotag_tag" : {
-            "text" : "[node:title] [node:field-doc-description] [node:field-doc-alt-title] [node:field-doc-title] ",
+            "text" : "[node:title] [node:field-doc-description] [node:field-doc-alt-title] [node:field-doc-keyword] ",
             "vocabulary" : "regions",
             "target_terms" : [ "node:field-geographical-focus" ]
           }
@@ -43,7 +43,7 @@ function landlibrary_rules_default_rules_configuration() {
       ],
       "DO" : [
         { "component_rules_autotag_tag" : {
-            "text" : "[node:title] [node:field-doc-description] [node:field-doc-alt-title] [node:field-doc-title] ",
+            "text" : "[node:title] [node:field-doc-description] [node:field-doc-alt-title] [node:field-doc-keyword] ",
             "vocabulary" : "landvoc_concepts",
             "target_terms" : [ "node:field-related-topics" ]
           }
