@@ -364,7 +364,7 @@ $handler->display->display_options['fields']['field_doc_description']['alter']['
 $handler->display->display_options['fields']['field_doc_people']['id'] = 'field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['table'] = 'field_data_field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['field'] = 'field_doc_people';
-/* Field: Field: Organization */
+/* Field: Field: Corporate Author(s) */
 $handler->display->display_options['fields']['field_orgref']['id'] = 'field_orgref';
 $handler->display->display_options['fields']['field_orgref']['table'] = 'field_data_field_orgref';
 $handler->display->display_options['fields']['field_orgref']['field'] = 'field_orgref';
@@ -445,7 +445,7 @@ $handler->display->display_options['fields']['field_doc_language']['id'] = 'fiel
 $handler->display->display_options['fields']['field_doc_language']['table'] = 'field_data_field_doc_language';
 $handler->display->display_options['fields']['field_doc_language']['field'] = 'field_doc_language';
 $handler->display->display_options['fields']['field_doc_language']['delta_offset'] = '0';
-/* Field: Content: Copyright owner */
+/* Field: Content: Copyright */
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['id'] = 'field_doc_copyrights_statement';
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['table'] = 'field_data_field_doc_copyrights_statement';
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['field'] = 'field_doc_copyrights_statement';
@@ -487,11 +487,6 @@ $handler->display->display_options['fields']['field_doc_thumb']['settings'] = ar
 $handler->display->display_options['fields']['language']['id'] = 'language';
 $handler->display->display_options['fields']['language']['table'] = 'node';
 $handler->display->display_options['fields']['language']['field'] = 'language';
-/* Field: Content: Country */
-$handler->display->display_options['fields']['field_doc_country']['id'] = 'field_doc_country';
-$handler->display->display_options['fields']['field_doc_country']['table'] = 'field_data_field_doc_country';
-$handler->display->display_options['fields']['field_doc_country']['field'] = 'field_doc_country';
-$handler->display->display_options['fields']['field_doc_country']['delta_offset'] = '0';
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -692,30 +687,8 @@ $handler->display->display_options['filters']['field_geographical_focus_tid']['e
   30037204 => 0,
 );
 $handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
-/* Filter criterion: Content: Country (field_doc_country) */
-$handler->display->display_options['filters']['field_doc_country_tid']['id'] = 'field_doc_country_tid';
-$handler->display->display_options['filters']['field_doc_country_tid']['table'] = 'field_data_field_doc_country';
-$handler->display->display_options['filters']['field_doc_country_tid']['field'] = 'field_doc_country_tid';
-$handler->display->display_options['filters']['field_doc_country_tid']['value'] = '';
-$handler->display->display_options['filters']['field_doc_country_tid']['exposed'] = TRUE;
-$handler->display->display_options['filters']['field_doc_country_tid']['expose']['operator_id'] = 'field_doc_country_tid_op';
-$handler->display->display_options['filters']['field_doc_country_tid']['expose']['label'] = 'Country (field_doc_country)';
-$handler->display->display_options['filters']['field_doc_country_tid']['expose']['operator'] = 'field_doc_country_tid_op';
-$handler->display->display_options['filters']['field_doc_country_tid']['expose']['identifier'] = 'field_doc_country_tid';
-$handler->display->display_options['filters']['field_doc_country_tid']['expose']['multiple'] = TRUE;
-$handler->display->display_options['filters']['field_doc_country_tid']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111903911 => 0,
-  111903912 => 0,
-  25521343 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
-$handler->display->display_options['filters']['field_doc_country_tid']['vocabulary'] = 'countries';
 
 /* Display: System */
 $handler = $view->new_display('system', 'System', 'system_1');
 $handler->display->display_options['defaults']['access'] = FALSE;
 $handler->display->display_options['path'] = 'admin/content/library';
-
