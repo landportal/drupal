@@ -199,11 +199,6 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_country' => array(
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
   'field_doc_copyrights_statement' => array(
     'sortable' => 0,
     'default_sort_order' => 'asc',
