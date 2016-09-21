@@ -77,17 +77,18 @@ $handler->display->display_options['defaults']['row_options'] = FALSE;
 /* Display: Page by country */
 $handler = $view->new_display('page', 'Page by country', 'page_1');
 $handler->display->display_options['defaults']['relationships'] = FALSE;
-/* Relationship: Content: Country (field_doc_country) */
-$handler->display->display_options['relationships']['field_doc_country_tid']['id'] = 'field_doc_country_tid';
-$handler->display->display_options['relationships']['field_doc_country_tid']['table'] = 'field_data_field_doc_country';
-$handler->display->display_options['relationships']['field_doc_country_tid']['field'] = 'field_doc_country_tid';
-$handler->display->display_options['relationships']['field_doc_country_tid']['required'] = TRUE;
+/* Relationship: Field: Geographical focus (field_geographical_focus) */
+$handler->display->display_options['relationships']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
+$handler->display->display_options['relationships']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['relationships']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
+$handler->display->display_options['relationships']['field_geographical_focus_tid']['label'] = 'Region via field_geographical_focus';
+$handler->display->display_options['relationships']['field_geographical_focus_tid']['required'] = TRUE;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Name */
 $handler->display->display_options['arguments']['name']['id'] = 'name';
 $handler->display->display_options['arguments']['name']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['arguments']['name']['field'] = 'name';
-$handler->display->display_options['arguments']['name']['relationship'] = 'field_doc_country_tid';
+$handler->display->display_options['arguments']['name']['relationship'] = 'field_geographical_focus_tid';
 $handler->display->display_options['arguments']['name']['title_enable'] = TRUE;
 $handler->display->display_options['arguments']['name']['title'] = 'Library resources about %1';
 $handler->display->display_options['arguments']['name']['default_argument_type'] = 'fixed';
@@ -96,35 +97,3 @@ $handler->display->display_options['arguments']['name']['summary']['format'] = '
 $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
 $handler->display->display_options['arguments']['name']['limit'] = '0';
 $handler->display->display_options['path'] = 'library/browse/by-country';
-
-/* Display: Resource by country */
-$handler = $view->new_display('block', 'Resource by country', 'block_1');
-$handler->display->display_options['defaults']['pager'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '5';
-$handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['relationships'] = FALSE;
-/* Relationship: Content: Country (field_doc_country) */
-$handler->display->display_options['relationships']['field_doc_country_tid']['id'] = 'field_doc_country_tid';
-$handler->display->display_options['relationships']['field_doc_country_tid']['table'] = 'field_data_field_doc_country';
-$handler->display->display_options['relationships']['field_doc_country_tid']['field'] = 'field_doc_country_tid';
-$handler->display->display_options['relationships']['field_doc_country_tid']['required'] = TRUE;
-$handler->display->display_options['defaults']['arguments'] = FALSE;
-/* Contextual filter: Taxonomy term: Name */
-$handler->display->display_options['arguments']['name']['id'] = 'name';
-$handler->display->display_options['arguments']['name']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['arguments']['name']['field'] = 'name';
-$handler->display->display_options['arguments']['name']['relationship'] = 'field_doc_country_tid';
-$handler->display->display_options['arguments']['name']['default_action'] = 'default';
-$handler->display->display_options['arguments']['name']['title_enable'] = TRUE;
-$handler->display->display_options['arguments']['name']['title'] = 'Library resources about %1';
-$handler->display->display_options['arguments']['name']['breadcrumb_enable'] = TRUE;
-$handler->display->display_options['arguments']['name']['breadcrumb'] = '%1';
-$handler->display->display_options['arguments']['name']['default_argument_type'] = 'raw';
-$handler->display->display_options['arguments']['name']['default_argument_options']['index'] = '2';
-$handler->display->display_options['arguments']['name']['default_argument_options']['use_alias'] = TRUE;
-$handler->display->display_options['arguments']['name']['summary']['number_of_records'] = '0';
-$handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
-$handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
-$handler->display->display_options['arguments']['name']['limit'] = '0';
-$handler->display->display_options['arguments']['name']['case'] = 'ucfirst';
