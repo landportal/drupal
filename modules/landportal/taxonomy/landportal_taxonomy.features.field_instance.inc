@@ -458,6 +458,164 @@ function landportal_taxonomy_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-licences-synonyms_synonyms'.
+  $field_instances['taxonomy_term-licences-synonyms_synonyms'] = array(
+    'bundle' => 'licences',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Please, enter the synonyms which should be related to this term.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'synonyms_synonyms',
+    'label' => 'Synonyms',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-organization_types-description_field'.
+  $field_instances['taxonomy_term-organization_types-description_field'] = array(
+    'bundle' => 'organization_types',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'description_field',
+    'label' => 'Description',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => -5,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-organization_types-name_field'.
+  $field_instances['taxonomy_term-organization_types-name_field'] = array(
+    'bundle' => 'organization_types',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-organization_types-synonyms_synonyms'.
+  $field_instances['taxonomy_term-organization_types-synonyms_synonyms'] = array(
+    'bundle' => 'organization_types',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Please, enter the synonyms which should be related to this term.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'synonyms_synonyms',
+    'label' => 'Synonyms',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance:
   // 'taxonomy_term-overarching_categories-description_field'.
   $field_instances['taxonomy_term-overarching_categories-description_field'] = array(
@@ -721,6 +879,47 @@ function landportal_taxonomy_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'taxonomy_term-overarching_categories-synonyms_synonyms'.
+  $field_instances['taxonomy_term-overarching_categories-synonyms_synonyms'] = array(
+    'bundle' => 'overarching_categories',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Please, enter the synonyms which should be related to this term.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'synonyms_synonyms',
+    'label' => 'Synonyms',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-regions-description_field'.
   $field_instances['taxonomy_term-regions-description_field'] = array(
     'bundle' => 'regions',
@@ -834,6 +1033,46 @@ function landportal_taxonomy_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-regions-synonyms_synonyms'.
+  $field_instances['taxonomy_term-regions-synonyms_synonyms'] = array(
+    'bundle' => 'regions',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Please, enter the synonyms which should be related to this term.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'synonyms_synonyms',
+    'label' => 'Synonyms',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
     ),
   );
 
@@ -1042,6 +1281,46 @@ function landportal_taxonomy_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-themes-synonyms_synonyms'.
+  $field_instances['taxonomy_term-themes-synonyms_synonyms'] = array(
+    'bundle' => 'themes',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Please, enter the synonyms which should be related to this term.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'synonyms_synonyms',
+    'label' => 'Synonyms',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
     ),
   );
 
