@@ -1,0 +1,115 @@
+<?php
+
+class idsviews_handler_filter_themes extends views_handler_filter {
+
+  function value_form(&$form, &$form_state) {
+    $themes_values = array('all_themes' => '--- All themes ---');
+
+    if ($this->options['size_select']) {
+      $length_title = $this->options['size_select'];
+    }
+    else {
+      $length_title = IDS_VIEWS_DEFAULT_SIZE_CATEGORIES;
+    }
+
+    if (isset($this->view->query->request->site)) {
+      $dataset = $this->view->query->request->site;
+    }
+    else {
+      $dataset = variable_get('idsapi_default_dataset', IDS_API_DEFAULT_DATASET);
+    }
+    $response = idsapi_get_all('themes', $dataset, 'full');
+    if (isset($response->results)) {
+      $themes = $response->results;
+      foreach ($themes as $theme) {
+        $name_theme = substr($theme->title,0,$length_title);
+        if (strlen($theme->title) > $length_title) {
+          $name_theme .= '...';
+        }
+        $level = $theme->level;
+        $padding_str = '-';
+        $padding = strlen($name_theme) + strlen($padding_str)*($level - 1);
+        $name_theme = str_pad($name_theme, $padding, $padding_str, STR_PAD_LEFT);
+        $themes_values[$theme->object_id] = $name_theme;
+      }
+    }
+    $form['value'] = array(
+      '#type' => 'select',
+      '#title'  => t('Themes'),
+      '#multiple' => TRUE,
+	  '#size' => 15,
+      '#options'  => $themes_values,
+      '#default_value'  => $this->value,
+    );
+    if (!empty($form_state['exposed'])) {
+      $identifier = $this->options['expose']['identifier'];
+      if (!isset($form_state['input'][$identifier])) {
+        $form_state['input'][$identifier] = $this->value;
+      }
+    }
+  }
+
+  function option_definition() {
+    $options = parent::option_definition();
+    $options['size_select'] = array('default' => '');
+    return $options;
+  }
+
+  function options_form(&$form, &$form_state) {   
+    parent::options_form($form, $form_state);
+    $form['size_select'] = array(
+      '#title' => t('Size'),
+      '#type' => 'textfield',
+      '#size' => 10,
+      '#maxlength' => 10,
+      '#description' => t('Number of characters shown for each theme.'),
+      '#default_value' => $this->options['size_select'],
+    );
+  }
+
+  function expose_options() {
+    $this->options['expose'] = array(
+      'use_operator' => FALSE, 
+      'operator' => $this->options['id'] . '_op', 
+      'identifier' => $this->options['id'], 
+      'label' => $this->definition['title'], 
+      'remember' => FALSE, 
+      'multiple' => TRUE, 
+      'required' => FALSE,
+    );
+  }
+
+  function query() {
+    $group = $this->options['group'];
+    $filter = $this->options['field'];
+    if (isset($this->value)) {
+      if (!isset($this->value['all_themes'])) {
+        $value = implode('|', $this->value);
+        if (isset($group, $filter, $value)) {
+          if ($value) {
+            $this->view->query->add_filter($group, $filter, $value);
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * Display the filter on the administrative summary.
+   *
+   * We've added this to allow us to display values from arrays correctly.
+   */
+  function admin_summary() {
+    if (is_array($this->value)){
+      if (empty($this->value)){
+        $value = t("none");
+      }
+      else
+        $value = implode(", ", $this->value);
+    }
+    else {
+      $value = (string) $this->value;
+    }
+    return check_plain((string) $this->operator) . ' ' . check_plain($value);
+  }
+}

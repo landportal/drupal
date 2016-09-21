@@ -1,0 +1,187 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ *  IDS API Module.
+ *
+ * This module uses the IDS Knowldege Services API (api.ids.ac.uk) in order
+ * to search, display and import data and metadata contained in the BRIDGE and ELDIS
+ * datasets, which are maintained by the IDS.
+ */
+
+/* --------------------- Hooks implementations -------------------- */
+
+/**
+ * Include files that implement the request and objects classes
+ */
+require_once('idsapi.default.inc');
+require_once(IDS_API_LIBRARY_PATH . 'idswrapper.default.inc');
+
+/**
+ * Implements hook_flush_caches().
+ */
+function idsapi_flush_caches() {
+  return array(IDS_API_CACHE_REQUESTS);
+}
+
+/**
+ * Implements hook_enable().
+ */
+function idsapi_enable() {
+    drupal_flush_all_caches();
+    drupal_set_message(t('To use the IDS API module, first go to the <a href="@url">IDS API Administration</a> to set general parameters, including your IDS API key.', array('@url' => url('admin/config/services/idsapi'))));
+}
+
+/**
+ * Implements hook_disable().
+ */
+function idsapi_disable() {
+    drupal_flush_all_caches();
+}
+
+/**
+ * Implements of hook_menu().
+ */
+function idsapi_menu() {
+  $items = array();
+
+  $items['admin/config/services/idsapi'] = array(
+    'title' => t('IDS API Module settings'),
+    'description' => t('Global settings for the IDS API module.'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('idsapi_settings_form'),
+    'type' => MENU_NORMAL_ITEM,
+    'access arguments' => array('administer idsapi'),
+    'file' => 'idsapi.admin.inc',
+  );
+  
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function idsapi_permission() {
+  return array(
+    'administer idsapi' => array(
+      'title' => t('Administer the IDS API module'), 
+      'description' => t('Perform administration tasks for the IDS API module.'),
+    ),
+  );
+}
+ 
+/**
+ * Implements hook_help().
+ */
+function idsapi_help($path, $arg) {
+  if ($path == 'admin/help#idsapi') {
+    return t('Uses the IDS API to provide access to Eldis and Bridge content. API documentation: ') . IDS_API_DOCUMENTATION_URL;
+  }
+}
+
+/**
+ * Function used to retrieve IDS items using get_all.
+ */
+function idsapi_get_all($type, $set, $format) {
+  $idswrapper = new IdsApiWrapper;
+  $api_key = variable_get('idsapi_api_key', '');
+  $response = $idswrapper->getAll($type, $set, $api_key, $format);
+  return $response;
+}
+
+/**
+ * Function used to retrieve IDS items using search, with parameters.
+ */
+function idsapi_search($type, $set, $format, $params) {
+  $idswrapper = new IdsApiWrapper;
+  $api_key = variable_get('idsapi_api_key', '');
+  $response = $idswrapper->search($type, $set, $api_key, $format, 0, 0, $params);
+  return $response;
+}
+
+/* ---------------- Examples of calls to the IDS API --------------- */
+
+/**
+ * Implements hook_block_info().
+ */
+function idsapi_block_info() {
+  $blocks = array();
+  $blocks['idsapi_eldis_documents'] = array(
+    'info' => t('Eldis documents'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['idsapi_eldis_organisations'] = array(
+    'info' => t('Eldis organisations'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['idsapi_bridge_documents'] = array(
+    'info' => t('Bridge documents'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function idsapi_block_view($block_name = '') {
+  $block = array();
+  $content = '';
+
+  // Retrieves latest Eldis documents
+  if ($block_name == 'idsapi_latest_eldis_documents') {
+    $response = idsapi_get_all('documents', 'eldis', 'full');
+    $items = $response->getArrayLinks();
+    if (is_array($items)) {
+      $theme_args = array('items' => $items, 'type' => 'ol');
+      $content = theme('item_list', $theme_args);
+    }
+    else  {
+      $content = theme('help', 'Error when recovering block content.');
+    }
+    $block['subject'] = t('Eldis recent documents');
+  }
+  
+  // Retrieves latest Eldis organisations
+  if ($block_name == 'idsapi_latest_eldis_organisations') {
+    $response = idsapi_get_all('organisations', 'eldis', 'full');
+    $items = $response->getArrayLinks();
+    if (is_array($items)) {
+      $theme_args = array('items' => $items, 'type' => 'ol');
+      $content = theme('item_list', $theme_args);
+    }
+    else  {
+      $content = theme('help', 'Error when recovering block content.');
+    }
+    $block['subject'] = t('Eldis latest organisations');
+  }
+  
+    // Retrieves latest Bridge documents
+  if ($block_name == 'idsapi_latest_bridge_documents') {
+    $response = idsapi_get_all('documents', 'bridge', 'full');
+    $items = $response->getArrayLinks();
+    if (is_array($items)) {
+      $theme_args = array('items' => $items, 'type' => 'ol');
+      $content = theme('item_list', $theme_args);
+    }
+    else  {
+      $content = theme('help', 'Error when recovering block content.');
+    }
+    $block['subject'] = t('Bridge latest documents');
+  }
+  $block['content'] = $content;
+  return $block;
+}
+
+
+
+
+
+
+
+
+
+
+
+

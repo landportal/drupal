@@ -1,0 +1,247 @@
+<?php
+/**
+ * @file
+ * Create content types and vocabularies for the IDS Content Feeds module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function idsimport_install() {
+  cache_clear_all('plugins:feeds:plugins', 'cache');
+  feeds_cache_clear();
+  // Apply patch to Feeds. This is to be removed once this bug is corrected in the Feeds module.
+  $feeds_patched = variable_get('idsimport_feeds_patched', FALSE);
+  if (!$feeds_patched) {
+    idsimport_patch_feeds();
+  }
+
+  // Create new user to be used by default as author of imported content.
+  $username = variable_get('idsimport_new_user', IDS_IMPORT_USER);
+  if ($new_user_id = idsimport_new_user($username)) {
+    variable_set('idsimport_new_user_id', $new_user_id);
+  }
+
+  node_types_rebuild();
+  // Create fields for content types and vocabularies.
+  $array_fields = idsimport_fields_definitions();
+  foreach ($array_fields as $fields) {
+    foreach ($fields as $field) {
+      $prior_field = field_read_field($field['field_name'], array('include_inactive' => TRUE));
+      if (empty($prior_field)) {
+        field_create_field($field);
+      }
+    }
+  }
+  // Create/update fields instances for content types and vocabularies.
+  $array_instances = idsimport_fields_instances();
+  foreach ($array_instances as $instances) {
+    foreach ($instances as $instance) {
+      $prior_instance = field_read_instance($instance['entity_type'], $instance['field_name'], $instance['bundle'], array('include_inactive' => TRUE));
+      if (empty($prior_instance)) {
+        field_create_instance($instance);
+      }
+      else {
+        field_update_instance($instance);
+      }    
+    }
+  }
+  // Create vocabularies for IDS Regions, Themes, Subjects, Countries.
+  // (Content types for IDS Documents, Organisations are created through hook_node_info)
+  $vocabularies = idsimport_vocabularies();
+  foreach ($vocabularies as $vocabulary) {
+    $voc_loaded = taxonomy_vocabulary_machine_name_load($vocabulary['machine_name']);
+    if (empty($voc_loaded)) {
+      taxonomy_vocabulary_save((object) $vocabulary);
+    }
+  }
+
+  // Create a new role if it does not exist and give it permissions to feeds and imported content.
+  $role = user_role_load_by_name('idsimport_user');
+  if (empty($role)) {
+    $role = new stdClass();
+    $role->name = 'idsimport_user';
+    user_role_save($role);
+  }
+  if (isset($role->rid)) {
+    idsimport_grant_permissions($role->rid);
+  }
+
+  cache_clear_all('plugins:feeds:plugins', 'cache');
+  feeds_cache_clear();
+  drupal_flush_all_caches();
+}
+
+/**
+ * Implements hook_enable().
+ * 
+ * Creates instances (nodes) of the importers with default values if they don't exist.
+ * Importers 'configurations' are created and associated to their corresponding types by the feeds module,
+ * by calling to idsimport_ctools_plugin_api().
+ */
+function idsimport_enable() {
+  cache_clear_all('plugins:feeds:plugins', 'cache');
+  feeds_cache_clear();
+  $new_user_id = variable_get('idsimport_new_user_id', 0);
+  if ((!$new_user_id) && (IDS_IMPORT_CREATE_USER)) {
+    $new_user_id = idsimport_new_user(IDS_IMPORT_USER);
+    variable_set('idsimport_new_user_id', $new_user_id);
+  }
+  $importers_ids = variable_get('idsimport_importers_ids');
+  foreach(idsimport_feeds_importer_default() as $importer) {
+    if (!($instances = idsimport_get_nodes_importer($importer))) {
+      $node_importer_id = idsimport_save_node_importer($importer);
+      $node_importer_path = drupal_lookup_path('alias',"node/".$node_importer_id);
+      // In case the module has been disabled and is now being re-enabled, we have to let Feeds know about items already imported (so they are not duplicated).
+      if (in_array($importer->id, $importers_ids)) {
+        if ($feeds_importer = feeds_importer_load($importer->id)) {
+          $processor = $feeds_importer->processor;
+          if (isset($processor->config['content_type'])) {
+            $type = $processor->config['content_type'];
+            if ($nids = idsimport_get_nids_type($type)) {
+              $nodes = node_load_multiple($nids);
+              foreach ($nodes as $node) {
+                if (isset($node->field_object_id)) {
+                  $hash = $processor->generateHash($node);
+                  $processor->newIdsItemInfo($node, $node_importer_id, $hash);
+                  $node->feeds_item->entity_id = $node->nid;
+                  $node->feeds_item->guid = $node->field_object_id['und'][0]['value'];
+                  feeds_item_info_save($node, $node->nid);
+                }
+              }
+            }
+          }
+          elseif (isset($processor->config['vocabulary'])) {
+            $vocabulary_name = $processor->config['vocabulary'];
+            if ($vocabulary = taxonomy_vocabulary_machine_name_load($vocabulary_name)) {
+              $terms = taxonomy_get_tree($vocabulary->vid, 0, NULL, TRUE);
+              foreach ($terms as $term) {
+                unset($term->depth);
+                unset($term->parents);
+                if (isset($node->field_object_id)) {
+                  $hash = $processor->generateHash($term);
+                  $processor->newIdsItemInfo($term, $node_importer_id, $hash);
+                  $term->feeds_item->entity_id = $term->tid;
+                  $term->feeds_item->guid = $term->field_object_id['und'][0]['value'];
+                  feeds_item_info_save($term, $term->tid);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  drupal_set_message(t('IDS Import module installed. Please go to <a href="@url">the configuration page</a> if you want to change its default settings.', array('@url' => url('admin/config/services/idsimport'))));
+  cache_clear_all('plugins:feeds:plugins', 'cache');
+  feeds_cache_clear();
+  drupal_flush_all_caches();
+}
+
+/**
+ * Implements hook_disable().
+ * 
+ */
+function idsimport_disable() {
+  foreach(idsimport_get_all_importers() as $importer) {
+    idsimport_delete_nodes_importer($importer);
+    $importer->delete();    
+  }
+  drupal_set_message(t('IDS Import: Default IDS importers deleted. The imported content was not deleted.'));
+  cache_clear_all('plugins:feeds:plugins', 'cache');
+  feeds_cache_clear();
+  drupal_flush_all_caches();
+  variable_del('idsimport_default_dataset');
+  variable_del('idsimport_delete_types');
+  variable_del('idsimport_enable_assets');
+  variable_del('idsimport_enable_categories');
+  variable_del('idsimport_expire_period_assets');
+  variable_del('idsimport_import');
+  variable_del('idsimport_import_period_assets');
+  variable_del('idsimport_import_period_categories');
+  variable_del('idsimport_new_user');
+  variable_del('idsimport_new_user_id');
+  variable_del('idsimport_number_assets');
+  variable_del('idsimport_age_new_assets');
+  variable_del('idsimport_check_enable_assets');
+  variable_del('idsimport_check_enable_categories');
+  variable_del('idsimport_check_import');
+}
+
+/**
+ * This function patches the Feeds module, v. 7.x-2.0-alpha5.
+ * It can be deleted when a stable version of the Feeds module is released and these issues are fixed.
+ */
+function idsimport_patch_feeds() {
+  $feeds_path = $_SERVER['DOCUMENT_ROOT'] . base_path() . drupal_get_path('module', 'feeds');
+  $feeds_includes_path = $feeds_path . '/includes';
+  $feeds_module_file = $feeds_path . '/feeds.module';
+  $feeds_config_file = $feeds_includes_path . '/FeedsConfigurable.inc';
+  $feeds_source_file = $feeds_includes_path . '/FeedsSource.inc';
+  $feeds_import_file = $feeds_includes_path . '/FeedsImporter.inc';    
+
+  $resp = (is_writable($feeds_config_file) && is_writable($feeds_source_file) && is_writable($feeds_import_file));  
+  if ($resp && ($file_module = file_get_contents($feeds_module_file)) && ($file_config = file_get_contents($feeds_config_file)) && ($file_source = file_get_contents($feeds_source_file)) && ($file_import = file_get_contents($feeds_import_file))) {
+
+    // feeds.module
+    $orig_code = '    $source->existing()->import();';
+    $patch_code = '    $source->import(); /* Patched */';
+    $new_file_module = str_replace($orig_code, $patch_code, $file_module);
+    $resp = file_put_contents($feeds_module_file, $new_file_module);
+
+    // FeedsConfigurable.inc
+    $patch1 = "\n" . '    if (!is_array($config)) { $config = array(); /* Patched */}';
+    $patch2 = "\n" . '    if (!is_array($this->config)) { $this->config = array(); /* Patched */}';
+    $code_set = 'function setConfig($config) {';
+    $patch_set = $code_set . $patch1;
+    $code_add = 'function addConfig($config) {';
+    $patch_add = $code_add . $patch1;
+    $code_get = 'function getConfig() {';    
+    $patch_get = $code_get . $patch2;
+    $new_file_config = str_replace(array($code_set, $code_add, $code_get), array($patch_set, $patch_add, $patch_get), $file_config);
+    $resp = file_put_contents($feeds_config_file, $new_file_config);
+    
+    // FeedsSource.inc
+    $code_per = '$fetcher_period = $this->importer->fetcher->importPeriod($this);';
+    $patch_per = '$fetcher_period = $period; /* Patched */';
+    $new_file_source = str_replace($code_per, $patch_per, $file_source);
+    $resp = file_put_contents($feeds_source_file, $new_file_source);
+
+    // FeedsImporter.inc
+    $code_imp1 = 'if (FEEDS_EXPIRE_NEVER != $this->processor->expiryTime()) {';
+    $patch_imp1 = '(method_exists($this->processor, \'expiryTime\')) ? $expire_time = $this->processor->expiryTime() : $expire_time = FEEDS_EXPIRE_NEVER;';
+    $patch_imp1 .= "\n" . '    if (FEEDS_EXPIRE_NEVER != $expire_time) { /* Patched */';
+    $code_imp2 = '      $job[\'period\'] = 3600;';
+    $patch_imp2 = '      $job[\'period\'] = $this->config[\'import_period\']; /* Patched */';
+
+    $code_imp3 = '    }';
+    $code_imp3 .= "\n" . '    parent::configFormSubmit($values);';
+    $patch_imp3 = '       $this->config[\'import_period\'] = $values[\'import_period\']; /* Patched */';
+    $patch_imp3 .= "\n" . '    }';
+    $patch_imp3 .= "\n" . '     $this->schedule(); /* Patched */';
+    $patch_imp3 .= "\n" . '    parent::configFormSubmit($values); /* Patched */';
+    $new_file_import = str_replace(array($code_imp1, $code_imp2, $code_imp3), array($patch_imp1, $patch_imp2, $patch_imp3), $file_import);
+    $resp = file_put_contents($feeds_import_file, $new_file_import);
+  }
+  else {
+    watchdog('idsimport', "Feeds module files are not accessible or cannot be written.", array('idsimport_install'), WATCHDOG_ALERT);
+    $resp = FALSE;
+  }
+  
+  if (!$resp) {
+      watchdog('idsimport', "The Feeds module could not be fully patched. The IDS Import module might report some errors.", array('idsimport_install'), WATCHDOG_ALERT);
+  }
+  else {
+      drupal_set_message('The Feeds module was succesfully patched.');
+      variable_set('idsimport_feeds_patched', TRUE);
+  }
+
+  return $resp;
+  
+}
+
+
+
+
+
+

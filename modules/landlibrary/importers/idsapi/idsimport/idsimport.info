@@ -1,0 +1,17 @@
+;$Id$
+name = IDS Import 
+description = Imports assets and categories from the IDS Collection via the IDS API, using the Feeds module.
+package = IDS
+core = 7.x
+version = 7.x-1
+
+configure = admin/config/services/idsimport
+
+files[] = idsimport.admin.inc
+files[] = idsimport.install
+files[] = idsimport.module
+
+dependencies[] = "idsapi"
+dependencies[] = "feeds"
+dependencies[] = "feeds_ui"
+dependencies[] = "date"

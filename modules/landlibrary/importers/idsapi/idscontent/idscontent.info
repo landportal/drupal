@@ -1,0 +1,12 @@
+;$Id:
+name = IDS Content
+description = Provide Ctools content to display individual items from the IDS API in the Panels system
+core = 7.x
+version = "7.x-1.0-beta4"
+package = IDS
+
+files[] = idscontent.module
+
+
+dependencies[] = "idsapi"
+dependencies[] = "ctools"

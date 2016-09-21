@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the IDS API module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function idsapi_uninstall() {
+  variable_del('idsapi_api_key');
+  variable_del('idsapi_api_url');
+  variable_del('idsapi_number_items');
+  variable_del('idsapi_age_items');
+  variable_del('idsapi_cache_time');
+  variable_del('idsapi_response_format');
+  variable_del('idsapi_api_default_dataset');
+}
+
+/**
+ * Implements hook_schema().
+ *
+ * Creates the cache table to be used by the module.
+ */
+function idsapi_schema() {
+  $schema = array();
+  $schema['idsapi_cache'] = drupal_get_schema_unprocessed('system', 'cache');
+  return $schema;
+}
+
+

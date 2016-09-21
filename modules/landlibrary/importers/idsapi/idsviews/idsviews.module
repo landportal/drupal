@@ -1,0 +1,874 @@
+<?php
+// $Id;
+
+/**
+ * @file
+ *   A Views backend to query the IDS API.
+ */
+module_load_include('inc', 'idsapi', 'default');
+require_once(IDS_API_LIBRARY_PATH . 'idswrapper.wrapper.inc');
+define('IDS_VIEWS_DEFAULT_SIZE_CATEGORIES', 40);
+
+/**
+ * Implementation of hook_views_api().
+ */
+function idsviews_views_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "views" && $api == "views_default") {
+    return array("version" => "3.0");
+  }
+}
+
+/**
+ * Implements hook_help().
+ */
+function idsviews_help($path, $arg) {
+  switch ($path) {
+  case 'admin/help#idsviews':
+    $output = '';
+    $output .= '<h3>' . t('IDS Views') . '</h3>';
+    $output .= '<p>' . t('This module allows to use Views to retrieve IDS documents and organisations using the IDS API. It creates default views for documents and organisations, as well as blocks with exposed filters that can be changed to adapt them to your specific needs.');
+    return $output;
+  }
+}
+
+/**
+ * Implementation of hook_views_plugins().
+ */
+function idsviews_views_plugins() {
+  $plugins = array(
+    'module' => 'idsviews',
+    'query' => array(
+      'idsviews_views_plugin_query' => array(
+        'title' => t('IDS Query'),
+        'help' => t('Allows to query the IDS API.'),
+        'handler' => 'idsviews_views_plugin_query',
+        'parent' => 'views_plugin_query',
+        'path' => drupal_get_path('module', 'idsviews') . '/plugins',
+      ),
+    ),
+  );
+  return $plugins;
+}
+
+/**
+ * Implementation of hook_views_data().
+ */
+function idsviews_views_data() {
+  $additional_fields = variable_get('idsapi_additional_fields', FALSE);
+
+  // Documents
+  // Base data
+  $data['idsviews_documents']['table']['group']  = t('IDS');
+  $data['idsviews_documents']['table']['base'] = array(
+    'field' => 'object_id',
+    'title' => t('IDS: IDS Documents'),
+    'help' => t('Query IDS Documents.'),
+    'query class' => 'idsviews_views_plugin_query',
+  );
+  // Fields 
+  $data['idsviews_documents']['object_id'] = array(
+    'title' => t('Object ID'),
+    'help' => t('Unique identifier of this object.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_documents']['object_type'] = array(
+    'title' => t('Object type'),
+    'help' => t('Type of object.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_documents']['title'] = array(
+    'title' => t('Title'),
+    'help' => t('Readable identifier of this object.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_documents']['site'] = array(
+    'title' => t('Site'),
+    'help' => t('Dataset.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_documents']['metadata_url'] = array(
+    'title' => t('Metadata URL'),
+    'help' => t('Web-accessible uri for this object.'),
+    'field' => array(
+      'handler' => 'views_handler_field_url',
+    ),
+  );
+  $data['idsviews_documents']['timestamp'] = array(
+    'title' => t('Timestamp'),
+    'help' => t('Indicates when record was indexed in the API.'),
+    'field' => array(
+      'handler' => 'views_handler_field_date',
+    ),
+  );
+  $data['idsviews_documents']['website_url'] = array(
+    'title' => t('Website URL'),
+    'help' => t('URL for the asset on the collection website.'),
+    'field' => array(
+      'handler' => 'views_handler_field_url',
+    ),
+  );
+  $data['idsviews_documents']['name'] = array(
+    'title' => t('Name'),
+    'help' => t('Name of the object.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_documents']['asset_id'] = array(
+    'title' => t('Asset ID'),
+    'help' => t('Asset identifier.'),
+    'field' => array(
+      'handler' => 'views_handler_field_numeric',
+    ),
+  );
+  $data['idsviews_documents']['date_created'] = array(
+    'title' => t('Date created'),
+    'help' => t('Date in which the object was added to the collection.'),
+    'field' => array(
+      'handler' => 'views_handler_field_date',
+    ),
+  );
+  $data['idsviews_documents']['date_updated'] = array(
+    'title' => t('Date updated'),
+    'help' => t('Date in which the object was last modified.'),
+    'field' => array(
+      'handler' => 'views_handler_field_date',
+    ),
+  );
+  $data['idsviews_documents']['category_theme_array'] = array(
+    'title' => t('Themes'),
+    'help' => t('Thematic categories which apply to the document.'),
+    'field' => array(
+      'handler' => 'idsviews_handler_field_categories',
+    ),
+  );
+  if ($additional_fields) {
+  $data['idsviews_documents']['category_subject_array'] = array(
+    'title' => t('Subjects'),
+    'help' => t('Subject-based categories which apply to the document.'),
+    'field' => array(
+      'handler' => 'idsviews_handler_field_categories',
+    ),
+  );
+  }
+  $data['idsviews_documents']['category_region_array'] = array(
+    'title' => t('Regions'),
+    'help' => t('Regions that apply to the document.'),
+    'field' => array(
+      'handler' => 'idsviews_handler_field_categories',
+    ),
+  );
+  $data['idsviews_documents']['country_focus_array'] = array(
+    'title' => t('Countries'),
+    'help' => t('Countries that apply to the document.'),
+    'field' => array(
+      'handler' => 'idsviews_handler_field_categories',
+    ),
+  );
+  $data['idsviews_documents']['keywords'] = array(
+    'title' => t('Keywords'),
+    'help' => t('Subject keywords that relate to the asset.'),
+    'field' => array(
+      'handler' => 'idsviews_handler_field_keywords',
+    ),
+  );
+  $data['idsviews_documents']['description'] = array(
+    'title' => t('Description'),
+    'help' => t('Description of the document.'),
+    'field' => array(
+      'handler' => 'views_handler_field_markup',
+      'format' => 'full_html',
+    ),
+  );
+  $data['idsviews_documents']['authors'] = array(
+    'title' => t('Authors'),
+    'help' => t('Authors (First initial. Surname).'),
+    'field' => array(
+      'handler' => 'idsviews_handler_field_authors',
+    ),
+  );
+  $data['idsviews_documents']['corporate_author'] = array(
+    'title' => t('Corporate authors'),
+    'help' => t('Corporate Authors.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_documents']['language_name'] = array(
+    'title' => t('Language'),
+    'help' => t('The language in which the title, headline and description are written.'),
+  );
+  $data['idsviews_documents']['metadata_languages'] = array(
+    'title' => t("Metadata languages"),
+    'help' => t("Metadata languages"),
+    'field' => array(
+      'handler' => "idsviews_handler_field_metadata_languages"
+    )
+  );
+  $data['idsviews_documents']['publication_date'] = array(
+    'title' => t('Publication date'),
+    'help' => t('Year when the research document was first published.'),
+    'field' => array(
+      'handler' => 'views_handler_field_date',
+    ),
+  );
+  $data['idsviews_documents']['publisher'] = array(
+    'title' => t('Publisher'),
+    'help' => t('Organisation that published the research.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_documents']['licence_type'] = array(
+    'title' => t('Licence type'),
+    'help' => t('Licence type.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_documents']['urls'] = array(
+    'title' => t('External URLs'),
+    'help' => t('External URLs of the full text document.'),
+    'field' => array(
+      'handler' => 'idsviews_handler_field_urls',
+    ),
+  );
+  // General filters
+  $data['idsviews_documents']['object_id_filter'] = array(
+    'title' => t('Object ID'),
+    'help' => t('The object ID of the document.'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['sector_filter'] = array(
+    'title' => t("Sector"),
+    'help' => t("The category sector to use when retrieving documents (e.g. Bibliographies)"),
+    'filter' => array(
+      'handler' => "idsviews_handler_filter_sector"
+    )
+  );
+  $data['idsviews_documents']['dataset_filter'] = array(
+    'title' => t('Dataset'),
+    'help' => t('Dataset from where to retrieve the documents (Eldis or Bridge).'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_dataset',
+    ),
+  );
+  $data['idsviews_documents']['query_filter'] = array(
+    'title' => t('Query'),
+    'help' => t('The text to search for across all fields. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['country_filter'] = array(
+    'title' => t('Countries'),
+    'help' => t('Filter by countries'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_countries',
+    ),
+  );
+  $data['idsviews_documents']['keyword_filter'] = array(
+    'title' => t('Keyword'),
+    'help' => t('The name of a keyword to search for. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['region_filter'] = array(
+    'title' => t('Regions'),
+    'help' => t('Filter by regions. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_regions',
+    ),
+  );
+  $data['idsviews_documents']['theme_filter'] = array(
+    'title' => t('Themes'),
+    'help' => t('Filter by themes'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_themes',
+    ),
+  );
+  if ($additional_fields) {
+  $data['idsviews_documents']['subject_filter'] = array(
+    'title' => t('Subjects'),
+    'help' => t('Filter by subjects'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_subjects',
+    ),
+  );
+  }
+  $data['idsviews_documents']['license_filter'] = array(
+    'title' => t('License'),
+    'help' => t('Filter by type of license. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['metadata_published_after_filter'] = array(
+    'title' => t('Metadata published after'),
+    'help' => t('Date after which the metadata was published. Format: YYYY-MM-DD (year, month, day). See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['metadata_published_before_filter'] = array(
+    'title' => t('Metadata published before'),
+    'help' => t('Date before which the metadata was published. Format: YYYY-MM-DD (year, month, day). See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['metadata_published_year_filter'] = array(
+    'title' => t('Metadata published year'),
+    'help' => t('The metadata was published during the specified year. Format: YYYY (year). See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  // Document specific filters
+  $data['idsviews_documents']['author_filter'] = array(
+    'title' => t('Author(s)'),
+    'help' => t('The author(s) of the document. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['publisher_filter'] = array(
+    'title' => t('Publisher ID'),
+    'help' => t('The publisher object id. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['publisher_name_filter'] = array(
+    'title' => t('Publisher name'),
+    'help' => t('A text string to match on part of the publisher name. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['publisher_country_filter'] = array(
+    'title' => t('Publisher country'),
+    'help' => t('The country where the publisher is located. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['copyright_clearance_filter'] = array(
+    'title' => t('Copyright'),
+    'help' => t('Whether the copyright holder has given permission for ELDIS to host the information. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['redistribute_clearance_filter'] = array(
+    'title' => t('Redistribute'),
+    'help' => t('Whether the copyright holder has given permission for the information to be redistributed. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['language_name_filter'] = array(
+    'title' => t('Language'),
+    'help' => t('The language the document is written in (case sensitive). See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['document_published_after_filter'] = array(
+    'title' => t('Document published after'),
+    'help' => t('Date after which the document was published. Format: YYYY-MM-DD. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['document_published_before_filter'] = array(
+    'title' => t('Document published before'),
+    'help' => t('Date before which the document was published. Format: YYYY-MM-DD. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_documents']['document_published_year_filter'] = array(
+    'title' => t('Document published year'),
+    'help' => t('The document was published during the specified year. Format: YYYY. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  // Documents sort field
+  $data['idsviews_documents']['sort_order'] = array(
+    'title' => t('Sort order'),
+    'help' => t('Note that you can only use one type of sort, and only once.'),
+    'sort' => array(
+      'handler' => 'idsviews_handler_sort',
+    ),
+  );
+  // Organisations
+  // Base data
+  $data['idsviews_organisations']['table']['group']  = t('IDS');
+  $data['idsviews_organisations']['table']['base'] = array(
+    'field' => 'object_id',
+    'title' => t('IDS: IDS Organisations'),
+    'help' => t('Query IDS Organisations.'),
+    'query class' => 'idsviews_views_plugin_query',
+  );
+  // Fields 
+  $data['idsviews_organisations']['object_id'] = array(
+    'title' => t('Object ID'),
+    'help' => t('Unique identifier of this object.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_organisations']['object_type'] = array(
+    'title' => t('Object type'),
+    'help' => t('Type of object.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_organisations']['title'] = array(
+    'title' => t('Title'),
+    'help' => t('Readable identifier of this object.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_organisations']['site'] = array(
+    'title' => t('Site'),
+    'help' => t('Dataset.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_organisations']['metadata_url'] = array(
+    'title' => t('Metadata URL'),
+    'help' => t('Web-accessible uri for this object.'),
+    'field' => array(
+      'handler' => 'views_handler_field_url',
+    ),
+  );
+  $data['idsviews_organisations']['timestamp'] = array(
+    'title' => t('Timestamp'),
+    'help' => t('Indicates when record was indexed in the API.'),
+    'field' => array(
+      'handler' => 'views_handler_field_date',
+    ),
+  );
+  $data['idsviews_organisations']['website_url'] = array(
+    'title' => t('Website URL'),
+    'help' => t('URL for the asset on the collection website.'),
+    'field' => array(
+      'handler' => 'views_handler_field_url',
+    ),
+  );
+  $data['idsviews_organisations']['name'] = array(
+    'title' => t('Name'),
+    'help' => t('Name of the object.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_organisations']['asset_id'] = array(
+    'title' => t('Asset ID'),
+    'help' => t('Asset identifier.'),
+    'field' => array(
+      'handler' => 'views_handler_field_numeric',
+    ),
+  );
+  $data['idsviews_organisations']['date_created'] = array(
+    'title' => t('Date created'),
+    'help' => t('Date in which the object was added to the collection.'),
+    'field' => array(
+      'handler' => 'views_handler_field_date',
+    ),
+  );
+  $data['idsviews_organisations']['date_updated'] = array(
+    'title' => t('Date updated'),
+    'help' => t('Date in which the object was last modified.'),
+    'field' => array(
+      'handler' => 'views_handler_field_date',
+    ),
+  );
+  $data['idsviews_organisations']['category_theme_array'] = array(
+    'title' => t('Themes'),
+    'help' => t('Thematic categories which apply to the document.'),
+    'field' => array(
+      'handler' => 'idsviews_handler_field_categories',
+    ),
+  );
+  if ($additional_fields) {
+  $data['idsviews_organisations']['category_subject_array'] = array(
+    'title' => t('Subjects'),
+    'help' => t('Subject categories which apply to the document.'),
+    'field' => array(
+      'handler' => 'idsviews_handler_field_categories',
+    ),
+  );
+  }
+  $data['idsviews_organisations']['category_region_array'] = array(
+    'title' => t('Regions'),
+    'help' => t('Regions that apply to the document.'),
+    'field' => array(
+      'handler' => 'idsviews_handler_field_categories',
+    ),
+  );
+  $data['idsviews_organisations']['country_focus_array'] = array(
+    'title' => t('Countries'),
+    'help' => t('Countries that apply to the document.'),
+    'field' => array(
+      'handler' => 'idsviews_handler_field_categories',
+    ),
+  );
+  $data['idsviews_organisations']['keywords'] = array(
+    'title' => t('Keywords'),
+    'help' => t('Subject keywords that relate to the asset.'),
+    'field' => array(
+      'handler' => 'idsviews_handler_field_keywords',
+    ),
+  );
+  $data['idsviews_organisations']['description'] = array(
+    'title' => t('Description'),
+    'help' => t('Description of the document.'),
+    'field' => array(
+      'handler' => 'views_handler_field_markup',
+      'format' => 'full_html',
+    ),
+  );
+  $data['idsviews_organisations']['acronym'] = array(
+    'title' => t('Acronym'),
+    'help' => t('Acronym of organisation.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_organisations']['alternative_acronym'] = array(
+    'title' => t('Alternative acronym'),
+    'help' => t('Alternative acronym of organisation.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_organisations']['alternative_name'] = array(
+    'title' => t('Alternative name'),
+    'help' => t('Alternative name of organisation.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_organisations']['organisation_type'] = array(
+    'title' => t('Organisation type'),
+    'help' => t('Primary function or role of the organisation in relation to international development.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_organisations']['organisation_url'] = array(
+    'title' => t('Organisation URL'),
+    'help' => t('Link to the organisation\'s website.'),
+    'field' => array(
+      'handler' => 'views_handler_field_url',
+    ),
+  );
+  $data['idsviews_organisations']['location_country'] = array(
+    'title' => t('Location country'),
+    'help' => t('Country where the organisation is located.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  // General filters
+  $data['idsviews_organisations']['object_id_filter'] = array(
+    'title' => t('Object ID'),
+    'help' => t('The object ID of the document.'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_organisations']['dataset_filter'] = array(
+    'title' => t('Dataset'),
+    'help' => t('Dataset from where to retrieve the organisations (Eldis or Bridge).'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_dataset',
+    ),
+  );
+  $data['idsviews_organisations']['query_filter'] = array(
+    'title' => t('Query'),
+    'help' => t('The text to search for across all fields. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_organisations']['country_filter'] = array(
+    'title' => t('Countries'),
+    'help' => t('Filter by countries'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_countries',
+    ),
+  );
+  $data['idsviews_organisations']['keyword_filter'] = array(
+    'title' => t('Keyword'),
+    'help' => t('The name of a keyword to search for. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_organisations']['region_filter'] = array(
+    'title' => t('Regions'),
+    'help' => t('Filter by regions. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_regions',
+    ),
+  );
+  $data['idsviews_organisations']['theme_filter'] = array(
+    'title' => t('Themes'),
+    'help' => t('Filter by themes'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_themes',
+    ),
+  );
+  if ($additional_fields) {
+  $data['idsviews_organisations']['subject_filter'] = array(
+    'title' => t('Subjects'),
+    'help' => t('Filter by subject'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_themes',
+    ),
+  );
+  }
+  $data['idsviews_organisations']['license_filter'] = array(
+    'title' => t('License'),
+    'help' => t('Filter by type of license. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_organisations']['metadata_published_after_filter'] = array(
+    'title' => t('Metadata published after'),
+    'help' => t('Date after which the metadata was published. Format: YYYY-MM-DD (year, month, day). See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_organisations']['metadata_published_before_filter'] = array(
+    'title' => t('Metadata published before'),
+    'help' => t('Date before which the metadata was published. Format: YYYY-MM-DD (year, month, day). See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_organisations']['metadata_published_year_filter'] = array(
+    'title' => t('Metadata published year'),
+    'help' => t('The metadata was published during the specified year. Format: YYYY (year). See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  // Organisation specific filters
+  $data['idsviews_organisations']['acronym_filter'] = array(
+    'title' => t('Acronym'),
+    'help' => t('The acronym for an organisation. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_organisations']['organisation_name_filter'] = array(
+    'title' => t('Organisation name'),
+    'help' => t('The name of an organisation. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_organisations']['location_country_filter'] = array(
+    'title' => t('Location country'),
+    'help' => t('The country in which the organisation is located. See help at http://api.ids.ac.uk/docs/functions/search/'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  // Organisations sort field
+  $data['idsviews_organisations']['sort_order'] = array(
+    'title' => t('Sort order'),
+    'help' => t('Note that you can only use one type of sort, and only once.'),
+    'sort' => array(
+      'handler' => 'idsviews_handler_sort',
+    ),
+  );
+
+  // Themes table
+  $data['idsviews_themes']['table']['group']  = t('IDS');
+  $data['idsviews_themes']['table']['base'] = array(
+    'field' => 'object_id',
+    'title' => t('IDS: IDS Themes'),
+    'help' => t('Query IDS Themes.'),
+    'query class' => 'idsviews_views_plugin_query',
+  );
+
+  // Fields
+
+  $data['idsviews_themes']['object_id'] = array(
+    'title' => t('Object ID'),
+    'help' => t('Unique identifier of this object.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_themes']['object_type'] = array(
+    'title' => t('Object type'),
+    'help' => t('Type of object.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_themes']['title'] = array(
+    'title' => t('Title'),
+    'help' => t('Readable identifier of this object.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_themes']['site'] = array(
+    'title' => t('Site'),
+    'help' => t('Dataset.'),
+    'field' => array(
+      'handler' => 'views_handler_field',
+    ),
+  );
+  $data['idsviews_themes']['metadata_url'] = array(
+    'title' => t('Metadata URL'),
+    'help' => t('Web-accessible uri for this object.'),
+    'field' => array(
+      'handler' => 'views_handler_field_url',
+    ),
+  );
+  $data['idsviews_themes']['level'] = array(
+    'title' => t("Level"),
+    'help' => t("Nesting level of the Theme"),
+    'field' => array(
+      "handler" => 'views_handler_field'
+    )
+  );
+
+  $data['idsviews_themes']['parent_object_id'] = array(
+    'title' => t("Parent"),
+    'help' => t("The Object ID of the parent of this theme"),
+    'field' => array(
+      'handler' => "views_handler_field"
+    )
+  );
+
+  $data['idsviews_themes']['category_id'] = array(
+    "title" => t("Category ID"),
+    'help' => t("Category ID of the theme"),
+    'field' => array(
+      'handler' => "views_handler_field"
+    )
+  );
+
+  $data['idsviews_themes']['cat_parent'] = array(
+    'title' => t("Parent Category"),
+    'help' => t("Category number of the theme's parent"),
+    'field' => array(
+      'handler' => "views_handler_field"
+    )
+  );
+
+  // Filters
+
+  $data['idsviews_themes']['object_id_filter'] = array(
+    'title' => t('Object ID'),
+    'help' => t('The object ID of the document.'),
+    'filter' => array(
+      'handler' => 'idsviews_handler_filter_text',
+    ),
+  );
+  $data['idsviews_themes']['level_filter'] = array(
+    'title' => t("Level"),
+    'help' => t("Limit view to only a specific level"),
+    'field' => array(
+      'handler' => "views_handler_filter_equality"
+    )
+  );
+
+  // Sort
+
+  $data['idsviews_themes']['sort_order'] = array(
+    'title' => t('Sort order'),
+    'help' => t('Note that you can only use one type of sort, and only once.'),
+    'sort' => array(
+      'handler' => 'idsviews_handler_sort',
+    ),
+  );
+
+  return $data;
+}
+
+/**
+ * Hide/display subjects on default view depending on API key.
+ */
+function idsviews_ids_api_key() {
+  $additional_fields = variable_get('idsapi_additional_fields', FALSE);
+  $assets =  array('documents','organisations');
+  foreach ($assets as $asset) {
+    $view_name = 'ids_' . $asset . '_view';
+    $view = views_get_view($view_name);
+    $table = 'idsviews_' . $asset;
+    if ($additional_fields) {
+      if (!function_exists("idsviews_display_subject_field")){
+        include_once drupal_get_path("module", "idsviews") . "/idsviews.views_default.inc";
+      }
+      idsviews_display_subject_field($view->display['default'], $table);
+      idsviews_display_subject_filter($view->display['default'], $table);
+    }
+    else {
+      $field = 'category_subject_array';
+      $filter = 'subject_filter';
+      unset($view->display['default']->display_options['fields']['category_subject_array']);
+      unset($view->display['default']->display_options['filters']['subject_filter']);
+    }
+    views_ui_cache_set($view);
+  }
+}
+
+/**
+ * Implementation of hook_theme().
+ */
+function idsviews_theme($existing) {
+  return array(
+    'views_view_field__ids_organisations_view__site' => array(
+      'arguments' => array('view' => NULL, 'field' => NULL, 'row' => NULL),
+      'template' => 'views-view-field--ids-organisations-view--site',
+      'original hook' => 'views_view_field',
+      'path' => drupal_get_path('module', 'idsviews') . '/theme',
+      'type' => 'module',
+      'preprocess functions' => array('template_preprocess', 'template_preprocess_views_view_field'),
+    ),
+    'views_view_field__ids_documents_view__site' => array(
+      'arguments' => array('view' => NULL, 'field' => NULL, 'row' => NULL),
+      'template' => 'views-view-field--ids-documents-view--site',
+      'original hook' => 'views_view_field',
+      'path' => drupal_get_path('module', 'idsviews') . '/theme',
+      'type' => 'module',
+      'preprocess functions' => array('template_preprocess', 'template_preprocess_views_view_field'),
+    ),
+  );
+}
+
+
+
+
+
+
+

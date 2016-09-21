@@ -1,0 +1,12 @@
+;$Id$
+name = IDS API 
+description = Provides access to the IDS collection via the IDS Knowledge Services API.
+package = IDS
+core = 7.x
+version = 7.x-1.0-beta4
+
+configure = admin/config/services/idsapi
+
+files[] = idsapi.admin.inc
+files[] = idsapi.install
+files[] = idsapi.module
