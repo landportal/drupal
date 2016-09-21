@@ -19,13 +19,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -171,13 +164,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -340,13 +326,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -488,6 +467,28 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
     ),
     'field_image' => array(),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Socio-Economic & Institutional Context',
+          'format' => NULL,
+          'safe_value' => 'Socio-Economic &amp; Institutional Context',
+        ),
+      ),
+    ),
+    'description_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => '<p>This theme include all information which are not directly related to land issues, but are important to understand the general context in which land dynamics occur. For instance, this theme includes socio-economic, demographic and institutional information.</p>
+',
+          'summary' => NULL,
+          'format' => 'filtered_html',
+          'safe_value' => '<p>This theme include all information which are not directly related to land issues, but are important to understand the general context in which land dynamics occur. For instance, this theme includes socio-economic, demographic and institutional information.</p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -505,6 +506,10 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'Socio-Economic & Institutional Context',
+    'entity_translation_handler_id' => 'taxonomy_term-themes-eid-7508-0',
+    'description_original' => '<p>This theme include all information which are not directly related to land issues, but are important to understand the general context in which land dynamics occur. For instance, this theme includes socio-economic, demographic and institutional information.</p>
+',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -545,13 +550,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -692,13 +690,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -828,13 +819,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -971,13 +955,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -1121,13 +1098,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -1290,13 +1260,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -1436,13 +1399,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -1620,13 +1576,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -1749,13 +1698,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -1907,13 +1849,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -2065,13 +2000,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -2223,13 +2151,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -2476,6 +2397,31 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
     ),
     'field_image' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Forestry',
+          'format' => NULL,
+          'safe_value' => 'Forestry',
+        ),
+      ),
+    ),
+    'description_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>The profession embracing the science, art, and practice of creating, managing, using, and conserving&nbsp;forests and associated resources for human benefit and in a sustainable manner to meet desired&nbsp;goals,&nbsp;needs, and values.</p>
+
+<p>Source: <a href="http://dictionaryofforestry.org/dict/term/forestry">SAFNet Dictionary</a></p>
+',
+          'summary' => NULL,
+          'format' => 'filtered_html',
+          'safe_value' => '<p>The profession embracing the science, art, and practice of creating, managing, using, and conserving forests and associated resources for human benefit and in a sustainable manner to meet desired goals, needs, and values.</p>
+<p>Source: <a href="http://dictionaryofforestry.org/dict/term/forestry">SAFNet Dictionary</a></p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -2493,6 +2439,12 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'Forestry',
+    'entity_translation_handler_id' => 'taxonomy_term-themes-eid-7344-0',
+    'description_original' => '<p>The profession embracing the science, art, and practice of creating, managing, using, and conserving&nbsp;forests and associated resources for human benefit and in a sustainable manner to meet desired&nbsp;goals,&nbsp;needs, and values.</p>
+
+<p>Source: <a href="http://dictionaryofforestry.org/dict/term/forestry">SAFNet Dictionary</a></p>
+',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -2506,13 +2458,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -2649,13 +2594,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -2782,6 +2720,31 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
     ),
     'field_image' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Land & Food Security',
+          'format' => NULL,
+          'safe_value' => 'Land &amp; Food Security',
+        ),
+      ),
+    ),
+    'description_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>Food security&nbsp;exists when all people, at all times, have physical and economic access to sufficient, safe and nutritious&nbsp;food&nbsp;to meet their dietary needs and&nbsp;foodpreferences for an active and healthy life.</p>
+
+<p>Source:<a href="http://www.fao.org/forestry/13128-0e6f36f27e0091055bec28ebe830f46b3.pdf"> FAO</a></p>
+',
+          'summary' => NULL,
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Food security exists when all people, at all times, have physical and economic access to sufficient, safe and nutritious food to meet their dietary needs and foodpreferences for an active and healthy life.</p>
+<p>Source:<a href="http://www.fao.org/forestry/13128-0e6f36f27e0091055bec28ebe830f46b3.pdf"> FAO</a></p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -2799,6 +2762,12 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'Land & Food Security',
+    'entity_translation_handler_id' => 'taxonomy_term-themes-eid-7352-0',
+    'description_original' => '<p>Food security&nbsp;exists when all people, at all times, have physical and economic access to sufficient, safe and nutritious&nbsp;food&nbsp;to meet their dietary needs and&nbsp;foodpreferences for an active and healthy life.</p>
+
+<p>Source:<a href="http://www.fao.org/forestry/13128-0e6f36f27e0091055bec28ebe830f46b3.pdf"> FAO</a></p>
+',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -2812,13 +2781,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -2955,13 +2917,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -3107,13 +3062,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -3250,13 +3198,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -3438,13 +3379,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -3592,13 +3526,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -3707,13 +3634,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -3822,13 +3742,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -4020,13 +3933,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -4187,13 +4093,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -4388,6 +4287,31 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
     ),
     'field_image' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Indigenous & Community Land Rights',
+          'format' => NULL,
+          'safe_value' => 'Indigenous &amp; Community Land Rights',
+        ),
+      ),
+    ),
+    'description_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>Collective land rights are an essential condition for Indigenous Peoples and local communities to enjoy human rights, and uphold cultural diversity.</p>
+
+<p>Source: <a href="http://www.landrightsnow.org/en/why/">Land Rights Now&nbsp;</a></p>
+',
+          'summary' => NULL,
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Collective land rights are an essential condition for Indigenous Peoples and local communities to enjoy human rights, and uphold cultural diversity.</p>
+<p>Source: <a href="http://www.landrightsnow.org/en/why/">Land Rights Now </a></p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -4405,49 +4329,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_original' => 'Indigenous & Community Land Rights',
+    'entity_translation_handler_id' => 'taxonomy_term-themes-eid-7346-0',
+    'description_original' => '<p>Collective land rights are an essential condition for Indigenous Peoples and local communities to enjoy human rights, and uphold cultural diversity.</p>
+
+<p>Source: <a href="http://www.landrightsnow.org/en/why/">Land Rights Now&nbsp;</a></p>
+',
     'path' => array(
       'pathauto' => 1,
-    ),
-  );
-  $terms[] = array(
-    'name' => 'English',
-    'description' => '',
-    'format' => 'filtered_html',
-    'weight' => 0,
-    'uuid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-    'language' => 'und',
-    'i18n_tsid' => 0,
-    'vocabulary_machine_name' => 'languages',
-    'name_field' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'English',
-          'format' => NULL,
-          'safe_value' => 'English',
-        ),
-      ),
-    ),
-    'translations' => array(
-      'original' => 'und',
-      'data' => array(
-        'und' => array(
-          'entity_type' => 'taxonomy_term',
-          'entity_id' => 540,
-          'revision_id' => 540,
-          'language' => 'und',
-          'source' => '',
-          'uid' => 1,
-          'status' => 1,
-          'translate' => 0,
-          'created' => 1461147771,
-          'changed' => 1461147771,
-        ),
-      ),
-    ),
-    'name_original' => 'English',
-    'entity_translation_handler_id' => 'taxonomy_term-languages-eid-540-0',
-    'path' => array(
-      'pathauto' => 0,
     ),
   );
   $terms[] = array(
@@ -4486,13 +4375,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -4670,6 +4552,64 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
       ),
     ),
     'field_image' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Commercial Pressures on Land',
+          'format' => NULL,
+          'safe_value' => 'Commercial Pressures on Land',
+        ),
+      ),
+    ),
+    'description_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>Commercial pressures, land grabs, investments, etc.—the words vary according to the positions of those who use them (...).<br />
+<br />
+The rapid changes in prices on certain markets and anticipation of probable estimated price rises are at the root of the taking control of large amounts of land and manifestations of interest in the purchase or long-term rental of land that we have been seeing for several months. These goods are essentially the following:<br />
+<br />
+<strong>Agrofuels </strong><br />
+An increasingly large global market has emerged around agrofuels, as a substitutes for fossil energy. The demand for and price of agrofuels still depend heavily on the public policies of certain states that make it mandatory to include a percentage of these products in the fuel used for transport, or that grant them tax advantages and subsidies. Otherwise, the development of agrofuels is directly linked to the price of oil.<br />
+<br />
+<strong>Staple Foods</strong><br />
+The prices of the principal food products rose sharply in 2007 and early 2008 for various reasons including notably the growth of agrofuels, weather problems in previous years, a reduction in security stores, and an increase in demand among the middle classes of some emerging countries. This rise reverses a 100-year-long downward trend that had been interrupted in the mid-1970s by a fleeting period of rising prices.<br />
+<br />
+<strong>Forest Resources </strong><br />
+Here, we must distinguish between two types of goods of very different natures: (1) timber and non-wood forest products, the demand for which has increased with the growth of emerging countries, as has the demand for mineral commodities; and (2) environmental services, with the establishment of markets for pollution rights, carbon credits, that make it possible to obtain resources in exchange for planting trees or through mechanisms—which are for now still voluntary— based on promises not to cut down forests (REDD mechanisms).<br />
+<br />
+What is more, for a more or less long time, a certain number of other markets have generated pressures on land.<br />
+<br />
+<strong>Tourism</strong><br />
+Already, the growth of tourism has long generated increasing interest in coastal zones and all areas of particular interest because of the beauty of the landscape, the wealth of flora and fauna, and/or the possibility of engaging in specific leisure activities. Mining and Energy Resources This is not new, but the sharp rise in demand from emerging countries has increased pressure on regions and countries that have mineral or oil wealth.<br />
+<br />
+<strong>Urbanization </strong><br />
+The large increase in the percentage of the population living in cities is causing urban zones to expand, usually spilling over onto farm land. This can create conflicts and very strong pressures<br />
+<br />
+<br />
+Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documents/resources/ilc_commercial_pressures_on_land_eng.pdf">Commercial Pressures on Land Worldwide. Issues and Conceptual Framework</a>". AGTER and International Land Coalition, &nbsp;April 2009, page 4.</p>
+',
+          'summary' => NULL,
+          'format' => 'full_html',
+          'safe_value' => '<p>Commercial pressures, land grabs, investments, etc.—the words vary according to the positions of those who use them (...).</p>
+<p>The rapid changes in prices on certain markets and anticipation of probable estimated price rises are at the root of the taking control of large amounts of land and manifestations of interest in the purchase or long-term rental of land that we have been seeing for several months. These goods are essentially the following:</p>
+<p><strong>Agrofuels </strong><br />
+An increasingly large global market has emerged around agrofuels, as a substitutes for fossil energy. The demand for and price of agrofuels still depend heavily on the public policies of certain states that make it mandatory to include a percentage of these products in the fuel used for transport, or that grant them tax advantages and subsidies. Otherwise, the development of agrofuels is directly linked to the price of oil.</p>
+<p><strong>Staple Foods</strong><br />
+The prices of the principal food products rose sharply in 2007 and early 2008 for various reasons including notably the growth of agrofuels, weather problems in previous years, a reduction in security stores, and an increase in demand among the middle classes of some emerging countries. This rise reverses a 100-year-long downward trend that had been interrupted in the mid-1970s by a fleeting period of rising prices.</p>
+<p><strong>Forest Resources </strong><br />
+Here, we must distinguish between two types of goods of very different natures: (1) timber and non-wood forest products, the demand for which has increased with the growth of emerging countries, as has the demand for mineral commodities; and (2) environmental services, with the establishment of markets for pollution rights, carbon credits, that make it possible to obtain resources in exchange for planting trees or through mechanisms—which are for now still voluntary— based on promises not to cut down forests (REDD mechanisms).</p>
+<p>What is more, for a more or less long time, a certain number of other markets have generated pressures on land.</p>
+<p><strong>Tourism</strong><br />
+Already, the growth of tourism has long generated increasing interest in coastal zones and all areas of particular interest because of the beauty of the landscape, the wealth of flora and fauna, and/or the possibility of engaging in specific leisure activities. Mining and Energy Resources This is not new, but the sharp rise in demand from emerging countries has increased pressure on regions and countries that have mineral or oil wealth.</p>
+<p><strong>Urbanization </strong><br />
+The large increase in the percentage of the population living in cities is causing urban zones to expand, usually spilling over onto farm land. This can create conflicts and very strong pressures</p>
+<p>
+Source:  "<a href="http://www.landcoalition.org/sites/default/files/documents/resources/ilc_commercial_pressures_on_land_eng.pdf">Commercial Pressures on Land Worldwide. Issues and Conceptual Framework</a>". AGTER and International Land Coalition,  April 2009, page 4.</p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -4687,6 +4627,32 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
         ),
       ),
     ),
+    'name_original' => 'Commercial Pressures on Land',
+    'entity_translation_handler_id' => 'taxonomy_term-themes-eid-7349-0',
+    'description_original' => '<p>Commercial pressures, land grabs, investments, etc.—the words vary according to the positions of those who use them (...).<br />
+<br />
+The rapid changes in prices on certain markets and anticipation of probable estimated price rises are at the root of the taking control of large amounts of land and manifestations of interest in the purchase or long-term rental of land that we have been seeing for several months. These goods are essentially the following:<br />
+<br />
+<strong>Agrofuels </strong><br />
+An increasingly large global market has emerged around agrofuels, as a substitutes for fossil energy. The demand for and price of agrofuels still depend heavily on the public policies of certain states that make it mandatory to include a percentage of these products in the fuel used for transport, or that grant them tax advantages and subsidies. Otherwise, the development of agrofuels is directly linked to the price of oil.<br />
+<br />
+<strong>Staple Foods</strong><br />
+The prices of the principal food products rose sharply in 2007 and early 2008 for various reasons including notably the growth of agrofuels, weather problems in previous years, a reduction in security stores, and an increase in demand among the middle classes of some emerging countries. This rise reverses a 100-year-long downward trend that had been interrupted in the mid-1970s by a fleeting period of rising prices.<br />
+<br />
+<strong>Forest Resources </strong><br />
+Here, we must distinguish between two types of goods of very different natures: (1) timber and non-wood forest products, the demand for which has increased with the growth of emerging countries, as has the demand for mineral commodities; and (2) environmental services, with the establishment of markets for pollution rights, carbon credits, that make it possible to obtain resources in exchange for planting trees or through mechanisms—which are for now still voluntary— based on promises not to cut down forests (REDD mechanisms).<br />
+<br />
+What is more, for a more or less long time, a certain number of other markets have generated pressures on land.<br />
+<br />
+<strong>Tourism</strong><br />
+Already, the growth of tourism has long generated increasing interest in coastal zones and all areas of particular interest because of the beauty of the landscape, the wealth of flora and fauna, and/or the possibility of engaging in specific leisure activities. Mining and Energy Resources This is not new, but the sharp rise in demand from emerging countries has increased pressure on regions and countries that have mineral or oil wealth.<br />
+<br />
+<strong>Urbanization </strong><br />
+The large increase in the percentage of the population living in cities is causing urban zones to expand, usually spilling over onto farm land. This can create conflicts and very strong pressures<br />
+<br />
+<br />
+Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documents/resources/ilc_commercial_pressures_on_land_eng.pdf">Commercial Pressures on Land Worldwide. Issues and Conceptual Framework</a>". AGTER and International Land Coalition, &nbsp;April 2009, page 4.</p>
+',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -4700,13 +4666,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -4843,13 +4802,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -4995,13 +4947,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -5065,13 +5010,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -5208,13 +5146,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -5360,13 +5291,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -5503,13 +5427,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -5676,13 +5593,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -5877,6 +5787,39 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
       ),
     ),
     'field_image' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Rangelands, Drylands & Pastoralism',
+          'format' => NULL,
+          'safe_value' => 'Rangelands, Drylands &amp; Pastoralism',
+        ),
+      ),
+    ),
+    'description_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>Rangelands&nbsp;are grasslands, shrublands, woodlands, wetlands, and deserts that are grazed by domestic livestock or wild animals. Types of&nbsp;rangelands&nbsp;include tallgrass and shortgrass prairies, desert grasslands and shrublands, woodlands, savannas, chaparrals, steppes, and tundras.</p>
+
+<p>Pastoralism&nbsp;is the branch of agriculture concerned with the raising of livestock.&nbsp;"Pastoralism" generally has a mobile aspect, moving the herds in search of fresh&nbsp;pasture&nbsp;and water (in contrast to&nbsp;pastoral farming, in which non-nomadic farmers grow crops and improve pastures for their livestock).&nbsp;<br />
+&nbsp;</p>
+
+<p>Drylands conventionally are defined in terms of water stress: as terrestrial areas where the mean annual rainfall (including snow, fog, hail, etc) is lower than the total amount of water evaporated to the atmosphere.</p>
+
+<p>Sources: <a href="http://globalrangelands.org/">GlobalRangelands.org</a>&nbsp;&amp; <a href="https://en.wikipedia.org/wiki/Pastoralism#cite_note-1">Wikipedia</a>&nbsp;&amp;&nbsp;<a href="https://www.iucn.org/wisp/pastoralist_portal/drylands_and_pastoralism/">IUCN</a>&nbsp;&nbsp;</p>
+',
+          'summary' => NULL,
+          'format' => 'full_html',
+          'safe_value' => '<p>Rangelands are grasslands, shrublands, woodlands, wetlands, and deserts that are grazed by domestic livestock or wild animals. Types of rangelands include tallgrass and shortgrass prairies, desert grasslands and shrublands, woodlands, savannas, chaparrals, steppes, and tundras.</p>
+<p>Pastoralism is the branch of agriculture concerned with the raising of livestock. "Pastoralism" generally has a mobile aspect, moving the herds in search of fresh pasture and water (in contrast to pastoral farming, in which non-nomadic farmers grow crops and improve pastures for their livestock). <br />
+ </p>
+<p>Drylands conventionally are defined in terms of water stress: as terrestrial areas where the mean annual rainfall (including snow, fog, hail, etc) is lower than the total amount of water evaporated to the atmosphere.</p>
+<p>Sources: <a href="http://globalrangelands.org/">GlobalRangelands.org</a> &amp; <a href="https://en.wikipedia.org/wiki/Pastoralism#cite_note-1">Wikipedia</a> &amp; <a href="https://www.iucn.org/wisp/pastoralist_portal/drylands_and_pastoralism/">IUCN</a>  </p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -5894,6 +5837,17 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
         ),
       ),
     ),
+    'name_original' => 'Rangelands, Drylands & Pastoralism',
+    'entity_translation_handler_id' => 'taxonomy_term-themes-eid-7345-0',
+    'description_original' => '<p>Rangelands&nbsp;are grasslands, shrublands, woodlands, wetlands, and deserts that are grazed by domestic livestock or wild animals. Types of&nbsp;rangelands&nbsp;include tallgrass and shortgrass prairies, desert grasslands and shrublands, woodlands, savannas, chaparrals, steppes, and tundras.</p>
+
+<p>Pastoralism&nbsp;is the branch of agriculture concerned with the raising of livestock.&nbsp;"Pastoralism" generally has a mobile aspect, moving the herds in search of fresh&nbsp;pasture&nbsp;and water (in contrast to&nbsp;pastoral farming, in which non-nomadic farmers grow crops and improve pastures for their livestock).&nbsp;<br />
+&nbsp;</p>
+
+<p>Drylands conventionally are defined in terms of water stress: as terrestrial areas where the mean annual rainfall (including snow, fog, hail, etc) is lower than the total amount of water evaporated to the atmosphere.</p>
+
+<p>Sources: <a href="http://globalrangelands.org/">GlobalRangelands.org</a>&nbsp;&amp; <a href="https://en.wikipedia.org/wiki/Pastoralism#cite_note-1">Wikipedia</a>&nbsp;&amp;&nbsp;<a href="https://www.iucn.org/wisp/pastoralist_portal/drylands_and_pastoralism/">IUCN</a>&nbsp;&nbsp;</p>
+',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -5907,13 +5861,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -5977,13 +5924,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -6144,13 +6084,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -6368,6 +6301,34 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
       ),
     ),
     'field_image' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Land & Gender',
+          'format' => NULL,
+          'safe_value' => 'Land &amp; Gender',
+        ),
+      ),
+    ),
+    'description_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>Despite progress on women’s rights, rights to land and security of tenure are not enjoyed equally by women and men in many parts of the world. This goes against international human rights, and also impacts negatively on households and the economy.</p>
+
+<p>Gender issues related to land are complicated. They involve sensitive social and cultural territories and challenge deeply rooted power structures.&nbsp;</p>
+
+<p>Source: <a href="http://landportal.info/sites/landportal.info/files/gltngendercriteria_english.pdf">GLTN / Gender Evaluation Criteria</a></p>
+',
+          'summary' => NULL,
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Despite progress on women’s rights, rights to land and security of tenure are not enjoyed equally by women and men in many parts of the world. This goes against international human rights, and also impacts negatively on households and the economy.</p>
+<p>Gender issues related to land are complicated. They involve sensitive social and cultural territories and challenge deeply rooted power structures. </p>
+<p>Source: <a href="http://landportal.info/sites/landportal.info/files/gltngendercriteria_english.pdf">GLTN / Gender Evaluation Criteria</a></p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -6385,6 +6346,14 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
         ),
       ),
     ),
+    'name_original' => 'Land & Gender',
+    'entity_translation_handler_id' => 'taxonomy_term-themes-eid-7347-0',
+    'description_original' => '<p>Despite progress on women’s rights, rights to land and security of tenure are not enjoyed equally by women and men in many parts of the world. This goes against international human rights, and also impacts negatively on households and the economy.</p>
+
+<p>Gender issues related to land are complicated. They involve sensitive social and cultural territories and challenge deeply rooted power structures.&nbsp;</p>
+
+<p>Source: <a href="http://landportal.info/sites/landportal.info/files/gltngendercriteria_english.pdf">GLTN / Gender Evaluation Criteria</a></p>
+',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -6398,13 +6367,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -6552,13 +6514,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -6736,13 +6691,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -6909,13 +6857,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -7045,13 +6986,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -7197,13 +7131,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -7355,13 +7282,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -7562,6 +7482,55 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
       ),
     ),
     'field_image' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Land, Climate change and Environment',
+          'format' => NULL,
+          'safe_value' => 'Land, Climate change and Environment',
+        ),
+      ),
+    ),
+    'description_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>Environment, as a cross-cutting issue, addresses global challenges of environmental impact related to land use, land management and land tenure, including the issues surrounding climate change and natural resource management.</p>
+
+<p>Environmental and land tenure challenges include the following:</p>
+
+<ul>
+	<li>landlessness that drives poor urban and rural people to occupy and misuse fragile ecosystems;</li>
+	<li>tenure insecurity undermining investment incentives and leading to environmental mismanagement in urban as well as in rural areas;</li>
+	<li>large scale land acquisitions and investments may lead to tenure insecurity of poor and vulnerable groups and environmental damages;</li>
+	<li>encroachment in particularly vulnerable and valuable habitats;</li>
+	<li>increasing threats in coastal areas due to sea water rise and severe weather risk;</li>
+	<li>shortage of arable and liveable lands results to more disputes and conflicts;</li>
+	<li>increasing tensions between land, land tenure arrangements and land use;</li>
+	<li>increasing land fragmentation in densely populated areas;</li>
+	<li>deforestation and forest degradation leading to carbon emissions and loss of biodiversity.</li>
+</ul>
+
+<p>Source: <a href="http://gltn.net/index.php/land-tools/cross-cutting-issues/environment">GLTN</a></p>
+',
+          'summary' => NULL,
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Environment, as a cross-cutting issue, addresses global challenges of environmental impact related to land use, land management and land tenure, including the issues surrounding climate change and natural resource management.</p>
+<p>Environmental and land tenure challenges include the following:</p>
+<ul><li>landlessness that drives poor urban and rural people to occupy and misuse fragile ecosystems;</li>
+<li>tenure insecurity undermining investment incentives and leading to environmental mismanagement in urban as well as in rural areas;</li>
+<li>large scale land acquisitions and investments may lead to tenure insecurity of poor and vulnerable groups and environmental damages;</li>
+<li>encroachment in particularly vulnerable and valuable habitats;</li>
+<li>increasing threats in coastal areas due to sea water rise and severe weather risk;</li>
+<li>shortage of arable and liveable lands results to more disputes and conflicts;</li>
+<li>increasing tensions between land, land tenure arrangements and land use;</li>
+<li>increasing land fragmentation in densely populated areas;</li>
+<li>deforestation and forest degradation leading to carbon emissions and loss of biodiversity.</li>
+</ul><p>Source: <a href="http://gltn.net/index.php/land-tools/cross-cutting-issues/environment">GLTN</a></p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -7579,6 +7548,26 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
         ),
       ),
     ),
+    'name_original' => 'Land, Climate change and Environment',
+    'entity_translation_handler_id' => 'taxonomy_term-themes-eid-7351-0',
+    'description_original' => '<p>Environment, as a cross-cutting issue, addresses global challenges of environmental impact related to land use, land management and land tenure, including the issues surrounding climate change and natural resource management.</p>
+
+<p>Environmental and land tenure challenges include the following:</p>
+
+<ul>
+	<li>landlessness that drives poor urban and rural people to occupy and misuse fragile ecosystems;</li>
+	<li>tenure insecurity undermining investment incentives and leading to environmental mismanagement in urban as well as in rural areas;</li>
+	<li>large scale land acquisitions and investments may lead to tenure insecurity of poor and vulnerable groups and environmental damages;</li>
+	<li>encroachment in particularly vulnerable and valuable habitats;</li>
+	<li>increasing threats in coastal areas due to sea water rise and severe weather risk;</li>
+	<li>shortage of arable and liveable lands results to more disputes and conflicts;</li>
+	<li>increasing tensions between land, land tenure arrangements and land use;</li>
+	<li>increasing land fragmentation in densely populated areas;</li>
+	<li>deforestation and forest degradation leading to carbon emissions and loss of biodiversity.</li>
+</ul>
+
+<p>Source: <a href="http://gltn.net/index.php/land-tools/cross-cutting-issues/environment">GLTN</a></p>
+',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -7622,13 +7611,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -7765,13 +7747,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -7968,13 +7943,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -8122,13 +8090,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -8279,13 +8240,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -8433,13 +8387,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -8587,13 +8534,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -8771,6 +8711,31 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
       ),
     ),
     'field_image' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Urbanization',
+          'format' => NULL,
+          'safe_value' => 'Urbanization',
+        ),
+      ),
+    ),
+    'description_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>Urbanization&nbsp;is a population shift from rural to urban areas, "the gradual increase in the proportion of people living in urban areas", and the ways in which each society adapts to the change.</p>
+
+<p>Source: <a href="http://www.nlm.nih.gov/cgi/mesh/2014/MB_cgi?term=Urbanization">National Library of Medicine</a></p>
+',
+          'summary' => NULL,
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Urbanization is a population shift from rural to urban areas, "the gradual increase in the proportion of people living in urban areas", and the ways in which each society adapts to the change.</p>
+<p>Source: <a href="http://www.nlm.nih.gov/cgi/mesh/2014/MB_cgi?term=Urbanization">National Library of Medicine</a></p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -8788,6 +8753,12 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
         ),
       ),
     ),
+    'name_original' => 'Urbanization',
+    'entity_translation_handler_id' => 'taxonomy_term-themes-eid-7343-0',
+    'description_original' => '<p>Urbanization&nbsp;is a population shift from rural to urban areas, "the gradual increase in the proportion of people living in urban areas", and the ways in which each society adapts to the change.</p>
+
+<p>Source: <a href="http://www.nlm.nih.gov/cgi/mesh/2014/MB_cgi?term=Urbanization">National Library of Medicine</a></p>
+',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -8858,13 +8829,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -9001,13 +8965,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -9144,13 +9101,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -9266,13 +9216,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -9409,13 +9352,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -9599,6 +9535,37 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     ),
   );
   $terms[] = array(
+    'name' => 'Publishing Company',
+    'description' => '<p>A company that publishes materials.</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => 'b1ff087a-9e04-4748-bb65-dd40c9ac5e23',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'organization_types',
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'entity_id' => 7888,
+          'revision_id' => 7888,
+          'language' => 'en',
+          'source' => '',
+          'uid' => 7082,
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1468509500,
+          'changed' => 1468509500,
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
     'name' => 'forest law',
     'description' => 'Forest law comprises the package of laws and regulations governing production and protection of forests, as well as those that regulate the powers of the administration in forests subject to the forest law.',
     'format' => 'filtered_html',
@@ -9607,13 +9574,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -9792,13 +9752,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -9942,13 +9895,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -10085,13 +10031,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -10246,13 +10185,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -10389,13 +10321,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -10504,13 +10429,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -10670,13 +10588,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -10838,13 +10749,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -10953,13 +10857,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -11110,13 +11007,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -11232,13 +11122,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -11375,13 +11258,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -11578,13 +11454,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -11693,13 +11562,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -11859,6 +11721,31 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
       ),
     ),
     'field_image' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Land Conflicts',
+          'format' => NULL,
+          'safe_value' => 'Land Conflicts',
+        ),
+      ),
+    ),
+    'description_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>A “land conflict” involves competing claims to large areas of land by groups, of a breadth and depth not easily resolved within existing law. There is often no consensus on the rules to be applied, and the parties may have quite different understandings of the nature of the conflict. As used in this paper, “conflict” implies tension and the danger of violence, but not violence unless this is specified. Longstanding potentials for conflict based in structural or other fundamental problems may be the result of “trigger” events turned violent.&nbsp;</p>
+
+<p>Source: <a href="http://www.usaidlandtenure.net/sites/default/files/USAID_Land_Tenure_Land_and_Conflict_Issue_Brief-061214.pdf">USAID</a></p>
+',
+          'summary' => NULL,
+          'format' => 'filtered_html',
+          'safe_value' => '<p>A “land conflict” involves competing claims to large areas of land by groups, of a breadth and depth not easily resolved within existing law. There is often no consensus on the rules to be applied, and the parties may have quite different understandings of the nature of the conflict. As used in this paper, “conflict” implies tension and the danger of violence, but not violence unless this is specified. Longstanding potentials for conflict based in structural or other fundamental problems may be the result of “trigger” events turned violent. </p>
+<p>Source: <a href="http://www.usaidlandtenure.net/sites/default/files/USAID_Land_Tenure_Land_and_Conflict_Issue_Brief-061214.pdf">USAID</a></p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -11876,6 +11763,43 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
         ),
       ),
     ),
+    'name_original' => 'Land Conflicts',
+    'entity_translation_handler_id' => 'taxonomy_term-themes-eid-7348-0',
+    'description_original' => '<p>A “land conflict” involves competing claims to large areas of land by groups, of a breadth and depth not easily resolved within existing law. There is often no consensus on the rules to be applied, and the parties may have quite different understandings of the nature of the conflict. As used in this paper, “conflict” implies tension and the danger of violence, but not violence unless this is specified. Longstanding potentials for conflict based in structural or other fundamental problems may be the result of “trigger” events turned violent.&nbsp;</p>
+
+<p>Source: <a href="http://www.usaidlandtenure.net/sites/default/files/USAID_Land_Tenure_Land_and_Conflict_Issue_Brief-061214.pdf">USAID</a></p>
+',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'All rights reserved',
+    'description' => '<p>Copyright is automatically granted to you when you begin creating your work. You don\'t have to file anything anywhere, or publish anything online to own the copyright of your music. By choosing All Rights Reserved, you ask that other creators not use your material.&nbsp;</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => 'ddd7a4db-b452-466f-b8d3-2fc5042da10d',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'licences',
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'entity_id' => 7893,
+          'revision_id' => 7893,
+          'language' => 'en',
+          'source' => '',
+          'uid' => 8157,
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1470397647,
+          'changed' => 1470397647,
+        ),
+      ),
+    ),
     'path' => array(
       'pathauto' => 1,
     ),
@@ -11889,13 +11813,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -12047,6 +11964,37 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
       ),
     ),
     'field_image' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Land Stakeholders & Institutions',
+          'format' => NULL,
+          'safe_value' => 'Land Stakeholders &amp; Institutions',
+        ),
+      ),
+    ),
+    'description_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>A&nbsp;stakeholder&nbsp;is anyone or any institution who has interests in, or is affected by, an issue or activity or transaction, and therefore has a natural right to participate in decisions relating to it.&nbsp;</p>
+
+<p>There may be more than one stakeholder, or stakeholder group, claiming an interest in the land use on a particular area of land.</p>
+
+<p>As examples, a farmer is a stakeholder in relation to the distribution or management of irrigation water from a common source, or as regards decisions on grazing rights on communal land. The term can also be applied to groups, as when several groups have an interest in, or are affected by, the exploitation of the water from a reservoir or products extracted from a forest. Stakeholders include those individuals or groups, such as women or indigenous communities, who have genuine and legitimate claims on use, but whose opinion may not be valued in current negotiations for cultural or religious reasons. Groups resident outside the area, such as non-governmental organizations (NGOs) and research institutions, can also be stakeholders. Also the government of a country may have ministries with the position of stakeholders. The concept can be extended to include unborn generations who have a future interest in the resource.</p>
+
+<p>Source: <a href="http://www.fao.org/docrep/004/x3810e/x3810e06.htm#t">FAO</a></p>
+',
+          'summary' => NULL,
+          'format' => 'filtered_html',
+          'safe_value' => '<p>A stakeholder is anyone or any institution who has interests in, or is affected by, an issue or activity or transaction, and therefore has a natural right to participate in decisions relating to it. </p>
+<p>There may be more than one stakeholder, or stakeholder group, claiming an interest in the land use on a particular area of land.</p>
+<p>As examples, a farmer is a stakeholder in relation to the distribution or management of irrigation water from a common source, or as regards decisions on grazing rights on communal land. The term can also be applied to groups, as when several groups have an interest in, or are affected by, the exploitation of the water from a reservoir or products extracted from a forest. Stakeholders include those individuals or groups, such as women or indigenous communities, who have genuine and legitimate claims on use, but whose opinion may not be valued in current negotiations for cultural or religious reasons. Groups resident outside the area, such as non-governmental organizations (NGOs) and research institutions, can also be stakeholders. Also the government of a country may have ministries with the position of stakeholders. The concept can be extended to include unborn generations who have a future interest in the resource.</p>
+<p>Source: <a href="http://www.fao.org/docrep/004/x3810e/x3810e06.htm#t">FAO</a></p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -12064,6 +12012,16 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
         ),
       ),
     ),
+    'name_original' => 'Land Stakeholders & Institutions',
+    'entity_translation_handler_id' => 'taxonomy_term-themes-eid-7350-0',
+    'description_original' => '<p>A&nbsp;stakeholder&nbsp;is anyone or any institution who has interests in, or is affected by, an issue or activity or transaction, and therefore has a natural right to participate in decisions relating to it.&nbsp;</p>
+
+<p>There may be more than one stakeholder, or stakeholder group, claiming an interest in the land use on a particular area of land.</p>
+
+<p>As examples, a farmer is a stakeholder in relation to the distribution or management of irrigation water from a common source, or as regards decisions on grazing rights on communal land. The term can also be applied to groups, as when several groups have an interest in, or are affected by, the exploitation of the water from a reservoir or products extracted from a forest. Stakeholders include those individuals or groups, such as women or indigenous communities, who have genuine and legitimate claims on use, but whose opinion may not be valued in current negotiations for cultural or religious reasons. Groups resident outside the area, such as non-governmental organizations (NGOs) and research institutions, can also be stakeholders. Also the government of a country may have ministries with the position of stakeholders. The concept can be extended to include unborn generations who have a future interest in the resource.</p>
+
+<p>Source: <a href="http://www.fao.org/docrep/004/x3810e/x3810e06.htm#t">FAO</a></p>
+',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -12077,13 +12035,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -12251,13 +12202,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -12432,13 +12376,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
@@ -12578,13 +12515,6 @@ Source: &nbsp;"<a href="http://www.landcoalition.org/sites/default/files/documen
     'language' => 'en',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landvoc_concepts',
-    'field_language' => array(
-      'und' => array(
-        0 => array(
-          'tid' => '4df363ab-6658-4c7f-bcaa-78e26dd184a0',
-        ),
-      ),
-    ),
     'field_agrovoc_uri' => array(
       'und' => array(
         0 => array(
