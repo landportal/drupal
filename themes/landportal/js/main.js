@@ -11,6 +11,7 @@
         Drupal.behaviors.landportal.initCarousel(context, settings);
         Drupal.behaviors.landportal.initReadMore(context, settings);
         Drupal.behaviors.landportal.nice_menu_direction(context);
+        Drupal.behaviors.landportal.initPrintOrganization(context);
       },
 
         nice_menu_direction: function (context) {
@@ -143,7 +144,7 @@
           $('#country-navigation').addClass('no-reletad-content-empty');
         }
 
-
+        if($('#block-views-landbook-countries-related-block-6').css('display') == 'block'){
         $('.view-landbook-countries-related.view-display-id-block_6 .view-content').owlCarousel({
           center: false,
           items:3,
@@ -161,7 +162,7 @@
                 items:3
               }
           }
-        });
+        });}
       },
       initReadMore: function(context, settings){
         $('.node-landlibrary-resource.node-teaser .field-name-field-doc-description').readmore({
@@ -171,6 +172,11 @@
           collapsedHeight:110,
           heightMargin: 100
         });
+      },
+      initPrintOrganization: function(context, settings){
+          $print=$('.print-organization').clone();
+          $("#header .section").after($print);
+          
       }
     };
     function isVisibleNewsletterLanguage(){
