@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GLTN Simple Land Portal CSV importer feature.
+ */
+
+include_once 'gltn_simple_land_portal_csv_importer.features.inc';
