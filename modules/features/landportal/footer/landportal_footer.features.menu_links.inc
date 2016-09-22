@@ -10,6 +10,30 @@
 function landportal_footer_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: menu-footer-menu_-propos-de-nous:node/6900.
+  $menu_links['menu-footer-menu_-propos-de-nous:node/6900'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/6900',
+    'router_path' => 'node/%',
+    'link_title' => 'À propos de nous',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_-propos-de-nous:node/6900',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -4,
+    'customized' => 1,
+    'language' => 'fr',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
+  );
   // Exported menu link: menu-footer-menu_about-us:node/6900.
   $menu_links['menu-footer-menu_about-us:node/6900'] = array(
     'menu_name' => 'menu-footer-menu',
@@ -28,31 +52,31 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => -2,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
   );
-  // Exported menu link: menu-footer-menu_acerca-de-nosotros:http://landportal.info/es/page/2015/02/acerca-del-portal-de-la-tierra.
-  $menu_links['menu-footer-menu_acerca-de-nosotros:http://landportal.info/es/page/2015/02/acerca-del-portal-de-la-tierra'] = array(
+  // Exported menu link: menu-footer-menu_acerca-de-nosotros:node/6900.
+  $menu_links['menu-footer-menu_acerca-de-nosotros:node/6900'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'http://landportal.info/es/page/2015/02/acerca-del-portal-de-la-tierra',
-    'router_path' => '',
+    'link_path' => 'node/6900',
+    'router_path' => 'node/%',
     'link_title' => 'Acerca de nosotros',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_acerca-de-nosotros:http://landportal.info/es/page/2015/02/acerca-del-portal-de-la-tierra',
+      'identifier' => 'menu-footer-menu_acerca-de-nosotros:node/6900',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => -4,
     'customized' => 1,
     'language' => 'es',
     'menu_links_customized' => 1,
@@ -76,33 +100,33 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -4,
     'customized' => 1,
     'language' => 'fr',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-debate:debate',
   );
-  // Exported menu link: menu-footer-menu_blog:http://landportal.info/es/debate/blog.
-  $menu_links['menu-footer-menu_blog:http://landportal.info/es/debate/blog'] = array(
+  // Exported menu link: menu-footer-menu_blog:debate/blog-post.
+  $menu_links['menu-footer-menu_blog:debate/blog-post'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'http://landportal.info/es/debate/blog',
-    'router_path' => '',
+    'link_path' => 'debate/blog-post',
+    'router_path' => 'debate',
     'link_title' => 'Blog',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_blog:http://landportal.info/es/debate/blog',
+      'identifier' => 'menu-footer-menu_blog:debate/blog-post',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => 2,
     'customized' => 1,
-    'language' => 'es',
+    'language' => 'fr',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-debate:debate',
   );
@@ -130,29 +154,53 @@ function landportal_footer_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-debate:debate',
   );
-  // Exported menu link: menu-footer-menu_browse:library/browse.
-  $menu_links['menu-footer-menu_browse:library/browse'] = array(
+  // Exported menu link: menu-footer-menu_blogues:debate/blog-post.
+  $menu_links['menu-footer-menu_blogues:debate/blog-post'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'library/browse',
-    'router_path' => 'library/browse',
-    'link_title' => 'Browse',
+    'link_path' => 'debate/blog-post',
+    'router_path' => 'debate',
+    'link_title' => 'Blogues',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_browse:library/browse',
+      'identifier' => 'menu-footer-menu_blogues:debate/blog-post',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => 2,
     'customized' => 1,
-    'language' => 'en',
+    'language' => 'pt',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-library:node/10158',
+    'parent_identifier' => 'menu-footer-menu_land-debate:debate',
+  );
+  // Exported menu link: menu-footer-menu_buscar:library/search.
+  $menu_links['menu-footer-menu_buscar:library/search'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'library/search',
+    'router_path' => 'library/search',
+    'link_title' => 'Buscar',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_buscar:library/search',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -4,
+    'customized' => 1,
+    'language' => 'es',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-library-es:node/10158',
   );
   // Exported menu link: menu-footer-menu_catalog:book/catalog.
   $menu_links['menu-footer-menu_catalog:book/catalog'] = array(
@@ -172,7 +220,7 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -48,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
@@ -196,7 +244,7 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -2,
     'customized' => 1,
     'language' => 'fr',
     'menu_links_customized' => 1,
@@ -220,7 +268,7 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -2,
     'customized' => 1,
     'language' => 'es',
     'menu_links_customized' => 1,
@@ -244,7 +292,7 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => 4,
     'customized' => 1,
     'language' => 'fr',
     'menu_links_customized' => 1,
@@ -292,83 +340,179 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => 4,
     'customized' => 1,
     'language' => 'es',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-debate:debate',
   );
-  // Exported menu link: menu-footer-menu_contact-us:https://landportal.info/contact-us.
-  $menu_links['menu-footer-menu_contact-us:https://landportal.info/contact-us'] = array(
+  // Exported menu link: menu-footer-menu_comunidade:debate/community.
+  $menu_links['menu-footer-menu_comunidade:debate/community'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'https://landportal.info/contact-us',
-    'router_path' => '',
+    'link_path' => 'debate/community',
+    'router_path' => 'debate/community',
+    'link_title' => 'Comunidade',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_comunidade:debate/community',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 4,
+    'customized' => 1,
+    'language' => 'pt',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-debate:debate',
+  );
+  // Exported menu link: menu-footer-menu_contact-us:node/30375.
+  $menu_links['menu-footer-menu_contact-us:node/30375'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/30375',
+    'router_path' => 'node/%',
     'link_title' => 'Contact us',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_contact-us:https://landportal.info/contact-us',
+      'identifier' => 'menu-footer-menu_contact-us:node/30375',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => 8,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
   );
-  // Exported menu link: menu-footer-menu_contactez-nous:https://landportal.info/fr/node/30375.
-  $menu_links['menu-footer-menu_contactez-nous:https://landportal.info/fr/node/30375'] = array(
+  // Exported menu link: menu-footer-menu_contactez-nous:node/30375.
+  $menu_links['menu-footer-menu_contactez-nous:node/30375'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'https://landportal.info/fr/node/30375',
-    'router_path' => '',
-    'link_title' => 'Contactez nous',
+    'link_path' => 'node/30375',
+    'router_path' => 'node/%',
+    'link_title' => 'Contactez-nous',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_contactez-nous:https://landportal.info/fr/node/30375',
+      'identifier' => 'menu-footer-menu_contactez-nous:node/30375',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => 4,
     'customized' => 1,
     'language' => 'fr',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
   );
-  // Exported menu link: menu-footer-menu_contacto:https://landportal.info/contact-us.
-  $menu_links['menu-footer-menu_contacto:https://landportal.info/contact-us'] = array(
+  // Exported menu link: menu-footer-menu_contato-conosco:node/30375.
+  $menu_links['menu-footer-menu_contato-conosco:node/30375'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'https://landportal.info/contact-us',
-    'router_path' => '',
-    'link_title' => 'Contacto',
+    'link_path' => 'node/30375',
+    'router_path' => 'node/%',
+    'link_title' => 'Contato Conosco',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_contacto:https://landportal.info/contact-us',
+      'identifier' => 'menu-footer-menu_contato-conosco:node/30375',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => 4,
+    'customized' => 1,
+    'language' => 'pt',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
+  );
+  // Exported menu link: menu-footer-menu_contctenos:node/30375.
+  $menu_links['menu-footer-menu_contctenos:node/30375'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/30375',
+    'router_path' => 'node/%',
+    'link_title' => 'Contáctenos',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_contctenos:node/30375',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 4,
     'customized' => 1,
     'language' => 'es',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
+  );
+  // Exported menu link: menu-footer-menu_contribuer:node/10160.
+  $menu_links['menu-footer-menu_contribuer:node/10160'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/10160',
+    'router_path' => 'node/%',
+    'link_title' => 'Contribuer',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_contribuer:node/10160',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 2,
+    'customized' => 1,
+    'language' => 'fr',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-library-fr:node/10158',
+  );
+  // Exported menu link: menu-footer-menu_contribuir:node/10160.
+  $menu_links['menu-footer-menu_contribuir:node/10160'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/10160',
+    'router_path' => 'node/%',
+    'link_title' => 'Contribuir',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_contribuir:node/10160',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 2,
+    'customized' => 1,
+    'language' => 'es',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-library-es:node/10158',
   );
   // Exported menu link: menu-footer-menu_contribute:node/10160.
   $menu_links['menu-footer-menu_contribute:node/10160'] = array(
@@ -388,24 +532,24 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => 4,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-library:node/10158',
   );
-  // Exported menu link: menu-footer-menu_countries:book/countries.
-  $menu_links['menu-footer-menu_countries:book/countries'] = array(
+  // Exported menu link: menu-footer-menu_countries:debate/countries.
+  $menu_links['menu-footer-menu_countries:debate/countries'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'book/countries',
-    'router_path' => 'book/countries',
+    'link_path' => 'debate/countries',
+    'router_path' => 'debate',
     'link_title' => 'Countries',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_countries:book/countries',
+      'identifier' => 'menu-footer-menu_countries:debate/countries',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -436,7 +580,7 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -45,
+    'weight' => 2,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
@@ -460,7 +604,7 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => -2,
     'customized' => 1,
     'language' => 'fr',
     'menu_links_customized' => 1,
@@ -490,30 +634,6 @@ function landportal_footer_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-debate:debate',
   );
-  // Exported menu link: menu-footer-menu_debates:http://landportal.info/es/debate/debates.
-  $menu_links['menu-footer-menu_debates:http://landportal.info/es/debate/debates'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'http://landportal.info/es/debate/debates',
-    'router_path' => '',
-    'link_title' => 'Debates',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_debates:http://landportal.info/es/debate/debates',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -49,
-    'customized' => 1,
-    'language' => 'es',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-debate:debate',
-  );
   // Exported menu link: menu-footer-menu_eventos:debate/events.
   $menu_links['menu-footer-menu_eventos:debate/events'] = array(
     'menu_name' => 'menu-footer-menu',
@@ -532,7 +652,7 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => 0,
     'customized' => 1,
     'language' => 'es',
     'menu_links_customized' => 1,
@@ -562,10 +682,10 @@ function landportal_footer_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-debate:debate',
   );
-  // Exported menu link: menu-footer-menu_faq:node/13057.
-  $menu_links['menu-footer-menu_faq:node/13057'] = array(
+  // Exported menu link: menu-footer-menu_faq:node/30529.
+  $menu_links['menu-footer-menu_faq:node/30529'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'node/13057',
+    'link_path' => 'node/30529',
     'router_path' => 'node/%',
     'link_title' => 'FAQ',
     'options' => array(
@@ -573,24 +693,72 @@ function landportal_footer_menu_default_menu_links() {
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_faq:node/13057',
+      'identifier' => 'menu-footer-menu_faq:node/30529',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -2,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
   );
+  // Exported menu link: menu-footer-menu_fontes:book/sources.
+  $menu_links['menu-footer-menu_fontes:book/sources'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'book/sources',
+    'router_path' => 'book',
+    'link_title' => 'Fontes',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_fontes:book/sources',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 2,
+    'customized' => 1,
+    'language' => 'pt',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-book:book',
+  );
+  // Exported menu link: menu-footer-menu_fontes:library/sources.
+  $menu_links['menu-footer-menu_fontes:library/sources'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'library/sources',
+    'router_path' => 'library/sources',
+    'link_title' => 'Fontes',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_fontes:library/sources',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -2,
+    'customized' => 1,
+    'language' => 'pt',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-library-pt:node/10158',
+  );
   // Exported menu link: menu-footer-menu_fuentes:book/sources.
   $menu_links['menu-footer-menu_fuentes:book/sources'] = array(
     'menu_name' => 'menu-footer-menu',
     'link_path' => 'book/sources',
-    'router_path' => 'book/sources',
+    'router_path' => 'book',
     'link_title' => 'Fuentes',
     'options' => array(
       'attributes' => array(
@@ -604,17 +772,41 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => 2,
     'customized' => 1,
     'language' => 'es',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-book:book',
   );
+  // Exported menu link: menu-footer-menu_fuentes:library/sources.
+  $menu_links['menu-footer-menu_fuentes:library/sources'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'library/sources',
+    'router_path' => 'library/sources',
+    'link_title' => 'Fuentes',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_fuentes:library/sources',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -2,
+    'customized' => 1,
+    'language' => 'es',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-library-es:node/10158',
+  );
   // Exported menu link: menu-footer-menu_indicadores:book/indicators.
   $menu_links['menu-footer-menu_indicadores:book/indicators'] = array(
     'menu_name' => 'menu-footer-menu',
     'link_path' => 'book/indicators',
-    'router_path' => 'book/indicators',
+    'router_path' => 'book',
     'link_title' => 'Indicadores',
     'options' => array(
       'attributes' => array(
@@ -628,7 +820,7 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => 0,
     'customized' => 1,
     'language' => 'es',
     'menu_links_customized' => 1,
@@ -638,7 +830,7 @@ function landportal_footer_menu_default_menu_links() {
   $menu_links['menu-footer-menu_indicateurs:book/indicators'] = array(
     'menu_name' => 'menu-footer-menu',
     'link_path' => 'book/indicators',
-    'router_path' => 'book/indicators',
+    'router_path' => 'book',
     'link_title' => 'Indicateurs',
     'options' => array(
       'attributes' => array(
@@ -652,7 +844,7 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => 0,
     'customized' => 1,
     'language' => 'fr',
     'menu_links_customized' => 1,
@@ -662,7 +854,7 @@ function landportal_footer_menu_default_menu_links() {
   $menu_links['menu-footer-menu_indicators:book/indicators'] = array(
     'menu_name' => 'menu-footer-menu',
     'link_path' => 'book/indicators',
-    'router_path' => 'book/indicators',
+    'router_path' => 'book',
     'link_title' => 'Indicators',
     'options' => array(
       'attributes' => array(
@@ -676,113 +868,18 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => -47,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-book:book',
-  );
-  // Exported menu link: menu-footer-menu_inscribirse:https://landportal.info/es/user/register.
-  $menu_links['menu-footer-menu_inscribirse:https://landportal.info/es/user/register'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'https://landportal.info/es/user/register',
-    'router_path' => '',
-    'link_title' => 'Inscribirse',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_inscribirse:https://landportal.info/es/user/register',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -47,
-    'customized' => 1,
-    'language' => 'es',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
-  );
-  // Exported menu link: menu-footer-menu_inscription:https://landportal.info/fr/user/register.
-  $menu_links['menu-footer-menu_inscription:https://landportal.info/fr/user/register'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'https://landportal.info/fr/user/register',
-    'router_path' => '',
-    'link_title' => 'Inscription',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_inscription:https://landportal.info/fr/user/register',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -47,
-    'customized' => 1,
-    'language' => 'fr',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
-  );
-  // Exported menu link: menu-footer-menu_join-now:https://landportal.info/user/register.
-  $menu_links['menu-footer-menu_join-now:https://landportal.info/user/register'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'https://landportal.info/user/register',
-    'router_path' => '',
-    'link_title' => 'Join now',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_join-now:https://landportal.info/user/register',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -47,
-    'customized' => 1,
-    'language' => 'en',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
-  );
-  // Exported menu link: menu-footer-menu_land-book-pt:book.
-  $menu_links['menu-footer-menu_land-book-pt:book'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'book',
-    'router_path' => 'book',
-    'link_title' => 'Land book pt',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_land-book-pt:book',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 1,
-    'weight' => -39,
-    'customized' => 1,
-    'language' => 'pt',
-    'menu_links_customized' => 1,
   );
   // Exported menu link: menu-footer-menu_land-book:book.
   $menu_links['menu-footer-menu_land-book:book'] = array(
     'menu_name' => 'menu-footer-menu',
     'link_path' => 'book',
     'router_path' => 'book',
-    'link_title' => 'Land book',
+    'link_title' => 'Land Book',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -795,32 +892,9 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
-    'weight' => -46,
+    'weight' => -49,
     'customized' => 1,
-    'language' => 'es',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: menu-footer-menu_land-debate-pt:debate.
-  $menu_links['menu-footer-menu_land-debate-pt:debate'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'debate',
-    'router_path' => 'debate',
-    'link_title' => 'Land debate pt',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_land-debate-pt:debate',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 1,
-    'weight' => -40,
-    'customized' => 1,
-    'language' => 'pt',
+    'language' => 'en',
     'menu_links_customized' => 1,
   );
   // Exported menu link: menu-footer-menu_land-debate:debate.
@@ -828,7 +902,7 @@ function landportal_footer_menu_default_menu_links() {
     'menu_name' => 'menu-footer-menu',
     'link_path' => 'debate',
     'router_path' => 'debate',
-    'link_title' => 'Land debate',
+    'link_title' => 'Land Debate',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -846,12 +920,81 @@ function landportal_footer_menu_default_menu_links() {
     'language' => 'en',
     'menu_links_customized' => 1,
   );
+  // Exported menu link: menu-footer-menu_land-library-es:node/10158.
+  $menu_links['menu-footer-menu_land-library-es:node/10158'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/10158',
+    'router_path' => 'node/%',
+    'link_title' => 'Land Library es',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_land-library-es:node/10158',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 1,
+    'expanded' => 1,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'es',
+    'menu_links_customized' => 1,
+  );
+  // Exported menu link: menu-footer-menu_land-library-fr:node/10158.
+  $menu_links['menu-footer-menu_land-library-fr:node/10158'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/10158',
+    'router_path' => 'node/%',
+    'link_title' => 'Land Library fr',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_land-library-fr:node/10158',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 1,
+    'expanded' => 1,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'fr',
+    'menu_links_customized' => 1,
+  );
+  // Exported menu link: menu-footer-menu_land-library-pt:node/10158.
+  $menu_links['menu-footer-menu_land-library-pt:node/10158'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/10158',
+    'router_path' => 'node/%',
+    'link_title' => 'Land Library pt',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_land-library-pt:node/10158',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 1,
+    'expanded' => 1,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'pt',
+    'menu_links_customized' => 1,
+  );
   // Exported menu link: menu-footer-menu_land-library:node/10158.
   $menu_links['menu-footer-menu_land-library:node/10158'] = array(
     'menu_name' => 'menu-footer-menu',
     'link_path' => 'node/10158',
     'router_path' => 'node/%',
-    'link_title' => 'Land library',
+    'link_title' => 'Land Library',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -867,29 +1010,6 @@ function landportal_footer_menu_default_menu_links() {
     'weight' => -48,
     'customized' => 1,
     'language' => 'en',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: menu-footer-menu_land-portal-pt:<front>.
-  $menu_links['menu-footer-menu_land-portal-pt:<front>'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Land Portal pt',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_land-portal-pt:<front>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -38,
-    'customized' => 1,
-    'language' => 'pt',
     'menu_links_customized' => 1,
   );
   // Exported menu link: menu-footer-menu_land-portal:<front>.
@@ -910,30 +1030,30 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 1,
     'expanded' => 1,
-    'weight' => -48,
+    'weight' => -40,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-footer-menu_library:node/10158.
-  $menu_links['menu-footer-menu_library:node/10158'] = array(
+  // Exported menu link: menu-footer-menu_landvoc:node/30281.
+  $menu_links['menu-footer-menu_landvoc:node/30281'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'node/10158',
+    'link_path' => 'node/30281',
     'router_path' => 'node/%',
-    'link_title' => 'Library',
+    'link_title' => 'LandVoc',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_library:node/10158',
+      'identifier' => 'menu-footer-menu_landvoc:node/30281',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => 9,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
@@ -963,6 +1083,30 @@ function landportal_footer_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-debate:debate',
   );
+  // Exported menu link: menu-footer-menu_notcias:debate/news.
+  $menu_links['menu-footer-menu_notcias:debate/news'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'debate/news',
+    'router_path' => 'debate/news',
+    'link_title' => 'Notícias',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_notcias:debate/news',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -4,
+    'customized' => 1,
+    'language' => 'pt',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-debate:debate',
+  );
   // Exported menu link: menu-footer-menu_noticias:debate/news.
   $menu_links['menu-footer-menu_noticias:debate/news'] = array(
     'menu_name' => 'menu-footer-menu',
@@ -981,35 +1125,59 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -4,
     'customized' => 1,
     'language' => 'es',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-debate:debate',
   );
-  // Exported menu link: menu-footer-menu_pases:book/countries.
-  $menu_links['menu-footer-menu_pases:book/countries'] = array(
+  // Exported menu link: menu-footer-menu_pas:debate/countries.
+  $menu_links['menu-footer-menu_pas:debate/countries'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'book/countries',
-    'router_path' => 'book/countries',
-    'link_title' => 'Países',
+    'link_path' => 'debate/countries',
+    'router_path' => 'debate',
+    'link_title' => 'País',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_pases:book/countries',
+      'identifier' => 'menu-footer-menu_pas:debate/countries',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => -4,
     'customized' => 1,
     'language' => 'pt',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-book-pt:book',
+    'parent_identifier' => 'menu-footer-menu_land-book:book',
+  );
+  // Exported menu link: menu-footer-menu_pases:debate/countries.
+  $menu_links['menu-footer-menu_pases:debate/countries'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'debate/countries',
+    'router_path' => 'debate',
+    'link_title' => 'Países',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_pases:debate/countries',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -4,
+    'customized' => 1,
+    'language' => 'es',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-book:book',
   );
   // Exported menu link: menu-footer-menu_pays:debate/countries.
   $menu_links['menu-footer-menu_pays:debate/countries'] = array(
@@ -1029,79 +1197,103 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => -4,
     'customized' => 1,
     'language' => 'fr',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-book:book',
   );
-  // Exported menu link: menu-footer-menu_politique-de-confidentialit:http://landportal.info/about/privacy-policy.
-  $menu_links['menu-footer-menu_politique-de-confidentialit:http://landportal.info/about/privacy-policy'] = array(
+  // Exported menu link: menu-footer-menu_politique-de-confidentialit:node/6884.
+  $menu_links['menu-footer-menu_politique-de-confidentialit:node/6884'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'http://landportal.info/about/privacy-policy',
-    'router_path' => '',
+    'link_path' => 'node/6884',
+    'router_path' => 'node/%',
     'link_title' => 'Politique de confidentialité',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_politique-de-confidentialit:http://landportal.info/about/privacy-policy',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
-    'customized' => 1,
-    'language' => 'fr',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
-  );
-  // Exported menu link: menu-footer-menu_poltica-de-privacidad:http://landportal.info/es/node/6884.
-  $menu_links['menu-footer-menu_poltica-de-privacidad:http://landportal.info/es/node/6884'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'http://landportal.info/es/node/6884',
-    'router_path' => '',
-    'link_title' => 'Política de privacidad',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_poltica-de-privacidad:http://landportal.info/es/node/6884',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
-    'customized' => 1,
-    'language' => 'es',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
-  );
-  // Exported menu link: menu-footer-menu_preguntas-ms-frecuentes:node/13057.
-  $menu_links['menu-footer-menu_preguntas-ms-frecuentes:node/13057'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'node/13057',
-    'router_path' => 'node/%',
-    'link_title' => 'Preguntas más frecuentes',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_preguntas-ms-frecuentes:node/13057',
+      'identifier' => 'menu-footer-menu_politique-de-confidentialit:node/6884',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'fr',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
+  );
+  // Exported menu link: menu-footer-menu_poltica-de-privacidad:node/6884.
+  $menu_links['menu-footer-menu_poltica-de-privacidad:node/6884'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/6884',
+    'router_path' => 'node/%',
+    'link_title' => 'Política de privacidad',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_poltica-de-privacidad:node/6884',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'es',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
+  );
+  // Exported menu link: menu-footer-menu_poltica-de-privacidade:node/6884.
+  $menu_links['menu-footer-menu_poltica-de-privacidade:node/6884'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/6884',
+    'router_path' => 'node/%',
+    'link_title' => 'Política de Privacidade',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_poltica-de-privacidade:node/6884',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'pt',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
+  );
+  // Exported menu link: menu-footer-menu_preguntas-frecuentes:node/30529.
+  $menu_links['menu-footer-menu_preguntas-frecuentes:node/30529'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/30529',
+    'router_path' => 'node/%',
+    'link_title' => 'Preguntas Frecuentes',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_preguntas-frecuentes:node/30529',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -2,
     'customized' => 1,
     'language' => 'es',
     'menu_links_customized' => 1,
@@ -1125,16 +1317,40 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => 4,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
   );
-  // Exported menu link: menu-footer-menu_questions-frquemment-poses:node/13057.
-  $menu_links['menu-footer-menu_questions-frquemment-poses:node/13057'] = array(
+  // Exported menu link: menu-footer-menu_procure:library/search.
+  $menu_links['menu-footer-menu_procure:library/search'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'node/13057',
+    'link_path' => 'library/search',
+    'router_path' => 'library/search',
+    'link_title' => 'Procure',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_procure:library/search',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -4,
+    'customized' => 1,
+    'language' => 'pt',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-library-pt:node/10158',
+  );
+  // Exported menu link: menu-footer-menu_questions-frquemment-poses:node/30529.
+  $menu_links['menu-footer-menu_questions-frquemment-poses:node/30529'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/30529',
     'router_path' => 'node/%',
     'link_title' => 'Questions fréquemment posées',
     'options' => array(
@@ -1142,162 +1358,114 @@ function landportal_footer_menu_default_menu_links() {
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_questions-frquemment-poses:node/13057',
+      'identifier' => 'menu-footer-menu_questions-frquemment-poses:node/30529',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -2,
     'customized' => 1,
     'language' => 'fr',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
   );
-  // Exported menu link: menu-footer-menu_regiones:book/regions.
-  $menu_links['menu-footer-menu_regiones:book/regions'] = array(
+  // Exported menu link: menu-footer-menu_rechercher:library/search.
+  $menu_links['menu-footer-menu_rechercher:library/search'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'book/regions',
-    'router_path' => 'book/regions',
-    'link_title' => 'Regiones',
+    'link_path' => 'library/search',
+    'router_path' => 'library/search',
+    'link_title' => 'Rechercher',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_regiones:book/regions',
+      'identifier' => 'menu-footer-menu_rechercher:library/search',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
-    'customized' => 1,
-    'language' => 'es',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-book:book',
-  );
-  // Exported menu link: menu-footer-menu_regions:book/regions.
-  $menu_links['menu-footer-menu_regions:book/regions'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'book/regions',
-    'router_path' => 'book/regions',
-    'link_title' => 'Regions',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_regions:book/regions',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -50,
-    'customized' => 1,
-    'language' => 'en',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-book:book',
-  );
-  // Exported menu link: menu-footer-menu_reuse:book/reuse.
-  $menu_links['menu-footer-menu_reuse:book/reuse'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'book/reuse',
-    'router_path' => 'book/reuse',
-    'link_title' => 'Reuse',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_reuse:book/reuse',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -45,
-    'customized' => 1,
-    'language' => 'en',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-book:book',
-  );
-  // Exported menu link: menu-footer-menu_reutilizar:book/reuse.
-  $menu_links['menu-footer-menu_reutilizar:book/reuse'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'book/reuse',
-    'router_path' => 'book/reuse',
-    'link_title' => 'Reutilizar',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_reutilizar:book/reuse',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -45,
-    'customized' => 1,
-    'language' => 'es',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-book:book',
-  );
-  // Exported menu link: menu-footer-menu_rgions:book/regions.
-  $menu_links['menu-footer-menu_rgions:book/regions'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'book/regions',
-    'router_path' => 'book/regions',
-    'link_title' => 'Régions',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_rgions:book/regions',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -50,
+    'weight' => -4,
     'customized' => 1,
     'language' => 'fr',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-book:book',
+    'parent_identifier' => 'menu-footer-menu_land-library-fr:node/10158',
   );
-  // Exported menu link: menu-footer-menu_rutilisation:book/reuse.
-  $menu_links['menu-footer-menu_rutilisation:book/reuse'] = array(
+  // Exported menu link: menu-footer-menu_reutilizacin-de-datos:node/10159.
+  $menu_links['menu-footer-menu_reutilizacin-de-datos:node/10159'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'book/reuse',
-    'router_path' => 'book/reuse',
-    'link_title' => 'Réutilisation',
+    'link_path' => 'node/10159',
+    'router_path' => 'node/%',
+    'link_title' => 'Reutilización de datos',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_rutilisation:book/reuse',
+      'identifier' => 'menu-footer-menu_reutilizacin-de-datos:node/10159',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -45,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'es',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-library-es:node/10158',
+  );
+  // Exported menu link: menu-footer-menu_reutilizao-de-dados:node/10159.
+  $menu_links['menu-footer-menu_reutilizao-de-dados:node/10159'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/10159',
+    'router_path' => 'node/%',
+    'link_title' => 'Reutilização de dados',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_reutilizao-de-dados:node/10159',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'pt',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-library-pt:node/10158',
+  );
+  // Exported menu link: menu-footer-menu_rutilisation-des-donnes:node/10159.
+  $menu_links['menu-footer-menu_rutilisation-des-donnes:node/10159'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/10159',
+    'router_path' => 'node/%',
+    'link_title' => 'Réutilisation des données',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_rutilisation-des-donnes:node/10159',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
     'customized' => 1,
     'language' => 'fr',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-book:book',
+    'parent_identifier' => 'menu-footer-menu_land-library-fr:node/10158',
   );
   // Exported menu link: menu-footer-menu_search:library/search.
   $menu_links['menu-footer-menu_search:library/search'] = array(
@@ -1317,17 +1485,41 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => -2,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-library:node/10158',
   );
+  // Exported menu link: menu-footer-menu_sobre-ns:node/6900.
+  $menu_links['menu-footer-menu_sobre-ns:node/6900'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/6900',
+    'router_path' => 'node/%',
+    'link_title' => 'Sobre nós',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_sobre-ns:node/6900',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -4,
+    'customized' => 1,
+    'language' => 'pt',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
+  );
   // Exported menu link: menu-footer-menu_sources:book/sources.
   $menu_links['menu-footer-menu_sources:book/sources'] = array(
     'menu_name' => 'menu-footer-menu',
     'link_path' => 'book/sources',
-    'router_path' => 'book/sources',
+    'router_path' => 'book',
     'link_title' => 'Sources',
     'options' => array(
       'attributes' => array(
@@ -1365,11 +1557,107 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => 0,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-library:node/10158',
+  );
+  // Exported menu link: menu-footer-menu_termes-et-conditions:node/6890.
+  $menu_links['menu-footer-menu_termes-et-conditions:node/6890'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/6890',
+    'router_path' => 'node/%',
+    'link_title' => 'Termes et conditions',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_termes-et-conditions:node/6890',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 2,
+    'customized' => 1,
+    'language' => 'fr',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
+  );
+  // Exported menu link: menu-footer-menu_termos-e-condies:node/6890.
+  $menu_links['menu-footer-menu_termos-e-condies:node/6890'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/6890',
+    'router_path' => 'node/%',
+    'link_title' => 'Termos e Condições',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_termos-e-condies:node/6890',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 2,
+    'customized' => 1,
+    'language' => 'pt',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
+  );
+  // Exported menu link: menu-footer-menu_terms-and-conditions:node/6890.
+  $menu_links['menu-footer-menu_terms-and-conditions:node/6890'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/6890',
+    'router_path' => 'node/%',
+    'link_title' => 'Terms and Conditions',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_terms-and-conditions:node/6890',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 6,
+    'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
+  );
+  // Exported menu link: menu-footer-menu_trminos-y-condiciones-de-uso:node/6890.
+  $menu_links['menu-footer-menu_trminos-y-condiciones-de-uso:node/6890'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'node/6890',
+    'router_path' => 'node/%',
+    'link_title' => 'Términos y condiciones de uso',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_trminos-y-condiciones-de-uso:node/6890',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 2,
+    'customized' => 1,
+    'language' => 'es',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-footer-menu_land-portal:<front>',
   );
   // Exported menu link: menu-footer-menu_vnements:debate/events.
   $menu_links['menu-footer-menu_vnements:debate/events'] = array(
@@ -1389,35 +1677,11 @@ function landportal_footer_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => 0,
     'customized' => 1,
     'language' => 'fr',
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-debate:debate',
-  );
-  // Exported menu link: menu-footer-menu_widgets:book/widgets.
-  $menu_links['menu-footer-menu_widgets:book/widgets'] = array(
-    'menu_name' => 'menu-footer-menu',
-    'link_path' => 'book/widgets',
-    'router_path' => 'book/widgets',
-    'link_title' => 'Widgets',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_widgets:book/widgets',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -44,
-    'customized' => 1,
-    'language' => 'en',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'menu-footer-menu_land-book:book',
   );
 
   // Translatables
@@ -1427,17 +1691,22 @@ function landportal_footer_menu_default_menu_links() {
   t('Actualités');
   t('Blog');
   t('Blogs');
-  t('Browse');
+  t('Blogues');
+  t('Buscar');
   t('Catalog');
   t('Catalogue');
   t('Catálogo');
   t('Communauté');
   t('Community');
   t('Comunidad');
+  t('Comunidade');
   t('Contact us');
-  t('Contactez nous');
-  t('Contacto');
+  t('Contactez-nous');
+  t('Contato Conosco');
+  t('Contribuer');
+  t('Contribuir');
   t('Contribute');
+  t('Contáctenos');
   t('Countries');
   t('Data Reuse');
   t('Debates');
@@ -1445,39 +1714,44 @@ function landportal_footer_menu_default_menu_links() {
   t('Eventos');
   t('Events');
   t('FAQ');
+  t('Fontes');
   t('Fuentes');
   t('Indicadores');
   t('Indicateurs');
   t('Indicators');
-  t('Inscribirse');
-  t('Inscription');
-  t('Join now');
+  t('Land Book');
+  t('Land Debate');
+  t('Land Library');
+  t('Land Library es');
+  t('Land Library fr');
+  t('Land Library pt');
   t('Land Portal');
-  t('Land Portal pt');
-  t('Land book');
-  t('Land book pt');
-  t('Land debate');
-  t('Land debate pt');
-  t('Land library');
-  t('Library');
+  t('LandVoc');
   t('News');
   t('Noticias');
+  t('Notícias');
   t('Pays');
+  t('País');
   t('Países');
   t('Politique de confidentialité');
+  t('Política de Privacidade');
   t('Política de privacidad');
-  t('Preguntas más frecuentes');
+  t('Preguntas Frecuentes');
   t('Privacy Policy');
+  t('Procure');
   t('Questions fréquemment posées');
-  t('Regiones');
-  t('Regions');
-  t('Reuse');
-  t('Reutilizar');
-  t('Régions');
-  t('Réutilisation');
+  t('Rechercher');
+  t('Reutilización de datos');
+  t('Reutilização de dados');
+  t('Réutilisation des données');
   t('Search');
+  t('Sobre nós');
   t('Sources');
-  t('Widgets');
+  t('Termes et conditions');
+  t('Termos e Condições');
+  t('Terms and Conditions');
+  t('Términos y condiciones de uso');
+  t('À propos de nous');
   t('Événements');
 
   return $menu_links;
