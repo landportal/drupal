@@ -18032,27 +18032,27 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 
 /* This could be anyviews in theory */
 /*.view-landbook-countries-related,*/
-/* line 9, ../scss/modules/_views.scss */
+/* line 10, ../scss/modules/_views.scss */
 .view-by-providers .view-filters,
 .view.view-landbook-indicators .view-filters,
 .view.view-landbook-catalog .view-filters {
   float: right;
 }
-/* line 16, ../scss/modules/_views.scss */
+/* line 17, ../scss/modules/_views.scss */
 .view-by-providers .views-row,
 .view.view-landbook-indicators .views-row,
 .view.view-landbook-catalog .views-row {
   margin: 1em 0;
   border-bottom: 1px solid #f0f0f0;
 }
-/* line 20, ../scss/modules/_views.scss */
+/* line 21, ../scss/modules/_views.scss */
 .view-by-providers .views-row:last-of-type,
 .view.view-landbook-indicators .views-row:last-of-type,
 .view.view-landbook-catalog .views-row:last-of-type {
   border-bottom: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 26, ../scss/modules/_views.scss */
+  /* line 27, ../scss/modules/_views.scss */
   .view-by-providers .view-filters h2,
   .view.view-landbook-indicators .view-filters h2,
   .view.view-landbook-catalog .view-filters h2 {
