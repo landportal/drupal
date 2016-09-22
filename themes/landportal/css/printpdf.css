@@ -19,33 +19,53 @@ body{
     height:120px !important;
 
 }
-/*
-#page .print-organization{
-    position: fixed !important;
-    top:-90px !important;
-    right: 20px !important;
-    display:none !important;
-}
-
-#header .print-organization{
-    display:block !important;
-    position: fixed !important;
-    top:-30px !important;
-    width:400px;
-}
-#header .print-organization p{
-    float:left;
-    color:#79655A !important;
-    font-size:22px;
-    margin-right:20px;
-    margin-top: 50px;
-}*/
-/*#header .print-organization img{
-    width:80px;
-    height:auto;
-    float:right;
-}*/
 
 #block-views-landbook-countries-related-block-6{
     display:none !important;
+}
+
+#table-indicators{
+    page-break-before: always !important;
+}
+#map-global{
+    page-break-before: auto !important;
+}
+section{
+    border-bottom: none !important;
+}
+
+section h2{
+    padding-bottom:0 !important;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+}
+
+table span.glyphicon{
+    display:none !important;
+}
+
+table tbody tr{
+    font-size: 14px !important;
+}
+table tbody tr td{
+    padding:5px !important;
+}
+
+.piechart{
+    margin-left:-15px !important;
+}
+
+.piechart #wrapper-piechart{
+    width:450px !important;
+}
+.piechart .spiderchart{
+    width:350px !important;
+    float: right !important;
+}
+.piechart #block-landbook-view-coda-lbcp-spider-note{
+    width:350px !important;
+}
+
+#main-wrapper .region-content > section#country-navigation header{
+    margin-top:-45px !important;
 }

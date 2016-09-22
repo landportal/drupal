@@ -61,8 +61,16 @@ span.flag{
         }
         >section,
         >div{
-           padding-left:80px;
-           padding-right:80px; 
+           padding-left:40px;
+           padding-right:40px; 
+        }
+        >section{
+            padding-top:30px !important;
+            padding-bottom:30px !important;
+            h2{
+                padding-top:0 !important;
+                margin-bottom: 0 !important;
+            }
         }
     }
     /*
