@@ -68,57 +68,6 @@ function ct_debate_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-debate-field_country_promoted'.
-  $field_instances['node-debate-field_country_promoted'] = array(
-    'bundle' => 'debate',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_country_promoted',
-    'label' => 'Country Promoted',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 112,
-    ),
-  );
-
   // Exported field_instance: 'node-debate-field_date'.
   $field_instances['node-debate-field_date'] = array(
     'bundle' => 'debate',
@@ -253,13 +202,14 @@ function ct_debate_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => '',
         'match_operator' => 'CONTAINS',
         'path' => '',
         'size' => 30,
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'options_select',
       'weight' => 27,
     ),
   );
@@ -708,7 +658,6 @@ function ct_debate_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Attach a  file');
   t('Body');
-  t('Country Promoted');
   t('Date');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Facilitators');

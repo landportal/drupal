@@ -54,9 +54,7 @@ function ct_page_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 0,
       ),

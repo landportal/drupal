@@ -61,7 +61,7 @@ projects:
   - job_scheduler
   - language_switcher
   - libraries
-  - link
+#  - link
   - location
   - login_one_time
   - logintoboggan

@@ -1,8 +1,11 @@
 /* This could be anyviews in theory */
 
+.view-landbook-countries-related,
+.view-by-providers,
 .view.view-landbook-indicators,
 .view.view-landbook-catalog {
     @extend .row;
+    //.views-exposed-form,
     .view-filters {
         @extend .col-sm-4;
         float: right;
@@ -15,5 +18,14 @@
         margin: 1em 0;
         border-bottom: 1px solid #f0f0f0;
         &:last-of-type { border-bottom: 0; }
+    }
+
+    @media only screen and (max-width: 767px){
+        //.views-exposed-form,
+        .view-filters{
+            h2{
+                padding-top:20px;
+            }
+        }
     }
 }

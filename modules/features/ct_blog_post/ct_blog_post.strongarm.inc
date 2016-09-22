@@ -108,19 +108,15 @@ function ct_blog_post_strongarm() {
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '6',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '7',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'listing' => array(
             'weight' => '4',
-            'visible' => FALSE,
-          ),
-          'promoted_country_page' => array(
-            'weight' => '6',
             'visible' => FALSE,
           ),
         ),
@@ -132,9 +128,23 @@ function ct_blog_post_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_blog_post';
+  $strongarm->value = '2';
+  $export['language_content_type_blog_post'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_blog_post';
   $strongarm->value = array();
   $export['menu_options_blog_post'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_blog_post';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_blog_post'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
