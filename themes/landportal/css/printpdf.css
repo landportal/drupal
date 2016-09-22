@@ -3,7 +3,7 @@ body{
 }
 
 #main-wrapper{
-    padding-top: 130px !important;
+    padding-top: 140px !important;
 }
 /*
 #compare,
@@ -16,11 +16,15 @@ body{
     position:fixed !important;
     top:0px !important;
     left:0 !important;
-    height:160px !important;
+    height:170px !important;
 
 }
 #header .print-organization{
-    top:50px !important;
+    top:10px !important;
+}
+
+#header .print-organization p{
+    margin-top:40px !important;
 }
 
 #block-views-landbook-countries-related-block-6{
