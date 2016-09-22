@@ -20,20 +20,6 @@ function landlibrary_resource_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'ant_landlibrary_resource';
-  $strongarm->value = '0';
-  $export['ant_landlibrary_resource'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_php_landlibrary_resource';
-  $strongarm->value = 0;
-  $export['ant_php_landlibrary_resource'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_landlibrary_resource';
   $strongarm->value = 0;
   $export['comment_anonymous_landlibrary_resource'] = $strongarm;
