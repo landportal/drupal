@@ -5,7 +5,6 @@
  * View name: admin_view_landlibrary
  * View URL: https://landportal.info/admin/structure/views/view/admin_view_library
  */
-
 $view = new view();
 $view->name = 'admin_view_library';
 $view->description = 'Find and manage Land Library resources';
@@ -358,7 +357,7 @@ $handler->display->display_options['fields']['field_doc_description']['alter']['
 $handler->display->display_options['fields']['field_doc_people']['id'] = 'field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['table'] = 'field_data_field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['field'] = 'field_doc_people';
-/* Field: Field: Corporate Author(s) */
+/* Field: Field: Organization */
 $handler->display->display_options['fields']['field_orgref']['id'] = 'field_orgref';
 $handler->display->display_options['fields']['field_orgref']['table'] = 'field_data_field_orgref';
 $handler->display->display_options['fields']['field_orgref']['field'] = 'field_orgref';
@@ -397,8 +396,6 @@ $handler->display->display_options['fields']['field_doc_type']['delta_offset'] =
 $handler->display->display_options['fields']['field_doc_creation_date']['id'] = 'field_doc_creation_date';
 $handler->display->display_options['fields']['field_doc_creation_date']['table'] = 'field_data_field_doc_creation_date';
 $handler->display->display_options['fields']['field_doc_creation_date']['field'] = 'field_doc_creation_date';
-$handler->display->display_options['fields']['field_doc_creation_date']['label'] = '';
-$handler->display->display_options['fields']['field_doc_creation_date']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_doc_creation_date']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_doc_creation_date']['settings'] = array(
   'format_type' => 'month_and_year',
@@ -439,7 +436,7 @@ $handler->display->display_options['fields']['field_doc_language']['id'] = 'fiel
 $handler->display->display_options['fields']['field_doc_language']['table'] = 'field_data_field_doc_language';
 $handler->display->display_options['fields']['field_doc_language']['field'] = 'field_doc_language';
 $handler->display->display_options['fields']['field_doc_language']['delta_offset'] = '0';
-/* Field: Content: Copyright */
+/* Field: Content: Copyright owner */
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['id'] = 'field_doc_copyrights_statement';
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['table'] = 'field_data_field_doc_copyrights_statement';
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['field'] = 'field_doc_copyrights_statement';
@@ -452,6 +449,10 @@ $handler->display->display_options['fields']['field_doc_is_shown_by']['type'] = 
 $handler->display->display_options['fields']['field_doc_is_shown_by']['settings'] = array(
   'strip_www' => 0,
 );
+/* Field: Content: ISBN / Resource ID */
+$handler->display->display_options['fields']['field_doc_identifier']['id'] = 'field_doc_identifier';
+$handler->display->display_options['fields']['field_doc_identifier']['table'] = 'field_data_field_doc_identifier';
+$handler->display->display_options['fields']['field_doc_identifier']['field'] = 'field_doc_identifier';
 /* Field: Updated */
 $handler->display->display_options['fields']['changed']['id'] = 'changed';
 $handler->display->display_options['fields']['changed']['table'] = 'node';
