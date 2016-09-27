@@ -389,7 +389,7 @@ function landlibrary_resource_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'rdf_rdftype_landlibrary_resource';
-  $strongarm->value = 'dc:BibliographicResource, bibo:Document, schema:CreativeWork, prov:Entity';
+  $strongarm->value = 'dc:BibliographicResource, bibo:Document, schema:CreativeWork, prov:Entity, edm:ProvidedCHO';
   $export['rdf_rdftype_landlibrary_resource'] = $strongarm;
 
   $strongarm = new stdClass();
