@@ -1,5 +1,3 @@
-
-
 @page{
     margin:50px 0 50px 0;
 }
@@ -51,7 +49,7 @@ span.flag{
     }
 }
 #page{
-    margin-top: 130px;
+    margin-top: 120px;
     /*padding-left:80px;
     padding-right:80px;*/
     
@@ -65,8 +63,9 @@ span.flag{
            padding-right:40px; 
         }
         >section{
-            padding-top:30px !important;
+            padding-top:10px !important;
             padding-bottom:30px !important;
+            border-bottom:none !important;
             h2{
                 padding-top:0 !important;
                 margin-bottom: 0 !important;
@@ -140,10 +139,11 @@ span.flag{
     background:none !important;
 }
 #main-wrapper .region-content > section#country-navigation header{
-    margin-top:-15px !important;
+    margin-top:-35px !important;
 }
 
 #table-indicators{
+    page-break-before: always !important;
     .header{
         h2{
             background:url("../images/indicators.png") no-repeat 50% 0 !important;
@@ -159,9 +159,11 @@ span.flag{
         }
         .table{
             width:100%;
-            word-wrap:break-word;
-            table-layout:fixed;
+            /*word-wrap:break-word !important;*/
+            /*table-layout:fixed !important;*/
             thead{
+                /*display:table-header-group;*/
+                display:table-row-group;
                 th{
                     background-color: #a3c642 !important;
                     color:#ffffff !important;
@@ -171,10 +173,13 @@ span.flag{
                 }
             }
             tbody{
+                font-size:14px !important;
                 tr{
                     display: table-row;
                     text-align:center;
-                    
+                    td{
+                        color-size:14px !important;
+                    }
                     td:last-child{
                         display:none !important;
                     }
@@ -269,12 +274,12 @@ input.btn.btn-primary{
         width: 300px !important;
     }
 }
-
+/*
 #map-global{
     page-break-before: always !important;
 }
-
-.piechart{
+*/
+/*.piechart{
     width:100% !important;
     #wrapper-piechart,
     .spiderchart{
@@ -286,7 +291,29 @@ input.btn.btn-primary{
         float:rigth !important;
         width:500px !important;
     }
+    .spiderchart{
+        width:100px !important;
+        float:rigth !important;
+    }
+}*/
+.piechart{
+    width:100% !important;
+    #wrapper-piechart{
+        width:400px !important;
+        float:left !important;
+    }
+    .spiderchart{
+        width:400px !important;
+        float:right !important;
+        margin-right: 170px !important;
+    }
+    #block-landbook-view-coda-lbcp-spider-note{
+        clear:both;
+        float:rigth !important;
+        width:500px !important;
+    }
 }
+
 
 header{
     h2{
