@@ -64,6 +64,7 @@ table tbody tr td{
 
 .piechart #wrapper-piechart{
     width:450px !important;
+    margin:0 !important;
 }
 .piechart .spiderchart{
     width:350px !important;
