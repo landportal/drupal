@@ -279,7 +279,7 @@ input.btn.btn-primary{
     page-break-before: always !important;
 }
 */
-/*.piechart{
+.piechart{
     width:100% !important;
     #wrapper-piechart,
     .spiderchart{
@@ -295,10 +295,11 @@ input.btn.btn-primary{
         width:100px !important;
         float:rigth !important;
     }
-}*/
-.piechart{
+}
+/*.piechart{
     width:100% !important;
-    #wrapper-piechart{
+    #wrapper-piechart,
+    .spiderchart{
         width:400px !important;
         float:left !important;
     }
@@ -308,7 +309,7 @@ input.btn.btn-primary{
         width:500px !important;
         margin-right: 100px !important;
     }
-}
+}*/
 
 
 header{
