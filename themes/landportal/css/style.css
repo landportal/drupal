@@ -4895,6 +4895,10 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 .view-organizations-overview.view-display-id-page_1 .views-row .node-organization.node-teaser, .view-organizations-overview.view-display-id-page .views-row .node-organization.node-teaser { line-height: 150px; }
 .view-organizations-overview.view-display-id-page_1 .views-row .node-organization.node-teaser img, .view-organizations-overview.view-display-id-page .views-row .node-organization.node-teaser img { min-width: 0; }
 
+/* Landbook country pages - featured block (promoted to CP) */
+.view-landbook-countries-related { margin: 0; }
+.view-landbook-countries-related .view-content { width: 100%; }
+
 /* Ranking viualization */
 #ranking-wrapper li { border-bottom: 1px solid #cccccc; }
 #ranking-wrapper li:first-of-type { text-transform: uppercase; background-color: #A3C642; color: #FFFFFF; }
