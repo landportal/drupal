@@ -4898,6 +4898,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 /* Landbook country pages - featured block (promoted to CP) */
 .view-landbook-countries-related { margin: 0; }
 .view-landbook-countries-related .view-content { width: 100%; padding: 0; }
+.view-landbook-countries-related .view-content img { width: 100%; }
 
 /* Ranking viualization */
 #ranking-wrapper li { border-bottom: 1px solid #cccccc; }
