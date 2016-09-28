@@ -50,6 +50,41 @@ section a{
     }
 }
 
+/******************************************
+ * Country (narrative) page
+ */
+
+.node-type-thematic-narrative #main {
+    /* Hide default node title */
+    #page-title {
+        display: none;
+    }
+    .node-thematic-narrative {
+        .field-name-title-field,
+        .group-topics-regions,
+        .field-name-field-landvoc-to {
+            @extend .text-center;
+        }
+        /* Title: The landvoc (Theme or Category) element linked to the node (landvoc-to) */
+        .field-name-field-landvoc-to {
+            @extend .h1;
+        }
+        /* Subtitle: Actual title of the node */
+        .field-name-title-field {
+            @extend .h2;
+        }
+        .group-topics-regions {
+            .field-item a {
+                @include border-radius(5em);
+                padding: 5px 10px;
+                display: block;
+            }
+        }
+    }
+
+}
+
+
 
 
 /******************************************

@@ -2034,18 +2034,18 @@ hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #ee
 
 [role="button"] { cursor: pointer; }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; }
-h1 small, h1 .small, h2 small, h2 .small, h3 small, h3 .small, h4 small, h4 .small, h5 small, h5 .small, h6 small, h6 .small, .h1 small, .h1 .small, .h2 small, .h2 .small, .h3 small, .h3 .small, .h4 small, .h4 .small, .h5 small, .h5 .small, .h6 small, .h6 .small { font-weight: normal; line-height: 1; color: #777777; }
+h1, h2, h3, h4, h5, h6, .h1, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-field-landvoc-to, .h2, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-title-field, .h3, .h4, .h5, .h6 { font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; }
+h1 small, h1 .small, h2 small, h2 .small, h3 small, h3 .small, h4 small, h4 .small, h5 small, h5 .small, h6 small, h6 .small, .h1 small, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-field-landvoc-to small, .h1 .small, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-field-landvoc-to .small, .h2 small, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-title-field small, .h2 .small, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-title-field .small, .h3 small, .h3 .small, .h4 small, .h4 .small, .h5 small, .h5 .small, .h6 small, .h6 .small { font-weight: normal; line-height: 1; color: #777777; }
 
-h1, .h1, h2, .h2, h3, .h3 { margin-top: 20px; margin-bottom: 10px; }
-h1 small, h1 .small, .h1 small, .h1 .small, h2 small, h2 .small, .h2 small, .h2 .small, h3 small, h3 .small, .h3 small, .h3 .small { font-size: 65%; }
+h1, .h1, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-field-landvoc-to, h2, .h2, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-title-field, h3, .h3 { margin-top: 20px; margin-bottom: 10px; }
+h1 small, h1 .small, .h1 small, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-field-landvoc-to small, .h1 .small, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-field-landvoc-to .small, h2 small, h2 .small, .h2 small, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-title-field small, .h2 .small, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-title-field .small, h3 small, h3 .small, .h3 small, .h3 .small { font-size: 65%; }
 
 h4, .h4, h5, .h5, h6, .h6 { margin-top: 10px; margin-bottom: 10px; }
 h4 small, h4 .small, .h4 small, .h4 .small, h5 small, h5 .small, .h5 small, .h5 .small, h6 small, h6 .small, .h6 small, .h6 .small { font-size: 75%; }
 
-h1, .h1 { font-size: 36px; }
+h1, .h1, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-field-landvoc-to { font-size: 36px; }
 
-h2, .h2 { font-size: 30px; }
+h2, .h2, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-title-field { font-size: 30px; }
 
 h3, .h3 { font-size: 24px; }
 
@@ -2068,7 +2068,7 @@ mark, .mark { background-color: #fcf8e3; padding: .2em; }
 
 .text-right { text-align: right; }
 
-.text-center, body[class*="page-book-countries-"] .node-landbook-country header h2 { text-align: center; }
+.text-center, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-title-field, .node-type-thematic-narrative #main .node-thematic-narrative .group-topics-regions, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-field-landvoc-to, body[class*="page-book-countries-"] .node-landbook-country header h2 { text-align: center; }
 
 .text-justify { text-align: justify; }
 
@@ -3109,14 +3109,14 @@ a.label:hover, a.label:focus { color: #fff; text-decoration: none; cursor: point
 a.badge:hover, a.badge:focus { color: #fff; text-decoration: none; cursor: pointer; }
 
 .jumbotron { padding-top: 30px; padding-bottom: 30px; margin-bottom: 30px; color: inherit; background-color: #eeeeee; }
-.jumbotron h1, .jumbotron .h1 { color: inherit; }
+.jumbotron h1, .jumbotron .h1, .jumbotron .node-type-thematic-narrative #main .node-thematic-narrative .field-name-field-landvoc-to, .node-type-thematic-narrative #main .node-thematic-narrative .jumbotron .field-name-field-landvoc-to { color: inherit; }
 .jumbotron p { margin-bottom: 15px; font-size: 21px; font-weight: 200; }
 .jumbotron > hr { border-top-color: #d5d5d5; }
 .container .jumbotron, .container-fluid .jumbotron, body[class*="page-book-countries-"] #block-landbook-disclaimer-block .jumbotron, #footer .jumbotron { border-radius: 6px; padding-left: 15px; padding-right: 15px; }
 .jumbotron .container { max-width: 100%; }
 @media screen and (min-width: 768px) { .jumbotron { padding-top: 48px; padding-bottom: 48px; }
   .container .jumbotron, .container-fluid .jumbotron, body[class*="page-book-countries-"] #block-landbook-disclaimer-block .jumbotron, #footer .jumbotron { padding-left: 60px; padding-right: 60px; }
-  .jumbotron h1, .jumbotron .h1 { font-size: 63px; } }
+  .jumbotron h1, .jumbotron .h1, .jumbotron .node-type-thematic-narrative #main .node-thematic-narrative .field-name-field-landvoc-to, .node-type-thematic-narrative #main .node-thematic-narrative .jumbotron .field-name-field-landvoc-to { font-size: 63px; } }
 
 .thumbnail { display: block; padding: 4px; margin-bottom: 20px; line-height: 1.42857143; background-color: #fff; border: 1px solid #ddd; border-radius: 4px; -webkit-transition: border 0.2s ease-in-out; -o-transition: border 0.2s ease-in-out; transition: border 0.2s ease-in-out; }
 .thumbnail > img, .thumbnail a > img { display: block; max-width: 100%; height: auto; margin-left: auto; margin-right: auto; }
@@ -4351,6 +4351,12 @@ section a:focus { color: #A3C642; border: none; outline: none; text-decoration: 
 .node-type-landbook-country #section-header, .page-book #section-header { border-top: 0; background-color: #A3C642; }
 
 /****************************************** Country (narrative) page */
+.node-type-thematic-narrative #main { /* Hide default node title */ }
+.node-type-thematic-narrative #main #page-title { display: none; }
+.node-type-thematic-narrative #main .node-thematic-narrative { /* Title: The landvoc (Theme or Category) element linked to the node (landvoc-to) */ /* Subtitle: Actual title of the node */ }
+.node-type-thematic-narrative #main .node-thematic-narrative .group-topics-regions .field-item a { -moz-border-radius: 5em; -webkit-border-radius: 5em; border-radius: 5em; padding: 5px 10px; display: block; }
+
+/****************************************** Country (narrative) page */
 .section-block h2:first-child { display: none; }
 .section-block .block-views h2 { display: block; }
 
@@ -4961,8 +4967,8 @@ html, body { height: 100%; margin: 0; padding: 0; }
 
 body { font-family: "Merriweather",serif; color: #666; }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 { font-family: "Open Sans",sans-serif; margin-top: 0; text-rendering: optimizelegibility; clear: both; }
-h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a { text-decoration: none; }
+h1, .h1, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-field-landvoc-to, h2, .h2, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-title-field, h3, .h3, h4, .h4, h5, .h5 { font-family: "Open Sans",sans-serif; margin-top: 0; text-rendering: optimizelegibility; clear: both; }
+h1 a, .h1 a, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-field-landvoc-to a, h2 a, .h2 a, .node-type-thematic-narrative #main .node-thematic-narrative .field-name-title-field a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a { text-decoration: none; }
 
 h1 { font-size: 2.5em; font-weight: normal; color: #333; padding-bottom: 0.2em; }
 
