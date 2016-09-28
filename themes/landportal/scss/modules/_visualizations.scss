@@ -3,11 +3,13 @@
 #ranking-wrapper {
     li {
         @extend .row;
+        background-color: white;
         border-bottom: 1px solid $grey-lighter;
         &:first-of-type {
             text-transform: uppercase;
             background-color: $green-light;
             color: #FFFFFF;
+            font-size: 1.2em;
         }
         &:last-of-type { border-bottom: 0; }
         span.flag {
@@ -22,10 +24,17 @@
             z-index: 1;
             @include border-radius(25px);
         }
-        &:first-of-type div,
-        div:nth-child(2) {
-            line-height: 70px; // Here the size should be flag height + margins
-                               //font-size: 1.2em;
+        &.expand {
+            a {
+                display: block;
+                padding: .5em 0;
+                width: 100%;
+            }
+            margin: .5em 0;
+        }
+        .value {
+            font-size: 1.8em;
+            padding-top: .5em;
         }
     }
 

@@ -5,6 +5,35 @@
  * 
  */
 
+function landbook_view_coda_update_7201() {
+    $block = array(
+        /* 'status' => 1, */
+        /* 'weight' => 2, */
+        /* 'region' => 'content', */
+        /* 'title' => '<none>' */
+        /* 'visibility' => BLOCK_VISIBILITY_LISTED, */
+        'pages' => "book/indicators/*\nbook/thematic/*",
+        'module' => 'landbook_view_coda',
+        'delta' => 'landbook_vis_ranking',
+        'theme' => 'landportal',
+        'cache' => DRUPAL_CACHE_PER_USER,
+    );
+    db_merge('block')
+        ->key(array(
+            'module'=>$block['module'],
+            'delta'=> $block['delta'],
+            'theme'=> $block['theme']
+        ))
+        ->fields(array(
+            /* 'status' => $block['status'], */
+            /* 'weight' => $block['weight'], */
+            /* 'region' => $block['region'], */
+            /* 'visibility' => $block['visibility'], */
+            'pages' => $block['pages'],
+        ))
+        ->execute();
+}
+
 function landbook_view_coda_update_7200() {
     $block = array(
         /* 'status' => 1, */

@@ -99,11 +99,11 @@ function landbook_view_coda_block_info() {
         'weight'    => 16
     );
     $blocks['landbook_vis_ranking'] = array(
-        'info'      => t('Indicator page: Ranking chart'),
+        'info'      => t('LB view-coda: Ranking chart'),
         'status'    => TRUE,
         'region'    => 'content',
         'visibility'=> BLOCK_VISIBILITY_LISTED,
-        'pages'     => "book/indicators/*",
+        'pages'     => "book/indicators/*\nbook/thematic/*",
         'weight'    => 14
     );
     return $blocks;
