@@ -1,5 +1,61 @@
 <?php
-include 'landbook_view_coda.library.inc';
+/**
+ * This module provides the Land Book visualization
+ * It interface with js-view-coda library
+ *
+ * Author: Jules Clement <jules@landportal.info>
+ */
+
+$LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
+
+include_once 'landbook_view_coda.library.inc';
+
+
+
+
+/**
+ * Add JS settings variables for landbook pages / sections
+ * that display some visualizations.
+ *
+ * in JS: Drupal.settings.landbook
+ */
+function landbook_view_coda_page_build() {
+    global $LBVIS_PATH;
+
+    $url = explode('/', drupal_get_path_alias());
+    if ($url[0] != 'book') return;
+    if ($url[1] == 'thematic') {
+        drupal_add_js(array(
+            'landbook' => array(
+                'type' => 'thematic'
+            )
+        ), 'setting');
+    }
+    if ($url[1] == 'countries' && count($url) > 2) {
+        drupal_add_css($LBVIS_PATH . '/css/screen.css', array('group' => CSS_DEFAULT));
+        drupal_add_css($LBVIS_PATH . '/css/spinkit.css', array('group' => CSS_DEFAULT));
+        drupal_add_js(array(
+            'landbook' => array(
+                'type'          => 'country',
+                'libraryPath'   => $LBVIS_PATH,
+                'countryCode'   => $url[2]
+            )
+        ), 'setting');
+    }
+}
+
+function landbook_view_coda_term_view($term, $view_mode, $langcode) {
+    if (!in_array($term->vocabulary_machine_name, array('indicators', 'catalogs')))
+        return;
+    drupal_add_js(array(
+        'landbook' => array(
+            'type' => $term->vocabulary_machine_name,
+            'id'   => $term->field_id['und'][0]['value']
+        )
+    ), 'setting');
+}
+
+
 
 function landbook_view_coda_block_info() {
     $blocks['lbcp_linechart'] = array(
@@ -42,7 +98,6 @@ function landbook_view_coda_block_info() {
         'pages'     => "",
         'weight'    => 16
     );
-
     $blocks['landbook_vis_ranking'] = array(
         'info'      => t('Indicator page: Ranking chart'),
         'status'    => TRUE,
@@ -101,7 +156,7 @@ function landbook_view_coda_block_view($delta = '') {
         );
         break;
     case 'lbcp_pie' :
-        //$block['subject'] = t('');
+        $block['subject'] = '';
         $block['content'] = array(
             '#attached' => array(
                 'library' => array(

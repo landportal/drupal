@@ -34,49 +34,11 @@ function landbook_help($path, $arg) {
   case "admin/help#landbook":
     return '<p>' . t("Landbook section of the Landportal") . '</p>'
       . '<p>' . t("It provides differents menus, block, pages and hooks plus a few configuration pages"). '</p>'
-      . '<p>' . t("The Landbook is composed of different modules: catalog, countries, indicators, regions, reuse, sources, widgets") . '</p>'
-      . '<p>' . t("Each submodule comes with some JS to allow dynamic actions and template(s) for main content and eventually sidebars elements.") . '</p>'
-      . '<p>' . t("This module also provides ajax ready pages (which output some JSON, see: ajax/) for JS callbacks.") . '</p>'
-      ;
+        . '<p>' . t("The Landbook is composed of different modules: catalog, countries, indicators, regions, reuse, sources, widgets") . '</p>';
     break;
   }
 }
 
-/**
- * Landbook pages hook
- */
-function landbook_page_build(&$page) {
-    // Country pages (aka naratives)
-    if (arg(0) == 'book' && arg(1) == 'countries') {
-        landbook_country_narrative(arg(2));
-    }
-}
-function landbook_taxonomy_term_view($term, $view_mode, $langcode) {
-    if (!in_array($term->vocabulary_machine_name, array('indicators', 'catalogs')))
-        return;
-    drupal_add_js(array(
-        'landbook' => array(
-            'type' => $term->vocabulary_machine_name,
-            'id'   => $term->field_id['und'][0]['value']
-        )
-    ), 'setting');
-}
-
-function landbook_country_narrative($iso3) {
-    global $LBVIS_PATH;
-    $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
-    // TODO: should be added by hook_library while declaring view-coda (aka lbvis)
-    // TODO: add css with #attached (see vis_map module)
-    drupal_add_css($LBVIS_PATH . '/css/screen.css', array('group' => CSS_DEFAULT));
-    drupal_add_css($LBVIS_PATH . '/css/spinkit.css', array('group' => CSS_DEFAULT));
-    drupal_add_js(array(
-        'landbook' => array(
-            //'path'          => $theme_path,
-            'libraryPath'   => $LBVIS_PATH,
-            'countryCode'   => $iso3
-        )
-    ), 'setting');
-}
 
 /**
  * Note: Webcoding
@@ -120,33 +82,6 @@ function landbook_get_country_iso($iso){
     return $tid;
 }
 
-// Un-used?
-function landbook_get_country_narrative_nid($title){
-  $nid = db_select('node', 'n')
-  ->fields('n', array('nid'))
-  ->condition('n.title', $title)
-  ->condition('n.type', 'landbook_country')
-  ->execute()
-  ->fetchField();
-  return $nid;
-}
-// Un-used?
-function load_country_description($title){
-  $nid = db_select('node', 'n')
-  ->fields('n', array('nid'))
-  ->condition('n.title', $title)
-  ->condition('n.type', 'landbook_country')
-  ->execute()
-  ->fetchField();
-  if(empty($nid)){
-    return '';
-  }
-  else{
-    $node = node_load($nid);
-    $description=node_view($node, 'teaser');
-    return $description ;
-  }
-}
 
 /**
  * Implements hook_views_pre_render().
@@ -166,13 +101,10 @@ function landbook_views_pre_render(&$view) {
         $query->condition('fdfi.field_iso3_value', $args[2]);
         $query->condition('t.vid', '7');
         $tid = $query->execute()->fetchField();
-
         if ($tid) {
           // Set to use 'custom_url'.
           $view->display_handler->set_option('link_display', 'custom_url');
-
           // Change the link url.
-
           $view->display_handler->set_option('link_url', 'library/search');
           $view->exposed_raw_input['f[0]'] = 'im_field_geographical_focus:' . $tid;
         }

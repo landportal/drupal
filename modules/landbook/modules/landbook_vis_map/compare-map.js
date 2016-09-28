@@ -3,7 +3,7 @@
         LBMG = new lbvisMap({
             target: '#map-global',
             map_data: map_data,
-            iso3: Drupal.settings.landbook.countryCode,
+            iso3: (Drupal.settings.landbook.type == 'country' ? Drupal.settings.landbook.countryCode : false),
             title: true,
             subtitle: true, // '{indicator.description}'
             legend: true,
