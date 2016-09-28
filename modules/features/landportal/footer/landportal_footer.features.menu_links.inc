@@ -538,18 +538,18 @@ function landportal_footer_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-library:node/10158',
   );
-  // Exported menu link: menu-footer-menu_countries:debate/countries.
-  $menu_links['menu-footer-menu_countries:debate/countries'] = array(
+  // Exported menu link: menu-footer-menu_countries:book/countries.
+  $menu_links['menu-footer-menu_countries:book/countries'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'debate/countries',
-    'router_path' => 'debate',
+    'link_path' => 'book/countries',
+    'router_path' => 'book/countries',
     'link_title' => 'Countries',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_countries:debate/countries',
+      'identifier' => 'menu-footer-menu_countries:book/countries',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -1131,18 +1131,18 @@ function landportal_footer_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-debate:debate',
   );
-  // Exported menu link: menu-footer-menu_pas:debate/countries.
-  $menu_links['menu-footer-menu_pas:debate/countries'] = array(
+  // Exported menu link: menu-footer-menu_pas:book/countries.
+  $menu_links['menu-footer-menu_pas:book/countries'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'debate/countries',
-    'router_path' => 'debate',
+    'link_path' => 'book/countries',
+    'router_path' => 'book/countries',
     'link_title' => 'País',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_pas:debate/countries',
+      'identifier' => 'menu-footer-menu_pas:book/countries',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -1155,18 +1155,18 @@ function landportal_footer_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-book:book',
   );
-  // Exported menu link: menu-footer-menu_pases:debate/countries.
-  $menu_links['menu-footer-menu_pases:debate/countries'] = array(
+  // Exported menu link: menu-footer-menu_pases:book/countries.
+  $menu_links['menu-footer-menu_pases:book/countries'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'debate/countries',
-    'router_path' => 'debate',
+    'link_path' => 'book/countries',
+    'router_path' => 'book/countries',
     'link_title' => 'Países',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_pases:debate/countries',
+      'identifier' => 'menu-footer-menu_pases:book/countries',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -1179,18 +1179,18 @@ function landportal_footer_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-footer-menu_land-book:book',
   );
-  // Exported menu link: menu-footer-menu_pays:debate/countries.
-  $menu_links['menu-footer-menu_pays:debate/countries'] = array(
+  // Exported menu link: menu-footer-menu_pays:book/countries.
+  $menu_links['menu-footer-menu_pays:book/countries'] = array(
     'menu_name' => 'menu-footer-menu',
-    'link_path' => 'debate/countries',
-    'router_path' => 'debate',
+    'link_path' => 'book/countries',
+    'router_path' => 'book/countries',
     'link_title' => 'Pays',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-footer-menu_pays:debate/countries',
+      'identifier' => 'menu-footer-menu_pays:book/countries',
     ),
     'module' => 'menu',
     'hidden' => 0,
