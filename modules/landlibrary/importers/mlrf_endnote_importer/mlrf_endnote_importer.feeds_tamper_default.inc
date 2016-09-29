@@ -8,6 +8,7 @@
  * Implements hook_feeds_tamper_default().
  */
 function mlrf_endnote_importer_feeds_tamper_default() {
+
 $export = array();
 
 $feeds_tamper = new stdClass();
@@ -108,7 +109,7 @@ $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_11-unique';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
 $feeds_tamper->source = 'xpathparser:11';
 $feeds_tamper->plugin_id = 'unique';
-$feeds_tamper->settings = '';
+$feeds_tamper->settings = array();
 $feeds_tamper->weight = 6;
 $feeds_tamper->description = 'Unique';
 
@@ -186,7 +187,7 @@ $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_12-unique';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
 $feeds_tamper->source = 'xpathparser:12';
 $feeds_tamper->plugin_id = 'unique';
-$feeds_tamper->settings = '';
+$feeds_tamper->settings = array();
 $feeds_tamper->weight = 2;
 $feeds_tamper->description = 'Unique';
 
@@ -239,7 +240,7 @@ $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_14-unique';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
 $feeds_tamper->source = 'xpathparser:14';
 $feeds_tamper->plugin_id = 'unique';
-$feeds_tamper->settings = '';
+$feeds_tamper->settings = array();
 $feeds_tamper->weight = 1;
 $feeds_tamper->description = 'Unique';
 
@@ -333,7 +334,7 @@ $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_15-unique';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
 $feeds_tamper->source = 'xpathparser:15';
 $feeds_tamper->plugin_id = 'unique';
-$feeds_tamper->settings = '';
+$feeds_tamper->settings = array();
 $feeds_tamper->weight = 2;
 $feeds_tamper->description = 'Unique';
 
@@ -404,6 +405,138 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Add the month (12) and day (31) at the end of the string';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_7-find_replace_multiple';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'xpathparser:7';
+$feeds_tamper->plugin_id = 'find_replace_multiple';
+$feeds_tamper->settings = array(
+  'pairs' => array(
+    0 => array(
+      'source' => 'Asian Institute of Technology – AIT',
+      'target' => 'Asian Institute of Technology',
+    ),
+    1 => array(
+      'source' => 'Asian NGO Coalition for Agrarian Reform and Rural Development \\(ANGOC\\)',
+      'target' => 'Asian NGO Coalition (ANGOC)',
+    ),
+    2 => array(
+      'source' => 'Asian Society of Agricultural Economists \\(ASAE\\)',
+      'target' => 'Asian Society of Agricultural Economists',
+    ),
+    3 => array(
+      'source' => 'Cambodia Land Studies Project; OXFAM',
+      'target' => 'Oxfam Great Britain',
+    ),
+    4 => array(
+      'source' => 'Center for Peacebuilding \\(KOFF\\), Swiss Peace Foundation \\(swisspeace\\)',
+      'target' => 'swisspeace',
+    ),
+    5 => array(
+      'source' => 'Earthscan',
+      'target' => 'Routledge Environment & Sustainability',
+    ),
+    6 => array(
+      'source' => 'Elsevier B.V.',
+      'target' => 'Elsevier',
+    ),
+    7 => array(
+      'source' => 'Elsevier Ltd',
+      'target' => 'Elsevier',
+    ),
+    8 => array(
+      'source' => 'Food & Agricultural Organistion of the United Nations \\(FAO\\)',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    9 => array(
+      'source' => 'Forest Peoples Programme',
+      'target' => 'Forest Peoples Programme (FPP)',
+    ),
+    10 => array(
+      'source' => 'IIED',
+      'target' => 'International Institute for Environment and Development',
+    ),
+    11 => array(
+      'source' => 'International Organization on Migration \\(IOM\\)',
+      'target' => 'International Organization for Migration',
+    ),
+    12 => array(
+      'source' => 'Asia Research Center on Migration \\(ARCM\\), Institute of Asian Studies, Chulalongkorn University.',
+      'target' => 'Asian Research Center for Migration',
+    ),
+    13 => array(
+      'source' => 'IRASEC',
+      'target' => 'Institut de Recherche sur l\'Asie du Sud-Est Contemporaine',
+    ),
+    14 => array(
+      'source' => 'Singapore University Press',
+      'target' => 'NUS Press Singapore',
+    ),
+    15 => array(
+      'source' => 'The Learning Institute \\(LI\\)',
+      'target' => 'Learning Institute',
+    ),
+    16 => array(
+      'source' => 'The World Bank',
+      'target' => 'World Bank Group',
+    ),
+    17 => array(
+      'source' => 'UBC Press',
+      'target' => 'University of British Columbia Press',
+    ),
+    18 => array(
+      'source' => 'XXIII FIG Congress',
+      'target' => 'International Federation of Surveyors (FIG)',
+    ),
+    19 => array(
+      'source' => 'Yale University Press',
+      'target' => 'Yale University Press',
+    ),
+  ),
+);
+$feeds_tamper->weight = 5;
+$feeds_tamper->description = 'Find replace multiple';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_7-php';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'xpathparser:7';
+$feeds_tamper->plugin_id = 'php';
+$feeds_tamper->settings = array(
+  'php' => 'if ($field != null) {
+   watchdog(\'mlrf_endnote_importer\', "end=".$field, array(), WATCHDOG_DEBUG);
+   return $field;
+}',
+);
+$feeds_tamper->weight = 6;
+$feeds_tamper->description = 'Execute php code';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_7-php_2';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'xpathparser:7';
+$feeds_tamper->plugin_id = 'php';
+$feeds_tamper->settings = array(
+  'php' => 'if ($field != null) {
+   watchdog(\'mlrf_endnote_importer\', "start=".$field, array(), WATCHDOG_DEBUG);
+   return $field;
+}',
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Execute php code';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -636,6 +769,7 @@ $feeds_tamper->weight = 8;
 $feeds_tamper->description = 'Statute - Reports & Research';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
+
 
   return $export;
 }

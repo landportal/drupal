@@ -20,7 +20,7 @@ $feeds_importer->config = array(
   'fetcher' => array(
     'plugin_key' => 'FeedsFileFetcher',
     'config' => array(
-      'allowed_extensions' => 'xml',
+      'allowed_extensions' => 'xml html htm',
       'direct' => 0,
       'directory' => 'private://feeds',
       'allowed_schemes' => array(
@@ -50,6 +50,7 @@ $feeds_importer->config = array(
         'xpathparser:16' => 'contributors/authors/author/style/text() | contributors/secondary-authors/author/style/text()',
         'xpathparser:17' => 'custom1/style/text()',
         'xpathparser:18' => 'pages/style/text()',
+        'xpathparser:19' => 'publisher/style/text()',
       ),
       'rawXML' => array(
         'xpathparser:0' => 0,
@@ -69,6 +70,7 @@ $feeds_importer->config = array(
         'xpathparser:16' => 0,
         'xpathparser:17' => 0,
         'xpathparser:18' => 0,
+        'xpathparser:19' => 0,
       ),
       'context' => '//record',
       'exp' => array(
@@ -92,6 +94,7 @@ $feeds_importer->config = array(
           'xpathparser:16' => 0,
           'xpathparser:17' => 0,
           'xpathparser:18' => 0,
+          'xpathparser:19' => 0,
         ),
       ),
       'allow_override' => 0,
@@ -215,6 +218,12 @@ $feeds_importer->config = array(
         18 => array(
           'source' => 'xpathparser:18',
           'target' => 'field_doc_pagination',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        19 => array(
+          'source' => 'xpathparser:19',
+          'target' => 'field_doc_copyrights_statement',
           'unique' => FALSE,
         ),
       ),
