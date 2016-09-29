@@ -26,3 +26,11 @@ Workflow
 Files imported
 --------------
 - 20160923 - Biblio-EndNote.xml
+
+Notes
+-----
+
+In the tamper for matching the publisher, the characters '(' and ')' has been modified (t o'\(' ), 
+due to the use of preg_replace PHP function by the multiple replace tamper plugin 
+https://www.drupal.org/node/1525540
+http://php.net/manual/function.preg-replace.php
