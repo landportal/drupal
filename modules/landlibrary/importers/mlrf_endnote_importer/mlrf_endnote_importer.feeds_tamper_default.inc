@@ -497,6 +497,10 @@ $feeds_tamper->settings = array(
       'source' => 'Yale University Press',
       'target' => 'Yale University Press',
     ),
+    20 => array(
+      'source' => 'Land Deals Politics Initiative \\(LDPI\\)',
+      'target' => 'Land Deal Politics Initiative (LDPI)',
+    ),
   ),
 );
 $feeds_tamper->weight = 5;
