@@ -63,6 +63,7 @@ function landbook_page_build(&$page) {
                 'margin-top'=>10,
                 'margin-left'=>0,
                 'margin-right'=>0,
+                'margin-bottom'=>'1cm',
                 'user-style-sheet'=>path_to_theme() . '/css/printpdf.css',
             ));
             $url='http://'.$_SERVER['HTTP_HOST'].'/'.str_replace('/pdf','',current_path());
