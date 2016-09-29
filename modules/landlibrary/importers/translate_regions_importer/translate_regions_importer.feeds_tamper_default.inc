@@ -34,7 +34,7 @@ $feeds_tamper->importer = 'translate_regions_importer';
 $feeds_tamper->source = 'blank 1';
 $feeds_tamper->plugin_id = 'php';
 $feeds_tamper->settings = array(
-  'php' => 'watchdog(\'importer\', "ISO3=".$field, array(), WATCHDOG_DEBUG);
+  'php' => 'watchdog(\'translate_regions_importer\', "ISO3=".$field, array(), WATCHDOG_DEBUG);
 return $field;',
 );
 $feeds_tamper->weight = 1;
@@ -86,12 +86,12 @@ $feeds_tamper->importer = 'translate_regions_importer';
 $feeds_tamper->source = 'blank 2';
 $feeds_tamper->plugin_id = 'php';
 $feeds_tamper->settings = array(
-  'php' => 'watchdog(\'importer\', "tid=".$field, array(), WATCHDOG_DEBUG);
+  'php' => 'watchdog(\'translate_regions_importer\', "tid=".$field, array(), WATCHDOG_DEBUG);
 if ($field != null) {
     $term = taxonomy_term_load($field);
-    watchdog(\'importer\', $field, array(), WATCHDOG_DEBUG);
+    watchdog(\'translate_regions_importer\', $field, array(), WATCHDOG_DEBUG);
     $name = $term->name;
-    watchdog(\'importer\', $name, array(), WATCHDOG_DEBUG);
+    watchdog(\'translate_regions_importer\', $name, array(), WATCHDOG_DEBUG);
     return $name;
 }',
 );
@@ -115,6 +115,7 @@ $feeds_tamper->weight = 3;
 $feeds_tamper->description = 'Required field';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
+
 
   return $export;
 }

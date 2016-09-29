@@ -81,7 +81,7 @@ $feeds_importer->config = array(
         6 => array(
           'source' => 'blank 2',
           'target' => 'name',
-          'unique' => FALSE,
+          'unique' => 1,
         ),
       ),
       'insert_new' => '0',
@@ -100,6 +100,7 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
+
 
   $export[$feeds_importer->id] = $feeds_importer;
 
