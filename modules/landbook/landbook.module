@@ -119,31 +119,73 @@ function landbook_views_pre_render(&$view) {
 // So this is both here and in land_util(ity?)?
 function landbook_form_alter(&$form, &$form_state, $form_id){
   if($form_id == 'news_node_form'  || $form_id == 'blog_post_node_form' || $form_id == 'debate_node_form' || $form_id == 'event_node_form' || $form_id == 'landlibrary_resource_node_form'){
-    drupal_add_js(drupal_get_path('module', 'landbook') . '/js/landbook.js');
-    $terms=array('0'=>'--None--');
-    $countries=taxonomy_get_tree(3);
+
+    $form['#after_build'][] = 'landbook_form_custom_options_after_build';
+    $form['options']['#attached']['js'][] = drupal_get_path('module', 'landbook') . '/js/landbook.js';
+
+    $terms = array('0'=>'--None--');
+    $countries = taxonomy_get_tree(3);
     foreach ($countries as $country) {
       $terms[$country->tid]=$country->name;
     }
-    $default_values=$form['#node']->field_country_promoted['und'];
+    $default_values = $form['#node']->field_country_promoted['und'];
     foreach ($default_values as $value) {
-      $default[]=$value['tid'];
+      $default[] = $value['tid'];
     }
-    $form['options']['promoted_nodes']=array(
+
+    $form['options']['promoted_nodes'] = array(
       '#type'=>'select',
-      '#weight'=>6,
+      '#weight'=>1,
       '#options'=>$terms,
       '#multiple'=>TRUE,
       '#default_value'=>$default,
     );
+
+    $thematic_narrative_nodes = node_load_multiple(array(), array('type' => 'thematic_narrative'));
+    $thematic_nodes = array('0'=>'--None--');
+    if (!empty($thematic_narrative_nodes)) {
+      foreach ($thematic_narrative_nodes as $node) {
+        $thematic_nodes[$node->nid] = $node->title;
+      }
+    }
+
+    $default_thematic_nodes = array();
+
+    if (!empty($form['#node']->field_thematic_promoted[LANGUAGE_NONE])) {
+      $default_values = $form['#node']->field_thematic_promoted[LANGUAGE_NONE];
+      foreach ($default_values as $value) {
+        $default_thematic_nodes[] = $value['target_id'];
+      }
+    }
+
+    $form['options']['promoted_thematic_nodes'] = array(
+      '#type'=> 'select',
+      '#weight'=> 10,
+      '#options'=> $thematic_nodes,
+      '#multiple'=> TRUE,
+      '#default_value'=> $default_thematic_nodes,
+    );
+
     array_unshift($form['#submit'],'landbook_save_promoted_nodes');
-    //unset($form['field_country_promoted']);
-    $form['field_country_promoted']['#access']=FALSE;
+    $form['field_country_promoted']['#access'] = FALSE;
+    $form['field_thematic_promoted']['#access'] = FALSE;
   }
 }
 function landbook_save_promoted_nodes(&$form, &$form_state){
-  $form_state['values']['field_country_promoted']['und']=array();
+  $form_state['values']['field_country_promoted']['und'] = array();
   foreach($form_state['values']['promoted_nodes'] as $value){
-    $form_state['values']['field_country_promoted']['und'][]['tid']=$value;
+    $form_state['values']['field_country_promoted']['und'][]['tid'] = $value;
   }
+
+  $form_state['values']['field_thematic_promoted'][LANGUAGE_NONE] = array();
+  foreach($form_state['values']['promoted_thematic_nodes'] as $value){
+    $form_state['values']['field_thematic_promoted'][LANGUAGE_NONE][]['target_id'] = $value;
+  }
+
+}
+
+function landbook_form_custom_options_after_build($form, &$form_state){
+  $form['options']['promoted_to_thematic_page']['#weight'] = 5;
+
+  return $form;
 }
