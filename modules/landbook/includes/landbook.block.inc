@@ -63,6 +63,14 @@ function landbook_block_info() {
         'pages'         => "book/countries/*",
         'weight'        => -43
     );
+    $blocks['thematic_promoted_nodes_block'] = array(
+        'info'          => t('Landbook thematic page promoted nodes'),
+        'status'        => TRUE,
+        'region'        => 'content',
+        'visibility'    => BLOCK_VISIBILITY_LISTED,
+        'pages'         => "book/thematic/*",
+        'weight'        => -43
+    );
     $blocks['country_navigation_block'] = array(
         'info'          => t('Landbook country page navigation'),
         'status'        => TRUE,
@@ -108,6 +116,10 @@ function landbook_block_view($delta = '') {
     case 'country_promoted_nodes_block' :
         $block['subject'] = '';
         $block['content'] = array('#theme' => 'country_promoted_nodes_block');
+        break;
+    case 'thematic_promoted_nodes_block' :
+        $block['subject'] = '';
+        $block['content'] = array('#theme' => 'thematic_promoted_nodes_block');
         break;
     case 'country_navigation_block' : // all that seems a bit weird...
         $block['subject'] = '';
