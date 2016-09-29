@@ -4970,9 +4970,7 @@ span.flag { width: 50px !important; height: 50px !important; border-radius: 50px
 #header .row, #header .view-by-providers, #header .view.view-landbook-indicators, #header .view.view-landbook-catalog, #header #ranking-wrapper li, #ranking-wrapper #header li, #header #footer .block-menu .content, #footer .block-menu #header .content { display: none; }
 
 #page { margin-top: 110px; /*padding-left:80px;
-padding-right:80px;*/ /*
-.print-organization{ position: absolute; top:10px; right: 20px; display:block !important; p{ float:left; color:#79655A !important; font-size:22px; margin-right:20px; margin-top: 50px; } img{ width:100px; height:auto; float:right; }
-}*/ }
+padding-right:80px;*/ }
 #page .region.region-content > section:first-child { padding: 0; }
 #page .region.region-content > section, #page .region.region-content > div { padding-left: 40px; padding-right: 40px; }
 #page .region.region-content > section { padding-top: 10px !important; padding-bottom: 30px !important; border-bottom: none !important; }
@@ -4991,7 +4989,9 @@ padding-right:80px;*/ /*
 
 #main-wrapper .region-content > section#country-navigation { padding-top: 0 !important; background: none !important; }
 
-#main-wrapper .region-content > section#country-navigation header { margin-top: -35px !important; }
+#main-wrapper .region-content > section#country-navigation.no-reletad-content-empty header { margin-top: -35px !important; }
+
+#main-wrapper .region-content > section#country-navigation header { margin-top: -45px !important; }
 
 #table-indicators { page-break-before: always !important; }
 #table-indicators .header h2 { background: url("../images/indicators.png") no-repeat 50% 0 !important; width: 52px !important; height: 52px !important; background-size: 52px !important; overflow: visible; }

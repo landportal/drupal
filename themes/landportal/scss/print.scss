@@ -1,0 +1,61 @@
+/*****************************************
+
+Landportal Stylesheet
+
+For: Landportal Drupal theme
+Author: Jules Clement <jules@ker.bz>
+Original design by: WESO (http://weso.es/)
+
+In order to build the CSS, you must use a 'SASS compiler' such as Compass
+(Debian package: ruby-compass). You can tweak SCSS configuration
+To rebuild automatically (on changes) the CSS, use something like:
+~/[...]/themes/landportal/scss$ compass watch
+
+*****************************************/
+
+/* IMPORT: Partials */
+@import "partials/variables";
+@import "partials/normalize";
+
+// Will prepend 'fonts_path' variable from config.rb
+$fa-font-path: "font-awesome/";
+
+@import "font-awesome-compass";
+@import "font-awesome";
+
+
+/* IMPORT: Modules */
+// Vendors
+@import "compass/css3/border-radius";
+@import "compass/css3/images";
+@import "compass/css3/box-shadow";
+@import "bootstrap-compass";
+@import "bootstrap";
+
+// Common elements
+@import "modules/buttons";
+@import "modules/links";
+@import "modules/flags";
+@import "modules/forms";
+@import "modules/lists";
+
+// Landportal modules
+@import "modules/debate";
+@import "modules/library";
+@import "modules/book";
+@import "modules/users";
+@import "modules/search";
+@import "modules/menus";
+@import "modules/footer";
+@import "modules/header";
+
+/* New stuff */
+@import "modules/taxonomies";
+@import "modules/node-teasers";
+@import "modules/views";
+@import "modules/visualizations";
+
+@import "modules/print";
+/* IMPORT: Screens */
+@import "screens/base";
+

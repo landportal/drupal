@@ -51,37 +51,6 @@ function landbook_page_build(&$page) {
     if (arg(0) == 'book' && arg(1) == 'countries') {
         landbook_country_narrative(arg(2));
     }
-
-    if (arg(0) == 'book' && arg(1) == 'countries' && arg(3) == 'pdf') {
-        if (($library = libraries_load('phpwkhtmltopdf')) && !empty($library['loaded'])) {
-            drupal_add_css(path_to_theme() . '/css/printpdf.css', array('group' => CSS_THEME, 'weight' => 115, 'preprocess' => TRUE,'media'=>'print'));
-            $pdf = new Pdf();
-            $pdf->binary = '/usr/local/bin/wkhtmltopdf';
-            $pdf->setOptions(array(
-                'page-size'=>'A4',
-                'javascript-delay' => 10000,
-                'margin-top'=>10,
-                'margin-left'=>0,
-                'margin-right'=>0,
-                'margin-bottom'=>'1cm',
-                'user-style-sheet'=>path_to_theme() . '/css/printpdf.css',
-            ));
-            $url='http://'.$_SERVER['HTTP_HOST'].'/'.str_replace('/pdf','',current_path());
-            $pageOptions = array(
-                'enable-javascript',
-                'no-stop-slow-scripts',
-                'debug-javascript',
-                'print-media-type'
-    
- 
-              );
-             $pdf->addPage($url,$pageOptions);
-            //$pdf->saveAs('/usr/local/www/drupal7.dev/landportal/sites/default/files/'.arg(2).'.pdf');
-            //$pdf->saveAs('/tmp/'.arg(2).'.pdf');
-            //$pdf->send();
-            $pdf->send(arg(2).'.pdf');
-        }
-    }
 }
 
 function landbook_taxonomy_term_view($term, $view_mode, $langcode) {
