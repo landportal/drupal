@@ -32,8 +32,7 @@ preferred_syntax = :scss
 #
 
 # DEV
-environment = :development
-sourcemap = true
-output_style = :expanded
-line_comments = true
-
+environment = :production
+sourcemap = (environment == :production) ? false : true
+output_style = (environment == :production) ? :compact : :expanded
+line_comments = (environment == :production) ? false : true

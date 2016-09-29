@@ -213,7 +213,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'name' => 'Regions',
       'machine_name' => 'regions',
       'description' => 'Regions',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => -7,
       'language' => 'und',

@@ -93,9 +93,12 @@
             font-size: 16px;
             line-height: 1.42857;
 
-            p{
+            p,h1,h2,h3,h4,h5{
                 font-size: 16px;
+                font-family: "Merriweather",serif;
+                line-height: 1.42857;
             }
+            
         }
         .date{
             background-image:url("../images/ico-cal.png");

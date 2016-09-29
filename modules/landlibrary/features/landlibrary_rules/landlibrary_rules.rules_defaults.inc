@@ -9,27 +9,6 @@
  */
 function landlibrary_rules_default_rules_configuration() {
   $items = array();
-  $items['rules_add_country_automatically'] = entity_import('rules_config', '{ "rules_add_country_automatically" : {
-      "LABEL" : "Add country automatically",
-      "PLUGIN" : "reaction rule",
-      "OWNER" : "rules",
-      "TAGS" : [ "landlibrary", "autotag" ],
-      "REQUIRES" : [ "rules" ],
-      "ON" : { "node_presave--landlibrary_resource" : { "bundle" : "landlibrary_resource" } },
-      "IF" : [
-        { "entity_has_field" : { "entity" : [ "node" ], "field" : "field_doc_country" } },
-        { "data_is_empty" : { "data" : [ "node:field-doc-country" ] } }
-      ],
-      "DO" : [
-        { "component_rules_autotag_tag" : {
-            "text" : "[node:title] [node:field-doc-description] [node:field-doc-alt-title] [node:field-doc-title] ",
-            "vocabulary" : "countries",
-            "target_terms" : [ "node:field-doc-country" ]
-          }
-        }
-      ]
-    }
-  }');
   $items['rules_add_geo_automatically'] = entity_import('rules_config', '{ "rules_add_geo_automatically" : {
       "LABEL" : "Add geo tag",
       "PLUGIN" : "reaction rule",
@@ -43,7 +22,7 @@ function landlibrary_rules_default_rules_configuration() {
       ],
       "DO" : [
         { "component_rules_autotag_tag" : {
-            "text" : "[node:title] [node:field-doc-description] [node:field-doc-alt-title] [node:field-doc-title] ",
+            "text" : "[node:title] [node:field-doc-description] [node:field-doc-alt-title] [node:field-doc-keyword] ",
             "vocabulary" : "regions",
             "target_terms" : [ "node:field-geographical-focus" ]
           }
@@ -52,7 +31,7 @@ function landlibrary_rules_default_rules_configuration() {
     }
   }');
   $items['rules_add_topic_automatically'] = entity_import('rules_config', '{ "rules_add_topic_automatically" : {
-      "LABEL" : "Add topic automatically",
+      "LABEL" : "Add LandVoc concept automatically",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
       "TAGS" : [ "landlibrary", "autotag" ],
@@ -64,7 +43,7 @@ function landlibrary_rules_default_rules_configuration() {
       ],
       "DO" : [
         { "component_rules_autotag_tag" : {
-            "text" : "[node:title] [node:field-doc-description] [node:field-doc-alt-title] [node:field-doc-title] ",
+            "text" : "[node:title] [node:field-doc-description] [node:field-doc-alt-title] [node:field-doc-keyword] ",
             "vocabulary" : "landvoc_concepts",
             "target_terms" : [ "node:field-related-topics" ]
           }

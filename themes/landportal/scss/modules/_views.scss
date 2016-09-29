@@ -30,3 +30,37 @@
         }
     }
 }
+
+.view-organizations-overview{
+    &.view-display-id-page_1,
+    &.view-display-id-page{
+        .views-row{
+            height:190px;
+            margin:15px 0;
+            text-align:center;
+            width:auto;
+            clear:none;
+            min-width: 180px;
+            .node-organization.node-teaser{
+                line-height: 150px;
+                
+                img{
+                    min-width: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/* Landbook country pages - featured block (promoted to CP) */
+.view-landbook-countries-related {
+    margin: 0;
+    .view-content {
+        width: 100%;
+        padding: 0;
+        img {
+            width: 100%;
+        }
+    }
+}

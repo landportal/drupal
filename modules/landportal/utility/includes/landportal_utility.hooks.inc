@@ -4,18 +4,12 @@
  * Hooks function for the landportal_utility module.
  */
 
-/* /\********************** */
-/* ** Implementation of hook_views_pre_render(). */
-/* ***********************\/ */
-/* function landportal_utility_views_pre_render(&$view){ */
-/*   if($view->name == 'taxonomy_term' && $view->current_display == 'page') { */
-/*     $view->style_plugin->row_plugin->options['view_mode'] = 'listing'; */
-/*   } */
-/* } */
 
 
 /**
  * Implements hook_form_alter().
+ *
+ * @webcoding: what is this 250+ lines function doing???
  */
 function landportal_utility_form_alter(&$form, &$form_state, $form_id){
   // core_search
@@ -291,40 +285,43 @@ function landportal_utility_custom_page_search_form(&$form, &$form_state){
     'search_sm_field_doc_provider',
     'search_im_field_geographical_focus',
     'search_im_field_related_topics',
-    'search_im_field_doc_country',
     'search_im_field_related_topics',
     'search_im_field_doc_type'
   );
 
   foreach ($input_name_list as $key => $name) {
-    if (!empty($values[$name]) && ($values[$name] != '_none')) {
-      if($name=='search_im_field_geographical_focus' ||$name=='search_im_field_related_topics' ||$name=='search_im_field_doc_type'||$name=='search_im_field_doc_country' ||$name=='search_content_type'){
-        foreach($values[$name] as $item){
-            $get['f'][]=$item;
-        }
-      }
-      else{
-        /*if($name=='search_sm_field_doc_provider'){
-          pa($values,1);
-        }*/
-        if(is_array($values[$name])){
-          foreach($values[$name] as $item){
-            if($name=='search_sm_field_doc_provider'){
-              $get['f'][]='sm_field_doc_provider:'.$item;
-            }
-            else{
-              $get['f'][]=$item;
-            }
+      if (!empty($values[$name]) && ($values[$name] != '_none')) {
+
+          if ($name=='search_im_field_geographical_focus' ||
+              $name=='search_im_field_related_topics' ||
+              $name=='search_im_field_doc_type' ||
+              $name=='search_content_type') {
+              foreach($values[$name] as $item) {
+                  $get['f'][]=$item;
+              }
           }
-        }
-        else{
-          $get['f'][] = $values[$name];
-        }
+          else{
+              /*if($name=='search_sm_field_doc_provider'){
+                pa($values,1);
+                }*/
+              if (is_array($values[$name])){
+                  foreach($values[$name] as $item){
+                      if($name=='search_sm_field_doc_provider'){
+                          $get['f'][]='sm_field_doc_provider:'.$item;
+                      }
+                      else{
+                          $get['f'][]=$item;
+                      }
+                  }
+              }
+              else{
+                  $get['f'][] = $values[$name];
+              }
+          }
       }
-    }
   }
   if(!empty($get['f'])){
-    $get['f']=array_unique($get['f']);
+      $get['f']=array_unique($get['f']);
   }
   $form_state['values']['get'] = json_encode($get);
   $form_state['redirect'] = array($redirect, array('query' => $get));
@@ -339,6 +336,15 @@ function landportal_utility_menu_breadcrumb_alter(&$active_trail, $item){
   }
 }
 
+function landportal_utility_form_search_block_form_alter(&$form, &$form_state){
+  $form['search_block_form']['#attributes'] = array('placeholder' => array(t('Search')));
+}
+
+
+
+/******************************************
+ * @webconding: Shouldn't this be in in the MC module/feature?
+ */
 function landportal_utility_form_user_register_form_alter(&$form, &$form_state,$form_id){
   $form['mailchimp_lists']['#collapsible'] = TRUE;
   $form['mailchimp_lists']['#collapsed'] = FALSE;
@@ -373,7 +379,6 @@ function landportal_utility_form_user_profile_form_alter(&$form, &$form_state,$f
   drupal_add_css(drupal_get_path('module', 'landportal_utility') . '/css/admin.css');
 }
 
-
 function landportal_utility_module_implements_alter(&$implementations, $hook) {
   // Name of the hook.
   if ($hook == 'form_alter') {
@@ -406,7 +411,8 @@ function landportal_utility_mailchimp_user_update($form, &$form_state){
     }
   }
 }
+/**
+ * End of MC feature
+ *
+ *****************************************/
 
-function landportal_utility_form_search_block_form_alter(&$form, &$form_state){
-  $form['search_block_form']['#attributes'] = array('placeholder' => array(t('Search')));
-}

@@ -8,7 +8,10 @@ function landportal_taxonomy_views_default_views() {
     $views = array(
         'concepts',
         'domains',
-        'themes'
+        'themes',
+		'landvoc',
+		'licenses',
+		'languages'
     );
     foreach ($views as $view_name) {
         include 'views/'.$view_name . '.inc';

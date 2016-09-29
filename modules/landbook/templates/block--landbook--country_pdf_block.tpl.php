@@ -15,7 +15,16 @@
 </a>
                </div>
         <div class="col-sm-4 txt-c">
-          <a class="displayb" href="/about/contact-us">
+          <?php 
+          global $language;
+          $translations = translation_path_get_translations("node/30375");
+          $url=drupal_get_path_alias($translations[$language->language]);
+          $contact_url='/'.$url;
+          if($language->language != 'en'){
+              $contact_url='/'.$language->language.'/'.$url;;
+          }
+          ?>
+          <a class="displayb" href="<?php print $contact_url; ?>">
           <img class="c-obj" alt="Feedback" src="<?php print '/'.$theme_path.'/images/ico-feedback.svg';?>">
           <span class="displayb txt-m m-s-top fos" data-localize="global.feedback">Give us your feedback</span>
           </a>
