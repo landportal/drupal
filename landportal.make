@@ -112,6 +112,7 @@ projects:
   - custom_pub
   - lang_dropdown
   - print
+  - phpwkhtmltopdf
   # - facebook_login
   # - twitter_login
   # - mailchimp_signup

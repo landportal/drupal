@@ -586,7 +586,7 @@ body[class*="page-book-countries-"] {
 
                         .content{
                             position: relative;
-
+                            
                             .mic-i-a{
                                 display: block;
                                 padding: 10px 0;
@@ -606,8 +606,14 @@ body[class*="page-book-countries-"] {
                                 cursor: pointer;
                             }
                             .mic-content{
-                                display:none;
+                                /*display:none;*/
+                                height: 0;
+                                overflow: hidden;
                             }
+                            /*.mic-content.click{
+                                display:none;
+                                height: auto;
+                            }*/
                         }
                     }
                 } 
@@ -1032,6 +1038,9 @@ body[class*="page-book-countries-"] {
             text-decoration: none;
         }
     }
+}
+.print-organization{
+    display:none;
 }
 
 #highcharts-0{

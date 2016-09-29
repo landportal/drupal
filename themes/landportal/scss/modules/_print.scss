@@ -1,9 +1,13 @@
 @page{
-    margin:50px 80px 50px 80px;
+    margin:50px 0 50px 0;
 }
 
 @page:first{
     margin-top:0;
+}
+
+a[href]:after {
+    content: none !important;
 }
 
 #section-header,
@@ -31,25 +35,72 @@ span.flag{
 
 
 #header{
-    height:100px;
-    border-bottom:1px solid #706057 !important;
+    height:120px;
+    border-bottom:1px solid #D4CECA !important;
     position:absolute;
     top:0;
+    left:0;
     width:100%;
     display:block;
     z-index:9999 !important;
-    padding-top:30px;
+    padding-top:40px;
     .row{
         display:none;
     }
 }
 #page{
-    margin-top: 120px;
+    margin-top: 110px;
+    /*padding-left:80px;
+    padding-right:80px;*/
+    
+    .region.region-content{
+        >section:first-child{
+            padding: 0;
+        }
+        >section,
+        >div{
+           padding-left:40px;
+           padding-right:40px; 
+        }
+        >section{
+            padding-top:10px !important;
+            padding-bottom:30px !important;
+            border-bottom:none !important;
+            h2{
+                padding-top:0 !important;
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+
+}
+
+#header{
+    .print-organization{
+        position: absolute;
+        top:10px;
+        right: 20px;
+        display:block !important;
+        p{
+            float:left;
+            color:#79655A !important;
+            font-size:22px;
+            margin-right:20px;
+            margin-top: 50px;
+        }
+        img{
+            width:100px;
+            height:auto;
+            float:right;
+        }
+    }
+
 }
 
 .field-name-field-country-info{
     .mic-content{
-        display:inline-block;
+        /*display:inline-block;*/
+        height: auto !important;
 
     }
     .field-collection-view-links{
@@ -68,11 +119,15 @@ span.flag{
     padding-top:0 !important;
     background:none !important;
 }
+#main-wrapper .region-content > section#country-navigation.no-reletad-content-empty header{
+    margin-top:-35px !important;
+}
 #main-wrapper .region-content > section#country-navigation header{
-    margin-top:-15px !important;
+    margin-top:-45px !important;
 }
 
 #table-indicators{
+    page-break-before: always !important;
     .header{
         h2{
             background:url("../images/indicators.png") no-repeat 50% 0 !important;
@@ -88,18 +143,30 @@ span.flag{
         }
         .table{
             width:100%;
-            word-wrap:break-word;
-            table-layout:fixed;
+            /*word-wrap:break-word !important;*/
+            /*table-layout:fixed !important;*/
             thead{
+                /*display:table-header-group;*/
+                display:table-row-group;
                 th{
                     background-color: #a3c642 !important;
                     color:#ffffff !important;
                 }
+                th:last-child{
+                    display:none !important;
+                }
             }
             tbody{
+                font-size:14px !important;
                 tr{
                     display: table-row;
                     text-align:center;
+                    td{
+                        color-size:14px !important;
+                    }
+                    td:last-child{
+                        display:none !important;
+                    }
                     a{
                         color:#a3c642 !important;
                     }
@@ -146,7 +213,7 @@ input.btn.btn-primary{
 
 
 #map-local{
-    margin-left:-30%;
+    /*margin-left:-30%;*/
 }
 
 .map-fluid{
@@ -191,23 +258,37 @@ input.btn.btn-primary{
         width: 300px !important;
     }
 }
-
+#compare,
 #map-global{
-    page-break-before: always !important;
+    header{
+        display:none !important;
+    }
+    form{
+        display:none !important;
+    }
+    #map-global-wrapper{
+        margin-left:40px;
+    }
 }
 
-#piechart{
+.piechart{
     width:100% !important;
     #wrapper-piechart,
     .spiderchart{
-        width:300px !important;
+        width:400px !important;
         float:left !important;
     }
+    #wrapper-piechart{
+        margin-left:-50px;
+        margin-right: 50px;
+    }
     #block-landbook-view-coda-lbcp-spider-note{
+        clear:both;
         float:rigth !important;
-        width:300px !important;
+        width:500px !important;
     }
 }
+
 
 header{
     h2{
