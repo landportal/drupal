@@ -144,9 +144,9 @@ $feeds_tamper->importer = 'simple_lp_csv_importer';
 $feeds_tamper->source = 'Publisher';
 $feeds_tamper->plugin_id = 'explode';
 $feeds_tamper->settings = array(
-  'separator' => ',',
+  'separator' => ';',
   'limit' => '',
-  'real_separator' => ',',
+  'real_separator' => ';',
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Explode (multiple values \',\' separated)';
