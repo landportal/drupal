@@ -44,7 +44,7 @@ function landbook_view_coda_page_build() {
     }
 }
 
-function landbook_view_coda_term_view($term, $view_mode, $langcode) {
+function landbook_view_coda_taxonomy_term_view($term, $view_mode, $langcode) {
     if (!in_array($term->vocabulary_machine_name, array('indicators', 'catalogs')))
         return;
     drupal_add_js(array(
