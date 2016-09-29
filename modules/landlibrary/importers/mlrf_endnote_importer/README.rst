@@ -1,5 +1,5 @@
-GLTN Simple LP CSV importer
-===========================
+Mekong Land Research Forum importer
+===================================
 
 :URL: https://landportal.info/admin/structure/feeds/mlrf_endnote_importer
 :source code: https://github.com/landportal/drupal/tree/master/modules/landlibrary/importers/mlrf_endnote_importer
