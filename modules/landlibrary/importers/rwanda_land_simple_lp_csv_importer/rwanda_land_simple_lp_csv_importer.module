@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Rwanda LAND - Simple Land Portal CSV importer feature.
+ */
+
+include_once 'rwanda_land_simple_lp_csv_importer.features.inc';
