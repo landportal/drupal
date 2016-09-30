@@ -21,7 +21,7 @@ Workflow Simple LP CSV importer
 - Clean the plain text file for any strange characters
 
 - Go to http://landportal.info
-- Create a user for the importer (importer_ACRONYM_simple_lp_csv)
+- Create a user for the importer (importer_ACRONYM_simple_lp_csv) with the role "landportal editor"
 - Go to https://landportal.info/admin/structure/feeds
 - Clone the Simple LP CSV importer 
 - Change the Tamper process to set the new username
