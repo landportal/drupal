@@ -39,14 +39,14 @@ function landbook_block_info() {
         'pages'         => "book/countries/*",
         'weight'        => 23
     );
-    $blocks['thematic_media_block'] = array(
+    /*$blocks['thematic_media_block'] = array(
         'info'          => t('Landbook thematic page Media'),
         'status'        => TRUE,
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/thematic/*",
         'weight'        => 23
-    );
+    );*/
     $blocks['partners_block'] = array(
         'info'          => t('Landbook country page Partners'),
         'status'        => TRUE,
@@ -55,14 +55,14 @@ function landbook_block_info() {
         'pages'         => "book/countries/*",
         'weight'        => 24
     );
-    $blocks['thematic_partners_block'] = array(
+    /*$blocks['thematic_partners_block'] = array(
         'info'          => t('Landbook thematic page Partners'),
         'status'        => TRUE,
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/thematic/*",
         'weight'        => 24
-    );
+    );*/
     $blocks['library_block'] = array(
         'info' => t('Landbook country page Library'),
         'status'        => TRUE,
@@ -71,14 +71,14 @@ function landbook_block_info() {
         'pages'         => "book/countries/*",
         'weight'        => 25
     );
-    $blocks['thematic_library_block'] = array(
+    /*$blocks['thematic_library_block'] = array(
         'info' => t('Landbook thematic page Library'),
         'status'        => TRUE,
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/thematic/*",
         'weight'        => 25
-    );
+    );*/
     $blocks['country_promoted_nodes_block'] = array(
         'info'          => t('Landbook country page promoted nodes'),
         'status'        => TRUE,
@@ -87,14 +87,14 @@ function landbook_block_info() {
         'pages'         => "book/countries/*",
         'weight'        => -43
     );
-    $blocks['thematic_promoted_nodes_block'] = array(
+    /*$blocks['thematic_promoted_nodes_block'] = array(
         'info'          => t('Landbook thematic page promoted nodes'),
         'status'        => TRUE,
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/thematic/*",
         'weight'        => -43
-    );
+    );*/
     $blocks['country_navigation_block'] = array(
         'info'          => t('Landbook country page navigation'),
         'status'        => TRUE,
@@ -103,14 +103,14 @@ function landbook_block_info() {
         'pages'         => "book/countries/*",
         'weight'        => -42
     );
-    $blocks['thematic_country_navigation_block'] = array(
+    /*$blocks['thematic_country_navigation_block'] = array(
         'info'          => t('Landbook thematic page navigation'),
-        'status'        => TRUE,
-        'region'        => 'content',
-        'visibility'    => BLOCK_VISIBILITY_LISTED,
-        'pages'         => "book/thematic/*",
-        'weight'        => -42
-    );
+        'status'        => FALSE,
+        //'region'        => 'content',
+        //'visibility'    => BLOCK_VISIBILITY_LISTED,
+        //'pages'         => "book/thematic/*",
+        //'weight'        => -42
+    );*/
     $blocks['country_pdf_block'] = array(
         'info'          => t('Landbook country page pdf block'),
         'status'        => TRUE,
