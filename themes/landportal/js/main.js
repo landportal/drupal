@@ -143,7 +143,7 @@
         }
 
 
-        $('.view-landbook-countries-related.view-display-id-block_6 .view-content').owlCarousel({
+        $('.view-landbook-countries-related.view-display-id-block_6 .view-content,#block-views-landbook-thematics-related-block-6 .view-content').owlCarousel({
           center: false,
           items:3,
           loop:false,

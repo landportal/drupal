@@ -16,6 +16,7 @@ $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['query']['options']['distinct'] = TRUE;
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '4';
@@ -102,6 +103,20 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
+/* Filter criterion: Field: Overarching categories (field_related_domains) */
+$handler->display->display_options['filters']['field_related_domains_tid']['id'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['table'] = 'field_data_field_related_domains';
+$handler->display->display_options['filters']['field_related_domains_tid']['field'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_domains_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';
+/* Filter criterion: Field: Themes (field_related_themes) */
+$handler->display->display_options['filters']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_themes_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
 
 /* Display: Latest Blog */
 $handler = $view->new_display('block', 'Latest Blog', 'block_1');
@@ -137,6 +152,20 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
+/* Filter criterion: Field: Overarching categories (field_related_domains) */
+$handler->display->display_options['filters']['field_related_domains_tid']['id'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['table'] = 'field_data_field_related_domains';
+$handler->display->display_options['filters']['field_related_domains_tid']['field'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_domains_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';
+/* Filter criterion: Field: Themes (field_related_themes) */
+$handler->display->display_options['filters']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_themes_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
 
 /* Display: Latest Events */
 $handler = $view->new_display('block', 'Latest Events', 'block_2');
@@ -172,6 +201,20 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
+/* Filter criterion: Field: Overarching categories (field_related_domains) */
+$handler->display->display_options['filters']['field_related_domains_tid']['id'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['table'] = 'field_data_field_related_domains';
+$handler->display->display_options['filters']['field_related_domains_tid']['field'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_domains_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';
+/* Filter criterion: Field: Themes (field_related_themes) */
+$handler->display->display_options['filters']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_themes_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
 
 /* Display: Latest News */
 $handler = $view->new_display('block', 'Latest News', 'block_3');
@@ -205,6 +248,20 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
+/* Filter criterion: Field: Overarching categories (field_related_domains) */
+$handler->display->display_options['filters']['field_related_domains_tid']['id'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['table'] = 'field_data_field_related_domains';
+$handler->display->display_options['filters']['field_related_domains_tid']['field'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_domains_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';
+/* Filter criterion: Field: Themes (field_related_themes) */
+$handler->display->display_options['filters']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_themes_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
 
 /* Display: Partners */
 $handler = $view->new_display('block', 'Partners', 'block_4');
@@ -247,6 +304,20 @@ $handler->display->display_options['filters']['field_organization_relationship_t
 );
 $handler->display->display_options['filters']['field_organization_relationship_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_organization_relationship_tid']['vocabulary'] = 'organization_relation';
+/* Filter criterion: Field: Overarching categories (field_related_domains) */
+$handler->display->display_options['filters']['field_related_domains_tid']['id'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['table'] = 'field_data_field_related_domains';
+$handler->display->display_options['filters']['field_related_domains_tid']['field'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_domains_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';
+/* Filter criterion: Field: Themes (field_related_themes) */
+$handler->display->display_options['filters']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_themes_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
 
 /* Display: Library */
 $handler = $view->new_display('block', 'Library', 'block_5');
@@ -351,6 +422,20 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
+/* Filter criterion: Field: Themes (field_related_themes) */
+$handler->display->display_options['filters']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_themes_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
+/* Filter criterion: Field: Overarching categories (field_related_domains) */
+$handler->display->display_options['filters']['field_related_domains_tid']['id'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['table'] = 'field_data_field_related_domains';
+$handler->display->display_options['filters']['field_related_domains_tid']['field'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_domains_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';
 $handler->display->display_options['block_caching'] = '-1';
 
 /* Display: Promoted nodes */
@@ -409,6 +494,11 @@ $handler->display->display_options['fields']['field_doc_thumb']['settings'] = ar
 );
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['filter_groups']['operator'] = 'OR';
+$handler->display->display_options['filter_groups']['groups'] = array(
+  1 => 'AND',
+  2 => 'AND',
+);
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
 $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -427,7 +517,9 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'event' => 'event',
   'landlibrary_resource' => 'landlibrary_resource',
   'news' => 'news',
+  'organization' => 'organization',
 );
+$handler->display->display_options['filters']['type']['group'] = 1;
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
@@ -436,16 +528,74 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
-/* Filter criterion: Content: Promoted to country page */
-$handler->display->display_options['filters']['promoted_to_country_page']['id'] = 'promoted_to_country_page';
-$handler->display->display_options['filters']['promoted_to_country_page']['table'] = 'node';
-$handler->display->display_options['filters']['promoted_to_country_page']['field'] = 'promoted_to_country_page';
-$handler->display->display_options['filters']['promoted_to_country_page']['value'] = '1';
-/* Filter criterion: Content: Country Promoted (field_country_promoted) */
-$handler->display->display_options['filters']['field_country_promoted_tid']['id'] = 'field_country_promoted_tid';
-$handler->display->display_options['filters']['field_country_promoted_tid']['table'] = 'field_data_field_country_promoted';
-$handler->display->display_options['filters']['field_country_promoted_tid']['field'] = 'field_country_promoted_tid';
-$handler->display->display_options['filters']['field_country_promoted_tid']['value'] = array(
-  0 => '13',
+$handler->display->display_options['filters']['language']['group'] = 1;
+/* Filter criterion: Content: Promoted to Thematic page */
+$handler->display->display_options['filters']['promoted_to_thematic_page']['id'] = 'promoted_to_thematic_page';
+$handler->display->display_options['filters']['promoted_to_thematic_page']['table'] = 'node';
+$handler->display->display_options['filters']['promoted_to_thematic_page']['field'] = 'promoted_to_thematic_page';
+$handler->display->display_options['filters']['promoted_to_thematic_page']['value'] = '1';
+$handler->display->display_options['filters']['promoted_to_thematic_page']['group'] = 1;
+/* Filter criterion: Content: Thematic Promoted (field_thematic_promoted) */
+$handler->display->display_options['filters']['field_thematic_promoted_target_id']['id'] = 'field_thematic_promoted_target_id';
+$handler->display->display_options['filters']['field_thematic_promoted_target_id']['table'] = 'field_data_field_thematic_promoted';
+$handler->display->display_options['filters']['field_thematic_promoted_target_id']['field'] = 'field_thematic_promoted_target_id';
+$handler->display->display_options['filters']['field_thematic_promoted_target_id']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_thematic_promoted_target_id']['value'] = array(
+  35963 => '35963',
 );
-$handler->display->display_options['filters']['field_country_promoted_tid']['vocabulary'] = 'countries';
+$handler->display->display_options['filters']['field_thematic_promoted_target_id']['group'] = 1;
+/* Filter criterion: Content: Thematic Promoted (field_thematic_promoted) */
+$handler->display->display_options['filters']['field_thematic_promoted_target_id_1']['id'] = 'field_thematic_promoted_target_id_1';
+$handler->display->display_options['filters']['field_thematic_promoted_target_id_1']['table'] = 'field_data_field_thematic_promoted';
+$handler->display->display_options['filters']['field_thematic_promoted_target_id_1']['field'] = 'field_thematic_promoted_target_id';
+$handler->display->display_options['filters']['field_thematic_promoted_target_id_1']['operator'] = 'empty';
+$handler->display->display_options['filters']['field_thematic_promoted_target_id_1']['group'] = 2;
+/* Filter criterion: Content: Promoted to Thematic page */
+$handler->display->display_options['filters']['promoted_to_thematic_page_1']['id'] = 'promoted_to_thematic_page_1';
+$handler->display->display_options['filters']['promoted_to_thematic_page_1']['table'] = 'node';
+$handler->display->display_options['filters']['promoted_to_thematic_page_1']['field'] = 'promoted_to_thematic_page';
+$handler->display->display_options['filters']['promoted_to_thematic_page_1']['value'] = '1';
+$handler->display->display_options['filters']['promoted_to_thematic_page_1']['group'] = 2;
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language_1']['id'] = 'language_1';
+$handler->display->display_options['filters']['language_1']['table'] = 'node';
+$handler->display->display_options['filters']['language_1']['field'] = 'language';
+$handler->display->display_options['filters']['language_1']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+);
+$handler->display->display_options['filters']['language_1']['group'] = 2;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status_1']['id'] = 'status_1';
+$handler->display->display_options['filters']['status_1']['table'] = 'node';
+$handler->display->display_options['filters']['status_1']['field'] = 'status';
+$handler->display->display_options['filters']['status_1']['value'] = '1';
+$handler->display->display_options['filters']['status_1']['group'] = 2;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+$handler->display->display_options['filters']['type_1']['table'] = 'node';
+$handler->display->display_options['filters']['type_1']['field'] = 'type';
+$handler->display->display_options['filters']['type_1']['value'] = array(
+  'blog_post' => 'blog_post',
+  'debate' => 'debate',
+  'event' => 'event',
+  'landlibrary_resource' => 'landlibrary_resource',
+  'news' => 'news',
+  'organization' => 'organization',
+);
+$handler->display->display_options['filters']['type_1']['group'] = 2;
+/* Filter criterion: Field: Themes (field_related_themes) */
+$handler->display->display_options['filters']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_themes_tid']['group'] = 2;
+$handler->display->display_options['filters']['field_related_themes_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
+/* Filter criterion: Field: Overarching categories (field_related_domains) */
+$handler->display->display_options['filters']['field_related_domains_tid']['id'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['table'] = 'field_data_field_related_domains';
+$handler->display->display_options['filters']['field_related_domains_tid']['field'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_related_domains_tid']['group'] = 2;
+$handler->display->display_options['filters']['field_related_domains_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';

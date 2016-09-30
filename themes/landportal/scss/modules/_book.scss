@@ -53,55 +53,8 @@ section a{
 /******************************************
  * Country (narrative) page
  */
-
-.node-type-thematic-narrative #main {
-    /* Hide default node title */
-    #page-title {
-        display: none;
-    }
-    .node-thematic-narrative {
-        .field-name-title-field,
-        .group-topics-regions,
-        .field-name-field-landvoc-to {
-            @extend .text-center;
-        }
-        /* Title: The landvoc (Theme or Category) element linked to the node (landvoc-to) */
-        .field-name-field-landvoc-to {
-            @extend .h1;
-        }
-        /* Subtitle: Actual title of the node */
-        .field-name-title-field {
-            @extend .h2;
-        }
-        .group-topics-regions {
-            .field-item a {
-                @include border-radius(5em);
-                padding: 5px 10px;
-                display: block;
-            }
-        }
-    }
-
-}
-
-
-
-
-/******************************************
- * Country (narrative) page
- */
-.section-block{
-    h2:first-child{
-        display:none;
-    }
-    .block-views{
-        h2{
-            display:block;
-        }
-    }
-}
-
-body[class*="page-book-countries-"] {
+body[class*="page-book-countries-"],
+body[class*="node-type-thematic-narrative"]{
     #table-indicators header h2 {
         background:url('../images/indicators.png') no-repeat 50% 0;
     }
@@ -191,69 +144,7 @@ body[class*="page-book-countries-"] {
                 }
             }
             >section{
-                padding-bottom: 60px;
-                // WTF!!!
-                &#reletad-content{
-                    .views-field-field-doc-thumb{
-                        max-height: 260px;
-                        overflow: hidden;
-                    }
-                    // WTFWTF
-                    /* &.empty{ */
-                    /*     margin-top: -260px; */
-                    /* } */
-                    padding-bottom: 0px;
-                    .view-content{
-                        text-align: center;
-                        margin-bottom: -5px;
-                      .views-row {
-                        position: relative;
-                        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
-                        margin-bottom:15px;
-                        @media(min-width:768px){
-                          position: relative;
-                          display:inline-block;
-                          &:last-child{
-                            margin-right: 0;
-                          }
-                        }
-                    }
-
-                    .views-field-title {
-                      width: 100%;
-                      background-color: rgba(.3, .3, .3, .6);
-                      position: absolute;
-                      padding: 0.5em 1em;
-                      padding-bottom:30px;
-                      bottom: 0;
-                      text-align: left;
-                      z-index: 1;
-                    }
-                    a {
-                      text-decoration: none;
-                      color: $white;
-                    }
-                    .views-field-field-image {
-                      height: 260px;
-                      overflow: hidden; 
-                    }
-                    img {
-                        width: auto;
-                        height: auto;
-                        min-height: 260px;
-                        @media(max-width:768px){
-                            width: 100%;
-                        }
-                    }
-                  }
-                  &:after {
-                      position: relative;
-                      clear: both;
-                      display: table;
-                      content: " ";
-                      visibility: hidden;
-                  }
-                }
+                
                 .btn{
                     background-color: $green-light;
                     color: #fff;
@@ -527,6 +418,157 @@ body[class*="page-book-countries-"] {
     /* End of Country narrative content */
 }
 
+.node-type-thematic-narrative #main {
+    /* Hide default node title */
+    #page-title {
+        display: none;
+    }
+    .node-thematic-narrative {
+        .field-name-title-field,
+        .group-topics-regions,
+        .field-name-field-landvoc-to {
+            @extend .text-center;
+        }
+        /* Title: The landvoc (Theme or Category) element linked to the node (landvoc-to) */
+        .field-name-field-landvoc-to {
+            @extend .h1;
+        }
+        /* Subtitle: Actual title of the node */
+        .field-name-title-field {
+            @extend .h2;
+        }
+        .group-topics-regions {
+            .field-item a {
+                @include border-radius(5em);
+                padding: 5px 10px;
+                display: block;
+            }
+        }
+    }
+
+}
+
+
+
+
+/******************************************
+ * Country (narrative) page
+ */
+.section-block{
+    h2:first-child{
+        display:none;
+    }
+    .block-views{
+        h2{
+            display:block;
+        }
+    }
+}
+
+body[class*="node-type-thematic-narrative"]{
+    #main{
+        .node-thematic-narrative{
+            margin-top:60px;
+            #reletad-content{
+                .views-field-field-doc-thumb{
+                    max-height: 260px;
+                    overflow: hidden;
+                }
+                padding-bottom: 0px;
+                .view-content{
+                    text-align: center;
+                    margin-bottom: -5px;
+                  .views-row {
+                    position: relative;
+                    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+                    margin-bottom:15px;
+                    @media(min-width:768px){
+                      position: relative;
+                      display:inline-block;
+                      &:last-child{
+                        margin-right: 0;
+                      }
+                    }
+                }
+
+                .views-field-title {
+                  width: 100%;
+                  background-color: rgba(.3, .3, .3, .6);
+                  position: absolute;
+                  padding: 0.5em 1em;
+                  padding-bottom:10px;
+                  bottom: 0;
+                  text-align: left;
+                  z-index: 1;
+                }
+                a {
+                  text-decoration: none;
+                  color: $white;
+                }
+                .views-field-field-image {
+                  height: 260px;
+                  overflow: hidden; 
+                }
+                img {
+                    width: auto;
+                    height: auto;
+                    min-height: 260px;
+                    @media(max-width:768px){
+                        width: 100%;
+                    }
+                }
+              }
+              &:after {
+                  position: relative;
+                  clear: both;
+                  display: table;
+                  content: " ";
+                  visibility: hidden;
+              }
+            }
+            .thematic-top{
+                .field-name-field-thematic-image{
+                    img{
+                        display:block;
+                        margin:0 auto;
+                    }
+                }
+                .field-name-field-landvoc-to{
+                    font-family: "Open Sans",sans-serif;
+                    margin-bottom: 5px;
+                    margin-top: 10px;
+                    font-size: 34px;
+                    color:#333;
+                }
+                .field-name-title-field{
+                    color: #666;
+                    border-bottom: 1px solid #d6dbdc;
+                    line-height: 28px;
+                    padding-bottom: 10px;
+                    margin-top: 10px;
+                    margin-bottom: 11px;
+                    font-size:22px;
+                }
+                .group-topics-regions{
+                    margin-bottom: 20px;
+                    .field-item{
+                        margin:0;
+                        a{
+                            /*background-color: #a3c642;*
+                            border-radius: 50em;
+                            margin: 5px;
+                            padding: 5px 10px;
+                            color: #fff;
+                            font-family: "Open Sans",sans-serif;
+                            font-size:12px;*/
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 #country-navigation{
@@ -595,6 +637,7 @@ body[class*="page-book-countries-"] {
 /******************************************
  * Country narative nodes
  */
+.node-thematic-narrative,
 .node-landbook-country {
     font-size:16px;
     font-family: "Merriweather",serif;
@@ -772,6 +815,7 @@ body[class*="page-book-countries-"] {
 }
 
 // WTF is block-4
+#block-views-views-landbook-thematics-related-block-4,
 #block-views-landbook-countries-related-block-4{
     .views-view-grid{
         margin: 0 auto;
@@ -796,6 +840,7 @@ body[class*="page-book-countries-"] {
 
 
 // WTF is block-5 ?
+#block-views-landbook-thematics-related-block-5,
 #block-views-landbook-countries-related-block-5{
     overflow-x:hidden; 
     .field-name-title{

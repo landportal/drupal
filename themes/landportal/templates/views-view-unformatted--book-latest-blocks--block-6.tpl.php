@@ -1,5 +1,5 @@
 <?php
-
+pa(2,1);
 /**
  * @file
  * Default simple view template to display a list of rows.
