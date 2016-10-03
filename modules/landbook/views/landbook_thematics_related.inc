@@ -1,4 +1,4 @@
-<?php
+<?php 
 $view = new view();
 $view->name = 'landbook_thematics_related';
 $view->description = 'Landbook thematics related content. For each LP content type, show the latest nodes tagged with a given thematic';
