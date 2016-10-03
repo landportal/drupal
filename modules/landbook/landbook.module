@@ -46,41 +46,43 @@ function landbook_help($path, $arg) {
  * most of it seems overkill, un-necessary
  */
 function landbook_views_query_alter(&$view, &$query){
-    if(!empty($view->name) && $view->name=='landbook_countries_related'){
-        if(arg(0)=='book' && arg(1) == 'countries'){
-            if($view->current_display != 'block_6'){
-              $tid=landbook_get_region_iso(arg(2));
-              $query->where[0]['conditions'][0]['value']=$tid;//pa($query,1);
-            }
-            // WTF is block6?
-            else{
-              $tid=landbook_get_country_iso(arg(2));
-              // WTFWTF?
-              $query->where[1]['conditions'][4]['value']=$tid;
-            }
+  if(!empty($view->name) && $view->name=='landbook_countries_related'){
+      if(arg(0)=='book' && arg(1) == 'countries'){
+          if($view->current_display != 'block_6'){
+            $tid=landbook_get_region_iso(arg(2));
+            $query->where[0]['conditions'][0]['value'] = $tid;
+          }
+          // WTF is block6?
+          else{
+            $tid = landbook_get_country_iso(arg(2));
+            // WTFWTF?
+            $query->where[1]['conditions'][4]['value'] = $tid;
+          }
+      }
+  }
+  if(!empty($view->name) && $view->name=='landbook_thematics_related'){
+    $args = arg();
+    if($args[0] == 'node' && is_numeric($args[1])){
+      $node = node_load($args[1]);
+      if($node->type == 'thematic_narrative'){
+        $field_values = field_get_items('node', $node, 'field_landvoc_to');
+        $tid = $field_values[0]['target_id'];
+        if($view->current_display != 'block_6'){
+          $query->where[0]['conditions'][0]['value'] = $tid;
         }
-    }
-    if(!empty($view->name) && $view->name=='landbook_thematics_related'){
-        if(arg(0)=='node' && !empty(arg(1))){
-            $node=node_load(arg(1));
-            if($node->type == 'thematic_narrative'){
-               if($view->current_display != 'block_6'){
-                    $field_values = field_get_items('node', $node, 'field_landvoc_to');
-                    $tid=$field_values[0]['target_id'];
-                    $query->where[0]['conditions'][0]['value']=$tid;
-                }
-                else{
-                    //pa($query,1);
-                    $field_values = field_get_items('node', $node, 'field_landvoc_to');
-                    $tid=$field_values[0]['target_id'];
-                    //$query->where[2]['conditions'][5]=array('field'=>'field_data_field_related_themes.field_related_themes_tid','value'=>$tid,'operator'=>'=');
-                    //$query->where[2]['conditions'][6]=array('field'=>'field_data_field_related_domains.field_related_domains_tid','value'=>$tid,'operator'=>'=');
-                    //pa($query,1);
-                }
-            }
+        else{
+          $query->where[1]['conditions'][4]['value'] = $args[1];
+          $query->where[1]['conditions'][4]['operator'] = '=';
+
+          $query->where[2]['conditions'][5]['value'] = $tid;
+          $query->where[2]['conditions'][5]['operator'] = '=';
+
+          $query->where[3]['conditions'][2]['value'] = $tid;
+          $query->where[3]['conditions'][2]['operator'] = '=';
         }
-        
+      }
     }
+  }
 }
 // TMP? 
 function landbook_get_region_iso($iso){
