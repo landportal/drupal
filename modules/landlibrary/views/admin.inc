@@ -5,6 +5,7 @@
  * View name: admin_view_landlibrary
  * View URL: https://landportal.info/admin/structure/views/view/admin_view_library
  */
+
 $view = new view();
 $view->name = 'admin_view_library';
 $view->description = 'Find and manage Land Library resources';
@@ -666,6 +667,7 @@ $handler->display->display_options['filters']['field_geographical_focus_tid']['i
 $handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
 $handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
 $handler->display->display_options['filters']['field_geographical_focus_tid']['value'] = '';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['group'] = 1;
 $handler->display->display_options['filters']['field_geographical_focus_tid']['exposed'] = TRUE;
 $handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['operator_id'] = 'field_geographical_focus_tid_op';
 $handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['label'] = 'Geographical focus (field_geographical_focus)';
@@ -682,8 +684,61 @@ $handler->display->display_options['filters']['field_geographical_focus_tid']['e
   30037204 => 0,
 );
 $handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
+/* Filter criterion: Field: Overarching categories (field_related_domains) */
+$handler->display->display_options['filters']['field_related_domains_tid']['id'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['table'] = 'field_data_field_related_domains';
+$handler->display->display_options['filters']['field_related_domains_tid']['field'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_related_domains_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['operator_id'] = 'field_related_domains_tid_op';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['label'] = 'Overarching categories (field_related_domains)';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['operator'] = 'field_related_domains_tid_op';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['identifier'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['multiple'] = TRUE;
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903912 => 0,
+  25521343 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_related_domains_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';
+/* Filter criterion: Field: Themes (field_related_themes) */
+$handler->display->display_options['filters']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_related_themes_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['operator_id'] = 'field_related_themes_tid_op';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['label'] = 'Themes (field_related_themes)';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['operator'] = 'field_related_themes_tid_op';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['identifier'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['multiple'] = TRUE;
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903912 => 0,
+  25521343 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_related_themes_tid']['group_info']['label'] = 'Themes (field_related_themes)';
+$handler->display->display_options['filters']['field_related_themes_tid']['group_info']['identifier'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['group_info']['remember'] = FALSE;
+$handler->display->display_options['filters']['field_related_themes_tid']['group_info']['group_items'] = array(
+  1 => array(),
+  2 => array(),
+  3 => array(),
+);
+$handler->display->display_options['filters']['field_related_themes_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
 
 /* Display: System */
 $handler = $view->new_display('system', 'System', 'system_1');
 $handler->display->display_options['defaults']['access'] = FALSE;
 $handler->display->display_options['path'] = 'admin/content/library';
+

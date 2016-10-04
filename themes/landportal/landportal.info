@@ -6,6 +6,7 @@ core = 7.x
 engine = phptemplate
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/owl.carousel.css
+stylesheets[print][] = css/print.css
 regions[content] = Content
 regions[header] = Header
 regions[section_header] = Section Header

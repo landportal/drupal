@@ -4368,19 +4368,6 @@ body[class*="page-book-countries-"] #main-wrapper, body[class*="node-type-themat
 body[class*="page-book-countries-"] #main-wrapper .region-content #block-system-main, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content #block-system-main { margin-top: -60px; /*margin-bottom: 60px;*/ }
 body[class*="page-book-countries-"] #main-wrapper .region-content #block-system-main .node-landbook-country, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content #block-system-main .node-landbook-country { /* WTF? seems to make the footer buggy */ /* >header{ */ /*     margin-top: -25px; */ /* } */ }
 body[class*="page-book-countries-"] #main-wrapper .region-content #block-system-main .node-landbook-country > .content, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content #block-system-main .node-landbook-country > .content { overflow: hidden; }
-body[class*="page-book-countries-"] #main-wrapper .region-content > section, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section { padding-bottom: 60px; }
-body[class*="page-book-countries-"] #main-wrapper .region-content > section#reletad-content, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section#reletad-content { /* &.empty{ */ /*     margin-top: -260px; */ /* } */ padding-bottom: 0px; }
-body[class*="page-book-countries-"] #main-wrapper .region-content > section#reletad-content .views-field-field-doc-thumb, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section#reletad-content .views-field-field-doc-thumb { max-height: 260px; overflow: hidden; }
-body[class*="page-book-countries-"] #main-wrapper .region-content > section#reletad-content .view-content, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section#reletad-content .view-content { text-align: center; margin-bottom: -5px; }
-body[class*="page-book-countries-"] #main-wrapper .region-content > section#reletad-content .view-content .views-row, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section#reletad-content .view-content .views-row { position: relative; box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4); margin-bottom: 15px; }
-@media (min-width: 768px) { body[class*="page-book-countries-"] #main-wrapper .region-content > section#reletad-content .view-content .views-row, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section#reletad-content .view-content .views-row { position: relative; display: inline-block; }
-  body[class*="page-book-countries-"] #main-wrapper .region-content > section#reletad-content .view-content .views-row:last-child, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section#reletad-content .view-content .views-row:last-child { margin-right: 0; } }
-body[class*="page-book-countries-"] #main-wrapper .region-content > section#reletad-content .view-content .views-field-title, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section#reletad-content .view-content .views-field-title { width: 100%; background-color: rgba(0, 0, 0, 0.6); position: absolute; padding: 0.5em 1em; padding-bottom: 30px; bottom: 0; text-align: left; z-index: 1; }
-body[class*="page-book-countries-"] #main-wrapper .region-content > section#reletad-content .view-content a, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section#reletad-content .view-content a { text-decoration: none; color: #ffffff; }
-body[class*="page-book-countries-"] #main-wrapper .region-content > section#reletad-content .view-content .views-field-field-image, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section#reletad-content .view-content .views-field-field-image { height: 260px; overflow: hidden; }
-body[class*="page-book-countries-"] #main-wrapper .region-content > section#reletad-content .view-content img, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section#reletad-content .view-content img { width: auto; height: auto; min-height: 260px; }
-@media (max-width: 768px) { body[class*="page-book-countries-"] #main-wrapper .region-content > section#reletad-content .view-content img, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section#reletad-content .view-content img { width: 100%; } }
-body[class*="page-book-countries-"] #main-wrapper .region-content > section#reletad-content:after, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section#reletad-content:after { position: relative; clear: both; display: table; content: " "; visibility: hidden; }
 body[class*="page-book-countries-"] #main-wrapper .region-content > section .btn, body[class*="page-book-countries-"] #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit], .webform-client-form .form-actions body[class*="page-book-countries-"] #main-wrapper .region-content > section input[type=submit], body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section .btn, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit], .webform-client-form .form-actions body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section input[type=submit] { background-color: #A3C642; color: #fff; box-shadow: 4px 5px 0 0 #6e872a; width: 100%; border: medium none; display: inline-block; line-height: 43px; outline: 0 none !important; padding: 0 1em; text-align: center; text-decoration: none; transition: background-color 300ms linear 0s; font-family: "Open Sans",sans-serif; font-size: 12px; border-radius: 0px; text-transform: uppercase; }
 body[class*="page-book-countries-"] #main-wrapper .region-content > section .btn:focus, body[class*="page-book-countries-"] #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit]:focus, .webform-client-form .form-actions body[class*="page-book-countries-"] #main-wrapper .region-content > section input[type=submit]:focus, body[class*="page-book-countries-"] #main-wrapper .region-content > section .btn:hover, body[class*="page-book-countries-"] #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit]:hover, .webform-client-form .form-actions body[class*="page-book-countries-"] #main-wrapper .region-content > section input[type=submit]:hover, body[class*="page-book-countries-"] #main-wrapper .region-content > section .btn:active, body[class*="page-book-countries-"] #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit]:active, .webform-client-form .form-actions body[class*="page-book-countries-"] #main-wrapper .region-content > section input[type=submit]:active, body[class*="page-book-countries-"] #main-wrapper .region-content > section .btn:visited, body[class*="page-book-countries-"] #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit]:visited, .webform-client-form .form-actions body[class*="page-book-countries-"] #main-wrapper .region-content > section input[type=submit]:visited, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section .btn:focus, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit]:focus, .webform-client-form .form-actions body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section input[type=submit]:focus, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section .btn:hover, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit]:hover, .webform-client-form .form-actions body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section input[type=submit]:hover, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section .btn:active, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit]:active, .webform-client-form .form-actions body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section input[type=submit]:active, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section .btn:visited, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section .webform-client-form .form-actions input[type=submit]:visited, .webform-client-form .form-actions body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section input[type=submit]:visited { background-color: #b6d269; color: #fff; }
 body[class*="page-book-countries-"] #main-wrapper .region-content > section select, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section select { -moz-appearance: none; -webkit-appearance: none; appearance: none; border: medium none; border-radius: 0; display: table-cell; padding: 9px 12px 9px 10px; width: 100%; height: auto; background: #f7f7f7 none repeat scroll 0 0; background-image: url("../images/toggle-arrow.png"); background-position: right 10px center; background-repeat: no-repeat; box-shadow: 4px 5px 0 0 #6e872a; margin-bottom: 5px; font-family: "Open Sans",sans-serif; font-size: 16px; }
@@ -4424,10 +4411,8 @@ body[class*="page-book-countries-"] #map-local, body[class*="node-type-thematic-
 
 .node-type-thematic-narrative #main { /* Hide default node title */ }
 .node-type-thematic-narrative #main #page-title { display: none; }
-.node-type-thematic-narrative #main #block-system-main { margin-top: 0px !important; }
 .node-type-thematic-narrative #main .node-thematic-narrative { /* Title: The landvoc (Theme or Category) element linked to the node (landvoc-to) */ /* Subtitle: Actual title of the node */ }
-.node-type-thematic-narrative #main .node-thematic-narrative .group-topics-regions legend { border-bottom: none; color: #999; font-family: "Open Sans",sans-serif; font-size: 12px; font-weight: bold; text-transform: uppercase; line-height: 14px; margin-bottom: 5px; margin-top: 10px; }
-.node-type-thematic-narrative #main .node-thematic-narrative .group-topics-regions .field-item a { -moz-border-radius: 5em; -webkit-border-radius: 5em; border-radius: 5em; padding: 5px 10px; display: block; font-size: 12px; text-transform: none; }
+.node-type-thematic-narrative #main .node-thematic-narrative .group-topics-regions .field-item a { -moz-border-radius: 5em; -webkit-border-radius: 5em; border-radius: 5em; padding: 5px 10px; display: block; }
 
 /****************************************** Country (narrative) page */
 .section-block h2:first-child { display: none; }
@@ -4448,7 +4433,7 @@ body[class*="node-type-thematic-narrative"] #main .node-thematic-narrative #rele
 body[class*="node-type-thematic-narrative"] #main .node-thematic-narrative #reletad-content:after { position: relative; clear: both; display: table; content: " "; visibility: hidden; }
 body[class*="node-type-thematic-narrative"] #main .node-thematic-narrative .thematic-top .field-name-field-thematic-image img { display: block; margin: 0 auto; }
 body[class*="node-type-thematic-narrative"] #main .node-thematic-narrative .thematic-top .field-name-field-landvoc-to { font-family: "Open Sans",sans-serif; margin-bottom: 5px; margin-top: 10px; font-size: 34px; color: #333; }
-body[class*="node-type-thematic-narrative"] #main .node-thematic-narrative .thematic-top .field-name-title-field { color: #666; border-bottom: 1px solid #d6dbdc; line-height: 28px; padding-bottom: 10px; margin-top: 10px; margin-bottom: 11px; font-size: 22px; font-family: "Merriweather",serif !important; }
+body[class*="node-type-thematic-narrative"] #main .node-thematic-narrative .thematic-top .field-name-title-field { color: #666; border-bottom: 1px solid #d6dbdc; line-height: 28px; padding-bottom: 10px; margin-top: 10px; margin-bottom: 11px; font-size: 22px; }
 body[class*="node-type-thematic-narrative"] #main .node-thematic-narrative .thematic-top .group-topics-regions { margin-bottom: 20px; }
 body[class*="node-type-thematic-narrative"] #main .node-thematic-narrative .thematic-top .group-topics-regions .field-item { margin: 0; }
 body[class*="node-type-thematic-narrative"] #main .node-thematic-narrative .thematic-top .group-topics-regions .field-item a { /*background-color: #a3c642;*
@@ -4993,6 +4978,328 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 #lgaf .lgaf-value-c { background-color: #F5A623; }
 #lgaf .lgaf-value-d { background-color: #F6112D; }
 #lgaf .lgaf-value-na { background-color: #CCC; }
+
+@page { margin: 50px 0 50px 0; }
+@page :first { margin-top: 0; }
+a[href]:after { content: none !important; }
+
+#section-header, #footer, #block-views-landbook-countries-related-block-6, .messages, .nav-country-processed, .pdf-block, .action-links-field-collection-add, #block-landbook-disclaimer-block, #media-block, #partners-block, .country-section:last-child { display: none !important; }
+
+span.flag { width: 50px !important; height: 50px !important; border-radius: 50px !important; overflow: visible; background: url("../images/flags.png") !important; background-size: cover !important; }
+
+#header { height: 120px; border-bottom: 1px solid #D4CECA !important; position: absolute; top: 0; left: 0; width: 100%; display: block; z-index: 9999 !important; padding-top: 40px; }
+#header .row, #header .view-by-providers, #header .view.view-landbook-indicators, #header .view.view-landbook-catalog, #header #ranking-wrapper li, #ranking-wrapper #header li, #header #footer .block-menu .content, #footer .block-menu #header .content { display: none; }
+
+#page { margin-top: 110px; /*padding-left:80px;
+padding-right:80px;*/ }
+#page .region.region-content > section:first-child { padding: 0; }
+#page .region.region-content > section, #page .region.region-content > div { padding-left: 40px; padding-right: 40px; }
+#page .region.region-content > section { padding-top: 10px !important; padding-bottom: 30px !important; border-bottom: none !important; }
+#page .region.region-content > section h2 { padding-top: 0 !important; margin-bottom: 0 !important; }
+
+#header .print-organization { position: absolute; top: 10px; right: 20px; display: block !important; }
+#header .print-organization p { float: left; color: #79655A !important; font-size: 22px; margin-right: 20px; margin-top: 50px; }
+#header .print-organization img { width: 100px; height: auto; float: right; }
+
+.field-name-field-country-info .mic-content { /*display:inline-block;*/ height: auto !important; }
+.field-name-field-country-info .field-collection-view-links { display: none; }
+
+.node-landbook-country .field-collection-container .field-name-field-country-info .field-collection-view .field-collection-item-field-country-info { border-bottom: none !important; }
+
+.field-collection-item-field-country-info .mic-i-a { color: #a3c642 !important; }
+
+#main-wrapper .region-content > section#country-navigation { padding-top: 0 !important; background: none !important; }
+
+#main-wrapper .region-content > section#country-navigation.no-reletad-content-empty header { margin-top: -35px !important; }
+
+#main-wrapper .region-content > section#country-navigation header { margin-top: -45px !important; }
+
+#table-indicators { page-break-before: always !important; }
+#table-indicators .header h2 { background: url("../images/indicators.png") no-repeat 50% 0 !important; width: 52px !important; height: 52px !important; background-size: 52px !important; overflow: visible; }
+#table-indicators .row form, #table-indicators .view-by-providers form, #table-indicators .view.view-landbook-indicators form, #table-indicators .view.view-landbook-catalog form, #table-indicators #ranking-wrapper li form, #ranking-wrapper #table-indicators li form, #table-indicators #footer .block-menu .content form, #footer .block-menu #table-indicators .content form { display: none; }
+#table-indicators .row .table, #table-indicators .view-by-providers .table, #table-indicators .view.view-landbook-indicators .table, #table-indicators .view.view-landbook-catalog .table, #table-indicators #ranking-wrapper li .table, #ranking-wrapper #table-indicators li .table, #table-indicators #footer .block-menu .content .table, #footer .block-menu #table-indicators .content .table { width: 100%; /*word-wrap:break-word !important;*/ /*table-layout:fixed !important;*/ }
+#table-indicators .row .table thead, #table-indicators .view-by-providers .table thead, #table-indicators .view.view-landbook-indicators .table thead, #table-indicators .view.view-landbook-catalog .table thead, #table-indicators #ranking-wrapper li .table thead, #ranking-wrapper #table-indicators li .table thead, #table-indicators #footer .block-menu .content .table thead, #footer .block-menu #table-indicators .content .table thead { /*display:table-header-group;*/ display: table-row-group; }
+#table-indicators .row .table thead th, #table-indicators .view-by-providers .table thead th, #table-indicators .view.view-landbook-indicators .table thead th, #table-indicators .view.view-landbook-catalog .table thead th, #table-indicators #ranking-wrapper li .table thead th, #ranking-wrapper #table-indicators li .table thead th, #table-indicators #footer .block-menu .content .table thead th, #footer .block-menu #table-indicators .content .table thead th { background-color: #a3c642 !important; color: #ffffff !important; }
+#table-indicators .row .table thead th:last-child, #table-indicators .view-by-providers .table thead th:last-child, #table-indicators .view.view-landbook-indicators .table thead th:last-child, #table-indicators .view.view-landbook-catalog .table thead th:last-child, #table-indicators #ranking-wrapper li .table thead th:last-child, #ranking-wrapper #table-indicators li .table thead th:last-child, #table-indicators #footer .block-menu .content .table thead th:last-child, #footer .block-menu #table-indicators .content .table thead th:last-child { display: none !important; }
+#table-indicators .row .table tbody, #table-indicators .view-by-providers .table tbody, #table-indicators .view.view-landbook-indicators .table tbody, #table-indicators .view.view-landbook-catalog .table tbody, #table-indicators #ranking-wrapper li .table tbody, #ranking-wrapper #table-indicators li .table tbody, #table-indicators #footer .block-menu .content .table tbody, #footer .block-menu #table-indicators .content .table tbody { font-size: 14px !important; }
+#table-indicators .row .table tbody tr, #table-indicators .view-by-providers .table tbody tr, #table-indicators .view.view-landbook-indicators .table tbody tr, #table-indicators .view.view-landbook-catalog .table tbody tr, #table-indicators #ranking-wrapper li .table tbody tr, #ranking-wrapper #table-indicators li .table tbody tr, #table-indicators #footer .block-menu .content .table tbody tr, #footer .block-menu #table-indicators .content .table tbody tr { display: table-row; text-align: center; }
+#table-indicators .row .table tbody tr td, #table-indicators .view-by-providers .table tbody tr td, #table-indicators .view.view-landbook-indicators .table tbody tr td, #table-indicators .view.view-landbook-catalog .table tbody tr td, #table-indicators #ranking-wrapper li .table tbody tr td, #ranking-wrapper #table-indicators li .table tbody tr td, #table-indicators #footer .block-menu .content .table tbody tr td, #footer .block-menu #table-indicators .content .table tbody tr td { color-size: 14px !important; }
+#table-indicators .row .table tbody tr td:last-child, #table-indicators .view-by-providers .table tbody tr td:last-child, #table-indicators .view.view-landbook-indicators .table tbody tr td:last-child, #table-indicators .view.view-landbook-catalog .table tbody tr td:last-child, #table-indicators #ranking-wrapper li .table tbody tr td:last-child, #ranking-wrapper #table-indicators li .table tbody tr td:last-child, #table-indicators #footer .block-menu .content .table tbody tr td:last-child, #footer .block-menu #table-indicators .content .table tbody tr td:last-child { display: none !important; }
+#table-indicators .row .table tbody tr a, #table-indicators .view-by-providers .table tbody tr a, #table-indicators .view.view-landbook-indicators .table tbody tr a, #table-indicators .view.view-landbook-catalog .table tbody tr a, #table-indicators #ranking-wrapper li .table tbody tr a, #ranking-wrapper #table-indicators li .table tbody tr a, #table-indicators #footer .block-menu .content .table tbody tr a, #footer .block-menu #table-indicators .content .table tbody tr a { color: #a3c642 !important; }
+#table-indicators .row .table tbody tr:nth-child(even), #table-indicators .view-by-providers .table tbody tr:nth-child(even), #table-indicators .view.view-landbook-indicators .table tbody tr:nth-child(even), #table-indicators .view.view-landbook-catalog .table tbody tr:nth-child(even), #table-indicators #ranking-wrapper li .table tbody tr:nth-child(even), #ranking-wrapper #table-indicators li .table tbody tr:nth-child(even), #table-indicators #footer .block-menu .content .table tbody tr:nth-child(even), #footer .block-menu #table-indicators .content .table tbody tr:nth-child(even) { background-color: #f2f2f2 !important; }
+
+select { -moz-appearance: none !important; background: #f7f7f7 url("../images/toggle-arrow.png") no-repeat scroll right 10px center !important; border: medium none !important; border-radius: 0 !important; box-shadow: 4px 5px 0 0 #6e872a !important; display: table-cell !important; font-family: "Open Sans",sans-serif !important; font-size: 16px !important; height: auto !important; margin-bottom: 5px !important; padding: 9px 12px 9px 10px !important; width: 100% !important; }
+
+input.btn.btn-primary, .webform-client-form .form-actions input[type=submit] { background-color: #a3c642 !important; border: medium none !important; border-radius: 0 !important; box-shadow: 4px 5px 0 0 #6e872a !important; color: #fff !important; display: inline-block !important; font-family: "Open Sans",sans-serif !important; font-size: 12px !important; line-height: 43px !important; outline: 0 none !important !important; padding: 0 1em !important; text-align: center !important; text-decoration: none !important; text-transform: uppercase !important; transition: background-color 300ms linear 0s !important; width: 100% !important; }
+
+#map-local { /*margin-left:-30%;*/ }
+
+.map-fluid { margin-left: -5%; }
+
+#compare, #lgaf { page-break-before: always !important; }
+#compare #lgaf-wrapper, #lgaf #lgaf-wrapper { width: 650px !important; margin: 0 auto !important; }
+#compare #lgaf-wrapper li span, #lgaf #lgaf-wrapper li span { border-radius: 20px !important; display: inline-block !important; height: 1em !important; margin-right: 0.5em !important; width: 1em !important; }
+#compare .lgaf-value-b, #lgaf .lgaf-value-b { background-color: #f8e71c !important; }
+#compare .lgaf-value-na, #lgaf .lgaf-value-na { background-color: #ccc !important; }
+#compare .lgaf-value-c, #lgaf .lgaf-value-c { background-color: #f5a623 !important; }
+#compare .lgaf-value-a, #lgaf .lgaf-value-a { background-color: #7ed321 !important; }
+#compare .lgaf-value-d, #lgaf .lgaf-value-d { background-color: #f6112d !important; }
+#compare .col-sm-2, #lgaf .col-sm-2 { width: 150px !important; }
+#compare .col-sm-5, #lgaf .col-sm-5 { width: 300px !important; }
+
+#compare header, #map-global header { display: none !important; }
+#compare form, #map-global form { display: none !important; }
+#compare #map-global-wrapper, #map-global #map-global-wrapper { margin-left: 40px; }
+
+.piechart { width: 100% !important; }
+.piechart #wrapper-piechart, .piechart .spiderchart { width: 400px !important; float: left !important; }
+.piechart #wrapper-piechart { margin-left: -50px; margin-right: 50px; }
+.piechart #block-landbook-view-coda-lbcp-spider-note { clear: both; float: rigth !important; width: 500px !important; }
+
+header h2 { font-size: 30px; padding-bottom: 50px; }
+header .flag-ABW { background-position: 0 0% !important; }
+header .flag-AFG { background-position: 0 0.413223% !important; }
+header .flag-AGO { background-position: 0 0.826446% !important; }
+header .flag-AIA { background-position: 0 1.239669% !important; }
+header .flag-ALB { background-position: 0 1.652893% !important; }
+header .flag-AND { background-position: 0 2.066116% !important; }
+header .flag-ARE { background-position: 0 2.479339% !important; }
+header .flag-ARG { background-position: 0 2.892562% !important; }
+header .flag-ARM { background-position: 0 3.305785% !important; }
+header .flag-ASM { background-position: 0 3.719008% !important; }
+header .flag-ATA { background-position: 0 4.132231% !important; }
+header .flag-ATC { background-position: 0 4.545455% !important; }
+header .flag-ATF { background-position: 0 4.958678% !important; }
+header .flag-ATG { background-position: 0 5.371901% !important; }
+header .flag-AUS { background-position: 0 5.785124% !important; }
+header .flag-AUT { background-position: 0 6.198347% !important; }
+header .flag-AZE { background-position: 0 6.61157% !important; }
+header .flag-BDI { background-position: 0 7.024793% !important; }
+header .flag-BEL { background-position: 0 7.438017% !important; }
+header .flag-BEN { background-position: 0 7.85124% !important; }
+header .flag-BES { background-position: 0 8.264463% !important; }
+header .flag-BFA { background-position: 0 8.677686% !important; }
+header .flag-BGD { background-position: 0 9.090909% !important; }
+header .flag-BGR { background-position: 0 9.504132% !important; }
+header .flag-BHR { background-position: 0 9.917355% !important; }
+header .flag-BHS { background-position: 0 10.330579% !important; }
+header .flag-BIH { background-position: 0 10.743802% !important; }
+header .flag-BLM { background-position: 0 11.157025% !important; }
+header .flag-BLR { background-position: 0 11.570248% !important; }
+header .flag-BLZ { background-position: 0 11.983471% !important; }
+header .flag-BMU { background-position: 0 12.396694% !important; }
+header .flag-BOL { background-position: 0 12.809917% !important; }
+header .flag-BRA { background-position: 0 13.22314% !important; }
+header .flag-BRB { background-position: 0 13.636364% !important; }
+header .flag-BRN { background-position: 0 14.049587% !important; }
+header .flag-BTN { background-position: 0 14.46281% !important; }
+header .flag-BWA { background-position: 0 14.876033% !important; }
+header .flag-CAF { background-position: 0 15.289256% !important; }
+header .flag-CAN { background-position: 0 15.702479% !important; }
+header .flag-CHE { background-position: 0 16.115702% !important; }
+header .flag-CHL { background-position: 0 16.528926% !important; }
+header .flag-CHN { background-position: 0 16.942149% !important; }
+header .flag-CIV { background-position: 0 17.355372% !important; }
+header .flag-CMR { background-position: 0 17.768595% !important; }
+header .flag-COD { background-position: 0 18.181818% !important; }
+header .flag-COG { background-position: 0 18.595041% !important; }
+header .flag-COK { background-position: 0 19.008264% !important; }
+header .flag-COL { background-position: 0 19.421488% !important; }
+header .flag-COM { background-position: 0 19.834711% !important; }
+header .flag-CPV { background-position: 0 20.247934% !important; }
+header .flag-CRI { background-position: 0 20.661157% !important; }
+header .flag-CUB { background-position: 0 21.07438% !important; }
+header .flag-CUW { background-position: 0 21.487603% !important; }
+header .flag-CYM { background-position: 0 21.900826% !important; }
+header .flag-CYN { background-position: 0 22.31405% !important; }
+header .flag-CYP { background-position: 0 22.727273% !important; }
+header .flag-CZE { background-position: 0 23.140496% !important; }
+header .flag-DEU { background-position: 0 23.553719% !important; }
+header .flag-DJI { background-position: 0 23.966942% !important; }
+header .flag-DMA { background-position: 0 24.380165% !important; }
+header .flag-DNK { background-position: 0 24.793388% !important; }
+header .flag-DOM { background-position: 0 25.206612% !important; }
+header .flag-DZA { background-position: 0 25.619835% !important; }
+header .flag-ECU { background-position: 0 26.033058% !important; }
+header .flag-EGY { background-position: 0 26.446281% !important; }
+header .flag-ERI { background-position: 0 26.859504% !important; }
+header .flag-ESP { background-position: 0 27.272727% !important; }
+header .flag-EST { background-position: 0 27.68595% !important; }
+header .flag-ETH { background-position: 0 28.099174% !important; }
+header .flag-FIN { background-position: 0 28.512397% !important; }
+header .flag-FJI { background-position: 0 28.92562% !important; }
+header .flag-FLK { background-position: 0 29.338843% !important; }
+header .flag-FRA { background-position: 0 29.752066% !important; }
+header .flag-FRO { background-position: 0 30.165289% !important; }
+header .flag-FSM { background-position: 0 30.578512% !important; }
+header .flag-GAB { background-position: 0 30.991736% !important; }
+header .flag-GBR { background-position: 0 31.404959% !important; }
+header .flag-GEO { background-position: 0 31.818182% !important; }
+header .flag-GGY { background-position: 0 32.231405% !important; }
+header .flag-GHA { background-position: 0 32.644628% !important; }
+header .flag-GIB { background-position: 0 33.057851% !important; }
+header .flag-GIN { background-position: 0 33.471074% !important; }
+header .flag-GLP { background-position: 0 33.884298% !important; }
+header .flag-GMB { background-position: 0 34.297521% !important; }
+header .flag-GNB { background-position: 0 34.710744% !important; }
+header .flag-GNQ { background-position: 0 35.123967% !important; }
+header .flag-GRC { background-position: 0 35.53719% !important; }
+header .flag-GRD { background-position: 0 35.950413% !important; }
+header .flag-GRL { background-position: 0 36.363636% !important; }
+header .flag-GTM { background-position: 0 36.77686% !important; }
+header .flag-GUF { background-position: 0 37.190083% !important; }
+header .flag-GUM { background-position: 0 37.603306% !important; }
+header .flag-GUY { background-position: 0 38.016529% !important; }
+header .flag-HMD { background-position: 0 38.429752% !important; }
+header .flag-HND { background-position: 0 38.842975% !important; }
+header .flag-HRV { background-position: 0 39.256198% !important; }
+header .flag-HTI { background-position: 0 39.669421% !important; }
+header .flag-HUN { background-position: 0 40.082645% !important; }
+header .flag-IDN { background-position: 0 40.495868% !important; }
+header .flag-IMN { background-position: 0 40.909091% !important; }
+header .flag-IND { background-position: 0 41.322314% !important; }
+header .flag-IOA { background-position: 0 41.735537% !important; }
+header .flag-IOT { background-position: 0 42.14876% !important; }
+header .flag-IRL { background-position: 0 42.561983% !important; }
+header .flag-IRN { background-position: 0 42.975207% !important; }
+header .flag-IRQ { background-position: 0 43.38843% !important; }
+header .flag-ISL { background-position: 0 43.801653% !important; }
+header .flag-ISR { background-position: 0 44.214876% !important; }
+header .flag-ITA { background-position: 0 44.628099% !important; }
+header .flag-JAM { background-position: 0 45.041322% !important; }
+header .flag-JEY { background-position: 0 45.454545% !important; }
+header .flag-JOR { background-position: 0 45.867769% !important; }
+header .flag-JPN { background-position: 0 46.280992% !important; }
+header .flag-KAS { background-position: 0 46.694215% !important; }
+header .flag-KAZ { background-position: 0 47.107438% !important; }
+header .flag-KEN { background-position: 0 47.520661% !important; }
+header .flag-KGZ { background-position: 0 47.933884% !important; }
+header .flag-KHM { background-position: 0 48.347107% !important; }
+header .flag-KIR { background-position: 0 48.760331% !important; }
+header .flag-KNA { background-position: 0 49.173554% !important; }
+header .flag-KOR { background-position: 0 49.586777% !important; }
+header .flag-KOS { background-position: 0 50% !important; }
+header .flag-KWT { background-position: 0 50.413223% !important; }
+header .flag-LAO { background-position: 0 50.826446% !important; }
+header .flag-LBN { background-position: 0 51.239669% !important; }
+header .flag-LBR { background-position: 0 51.652893% !important; }
+header .flag-LBY { background-position: 0 52.066116% !important; }
+header .flag-LCA { background-position: 0 52.479339% !important; }
+header .flag-LIE { background-position: 0 52.892562% !important; }
+header .flag-LKA { background-position: 0 53.305785% !important; }
+header .flag-LSO { background-position: 0 53.719008% !important; }
+header .flag-LTU { background-position: 0 54.132231% !important; }
+header .flag-LUX { background-position: 0 54.545455% !important; }
+header .flag-LVA { background-position: 0 54.958678% !important; }
+header .flag-MAF { background-position: 0 55.371901% !important; }
+header .flag-MAR { background-position: 0 55.785124% !important; }
+header .flag-MCO { background-position: 0 56.198347% !important; }
+header .flag-MDA { background-position: 0 56.61157% !important; }
+header .flag-MDG { background-position: 0 57.024793% !important; }
+header .flag-MDV { background-position: 0 57.438017% !important; }
+header .flag-MEX { background-position: 0 57.85124% !important; }
+header .flag-MHL { background-position: 0 58.264463% !important; }
+header .flag-MKD { background-position: 0 58.677686% !important; }
+header .flag-MLI { background-position: 0 59.090909% !important; }
+header .flag-MLT { background-position: 0 59.504132% !important; }
+header .flag-MMR { background-position: 0 59.917355% !important; }
+header .flag-MNE { background-position: 0 60.330579% !important; }
+header .flag-MNG { background-position: 0 60.743802% !important; }
+header .flag-MNP { background-position: 0 61.157025% !important; }
+header .flag-MOZ { background-position: 0 61.570248% !important; }
+header .flag-MRT { background-position: 0 61.983471% !important; }
+header .flag-MSR { background-position: 0 62.396694% !important; }
+header .flag-MUS { background-position: 0 62.809917% !important; }
+header .flag-MWI { background-position: 0 63.22314% !important; }
+header .flag-MYS { background-position: 0 63.636364% !important; }
+header .flag-NAM { background-position: 0 64.049587% !important; }
+header .flag-NCL { background-position: 0 64.46281% !important; }
+header .flag-NER { background-position: 0 64.876033% !important; }
+header .flag-NFK { background-position: 0 65.289256% !important; }
+header .flag-NGA { background-position: 0 65.702479% !important; }
+header .flag-NIC { background-position: 0 66.115702% !important; }
+header .flag-NIU { background-position: 0 66.528926% !important; }
+header .flag-NLD { background-position: 0 66.942149% !important; }
+header .flag-NOR { background-position: 0 67.355372% !important; }
+header .flag-NPL { background-position: 0 67.768595% !important; }
+header .flag-NRU { background-position: 0 68.181818% !important; }
+header .flag-NZL { background-position: 0 68.595041% !important; }
+header .flag-OMN { background-position: 0 69.008264% !important; }
+header .flag-PAK { background-position: 0 69.421488% !important; }
+header .flag-PAN { background-position: 0 69.834711% !important; }
+header .flag-PCN { background-position: 0 70.247934% !important; }
+header .flag-PER { background-position: 0 70.661157% !important; }
+header .flag-PHL { background-position: 0 71.07438% !important; }
+header .flag-PLW { background-position: 0 71.487603% !important; }
+header .flag-PNG { background-position: 0 71.900826% !important; }
+header .flag-POL { background-position: 0 72.31405% !important; }
+header .flag-PRI { background-position: 0 72.727273% !important; }
+header .flag-PRK { background-position: 0 73.140496% !important; }
+header .flag-PRT { background-position: 0 73.553719% !important; }
+header .flag-PRY { background-position: 0 73.966942% !important; }
+header .flag-PSX { background-position: 0 74.380165% !important; }
+header .flag-PYF { background-position: 0 74.793388% !important; }
+header .flag-QAT { background-position: 0 75.206612% !important; }
+header .flag-ROU { background-position: 0 75.619835% !important; }
+header .flag-RUS { background-position: 0 76.033058% !important; }
+header .flag-RWA { background-position: 0 76.446281% !important; }
+header .flag-SAH { background-position: 0 76.859504% !important; }
+header .flag-SAU { background-position: 0 77.272727% !important; }
+header .flag-SDN { background-position: 0 77.68595% !important; }
+header .flag-SEN { background-position: 0 78.099174% !important; }
+header .flag-SGP { background-position: 0 78.512397% !important; }
+header .flag-SGS { background-position: 0 78.92562% !important; }
+header .flag-SHN { background-position: 0 79.338843% !important; }
+header .flag-SLB { background-position: 0 79.752066% !important; }
+header .flag-SLE { background-position: 0 80.165289% !important; }
+header .flag-SLV { background-position: 0 80.578512% !important; }
+header .flag-SMR { background-position: 0 80.991736% !important; }
+header .flag-SOM { background-position: 0 81.404959% !important; }
+header .flag-SPM { background-position: 0 81.818182% !important; }
+header .flag-SRB { background-position: 0 82.231405% !important; }
+header .flag-SSD { background-position: 0 82.644628% !important; }
+header .flag-STP { background-position: 0 83.057851% !important; }
+header .flag-SUR { background-position: 0 83.471074% !important; }
+header .flag-SVK { background-position: 0 83.884298% !important; }
+header .flag-SVN { background-position: 0 84.297521% !important; }
+header .flag-SWE { background-position: 0 84.710744% !important; }
+header .flag-SWZ { background-position: 0 85.123967% !important; }
+header .flag-SXM { background-position: 0 85.53719% !important; }
+header .flag-SYC { background-position: 0 85.950413% !important; }
+header .flag-SYR { background-position: 0 86.363636% !important; }
+header .flag-TCA { background-position: 0 86.77686% !important; }
+header .flag-TCD { background-position: 0 87.190083% !important; }
+header .flag-TGO { background-position: 0 87.603306% !important; }
+header .flag-THA { background-position: 0 88.016529% !important; }
+header .flag-TJK { background-position: 0 88.429752% !important; }
+header .flag-TKL { background-position: 0 88.842975% !important; }
+header .flag-TKM { background-position: 0 89.256198% !important; }
+header .flag-TLS { background-position: 0 89.669421% !important; }
+header .flag-TON { background-position: 0 90.082645% !important; }
+header .flag-TTO { background-position: 0 90.495868% !important; }
+header .flag-TUN { background-position: 0 90.909091% !important; }
+header .flag-TUR { background-position: 0 91.322314% !important; }
+header .flag-TWN { background-position: 0 91.735537% !important; }
+header .flag-TZA { background-position: 0 92.14876% !important; }
+header .flag-UGA { background-position: 0 92.561983% !important; }
+header .flag-UKR { background-position: 0 92.975207% !important; }
+header .flag-URY { background-position: 0 93.38843% !important; }
+header .flag-USA { background-position: 0 93.801653% !important; }
+header .flag-UZB { background-position: 0 94.214876% !important; }
+header .flag-VAT { background-position: 0 94.628099% !important; }
+header .flag-VCT { background-position: 0 95.041322% !important; }
+header .flag-VEN { background-position: 0 95.454545% !important; }
+header .flag-VGB { background-position: 0 95.867769% !important; }
+header .flag-VIR { background-position: 0 96.280992% !important; }
+header .flag-VNM { background-position: 0 96.694215% !important; }
+header .flag-VUT { background-position: 0 97.107438% !important; }
+header .flag-WLF { background-position: 0 97.520661% !important; }
+header .flag-WSM { background-position: 0 97.933884% !important; }
+header .flag-YEM { background-position: 0 98.347107% !important; }
+header .flag-ZAF { background-position: 0 98.760331% !important; }
+header .flag-ZMB { background-position: 0 99.173554% !important; }
+header .flag-ZWE { background-position: 0 99.586777% !important; }
+header .flag-no-flag { background-position: 0 100% !important; }
 
 /* IMPORT: Screens */
 /** Landportal SCSS Base size and positionning */

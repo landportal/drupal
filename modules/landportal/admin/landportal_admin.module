@@ -13,15 +13,31 @@ function landportal_admin_menu() {
     /*     'access arguments' => array('administer taxonomy'), */
     /*     'weight' => 12, */
     /* ); */
+    $items['admin/structure/taxonomy/terms/overarching-categories'] = array(
+        'title' => 'Manage Overarching Categories',
+        'type' => MENU_LOCAL_TASK,
+        'access arguments' => array('administer taxonomy'),
+        'weight' => 10,
+        'callback' => 'systems_view_data',
+        'page arguments' => array('admin/structure/taxonomy/terms/overarching-categories'),
+    );
+    $items['admin/structure/taxonomy/terms/themes'] = array(
+        'title' => 'Manage Themes',
+        'type' => MENU_LOCAL_TASK,
+        'access arguments' => array('administer taxonomy'),
+        'weight' => 10,
+        'callback' => 'systems_view_data',
+        'page arguments' => array('admin/structure/taxonomy/terms/themes'),
+    );
     $items['admin/structure/taxonomy/terms/topics'] = array(
-        'title' => 'Manage Topics',
+        'title' => 'Manage LandVoc Concepts',
         'type' => MENU_LOCAL_TASK,
         'access arguments' => array('administer taxonomy'),
         'weight' => 10,
         'callback' => 'systems_view_data',
         //'page callback' => 'node_page_view',//admin_views_taxonomy_terms_topics',
         'page arguments' => array('admin/structure/taxonomy/terms/topics'),
-    );
+    );	
     $items['admin/people/moderate'] = array(
         'title' => 'Pending account',
         'type' => MENU_LOCAL_TASK,
