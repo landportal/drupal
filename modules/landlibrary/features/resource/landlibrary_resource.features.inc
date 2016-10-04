@@ -127,6 +127,7 @@ function landlibrary_resource_rdf_default_mappings() {
         0 => 'dct:date',
         1 => 'schema:datePublished',
       ),
+      'callback' => 'date_iso8601_llr',
     ),
     'field_doc_creator' => array(
       'type' => 'rel',
@@ -350,3 +351,4 @@ function landlibrary_resource_rdf_default_mappings() {
 
   return $rdf_mappings;
 }
+
