@@ -209,7 +209,6 @@ function landbook_save_promoted_nodes(&$form, &$form_state){
       $form_state['values']['field_country_promoted']['und'][]['tid'] = $value;
     }
   }
-<<<<<<< HEAD
 
   $form_state['values']['field_thematic_promoted'][LANGUAGE_NONE] = array();
   foreach($form_state['values']['promoted_thematic_nodes'] as $value){
@@ -221,7 +220,6 @@ function landbook_form_custom_options_after_build($form, &$form_state){
   $form['options']['promoted_to_thematic_page']['#weight'] = 5;
 
   return $form;
-=======
 }
 
 function landbook_get_narrative(){
@@ -260,5 +258,4 @@ function landbook_preprocess_page(&$variables){
     if(!empty($image)){
        $variables['print_logo_image']='<div class="print-organization"><p>'.t('Country page powered by').'</p>'.$image.'</div>';
     }
->>>>>>> print
 }
