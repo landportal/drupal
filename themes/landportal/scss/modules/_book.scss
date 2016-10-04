@@ -664,7 +664,7 @@ body[class*="node-type-thematic-narrative"]{
 
                         .content{
                             position: relative;
-
+                            
                             .mic-i-a{
                                 display: block;
                                 padding: 10px 0;
@@ -684,8 +684,14 @@ body[class*="node-type-thematic-narrative"]{
                                 cursor: pointer;
                             }
                             .mic-content{
-                                display:none;
+                                /*display:none;*/
+                                height: 0;
+                                overflow: hidden;
                             }
+                            /*.mic-content.click{
+                                display:none;
+                                height: auto;
+                            }*/
                         }
                     }
                 } 
@@ -1112,6 +1118,9 @@ body[class*="node-type-thematic-narrative"]{
             text-decoration: none;
         }
     }
+}
+.print-organization{
+    display:none;
 }
 
 #highcharts-0{

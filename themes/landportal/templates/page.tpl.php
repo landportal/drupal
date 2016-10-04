@@ -54,7 +54,10 @@
       <?php endif; ?>
 
     </div></div> <!-- /#main, /#main-wrapper -->
-
+    
+    <?php if($title == 'Countries'): ?>
+        <?php print $print_logo_image; ?>
+    <?php endif; ?>
     <div id="footer">
         <div class="section container">
             <div class="row">

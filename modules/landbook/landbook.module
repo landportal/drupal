@@ -1,4 +1,5 @@
 <?php
+use mikehaertl\wkhtmlto\Pdf;
 /**
  * @file
  * This module provide an interface to the landbook section of the Landportal.
@@ -38,7 +39,6 @@ function landbook_help($path, $arg) {
     break;
   }
 }
-
 
 /**
  * Note: Webcoding
@@ -209,6 +209,7 @@ function landbook_save_promoted_nodes(&$form, &$form_state){
       $form_state['values']['field_country_promoted']['und'][]['tid'] = $value;
     }
   }
+<<<<<<< HEAD
 
   $form_state['values']['field_thematic_promoted'][LANGUAGE_NONE] = array();
   foreach($form_state['values']['promoted_thematic_nodes'] as $value){
@@ -220,4 +221,44 @@ function landbook_form_custom_options_after_build($form, &$form_state){
   $form['options']['promoted_to_thematic_page']['#weight'] = 5;
 
   return $form;
+=======
+}
+
+function landbook_get_narrative(){
+    if (arg(0) == 'book' && arg(1) == 'countries') {
+        global $language;
+        $tid=landbook_get_region_iso(arg(2));
+        $term=taxonomy_term_load($tid);
+        $node_id=landbook_get_country_narrative_nid($term->name);
+        $image='';
+        if(!empty($node_id)){
+            $node=node_load($node_id);
+            $items = field_get_items('node', $node, 'field_orgref');
+            if(!empty($items)){
+                $item = array_shift($items);
+                if(isset($item['entity'])){
+                    $items = field_get_items('node', $item['entity'], 'field_image');
+                    $url=$items[0]['uri'];
+                    $params = array(
+                        'style_name' => 'medium',
+                        'path' => $url,
+                      );
+                    $image=theme('image_style', $params);
+                }
+                else{
+                    $image='';
+                }
+            }
+        }
+        return $image;
+    }
+}
+
+function landbook_preprocess_page(&$variables){
+    $image=landbook_get_narrative();
+    $variables['print_logo_image']='';
+    if(!empty($image)){
+       $variables['print_logo_image']='<div class="print-organization"><p>'.t('Country page powered by').'</p>'.$image.'</div>';
+    }
+>>>>>>> print
 }
