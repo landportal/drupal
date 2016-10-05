@@ -13,7 +13,7 @@ function promoted_views_default_views() {
     'promoted',
   );
   foreach ($views as $view_name) {
-    include drupal_get_path('module', 'landbook') . '/views/' . $view_name . '.inc';
+    include drupal_get_path('module', 'promoted') . '/views/' . $view_name . '.inc';
     $export[$view->name] = $view;
   }
   return $export;
