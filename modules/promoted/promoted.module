@@ -1,0 +1,80 @@
+<?php
+module_load_include('inc', 'promoted', '/includes/promoted.hooks');
+module_load_include('inc', 'promoted', '/includes/promoted.theme');
+module_load_include('inc', 'promoted', '/includes/promoted.views_default.inc');
+
+define('PATH_TO_MODULE', drupal_get_path('module', 'promoted'));
+define('PATH_TO_THEME', drupal_get_path('theme', 'landportal'));
+
+/**
+ * Implements hook_block_info().
+ */
+function promoted_block_info() {
+  $blocks['country_promoted_nodes_block'] = array(
+    'info'          => t('Country page promoted nodes'),
+    'status'        => TRUE,
+    'region'        => 'content',
+    'visibility'    => BLOCK_VISIBILITY_LISTED,
+    'pages'         => "book/countries/*",
+    'weight'        => -43
+  );
+  $blocks['thematic_promoted_nodes_block'] = array(
+    'info'          => t('Thematic page promoted nodes'),
+    'status'        => TRUE,
+    'visibility'    => BLOCK_VISIBILITY_LISTED,
+    'pages'         => "book/thematic/*",
+    'weight'        => -43
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function promoted_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'country_promoted_nodes_block' :
+      $block['subject'] = '';
+      $block['content'] = array(
+        '#theme' => 'country_promoted_nodes_block',
+        '#attached' => array(
+          'js' => array(
+            PATH_TO_MODULE . '/js/promoted.js',
+            PATH_TO_THEME . '/js/owl.carousel.min.js',
+          ),
+          'css' => array(
+            PATH_TO_THEME . '/css/owl.carousel.css',
+          )
+        )
+      );
+      break;
+    case 'thematic_promoted_nodes_block' :
+      $block['subject'] = '';
+      $block['content'] = array(
+        '#theme' => 'thematic_promoted_nodes_block',
+        '#attached' => array(
+          'js' => array(
+            PATH_TO_MODULE . '/js/promoted.js',
+            PATH_TO_THEME . '/js/owl.carousel.min.js',
+          ),
+          'css' => array(
+            PATH_TO_THEME . '/css/owl.carousel.css',
+          )
+        )
+      );
+      break;
+    }
+  return $block;
+}
+
+function promoted_get_country_iso($iso){
+  $tid = db_select('field_data_field_iso3', 't')
+    ->fields('t', array('entity_id'))
+    ->condition('t.field_iso3_value', $iso)
+    ->condition('t.bundle', 'countries')
+    ->execute()
+    ->fetchField();
+  return $tid;
+}

@@ -82,7 +82,7 @@
            </div>
       </div>
       <?php        
-        $block = block_load('landbook', 'thematic_promoted_nodes_block');
+        $block = block_load('promoted', 'thematic_promoted_nodes_block');
         $block = _block_render_blocks(array($block));
         $block_build = _block_get_renderable_array($block);
         echo drupal_render($block_build);      
