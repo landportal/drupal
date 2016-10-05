@@ -4994,13 +4994,17 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 #lgaf .lgaf-value-d { background-color: #F6112D; }
 #lgaf .lgaf-value-na { background-color: #CCC; }
 
+body { width: 1150px !important; }
+
 @page { margin: 50px 0 50px 0; }
 @page :first { margin-top: 0; }
 a[href]:after { content: none !important; }
 
-#section-header, #footer, #block-views-landbook-countries-related-block-6, .messages, .nav-country-processed, .pdf-block, .action-links-field-collection-add, #block-landbook-disclaimer-block, #media-block, #partners-block, .country-section:last-child { display: none !important; }
+#section-header, #footer, #block-views-landbook-countries-related-block-6, #block-views-landbook-thematics-related-block-6, #reletad-content, .messages, .nav-country-processed, .pdf-block, .action-links-field-collection-add, #block-landbook-disclaimer-block, #media-block, #partners-block, .country-section:last-child { display: none !important; }
 
-span.flag { width: 50px !important; height: 50px !important; border-radius: 50px !important; overflow: visible; background: url("../images/flags.png") !important; background-size: cover !important; }
+span.flag { width: 50px !important; height: 50px !important; border-radius: 50px !important; overflow: visible; background: url("../images/flags.png") !important; background-size: cover !important; text-indent: -9999px !important; display: block !important; }
+
+span.rank { background-color: #a3c642 !important; border: 2px solid #ffffff !important; }
 
 #header { height: 120px; border-bottom: 1px solid #D4CECA !important; position: absolute; top: 0; left: 0; width: 100%; display: block; z-index: 9999 !important; padding-top: 40px; }
 #header .row, #header .view-by-providers, #header .view.view-landbook-indicators, #header .view.view-landbook-catalog, #header #ranking-wrapper li, #ranking-wrapper #header li, #header #footer .block-menu .content, #footer .block-menu #header .content { display: none; }
@@ -5051,16 +5055,16 @@ input.btn.btn-primary, .webform-client-form .form-actions input[type=submit] { b
 
 .map-fluid { margin-left: -5%; }
 
-#compare, #lgaf { page-break-before: always !important; }
-#compare #lgaf-wrapper, #lgaf #lgaf-wrapper { width: 650px !important; margin: 0 auto !important; }
-#compare #lgaf-wrapper li span, #lgaf #lgaf-wrapper li span { border-radius: 20px !important; display: inline-block !important; height: 1em !important; margin-right: 0.5em !important; width: 1em !important; }
-#compare .lgaf-value-b, #lgaf .lgaf-value-b { background-color: #f8e71c !important; }
-#compare .lgaf-value-na, #lgaf .lgaf-value-na { background-color: #ccc !important; }
-#compare .lgaf-value-c, #lgaf .lgaf-value-c { background-color: #f5a623 !important; }
-#compare .lgaf-value-a, #lgaf .lgaf-value-a { background-color: #7ed321 !important; }
-#compare .lgaf-value-d, #lgaf .lgaf-value-d { background-color: #f6112d !important; }
-#compare .col-sm-2, #lgaf .col-sm-2 { width: 150px !important; }
-#compare .col-sm-5, #lgaf .col-sm-5 { width: 300px !important; }
+#ranking, #compare, #lgaf { page-break-before: always !important; }
+#ranking #lgaf-wrapper, #compare #lgaf-wrapper, #lgaf #lgaf-wrapper { width: 650px !important; margin: 0 auto !important; }
+#ranking #lgaf-wrapper li span, #compare #lgaf-wrapper li span, #lgaf #lgaf-wrapper li span { border-radius: 20px !important; display: inline-block !important; height: 1em !important; margin-right: 0.5em !important; width: 1em !important; }
+#ranking .lgaf-value-b, #compare .lgaf-value-b, #lgaf .lgaf-value-b { background-color: #f8e71c !important; }
+#ranking .lgaf-value-na, #compare .lgaf-value-na, #lgaf .lgaf-value-na { background-color: #ccc !important; }
+#ranking .lgaf-value-c, #compare .lgaf-value-c, #lgaf .lgaf-value-c { background-color: #f5a623 !important; }
+#ranking .lgaf-value-a, #compare .lgaf-value-a, #lgaf .lgaf-value-a { background-color: #7ed321 !important; }
+#ranking .lgaf-value-d, #compare .lgaf-value-d, #lgaf .lgaf-value-d { background-color: #f6112d !important; }
+#ranking .col-sm-2, #compare .col-sm-2, #lgaf .col-sm-2 { width: 150px !important; }
+#ranking .col-sm-5, #compare .col-sm-5, #lgaf .col-sm-5 { width: 300px !important; }
 
 #compare header, #map-global header { display: none !important; }
 #compare form, #map-global form { display: none !important; }
@@ -5071,250 +5075,252 @@ input.btn.btn-primary, .webform-client-form .form-actions input[type=submit] { b
 .piechart #wrapper-piechart { margin-left: -50px; margin-right: 50px; }
 .piechart #block-landbook-view-coda-lbcp-spider-note { clear: both; float: rigth !important; width: 500px !important; }
 
-header h2 { font-size: 30px; padding-bottom: 50px; }
-header .flag-ABW { background-position: 0 0% !important; }
-header .flag-AFG { background-position: 0 0.413223% !important; }
-header .flag-AGO { background-position: 0 0.826446% !important; }
-header .flag-AIA { background-position: 0 1.239669% !important; }
-header .flag-ALB { background-position: 0 1.652893% !important; }
-header .flag-AND { background-position: 0 2.066116% !important; }
-header .flag-ARE { background-position: 0 2.479339% !important; }
-header .flag-ARG { background-position: 0 2.892562% !important; }
-header .flag-ARM { background-position: 0 3.305785% !important; }
-header .flag-ASM { background-position: 0 3.719008% !important; }
-header .flag-ATA { background-position: 0 4.132231% !important; }
-header .flag-ATC { background-position: 0 4.545455% !important; }
-header .flag-ATF { background-position: 0 4.958678% !important; }
-header .flag-ATG { background-position: 0 5.371901% !important; }
-header .flag-AUS { background-position: 0 5.785124% !important; }
-header .flag-AUT { background-position: 0 6.198347% !important; }
-header .flag-AZE { background-position: 0 6.61157% !important; }
-header .flag-BDI { background-position: 0 7.024793% !important; }
-header .flag-BEL { background-position: 0 7.438017% !important; }
-header .flag-BEN { background-position: 0 7.85124% !important; }
-header .flag-BES { background-position: 0 8.264463% !important; }
-header .flag-BFA { background-position: 0 8.677686% !important; }
-header .flag-BGD { background-position: 0 9.090909% !important; }
-header .flag-BGR { background-position: 0 9.504132% !important; }
-header .flag-BHR { background-position: 0 9.917355% !important; }
-header .flag-BHS { background-position: 0 10.330579% !important; }
-header .flag-BIH { background-position: 0 10.743802% !important; }
-header .flag-BLM { background-position: 0 11.157025% !important; }
-header .flag-BLR { background-position: 0 11.570248% !important; }
-header .flag-BLZ { background-position: 0 11.983471% !important; }
-header .flag-BMU { background-position: 0 12.396694% !important; }
-header .flag-BOL { background-position: 0 12.809917% !important; }
-header .flag-BRA { background-position: 0 13.22314% !important; }
-header .flag-BRB { background-position: 0 13.636364% !important; }
-header .flag-BRN { background-position: 0 14.049587% !important; }
-header .flag-BTN { background-position: 0 14.46281% !important; }
-header .flag-BWA { background-position: 0 14.876033% !important; }
-header .flag-CAF { background-position: 0 15.289256% !important; }
-header .flag-CAN { background-position: 0 15.702479% !important; }
-header .flag-CHE { background-position: 0 16.115702% !important; }
-header .flag-CHL { background-position: 0 16.528926% !important; }
-header .flag-CHN { background-position: 0 16.942149% !important; }
-header .flag-CIV { background-position: 0 17.355372% !important; }
-header .flag-CMR { background-position: 0 17.768595% !important; }
-header .flag-COD { background-position: 0 18.181818% !important; }
-header .flag-COG { background-position: 0 18.595041% !important; }
-header .flag-COK { background-position: 0 19.008264% !important; }
-header .flag-COL { background-position: 0 19.421488% !important; }
-header .flag-COM { background-position: 0 19.834711% !important; }
-header .flag-CPV { background-position: 0 20.247934% !important; }
-header .flag-CRI { background-position: 0 20.661157% !important; }
-header .flag-CUB { background-position: 0 21.07438% !important; }
-header .flag-CUW { background-position: 0 21.487603% !important; }
-header .flag-CYM { background-position: 0 21.900826% !important; }
-header .flag-CYN { background-position: 0 22.31405% !important; }
-header .flag-CYP { background-position: 0 22.727273% !important; }
-header .flag-CZE { background-position: 0 23.140496% !important; }
-header .flag-DEU { background-position: 0 23.553719% !important; }
-header .flag-DJI { background-position: 0 23.966942% !important; }
-header .flag-DMA { background-position: 0 24.380165% !important; }
-header .flag-DNK { background-position: 0 24.793388% !important; }
-header .flag-DOM { background-position: 0 25.206612% !important; }
-header .flag-DZA { background-position: 0 25.619835% !important; }
-header .flag-ECU { background-position: 0 26.033058% !important; }
-header .flag-EGY { background-position: 0 26.446281% !important; }
-header .flag-ERI { background-position: 0 26.859504% !important; }
-header .flag-ESP { background-position: 0 27.272727% !important; }
-header .flag-EST { background-position: 0 27.68595% !important; }
-header .flag-ETH { background-position: 0 28.099174% !important; }
-header .flag-FIN { background-position: 0 28.512397% !important; }
-header .flag-FJI { background-position: 0 28.92562% !important; }
-header .flag-FLK { background-position: 0 29.338843% !important; }
-header .flag-FRA { background-position: 0 29.752066% !important; }
-header .flag-FRO { background-position: 0 30.165289% !important; }
-header .flag-FSM { background-position: 0 30.578512% !important; }
-header .flag-GAB { background-position: 0 30.991736% !important; }
-header .flag-GBR { background-position: 0 31.404959% !important; }
-header .flag-GEO { background-position: 0 31.818182% !important; }
-header .flag-GGY { background-position: 0 32.231405% !important; }
-header .flag-GHA { background-position: 0 32.644628% !important; }
-header .flag-GIB { background-position: 0 33.057851% !important; }
-header .flag-GIN { background-position: 0 33.471074% !important; }
-header .flag-GLP { background-position: 0 33.884298% !important; }
-header .flag-GMB { background-position: 0 34.297521% !important; }
-header .flag-GNB { background-position: 0 34.710744% !important; }
-header .flag-GNQ { background-position: 0 35.123967% !important; }
-header .flag-GRC { background-position: 0 35.53719% !important; }
-header .flag-GRD { background-position: 0 35.950413% !important; }
-header .flag-GRL { background-position: 0 36.363636% !important; }
-header .flag-GTM { background-position: 0 36.77686% !important; }
-header .flag-GUF { background-position: 0 37.190083% !important; }
-header .flag-GUM { background-position: 0 37.603306% !important; }
-header .flag-GUY { background-position: 0 38.016529% !important; }
-header .flag-HMD { background-position: 0 38.429752% !important; }
-header .flag-HND { background-position: 0 38.842975% !important; }
-header .flag-HRV { background-position: 0 39.256198% !important; }
-header .flag-HTI { background-position: 0 39.669421% !important; }
-header .flag-HUN { background-position: 0 40.082645% !important; }
-header .flag-IDN { background-position: 0 40.495868% !important; }
-header .flag-IMN { background-position: 0 40.909091% !important; }
-header .flag-IND { background-position: 0 41.322314% !important; }
-header .flag-IOA { background-position: 0 41.735537% !important; }
-header .flag-IOT { background-position: 0 42.14876% !important; }
-header .flag-IRL { background-position: 0 42.561983% !important; }
-header .flag-IRN { background-position: 0 42.975207% !important; }
-header .flag-IRQ { background-position: 0 43.38843% !important; }
-header .flag-ISL { background-position: 0 43.801653% !important; }
-header .flag-ISR { background-position: 0 44.214876% !important; }
-header .flag-ITA { background-position: 0 44.628099% !important; }
-header .flag-JAM { background-position: 0 45.041322% !important; }
-header .flag-JEY { background-position: 0 45.454545% !important; }
-header .flag-JOR { background-position: 0 45.867769% !important; }
-header .flag-JPN { background-position: 0 46.280992% !important; }
-header .flag-KAS { background-position: 0 46.694215% !important; }
-header .flag-KAZ { background-position: 0 47.107438% !important; }
-header .flag-KEN { background-position: 0 47.520661% !important; }
-header .flag-KGZ { background-position: 0 47.933884% !important; }
-header .flag-KHM { background-position: 0 48.347107% !important; }
-header .flag-KIR { background-position: 0 48.760331% !important; }
-header .flag-KNA { background-position: 0 49.173554% !important; }
-header .flag-KOR { background-position: 0 49.586777% !important; }
-header .flag-KOS { background-position: 0 50% !important; }
-header .flag-KWT { background-position: 0 50.413223% !important; }
-header .flag-LAO { background-position: 0 50.826446% !important; }
-header .flag-LBN { background-position: 0 51.239669% !important; }
-header .flag-LBR { background-position: 0 51.652893% !important; }
-header .flag-LBY { background-position: 0 52.066116% !important; }
-header .flag-LCA { background-position: 0 52.479339% !important; }
-header .flag-LIE { background-position: 0 52.892562% !important; }
-header .flag-LKA { background-position: 0 53.305785% !important; }
-header .flag-LSO { background-position: 0 53.719008% !important; }
-header .flag-LTU { background-position: 0 54.132231% !important; }
-header .flag-LUX { background-position: 0 54.545455% !important; }
-header .flag-LVA { background-position: 0 54.958678% !important; }
-header .flag-MAF { background-position: 0 55.371901% !important; }
-header .flag-MAR { background-position: 0 55.785124% !important; }
-header .flag-MCO { background-position: 0 56.198347% !important; }
-header .flag-MDA { background-position: 0 56.61157% !important; }
-header .flag-MDG { background-position: 0 57.024793% !important; }
-header .flag-MDV { background-position: 0 57.438017% !important; }
-header .flag-MEX { background-position: 0 57.85124% !important; }
-header .flag-MHL { background-position: 0 58.264463% !important; }
-header .flag-MKD { background-position: 0 58.677686% !important; }
-header .flag-MLI { background-position: 0 59.090909% !important; }
-header .flag-MLT { background-position: 0 59.504132% !important; }
-header .flag-MMR { background-position: 0 59.917355% !important; }
-header .flag-MNE { background-position: 0 60.330579% !important; }
-header .flag-MNG { background-position: 0 60.743802% !important; }
-header .flag-MNP { background-position: 0 61.157025% !important; }
-header .flag-MOZ { background-position: 0 61.570248% !important; }
-header .flag-MRT { background-position: 0 61.983471% !important; }
-header .flag-MSR { background-position: 0 62.396694% !important; }
-header .flag-MUS { background-position: 0 62.809917% !important; }
-header .flag-MWI { background-position: 0 63.22314% !important; }
-header .flag-MYS { background-position: 0 63.636364% !important; }
-header .flag-NAM { background-position: 0 64.049587% !important; }
-header .flag-NCL { background-position: 0 64.46281% !important; }
-header .flag-NER { background-position: 0 64.876033% !important; }
-header .flag-NFK { background-position: 0 65.289256% !important; }
-header .flag-NGA { background-position: 0 65.702479% !important; }
-header .flag-NIC { background-position: 0 66.115702% !important; }
-header .flag-NIU { background-position: 0 66.528926% !important; }
-header .flag-NLD { background-position: 0 66.942149% !important; }
-header .flag-NOR { background-position: 0 67.355372% !important; }
-header .flag-NPL { background-position: 0 67.768595% !important; }
-header .flag-NRU { background-position: 0 68.181818% !important; }
-header .flag-NZL { background-position: 0 68.595041% !important; }
-header .flag-OMN { background-position: 0 69.008264% !important; }
-header .flag-PAK { background-position: 0 69.421488% !important; }
-header .flag-PAN { background-position: 0 69.834711% !important; }
-header .flag-PCN { background-position: 0 70.247934% !important; }
-header .flag-PER { background-position: 0 70.661157% !important; }
-header .flag-PHL { background-position: 0 71.07438% !important; }
-header .flag-PLW { background-position: 0 71.487603% !important; }
-header .flag-PNG { background-position: 0 71.900826% !important; }
-header .flag-POL { background-position: 0 72.31405% !important; }
-header .flag-PRI { background-position: 0 72.727273% !important; }
-header .flag-PRK { background-position: 0 73.140496% !important; }
-header .flag-PRT { background-position: 0 73.553719% !important; }
-header .flag-PRY { background-position: 0 73.966942% !important; }
-header .flag-PSX { background-position: 0 74.380165% !important; }
-header .flag-PYF { background-position: 0 74.793388% !important; }
-header .flag-QAT { background-position: 0 75.206612% !important; }
-header .flag-ROU { background-position: 0 75.619835% !important; }
-header .flag-RUS { background-position: 0 76.033058% !important; }
-header .flag-RWA { background-position: 0 76.446281% !important; }
-header .flag-SAH { background-position: 0 76.859504% !important; }
-header .flag-SAU { background-position: 0 77.272727% !important; }
-header .flag-SDN { background-position: 0 77.68595% !important; }
-header .flag-SEN { background-position: 0 78.099174% !important; }
-header .flag-SGP { background-position: 0 78.512397% !important; }
-header .flag-SGS { background-position: 0 78.92562% !important; }
-header .flag-SHN { background-position: 0 79.338843% !important; }
-header .flag-SLB { background-position: 0 79.752066% !important; }
-header .flag-SLE { background-position: 0 80.165289% !important; }
-header .flag-SLV { background-position: 0 80.578512% !important; }
-header .flag-SMR { background-position: 0 80.991736% !important; }
-header .flag-SOM { background-position: 0 81.404959% !important; }
-header .flag-SPM { background-position: 0 81.818182% !important; }
-header .flag-SRB { background-position: 0 82.231405% !important; }
-header .flag-SSD { background-position: 0 82.644628% !important; }
-header .flag-STP { background-position: 0 83.057851% !important; }
-header .flag-SUR { background-position: 0 83.471074% !important; }
-header .flag-SVK { background-position: 0 83.884298% !important; }
-header .flag-SVN { background-position: 0 84.297521% !important; }
-header .flag-SWE { background-position: 0 84.710744% !important; }
-header .flag-SWZ { background-position: 0 85.123967% !important; }
-header .flag-SXM { background-position: 0 85.53719% !important; }
-header .flag-SYC { background-position: 0 85.950413% !important; }
-header .flag-SYR { background-position: 0 86.363636% !important; }
-header .flag-TCA { background-position: 0 86.77686% !important; }
-header .flag-TCD { background-position: 0 87.190083% !important; }
-header .flag-TGO { background-position: 0 87.603306% !important; }
-header .flag-THA { background-position: 0 88.016529% !important; }
-header .flag-TJK { background-position: 0 88.429752% !important; }
-header .flag-TKL { background-position: 0 88.842975% !important; }
-header .flag-TKM { background-position: 0 89.256198% !important; }
-header .flag-TLS { background-position: 0 89.669421% !important; }
-header .flag-TON { background-position: 0 90.082645% !important; }
-header .flag-TTO { background-position: 0 90.495868% !important; }
-header .flag-TUN { background-position: 0 90.909091% !important; }
-header .flag-TUR { background-position: 0 91.322314% !important; }
-header .flag-TWN { background-position: 0 91.735537% !important; }
-header .flag-TZA { background-position: 0 92.14876% !important; }
-header .flag-UGA { background-position: 0 92.561983% !important; }
-header .flag-UKR { background-position: 0 92.975207% !important; }
-header .flag-URY { background-position: 0 93.38843% !important; }
-header .flag-USA { background-position: 0 93.801653% !important; }
-header .flag-UZB { background-position: 0 94.214876% !important; }
-header .flag-VAT { background-position: 0 94.628099% !important; }
-header .flag-VCT { background-position: 0 95.041322% !important; }
-header .flag-VEN { background-position: 0 95.454545% !important; }
-header .flag-VGB { background-position: 0 95.867769% !important; }
-header .flag-VIR { background-position: 0 96.280992% !important; }
-header .flag-VNM { background-position: 0 96.694215% !important; }
-header .flag-VUT { background-position: 0 97.107438% !important; }
-header .flag-WLF { background-position: 0 97.520661% !important; }
-header .flag-WSM { background-position: 0 97.933884% !important; }
-header .flag-YEM { background-position: 0 98.347107% !important; }
-header .flag-ZAF { background-position: 0 98.760331% !important; }
-header .flag-ZMB { background-position: 0 99.173554% !important; }
-header .flag-ZWE { background-position: 0 99.586777% !important; }
-header .flag-no-flag { background-position: 0 100% !important; }
+.group-topics-regions .field-item { background-color: #428bca !important; border-radius: 15px; }
+
+#ranking h2, header h2 { font-size: 30px; padding-bottom: 50px; }
+#ranking .flag-ABW, header .flag-ABW { background-position: 0 0% !important; }
+#ranking .flag-AFG, header .flag-AFG { background-position: 0 0.413223% !important; }
+#ranking .flag-AGO, header .flag-AGO { background-position: 0 0.826446% !important; }
+#ranking .flag-AIA, header .flag-AIA { background-position: 0 1.239669% !important; }
+#ranking .flag-ALB, header .flag-ALB { background-position: 0 1.652893% !important; }
+#ranking .flag-AND, header .flag-AND { background-position: 0 2.066116% !important; }
+#ranking .flag-ARE, header .flag-ARE { background-position: 0 2.479339% !important; }
+#ranking .flag-ARG, header .flag-ARG { background-position: 0 2.892562% !important; }
+#ranking .flag-ARM, header .flag-ARM { background-position: 0 3.305785% !important; }
+#ranking .flag-ASM, header .flag-ASM { background-position: 0 3.719008% !important; }
+#ranking .flag-ATA, header .flag-ATA { background-position: 0 4.132231% !important; }
+#ranking .flag-ATC, header .flag-ATC { background-position: 0 4.545455% !important; }
+#ranking .flag-ATF, header .flag-ATF { background-position: 0 4.958678% !important; }
+#ranking .flag-ATG, header .flag-ATG { background-position: 0 5.371901% !important; }
+#ranking .flag-AUS, header .flag-AUS { background-position: 0 5.785124% !important; }
+#ranking .flag-AUT, header .flag-AUT { background-position: 0 6.198347% !important; }
+#ranking .flag-AZE, header .flag-AZE { background-position: 0 6.61157% !important; }
+#ranking .flag-BDI, header .flag-BDI { background-position: 0 7.024793% !important; }
+#ranking .flag-BEL, header .flag-BEL { background-position: 0 7.438017% !important; }
+#ranking .flag-BEN, header .flag-BEN { background-position: 0 7.85124% !important; }
+#ranking .flag-BES, header .flag-BES { background-position: 0 8.264463% !important; }
+#ranking .flag-BFA, header .flag-BFA { background-position: 0 8.677686% !important; }
+#ranking .flag-BGD, header .flag-BGD { background-position: 0 9.090909% !important; }
+#ranking .flag-BGR, header .flag-BGR { background-position: 0 9.504132% !important; }
+#ranking .flag-BHR, header .flag-BHR { background-position: 0 9.917355% !important; }
+#ranking .flag-BHS, header .flag-BHS { background-position: 0 10.330579% !important; }
+#ranking .flag-BIH, header .flag-BIH { background-position: 0 10.743802% !important; }
+#ranking .flag-BLM, header .flag-BLM { background-position: 0 11.157025% !important; }
+#ranking .flag-BLR, header .flag-BLR { background-position: 0 11.570248% !important; }
+#ranking .flag-BLZ, header .flag-BLZ { background-position: 0 11.983471% !important; }
+#ranking .flag-BMU, header .flag-BMU { background-position: 0 12.396694% !important; }
+#ranking .flag-BOL, header .flag-BOL { background-position: 0 12.809917% !important; }
+#ranking .flag-BRA, header .flag-BRA { background-position: 0 13.22314% !important; }
+#ranking .flag-BRB, header .flag-BRB { background-position: 0 13.636364% !important; }
+#ranking .flag-BRN, header .flag-BRN { background-position: 0 14.049587% !important; }
+#ranking .flag-BTN, header .flag-BTN { background-position: 0 14.46281% !important; }
+#ranking .flag-BWA, header .flag-BWA { background-position: 0 14.876033% !important; }
+#ranking .flag-CAF, header .flag-CAF { background-position: 0 15.289256% !important; }
+#ranking .flag-CAN, header .flag-CAN { background-position: 0 15.702479% !important; }
+#ranking .flag-CHE, header .flag-CHE { background-position: 0 16.115702% !important; }
+#ranking .flag-CHL, header .flag-CHL { background-position: 0 16.528926% !important; }
+#ranking .flag-CHN, header .flag-CHN { background-position: 0 16.942149% !important; }
+#ranking .flag-CIV, header .flag-CIV { background-position: 0 17.355372% !important; }
+#ranking .flag-CMR, header .flag-CMR { background-position: 0 17.768595% !important; }
+#ranking .flag-COD, header .flag-COD { background-position: 0 18.181818% !important; }
+#ranking .flag-COG, header .flag-COG { background-position: 0 18.595041% !important; }
+#ranking .flag-COK, header .flag-COK { background-position: 0 19.008264% !important; }
+#ranking .flag-COL, header .flag-COL { background-position: 0 19.421488% !important; }
+#ranking .flag-COM, header .flag-COM { background-position: 0 19.834711% !important; }
+#ranking .flag-CPV, header .flag-CPV { background-position: 0 20.247934% !important; }
+#ranking .flag-CRI, header .flag-CRI { background-position: 0 20.661157% !important; }
+#ranking .flag-CUB, header .flag-CUB { background-position: 0 21.07438% !important; }
+#ranking .flag-CUW, header .flag-CUW { background-position: 0 21.487603% !important; }
+#ranking .flag-CYM, header .flag-CYM { background-position: 0 21.900826% !important; }
+#ranking .flag-CYN, header .flag-CYN { background-position: 0 22.31405% !important; }
+#ranking .flag-CYP, header .flag-CYP { background-position: 0 22.727273% !important; }
+#ranking .flag-CZE, header .flag-CZE { background-position: 0 23.140496% !important; }
+#ranking .flag-DEU, header .flag-DEU { background-position: 0 23.553719% !important; }
+#ranking .flag-DJI, header .flag-DJI { background-position: 0 23.966942% !important; }
+#ranking .flag-DMA, header .flag-DMA { background-position: 0 24.380165% !important; }
+#ranking .flag-DNK, header .flag-DNK { background-position: 0 24.793388% !important; }
+#ranking .flag-DOM, header .flag-DOM { background-position: 0 25.206612% !important; }
+#ranking .flag-DZA, header .flag-DZA { background-position: 0 25.619835% !important; }
+#ranking .flag-ECU, header .flag-ECU { background-position: 0 26.033058% !important; }
+#ranking .flag-EGY, header .flag-EGY { background-position: 0 26.446281% !important; }
+#ranking .flag-ERI, header .flag-ERI { background-position: 0 26.859504% !important; }
+#ranking .flag-ESP, header .flag-ESP { background-position: 0 27.272727% !important; }
+#ranking .flag-EST, header .flag-EST { background-position: 0 27.68595% !important; }
+#ranking .flag-ETH, header .flag-ETH { background-position: 0 28.099174% !important; }
+#ranking .flag-FIN, header .flag-FIN { background-position: 0 28.512397% !important; }
+#ranking .flag-FJI, header .flag-FJI { background-position: 0 28.92562% !important; }
+#ranking .flag-FLK, header .flag-FLK { background-position: 0 29.338843% !important; }
+#ranking .flag-FRA, header .flag-FRA { background-position: 0 29.752066% !important; }
+#ranking .flag-FRO, header .flag-FRO { background-position: 0 30.165289% !important; }
+#ranking .flag-FSM, header .flag-FSM { background-position: 0 30.578512% !important; }
+#ranking .flag-GAB, header .flag-GAB { background-position: 0 30.991736% !important; }
+#ranking .flag-GBR, header .flag-GBR { background-position: 0 31.404959% !important; }
+#ranking .flag-GEO, header .flag-GEO { background-position: 0 31.818182% !important; }
+#ranking .flag-GGY, header .flag-GGY { background-position: 0 32.231405% !important; }
+#ranking .flag-GHA, header .flag-GHA { background-position: 0 32.644628% !important; }
+#ranking .flag-GIB, header .flag-GIB { background-position: 0 33.057851% !important; }
+#ranking .flag-GIN, header .flag-GIN { background-position: 0 33.471074% !important; }
+#ranking .flag-GLP, header .flag-GLP { background-position: 0 33.884298% !important; }
+#ranking .flag-GMB, header .flag-GMB { background-position: 0 34.297521% !important; }
+#ranking .flag-GNB, header .flag-GNB { background-position: 0 34.710744% !important; }
+#ranking .flag-GNQ, header .flag-GNQ { background-position: 0 35.123967% !important; }
+#ranking .flag-GRC, header .flag-GRC { background-position: 0 35.53719% !important; }
+#ranking .flag-GRD, header .flag-GRD { background-position: 0 35.950413% !important; }
+#ranking .flag-GRL, header .flag-GRL { background-position: 0 36.363636% !important; }
+#ranking .flag-GTM, header .flag-GTM { background-position: 0 36.77686% !important; }
+#ranking .flag-GUF, header .flag-GUF { background-position: 0 37.190083% !important; }
+#ranking .flag-GUM, header .flag-GUM { background-position: 0 37.603306% !important; }
+#ranking .flag-GUY, header .flag-GUY { background-position: 0 38.016529% !important; }
+#ranking .flag-HMD, header .flag-HMD { background-position: 0 38.429752% !important; }
+#ranking .flag-HND, header .flag-HND { background-position: 0 38.842975% !important; }
+#ranking .flag-HRV, header .flag-HRV { background-position: 0 39.256198% !important; }
+#ranking .flag-HTI, header .flag-HTI { background-position: 0 39.669421% !important; }
+#ranking .flag-HUN, header .flag-HUN { background-position: 0 40.082645% !important; }
+#ranking .flag-IDN, header .flag-IDN { background-position: 0 40.495868% !important; }
+#ranking .flag-IMN, header .flag-IMN { background-position: 0 40.909091% !important; }
+#ranking .flag-IND, header .flag-IND { background-position: 0 41.322314% !important; }
+#ranking .flag-IOA, header .flag-IOA { background-position: 0 41.735537% !important; }
+#ranking .flag-IOT, header .flag-IOT { background-position: 0 42.14876% !important; }
+#ranking .flag-IRL, header .flag-IRL { background-position: 0 42.561983% !important; }
+#ranking .flag-IRN, header .flag-IRN { background-position: 0 42.975207% !important; }
+#ranking .flag-IRQ, header .flag-IRQ { background-position: 0 43.38843% !important; }
+#ranking .flag-ISL, header .flag-ISL { background-position: 0 43.801653% !important; }
+#ranking .flag-ISR, header .flag-ISR { background-position: 0 44.214876% !important; }
+#ranking .flag-ITA, header .flag-ITA { background-position: 0 44.628099% !important; }
+#ranking .flag-JAM, header .flag-JAM { background-position: 0 45.041322% !important; }
+#ranking .flag-JEY, header .flag-JEY { background-position: 0 45.454545% !important; }
+#ranking .flag-JOR, header .flag-JOR { background-position: 0 45.867769% !important; }
+#ranking .flag-JPN, header .flag-JPN { background-position: 0 46.280992% !important; }
+#ranking .flag-KAS, header .flag-KAS { background-position: 0 46.694215% !important; }
+#ranking .flag-KAZ, header .flag-KAZ { background-position: 0 47.107438% !important; }
+#ranking .flag-KEN, header .flag-KEN { background-position: 0 47.520661% !important; }
+#ranking .flag-KGZ, header .flag-KGZ { background-position: 0 47.933884% !important; }
+#ranking .flag-KHM, header .flag-KHM { background-position: 0 48.347107% !important; }
+#ranking .flag-KIR, header .flag-KIR { background-position: 0 48.760331% !important; }
+#ranking .flag-KNA, header .flag-KNA { background-position: 0 49.173554% !important; }
+#ranking .flag-KOR, header .flag-KOR { background-position: 0 49.586777% !important; }
+#ranking .flag-KOS, header .flag-KOS { background-position: 0 50% !important; }
+#ranking .flag-KWT, header .flag-KWT { background-position: 0 50.413223% !important; }
+#ranking .flag-LAO, header .flag-LAO { background-position: 0 50.826446% !important; }
+#ranking .flag-LBN, header .flag-LBN { background-position: 0 51.239669% !important; }
+#ranking .flag-LBR, header .flag-LBR { background-position: 0 51.652893% !important; }
+#ranking .flag-LBY, header .flag-LBY { background-position: 0 52.066116% !important; }
+#ranking .flag-LCA, header .flag-LCA { background-position: 0 52.479339% !important; }
+#ranking .flag-LIE, header .flag-LIE { background-position: 0 52.892562% !important; }
+#ranking .flag-LKA, header .flag-LKA { background-position: 0 53.305785% !important; }
+#ranking .flag-LSO, header .flag-LSO { background-position: 0 53.719008% !important; }
+#ranking .flag-LTU, header .flag-LTU { background-position: 0 54.132231% !important; }
+#ranking .flag-LUX, header .flag-LUX { background-position: 0 54.545455% !important; }
+#ranking .flag-LVA, header .flag-LVA { background-position: 0 54.958678% !important; }
+#ranking .flag-MAF, header .flag-MAF { background-position: 0 55.371901% !important; }
+#ranking .flag-MAR, header .flag-MAR { background-position: 0 55.785124% !important; }
+#ranking .flag-MCO, header .flag-MCO { background-position: 0 56.198347% !important; }
+#ranking .flag-MDA, header .flag-MDA { background-position: 0 56.61157% !important; }
+#ranking .flag-MDG, header .flag-MDG { background-position: 0 57.024793% !important; }
+#ranking .flag-MDV, header .flag-MDV { background-position: 0 57.438017% !important; }
+#ranking .flag-MEX, header .flag-MEX { background-position: 0 57.85124% !important; }
+#ranking .flag-MHL, header .flag-MHL { background-position: 0 58.264463% !important; }
+#ranking .flag-MKD, header .flag-MKD { background-position: 0 58.677686% !important; }
+#ranking .flag-MLI, header .flag-MLI { background-position: 0 59.090909% !important; }
+#ranking .flag-MLT, header .flag-MLT { background-position: 0 59.504132% !important; }
+#ranking .flag-MMR, header .flag-MMR { background-position: 0 59.917355% !important; }
+#ranking .flag-MNE, header .flag-MNE { background-position: 0 60.330579% !important; }
+#ranking .flag-MNG, header .flag-MNG { background-position: 0 60.743802% !important; }
+#ranking .flag-MNP, header .flag-MNP { background-position: 0 61.157025% !important; }
+#ranking .flag-MOZ, header .flag-MOZ { background-position: 0 61.570248% !important; }
+#ranking .flag-MRT, header .flag-MRT { background-position: 0 61.983471% !important; }
+#ranking .flag-MSR, header .flag-MSR { background-position: 0 62.396694% !important; }
+#ranking .flag-MUS, header .flag-MUS { background-position: 0 62.809917% !important; }
+#ranking .flag-MWI, header .flag-MWI { background-position: 0 63.22314% !important; }
+#ranking .flag-MYS, header .flag-MYS { background-position: 0 63.636364% !important; }
+#ranking .flag-NAM, header .flag-NAM { background-position: 0 64.049587% !important; }
+#ranking .flag-NCL, header .flag-NCL { background-position: 0 64.46281% !important; }
+#ranking .flag-NER, header .flag-NER { background-position: 0 64.876033% !important; }
+#ranking .flag-NFK, header .flag-NFK { background-position: 0 65.289256% !important; }
+#ranking .flag-NGA, header .flag-NGA { background-position: 0 65.702479% !important; }
+#ranking .flag-NIC, header .flag-NIC { background-position: 0 66.115702% !important; }
+#ranking .flag-NIU, header .flag-NIU { background-position: 0 66.528926% !important; }
+#ranking .flag-NLD, header .flag-NLD { background-position: 0 66.942149% !important; }
+#ranking .flag-NOR, header .flag-NOR { background-position: 0 67.355372% !important; }
+#ranking .flag-NPL, header .flag-NPL { background-position: 0 67.768595% !important; }
+#ranking .flag-NRU, header .flag-NRU { background-position: 0 68.181818% !important; }
+#ranking .flag-NZL, header .flag-NZL { background-position: 0 68.595041% !important; }
+#ranking .flag-OMN, header .flag-OMN { background-position: 0 69.008264% !important; }
+#ranking .flag-PAK, header .flag-PAK { background-position: 0 69.421488% !important; }
+#ranking .flag-PAN, header .flag-PAN { background-position: 0 69.834711% !important; }
+#ranking .flag-PCN, header .flag-PCN { background-position: 0 70.247934% !important; }
+#ranking .flag-PER, header .flag-PER { background-position: 0 70.661157% !important; }
+#ranking .flag-PHL, header .flag-PHL { background-position: 0 71.07438% !important; }
+#ranking .flag-PLW, header .flag-PLW { background-position: 0 71.487603% !important; }
+#ranking .flag-PNG, header .flag-PNG { background-position: 0 71.900826% !important; }
+#ranking .flag-POL, header .flag-POL { background-position: 0 72.31405% !important; }
+#ranking .flag-PRI, header .flag-PRI { background-position: 0 72.727273% !important; }
+#ranking .flag-PRK, header .flag-PRK { background-position: 0 73.140496% !important; }
+#ranking .flag-PRT, header .flag-PRT { background-position: 0 73.553719% !important; }
+#ranking .flag-PRY, header .flag-PRY { background-position: 0 73.966942% !important; }
+#ranking .flag-PSX, header .flag-PSX { background-position: 0 74.380165% !important; }
+#ranking .flag-PYF, header .flag-PYF { background-position: 0 74.793388% !important; }
+#ranking .flag-QAT, header .flag-QAT { background-position: 0 75.206612% !important; }
+#ranking .flag-ROU, header .flag-ROU { background-position: 0 75.619835% !important; }
+#ranking .flag-RUS, header .flag-RUS { background-position: 0 76.033058% !important; }
+#ranking .flag-RWA, header .flag-RWA { background-position: 0 76.446281% !important; }
+#ranking .flag-SAH, header .flag-SAH { background-position: 0 76.859504% !important; }
+#ranking .flag-SAU, header .flag-SAU { background-position: 0 77.272727% !important; }
+#ranking .flag-SDN, header .flag-SDN { background-position: 0 77.68595% !important; }
+#ranking .flag-SEN, header .flag-SEN { background-position: 0 78.099174% !important; }
+#ranking .flag-SGP, header .flag-SGP { background-position: 0 78.512397% !important; }
+#ranking .flag-SGS, header .flag-SGS { background-position: 0 78.92562% !important; }
+#ranking .flag-SHN, header .flag-SHN { background-position: 0 79.338843% !important; }
+#ranking .flag-SLB, header .flag-SLB { background-position: 0 79.752066% !important; }
+#ranking .flag-SLE, header .flag-SLE { background-position: 0 80.165289% !important; }
+#ranking .flag-SLV, header .flag-SLV { background-position: 0 80.578512% !important; }
+#ranking .flag-SMR, header .flag-SMR { background-position: 0 80.991736% !important; }
+#ranking .flag-SOM, header .flag-SOM { background-position: 0 81.404959% !important; }
+#ranking .flag-SPM, header .flag-SPM { background-position: 0 81.818182% !important; }
+#ranking .flag-SRB, header .flag-SRB { background-position: 0 82.231405% !important; }
+#ranking .flag-SSD, header .flag-SSD { background-position: 0 82.644628% !important; }
+#ranking .flag-STP, header .flag-STP { background-position: 0 83.057851% !important; }
+#ranking .flag-SUR, header .flag-SUR { background-position: 0 83.471074% !important; }
+#ranking .flag-SVK, header .flag-SVK { background-position: 0 83.884298% !important; }
+#ranking .flag-SVN, header .flag-SVN { background-position: 0 84.297521% !important; }
+#ranking .flag-SWE, header .flag-SWE { background-position: 0 84.710744% !important; }
+#ranking .flag-SWZ, header .flag-SWZ { background-position: 0 85.123967% !important; }
+#ranking .flag-SXM, header .flag-SXM { background-position: 0 85.53719% !important; }
+#ranking .flag-SYC, header .flag-SYC { background-position: 0 85.950413% !important; }
+#ranking .flag-SYR, header .flag-SYR { background-position: 0 86.363636% !important; }
+#ranking .flag-TCA, header .flag-TCA { background-position: 0 86.77686% !important; }
+#ranking .flag-TCD, header .flag-TCD { background-position: 0 87.190083% !important; }
+#ranking .flag-TGO, header .flag-TGO { background-position: 0 87.603306% !important; }
+#ranking .flag-THA, header .flag-THA { background-position: 0 88.016529% !important; }
+#ranking .flag-TJK, header .flag-TJK { background-position: 0 88.429752% !important; }
+#ranking .flag-TKL, header .flag-TKL { background-position: 0 88.842975% !important; }
+#ranking .flag-TKM, header .flag-TKM { background-position: 0 89.256198% !important; }
+#ranking .flag-TLS, header .flag-TLS { background-position: 0 89.669421% !important; }
+#ranking .flag-TON, header .flag-TON { background-position: 0 90.082645% !important; }
+#ranking .flag-TTO, header .flag-TTO { background-position: 0 90.495868% !important; }
+#ranking .flag-TUN, header .flag-TUN { background-position: 0 90.909091% !important; }
+#ranking .flag-TUR, header .flag-TUR { background-position: 0 91.322314% !important; }
+#ranking .flag-TWN, header .flag-TWN { background-position: 0 91.735537% !important; }
+#ranking .flag-TZA, header .flag-TZA { background-position: 0 92.14876% !important; }
+#ranking .flag-UGA, header .flag-UGA { background-position: 0 92.561983% !important; }
+#ranking .flag-UKR, header .flag-UKR { background-position: 0 92.975207% !important; }
+#ranking .flag-URY, header .flag-URY { background-position: 0 93.38843% !important; }
+#ranking .flag-USA, header .flag-USA { background-position: 0 93.801653% !important; }
+#ranking .flag-UZB, header .flag-UZB { background-position: 0 94.214876% !important; }
+#ranking .flag-VAT, header .flag-VAT { background-position: 0 94.628099% !important; }
+#ranking .flag-VCT, header .flag-VCT { background-position: 0 95.041322% !important; }
+#ranking .flag-VEN, header .flag-VEN { background-position: 0 95.454545% !important; }
+#ranking .flag-VGB, header .flag-VGB { background-position: 0 95.867769% !important; }
+#ranking .flag-VIR, header .flag-VIR { background-position: 0 96.280992% !important; }
+#ranking .flag-VNM, header .flag-VNM { background-position: 0 96.694215% !important; }
+#ranking .flag-VUT, header .flag-VUT { background-position: 0 97.107438% !important; }
+#ranking .flag-WLF, header .flag-WLF { background-position: 0 97.520661% !important; }
+#ranking .flag-WSM, header .flag-WSM { background-position: 0 97.933884% !important; }
+#ranking .flag-YEM, header .flag-YEM { background-position: 0 98.347107% !important; }
+#ranking .flag-ZAF, header .flag-ZAF { background-position: 0 98.760331% !important; }
+#ranking .flag-ZMB, header .flag-ZMB { background-position: 0 99.173554% !important; }
+#ranking .flag-ZWE, header .flag-ZWE { background-position: 0 99.586777% !important; }
+#ranking .flag-no-flag, header .flag-no-flag { background-position: 0 100% !important; }
 
 /* IMPORT: Screens */
 /** Landportal SCSS Base size and positionning */

@@ -1,3 +1,6 @@
+body{
+    width:1150px !important;
+}
 @page{
     margin:50px 0 50px 0;
 }
@@ -13,6 +16,8 @@ a[href]:after {
 #section-header,
 #footer,
 #block-views-landbook-countries-related-block-6,
+#block-views-landbook-thematics-related-block-6,
+#reletad-content,
 .messages,
 .nav-country-processed,
 .pdf-block,
@@ -31,8 +36,13 @@ span.flag{
     overflow:visible;
     background: url("../images/flags.png")  !important;
     background-size:cover !important;
+    text-indent: -9999px !important;
+    display:block !important;
 }
-
+span.rank{
+    background-color: #a3c642 !important;
+    border: 2px solid #ffffff !important;
+}
 
 #header{
     height:120px;
@@ -219,6 +229,7 @@ input.btn.btn-primary{
 .map-fluid{
     margin-left:-5%;
 }
+#ranking,
 #compare,
 #lgaf{
     page-break-before: always !important;
@@ -290,6 +301,14 @@ input.btn.btn-primary{
 }
 
 
+.group-topics-regions{
+    .field-item{
+        background-color: #428bca !important;
+        border-radius:15px;
+    }
+}
+
+#ranking,
 header{
     h2{
         font-size: 30px;
