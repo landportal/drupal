@@ -5000,7 +5000,7 @@ body { width: 1150px !important; }
 @page :first { margin-top: 0; }
 a[href]:after { content: none !important; }
 
-#section-header, #footer, #block-views-landbook-countries-related-block-6, #block-views-landbook-thematics-related-block-6, #reletad-content, .messages, .nav-country-processed, .pdf-block, .action-links-field-collection-add, #block-landbook-disclaimer-block, #media-block, #partners-block, .country-section:last-child { display: none !important; }
+#section-header, #footer, #block-views-landbook-countries-related-block-6, #block-views-landbook-thematics-related-block-6, #reletad-content, #block-views-promoted-block-1, .messages, .nav-country-processed, .pdf-block, .action-links-field-collection-add, #block-landbook-disclaimer-block, #media-block, #partners-block, .country-section:last-child { display: none !important; }
 
 span.flag { width: 50px !important; height: 50px !important; border-radius: 50px !important; overflow: visible; background: url("../images/flags.png") !important; background-size: cover !important; text-indent: -9999px !important; display: block !important; }
 
@@ -5027,7 +5027,7 @@ padding-right:80px;*/ }
 
 .field-collection-item-field-country-info .mic-i-a { color: #a3c642 !important; }
 
-#main-wrapper .region-content > section#country-navigation { padding-top: 0 !important; background: none !important; }
+#main-wrapper .region-content > section#country-navigation { padding-top: 130px !important; background: none !important; }
 
 #main-wrapper .region-content > section#country-navigation.no-reletad-content-empty header { margin-top: -35px !important; }
 
