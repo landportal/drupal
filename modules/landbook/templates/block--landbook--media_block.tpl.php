@@ -35,6 +35,8 @@ foreach ($views as $vid => $view) {
 
         <?php $full_width=''; ?>
         <?php $centerred=''; ?>
+        <?php $col1=''; ?>
+        <?php $col2=''; ?>
         <?php if(empty($render['news'])):?>
             <?php $col1='hide '; ?>
             <?php $col2='centered'; ?>
