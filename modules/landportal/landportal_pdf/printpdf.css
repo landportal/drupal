@@ -35,7 +35,8 @@ body{
     margin-top:40px !important;
 }
 
-#block-views-landbook-countries-related-block-6{
+#block-views-landbook-countries-related-block-6,
+#block-views-landbook-thematics-related-block-6{
     display:none !important;
 }
 

@@ -1,4 +1,4 @@
-name = PDF
+name = Landbook PDF
 description = Custom module for pdf generation
 core = 7.x
 package = Landportal
