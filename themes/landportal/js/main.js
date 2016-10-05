@@ -8,7 +8,6 @@
         Drupal.behaviors.landportal.initShowInfo(context, settings);
         //Drupal.behaviors.landportal.initSearchBlock(context, settings);
         Drupal.behaviors.landportal.showSpiderBlock(context, settings);
-        Drupal.behaviors.landportal.initCarousel(context, settings);
         Drupal.behaviors.landportal.initReadMore(context, settings);
         Drupal.behaviors.landportal.nice_menu_direction(context);
         Drupal.behaviors.landportal.initPrintOrganization(context);
@@ -135,35 +134,6 @@
             $('#wrapper-piechart').show();
           }
         }, 100);
-      },
-      initCarousel: function(context, settings){
-        if($('#reletad-content .view-display-id-block_6 .empty').is('#reletad-content .view-display-id-block_6 .empty')){
-            $('#reletad-content').addClass('empty');
-        }
-        else{
-          $('#country-navigation').addClass('no-reletad-content-empty');
-        }
-
-        if($('#block-views-landbook-countries-related-block-6, #block-views-landbook-thematics-related-block-6').css('display') == 'block') {
-            $('.view-landbook-countries-related.view-display-id-block_6 .view-content,#block-views-landbook-thematics-related-block-6 .view-content').owlCarousel({
-                center: false,
-                items:3,
-                loop:false,
-                margin:1,
-                responsive:{
-                    320:{
-                        items:1,
-                        loop: false,
-                    },
-                    768:{
-                        items:2
-                    },
-                    1200:{
-                        items:3
-                    }
-                }
-            });
-        }
       },
       initReadMore: function(context, settings){
         $('.node-landlibrary-resource.node-teaser .field-name-field-doc-description').readmore({

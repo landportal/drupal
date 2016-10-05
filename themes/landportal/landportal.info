@@ -5,7 +5,6 @@ version = 7.x-2.2-beta
 core = 7.x
 engine = phptemplate
 stylesheets[all][] = css/style.css
-stylesheets[all][] = css/owl.carousel.css
 stylesheets[print][] = css/print.css
 regions[content] = Content
 regions[header] = Header
@@ -20,6 +19,5 @@ features[] = favicon
 features[] = main_menu
 
 scripts[] = 'js/bootstrap.min.js'
-scripts[] = 'js/owl.carousel.min.js'
 scripts[] = 'js/readmore.min.js'
 scripts[] = 'js/main.js'
