@@ -1,19 +1,16 @@
 <?php
+
 /**
  * @file
- * Debate node implementation
+ * Default theme implementation to display a node.
  *
- * Do not show the following elements:
- * - submitted
- *
+ * @see node.tpl.php
  * @see template_preprocess()
  * @see template_preprocess_node()
  * @see template_process()
  *
  * @ingroup themeable
  */
-
-
 ?>
 <?php switch ($view_mode) : ?>
 <?php case 'listing' : ?>
@@ -29,6 +26,7 @@
 
   <?php $information = '' ?>
   <?php $information = render($content['field_image']); ?>
+  <?php $information = render($content['field_doc_thumb']); ?>
   <?php $information .= render($content['field_date']); ?>
   <?php $information .= render($content['field_geographical_focus']); ?>
   <?php $information .= render($content['field_related_topics']); ?>
@@ -49,40 +47,11 @@
     ?>
 
 </div>
-<?php break; ?>
-
-<?php case 'teaser' : ?>
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix new p-l-top p-l-bottom group"<?php print $attributes; ?>>
-    <div class="node-image group col-md-4">
-      <?php print render($content['field_image']); ?>
-    </div>
-    <div class="node-intro displayb col-md-8">
-        <?php print render($title_prefix); ?>
-        <?php print render($title_suffix); ?>
-        <h2><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-        <?php if(!empty($node->field_date)): ?>
-        <?php $field_values = field_get_items('node', $node, 'field_date');
-          $date_start=date('F jS',strtotime($field_values[0]['value']));
-          $date_end=date('F jS, Y',strtotime($field_values[0]['value2']));
-        ?>
-        <div class="date"><?php print $date_start.' - '.$date_end; ?></div>
-      <?php endif; ?>
-
-      <?php
-      // We hide the comments and links now so that we can render them later.
-        hide($content['comments']);
-        hide($content['links']);
-        hide($content['field_image']);
-        hide($content['field_date']);
-        print render($content);
-      ?>
-    </div>
-</article>
 
 <?php break; ?>
 
 <?php default: ?>
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print $user_picture; ?>
 
@@ -92,36 +61,57 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-  <?php /* if ($display_submitted): ?> */
-  /*   <div class="submitted"> */
-  /*     <?php print $submitted; ?> */
-  /*   </div> */
-  /* <?php endif; */ ?>
-
-
-  <section class="information">
-    <?php
-      // We hide the comments and links now so that we can render them later.
-    foreach(array('image', 'status', 'date', 'facilitators') as $fn) {
-        hide($content['field_'.$fn]);
-        print render($content['field_'.$fn]);
-    }
-    ?>
-  </section>
-
   <section class="content"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-      print render($content);
-    ?>
+      hide($content['field_landvoc_to']);
+      hide($content['title_field']);
+      hide($content['group_topics_regions']);
+      hide($content['field_thematic_image']);
+      ?>
+      <div class="container">
+           <div class="row">
+               <div class="col-xs-12 thematic-top">
+                   <?php print render($content['field_thematic_image']);?>
+                   <?php print render($content['field_landvoc_to']);?>
+                   <?php print render($content['title_field']);?>
+                   <?php print render($content['group_topics_regions']);?>
+               </div>
+           </div>
+      </div>
+      <?php        
+        $block = block_load('landbook', 'thematic_promoted_nodes_block');
+        $block = _block_render_blocks(array($block));
+        $block_build = _block_get_renderable_array($block);
+        echo drupal_render($block_build);      
+      ?>
+      <?php         
+        $block = block_load('landbook', 'thematic_country_navigation_block');
+        $block = _block_render_blocks(array($block));
+        $block_build = _block_get_renderable_array($block);
+        echo drupal_render($block_build);      
+      ?>
+      <div class="container">
+           <div class="row">
+               <div class="col-xs-12">
+                    <?php print render($content); ?>
+               </div>
+           </div>
+      </div>
+
+  <?php if ($display_submitted): ?>
+  <div class="submitted">
+      <?php print $submitted; ?>
+    </div>
+  <?php endif; ?>
   </section>
-
-  <?php print render($content['links']); ?>
-
+  <?php if($node->type !='page'): ?>
+    <?php print render($content['links']); ?>
+  <?php endif; ?>
   <?php print render($content['comments']); ?>
 
-</article>
+</div>
 <?php break; ?>
 <?php endswitch; ?>

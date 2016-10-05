@@ -5,10 +5,12 @@
 /*config.php
 /files
 /private
-/themes/landportal/scss/.sass-cache/
+
+# Ignore dev files
+.sass-cache/
+**/css/*map
 
 # Ignore backup & temp files
 *~
 .DS_Store
 \#*
-.sass-cache

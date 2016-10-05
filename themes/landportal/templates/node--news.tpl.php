@@ -76,22 +76,6 @@
 
 <?php break; ?>
 
-
-<?php case 'promoted_country_page' : ?>
-<?php 
-hide($content['comments']);
-hide($content['links']);
- ?>
-<div class="c-item">
-      <figure class="fig-carousel r-pos group">
-          <?php print render($content); ?>
-          <figcaption class="pos-txt-img-carousel c-contrast fos"><?php print $title; ?></figcaption>
-          <div class="cover-img-carousel"></div>
-      </figure>
-    </div>
-
-<?php break; ?>
-
 <?php default: ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 

@@ -144,25 +144,26 @@
           $('#country-navigation').addClass('no-reletad-content-empty');
         }
 
-        if($('#block-views-landbook-countries-related-block-6').css('display') == 'block'){
-        $('.view-landbook-countries-related.view-display-id-block_6 .view-content').owlCarousel({
-          center: false,
-          items:3,
-          loop:false,
-          margin:1,
-          responsive:{
-              320:{
-                items:1,
-                loop: false,
-              },
-              768:{
-                items:2
-              },
-              1200:{
-                items:3
-              }
-          }
-        });}
+        if($('#block-views-landbook-countries-related-block-6, #block-views-landbook-thematics-related-block-6').css('display') == 'block') {
+            $('.view-landbook-countries-related.view-display-id-block_6 .view-content,#block-views-landbook-thematics-related-block-6 .view-content').owlCarousel({
+                center: false,
+                items:3,
+                loop:false,
+                margin:1,
+                responsive:{
+                    320:{
+                        items:1,
+                        loop: false,
+                    },
+                    768:{
+                        items:2
+                    },
+                    1200:{
+                        items:3
+                    }
+                }
+            });
+        }
       },
       initReadMore: function(context, settings){
         $('.node-landlibrary-resource.node-teaser .field-name-field-doc-description').readmore({
