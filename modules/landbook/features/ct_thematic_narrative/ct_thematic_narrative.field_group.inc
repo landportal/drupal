@@ -20,17 +20,16 @@ function ct_thematic_narrative_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => '',
+    'label' => 'Landvoc concepts',
     'weight' => '3',
     'children' => array(
-      0 => 'field_geographical_focus',
-      1 => 'field_related_domains',
-      2 => 'field_related_topics',
-      3 => 'field_related_themes',
+      0 => 'field_related_domains',
+      1 => 'field_related_topics',
+      2 => 'field_related_themes',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => '',
+      'label' => 'Landvoc concepts',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-topics-regions field-group-fieldset',
@@ -106,6 +105,7 @@ function ct_thematic_narrative_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Landvoc concepts');
   t('Topics and Regions');
 
   return $field_groups;
