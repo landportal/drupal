@@ -87,7 +87,7 @@ function promoted_form_custom_options_after_build($form, &$form_state){
  * Implements hook_views_query_alter().
  */
 function promoted_views_query_alter(&$view, &$query){
-  if(!empty($view->name) && $view->name == 'promoted'){
+  if(!empty($view->name) && $view->name == 'promoted_nodes'){
     $args = arg();
     if($view->current_display == 'block_1'){
       if (!empty($args[2])) {

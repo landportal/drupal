@@ -10,8 +10,9 @@
 function promoted_views_default_views() {
   $export = array();
   $views = array(
-    'promoted',
+    'promoted_nodes',
   );
+
   foreach ($views as $view_name) {
     include drupal_get_path('module', 'promoted') . '/views/' . $view_name . '.inc';
     $export[$view->name] = $view;

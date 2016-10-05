@@ -1,7 +1,7 @@
 <?php
 module_load_include('inc', 'promoted', '/includes/promoted.hooks');
 module_load_include('inc', 'promoted', '/includes/promoted.theme');
-module_load_include('inc', 'promoted', '/includes/promoted.views_default.inc');
+module_load_include('inc', 'promoted', '/includes/promoted.views_default');
 
 define('PATH_TO_MODULE', drupal_get_path('module', 'promoted'));
 define('PATH_TO_THEME', drupal_get_path('theme', 'landportal'));
@@ -67,6 +67,15 @@ function promoted_block_view($delta = '') {
       break;
     }
   return $block;
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function promoted_views_api() {
+  return array(
+    'api' => 3,
+  );
 }
 
 function promoted_get_country_iso($iso){

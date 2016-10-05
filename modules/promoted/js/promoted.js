@@ -12,15 +12,15 @@
       });
     },
     initPromotedCarousel: function(context, settings){
-      if ($('.view-promoted .empty').get(0)) {
+      if ($('.view-promoted-nodes .empty').get(0)) {
         $('#reletad-content').addClass('empty');
       }
       else{
         $('#country-navigation').addClass('no-reletad-content-empty');
       }
-      if ($('.view-promoted').get(0)) {
-        if ($('.view-promoted').css('display') == 'block') {
-          $('.view-promoted .view-content').owlCarousel({
+      if ($('.view-promoted-nodes').get(0)) {
+        if ($('.view-promoted-nodes').css('display') == 'block') {
+          $('.view-promoted-nodes .view-content').owlCarousel({
             center: false,
             items:3,
             loop:false,

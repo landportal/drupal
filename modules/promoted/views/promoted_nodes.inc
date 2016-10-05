@@ -1,10 +1,10 @@
 <?php
 $view = new view();
-$view->name = 'promoted';
+$view->name = 'promoted_nodes';
 $view->description = '';
 $view->tag = 'default';
 $view->base_table = 'node';
-$view->human_name = 'Promoted';
+$view->human_name = 'Promoted nodes';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */

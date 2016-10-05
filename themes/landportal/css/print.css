@@ -5000,7 +5000,7 @@ body { width: 1150px !important; }
 @page :first { margin-top: 0; }
 a[href]:after { content: none !important; }
 
-#section-header, #footer, #block-views-landbook-countries-related-block-6, #block-views-landbook-thematics-related-block-6, #reletad-content, #block-views-promoted-block-1, .messages, .nav-country-processed, .pdf-block, .action-links-field-collection-add, #block-landbook-disclaimer-block, #media-block, #partners-block, .country-section:last-child { display: none !important; }
+#section-header, #footer, #block-views-landbook-countries-related-block-6, #block-views-landbook-thematics-related-block-6, #reletad-content, .view-promoted-nodes, #block-views-promoted-block-1, .messages, .nav-country-processed, .pdf-block, .action-links-field-collection-add, #block-landbook-disclaimer-block, #media-block, #partners-block, .country-section:last-child { display: none !important; }
 
 span.flag { width: 50px !important; height: 50px !important; border-radius: 50px !important; overflow: visible; background: url("../images/flags.png") !important; background-size: cover !important; text-indent: -9999px !important; display: block !important; }
 

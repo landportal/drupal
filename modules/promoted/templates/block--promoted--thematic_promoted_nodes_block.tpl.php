@@ -1,5 +1,5 @@
 <?php
-  $v = block_load('views', 'promoted-block');
+  $v = block_load('views', 'promoted_nodes-block');
   $render = _block_get_renderable_array(_block_render_blocks(array($v)));
   $output = drupal_render($render);
 ?>
