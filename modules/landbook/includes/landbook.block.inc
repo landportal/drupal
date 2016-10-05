@@ -79,22 +79,6 @@ function landbook_block_info() {
         'pages'         => "book/thematic/*",
         'weight'        => 25
     );
-    $blocks['country_promoted_nodes_block'] = array(
-        'info'          => t('Landbook country page promoted nodes'),
-        'status'        => TRUE,
-        'region'        => 'content',
-        'visibility'    => BLOCK_VISIBILITY_LISTED,
-        'pages'         => "book/countries/*",
-        'weight'        => -43
-    );
-    $blocks['thematic_promoted_nodes_block'] = array(
-        'info'          => t('Landbook thematic page promoted nodes'),
-        /*'status'        => TRUE,
-        'region'        => 'content',
-        'visibility'    => BLOCK_VISIBILITY_LISTED,
-        'pages'         => "book/thematic/*",
-        'weight'        => -43*/
-    );
     $blocks['country_navigation_block'] = array(
         'info'          => t('Landbook country page navigation'),
         'status'        => TRUE,
@@ -103,14 +87,6 @@ function landbook_block_info() {
         'pages'         => "book/countries/*",
         'weight'        => -42
     );
-    /*$blocks['thematic_country_navigation_block'] = array(
-        'info'          => t('Landbook thematic page navigation'),
-        'status'        => FALSE,
-        //'region'        => 'content',
-        //'visibility'    => BLOCK_VISIBILITY_LISTED,
-        //'pages'         => "book/thematic/*",
-        //'weight'        => -42
-    );*/
     $blocks['country_pdf_block'] = array(
         'info'          => t('Landbook country page pdf block'),
         'status'        => TRUE,
@@ -157,14 +133,6 @@ function landbook_block_view($delta = '') {
         $block['subject'] = t('Library');
         $block['content'] = array('#theme' => 'thematic_library_block');
         break;
-    case 'country_promoted_nodes_block' :
-        $block['subject'] = '';
-        $block['content'] = array('#theme' => 'country_promoted_nodes_block');
-        break;
-    case 'thematic_promoted_nodes_block' :
-        $block['subject'] = '';
-        $block['content'] = array('#theme' => 'thematic_promoted_nodes_block');
-        break;
     case 'country_navigation_block' : // all that seems a bit weird...
         $block['subject'] = '';
         $block['content'] = array('#theme' => 'country_navigation_block');
@@ -173,7 +141,6 @@ function landbook_block_view($delta = '') {
     case 'thematic_country_navigation_block' :
         $block['subject'] = '';
         $block['content'] = array('#theme' => 'thematic_country_navigation_block');
-        //$block['country_info'] = landbook_thematic_get_country_info();
         break;
     case 'country_pdf_block' :
         $block['subject'] = '';
@@ -186,7 +153,6 @@ function landbook_block_view($delta = '') {
 
 function landbook_get_pdf_url(){
     $iso3 = arg(2);
-    //$info = landbook_get_country_info();
     if (in_array($iso3, ['KHM', 'LAO', 'MMR', 'THA', 'VNM'])) {
         return file_create_url('public://2016/countries/' . $iso3 . '.pdf');
     }
