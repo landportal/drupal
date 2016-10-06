@@ -190,14 +190,11 @@ function landportal_blocks_block_view($delta = '') {
               'url' => $item['href']
           );
       } else if (arg(0) == 'taxonomy' && arg(1) == 'term') {
-          dpm($item, arg(2));
           $addtoany = (object) array(
               'title' => $item->name,
               'url' => drupal_get_path_alias(),
           );
       }
-      else           dpm($item);
-
       if ($addtoany) {
           $block['content'] = addtoany_create_node_buttons($addtoany);
       }
