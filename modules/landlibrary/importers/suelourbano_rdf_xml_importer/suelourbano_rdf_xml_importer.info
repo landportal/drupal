@@ -1,0 +1,12 @@
+name = suelourbano.org - RDF/XML importer
+description = Import suelourbano.org Land Library Resources from an RDF/XML file
+core = 7.x
+package = Landlibrary Importers
+version = 7.x-1.0-beta
+dependencies[] = ctools
+dependencies[] = feeds
+dependencies[] = feeds_tamper
+dependencies[] = feeds_tamper_utf8_encode
+features[ctools][] = feeds:feeds_importer_default:1
+features[ctools][] = feeds_tamper:feeds_tamper_default:2
+features[features_api][] = api:2
