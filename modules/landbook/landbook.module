@@ -1,5 +1,4 @@
 <?php
-use mikehaertl\wkhtmlto\Pdf;
 /**
  * @file
  * This module provide an interface to the landbook section of the Landportal.
