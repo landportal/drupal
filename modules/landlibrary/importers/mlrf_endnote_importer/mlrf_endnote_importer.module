@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Mekong Land Research Forum - EndNote importer feature.
+ */
+
+include_once 'mlrf_endnote_importer.features.inc';

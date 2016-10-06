@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the translate_regions importer feature.
+ */
+
+include_once 'translate_regions_importer.features.inc';
