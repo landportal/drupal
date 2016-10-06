@@ -196,7 +196,7 @@ function landportal_blocks_block_view($delta = '') {
           );
       }
       if ($addtoany) {
-          $block['content'] = addtoany_create_node_buttons($addtoany);
+          $block['content'] = addtoany_create_buttons($addtoany);
       }
   }
   return $block;
