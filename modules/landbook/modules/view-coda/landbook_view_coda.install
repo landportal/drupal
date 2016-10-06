@@ -1,9 +1,70 @@
 <?php
 /**
- * LP upgrade hooks
- * Great place for 1 time actions upon release ...
- * 
+ * LB visualization module install and update hooks
+ *
+ * Author: Jules Clement <jules.clement@landportal.info>
  */
+
+
+/**
+ * Add field_indicators and Vis. group to ct_thematic_narrative form (for Table)
+ */
+function landbook_view_coda_update_7202() {
+    $instance = array(
+        'field_name' => 'field_indicators',
+        'entity_type' => 'node',
+        'label' => 'Table',
+        'bundle' => 'thematic_narrative',
+        'description' => t('LB visualization settings'),
+        'widget' => array(
+            'weight' => '11',
+            'type' => 'options_select',
+            'module' => 'options',
+            'active' => 1,
+            'settings' => array(
+                'apply_chosen' => '',
+            ),
+        ),
+        'display' => array(
+            'default' => array(
+                'type' => 'hidden',
+                'label' => 'above',
+                'settings' => array(),
+                'weight' => 0,
+            ),
+            'listing' => array(
+                'type' => 'hidden',
+                'label' => 'above',
+                'settings' => array(),
+                'weight' => 0,
+            ),
+        )
+    );
+    field_create_instance($instance);
+
+    $group = (object) array(
+        'identifier' => 'group_view_coda|node|thematic_narrative|form',
+        'group_name' => 'group_view_coda',
+        'entity_type' => 'node',
+        'bundle' => 'thematic_narrative',
+        'mode' => 'form',
+        'label' => 'Visualizations',
+        'children' => array(
+            0 => 'field_indicators',
+        ),
+        'weight' => '10',
+        'format_type' => 'fieldset',
+        'format_settings' => array(
+            'formatter' => 'collapsible',
+            'instance_settings' => array(
+                'description' => '',
+                'classes' => '',
+                'required_fields' => 1,
+            ),
+        ),
+    );
+    field_group_group_save($group);
+}
 
 function landbook_view_coda_update_7201() {
     $block = array(
