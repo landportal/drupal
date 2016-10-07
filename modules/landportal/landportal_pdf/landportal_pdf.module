@@ -23,9 +23,10 @@ function landportal_pdf_preprocess_page(&$variables){
 }
 
 function landportal_pdf_get_narrative(){
-  if (arg(0) == 'book' && arg(1) == 'countries') {
+  $args = arg();
+  if ($args[0] == 'book' && $args[1] == 'countries' && isset($args[2])) {
     global $language;
-    $tid = landbook_get_region_iso(arg(2));
+    $tid = landbook_get_region_iso($args[2]);
     $term = taxonomy_term_load($tid);
     $node_id = landportal_pdf_get_country_narrative_nid($term->name);
     $image = '';
