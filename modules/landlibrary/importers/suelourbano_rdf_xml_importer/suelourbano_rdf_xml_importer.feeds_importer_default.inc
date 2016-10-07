@@ -53,6 +53,7 @@ $feeds_importer->config = array(
         'xpathparser:19' => 'dc:publisher/text()',
         'xpathparser:20' => 'string(schema:image/@rdf:resource)',
         'xpathparser:21' => 'dc:author/text()',
+        'xpathparser:22' => 'string(@rdf:about)',
       ),
       'rawXML' => array(
         'xpathparser:0' => 0,
@@ -74,6 +75,7 @@ $feeds_importer->config = array(
         'xpathparser:19' => 0,
         'xpathparser:20' => 0,
         'xpathparser:21' => 0,
+        'xpathparser:22' => 0,
       ),
       'context' => '//rdf:Description',
       'exp' => array(
@@ -99,6 +101,7 @@ $feeds_importer->config = array(
           'xpathparser:19' => 0,
           'xpathparser:20' => 0,
           'xpathparser:21' => 0,
+          'xpathparser:22' => 0,
         ),
       ),
       'allow_override' => 0,
@@ -235,6 +238,12 @@ $feeds_importer->config = array(
           'source' => 'xpathparser:21',
           'target' => 'field_orgref:label',
           'unique' => FALSE,
+          'language' => 'und',
+        ),
+        21 => array(
+          'source' => 'xpathparser:22',
+          'target' => 'field_doc_is_shown_at:url',
+          'unique' => FALSE,
         ),
       ),
       'insert_new' => '1',
@@ -253,6 +262,7 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
+
 
 
 
