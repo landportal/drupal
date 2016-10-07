@@ -175,7 +175,7 @@ $feeds_tamper->description = 'Unique';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_14-find_replace_multiple';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -228,7 +228,7 @@ $feeds_tamper->description = 'Unique';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_15-explode';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
