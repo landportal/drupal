@@ -22,13 +22,12 @@ function landportal_theme($existing, $type, $theme, $path) {
  * Until users & profile field have been cleaned up / sync'ed
  */
 function landportal_user_view_alter(&$build) {
-    foreach (profile2_get_types() as $type => $profile_type) {
-        if (array_key_exists('profile_'.$type, $build)) {
-            unset($build['profile_'.$type]['#prefix']);
-            $build['profile_'.$type]['#profile_type'] = $profile_type->type;
-        }
+  foreach (profile2_get_types() as $type => $profile_type) {
+    if (array_key_exists('profile_'.$type, $build)) {
+      unset($build['profile_'.$type]['#prefix']);
+      $build['profile_'.$type]['#profile_type'] = $profile_type->type;
     }
-    //dpm($build);
+  }
 }
 
 /**
@@ -116,13 +115,6 @@ function landportal_preprocess_page(&$variables) {
   if((arg(0) == 'search' && arg(1) == 'all') || (arg(0) == 'library' && arg(1) == 'search')){
     drupal_set_title('');
   }
-  
-  /* if (isset($variables['page']['header']['lang_dropdown_language']['#weight'])) { */
-  /*   $variables['page']['header']['lang_dropdown_language']['#weight'] = -60; */
-  /* } */
-  /* if (isset($variables['page']['header']['nice_menus_1']['#weight'])) { */
-  /*   $variables['page']['header']['nice_menus_1']['#weight'] = -60; */
-  /* } */
 }
 
 /**
