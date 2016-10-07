@@ -21,7 +21,7 @@ Workflow
 
 Files imported
 --------------
--
+- 2016/10/07 Importer run. 41 documents added.
 
 
 Notes
