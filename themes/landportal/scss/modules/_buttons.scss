@@ -75,28 +75,12 @@
 }
 
 /* Debate status */
-.field-name-field-status .field-item {
+.field-name-field-status{
+  .field-item {
     margin: 1.5em 0;
     padding: .5em;
-}
-.field-name-field-status .field-item {
     float: none;
     border: 1px solid $grey-light;
     border-radius: 1em;
+  }
 }
-
-/* TODO
-
-.field-item[content="Closed"] {
-        background-color: $status-red;
-}
-
-.field-item[content="Open"] {
-        background-color: $status-green;
-}
-
-.field-item[content="Coming soon"] {
-        background-color: $status-grey;
-}
-
-*/

@@ -3596,22 +3596,8 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 .group-landvoc .field { display: inline; }
 
 /* Debate status */
-.field-name-field-status .field-item { margin: 1.5em 0; padding: .5em; }
+.field-name-field-status .field-item { margin: 1.5em 0; padding: .5em; float: none; border: 1px solid #888888; border-radius: 1em; }
 
-.field-name-field-status .field-item { float: none; border: 1px solid #888888; border-radius: 1em; }
-
-/* TODO
-
-.field-item[content="Closed"] { background-color: $status-red;
-}
-
-.field-item[content="Open"] { background-color: $status-green;
-}
-
-.field-item[content="Coming soon"] { background-color: $status-grey;
-}
-
-*/
 .links.inline { float: right; font-style: italic; }
 .links.inline li { padding-right: 0; }
 .links.inline a { font-size: .9em; }
@@ -4223,6 +4209,9 @@ div.form-type-checkbox { display: block !important; }
 
 .node-debate .information .field-name-field-facilitators > .field-items > .field-item { border-bottom: 1px dotted #888888; }
 .node-debate .information .field-name-field-facilitators > .field-items > .field-item:last-of-type { border-bottom: 0; }
+.node-debate .field-name-field-status.status-open .field-item { background-color: #01df3a; }
+.node-debate .field-name-field-status.status-closed .field-item { background-color: #fe2e2e; }
+.node-debate .field-name-field-status.status-coming-soon .field-item { background-color: #CCCCCC; }
 
 .page-debate #page { overflow-x: hidden; }
 

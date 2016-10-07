@@ -163,10 +163,26 @@
             }
         }        
     }
+    .field-name-field-status{
+        &.status-open{
+            .field-item{
+                background-color: $status-green;
+            }
+        }
+        &.status-closed{
+            .field-item{
+                background-color: $status-red;
+            }
+        }
+        &.status-coming-soon{
+            .field-item{
+                background-color: $status-grey;
+            }
+        }
+    }
 }
 .page-debate{
     #page{
         overflow-x:hidden; 
     }
 }
-

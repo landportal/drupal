@@ -158,3 +158,17 @@ function landportal_preprocess_search_result(&$vars){
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_field()
+ */
+ 
+function landportal_preprocess_field(&$vars) {
+  $name = $vars['element']['#field_name'];
+  if ($name == 'field_status') {
+    $value = str_replace(' ','-',strtolower($vars['items'][0]['#markup']));
+    if (!empty($value)) {
+      $vars['classes_array'][] = 'status-' . $value;
+    }
+  }
+}
