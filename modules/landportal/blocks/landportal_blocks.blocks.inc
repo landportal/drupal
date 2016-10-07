@@ -68,8 +68,7 @@ function landportal_blocks_block_default_body($name) {
 Contact&nbsp;<a href="mailto:hello@landportal.info">hello@landportal.info</a>&nbsp;/&nbsp;Read more <a href="/about">about us</a>&nbsp;/ See our <a href="/about/privacy-policy">privacy&nbsp;policy</a><br />
 &nbsp;</p>',
     'lp_footer_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li><a href="https://www.youtube.com/channel/UCXi7yRaXT0DYrY8drhpekwQ" target="_blank"><i class="fa fa-youtube"></i></a></li></ul>',
-    'lp_header_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li class="google-plus"><a href="https://plus.google.com/107805891674805739531"><i class="fa fa-google-plus"></i></a></li></ul>',
-    'lp_share' => '<a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_google_plus"></a>'
+    'lp_header_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li class="google-plus"><a href="https://plus.google.com/107805891674805739531"><i class="fa fa-google-plus"></i></a></li></ul>'
   );
 
   //$default: The default value to use if this variable has never been set.
@@ -180,8 +179,26 @@ function landportal_blocks_block_view($delta = '') {
     $block['content'] = array('#type' => 'markup', '#markup' => $str);
     break;
   case 'lp_share':
-      $text = landportal_blocks_block_default_body('lp_share');
-      $block['content'] = addtoany_create_node_buttons($text);
+    $item = menu_get_item();
+    $addtoany = null;
+    if ($item['page_arguments'][0] == 'node') {
+      $addtoany = array_pop($item['page_arguments']);
+    } else if ($item['page_callback'] == 'views_page') {
+      $view = views_get_page_view();
+      $addtoany = (object) array(
+          'title' => $view->get_title(),
+          'url' => $item['href']
+      );
+    } else if (arg(0) == 'taxonomy' && arg(1) == 'term') {
+      $addtoany = (object) array(
+        'title' => $item->name,
+        'url' => drupal_get_path_alias(),
+      );
+    }
+    else 
+    if ($addtoany) {
+      $block['content'] = addtoany_create_node_buttons($addtoany);
+    }
   }
   return $block;
 }
