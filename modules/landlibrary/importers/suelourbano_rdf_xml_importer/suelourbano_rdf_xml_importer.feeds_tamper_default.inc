@@ -63,64 +63,6 @@ $feeds_tamper->description = 'Get the Entity TID from ISO3 code	';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_11-explode';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:11';
-$feeds_tamper->plugin_id = 'explode';
-$feeds_tamper->settings = array(
-  'separator' => ',',
-  'limit' => '',
-  'real_separator' => ',',
-);
-$feeds_tamper->weight = 23;
-$feeds_tamper->description = 'Explode';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_11-find_replace';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:11';
-$feeds_tamper->plugin_id = 'find_replace';
-$feeds_tamper->settings = array(
-  'find' => 'Regional',
-  'replace' => 'Cambodia, Lao, Myanmar, Thailand, Vietnam',
-  'case_sensitive' => 0,
-  'word_boundaries' => 0,
-  'whole' => 0,
-  'regex' => FALSE,
-  'func' => 'str_ireplace',
-);
-$feeds_tamper->weight = 22;
-$feeds_tamper->description = 'Regional -> Cambodia, Lao, Myanmar, Thailand, Vietnam';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_11-find_replace_2';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:11';
-$feeds_tamper->plugin_id = 'find_replace';
-$feeds_tamper->settings = array(
-  'find' => 'Laos',
-  'replace' => 'Lao',
-  'case_sensitive' => 1,
-  'word_boundaries' => 1,
-  'whole' => 0,
-  'regex' => TRUE,
-  'regex_find' => '/\\bLaos\\b/u',
-);
-$feeds_tamper->weight = 21;
-$feeds_tamper->description = 'Laos -> Lao';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
@@ -152,23 +94,6 @@ $feeds_tamper->description = 'Get Term Name from Term ID (TID)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_11-php_2';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:11';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => 'if ($field != null) {
-   watchdog(\'suelourbano_rdf_xml_importer\', "field=".$field, array(), WATCHDOG_DEBUG);
-   return $field;
-}',
-);
-$feeds_tamper->weight = 20;
-$feeds_tamper->description = 'Execute php code';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
@@ -290,7 +215,7 @@ $feeds_tamper->description = 'MLRF keyrwords to LP Themes';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_14-unique';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -303,7 +228,7 @@ $feeds_tamper->description = 'Unique';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_15-explode';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -403,7 +328,7 @@ $feeds_tamper->description = 'One author per line';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_16-php';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -542,7 +467,7 @@ $feeds_tamper->description = 'Find replace multiple (suelourbano.org Corporate a
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_21-php';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -572,24 +497,6 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 1;
 $feeds_tamper->description = 'Trim';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_6-str_pad';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:6';
-$feeds_tamper->plugin_id = 'str_pad';
-$feeds_tamper->settings = array(
-  'pad_length' => 10,
-  'pad_string' => '-12-31',
-  'pad_type' => '1',
-  'real_pad_string' => '-12-31',
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Add the month (12) and day (31) at the end of the string';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -669,42 +576,6 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_7-php';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:7';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => 'if ($field != null) {
-   watchdog(\'suelourbano_rdf_xml_importer\', "end=".var_export($field, TRUE), array(), WATCHDOG_DEBUG);
-   return $field;
-}',
-);
-$feeds_tamper->weight = 15;
-$feeds_tamper->description = 'Execute php code';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_7-php_2';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:7';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => 'if ($field != null) {
-   watchdog(\'suelourbano_rdf_xml_importer\', var_export($field, TRUE), array(), WATCHDOG_DEBUG);
-   return $field;
-}',
-);
-$feeds_tamper->weight = 13;
-$feeds_tamper->description = 'Execute php code';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_7-trim';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
 $feeds_tamper->source = 'xpathparser:7';
@@ -771,26 +642,6 @@ $feeds_tamper->description = 'Caja de Herramientas (guías, manuales, etc.) - Ma
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_10';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:9';
-$feeds_tamper->plugin_id = 'find_replace';
-$feeds_tamper->settings = array(
-  'find' => 'Working Paper',
-  'replace' => 'Policy Papers & Briefs',
-  'case_sensitive' => 1,
-  'word_boundaries' => 1,
-  'whole' => 1,
-  'regex' => TRUE,
-  'regex_find' => '/^Working Paper$/u',
-);
-$feeds_tamper->weight = 9;
-$feeds_tamper->description = 'Working Paper - Policy Papers & Briefs';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
@@ -876,105 +727,6 @@ $feeds_tamper->description = 'Videos - Multimedia';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_6';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:9';
-$feeds_tamper->plugin_id = 'find_replace';
-$feeds_tamper->settings = array(
-  'find' => 'Web Page',
-  'replace' => 'Institutional & promotional materials',
-  'case_sensitive' => 1,
-  'word_boundaries' => 1,
-  'whole' => 1,
-  'regex' => TRUE,
-  'regex_find' => '/^Web Page$/u',
-);
-$feeds_tamper->weight = 5;
-$feeds_tamper->description = 'Web Page - Institutional & promotional materials';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_7';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:9';
-$feeds_tamper->plugin_id = 'find_replace';
-$feeds_tamper->settings = array(
-  'find' => 'Book',
-  'replace' => 'Journal Articles & Books',
-  'case_sensitive' => 1,
-  'word_boundaries' => 1,
-  'whole' => 1,
-  'regex' => TRUE,
-  'regex_find' => '/^Book$/u',
-);
-$feeds_tamper->weight = 6;
-$feeds_tamper->description = 'Book - Journal Articles & Books';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_8';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:9';
-$feeds_tamper->plugin_id = 'find_replace';
-$feeds_tamper->settings = array(
-  'find' => 'Thesis',
-  'replace' => 'Reports & Research',
-  'case_sensitive' => 1,
-  'word_boundaries' => 1,
-  'whole' => 1,
-  'regex' => TRUE,
-  'regex_find' => '/^Thesis$/u',
-);
-$feeds_tamper->weight = 7;
-$feeds_tamper->description = 'Thesis - Reports & Research';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_9';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:9';
-$feeds_tamper->plugin_id = 'find_replace';
-$feeds_tamper->settings = array(
-  'find' => 'Statute',
-  'replace' => 'Other',
-  'case_sensitive' => 1,
-  'word_boundaries' => 1,
-  'whole' => 1,
-  'regex' => TRUE,
-  'regex_find' => '/^Statute$/u',
-);
-$feeds_tamper->weight = 8;
-$feeds_tamper->description = 'Statute - Reports & Research';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-php';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:9';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => 'watchdog(\'suelourbano_rdf_xml_importer\', "field=".$field, array(), WATCHDOG_DEBUG);
-',
-);
-$feeds_tamper->weight = 10;
-$feeds_tamper->description = 'Debug script';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
 
 
   return $export;
