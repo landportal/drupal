@@ -99,7 +99,7 @@ function landbook_view_coda_block_view($delta = '') {
         );
         break;
     case 'lbcp_pie' :
-        $block['subject'] = '';
+        $block['subject'] = '<none>';
         $block['content'] = array(
             '#attached' => array(
                 'library' => array(
@@ -115,11 +115,11 @@ function landbook_view_coda_block_view($delta = '') {
         );
         break;
     case 'lbcp_spider_note' :
-        $block['subject'] = '';
+        $block['subject'] = '<none>';
         $block['content'] = landbook_view_coda_block_body($delta);
         break;
     case 'lbcp_spider' :
-        $block['subject'] = '';
+        $block['subject'] = '<none>';
         $block['content'] = array(
             '#attached' => array(
                 'library' => array(

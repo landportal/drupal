@@ -159,24 +159,30 @@ function landportal_blocks_block_view($delta = '') {
   case 'landportal_footer':
     $text = landportal_blocks_block_default_body('landportal_footer');
     $block['content'] = $text;
+    $block['subject'] = '<none>';
     break;
   case 'lp_footer_social':
     $str = landportal_blocks_block_default_body('lp_footer_social');
     $block['content'] = array('#type' => 'markup', '#markup' => $str);
+    $block['subject'] = '<none>';
     break;
   case 'lp_twitter':
     $block['content'] = landportal_blocks_block_default_body('lp_twitter');
+    $block['subject'] = '<none>';
     break;
   case 'lp_facebook':
     $block['content'] = landportal_blocks_block_default_body('lp_facebook');
+    $block['subject'] = '<none>';
     break;
   case 'lp_shareit':
     $block['title'] = 'Share it';
     $block['content'] = variable_get('lp_shareit', '');
+    $block['subject'] = '<none>';
     break;
   case 'lp_header_social':
     $str = landportal_blocks_block_default_body('lp_header_social');
     $block['content'] = array('#type' => 'markup', '#markup' => $str);
+    $block['subject'] = '<none>';
     break;
   case 'lp_share':
       $item = menu_get_item();
@@ -197,6 +203,7 @@ function landportal_blocks_block_view($delta = '') {
       }
       if ($addtoany) {
           $block['content'] = addtoany_create_buttons($addtoany);
+          $block['subject'] = '<none>';
       }
   }
   return $block;

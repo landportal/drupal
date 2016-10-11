@@ -23,7 +23,8 @@ function promoted_block_info() {
     'status'        => TRUE,
     'visibility'    => BLOCK_VISIBILITY_LISTED,
     'pages'         => "book/thematic/*",
-    'weight'        => -43
+    'weight'        => -43,
+    'region'        => -1,
   );
 
   return $blocks;
