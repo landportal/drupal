@@ -87,6 +87,14 @@ function landbook_block_info() {
         'pages'         => "book/countries/*",
         'weight'        => -42
     );
+    $blocks['thematic_navigation_block'] = array(
+        'info'          => t('Landbook thematic page navigation'),
+        'status'        => TRUE,
+        'region'        => 'none',
+        'visibility'    => BLOCK_VISIBILITY_LISTED,
+        'pages'         => "book/thematic/*",
+        'weight'        => -42
+    );
     $blocks['country_pdf_block'] = array(
         'info'          => t('Landbook country page pdf block'),
         'status'        => TRUE,
@@ -102,11 +110,11 @@ function landbook_block_view($delta = '') {
     $block = array();
     switch ($delta) {
     case 'disclaimer_block' :
-        $block['subject'] = '';
+        $block['subject'] = '<none>';
         $block['content'] = landbook_block_body($delta);
         break;
     case 'lgaf_block' :
-        $block['subject'] = '';
+        $block['subject'] = '<none>';
         $block['content'] = landbook_block_body($delta);
         break;
     case 'media_block' :
@@ -134,16 +142,16 @@ function landbook_block_view($delta = '') {
         $block['content'] = array('#theme' => 'thematic_library_block');
         break;
     case 'country_navigation_block' : // all that seems a bit weird...
-        $block['subject'] = '';
+        $block['subject'] = '<none>';
         $block['content'] = array('#theme' => 'country_navigation_block');
         $block['country_info'] = landbook_get_country_info();
         break;
-    case 'thematic_country_navigation_block' :
-        $block['subject'] = '';
-        $block['content'] = array('#theme' => 'thematic_country_navigation_block');
+    case 'thematic_navigation_block' :
+        $block['subject'] = '<none>';
+        $block['content'] = array('#theme' => 'thematic_navigation_block');
         break;
     case 'country_pdf_block' :
-        $block['subject'] = '';
+        $block['subject'] = '<none>';
         $block['content'] = array('#theme' => 'country_pdf_block');
         $block['pdf_url'] = landbook_get_pdf_url();
         break;
