@@ -14,6 +14,9 @@ foreach ($views as $vid => $view) {
     $v = block_load('views', $view);
     $render_block = _block_get_renderable_array(_block_render_blocks(array($v)));
     if (isset($render_block['views_' . $view]['#markup'])) {
+        if (!isset($render_block['views_' . $view]['#block']->region)) {
+          $render_block['views_' . $view]['#block']->region = -1;
+        }
         $render[$vid] = drupal_render($render_block);
     }
     else{

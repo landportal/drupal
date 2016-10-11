@@ -45,7 +45,7 @@ function landbook_vis_map_block_view($delta = '') {
     $block = array();
     switch ($delta) {
     case 'region_map' :
-        $block['subject'] = '';
+        $block['subject'] = '<none>';
         $block['content'] = array(
             '#theme' => 'region_map',
             '#attached' => array(

@@ -3,6 +3,9 @@
 // DO NOT OVERRIDE $block IN A BLOCK TEMPLATE!!!
 $v = block_load('views', 'landbook_countries_related-block_5');
 $render = _block_get_renderable_array(_block_render_blocks(array($v)));
+if (!isset($render['views_landbook_countries_related-block_5']['#block']->region)) {
+  $render['views_landbook_countries_related-block_5']['#block']->region = -1;
+}
 $output = drupal_render($render);
 ?>
 <?php if(!empty($output)):?>
