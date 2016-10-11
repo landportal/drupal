@@ -1,13 +1,21 @@
 <?php
 
 function landbook_vis_table_indicators_block_info() {
-    $blocks['lbvt_country'] = array(
-        'info' => t('Country page: Indicators table'),
-        'status' => TRUE,
-        'region' => 'content',
-        'visibility'      => BLOCK_VISIBILITY_LISTED,
-        'pages'           => "book/countries/*",
-        'weight'      => 10
+    $blocks['country_values'] = array(
+        'info'      => t('Indicators table: country values'),
+        'status'    => TRUE,
+        'region'    => 'content',
+        'visibility'=> BLOCK_VISIBILITY_LISTED,
+        'pages'     => "book/countries/*",
+        'weight'    => 10
+    );
+    $blocks['details'] = array(
+        'info'      => t('Indicators table: details'),
+        'status'    => TRUE,
+        'region'    => 'content',
+        'visibility'=> BLOCK_VISIBILITY_LISTED,
+        'pages'     => "book/thematic/*\nbook/indicator/*",
+        'weight'    => 6
     );
     return $blocks;
 }
@@ -17,19 +25,21 @@ function landbook_vis_table_indicators_block_view($delta = '') {
 
     $block = array();
     switch ($delta) {
-    case 'lbvt_country' :
+    case 'country_values' :
+    case 'details' :
         $block['subject'] = t('Indicators');
         $block['content'] = array(
-            '#theme' => 'lbvt_country',
             '#attached' => array(
                 'library' => array(
                     array('landbook_view_coda', 'lbvis.table'),
                 ),
                 'js' =>  array(
-                    $module_path . '/country.js' => array('weight' => 3, 'requires_jquery' => TRUE)
+                    $module_path . '/table.js'// => array('weight' => 3)
+                //, 'requires_jquery' => TRUE)
                 )
             )
-        );          break;
+        );
+        break;
     }
     return $block;
 }
