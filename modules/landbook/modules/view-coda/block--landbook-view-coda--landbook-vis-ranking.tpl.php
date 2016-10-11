@@ -20,9 +20,23 @@
           </div>
         </form>
       </nav>
+      <div class="row metadata">
+        <div class="col-md-offset-2 col-md-8 text-center h2 visible-print-block">
+          <a><span name="indicator"></span></a>
+          <span name="year" class="h3"></span>
+          </div>
+        <div class="col-md-offset-2 col-md-8 text-center h3">
+          <a><span name="dataset"></span></a> -
+          <a><span name="source"></span></a>
+        </div>
+        <div class="col-md-offset-2 col-md-8 text-center">
+          <p><span name="description"></span></p>
+        </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-xs-10 col-xs-push-1 col-sm-8 col-sm-push-2 col-lg-6 col-lg-push-3">
-          <ul id="ranking-wrapper" class="list-unstyled"></ul>
+          <ul id="ranking-wrapper" class="ranking list-unstyled"></ul>
         </div>
       </div>
     </section>

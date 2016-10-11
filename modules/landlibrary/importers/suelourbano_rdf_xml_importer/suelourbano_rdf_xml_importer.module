@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the suelourbano.org RDF XML importer feature.
+ */
+
+include_once 'suelourbano_rdf_xml_importer.features.inc';

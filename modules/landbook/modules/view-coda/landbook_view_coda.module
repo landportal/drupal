@@ -30,13 +30,11 @@ function landbook_view_coda_page_build(&$page) {
         $item = menu_get_item();
         $node = array_pop($item['page_arguments']);
         $table_ind = array();
-
         if (!empty($node->field_indicators[LANGUAGE_NONE])) {
           foreach($node->field_indicators['und'] as $ind) {
             array_push($table_ind, $ind['taxonomy_term']->field_id['und'][0]['value']);
           }
         }
-
         drupal_add_js(array(
             'landbook' => array(
                 'type' => 'thematic',
