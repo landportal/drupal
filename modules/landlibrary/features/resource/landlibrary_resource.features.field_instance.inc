@@ -96,7 +96,6 @@ function landlibrary_resource_field_default_field_instances() {
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
-          'mailchimp_campaign' => 'mailchimp_campaign',
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -107,9 +106,6 @@ function landlibrary_resource_field_default_field_instances() {
               'weight' => -10,
             ),
             'full_html' => array(
-              'weight' => -9,
-            ),
-            'mailchimp_campaign' => array(
               'weight' => -9,
             ),
             'plain_text' => array(
@@ -189,7 +185,6 @@ function landlibrary_resource_field_default_field_instances() {
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
-          'mailchimp_campaign' => 'mailchimp_campaign',
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -200,9 +195,6 @@ function landlibrary_resource_field_default_field_instances() {
               'weight' => -10,
             ),
             'full_html' => array(
-              'weight' => -9,
-            ),
-            'mailchimp_campaign' => array(
               'weight' => -9,
             ),
             'plain_text' => array(
@@ -388,7 +380,6 @@ function landlibrary_resource_field_default_field_instances() {
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
-          'mailchimp_campaign' => 'mailchimp_campaign',
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -399,9 +390,6 @@ function landlibrary_resource_field_default_field_instances() {
               'weight' => -10,
             ),
             'full_html' => array(
-              'weight' => -9,
-            ),
-            'mailchimp_campaign' => array(
               'weight' => -9,
             ),
             'plain_text' => array(
@@ -476,7 +464,6 @@ function landlibrary_resource_field_default_field_instances() {
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
-          'mailchimp_campaign' => 'mailchimp_campaign',
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -487,9 +474,6 @@ function landlibrary_resource_field_default_field_instances() {
               'weight' => -10,
             ),
             'full_html' => array(
-              'weight' => -9,
-            ),
-            'mailchimp_campaign' => array(
               'weight' => -9,
             ),
             'plain_text' => array(
@@ -1082,7 +1066,6 @@ function landlibrary_resource_field_default_field_instances() {
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
-          'mailchimp_campaign' => 'mailchimp_campaign',
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -1093,9 +1076,6 @@ function landlibrary_resource_field_default_field_instances() {
               'weight' => -10,
             ),
             'full_html' => array(
-              'weight' => -9,
-            ),
-            'mailchimp_campaign' => array(
               'weight' => -9,
             ),
             'plain_text' => array(
@@ -1164,7 +1144,6 @@ function landlibrary_resource_field_default_field_instances() {
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
-          'mailchimp_campaign' => 'mailchimp_campaign',
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -1175,9 +1154,6 @@ function landlibrary_resource_field_default_field_instances() {
               'weight' => -10,
             ),
             'full_html' => array(
-              'weight' => -9,
-            ),
-            'mailchimp_campaign' => array(
               'weight' => -9,
             ),
             'plain_text' => array(
