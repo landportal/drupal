@@ -90,7 +90,7 @@ function landbook_block_info() {
     $blocks['thematic_navigation_block'] = array(
         'info'          => t('Landbook thematic page navigation'),
         'status'        => TRUE,
-        'region'        => 'none',
+        'region'        => -1,
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/thematic/*",
         'weight'        => -42
