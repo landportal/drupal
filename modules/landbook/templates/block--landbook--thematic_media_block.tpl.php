@@ -4,21 +4,27 @@
 //print_r ($block);
 
 $views = [
-    'news' => 'landbook_thematics_related-block_3',
-    'blog' => 'landbook_thematics_related-block_1',
-    'events' => 'landbook_thematics_related-block_2',
-    'debates' => 'landbook_thematics_related-block',
+  'news' => 'landbook_thematics_related-block_3',
+  'blog' => 'landbook_thematics_related-block_1',
+  'events' => 'landbook_thematics_related-block_2',
+  'debates' => 'landbook_thematics_related-block',
 ];
 
 foreach ($views as $vid => $view) {
-    $v = block_load('views', $view);
-    $render_block = _block_get_renderable_array(_block_render_blocks(array($v)));
-    if (isset($render_block['views_' . $view]['#markup'])) {
-        $render[$vid] = drupal_render($render_block);
+  $v = block_load('views', $view);
+  if (!isset($v->title)) {
+    $v->title = '';
+  }
+  $render_block = _block_get_renderable_array(_block_render_blocks(array($v)));
+  if (isset($render_block['views_' . $view]['#markup'])) {
+    if (!isset($render_block['views_' . $view]['#block']->region)) {
+      $render_block['views_' . $view]['#block']->region = -1;
     }
-    else{
-        $render[$vid] = '';
-    }
+    $render[$vid] = drupal_render($render_block);
+  }
+  else{
+    $render[$vid] = '';
+  }
 }
 ?>
 
