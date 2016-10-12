@@ -984,7 +984,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Number of pages of the resource (if applicable) or the duration of a video.',
+    'description' => 'Number of pages of the resource (if applicable), the page range or the duration of a video.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -2049,7 +2049,7 @@ function landlibrary_resource_field_default_field_instances() {
   t('License of the resource');
   t('Local file URL');
   t('Location Source');
-  t('Number of pages of the resource (if applicable) or the duration of a video.');
+  t('Number of pages of the resource (if applicable), the page range or the duration of a video.');
   t('Organization cited as Author of this material  (linked to an organizational profile on the Land Portal).');
   t('Overarching Categories');
   t('Pages / Duration');
