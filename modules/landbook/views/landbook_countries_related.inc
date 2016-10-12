@@ -1,4 +1,4 @@
-<?php
+<?php 
 $view = new view();
 $view->name = 'landbook_countries_related';
 $view->description = 'Landbook countries related content. For each LP content type, show the latest nodes tagged with a given country';
@@ -35,17 +35,6 @@ $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'node';
 $handler->display->display_options['sorts']['created']['field'] = 'created';
 $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-/* Contextual filter: Content: Has taxonomy term ID */
-$handler->display->display_options['arguments']['tid']['id'] = 'tid';
-$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-$handler->display->display_options['arguments']['tid']['field'] = 'tid';
-$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
-$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-$handler->display->display_options['arguments']['tid']['default_argument_options']['argument'] = '1';
-$handler->display->display_options['arguments']['tid']['default_argument_skip_url'] = TRUE;
-$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
 /* Filter criterion: Content: Published */
 $handler->display->display_options['filters']['status']['id'] = 'status';
 $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -67,6 +56,15 @@ $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
+/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
+$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['value'] = array(
+  550 => '550',
+);
+$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
 
 /* Display: Latest Debate */
 $handler = $view->new_display('block', 'Latest Debate', 'block');
@@ -102,6 +100,15 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
+/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
+$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['value'] = array(
+  550 => '550',
+);
+$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
 
 /* Display: Latest Blog */
 $handler = $view->new_display('block', 'Latest Blog', 'block_1');
@@ -137,6 +144,15 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
+/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
+$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['value'] = array(
+  550 => '550',
+);
+$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
 
 /* Display: Latest Events */
 $handler = $view->new_display('block', 'Latest Events', 'block_2');
@@ -172,6 +188,15 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
+/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
+$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['value'] = array(
+  550 => '550',
+);
+$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
 
 /* Display: Latest News */
 $handler = $view->new_display('block', 'Latest News', 'block_3');
@@ -181,6 +206,7 @@ $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '4';
 $handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['arguments'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
@@ -203,8 +229,16 @@ $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  'und' => 'und',
 );
+/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
+$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['value'] = array(
+  550 => '550',
+);
+$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
 
 /* Display: Partners */
 $handler = $view->new_display('block', 'Partners', 'block_4');
@@ -247,6 +281,15 @@ $handler->display->display_options['filters']['field_organization_relationship_t
 );
 $handler->display->display_options['filters']['field_organization_relationship_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_organization_relationship_tid']['vocabulary'] = 'organization_relation';
+/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
+$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['value'] = array(
+  550 => '550',
+);
+$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
 
 /* Display: Library */
 $handler = $view->new_display('block', 'Library', 'block_5');
@@ -351,4 +394,13 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
+/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
+$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['value'] = array(
+  550 => '550',
+);
+$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
 $handler->display->display_options['block_caching'] = '-1';
