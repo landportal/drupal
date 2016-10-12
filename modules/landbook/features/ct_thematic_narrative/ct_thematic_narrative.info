@@ -58,4 +58,3 @@ features[variable][] = pathauto_node_thematic_narrative_und_pattern
 features[variable][] = xmlsitemap_settings_node_thematic_narrative
 features_exclude[dependencies][landbook_country] = landbook_country
 features_exclude[field_base][title_field] = title_field
-project path = sites/dev.landportal.info/modules/landbook/features
