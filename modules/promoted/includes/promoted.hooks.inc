@@ -39,7 +39,14 @@ function promoted_form_alter(&$form, &$form_state, $form_id){
     $thematic_nodes = array('0'=>'--None--');
     if (!empty($thematic_narrative_nodes)) {
       foreach ($thematic_narrative_nodes as $node) {
-        $thematic_nodes[$node->nid] = $node->title;
+        $field_landvoc_to = field_get_items('node', $node, 'field_landvoc_to');
+        if (!empty($field_landvoc_to[0])) {
+          $term = taxonomy_term_load($field_landvoc_to[0]['target_id']);
+          if (!empty($term)) {
+            $vocabulary = taxonomy_vocabulary_load($term->vid);
+            $thematic_nodes[$node->nid] = $term->name . ' - ' . '(' . $vocabulary->name . ')' . ' - Nid: ' . $node->nid;
+          }
+        }
       }
     }
 
