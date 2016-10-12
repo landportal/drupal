@@ -1,5 +1,4 @@
 <?php
-
 $view = new view();
 $view->name = 'by_providers';
 $view->description = '';
@@ -181,4 +180,22 @@ $handler->display->display_options['arguments']['field_doc_provider_target_id'][
 $handler->display->display_options['arguments']['field_doc_provider_target_id']['validate_options']['types'] = array(
   'organization' => 'organization',
 );
+/* Contextual filter: Content: Publisher (field_doc_publisher) */
+$handler->display->display_options['arguments']['field_doc_publisher_target_id']['id'] = 'field_doc_publisher_target_id';
+$handler->display->display_options['arguments']['field_doc_publisher_target_id']['table'] = 'field_data_field_doc_publisher';
+$handler->display->display_options['arguments']['field_doc_publisher_target_id']['field'] = 'field_doc_publisher_target_id';
+$handler->display->display_options['arguments']['field_doc_publisher_target_id']['default_action'] = 'default';
+$handler->display->display_options['arguments']['field_doc_publisher_target_id']['default_argument_type'] = 'node';
+$handler->display->display_options['arguments']['field_doc_publisher_target_id']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['field_doc_publisher_target_id']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['field_doc_publisher_target_id']['summary_options']['items_per_page'] = '25';
+/* Contextual filter: Field: Organization (field_orgref) */
+$handler->display->display_options['arguments']['field_orgref_target_id']['id'] = 'field_orgref_target_id';
+$handler->display->display_options['arguments']['field_orgref_target_id']['table'] = 'field_data_field_orgref';
+$handler->display->display_options['arguments']['field_orgref_target_id']['field'] = 'field_orgref_target_id';
+$handler->display->display_options['arguments']['field_orgref_target_id']['default_action'] = 'default';
+$handler->display->display_options['arguments']['field_orgref_target_id']['default_argument_type'] = 'node';
+$handler->display->display_options['arguments']['field_orgref_target_id']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['field_orgref_target_id']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['field_orgref_target_id']['summary_options']['items_per_page'] = '25';
 $handler->display->display_options['block_description'] = 'Library resources by providers';

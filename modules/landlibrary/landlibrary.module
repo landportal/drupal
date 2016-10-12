@@ -16,7 +16,7 @@ function landlibrary_views_api($module = NULL, $api = NULL) {
 function landlibrary_node_view_alter(&$build) {
     $node = $build['#node'];
     if ($node->type == 'landlibrary_resource') {
-	$breadcrumb[] = l('LandLibrary', 'library');
+  $breadcrumb[] = l('LandLibrary', 'library');
     }
     $breadcrumb[] = l(t(drupal_get_title()), $_GET['q']);
     drupal_set_breadcrumb($breadcrumb);
@@ -50,4 +50,15 @@ function landlibrary_block_info_alter(&$blocks, $theme, $code_blocks) {
         $blocks['views']['by_providers-block']['pages'] = 'organization/*';
     }
     return $blocks;
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function landlibrary_views_query_alter(&$view, &$query) {
+  if ($view->name == 'by_providers') {
+    if ($view->current_display == 'block') {
+      $query->where[0]['type'] = 'OR';
+    }
+  }
 }
