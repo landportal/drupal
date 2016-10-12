@@ -5,9 +5,18 @@
  */
 function landbook_vis_map_theme($existing, $type, $theme, $path){
     return array(
-        'region_map' => array('template' => 'block--landbook-vis-map--region-map'),
-        'world_map'  => array('template' => 'block--landbook-vis-map--world-map'),
-        'compare_map'=> array('template' => 'block--landbook-vis-map--compare-map'),
+        'region_map' => array(
+            'template' => 'block--landbook-vis-map--region-map',
+            'render element' => 'elements'
+        ),
+        'world_map'  => array(
+            'template' => 'block--landbook-vis-map--world-map',
+            'render element' => 'elements'
+        ),
+        'compare_map'=> array(
+            'template' => 'block--landbook-vis-map--compare-map',
+            'render element' => 'elements'
+        ),
     );
 }
 
