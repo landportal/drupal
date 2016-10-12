@@ -196,13 +196,14 @@ function landportal_blocks_block_view($delta = '') {
               'url' => $item['href']
           );
       } else if (arg(0) == 'taxonomy' && arg(1) == 'term') {
+          //dpm($item);
           $addtoany = (object) array(
-              'title' => $item->name,
+              'title' => $item['title'],
               'url' => drupal_get_path_alias(),
           );
       }
       if ($addtoany) {
-          $block['content'] = addtoany_create_buttons($addtoany);
+          $block['content'] = addtoany_create_buttons($addtoany->url, $addtoany->title);
           $block['subject'] = '<none>';
       }
   }
