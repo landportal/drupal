@@ -340,41 +340,7 @@ function landportal_utility_form_search_block_form_alter(&$form, &$form_state){
   $form['search_block_form']['#attributes'] = array('placeholder' => array(t('Search')));
 }
 
-
-
-/******************************************
- * @webconding: Shouldn't this be in in the MC module/feature?
- */
-function landportal_utility_form_user_register_form_alter(&$form, &$form_state,$form_id){
-  $form['mailchimp_lists']['#collapsible'] = TRUE;
-  $form['mailchimp_lists']['#collapsed'] = FALSE;
-  $form['mailchimp_lists']['mailchimp_land_portal_news_digest']['interest_groups'][1]['#default_value']=array('English' => 'English');
-  $form['#validate'][]='landportal_utility_validate_mailchimp_lists_user_subscribe';
-  $form['#submit'][]='landportal_utility_mailchimp_user_update';
-}
-
-function landportal_utility_validate_mailchimp_lists_user_subscribe($form, &$form_state){
-  if($form_state['values']['mailchimp_lists']['mailchimp_land_portal_news_digest']['subscribe'] == 1){
-    $languages=$form_state['values']['mailchimp_lists']['mailchimp_land_portal_news_digest']['interest_groups'][1];
-    $flag = false;
-    foreach($languages as $lang){
-      if($lang !== 0){
-        $flag = TRUE;
-      }
-    }
-    if($flag == false){
-      form_set_error('', 'Please select language');
-    }
-  }
-}
-
-function landportal_utility_form_mailchimp_lists_user_subscribe_form_alter(&$form, &$form_state,$form_id){
-  drupal_add_js(drupal_get_path('module', 'landportal_utility') . '/js/main.js');
-  drupal_add_css(drupal_get_path('module', 'landportal_utility') . '/css/admin.css');
-  $form['#validate'][]='landportal_utility_validate_mailchimp_lists_user_subscribe';
-  $form['#submit'][]='landportal_utility_mailchimp_user_update';
-
-}
+// Seems like scary stuff
 function landportal_utility_form_user_profile_form_alter(&$form, &$form_state,$form_id){
   drupal_add_css(drupal_get_path('module', 'landportal_utility') . '/css/admin.css');
 }
@@ -388,31 +354,3 @@ function landportal_utility_module_implements_alter(&$implementations, $hook) {
     $implementations[$module] = $group;
   }
 }
-
-function landportal_utility_mailchimp_user_update($form, &$form_state){
-  if(isset($form_state['values']['account'])){
-    $account=$form_state['values']['account'];
-  }
-  if(isset($form_state['values']['uid'])){
-    $account=user_load($form_state['values']['uid']);
-  }
-  $lists = mailchimp_lists_get_available_lists($account);
-  $mcapi = mailchimp_get_api_object();
-
-  foreach ($lists as $list_key=>$list){
-    if($list->name == 'land_portal_news_digest'){
-    $mergevars = _mailchimp_lists_build_update_mergevars($account, $list, $account->mail, $account->mail);
-    $profile=profile2_by_uid_load($account->uid, 'main');
-    $fname=field_get_items('profile2', $profile, 'field_firstname');
-    $lname=field_get_items('profile2', $profile, 'field_lastname');
-    $mergevars['FNAME']=$fname[0]['value'];
-    $mergevars['LNAME']=$lname[0]['value'];
-    mailchimp_lists_execute_change('update', $list, $account->mail, $mergevars, NULL, $mcapi);
-    }
-  }
-}
-/**
- * End of MC feature
- *
- *****************************************/
-
