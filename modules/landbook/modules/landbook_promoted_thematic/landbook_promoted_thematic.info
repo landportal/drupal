@@ -18,4 +18,3 @@ features[field_instance][] = node-event-field_thematic_promoted
 features[field_instance][] = node-landlibrary_resource-field_thematic_promoted
 features[field_instance][] = node-news-field_thematic_promoted
 features[field_instance][] = node-organization-field_thematic_promoted
-project path = sites/dev.landportal.info/modules/landbook/modules
