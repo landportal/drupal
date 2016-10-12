@@ -25,6 +25,9 @@ function landportal_taxonomy_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'teaser' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -82,7 +85,7 @@ function landportal_taxonomy_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_languages_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'voc/language/[term:name]';
   $export['pathauto_taxonomy_term_languages_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

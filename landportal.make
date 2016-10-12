@@ -11,6 +11,7 @@ api: 2
 #   projects:
 #     subdir: "sites/all/modules"
 projects:
+  - addtoany
   - admin_menu
   - admin_views
   - apachesolr
@@ -20,11 +21,14 @@ projects:
   - calendar
   - captcha
   - chosen
+  - ckeditor
   - complete_profile
   - computed_field
   - context
   - ctools
+  - custom_pub
   - date
+  - disable_messages
   - draggableviews
   - drupal
   - ds
@@ -48,32 +52,39 @@ projects:
   - feeds_tamper_php
   - feeds_tamper_string2id
   - feeds_xpathparser
+  - field_collection
   - field_group
   - field_tools
   - field_validation
   - file_entity
   - global_filter
-  - google_analytics
   - google_adwords
+  - google_analytics
   - honeypot
   - hybridauth
   - i18n
+  - i18nviews
   - job_scheduler
+  - lang_dropdown
   - language_switcher
   - libraries
-#  - link
+  - link
   - location
   - login_one_time
   - logintoboggan
+#  - mailchimp
   - mailchimp_user_lists
   - masquerade
   - media
+  - media_ckeditor
   - module_filter
   - nice_menus
   - node_edit_protection
   - oauth
   - pathauto
   - pcp
+  - phpwkhtmltopdf
+  - print
   - recaptcha
   - references
   - restws
@@ -85,7 +96,6 @@ projects:
   - services
   - session_cache
   - shs
-  - xmlsitemap
   - sparql
   - strongarm
   - synonyms
@@ -105,17 +115,7 @@ projects:
   - views_php
   - views_tree
   - webform
-  - disable_messages
-  - i18nviews
-  - field_collection
-  - addtoany
-  - custom_pub
-  - lang_dropdown
-  - print
-  - phpwkhtmltopdf
-  # - facebook_login
-  # - twitter_login
-  # - mailchimp_signup
+  - xmlsitemap
 
 includes:
   - "landportal-custom.make"
