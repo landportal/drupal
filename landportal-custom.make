@@ -14,12 +14,6 @@ api: 2
 #   projects:
 #     subdir: "sites/all/modules"
 projects:
-  ckeditor:
-    # Dev version otherwise there is a bug with Media modules, see:
-    # https://www.drupal.org/node/2121253
-    # https://www.drupal.org/node/2455391
-    # https://www.drupal.org/node/2454933
-    version: "1.x-dev"
   profile2:
     version: ~
     patch:
@@ -44,6 +38,8 @@ projects:
     version: ~
     patch:
       - "https://www.drupal.org/files/issues/validate_url-2299657-46.patch"
+  mailchimp:
+    version: "2.13"
   rdfx:
     version: "2.x-dev"
     download:
@@ -77,14 +73,14 @@ libraries:
   mailchimp:
     download:
       # V1 API
-      # type: "file"
-      # url: "http://apidocs.mailchimp.com/api/downloads/mailchimp-api-class.zip"
-      # V2 API
-      # type: "git"
-      # url: "https://bitbucket.org/mailchimp/mailchimp-api-php.git"
-      # MC V3 API - library v1.0.4
       type: "file"
-      url: "https://github.com/thinkshout/mailchimp-api-php/archive/v1.0.4.zip"
+      url: "http://apidocs.mailchimp.com/api/downloads/mailchimp-api-class.zip"
+      # V2 API
+      #type: "git"
+      #url: "https://bitbucket.org/mailchimp/mailchimp-api-php.git"
+      # MC V3 API - library v1.0.4
+      #type: "file"
+      #url: "https://github.com/thinkshout/mailchimp-api-php/archive/v1.0.4.zip"
   hybridauth:
     download:
       type: "git"

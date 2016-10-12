@@ -21,6 +21,7 @@ projects:
   - calendar
   - captcha
   - chosen
+  - ckeditor
   - complete_profile
   - computed_field
   - context
@@ -67,13 +68,15 @@ projects:
   - lang_dropdown
   - language_switcher
   - libraries
+  - link
   - location
   - login_one_time
   - logintoboggan
-  - mailchimp
+#  - mailchimp
   - mailchimp_user_lists
   - masquerade
   - media
+  - media_ckeditor
   - module_filter
   - nice_menus
   - node_edit_protection
@@ -113,10 +116,6 @@ projects:
   - views_tree
   - webform
   - xmlsitemap
-#  - link
-  # - facebook_login
-  # - twitter_login
-  # - mailchimp_signup
 
 includes:
   - "landportal-custom.make"
