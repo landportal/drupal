@@ -12,6 +12,9 @@ $views = [
 
 foreach ($views as $vid => $view) {
     $v = block_load('views', $view);
+    if (!isset($v->title)) {
+        $v->title = '';
+    }
     $render_block = _block_get_renderable_array(_block_render_blocks(array($v)));
     if (isset($render_block['views_' . $view]['#markup'])) {
         if (!isset($render_block['views_' . $view]['#block']->region)) {
