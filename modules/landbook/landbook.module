@@ -48,8 +48,8 @@ function landbook_views_query_alter(&$view, &$query){
   $args = arg();
   if(!empty($view->name) && $view->name == 'landbook_countries_related'){
     if($args[0] == 'book' && $args[1] == 'countries'){
-      $tid = landbook_get_country_iso($args[2]);
-      $query->where[0]['conditions'][0]['value'] = $tid;
+      $tid = landbook_get_region_iso($args[2]);
+      $query->where[1]['conditions'][3]['value'] = $tid;
     }
   }
   if(!empty($view->name) && $view->name=='landbook_thematics_related'){
