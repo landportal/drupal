@@ -186,25 +186,13 @@ function landportal_blocks_block_view($delta = '') {
     break;
   case 'lp_share':
       $item = menu_get_item();
-      $addtoany = null;
-      if ($item['page_arguments'][0] == 'node') {
-          $addtoany = array_pop($item['page_arguments']);
-      } else if ($item['page_callback'] == 'views_page') {
+      $title = $item['title'];
+      if ($item['page_callback'] == 'views_page') {
           $view = views_get_page_view();
-          $addtoany = (object) array(
-              'title' => $view->get_title(),
-              'url' => $item['href']
-          );
-      } else if (arg(0) == 'taxonomy' && arg(1) == 'term') {
-          $addtoany = (object) array(
-              'title' => $item->name,
-              'url' => drupal_get_path_alias(),
-          );
+          $title = $view->get_title();
       }
-      if ($addtoany) {
-          $block['content'] = addtoany_create_buttons($addtoany);
-          $block['subject'] = '<none>';
-      }
+      $block['content'] = addtoany_create_buttons(drupal_get_path_alias(), $title);
+      $block['subject'] = '<none>';
   }
   return $block;
 }
