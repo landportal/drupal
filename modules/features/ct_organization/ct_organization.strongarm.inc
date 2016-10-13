@@ -47,10 +47,10 @@ function ct_organization_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '11',
+          'weight' => '12',
         ),
         'path' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
         'language' => array(
           'weight' => '9',

@@ -112,6 +112,7 @@ function ct_organization_field_default_field_instances() {
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'mailchimp_campaign' => 'mailchimp_campaign',
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -122,6 +123,9 @@ function ct_organization_field_default_field_instances() {
               'weight' => -10,
             ),
             'full_html' => array(
+              'weight' => -9,
+            ),
+            'mailchimp_campaign' => array(
               'weight' => -9,
             ),
             'plain_text' => array(
@@ -554,7 +558,7 @@ function ct_organization_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -775,6 +779,16 @@ function ct_organization_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 0,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
     'entityconnect_icon_add' => 0,
     'entityconnect_icon_edit' => 0,
     'entityconnect_show_add_icon' => 0,
