@@ -57,28 +57,60 @@ body[class*="page-book-countries-"],
 body[class*="node-type-thematic-narrative"]{
     #table-indicators header h2 {
         background:url('../images/indicators.png') no-repeat 50% 0;
+        @extend .title-decorated;
     }
     #map-global header h2 {
         background:url('../images/mapping.png') no-repeat 50% 0;
+        @extend .title-decorated;
     }
     #compare header h2 {
         background:url('../images/infographics.png') no-repeat 50% 0;
+        @extend .title-decorated;
     }
     #lgaf header h2 {
         background:url('../images/rankings.png') no-repeat 50% 0;
+        @extend .title-decorated;
     }
     h2.media{
         background:url('../images/media.png') no-repeat 50% 0;
+        @extend .title-decorated;
     }
+    #block-views-country-content-partners>h2,
     h2.partners{
         background:url('../images/partners.png') no-repeat 50% 0;
+        @extend .title-decorated;
     }
+    #block-views-country-content-library>h2,
     h2.library{
         background:url('../images/library.png') no-repeat 50% 0;
+        @extend .title-decorated;
     }
 
     #block-system-main {
         @extend .clearfix;
+    }
+
+    #block-views-country-content-partners,
+    #block-views-country-content-library {
+        .content {
+            @extend .col-sm-offset-1;
+            @extend .col-sm-10;
+        }
+    }
+
+    // Inner content of the Library block
+    #block-views-country-content-library {
+        .content .view {
+            @extend .row;
+            .view-filters {
+                @extend .col-sm-3;
+                @extend .col-sm-push-9;
+            }
+            .view-content {
+                @extend .col-sm-9;
+                @extend .col-sm-pull-3;
+            }
+        }
     }
 
     #block-landbook-lgaf-block,
@@ -113,11 +145,12 @@ body[class*="node-type-thematic-narrative"]{
 
     /* Block background colors */
     #lgaf,
-    #partners-block,
+    #block-views-country-content-partners,
     #media-block .media-block-content,
     #block-system-main,
     #compare {
         background-color: $grey-bglight;
+        @extend .clearfix;
     }
     #media-block {
         padding-bottom: 0;
@@ -250,16 +283,8 @@ body[class*="node-type-thematic-narrative"]{
                     font-family: "Open Sans",sans-serif;
                     font-size: 16px;
                 }
-                header{
-                    h2{
-                        padding-top: 65px;
-                        font-family: "Open Sans",sans-serif;
-                        font-size: 29px;
-                        margin-top:5px;
-                        text-align:center;
-                        margin-bottom: 35px;
-                        color:#333;
-                    }
+                header h2 {
+                    @extend .title-decorated;
                 }
                 &#map-local{
                     padding-bottom: 0px;
@@ -368,15 +393,15 @@ body[class*="node-type-thematic-narrative"]{
         padding-top: 60px;
         padding-bottom: 60px;
 
-        h2.section-title{
-            padding-top: 65px;
-            font-family: "Open Sans",sans-serif;
-            font-size: 29px;
-            margin-top:5px;
-            text-align:center;
-            margin-bottom: 35px;
-            color:#333;
-        }
+        /* h2.section-title{ */
+        /*     padding-top: 65px; */
+        /*     font-family: "Open Sans",sans-serif; */
+        /*     font-size: 29px; */
+        /*     margin-top:5px; */
+        /*     text-align:center; */
+        /*     margin-bottom: 35px; */
+        /*     color:#333; */
+        /* } */
         .adj-blog{
             margin-left:30px;
         }

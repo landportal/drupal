@@ -18,6 +18,7 @@
 
     // An organization teaser showing in a teaser (ex: LL)
     .node-organization.node-teaser {
+        float: right;
         .field-name-field-image img {
             max-height: 70px;
         }
