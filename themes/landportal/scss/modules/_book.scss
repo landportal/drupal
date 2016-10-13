@@ -106,6 +106,7 @@ body[class*="node-type-thematic-narrative"]{
                 @extend .col-sm-3;
                 @extend .col-sm-push-9;
             }
+            .view-empty,
             .view-content {
                 @extend .col-sm-9;
                 @extend .col-sm-pull-3;
