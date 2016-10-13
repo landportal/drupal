@@ -1,5 +1,8 @@
 <?php
-
+/* Damn this is bad.
+   All this is *exactly* why you would have templates (such as section for instance...) in a theme. To deal with what you show and how you do it. Using a template to call up up blocks that have themselves templates is MAD and most likely WRONG.
+ */
+    
 // DO NOT OVERRIDE $block IN A BLOCK TEMPLATE!!!
 //print_r ($block);
 
