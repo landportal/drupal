@@ -14,7 +14,11 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
-$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['cache']['type'] = 'time';
+$handler->display->display_options['cache']['results_lifespan'] = '3600';
+$handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+$handler->display->display_options['cache']['output_lifespan'] = '3600';
+$handler->display->display_options['cache']['output_lifespan_custom'] = '0';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['query']['options']['distinct'] = TRUE;
 $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -224,3 +228,70 @@ $handler->display->display_options['filters']['nid_1']['table'] = 'node';
 $handler->display->display_options['filters']['nid_1']['field'] = 'nid';
 $handler->display->display_options['filters']['nid_1']['relationship'] = 'reverse_field_doc_provider_node';
 $handler->display->display_options['filters']['nid_1']['operator'] = 'not empty';
+
+/* Display: LL Sources */
+$handler = $view->new_display('page', 'LL Sources', 'page_1');
+$handler->display->display_options['defaults']['use_ajax'] = FALSE;
+$handler->display->display_options['use_ajax'] = TRUE;
+$handler->display->display_options['defaults']['exposed_form'] = FALSE;
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
+$handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['row_class'] = 'col-sm-3 col-lg-2';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['style_options']['uses_fields'] = TRUE;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'entity';
+$handler->display->display_options['row_options']['view_mode'] = 'teaser';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'organization' => 'organization',
+);
+/* Filter criterion: Content: Nid (reference filter) */
+$handler->display->display_options['filters']['nid_entityreference_filter']['id'] = 'nid_entityreference_filter';
+$handler->display->display_options['filters']['nid_entityreference_filter']['table'] = 'node';
+$handler->display->display_options['filters']['nid_entityreference_filter']['field'] = 'nid_entityreference_filter';
+$handler->display->display_options['filters']['nid_entityreference_filter']['reference_display'] = 'organizations:entityreference_5';
+/* Filter criterion: Content: Organization type (field_organization_type) */
+$handler->display->display_options['filters']['field_organization_type_tid']['id'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['table'] = 'field_data_field_organization_type';
+$handler->display->display_options['filters']['field_organization_type_tid']['field'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['operator_id'] = 'field_organization_type_tid_op';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['label'] = 'Type of organization ';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['operator'] = 'field_organization_type_tid_op';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['identifier'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903912 => 0,
+  25521343 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_organization_type_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_organization_type_tid']['vocabulary'] = 'organization_types';
+$handler->display->display_options['path'] = 'library/sources';
+$handler->display->display_options['menu']['title'] = 'Sources';
+$handler->display->display_options['menu']['weight'] = '0';
+$handler->display->display_options['menu']['name'] = 'landbook-menu';
+$handler->display->display_options['menu']['context'] = 0;
+$handler->display->display_options['menu']['context_only_inline'] = 0;
