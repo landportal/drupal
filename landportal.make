@@ -111,6 +111,7 @@ projects:
   - video_filter
   - views
   - views_bulk_operations
+  - views_contextual_filters_or
   - views_distinct
   - views_php
   - views_tree

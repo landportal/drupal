@@ -151,6 +151,9 @@ $handler->display->display_options['path'] = 'library/browse/by-organizations';
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
+$handler->display->display_options['defaults']['query'] = FALSE;
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['query']['options']['contextual_filters_or'] = TRUE;
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '6';
