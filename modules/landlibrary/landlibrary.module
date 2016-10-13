@@ -51,14 +51,3 @@ function landlibrary_block_info_alter(&$blocks, $theme, $code_blocks) {
     }
     return $blocks;
 }
-
-/**
- * Implements hook_views_query_alter().
- */
-function landlibrary_views_query_alter(&$view, &$query) {
-  if ($view->name == 'by_providers') {
-    if ($view->current_display == 'block') {
-      $query->where[0]['type'] = 'OR';
-    }
-  }
-}
