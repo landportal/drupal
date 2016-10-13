@@ -30,7 +30,7 @@ a { color: #A3C642; }
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH -------------------------- */
-@font-face { font-family: 'FontAwesome'; src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.6.2&1473751643); src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.6.2&1473751643#iefix) format("embedded-opentype"), url(../fonts/font-awesome/fontawesome-webfont.woff2?v=4.6.2&1473751643) format("woff2"), url(../fonts/font-awesome/fontawesome-webfont.woff?v=4.6.2&1473751643) format("woff"), url(../fonts/font-awesome/fontawesome-webfont.ttf?v=4.6.2&1473751643) format("truetype"), url(../fonts/font-awesome/fontawesome-webfont.svg?v=4.6.2&1473751643#fontawesomeregular) format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'FontAwesome'; src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.6.2&1472885790); src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.6.2&1472885790#iefix) format("embedded-opentype"), url(../fonts/font-awesome/fontawesome-webfont.woff2?v=4.6.2&1472885790) format("woff2"), url(../fonts/font-awesome/fontawesome-webfont.woff?v=4.6.2&1472885790) format("woff"), url(../fonts/font-awesome/fontawesome-webfont.ttf?v=4.6.2&1472885790) format("truetype"), url(../fonts/font-awesome/fontawesome-webfont.svg?v=4.6.2&1472885790#fontawesomeregular) format("svg"); font-weight: normal; font-style: normal; }
 .fa { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 /* makes the font 33% larger relative to the icon container */
@@ -1473,7 +1473,7 @@ td, th { padding: 0; }
   .table { border-collapse: collapse !important; }
   .table td, .table th { background-color: #fff !important; }
   .table-bordered th, .table-bordered td { border: 1px solid #ddd !important; } }
-@font-face { font-family: 'Glyphicons Halflings'; src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?1473751643); src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?&1473751643#iefix) format("embedded-opentype"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff2?1473751643) format("woff2"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff?1473751643) format("woff"), url(../fonts/bootstrap/glyphicons-halflings-regular.ttf?1473751643) format("truetype"), url(../fonts/bootstrap/glyphicons-halflings-regular.svg?1473751643#glyphicons_halflingsregular) format("svg"); }
+@font-face { font-family: 'Glyphicons Halflings'; src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?1472885790); src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?&1472885790#iefix) format("embedded-opentype"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff2?1472885790) format("woff2"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff?1472885790) format("woff"), url(../fonts/bootstrap/glyphicons-halflings-regular.ttf?1472885790) format("truetype"), url(../fonts/bootstrap/glyphicons-halflings-regular.svg?1472885790#glyphicons_halflingsregular) format("svg"); }
 .glyphicon { position: relative; top: 1px; display: inline-block; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .glyphicon-asterisk:before { content: "\002a"; }
@@ -4879,14 +4879,13 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 
 .node-teaser { padding: 20px 0; }
 .node-teaser .field-name-field-image img { max-height: 150px; max-width: 150px; width: auto; height: auto; }
+.node-teaser.node-organization { line-height: 160px; text-align: center; }
 .node-teaser .node-organization.node-teaser .field-name-field-image img { max-height: 70px; }
 .node-teaser .field { clear: left; }
 .node-teaser .field.field-type-taxonomy-term-reference .field-item { margin-bottom: 5px; }
-.node-teaser .node-image { padding-left: 0px; padding-right: 0px; margin-bottom: 15px; }
-.node-teaser .node-image a { box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4); display: inline-block; }
 .node-teaser .field-name-body { font-size: 16px; }
 .node-teaser .field-name-body h3 { font-size: 16px; }
-.node-teaser .node-image { padding: 0; }
+.node-teaser .node-image { padding: 0; margin-bottom: 15px; }
 .node-teaser .node-image a { box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4); display: inline-block; }
 .node-teaser .node-image a img { max-width: 100%; max-height: 122px; height: auto; }
 @media only screen and (max-width: 992px) { .node-teaser .node-image { padding-left: 15px; padding-right: 15px; margin-bottom: 15px; } }
@@ -4919,8 +4918,6 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 @media only screen and (max-width: 767px) { .view-by-providers .view-filters h2, .view.view-landbook-indicators .view-filters h2, .view.view-landbook-catalog .view-filters h2 { padding-top: 20px; } }
 
 .view-organizations-overview.view-display-id-page_1 .views-row, .view-organizations-overview.view-display-id-page .views-row { height: 190px; margin: 15px 0; text-align: center; width: auto; clear: none; min-width: 180px; }
-.view-organizations-overview.view-display-id-page_1 .views-row .node-organization.node-teaser, .view-organizations-overview.view-display-id-page .views-row .node-organization.node-teaser { line-height: 150px; }
-.view-organizations-overview.view-display-id-page_1 .views-row .node-organization.node-teaser img, .view-organizations-overview.view-display-id-page .views-row .node-organization.node-teaser img { min-width: 0; }
 
 /* Landbook country pages - featured block (promoted to CP) */
 .view-landbook-countries-related { margin: 0; }

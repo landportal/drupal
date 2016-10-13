@@ -1,6 +1,8 @@
 
 
-.node-teaser{
+.node-teaser {
+    padding: 20px 0;
+
     .field-name-field-image img {
         max-height: 150px;
         max-width: 150px;
@@ -8,29 +10,24 @@
         height: auto;
     }
 
+    // This help get a more proper vertical align impression for logos
+    &.node-organization {
+        line-height: 160px;
+        text-align: center;
+    }
+
+    // An organization teaser showing in a teaser (ex: LL)
     .node-organization.node-teaser {
         .field-name-field-image img {
             max-height: 70px;
         }
     }
-
-    padding: 20px 0;
-
     .field{
         clear: left;
         &.field-type-taxonomy-term-reference{
             .field-item{
                 margin-bottom: 5px;
             }
-        }
-    }
-    .node-image{
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-bottom: 15px;
-        a{
-            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
-            display: inline-block;
         }
     }
 
@@ -42,7 +39,8 @@
     }
 
     .node-image{
-        padding:0;
+        padding: 0;
+        margin-bottom: 15px;
         a{
             box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
             display: inline-block;
@@ -52,14 +50,15 @@
                 height: auto;
             }
         }
-
         @media only screen and (max-width: 992px){
             padding-left:15px;
             padding-right:15px;
             margin-bottom: 15px;
         }
-
     }
+
+
+    // WFT is going on here... this is SCSS not CSS why so many specific definition and duplication of code?
     .node-intro{
         >h2{
             margin-top:0;
@@ -92,13 +91,11 @@
             color: $text-color;
             font-size: 16px;
             line-height: 1.42857;
-
             p,h1,h2,h3,h4,h5{
                 font-size: 16px;
                 font-family: "Merriweather",serif;
                 line-height: 1.42857;
             }
-            
         }
         .date{
             background-image:url("../images/ico-cal.png");
@@ -134,7 +131,6 @@
                 font-size: 16px;
                 line-height: 1.42857;
                 font-family: "Open Sans",sans-serif;
-
                 &:hover{
                     color:#617724;
                     text-decoration: none;
@@ -143,7 +139,6 @@
         }
         border-bottom:1px solid $grey-bglight;
         .description-resource{
-
             padding-top:0;
             p{  
                 font-family: "Merriweather",serif !important;
@@ -162,16 +157,15 @@
             a{
                 color:#91b135;
                 font-size: 16px;
-
                 &:hover{
                     color:#617724;
                     text-decoration: none;
                 }
             }
-
         }
     }
 }
+
 /* For datasets taxonomy terms
  * Organization teasers float on left
  */
