@@ -4597,7 +4597,7 @@ font-size:12px;*/ }
 .page-user .profile { min-height: 240px; border: 1px solid #cccccc; -moz-border-radius: 0.5em; -webkit-border-radius: 0.5em; border-radius: 0.5em; -moz-border-radius-topleft: 0; -webkit-border-top-left-radius: 0; border-top-left-radius: 0; padding: .5em; }
 .page-user .profile .field-name-field-title, .page-user .profile .field-name-field-firstname, .page-user .profile .field-name-field-lastname { font-size: 1.6em; font-weight: bold; font-family: 'News Cycle', sans-serif; margin-top: 0; text-rendering: optimizelegibility; /* clear: both; */ }
 .page-user .profile .user-picture { margin: -.5em 1em 1em -.5em; }
-.page-user .profile2-work-profile { border: 1px solid #cccccc; -moz-border-radius: 0.5em; -webkit-border-radius: 0.5em; border-radius: 0.5em; display: inline-block; text-align: center; padding: 1em; margin: .5em 0 1em 1em; }
+.page-user .profile2-work-profile { border: 1px solid #cccccc; -moz-border-radius: 0.5em; -webkit-border-radius: 0.5em; border-radius: 0.5em; display: inline-block; text-align: center; padding: 1em; margin: 0; }
 
 /****************************************** Users / profile  When viewed as referenced entity */
 .view-users .profile, .field-type-entityreference .profile { /* width: 25%; */ min-width: 245px; max-width: 270px; margin: 0 0 .5em 0; min-height: 80px; padding: .5em 0 .5em .5em; border: 1px solid #cccccc; -moz-border-radius: 0.5em; -webkit-border-radius: 0.5em; border-radius: 0.5em; -moz-border-radius-topright: 0; -webkit-border-top-right-radius: 0; border-top-right-radius: 0; -moz-border-radius-bottomleft: 0; -webkit-border-bottom-left-radius: 0; border-bottom-left-radius: 0; }
