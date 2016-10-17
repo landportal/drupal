@@ -4652,6 +4652,13 @@ font-size:12px;*/ }
 .page-node.node-type-organization .node-organization .field-name-field-organization-relationship .field-items .field-item a { background-color: #e3ab03; }
 .page-node.node-type-organization .node-organization .field-name-field-user > .field-items > .field-item { margin: 0 1em 0 0; float: left; }
 
+.page-user-register #user-register-form .form-type-checkbox input { margin: 0px; height: 14px; }
+.page-user-register #user-register-form .form-type-checkbox label { margin: 0px; font-size: 14px; line-height: 14px; }
+.page-user-register #user-register-form input.form-text { border: 1px solid #a9a9a9; width: 100%; height: 37px; background-color: #f7f7f7; padding: 5px; }
+.page-user-register #user-register-form .form-item select { background-color: #f7f7f7; }
+.page-user-register #user-register-form .form-item select[multiple] { background-image: none; }
+.page-user-register #user-register-form .form-file { margin-bottom: 5px; }
+
 .apachesolr_search-results { margin: 0; padding: 0; }
 .apachesolr_search-results .node-search { width: 100%; overflow: hidden; border-bottom: 1px dotted #888; padding: 2em 0; }
 .apachesolr_search-results .search-title { margin-bottom: 1em; vertical-align: bottom; }
