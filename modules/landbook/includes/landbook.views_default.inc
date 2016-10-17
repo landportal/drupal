@@ -10,6 +10,7 @@
 function landbook_views_default_views() {
     $export = array();
     $views = array(
+        'country_content',
         'landbook_countries',
         'landbook_countries_related',
         'landbook_catalog',
