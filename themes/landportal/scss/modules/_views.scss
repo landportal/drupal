@@ -58,10 +58,59 @@
     }
 }
 .view-landbook-countries-related,
-.view-landbook-countries-related{
+.view-landbook-thematics-related{
   .view-filters{
     .more-link{
       text-align: left;
+    }
+  }
+  .left-col{
+    @media(min-width:992px){
+      float: right;
+    }
+  }
+  .right-col{
+    @media(min-width:992px){
+      float: left;
+    }
+  }
+  #views-exposed-form-landbook-countries-related-block-5,
+  #views-exposed-form-landbook-thematics-related-block-5{
+    .views-exposed-form{
+      .views-exposed-widget{
+        clear: both;
+        &.views-submit-button{
+          clear: none;
+          width: auto;
+        }
+        @media(min-width:992px){
+          width: 100%;
+        }
+        .container-inline-date{
+          .form-item{
+            @media(min-width:992px){
+              width: 100%;
+            }
+            .date-padding{
+              @media(min-width:992px){
+                width: 100%;
+              }
+            }
+          }
+        }
+        .form-type-select{
+          @media(min-width:992px){
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+#partners-block{
+  .view-content{
+    table{
+      width: 100%;
     }
   }
 }
