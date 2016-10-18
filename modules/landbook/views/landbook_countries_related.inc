@@ -354,15 +354,15 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
-/* Filter criterion: Content: Publisher (field_doc_publisher) */
-$handler->display->display_options['filters']['field_doc_publisher_target_id']['id'] = 'field_doc_publisher_target_id';
-$handler->display->display_options['filters']['field_doc_publisher_target_id']['table'] = 'field_data_field_doc_publisher';
-$handler->display->display_options['filters']['field_doc_publisher_target_id']['field'] = 'field_doc_publisher_target_id';
-$handler->display->display_options['filters']['field_doc_publisher_target_id']['exposed'] = TRUE;
-$handler->display->display_options['filters']['field_doc_publisher_target_id']['expose']['operator_id'] = 'field_doc_publisher_target_id_op';
-$handler->display->display_options['filters']['field_doc_publisher_target_id']['expose']['operator'] = 'field_doc_publisher_target_id_op';
-$handler->display->display_options['filters']['field_doc_publisher_target_id']['expose']['identifier'] = 'field_doc_publisher_target_id';
-$handler->display->display_options['filters']['field_doc_publisher_target_id']['expose']['remember_roles'] = array(
+/* Filter criterion: Content: Publisher (field_doc_publisher) (reference filter) */
+$handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['id'] = 'field_doc_publisher_target_id_entityreference_filter';
+$handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['table'] = 'field_data_field_doc_publisher';
+$handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['field'] = 'field_doc_publisher_target_id_entityreference_filter';
+$handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['expose']['operator_id'] = 'field_doc_publisher_target_id_entityreference_filter_op';
+$handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['expose']['operator'] = 'field_doc_publisher_target_id_entityreference_filter_op';
+$handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['expose']['identifier'] = 'field_doc_publisher_target_id_entityreference_filter';
+$handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['expose']['remember_roles'] = array(
   2 => '2',
   1 => 0,
   111903911 => 0,
@@ -371,4 +371,5 @@ $handler->display->display_options['filters']['field_doc_publisher_target_id']['
   111903910 => 0,
   30037204 => 0,
 );
+$handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['reference_display'] = 'organizations:entityreference_2';
 $handler->display->display_options['block_caching'] = '-1';
