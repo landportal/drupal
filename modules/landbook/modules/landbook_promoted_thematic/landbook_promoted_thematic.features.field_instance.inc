@@ -337,7 +337,7 @@ function landbook_promoted_thematic_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 112,
+      'weight' => 14,
     ),
   );
 
