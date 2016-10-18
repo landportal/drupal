@@ -49,6 +49,11 @@
     <div class="view-filters col-md-4 left-col">
       <h2><?php print t('Refine results'); ?></h2>
       <?php print $exposed; ?>
+      <?php if ($rows): ?>
+        <?php if ($more): ?>
+          <?php print $more; ?>
+        <?php endif; ?>
+      <?php endif; ?>
     </div>
   <?php endif; ?>
 
@@ -71,12 +76,6 @@
     <div class="attachment attachment-after">
       <?php print $attachment_after; ?>
     </div>
-  <?php endif; ?>
-
-  <?php if ($rows): ?>
-    <?php if ($more): ?>
-      <?php print $more; ?>
-    <?php endif; ?>
   <?php endif; ?>
 
   <?php if ($footer): ?>

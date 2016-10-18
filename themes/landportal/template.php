@@ -164,3 +164,20 @@ function landportal_preprocess_field(&$vars) {
     }
   }
 }
+
+function landportal_preprocess_block(&$vars) {
+  if ($vars['block']->module == 'views') {
+    // Add some template suggestions that are a little easier to manage than
+    // the default dom id added by views.
+    $delta = $vars['block']->delta;
+
+    if (strlen($delta) == 32) {
+      $hashes = variable_get('views_block_hashes', array());
+      if (!empty($hashes[$delta])) {
+        $delta = $hashes[$delta];
+        list($name, $display_id) = explode('-', $delta);
+        $vars['theme_hook_suggestions'][] = 'block__views__' . $name .'__' . $display_id;
+      }
+    }
+  }
+}

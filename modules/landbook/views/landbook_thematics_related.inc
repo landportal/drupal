@@ -258,6 +258,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
 /* Display: Partners */
 $handler = $view->new_display('block', 'Partners', 'block_4');
 $handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Partners';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'partners';
 $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -312,6 +313,7 @@ $handler->display->display_options['filters']['field_organization_relationship_t
 /* Display: Library */
 $handler = $view->new_display('block', 'Library', 'block_5');
 $handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Library';
 $handler->display->display_options['defaults']['use_ajax'] = FALSE;
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['defaults']['use_more'] = FALSE;
@@ -350,6 +352,12 @@ $handler->display->display_options['empty']['area']['field'] = 'area';
 $handler->display->display_options['empty']['area']['empty'] = TRUE;
 $handler->display->display_options['empty']['area']['content'] = 'Currently there are no resources in the Land Library for this country. <a href=" /library/contribute">Help us populate the Land Library by contributing!</a>';
 $handler->display->display_options['empty']['area']['format'] = 'full_html';
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Date of publication (field_doc_creation_date) */
+$handler->display->display_options['sorts']['field_doc_creation_date_value']['id'] = 'field_doc_creation_date_value';
+$handler->display->display_options['sorts']['field_doc_creation_date_value']['table'] = 'field_data_field_doc_creation_date';
+$handler->display->display_options['sorts']['field_doc_creation_date_value']['field'] = 'field_doc_creation_date_value';
+$handler->display->display_options['sorts']['field_doc_creation_date_value']['order'] = 'DESC';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Content: Has taxonomy term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -397,6 +405,7 @@ $handler->display->display_options['filters']['field_doc_type_tid']['expose']['r
 );
 $handler->display->display_options['filters']['field_doc_type_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_doc_type_tid']['vocabulary'] = 'landlibrary_resource_type';
+$handler->display->display_options['filters']['field_doc_type_tid']['hierarchy'] = 1;
 /* Filter criterion: Content: Date of publication (field_doc_creation_date) */
 $handler->display->display_options['filters']['field_doc_creation_date_value']['id'] = 'field_doc_creation_date_value';
 $handler->display->display_options['filters']['field_doc_creation_date_value']['table'] = 'field_data_field_doc_creation_date';
@@ -423,5 +432,22 @@ $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
+);
+/* Filter criterion: Content: Publisher (field_doc_publisher) */
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['id'] = 'field_doc_publisher_target_id';
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['table'] = 'field_data_field_doc_publisher';
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['field'] = 'field_doc_publisher_target_id';
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['expose']['operator_id'] = 'field_doc_publisher_target_id_op';
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['expose']['operator'] = 'field_doc_publisher_target_id_op';
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['expose']['identifier'] = 'field_doc_publisher_target_id';
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903912 => 0,
+  25521343 => 0,
+  111903910 => 0,
+  30037204 => 0,
 );
 $handler->display->display_options['block_caching'] = '-1';
