@@ -41,8 +41,16 @@ function landbook_view_coda_block_info() {
         'pages'     => "",
         'weight'    => 16
     );
-    $blocks['landbook_vis_ranking'] = array(
-        'info'      => t('LB view-coda: Ranking chart'),
+    $blocks['indicator_dl'] = array(
+        'info'      => t('View CODA: Indicator Download'),
+        'status'    => TRUE,
+        'region'    => 'content',
+        'visibility'=> BLOCK_VISIBILITY_LISTED,
+        'pages'     => "book/indicators/*\n",
+        'weight'    => 13
+    );
+    $blocks['indicator_ranking'] = array(
+        'info'      => t('View CODA: Indicator Ranking'),
         'status'    => TRUE,
         'region'    => 'content',
         'visibility'=> BLOCK_VISIBILITY_LISTED,
@@ -59,10 +67,10 @@ function landbook_view_coda_lbvis_ready_callback($callback) {
 
 function landbook_view_coda_block_view($delta = '') {
     $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
-    $block = array();
+    $block = array('subject' => 'default', 'content' => 'bad');
     $jsAttr = 'vis: LBV, iso3: Drupal.settings.landbook.countryCode';
     $jsAttrIndicators = 'vis: LBV, type: "indicators", indicator: Drupal.settings.landbook.id';
-    $jsCB = '';
+
     switch ($delta) {
     case 'lbcp_linechart' :
         $block['subject'] = t('Compare countries');
@@ -135,22 +143,26 @@ function landbook_view_coda_block_view($delta = '') {
             )
         );
         break;
-    case 'landbook_vis_ranking' :
+    case 'indicator_ranking' :
         $block['subject'] = t('Ranking');
-        $block['content'] = array(
-            '#attached' => array(
-                'library' => array(
-                    array('landbook_view_coda', 'lbvis.ranking')
-                ),
-                'js' => array(
-                    array(
-                        'type' => 'inline',
-                        'data' => landbook_view_coda_lbvis_ready_callback(
-                            'RANKING = new lbvisRanking({' . $jsAttrIndicators . '}); RANKING.init();')
-                    ),
-                )
-            )
-        );
+        $block['content'] = array('#attached' => array(
+            'library' => array(array('landbook_view_coda', 'lbvis.ranking')),
+            'js' => array(array(
+                'type' => 'inline',
+                'data' => landbook_view_coda_lbvis_ready_callback(
+                    'RANKING = new lbvisRanking({' . $jsAttrIndicators . '}); RANKING.init();')
+            ))
+        ));
+        break;
+    case 'indicator_dl':
+        $block['subject'] = t('Download');
+        $block['content'] = array('#attached' => array(
+            'library' => array(array('landbook_view_coda', 'lbvis.dl')),
+            'js' => array(array(
+                'type' => 'inline',
+                'data' => landbook_view_coda_lbvis_ready_callback('DL = new lbvis.dl({'.$jsAttr.'});')
+            ))
+        ));
         break;
     }
     return $block;
