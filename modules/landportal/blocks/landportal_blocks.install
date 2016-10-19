@@ -6,11 +6,11 @@
 function landportal_blocks_update_7201() {
 
     // Remove Block
-    db_delete('block', array('module' => 'landportal_blocks', 'delta' => 'lp_header_social'))->execute();
-    db_delete('block', array('module' => 'landportal_blocks', 'delta' => 'lp_footer_social'))->execute();
-    db_delete('block', array('module' => 'landportal_blocks', 'delta' => 'lp_facebook'))->execute();
-    db_delete('block', array('module' => 'landportal_blocks', 'delta' => 'lp_twitter'))->execute();
-    db_delete('block', array('module' => 'landportal_blocks', 'delta' => 'lp_share'))->execute();
+    db_delete('block')->condition('module', 'landportal_blocks')->condition('delta', 'lp_header_social')->execute();
+    db_delete('block')->condition('module', 'landportal_blocks')->condition('delta', 'lp_footer_social')->execute();
+    db_delete('block')->condition('module', 'landportal_blocks')->condition('delta', 'lp_facebook')->execute();
+    db_delete('block')->condition('module', 'landportal_blocks')->condition('delta', 'lp_twitter')->execute();
+    db_delete('block')->condition('module', 'landportal_blocks')->condition('delta', 'lp_share')->execute();
 
     // Reset Blocks
     $blocks = array();

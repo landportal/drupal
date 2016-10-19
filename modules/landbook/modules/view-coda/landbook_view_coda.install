@@ -11,7 +11,7 @@
  */
 function landbook_view_coda_update_7203() {
     // remove renamed module
-    db_delete('block', array('module' => 'landbook_view_coda', 'delta' => 'landbook_vis_ranking'))->execute();
+    db_delete('block')->condition('module', 'landbook_view_coda')->condition('delta', 'landbook_vis_ranking')->execute();
 }
 
 /**
