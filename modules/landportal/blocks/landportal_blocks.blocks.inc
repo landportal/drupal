@@ -30,7 +30,7 @@ function landportal_blocks_block_info() {
     'lp_twitter' => array(
       'info'            => t('Twitter widget'),
       'status'          => TRUE,
-      'region'          => 'sidebar_second',
+      'region'          => -1,
       'visibility'      => BLOCK_VISIBILITY_LISTED,
       'pages'           => "debate/debates\ndebate/news",
     ),
@@ -38,8 +38,6 @@ function landportal_blocks_block_info() {
       'info'            => t('Facebook widget'),
       'status'          => TRUE,
       'region'          => -1,
-      'visibility'      => 0,
-      'pages'           => "",
     ),
     'lp_shareit' => array(
       'info'            => t('Share it widget'),
@@ -51,8 +49,7 @@ function landportal_blocks_block_info() {
     'lp_share' => array(
       'info'            => t('Share Buttons Block'),
       'status'          => TRUE,
-      'theme'           => 'landportal',
-      'region'          => 'footer',
+      'region'          => -1,
     ),
   );
   return $blocks;
