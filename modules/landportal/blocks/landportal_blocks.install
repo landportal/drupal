@@ -24,7 +24,7 @@ function landportal_blocks_update_7201() {
             'weight' => 0,
             'region' => -1,
             'visibility' => 0,
-            'pages'  => ''
+            'pages'  => '',
         )
     );
     array_push($blocks, $block);
@@ -37,6 +37,7 @@ function landportal_blocks_update_7201() {
         ),
         'values' => array(
             'region'    => 'footer',
+            'pages'  => '',
         )
     );
     array_push($blocks, $block);
@@ -49,6 +50,7 @@ function landportal_blocks_update_7201() {
         ),
         'values' => array(
             'region'    => 'footer',
+            'pages'  => '',
         )
     );
     array_push($blocks, $block);
