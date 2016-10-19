@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Landportal groups feature.
+ */
+
+include_once 'landportal_groups.features.inc';
