@@ -15,8 +15,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'administer taxonomy',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'taxonomy',
   );
@@ -24,10 +23,7 @@ function landportal_taxonomy_user_default_permissions() {
   // Exported permission: 'delete terms in debate_status'.
   $permissions['delete terms in debate_status'] = array(
     'name' => 'delete terms in debate_status',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-    ),
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -36,7 +32,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'delete terms in landvoc_concepts',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
+      'landportal' => 'landportal',
     ),
     'module' => 'taxonomy',
   );
@@ -46,7 +42,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'delete terms in organization_relation',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
+      'landportal' => 'landportal',
     ),
     'module' => 'taxonomy',
   );
@@ -56,7 +52,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'delete terms in organization_types',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
+      'landportal' => 'landportal',
     ),
     'module' => 'taxonomy',
   );
@@ -66,6 +62,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'delete terms in overarching_categories',
     'roles' => array(
       'administrator' => 'administrator',
+      'landportal' => 'landportal',
     ),
     'module' => 'taxonomy',
   );
@@ -75,6 +72,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'delete terms in themes',
     'roles' => array(
       'administrator' => 'administrator',
+      'landportal' => 'landportal',
     ),
     'module' => 'taxonomy',
   );
@@ -82,11 +80,7 @@ function landportal_taxonomy_user_default_permissions() {
   // Exported permission: 'edit terms in debate_status'.
   $permissions['edit terms in debate_status'] = array(
     'name' => 'edit terms in debate_status',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
-    ),
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -95,8 +89,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'edit terms in landvoc_concepts',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'taxonomy',
   );
@@ -106,8 +99,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'edit terms in organization_relation',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'taxonomy',
   );
@@ -117,8 +109,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'edit terms in organization_types',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'taxonomy',
   );
@@ -128,6 +119,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'edit terms in overarching_categories',
     'roles' => array(
       'administrator' => 'administrator',
+      'landportal' => 'landportal',
     ),
     'module' => 'taxonomy',
   );
@@ -137,6 +129,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'edit terms in themes',
     'roles' => array(
       'administrator' => 'administrator',
+      'landportal' => 'landportal',
     ),
     'module' => 'taxonomy',
   );
@@ -144,17 +137,16 @@ function landportal_taxonomy_user_default_permissions() {
   // Exported permission: 'merge debate_status terms'.
   $permissions['merge debate_status terms'] = array(
     'name' => 'merge debate_status terms',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-    ),
+    'roles' => array(),
     'module' => 'term_merge',
   );
 
   // Exported permission: 'merge landvoc_concepts terms'.
   $permissions['merge landvoc_concepts terms'] = array(
     'name' => 'merge landvoc_concepts terms',
-    'roles' => array(),
+    'roles' => array(
+      'landportal' => 'landportal',
+    ),
     'module' => 'term_merge',
   );
 
@@ -163,7 +155,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'merge organization_relation terms',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
+      'landportal' => 'landportal',
     ),
     'module' => 'term_merge',
   );
@@ -173,7 +165,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'merge organization_types terms',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
+      'landportal' => 'landportal',
     ),
     'module' => 'term_merge',
   );
@@ -190,8 +182,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'merge terms',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'term_merge',
   );
@@ -201,7 +192,6 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'merge themes terms',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
     ),
     'module' => 'term_merge',
   );
