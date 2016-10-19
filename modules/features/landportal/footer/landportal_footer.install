@@ -5,7 +5,6 @@
  */
 function landportal_footer_update_7200() {
 
-
     $blocks = array();
     $block = array(
         'keys' => array(
@@ -14,6 +13,7 @@ function landportal_footer_update_7200() {
         ),
         'values' => array(
             'region'    => 'footer',
+            'pages'     => '',
             'theme'     => 'landportal'
         )
     );
@@ -25,4 +25,5 @@ function landportal_footer_update_7200() {
             ->fields($block['values'])
             ->execute();
     }
+    return FALSE;
 }

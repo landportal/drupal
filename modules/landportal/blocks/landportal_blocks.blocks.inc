@@ -37,9 +37,9 @@ function landportal_blocks_block_info() {
     'lp_facebook' => array(
       'info'            => t('Facebook widget'),
       'status'          => TRUE,
-      'region'          => 'sidebar_second',
-      'visibility'      => BLOCK_VISIBILITY_LISTED,
-      'pages'           => "debate/community",
+      'region'          => -1,
+      'visibility'      => 0,
+      'pages'           => "",
     ),
     'lp_shareit' => array(
       'info'            => t('Share it widget'),
