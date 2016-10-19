@@ -39,7 +39,7 @@ function landportal_display_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'chosen_jquery_selector';
-  $strongarm->value = '.search-form .form-select,.node-form .form-select,.taxonomy-form-term .form-select, #taxonomy-form-term .form-select';
+  $strongarm->value = '.search-form .form-select,.node-form .form-select,.taxonomy-form-term .form-select, #taxonomy-form-term .form-select, .page-admin .views-exposed-form .form-select';
   $export['chosen_jquery_selector'] = $strongarm;
 
   $strongarm = new stdClass();
