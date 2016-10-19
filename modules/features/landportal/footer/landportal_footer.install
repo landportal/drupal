@@ -9,12 +9,12 @@ function landportal_footer_update_7200() {
     $block = array(
         'keys' => array(
             'module' => 'menu',
-            'delta' => 'menu-footer-menu'
+            'delta' => 'menu-footer-menu',
+            'theme'     => 'landportal',
         ),
         'values' => array(
             'region'    => 'footer',
             'pages'     => '',
-            'theme'     => 'landportal'
         )
     );
     array_push($blocks, $block);
