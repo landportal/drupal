@@ -13,22 +13,20 @@
 function landportal_blocks_block_info() {
   $blocks = array(
     'landportal_footer' => array(
-      'info' => t('Landportal Footer'),
-      'status' => TRUE,
-      'region' => 'footer',
+      'info'    => t('Landportal Footer text'),
+      'status'  => TRUE,
     ),
     'lp_footer_social' => array(
       'info' => t('Footer social icons'),
-      'status' => TRUE,
-      'region' => 'footer',
+      'status'  => TRUE,
+      'theme'   => 'landportal',
+      'region'  => 'footer',
     ),
-
-    'lp_header_social' => array(
-      'info' => t('Header social icons'),
-      'status' => TRUE,
-      'region' => 'header',
-    ),
-
+    /* 'lp_header_social' => array( */
+    /*   'info' => t('Header social icons'), */
+    /*   'status' => TRUE, */
+    /*   'region' => 'header', */
+    /* ), */
     'lp_twitter' => array(
       'info'            => t('Twitter widget'),
       'status'          => TRUE,
@@ -53,6 +51,7 @@ function landportal_blocks_block_info() {
     'lp_share' => array(
       'info'            => t('Share Buttons Block'),
       'status'          => TRUE,
+      'theme'           => 'landportal',
       'region'          => 'footer',
     ),
   );
@@ -68,7 +67,6 @@ function landportal_blocks_block_default_body($name) {
 Contact&nbsp;<a href="mailto:hello@landportal.info">hello@landportal.info</a>&nbsp;/&nbsp;Read more <a href="/about">about us</a>&nbsp;/ See our <a href="/about/privacy-policy">privacy&nbsp;policy</a><br />
 &nbsp;</p>',
     'lp_footer_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li><a href="https://www.youtube.com/channel/UCXi7yRaXT0DYrY8drhpekwQ" target="_blank"><i class="fa fa-youtube"></i></a></li></ul>',
-    'lp_header_social'  => '<ul><li class="twitter"><a href="http://twitter.com/landportal"><i class="fa fa-twitter"></i></a></li><li class="facebook"><a href="http://facebook.com/landportal"><i class="fa fa-facebook"></i></a></li><li class="google-plus"><a href="https://plus.google.com/107805891674805739531"><i class="fa fa-google-plus"></i></a></li></ul>',
   );
 
   //$default: The default value to use if this variable has never been set.
@@ -118,13 +116,6 @@ function landportal_blocks_block_configure($delta='') {
        '#default_value' => variable_get('lp_shareit', 'mail, twitter, facebook, linkedin'),
      );
      break;
-   case 'lp_header_social' :
-     $form['text_body'] = array(
-       '#type' => 'text_format',
-       '#title' => t('Footer Social Networks (check if icon exists at: http://fortawesome.github.io/Font-Awesome/icons/#brand)'),
-       '#default_value' => landportal_blocks_block_default_body('lp_header_social'),
-     );
-     break;
    }
    return $form;
  }
@@ -145,9 +136,6 @@ function landportal_blocks_block_save($delta = '', $edit = array()) {
     break;
   case 'lp_shareit' :
     variable_set('lp_shareit', $edit['text_body']['value']);
-    break;
-  case 'lp_header_social' :
-    variable_set('lp_header_social', $edit['text_body']['value']);
     break;
   }
 
@@ -179,11 +167,6 @@ function landportal_blocks_block_view($delta = '') {
     $block['content'] = variable_get('lp_shareit', '');
     $block['subject'] = '<none>';
     break;
-  case 'lp_header_social':
-    $str = landportal_blocks_block_default_body('lp_header_social');
-    $block['content'] = array('#type' => 'markup', '#markup' => $str);
-    $block['subject'] = '<none>';
-    break;
   case 'lp_share':
       $item = menu_get_item();
       $title = $item['title'];
@@ -193,6 +176,7 @@ function landportal_blocks_block_view($delta = '') {
       }
       $block['content'] = addtoany_create_buttons(drupal_get_path_alias(), $title);
       $block['subject'] = '<none>';
+      break;
   }
   return $block;
 }

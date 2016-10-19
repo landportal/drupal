@@ -1,6 +1,62 @@
 <?php
 
 /**
+ * Remove un-used blocks
+ */
+function landportal_blocks_update_7201() {
+
+    // Remove Block
+    db_delete('block', array('module' => 'landportal_blocks', 'delta' => 'lp_header_social'))->execute();
+
+    // Reset Blocks
+    $blocks = array();
+    $block = array(
+        'keys' => array(
+            'module' => 'landportal_blocks',
+            'delta' => 'landportal_footer'
+        ),
+        'values' => array(
+            'status' => 0,
+            'weight' => 0,
+            'region' => -1,
+            'visibility' => 0,
+        )
+    );
+    array_push($blocks, $block);
+
+    $block = array(
+        'keys' => array(
+            'module' => 'landportal_blocks',
+            'delta' => 'lp_share'
+        ),
+        'values' => array(
+            'region'    => 'footer',
+            'theme'     => 'landportal'
+        )
+    );
+    array_push($blocks, $block);
+
+    $block = array(
+        'keys' => array(
+            'module' => 'landportal_blocks',
+            'delta' => 'lp_footer_social'
+        ),
+        'values' => array(
+            'region'    => 'footer',
+            'theme'     => 'landportal'
+        )
+    );
+    array_push($blocks, $block);
+
+    foreach($blocks as $block){
+        db_merge('block')
+            ->key($block['keys'])
+            ->fields($block['values'])
+            ->execute();
+    }
+}
+
+/**
  * For LP 2.3 release
  * Reset some block positioning / display
  */
