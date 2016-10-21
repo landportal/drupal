@@ -4931,7 +4931,6 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 .view-promoted-nodes { margin: 0; }
 .view-promoted-nodes .view-row { width: 100%; padding: 0; }
 .view-promoted-nodes .view-row img { width: 100%; }
-<<<<<<< HEAD
 
 .view-landbook-countries-related .view-filters .more-link, .view-landbook-thematics-related .view-filters .more-link { text-align: left; }
 @media (min-width: 992px) { .view-landbook-countries-related .left-col, .view-landbook-thematics-related .left-col { float: right; } }
@@ -4944,8 +4943,6 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 @media (min-width: 992px) { .view-landbook-countries-related #views-exposed-form-landbook-countries-related-block-5 .views-exposed-form .views-exposed-widget .form-type-select, .view-landbook-countries-related #views-exposed-form-landbook-thematics-related-block-5 .views-exposed-form .views-exposed-widget .form-type-select, .view-landbook-thematics-related #views-exposed-form-landbook-countries-related-block-5 .views-exposed-form .views-exposed-widget .form-type-select, .view-landbook-thematics-related #views-exposed-form-landbook-thematics-related-block-5 .views-exposed-form .views-exposed-widget .form-type-select { width: 100%; } }
 
 #partners-block .view-content table { width: 100%; }
-=======
->>>>>>> origin/master
 
 /* Ranking viualization */
 #ranking-wrapper li { background-color: white; border-bottom: 1px solid #cccccc; }
