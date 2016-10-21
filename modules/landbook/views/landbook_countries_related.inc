@@ -1,4 +1,5 @@
 <?php 
+
 $view = new view();
 $view->name = 'landbook_countries_related';
 $view->description = 'Landbook countries related content. For each LP content type, show the latest nodes tagged with a given country';
@@ -243,6 +244,7 @@ $handler->display->display_options['filters']['field_geographical_focus_tid']['v
 /* Display: Partners */
 $handler = $view->new_display('block', 'Partners', 'block_4');
 $handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Partners';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'partners';
 $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -294,6 +296,9 @@ $handler->display->display_options['filters']['field_geographical_focus_tid']['v
 /* Display: Library */
 $handler = $view->new_display('block', 'Library', 'block_5');
 $handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Library';
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'clearfix';
 $handler->display->display_options['defaults']['use_ajax'] = FALSE;
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['defaults']['use_more'] = FALSE;
@@ -314,6 +319,8 @@ $handler->display->display_options['pager']['options']['items_per_page'] = '6';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'node';
