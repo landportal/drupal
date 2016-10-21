@@ -30,7 +30,7 @@ a { color: #A3C642; }
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH -------------------------- */
-@font-face { font-family: 'FontAwesome'; src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.6.2&1473751643); src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.6.2&1473751643#iefix) format("embedded-opentype"), url(../fonts/font-awesome/fontawesome-webfont.woff2?v=4.6.2&1473751643) format("woff2"), url(../fonts/font-awesome/fontawesome-webfont.woff?v=4.6.2&1473751643) format("woff"), url(../fonts/font-awesome/fontawesome-webfont.ttf?v=4.6.2&1473751643) format("truetype"), url(../fonts/font-awesome/fontawesome-webfont.svg?v=4.6.2&1473751643#fontawesomeregular) format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'FontAwesome'; src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.6.2&1472885790); src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.6.2&1472885790#iefix) format("embedded-opentype"), url(../fonts/font-awesome/fontawesome-webfont.woff2?v=4.6.2&1472885790) format("woff2"), url(../fonts/font-awesome/fontawesome-webfont.woff?v=4.6.2&1472885790) format("woff"), url(../fonts/font-awesome/fontawesome-webfont.ttf?v=4.6.2&1472885790) format("truetype"), url(../fonts/font-awesome/fontawesome-webfont.svg?v=4.6.2&1472885790#fontawesomeregular) format("svg"); font-weight: normal; font-style: normal; }
 .fa { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 /* makes the font 33% larger relative to the icon container */
@@ -1475,7 +1475,7 @@ td, th { padding: 0; }
   .table { border-collapse: collapse !important; }
   .table td, .table th { background-color: #fff !important; }
   .table-bordered th, .table-bordered td { border: 1px solid #ddd !important; } }
-@font-face { font-family: 'Glyphicons Halflings'; src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?1473751643); src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?&1473751643#iefix) format("embedded-opentype"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff2?1473751643) format("woff2"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff?1473751643) format("woff"), url(../fonts/bootstrap/glyphicons-halflings-regular.ttf?1473751643) format("truetype"), url(../fonts/bootstrap/glyphicons-halflings-regular.svg?1473751643#glyphicons_halflingsregular) format("svg"); }
+@font-face { font-family: 'Glyphicons Halflings'; src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?1472885790); src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?&1472885790#iefix) format("embedded-opentype"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff2?1472885790) format("woff2"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff?1472885790) format("woff"), url(../fonts/bootstrap/glyphicons-halflings-regular.ttf?1472885790) format("truetype"), url(../fonts/bootstrap/glyphicons-halflings-regular.svg?1472885790#glyphicons_halflingsregular) format("svg"); }
 .glyphicon { position: relative; top: 1px; display: inline-block; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .glyphicon-asterisk:before { content: "\002a"; }
@@ -4931,6 +4931,7 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 .view-promoted-nodes { margin: 0; }
 .view-promoted-nodes .view-row { width: 100%; padding: 0; }
 .view-promoted-nodes .view-row img { width: 100%; }
+<<<<<<< HEAD
 
 .view-landbook-countries-related .view-filters .more-link, .view-landbook-thematics-related .view-filters .more-link { text-align: left; }
 @media (min-width: 992px) { .view-landbook-countries-related .left-col, .view-landbook-thematics-related .left-col { float: right; } }
@@ -4943,6 +4944,8 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 @media (min-width: 992px) { .view-landbook-countries-related #views-exposed-form-landbook-countries-related-block-5 .views-exposed-form .views-exposed-widget .form-type-select, .view-landbook-countries-related #views-exposed-form-landbook-thematics-related-block-5 .views-exposed-form .views-exposed-widget .form-type-select, .view-landbook-thematics-related #views-exposed-form-landbook-countries-related-block-5 .views-exposed-form .views-exposed-widget .form-type-select, .view-landbook-thematics-related #views-exposed-form-landbook-thematics-related-block-5 .views-exposed-form .views-exposed-widget .form-type-select { width: 100%; } }
 
 #partners-block .view-content table { width: 100%; }
+=======
+>>>>>>> origin/master
 
 /* Ranking viualization */
 #ranking-wrapper li { background-color: white; border-bottom: 1px solid #cccccc; }

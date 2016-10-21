@@ -145,6 +145,7 @@ function landbook_country_strongarm() {
   $strongarm->name = 'node_options_landbook_country';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_landbook_country'] = $strongarm;
 
@@ -174,8 +175,8 @@ function landbook_country_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_landbook_country';
   $strongarm->value = array(
-    'status' => '0',
-    'priority' => '0.5',
+    'status' => '1',
+    'priority' => '0.6',
   );
   $export['xmlsitemap_settings_node_landbook_country'] = $strongarm;
 

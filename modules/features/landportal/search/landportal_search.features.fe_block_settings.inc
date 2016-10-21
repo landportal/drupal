@@ -33,7 +33,7 @@ function landportal_search_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'landportal',
-        'weight' => -35,
+        'weight' => -46,
       ),
       'seven' => array(
         'region' => '',
@@ -67,7 +67,7 @@ function landportal_search_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'landportal',
-        'weight' => -40,
+        'weight' => -50,
       ),
       'seven' => array(
         'region' => '',
@@ -101,7 +101,7 @@ function landportal_search_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'landportal',
-        'weight' => -36,
+        'weight' => -48,
       ),
       'seven' => array(
         'region' => '',
@@ -135,7 +135,7 @@ function landportal_search_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'landportal',
-        'weight' => -38,
+        'weight' => -49,
       ),
       'seven' => array(
         'region' => '',

@@ -1,4 +1,5 @@
 <?php
+
 $view = new view();
 $view->name = 'promoted_nodes';
 $view->description = '';

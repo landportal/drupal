@@ -5,6 +5,7 @@ package = Landportal
 version = 7.x-2.3-beta1
 project = landportal_blocks
 dependencies[] = addtoany
+dependencies[] = block
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = strongarm

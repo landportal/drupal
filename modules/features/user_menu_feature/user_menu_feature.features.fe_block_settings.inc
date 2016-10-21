@@ -67,7 +67,7 @@ function user_menu_feature_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'landportal',
-        'weight' => -13,
+        'weight' => -11,
       ),
       'seven' => array(
         'region' => '',

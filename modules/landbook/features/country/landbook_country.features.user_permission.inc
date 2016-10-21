@@ -15,6 +15,7 @@ function landbook_country_user_default_permissions() {
     'name' => 'create landbook_country content',
     'roles' => array(
       'administrator' => 'administrator',
+      'contributor' => 'contributor',
     ),
     'module' => 'node',
   );
@@ -51,6 +52,7 @@ function landbook_country_user_default_permissions() {
     'name' => 'edit own landbook_country content',
     'roles' => array(
       'administrator' => 'administrator',
+      'contributor' => 'contributor',
     ),
     'module' => 'node',
   );
