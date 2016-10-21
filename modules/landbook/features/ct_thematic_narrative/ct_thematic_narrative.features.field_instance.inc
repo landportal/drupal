@@ -211,6 +211,45 @@ function ct_thematic_narrative_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-thematic_narrative-field_indicators'.
+  $field_instances['node-thematic_narrative-field_indicators'] = array(
+    'bundle' => 'thematic_narrative',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'LB visualization settings',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_indicators',
+    'label' => 'Table',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'node-thematic_narrative-field_landvoc_to'.
   $field_instances['node-thematic_narrative-field_landvoc_to'] = array(
     'bundle' => 'thematic_narrative',
@@ -564,10 +603,12 @@ function ct_thematic_narrative_field_default_field_instances() {
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Geographical focus');
   t('Info');
+  t('LB visualization settings');
   t('Landvoc Theme or Overarching Category of this narrative.');
   t('Narrative');
   t('Overarching categories');
   t('Related concepts');
+  t('Table');
   t('Thematic Image');
   t('Themes');
   t('Title');

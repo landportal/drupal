@@ -13,6 +13,7 @@ dependencies[] = file
 dependencies[] = i18n_taxonomy
 dependencies[] = image
 dependencies[] = landportal_base
+dependencies[] = landportal_multilingual
 dependencies[] = landportal_taxonomy
 dependencies[] = media
 dependencies[] = node

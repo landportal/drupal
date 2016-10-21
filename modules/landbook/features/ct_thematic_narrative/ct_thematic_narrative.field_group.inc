@@ -103,10 +103,38 @@ function ct_thematic_narrative_field_group_info() {
   );
   $field_groups['group_topics_regions|node|thematic_narrative|listing'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_view_coda|node|thematic_narrative|form';
+  $field_group->group_name = 'group_view_coda';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'thematic_narrative';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Visualizations',
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_indicators',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_view_coda|node|thematic_narrative|form'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Landvoc concepts');
   t('Topics and Regions');
+  t('Visualizations');
 
   return $field_groups;
 }
