@@ -178,18 +178,18 @@ function user_menu_feature_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'user-menu_add-content:node/add',
   );
-  // Exported menu link: user-menu_add-page:node/add/page.
-  $menu_links['user-menu_add-page:node/add/page'] = array(
+  // Exported menu link: user-menu_add-page:node/add/partners-page.
+  $menu_links['user-menu_add-page:node/add/partners-page'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/add/page',
-    'router_path' => 'node/add/page',
+    'link_path' => 'node/add/partners-page',
+    'router_path' => 'node/add/partners-page',
     'link_title' => 'Add Page',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'user-menu_add-page:node/add/page',
+      'identifier' => 'user-menu_add-page:node/add/partners-page',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -295,6 +295,29 @@ function user_menu_feature_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'user-menu_my-account:user',
   );
+  // Exported menu link: user-menu_my-account:user.
+  $menu_links['user-menu_my-account:user'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'user',
+    'router_path' => 'user',
+    'link_title' => 'My account',
+    'options' => array(
+      'alter' => TRUE,
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'user-menu_my-account:user',
+    ),
+    'module' => 'system',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 1,
+    'expanded' => 0,
+    'weight' => -50,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+  );
   // Exported menu link: user-menu_sign-in:user/login.
   $menu_links['user-menu_sign-in:user/login'] = array(
     'menu_name' => 'user-menu',
@@ -333,7 +356,7 @@ function user_menu_feature_menu_default_menu_links() {
   t('Docs');
   t('Forms management');
   t('Log out');
-  t('Mailing Lists');
+  t('My account');
   t('Sign in');
 
   return $menu_links;
