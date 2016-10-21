@@ -73,7 +73,6 @@ function landlibrary_resource_strongarm() {
   $strongarm->value = array(
     0 => 'default',
     1 => 'teaser',
-    2 => 'promoted_country_page',
   );
   $export['ds_extras_view_modes_landlibrary_resource'] = $strongarm;
 
@@ -308,9 +307,7 @@ function landlibrary_resource_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_landlibrary_resource';
-  $strongarm->value = array(
-    0 => 'main-menu',
-  );
+  $strongarm->value = array();
   $export['menu_options_landlibrary_resource'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -326,6 +323,7 @@ function landlibrary_resource_strongarm() {
   $strongarm->name = 'node_options_landlibrary_resource';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_landlibrary_resource'] = $strongarm;
 
@@ -389,7 +387,7 @@ function landlibrary_resource_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'rdf_rdftype_landlibrary_resource';
-  $strongarm->value = 'dc:BibliographicResource, bibo:Document, schema:CreativeWork, prov:Entity, edm:ProvidedCHO';
+  $strongarm->value = 'dct:BibliographicResource, bibo:Document, schema:CreativeWork, prov:Entity, edm:ProvidedCHO';
   $export['rdf_rdftype_landlibrary_resource'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -403,7 +401,7 @@ function landlibrary_resource_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'rdf_title_predicates_landlibrary_resource';
-  $strongarm->value = 'dc:title, schema:name';
+  $strongarm->value = 'dct:title, schema:name';
   $export['rdf_title_predicates_landlibrary_resource'] = $strongarm;
 
   $strongarm = new stdClass();
