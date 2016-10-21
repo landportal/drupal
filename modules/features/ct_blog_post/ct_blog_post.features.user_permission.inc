@@ -15,10 +15,9 @@ function ct_blog_post_user_default_permissions() {
     'name' => 'create blog_post content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'contributor' => 'contributor',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -28,7 +27,7 @@ function ct_blog_post_user_default_permissions() {
     'name' => 'delete any blog_post content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -38,9 +37,7 @@ function ct_blog_post_user_default_permissions() {
     'name' => 'delete own blog_post content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -50,8 +47,7 @@ function ct_blog_post_user_default_permissions() {
     'name' => 'edit any blog_post content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -61,10 +57,9 @@ function ct_blog_post_user_default_permissions() {
     'name' => 'edit own blog_post content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'contributor' => 'contributor',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );

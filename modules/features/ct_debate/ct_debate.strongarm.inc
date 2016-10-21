@@ -86,6 +86,12 @@ function ct_debate_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'listing' => array(
+        'custom_settings' => TRUE,
+      ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -109,7 +115,7 @@ function ct_debate_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '7',
+            'weight' => '9',
             'visible' => FALSE,
           ),
           'listing' => array(

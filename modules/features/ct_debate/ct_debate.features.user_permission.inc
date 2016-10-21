@@ -15,9 +15,8 @@ function ct_debate_user_default_permissions() {
     'name' => 'create debate content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'contributor' => 'contributor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -27,7 +26,7 @@ function ct_debate_user_default_permissions() {
     'name' => 'delete any debate content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -37,9 +36,7 @@ function ct_debate_user_default_permissions() {
     'name' => 'delete own debate content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -49,8 +46,7 @@ function ct_debate_user_default_permissions() {
     'name' => 'edit any debate content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -60,9 +56,8 @@ function ct_debate_user_default_permissions() {
     'name' => 'edit own debate content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'contributor' => 'contributor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );

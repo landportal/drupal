@@ -16,9 +16,8 @@ function ct_news_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'contributor' => 'contributor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -28,7 +27,7 @@ function ct_news_user_default_permissions() {
     'name' => 'delete any news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -38,9 +37,7 @@ function ct_news_user_default_permissions() {
     'name' => 'delete own news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -50,8 +47,7 @@ function ct_news_user_default_permissions() {
     'name' => 'edit any news content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -62,9 +58,8 @@ function ct_news_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'contributor' => 'contributor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );

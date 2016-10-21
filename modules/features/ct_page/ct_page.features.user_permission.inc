@@ -15,9 +15,7 @@ function ct_page_user_default_permissions() {
     'name' => 'create page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -27,8 +25,7 @@ function ct_page_user_default_permissions() {
     'name' => 'delete any page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -38,9 +35,7 @@ function ct_page_user_default_permissions() {
     'name' => 'delete own page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -50,8 +45,7 @@ function ct_page_user_default_permissions() {
     'name' => 'edit any page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -61,9 +55,7 @@ function ct_page_user_default_permissions() {
     'name' => 'edit own page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );

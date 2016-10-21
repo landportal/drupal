@@ -15,9 +15,8 @@ function ct_organization_user_default_permissions() {
     'name' => 'create organization content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'contributor' => 'contributor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -27,7 +26,7 @@ function ct_organization_user_default_permissions() {
     'name' => 'delete any organization content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -37,8 +36,7 @@ function ct_organization_user_default_permissions() {
     'name' => 'delete own organization content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -48,8 +46,7 @@ function ct_organization_user_default_permissions() {
     'name' => 'edit any organization content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -59,9 +56,8 @@ function ct_organization_user_default_permissions() {
     'name' => 'edit own organization content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'landportal admin' => 'landportal admin',
-      'landportal editor' => 'landportal editor',
+      'contributor' => 'contributor',
+      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );

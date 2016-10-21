@@ -26,7 +26,7 @@ function ct_blog_post_node_info() {
       'base' => 'node_content',
       'description' => t('A post in the Landportal Debate Blog'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Blog post title'),
       'help' => '',
     ),
   );
