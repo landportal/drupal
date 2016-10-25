@@ -89,6 +89,9 @@ function ct_blog_post_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -104,6 +107,9 @@ function ct_blog_post_strongarm() {
         'path' => array(
           'weight' => '5',
         ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'language' => array(
@@ -112,7 +118,7 @@ function ct_blog_post_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '16',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'listing' => array(

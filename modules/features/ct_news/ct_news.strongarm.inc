@@ -117,7 +117,7 @@ function ct_news_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '10',
+            'weight' => '13',
             'visible' => FALSE,
           ),
           'teaser' => array(

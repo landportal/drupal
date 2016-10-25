@@ -109,7 +109,7 @@ function ct_blog_post_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -258,7 +258,7 @@ function ct_blog_post_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -301,7 +301,7 @@ function ct_blog_post_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'options_select',
-      'weight' => 109,
+      'weight' => 6,
     ),
   );
 
@@ -317,7 +317,7 @@ function ct_blog_post_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -355,7 +355,7 @@ function ct_blog_post_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 110,
+      'weight' => 7,
     ),
   );
 
@@ -371,7 +371,7 @@ function ct_blog_post_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -421,7 +421,7 @@ function ct_blog_post_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 8,
     ),
   );
 

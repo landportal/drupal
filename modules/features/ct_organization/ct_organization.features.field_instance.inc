@@ -193,7 +193,7 @@ function ct_organization_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -245,7 +245,70 @@ function ct_organization_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 7,
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-organization-field_file'.
+  $field_instances['node-organization-field_file'] = array(
+    'bundle' => 'organization',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 12,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_file',
+    'label' => 'Attach a  file',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => 'organization',
+      'file_extensions' => 'txt pdf png jpg jpeg',
+      'max_filesize' => '5 MB',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 6,
     ),
   );
 
@@ -453,7 +516,7 @@ function ct_organization_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 3,
+      'weight' => 7,
     ),
   );
 
@@ -570,7 +633,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -629,7 +692,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -683,7 +746,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -817,6 +880,7 @@ function ct_organization_field_default_field_instances() {
   t('A short text introducing this organisation.
 ');
   t('Acronym');
+  t('Attach a  file');
   t('Description');
   t('Email');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');

@@ -117,7 +117,7 @@ function ct_events_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '11',
+            'weight' => '9',
             'visible' => FALSE,
           ),
           'teaser' => array(

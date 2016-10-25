@@ -40,6 +40,9 @@ function ct_organization_strongarm() {
       'listing' => array(
         'custom_settings' => TRUE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -153,7 +156,7 @@ function ct_organization_strongarm() {
         'coords' => 0,
       ),
       'teaser' => 0,
-      'full' => 1,
+      'full' => 0,
     ),
     'rss' => array(
       'mode' => 'simple',
