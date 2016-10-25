@@ -19,6 +19,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -28,16 +29,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3678,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1463136591,
-          'changed' => 1463136591,
+          'created' => 1477404156,
+          'changed' => 1477404156,
         ),
       ),
     ),
     'path' => array(
-      'pathauto' => 0,
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -49,6 +50,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -58,13 +60,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3992,
           'language' => 'und',
           'source' => '',
-          'uid' => 0,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1440683399,
-          'changed' => 1440683399,
+          'created' => 1477404089,
+          'changed' => 1477404089,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
     'parent' => array(
       0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
@@ -79,6 +84,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -88,13 +94,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3991,
           'language' => 'und',
           'source' => '',
-          'uid' => 0,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1440683399,
-          'changed' => 1440683399,
+          'created' => 1477404199,
+          'changed' => 1477404199,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
     'parent' => array(
       0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
@@ -109,6 +118,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -118,13 +128,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3659,
           'language' => 'und',
           'source' => '',
-          'uid' => 1,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1431281909,
-          'changed' => 1431281909,
+          'created' => 1477404206,
+          'changed' => 1477404206,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
     'parent' => array(
       0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
@@ -139,6 +152,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -148,16 +162,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3993,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1463135681,
-          'changed' => 1463135681,
+          'created' => 1477404186,
+          'changed' => 1477404186,
         ),
       ),
     ),
     'path' => array(
-      'pathauto' => 0,
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -169,6 +183,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -178,16 +193,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3655,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1463135386,
-          'changed' => 1463135386,
+          'created' => 1477404136,
+          'changed' => 1477404136,
         ),
       ),
     ),
     'path' => array(
-      'pathauto' => 0,
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -199,6 +214,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -208,16 +224,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3987,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1463136208,
-          'changed' => 1463136208,
+          'created' => 1477404056,
+          'changed' => 1477404056,
         ),
       ),
     ),
     'path' => array(
-      'pathauto' => 0,
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -229,6 +245,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -238,13 +255,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3673,
           'language' => 'und',
           'source' => '',
-          'uid' => 1,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1431281909,
-          'changed' => 1431281909,
+          'created' => 1477404150,
+          'changed' => 1477404150,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
     'parent' => array(
       0 => '795d74c2-9665-4a96-b246-a8ae0b058811',
@@ -259,6 +279,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -268,16 +289,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3663,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1463135631,
-          'changed' => 1463135631,
+          'created' => 1477403902,
+          'changed' => 1477403902,
         ),
       ),
     ),
     'path' => array(
-      'pathauto' => 0,
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -289,6 +310,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -298,13 +320,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3994,
           'language' => 'und',
           'source' => '',
-          'uid' => 0,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1440683399,
-          'changed' => 1440683399,
+          'created' => 1477404078,
+          'changed' => 1477404078,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
     'parent' => array(
       0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
@@ -319,6 +344,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -328,16 +354,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3677,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1463136689,
-          'changed' => 1463136689,
+          'created' => 1477404084,
+          'changed' => 1477404084,
         ),
       ),
     ),
     'path' => array(
-      'pathauto' => 0,
+      'pathauto' => 1,
     ),
     'parent' => array(
       0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
@@ -352,6 +378,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -361,16 +388,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3982,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1463135605,
-          'changed' => 1463135605,
+          'created' => 1477404192,
+          'changed' => 1477404192,
         ),
       ),
     ),
     'path' => array(
-      'pathauto' => 0,
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -382,6 +409,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -391,13 +419,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3671,
           'language' => 'und',
           'source' => '',
-          'uid' => 1,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1431281909,
-          'changed' => 1431281909,
+          'created' => 1477404029,
+          'changed' => 1477404029,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
   );
   $terms[] = array(
@@ -409,6 +440,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -418,13 +450,16 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
           'revision_id' => 3668,
           'language' => 'und',
           'source' => '',
-          'uid' => 1,
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1431281909,
-          'changed' => 1431281909,
+          'created' => 1477404095,
+          'changed' => 1477404095,
         ),
       ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
     ),
     'parent' => array(
       0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
