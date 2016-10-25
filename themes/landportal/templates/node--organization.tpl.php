@@ -76,7 +76,7 @@
 //dpm($content);
 hide($content['field_related_topics']);
 hide($content['field_geographical_focus']);
-hide($content['locations']);
+//hide($content['locations']);
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <aside class="col-sm-4 col-lg-3">
