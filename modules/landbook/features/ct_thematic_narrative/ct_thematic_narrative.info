@@ -1,7 +1,7 @@
 name = CT thematic narrative
 core = 7.x
 package = Landbook
-version = 7.x-2.5
+version = 7.x-2.6
 dependencies[] = ctools
 dependencies[] = entityreference
 dependencies[] = features
@@ -12,6 +12,7 @@ dependencies[] = i18n_taxonomy
 dependencies[] = image
 dependencies[] = landportal_base
 dependencies[] = landportal_taxonomy
+dependencies[] = media
 dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = text

@@ -19,12 +19,9 @@ function landbook_promoted_thematic_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 8,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
       ),
       'listing' => array(
         'label' => 'above',
@@ -134,7 +131,7 @@ function landbook_promoted_thematic_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 8,
       ),
       'listing' => array(
         'label' => 'above',
@@ -248,7 +245,7 @@ function landbook_promoted_thematic_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 10,
       ),
       'listing' => array(
         'label' => 'above',
@@ -303,7 +300,7 @@ function landbook_promoted_thematic_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'listing' => array(
         'label' => 'above',

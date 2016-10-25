@@ -19,10 +19,9 @@ function landbook_country_page_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'listing' => array(
         'label' => 'above',
@@ -124,7 +123,7 @@ function landbook_country_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'listing' => array(
         'label' => 'above',
@@ -227,7 +226,7 @@ function landbook_country_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 11,
       ),
       'listing' => array(
         'label' => 'above',
