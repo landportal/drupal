@@ -33,7 +33,7 @@ function landbook_country_page_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -36,
+        'weight' => -34,
       ),
       'seven' => array(
         'region' => '',
@@ -67,7 +67,7 @@ function landbook_country_page_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -34,
+        'weight' => -32,
       ),
       'seven' => array(
         'region' => '',

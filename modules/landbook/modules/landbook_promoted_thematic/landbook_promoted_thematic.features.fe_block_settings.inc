@@ -33,7 +33,7 @@ function landbook_promoted_thematic_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -33,
+        'weight' => -31,
       ),
       'seven' => array(
         'region' => '',
@@ -67,7 +67,7 @@ function landbook_promoted_thematic_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'landportal',
-        'weight' => -35,
+        'weight' => -33,
       ),
       'seven' => array(
         'region' => '',

@@ -75,7 +75,7 @@ function ct_thematic_narrative_strongarm() {
         'custom_settings' => FALSE,
       ),
       'teaser' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -99,16 +99,16 @@ function ct_thematic_narrative_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'locations' => array(
-          'weight' => '6',
-        ),
-        'path' => array(
           'weight' => '7',
         ),
+        'path' => array(
+          'weight' => '8',
+        ),
         'xmlsitemap' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
       ),
       'display' => array(
@@ -119,6 +119,10 @@ function ct_thematic_narrative_strongarm() {
           ),
           'listing' => array(
             'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
@@ -190,7 +194,7 @@ function ct_thematic_narrative_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_thematic_narrative';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_thematic_narrative'] = $strongarm;
 
   $strongarm = new stdClass();

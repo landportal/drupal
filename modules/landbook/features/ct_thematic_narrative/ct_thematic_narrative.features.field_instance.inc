@@ -46,7 +46,7 @@ function ct_thematic_narrative_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -127,12 +127,9 @@ function ct_thematic_narrative_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'field_collection',
-        'settings' => array(
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_fields',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -183,7 +180,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -230,11 +227,17 @@ function ct_thematic_narrative_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_indicators',
     'label' => 'Table',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -255,7 +258,7 @@ function ct_thematic_narrative_field_default_field_instances() {
     'bundle' => 'thematic_narrative',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Landvoc Theme or Overarching Category of this narrative.',
+    'description' => 'Select a Landvoc Theme or Overarching Category this narrative is about.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -281,6 +284,15 @@ function ct_thematic_narrative_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
     ),
     'entity_type' => 'node',
     'entityconnect_show_add_icon' => 0,
@@ -288,8 +300,8 @@ function ct_thematic_narrative_field_default_field_instances() {
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_landvoc_to',
-    'label' => 'landvoc_to',
-    'required' => 0,
+    'label' => 'The narrative (title)',
+    'required' => 1,
     'settings' => array(
       'behaviors' => array(
         'taxonomy-index' => array(
@@ -306,7 +318,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 0,
     ),
   );
 
@@ -341,7 +353,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -400,7 +412,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'node',
@@ -461,7 +473,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -510,6 +522,15 @@ function ct_thematic_narrative_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'full',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_thematic_image',
@@ -542,7 +563,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -581,27 +602,56 @@ function ct_thematic_narrative_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'title_field',
-    'label' => 'Title',
-    'required' => TRUE,
+    'label' => 'The subtitle of the narrative',
+    'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -10,
+            ),
+            'full_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'hide_label' => array(
-        'entity' => FALSE,
-        'page' => FALSE,
+        'entity' => 0,
+        'page' => 0,
       ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -611,15 +661,15 @@ function ct_thematic_narrative_field_default_field_instances() {
   t('Geographical focus');
   t('Info');
   t('LB visualization settings');
-  t('Landvoc Theme or Overarching Category of this narrative.');
   t('Narrative');
   t('Overarching categories');
   t('Related concepts');
+  t('Select a Landvoc Theme or Overarching Category this narrative is about.');
   t('Table');
+  t('The narrative (title)');
+  t('The subtitle of the narrative');
   t('Thematic Image');
   t('Themes');
-  t('Title');
-  t('landvoc_to');
 
   return $field_instances;
 }
