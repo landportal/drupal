@@ -32,7 +32,7 @@ function landportal_taxonomy_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '5',
+          'weight' => '7',
         ),
         'name' => array(
           'weight' => '0',
@@ -41,7 +41,7 @@ function landportal_taxonomy_strongarm() {
           'weight' => '1',
         ),
         'xmlsitemap' => array(
-          'weight' => '4',
+          'weight' => '6',
         ),
       ),
       'display' => array(
