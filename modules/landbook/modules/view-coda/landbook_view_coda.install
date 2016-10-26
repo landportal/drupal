@@ -7,6 +7,19 @@
 
 
 /**
+ * Cleanup old Landbook blocks
+ */
+function landbook_view_coda_update_7204() {
+
+    // Old LB stuff
+    db_delete('block')->condition('module', 'landbook')->condition('delta', 'country_sidebar_first')->execute();
+    db_delete('block')->condition('module', 'landbook')->condition('delta', 'country_sidebar_second')->execute();
+    db_delete('block')->condition('module', 'landbook')->condition('delta', 'indicator_sidebar_second')->execute();
+
+}
+
+
+/**
  * Remove renamed block
  */
 function landbook_view_coda_update_7203() {
@@ -76,11 +89,6 @@ function landbook_view_coda_update_7202() {
 
 function landbook_view_coda_update_7201() {
     $block = array(
-        /* 'status' => 1, */
-        /* 'weight' => 2, */
-        /* 'region' => 'content', */
-        /* 'title' => '<none>' */
-        /* 'visibility' => BLOCK_VISIBILITY_LISTED, */
         'pages' => "book/indicators/*\nbook/thematic/*",
         'module' => 'landbook_view_coda',
         'delta' => 'landbook_vis_ranking',
@@ -94,10 +102,6 @@ function landbook_view_coda_update_7201() {
             'theme'=> $block['theme']
         ))
         ->fields(array(
-            /* 'status' => $block['status'], */
-            /* 'weight' => $block['weight'], */
-            /* 'region' => $block['region'], */
-            /* 'visibility' => $block['visibility'], */
             'pages' => $block['pages'],
         ))
         ->execute();
@@ -105,11 +109,6 @@ function landbook_view_coda_update_7201() {
 
 function landbook_view_coda_update_7200() {
     $block = array(
-        /* 'status' => 1, */
-        /* 'weight' => 2, */
-        /* 'region' => 'content', */
-        /* 'title' => '<none>' */
-        /* 'visibility' => BLOCK_VISIBILITY_LISTED, */
         'pages' => "book/countries/*\nbook/indicators/*\nbook/thematic/*",
         'module' => 'landbook_vis_map',
         'delta' => 'compare_map',
@@ -123,10 +122,6 @@ function landbook_view_coda_update_7200() {
             'theme'=> $block['theme']
         ))
         ->fields(array(
-            /* 'status' => $block['status'], */
-            /* 'weight' => $block['weight'], */
-            /* 'region' => $block['region'], */
-            /* 'visibility' => $block['visibility'], */
             'pages' => $block['pages'],
         ))
         ->execute();
