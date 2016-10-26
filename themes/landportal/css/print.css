@@ -4884,6 +4884,9 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
 .group-topics-regions .field .field-items { float: left; }
 .group-topics-regions .field .field-item { display: inline-block; margin: .2em; margin-left: 0; }
 
+/* Hide feed icon */
+.feed-icon { display: none; }
+
 .node-teaser { padding: 20px 0; }
 .node-teaser .field-name-field-image img { max-height: 150px; max-width: 150px; width: auto; height: auto; }
 .node-teaser.node-organization { line-height: 160px; text-align: center; }
