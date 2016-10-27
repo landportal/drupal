@@ -1,0 +1,3 @@
+[submodule "themes/lpbs"]
+	path = themes/lpbs
+	url = https://github.com/landportal/drupal-lpbs.git
