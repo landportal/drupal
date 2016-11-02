@@ -6,6 +6,118 @@
  */
 
 /**
+ * Clean up and settings for new LP theme (LPBS)
+ */
+function landportal_admin_update_7201() {
+    
+    // Reset Blocks
+    $blocks = array();
+    // hide main menu in LPBS as it is shown by default in the site header
+    $block = array(
+        'keys' => array(
+            'module' => 'system',
+            'delta'  => 'main-menu',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+            'region' => -1,
+            'pages' => '',
+        )
+    );
+    array_push($blocks, $block);
+
+    // hide all facetapi blocks
+    $block = array(
+        'keys' => array(
+            'module' => 'facetapi',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+            'region' => -1,
+            'pages' => '',
+        )
+    );
+    array_push($blocks, $block);
+
+    // move LP submenus
+    $block = array(
+        'keys' => array(
+            'module' => 'menu',
+            'delta'  => 'landbook-menu',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+            'region' => 'header',
+        )
+    );
+    array_push($blocks, $block);
+    $block = array(
+        'keys' => array(
+            'module' => 'menu',
+            'delta'  => 'landdebate-menu',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+            'region' => 'header',
+        )
+    );
+    array_push($blocks, $block);
+    $block = array(
+        'keys' => array(
+            'module' => 'menu',
+            'delta'  => 'menu-landlibrary-menu',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+            'region' => 'header',
+        )
+    );
+    array_push($blocks, $block);
+    $block = array(
+        'keys' => array(
+            'module' => 'menu',
+            'delta'  => 'user-signin',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+            'region' => 'header',
+        )
+    );
+    array_push($blocks, $block);
+    
+    $block = array(
+        'keys' => array(
+            'module' => 'search',
+            'delta'  => 'form',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+            'region' => 'navigation',
+        )
+    );
+    array_push($blocks, $block);
+
+
+    // Execute block changes
+    foreach($blocks as $block){
+        db_merge('block')
+            ->key($block['keys'])
+            ->fields($block['values'])
+            ->execute();
+    }
+
+
+    // DISABLE MODULES
+    module_disable(array('nice_menus', 'lang_dropdown'));
+
+    // DEV REMOVE
+    //drupal_set_installed_schema_version('landportal_admin', '7200');
+}
+
+
+
+
+/**
  * Clean up modules that have been removed brutally
  */
 function landportal_admin_update_7200() {
