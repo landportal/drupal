@@ -46,14 +46,10 @@ projects:
       url: "https://github.com/landportal/rdfx"
       tag: "7.x-2.0-alpha5"
   rdf_indexer:
-    version: ~
     download:
-      working-copy: true
-      type: git
-      branch: "7.x-1.x"
-      url: "git://git.drupal.org/project/rdf_indexer.git"
-    patch:
-      - "https://www.drupal.org/files/issues/rdf_indexer-add_virtuoso_support-2029717-15.patch"
+      type: "git"
+      url: "https://github.com/landportal/rdf_indexer"
+      tag: "7.x-1.x-alpha1"
 
 
 libraries:
