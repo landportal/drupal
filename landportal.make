@@ -20,7 +20,7 @@ projects:
   - block_class
   - calendar
   - captcha
-  - chosen
+#  - chosen
   - ckeditor
   - complete_profile
   - computed_field
@@ -78,7 +78,7 @@ projects:
   - media
   - media_ckeditor
   - module_filter
-  - nice_menus
+#  - nice_menus
   - node_edit_protection
   - oauth
   - pathauto
