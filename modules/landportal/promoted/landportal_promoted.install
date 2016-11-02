@@ -1,0 +1,69 @@
+<?php
+/**
+ * Install / Upgrade hooks
+ */
+
+/**
+ * Clean up modules that have been removed brutally
+ */
+function landportal_promoted_install() {
+  module_disable('landportal_homepage');
+  module_disable('promoted');
+
+  db_delete('block')
+    ->condition('module', 'views')
+    ->condition('delta', 'front_page_promoted-block')
+    ->execute();
+
+  db_delete('block')
+    ->condition('module', 'views')
+    ->condition('delta', 'landlibrary_promoted-block')
+    ->execute();
+
+  db_delete('block')
+    ->condition('module', 'views')
+    ->condition('delta', 'promoted_nodes-block')
+    ->execute();
+
+  db_delete('block')
+    ->condition('module', 'views')
+    ->condition('delta', 'promoted_nodes-block_1')
+    ->execute();
+
+  db_delete('block')
+    ->condition('module', 'promoted')
+    ->execute();
+
+  db_delete('block')
+    ->condition('module', 'landbook')
+    ->condition('delta', 'country_promoted_nodes_block')
+    ->execute();
+  db_delete('block')
+    ->condition('module', 'landbook')
+    ->condition('delta', 'thematic_promoted_nodes_block')
+    ->execute();
+
+    $blocks = array();
+    /* $block = array( */
+    /*     'keys' => array( */
+    /*         'module' => 'views', */
+    /*         'delta' => 'front_page_promoted-block', */
+    /*     ), */
+    /*     'values' => array( */
+    /*         'status' => 0, */
+    /*         'weight' => 0, */
+    /*         'region' => -1, */
+    /*         'visibility' => 0, */
+    /*         'pages'  => '', */
+    /*     ) */
+    /* ); */
+    /* array_push($blocks, $block); */
+
+  foreach($blocks as $block){
+        db_merge('block')
+            ->key($block['keys'])
+            ->fields($block['values'])
+            ->execute();
+    }
+    return FALSE;
+}

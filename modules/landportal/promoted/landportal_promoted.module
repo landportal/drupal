@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * Code for the Landportal Promoted module
+ */
+
+function landportal_promoted_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
+ * Implements hook_views_default_views().
+ */
+function landportal_promoted_views_default_views() {
+    $export = array();
+    include 'views/promoted.inc';
+    $export[$view->name] = $view;
+    return $export;
+}

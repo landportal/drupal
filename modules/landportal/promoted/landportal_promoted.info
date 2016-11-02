@@ -1,0 +1,11 @@
+name = Landportal Promoted
+description = Land Portal promoted blocks and features
+core = 7.x
+package = Landportal
+version = 7.x-2.3-beta1
+project = landportal_blocks
+#dependencies[] = ctools
+dependencies[] = block
+dependencies[] = custom_pub
+dependencies[] = views
+project status url = https://github.com/landportal/drupal
