@@ -41,11 +41,10 @@ projects:
   mailchimp:
     version: "2.13"
   rdfx:
-    version: "2.x-dev"
     download:
       type: "git"
-      branch: "7.x-2.x"
-      url: "git://git.drupal.org/project/rdfx.git"
+      url: "https://github.com/landportal/rdfx"
+      tag: "7.x-2.0-alpha5"
   rdf_indexer:
     version: ~
     download:
