@@ -12,7 +12,6 @@ dependencies[] = field_group
 dependencies[] = file
 dependencies[] = i18n_taxonomy
 dependencies[] = image
-dependencies[] = landbook_promoted_thematic
 dependencies[] = landportal_base
 dependencies[] = landportal_multilingual
 dependencies[] = landportal_taxonomy
