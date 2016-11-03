@@ -80,7 +80,7 @@ function landportal_admin_update_7201() {
             'theme'  => 'lpbs',
         ),
         'values' => array(
-            'region' => 'header',
+            'region' => -1,
         )
     );
     array_push($blocks, $block);
