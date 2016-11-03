@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * Code for the Landportal Mailchimp feature.
+ */
+
+include_once 'landportal_mailchimp.features.inc';
+
+/* // At user registration */
+/* function mailchimp_feature_form_user_register_form_alter(&$form, &$form_state,$form_id){ */
+/*   // Validate MC subscription */
+/*   $form['#validate'][]='mailchimp_feature_validate_mailchimp_lists_user_subscribe'; */
+/* } */
+
+/* // Check that the user chose at least one language? */
+/* function landportal_mailchimp_validate_mailchimp_lists_user_subscribe($form, &$form_state){ */
+/*   if($form_state['values']['mailchimp_lists']['mailchimp_land_portal_news_digest']['subscribe'] == 1){ */
+/*     $languages=$form_state['values']['mailchimp_lists']['mailchimp_land_portal_news_digest']['interest_groups'][1]; */
+/*     $flag = false; */
+/*     foreach($languages as $lang){ */
+/*       if($lang !== 0){ */
+/*         $flag = TRUE; */
+/*       } */
+/*     } */
+/*     if($flag == false){ */
+/*       form_set_error('', 'Please select language'); */
+/*     } */
+/*   } */
+/* } */
