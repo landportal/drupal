@@ -11,3 +11,5 @@ features[features_api][] = api:2
 features[field_base][] = field_mc_legend
 features[field_base][] = field_mc_newsletter
 features[field_group][] = group_lists|user|user|form
+features[field_instance][] = user-user-field_mc_legend
+features[field_instance][] = user-user-field_mc_newsletter
