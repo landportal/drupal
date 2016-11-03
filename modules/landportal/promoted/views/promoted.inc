@@ -86,11 +86,11 @@ $handler->display->display_options['filters']['promote']['field'] = 'promote';
 $handler->display->display_options['filters']['promote']['value'] = '1';
 
 /* Display: Front block */
-$handler = $view->new_display('block', 'Front block', 'block');
+$handler = $view->new_display('block', 'Front block', 'front');
 $handler->display->display_options['defaults']['title'] = FALSE;
 
 /* Display: Library block */
-$handler = $view->new_display('block', 'Library block', 'block_1');
+$handler = $view->new_display('block', 'Library block', 'library');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Title */
@@ -154,7 +154,7 @@ $handler->display->display_options['filters']['promote']['field'] = 'promote';
 $handler->display->display_options['filters']['promote']['value'] = '1';
 
 /* Display: CP block */
-$handler = $view->new_display('block', 'CP block', 'block_2');
+$handler = $view->new_display('block', 'CP block', 'country');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Field: Geographical focus (field_geographical_focus) */
@@ -241,7 +241,7 @@ $handler->display->display_options['filters']['promoted_to_country_page']['field
 $handler->display->display_options['filters']['promoted_to_country_page']['value'] = '1';
 
 /* Display: TP block */
-$handler = $view->new_display('block', 'TP block', 'block_3');
+$handler = $view->new_display('block', 'TP block', 'thematic');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Entity Reference: Referenced Entity */

@@ -3,12 +3,87 @@
  * Install / Upgrade hooks
  */
 
+function landportal_promoted_update_7200() {
+
+  $blocks = array();
+
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'promoted-front',
+    ),
+    'values' => array(
+      'status' => 0,
+      'weight' => 0,
+      'region' => 'highlighted',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages'  => '<front>',
+    )
+  );
+  array_push($blocks, $block);
+
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'promoted-library',
+    ),
+    'values' => array(
+      'status' => 0,
+      'weight' => 0,
+      'region' => 'highlighted',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages'  => 'library',
+    )
+  );
+  array_push($blocks, $block);
+
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'promoted-country',
+    ),
+    'values' => array(
+      'status' => 0,
+      'weight' => 0,
+      'region' => 'highlighted',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages'  => 'book/countries/*',
+    )
+  );
+  array_push($blocks, $block);
+
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'promoted-thematic',
+    ),
+    'values' => array(
+      'status' => 0,
+      'weight' => 0,
+      'region' => 'highlighted',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages'  => 'book/thematic/*',
+    )
+  );
+  array_push($blocks, $block);
+
+  foreach($blocks as $block){
+        db_merge('block')
+            ->key($block['keys'])
+            ->fields($block['values'])
+            ->execute();
+    }
+}
+
 /**
  * Clean up modules that have been removed brutally
  */
-function landportal_promoted_install() {
-  module_disable('landportal_homepage');
-  module_disable('promoted');
+function landportal_promoted_enable() {
+  module_disable(array(
+    'landportal_homepage',
+    'promoted',
+    'landbook_promoted_thematic'
+  ));
 
   db_delete('block')
     ->condition('module', 'views')
@@ -42,28 +117,16 @@ function landportal_promoted_install() {
     ->condition('module', 'landbook')
     ->condition('delta', 'thematic_promoted_nodes_block')
     ->execute();
+}
 
-    $blocks = array();
-    /* $block = array( */
-    /*     'keys' => array( */
-    /*         'module' => 'views', */
-    /*         'delta' => 'front_page_promoted-block', */
-    /*     ), */
-    /*     'values' => array( */
-    /*         'status' => 0, */
-    /*         'weight' => 0, */
-    /*         'region' => -1, */
-    /*         'visibility' => 0, */
-    /*         'pages'  => '', */
-    /*     ) */
-    /* ); */
-    /* array_push($blocks, $block); */
-
-  foreach($blocks as $block){
-        db_merge('block')
-            ->key($block['keys'])
-            ->fields($block['values'])
-            ->execute();
-    }
-    return FALSE;
+function landportal_promoted_uninstall() {
+  $or = db_or()->condition('delta', 'promoted-library')
+               ->condition('delta', 'promoted-front')
+               ->condition('delta', 'promoted-thematic')
+               ->condition('delta', 'promoted-country')
+    ;
+  db_delete('block')
+    ->condition('module', 'views')
+    ->condition($or)
+    ->execute();
 }

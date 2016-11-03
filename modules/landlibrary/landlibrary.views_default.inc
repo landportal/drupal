@@ -14,7 +14,7 @@ function landlibrary_views_default_views() {
         'browse',
         'by_providers',
         'organizations',
-        'promoted',
+        //'promoted',
         'resource_type',
     );
     foreach ($views as $view_name) {
