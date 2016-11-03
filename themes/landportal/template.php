@@ -99,7 +99,7 @@ function landportal_preprocess_html(&$variables) {
  * TODO: pretty bad hook in there, surely a better way to do that.
  */
 function landportal_preprocess_page(&$variables) {
-    dpm($variables, 'preprocess_page');
+//    dpm($variables, 'preprocess_page');
     if (isset($variables['node']->type)) {
         $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
     }
@@ -123,7 +123,7 @@ function landportal_preprocess_page(&$variables) {
  * If no menu is found, remove the whole block.
  */
 function landportal_page_alter(&$page) {
-    dpm($page, 'page_alter');
+//    dpm($page, 'page_alter');
   if (!isset($page['section_header'])) return;
   $check = FALSE;
   foreach (array('landbook-menu', 'landdebate-menu', 'menu-landlibrary-menu', 'user-signin') as $i) {
