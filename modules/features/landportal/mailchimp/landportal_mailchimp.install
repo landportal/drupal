@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Remove deprecated and borken MC modules
+ */
+function landportal_mailchimp_update_7200() {
+  $or = db_or()
+    ->condition('name', 'custom_mailchimp_us')
+    ->condition('name', 'mailchimp_feature')
+    ->condition('name', 'mailchimp_user_list')
+    ;
+  
+  db_delete('system')
+    ->condition($or)
+    ->execute();
+}
