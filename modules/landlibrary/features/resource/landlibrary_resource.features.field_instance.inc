@@ -57,7 +57,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'above',
@@ -146,7 +146,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 14,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'above',
@@ -238,7 +238,7 @@ function landlibrary_resource_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 18,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'above',
@@ -337,7 +337,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -425,7 +425,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 17,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
@@ -509,7 +509,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 25,
+        'weight' => 16,
       ),
       'full' => array(
         'label' => 'above',
@@ -588,7 +588,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 20,
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'above',
@@ -664,7 +664,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 21,
+        'weight' => 12,
       ),
       'full' => array(
         'label' => 'above',
@@ -740,7 +740,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 22,
+        'weight' => 13,
       ),
       'listing' => array(
         'label' => 'above',
@@ -795,7 +795,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
@@ -869,7 +869,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 37,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'above',
@@ -930,7 +930,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 10,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -991,7 +991,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 19,
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'inline',
@@ -1114,7 +1114,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 13,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1193,7 +1193,7 @@ function landlibrary_resource_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 9,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -1285,7 +1285,7 @@ function landlibrary_resource_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 8,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'above',
@@ -1369,7 +1369,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 11,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
@@ -1431,7 +1431,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_separate',
-        'weight' => 24,
+        'weight' => 15,
       ),
       'full' => array(
         'label' => 'above',
@@ -1586,7 +1586,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 16,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1599,11 +1599,11 @@ function landlibrary_resource_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'hidden',
-        'module' => 'shs',
+        'module' => 'i18n_taxonomy',
         'settings' => array(
           'linked' => FALSE,
         ),
-        'type' => 'shs_default',
+        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
       'promoted_country_page' => array(
@@ -1743,7 +1743,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_markup',
-        'weight' => 23,
+        'weight' => 14,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1802,7 +1802,7 @@ function landlibrary_resource_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 12,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'above',
