@@ -18,23 +18,26 @@ function landlibrary_resource_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'landlibrary_resource';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_resource';
+  $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Author(s)',
-    'weight' => '6',
+    'label' => 'Author(s) and Publisher(s)',
+    'weight' => '4',
     'children' => array(
-      0 => 'field_orgref',
-      1 => 'field_doc_people',
+      0 => 'field_doc_provider',
+      1 => 'field_doc_publisher',
+      2 => 'field_orgref',
+      3 => 'field_doc_people',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Author(s) and Publisher(s)',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-authors field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-editors-pub field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_authors|node|landlibrary_resource|form'] = $field_group;
@@ -70,7 +73,7 @@ function landlibrary_resource_field_group_info() {
   $field_groups['group_deprecated|node|landlibrary_resource|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_detailresource|node|landlibrary_resource|form';
   $field_group->group_name = 'group_detailresource';
@@ -101,7 +104,7 @@ function landlibrary_resource_field_group_info() {
   $field_groups['group_detailresource|node|landlibrary_resource|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_detailsaccessresource|node|landlibrary_resource|form';
   $field_group->group_name = 'group_detailsaccessresource';
@@ -144,9 +147,10 @@ function landlibrary_resource_field_group_info() {
     'label' => 'Access to the resource',
     'weight' => '2',
     'children' => array(
-      0 => 'field_doc_is_shown_by',
-      1 => 'field_doc_thumb',
-      2 => 'group_detailsaccessresource',
+      0 => 'field_doc_is_shown_at',
+      1 => 'field_doc_is_shown_by',
+      2 => 'field_doc_is_shown_by_file',
+      3 => 'field_local_file_url',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -154,10 +158,10 @@ function landlibrary_resource_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'id' => '',
-        'classes' => 'group-doc-physical-chars field-group-fieldset undo-collapse',
+        'classes' => 'group-access field-group-fieldset',
         'description' => '',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_doc_physical_chars|node|landlibrary_resource|form'] = $field_group;
@@ -173,7 +177,7 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Publishing rights',
-    'weight' => '3',
+    'weight' => '8',
     'children' => array(
       0 => 'field_doc_copyrights_statement',
       1 => 'field_doc_licencing',
@@ -335,25 +339,22 @@ function landlibrary_resource_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'General information about the resource',
-    'weight' => '0',
+    'label' => 'About the resource',
+    'weight' => '3',
     'children' => array(
       0 => 'field_doc_creation_date',
-      1 => 'field_doc_description',
+      1 => 'field_doc_identifier',
       2 => 'field_doc_language',
-      3 => 'field_doc_type',
-      4 => 'title',
-      5 => 'group_authors',
-      6 => 'group_detailresource',
-      7 => 'group_source',
+      3 => 'field_doc_pagination',
+      4 => 'field_doc_type',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'General information about the resource',
+      'label' => 'About the resource',
       'instance_settings' => array(
         'required_fields' => 1,
         'id' => '',
-        'classes' => 'group-resource field-group-fieldset',
+        'classes' => 'group-meta field-group-fieldset',
         'description' => '',
       ),
       'formatter' => 'open',
@@ -372,14 +373,16 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Settings',
-    'weight' => '4',
+    'weight' => '9',
     'children' => array(
-      0 => 'field_doc_keyword',
-      1 => 'field_country_promoted',
-      2 => 'locations',
-      3 => 'path',
-      4 => 'xmlsitemap',
-      5 => 'language',
+      0 => 'field_doc_alt_title',
+      1 => 'field_doc_keyword',
+      2 => 'field_country_promoted',
+      3 => 'field_thematic_promoted',
+      4 => 'locations',
+      5 => 'path',
+      6 => 'xmlsitemap',
+      7 => 'language',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -396,7 +399,7 @@ function landlibrary_resource_field_group_info() {
   $field_groups['group_settings|node|landlibrary_resource|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_source|node|landlibrary_resource|form';
   $field_group->group_name = 'group_source';
@@ -466,7 +469,7 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Subject of the resource',
-    'weight' => '1',
+    'weight' => '5',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_topics',
@@ -517,11 +520,11 @@ function landlibrary_resource_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('About the resource');
   t('Access to the resource');
-  t('Author(s)');
+  t('Author(s) and Publisher(s)');
   t('Authors and Publishers');
   t('Deprecated');
-  t('General information about the resource');
   t('Meta');
   t('More details about access to resource');
   t('More details about resource');

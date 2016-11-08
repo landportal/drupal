@@ -13,7 +13,7 @@ function landlibrary_resource_field_default_field_bases() {
   // Exported field_base: 'field_doc_alt_title'.
   $field_bases['field_doc_alt_title'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 5,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_doc_alt_title',
