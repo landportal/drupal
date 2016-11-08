@@ -82,7 +82,7 @@ function landbook_view_coda_block_view($delta = '') {
                 'js' => array(
                      array(
                          'type' => 'inline',
-                         'data' => landbook_view_coda_lbvis_ready_callback('COMP = new lbvisLC({'.$jsAttr.'}); COMP.init();')
+                         'data' => landbook_view_coda_lbvis_ready_callback('COMP = new lbvisLC({'.$jsAttr.', target: "#block-compare"}); COMP.init();')
                      )
                 )
             )
