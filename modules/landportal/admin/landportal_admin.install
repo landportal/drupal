@@ -9,6 +9,9 @@
  * Clean up and settings for new LP theme (LPBS)
  */
 function landportal_admin_update_7201() {
+  module_disable(array(
+    'shs',
+  ));
     
     // Reset Blocks
     $blocks = array();
@@ -59,6 +62,8 @@ function landportal_admin_update_7201() {
         ),
         'values' => array(
             'region' => 'header',
+            'visibility' => BLOCK_VISIBILITY_LISTED,
+            'pages'  => "debate\ndebate/*\nnews/*\nevents/*\nblogs/*\norganization/*\nevent/*\nblog-post/*",
         )
     );
     array_push($blocks, $block);

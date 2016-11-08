@@ -3,6 +3,8 @@
  * Install / Upgrade hooks
  */
 
+/** Place promoted block in default locations
+ */
 function landportal_promoted_update_7200() {
 
   $blocks = array();
@@ -13,7 +15,7 @@ function landportal_promoted_update_7200() {
       'delta' => 'promoted-front',
     ),
     'values' => array(
-      'status' => 0,
+      'status' => 1,
       'weight' => 0,
       'region' => 'highlighted',
       'visibility' => BLOCK_VISIBILITY_LISTED,
@@ -28,8 +30,8 @@ function landportal_promoted_update_7200() {
       'delta' => 'promoted-library',
     ),
     'values' => array(
-      'status' => 0,
-      'weight' => 0,
+      'status' => 1,
+      'weight' => 1,
       'region' => 'highlighted',
       'visibility' => BLOCK_VISIBILITY_LISTED,
       'pages'  => 'library',
@@ -43,8 +45,8 @@ function landportal_promoted_update_7200() {
       'delta' => 'promoted-country',
     ),
     'values' => array(
-      'status' => 0,
-      'weight' => 0,
+      'status' => 1,
+      'weight' => 2,
       'region' => 'highlighted',
       'visibility' => BLOCK_VISIBILITY_LISTED,
       'pages'  => 'book/countries/*',
@@ -58,8 +60,8 @@ function landportal_promoted_update_7200() {
       'delta' => 'promoted-thematic',
     ),
     'values' => array(
-      'status' => 0,
-      'weight' => 0,
+      'status' => 1,
+      'weight' => 3,
       'region' => 'highlighted',
       'visibility' => BLOCK_VISIBILITY_LISTED,
       'pages'  => 'book/thematic/*',
@@ -68,11 +70,12 @@ function landportal_promoted_update_7200() {
   array_push($blocks, $block);
 
   foreach($blocks as $block){
-        db_merge('block')
-            ->key($block['keys'])
-            ->fields($block['values'])
-            ->execute();
-    }
+    //error_log('update ' . $block['keys']['delta']);
+    db_merge('block')
+      ->key($block['keys'])
+      ->fields($block['values'])
+      ->execute();
+  }
 }
 
 /**

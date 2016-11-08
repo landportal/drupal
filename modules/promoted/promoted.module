@@ -39,7 +39,7 @@ function promoted_block_view($delta = '') {
     case 'country_promoted_nodes_block' :
       $block['subject'] = '';
       $block['content'] = array(
-        '#theme' => 'country_promoted_nodes_block',
+//        '#theme' => 'country_promoted_nodes_block',
         '#attached' => array(
           'js' => array(
             PATH_TO_MODULE . '/js/promoted.js',
@@ -54,7 +54,7 @@ function promoted_block_view($delta = '') {
     case 'thematic_promoted_nodes_block' :
       $block['subject'] = '';
       $block['content'] = array(
-        '#theme' => 'thematic_promoted_nodes_block',
+//        '#theme' => 'thematic_promoted_nodes_block',
         '#attached' => array(
           'js' => array(
             PATH_TO_MODULE . '/js/promoted.js',

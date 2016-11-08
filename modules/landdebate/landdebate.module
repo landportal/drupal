@@ -69,18 +69,3 @@ function landdebate_node_view_alter(&$build) {
       drupal_set_breadcrumb($breadcrumb);
     }
 }
-
-/**
- * Blocks configuration for landdebate section header
- *
- * TODO: bugfix: pages & visibility config doesn't appear in the block configuration page (it seems to work ok though)
- */
-function landdebate_block_info_alter(&$blocks, $theme, $code_blocks) {
-  if ($theme == 'landportal') {
-    $blocks['menu'][$GLOBALS['landdebate_menu']]['status'] = TRUE;
-    $blocks['menu'][$GLOBALS['landdebate_menu']]['region'] = 'section_header';
-    $blocks['menu'][$GLOBALS['landdebate_menu']]['visibility'] = BLOCK_VISIBILITY_LISTED;
-    $blocks['menu'][$GLOBALS['landdebate_menu']]['pages'] = "debate\ndebate/*";
-  }
-  return $blocks;
-}
