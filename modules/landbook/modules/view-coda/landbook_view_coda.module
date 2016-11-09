@@ -29,7 +29,10 @@ function landbook_view_coda_page_build(&$page) {
         // For thematic narrative nodes, pick indicators to show in the table (field_indicators)
         $item = menu_get_item();
         $node = array_pop($item['page_arguments']);
+        // Indicators for visualization
         $table_ind = array();
+        $ranking_ind = null;
+        $map_ind = null;
         if (!empty($node->field_indicators[LANGUAGE_NONE])) {
             foreach($node->field_indicators['und'] as $ind) {
                 $term = taxonomy_term_load($ind['tid']);
@@ -37,10 +40,18 @@ function landbook_view_coda_page_build(&$page) {
                 array_push($table_ind, $id[0]['value']);
             }
         }
+        if (!empty($node->field_indicator_ranking[LANGUAGE_NONE])) {
+          $term = taxonomy_term_load($node->field_indicator_ranking[LANGUAGE_NONE]['tid']);
+          $id = field_get_items('taxonomy_term', $term, 'field_id');
+          $id[0]['value'];
+
+        }
         drupal_add_js(array(
             'landbook' => array(
                 'type' => 'thematic',
-                'indicators' => $table_ind
+                'indicators' => $table_ind,
+                'ranking' => $ranking_ind,
+                'map' => $map_ind
             )
         ), 'setting');
     }
