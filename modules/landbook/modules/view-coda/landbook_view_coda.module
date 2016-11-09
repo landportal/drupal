@@ -40,7 +40,6 @@ function landbook_view_coda_page_build(&$page) {
                 array_push($table_ind, $id[0]['value']);
             }
         }
-        dpm($node);
         if (!empty($node->field_indicator_ranking[LANGUAGE_NONE])) {
           $term = taxonomy_term_load($node->field_indicator_ranking[LANGUAGE_NONE][0]['tid']);
           $id = field_get_items('taxonomy_term', $term, 'field_id');
