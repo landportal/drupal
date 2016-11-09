@@ -150,7 +150,7 @@ function landbook_view_coda_block_view($delta = '') {
             'js' => array(array(
                 'type' => 'inline',
                 'data' => landbook_view_coda_lbvis_ready_callback(
-                    'RANKING = new lbvisRanking({' . $jsAttrIndicators . '}); RANKING.init();')
+                    'RANKING = new lbvisRanking({' . $jsRanking . '}); RANKING.init();')
             ))
         ));
         break;
