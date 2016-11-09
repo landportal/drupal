@@ -10,8 +10,7 @@
             tooltip: true, // '{indicator.label}'
             years: true,
             indicators: (Drupal.settings.landbook.type == 'indicators' ? false : true),
-            indicator: (Drupal.settings.landbook.type == 'indicators' && Drupal.settings.landbook.map
-                        ? Drupal.settings.landbook.map
+            indicator: (Drupal.settings.landbook.map ? Drupal.settings.landbook.map
                         : 'WB-SP.RUR.TOTL.ZS'),
             vis: LBV
         });
