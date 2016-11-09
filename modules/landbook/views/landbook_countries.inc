@@ -1,4 +1,5 @@
 <?php
+
 $view = new view();
 $view->name = 'landbook_countries';
 $view->description = 'Landbook countries, list all known countries from taxonomy, link to country pages';
@@ -23,8 +24,10 @@ $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['row_options']['default_field_elements'] = FALSE;
 /* Header: Global: Text area */
 $handler->display->display_options['header']['area']['id'] = 'area';
 $handler->display->display_options['header']['area']['table'] = 'views';
@@ -109,6 +112,7 @@ $handler->display->display_options['menu']['context_only_inline'] = 0;
 
 /* Display: Page country narrative */
 $handler = $view->new_display('page', 'Page country narrative', 'page_1');
+$handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Taxonomy term: Content with term */
