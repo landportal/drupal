@@ -29,10 +29,6 @@ $handler->display->display_options['empty']['area']['field'] = 'area';
 $handler->display->display_options['empty']['area']['empty'] = TRUE;
 $handler->display->display_options['empty']['area']['content'] = '<div class="empty"></div>';
 $handler->display->display_options['empty']['area']['format'] = 'full_html';
-/* Relationship: Content: Country Promoted (field_country_promoted) */
-$handler->display->display_options['relationships']['field_country_promoted_tid']['id'] = 'field_country_promoted_tid';
-$handler->display->display_options['relationships']['field_country_promoted_tid']['table'] = 'field_data_field_country_promoted';
-$handler->display->display_options['relationships']['field_country_promoted_tid']['field'] = 'field_country_promoted_tid';
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -77,6 +73,25 @@ $handler->display->display_options['filters']['status']['field'] = 'status';
 $handler->display->display_options['filters']['status']['value'] = 1;
 $handler->display->display_options['filters']['status']['group'] = 1;
 $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  'und' => 'und',
+);
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'blog_post' => 'blog_post',
+  'debate' => 'debate',
+  'event' => 'event',
+  'landlibrary_resource' => 'landlibrary_resource',
+  'news' => 'news',
+);
 
 /* Display: Promoted thematic */
 $handler = $view->new_display('block', 'Promoted thematic', 'block');
@@ -132,7 +147,6 @@ $handler->display->display_options['arguments']['nid']['summary']['number_of_rec
 $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
 $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-$handler->display->display_options['filter_groups']['operator'] = 'OR';
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
 $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -149,13 +163,6 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
-$handler->display->display_options['filters']['language']['group'] = 1;
-/* Filter criterion: Content: Promoted to Thematic page */
-$handler->display->display_options['filters']['promoted_to_thematic_page']['id'] = 'promoted_to_thematic_page';
-$handler->display->display_options['filters']['promoted_to_thematic_page']['table'] = 'node';
-$handler->display->display_options['filters']['promoted_to_thematic_page']['field'] = 'promoted_to_thematic_page';
-$handler->display->display_options['filters']['promoted_to_thematic_page']['value'] = '1';
-$handler->display->display_options['filters']['promoted_to_thematic_page']['group'] = 1;
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -166,9 +173,12 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'event' => 'event',
   'landlibrary_resource' => 'landlibrary_resource',
   'news' => 'news',
-  'organization' => 'organization',
 );
-$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Content: Promoted to Thematic page */
+$handler->display->display_options['filters']['promoted_to_thematic_page']['id'] = 'promoted_to_thematic_page';
+$handler->display->display_options['filters']['promoted_to_thematic_page']['table'] = 'node';
+$handler->display->display_options['filters']['promoted_to_thematic_page']['field'] = 'promoted_to_thematic_page';
+$handler->display->display_options['filters']['promoted_to_thematic_page']['value'] = '1';
 
 /* Display: Promoted country */
 $handler = $view->new_display('block', 'Promoted country', 'block_1');
@@ -201,6 +211,14 @@ $handler->display->display_options['filters']['status']['field'] = 'status';
 $handler->display->display_options['filters']['status']['value'] = 1;
 $handler->display->display_options['filters']['status']['group'] = 1;
 $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  'und' => 'und',
+);
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -211,14 +229,6 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'event' => 'event',
   'landlibrary_resource' => 'landlibrary_resource',
   'news' => 'news',
-);
-/* Filter criterion: Content: Language */
-$handler->display->display_options['filters']['language']['id'] = 'language';
-$handler->display->display_options['filters']['language']['table'] = 'node';
-$handler->display->display_options['filters']['language']['field'] = 'language';
-$handler->display->display_options['filters']['language']['value'] = array(
-  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  'und' => 'und',
 );
 /* Filter criterion: Content: Promoted to country page */
 $handler->display->display_options['filters']['promoted_to_country_page']['id'] = 'promoted_to_country_page';
