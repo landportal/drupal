@@ -1,6 +1,12 @@
 <?php
 /**
  * @file
+ * Code for the Landportal Promoted feature.
+ */
+
+include_once 'landportal_promoted.features.inc';
+/**
+ * @file
  * Code for the Landportal Promoted module
  */
 
