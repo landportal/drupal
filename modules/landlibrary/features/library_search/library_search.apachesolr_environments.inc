@@ -14,7 +14,7 @@ function library_search_apachesolr_environments() {
   $environment->api_version = 1;
   $environment->env_id = 'landlibrary_search';
   $environment->name = 'Landlibrary solr search';
-  $environment->url = 'http://localhost:8983/solr/landlibrary';
+  $environment->url = 'http://localhost:8080/solr/landlibrary';
   $environment->service_class = '';
   $environment->conf = array(
     'apachesolr_direct_commit' => 0,
