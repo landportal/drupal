@@ -117,7 +117,7 @@ function ct_news_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '13',
+            'weight' => '10',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -125,7 +125,7 @@ function ct_news_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '4',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'promoted_country_page' => array(

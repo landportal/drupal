@@ -22,7 +22,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -31,7 +31,7 @@ function ct_news_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -82,13 +82,13 @@ function ct_news_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 9,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -149,7 +149,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -166,8 +166,9 @@ function ct_news_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 2,
       ),
     ),
@@ -292,13 +293,13 @@ function ct_news_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 9,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -344,13 +345,13 @@ function ct_news_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 8,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 9,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -362,12 +363,12 @@ function ct_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_link',
-    'label' => 'Source',
+    'label' => 'Website',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
@@ -376,7 +377,7 @@ function ct_news_field_default_field_instances() {
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
-        'target' => '_blank',
+        'target' => 'default',
         'title' => '',
       ),
       'display' => array(
@@ -391,14 +392,14 @@ function ct_news_field_default_field_instances() {
       'title_value' => '',
       'url' => 0,
       'user_register_form' => FALSE,
-      'validate_url' => 1,
+      'validate_url' => 0,
     ),
     'widget' => array(
       'active' => 0,
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 7,
+      'weight' => 3,
     ),
   );
 
@@ -414,7 +415,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -431,9 +432,10 @@ function ct_news_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -473,7 +475,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -490,9 +492,10 @@ function ct_news_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -527,14 +530,14 @@ function ct_news_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -551,9 +554,10 @@ function ct_news_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -592,8 +596,8 @@ function ct_news_field_default_field_instances() {
   t('Overarching categories');
   t('Related concepts');
   t('Select the language of the original article that is reposted');
-  t('Source');
   t('Themes');
+  t('Website');
 
   return $field_instances;
 }
