@@ -1,7 +1,5 @@
 <?php
 /**
  * @file
- * Code for the Landbook Promoted Thematic feature.
+ * Drupal needs this blank file.
  */
-
-include_once 'landbook_promoted_thematic.features.inc';
