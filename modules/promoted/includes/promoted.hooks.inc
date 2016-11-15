@@ -89,35 +89,3 @@ function promoted_form_custom_options_after_build($form, &$form_state){
   $form['options']['promoted_to_thematic_page']['#weight'] = 5;
   return $form;
 }
-
-/**
- * Implements hook_views_query_alter().
- */
-function promoted_views_query_alter(&$view, &$query){
-  if(!empty($view->name) && $view->name == 'promoted_nodes'){
-    $args = arg();
-    if($view->current_display == 'block_1'){
-      if (!empty($args[2])) {
-        $tid = promoted_get_country_iso($args[2]);
-        $query->where[1]['conditions'][4]['value'] = $tid;
-      }
-    }
-    if($view->current_display == 'block'){
-      if($args[0] == 'node' && is_numeric($args[1])){
-        $node = node_load($args[1]);
-        if($node->type == 'thematic_narrative'){
-          $field_values = field_get_items('node', $node, 'field_landvoc_to');
-          $tid = $field_values[0]['target_id'];
-          $query->where[1]['conditions'][4]['value'] = $args[1];
-          $query->where[1]['conditions'][4]['operator'] = '=';
-
-          $query->where[2]['conditions'][5]['value'] = $tid;
-          $query->where[2]['conditions'][5]['operator'] = '=';
-
-          $query->where[3]['conditions'][5]['value'] = $tid;
-          $query->where[3]['conditions'][5]['operator'] = '=';
-        }
-      }
-    }
-  }
-}

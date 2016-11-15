@@ -67,6 +67,10 @@ body[class*="node-type-thematic-narrative"]{
         background:url('../images/infographics.png') no-repeat 50% 0;
         @extend .title-decorated;
     }
+    #ranking header h2 {
+        background:url('../images/ranking.png') no-repeat 50% 0;
+        @extend .title-decorated;
+    }
     #lgaf header h2 {
         background:url('../images/rankings.png') no-repeat 50% 0;
         @extend .title-decorated;
@@ -149,6 +153,7 @@ body[class*="node-type-thematic-narrative"]{
     #block-views-country-content-partners,
     #media-block .media-block-content,
     #block-system-main,
+    #partners-block,
     #compare {
         background-color: $grey-bglight;
         @extend .clearfix;

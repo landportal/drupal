@@ -26,11 +26,11 @@ To rebuild automatically (on changes) the CSS, use something like:
 a { color: #A3C642; }
 
 /*!
- *  Font Awesome 4.6.2 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH -------------------------- */
-@font-face { font-family: 'FontAwesome'; src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.6.2&1472885790); src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.6.2&1472885790#iefix) format("embedded-opentype"), url(../fonts/font-awesome/fontawesome-webfont.woff2?v=4.6.2&1472885790) format("woff2"), url(../fonts/font-awesome/fontawesome-webfont.woff?v=4.6.2&1472885790) format("woff"), url(../fonts/font-awesome/fontawesome-webfont.ttf?v=4.6.2&1472885790) format("truetype"), url(../fonts/font-awesome/fontawesome-webfont.svg?v=4.6.2&1472885790#fontawesomeregular) format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'FontAwesome'; src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.7.0&1472885790); src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.7.0&1472885790#iefix) format("embedded-opentype"), url(../fonts/font-awesome/fontawesome-webfont.woff2?v=4.7.0&1472885790) format("woff2"), url(../fonts/font-awesome/fontawesome-webfont.woff?v=4.7.0&1472885790) format("woff"), url(../fonts/font-awesome/fontawesome-webfont.ttf?v=4.7.0&1472885790) format("truetype"), url(../fonts/font-awesome/fontawesome-webfont.svg?v=4.7.0&1472885790#fontawesomeregular) format("svg"); font-weight: normal; font-style: normal; }
 .fa { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 /* makes the font 33% larger relative to the icon container */
@@ -1148,7 +1148,7 @@ a { color: #A3C642; }
 
 .fa-expeditedssl:before { content: ""; }
 
-.fa-battery-4:before, .fa-battery-full:before { content: ""; }
+.fa-battery-4:before, .fa-battery:before, .fa-battery-full:before { content: ""; }
 
 .fa-battery-3:before, .fa-battery-three-quarters:before { content: ""; }
 
@@ -1364,11 +1364,97 @@ a { color: #A3C642; }
 
 .fa-themeisle:before { content: ""; }
 
+.fa-google-plus-circle:before, .fa-google-plus-official:before { content: ""; }
+
+.fa-fa:before, .fa-font-awesome:before { content: ""; }
+
+.fa-handshake-o:before { content: ""; }
+
+.fa-envelope-open:before { content: ""; }
+
+.fa-envelope-open-o:before { content: ""; }
+
+.fa-linode:before { content: ""; }
+
+.fa-address-book:before { content: ""; }
+
+.fa-address-book-o:before { content: ""; }
+
+.fa-vcard:before, .fa-address-card:before { content: ""; }
+
+.fa-vcard-o:before, .fa-address-card-o:before { content: ""; }
+
+.fa-user-circle:before { content: ""; }
+
+.fa-user-circle-o:before { content: ""; }
+
+.fa-user-o:before { content: ""; }
+
+.fa-id-badge:before { content: ""; }
+
+.fa-drivers-license:before, .fa-id-card:before { content: ""; }
+
+.fa-drivers-license-o:before, .fa-id-card-o:before { content: ""; }
+
+.fa-quora:before { content: ""; }
+
+.fa-free-code-camp:before { content: ""; }
+
+.fa-telegram:before { content: ""; }
+
+.fa-thermometer-4:before, .fa-thermometer:before, .fa-thermometer-full:before { content: ""; }
+
+.fa-thermometer-3:before, .fa-thermometer-three-quarters:before { content: ""; }
+
+.fa-thermometer-2:before, .fa-thermometer-half:before { content: ""; }
+
+.fa-thermometer-1:before, .fa-thermometer-quarter:before { content: ""; }
+
+.fa-thermometer-0:before, .fa-thermometer-empty:before { content: ""; }
+
+.fa-shower:before { content: ""; }
+
+.fa-bathtub:before, .fa-s15:before, .fa-bath:before { content: ""; }
+
+.fa-podcast:before { content: ""; }
+
+.fa-window-maximize:before { content: ""; }
+
+.fa-window-minimize:before { content: ""; }
+
+.fa-window-restore:before { content: ""; }
+
+.fa-times-rectangle:before, .fa-window-close:before { content: ""; }
+
+.fa-times-rectangle-o:before, .fa-window-close-o:before { content: ""; }
+
+.fa-bandcamp:before { content: ""; }
+
+.fa-grav:before { content: ""; }
+
+.fa-etsy:before { content: ""; }
+
+.fa-imdb:before { content: ""; }
+
+.fa-ravelry:before { content: ""; }
+
+.fa-eercast:before { content: ""; }
+
+.fa-microchip:before { content: ""; }
+
+.fa-snowflake-o:before { content: ""; }
+
+.fa-superpowers:before { content: ""; }
+
+.fa-wpexplorer:before { content: ""; }
+
+.fa-meetup:before { content: ""; }
+
 .sr-only, div#breadcrumb { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
 
 .sr-only-focusable:active, .sr-only-focusable:focus { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; }
 
-.title-decorated, body[class*="page-book-countries-"] #table-indicators header h2, body[class*="node-type-thematic-narrative"] #table-indicators header h2, body[class*="page-book-countries-"] #map-global header h2, body[class*="node-type-thematic-narrative"] #map-global header h2, body[class*="page-book-countries-"] #compare header h2, body[class*="node-type-thematic-narrative"] #compare header h2, body[class*="page-book-countries-"] #lgaf header h2, body[class*="node-type-thematic-narrative"] #lgaf header h2, body[class*="page-book-countries-"] h2.media, body[class*="node-type-thematic-narrative"] h2.media, body[class*="page-book-countries-"] #block-views-country-content-partners > h2, body[class*="page-book-countries-"] h2.partners, body[class*="node-type-thematic-narrative"] #block-views-country-content-partners > h2, body[class*="node-type-thematic-narrative"] h2.partners, body[class*="page-book-countries-"] #block-views-country-content-library > h2, body[class*="page-book-countries-"] h2.library, body[class*="node-type-thematic-narrative"] #block-views-country-content-library > h2, body[class*="node-type-thematic-narrative"] h2.library, body[class*="page-book-countries-"] #main-wrapper .region-content > section header h2, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section header h2 { font-family: "Open Sans",sans-serif; font-size: 29px; text-align: center; color: #444444; padding-top: 65px; margin-top: 5px; margin-bottom: 35px; }
+.title-decorated, body[class*="page-book-countries-"] #table-indicators header h2, body[class*="node-type-thematic-narrative"] #table-indicators header h2, body[class*="page-book-countries-"] #map-global header h2, body[class*="node-type-thematic-narrative"] #map-global header h2, body[class*="page-book-countries-"] #compare header h2, body[class*="node-type-thematic-narrative"] #compare header h2, body[class*="page-book-countries-"] #ranking header h2, body[class*="node-type-thematic-narrative"] #ranking header h2, body[class*="page-book-countries-"] #lgaf header h2, body[class*="node-type-thematic-narrative"] #lgaf header h2, body[class*="page-book-countries-"] h2.media, body[class*="node-type-thematic-narrative"] h2.media, body[class*="page-book-countries-"] #block-views-country-content-partners > h2, body[class*="page-book-countries-"] h2.partners, body[class*="node-type-thematic-narrative"] #block-views-country-content-partners > h2, body[class*="node-type-thematic-narrative"] h2.partners, body[class*="page-book-countries-"] #block-views-country-content-library > h2, body[class*="page-book-countries-"] h2.library, body[class*="node-type-thematic-narrative"] #block-views-country-content-library > h2, body[class*="node-type-thematic-narrative"] h2.library, body[class*="page-book-countries-"] #main-wrapper .region-content > section header h2, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content > section header h2 { font-family: "Open Sans",sans-serif; font-size: 29px; text-align: center; color: #444444; padding-top: 65px; margin-top: 5px; margin-bottom: 35px; }
 
 /* IMPORT: Modules */
 /*!
@@ -3481,8 +3567,8 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
   .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next { margin-right: -10px; }
   .carousel-caption { left: 20%; right: 20%; padding-bottom: 30px; }
   .carousel-indicators { bottom: 20px; } }
-.clearfix:before, .group-landvoc:before, body[class*="page-book-countries-"] #block-system-main:before, body[class*="node-type-thematic-narrative"] #block-system-main:before, body[class*="page-book-countries-"] #block-landbook-disclaimer-block:before, body[class*="node-type-thematic-narrative"] #block-landbook-disclaimer-block:before, body[class*="page-book-countries-"] #lgaf:before, body[class*="page-book-countries-"] #block-views-country-content-partners:before, body[class*="page-book-countries-"] #media-block .media-block-content:before, body[class*="page-book-countries-"] #compare:before, body[class*="node-type-thematic-narrative"] #lgaf:before, body[class*="node-type-thematic-narrative"] #block-views-country-content-partners:before, body[class*="node-type-thematic-narrative"] #media-block .media-block-content:before, body[class*="node-type-thematic-narrative"] #compare:before, .view-by-providers .views-row:before, .view.view-landbook-indicators .views-row:before, .view.view-landbook-catalog .views-row:before, #footer .block-menu:before, .clearfix:after, .group-landvoc:after, body[class*="page-book-countries-"] #block-system-main:after, body[class*="node-type-thematic-narrative"] #block-system-main:after, body[class*="page-book-countries-"] #block-landbook-disclaimer-block:after, body[class*="node-type-thematic-narrative"] #block-landbook-disclaimer-block:after, body[class*="page-book-countries-"] #lgaf:after, body[class*="page-book-countries-"] #block-views-country-content-partners:after, body[class*="page-book-countries-"] #media-block .media-block-content:after, body[class*="page-book-countries-"] #compare:after, body[class*="node-type-thematic-narrative"] #lgaf:after, body[class*="node-type-thematic-narrative"] #block-views-country-content-partners:after, body[class*="node-type-thematic-narrative"] #media-block .media-block-content:after, body[class*="node-type-thematic-narrative"] #compare:after, .view-by-providers .views-row:after, .view.view-landbook-indicators .views-row:after, .view.view-landbook-catalog .views-row:after { content: " "; display: table; }
-.clearfix:after, .group-landvoc:after, body[class*="page-book-countries-"] #block-system-main:after, body[class*="node-type-thematic-narrative"] #block-system-main:after, body[class*="page-book-countries-"] #block-landbook-disclaimer-block:after, body[class*="node-type-thematic-narrative"] #block-landbook-disclaimer-block:after, body[class*="page-book-countries-"] #lgaf:after, body[class*="page-book-countries-"] #block-views-country-content-partners:after, body[class*="page-book-countries-"] #media-block .media-block-content:after, body[class*="page-book-countries-"] #compare:after, body[class*="node-type-thematic-narrative"] #lgaf:after, body[class*="node-type-thematic-narrative"] #block-views-country-content-partners:after, body[class*="node-type-thematic-narrative"] #media-block .media-block-content:after, body[class*="node-type-thematic-narrative"] #compare:after, .view-by-providers .views-row:after, .view.view-landbook-indicators .views-row:after, .view.view-landbook-catalog .views-row:after { clear: both; }
+.clearfix:before, .group-landvoc:before, body[class*="page-book-countries-"] #block-system-main:before, body[class*="node-type-thematic-narrative"] #block-system-main:before, body[class*="page-book-countries-"] #block-landbook-disclaimer-block:before, body[class*="node-type-thematic-narrative"] #block-landbook-disclaimer-block:before, body[class*="page-book-countries-"] #lgaf:before, body[class*="page-book-countries-"] #block-views-country-content-partners:before, body[class*="page-book-countries-"] #media-block .media-block-content:before, body[class*="page-book-countries-"] #partners-block:before, body[class*="page-book-countries-"] #compare:before, body[class*="node-type-thematic-narrative"] #lgaf:before, body[class*="node-type-thematic-narrative"] #block-views-country-content-partners:before, body[class*="node-type-thematic-narrative"] #media-block .media-block-content:before, body[class*="node-type-thematic-narrative"] #partners-block:before, body[class*="node-type-thematic-narrative"] #compare:before, .view-by-providers .views-row:before, .view.view-landbook-indicators .views-row:before, .view.view-landbook-catalog .views-row:before, #footer .block-menu:before, .clearfix:after, .group-landvoc:after, body[class*="page-book-countries-"] #block-system-main:after, body[class*="node-type-thematic-narrative"] #block-system-main:after, body[class*="page-book-countries-"] #block-landbook-disclaimer-block:after, body[class*="node-type-thematic-narrative"] #block-landbook-disclaimer-block:after, body[class*="page-book-countries-"] #lgaf:after, body[class*="page-book-countries-"] #block-views-country-content-partners:after, body[class*="page-book-countries-"] #media-block .media-block-content:after, body[class*="page-book-countries-"] #partners-block:after, body[class*="page-book-countries-"] #compare:after, body[class*="node-type-thematic-narrative"] #lgaf:after, body[class*="node-type-thematic-narrative"] #block-views-country-content-partners:after, body[class*="node-type-thematic-narrative"] #media-block .media-block-content:after, body[class*="node-type-thematic-narrative"] #partners-block:after, body[class*="node-type-thematic-narrative"] #compare:after, .view-by-providers .views-row:after, .view.view-landbook-indicators .views-row:after, .view.view-landbook-catalog .views-row:after { content: " "; display: table; }
+.clearfix:after, .group-landvoc:after, body[class*="page-book-countries-"] #block-system-main:after, body[class*="node-type-thematic-narrative"] #block-system-main:after, body[class*="page-book-countries-"] #block-landbook-disclaimer-block:after, body[class*="node-type-thematic-narrative"] #block-landbook-disclaimer-block:after, body[class*="page-book-countries-"] #lgaf:after, body[class*="page-book-countries-"] #block-views-country-content-partners:after, body[class*="page-book-countries-"] #media-block .media-block-content:after, body[class*="page-book-countries-"] #partners-block:after, body[class*="page-book-countries-"] #compare:after, body[class*="node-type-thematic-narrative"] #lgaf:after, body[class*="node-type-thematic-narrative"] #block-views-country-content-partners:after, body[class*="node-type-thematic-narrative"] #media-block .media-block-content:after, body[class*="node-type-thematic-narrative"] #partners-block:after, body[class*="node-type-thematic-narrative"] #compare:after, .view-by-providers .views-row:after, .view.view-landbook-indicators .views-row:after, .view.view-landbook-catalog .views-row:after { clear: both; }
 
 .center-block { display: block; margin-left: auto; margin-right: auto; }
 
@@ -4346,6 +4432,7 @@ body[class*="page-book-countries-"], body[class*="node-type-thematic-narrative"]
 body[class*="page-book-countries-"] #table-indicators header h2, body[class*="node-type-thematic-narrative"] #table-indicators header h2 { background: url("../images/indicators.png") no-repeat 50% 0; }
 body[class*="page-book-countries-"] #map-global header h2, body[class*="node-type-thematic-narrative"] #map-global header h2 { background: url("../images/mapping.png") no-repeat 50% 0; }
 body[class*="page-book-countries-"] #compare header h2, body[class*="node-type-thematic-narrative"] #compare header h2 { background: url("../images/infographics.png") no-repeat 50% 0; }
+body[class*="page-book-countries-"] #ranking header h2, body[class*="node-type-thematic-narrative"] #ranking header h2 { background: url("../images/ranking.png") no-repeat 50% 0; }
 body[class*="page-book-countries-"] #lgaf header h2, body[class*="node-type-thematic-narrative"] #lgaf header h2 { background: url("../images/rankings.png") no-repeat 50% 0; }
 body[class*="page-book-countries-"] h2.media, body[class*="node-type-thematic-narrative"] h2.media { background: url("../images/media.png") no-repeat 50% 0; }
 body[class*="page-book-countries-"] #block-views-country-content-partners > h2, body[class*="page-book-countries-"] h2.partners, body[class*="node-type-thematic-narrative"] #block-views-country-content-partners > h2, body[class*="node-type-thematic-narrative"] h2.partners { background: url("../images/partners.png") no-repeat 50% 0; }
@@ -4353,7 +4440,7 @@ body[class*="page-book-countries-"] #block-views-country-content-library > h2, b
 body[class*="page-book-countries-"] #block-landbook-lgaf-block, body[class*="page-book-countries-"] #block-landbook-view-coda-lbcp-spider-note, body[class*="node-type-thematic-narrative"] #block-landbook-lgaf-block, body[class*="node-type-thematic-narrative"] #block-landbook-view-coda-lbcp-spider-note { padding: 0; font-size: 12px; color: #999; font-family: "Open Sans",sans-serif; }
 body[class*="page-book-countries-"] #block-landbook-disclaimer-block, body[class*="node-type-thematic-narrative"] #block-landbook-disclaimer-block { background: #A3C642; padding: 15px 0; font-size: 12px; color: #ffffff; /* Note: FIX ME, this is not a proper bootstrap grid implementation */ }
 body[class*="page-book-countries-"] #block-landbook-disclaimer-block .content, body[class*="node-type-thematic-narrative"] #block-landbook-disclaimer-block .content { margin: 0 5%; text-align: justify; /* @extend .col-xs-10; */ /* @extend .col-xs-offset-1; */ /* @extend .col-md-8; */ /* @extend .col-md-offset-2; */ }
-body[class*="page-book-countries-"] #lgaf, body[class*="page-book-countries-"] #block-views-country-content-partners, body[class*="page-book-countries-"] #media-block .media-block-content, body[class*="page-book-countries-"] #block-system-main, body[class*="page-book-countries-"] #compare, body[class*="node-type-thematic-narrative"] #lgaf, body[class*="node-type-thematic-narrative"] #block-views-country-content-partners, body[class*="node-type-thematic-narrative"] #media-block .media-block-content, body[class*="node-type-thematic-narrative"] #block-system-main, body[class*="node-type-thematic-narrative"] #compare { background-color: #f0f0f0; }
+body[class*="page-book-countries-"] #lgaf, body[class*="page-book-countries-"] #block-views-country-content-partners, body[class*="page-book-countries-"] #media-block .media-block-content, body[class*="page-book-countries-"] #block-system-main, body[class*="page-book-countries-"] #partners-block, body[class*="page-book-countries-"] #compare, body[class*="node-type-thematic-narrative"] #lgaf, body[class*="node-type-thematic-narrative"] #block-views-country-content-partners, body[class*="node-type-thematic-narrative"] #media-block .media-block-content, body[class*="node-type-thematic-narrative"] #block-system-main, body[class*="node-type-thematic-narrative"] #partners-block, body[class*="node-type-thematic-narrative"] #compare { background-color: #f0f0f0; }
 body[class*="page-book-countries-"] #media-block, body[class*="node-type-thematic-narrative"] #media-block { padding-bottom: 0; border-bottom: 0; }
 body[class*="page-book-countries-"] #main-wrapper, body[class*="node-type-thematic-narrative"] #main-wrapper { width: 100%; padding-left: 0px; padding-right: 0px; margin-top: 0; }
 body[class*="page-book-countries-"] #main-wrapper .region-content #block-system-main, body[class*="node-type-thematic-narrative"] #main-wrapper .region-content #block-system-main { margin-top: -60px; /*margin-bottom: 60px;*/ }
@@ -4572,7 +4659,7 @@ font-size:12px;*/ }
 .btn-more { margin-top: 14px; }
 
 /* Nasty hack for avoid field clearfix */
-.node-teaser .clearfix:after, .node-teaser .group-landvoc:after, .node-teaser body[class*="page-book-countries-"] #block-system-main:after, body[class*="page-book-countries-"] .node-teaser #block-system-main:after, .node-teaser body[class*="node-type-thematic-narrative"] #block-system-main:after, body[class*="node-type-thematic-narrative"] .node-teaser #block-system-main:after, .node-teaser body[class*="page-book-countries-"] #block-landbook-disclaimer-block:after, body[class*="page-book-countries-"] .node-teaser #block-landbook-disclaimer-block:after, .node-teaser body[class*="node-type-thematic-narrative"] #block-landbook-disclaimer-block:after, body[class*="node-type-thematic-narrative"] .node-teaser #block-landbook-disclaimer-block:after, .node-teaser body[class*="page-book-countries-"] #lgaf:after, body[class*="page-book-countries-"] .node-teaser #lgaf:after, .node-teaser body[class*="page-book-countries-"] #block-views-country-content-partners:after, body[class*="page-book-countries-"] .node-teaser #block-views-country-content-partners:after, .node-teaser body[class*="page-book-countries-"] #media-block .media-block-content:after, body[class*="page-book-countries-"] #media-block .node-teaser .media-block-content:after, .node-teaser body[class*="page-book-countries-"] #compare:after, body[class*="page-book-countries-"] .node-teaser #compare:after, .node-teaser body[class*="node-type-thematic-narrative"] #lgaf:after, body[class*="node-type-thematic-narrative"] .node-teaser #lgaf:after, .node-teaser body[class*="node-type-thematic-narrative"] #block-views-country-content-partners:after, body[class*="node-type-thematic-narrative"] .node-teaser #block-views-country-content-partners:after, .node-teaser body[class*="node-type-thematic-narrative"] #media-block .media-block-content:after, body[class*="node-type-thematic-narrative"] #media-block .node-teaser .media-block-content:after, .node-teaser body[class*="node-type-thematic-narrative"] #compare:after, body[class*="node-type-thematic-narrative"] .node-teaser #compare:after, .node-teaser .view-by-providers .views-row:after, .view-by-providers .node-teaser .views-row:after, .node-teaser .view.view-landbook-indicators .views-row:after, .view.view-landbook-indicators .node-teaser .views-row:after, .node-teaser .view.view-landbook-catalog .views-row:after, .view.view-landbook-catalog .node-teaser .views-row:after { clear: left; }
+.node-teaser .clearfix:after, .node-teaser .group-landvoc:after, .node-teaser body[class*="page-book-countries-"] #block-system-main:after, body[class*="page-book-countries-"] .node-teaser #block-system-main:after, .node-teaser body[class*="node-type-thematic-narrative"] #block-system-main:after, body[class*="node-type-thematic-narrative"] .node-teaser #block-system-main:after, .node-teaser body[class*="page-book-countries-"] #block-landbook-disclaimer-block:after, body[class*="page-book-countries-"] .node-teaser #block-landbook-disclaimer-block:after, .node-teaser body[class*="node-type-thematic-narrative"] #block-landbook-disclaimer-block:after, body[class*="node-type-thematic-narrative"] .node-teaser #block-landbook-disclaimer-block:after, .node-teaser body[class*="page-book-countries-"] #lgaf:after, body[class*="page-book-countries-"] .node-teaser #lgaf:after, .node-teaser body[class*="page-book-countries-"] #block-views-country-content-partners:after, body[class*="page-book-countries-"] .node-teaser #block-views-country-content-partners:after, .node-teaser body[class*="page-book-countries-"] #media-block .media-block-content:after, body[class*="page-book-countries-"] #media-block .node-teaser .media-block-content:after, .node-teaser body[class*="page-book-countries-"] #partners-block:after, body[class*="page-book-countries-"] .node-teaser #partners-block:after, .node-teaser body[class*="page-book-countries-"] #compare:after, body[class*="page-book-countries-"] .node-teaser #compare:after, .node-teaser body[class*="node-type-thematic-narrative"] #lgaf:after, body[class*="node-type-thematic-narrative"] .node-teaser #lgaf:after, .node-teaser body[class*="node-type-thematic-narrative"] #block-views-country-content-partners:after, body[class*="node-type-thematic-narrative"] .node-teaser #block-views-country-content-partners:after, .node-teaser body[class*="node-type-thematic-narrative"] #media-block .media-block-content:after, body[class*="node-type-thematic-narrative"] #media-block .node-teaser .media-block-content:after, .node-teaser body[class*="node-type-thematic-narrative"] #partners-block:after, body[class*="node-type-thematic-narrative"] .node-teaser #partners-block:after, .node-teaser body[class*="node-type-thematic-narrative"] #compare:after, body[class*="node-type-thematic-narrative"] .node-teaser #compare:after, .node-teaser .view-by-providers .views-row:after, .view-by-providers .node-teaser .views-row:after, .node-teaser .view.view-landbook-indicators .views-row:after, .view.view-landbook-indicators .node-teaser .views-row:after, .node-teaser .view.view-landbook-catalog .views-row:after, .view.view-landbook-catalog .node-teaser .views-row:after { clear: left; }
 
 .page-book-countries #content a { color: #A3C642; }
 .page-book-countries #content a:hover { color: #617724; text-decoration: none; }
