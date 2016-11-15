@@ -107,19 +107,16 @@ function ct_blog_post_strongarm() {
         'path' => array(
           'weight' => '5',
         ),
-        'xmlsitemap' => array(
-          'weight' => '30',
-        ),
       ),
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '4',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '20',
-            'visible' => FALSE,
+            'weight' => '2',
+            'visible' => TRUE,
           ),
           'listing' => array(
             'weight' => '4',
