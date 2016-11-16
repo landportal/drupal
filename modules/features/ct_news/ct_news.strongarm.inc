@@ -121,11 +121,11 @@ function ct_news_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '8',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '6',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'promoted_country_page' => array(

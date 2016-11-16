@@ -117,15 +117,15 @@ function ct_events_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '9',
+            'weight' => '11',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '8',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '6',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           'promoted_country_page' => array(
