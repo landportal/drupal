@@ -40,9 +40,6 @@ function ct_organization_strongarm() {
       'listing' => array(
         'custom_settings' => TRUE,
       ),
-      'print' => array(
-        'custom_settings' => FALSE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -50,10 +47,10 @@ function ct_organization_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '12',
+          'weight' => '11',
         ),
         'path' => array(
-          'weight' => '11',
+          'weight' => '10',
         ),
         'language' => array(
           'weight' => '9',
@@ -65,7 +62,7 @@ function ct_organization_strongarm() {
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '8',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -113,18 +110,18 @@ function ct_organization_strongarm() {
           'weight' => '6',
         ),
         'city' => array(
-          'collect' => '1',
+          'collect' => '0',
           'default' => '',
           'weight' => '8',
         ),
         'province' => array(
-          'collect' => '1',
+          'collect' => '0',
           'widget' => 'autocomplete',
           'default' => '',
           'weight' => '10',
         ),
         'postal_code' => array(
-          'collect' => '1',
+          'collect' => '0',
           'default' => '',
           'weight' => '12',
         ),
@@ -156,7 +153,7 @@ function ct_organization_strongarm() {
         'coords' => 0,
       ),
       'teaser' => 0,
-      'full' => 0,
+      'full' => 1,
     ),
     'rss' => array(
       'mode' => 'simple',
@@ -169,8 +166,8 @@ function ct_organization_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_organization';
   $strongarm->value = array(
-    'status' => '0',
-    'priority' => '0.5',
+    'status' => '1',
+    'priority' => '0.4',
   );
   $export['xmlsitemap_settings_node_organization'] = $strongarm;
 
