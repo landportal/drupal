@@ -110,7 +110,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       ),
     ),
     'licences' => array(
-      'name' => 'Licences',
+      'name' => 'Licenses',
       'machine_name' => 'licences',
       'description' => '',
       'hierarchy' => 0,
