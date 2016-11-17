@@ -147,3 +147,7 @@ You can find some more details on the Landportal infrastructures and services in
 ## Author
 
 Jules Clement <jules@ker.bz> - Sept. 2015
+
+## License
+This software project is under MIT license (see LICENSE)
+
