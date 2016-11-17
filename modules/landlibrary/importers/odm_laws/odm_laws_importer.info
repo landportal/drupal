@@ -1,0 +1,11 @@
+name = ODM laws importer
+description = Import ODM library documents from a CKAN API in JSON format.
+core = 7.x
+package = Landlibrary Importers
+version = 7.x-1.0-alpha
+project = odm_laws_importer
+dependencies[] = ctools
+dependencies[] = feeds
+dependencies[] = feeds_jsonpath_parser
+dependencies[] = feeds_tamper
+dependencies[] = landlibrary
