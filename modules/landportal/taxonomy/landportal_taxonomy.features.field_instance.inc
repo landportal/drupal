@@ -1070,7 +1070,64 @@ function landportal_taxonomy_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-regions-field_area_code_un_m_49'.
+  $field_instances['taxonomy_term-regions-field_area_code_un_m_49'] = array(
+    'bundle' => 'regions',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '3 numbes code for the area (country/region). See the latest list of codes in the <a href="http://unstats.un.org/unsd/publications/statistical-yearbook">UN Statistical Yearbook</a>.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_area_code_un_m_49',
+    'label' => 'Area code (UN M.49)',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -10,
+            ),
+            'full_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 3,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
     ),
   );
 
@@ -1082,7 +1139,7 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1110,7 +1167,7 @@ function landportal_taxonomy_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -1187,7 +1244,7 @@ function landportal_taxonomy_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -1511,7 +1568,9 @@ function landportal_taxonomy_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('2 letters ISO 639-1 code for the language. <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">More information</a>');
+  t('3 numbes code for the area (country/region). See the latest list of codes in the <a href="http://unstats.un.org/unsd/publications/statistical-yearbook">UN Statistical Yearbook</a>.');
   t('AGROVOC URI');
+  t('Area code (UN M.49)');
   t('Define which themes this content is covering');
   t('Description');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
