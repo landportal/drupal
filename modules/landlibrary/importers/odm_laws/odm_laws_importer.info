@@ -1,5 +1,5 @@
-name = ODM laws importer
-description = Import ODM library documents from a CKAN API in JSON format.
+name = ODM Laws importer
+description = Import ODM laws records from a CKAN API in JSON format.
 core = 7.x
 package = Landlibrary Importers
 version = 7.x-1.0-alpha
