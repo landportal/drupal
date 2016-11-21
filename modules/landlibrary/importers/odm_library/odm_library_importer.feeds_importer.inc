@@ -50,6 +50,7 @@ $feeds_importer->config = array(
         'jsonpath_parser:13' => 'marc21_260a[en]',
         'jsonpath_parser:15' => 'organization.title',
         'jsonpath_parser:16' => 'marc21_300[en]',
+        'jsonpath_parser:17' => 'marc21_700',
       ),
       'debug' => array(
         'options' => array(
@@ -68,6 +69,7 @@ $feeds_importer->config = array(
           'jsonpath_parser:13' => 0,
           'jsonpath_parser:15' => 0,
           'jsonpath_parser:16' => 0,
+          'jsonpath_parser:17' => 0,
         ),
       ),
       'allow_override' => 0,
@@ -177,6 +179,12 @@ $feeds_importer->config = array(
           'source' => 'jsonpath_parser:16',
           'target' => 'field_doc_pagination',
           'unique' => FALSE,
+          'language' => 'und',
+        ),
+        16 => array(
+          'source' => 'jsonpath_parser:17',
+          'target' => 'Temporary target 1',
+          'unique' => FALSE,
         ),
       ),
       'update_existing' => '2',
@@ -195,6 +203,7 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
+
 
 
 /************/

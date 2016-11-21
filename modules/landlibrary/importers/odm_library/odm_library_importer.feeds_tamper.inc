@@ -163,7 +163,7 @@ $feeds_tamper->settings = array(
       'target' => 'Journal Articles & Books',
     ),
     2 => array(
-      'source' => 'analysis_discussion_papers_and_blogs​',
+      'source' => 'analysis_discussion_papers_and_blogs',
       'target' => 'Policy Papers & Briefs',
     ),
     3 => array(
@@ -219,6 +219,22 @@ profiles_geographical_areas_and_sites
 );
 $feeds_tamper->weight = 3;
 $feeds_tamper->description = 'Not import some ODM resource types';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_12-rewrite';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:12';
+$feeds_tamper->plugin_id = 'rewrite';
+$feeds_tamper->settings = array(
+  'text' => '[jsonpath_parser:12]
+[jsonpath_parser:17]',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Rewrite';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -325,6 +341,23 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Explode';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_7-explode';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:7';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ',',
+  'limit' => '',
+  'real_separator' => ',',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Explode (multiple values \',\' separated)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -555,10 +588,7 @@ $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Rewrite';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
-
 /****************/
-
-    $export[$feeds_tamper->id] = $feeds_tamper;
 
     return $export;
 }
