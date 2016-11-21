@@ -9,6 +9,7 @@
  */
 function odm_library_importer_feeds_tamper_default() {
 
+
 $export = array();
 
 $feeds_tamper = new stdClass();
@@ -534,6 +535,42 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Explode (multiple values \',\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_9-feeds_tamper_conditional';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:9';
+$feeds_tamper->plugin_id = 'feeds_tamper_conditional';
+$feeds_tamper->settings = array(
+  'conditional_field' => 'jsonpath_parser:9',
+  'operator' => 'empty',
+  'negate' => 1,
+  'value' => '',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Conditional';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_9-str_pad';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:9';
+$feeds_tamper->plugin_id = 'str_pad';
+$feeds_tamper->settings = array(
+  'pad_length' => 10,
+  'pad_string' => '-12-31',
+  'pad_type' => '1',
+  'real_pad_string' => '-12-31',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Add the month (12) and day (31) at the end of the string';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
