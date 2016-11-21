@@ -11,7 +11,6 @@ function odm_library_importer_feeds_importer_default() {
     $export = array();
 
 /************/
-
 $feeds_importer = new stdClass();
 $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
 $feeds_importer->api_version = 1;
@@ -55,6 +54,7 @@ $feeds_importer->config = array(
         'jsonpath_parser:19' => 'odm_spatial_range',
         'jsonpath_parser:20' => 'marc21_020',
         'jsonpath_parser:21' => 'marc21_022',
+        'jsonpath_parser:22' => 'taxonomy',
       ),
       'debug' => array(
         'options' => array(
@@ -78,6 +78,7 @@ $feeds_importer->config = array(
           'jsonpath_parser:19' => 0,
           'jsonpath_parser:20' => 0,
           'jsonpath_parser:21' => 0,
+          'jsonpath_parser:22' => 0,
         ),
       ),
       'allow_override' => 0,
@@ -217,6 +218,24 @@ $feeds_importer->config = array(
           'source' => 'jsonpath_parser:21',
           'target' => 'field_doc_identifier',
           'unique' => FALSE,
+          'language' => 'und',
+        ),
+        21 => array(
+          'source' => 'Blank source 1',
+          'target' => 'field_related_domains',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        22 => array(
+          'source' => 'jsonpath_parser:22',
+          'target' => 'Temporary target 2',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        23 => array(
+          'source' => 'Blank source 2',
+          'target' => 'field_related_themes',
+          'unique' => FALSE,
         ),
       ),
       'update_existing' => '2',
@@ -235,6 +254,7 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
+
 
 /************/
 
