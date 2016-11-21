@@ -1,4 +1,4 @@
-name = ODM library importer
+name = ODM Library importer
 description = Import ODM library documents from a CKAN API in JSON format.
 core = 7.x
 package = Landlibrary Importers
