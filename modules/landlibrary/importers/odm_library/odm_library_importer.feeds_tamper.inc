@@ -288,6 +288,132 @@ $feeds_tamper->description = 'Find replace multiple';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_19-explode';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:19';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ',',
+  'limit' => '',
+  'real_separator' => ',',
+);
+$feeds_tamper->weight = 5;
+$feeds_tamper->description = 'Explode (multiple values \',\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_19-find_replace_multiple';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:19';
+$feeds_tamper->plugin_id = 'find_replace_multiple';
+$feeds_tamper->settings = array(
+  'pairs' => array(
+    0 => array(
+      'source' => 'kh',
+      'target' => 'Cambodia',
+    ),
+    1 => array(
+      'source' => 'vn',
+      'target' => 'Vietnam',
+    ),
+    2 => array(
+      'source' => 'la',
+      'target' => 'Lao',
+    ),
+    3 => array(
+      'source' => 'th',
+      'target' => 'Thailand',
+    ),
+    4 => array(
+      'source' => 'mm',
+      'target' => 'Myanmar',
+    ),
+    5 => array(
+      'source' => 'my',
+      'target' => 'Malaysia',
+    ),
+    6 => array(
+      'source' => 'id',
+      'target' => 'Indonesia',
+    ),
+    7 => array(
+      'source' => 'cn',
+      'target' => 'China',
+    ),
+    8 => array(
+      'source' => 'ph',
+      'target' => 'Philippines',
+    ),
+    9 => array(
+      'source' => 'sg',
+      'target' => 'Singapore',
+    ),
+    10 => array(
+      'source' => 'bn',
+      'target' => 'Brunei Darussalam',
+    ),
+  ),
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Find replace multiple(from ISO2 code to Country names)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_19-find_replace_multiple_regions';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:19';
+$feeds_tamper->plugin_id = 'find_replace_multiple';
+$feeds_tamper->settings = array(
+  'pairs' => array(
+    0 => array(
+      'source' => 'asean',
+      'target' => 'id,my,ph,sg,th,bn,kh,la,mm,vn',
+    ),
+    1 => array(
+      'source' => 'lmc',
+      'target' => 'kh,vn,la,th,mm',
+    ),
+    2 => array(
+      'source' => 'gms',
+      'target' => 'kh,vn,la,mm,cn',
+    ),
+    3 => array(
+      'source' => 'lmb',
+      'target' => 'kh,vn,la,th,mm',
+    ),
+    4 => array(
+      'source' => 'global',
+      'target' => 'Global',
+    ),
+  ),
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Find replace multiple (regions to countries ISO2 code)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_19-unique';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:19';
+$feeds_tamper->plugin_id = 'unique';
+$feeds_tamper->settings = array();
+$feeds_tamper->weight = 6;
+$feeds_tamper->description = 'Unique';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
 $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_library_importer-jsonpath_parser_5-array_filter';
