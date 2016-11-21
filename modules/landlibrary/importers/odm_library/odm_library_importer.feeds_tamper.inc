@@ -256,6 +256,38 @@ $feeds_tamper->description = 'Explode';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_18-find_replace_multiple';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:18';
+$feeds_tamper->plugin_id = 'find_replace_multiple';
+$feeds_tamper->settings = array(
+  'pairs' => array(
+    0 => array(
+      'source' => 'CC-BY-4.0',
+      'target' => 'Creative Commons Attribution',
+    ),
+    1 => array(
+      'source' => 'CC-BY-SA-4.0',
+      'target' => 'Creative Commons Attribution-ShareAlike',
+    ),
+    2 => array(
+      'source' => 'CC0-1.0',
+      'target' => 'Creative Commons Zero (Public Domain)',
+    ),
+    3 => array(
+      'source' => 'unspecified',
+      'target' => '',
+    ),
+  ),
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Find replace multiple';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
 $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_library_importer-jsonpath_parser_5-array_filter';
@@ -588,6 +620,7 @@ $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Rewrite';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
+
 /****************/
 
     return $export;

@@ -51,9 +51,11 @@ $feeds_importer->config = array(
         'jsonpath_parser:15' => 'organization.title',
         'jsonpath_parser:16' => 'marc21_300[en]',
         'jsonpath_parser:17' => 'marc21_700',
+        'jsonpath_parser:18' => 'license_id',
       ),
       'debug' => array(
         'options' => array(
+          'jsonpath_parser:18' => 'jsonpath_parser:18',
           'context' => 0,
           'jsonpath_parser:1' => 0,
           'jsonpath_parser:2' => 0,
@@ -184,6 +186,12 @@ $feeds_importer->config = array(
         16 => array(
           'source' => 'jsonpath_parser:17',
           'target' => 'Temporary target 1',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        17 => array(
+          'source' => 'jsonpath_parser:18',
+          'target' => 'field_doc_licencing',
           'unique' => FALSE,
         ),
       ),
