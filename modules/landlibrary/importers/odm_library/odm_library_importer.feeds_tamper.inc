@@ -20,7 +20,7 @@ $feeds_tamper->source = 'Blank source 1';
 $feeds_tamper->plugin_id = 'copy';
 $feeds_tamper->settings = array(
   'to_from' => 'from',
-  'source' => 'jsonpath_parser:14',
+  'source' => 'jsonpath_parser:20',
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Copy source value';
@@ -410,6 +410,24 @@ $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
 $feeds_tamper->weight = 6;
 $feeds_tamper->description = 'Unique';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_21-feeds_tamper_conditional';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:21';
+$feeds_tamper->plugin_id = 'feeds_tamper_conditional';
+$feeds_tamper->settings = array(
+  'conditional_field' => 'jsonpath_parser:20',
+  'operator' => 'empty',
+  'negate' => 0,
+  'value' => '',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Add only if there is not ISBN value';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 

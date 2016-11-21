@@ -53,6 +53,8 @@ $feeds_importer->config = array(
         'jsonpath_parser:17' => 'marc21_700',
         'jsonpath_parser:18' => 'license_id',
         'jsonpath_parser:19' => 'odm_spatial_range',
+        'jsonpath_parser:20' => 'marc21_020',
+        'jsonpath_parser:21' => 'marc21_022',
       ),
       'debug' => array(
         'options' => array(
@@ -74,6 +76,8 @@ $feeds_importer->config = array(
           'jsonpath_parser:17' => 0,
           'jsonpath_parser:18' => 0,
           'jsonpath_parser:19' => 0,
+          'jsonpath_parser:20' => 0,
+          'jsonpath_parser:21' => 0,
         ),
       ),
       'allow_override' => 0,
@@ -201,6 +205,18 @@ $feeds_importer->config = array(
           'source' => 'jsonpath_parser:19',
           'target' => 'field_geographical_focus',
           'unique' => FALSE,
+          'language' => 'und',
+        ),
+        19 => array(
+          'source' => 'jsonpath_parser:20',
+          'target' => 'field_doc_identifier',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        20 => array(
+          'source' => 'jsonpath_parser:21',
+          'target' => 'field_doc_identifier',
+          'unique' => FALSE,
         ),
       ),
       'update_existing' => '2',
@@ -219,7 +235,6 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
-
 
 /************/
 
