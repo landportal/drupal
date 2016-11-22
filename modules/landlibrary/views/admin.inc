@@ -478,6 +478,11 @@ $handler->display->display_options['fields']['field_doc_identifier']['exclude'] 
 $handler->display->display_options['fields']['field_doc_identifier']['alter']['nl2br'] = TRUE;
 $handler->display->display_options['fields']['field_doc_identifier']['hide_empty'] = TRUE;
 $handler->display->display_options['fields']['field_doc_identifier']['hide_alter_empty'] = FALSE;
+/* Field: Content: Pages */
+$handler->display->display_options['fields']['field_doc_pagination']['id'] = 'field_doc_pagination';
+$handler->display->display_options['fields']['field_doc_pagination']['table'] = 'field_data_field_doc_pagination';
+$handler->display->display_options['fields']['field_doc_pagination']['field'] = 'field_doc_pagination';
+$handler->display->display_options['fields']['field_doc_pagination']['exclude'] = TRUE;
 /* Field: Global: Custom text */
 $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
 $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
@@ -487,7 +492,8 @@ $handler->display->display_options['fields']['nothing_1']['alter']['text'] = 'Ty
 Lang: [field_doc_language] <br />
 Direct: [field_doc_is_shown_by] <br />
 Original: [field_doc_is_shown_at] <br />
-ID: [field_doc_identifier]';
+ID: [field_doc_identifier] <br />
+Pages: [field_doc_pagination]';
 $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
 /* Field: Field: Geographical focus */
 $handler->display->display_options['fields']['field_geographical_focus']['id'] = 'field_geographical_focus';
