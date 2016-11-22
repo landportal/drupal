@@ -19,15 +19,14 @@ $feeds_importer->config = array(
   'name' => 'ODM Laws importer',
   'description' => 'Import ODM laws records from a CKAN API in JSON format',
   'fetcher' => array(
-    'plugin_key' => 'FeedsFileFetcher',
+    'plugin_key' => 'FeedsHTTPFetcher',
     'config' => array(
-      'allowed_extensions' => 'txt csv tsv xml opml json',
-      'direct' => 0,
-      'directory' => 'private://feeds',
-      'allowed_schemes' => array(
-        'public' => 'public',
-        'private' => 'private',
-      ),
+      'auto_detect_feeds' => FALSE,
+      'use_pubsubhubbub' => FALSE,
+      'designated_hub' => '',
+      'request_timeout' => NULL,
+      'auto_scheme' => 'http',
+      'accept_invalid_cert' => FALSE,
     ),
   ),
   'parser' => array(
