@@ -18,23 +18,13 @@ $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
-$handler->display->display_options['pager']['type'] = 'full';
-$handler->display->display_options['pager']['options']['items_per_page'] = '25';
+$handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['pager']['options']['id'] = '0';
-$handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-/* Header: Global: Text area */
-$handler->display->display_options['header']['area']['id'] = 'area';
-$handler->display->display_options['header']['area']['table'] = 'views';
-$handler->display->display_options['header']['area']['field'] = 'area';
-$handler->display->display_options['header']['area']['content'] = 'The Land Book follows the classification made by the <a href="http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/">Geopolitical Ontology from the Food and Agriculture Organization of the United Nations</a>.
-';
-$handler->display->display_options['header']['area']['format'] = 'filtered_html';
 /* Field: Taxonomy term: ISO3 */
 $handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
 $handler->display->display_options['fields']['field_iso3']['table'] = 'field_data_field_iso3';
@@ -42,41 +32,45 @@ $handler->display->display_options['fields']['field_iso3']['field'] = 'field_iso
 $handler->display->display_options['fields']['field_iso3']['label'] = '';
 $handler->display->display_options['fields']['field_iso3']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_iso3']['element_label_colon'] = FALSE;
-/* Field: Taxonomy term: Rendered Taxonomy term */
-$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
-$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
-$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
-$handler->display->display_options['fields']['rendered_entity']['label'] = '';
-$handler->display->display_options['fields']['rendered_entity']['alter']['make_link'] = TRUE;
-$handler->display->display_options['fields']['rendered_entity']['alter']['path'] = 'book/countries/[field_iso3]';
-$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 0;
-$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'token';
-$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name_field']['id'] = 'name_field';
+$handler->display->display_options['fields']['name_field']['table'] = 'field_data_name_field';
+$handler->display->display_options['fields']['name_field']['field'] = 'name_field';
+$handler->display->display_options['fields']['name_field']['label'] = '';
+$handler->display->display_options['fields']['name_field']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['name_field']['alter']['text'] = '[name_field] - [field_iso3]';
+$handler->display->display_options['fields']['name_field']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
 /* Filter criterion: Taxonomy vocabulary: Machine name */
 $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
 $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
 $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
 $handler->display->display_options['filters']['machine_name']['value'] = array(
-  'countries' => 'countries',
+  'regions' => 'regions',
 );
+/* Filter criterion: Taxonomy term: ISO3 (field_iso3) */
+$handler->display->display_options['filters']['field_iso3_value']['id'] = 'field_iso3_value';
+$handler->display->display_options['filters']['field_iso3_value']['table'] = 'field_data_field_iso3';
+$handler->display->display_options['filters']['field_iso3_value']['field'] = 'field_iso3_value';
+$handler->display->display_options['filters']['field_iso3_value']['operator'] = 'not empty';
 
 /* Display: Page countries */
 $handler = $view->new_display('page', 'Page countries', 'page');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Land Book Countries';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'text-center';
+$handler->display->display_options['css_class'] = 'grid';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['row_class'] = 'col-sm-4 col-md-3 col-lg-2';
-$handler->display->display_options['style_options']['default_row_class'] = FALSE;
-$handler->display->display_options['style_options']['row_class_special'] = FALSE;
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'fields';
-$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: Text area */
+$handler->display->display_options['header']['area']['id'] = 'area';
+$handler->display->display_options['header']['area']['table'] = 'views';
+$handler->display->display_options['header']['area']['field'] = 'area';
+$handler->display->display_options['header']['area']['content'] = 'The Land Book follows the classification made by the <a href="http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/">Geopolitical Ontology from the Food and Agriculture Organization of the United Nations</a>.
+';
+$handler->display->display_options['header']['area']['format'] = 'filtered_html';
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Taxonomy term: ISO3 */
 $handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
@@ -92,7 +86,7 @@ $handler->display->display_options['fields']['name_field']['table'] = 'field_dat
 $handler->display->display_options['fields']['name_field']['field'] = 'name_field';
 $handler->display->display_options['fields']['name_field']['label'] = '';
 $handler->display->display_options['fields']['name_field']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['name_field']['alter']['text'] = '<span class="flag flag-[field_iso3]"></span> [name_field]';
+$handler->display->display_options['fields']['name_field']['alter']['text'] = '<span class="flag-icon flag-[field_iso3]"></span> [name_field]';
 $handler->display->display_options['fields']['name_field']['alter']['make_link'] = TRUE;
 $handler->display->display_options['fields']['name_field']['alter']['path'] = 'book/countries/[field_iso3]';
 $handler->display->display_options['fields']['name_field']['alter']['absolute'] = TRUE;
@@ -157,8 +151,13 @@ $handler->display->display_options['filters']['machine_name']['id'] = 'machine_n
 $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
 $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
 $handler->display->display_options['filters']['machine_name']['value'] = array(
-  'countries' => 'countries',
+  'regions' => 'regions',
 );
+/* Filter criterion: Taxonomy term: ISO3 (field_iso3) */
+$handler->display->display_options['filters']['field_iso3_value']['id'] = 'field_iso3_value';
+$handler->display->display_options['filters']['field_iso3_value']['table'] = 'field_data_field_iso3';
+$handler->display->display_options['filters']['field_iso3_value']['field'] = 'field_iso3_value';
+$handler->display->display_options['filters']['field_iso3_value']['operator'] = 'not empty';
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -168,3 +167,58 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'landbook_country' => 'landbook_country',
 );
 $handler->display->display_options['path'] = 'book/countries/%';
+
+/* Display: Countries portfolio */
+$handler = $view->new_display('block', 'Countries portfolio', 'block_1');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Countries portfolio';
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'grid';
+$handler->display->display_options['display_description'] = 'List / overview of countries with narratives';
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Taxonomy term: Content using Geographical focus */
+$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['id'] = 'reverse_field_geographical_focus_node';
+$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['field'] = 'reverse_field_geographical_focus_node';
+$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['label'] = 'narrative';
+$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['required'] = TRUE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: ISO3 */
+$handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
+$handler->display->display_options['fields']['field_iso3']['table'] = 'field_data_field_iso3';
+$handler->display->display_options['fields']['field_iso3']['field'] = 'field_iso3';
+$handler->display->display_options['fields']['field_iso3']['label'] = '';
+$handler->display->display_options['fields']['field_iso3']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_iso3']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name_field']['id'] = 'name_field';
+$handler->display->display_options['fields']['name_field']['table'] = 'field_data_name_field';
+$handler->display->display_options['fields']['name_field']['field'] = 'name_field';
+$handler->display->display_options['fields']['name_field']['label'] = '';
+$handler->display->display_options['fields']['name_field']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['name_field']['alter']['text'] = '<a href="/book/countries/[field_iso3]"><span class="flag-icon flag-icon-rounded flag-[field_iso3]"></span>
+[name_field]</a>';
+$handler->display->display_options['fields']['name_field']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Taxonomy vocabulary: Machine name */
+$handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+$handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['value'] = array(
+  'regions' => 'regions',
+);
+/* Filter criterion: Taxonomy term: ISO3 (field_iso3) */
+$handler->display->display_options['filters']['field_iso3_value']['id'] = 'field_iso3_value';
+$handler->display->display_options['filters']['field_iso3_value']['table'] = 'field_data_field_iso3';
+$handler->display->display_options['filters']['field_iso3_value']['field'] = 'field_iso3_value';
+$handler->display->display_options['filters']['field_iso3_value']['operator'] = 'not empty';
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['relationship'] = 'reverse_field_geographical_focus_node';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'landbook_country' => 'landbook_country',
+);
