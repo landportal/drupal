@@ -1,23 +1,23 @@
 <?php
 /**
  * @file
- * odm_library_importer.feeds_importer_default.inc
+ * odm_laws_importer.feeds_importer_default.inc
  */
 
 /**
  * Implements hook_feeds_importer_default().
  */
-function odm_library_importer_feeds_importer_default() {
+function odm_laws_importer_feeds_importer_default() {
     $export = array();
 
-/************/
+/******/
 $feeds_importer = new stdClass();
 $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
 $feeds_importer->api_version = 1;
-$feeds_importer->id = 'odm_library_importer';
+$feeds_importer->id = 'odm_laws_importer';
 $feeds_importer->config = array(
-  'name' => 'ODM Library importer',
-  'description' => 'Import ODM Library resources from CKAN API in JSON format',
+  'name' => 'ODM Laws importer',
+  'description' => 'Import ODM laws records from a CKAN API in JSON format',
   'fetcher' => array(
     'plugin_key' => 'FeedsHTTPFetcher',
     'config' => array(
@@ -41,22 +41,16 @@ $feeds_importer->config = array(
         'jsonpath_parser:6' => 'taxonomy',
         'jsonpath_parser:7' => 'taxonomy',
         'jsonpath_parser:8' => 'odm_access_and_use_constraints[en]',
-        'jsonpath_parser:9' => 'marc21_260c',
+        'jsonpath_parser:9' => 'odm_promulgation_date',
         'jsonpath_parser:10' => 'odm_language',
-        'jsonpath_parser:11' => 'document_type',
-        'jsonpath_parser:12' => 'marc21_100',
-        'jsonpath_parser:13' => 'marc21_260a[en]',
+        'jsonpath_parser:11' => 'odm_document_type',
         'jsonpath_parser:15' => 'organization.title',
-        'jsonpath_parser:16' => 'marc21_300[en]',
         'jsonpath_parser:17' => 'marc21_700',
         'jsonpath_parser:18' => 'license_id',
         'jsonpath_parser:19' => 'odm_spatial_range',
-        'jsonpath_parser:20' => 'marc21_020',
-        'jsonpath_parser:21' => 'marc21_022',
+        'jsonpath_parser:20' => 'odm_document_number',
         'jsonpath_parser:22' => 'taxonomy',
-        'jsonpath_parser:23' => 'marc21_110',
-        'jsonpath_parser:24' => 'marc21_710',
-        'jsonpath_parser:25' => 'marc21_260b[en]',
+        'jsonpath_parser:23' => 'odm_laws_issuing_agency_parties',
       ),
       'debug' => array(
         'options' => array(
@@ -71,19 +65,13 @@ $feeds_importer->config = array(
           'jsonpath_parser:9' => 0,
           'jsonpath_parser:10' => 0,
           'jsonpath_parser:11' => 0,
-          'jsonpath_parser:12' => 0,
-          'jsonpath_parser:13' => 0,
           'jsonpath_parser:15' => 0,
-          'jsonpath_parser:16' => 0,
           'jsonpath_parser:17' => 0,
           'jsonpath_parser:18' => 0,
           'jsonpath_parser:19' => 0,
           'jsonpath_parser:20' => 0,
-          'jsonpath_parser:21' => 0,
           'jsonpath_parser:22' => 0,
           'jsonpath_parser:23' => 0,
-          'jsonpath_parser:24' => 0,
-          'jsonpath_parser:25' => 0,
         ),
       ),
       'allow_override' => 0,
@@ -172,98 +160,68 @@ $feeds_importer->config = array(
           'language' => 'und',
         ),
         12 => array(
-          'source' => 'jsonpath_parser:12',
-          'target' => 'field_doc_people',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        13 => array(
-          'source' => 'jsonpath_parser:13',
-          'target' => 'field_doc_publisher_place',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        14 => array(
           'source' => 'jsonpath_parser:15',
           'target' => 'field_doc_provider:label',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        15 => array(
-          'source' => 'jsonpath_parser:16',
-          'target' => 'field_doc_pagination',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        16 => array(
+        13 => array(
           'source' => 'jsonpath_parser:17',
           'target' => 'Temporary target 1',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        17 => array(
+        14 => array(
           'source' => 'jsonpath_parser:18',
           'target' => 'field_doc_licencing',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        18 => array(
+        15 => array(
           'source' => 'jsonpath_parser:19',
           'target' => 'field_geographical_focus',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        19 => array(
+        16 => array(
           'source' => 'jsonpath_parser:20',
           'target' => 'field_doc_identifier',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        20 => array(
-          'source' => 'jsonpath_parser:21',
-          'target' => 'field_doc_identifier',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        21 => array(
+        17 => array(
           'source' => 'Blank source 1',
           'target' => 'field_related_domains',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        22 => array(
+        18 => array(
           'source' => 'jsonpath_parser:22',
           'target' => 'Temporary target 2',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        23 => array(
+        19 => array(
           'source' => 'Blank source 2',
           'target' => 'field_related_themes',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        24 => array(
+        20 => array(
           'source' => 'jsonpath_parser:23',
           'target' => 'Temporary target 3',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        25 => array(
-          'source' => 'jsonpath_parser:24',
-          'target' => 'Temporary target 4',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        26 => array(
-          'source' => 'jsonpath_parser:25',
-          'target' => 'field_doc_publisher:label',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        27 => array(
-          'source' => 'Blank source 4',
+        21 => array(
+          'source' => 'Blank source 3',
           'target' => 'field_orgref:label',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        22 => array(
+          'source' => 'Blank source 4',
+          'target' => 'field_doc_publisher:label',
           'unique' => FALSE,
           'language' => 'und',
         ),
@@ -285,9 +243,7 @@ $feeds_importer->config = array(
   'process_in_background' => 0,
 );
 
-
-/************/
-
+/*****/
     $export[$feeds_importer->id] = $feeds_importer;
 
     return $export;

@@ -397,9 +397,12 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Creative Commons Attribution',
-    'description' => 'You are free to Share (copy and redistribute the material in any medium or format), Adapt (remix, transform, and build upon the material) for any purpose, even commercially, under the following terms: Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.<br />
+    'description' => '<p>Acronym: <strong>CC-BY</strong></p>
+
+<p>This license lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. Recommended for maximum dissemination and use of licensed materials.<br />
 <br />
-More information at <a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a>',
+More information at <a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a></p>
+',
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => '6fc71047-4180-4b14-8239-2c70e1ac4819',
@@ -419,8 +422,8 @@ More information at <a href="http://creativecommons.org/licenses/by/4.0/">http:/
           'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1475057738,
-          'changed' => 1475057738,
+          'created' => 1478869181,
+          'changed' => 1478869181,
         ),
       ),
     ),
@@ -730,9 +733,12 @@ More information at <a href="http://creativecommons.org/licenses/by/4.0/">http:/
   );
   $terms[] = array(
     'name' => 'Creative Commons Attribution-NonCommercial',
-    'description' => 'You are free to Share (copy and redistribute the material in any medium or format), Adapt (remix, transform, and build upon the material), under the following terms: Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. NonCommercial — You may not use the material for commercial purposes.<br />
+    'description' => '<p>Acronym:&nbsp;<strong>CC-BY-NC</strong></p>
+
+<p>This license lets others remix, tweak, and build upon your work non-commercially, and although their new works must also acknowledge you and be non-commercial, they don’t have to license their derivative works on the same terms.<br />
 <br />
-More information at&nbsp;<a href="http://creativecommons.org/licenses/by-nc/4.0/">http://creativecommons.org/licenses/by-nc/4.0/</a>',
+More information at&nbsp;<a href="http://creativecommons.org/licenses/by-nc/4.0/">http://creativecommons.org/licenses/by-nc/4.0/</a></p>
+',
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => 'a5d05b88-1783-4d86-a95f-bb203d003986',
@@ -752,8 +758,8 @@ More information at&nbsp;<a href="http://creativecommons.org/licenses/by-nc/4.0/
           'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1475058112,
-          'changed' => 1475058112,
+          'created' => 1478869216,
+          'changed' => 1478869216,
         ),
       ),
     ),
@@ -851,9 +857,12 @@ More information at&nbsp;<a href="http://creativecommons.org/licenses/by-nc/4.0/
   );
   $terms[] = array(
     'name' => 'Creative Commons Attribution-ShareAlike',
-    'description' => 'You are free to Share (copy and redistribute the material in any medium or format), Adapt (remix, transform, and build upon the material) for any purpose, even commercially, under the following terms: Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.<br />
+    'description' => '<p>Acronym: <strong>CC-BY-SA</strong></p>
+
+<p>This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. All new works based on yours will carry the same license, so any derivatives will also allow commercial use.&nbsp;<br />
 <br />
-More information at&nbsp;<a href="http://creativecommons.org/licenses/by-sa/4.0/">http://creativecommons.org/licenses/by-sa/4.0/</a>',
+More information at&nbsp;<a href="http://creativecommons.org/licenses/by-sa/4.0/">http://creativecommons.org/licenses/by-sa/4.0/</a></p>
+',
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => 'b340e1a0-fa8d-495d-8cc7-b4370dc746eb',
@@ -873,8 +882,8 @@ More information at&nbsp;<a href="http://creativecommons.org/licenses/by-sa/4.0/
           'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1475058045,
-          'changed' => 1475058045,
+          'created' => 1478869469,
+          'changed' => 1478869469,
         ),
       ),
     ),
@@ -1043,8 +1052,8 @@ More information at&nbsp;<a href="http://creativecommons.org/licenses/by-sa/4.0/
           'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1470397647,
-          'changed' => 1470397647,
+          'created' => 1478869140,
+          'changed' => 1478869140,
         ),
       ),
     ),

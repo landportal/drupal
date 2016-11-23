@@ -40,7 +40,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'Status of a debate',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -6,
+      'weight' => -4,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -65,7 +65,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'Land vocabulary concepts terms - linked to Agrovoc (aka Topics)',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -8,
+      'weight' => -6,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -90,7 +90,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => 0,
+      'weight' => 1,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -110,12 +110,12 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       ),
     ),
     'licences' => array(
-      'name' => 'Licences',
+      'name' => 'Licenses',
       'machine_name' => 'licences',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -5,
+      'weight' => -3,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -140,7 +140,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'Relationship to the Landportal',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -4,
+      'weight' => -2,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -165,7 +165,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'Specific types for organizations (needs rework)',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -3,
+      'weight' => -1,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -190,7 +190,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'Land Portal Overarching Categories (aka domains)',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -10,
+      'weight' => -8,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -213,9 +213,9 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'name' => 'Regions',
       'machine_name' => 'regions',
       'description' => 'Regions',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -7,
+      'weight' => -5,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
@@ -240,7 +240,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'description' => 'Land Portal organizational taxonomy system for Themes, Categories',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -9,
+      'weight' => -7,
       'language' => 'und',
       'i18n_mode' => 1,
       'rdf_mapping' => array(
