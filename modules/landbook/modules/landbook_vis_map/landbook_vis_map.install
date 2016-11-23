@@ -1,0 +1,23 @@
+<?php
+/**
+ * LB visualization module install and update hooks
+ *
+ * Author: Jules Clement <jules.clement@landportal.info>
+ */
+
+
+/* Place country map in highlight region */
+function landbook_vis_map_update_7200() {
+    $block = array(
+      'keys' => array(
+        'module' => 'landbook_vis_map',
+        'delta' => 'region_map',
+        'theme' => 'lpbs',
+      ),
+      'fields' => array(
+        'region' => 'highlighted',
+        'weight' => '-1',
+      )
+    );
+    db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+}
