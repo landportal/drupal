@@ -1,9 +1,9 @@
-<section id="country-navigation" class="text-center">
+<section id="country-navigation" class="text-center row">
 <?php if (!empty($block->country_info)): ?>
   <div class="col-md-12">
   <header>
 <?php if (!empty($block->country_info['iso'])): ?>
-    <span class="flag flag-<?php print $block->country_info['iso']; ?>"></span>
+    <span class="flag-icon flag-icon-rounded flag-<?php print $block->country_info['iso']; ?>"></span>
 <?php endif;?>
 <?php if (!empty($block->country_info['country_name'])): ?>
     <h2><?php print $block->country_info['country_name'];?></h2>
