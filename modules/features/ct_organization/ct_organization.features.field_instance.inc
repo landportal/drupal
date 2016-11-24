@@ -338,7 +338,7 @@ function ct_organization_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'promoted_country_page' => array(
         'label' => 'above',

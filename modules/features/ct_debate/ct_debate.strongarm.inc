@@ -111,16 +111,16 @@ function ct_debate_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '9',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '5',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '5',
-            'visible' => TRUE,
+            'weight' => '6',
+            'visible' => FALSE,
           ),
         ),
       ),

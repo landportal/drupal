@@ -90,7 +90,7 @@ function ct_events_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -232,7 +232,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -365,7 +365,7 @@ If it is only a one day event, the end date should be the same as the starting d
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'promoted_country_page' => array(
         'label' => 'above',

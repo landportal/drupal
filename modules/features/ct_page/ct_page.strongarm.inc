@@ -112,6 +112,10 @@ function ct_page_strongarm() {
             'weight' => '0',
             'visible' => FALSE,
           ),
+          'listing' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),
