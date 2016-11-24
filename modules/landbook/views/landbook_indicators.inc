@@ -68,6 +68,8 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
 
 /* Display: Page indicators */
 $handler = $view->new_display('page', 'Page indicators', 'page');
+$handler->display->display_options['defaults']['group_by'] = FALSE;
+$handler->display->display_options['group_by'] = TRUE;
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'full';
 $handler->display->display_options['pager']['options']['items_per_page'] = '50';
@@ -145,11 +147,10 @@ $handler->display->display_options['filters']['field_related_themes_tid']['expos
   2 => '2',
   1 => 0,
   111903911 => 0,
-  111903912 => 0,
-  25521343 => 0,
   111903910 => 0,
   30037204 => 0,
 );
+$handler->display->display_options['filters']['field_related_themes_tid']['reduce_duplicates'] = TRUE;
 $handler->display->display_options['filters']['field_related_themes_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
 /* Filter criterion: Field: Overarching categories (field_related_domains) */
@@ -165,11 +166,10 @@ $handler->display->display_options['filters']['field_related_domains_tid']['expo
   2 => '2',
   1 => 0,
   111903911 => 0,
-  111903912 => 0,
-  25521343 => 0,
   111903910 => 0,
   30037204 => 0,
 );
+$handler->display->display_options['filters']['field_related_domains_tid']['reduce_duplicates'] = TRUE;
 $handler->display->display_options['filters']['field_related_domains_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';
 $handler->display->display_options['path'] = 'book/indicators';
@@ -183,7 +183,7 @@ $handler->display->display_options['menu']['context_only_inline'] = 0;
 /* Display: Dataset indicators */
 $handler = $view->new_display('block', 'Dataset indicators', 'block_1');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Dataset indicators';
+$handler->display->display_options['title'] = 'Indicators in this dataset';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
