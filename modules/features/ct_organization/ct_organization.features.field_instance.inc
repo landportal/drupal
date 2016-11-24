@@ -559,7 +559,7 @@ function ct_organization_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -751,13 +751,9 @@ function ct_organization_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 0,
-          'use_content_language' => TRUE,
-          'view_mode' => 'teaser',
-        ),
-        'type' => 'entityreference_entity_view',
+        'module' => 'og_ui',
+        'settings' => array(),
+        'type' => 'og_list_default',
         'weight' => 7,
       ),
       'listing' => array(

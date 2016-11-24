@@ -40,6 +40,9 @@ function ct_organization_strongarm() {
       'listing' => array(
         'custom_settings' => TRUE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -47,10 +50,10 @@ function ct_organization_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '11',
+          'weight' => '13',
         ),
         'path' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
         'language' => array(
           'weight' => '9',
@@ -137,7 +140,7 @@ function ct_organization_strongarm() {
       ),
     ),
     'display' => array(
-      'weight' => '0',
+      'weight' => '6',
       'hide' => array(
         'name' => 0,
         'street' => 0,
