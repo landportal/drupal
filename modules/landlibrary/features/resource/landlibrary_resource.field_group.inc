@@ -238,15 +238,14 @@ function landlibrary_resource_field_group_info() {
   $field_group->mode = 'listing';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Authors and Publishers',
-    'weight' => '2',
+    'label' => '',
+    'weight' => '4',
     'children' => array(
       0 => 'field_doc_provider',
-      1 => 'field_doc_publisher',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'hidden',
     'format_settings' => array(
-      'label' => 'Authors and Publishers',
+      'label' => '',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-editors-pub field-group-fieldset',
@@ -268,12 +267,12 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Authors and Publishers',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_doc_provider',
       1 => 'field_doc_publisher',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'hidden',
     'format_settings' => array(
       'label' => 'Authors and Publishers',
       'instance_settings' => array(
@@ -356,7 +355,7 @@ function landlibrary_resource_field_group_info() {
   $field_group->mode = 'listing';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Meta',
+    'label' => 'Library resource',
     'weight' => '1',
     'children' => array(
       0 => 'field_doc_creation_date',
@@ -365,7 +364,7 @@ function landlibrary_resource_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Meta',
+      'label' => 'Library resource',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-meta field-group-fieldset',
@@ -606,7 +605,7 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '3',
+    'weight' => '2',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_topics',
@@ -637,7 +636,7 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '4',
+    'weight' => '2',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_topics',
@@ -664,6 +663,7 @@ function landlibrary_resource_field_group_info() {
   t('Author(s) and Publisher(s)');
   t('Authors and Publishers');
   t('Deprecated');
+  t('Library resource');
   t('Meta');
   t('More details about access to resource');
   t('More details about resource');
