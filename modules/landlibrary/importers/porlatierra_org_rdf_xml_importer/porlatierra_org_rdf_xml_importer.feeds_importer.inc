@@ -21,7 +21,7 @@ $feeds_importer->config = array(
   'fetcher' => array(
     'plugin_key' => 'FeedsFileFetcher',
     'config' => array(
-      'allowed_extensions' => 'rdf',
+      'allowed_extensions' => 'rdf html htm',
       'direct' => 0,
       'directory' => 'private://feeds',
       'allowed_schemes' => array(
@@ -54,6 +54,7 @@ $feeds_importer->config = array(
         'xpathparser:21' => 'dc:author/text()',
         'xpathparser:22' => 'string(@rdf:about)',
         'xpathparser:23' => 'dc:license/text()',
+        'xpathparser:24' => 'dc:coverage',
       ),
       'rawXML' => array(
         'xpathparser:0' => 0,
@@ -75,6 +76,7 @@ $feeds_importer->config = array(
         'xpathparser:21' => 0,
         'xpathparser:22' => 0,
         'xpathparser:23' => 0,
+        'xpathparser:24' => 0,
       ),
       'context' => '//rdf:Description',
       'exp' => array(
@@ -100,6 +102,7 @@ $feeds_importer->config = array(
           'xpathparser:21' => 0,
           'xpathparser:22' => 0,
           'xpathparser:23' => 0,
+          'xpathparser:24' => 0,
         ),
       ),
       'allow_override' => 0,
@@ -236,6 +239,12 @@ $feeds_importer->config = array(
           'source' => 'xpathparser:23',
           'target' => 'field_doc_licencing',
           'unique' => FALSE,
+          'language' => 'und',
+        ),
+        21 => array(
+          'source' => 'xpathparser:24',
+          'target' => 'field_geographical_focus',
+          'unique' => FALSE,
         ),
       ),
       'insert_new' => '1',
@@ -254,7 +263,6 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
-
 
 /*****/
     $export[$feeds_importer->id] = $feeds_importer;

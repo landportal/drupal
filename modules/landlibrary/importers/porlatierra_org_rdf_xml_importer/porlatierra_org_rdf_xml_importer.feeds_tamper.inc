@@ -319,7 +319,7 @@ $feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_21-unique';
 $feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
 $feeds_tamper->source = 'xpathparser:21';
 $feeds_tamper->plugin_id = 'unique';
-$feeds_tamper->settings = '';
+$feeds_tamper->settings = array();
 $feeds_tamper->weight = 3;
 $feeds_tamper->description = 'Unique';
 
@@ -346,6 +346,69 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Execute php code';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_24-efq_finder';
+$feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:24';
+$feeds_tamper->plugin_id = 'efq_finder';
+$feeds_tamper->settings = array(
+  'update' => 'Update',
+  'entity_type' => 'taxonomy_term',
+  'bundle' => 'regions',
+  'field' => 'field_area_code_un_m_49',
+  'column' => 'value',
+  'property' => FALSE,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Get the Entity TID from UN M.49 code';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_24-php';
+$feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:24';
+$feeds_tamper->plugin_id = 'php';
+$feeds_tamper->settings = array(
+  'php' => '// field could be an item or an array
+if ($field != null) {
+    if (is_array($field)){
+       $terms = array();
+       foreach ($field as $f) {
+          $term = taxonomy_term_load($f);
+          $name = $term->name;
+          array_push($terms, $name);
+       }
+       return $terms;
+    } else {
+      $term = taxonomy_term_load($field);
+      $name = $term->name;
+      return $name;
+    }
+}',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Get Term Name from Term ID (TID)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_24-unique';
+$feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:24';
+$feeds_tamper->plugin_id = 'unique';
+$feeds_tamper->settings = '';
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -449,7 +512,7 @@ $feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_7-unique';
 $feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
 $feeds_tamper->source = 'xpathparser:7';
 $feeds_tamper->plugin_id = 'unique';
-$feeds_tamper->settings = '';
+$feeds_tamper->settings = array();
 $feeds_tamper->weight = 15;
 $feeds_tamper->description = 'Unique';
 
@@ -553,7 +616,7 @@ $feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_9-unique';
 $feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
 $feeds_tamper->source = 'xpathparser:9';
 $feeds_tamper->plugin_id = 'unique';
-$feeds_tamper->settings = '';
+$feeds_tamper->settings = array();
 $feeds_tamper->weight = 6;
 $feeds_tamper->description = 'Unique';
 
