@@ -109,72 +109,6 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_12-explode';
-$feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:12';
-$feeds_tamper->plugin_id = 'explode';
-$feeds_tamper->settings = array(
-  'separator' => ';',
-  'limit' => '',
-  'real_separator' => ';',
-);
-$feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_12-find_replace_multiple';
-$feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:12';
-$feeds_tamper->plugin_id = 'find_replace_multiple';
-$feeds_tamper->settings = array(
-  'pairs' => array(
-    0 => array(
-      'source' => 'Acceso a suelos y tenencia segura',
-      'target' => 'Access to Land & Tenure Security',
-    ),
-    1 => array(
-      'source' => 'Administracion de suelos e información',
-      'target' => 'Land Use, Management & Investment',
-    ),
-    2 => array(
-      'source' => 'Financiamiento urbano basado en suelos',
-      'target' => 'Land Use, Management & Investment',
-    ),
-    3 => array(
-      'source' => 'Gestión y planificación del territorio',
-      'target' => 'Land Use, Management & Investment',
-    ),
-    4 => array(
-      'source' => 'Legislación y políticas de suelos',
-      'target' => 'Land Policy & Legislation',
-    ),
-  ),
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'suelourbano.org temas to LP OverArching Categories';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_12-unique';
-$feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:12';
-$feeds_tamper->plugin_id = 'unique';
-$feeds_tamper->settings = array();
-$feeds_tamper->weight = 2;
-$feeds_tamper->description = 'Unique';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_15-efq_finder';
 $feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
 $feeds_tamper->source = 'xpathparser:15';
@@ -315,10 +249,50 @@ $feeds_tamper->settings = array(
       'source' => 'IPDRS',
       'target' => 'Instituto para el Desarrollo Rural de Sudamérica',
     ),
+    1 => array(
+      'source' => 'Fundación Tierra - Valles	',
+      'target' => 'Fundación Tierra',
+    ),
+    2 => array(
+      'source' => 'OINCO',
+      'target' => 'Organización de Inquilinos de Cochabamba',
+    ),
+    3 => array(
+      'source' => 'CAAP',
+      'target' => 'Centro Andino de Acción Popular',
+    ),
+    4 => array(
+      'source' => 'CIPCA',
+      'target' => 'Centro de Investigación y Promoción del Campesinado',
+    ),
+    5 => array(
+      'source' => 'SIPAE',
+      'target' => 'Corporación Sistema de Investigación sobre la Problemática Agraria en el Ecuador',
+    ),
+    6 => array(
+      'source' => 'IEE',
+      'target' => 'Instituto de Estudios Ecuatorianos',
+    ),
+    7 => array(
+      'source' => 'OCARU',
+      'target' => 'OCARU Observatorio del Cambio Rural',
+    ),
+    8 => array(
+      'source' => 'BASE IS',
+      'target' => 'Base Investigaciones Sociales',
+    ),
+    9 => array(
+      'source' => 'LEMTO-UFF',
+      'target' => 'Laboratório de Estudos de Movimento Sociais e Territorialidades',
+    ),
+    10 => array(
+      'source' => 'CEPES',
+      'target' => 'Centro Peruano de Estudios Sociales',
+    ),
   ),
 );
 $feeds_tamper->weight = 2;
-$feeds_tamper->description = 'Find replace multiple (suelourbano.org Corporate authors)';
+$feeds_tamper->description = 'Find replace multiple (porlatierra.org Corporate authors)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -335,6 +309,19 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 1;
 $feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_21-unique';
+$feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:21';
+$feeds_tamper->plugin_id = 'unique';
+$feeds_tamper->settings = '';
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -392,6 +379,46 @@ $feeds_tamper->settings = array(
       'source' => 'IPDRS',
       'target' => 'Instituto para el Desarrollo Rural de Sudamérica',
     ),
+    1 => array(
+      'source' => 'Fundación Tierra - Valles	',
+      'target' => 'Fundación Tierra',
+    ),
+    2 => array(
+      'source' => 'OINCO',
+      'target' => 'Organización de Inquilinos de Cochabamba',
+    ),
+    3 => array(
+      'source' => 'CAAP',
+      'target' => 'Centro Andino de Acción Popular',
+    ),
+    4 => array(
+      'source' => 'CIPCA',
+      'target' => 'Centro de Investigación y Promoción del Campesinado',
+    ),
+    5 => array(
+      'source' => 'SIPAE',
+      'target' => 'Corporación Sistema de Investigación sobre la Problemática Agraria en el Ecuador',
+    ),
+    6 => array(
+      'source' => 'IEE',
+      'target' => 'Instituto de Estudios Ecuatorianos',
+    ),
+    7 => array(
+      'source' => 'OCARU',
+      'target' => 'OCARU Observatorio del Cambio Rural',
+    ),
+    8 => array(
+      'source' => 'BASE IS',
+      'target' => 'Base Investigaciones Sociales',
+    ),
+    9 => array(
+      'source' => 'LEMTO-UFF',
+      'target' => 'Laboratório de Estudos de Movimento Sociais e Territorialidades',
+    ),
+    10 => array(
+      'source' => 'CEPES',
+      'target' => 'Centro Peruano de Estudios Sociales',
+    ),
   ),
 );
 $feeds_tamper->weight = 14;
@@ -412,6 +439,19 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 12;
 $feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_7-unique';
+$feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:7';
+$feeds_tamper->plugin_id = 'unique';
+$feeds_tamper->settings = '';
+$feeds_tamper->weight = 15;
+$feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -489,20 +529,33 @@ $feeds_tamper->settings = array(
   'pairs' => array(
     0 => array(
       'source' => 'Estudios de caso MRxT',
-      'target' => 'Multimedia',
+      'target' => 'Reports & Research',
     ),
     1 => array(
       'source' => 'Cuadernos MRxT',
-      'target' => 'Multimedia',
+      'target' => 'Institutional & Promotional materials',
     ),
     2 => array(
       'source' => 'Documentos MRxT',
-      'target' => 'Multimedia',
+      'target' => 'Policy Papers & Briefs',
     ),
   ),
 );
 $feeds_tamper->weight = 5;
-$feeds_tamper->description = 'FIXME: ALL - Multimedia';
+$feeds_tamper->description = 'Find replace multiple - Resource Type (porlatierra.org)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_9-unique';
+$feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:9';
+$feeds_tamper->plugin_id = 'unique';
+$feeds_tamper->settings = '';
+$feeds_tamper->weight = 6;
+$feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
