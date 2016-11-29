@@ -139,7 +139,7 @@ function landlibrary_resource_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'The organization / person that owns the copyrights of the resource.',
+    'description' => 'Details about the copyright of the resource, like the organization / person that owns the copyrights or a specific copyright statement.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -178,7 +178,7 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_copyrights_statement',
-    'label' => 'Copyright owner',
+    'label' => 'Copyright details',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -493,7 +493,7 @@ function landlibrary_resource_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 127,
+      'weight' => 128,
     ),
   );
 
@@ -984,7 +984,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Number of pages of the resource (if applicable), the page range  or the duration of a video.',
+    'description' => 'Number of pages of the resource or the page range in case of a journal article or book.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -1059,7 +1059,7 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_pagination',
-    'label' => 'Pages / Duration',
+    'label' => 'Pages',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1676,6 +1676,52 @@ function landlibrary_resource_field_default_field_instances() {
     'widget_type' => 'options_select',
   );
 
+  // Exported field_instance: 'node-landlibrary_resource-field_duration'.
+  $field_instances['node-landlibrary_resource-field_duration'] = array(
+    'bundle' => 'landlibrary_resource',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 50,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_duration',
+    'label' => 'Duration',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 127,
+    ),
+  );
+
   // Exported field_instance:
   // 'node-landlibrary_resource-field_geographical_focus'.
   $field_instances['node-landlibrary_resource-field_geographical_focus'] = array(
@@ -2035,10 +2081,12 @@ function landlibrary_resource_field_default_field_instances() {
   t('An ISBN or another unique label that identifies the resource. (If your resource does not have a unique label, please enter the first six letters of the publisher - first six letters of the title - YYYYMM.E.g.: Landpo-Firsts-201607).');
   t('Author(s), editor(s), contributor(s)');
   t('Comment');
-  t('Copyright owner');
+  t('Copyright details');
   t('Corporate Author(s)');
   t('Data Provider');
   t('Date of publication');
+  t('Details about the copyright of the resource, like the organization / person that owns the copyrights or a specific copyright statement.');
+  t('Duration');
   t('Enter a concept term from Land Portal\'s <a href="/voc/landvoc">LandVoc</a> thesaurus to classify the topical subject of the resource.');
   t('Enter one (or several) of the Land Portal\'s <a href="/voc/landvoc">Overarching Categories</a> to classify the topical subject of the resource.');
   t('File Upload');
@@ -2049,10 +2097,10 @@ function landlibrary_resource_field_default_field_instances() {
   t('License of the resource');
   t('Local file URL');
   t('Location Source');
-  t('Number of pages of the resource (if applicable), the page range  or the duration of a video.');
+  t('Number of pages of the resource or the page range in case of a journal article or book.');
   t('Organization cited as Author of this material  (linked to an organizational profile on the Land Portal).');
   t('Overarching Categories');
-  t('Pages / Duration');
+  t('Pages');
   t('People who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]"
 ');
   t('Published at');
@@ -2070,7 +2118,6 @@ function landlibrary_resource_field_default_field_instances() {
   t('The geographical focus of the resource (possible to select several).');
   t('The language of the resource');
   t('The location of the source.');
-  t('The organization / person that owns the copyrights of the resource.');
   t('The organization that makes the resource available (needs to be linked to an organizational profile on the Land Portal).');
   t('The organization that published the resource (needs to be linked to an organizational profile on the Land Portal).');
   t('The page on the website of the publisher where the resource is presented (e.g.: http://landportal.info/library/resources/report-sharing-best-practices-and-lessons-learned-supporting-women%E2%80%99s-land-rights).');

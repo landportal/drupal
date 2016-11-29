@@ -85,6 +85,7 @@ function landlibrary_resource_field_group_info() {
       0 => 'field_doc_alt_title',
       1 => 'field_doc_identifier',
       2 => 'field_doc_pagination',
+      3 => 'field_duration',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
