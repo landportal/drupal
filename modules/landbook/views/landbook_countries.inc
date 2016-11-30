@@ -59,7 +59,7 @@ $handler = $view->new_display('page', 'Page countries', 'page');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Land Book Countries';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'grid';
+$handler->display->display_options['css_class'] = 'view-grid';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -173,7 +173,7 @@ $handler = $view->new_display('block', 'Countries portfolio', 'block_1');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Countries portfolio';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'grid';
+$handler->display->display_options['css_class'] = 'view-grid';
 $handler->display->display_options['display_description'] = 'List / overview of countries with narratives';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Taxonomy term: Content using Geographical focus */
