@@ -617,7 +617,7 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_is_shown_at',
-    'label' => 'Published at',
+    'label' => 'Originally published at',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
@@ -714,7 +714,7 @@ function landlibrary_resource_field_default_field_instances() {
       'title' => 'value',
       'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
-      'title_value' => 'Click here to access the resource',
+      'title_value' => 'DOWNLOAD THE RESOURCE',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,
@@ -1685,9 +1685,8 @@ function landlibrary_resource_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 50,
       ),
       'listing' => array(
@@ -2099,11 +2098,11 @@ function landlibrary_resource_field_default_field_instances() {
   t('Location Source');
   t('Number of pages of the resource or the page range in case of a journal article or book.');
   t('Organization cited as Author of this material  (linked to an organizational profile on the Land Portal).');
+  t('Originally published at');
   t('Overarching Categories');
   t('Pages');
   t('People who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]"
 ');
-  t('Published at');
   t('Publisher');
   t('Related Concepts');
   t('Relation');
