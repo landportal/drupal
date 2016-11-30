@@ -68,14 +68,14 @@ libraries:
   mailchimp:
     download:
       # V1 API
-      type: "file"
-      url: "http://apidocs.mailchimp.com/api/downloads/mailchimp-api-class.zip"
+#      type: "file"
+#      url: "http://apidocs.mailchimp.com/api/downloads/mailchimp-api-class.zip"
       # V2 API
       #type: "git"
       #url: "https://bitbucket.org/mailchimp/mailchimp-api-php.git"
       # MC V3 API - library v1.0.4
-      #type: "file"
-      #url: "https://github.com/thinkshout/mailchimp-api-php/archive/v1.0.4.zip"
+      type: "file"
+      url: "https://github.com/thinkshout/mailchimp-api-php/archive/v1.0.4.zip"
   hybridauth:
     download:
       type: "git"
