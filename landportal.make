@@ -53,6 +53,7 @@ projects:
   - feeds_tamper_string2id
   - feeds_xpathparser
   - field_collection
+  - field_collection_fieldset
   - field_group
   - field_tools
   - field_validation
@@ -81,6 +82,7 @@ projects:
 #  - nice_menus
   - node_edit_protection
   - oauth
+  - og
   - pathauto
   - pcp
   - phpwkhtmltopdf
