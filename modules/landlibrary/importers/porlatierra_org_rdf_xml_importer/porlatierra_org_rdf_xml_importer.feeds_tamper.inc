@@ -326,30 +326,6 @@ $feeds_tamper->description = 'Unique';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_23-php';
-$feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:23';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => 'if ($field != null) {
-   debug($field);
-   $path_array = explode(\'/\', $field);
-   debug($path_array );
-   $term_name = $path_array[(count($path_array)-1)];
-   debug($term_name);
-   $term_object = taxonomy_get_term_by_name($term_name);
-   debug($term_object);
-   return $field;
-}',
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Execute php code';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_24-efq_finder';
