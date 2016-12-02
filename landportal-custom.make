@@ -28,6 +28,7 @@ projects:
     version: ~
     patch:
       - "https://www.drupal.org/files/issues/multiple_replace-1525540-7.patch"
+      - "https://www.drupal.org/files/issues/feeds_tamper-2792585-3.patch"
   feeds_oai_pmh:
     version: "1.x-dev"
     patch:
