@@ -129,6 +129,16 @@ function landbook_view_coda_library() {
             array('landbook_view_coda', 'view-coda'),
         ),
     );
+    $libraries['lbvis.vggt'] = array(
+        'title' => 'view-coda vggt',
+        'version' => '0.0.1',
+        'js' => array(
+            $LBVIS_PATH . '/js/lbvis.vggt.js' => array(),
+        ),
+        'dependencies' => array(
+            array('landbook_view_coda', 'view-coda'),
+        ),
+    );
     $libraries['lbvis.dl'] = array(
         'title' => 'view-coda download',
         'version' => '0.0.1',

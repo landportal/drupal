@@ -410,19 +410,17 @@ $handler->display->display_options['fields']['field_doc_provider']['exclude'] = 
 $handler->display->display_options['fields']['field_doc_provider']['settings'] = array(
   'link' => 1,
 );
-/* Field: Content: Copyright owner */
-$handler->display->display_options['fields']['field_doc_copyrights_statement']['id'] = 'field_doc_copyrights_statement';
-$handler->display->display_options['fields']['field_doc_copyrights_statement']['table'] = 'field_data_field_doc_copyrights_statement';
-$handler->display->display_options['fields']['field_doc_copyrights_statement']['field'] = 'field_doc_copyrights_statement';
-$handler->display->display_options['fields']['field_doc_copyrights_statement']['label'] = 'Authors and Owners';
-$handler->display->display_options['fields']['field_doc_copyrights_statement']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['field_doc_copyrights_statement']['alter']['text'] = 'Authors (person): [field_doc_people]
-Authors (orgs): [field_orgref]
----
-Pub: [field_doc_publisher]
-Prov: [field_doc_provider]
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing_2']['id'] = 'nothing_2';
+$handler->display->display_options['fields']['nothing_2']['table'] = 'views';
+$handler->display->display_options['fields']['nothing_2']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing_2']['label'] = 'Authors, publishers and data provider';
+$handler->display->display_options['fields']['nothing_2']['alter']['text'] = 'Authors (person): [field_doc_people] <br />
+Authors (orgs): [field_orgref] <br />
+---<br />
+Pub: [field_doc_publisher] <br />
+Prov: [field_doc_provider] <br />
 ';
-$handler->display->display_options['fields']['field_doc_copyrights_statement']['alter']['nl2br'] = TRUE;
 /* Field: Content: Thumbnail of the resource */
 $handler->display->display_options['fields']['field_doc_thumb']['id'] = 'field_doc_thumb';
 $handler->display->display_options['fields']['field_doc_thumb']['table'] = 'field_data_field_doc_thumb';
@@ -483,17 +481,33 @@ $handler->display->display_options['fields']['field_doc_pagination']['id'] = 'fi
 $handler->display->display_options['fields']['field_doc_pagination']['table'] = 'field_data_field_doc_pagination';
 $handler->display->display_options['fields']['field_doc_pagination']['field'] = 'field_doc_pagination';
 $handler->display->display_options['fields']['field_doc_pagination']['exclude'] = TRUE;
+/* Field: Content: License of the resource */
+$handler->display->display_options['fields']['field_doc_licencing']['id'] = 'field_doc_licencing';
+$handler->display->display_options['fields']['field_doc_licencing']['table'] = 'field_data_field_doc_licencing';
+$handler->display->display_options['fields']['field_doc_licencing']['field'] = 'field_doc_licencing';
+$handler->display->display_options['fields']['field_doc_licencing']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_doc_licencing']['delta_offset'] = '0';
+/* Field: Content: Copyright owner */
+$handler->display->display_options['fields']['field_doc_copyrights_statement']['id'] = 'field_doc_copyrights_statement';
+$handler->display->display_options['fields']['field_doc_copyrights_statement']['table'] = 'field_data_field_doc_copyrights_statement';
+$handler->display->display_options['fields']['field_doc_copyrights_statement']['field'] = 'field_doc_copyrights_statement';
+$handler->display->display_options['fields']['field_doc_copyrights_statement']['label'] = 'Copyright details';
+$handler->display->display_options['fields']['field_doc_copyrights_statement']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_doc_copyrights_statement']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_doc_copyrights_statement']['alter']['nl2br'] = TRUE;
 /* Field: Global: Custom text */
 $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
 $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
 $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
-$handler->display->display_options['fields']['nothing_1']['label'] = 'Metadata';
+$handler->display->display_options['fields']['nothing_1']['label'] = 'Metadata___details';
 $handler->display->display_options['fields']['nothing_1']['alter']['text'] = 'Type: [field_doc_type] <br />
 Lang: [field_doc_language] <br />
 Direct: [field_doc_is_shown_by] <br />
 Original: [field_doc_is_shown_at] <br />
 ID: [field_doc_identifier] <br />
-Pages: [field_doc_pagination]';
+Pages: [field_doc_pagination] <br />
+License: [field_doc_licencing] <br />
+Copyright details: [field_doc_copyrights_statement] <br />';
 $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
 /* Field: Field: Geographical focus */
 $handler->display->display_options['fields']['field_geographical_focus']['id'] = 'field_geographical_focus';
@@ -545,6 +559,12 @@ $handler->display->display_options['fields']['field_doc_creation_date']['setting
   'show_remaining_days' => 0,
   'show_repeat_rule' => 'show',
 );
+/* Field: User: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'users';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['relationship'] = 'uid';
+$handler->display->display_options['fields']['name']['label'] = 'Username';
 /* Field: Updated */
 $handler->display->display_options['fields']['changed']['id'] = 'changed';
 $handler->display->display_options['fields']['changed']['table'] = 'node';
@@ -555,12 +575,6 @@ $handler->display->display_options['fields']['changed']['element_label_colon'] =
 $handler->display->display_options['fields']['changed']['date_format'] = 'short';
 $handler->display->display_options['fields']['changed']['custom_date_format'] = 'd/m/Y';
 $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
-/* Field: User: Name */
-$handler->display->display_options['fields']['name']['id'] = 'name';
-$handler->display->display_options['fields']['name']['table'] = 'users';
-$handler->display->display_options['fields']['name']['field'] = 'name';
-$handler->display->display_options['fields']['name']['relationship'] = 'uid';
-$handler->display->display_options['fields']['name']['label'] = 'Username';
 $handler->display->display_options['filter_groups']['groups'] = array(
   1 => 'AND',
   2 => 'AND',

@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Code for sudamericarural.org biblioteca, dialogos, exploraciones (RDF/XML).
+ */
+
+include_once('sudamericarural_org_rdf_xml_importer.feeds_importer.inc');
+include_once('sudamericarural_org_rdf_xml_importer.feeds_tamper.inc');
+
+function sudamericarural_org_rdf_xml_importer_ctools_plugin_api($module = '', $api = '') {
+    if ($module == "feeds_tamper" && $api == "feeds_tamper_default") {
+        return array("version" => "2");
+    }
+    if ($module == "feeds" && $api == "feeds_importer_default") {
+        return array("version" => "1");
+    }
+}
