@@ -25,7 +25,6 @@ dependencies[] = node
 dependencies[] = options
 dependencies[] = rdf
 dependencies[] = rdfx
-dependencies[] = shs
 dependencies[] = strongarm
 dependencies[] = synonyms
 dependencies[] = taxonomy

@@ -421,18 +421,11 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'taxonomy',
+      'module' => 'synonyms',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'shs' => array(
-          'create_new_levels' => 0,
-          'create_new_terms' => 0,
-          'force_deepest' => 0,
-          'node_count' => 0,
-        ),
-        'size' => 60,
+        'sort' => 'weight',
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'synonyms_select_taxonomy_term',
       'weight' => 3,
     ),
   );

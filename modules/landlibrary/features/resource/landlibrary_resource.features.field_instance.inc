@@ -1599,11 +1599,9 @@ function landlibrary_resource_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'hidden',
-        'module' => 'shs',
-        'settings' => array(
-          'linked' => FALSE,
-        ),
-        'type' => 'shs_default',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
       'promoted_country_page' => array(
