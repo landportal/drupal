@@ -30,7 +30,7 @@ a { color: #A3C642; }
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH -------------------------- */
-@font-face { font-family: 'FontAwesome'; src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.7.0&1472885790); src: url(../fonts/font-awesome/fontawesome-webfont.eot?v=4.7.0&1472885790#iefix) format("embedded-opentype"), url(../fonts/font-awesome/fontawesome-webfont.woff2?v=4.7.0&1472885790) format("woff2"), url(../fonts/font-awesome/fontawesome-webfont.woff?v=4.7.0&1472885790) format("woff"), url(../fonts/font-awesome/fontawesome-webfont.ttf?v=4.7.0&1472885790) format("truetype"), url(../fonts/font-awesome/fontawesome-webfont.svg?v=4.7.0&1472885790#fontawesomeregular) format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'FontAwesome'; src: url(../fonts/../fonts/font-awesome/fontawesome-webfont.eot?v=4.7.0&1472885790); src: url(../fonts/../fonts/font-awesome/fontawesome-webfont.eot?v=4.7.0&1472885790#iefix) format("embedded-opentype"), url(../fonts/../fonts/font-awesome/fontawesome-webfont.woff2?v=4.7.0&1472885790) format("woff2"), url(../fonts/../fonts/font-awesome/fontawesome-webfont.woff?v=4.7.0&1472885790) format("woff"), url(../fonts/../fonts/font-awesome/fontawesome-webfont.ttf?v=4.7.0&1472885790) format("truetype"), url(../fonts/../fonts/font-awesome/fontawesome-webfont.svg?v=4.7.0&1472885790#fontawesomeregular) format("svg"); font-weight: normal; font-style: normal; }
 .fa { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 /* makes the font 33% larger relative to the icon container */
@@ -1561,7 +1561,7 @@ td, th { padding: 0; }
   .table { border-collapse: collapse !important; }
   .table td, .table th { background-color: #fff !important; }
   .table-bordered th, .table-bordered td { border: 1px solid #ddd !important; } }
-@font-face { font-family: 'Glyphicons Halflings'; src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?1472885790); src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?&1472885790#iefix) format("embedded-opentype"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff2?1472885790) format("woff2"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff?1472885790) format("woff"), url(../fonts/bootstrap/glyphicons-halflings-regular.ttf?1472885790) format("truetype"), url(../fonts/bootstrap/glyphicons-halflings-regular.svg?1472885790#glyphicons_halflingsregular) format("svg"); }
+@font-face { font-family: 'Glyphicons Halflings'; src: url(../fonts/../fonts/bootstrap/glyphicons-halflings-regular.eot?1472885790); src: url(../fonts/../fonts/bootstrap/glyphicons-halflings-regular.eot?&1472885790#iefix) format("embedded-opentype"), url(../fonts/../fonts/bootstrap/glyphicons-halflings-regular.woff2?1472885790) format("woff2"), url(../fonts/../fonts/bootstrap/glyphicons-halflings-regular.woff?1472885790) format("woff"), url(../fonts/../fonts/bootstrap/glyphicons-halflings-regular.ttf?1472885790) format("truetype"), url(../fonts/../fonts/bootstrap/glyphicons-halflings-regular.svg?1472885790#glyphicons_halflingsregular) format("svg"); }
 .glyphicon { position: relative; top: 1px; display: inline-block; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .glyphicon-asterisk:before { content: "\002a"; }
@@ -5072,23 +5072,21 @@ body #footer .section #block-landportal-blocks-lp-footer-social .content li a .f
   .table tbody tr td:nth-of-type(7)::before { content: "Remove"; text-align: left; } }
 
 /* LGAF Chart */
-#lgaf { overflow: hidden; }
-#lgaf .ldaf-title { margin: 20px 0 10px 0; }
-#lgaf .ldaf-title p { font-family: "Open Sans",sans-serif; color: #666; font-size: 16px; line-height: 1.42857; }
-#lgaf.country-section { border-bottom: none; }
-#lgaf .piechart { margin-top: 30px; padding-top: 40px; border-top: 1px solid #d6dbdc; }
-#lgaf #lgaf-legend li { padding: 0; }
-#lgaf #lgaf-legend li span { font-size: 12px; font-family: "Open Sans",sans-serif; }
-#lgaf #lgaf-legend li span.lgaf-value { width: 14px !important; height: 14px !important; left: 0; position: relative; top: 2px; }
-#lgaf #lgaf-wrapper li { position: relative; font-family: "Open Sans",sans-serif; font-size: 16px; padding: 15px 20px; border-bottom: 2px solid #F2F2F2; background-color: #FFFFFF; /* .lgaf-value-a, */ /* .lgaf-value-b, */ /* .lgaf-value-c, */ /* .lgaf-value-d, */ /* .lgaf-value-na,{ */ /*     height: 20px !important; */ /*     left: 10px; */ /*     line-height: 20px; */ /*     position: absolute; */ /*     text-align: center; */ /*     top: 17px; */ /*     width: 20px !important; */ /* } */ }
-#lgaf #lgaf-wrapper li span { margin-right: .5em; width: 1em; height: 1em; display: inline-block; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; }
-#lgaf #lgaf-wrapper li span:nth-child(2) { width: .5em; margin-left: -1em; -moz-border-radius: 0 20px 20px 0; -webkit-border-radius: 0; border-radius: 0 20px 20px 0; }
-#lgaf #lgaf-legend li span:first-of-type { width: 1em; height: 1em; display: inline-block; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; }
-#lgaf .lgaf-value-a { background-color: #7ED321; }
-#lgaf .lgaf-value-b { background-color: #F8E71C; }
-#lgaf .lgaf-value-c { background-color: #F5A623; }
-#lgaf .lgaf-value-d { background-color: #F6112D; }
-#lgaf .lgaf-value-na { background-color: #CCC; }
+#block-landbook-vggt-vis-vggt, #lgaf { overflow: hidden; /* .ldaf-title{ */ /*     margin: 20px 0 10px 0; */ /*     p{ */ /*         font-family: "Open Sans",sans-serif; */ /*         color: #666; */ /*         font-size: 16px; */ /*         line-height: 1.42857; */ /*     } */ /* } */ }
+#block-landbook-vggt-vis-vggt.country-section, #lgaf.country-section { border-bottom: none; }
+#block-landbook-vggt-vis-vggt .piechart, #lgaf .piechart { margin-top: 30px; padding-top: 40px; border-top: 1px solid #d6dbdc; }
+#block-landbook-vggt-vis-vggt #block-landbook-vggt-vis-vggt-wrapper li, #block-landbook-vggt-vis-vggt #lgaf-wrapper li, #lgaf #block-landbook-vggt-vis-vggt-wrapper li, #lgaf #lgaf-wrapper li { position: relative; font-family: "Open Sans",sans-serif; font-size: 16px; padding: 15px 20px; border-bottom: 2px solid #F2F2F2; background-color: #FFFFFF; }
+#block-landbook-vggt-vis-vggt #block-landbook-vggt-vis-vggt-wrapper li span, #block-landbook-vggt-vis-vggt #lgaf-wrapper li span, #lgaf #block-landbook-vggt-vis-vggt-wrapper li span, #lgaf #lgaf-wrapper li span { margin-right: .5em; width: 1em; height: 1em; display: inline-block; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; }
+#block-landbook-vggt-vis-vggt #block-landbook-vggt-vis-vggt-wrapper li span:nth-child(2), #block-landbook-vggt-vis-vggt #lgaf-wrapper li span:nth-child(2), #lgaf #block-landbook-vggt-vis-vggt-wrapper li span:nth-child(2), #lgaf #lgaf-wrapper li span:nth-child(2) { width: .5em; margin-left: -1em; -moz-border-radius: 0 20px 20px 0; -webkit-border-radius: 0; border-radius: 0 20px 20px 0; }
+#block-landbook-vggt-vis-vggt .values-legend li, #block-landbook-vggt-vis-vggt #lgaf-legend li, #lgaf .values-legend li, #lgaf #lgaf-legend li { padding: 0; }
+#block-landbook-vggt-vis-vggt .values-legend li span, #block-landbook-vggt-vis-vggt #lgaf-legend li span, #lgaf .values-legend li span, #lgaf #lgaf-legend li span { font-size: 12px; font-family: "Open Sans",sans-serif; }
+#block-landbook-vggt-vis-vggt .values-legend li span[class*="value-*"], #block-landbook-vggt-vis-vggt .values-legend li span[class*="lgaf-value-*"], #block-landbook-vggt-vis-vggt #lgaf-legend li span[class*="value-*"], #block-landbook-vggt-vis-vggt #lgaf-legend li span[class*="lgaf-value-*"], #lgaf .values-legend li span[class*="value-*"], #lgaf .values-legend li span[class*="lgaf-value-*"], #lgaf #lgaf-legend li span[class*="value-*"], #lgaf #lgaf-legend li span[class*="lgaf-value-*"] { width: 14px !important; height: 14px !important; left: 0; position: relative; top: 2px; }
+#block-landbook-vggt-vis-vggt .values-legend li span:first-of-type, #block-landbook-vggt-vis-vggt #lgaf-legend li span:first-of-type, #lgaf .values-legend li span:first-of-type, #lgaf #lgaf-legend li span:first-of-type { width: 1em; height: 1em; display: inline-block; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; }
+#block-landbook-vggt-vis-vggt .value-a, #block-landbook-vggt-vis-vggt .lgaf-value-a, #lgaf .value-a, #lgaf .lgaf-value-a { background-color: #7ED321; }
+#block-landbook-vggt-vis-vggt .value-b, #block-landbook-vggt-vis-vggt .lgaf-value-b, #lgaf .value-b, #lgaf .lgaf-value-b { background-color: #F8E71C; }
+#block-landbook-vggt-vis-vggt .value-c, #block-landbook-vggt-vis-vggt .lgaf-value-c, #lgaf .value-c, #lgaf .lgaf-value-c { background-color: #F5A623; }
+#block-landbook-vggt-vis-vggt .value-d, #block-landbook-vggt-vis-vggt .lgaf-value-d, #lgaf .value-d, #lgaf .lgaf-value-d { background-color: #F6112D; }
+#block-landbook-vggt-vis-vggt .value-na, #block-landbook-vggt-vis-vggt .lgaf-value-na, #lgaf .value-na, #lgaf .lgaf-value-na { background-color: #CCC; }
 
 body { width: 1150px !important; }
 
