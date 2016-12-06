@@ -1,0 +1,8 @@
+name = Landbook vis VGGT
+description = Landbook module to display VGGT visualization
+package = Landportal
+core = 7.x
+version = 7.x-1.1
+dependencies[] = blocks
+dependencies[] = landbook_taxonomies
+dependencies[] = landbook_view_coda

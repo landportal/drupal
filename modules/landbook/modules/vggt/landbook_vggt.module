@@ -1,0 +1,56 @@
+<?php
+
+function landbook_vggt_block_info() {
+  $blocks['vis_vggt'] = array(
+    'info'      => t('LB View CODA: VGGT'),
+    'status'    => TRUE,
+    'region'    => 'content',
+    'visibility'=> BLOCK_VISIBILITY_LISTED,
+    'pages'     => "book/countries/*",
+    'weight'    => 16
+  );
+  return $blocks;
+}
+
+// Wrap lbvis.[CHART] callback
+function landbook_vggt_lbvis($callback) {
+    return 'jQuery(document).ready(function () { LBV.ready().done(function () { ' . $callback . ' }) });';
+}
+
+function landbook_vggt_block_view($delta = '') {
+    if ($delta != 'vis_vggt') return ;
+
+    $vggtDesc = variable_get('landbook-vggt', '
+                  <p>The Voluntary Guidelines on the Responsible Governance of Tenure of Land, Fisheries, and Forests in the
+              Context of National Food Security (The VGGTs) were
+                <a href="http://www.fao.org/docrep/016/i2801e/i2801e.pdf">endorsed by the Committee on World Food Security in 2012</a>.</p>
+              <p>The "VGGT indicators" were created by Nicholas K. Tagliarino, PhD Candidate at the University of Groningen. (IND-NKT-VGGT). The indicators assess national laws against Section 16 of the VGGT standards on expropriation, compensation, and resettlement.</p>
+                  <p>Each indicator relates to a principle established in the VGGTs.</p>
+                  <ul>
+                    <li>A (green)= National laws fully adopt the VGGT principle</li>
+                    <li>B (yellow)= National laws partially adopt the VGGT principle</li>
+                    <li>C (red)= National laws do not adopt the VGGT principle</li>
+                  </ul>
+
+              <p>Answering the questions posed by these indicators entails analyzing a broad range of national-level laws, including national constitutions, land acquisition acts, land acts, community land acts, agricultural land acts, land use regulations, and some court decisions.</p>');
+      
+    $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
+    $jsAttr = 'vis: LBV, jsonPath: "' . $LBVIS_PATH . '/json", iso3: Drupal.settings.landbook.countryCode';
+    $block = array();
+    $block['subject'] = t('Voluntary Guidelines on the Responsible Governance of Tenure');
+    $block['content'] = array(
+      '#attached' => array(
+        'library' => array(
+          array('landbook_view_coda', 'lbvis.vggt')
+        ),
+        'js' => array(
+          array(
+            'type' => 'inline',
+            'data' => landbook_view_coda_lbvis_ready_callback('VGGT = new lbvisVGGT({'.$jsAttr.', target: "#block-landbook-vggt-vis-vggt"}); VGGT.init();')
+          )
+        )
+      ),
+      '#markup' => $vggtDesc
+    );
+    return $block;
+}
