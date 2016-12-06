@@ -5,12 +5,14 @@
  * 
  */
 
-/**
- * Clean up and settings for new LP theme (LPBS)
+/** LPBS Release
+ * Clean up and settings for LP new theme
  */
 function landportal_admin_update_7201() {
+
+    // DISABLE MODULES
   module_disable(array(
-    'shs',
+    'shs', 'nice_menus', 'lang_dropdown'
   ));
     
     // Reset Blocks
@@ -28,7 +30,6 @@ function landportal_admin_update_7201() {
         )
     );
     array_push($blocks, $block);
-
     // hide all facetapi blocks
     $block = array(
         'keys' => array(
@@ -89,7 +90,7 @@ function landportal_admin_update_7201() {
         )
     );
     array_push($blocks, $block);
-    
+    // Borken?
     $block = array(
         'keys' => array(
             'module' => 'search',
@@ -102,7 +103,6 @@ function landportal_admin_update_7201() {
     );
     array_push($blocks, $block);
 
-
     // Execute block changes
     foreach($blocks as $block){
         db_merge('block')
@@ -110,12 +110,6 @@ function landportal_admin_update_7201() {
             ->fields($block['values'])
             ->execute();
     }
-
-
-    // DISABLE MODULES
-    module_disable(array('nice_menus', 'lang_dropdown'));
-
-    // DEV REMOVE
     //drupal_set_installed_schema_version('landportal_admin', '7200');
 }
 
@@ -126,7 +120,7 @@ function landportal_admin_update_7201() {
  * Clean up modules that have been removed brutally
  */
 function landportal_admin_update_7200() {
-    $modules = array ('auto_nodetitle', 'fc', 'fc_progress', 'fc_incomplete', 'fc_field_groups', 'antispam', 'batch_add_terms', 'feeds_sql', 'feeds_youtube', 'ccl', 'ckan_integration_endpoint', 'connector', 'content_access', 'emvideo', 'emvideo_youtube', 'fb', 'fb_likebox', 'imce', 'themekey', 'http_client', 'http_client_oauth', 'delete_all', 'druser_resource', 'field_permissions', 'unit_testing', 'session_resource', 'node_export', 'wysiwyg', 'social_buttons', 'taxonomy_csv', 'og', 'og_ui', 'og_access', 'video', 'shortcode_video', 'shortcode', 'user_profile_sync', 'user_account_fields', 'oauthconnector', 'oauth2_common', 'migrate', 'migrate_ui', 'migrate_d2d', 'migrate_d2d_ui', 'references_dialog', 'role_export', 'imce_filefield', 'imce_wysiwyg', 'jira_issue_collector', 'landbook_nodes', 'landbook_nodes_access', 'landbook_nodes_importers', 'landdebate_content_types', 'landdebate_permissions', 'landdebate_views', 'landportal_api_auth', 'landportal_bo', 'landportal_content_types', 'landportal_ct_organization', 'landportal_field_base', 'landportal_extra', 'landportal_permissions', 'landportal_migration', 'landportal_uris', 'landportal_users', 'mailchimp_seg_custom');
+    $modules = array ('auto_nodetitle', 'fc', 'fc_progress', 'fc_incomplete', 'fc_field_groups', 'antispam', 'batch_add_terms', 'feeds_sql', 'feeds_youtube', 'ccl', 'ckan_integration_endpoint', 'connector', 'content_access', 'emvideo', 'emvideo_youtube', 'fb', 'fb_likebox', 'imce', 'themekey', 'http_client', 'http_client_oauth', 'delete_all', 'druser_resource', 'field_permissions', 'unit_testing', 'session_resource', 'node_export', 'wysiwyg', 'social_buttons', 'taxonomy_csv', 'video', 'shortcode_video', 'shortcode', 'user_profile_sync', 'user_account_fields', 'oauthconnector', 'oauth2_common', 'migrate', 'migrate_ui', 'migrate_d2d', 'migrate_d2d_ui', 'references_dialog', 'role_export', 'imce_filefield', 'imce_wysiwyg', 'jira_issue_collector', 'landbook_nodes', 'landbook_nodes_access', 'landbook_nodes_importers', 'landdebate_content_types', 'landdebate_permissions', 'landdebate_views', 'landportal_api_auth', 'landportal_bo', 'landportal_content_types', 'landportal_ct_organization', 'landportal_field_base', 'landportal_extra', 'landportal_permissions', 'landportal_migration', 'landportal_uris', 'landportal_users', 'mailchimp_seg_custom');
   
     db_delete('system')
         ->condition('name', $modules, 'IN')

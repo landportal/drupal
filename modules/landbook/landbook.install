@@ -9,7 +9,9 @@
  * Drupal refactoring: Jules <jules@ker.bz>
  */
 
-/* Reset disclaimer and pdf/feedback links blocks positions */
+/** LPBS Release
+ * Reset blocks position for LP new theme
+ */
 function landbook_update_7201() {
     $block = array(
       'keys' => array(
@@ -19,7 +21,7 @@ function landbook_update_7201() {
       ),
       'fields' => array(
         'region' => 'content',
-        'weight' => '-43',
+        'weight' => '1',
       )
     );
     db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
@@ -31,7 +33,7 @@ function landbook_update_7201() {
       ),
       'fields' => array(
         'region' => 'content',
-        'weight' => '-44',
+        'weight' => '2',
       )
     );
     db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
