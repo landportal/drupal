@@ -1,5 +1,6 @@
 <?php
 
+/* Declare VGGT block */
 function landbook_vggt_block_info() {
   $blocks['vis_vggt'] = array(
     'info'      => t('LB View CODA: VGGT'),
@@ -12,15 +13,28 @@ function landbook_vggt_block_info() {
   return $blocks;
 }
 
-// Wrap lbvis.[CHART] callback
-function landbook_vggt_lbvis($callback) {
-    return 'jQuery(document).ready(function () { LBV.ready().done(function () { ' . $callback . ' }) });';
+
+/* Drupal administration form for block */
+function landbook_vggt_block_configure($delta='') {
+  if ($delta != 'vis_vggt') return ;
+   $form = array(
+     'text_body' => array(
+       '#type'          => 'text_format',
+       '#title'         => t('Landbook VGGT information'),
+       '#default_value' => landbook_vggt_body()
+     )
+   );
+   return $form;
 }
 
-function landbook_vggt_block_view($delta = '') {
-    if ($delta != 'vis_vggt') return ;
+function landbook_vggt_block_save($delta = '', $edit = array()) {
+  if ($delta != 'vis_vggt') return ;
+  variable_set('landbook_vggt', $edit['text_body']['value']);
+}
 
-    $vggtDesc = variable_get('landbook-vggt', '
+/* VGGT block description (shown everytime the VGGT vis appears) */
+function landbook_vggt_body() {
+  $vggtDesc = variable_get('landbook_vggt', '
                   <p>The Voluntary Guidelines on the Responsible Governance of Tenure of Land, Fisheries, and Forests in the
               Context of National Food Security (The VGGTs) were
                 <a href="http://www.fao.org/docrep/016/i2801e/i2801e.pdf">endorsed by the Committee on World Food Security in 2012</a>.</p>
@@ -33,6 +47,17 @@ function landbook_vggt_block_view($delta = '') {
                   </ul>
 
               <p>Answering the questions posed by these indicators entails analyzing a broad range of national-level laws, including national constitutions, land acquisition acts, land acts, community land acts, agricultural land acts, land use regulations, and some court decisions.</p>');
+    return $vggtDesc;
+}
+
+// Wrap lbvis.[CHART] callback
+function landbook_vggt_lbvis($callback) {
+    return 'jQuery(document).ready(function () { LBV.ready().done(function () { ' . $callback . ' }) });';
+}
+
+function landbook_vggt_block_view($delta = '') {
+    if ($delta != 'vis_vggt') return ;
+
       
     $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
     $jsAttr = 'vis: LBV, jsonPath: "' . $LBVIS_PATH . '/json", iso3: Drupal.settings.landbook.countryCode';
@@ -50,7 +75,7 @@ function landbook_vggt_block_view($delta = '') {
           )
         )
       ),
-      '#markup' => $vggtDesc
+      '#markup' => landbook_vggt_body()
     );
     return $block;
 }

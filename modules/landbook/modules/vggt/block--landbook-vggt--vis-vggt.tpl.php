@@ -2,7 +2,7 @@
 /* VGGT visualization block */
 //dpm($block);
 ?>
-        <article id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+        <article id="<?php print $block_html_id; ?>" class="col-sm-10 col-sm-offset-1 country-section <?php print $classes; ?>"<?php print $attributes; ?>>
           <header class="text-center">
 <?php print render($title_prefix); ?>
 <?php if ($block->subject): ?>
@@ -29,7 +29,7 @@
           <div class="row">
             <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
               <div id="<?php print $block_html_id; ?>-wrapper" class="">
-                <ul class="list-unstyled text-center"><li class="panelVal"></li></ul>
+                <ul class="list-unstyled text-center"><li class="panelVal values-panel"></li></ul>
                 <div class="panel panel-default">
                   <div class="panel-heading">Explanation</div>
                   <div class="panel-body">
