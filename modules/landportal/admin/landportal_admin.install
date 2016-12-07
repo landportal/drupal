@@ -71,7 +71,7 @@ function landportal_admin_update_7201() {
     $block = array(
         'keys' => array(
             'module' => 'menu',
-            'delta'  => 'menu-landlibrary-menu',
+            'delta'  => 'landlibrary-menu',
             'theme'  => 'lpbs',
         ),
         'values' => array(

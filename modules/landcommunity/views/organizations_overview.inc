@@ -451,7 +451,7 @@ $handler->display->display_options['path'] = 'library/sources';
 $handler->display->display_options['menu']['type'] = 'normal';
 $handler->display->display_options['menu']['title'] = 'Sources';
 $handler->display->display_options['menu']['weight'] = '2';
-$handler->display->display_options['menu']['name'] = 'menu-landlibrary-menu';
+$handler->display->display_options['menu']['name'] = 'landlibrary-menu';
 $handler->display->display_options['menu']['context'] = 0;
 $handler->display->display_options['menu']['context_only_inline'] = 0;
 
