@@ -1,16 +1,41 @@
 <?php
 
+/** LPBS Release
+ */
+function landportal_footer_update_7201() {
+    $blocks = array();
+    $block = array(
+        'keys' => array(
+            'module'  => 'menu',
+            'delta'   => 'menu-footer-menu',
+            'theme'   => 'lpbs'
+        ),
+        'values' => array(
+            'region'    => 'footer',
+            'pages'     => '',
+        )
+    );
+    array_push($blocks, $block);
+
+    foreach($blocks as $block){
+        db_merge('block')
+            ->key($block['keys'])
+            ->fields($block['values'])
+            ->execute();
+    }
+    return FALSE;
+}
+
 /**
  * Remove un-used blocks
  */
 function landportal_footer_update_7200() {
-
     $blocks = array();
     $block = array(
         'keys' => array(
-            'module' => 'menu',
-            'delta' => 'menu-footer-menu',
-            'theme'     => 'landportal',
+            'module'  => 'menu',
+            'delta'   => 'menu-footer-menu',
+            'theme'   => 'landportal',
         ),
         'values' => array(
             'region'    => 'footer',
