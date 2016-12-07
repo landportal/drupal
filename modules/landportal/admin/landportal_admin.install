@@ -51,7 +51,10 @@ function landportal_admin_update_7201() {
             'theme'  => 'lpbs',
         ),
         'values' => array(
-            'region' => 'header',
+          'status' => 1,
+          'region' => 'header',
+          'visibility' => BLOCK_VISIBILITY_LISTED,
+          'pages' => 'book/\nbook/*',
         )
     );
     array_push($blocks, $block);
@@ -76,6 +79,8 @@ function landportal_admin_update_7201() {
         ),
         'values' => array(
             'region' => 'header',
+            'visibility' => BLOCK_VISIBILITY_LISTED,
+            'pages' => 'library/\nlibrary/*',
         )
     );
     array_push($blocks, $block);
@@ -98,7 +103,8 @@ function landportal_admin_update_7201() {
             'theme'  => 'lpbs',
         ),
         'values' => array(
-            'region' => 'navigation',
+          'status' => 1,
+          'region' => 'navigation',
         )
     );
     array_push($blocks, $block);
@@ -112,9 +118,6 @@ function landportal_admin_update_7201() {
     }
     //drupal_set_installed_schema_version('landportal_admin', '7200');
 }
-
-
-
 
 /**
  * Clean up modules that have been removed brutally
