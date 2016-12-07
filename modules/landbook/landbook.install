@@ -32,11 +32,23 @@ function landbook_update_7201() {
         'theme' => 'lpbs',
       ),
       'fields' => array(
+        'pages' => 'book/countries/*',
         'region' => 'content',
         'weight' => '2',
       )
     );
     db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+
+    db_update('menu_links')
+      ->fields(array('hidden'=>1))
+      ->condition('link_path', 'book/indicators')
+      ->execute();
+
+    $links = array('13416', '13417', '20015');
+    // Remove borken menu links
+    db_delete('menu_links')
+      ->condition('mlid', $links, 'IN')
+      ->execute();
 }
 
 /* Fill out regions terms with iso code from countries taxonomy */
