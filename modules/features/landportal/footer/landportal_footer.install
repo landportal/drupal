@@ -12,6 +12,9 @@ function landportal_footer_update_7201() {
         ),
         'values' => array(
             'region'    => 'footer',
+            'status'    => 1,
+            'weight'    => -1,
+            'title'     => '<none>',
             'pages'     => '',
         )
     );
