@@ -1,6 +1,0 @@
-name = Promoted Custom Module
-description = Add custom publishing options and views.
-
-package = Custom
-core = 7.x
-version = 7.x-1.0
