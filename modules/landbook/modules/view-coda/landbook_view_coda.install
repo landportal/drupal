@@ -6,16 +6,81 @@
  */
 
 
+/** LPBS Release
+ * Vis blocks
+ */
+function landbook_view_coda_update_7205() {
+  $block = array(
+    'keys' => array(
+      'module'  => 'landbook_view_coda',
+      'delta'   => 'lbcp_lgaf',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/countries/*',
+      'region'      => 'content',
+      'weight'      => 16,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  $block = array(
+    'keys' => array(
+      'module'  => 'landbook_view_coda',
+      'delta'   => 'lbcp_spider',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/countries/*',
+      'region'      => 'content',
+      'weight'      => 17,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  $block = array(
+    'keys' => array(
+      'module'  => 'landbook_view_coda',
+      'delta'   => 'lbcp_pie',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/countries/*',
+      'region'      => 'content',
+      'weight'      => 18,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  // Also update map shit
+  $block = array(
+    'keys' => array(
+      'module'  => 'landbook_vis_map',
+      'delta'   => 'region_map',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/countries/*',
+      'region'      => 'highlighted',
+      'weight'      => -1,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+}
+
 /**
  * Cleanup old Landbook blocks
  */
 function landbook_view_coda_update_7204() {
-
     // Old LB stuff
     db_delete('block')->condition('module', 'landbook')->condition('delta', 'country_sidebar_first')->execute();
     db_delete('block')->condition('module', 'landbook')->condition('delta', 'country_sidebar_second')->execute();
     db_delete('block')->condition('module', 'landbook')->condition('delta', 'indicator_sidebar_second')->execute();
-
 }
 
 
