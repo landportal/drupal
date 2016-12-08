@@ -1674,6 +1674,51 @@ function landlibrary_resource_field_default_field_instances() {
     'widget_type' => 'options_select',
   );
 
+  // Exported field_instance: 'node-landlibrary_resource-field_duration'.
+  $field_instances['node-landlibrary_resource-field_duration'] = array(
+    'bundle' => 'landlibrary_resource',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 50,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_duration',
+    'label' => 'Duration',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 127,
+    ),
+  );
+
   // Exported field_instance:
   // 'node-landlibrary_resource-field_geographical_focus'.
   $field_instances['node-landlibrary_resource-field_geographical_focus'] = array(
@@ -2037,6 +2082,7 @@ function landlibrary_resource_field_default_field_instances() {
   t('Corporate Author(s)');
   t('Data Provider');
   t('Date of publication');
+  t('Duration');
   t('Enter a concept term from Land Portal\'s <a href="/voc/landvoc">LandVoc</a> thesaurus to classify the topical subject of the resource.');
   t('Enter one (or several) of the Land Portal\'s <a href="/voc/landvoc">Overarching Categories</a> to classify the topical subject of the resource.');
   t('File Upload');
@@ -2047,8 +2093,9 @@ function landlibrary_resource_field_default_field_instances() {
   t('License of the resource');
   t('Local file URL');
   t('Location Source');
-  t('Number of pages of the resource or the page range in case of a journal article or book.');
+  t('Number of pages of the resource (if applicable), the page range  or the duration of a video.');
   t('Organization cited as Author of this material  (linked to an organizational profile on the Land Portal).');
+  t('Other known titles for this resource');
   t('Overarching Categories');
   t('Pages / Duration');
   t('People who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]"
@@ -2072,7 +2119,6 @@ function landlibrary_resource_field_default_field_instances() {
   t('The organization that makes the resource available (needs to be linked to an organizational profile on the Land Portal).');
   t('The organization that published the resource (needs to be linked to an organizational profile on the Land Portal).');
   t('The page on the website of the publisher where the resource is presented (e.g.: http://landportal.info/library/resources/report-sharing-best-practices-and-lessons-learned-supporting-women%E2%80%99s-land-rights).');
-  t('The subtitle of the resource (if applicable).');
   t('Themes');
   t('This is a hidden field storing the value of the URL of the local file (the upload field cannot be mapped to RDF properties).');
   t('Thumbnail of the resource');
