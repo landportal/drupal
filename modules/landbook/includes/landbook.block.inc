@@ -31,6 +31,14 @@ function landbook_block_info() {
         'pages'         => "book/countries/*\nbook/thematic/*",
         'weight'        => 23
     );
+    $blocks['infographics'] = array(
+        'info'          => t('Landbook Infographics'),
+        'status'        => TRUE,
+        'region'        => 'content',
+        'visibility'    => BLOCK_VISIBILITY_LISTED,
+        'pages'         => "book/countries/*\nbook/thematic/*",
+        'weight'        => 15
+    );
     // @TODO: cleanup this shit
     $blocks['country_navigation_block'] = array(
         'info'          => t('Landbook country page navigation'),
@@ -69,8 +77,13 @@ function landbook_block_view($delta = '') {
         break;
     case 'media' :
         $block['subject'] = t('Media');
-        $block['content'] = ' ';
+        $block['content'] = landbook_block_body($delta);
         break;
+    case 'infographics' :
+        $block['subject'] = t('Infographics');
+        $block['content'] = landbook_block_body($delta);
+        break;
+
     // @TODO: cleanup this shit
     // all that seems a bit weird...
     case 'country_navigation_block' :
@@ -121,7 +134,7 @@ function landbook_block_body($name) {
     //$default: The default value to use if this variable has never been set.
     $output = variable_get('landbook-' . $name, $default[$name]);
     if (empty($output)) {
-        $output = $default[$name];
+      $output = (isset($default[$name]) ? $default[$name] : ' ');
     }
     return $output;
 }

@@ -74,6 +74,36 @@ function landbook_update_7201() {
     )
   );
   db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'country_content-partners',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/countries/*',
+      'region'      => 'content',
+      'weight'      => 28,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'country_content-library',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/countries/*',
+      'region'      => 'content',
+      'weight'      => 29,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
 
 
   $block = array(
