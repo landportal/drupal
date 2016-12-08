@@ -1,10 +1,10 @@
-    <section id="block-compare" class="country-section">
-<?php if(!empty($block->subject)): ?>
-      <header class="block-title">
-        <h2><?php print $block->subject ?></h2>
-      </header>
+        <article id="<?php print $block_html_id; ?>" class="view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
+          <header class="text-center">
+<?php print render($title_prefix); ?>
+<?php if ($block->subject): ?>
+            <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
 <?php endif;?>
-      <div>
+<?php print render($title_suffix); ?>
         <form>
           <div class="form-group col-xs-12 col-sm-3">
             <select name="indicator" class="form-control">
@@ -31,21 +31,11 @@
             <input type="submit" name="add" value="Add" class="btn btn-primary" data-localize="inputs.addtocompare"/>
           </div>
         </form>
-      </div>
-      <div class="col-xs-12 text-center" id="labels-compare">
-        <span class="hidden">Remove countries added</span>
-      </div>
-      <div class="col-xs-12">
-        <div id="compare-chart"></div>
-          <div class="loading">
-            <div class="pos_spinkit">
-              <div class="sk-three-bounce no-m-bottom">
-                <div class="sk-child sk-bounce1"></div>
-                <div class="sk-child sk-bounce2"></div>
-                <div class="sk-child sk-bounce3"></div>
-              </div>
-              <p class="text-center" data-localize="feedback.loading">Loading data ...</p>
-            </div>
+          </header>
+          <div class="col-xs-12 text-center" id="labels-compare">
+            <span class="hidden">Remove countries added</span>
           </div>
-      </div>
-    </section>
+          <div class="col-xs-12">
+            <div id="<?php print $block_html_id; ?>-wrapper"></div>
+          </div>
+        </article>

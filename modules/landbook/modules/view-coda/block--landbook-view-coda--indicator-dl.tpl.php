@@ -1,4 +1,4 @@
-    <section id="ranking" class="container">
+    <section id="<?php print $block_html_id; ?>" class="view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
 <?php if(!empty($block->subject)): ?>
       <header class="row">
         <div class="col-xs-12">
