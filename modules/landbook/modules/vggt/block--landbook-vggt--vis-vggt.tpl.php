@@ -2,7 +2,7 @@
 /* VGGT visualization block */
 //dpm($block);
 ?>
-        <article id="<?php print $block_html_id; ?>" class="col-sm-10 col-sm-offset-1 country-section <?php print $classes; ?>"<?php print $attributes; ?>>
+        <article id="<?php print $block_html_id; ?>" class="view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
           <header class="text-center">
 <?php print render($title_prefix); ?>
 <?php if ($block->subject): ?>
@@ -16,7 +16,7 @@
                 <select name="year" class="form-control" disabled="disabled">
                 </select>
               </div>
-              <div class="form-group col-xs-9 col-sm-5">
+              <div class="form-group col-xs-8 col-sm-5">
                 <select name="panel" class="form-control">
                 </select>
               </div>
@@ -27,7 +27,7 @@
             </form>
           </nav>
           <div class="row">
-            <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
+            <div class="col-xs-12">
               <div id="<?php print $block_html_id; ?>-wrapper" class="">
                 <ul class="list-unstyled text-center"><li class="panelVal values-panel"></li></ul>
                 <div class="panel panel-default">
@@ -45,14 +45,14 @@
               </div>
             </div>
           </div>
-          <footer class="row">
-            <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
+          <footer>
+            <div>
               <div class="panel panel-default">
                 <div class="panel-heading">Information on indicators</div>
                 <div class="panel-body"<?php print $content_attributes; ?>><?php print $content ?></div>
               </div>
             </div>
-            <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8 text-center">
+            <div class="legend text-center">
               <em>Legend</em>
               <ul class="list-unstyled list-inline values-legend">
                 <li><span class="value-a"></span> <span data-localize="label.vgp">Fully adopt the VGGT principle</span></li>
