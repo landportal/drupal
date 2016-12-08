@@ -10,7 +10,7 @@ if($language->language != 'en'){
 ?>
 
 <?php $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));//pa($block,1); ?>
-<div id="content-related-links" class="row clearfix text-center">
+<section id="content-related-links" class="text-center">
   <div class="col-md-6">
     <a href="<?php print base_path().current_path().'/pdf';?>">
       <img alt="PDF" src="<?php print '/'.$theme_path.'/images/ico-download.svg';?>">
@@ -23,4 +23,4 @@ if($language->language != 'en'){
       <span>Give us your feedback</span>
     </a>
   </div>
-</div>
+</section>
