@@ -21,25 +21,26 @@ function landbook_vis_table_indicators_block_info() {
 }
 
 function landbook_vis_table_indicators_block_view($delta = '') {
-    $module_path = drupal_get_path('module', 'landbook_vis_table_indicators');
+  $module_path = drupal_get_path('module', 'landbook_vis_table_indicators');
+  $jsAttr = 'vis: LBV, iso3: (Drupal.settings.landbook.type == "country" ? Drupal.settings.landbook.countryCode : null)';
+  $jsAttr .= ', indicators: (Drupal.settings.landbook.indicators ? Drupal.settings.landbook.indicators : ["WB-SP.POP.TOTL", "WB-SP.RUR.TOTL.ZS", "WB-NY.GDP.PCAP.PP.KD", "FAO-6601-5110", "FAO-23045-6083", "DP-MOD-O-F", "DP-MOD-O-N", "FAO-LG.1FB"])';
+  $block = array();
 
-    $block = array();
-    switch ($delta) {
-    case 'country_values' :
-    case 'details' :
-        $block['subject'] = t('Indicators');
-        $block['content'] = array(
-            '#attached' => array(
-                'library' => array(
-                    array('landbook_view_coda', 'lbvis.table'),
-                ),
-                'js' =>  array(
-                    $module_path . '/table.js'// => array('weight' => 3)
-                //, 'requires_jquery' => TRUE)
-                )
-            )
-        );
-        break;
-    }
-    return $block;
+  switch ($delta) {
+  case 'country_values' :
+  case 'details' :
+    $block['subject'] = t('Indicators');
+    $block['content'] = array(
+      '#attached' => array(
+        'library' => array(array('landbook_view_coda', 'lbvis.table')),
+        'js' =>  array(array(
+          'type' => 'inline',
+          'data' => landbook_view_coda_lbvis_ready_callback(
+            'LBT = new lbvisTable({'.$jsAttr.', target: "#block-landbook-vis-table-indicators-'.str_replace('_', '-', $delta).'"}); LBT.init();')
+        ))
+      )
+    );
+    break;
+  }
+  return $block;
 }

@@ -1,14 +1,14 @@
-<section id="table-indicators" class="country-section">
-  <div class="container">
-  <?php if(!empty($block->subject)): ?>
-    <header class="row">
-      <div class="col-md-offset-2 col-md-8 text-center">
-        <h2 data-localize="global.indicators"><?php print $block->subject;?></h2>
-      </div>
-    </header>
-  <?php endif;?>
-  <div class="row">
-    <div class="col-xs-12">
+        <article id="<?php print $block_html_id; ?>" class="view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
+<?php if(!empty($block->subject)): ?>
+          <header class="text-center">
+<?php print render($title_prefix); ?>
+<?php if ($block->subject): ?>
+            <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
+<?php endif;?>
+<?php print render($title_suffix); ?>
+          </header>
+<?php endif;?>
+          <div class="col-xs-12">
       <table class="table">
         <thead>
           <tr>
@@ -36,24 +36,22 @@
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
-  <div class="row">
-    <form>
-      <div class="form-group col-xs-7 col-sm-6">
-        <select name="indicator" class="form-control">
-          <option data-localize="inputs.indicators">Select an indicator...</option>
-        </select>
-      </div>
-      <div class="form-group col-xs-5 col-sm-3">
-        <select name="year" class="form-control" disabled="disabled">
-          <option data-localize="inputs.years">Year...</option>
-        </select>
-      </div>
-      <div class="form-group col-xs-7 col-sm-3">
-        <input type="submit" name="add" value="Add" class="btn btn-primary" data-localize="inputs.addindicator"/>
-      </div>
-    </form>
-  </div>
-  </div>
-</section>
+          </div>
+          <footer>
+            <form>
+              <div class="form-group col-xs-7 col-sm-6">
+                <select name="indicator" class="form-control">
+                  <option data-localize="inputs.indicators">Select an indicator...</option>
+                </select>
+              </div>
+              <div class="form-group col-xs-5 col-sm-3">
+                <select name="year" class="form-control" disabled="disabled">
+                  <option data-localize="inputs.years">Year...</option>
+                </select>
+              </div>
+              <div class="form-group col-xs-7 col-sm-3">
+                <input type="submit" name="add" value="Add" class="btn btn-primary" data-localize="inputs.addindicator"/>
+              </div>
+            </form>
+          </footer>
+        </article>

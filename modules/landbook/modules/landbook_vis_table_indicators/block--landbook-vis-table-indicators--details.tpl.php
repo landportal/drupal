@@ -1,13 +1,13 @@
-<section id="table-indicators" class="country-section">
-  <div class="container">
-  <?php if(!empty($block->subject)): ?>
-    <header class="row">
-      <div class="col-md-offset-2 col-md-8 text-center">
-        <h2 data-localize="global.indicators"><?php print $block->subject;?></h2>
-      </div>
-    </header>
-  <?php endif;?>
-      <div class="row">
+        <article id="<?php print $block_html_id; ?>" class="view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
+<?php if(!empty($block->subject)): ?>
+          <header class="text-center">
+<?php print render($title_prefix); ?>
+<?php if ($block->subject): ?>
+            <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
+<?php endif;?>
+<?php print render($title_suffix); ?>
+          </header>
+<?php endif;?>
         <div class="col-xs-12">
           <table class="table">
             <thead>
@@ -31,8 +31,7 @@
             </tbody>
           </table>
         </div>
-      </div>
-      <footer class="row">
+      <footer>
         <nav>
           <form>
             <div class="form-group col-xs-8 col-sm-9">
@@ -46,4 +45,4 @@
           </form>
         </nav>
       </footer>
-    </section>
+    </article>
