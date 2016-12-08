@@ -3,7 +3,4 @@ description = Custom module for pdf generation
 core = 7.x
 package = Landportal
 version = 7.x-1.0
-
-
 dependencies[] = phpwkhtmltopdf
-dependencies[] = landbook_country_page

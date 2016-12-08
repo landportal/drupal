@@ -3,9 +3,9 @@
  * Install / Upgrade hooks
  */
 
-/** Place promoted block in default locations
+/** LPBS release
  */
-function landportal_promoted_update_7200() {
+function landportal_promoted_update_7201() {
 
   $blocks = array();
 
@@ -80,6 +80,13 @@ function landportal_promoted_update_7200() {
       ->fields($block['values'])
       ->execute();
   }
+
+}
+
+/** Place promoted block in default locations
+ */
+function landportal_promoted_update_7200() {
+
 }
 
 /**

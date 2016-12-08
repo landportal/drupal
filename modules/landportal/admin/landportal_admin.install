@@ -26,7 +26,6 @@ function landportal_admin_update_7201() {
         ),
         'values' => array(
             'region' => -1,
-            'pages' => '',
         )
     );
     array_push($blocks, $block);
@@ -38,7 +37,6 @@ function landportal_admin_update_7201() {
         ),
         'values' => array(
             'region' => -1,
-            'pages' => '',
         )
     );
     array_push($blocks, $block);
@@ -54,7 +52,7 @@ function landportal_admin_update_7201() {
           'status' => 1,
           'region' => 'header',
           'visibility' => BLOCK_VISIBILITY_LISTED,
-          'pages' => 'book/\nbook/*',
+          'pages' => 'book\nbook/*',
         )
     );
     array_push($blocks, $block);
@@ -65,6 +63,7 @@ function landportal_admin_update_7201() {
             'theme'  => 'lpbs',
         ),
         'values' => array(
+          'status' => 1,
             'region' => 'header',
             'visibility' => BLOCK_VISIBILITY_LISTED,
             'pages'  => "debate\ndebate/*\nnews/*\nevents/*\nblogs/*\norganization/*\nevent/*\nblog-post/*",
@@ -78,6 +77,7 @@ function landportal_admin_update_7201() {
             'theme'  => 'lpbs',
         ),
         'values' => array(
+          'status' => 1,
             'region' => 'header',
             'visibility' => BLOCK_VISIBILITY_LISTED,
             'pages' => 'library/\nlibrary/*',
@@ -105,6 +105,7 @@ function landportal_admin_update_7201() {
         'values' => array(
           'status' => 1,
           'region' => 'navigation',
+          'pages' => '',
         )
     );
     array_push($blocks, $block);
