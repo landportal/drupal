@@ -7,7 +7,7 @@
  */
 
 $view = new view();
-$view->name = 'organizations_overview';
+$view->name = 'org_view';
 $view->description = '';
 $view->tag = 'default';
 $view->base_table = 'node';
