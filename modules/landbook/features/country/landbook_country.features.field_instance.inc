@@ -369,9 +369,105 @@ function landbook_country_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
       'type' => 'options_select',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-landbook_country-field_indicator_map'.
+  $field_instances['node-landbook_country-field_indicator_map'] = array(
+    'bundle' => 'landbook_country',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_indicator_map',
+    'label' => 'Map',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+        'sort' => 'weight',
+      ),
+      'type' => 'options_select',
+      'weight' => 114,
+    ),
+  );
+
+  // Exported field_instance: 'node-landbook_country-field_indicator_ranking'.
+  $field_instances['node-landbook_country-field_indicator_ranking'] = array(
+    'bundle' => 'landbook_country',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_indicator_ranking',
+    'label' => 'Ranking',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+        'sort' => 'weight',
+      ),
+      'type' => 'options_select',
+      'weight' => 113,
     ),
   );
 
@@ -510,8 +606,10 @@ function landbook_country_field_default_field_instances() {
   t('Description');
   t('Indicators');
   t('Info');
+  t('Map');
   t('Narrative');
   t('Pre-selected indicators for this country');
+  t('Ranking');
   t('Source of the narrative');
   t('Title');
 

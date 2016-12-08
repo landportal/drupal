@@ -95,23 +95,20 @@ function landbook_country_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
-      'print' => array(
-        'custom_settings' => FALSE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '8',
+          'weight' => '6',
         ),
         'title' => array(
-          'weight' => '2',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '9',
+          'weight' => '7',
         ),
         'xmlsitemap' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
       ),
       'display' => array(),
