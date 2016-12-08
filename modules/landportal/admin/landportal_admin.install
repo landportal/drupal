@@ -10,7 +10,14 @@
  */
 function landportal_admin_update_7201() {
 
-    // DISABLE MODULES
+  if ($view = views_get_view('landlibrary_promoted')) {
+    views_delete_view($view);
+  }
+  if ($view = views_get_view('front_page_promoted')) {
+    views_delete_view($view);
+  }
+
+  // DISABLE MODULES
   module_disable(array(
     'shs', 'nice_menus', 'lang_dropdown'
   ));
@@ -29,14 +36,85 @@ function landportal_admin_update_7201() {
         )
     );
     array_push($blocks, $block);
-    // hide all facetapi blocks
+
     $block = array(
         'keys' => array(
-            'module' => 'facetapi',
+            'module' => 'views',
+            'delta'  => 'by_provider-block',
             'theme'  => 'lpbs',
         ),
         'values' => array(
-            'region' => -1,
+          'status' => 1,
+          'region' => 'content',
+          'weight' => 1,
+          'visibility' => BLOCK_VISIBILITY_LISTED,
+          'pages' => 'organization/*',
+        )
+    );
+    array_push($blocks, $block);
+
+    $block = array(
+        'keys' => array(
+            'module' => 'views',
+            'delta'  => 'domains-block',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+          'status' => 1,
+          'region' => 'content',
+          'weight' => 1,
+          'visibility' => BLOCK_VISIBILITY_LISTED,
+          'pages' => 'voc/landvoc',
+        )
+    );
+    array_push($blocks, $block);
+
+    $block = array(
+        'keys' => array(
+            'module' => 'views',
+            'delta'  => 'themes-block',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+          'status' => 1,
+          'region' => 'content',
+          'weight' => 1,
+          'visibility' => BLOCK_VISIBILITY_LISTED,
+          'pages' => 'voc/landvoc',
+        )
+    );
+    array_push($blocks, $block);
+
+    $block = array(
+        'keys' => array(
+            'module' => 'views',
+            'delta'  => 'licenses-block',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+          'status' => 1,
+          'region' => 'content',
+          'weight' => 1,
+          'visibility' => BLOCK_VISIBILITY_LISTED,
+          'pages' => 'voc/license',
+        )
+    );
+    array_push($blocks, $block);
+
+    // Forms
+
+    $block = array(
+        'keys' => array(
+            'module' => 'webform',
+            'delta'  => 'client-block-30308',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+          'status' => 1,
+          'region' => 'content',
+          'weight' => 1,
+          'visibility' => BLOCK_VISIBILITY_LISTED,
+          'pages' => 'about/contact-us',
         )
     );
     array_push($blocks, $block);
@@ -95,7 +173,6 @@ function landportal_admin_update_7201() {
         )
     );
     array_push($blocks, $block);
-    // Borken?
     $block = array(
         'keys' => array(
             'module' => 'search',
@@ -118,6 +195,16 @@ function landportal_admin_update_7201() {
             ->execute();
     }
     //drupal_set_installed_schema_version('landportal_admin', '7200');
+
+    db_delete('block')
+      ->condition('delta', 'menu-landlibrary-menu')
+      ->execute();
+    db_delete('menu_links')
+      ->condition('menu_name', 'menu-landlibrary-menu')
+      ->execute();
+    db_delete('menu_custom')
+      ->condition('menu_name', 'menu-landlibrary-menu')
+      ->execute();
 }
 
 /**
