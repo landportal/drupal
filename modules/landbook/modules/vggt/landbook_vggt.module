@@ -3,7 +3,7 @@
 /* Declare VGGT block */
 function landbook_vggt_block_info() {
   $blocks['vis_vggt'] = array(
-    'info'      => t('LB View CODA: VGGT'),
+    'info'      => t('View CODA: VGGT'),
     'status'    => TRUE,
     'region'    => 'content',
     'visibility'=> BLOCK_VISIBILITY_LISTED,
