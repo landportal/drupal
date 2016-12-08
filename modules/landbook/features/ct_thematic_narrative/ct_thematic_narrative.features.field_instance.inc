@@ -22,7 +22,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
@@ -102,16 +102,19 @@ function ct_thematic_narrative_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'field_collection',
+        'module' => 'field_collection_fieldset',
         'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
+          'add' => '',
+          'collapsed' => 1,
+          'collapsible' => 1,
+          'delete' => '',
+          'description' => 0,
+          'edit' => '',
+          'legend' => 0,
           'view_mode' => 'full',
         ),
-        'type' => 'field_collection_view',
-        'weight' => 5,
+        'type' => 'field_collection_fieldset_view',
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -161,7 +164,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 8,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -208,6 +211,98 @@ function ct_thematic_narrative_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-thematic_narrative-field_indicator_map'.
+  $field_instances['node-thematic_narrative-field_indicator_map'] = array(
+    'bundle' => 'thematic_narrative',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_indicator_map',
+    'label' => 'Map',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+        'sort' => 'weight',
+      ),
+      'type' => 'options_select',
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'node-thematic_narrative-field_indicator_ranking'.
+  $field_instances['node-thematic_narrative-field_indicator_ranking'] = array(
+    'bundle' => 'thematic_narrative',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_indicator_ranking',
+    'label' => 'Ranking',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+        'sort' => 'weight',
+      ),
+      'type' => 'options_select',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'node-thematic_narrative-field_indicators'.
   $field_instances['node-thematic_narrative-field_indicators'] = array(
     'bundle' => 'thematic_narrative',
@@ -219,7 +314,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'above',
@@ -264,9 +359,11 @@ function ct_thematic_narrative_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => 0,
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 1,
       ),
       'listing' => array(
@@ -322,6 +419,64 @@ function ct_thematic_narrative_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-thematic_narrative-field_orgref'.
+  $field_instances['node-thematic_narrative-field_orgref'] = array(
+    'bundle' => 'thematic_narrative',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 5,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_orgref',
+    'label' => 'SOURCES',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'node-thematic_narrative-field_related_domains'.
   $field_instances['node-thematic_narrative-field_related_domains'] = array(
     'bundle' => 'thematic_narrative',
@@ -331,9 +486,8 @@ function ct_thematic_narrative_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'listing' => array(
@@ -390,9 +544,8 @@ function ct_thematic_narrative_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'listing' => array(
@@ -444,9 +597,8 @@ function ct_thematic_narrative_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 5,
       ),
       'listing' => array(
@@ -509,11 +661,8 @@ function ct_thematic_narrative_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
-        'settings' => array(
-          'file_view_mode' => 'full',
-        ),
-        'type' => 'file_rendered',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'listing' => array(
@@ -580,7 +729,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'settings' => array(
           'title_class' => '',
           'title_link' => '',
-          'title_style' => '',
+          'title_style' => 'h2',
         ),
         'type' => 'title_linked',
         'weight' => 2,
@@ -661,9 +810,12 @@ function ct_thematic_narrative_field_default_field_instances() {
   t('Geographical focus');
   t('Info');
   t('LB visualization settings');
+  t('Map');
   t('Narrative');
   t('Overarching categories');
+  t('Ranking');
   t('Related concepts');
+  t('SOURCES');
   t('Select a Landvoc Theme or Overarching Category this narrative is about.');
   t('Table');
   t('The narrative (title)');
