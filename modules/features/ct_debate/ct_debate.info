@@ -73,6 +73,4 @@ features[variable][] = pathauto_node_debate_pt_pattern
 features[variable][] = pathauto_node_debate_und_pattern
 features[variable][] = xmlsitemap_settings_node_debate
 features[variable][] = xmlsitemap_settings_taxonomy_term_debate_status
-features_exclude[dependencies][landbook_country_page] = landbook_country_page
-features_exclude[dependencies][landbook_promoted_thematic] = landbook_promoted_thematic
 features_exclude[dependencies][landportal_promoted] = landportal_promoted
