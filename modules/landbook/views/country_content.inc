@@ -78,10 +78,11 @@ $handler->display->display_options['filters']['language']['value'] = array(
 );
 
 /* Display: Latest Debate */
-$handler = $view->new_display('block', 'Latest Debate', 'block');
+$handler = $view->new_display('block', 'Latest Debates', 'debates');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Debate';
-$handler->display->display_options['defaults']['sorts'] = FALSE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
 /* Sort criterion: Field: Date -  start date (field_date) */
 $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
 $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
@@ -111,26 +112,11 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
-/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
-$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['value'] = array(
-  550 => '550',
-);
-$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
 
 /* Display: Latest Blog */
-$handler = $view->new_display('block', 'Latest Blog', 'block_1');
+$handler = $view->new_display('block', 'Latest Blogs', 'blogs');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Latest Blog';
-$handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'blog';
-$handler->display->display_options['defaults']['pager'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '3';
-$handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
@@ -155,20 +141,13 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
-/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
-$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['value'] = array(
-  550 => '550',
-);
-$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
 
 /* Display: Latest Events */
-$handler = $view->new_display('block', 'Latest Events', 'block_2');
+$handler = $view->new_display('block', 'Latest Events', 'events');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Latest Events';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
 $handler->display->display_options['defaults']['sorts'] = FALSE;
 /* Sort criterion: Field: Date -  start date (field_date) */
 $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
@@ -199,25 +178,11 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
-/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
-$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['value'] = array(
-  550 => '550',
-);
-$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
 
 /* Display: Latest News */
-$handler = $view->new_display('block', 'Latest News', 'block_3');
+$handler = $view->new_display('block', 'Latest News', 'news');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Latest News';
-$handler->display->display_options['defaults']['pager'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '4';
-$handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['arguments'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
@@ -241,15 +206,6 @@ $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
-/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
-$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['value'] = array(
-  550 => '550',
-);
-$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
 
 /* Display: Partners */
 $handler = $view->new_display('block', 'Partners', 'partners');
