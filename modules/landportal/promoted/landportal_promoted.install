@@ -13,6 +13,7 @@ function landportal_promoted_update_7200() {
     'keys' => array(
       'module' => 'views',
       'delta' => 'promoted-front',
+      'theme' => 'lpbs',
     ),
     'values' => array(
       'status' => 1,
@@ -28,6 +29,7 @@ function landportal_promoted_update_7200() {
     'keys' => array(
       'module' => 'views',
       'delta' => 'promoted-library',
+      'theme' => 'lpbs',
     ),
     'values' => array(
       'status' => 1,
@@ -43,6 +45,7 @@ function landportal_promoted_update_7200() {
     'keys' => array(
       'module' => 'views',
       'delta' => 'promoted-country',
+      'theme' => 'lpbs',
     ),
     'values' => array(
       'status' => 1,
@@ -58,6 +61,7 @@ function landportal_promoted_update_7200() {
     'keys' => array(
       'module' => 'views',
       'delta' => 'promoted-thematic',
+      'theme' => 'lpbs',
     ),
     'values' => array(
       'status' => 1,
