@@ -23,62 +23,15 @@ function landbook_block_info() {
         'pages'         => "book/countries/*",
         'weight'        => -39
     );
-    $blocks['lgaf_block'] = array(
-        'info'          => t('Landbook country page: LGAF note'),
-        'status'        => TRUE,
-        'region'        => -1,
-        'visibility'    => BLOCK_VISIBILITY_LISTED,
-        'pages'         => "",
-        'weight'        => 23
-    );
-    $blocks['media_block'] = array(
-        'info'          => t('Landbook country page Media'),
+    $blocks['media'] = array(
+        'info'          => t('Landbook Media'),
         'status'        => TRUE,
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
-        'pages'         => "book/countries/*",
+        'pages'         => "book/countries/*\nbook/thematic/*",
         'weight'        => 23
     );
-    $blocks['thematic_media_block'] = array(
-        'info'          => t('Landbook thematic page Media'),
-        'status'        => TRUE,
-        'region'        => 'content',
-        'visibility'    => BLOCK_VISIBILITY_LISTED,
-        'pages'         => "book/thematic/*",
-        'weight'        => 23
-    );
-    /* $blocks['partners_block'] = array( */
-    /*     'info'          => t('Landbook country page Partners'), */
-    /*     'status'        => TRUE, */
-    /*     'region'        => 'content', */
-    /*     'visibility'    => BLOCK_VISIBILITY_LISTED, */
-    /*     'pages'         => "book/countries/\*", */
-    /*     'weight'        => 24 */
-    /* ); */
-    /* $blocks['thematic_partners_block'] = array( */
-    /*     'info'          => t('Landbook thematic page Partners'), */
-    /*     'status'        => TRUE, */
-    /*     'region'        => 'content', */
-    /*     'visibility'    => BLOCK_VISIBILITY_LISTED, */
-    /*     'pages'         => "book/thematic/\*", */
-    /*     'weight'        => 24 */
-    /* ); */
-    /* $blocks['library_block'] = array( */
-    /*     'info' => t('Landbook country page Library'), */
-    /*     'status'        => TRUE, */
-    /*     'region'        => 'content', */
-    /*     'visibility'    => BLOCK_VISIBILITY_LISTED, */
-    /*     'pages'         => "book/countries/\*", */
-    /*     'weight'        => 25 */
-    /* ); */
-    /* $blocks['thematic_library_block'] = array( */
-    /*     'info' => t('Landbook thematic page Library'), */
-    /*     'status'        => TRUE, */
-    /*     'region'        => 'content', */
-    /*     'visibility'    => BLOCK_VISIBILITY_LISTED, */
-    /*     'pages'         => "book/thematic/\*", */
-    /*     'weight'        => 25 */
-    /* ); */
+    // @TODO: cleanup this shit
     $blocks['country_navigation_block'] = array(
         'info'          => t('Landbook country page navigation'),
         'status'        => TRUE,
@@ -95,6 +48,7 @@ function landbook_block_info() {
         'pages'         => "book/thematic/*",
         'weight'        => -42
     );
+    // @TODO: rename and cleanup , this block provide BOTH the PDF + Feedback links
     $blocks['country_pdf_block'] = array(
         'info'          => t('Landbook country page pdf block'),
         'status'        => TRUE,
@@ -113,31 +67,13 @@ function landbook_block_view($delta = '') {
         $block['subject'] = '<none>';
         $block['content'] = landbook_block_body($delta);
         break;
-    case 'lgaf_block' :
-        $block['subject'] = '<none>';
-        $block['content'] = landbook_block_body($delta);
-        break;
-    case 'media_block' :
+    case 'media' :
         $block['subject'] = t('Media');
         $block['content'] = ' ';
         break;
-    case 'thematic_media_block' :
-        $block['subject'] = t('Media');
-        $block['content'] = ' ';
-        break;
-    /* case 'partners_block' : */
-    /*     $block['subject'] = t('Partners'); */
-    /*     break; */
-    /* case 'thematic_partners_block' : */
-    /*     $block['subject'] = t('Partners'); */
-    /*     break; */
-    /* case 'library_block' : */
-    /*     $block['subject'] = t('Library'); */
-    /*     break; */
-    /* case 'thematic_library_block' : */
-    /*     $block['subject'] = t('Library'); */
-    /*     break; */
-    case 'country_navigation_block' : // all that seems a bit weird...
+    // @TODO: cleanup this shit
+    // all that seems a bit weird...
+    case 'country_navigation_block' :
         $block['subject'] = '<none>';
         $block['content'] = ' ';
         $block['country_info'] = landbook_get_country_info();
@@ -153,7 +89,7 @@ function landbook_block_view($delta = '') {
     }
     return $block;
 }
-
+// TMP
 function landbook_get_pdf_url(){
     $iso3 = arg(2);
     if (in_array($iso3, ['KHM', 'LAO', 'MMR', 'THA', 'VNM'])) {
@@ -161,7 +97,7 @@ function landbook_get_pdf_url(){
     }
     return ;
 }
-
+// TODO: cleanup this shit
 function landbook_get_country_info(){
     $output = array();
     $args = arg();
@@ -174,18 +110,16 @@ function landbook_get_country_info(){
             $output['country_name'] = $term->name;
         }
     }
-
     return $output;
 }
 
 function landbook_block_body($name) {
     $default = array(
         'disclaimer_block' => '<p><b>Disclaimer:</b> The data displayed on the Land Portal is provided by third parts indicated as the data source or as the data provider. The Land Portal team is constantly working to ensure the highest possible standard of data quality and accuracy, yet the data is by its nature approximate and will contain some inaccuracies. The data may contain errors introduced by the data provider(s) and/or by the Land Portal team. In addition, this page allows you to compare data from different sources, but not all indicators are necessarily statistically comparable. The Land Portal Foundation (A) expressly disclaims the accuracy, adequacy, or completeness of any data and (B) shall not be liable for any errors, omissions or other defects in, delays or interruptions in such data, or for any actions taken in reliance thereon. Neither the Land Portal Foundation nor any of its data providers will be liable for any damages relating to your use of the data provided herein.</p>',
-        'lgaf_block' => '<p>Note: Some Indicators might have multiple values (e.g. Green-Orange), which might refers to different localities or categories of people. For more information please refers to specific country reports and to the methodology made available by the original data source/provider: <a href="http://go.worldbank.org/21M7S7AZO0" target="_blank">The Land GovernanceAssessment Framework (LGAF) website of the World Bank</a></p>'
     );
     
     //$default: The default value to use if this variable has never been set.
-    //$output = variable_get('landbook-' . $name, $default[$name]);
+    $output = variable_get('landbook-' . $name, $default[$name]);
     if (empty($output)) {
         $output = $default[$name];
     }
