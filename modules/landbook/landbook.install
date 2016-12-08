@@ -13,15 +13,81 @@
  * Reset blocks position for LP new theme
  */
 function landbook_update_7201() {
-    $block = array(
+
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'country_content-news',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/countries/*',
+      'region'      => 'content',
+      'weight'      => 24,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'country_content-blogs',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/countries/*',
+      'region'      => 'content',
+      'weight'      => 25,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'country_content-events',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/countries/*',
+      'region'      => 'content',
+      'weight'      => 26,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'country_content-debates',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/countries/*',
+      'region'      => 'content',
+      'weight'      => 27,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+
+
+  $block = array(
       'keys' => array(
         'module' => 'landbook',
         'delta' => 'country_pdf_block',
         'theme' => 'lpbs',
       ),
       'fields' => array(
-        'region' => 'content',
-        'weight' => '1',
+        'status'      => 1,
+        'visibility'  => BLOCK_VISIBILITY_LISTED,
+        'pages'       => 'book/countries/*',
+        'region'      => 'content',
+        'weight'      => '1',
       )
     );
     db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
@@ -32,20 +98,21 @@ function landbook_update_7201() {
         'theme' => 'lpbs',
       ),
       'fields' => array(
-        'pages' => 'book/countries/*',
-        'region' => 'content',
-        'weight' => '2',
+        'status'      => 1,
+        'visibility'  => BLOCK_VISIBILITY_LISTED,
+        'pages'       => 'book/countries/*',
+        'region'      => 'content',
+        'weight'      => '2',
       )
     );
     db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
 
+    // Cleanup & remove borken links
     db_update('menu_links')
       ->fields(array('hidden'=>1))
       ->condition('link_path', 'book/indicators')
       ->execute();
-
     $links = array('13416', '13417', '20015');
-    // Remove borken menu links
     db_delete('menu_links')
       ->condition('mlid', $links, 'IN')
       ->execute();
