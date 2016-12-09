@@ -14,6 +14,22 @@ $export = array();
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-blank_source_2-default_value';
+$feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
+$feeds_tamper->source = 'Blank source 2';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => 'Movimiento Regional por la tierra y el territorio',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set fixed value "Movimiento Regional por la tierra y el territorio"';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-blank_source_1-default_value';
 $feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
 $feeds_tamper->source = 'Blank source 1';
@@ -24,22 +40,6 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Set fixed value "importer_porlatierra_rdf_xml"';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-blank_source_2-default_value';
-$feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
-$feeds_tamper->source = 'Blank source 2';
-$feeds_tamper->plugin_id = 'default_value';
-$feeds_tamper->settings = array(
-  'default_value' => 'Instituto para el Desarrollo Rural de Sudamérica',
-  'only_if_empty' => 0,
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Set fixed value "Instituto para el Desarrollo Rural de Sudamérica"';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
