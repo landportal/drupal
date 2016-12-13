@@ -447,7 +447,7 @@ $handler->display->display_options['fields']['field_doc_language']['table'] = 'f
 $handler->display->display_options['fields']['field_doc_language']['field'] = 'field_doc_language';
 $handler->display->display_options['fields']['field_doc_language']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_doc_language']['delta_offset'] = '0';
-/* Field: Content: Published at */
+/* Field: Content: Originally published at */
 $handler->display->display_options['fields']['field_doc_is_shown_at']['id'] = 'field_doc_is_shown_at';
 $handler->display->display_options['fields']['field_doc_is_shown_at']['table'] = 'field_data_field_doc_is_shown_at';
 $handler->display->display_options['fields']['field_doc_is_shown_at']['field'] = 'field_doc_is_shown_at';
@@ -466,6 +466,16 @@ $handler->display->display_options['fields']['field_doc_is_shown_by']['click_sor
 $handler->display->display_options['fields']['field_doc_is_shown_by']['type'] = 'link_label';
 $handler->display->display_options['fields']['field_doc_is_shown_by']['settings'] = array(
   'strip_www' => 0,
+);
+/* Field: Content: File Upload */
+$handler->display->display_options['fields']['field_doc_is_shown_by_file']['id'] = 'field_doc_is_shown_by_file';
+$handler->display->display_options['fields']['field_doc_is_shown_by_file']['table'] = 'field_data_field_doc_is_shown_by_file';
+$handler->display->display_options['fields']['field_doc_is_shown_by_file']['field'] = 'field_doc_is_shown_by_file';
+$handler->display->display_options['fields']['field_doc_is_shown_by_file']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_doc_is_shown_by_file']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_doc_is_shown_by_file']['type'] = 'file_download_link';
+$handler->display->display_options['fields']['field_doc_is_shown_by_file']['settings'] = array(
+  'text' => 'File',
 );
 /* Field: Content: ISBN / Resource ID */
 $handler->display->display_options['fields']['field_doc_identifier']['id'] = 'field_doc_identifier';
@@ -487,11 +497,10 @@ $handler->display->display_options['fields']['field_doc_licencing']['table'] = '
 $handler->display->display_options['fields']['field_doc_licencing']['field'] = 'field_doc_licencing';
 $handler->display->display_options['fields']['field_doc_licencing']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_doc_licencing']['delta_offset'] = '0';
-/* Field: Content: Copyright owner */
+/* Field: Content: Copyright details */
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['id'] = 'field_doc_copyrights_statement';
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['table'] = 'field_data_field_doc_copyrights_statement';
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['field'] = 'field_doc_copyrights_statement';
-$handler->display->display_options['fields']['field_doc_copyrights_statement']['label'] = 'Copyright details';
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['alter']['alter_text'] = TRUE;
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['alter']['nl2br'] = TRUE;
@@ -502,7 +511,8 @@ $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
 $handler->display->display_options['fields']['nothing_1']['label'] = 'Metadata___details';
 $handler->display->display_options['fields']['nothing_1']['alter']['text'] = 'Type: [field_doc_type] <br />
 Lang: [field_doc_language] <br />
-Direct: [field_doc_is_shown_by] <br />
+Direct URL: [field_doc_is_shown_by] <br />
+Upload File: [field_doc_is_shown_by_file] <br />
 Original: [field_doc_is_shown_at] <br />
 ID: [field_doc_identifier] <br />
 Pages: [field_doc_pagination] <br />
