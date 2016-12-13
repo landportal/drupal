@@ -39,6 +39,88 @@ function landportal_admin_update_7201() {
 
     $block = array(
         'keys' => array(
+            'module' => 'locale',
+            'delta'  => 'language',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+          'title' => '<none>',
+          'status' => 1,
+          'region' => 'navigation',
+          'weight' => -1,
+//          'visibility' => BLOCK_VISIBILITY_LISTED,
+//          'pages' => 'debate/debates\ndebate/news',
+        )
+    );
+    array_push($blocks, $block);
+
+    $block = array(
+        'keys' => array(
+            'module' => 'landportal_blocks',
+            'delta'  => 'lp_twitter',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+          'title' => '<none>',
+          'status' => 1,
+          'region' => 'sidebar_first',
+          'weight' => 3,
+          'visibility' => BLOCK_VISIBILITY_LISTED,
+          'pages' => 'debate/debates\ndebate/news',
+        )
+    );
+    array_push($blocks, $block);
+
+    $block = array(
+        'keys' => array(
+            'module' => 'views',
+            'delta'  => 'front_page_teasers-block',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+          'title' => '<none>',
+          'status' => 1,
+          'region' => 'content',
+          'weight' => 3,
+          'visibility' => BLOCK_VISIBILITY_LISTED,
+          'pages' => '<front>',
+        )
+    );
+    array_push($blocks, $block);
+    $block = array(
+        'keys' => array(
+            'module' => 'views',
+            'delta'  => 'news-block_1',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+          'status' => 1,
+          'region' => 'content',
+          'weight' => 3,
+          'visibility' => BLOCK_VISIBILITY_LISTED,
+          'pages' => '<front>',
+        )
+    );
+    array_push($blocks, $block);
+
+    $block = array(
+        'keys' => array(
+            'module' => 'views',
+            'delta'  => 'org_view-llprovider_featured',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+          'status' => 1,
+          'region' => 'content',
+          'weight' => 3,
+          'visibility' => BLOCK_VISIBILITY_LISTED,
+          'pages' => 'library',
+        )
+    );
+    array_push($blocks, $block);
+
+    $block = array(
+        'keys' => array(
             'module' => 'views',
             'delta'  => 'by_provider-block',
             'theme'  => 'lpbs',
@@ -110,6 +192,7 @@ function landportal_admin_update_7201() {
             'theme'  => 'lpbs',
         ),
         'values' => array(
+          'title' => '<none>',
           'status' => 1,
           'region' => 'content',
           'weight' => 1,

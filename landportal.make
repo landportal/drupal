@@ -66,8 +66,6 @@ projects:
   - i18n
   - i18nviews
   - job_scheduler
-  - lang_dropdown
-  - language_switcher
   - libraries
   - link
   - location
