@@ -11,6 +11,7 @@ function porlatierra_org_rdf_xml_importer_feeds_importer_default() {
     $export = array();
 
 /******/
+
 $feeds_importer = new stdClass();
 $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
 $feeds_importer->api_version = 1;
@@ -28,7 +29,6 @@ $feeds_importer->config = array(
         'public' => 'public',
         'private' => 'private',
       ),
-      'delete_uploaded_file' => 0,
     ),
   ),
   'parser' => array(
@@ -118,8 +118,7 @@ $feeds_importer->config = array(
         0 => array(
           'source' => 'xpathparser:0',
           'target' => 'title',
-          'unique' => FALSE,
-          'language' => 'und',
+          'unique' => 1,
         ),
         1 => array(
           'source' => 'xpathparser:1',
@@ -245,6 +244,7 @@ $feeds_importer->config = array(
           'source' => 'xpathparser:24',
           'target' => 'field_geographical_focus',
           'unique' => FALSE,
+          'language' => 'und',
         ),
       ),
       'insert_new' => '1',

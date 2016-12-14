@@ -121,7 +121,7 @@ $feeds_tamper->settings = array(
   'column' => 'url',
   'property' => FALSE,
 );
-$feeds_tamper->weight = 8;
+$feeds_tamper->weight = 14;
 $feeds_tamper->description = 'Get the Entity TID (Concept) from Agrovoc URI';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -151,7 +151,7 @@ if ($field != null) {
     }
 }',
 );
-$feeds_tamper->weight = 10;
+$feeds_tamper->weight = 15;
 $feeds_tamper->description = 'Get Term Name from Term ID (TID)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -167,7 +167,7 @@ $feeds_tamper->settings = array(
   'invert' => 0,
   'log' => 1,
 );
-$feeds_tamper->weight = 12;
+$feeds_tamper->weight = 17;
 $feeds_tamper->description = 'Required field (at least one value from LandVoc)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -180,7 +180,7 @@ $feeds_tamper->importer = 'sudamericarural_org_rdf_xml_importer';
 $feeds_tamper->source = 'xpathparser:15';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 11;
+$feeds_tamper->weight = 16;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;

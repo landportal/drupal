@@ -28,7 +28,6 @@ $feeds_importer->config = array(
         'public' => 'public',
         'private' => 'private',
       ),
-      'delete_uploaded_file' => 0,
     ),
   ),
   'parser' => array(
@@ -118,8 +117,7 @@ $feeds_importer->config = array(
         0 => array(
           'source' => 'xpathparser:0',
           'target' => 'title',
-          'unique' => FALSE,
-          'language' => 'und',
+          'unique' => 1,
         ),
         1 => array(
           'source' => 'xpathparser:1',
@@ -245,6 +243,7 @@ $feeds_importer->config = array(
           'source' => 'xpathparser:24',
           'target' => 'field_geographical_focus',
           'unique' => FALSE,
+          'language' => 'und',
         ),
       ),
       'insert_new' => '1',
@@ -263,7 +262,6 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
-
 
 /*****/
     $export[$feeds_importer->id] = $feeds_importer;
