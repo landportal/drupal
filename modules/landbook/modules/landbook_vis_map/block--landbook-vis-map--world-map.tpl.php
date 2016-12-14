@@ -1,12 +1,16 @@
-<section id="map">
+    <section id="<?php print $block_html_id; ?>" class="view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
 <?php if(!empty($block->subject)): ?>
-  <header class="col-md-offset-2 col-md-8 text-center">
-    <h2><?php print $block->subject; ?></h2>
-  </header>
+      <header class="text-center">
+<?php print render($title_prefix); ?>
+<?php if ($block->subject): ?>
+        <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
 <?php endif;?>
-  <div class="col-xs-12">
-    <div class="map-fluid">
-      <div id="map-wrapper" class="map-fluid-wrapper"></div>
-    </div>
-  </div>
-</section>
+<?php print render($title_suffix); ?>
+      </header>
+<?php endif;?>
+      <div class="col-xs-12">
+        <div class="map-fluid">
+          <div id="<?php print $block_html_id; ?>-wrapper" class="map-fluid-wrapper"></div>
+        </div>
+      </div>
+    </section>

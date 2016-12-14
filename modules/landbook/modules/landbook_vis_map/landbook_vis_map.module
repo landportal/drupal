@@ -3,22 +3,6 @@
  * This module provide blocks to display js-view-coda maps
  *
  */
-function landbook_vis_map_theme($existing, $type, $theme, $path){
-    return array(
-        'region_map' => array(
-            'template' => 'block--landbook-vis-map--region-map',
-            'render element' => 'elements'
-        ),
-        'world_map'  => array(
-            'template' => 'block--landbook-vis-map--world-map',
-            'render element' => 'elements'
-        ),
-        'compare_map'=> array(
-            'template' => 'block--landbook-vis-map--compare-map',
-            'render element' => 'elements'
-        ),
-    );
-}
 
 function landbook_vis_map_block_info() {
     $blocks['region_map'] = array(
@@ -49,52 +33,59 @@ function landbook_vis_map_block_info() {
 }
 
 function landbook_vis_map_block_view($delta = '') {
-    $module_path = drupal_get_path('module', 'landbook_vis_map');
+  $module_path = drupal_get_path('module', 'landbook_vis_map');
+  $jsAttr = 'vis: LBV, map_data: map_data'
+    . ', iso3: (Drupal.settings.landbook.type == "country" ? Drupal.settings.landbook.countryCode : null)'
+    . ', target: "#block-landbook-vis-map-' . str_replace('_', '-', $delta) . '"';
+  $jsAttrInd = ', indicators: (Drupal.settings.landbook.type == "indicators" ? false : true)';
+  $jsAttrInd .= ', indicator: (Drupal.settings.landbook.map ? Drupal.settings.landbook.map '
+    . ' : (Drupal.settings.landbook.id ? Drupal.settings.landbook.id : null))';
 
-    $block = array();
-    switch ($delta) {
-    case 'region_map' :
-        $block['subject'] = '<none>';
-        $block['content'] = array(
-            '#theme' => 'region_map',
-            '#attached' => array(
-                'library' => array(
-                    array('landbook_view_coda', 'lbvis.map'),
-                ),
-                'js' =>  array(
-                    $module_path . '/region-map.js' =>  array('weight' => 3, 'requires_jquery' => TRUE),
-                )
-            )
-        );
-        break;
-    case 'compare_map' :
-        $block['subject'] = t('Mapping');
-        $block['content'] = array(
-            '#theme' => 'compare_map',
-            '#attached' => array(
-                'library' => array(
-                    array('landbook_view_coda', 'lbvis.map'),
-                ),
-                'js' =>  array(
-                    $module_path . '/compare-map.js' =>  array('weight' => 3, 'requires_jquery' => TRUE),
-                )
-            )
-        );
-        break;
-    case 'world_map' :
-        $block['subject'] = '';
-        $block['content'] = array(
-            '#theme' => 'world_map',
-            '#attached' => array(
-                'library' => array(
-                    array('landbook_view_coda', 'lbvis.map'),
-                ),
-                'js' =>  array(
-                    $module_path . '/world-map.js' =>  array('weight' => 3, 'requires_jquery' => TRUE),
-                )
-            )
-        );
-        break;
-    }
-    return $block;
+  $block = array();
+  switch ($delta) {
+  case 'region_map' :
+    $jsAttr .= ', zoom: 2, height: 200';
+    $block['subject'] = '<none>';
+    $block['content'] = array(
+      '#attached' => array(
+        'library' => array(array('landbook_view_coda', 'lbvis.map')),
+        'js' =>  array(array(
+          'type' => 'inline',
+          'data' => landbook_view_coda_lbvis_ready_callback(
+            'LBML = new lbvisMap({' . $jsAttr . '}); LBML.init();')
+        ))
+      )
+    );
+    break;
+  case 'compare_map' :
+    $jsAttr .= $jsAttrInd . ', title: true, subtitle: true, legend: true, tooltip: true, years: true';
+    $block['subject'] = t('Mapping');
+    $block['content'] = array(
+      '#attached' => array(
+        'library' => array(array('landbook_view_coda', 'lbvis.map')),
+        'js' =>  array(array(
+          'type' => 'inline',
+          'data' => landbook_view_coda_lbvis_ready_callback(
+            'LBMC = new lbvisMap({' . $jsAttr . '}); LBMC.init();')
+        ))
+      )
+    );
+    break;
+  case 'world_map' :
+    $jsAttr .= 'selectable: true, tooltip: function () { return "Click to visit " + this.point.name; }'
+      . ', events: { click: function () { window.location.href = "/book/countries/" + this.id; } }';
+    $block['subject'] = '<none>';
+    $block['content'] = array(
+      '#attached' => array(
+        'library' => array(array('landbook_view_coda', 'lbvis.map')),
+        'js' =>  array(array(
+          'type' => 'inline',
+          'data' => landbook_view_coda_lbvis_ready_callback(
+            'LBMW = new lbvisMap({' . $jsAttr . '}); LBMW.init();')
+        ))
+      )
+    );
+    break;
+  }
+  return $block;
 }
