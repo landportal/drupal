@@ -14,7 +14,7 @@ function landbook_vis_table_indicators_block_info() {
         'status'    => TRUE,
         'region'    => 'content',
         'visibility'=> BLOCK_VISIBILITY_LISTED,
-        'pages'     => "book/thematic/*\nbook/indicator/*",
+        'pages'     => "book/thematic/*",
         'weight'    => 6
     );
     return $blocks;
