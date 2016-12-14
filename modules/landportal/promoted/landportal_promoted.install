@@ -5,7 +5,7 @@
 
 /** LPBS release
  */
-function landportal_promoted_update_7201() {
+function landportal_promoted_update_7200() {
 
   $blocks = array();
 
@@ -74,7 +74,6 @@ function landportal_promoted_update_7201() {
   array_push($blocks, $block);
 
   foreach($blocks as $block){
-    //error_log('update ' . $block['keys']['delta']);
     db_merge('block')
       ->key($block['keys'])
       ->fields($block['values'])
@@ -83,18 +82,11 @@ function landportal_promoted_update_7201() {
 
 }
 
-/** Place promoted block in default locations
- */
-function landportal_promoted_update_7200() {
-
-}
-
 /**
  * Clean up modules that have been removed brutally
  */
 function landportal_promoted_enable() {
   module_disable(array(
-    'landportal_homepage',
     'promoted',
     'landbook_promoted_thematic'
   ));
