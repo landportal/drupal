@@ -2,7 +2,7 @@
 /* VGGT visualization block */
 //dpm($block);
 ?>
-        <article id="<?php print $block_html_id; ?>" class="view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
+        <article id="<?php print $block_html_id; ?>" class="view-coda view-coda-ranking <?php print $classes; ?>"<?php print $attributes; ?>>
           <header class="text-center">
 <?php print render($title_prefix); ?>
 <?php if ($block->subject): ?>

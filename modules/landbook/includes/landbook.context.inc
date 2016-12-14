@@ -127,7 +127,7 @@ t('landbook');
           'module' => 'landbook_view_coda',
           'delta' => 'indicator_ranking',
           'region' => 'content',
-          'weight' => '12',
+          'weight' => '16',
         ),
       ),
     ),

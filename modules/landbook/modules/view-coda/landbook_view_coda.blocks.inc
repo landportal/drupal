@@ -47,7 +47,7 @@ function landbook_view_coda_block_info() {
     'region'    => 'content',
     'visibility'=> BLOCK_VISIBILITY_LISTED,
     'pages'     => "book/indicators/*\nbook/thematic/*",
-    'weight'    => 14
+    'weight'    => 16
   );
   return $blocks;
 }
