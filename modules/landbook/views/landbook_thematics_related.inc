@@ -1,10 +1,11 @@
+
 <?php
 $view = new view();
-$view->name = 'landbook_thematics_related';
+$view->name = 'landvoc_related';
 $view->description = 'Landbook thematics related content. For each LP content type, show the latest nodes tagged with a given thematic';
 $view->tag = 'landbook';
 $view->base_table = 'node';
-$view->human_name = 'Landbook Thematics Latest related content';
+$view->human_name = 'Thematic content';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -70,7 +71,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
 );
 
 /* Display: Latest Debate */
-$handler = $view->new_display('block', 'Latest Debate', 'block');
+$handler = $view->new_display('block', 'Latest Debate', 'debates');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Debate';
 $handler->display->display_options['defaults']['sorts'] = FALSE;
@@ -117,7 +118,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
 );
 
 /* Display: Latest Blog */
-$handler = $view->new_display('block', 'Latest Blog', 'block_1');
+$handler = $view->new_display('block', 'Latest Blog', 'blogs');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Latest Blog';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -164,7 +165,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
 );
 
 /* Display: Latest Events */
-$handler = $view->new_display('block', 'Latest Events', 'block_2');
+$handler = $view->new_display('block', 'Latest Events', 'events');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Latest Events';
 $handler->display->display_options['defaults']['sorts'] = FALSE;
@@ -211,7 +212,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
 );
 
 /* Display: Latest News */
-$handler = $view->new_display('block', 'Latest News', 'block_3');
+$handler = $view->new_display('block', 'Latest News', 'news');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Latest News';
 $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -256,7 +257,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
 );
 
 /* Display: Partners */
-$handler = $view->new_display('block', 'Partners', 'block_4');
+$handler = $view->new_display('block', 'Partners', 'partners');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Partners';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -311,7 +312,7 @@ $handler->display->display_options['filters']['field_organization_relationship_t
 $handler->display->display_options['filters']['field_organization_relationship_tid']['vocabulary'] = 'organization_relation';
 
 /* Display: Library */
-$handler = $view->new_display('block', 'Library', 'block_5');
+$handler = $view->new_display('block', 'Library', 'library');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Library';
 $handler->display->display_options['defaults']['use_ajax'] = FALSE;

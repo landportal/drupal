@@ -13,7 +13,99 @@
  * Reset blocks position for LP new theme
  */
 function landbook_update_7201() {
+  /* Thematic pages */
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'landvoc_related-news',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/thematic/*',
+      'region'      => 'content',
+      'weight'      => 24,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'landvoc_related-blogs',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/thematic/*',
+      'region'      => 'content',
+      'weight'      => 25,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'landvoc_related-events',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/thematic/*',
+      'region'      => 'content',
+      'weight'      => 26,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'landvoc_related-debates',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/thematic/*',
+      'region'      => 'content',
+      'weight'      => 27,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'landvoc_related-partners',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/thematic/*',
+      'region'      => 'content',
+      'weight'      => 28,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'landvoc_related-library',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/thematic/*',
+      'region'      => 'content',
+      'weight'      => 29,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
 
+  /* Country Pages */
   $block = array(
     'keys' => array(
       'module'  => 'views',
@@ -104,7 +196,6 @@ function landbook_update_7201() {
     )
   );
   db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
-
 
   $block = array(
       'keys' => array(
