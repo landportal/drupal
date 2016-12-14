@@ -1,10 +1,12 @@
-<section id="ranking" class="container">
+    <section id="<?php print $block_html_id; ?>" class="view-coda view-coda-ranking <?php print $classes; ?>"<?php print $attributes; ?>>
 <?php if(!empty($block->subject)): ?>
-  <header class="row">
-    <div class="col-xs-12">
-      <h2><?php print $block->subject; ?></h2>
-    </div>
-  </header>
+          <header class="text-center">
+<?php print render($title_prefix); ?>
+<?php if ($block->subject): ?>
+            <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
+<?php endif;?>
+<?php print render($title_suffix); ?>
+          </header>
 <?php endif;?>
   <nav class="row">
     <form>
@@ -35,7 +37,7 @@
   </div>
   <div class="row">
     <div class="col-xs-10 col-xs-push-1 col-sm-8 col-sm-push-2 col-lg-6 col-lg-push-3">
-      <ul id="ranking-wrapper" class="ranking list-unstyled"></ul>
+      <ul id="<?php print $block_html_id; ?>-wrapper" class="ranking list-unstyled"></ul>
     </div>
   </div>
 </section>
