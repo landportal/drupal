@@ -59,9 +59,8 @@ function landbook_view_coda_lbvis_ready_callback($callback) {
 
 function landbook_view_coda_block_view($delta = '') {
   $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
-  $block = array('subject' => 'default', 'content' => 'bad');
   $jsAttr = 'vis: LBV, iso3: Drupal.settings.landbook.countryCode';
-  $jsRanking = 'vis: LBV, type: "indicators", indicator: Drupal.settings.landbook.ranking';
+  $jsRanking = 'vis: LBV, type: "indicators", indicator: Drupal.settings.landbook.ranking || Drupal.settings.landbook.id';
 
   switch ($delta) {
   case 'lbcp_linechart' :
@@ -142,7 +141,7 @@ function landbook_view_coda_block_view($delta = '') {
         'library' => array(array('landbook_view_coda', 'lbvis.dl')),
         'js' => array(array(
           'type' => 'inline',
-          'data' => landbook_view_coda_lbvis_ready_callback('DL = new lbvis.dl({'.$jsAttr.'});')
+          'data' => landbook_view_coda_lbvis_ready_callback('DL = new lbvis.dl({'.$jsAttr.',  target: "#block-landbook-view-coda-indicator-dl", indicator: Drupal.settings.landbook.id});')
         ))
       )
     );
