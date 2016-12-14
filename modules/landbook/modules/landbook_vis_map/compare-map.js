@@ -11,7 +11,7 @@
             years: true,
             indicators: (Drupal.settings.landbook.type == 'indicators' ? false : true),
             indicator: (Drupal.settings.landbook.map ? Drupal.settings.landbook.map
-                        : 'WB-SP.RUR.TOTL.ZS'),
+                        : (Drupal.settings.landbook.id ? Drupal.settings.landbook.id : null)),
             vis: LBV
         });
         LBV.ready().done(function () {

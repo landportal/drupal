@@ -1,4 +1,4 @@
-<section id="map" class="row">
+<section id="map">
 <?php if(!empty($block->subject)): ?>
   <header class="col-md-offset-2 col-md-8 text-center">
     <h2><?php print $block->subject; ?></h2>
