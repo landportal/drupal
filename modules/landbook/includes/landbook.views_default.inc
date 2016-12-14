@@ -11,11 +11,12 @@ function landbook_views_default_views() {
     $export = array();
     $views = array(
         'country_content',
+        'thematic_content',
         'landbook_countries',
-        'landbook_countries_related',
+//        'landbook_countries_related',
         'landbook_catalog',
         'landbook_indicators',
-        'landbook_thematics_related',
+//        'landbook_thematics_related',
         'thematic_pages',
     );
     foreach ($views as $view_name) {

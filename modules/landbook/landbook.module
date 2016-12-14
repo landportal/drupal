@@ -39,25 +39,6 @@ function landbook_help($path, $arg) {
   }
 }
 
-/**
- * Note: Webcoding
- * Explain AND document all the following functions
- * most of it seems overkill, un-necessary
- */
-function landbook_views_query_alter(&$view, &$query){
-  $args = arg();
-  if(!empty($view->name) && $view->name=='landbook_thematics_related'){
-    if($args[0] == 'node' && is_numeric($args[1])){
-      $node = node_load($args[1]);
-      if($node->type == 'thematic_narrative'){
-        $field_values = field_get_items('node', $node, 'field_landvoc_to');
-        $tid = $field_values[0]['target_id'];
-        $query->where[0]['conditions'][0]['value'] = $tid;
-      }
-    }
-  }
-}
-
 // TMP? 
 function landbook_get_region_iso($iso){
   $tid = db_select('field_data_field_iso3', 't')
@@ -77,34 +58,4 @@ function landbook_get_country_iso($iso){
     ->execute()
     ->fetchField();
   return $tid;
-}
-
-/**
- * Implements hook_views_pre_render().
- */
-// WFT is going on there?
-function landbook_views_pre_render(&$view) {
-  // We target the views and probably the display we want to customize.
-  if (!empty($view->name) && $view->name === 'landbook_countries_related' && $view->current_display === 'block_5') {
-    // Only act on when the views is set to use "more link".
-    if ($view->display_handler->use_more()) {
-      $args = arg();
-      // Load the term. The argument can be passed by url or panel configuration.
-      if (!empty($args[2])) {
-        $query = db_select('taxonomy_term_data', 't');
-        $query->fields('t', array('tid'));
-        $query->leftJoin('field_data_field_iso3', 'fdfi', 'fdfi.entity_id = t.tid');
-        $query->condition('fdfi.field_iso3_value', $args[2]);
-        $query->condition('t.vid', '7');
-        $tid = $query->execute()->fetchField();
-        if ($tid) {
-          // Set to use 'custom_url'.
-          $view->display_handler->set_option('link_display', 'custom_url');
-          // Change the link url.
-          $view->display_handler->set_option('link_url', 'library/search');
-          $view->exposed_raw_input['f[0]'] = 'im_field_geographical_focus:' . $tid;
-        }
-      }
-    }
-  }
 }

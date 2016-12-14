@@ -109,10 +109,10 @@ $handler = $view->new_display('page', 'Page country narrative', 'page_1');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
-/* Relationship: Taxonomy term: Content with term */
-$handler->display->display_options['relationships']['nid']['id'] = 'nid';
-$handler->display->display_options['relationships']['nid']['table'] = 'taxonomy_index';
-$handler->display->display_options['relationships']['nid']['field'] = 'nid';
+/* Relationship: Taxonomy term: Content using Geographical focus */
+$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['id'] = 'reverse_field_geographical_focus_node';
+$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['field'] = 'reverse_field_geographical_focus_node';
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Taxonomy term: ISO3 */
 $handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
@@ -122,16 +122,16 @@ $handler->display->display_options['fields']['field_iso3']['label'] = '';
 $handler->display->display_options['fields']['field_iso3']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_iso3']['element_label_colon'] = FALSE;
 /* Field: Content: Rendered Content */
-$handler->display->display_options['fields']['rendered_entity_1']['id'] = 'rendered_entity_1';
-$handler->display->display_options['fields']['rendered_entity_1']['table'] = 'views_entity_node';
-$handler->display->display_options['fields']['rendered_entity_1']['field'] = 'rendered_entity';
-$handler->display->display_options['fields']['rendered_entity_1']['relationship'] = 'nid';
-$handler->display->display_options['fields']['rendered_entity_1']['label'] = '';
-$handler->display->display_options['fields']['rendered_entity_1']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['rendered_entity_1']['link_to_entity'] = 1;
-$handler->display->display_options['fields']['rendered_entity_1']['display'] = 'view';
-$handler->display->display_options['fields']['rendered_entity_1']['view_mode'] = 'full';
-$handler->display->display_options['fields']['rendered_entity_1']['bypass_access'] = 0;
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['relationship'] = 'reverse_field_geographical_focus_node';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: ISO3 (field_iso3) */
 $handler->display->display_options['arguments']['field_iso3_value']['id'] = 'field_iso3_value';
@@ -162,10 +162,16 @@ $handler->display->display_options['filters']['field_iso3_value']['operator'] = 
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
-$handler->display->display_options['filters']['type']['relationship'] = 'nid';
+$handler->display->display_options['filters']['type']['relationship'] = 'reverse_field_geographical_focus_node';
 $handler->display->display_options['filters']['type']['value'] = array(
   'landbook_country' => 'landbook_country',
 );
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['relationship'] = 'reverse_field_geographical_focus_node';
+$handler->display->display_options['filters']['status']['value'] = '1';
 $handler->display->display_options['path'] = 'book/countries/%';
 
 /* Display: Countries portfolio */

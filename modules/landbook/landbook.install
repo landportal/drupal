@@ -17,7 +17,7 @@ function landbook_update_7201() {
   $block = array(
     'keys' => array(
       'module'  => 'views',
-      'delta'   => 'landvoc_related-news',
+      'delta'   => 'thematic_content-news',
       'theme'   => 'lpbs',
     ),
     'fields' => array(
@@ -32,7 +32,7 @@ function landbook_update_7201() {
   $block = array(
     'keys' => array(
       'module'  => 'views',
-      'delta'   => 'landvoc_related-blogs',
+      'delta'   => 'thematic_content-blogs',
       'theme'   => 'lpbs',
     ),
     'fields' => array(
@@ -47,7 +47,7 @@ function landbook_update_7201() {
   $block = array(
     'keys' => array(
       'module'  => 'views',
-      'delta'   => 'landvoc_related-events',
+      'delta'   => 'thematic_content-events',
       'theme'   => 'lpbs',
     ),
     'fields' => array(
@@ -62,7 +62,7 @@ function landbook_update_7201() {
   $block = array(
     'keys' => array(
       'module'  => 'views',
-      'delta'   => 'landvoc_related-debates',
+      'delta'   => 'thematic_content-debates',
       'theme'   => 'lpbs',
     ),
     'fields' => array(
@@ -77,7 +77,7 @@ function landbook_update_7201() {
   $block = array(
     'keys' => array(
       'module'  => 'views',
-      'delta'   => 'landvoc_related-partners',
+      'delta'   => 'thematic_content-partners',
       'theme'   => 'lpbs',
     ),
     'fields' => array(
@@ -92,7 +92,7 @@ function landbook_update_7201() {
   $block = array(
     'keys' => array(
       'module'  => 'views',
-      'delta'   => 'landvoc_related-library',
+      'delta'   => 'thematic_content-library',
       'theme'   => 'lpbs',
     ),
     'fields' => array(
