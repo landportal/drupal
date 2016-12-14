@@ -39,13 +39,13 @@ function landbook_vis_map_block_view($delta = '') {
     . ', target: "#block-landbook-vis-map-' . str_replace('_', '-', $delta) . '"';
   $jsAttrInd = ', indicators: (Drupal.settings.landbook.type == "indicators" ? false : true)';
   $jsAttrInd .= ', indicator: (Drupal.settings.landbook.map ? Drupal.settings.landbook.map '
-    . ' : (Drupal.settings.landbook.id ? Drupal.settings.landbook.id : null))';
+    . ' : (Drupal.settings.landbook.id ? Drupal.settings.landbook.id : "WB-SP.RUR.TOTL.ZS"))';
 
   $block = array();
   switch ($delta) {
   case 'region_map' :
     $jsAttr .= ', zoom: 2, height: 200';
-    $block['subject'] = '<none>';
+    $block['subject'] = '';
     $block['content'] = array(
       '#attached' => array(
         'library' => array(array('landbook_view_coda', 'lbvis.map')),
@@ -74,7 +74,7 @@ function landbook_vis_map_block_view($delta = '') {
   case 'world_map' :
     $jsAttr .= 'selectable: true, tooltip: function () { return "Click to visit " + this.point.name; }'
       . ', events: { click: function () { window.location.href = "/book/countries/" + this.id; } }';
-    $block['subject'] = '<none>';
+    $block['subject'] = '';
     $block['content'] = array(
       '#attached' => array(
         'library' => array(array('landbook_view_coda', 'lbvis.map')),
