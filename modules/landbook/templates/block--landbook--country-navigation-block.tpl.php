@@ -1,6 +1,3 @@
-<?php
-dpm($variables);
-?>
 <section id="country-navigation" class="text-center">
 <?php if (!empty($block->country_info)): ?>
   <header>
