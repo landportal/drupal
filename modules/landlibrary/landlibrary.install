@@ -1,0 +1,32 @@
+<?php
+/**
+ * @file
+ * This module provide the installation and update hook for the landlibrary module
+ *
+ * The Land Portal - Land Library
+ *
+ * Author: Jules Clement <jules@ker.bz>
+ */
+
+/** LPBS Release
+ * Reset blocks position for LP new theme
+ */
+function landlibrary_update_7200() {
+
+  /* Thematic pages */
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'by_providers-block',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => TRUE,
+      /* 'visibility'  => BLOCK_VISIBILITY_LISTED, */
+      /* 'pages'       => 'book/thematic/\*', */
+      'region'      => 'content',
+      'weight'      => 10,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+}
