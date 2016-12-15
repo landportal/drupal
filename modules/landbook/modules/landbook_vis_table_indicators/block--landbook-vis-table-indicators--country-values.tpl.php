@@ -8,7 +8,7 @@
 <?php print render($title_suffix); ?>
           </header>
 <?php endif;?>
-          <div class="col-xs-12">
+          <div class="view-coda-vis">
       <table class="table">
         <thead>
           <tr>

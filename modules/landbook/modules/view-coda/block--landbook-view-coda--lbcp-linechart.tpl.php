@@ -1,11 +1,11 @@
         <article id="<?php print $block_html_id; ?>" class="view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
-          <header class="text-center">
+          <header class="text-center clearfix">
 <?php print render($title_prefix); ?>
 <?php if ($block->subject): ?>
             <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
 <?php endif;?>
 <?php print render($title_suffix); ?>
-        <form>
+        <form class="form-horizontal">
           <div class="form-group col-xs-12 col-sm-3">
             <select name="indicator" class="form-control">
               <option data-localize="inputs.indicators">Select an indicator...</option>
@@ -32,10 +32,10 @@
           </div>
         </form>
           </header>
-          <div class="col-xs-12 text-center" id="labels-compare">
+          <div class="text-center" id="labels-compare">
             <span class="hidden">Remove countries added</span>
           </div>
-          <div class="col-xs-12">
+          <div class="view-coda-vis">
             <div id="<?php print $block_html_id; ?>-wrapper"></div>
           </div>
         </article>

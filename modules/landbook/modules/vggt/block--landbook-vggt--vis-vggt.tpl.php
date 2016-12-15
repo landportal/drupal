@@ -9,9 +9,7 @@
             <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
 <?php endif;?>
 <?php print render($title_suffix); ?>
-          </header>
-          <nav class="row">
-            <form>
+            <form class="form-horizontal">
               <div class="form-group col-xs-6 col-sm-2">
                 <select name="year" class="form-control" disabled="disabled">
                 </select>
@@ -25,9 +23,8 @@
                 </select>
               </div>
             </form>
-          </nav>
-          <div class="row">
-            <div class="col-xs-12">
+          </header>
+          <div class="view-coda-vis">
               <div id="<?php print $block_html_id; ?>-wrapper" class="">
                 <ul class="list-unstyled text-center"><li class="panelVal values-panel"></li></ul>
                 <div class="panel panel-default">
@@ -43,7 +40,6 @@
                   </div>
                 </div>
               </div>
-            </div>
           </div>
           <footer>
             <div>
