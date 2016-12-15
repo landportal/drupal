@@ -36,7 +36,7 @@ function landbook_block_info() {
         'status'        => TRUE,
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
-        'pages'         => "book/countries/*\nbook/thematic/*",
+        'pages'         => "book/countries/*\n",
         'weight'        => 15
     );
     // @TODO: cleanup this shit
