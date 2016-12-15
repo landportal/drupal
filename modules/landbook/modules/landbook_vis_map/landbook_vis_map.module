@@ -11,7 +11,7 @@ function landbook_vis_map_block_info() {
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/countries/*",
-        'weight'        => -52
+        'weight'        => -2
     );
     $blocks['compare_map'] = array(
         'info'          => t('Landbook: Country page: Compare map'),
@@ -27,7 +27,7 @@ function landbook_vis_map_block_info() {
         'region'        => 'content',
         'visibility'    => BLOCK_VISIBILITY_LISTED,
         'pages'         => "book/countries",
-        'weight'        => -52
+        'weight'        => -2
   );
   return $blocks;
 }
