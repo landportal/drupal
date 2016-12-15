@@ -80,7 +80,7 @@ function landbook_view_coda_update_7205() {
     'fields' => array(
       'status'      => 1,
       'visibility'  => BLOCK_VISIBILITY_LISTED,
-      'pages'       => 'book/countries/*',
+      'pages'       => 'book/countries',
       'region'      => 'content',
       'weight'      => -2,
     )
