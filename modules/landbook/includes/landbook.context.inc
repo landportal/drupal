@@ -76,9 +76,9 @@ t('landbook');
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-landbook_indicators-block_1' => array(
+        'views-landbook_indicators-dataset' => array(
           'module' => 'views',
-          'delta' => 'landbook_indicators-block_1',
+          'delta' => 'landbook_indicators-dataset',
           'region' => 'content',
           'weight' => '1',
         ),
