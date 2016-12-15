@@ -28,10 +28,10 @@ $handler->display->display_options['style_options']['row_class_special'] = FALSE
 $handler->display->display_options['style_options']['uses_fields'] = TRUE;
 $handler->display->display_options['row_plugin'] = 'node';
 $handler->display->display_options['row_options']['links'] = FALSE;
-/* Header: Global: Result summary */
-$handler->display->display_options['header']['result']['id'] = 'result';
-$handler->display->display_options['header']['result']['table'] = 'views';
-$handler->display->display_options['header']['result']['field'] = 'result';
+/* /\* Header: Global: Result summary *\/ */
+/* $handler->display->display_options['header']['result']['id'] = 'result'; */
+/* $handler->display->display_options['header']['result']['table'] = 'views'; */
+/* $handler->display->display_options['header']['result']['field'] = 'result'; */
 /* Relationship: Content: Taxonomy terms on node */
 $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
 $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
