@@ -17,59 +17,69 @@ include_once 'landbook_view_coda.blocks.inc';
  * that display some visualizations.
  *
  * in JS: Drupal.settings.landbook
+   @TODO: should be based on the CT (or menu_get_item())
  */
 function landbook_view_coda_page_build(&$page) {
-    global $LBVIS_PATH;
-    // Based on actuall path
-    $url = explode('/', drupal_get_path_alias());
-    if ($url[0] != 'book') return;
-    // TODO: should be based on the CT (or menu_get_item())
-    //  + config screen to attach/show vis on a specific CT(?)
-    if ($url[1] == 'thematic') {
-        // For thematic narrative nodes, pick indicators to show in the table (field_indicators)
-        $item = menu_get_item();
-        $node = array_pop($item['page_arguments']);
-        // Indicators for visualization
-        $table_ind = array();
-        $ranking_ind = null;
-        $map_ind = null;
-        if (!empty($node->field_indicators[LANGUAGE_NONE])) {
-            foreach($node->field_indicators['und'] as $ind) {
-                $term = taxonomy_term_load($ind['tid']);
-                $id = field_get_items('taxonomy_term', $term, 'field_id');
-                array_push($table_ind, $id[0]['value']);
-            }
-        }
-        if (!empty($node->field_indicator_ranking[LANGUAGE_NONE])) {
-          $term = taxonomy_term_load($node->field_indicator_ranking[LANGUAGE_NONE][0]['tid']);
-          $id = field_get_items('taxonomy_term', $term, 'field_id');
-          $ranking_ind = $id[0]['value'];
-        }
-        if (!empty($node->field_indicator_map[LANGUAGE_NONE])) {
-          $term = taxonomy_term_load($node->field_indicator_map[LANGUAGE_NONE][0]['tid']);
-          $id = field_get_items('taxonomy_term', $term, 'field_id');
-          $map_ind = $id[0]['value'];
-        }
-        drupal_add_js(array(
-            'landbook' => array(
-                'type'        => 'thematic',
-                'indicators'  => $table_ind,
-                'ranking'     => $ranking_ind,
-                'map'         => $map_ind,
-            )
-        ), 'setting');
+  global $LBVIS_PATH;
+  // Based on actuall path
+  $url = explode('/', drupal_get_path_alias());
+  if ($url[0] != 'book') return;
+
+  // JS var: Drupal.settings.landbook
+  $view_coda = array('type' => 'book');
+  //  + config screen to attach/show vis on a specific CT(?)
+  if ($url[1] == 'thematic') {
+    landbook_view_coda_js_settings_thematic($url, $view_coda);
+  }
+  if ($url[1] == 'countries' && count($url) > 2) {
+    landbook_view_coda_js_settings_countries($url, $view_coda);
+  }
+  drupal_add_js(array('landbook' => $view_coda), 'setting');    
+}
+
+function landbook_view_coda_js_settings_thematic($url, &$vars) {
+  // For thematic narrative nodes, pick indicators to show in the table (field_indicators)
+  $item = menu_get_item();
+  $node = array_pop($item['page_arguments']);
+  // Indicators for visualization
+  $table_ind = array();
+  if (!empty($node->field_indicators[LANGUAGE_NONE])) {
+    foreach($node->field_indicators['und'] as $ind) {
+      $term = taxonomy_term_load($ind['tid']);
+      $id = field_get_items('taxonomy_term', $term, 'field_id');
+      array_push($table_ind, $id[0]['value']);
     }
-    if ($url[1] == 'countries' && count($url) > 2) {
-        drupal_add_css($LBVIS_PATH . '/css/screen.css', array('group' => CSS_DEFAULT));
-        drupal_add_css($LBVIS_PATH . '/css/spinkit.css', array('group' => CSS_DEFAULT));
-        drupal_add_js(array(
-            'landbook' => array(
-                'type'          => 'country',
-                'libraryPath'   => $LBVIS_PATH,
-                'countryCode'   => $url[2]
-            )
-        ), 'setting');
-    }
+  }
+  $ranking_ind = null;
+  if (!empty($node->field_indicator_ranking[LANGUAGE_NONE])) {
+    $term = taxonomy_term_load($node->field_indicator_ranking[LANGUAGE_NONE][0]['tid']);
+    $id = field_get_items('taxonomy_term', $term, 'field_id');
+    $ranking_ind = $id[0]['value'];
+  }
+  $map_ind = null;
+  if (!empty($node->field_indicator_map[LANGUAGE_NONE])) {
+    $term = taxonomy_term_load($node->field_indicator_map[LANGUAGE_NONE][0]['tid']);
+    $id = field_get_items('taxonomy_term', $term, 'field_id');
+    $map_ind = $id[0]['value'];
+  }
+  // Fill up JS settings
+  $vars = array(
+    'type'        => 'thematic',
+    'indicators'  => $table_ind,
+    'ranking'     => $ranking_ind,
+    'map'         => $map_ind,
+  );
+}
+
+function landbook_view_coda_js_settings_countries($url, &$vars) {
+  drupal_add_css($LBVIS_PATH . '/css/screen.css', array('group' => CSS_DEFAULT));
+  // Borken / @todo: put back a nice loading in js-view-coda // not here?
+  /* drupal_add_css($LBVIS_PATH . '/css/spinkit.css', array('group' => CSS_DEFAULT)); */
+  $vars = array(
+    'type'        => 'country',
+    'libraryPath' => $LBVIS_PATH,
+    'countryCode' => $url[2]
+  );
 }
 
 function landbook_view_coda_taxonomy_term_view($term, $view_mode, $langcode) {
