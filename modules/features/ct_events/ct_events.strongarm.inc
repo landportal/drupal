@@ -170,7 +170,7 @@ function ct_events_strongarm() {
       'add' => '1',
     ),
     'form' => array(
-      'weight' => '0',
+      'weight' => '1',
       'collapsible' => 0,
       'collapsed' => 0,
       'fields' => array(
@@ -217,7 +217,7 @@ function ct_events_strongarm() {
       ),
     ),
     'display' => array(
-      'weight' => '0',
+      'weight' => '1',
       'hide' => array(
         'name' => 0,
         'street' => 0,

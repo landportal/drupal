@@ -133,7 +133,7 @@ function ct_events_field_default_field_instances() {
 If it is only a one day event, the end date should be the same as the starting date.',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
