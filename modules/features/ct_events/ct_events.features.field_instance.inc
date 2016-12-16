@@ -169,7 +169,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
