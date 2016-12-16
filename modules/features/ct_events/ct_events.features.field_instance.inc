@@ -381,7 +381,7 @@ If it is only a one day event, the end date should be the same as the starting d
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
