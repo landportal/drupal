@@ -13,7 +13,7 @@ function social_login_feature_default_rules_configuration() {
       "LABEL" : "Ask user to update profile",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
-      "REQUIRES" : [ "rules", "rules_i18n", "hybridauth" ],
+      "REQUIRES" : [ "rules", "hybridauth" ],
       "ON" : { "hybridauth_user_login" : [] },
       "IF" : [
         { "OR" : [
