@@ -238,6 +238,24 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'sudamericarural_org_rdf_xml_importer-xpathparser_18-feeds_tamper_conditional';
+$feeds_tamper->importer = 'sudamericarural_org_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:18';
+$feeds_tamper->plugin_id = 'feeds_tamper_conditional';
+$feeds_tamper->settings = array(
+  'conditional_field' => 'xpathparser:9',
+  'operator' => 'not_equals',
+  'negate' => 0,
+  'value' => 'Multimedia',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Conditional (resource type not equals \'Multimedia\')';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'sudamericarural_org_rdf_xml_importer-xpathparser_21-explode';
 $feeds_tamper->importer = 'sudamericarural_org_rdf_xml_importer';
 $feeds_tamper->source = 'xpathparser:21';
@@ -585,6 +603,42 @@ $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
 $feeds_tamper->weight = 2;
 $feeds_tamper->description = 'Unique';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'sudamericarural_org_rdf_xml_importer-xpathparser_25-feeds_tamper_conditional';
+$feeds_tamper->importer = 'sudamericarural_org_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:25';
+$feeds_tamper->plugin_id = 'feeds_tamper_conditional';
+$feeds_tamper->settings = array(
+  'conditional_field' => 'xpathparser:9',
+  'operator' => 'equals',
+  'negate' => 0,
+  'value' => 'Multimedia',
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Conditional (resource type equals \'Multimedia\')';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'sudamericarural_org_rdf_xml_importer-xpathparser_25-php';
+$feeds_tamper->importer = 'sudamericarural_org_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:25';
+$feeds_tamper->plugin_id = 'php';
+$feeds_tamper->settings = array(
+  'php' => 'if ($field != null) {
+   return gmdate("H:i:s", $field);
+}
+',
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Execute php code. From seconds to H:i:s (gmdate php function)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
