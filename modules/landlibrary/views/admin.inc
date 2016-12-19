@@ -383,7 +383,7 @@ $handler->display->display_options['fields']['field_doc_people']['id'] = 'field_
 $handler->display->display_options['fields']['field_doc_people']['table'] = 'field_data_field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['field'] = 'field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['exclude'] = TRUE;
-/* Field: Field: Organization */
+/* Field: Field: Corporate Author(s) */
 $handler->display->display_options['fields']['field_orgref']['id'] = 'field_orgref';
 $handler->display->display_options['fields']['field_orgref']['table'] = 'field_data_field_orgref';
 $handler->display->display_options['fields']['field_orgref']['field'] = 'field_orgref';
@@ -491,6 +491,11 @@ $handler->display->display_options['fields']['field_doc_pagination']['id'] = 'fi
 $handler->display->display_options['fields']['field_doc_pagination']['table'] = 'field_data_field_doc_pagination';
 $handler->display->display_options['fields']['field_doc_pagination']['field'] = 'field_doc_pagination';
 $handler->display->display_options['fields']['field_doc_pagination']['exclude'] = TRUE;
+/* Field: Content: Duration */
+$handler->display->display_options['fields']['field_duration']['id'] = 'field_duration';
+$handler->display->display_options['fields']['field_duration']['table'] = 'field_data_field_duration';
+$handler->display->display_options['fields']['field_duration']['field'] = 'field_duration';
+$handler->display->display_options['fields']['field_duration']['exclude'] = TRUE;
 /* Field: Content: License of the resource */
 $handler->display->display_options['fields']['field_doc_licencing']['id'] = 'field_doc_licencing';
 $handler->display->display_options['fields']['field_doc_licencing']['table'] = 'field_data_field_doc_licencing';
@@ -516,6 +521,7 @@ Upload File: [field_doc_is_shown_by_file] <br />
 Original: [field_doc_is_shown_at] <br />
 ID: [field_doc_identifier] <br />
 Pages: [field_doc_pagination] <br />
+Duration: [field_duration] <br />
 License: [field_doc_licencing] <br />
 Copyright details: [field_doc_copyrights_statement] <br />';
 $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
