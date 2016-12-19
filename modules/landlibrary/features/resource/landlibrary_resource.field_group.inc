@@ -272,6 +272,7 @@ function landlibrary_resource_field_group_info() {
     'children' => array(
       0 => 'field_doc_provider',
       1 => 'field_doc_publisher',
+      2 => 'field_doc_people',
     ),
     'format_type' => 'hidden',
     'format_settings' => array(
