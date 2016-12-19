@@ -51,10 +51,10 @@
             <div class="legend text-center">
               <em>Legend</em>
               <ul class="list-unstyled list-inline values-legend">
-                <li><span class="value-a"></span> <span data-localize="label.vgp">Fully adopt the VGGT principle</span></li>
-                <li><span class="value-b"></span> <span data-localize="label.gp">Partially adopt the VGGT principle</span></li>
-                <li><span class="value-c"></span> <span data-localize="label.wp">Do not adopt the VGGT principle</span></li>
-                <li><span class="value-na"></span> <span data-localize="label.ndata">Missing Value</span></li>
+                <li><span class="value-a"></span> <?php print t('Fully adopt the VGGT principle'); ?></li>
+                <li><span class="value-b"></span> <?php print t('Partially adopt the VGGT principle'); ?></li>
+                <li><span class="value-c"></span> <?php print t('Do not adopt the VGGT principle'); ?></li>
+                <li><span class="value-na"></span> <?php print t('Missing Value'); ?></li>
               </ul>
             </div>
           </footer>

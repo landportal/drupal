@@ -35,17 +35,17 @@
             <ul id="<?php print $block_html_id; ?>-wrapper" class="list-unstyled">
               <li>Please, select year and panels to show the info.</li>
             </ul>
+          </div>
             <div class="legend text-center">
               <em>Legend</em>
               <ul class="list-unstyled list-inline">
-                <li><span class="lgaf-value-a lgaf-value"></span> <span data-localize="label.vgp">Very Good Practice</span></li>
-                <li><span class="lgaf-value-b lgaf-value"></span> <span data-localize="label.gp">Good Practice</span></li>
-                <li><span class="lgaf-value-c lgaf-value"></span> <span data-localize="label.wp">Weak Practice</span></li>
-                <li><span class="lgaf-value-d lgaf-value"></span> <span data-localize="label.vwp">Very Weak Practice </span></li>
-                <li><span class="lgaf-value-na lgaf-value"></span> <span data-localize="label.ndata">Missing Value</span></li>
+                <li><span class="lgaf-value-a lgaf-value"></span> <?php print t('Very Good Practice'); ?></li>
+                <li><span class="lgaf-value-b lgaf-value"></span> <?php print t('Good Practice'); ?></li>
+                <li><span class="lgaf-value-c lgaf-value"></span> <?php print t('Weak Practice'); ?></li>
+                <li><span class="lgaf-value-d lgaf-value"></span> <?php print t('Very Weak Practice'); ?></li>
+                <li><span class="lgaf-value-na lgaf-value"></span> <?php print t('Missing Value'); ?></li>
               </ul>
             </div>
-          </div>
           <footer>
             <div<?php print $content_attributes; ?>><?php print $content ?></div>
           </footer>
