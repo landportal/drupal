@@ -93,7 +93,7 @@ function ct_organization_strongarm() {
       'add' => '1',
     ),
     'form' => array(
-      'weight' => '6',
+      'weight' => '4',
       'collapsible' => 1,
       'collapsed' => 1,
       'fields' => array(
@@ -140,7 +140,7 @@ function ct_organization_strongarm() {
       ),
     ),
     'display' => array(
-      'weight' => '6',
+      'weight' => '4',
       'hide' => array(
         'name' => 0,
         'street' => 0,
