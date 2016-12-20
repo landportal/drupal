@@ -57,7 +57,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'above',
@@ -337,7 +337,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -666,7 +666,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 21,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'above',
@@ -738,11 +738,13 @@ function landlibrary_resource_field_default_field_instances() {
     'description' => 'Upload the resource to the Land Portal\'s server.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 23,
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'text' => 'Download [file:name]',
+        ),
+        'type' => 'file_download_link',
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1195,7 +1197,7 @@ function landlibrary_resource_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
@@ -1514,7 +1516,7 @@ function landlibrary_resource_field_default_field_instances() {
           'image_style' => 'large',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'above',
@@ -1789,7 +1791,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_markup',
-        'weight' => 22,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
