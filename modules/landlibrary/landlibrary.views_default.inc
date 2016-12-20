@@ -13,7 +13,7 @@ function landlibrary_views_default_views() {
         'admin',
         'browse',
         'by_providers',
-        'organizations',
+        //'organizations',
         'resource_type',
     );
     foreach ($views as $view_name) {
