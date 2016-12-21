@@ -146,7 +146,7 @@ function ct_organization_field_default_field_instances() {
         'size' => 20,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -198,7 +198,7 @@ function ct_organization_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 14,
     ),
   );
 
@@ -250,7 +250,7 @@ function ct_organization_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 7,
+      'weight' => 13,
     ),
   );
 
@@ -313,7 +313,7 @@ function ct_organization_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 6,
+      'weight' => 17,
     ),
   );
 
@@ -451,7 +451,7 @@ function ct_organization_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -498,8 +498,8 @@ function ct_organization_field_default_field_instances() {
         'class' => '',
         'configurable_class' => 0,
         'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
+        'rel' => 'nofollow',
+        'target' => '_blank',
         'title' => '',
       ),
       'display' => array(
@@ -521,7 +521,7 @@ function ct_organization_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 3,
+      'weight' => 12,
     ),
   );
 
@@ -571,7 +571,7 @@ function ct_organization_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -622,7 +622,7 @@ function ct_organization_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 16,
     ),
   );
 
@@ -871,7 +871,7 @@ function ct_organization_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 

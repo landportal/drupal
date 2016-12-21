@@ -50,16 +50,16 @@ function ct_organization_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '13',
+          'weight' => '15',
         ),
         'path' => array(
-          'weight' => '11',
+          'weight' => '10',
         ),
         'language' => array(
-          'weight' => '9',
+          'weight' => '8',
         ),
         'xmlsitemap' => array(
-          'weight' => '12',
+          'weight' => '11',
         ),
       ),
       'display' => array(
@@ -95,7 +95,7 @@ function ct_organization_strongarm() {
     'form' => array(
       'weight' => '4',
       'collapsible' => 1,
-      'collapsed' => 1,
+      'collapsed' => 0,
       'fields' => array(
         'name' => array(
           'collect' => '1',

@@ -20,23 +20,65 @@ function ct_organization_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'More about',
-    'weight' => '4',
+    'label' => 'About this organization',
+    'weight' => '5',
     'children' => array(
       0 => 'field_contact',
-      1 => 'field_link',
+      1 => 'field_organization_type',
+      2 => 'field_link',
+      3 => 'field_email',
+      4 => 'field_file',
+      5 => 'locations',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'About this organization',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-about field-group-fieldset',
         'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-about field-group-fieldset',
+        'description' => 'Provide us with more detailed information',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_about|node|organization|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_admin|node|organization|form';
+  $field_group->group_name = 'group_admin';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'organization';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Admin',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_organization_relationship',
+      1 => 'field_user',
+      2 => 'field_thematic_promoted',
+      3 => 'path',
+      4 => 'xmlsitemap',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'open',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-admin field-group-div',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_admin|node|organization|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -110,7 +152,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '5',
+    'weight' => '4',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_topics',
@@ -126,7 +168,7 @@ function ct_organization_field_group_info() {
         'classes' => 'group-topics-regions field-group-fieldset',
         'description' => '',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_topics_regions|node|organization|form'] = $field_group;
@@ -195,7 +237,8 @@ function ct_organization_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('More about');
+  t('About this organization');
+  t('Admin');
   t('Topics and Regions');
 
   return $field_groups;

@@ -27,6 +27,7 @@ features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[field_base][] = field_organization_relationship
 features[field_group][] = group_about|node|organization|form
+features[field_group][] = group_admin|node|organization|form
 features[field_group][] = group_details|node|organization|default
 features[field_group][] = group_topics_regions|node|organization|default
 features[field_group][] = group_topics_regions|node|organization|form
