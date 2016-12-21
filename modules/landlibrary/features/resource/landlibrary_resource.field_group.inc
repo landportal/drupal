@@ -306,11 +306,10 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Authors and Publishers',
-    'weight' => '4',
+    'weight' => '6',
     'children' => array(
       0 => 'field_doc_provider',
-      1 => 'field_doc_publisher',
-      2 => 'field_doc_people',
+      1 => 'field_doc_people',
     ),
     'format_type' => 'hidden',
     'format_settings' => array(
@@ -336,7 +335,7 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'landvoc',
-    'weight' => '6',
+    'weight' => '9',
     'children' => array(),
     'format_type' => 'hidden',
     'format_settings' => array(
@@ -426,7 +425,7 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Resource information',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_doc_creation_date',
       1 => 'field_doc_language',
@@ -684,20 +683,24 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '1',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_topics',
       2 => 'field_related_domains',
       3 => 'field_related_themes',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-topics-regions field-group-fieldset',
+        'classes' => 'group-topics-regions',
         'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
       ),
       'formatter' => 'open',
     ),
