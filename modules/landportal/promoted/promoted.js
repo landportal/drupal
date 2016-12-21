@@ -1,60 +1,25 @@
-;(function ($) {
-  Drupal.behaviors.landportal_promoted = {
-    attach : function(context, settings){
-      Drupal.behaviors.promoted.initCustomPublishingOptions(context, settings);
-//      Drupal.behaviors.promoted.initPromotedCarousel(context, settings);
-    },
-
-    initCustomPublishingOptions: function(context, settings){
-      initPromoted();
-      $('.node-form .form-item-promoted-to-country-page input, .node-form .form-item-promoted-to-thematic-page input').on('click', function(event) {
-        initPromoted();
-      });
-    },
-    // initPromotedCarousel: function(context, settings){
-    //   if ($('.view-promoted-nodes .empty').get(0)) {
-    //     $('#reletad-content').addClass('empty');
-    //   }
-    //   else{
-    //     $('#country-navigation').addClass('no-reletad-content-empty');
-    //   }
-    //   if ($('.view-promoted-nodes').get(0)) {
-    //     if ($('.view-promoted-nodes').css('display') == 'block') {
-    //       $('.view-promoted-nodes .view-content').owlCarousel({
-    //         center: false,
-    //         items:3,
-    //         loop:false,
-    //         margin:1,
-    //         responsive:{
-    //           320:{
-    //               items:1,
-    //               loop: false,
-    //           },
-    //           768:{
-    //               items:2
-    //           },
-    //           1200:{
-    //               items:3
-    //           }
-    //         }
-    //       });
-    //     }
-    //   }
-    // }
-  }
-
-  function initPromoted(){
-    if($('.node-form .form-item-promoted-to-country-page input').prop("checked")){
-      $('.node-form .form-item-promoted-nodes').show();
+//
+// For specific Nodes form Publishing options / promoted to country / thematic pages
+//
+(function ($) {
+    Drupal.behaviors.landportal_promoted = {
+        attach : function(context, settings) {
+            var promoted = ['country', 'thematic'];
+            //console.log(context, settings);
+            // Check if we have promoted to country or thematic fields
+            $.each(promoted, function  (i, p) {
+                var f = $('.node-form input[name="promoted_to_' + p + '_page"]');
+                var s = $('.node-form .field-name-field-' + p + '-promoted');
+                if (f[0]) {
+                    s.toggle(f[0].checked);
+                    console.log(p, f[0].checked);
+                    $('.node-form input[name="promoted_to_' + p + '_page"]').on('click', function (event) {
+                        //console.log(p + ' ' + event.target.checked);
+                        // Show or hide promoted to XXX select if pub. option is checked
+                        $('.node-form .field-name-field-' + p + '-promoted').toggle(200);//event.target.checked);
+                    });
+                }
+            });
+        }
     }
-    else{
-      $('.node-form .form-item-promoted-nodes').hide();
-    }
-    if($('.node-form .form-item-promoted-to-thematic-page input').prop("checked")){
-      $('.node-form .form-item-promoted-thematic-nodes').show();
-    }
-    else{
-      $('.node-form .form-item-promoted-thematic-nodes').hide();
-    }
-  }
 })(jQuery);
