@@ -27,7 +27,7 @@ function landportal_promoted_views_default_views() {
 /* Attach JS to node form for promoted_to_XXX behaviors */
 function landportal_promoted_form_alter(&$form, &$form_state, $form_id) {
   if (substr($form_id, -10) == '_node_form') {
-    dpm($form, $form_id);
+    //dpm($form, $form_id);
     if (isset($form['field_country_promoted']) || isset($form['field_thematic_promoted'])) {
       //$form['#after_build'][] = 'landportal_promoted_after_build';
       $form['options']['#attached']['js'][] = drupal_get_path('module', 'landportal_promoted') . '/promoted.js';
