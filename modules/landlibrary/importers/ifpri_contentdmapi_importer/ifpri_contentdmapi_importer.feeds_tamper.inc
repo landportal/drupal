@@ -982,19 +982,19 @@ $feeds_tamper->settings = array(
     ),
     36 => array(
       'source' => 'dry areas',
-      'target' => 'Rangelands, Drylands and Pastoralism',
+      'target' => 'Rangelands, Drylands & Pastoralism',
     ),
     37 => array(
       'source' => 'dry lands',
-      'target' => 'Rangelands, Drylands and Pastoralism',
+      'target' => 'Rangelands, Drylands & Pastoralism',
     ),
     38 => array(
       'source' => 'drylands',
-      'target' => 'Rangelands, Drylands and Pastoralism',
+      'target' => 'Rangelands, Drylands & Pastoralism',
     ),
     39 => array(
       'source' => 'ecological restoration',
-      'target' => 'Rangelands, Drylands and Pastoralism',
+      'target' => 'Rangelands, Drylands & Pastoralism',
     ),
     40 => array(
       'source' => 'economic development projects',
@@ -1314,7 +1314,7 @@ $feeds_tamper->settings = array(
     ),
     119 => array(
       'source' => 'grazing systems',
-      'target' => 'Rangelands, Drylands and Pastoralism',
+      'target' => 'Rangelands, Drylands & Pastoralism',
     ),
     120 => array(
       'source' => 'greenhouse gas',
@@ -1430,11 +1430,11 @@ $feeds_tamper->settings = array(
     ),
     148 => array(
       'source' => 'pastoral society',
-      'target' => 'Rangelands, Drylands and Pastoralism',
+      'target' => 'Rangelands, Drylands & Pastoralism',
     ),
     149 => array(
       'source' => 'pastoralism',
-      'target' => 'Rangelands, Drylands and Pastoralism',
+      'target' => 'Rangelands, Drylands & Pastoralism',
     ),
     150 => array(
       'source' => 'prevention of land degradation',
@@ -1462,7 +1462,7 @@ $feeds_tamper->settings = array(
     ),
     156 => array(
       'source' => 'rangelands',
-      'target' => 'Rangelands, Drylands and Pastoralism',
+      'target' => 'Rangelands, Drylands & Pastoralism',
     ),
     157 => array(
       'source' => 'redd+',
