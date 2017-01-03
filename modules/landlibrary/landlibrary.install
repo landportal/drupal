@@ -21,10 +21,10 @@ function landlibrary_update_7200() {
       'theme'   => 'lpbs',
     ),
     'fields' => array(
-      'status'      => TRUE,
+      'status'      => -1,
       /* 'visibility'  => BLOCK_VISIBILITY_LISTED, */
-      /* 'pages'       => 'book/thematic/\*', */
-      'region'      => 'content',
+      'pages'       => '',
+      'region'      => -1,
       'weight'      => 10,
     )
   );

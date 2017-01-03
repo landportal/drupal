@@ -48,6 +48,7 @@ function landportal_admin_update_7201() {
           'status' => 1,
           'region' => 'navigation',
           'weight' => -1,
+          'pages' => '',
 //          'visibility' => BLOCK_VISIBILITY_LISTED,
 //          'pages' => 'debate/debates\ndebate/news',
         )
@@ -238,7 +239,7 @@ function landportal_admin_update_7201() {
             'theme'  => 'lpbs',
         ),
         'values' => array(
-          'status' => 1,
+            'status' => 1,
             'region' => 'header',
             'visibility' => BLOCK_VISIBILITY_LISTED,
             'pages' => 'library/\nlibrary/*',
