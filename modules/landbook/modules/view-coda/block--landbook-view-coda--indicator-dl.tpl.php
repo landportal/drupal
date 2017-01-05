@@ -31,10 +31,9 @@
         </div>
       </div>
       <div class="row text-center h3">
-        <div class="col-sm-offset-1 col-sm-2"><a name="cvs" rel="nofollow" target="_blank" disabled="disabled" class="btn btn-default">CVS</label></a></div>
+        <div class="col-sm-offset-1 col-sm-2"><a name="csv" rel="nofollow" target="_blank" disabled="disabled" class="btn btn-default">CSV</label></a></div>
         <div class="col-sm-2"><a name="json" target="_blank" disabled="disabled" rel="nofollow" class="btn btn-default">JSON</label></a></div>
         <div class="col-sm-2"><a name="xml"  target="_blank" disabled="disabled" rel="nofollow" class="btn btn-default">XML</label></a></div>
-        <div class="col-sm-2"><a name="application/vnd.ms-excel" target="_blank" disabled="disabled" rel="nofollow" class="btn btn-default">EXCEL</label></a></div>
-        <div class="col-sm-2"><a name="html" target="_blank" disabled="disabled" rel="nofollow" class="btn btn-default">HTML</label></a></div>
+        <div class="col-sm-2"><a name="html" target="_blank" disabled="disabled" rel="nofollow" class="btn btn-default">HTML / Table</label></a></div>
       </div>
     </section>
