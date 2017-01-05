@@ -33,7 +33,7 @@ function landbook_vis_map_update_7200() {
       ),
       'fields' => array(
         'region'      => 'content',
-        'weight'      => '2',
+        'weight'      => '-1',
         'visibility'  => BLOCK_VISIBILITY_LISTED,
         'pages'       => 'book/countries',
       )
