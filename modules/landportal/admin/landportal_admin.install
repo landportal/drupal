@@ -4,7 +4,7 @@
  * Great place for 1 time actions upon release ...
  * 
  */
-
+    
 /** LPBS Release
  * Clean up and settings for LP new theme
  */
@@ -123,7 +123,7 @@ function landportal_admin_update_7201() {
     $block = array(
         'keys' => array(
             'module' => 'views',
-            'delta'  => 'by_provider-block',
+            'delta'  => 'by_providers-block',
             'theme'  => 'lpbs',
         ),
         'values' => array(
