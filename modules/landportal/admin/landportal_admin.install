@@ -97,7 +97,7 @@ function landportal_admin_update_7201() {
         'values' => array(
           'status' => 1,
           'region' => 'content',
-          'weight' => 3,
+          'weight' => 2,
           'visibility' => BLOCK_VISIBILITY_LISTED,
           'pages' => '<front>',
         )
@@ -202,6 +202,34 @@ function landportal_admin_update_7201() {
         )
     );
     array_push($blocks, $block);
+
+    // About menu
+    $block = array(
+        'keys' => array(
+            'module' => 'menu',
+            'delta'  => 'land-portal-about',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+          'status' => 1,
+          'region' => 'sidebar_first',
+          'visibility' => BLOCK_VISIBILITY_LISTED,
+          'pages' => 'about\nabout/*',
+        )
+    );
+    $block = array(
+        'keys' => array(
+            'module' => 'menu',
+            'delta'  => 'legend',
+            'theme'  => 'lpbs',
+        ),
+        'values' => array(
+          'status' => 1,
+          'region' => 'sidebar_first',
+          'visibility' => BLOCK_VISIBILITY_LISTED,
+          'pages' => 'partners/legend\npartners/legend/*',
+        )
+    );
 
     // move LP submenus
     $block = array(
