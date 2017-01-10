@@ -1,0 +1,11 @@
+name = IFPRI contentdmAPI importer
+description = Import IFPRI records from contentdm API
+core = 7.x
+package = Landlibrary Importers
+version = 7.x-2.3
+project = ifpri_contentdmapi_importer
+dependencies[] = ctools
+dependencies[] = feeds
+dependencies[] = feeds_tamper
+dependencies[] = feeds_tamper_utf8_encode
+features[features_api][] = api:2

@@ -28,6 +28,7 @@ $feeds_importer->config = array(
         'public' => 'public',
         'private' => 'private',
       ),
+      'delete_uploaded_file' => FALSE,
     ),
   ),
   'parser' => array(
@@ -54,6 +55,7 @@ $feeds_importer->config = array(
         'xpathparser:22' => 'string(@rdf:about)',
         'xpathparser:23' => 'dc:license/text()',
         'xpathparser:24' => 'dc:coverage',
+        'xpathparser:25' => 'dct:extent/text()',
       ),
       'rawXML' => array(
         'xpathparser:0' => 0,
@@ -76,10 +78,13 @@ $feeds_importer->config = array(
         'xpathparser:22' => 0,
         'xpathparser:23' => 0,
         'xpathparser:24' => 0,
+        'xpathparser:25' => 0,
       ),
       'context' => '//rdf:Description',
       'exp' => array(
         'errors' => 1,
+        'tidy' => 0,
+        'tidy_encoding' => 'UTF8',
         'debug' => array(
           'context' => 0,
           'xpathparser:0' => 0,
@@ -102,6 +107,7 @@ $feeds_importer->config = array(
           'xpathparser:22' => 0,
           'xpathparser:23' => 0,
           'xpathparser:24' => 0,
+          'xpathparser:25' => 0,
         ),
       ),
       'allow_override' => 0,
@@ -118,6 +124,7 @@ $feeds_importer->config = array(
           'source' => 'xpathparser:0',
           'target' => 'title',
           'unique' => 1,
+          'language' => 'und',
         ),
         1 => array(
           'source' => 'xpathparser:1',
@@ -244,6 +251,11 @@ $feeds_importer->config = array(
           'target' => 'field_geographical_focus',
           'unique' => FALSE,
           'language' => 'und',
+        ),
+        22 => array(
+          'source' => 'xpathparser:25',
+          'target' => 'field_duration',
+          'unique' => FALSE,
         ),
       ),
       'insert_new' => '1',
