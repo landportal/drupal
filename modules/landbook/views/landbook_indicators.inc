@@ -173,7 +173,6 @@ $handler->display->display_options['filters']['field_related_domains_tid']['redu
 $handler->display->display_options['filters']['field_related_domains_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';
 $handler->display->display_options['path'] = 'book/indicators';
-$handler->display->display_options['menu']['type'] = 'normal';
 $handler->display->display_options['menu']['title'] = 'Indicators';
 $handler->display->display_options['menu']['weight'] = '3';
 $handler->display->display_options['menu']['name'] = 'landbook-menu';

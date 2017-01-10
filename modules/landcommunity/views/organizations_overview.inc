@@ -363,7 +363,6 @@ $handler->display->display_options['filters']['nid_entityreference_filter']['tab
 $handler->display->display_options['filters']['nid_entityreference_filter']['field'] = 'nid_entityreference_filter';
 $handler->display->display_options['filters']['nid_entityreference_filter']['reference_display'] = 'organizations:entityreference_1';
 $handler->display->display_options['path'] = 'book/sources';
-$handler->display->display_options['menu']['type'] = 'normal';
 $handler->display->display_options['menu']['title'] = 'Sources';
 $handler->display->display_options['menu']['weight'] = '4';
 $handler->display->display_options['menu']['name'] = 'landbook-menu';

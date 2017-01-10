@@ -96,7 +96,6 @@ $handler->display->display_options['fields']['name_field']['element_wrapper_type
 $handler->display->display_options['fields']['name_field']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
 $handler->display->display_options['path'] = 'book/countries';
-$handler->display->display_options['menu']['type'] = 'normal';
 $handler->display->display_options['menu']['title'] = 'Countries';
 $handler->display->display_options['menu']['weight'] = '0';
 $handler->display->display_options['menu']['name'] = 'landbook-menu';
