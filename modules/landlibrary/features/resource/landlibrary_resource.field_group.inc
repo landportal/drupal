@@ -425,11 +425,12 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Resource information',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_doc_creation_date',
       1 => 'field_doc_language',
-      2 => 'field_doc_type',
+      2 => 'field_doc_publisher',
+      3 => 'field_doc_type',
     ),
     'format_type' => 'div',
     'format_settings' => array(

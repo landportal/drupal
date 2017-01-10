@@ -217,7 +217,7 @@ function ct_events_strongarm() {
       ),
     ),
     'display' => array(
-      'weight' => '1',
+      'weight' => '4',
       'hide' => array(
         'name' => 0,
         'street' => 0,
