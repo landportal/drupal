@@ -19,12 +19,111 @@ function landportal_admin_update_7201() {
 
   // DISABLE MODULES
   module_disable(array(
-    'shs', 'nice_menus', 'lang_dropdown'
+    'shs', 'nice_menus', 'lang_dropdown', 'promoted', 'landbook_promoted_thematic'
   ));
-    
-    // Reset Blocks
-    $blocks = array();
-    // hide main menu in LPBS as it is shown by default in the site header
+
+
+  db_delete('block')
+    ->condition('module', 'views')
+    ->condition('delta', 'front_page_promoted-block')
+    ->execute();
+
+  db_delete('block')
+    ->condition('module', 'views')
+    ->condition('delta', 'landlibrary_promoted-block')
+    ->execute();
+
+  db_delete('block')
+    ->condition('module', 'views')
+    ->condition('delta', 'promoted_nodes-block')
+    ->execute();
+
+  db_delete('block')
+    ->condition('module', 'views')
+    ->condition('delta', 'promoted_nodes-block_1')
+    ->execute();
+
+  db_delete('block')
+    ->condition('module', 'promoted')
+    ->execute();
+
+  db_delete('block')
+    ->condition('module', 'landbook')
+    ->condition('delta', 'country_promoted_nodes_block')
+    ->execute();
+  db_delete('block')
+    ->condition('module', 'landbook')
+    ->condition('delta', 'thematic_promoted_nodes_block')
+    ->execute();
+
+  // Reset Blocks
+  $blocks = array();
+
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'promoted-front',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'highlighted',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages'  => '<front>',
+    )
+  );
+  array_push($blocks, $block);
+
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'promoted-library',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'weight' => 1,
+      'region' => 'highlighted',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages'  => 'library',
+    )
+  );
+  array_push($blocks, $block);
+
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'promoted-country',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'weight' => 2,
+      'region' => 'highlighted',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages'  => 'book/countries/*',
+    )
+  );
+  array_push($blocks, $block);
+
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'promoted-thematic',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'weight' => 3,
+      'region' => 'highlighted',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages'  => 'book/thematic/*',
+    )
+  );
+  array_push($blocks, $block);
+
+  // hide main menu in LPBS as it is shown by default in the site header
     $block = array(
         'keys' => array(
             'module' => 'system',
@@ -185,7 +284,6 @@ function landportal_admin_update_7201() {
     array_push($blocks, $block);
 
     // Forms
-
     $block = array(
         'keys' => array(
             'module' => 'webform',
