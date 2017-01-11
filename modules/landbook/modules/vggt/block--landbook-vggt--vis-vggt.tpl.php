@@ -51,9 +51,9 @@
             <div class="legend text-center">
               <em>Legend</em>
               <ul class="list-unstyled list-inline values-legend">
-                <li><span class="value-a"></span> <?php print t('Fully adopt the VGGT principle'); ?></li>
-                <li><span class="value-b"></span> <?php print t('Partially adopt the VGGT principle'); ?></li>
-                <li><span class="value-c"></span> <?php print t('Do not adopt the VGGT principle'); ?></li>
+                <li><span class="value-a"></span> <?php print t('National laws fully adopt the VGGT principle'); ?></li>
+                <li><span class="value-b"></span> <?php print t('National laws partially adopt the VGGT principle'); ?></li>
+                <li><span class="value-c"></span> <?php print t('National laws do not adopt the VGGT principle'); ?></li>
                 <li><span class="value-na"></span> <?php print t('Missing Value'); ?></li>
               </ul>
             </div>
