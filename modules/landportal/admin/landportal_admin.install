@@ -397,6 +397,20 @@ function landportal_admin_update_7201() {
     );
     array_push($blocks, $block);
 
+    $block = array(
+      'keys' => array(
+        'module' => 'landportal_blocks',
+        'delta'  => 'lp_share',
+        'theme'  => 'lpbs',
+      ),
+      'values' => array(
+        'status' => 1,
+        'region' => 'footer',
+        'pages' => '',
+      )
+    );
+    array_push($blocks, $block);
+
     // Execute block changes
     foreach($blocks as $block){
         db_merge('block')
