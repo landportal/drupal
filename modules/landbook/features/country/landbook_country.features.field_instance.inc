@@ -209,57 +209,6 @@ function landbook_country_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-landbook_country-field_countries'.
-  $field_instances['node-landbook_country-field_countries'] = array(
-    'bundle' => 'landbook_country',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Bind this narrative to the proper country.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_countries',
-    'label' => 'Country',
-    'required' => 1,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 0,
-    ),
-  );
-
   // Exported field_instance: 'node-landbook_country-field_country_info'.
   $field_instances['node-landbook_country-field_country_info'] = array(
     'bundle' => 'landbook_country',
@@ -360,7 +309,7 @@ function landbook_country_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_geographical_focus',
-    'label' => 'CountryLink',
+    'label' => 'Country',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -373,7 +322,7 @@ function landbook_country_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -420,7 +369,7 @@ function landbook_country_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 114,
+      'weight' => 10,
     ),
   );
 
@@ -467,7 +416,7 @@ function landbook_country_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 113,
+      'weight' => 9,
     ),
   );
 
@@ -522,7 +471,7 @@ function landbook_country_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -599,10 +548,8 @@ function landbook_country_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Bind this narrative to the proper country.');
   t('Country');
   t('Country narrative');
-  t('CountryLink');
   t('Description');
   t('Indicators');
   t('Info');
