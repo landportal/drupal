@@ -72,7 +72,8 @@ function landbook_view_coda_js_settings_thematic($url, &$vars) {
 }
 
 function landbook_view_coda_js_settings_countries($url, &$vars) {
-  drupal_add_css($LBVIS_PATH . '/css/screen.css', array('group' => CSS_DEFAULT));
+  global $LBVIS_PATH;
+  //drupal_add_css($LBVIS_PATH . '/css/screen.css', array('group' => CSS_DEFAULT));
   // Borken / @todo: put back a nice loading in js-view-coda // not here?
   /* drupal_add_css($LBVIS_PATH . '/css/spinkit.css', array('group' => CSS_DEFAULT)); */
   $vars = array(
