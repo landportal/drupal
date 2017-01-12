@@ -1,5 +1,4 @@
 <?php
-
 $view = new view();
 $view->name = 'thematic_content';
 $view->description = 'Landbook thematics related content. For each LP content type, show the latest nodes tagged with a given thematic';
@@ -225,13 +224,14 @@ $handler = $view->new_display('block', 'Partners', 'partners');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Partners';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'partners';
+$handler->display->display_options['css_class'] = 'partners view-grid';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '8';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'grid';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'node';
