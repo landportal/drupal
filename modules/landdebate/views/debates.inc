@@ -38,6 +38,10 @@ $handler->display->display_options['fields']['field_facilitators']['field'] = 'f
 $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
 $handler->display->display_options['sorts']['sticky']['table'] = 'node';
 $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
+/* Sort criterion: Content: Status (field_status) */
+$handler->display->display_options['sorts']['field_status_tid']['id'] = 'field_status_tid';
+$handler->display->display_options['sorts']['field_status_tid']['table'] = 'field_data_field_status';
+$handler->display->display_options['sorts']['field_status_tid']['field'] = 'field_status_tid';
 /* Sort criterion: Content: Post date */
 $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -68,23 +72,3 @@ $handler->display->display_options['filters']['language']['value'] = array(
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page');
 $handler->display->display_options['path'] = 'debate/debates';
-$translatables['debates'] = array(
-    t('Master'),
-    t('Discussions'),
-    t('Read more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Facilitators'),
-    t('Page'),
-    t('more'),
-);
