@@ -1,4 +1,5 @@
 <?php
+
 $view = new view();
 $view->name = 'thematic_content';
 $view->description = 'Landbook thematics related content. For each LP content type, show the latest nodes tagged with a given thematic';
@@ -321,6 +322,7 @@ $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  'und' => 'und',
 );
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
