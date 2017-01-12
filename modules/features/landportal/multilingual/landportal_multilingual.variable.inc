@@ -11,7 +11,7 @@ function landportal_multilingual_variable_realm_default_variables() {
 $realm_variables = array();
   $realm_variables['language']['en'] = array(
   'site_frontpage' => 'node/10064',
-  'site_name' => 'Landportal',
+  'site_name' => 'Land Portal',
   'site_slogan' => '',
 );
   $realm_variables['language']['es'] = array(
