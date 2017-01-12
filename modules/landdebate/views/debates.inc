@@ -12,7 +12,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Discussions';
+$handler->display->display_options['title'] = 'Land Debates';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['use_more_text'] = 'Read more';
 $handler->display->display_options['access']['type'] = 'perm';
@@ -59,14 +59,14 @@ $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
-    'debate' => 'debate',
+  'debate' => 'debate',
 );
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
 
 /* Display: Page */
