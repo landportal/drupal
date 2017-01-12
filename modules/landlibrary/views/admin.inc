@@ -383,7 +383,7 @@ $handler->display->display_options['fields']['field_doc_people']['id'] = 'field_
 $handler->display->display_options['fields']['field_doc_people']['table'] = 'field_data_field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['field'] = 'field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['exclude'] = TRUE;
-/* Field: Field: Corporate Author(s) */
+/* Field: Field: Organization */
 $handler->display->display_options['fields']['field_orgref']['id'] = 'field_orgref';
 $handler->display->display_options['fields']['field_orgref']['table'] = 'field_data_field_orgref';
 $handler->display->display_options['fields']['field_orgref']['field'] = 'field_orgref';
@@ -447,7 +447,7 @@ $handler->display->display_options['fields']['field_doc_language']['table'] = 'f
 $handler->display->display_options['fields']['field_doc_language']['field'] = 'field_doc_language';
 $handler->display->display_options['fields']['field_doc_language']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_doc_language']['delta_offset'] = '0';
-/* Field: Content: Originally published at */
+/* Field: Content: Published at */
 $handler->display->display_options['fields']['field_doc_is_shown_at']['id'] = 'field_doc_is_shown_at';
 $handler->display->display_options['fields']['field_doc_is_shown_at']['table'] = 'field_data_field_doc_is_shown_at';
 $handler->display->display_options['fields']['field_doc_is_shown_at']['field'] = 'field_doc_is_shown_at';
@@ -486,7 +486,7 @@ $handler->display->display_options['fields']['field_doc_identifier']['exclude'] 
 $handler->display->display_options['fields']['field_doc_identifier']['alter']['nl2br'] = TRUE;
 $handler->display->display_options['fields']['field_doc_identifier']['hide_empty'] = TRUE;
 $handler->display->display_options['fields']['field_doc_identifier']['hide_alter_empty'] = FALSE;
-/* Field: Content: Pages */
+/* Field: Content: Pages / Duration */
 $handler->display->display_options['fields']['field_doc_pagination']['id'] = 'field_doc_pagination';
 $handler->display->display_options['fields']['field_doc_pagination']['table'] = 'field_data_field_doc_pagination';
 $handler->display->display_options['fields']['field_doc_pagination']['field'] = 'field_doc_pagination';
@@ -502,7 +502,7 @@ $handler->display->display_options['fields']['field_doc_licencing']['table'] = '
 $handler->display->display_options['fields']['field_doc_licencing']['field'] = 'field_doc_licencing';
 $handler->display->display_options['fields']['field_doc_licencing']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_doc_licencing']['delta_offset'] = '0';
-/* Field: Content: Copyright details */
+/* Field: Content: Copyright owner */
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['id'] = 'field_doc_copyrights_statement';
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['table'] = 'field_data_field_doc_copyrights_statement';
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['field'] = 'field_doc_copyrights_statement';

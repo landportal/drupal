@@ -307,6 +307,22 @@ $handler->display->display_options['filters']['rid']['expose']['remember_roles']
   111903910 => 0,
   30037204 => 0,
 );
+/* Filter criterion: User: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'users';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['exposed'] = TRUE;
+$handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
+$handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
+$handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
+$handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
+$handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
 
 /* Display: System */
 $handler = $view->new_display('system', 'System', 'system_1');
@@ -400,39 +416,3 @@ $handler->display->display_options['filters']['rid']['expose']['remember_roles']
   30037204 => 0,
 );
 $handler->display->display_options['path'] = 'admin/people/moderate';
-$translatables['admin_views_user'] = array(
-  t('Defaults'),
-  t('Users'),
-  t('more'),
-  t('Apply'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Items per page'),
-  t('- All -'),
-  t('Offset'),
-  t('« first'),
-  t('‹ previous'),
-  t('next ›'),
-  t('last »'),
-  t('Displaying @start - @end of @total'),
-  t('No users available.'),
-  t('Public'),
-  t('- Choose an operation -'),
-  t('Change value'),
-  t('Change user roles'),
-  t('Send e-mail'),
-  t('Name'),
-  t('Active'),
-  t('Roles'),
-  t('Public Geo'),
-  t('Member for'),
-  t('Last access'),
-  t('Operations'),
-  t('Username'),
-  t('E-mail'),
-  t('Role'),
-  t('System'),
-  t('Pending'),
-);
