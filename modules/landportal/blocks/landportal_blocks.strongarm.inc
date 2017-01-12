@@ -16,7 +16,7 @@ function landportal_blocks_strongarm() {
   $strongarm->name = 'addtoany_additional_html';
   $strongarm->value = '<a class="a2a_button_facebook"></a>
 <a class="a2a_button_twitter"></a>
-<a class="a2a_button_google_plus"></a>';
+';
   $export['addtoany_additional_html'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -105,12 +105,13 @@ function landportal_blocks_strongarm() {
     'landbook_country' => 0,
     'debate' => 0,
     'event' => 0,
-    'feed' => 0,
-    'feed_item' => 0,
     'landlibrary_resource' => 0,
     'news' => 0,
     'organization' => 0,
     'page' => 0,
+    'partners' => 0,
+    'partners_page' => 0,
+    'thematic_narrative' => 0,
     'webform' => 0,
   );
   $export['addtoany_nodetypes'] = $strongarm;
