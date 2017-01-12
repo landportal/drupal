@@ -10,9 +10,9 @@
 function landportal_taxonomy_taxonomy_default_vocabularies() {
   return array(
     'countries' => array(
-      'name' => 'Countries',
+      'name' => 'Countries - DEPREC',
       'machine_name' => 'countries',
-      'description' => 'Countries',
+      'description' => 'DEPREC - DO NOT USE',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 5,

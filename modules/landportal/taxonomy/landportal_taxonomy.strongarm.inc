@@ -26,7 +26,7 @@ function landportal_taxonomy_strongarm() {
         'custom_settings' => FALSE,
       ),
       'teaser' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
     ),
     'extra_fields' => array(
@@ -53,10 +53,6 @@ function landportal_taxonomy_strongarm() {
           'search_index' => array(
             'weight' => '1',
             'visible' => FALSE,
-          ),
-          'teaser' => array(
-            'weight' => '0',
-            'visible' => TRUE,
           ),
         ),
       ),
