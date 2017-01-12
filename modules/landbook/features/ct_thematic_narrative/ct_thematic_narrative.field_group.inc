@@ -13,6 +13,36 @@ function ct_thematic_narrative_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|node|thematic_narrative|form';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'thematic_narrative';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'About the narrative',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_thematic_image',
+      1 => 'field_orgref',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'About the narrative',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-details field-group-fieldset group-meta',
+        'description' => '',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups['group_details|node|thematic_narrative|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_topics_regions|node|thematic_narrative|default';
   $field_group->group_name = 'group_topics_regions';
   $field_group->entity_type = 'node';
@@ -114,9 +144,11 @@ function ct_thematic_narrative_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Visualizations',
-    'weight' => '10',
+    'weight' => '6',
     'children' => array(
       0 => 'field_indicators',
+      1 => 'field_indicator_ranking',
+      2 => 'field_indicator_map',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -132,6 +164,7 @@ function ct_thematic_narrative_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('About the narrative');
   t('Landvoc concepts');
   t('Topics and Regions');
   t('Visualizations');

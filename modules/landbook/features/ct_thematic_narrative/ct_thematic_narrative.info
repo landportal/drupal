@@ -23,6 +23,7 @@ features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[field_base][] = field_landvoc_to
 features[field_base][] = field_thematic_image
+features[field_group][] = group_details|node|thematic_narrative|form
 features[field_group][] = group_topics_regions|node|thematic_narrative|default
 features[field_group][] = group_topics_regions|node|thematic_narrative|form
 features[field_group][] = group_topics_regions|node|thematic_narrative|listing

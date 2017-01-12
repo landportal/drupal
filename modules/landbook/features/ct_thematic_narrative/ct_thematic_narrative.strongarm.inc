@@ -99,16 +99,16 @@ function ct_thematic_narrative_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
         'locations' => array(
-          'weight' => '7',
-        ),
-        'path' => array(
           'weight' => '8',
         ),
+        'path' => array(
+          'weight' => '9',
+        ),
         'xmlsitemap' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
       ),
       'display' => array(

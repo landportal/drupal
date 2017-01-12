@@ -89,7 +89,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -110,7 +110,7 @@ function ct_thematic_narrative_field_default_field_instances() {
           'delete' => '',
           'description' => 0,
           'edit' => '',
-          'legend' => 0,
+          'legend' => 'field_info_title',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fieldset_view',
@@ -145,9 +145,15 @@ function ct_thematic_narrative_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
+      'module' => 'field_collection_fieldset',
+      'settings' => array(
+        'collapsed' => FALSE,
+        'field_as_label' => array(),
+        'last_item_collapsed' => FALSE,
+        'new_item_open' => FALSE,
+        'replace_label' => FALSE,
+      ),
+      'type' => 'field_collection_fieldset',
       'weight' => 4,
     ),
   );
@@ -473,7 +479,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -712,7 +718,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
