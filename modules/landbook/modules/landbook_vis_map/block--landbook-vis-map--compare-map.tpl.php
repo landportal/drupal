@@ -1,4 +1,4 @@
-    <section id="<?php print $block_html_id; ?>" class="view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
+    <section id="<?php print $block_html_id; ?>" class="clearfix view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
 <?php if(!empty($block->subject)): ?>
       <header class="text-center">
 <?php print render($title_prefix); ?>
