@@ -205,7 +205,7 @@ function landbook_country_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 1,
     ),
   );
 
@@ -214,7 +214,8 @@ function landbook_country_field_default_field_instances() {
     'bundle' => 'landbook_country',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Foldable elements of the narrative.
+ ',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -256,24 +257,24 @@ function landbook_country_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_country_info',
-    'label' => 'Info',
+    'label' => 'Additional paragraph',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'field_collection_fieldset',
       'settings' => array(
-        'collapsed' => FALSE,
-        'field_as_label' => array(),
-        'last_item_collapsed' => FALSE,
-        'new_item_open' => FALSE,
-        'replace_label' => FALSE,
+        'collapsed' => 0,
+        'field_as_label' => '',
+        'last_item_collapsed' => 0,
+        'new_item_open' => 0,
+        'replace_label' => 0,
       ),
       'type' => 'field_collection_fieldset',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -322,7 +323,7 @@ function landbook_country_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -369,7 +370,7 @@ function landbook_country_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -416,7 +417,7 @@ function landbook_country_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -471,7 +472,7 @@ function landbook_country_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -542,17 +543,19 @@ function landbook_country_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Additional paragraph');
   t('Country');
   t('Country narrative');
   t('Description');
+  t('Foldable elements of the narrative.
+ ');
   t('Indicators');
-  t('Info');
   t('Map');
   t('Narrative');
   t('Pre-selected indicators for this country');

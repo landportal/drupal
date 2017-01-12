@@ -30,7 +30,7 @@ function landbook_country_field_default_field_bases() {
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'hide_blank_items' => 1,
-      'hide_initial_item' => FALSE,
+      'hide_initial_item' => 0,
       'path' => '',
       'profile2_private' => FALSE,
     ),

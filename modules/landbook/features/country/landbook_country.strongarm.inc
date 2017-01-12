@@ -99,19 +99,19 @@ function landbook_country_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '8',
+          'weight' => '6',
         ),
         'title' => array(
-          'weight' => '1',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '9',
-        ),
-        'xmlsitemap' => array(
           'weight' => '7',
         ),
+        'xmlsitemap' => array(
+          'weight' => '5',
+        ),
         'language' => array(
-          'weight' => '0',
+          'weight' => '5',
         ),
       ),
       'display' => array(),
