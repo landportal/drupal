@@ -29,7 +29,6 @@ features[field_base][] = body
 features[field_base][] = comment_body
 features[field_base][] = field_acronym
 features[field_base][] = field_contact
-features[field_base][] = field_countries
 features[field_base][] = field_dataset
 features[field_base][] = field_date
 features[field_base][] = field_description
