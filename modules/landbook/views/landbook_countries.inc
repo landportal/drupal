@@ -67,7 +67,7 @@ $handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['header']['area']['id'] = 'area';
 $handler->display->display_options['header']['area']['table'] = 'views';
 $handler->display->display_options['header']['area']['field'] = 'area';
-$handler->display->display_options['header']['area']['content'] = 'The Land Book follows the classification made by the <a href="http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/">Geopolitical Ontology from the Food and Agriculture Organization of the United Nations</a>.
+$handler->display->display_options['header']['area']['content'] = 'The Land Book follows the classification made by the <a href="https://www.iso.org/obp/ui/#search">ISO 3166-1 "Codes for the representation of names of countries and their subdivisions"</a>
 ';
 $handler->display->display_options['header']['area']['format'] = 'filtered_html';
 $handler->display->display_options['defaults']['fields'] = FALSE;
