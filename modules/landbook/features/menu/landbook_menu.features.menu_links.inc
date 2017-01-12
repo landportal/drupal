@@ -17,18 +17,15 @@ function landbook_menu_menu_default_menu_links() {
     'router_path' => 'book/catalog',
     'link_title' => 'Catalog',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
       'identifier' => 'landbook-menu_catalog:book/catalog',
     ),
-    'module' => 'system',
+    'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -40,
+    'weight' => -36,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
@@ -40,9 +37,6 @@ function landbook_menu_menu_default_menu_links() {
     'router_path' => 'book/catalog',
     'link_title' => 'Catalogue',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
       'identifier' => 'landbook-menu_catalogue:book/catalog',
     ),
@@ -51,32 +45,9 @@ function landbook_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -39,
+    'weight' => -35,
     'customized' => 1,
     'language' => 'fr',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: landbook-menu_catlogo-:book/catalog.
-  $menu_links['landbook-menu_catlogo-:book/catalog'] = array(
-    'menu_name' => 'landbook-menu',
-    'link_path' => 'book/catalog',
-    'router_path' => 'book/catalog',
-    'link_title' => 'Catálogo ',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'landbook-menu_catlogo-:book/catalog',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -38,
-    'customized' => 1,
-    'language' => 'es',
     'menu_links_customized' => 1,
   );
   // Exported menu link: landbook-menu_catlogo:book/catalog.
@@ -86,9 +57,6 @@ function landbook_menu_menu_default_menu_links() {
     'router_path' => 'book/catalog',
     'link_title' => 'Catálogo',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
       'identifier' => 'landbook-menu_catlogo:book/catalog',
     ),
@@ -97,9 +65,9 @@ function landbook_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -37,
+    'weight' => -34,
     'customized' => 1,
-    'language' => 'pt',
+    'language' => 'es',
     'menu_links_customized' => 1,
   );
   // Exported menu link: landbook-menu_countries:book/countries.
@@ -109,16 +77,13 @@ function landbook_menu_menu_default_menu_links() {
     'router_path' => 'book/countries',
     'link_title' => 'Countries',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
       'identifier' => 'landbook-menu_countries:book/countries',
     ),
-    'module' => 'system',
+    'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
-    'has_children' => 1,
+    'has_children' => 0,
     'expanded' => 0,
     'weight' => -44,
     'customized' => 1,
@@ -130,11 +95,8 @@ function landbook_menu_menu_default_menu_links() {
     'menu_name' => 'landbook-menu',
     'link_path' => 'book/sources',
     'router_path' => 'book/sources',
-    'link_title' => 'fontes',
+    'link_title' => 'Fontes',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
       'identifier' => 'landbook-menu_fontes:book/sources',
     ),
@@ -143,7 +105,7 @@ function landbook_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -29,
+    'weight' => -24,
     'customized' => 1,
     'language' => 'pt',
     'menu_links_customized' => 1,
@@ -155,9 +117,6 @@ function landbook_menu_menu_default_menu_links() {
     'router_path' => 'book/sources',
     'link_title' => 'Fuentes',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
       'identifier' => 'landbook-menu_fuentes:book/sources',
     ),
@@ -166,30 +125,7 @@ function landbook_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -30,
-    'customized' => 1,
-    'language' => 'es',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: landbook-menu_indicadores-:book/indicators.
-  $menu_links['landbook-menu_indicadores-:book/indicators'] = array(
-    'menu_name' => 'landbook-menu',
-    'link_path' => 'book/indicators',
-    'router_path' => 'book/indicators',
-    'link_title' => 'Indicadores ',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'landbook-menu_indicadores-:book/indicators',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -35,
+    'weight' => -26,
     'customized' => 1,
     'language' => 'es',
     'menu_links_customized' => 1,
@@ -201,9 +137,6 @@ function landbook_menu_menu_default_menu_links() {
     'router_path' => 'book/indicators',
     'link_title' => 'Indicadores',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
       'identifier' => 'landbook-menu_indicadores:book/indicators',
     ),
@@ -212,9 +145,9 @@ function landbook_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -33,
+    'weight' => -31,
     'customized' => 1,
-    'language' => 'pt',
+    'language' => 'es',
     'menu_links_customized' => 1,
   );
   // Exported menu link: landbook-menu_indicateurs:book/indicators.
@@ -224,9 +157,6 @@ function landbook_menu_menu_default_menu_links() {
     'router_path' => 'book/indicators',
     'link_title' => 'Indicateurs',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
       'identifier' => 'landbook-menu_indicateurs:book/indicators',
     ),
@@ -235,7 +165,7 @@ function landbook_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -34,
+    'weight' => -30,
     'customized' => 1,
     'language' => 'fr',
     'menu_links_customized' => 1,
@@ -247,54 +177,28 @@ function landbook_menu_menu_default_menu_links() {
     'router_path' => 'book/indicators',
     'link_title' => 'Indicators',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
       'identifier' => 'landbook-menu_indicators:book/indicators',
     ),
-    'module' => 'system',
+    'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -36,
+    'weight' => -32,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: landbook-menu_landbook:book.
-  $menu_links['landbook-menu_landbook:book'] = array(
-    'menu_name' => 'landbook-menu',
-    'link_path' => 'book',
-    'router_path' => 'book',
-    'link_title' => 'Landbook',
-    'options' => array(
-      'alter' => TRUE,
-      'identifier' => 'landbook-menu_landbook:book',
-    ),
-    'module' => 'system',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -49,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: landbook-menu_pases---:book/countries.
-  $menu_links['landbook-menu_pases---:book/countries'] = array(
+  // Exported menu link: landbook-menu_pases:book/countries.
+  $menu_links['landbook-menu_pases:book/countries'] = array(
     'menu_name' => 'landbook-menu',
     'link_path' => 'book/countries',
     'router_path' => 'book/countries',
-    'link_title' => 'Países   ',
+    'link_title' => 'Países',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
-      'identifier' => 'landbook-menu_pases---:book/countries',
+      'identifier' => 'landbook-menu_pases:book/countries',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -306,29 +210,6 @@ function landbook_menu_menu_default_menu_links() {
     'language' => 'es',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: landbook-menu_pases:book/countries.
-  $menu_links['landbook-menu_pases:book/countries'] = array(
-    'menu_name' => 'landbook-menu',
-    'link_path' => 'book/countries',
-    'router_path' => 'book/countries',
-    'link_title' => 'Países',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'landbook-menu_pases:book/countries',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -41,
-    'customized' => 1,
-    'language' => 'pt',
-    'menu_links_customized' => 1,
-  );
   // Exported menu link: landbook-menu_pays:book/countries.
   $menu_links['landbook-menu_pays:book/countries'] = array(
     'menu_name' => 'landbook-menu',
@@ -336,9 +217,6 @@ function landbook_menu_menu_default_menu_links() {
     'router_path' => 'book/countries',
     'link_title' => 'Pays',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
       'identifier' => 'landbook-menu_pays:book/countries',
     ),
@@ -352,50 +230,24 @@ function landbook_menu_menu_default_menu_links() {
     'language' => 'fr',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: landbook-menu_reuse:book/reuse.
-  $menu_links['landbook-menu_reuse:book/reuse'] = array(
+  // Exported menu link: landbook-menu_reuse:node/35680.
+  $menu_links['landbook-menu_reuse:node/35680'] = array(
     'menu_name' => 'landbook-menu',
-    'link_path' => 'book/reuse',
-    'router_path' => 'book',
+    'link_path' => 'node/35680',
+    'router_path' => 'node/%',
     'link_title' => 'Reuse',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
-      'identifier' => 'landbook-menu_reuse:book/reuse',
-    ),
-    'module' => 'system',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -28,
-    'customized' => 1,
-    'language' => 'en',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: landbook-menu_reutilizar-:book/reuse.
-  $menu_links['landbook-menu_reutilizar-:book/reuse'] = array(
-    'menu_name' => 'landbook-menu',
-    'link_path' => 'book/reuse',
-    'router_path' => 'book',
-    'link_title' => 'Reutilizar ',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'landbook-menu_reutilizar-:book/reuse',
+      'identifier' => 'landbook-menu_reuse:node/35680',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -27,
+    'weight' => -25,
     'customized' => 1,
-    'language' => 'es',
+    'language' => 'en',
     'menu_links_customized' => 1,
   );
   // Exported menu link: landbook-menu_reutilizar:book/reuse.
@@ -405,9 +257,6 @@ function landbook_menu_menu_default_menu_links() {
     'router_path' => 'book',
     'link_title' => 'Reutilizar',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
       'identifier' => 'landbook-menu_reutilizar:book/reuse',
     ),
@@ -416,7 +265,7 @@ function landbook_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -25,
+    'weight' => -21,
     'customized' => 1,
     'language' => 'pt',
     'menu_links_customized' => 1,
@@ -428,9 +277,6 @@ function landbook_menu_menu_default_menu_links() {
     'router_path' => 'book',
     'link_title' => 'Réutilisation',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
       'identifier' => 'landbook-menu_rutilisation:book/reuse',
     ),
@@ -439,7 +285,7 @@ function landbook_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -26,
+    'weight' => -22,
     'customized' => 1,
     'language' => 'fr',
     'menu_links_customized' => 1,
@@ -451,18 +297,15 @@ function landbook_menu_menu_default_menu_links() {
     'router_path' => 'book/sources',
     'link_title' => 'Sources',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'alter' => TRUE,
       'identifier' => 'landbook-menu_sources:book/sources',
     ),
-    'module' => 'system',
+    'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -31,
+    'weight' => -27,
     'customized' => 1,
     'language' => 'en',
     'menu_links_customized' => 1,
@@ -473,23 +316,18 @@ function landbook_menu_menu_default_menu_links() {
   t('Catalog');
   t('Catalogue');
   t('Catálogo');
-  t('Catálogo ');
   t('Countries');
+  t('Fontes');
   t('Fuentes');
   t('Indicadores');
-  t('Indicadores ');
   t('Indicateurs');
   t('Indicators');
-  t('Landbook');
   t('Pays');
   t('Países');
-  t('Países   ');
   t('Reuse');
   t('Reutilizar');
-  t('Reutilizar ');
   t('Réutilisation');
   t('Sources');
-  t('fontes');
 
   return $menu_links;
 }
