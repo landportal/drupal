@@ -132,7 +132,7 @@ function landbook_block_body($name) {
     );
     
     //$default: The default value to use if this variable has never been set.
-    $output = variable_get('landbook-' . $name, $default[$name]);
+    $output = variable_get('landbook-' . $name, (isset($default[$name]) ? $default[$name] : ''));
     if (empty($output)) {
       $output = (isset($default[$name]) ? $default[$name] : ' ');
     }
