@@ -585,7 +585,7 @@ function landlibrary_resource_field_default_field_instances() {
     'description' => 'The page on the website of the publisher where the resource is presented (e.g.: http://landportal.info/library/resources/report-sharing-best-practices-and-lessons-learned-supporting-women%E2%80%99s-land-rights).',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -715,7 +715,7 @@ function landlibrary_resource_field_default_field_instances() {
       'title' => 'value',
       'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
-      'title_value' => 'Click here to access the resource',
+      'title_value' => 'Download the resource',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,
@@ -1276,7 +1276,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The organization that published the resource (needs to be linked to an organizational profile on the Land Portal).',
+    'description' => 'The organization/s that published the resource (needs to be linked to an organizational profile on the Land Portal).',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1339,7 +1339,7 @@ function landlibrary_resource_field_default_field_instances() {
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_doc_publisher',
-    'label' => 'Publisher',
+    'label' => 'Publisher(s)',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1348,9 +1348,7 @@ function landlibrary_resource_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 1,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 121,
     ),
@@ -2107,7 +2105,7 @@ function landlibrary_resource_field_default_field_instances() {
   t('Pages');
   t('People who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]"
 ');
-  t('Publisher');
+  t('Publisher(s)');
   t('Related Concepts');
   t('Relation');
   t('Resource Language');
@@ -2121,7 +2119,7 @@ function landlibrary_resource_field_default_field_instances() {
   t('The language of the resource');
   t('The location of the source.');
   t('The organization that makes the resource available (needs to be linked to an organizational profile on the Land Portal).');
-  t('The organization that published the resource (needs to be linked to an organizational profile on the Land Portal).');
+  t('The organization/s that published the resource (needs to be linked to an organizational profile on the Land Portal).');
   t('The page on the website of the publisher where the resource is presented (e.g.: http://landportal.info/library/resources/report-sharing-best-practices-and-lessons-learned-supporting-women%E2%80%99s-land-rights).');
   t('Themes');
   t('This is a hidden field storing the value of the URL of the local file (the upload field cannot be mapped to RDF properties).');
