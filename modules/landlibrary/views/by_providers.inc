@@ -1,4 +1,5 @@
 <?php
+
 $view = new view();
 $view->name = 'by_providers';
 $view->description = '';
@@ -36,11 +37,24 @@ $handler->display->display_options['fields']['nid']['table'] = 'node';
 $handler->display->display_options['fields']['nid']['field'] = 'nid';
 $handler->display->display_options['fields']['nid']['label'] = '';
 $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+/* Sort criterion: Content: Date of publication (field_doc_creation_date) */
+$handler->display->display_options['sorts']['field_doc_creation_date_value_1']['id'] = 'field_doc_creation_date_value_1';
+$handler->display->display_options['sorts']['field_doc_creation_date_value_1']['table'] = 'field_data_field_doc_creation_date';
+$handler->display->display_options['sorts']['field_doc_creation_date_value_1']['field'] = 'field_doc_creation_date_value';
+$handler->display->display_options['sorts']['field_doc_creation_date_value_1']['order'] = 'DESC';
+$handler->display->display_options['sorts']['field_doc_creation_date_value_1']['exposed'] = TRUE;
+$handler->display->display_options['sorts']['field_doc_creation_date_value_1']['expose']['label'] = 'Date of publication';
 /* Sort criterion: Content: Post date */
 $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'node';
 $handler->display->display_options['sorts']['created']['field'] = 'created';
 $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Sort criterion: Content: Title */
+$handler->display->display_options['sorts']['title']['id'] = 'title';
+$handler->display->display_options['sorts']['title']['table'] = 'node';
+$handler->display->display_options['sorts']['title']['field'] = 'title';
+$handler->display->display_options['sorts']['title']['exposed'] = TRUE;
+$handler->display->display_options['sorts']['title']['expose']['label'] = 'Title';
 /* Contextual filter: Content: Data Provider (field_doc_provider) */
 $handler->display->display_options['arguments']['field_doc_provider_target_id']['id'] = 'field_doc_provider_target_id';
 $handler->display->display_options['arguments']['field_doc_provider_target_id']['table'] = 'field_data_field_doc_provider';
@@ -92,50 +106,6 @@ $handler->display->display_options['filters']['title']['expose']['remember_roles
   111903910 => 0,
   30037204 => 0,
 );
-/* Filter criterion: Content: Date of publication (field_doc_creation_date) */
-$handler->display->display_options['filters']['field_doc_creation_date_value']['id'] = 'field_doc_creation_date_value';
-$handler->display->display_options['filters']['field_doc_creation_date_value']['table'] = 'field_data_field_doc_creation_date';
-$handler->display->display_options['filters']['field_doc_creation_date_value']['field'] = 'field_doc_creation_date_value';
-$handler->display->display_options['filters']['field_doc_creation_date_value']['group'] = 1;
-$handler->display->display_options['filters']['field_doc_creation_date_value']['exposed'] = TRUE;
-$handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['operator_id'] = 'field_doc_creation_date_value_op';
-$handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['label'] = 'Publication year';
-$handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['operator'] = 'field_doc_creation_date_value_op';
-$handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['identifier'] = 'field_doc_creation_date_value';
-$handler->display->display_options['filters']['field_doc_creation_date_value']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111903911 => 0,
-  111903912 => 0,
-  25521343 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
-$handler->display->display_options['filters']['field_doc_creation_date_value']['granularity'] = 'year';
-$handler->display->display_options['filters']['field_doc_creation_date_value']['form_type'] = 'date_text';
-$handler->display->display_options['filters']['field_doc_creation_date_value']['year_range'] = '-10:+10';
-/* Filter criterion: Content: Resource type (field_doc_type) */
-$handler->display->display_options['filters']['field_doc_type_tid_1']['id'] = 'field_doc_type_tid_1';
-$handler->display->display_options['filters']['field_doc_type_tid_1']['table'] = 'field_data_field_doc_type';
-$handler->display->display_options['filters']['field_doc_type_tid_1']['field'] = 'field_doc_type_tid';
-$handler->display->display_options['filters']['field_doc_type_tid_1']['exposed'] = TRUE;
-$handler->display->display_options['filters']['field_doc_type_tid_1']['expose']['operator_id'] = 'field_doc_type_tid_1_op';
-$handler->display->display_options['filters']['field_doc_type_tid_1']['expose']['label'] = 'Resource type';
-$handler->display->display_options['filters']['field_doc_type_tid_1']['expose']['operator'] = 'field_doc_type_tid_1_op';
-$handler->display->display_options['filters']['field_doc_type_tid_1']['expose']['identifier'] = 'field_doc_type_tid_1';
-$handler->display->display_options['filters']['field_doc_type_tid_1']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111903911 => 0,
-  111903912 => 0,
-  25521343 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
-$handler->display->display_options['filters']['field_doc_type_tid_1']['type'] = 'select';
-$handler->display->display_options['filters']['field_doc_type_tid_1']['vocabulary'] = 'landlibrary_resource_type';
-$handler->display->display_options['filters']['field_doc_type_tid_1']['hierarchy'] = 1;
-$handler->display->display_options['filters']['field_doc_type_tid_1']['error_message'] = FALSE;
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page');
