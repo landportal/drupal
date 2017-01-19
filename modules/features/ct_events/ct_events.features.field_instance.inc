@@ -46,7 +46,7 @@ function ct_events_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -80,11 +80,11 @@ function ct_events_field_default_field_instances() {
 ',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -226,7 +226,7 @@ If it is only a one day event, the end date should be the same as the starting d
           'text' => 'Download [file:name]',
         ),
         'type' => 'file_download_link',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -428,7 +428,7 @@ If it is only a one day event, the end date should be the same as the starting d
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',

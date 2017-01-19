@@ -133,6 +133,30 @@ function ct_events_strongarm() {
             'visible' => FALSE,
           ),
         ),
+        'location' => array(
+          'default' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+        ),
+        'locations' => array(
+          'default' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+          'listing' => array(
+            'weight' => '8',
+            'visible' => TRUE,
+          ),
+        ),
       ),
     ),
   );

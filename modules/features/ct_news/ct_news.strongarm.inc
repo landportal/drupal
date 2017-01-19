@@ -102,22 +102,22 @@ function ct_news_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '7',
-        ),
-        'path' => array(
           'weight' => '6',
         ),
+        'path' => array(
+          'weight' => '5',
+        ),
         'language' => array(
-          'weight' => '8',
+          'weight' => '7',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '8',
         ),
       ),
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '10',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'teaser' => array(

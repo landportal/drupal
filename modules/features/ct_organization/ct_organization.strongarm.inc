@@ -65,7 +65,7 @@ function ct_organization_strongarm() {
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '6',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -73,7 +73,27 @@ function ct_organization_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '5',
+            'weight' => '6',
+            'visible' => FALSE,
+          ),
+        ),
+        'location' => array(
+          'default' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
+        ),
+        'locations' => array(
+          'default' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '9',
             'visible' => FALSE,
           ),
         ),

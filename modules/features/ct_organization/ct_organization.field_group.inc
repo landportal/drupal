@@ -96,6 +96,7 @@ function ct_organization_field_group_info() {
       0 => 'field_link',
       1 => 'field_email',
       2 => 'field_acronym',
+      3 => 'locations',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -215,7 +216,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_topics',

@@ -48,6 +48,7 @@ features[field_base][] = field_lastname
 features[field_base][] = field_link
 features[field_base][] = field_organization_type
 features[field_base][] = field_orgref
+features[field_base][] = field_pubdate
 features[field_base][] = field_related_domains
 features[field_base][] = field_related_themes
 features[field_base][] = field_related_topics
