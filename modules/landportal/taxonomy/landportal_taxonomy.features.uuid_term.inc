@@ -397,12 +397,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Creative Commons Attribution',
-    'description' => '<p>Acronym: <strong>CC-BY</strong></p>
-
-<p>This license lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. Recommended for maximum dissemination and use of licensed materials.<br />
-<br />
-More information at <a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a></p>
-',
+    'description' => '<p>This license lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. Recommended for maximum dissemination and use of licensed materials.<br></p>',
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => '6fc71047-4180-4b14-8239-2c70e1ac4819',
@@ -410,6 +405,24 @@ More information at <a href="http://creativecommons.org/licenses/by/4.0/">http:/
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'licences',
     'synonyms_synonyms' => array(),
+    'field_rdflicense_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://purl.org/NET/rdflicense/cc-by4.0',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
+    'field_acronym' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'CC-BY',
+          'format' => NULL,
+          'safe_value' => 'CC-BY',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -422,8 +435,8 @@ More information at <a href="http://creativecommons.org/licenses/by/4.0/">http:/
           'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1478869181,
-          'changed' => 1478869181,
+          'created' => 1484839067,
+          'changed' => 1484839067,
         ),
       ),
     ),
@@ -733,11 +746,7 @@ More information at <a href="http://creativecommons.org/licenses/by/4.0/">http:/
   );
   $terms[] = array(
     'name' => 'Creative Commons Attribution-NonCommercial',
-    'description' => '<p>Acronym:&nbsp;<strong>CC-BY-NC</strong></p>
-
-<p>This license lets others remix, tweak, and build upon your work non-commercially, and although their new works must also acknowledge you and be non-commercial, they don’t have to license their derivative works on the same terms.<br />
-<br />
-More information at&nbsp;<a href="http://creativecommons.org/licenses/by-nc/4.0/">http://creativecommons.org/licenses/by-nc/4.0/</a></p>
+    'description' => '<p>This license lets others remix, tweak, and build upon your work non-commercially, and although their new works must also acknowledge you and be non-commercial, they don’t have to license their derivative works on the same terms.</p>
 ',
     'format' => 'full_html',
     'weight' => 0,
@@ -746,6 +755,24 @@ More information at&nbsp;<a href="http://creativecommons.org/licenses/by-nc/4.0/
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'licences',
     'synonyms_synonyms' => array(),
+    'field_rdflicense_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://purl.org/NET/rdflicense/cc-by-nc4.0',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
+    'field_acronym' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'CC-BY-NC',
+          'format' => NULL,
+          'safe_value' => 'CC-BY-NC',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -758,8 +785,8 @@ More information at&nbsp;<a href="http://creativecommons.org/licenses/by-nc/4.0/
           'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1478869216,
-          'changed' => 1478869216,
+          'created' => 1484839135,
+          'changed' => 1484839135,
         ),
       ),
     ),
@@ -857,11 +884,7 @@ More information at&nbsp;<a href="http://creativecommons.org/licenses/by-nc/4.0/
   );
   $terms[] = array(
     'name' => 'Creative Commons Attribution-ShareAlike',
-    'description' => '<p>Acronym: <strong>CC-BY-SA</strong></p>
-
-<p>This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. All new works based on yours will carry the same license, so any derivatives will also allow commercial use.&nbsp;<br />
-<br />
-More information at&nbsp;<a href="http://creativecommons.org/licenses/by-sa/4.0/">http://creativecommons.org/licenses/by-sa/4.0/</a></p>
+    'description' => '<p>This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. All new works based on yours will carry the same license, so any derivatives will also allow commercial use.</p>
 ',
     'format' => 'full_html',
     'weight' => 0,
@@ -870,6 +893,24 @@ More information at&nbsp;<a href="http://creativecommons.org/licenses/by-sa/4.0/
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'licences',
     'synonyms_synonyms' => array(),
+    'field_rdflicense_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://purl.org/NET/rdflicense/cc-by-sa4.0',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
+    'field_acronym' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'CC-BY-SA',
+          'format' => NULL,
+          'safe_value' => 'CC-BY-SA',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -882,8 +923,8 @@ More information at&nbsp;<a href="http://creativecommons.org/licenses/by-sa/4.0/
           'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1478869469,
-          'changed' => 1478869469,
+          'created' => 1484839283,
+          'changed' => 1484839283,
         ),
       ),
     ),
@@ -1031,7 +1072,7 @@ More information at&nbsp;<a href="http://creativecommons.org/licenses/by-sa/4.0/
   );
   $terms[] = array(
     'name' => 'All rights reserved',
-    'description' => '<p>Copyright is automatically granted to you when you begin creating your work. You don\'t have to file anything anywhere, or publish anything online to own the copyright of your music. By choosing All Rights Reserved, you ask that other creators not use your material.&nbsp;</p>
+    'description' => '<p>Copyright is automatically granted to you when you begin creating your work. You don\'t have to file anything anywhere, or publish anything online to own the copyright of your music. By choosing All Rights Reserved, you ask that other creators not use your material.</p>
 ',
     'format' => 'filtered_html',
     'weight' => 0,
@@ -1040,6 +1081,24 @@ More information at&nbsp;<a href="http://creativecommons.org/licenses/by-sa/4.0/
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'licences',
     'synonyms_synonyms' => array(),
+    'field_rdflicense_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://purl.org/NET/rdflicense/allrightsreserved',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
+    'field_acronym' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'ARR',
+          'format' => NULL,
+          'safe_value' => 'ARR',
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -1052,8 +1111,8 @@ More information at&nbsp;<a href="http://creativecommons.org/licenses/by-sa/4.0/
           'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1478869140,
-          'changed' => 1478869140,
+          'created' => 1484838336,
+          'changed' => 1484838336,
         ),
       ),
     ),

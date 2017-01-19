@@ -511,6 +511,116 @@ function landportal_taxonomy_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-licences-field_acronym'.
+  $field_instances['taxonomy_term-licences-field_acronym'] = array(
+    'bundle' => 'licences',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_acronym',
+    'label' => 'acronym',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -10,
+            ),
+            'full_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 10,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-licences-field_rdflicense_uri'.
+  $field_instances['taxonomy_term-licences-field_rdflicense_uri'] = array(
+    'bundle' => 'licences',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'URI of the license from the RDFLicense dataset
+',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_rdflicense_uri',
+    'label' => 'RDFLicense URI',
+    'required' => 1,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
+      'rel_remove' => 'default',
+      'title' => 'value',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => 'More information about this license',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-licences-synonyms_synonyms'.
   $field_instances['taxonomy_term-licences-synonyms_synonyms'] = array(
     'bundle' => 'licences',
@@ -523,7 +633,7 @@ function landportal_taxonomy_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -547,7 +657,7 @@ function landportal_taxonomy_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -1668,10 +1778,14 @@ function landportal_taxonomy_field_default_field_instances() {
   t('Language code (ISO 639-1)');
   t('Name');
   t('Please, enter the synonyms which should be related to this term.');
+  t('RDFLicense URI');
   t('Related concepts');
   t('Synonyms');
   t('Themes');
   t('This field is for the \'same as\' concepts linked to that one');
+  t('URI of the license from the RDFLicense dataset
+');
+  t('acronym');
 
   return $field_instances;
 }
