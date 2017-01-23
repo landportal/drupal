@@ -5,14 +5,14 @@ $view->name = 'landvoc_concepts';
 $view->description = '';
 $view->tag = 'default';
 $view->base_table = 'taxonomy_term_data';
-$view->human_name = 'Land-related concepts';
+$view->human_name = 'LandVoc concepts';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Land-related concepts';
+$handler->display->display_options['title'] = 'LandVoc concepts';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['group_by'] = TRUE;
 $handler->display->display_options['access']['type'] = 'perm';
