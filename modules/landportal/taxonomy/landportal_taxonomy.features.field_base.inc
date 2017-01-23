@@ -99,6 +99,29 @@ function landportal_taxonomy_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_language_code_iso_639_3'.
+  $field_bases['field_language_code_iso_639_3'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_language_code_iso_639_3',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 255,
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_linked_uris'.
   $field_bases['field_linked_uris'] = array(
     'active' => 1,

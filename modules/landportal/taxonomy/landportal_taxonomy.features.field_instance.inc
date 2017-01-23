@@ -420,16 +420,21 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => '2 letters ISO 639-1 code for the language. <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">More information</a>',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
+        'label' => 'inline',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'span',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_language_code_iso_639_1',
     'label' => 'Language code (ISO 639-1)',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -465,6 +470,68 @@ function landportal_taxonomy_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-languages-field_language_code_iso_639_3'.
+  $field_instances['taxonomy_term-languages-field_language_code_iso_639_3'] = array(
+    'bundle' => 'languages',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '3 letters ISO 639-3 code for the language. <a href="https://en.wikipedia.org/wiki/ISO_639-3">More information</a>',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_language_code_iso_639_3',
+    'label' => 'Language code (ISO 639-3)',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -10,
+            ),
+            'full_html' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 3,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 32,
     ),
   );
 
@@ -1764,6 +1831,7 @@ function landportal_taxonomy_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('2 letters ISO 639-1 code for the language. <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">More information</a>');
+  t('3 letters ISO 639-3 code for the language. <a href="https://en.wikipedia.org/wiki/ISO_639-3">More information</a>');
   t('3 numbes code for the area (country/region). See the latest list of codes in the <a href="http://unstats.un.org/unsd/publications/statistical-yearbook">UN Statistical Yearbook</a>.');
   t('AGROVOC URI');
   t('Area code (UN M.49)');
@@ -1776,6 +1844,7 @@ function landportal_taxonomy_field_default_field_instances() {
   t('Icon');
   t('Label');
   t('Language code (ISO 639-1)');
+  t('Language code (ISO 639-3)');
   t('Name');
   t('Please, enter the synonyms which should be related to this term.');
   t('RDFLicense URI');
