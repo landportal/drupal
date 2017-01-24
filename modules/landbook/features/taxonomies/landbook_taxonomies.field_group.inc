@@ -116,7 +116,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '1',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_topics',

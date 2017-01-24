@@ -80,16 +80,7 @@ $handler->display->display_options['filters']['machine_name']['field'] = 'machin
 $handler->display->display_options['filters']['machine_name']['value'] = array(
   'datasets' => 'datasets',
 );
-/* Filter criterion: Field: Organization (field_orgref) (reference filter) */
-$handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['id'] = 'field_orgref_target_id_entityreference_filter';
-$handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['table'] = 'field_data_field_orgref';
-$handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['field'] = 'field_orgref_target_id_entityreference_filter';
-$handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['exposed'] = TRUE;
-$handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['expose']['operator_id'] = 'field_orgref_target_id_entityreference_filter_op';
-$handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['expose']['label'] = 'Data Provider';
-$handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['expose']['operator'] = 'field_orgref_target_id_entityreference_filter_op';
-$handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['expose']['identifier'] = 'source_id';
-$handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['reference_display'] = 'organizations:entityreference_1';
+$handler->display->display_options['filters']['machine_name']['group'] = 1;
 $handler->display->display_options['path'] = 'book/catalog';
 
 /* Display: Entity Reference */
