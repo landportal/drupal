@@ -29,6 +29,53 @@ $handler->display->display_options['relationships']['field_landvoc_to_target_id'
 $handler->display->display_options['relationships']['field_landvoc_to_target_id']['field'] = 'field_landvoc_to_target_id';
 $handler->display->display_options['relationships']['field_landvoc_to_target_id']['label'] = 'landvoc';
 $handler->display->display_options['relationships']['field_landvoc_to_target_id']['required'] = TRUE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name_field']['id'] = 'name_field';
+$handler->display->display_options['fields']['name_field']['table'] = 'field_data_name_field';
+$handler->display->display_options['fields']['name_field']['field'] = 'name_field';
+$handler->display->display_options['fields']['name_field']['relationship'] = 'field_landvoc_to_target_id';
+$handler->display->display_options['fields']['name_field']['label'] = '';
+$handler->display->display_options['fields']['name_field']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['name_field']['alter']['path'] = '[path]';
+$handler->display->display_options['fields']['name_field']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name_field']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['name_field']['settings'] = array(
+  'title_style' => 'h2',
+  'title_link' => '',
+  'title_class' => '',
+);
+$handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
+/* Sort criterion: Content: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'thematic_narrative' => 'thematic_narrative',
+);
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = '1';
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page');
+$handler->display->display_options['field_language'] = 'und';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['row_class'] = 'col-sm-4 text-center';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Path */
 $handler->display->display_options['fields']['path']['id'] = 'path';
 $handler->display->display_options['fields']['path']['table'] = 'node';
@@ -79,34 +126,19 @@ $handler->display->display_options['fields']['title']['alter']['word_boundary'] 
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-/* Sort criterion: Content: Post date */
-$handler->display->display_options['sorts']['created']['id'] = 'created';
-$handler->display->display_options['sorts']['created']['table'] = 'node';
-$handler->display->display_options['sorts']['created']['field'] = 'created';
-$handler->display->display_options['sorts']['created']['order'] = 'DESC';
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type']['id'] = 'type';
-$handler->display->display_options['filters']['type']['table'] = 'node';
-$handler->display->display_options['filters']['type']['field'] = 'type';
-$handler->display->display_options['filters']['type']['value'] = array(
-  'thematic_narrative' => 'thematic_narrative',
-);
-/* Filter criterion: Content: Published */
-$handler->display->display_options['filters']['status']['id'] = 'status';
-$handler->display->display_options['filters']['status']['table'] = 'node';
-$handler->display->display_options['filters']['status']['field'] = 'status';
-$handler->display->display_options['filters']['status']['value'] = '1';
+$handler->display->display_options['path'] = 'book/thematic';
 
-/* Display: Page */
-$handler = $view->new_display('page', 'Page', 'page');
-$handler->display->display_options['field_language'] = 'und';
+/* Display: Entity Reference */
+$handler = $view->new_display('entityreference', 'Entity Reference', 'entityreference_1');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['row_class'] = 'col-sm-4 text-center';
-$handler->display->display_options['style_options']['default_row_class'] = FALSE;
-$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'entityreference_style';
+$handler->display->display_options['style_options']['search_fields'] = array(
+  'name_field' => 'name_field',
+  'title' => 0,
+);
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['row_plugin'] = 'entityreference_fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
-$handler->display->display_options['path'] = 'book/thematic';
