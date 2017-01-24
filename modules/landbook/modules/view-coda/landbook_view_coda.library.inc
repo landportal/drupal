@@ -22,6 +22,8 @@ function landbook_view_coda_library() {
         'title' => 'view-coda vendor libs',
         'version' => '0.0.1',
         'js' => array(
+            $LBVIS_PATH . '/js/vendor/linkify.min.js' => array('weight' => 0),
+            $LBVIS_PATH . '/js/vendor/linkify-jquery.min.js' => array('weight' => 0),
             $LBVIS_PATH . '/js/vendor/highstock.js' => array('weight' => 0),
             $LBVIS_PATH . '/js/vendor/highmaps.js' => array('weight' => 1),
             $LBVIS_PATH . '/js/vendor/highcharts-more.js' => array('weight' => 2),

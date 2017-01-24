@@ -25,37 +25,49 @@
             </form>
           </header>
           <div class="view-coda-vis">
-              <div id="<?php print $block_html_id; ?>-wrapper" class="">
-                <ul class="list-unstyled text-center"><li class="panelVal values-panel"></li></ul>
-                <div class="panel panel-default">
-                  <div class="panel-heading">Explanation</div>
-                  <div class="panel-body">
-                    <div class="panelInfo"><p>Please, select year and panels to show the info.</p></div>
+            <div id="<?php print $block_html_id; ?>-wrapper" class="">
+              <ul class="list-unstyled text-center"><li class="panelVal values-panel"></li></ul>
+
+              <!-- <div class="panel-group" id="accordion" aria-multiselectable="true"> -->
+
+                <div class="collapsible collapsed panel panel-default">
+                  <div class="panel-heading">
+                     <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-exp">Explanation</a>
+                  </div>
+                  <div id="vggt-exp" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="panelInfo"><p>Please, select year and panels to show the info.</p></div>
+                    </div>
                   </div>
                 </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">Relevant laws</div>
-                  <div class="panel-body">
-                    <div class="countryInfo"></div>
+
+                <div class="collapsible collapsed panel panel-default">
+                  <div class="panel-heading">
+                    <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-laws">Relevant laws</a></div>
+                  <div id="vggt-laws" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="countryInfo"></div>
+                    </div>
                   </div>
                 </div>
-              </div>
+
+                <div class="collapsible collapsed panel panel-default">
+                  <div class="panel-heading">
+                    <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-info">Information on indicators</a>
+                  <div id="vggt-info" class="panel-collapse collapse">
+                    <div class="panel-body"<?php print $content_attributes; ?>><?php print $content ?></div>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
           </div>
-          <footer>
-            <div>
-              <div class="panel panel-default">
-                <div class="panel-heading">Information on indicators</div>
-                <div class="panel-body"<?php print $content_attributes; ?>><?php print $content ?></div>
+              <div class="legend text-center">
+                <em><?php print t('Legend'); ?>: <?php print t('National laws adoption of the VGGT principle'); ?></em>
+                <ul class="list-unstyled list-inline values-legend">
+                  <li><span class="value-a"></span> <?php print t('Fully adopt'); ?></li>
+                  <li><span class="value-b"></span> <?php print t('Partially adopt'); ?></li>
+                  <li><span class="value-c"></span> <?php print t('Not adopted'); ?></li>
+                  <li><span class="value-na"></span> <?php print t('Missing Value'); ?></li>
+                </ul>
               </div>
-            </div>
-            <div class="legend text-center">
-              <em>Legend</em>
-              <ul class="list-unstyled list-inline values-legend">
-                <li><span class="value-a"></span> <?php print t('National laws fully adopt the VGGT principle'); ?></li>
-                <li><span class="value-b"></span> <?php print t('National laws partially adopt the VGGT principle'); ?></li>
-                <li><span class="value-c"></span> <?php print t('National laws do not adopt the VGGT principle'); ?></li>
-                <li><span class="value-na"></span> <?php print t('Missing Value'); ?></li>
-              </ul>
-            </div>
-          </footer>
         </article>
