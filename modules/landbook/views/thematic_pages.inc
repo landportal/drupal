@@ -1,5 +1,4 @@
 <?php
-
 $view = new view();
 $view->name = 'thematic_pages';
 $view->description = '';
@@ -45,11 +44,11 @@ $handler->display->display_options['fields']['name_field']['settings'] = array(
   'title_class' => '',
 );
 $handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
-/* Sort criterion: Content: Post date */
-$handler->display->display_options['sorts']['created']['id'] = 'created';
-$handler->display->display_options['sorts']['created']['table'] = 'node';
-$handler->display->display_options['sorts']['created']['field'] = 'created';
-$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Sort criterion: Taxonomy term: Name */
+$handler->display->display_options['sorts']['name']['id'] = 'name';
+$handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['name']['field'] = 'name';
+$handler->display->display_options['sorts']['name']['relationship'] = 'field_landvoc_to_target_id';
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
