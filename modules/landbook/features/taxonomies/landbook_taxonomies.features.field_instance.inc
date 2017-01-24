@@ -71,10 +71,9 @@ function landbook_taxonomies_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
