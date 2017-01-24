@@ -290,7 +290,7 @@ function landportal_promoted_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -450,7 +450,7 @@ function landportal_promoted_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
@@ -486,7 +486,7 @@ function landportal_promoted_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 112,
+      'weight' => 9,
     ),
   );
 
@@ -501,7 +501,7 @@ function landportal_promoted_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'above',
@@ -541,7 +541,7 @@ function landportal_promoted_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 113,
+      'weight' => 10,
     ),
   );
 
@@ -562,13 +562,13 @@ function landportal_promoted_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
