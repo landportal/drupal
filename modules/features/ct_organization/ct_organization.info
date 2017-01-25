@@ -61,7 +61,6 @@ features_exclude[dependencies][landdebate] = landdebate
 features_exclude[dependencies][landportal_content_types] = landportal_content_types
 features_exclude[dependencies][synonyms] = synonyms
 features_exclude[dependencies][landlibrary_resource] = landlibrary_resource
-features_exclude[dependencies][landbook_promoted_thematic] = landbook_promoted_thematic
 features_exclude[dependencies][landportal_promoted] = landportal_promoted
 features_exclude[field_base][body] = body
 features_exclude[field_base][field_image] = field_image
