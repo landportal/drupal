@@ -58,6 +58,8 @@ $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
 $handler->display->display_options['sorts']['title']['id'] = 'title';
 $handler->display->display_options['sorts']['title']['table'] = 'node';
 $handler->display->display_options['sorts']['title']['field'] = 'title';
+$handler->display->display_options['sorts']['title']['exposed'] = TRUE;
+$handler->display->display_options['sorts']['title']['expose']['label'] = 'Title';
 /* Contextual filter: Content: Title */
 $handler->display->display_options['arguments']['title']['id'] = 'title';
 $handler->display->display_options['arguments']['title']['table'] = 'node';
@@ -306,6 +308,7 @@ $handler->display->display_options['fields']['tid']['field'] = 'tid';
 $handler->display->display_options['fields']['tid']['relationship'] = 'reverse_field_orgref_taxonomy_term';
 $handler->display->display_options['fields']['tid']['group_type'] = 'count';
 $handler->display->display_options['fields']['tid']['label'] = 'Datasets';
+$handler->display->display_options['defaults']['sorts'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
@@ -340,6 +343,15 @@ $handler->display->display_options['path'] = 'organizations';
 
 /* Display: LL sources */
 $handler = $view->new_display('page', 'LL sources', 'page_2');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-grid view-with-filters';
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Title */
+$handler->display->display_options['sorts']['title']['id'] = 'title';
+$handler->display->display_options['sorts']['title']['table'] = 'node';
+$handler->display->display_options['sorts']['title']['field'] = 'title';
+$handler->display->display_options['sorts']['title']['exposed'] = TRUE;
+$handler->display->display_options['sorts']['title']['expose']['label'] = 'Title';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['filter_groups']['groups'] = array(
   1 => 'AND',
