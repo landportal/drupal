@@ -161,7 +161,7 @@ $handler->display->display_options['arguments']['field_doc_provider_target_id'][
 $handler->display->display_options['arguments']['field_doc_provider_target_id']['validate_options']['types'] = array(
   'organization' => 'organization',
 );
-/* Contextual filter: Content: Publisher (field_doc_publisher) */
+/* Contextual filter: Content: Publisher(s) (field_doc_publisher) */
 $handler->display->display_options['arguments']['field_doc_publisher_target_id']['id'] = 'field_doc_publisher_target_id';
 $handler->display->display_options['arguments']['field_doc_publisher_target_id']['table'] = 'field_data_field_doc_publisher';
 $handler->display->display_options['arguments']['field_doc_publisher_target_id']['field'] = 'field_doc_publisher_target_id';
