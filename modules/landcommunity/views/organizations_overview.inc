@@ -447,6 +447,7 @@ $handler->display->display_options['relationships']['reverse_field_doc_provider_
 $handler->display->display_options['relationships']['reverse_field_doc_provider_node']['field'] = 'reverse_field_doc_provider_node';
 $handler->display->display_options['relationships']['reverse_field_doc_provider_node']['label'] = 'llresources';
 $handler->display->display_options['relationships']['reverse_field_doc_provider_node']['required'] = TRUE;
+$handler->display->display_options['defaults']['sorts'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
