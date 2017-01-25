@@ -145,6 +145,7 @@ $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   '***DEFAULT_LANGUAGE***' => '***DEFAULT_LANGUAGE***',
+  'und' => 'und',
 );
 /* Filter criterion: Content: Promoted to front page */
 $handler->display->display_options['filters']['promote']['id'] = 'promote';
