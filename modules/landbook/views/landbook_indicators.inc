@@ -184,7 +184,6 @@ $handler = $view->new_display('block', 'Dataset indicators', 'dataset');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Indicators in this dataset';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'view-grid dataset';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
