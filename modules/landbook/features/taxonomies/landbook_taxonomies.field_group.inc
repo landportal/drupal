@@ -23,7 +23,7 @@ function landbook_taxonomies_field_group_info() {
     'label' => 'Details',
     'weight' => '3',
     'children' => array(
-      0 => 'field_id',
+      0 => 'field_dataset',
       1 => 'field_unit',
       2 => 'field_min',
       3 => 'field_max',
@@ -238,7 +238,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '1',
+    'weight' => '0',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_domains',
