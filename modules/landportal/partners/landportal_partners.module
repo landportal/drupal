@@ -1,0 +1,20 @@
+<?php
+/**
+ * @file
+ * Code for the Landportal Partners module
+ */
+
+
+function landportal_partners_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
+ * Implements hook_views_default_views().
+ */
+function landportal_patners_views_default_views() {
+    $export = array();
+    include 'views/partners_content.inc';
+    $export[$view->name] = $view;
+    return $export;
+}

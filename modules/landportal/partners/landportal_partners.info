@@ -1,0 +1,14 @@
+name = Landportal Partners
+description = Land Portal partners section
+core = 7.x
+package = Landportal
+version = 7.x-2.4-alpha
+project = landportal_partners
+dependencies[] = block
+dependencies[] = ctools
+dependencies[] = landportal_base
+dependencies[] = landportal_groups
+dependencies[] = og
+dependencies[] = views
+dependencies[] = views_bootstrap
+project status url = https://github.com/landportal/drupal
