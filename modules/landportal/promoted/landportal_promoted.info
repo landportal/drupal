@@ -17,7 +17,6 @@ dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = views
-#dependencies[] = ctools
 features[ctools][] = strongarm:strongarm:1
 features[custom_pub][] = promoted_to_country_page
 features[custom_pub][] = promoted_to_thematic_page
