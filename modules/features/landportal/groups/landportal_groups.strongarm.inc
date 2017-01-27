@@ -163,8 +163,8 @@ function landportal_groups_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '2',
-            'visible' => TRUE,
+            'weight' => '3',
+            'visible' => FALSE,
           ),
           'listing' => array(
             'weight' => '1',
@@ -211,7 +211,20 @@ function landportal_groups_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'language' => array(
+          'weight' => '0',
+        ),
+        'locations' => array(
+          'weight' => '30',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
+      ),
       'display' => array(
         'language' => array(
           'default' => array(

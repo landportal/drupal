@@ -22,6 +22,7 @@ features[field_base][] = group_group
 features[field_base][] = og_group_ref
 features[field_instance][] = node-partners-body
 features[field_instance][] = node-partners-field_image
+features[field_instance][] = node-partners-field_orgref
 features[field_instance][] = node-partners-group_group
 features[field_instance][] = node-partners_page-body
 features[field_instance][] = node-partners_page-og_group_ref

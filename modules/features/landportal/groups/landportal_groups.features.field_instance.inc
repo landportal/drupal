@@ -69,12 +69,8 @@ function landportal_groups_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 2,
       ),
       'listing' => array(
@@ -122,6 +118,58 @@ function landportal_groups_field_default_field_instances() {
       ),
       'type' => 'media_generic',
       'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance: 'node-partners-field_orgref'.
+  $field_instances['node-partners-field_orgref'] = array(
+    'bundle' => 'partners',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 3,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_orgref',
+    'label' => 'Organization',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 35,
     ),
   );
 
@@ -345,6 +393,7 @@ function landportal_groups_field_default_field_instances() {
   t('Group');
   t('Groups audience');
   t('Logo');
+  t('Organization');
   t('Title');
 
   return $field_instances;
