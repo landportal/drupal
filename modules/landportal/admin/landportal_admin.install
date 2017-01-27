@@ -2,9 +2,21 @@
 /**
  * LP upgrade hooks
  * Great place for 1 time actions upon release ...
- * 
+ *
  */
-    
+
+/**
+ * Fix og module version
+ */
+function landportal_admin_update_7202() {
+  db_update('system')
+    ->fields(array(
+      'schema_version' => '7205',
+    ))
+    ->condition('name', 'og')
+    ->execute();
+}
+
 /** LPBS Release
  * Clean up and settings for LP new theme
  */
