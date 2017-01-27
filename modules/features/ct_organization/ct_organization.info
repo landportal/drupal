@@ -16,7 +16,6 @@ dependencies[] = landportal_taxonomy
 dependencies[] = link
 dependencies[] = media
 dependencies[] = node
-dependencies[] = og_ui
 dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = taxonomy
