@@ -1,0 +1,20 @@
+<?php
+/**
+ * @file
+ *
+ * The Land Portal Library
+*  
+ * Author: Jules <jules@ker.bz>
+ */
+
+/* Fill out regions terms with iso code from countries taxonomy */
+function landlibrary_update_7200() {
+  // Remove DB view : llr_by_uuid
+
+// Check the view id the one that you are looking for.
+  if ($view = views_get_view('llr_by_uuid')) {
+    // Delete the view if it is the one that you are looking for.
+    views_delete_view($view);
+  }
+
+}
