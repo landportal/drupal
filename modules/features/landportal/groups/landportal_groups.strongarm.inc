@@ -143,7 +143,23 @@ function landportal_groups_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'language' => array(
+          'weight' => '0',
+        ),
+        'locations' => array(
+          'weight' => '30',
+        ),
+        'title' => array(
+          'weight' => '-5',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
+      ),
       'display' => array(
         'language' => array(
           'default' => array(

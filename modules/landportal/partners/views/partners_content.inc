@@ -19,7 +19,8 @@ $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['pager']['options']['items_per_page'] = '3';
+$handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['row_plugin'] = 'fields';
 /* Field: Content: Title */
@@ -114,17 +115,21 @@ $handler->display->display_options['block_description'] = 'Partners promoted';
 /* Display: Logo */
 $handler = $view->new_display('block', 'Logo', 'logo');
 $handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '1';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
-/* Relationship: Entity Reference: Referenced Entity */
-$handler->display->display_options['relationships']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
-$handler->display->display_options['relationships']['og_group_ref_target_id']['table'] = 'og_membership';
-$handler->display->display_options['relationships']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
+/* Relationship: OG membership: OG membership from Content group */
+$handler->display->display_options['relationships']['og_membership_rel_group']['id'] = 'og_membership_rel_group';
+$handler->display->display_options['relationships']['og_membership_rel_group']['table'] = 'node';
+$handler->display->display_options['relationships']['og_membership_rel_group']['field'] = 'og_membership_rel_group';
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Field: Image */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['relationship'] = 'og_group_ref_target_id';
 $handler->display->display_options['fields']['field_image']['label'] = '';
 $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
@@ -133,6 +138,16 @@ $handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_link' => 'content',
 );
 $handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: OG membership: Group ID */
+$handler->display->display_options['arguments']['gid']['id'] = 'gid';
+$handler->display->display_options['arguments']['gid']['table'] = 'og_membership';
+$handler->display->display_options['arguments']['gid']['field'] = 'gid';
+$handler->display->display_options['arguments']['gid']['relationship'] = 'og_membership_rel_group';
+$handler->display->display_options['arguments']['gid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['gid']['default_argument_type'] = 'og_context';
+$handler->display->display_options['arguments']['gid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['gid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['gid']['summary_options']['items_per_page'] = '25';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
