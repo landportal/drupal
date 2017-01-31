@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the LandWise JSON importer feature.
+ */
+
+include_once 'landwise_json_importer.features.inc';
