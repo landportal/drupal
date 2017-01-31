@@ -56,8 +56,10 @@ function landportal_admin_default_rules_configuration() {
     foreach ($files as $filepath => $file) {
         require $filepath;
         if (isset($rule)) {
+          error_log('RULES: ' . $file->name);
             $config[$file->name] = rules_import($rule);
         }
     }
+    dpm($config);
     return $config;
 }
