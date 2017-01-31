@@ -14,7 +14,7 @@ function landlibrary_resource_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_landlibrary_resource';
-  $strongarm->value = 'edit-og';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_landlibrary_resource'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -312,8 +312,7 @@ function landlibrary_resource_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_landlibrary_resource';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_landlibrary_resource'] = $strongarm;
 
