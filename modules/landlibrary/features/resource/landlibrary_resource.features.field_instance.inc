@@ -133,11 +133,7 @@ function landlibrary_resource_field_default_field_instances() {
   // 'node-landlibrary_resource-field_doc_copyrights_statement'.
   $field_instances['node-landlibrary_resource-field_doc_copyrights_statement'] = array(
     'bundle' => 'landlibrary_resource',
-    'default_value' => array(
-      0 => array(
-        'value' => '©',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Details about the copyright of the resource, like the organization / person that owns the copyrights or a specific copyright statement.',
     'display' => array(
