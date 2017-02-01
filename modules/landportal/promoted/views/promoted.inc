@@ -190,6 +190,17 @@ $handler->display->display_options['fields']['field_country_promoted']['label'] 
 $handler->display->display_options['fields']['field_country_promoted']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_country_promoted']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_country_promoted']['delta_offset'] = '0';
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Promoted to country page */
+$handler->display->display_options['sorts']['promoted_to_country_page']['id'] = 'promoted_to_country_page';
+$handler->display->display_options['sorts']['promoted_to_country_page']['table'] = 'node';
+$handler->display->display_options['sorts']['promoted_to_country_page']['field'] = 'promoted_to_country_page';
+$handler->display->display_options['sorts']['promoted_to_country_page']['order'] = 'DESC';
+/* Sort criterion: Content: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: ISO3 (field_iso3) */
 $handler->display->display_options['arguments']['field_iso3_value']['id'] = 'field_iso3_value';
@@ -218,7 +229,6 @@ $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
   'blog_post' => 'blog_post',
-  'landbook_country' => 'landbook_country',
   'debate' => 'debate',
   'event' => 'event',
   'landlibrary_resource' => 'landlibrary_resource',
@@ -234,11 +244,11 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   '***DEFAULT_LANGUAGE***' => '***DEFAULT_LANGUAGE***',
 );
-/* Filter criterion: Content: Promoted to country page */
-$handler->display->display_options['filters']['promoted_to_country_page']['id'] = 'promoted_to_country_page';
-$handler->display->display_options['filters']['promoted_to_country_page']['table'] = 'node';
-$handler->display->display_options['filters']['promoted_to_country_page']['field'] = 'promoted_to_country_page';
-$handler->display->display_options['filters']['promoted_to_country_page']['value'] = '1';
+/* Filter criterion: Field: Image (field_image:fid) */
+$handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
+$handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
+$handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
+$handler->display->display_options['filters']['field_image_fid']['operator'] = 'not empty';
 
 /* Display: TP block */
 $handler = $view->new_display('block', 'TP block', 'thematic');
