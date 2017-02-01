@@ -52,12 +52,14 @@ function landportal_admin_default_rules_configuration() {
     $config = array();
     
     $rules_path = dirname(__FILE__) . '/rules';
-    $files = file_scan_directory($rules_path, '/\.rule$/');
+    $files = file_scan_directory($rules_path, '/\.inc$/');
     foreach ($files as $filepath => $file) {
         require $filepath;
         if (isset($rule)) {
-            $config['landportal_admin_' . $file->name] = rules_import($rule);
+          //error_log('RULES: ' . $file->name);
+            $config[$file->name] = rules_import($rule);
         }
     }
+    //dpm($config);
     return $config;
 }

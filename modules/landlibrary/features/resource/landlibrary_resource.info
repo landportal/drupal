@@ -21,7 +21,6 @@ dependencies[] = landportal_multilingual
 dependencies[] = landportal_promoted
 dependencies[] = landportal_taxonomy
 dependencies[] = link
-dependencies[] = node
 dependencies[] = options
 dependencies[] = rdf
 dependencies[] = rdfx

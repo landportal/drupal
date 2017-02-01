@@ -1,4 +1,7 @@
 <?php
+
+// From https://landportal.info/admin/structure/views/view/thematic_pages/export
+
 $view = new view();
 $view->name = 'thematic_pages';
 $view->description = '';
@@ -11,7 +14,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Thematic pages';
+$handler->display->display_options['title'] = 'Thematic portfolios';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
@@ -22,6 +25,12 @@ $handler->display->display_options['pager']['options']['items_per_page'] = '9';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['row_plugin'] = 'node';
 $handler->display->display_options['row_options']['links'] = FALSE;
+/* Header: Global: Text area */
+$handler->display->display_options['header']['area']['id'] = 'area';
+$handler->display->display_options['header']['area']['table'] = 'views';
+$handler->display->display_options['header']['area']['field'] = 'area';
+$handler->display->display_options['header']['area']['content'] = '<p class="lead">Get land-related information by theme. Indeed, land and land governance are multidimensional concepts related to a variety of intertwined issues. Try not to get lost and click on a thematic portfolio to read the dedicated thematic narrative, to discover the existing data, to check the latest news, to retrive specific bibliographic resources and much more.</p>';
+$handler->display->display_options['header']['area']['format'] = 'filtered_html';
 /* Relationship: Entity Reference: Referenced Entity */
 $handler->display->display_options['relationships']['field_landvoc_to_target_id']['id'] = 'field_landvoc_to_target_id';
 $handler->display->display_options['relationships']['field_landvoc_to_target_id']['table'] = 'field_data_field_landvoc_to';
@@ -56,11 +65,6 @@ $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
   'thematic_narrative' => 'thematic_narrative',
 );
-/* Filter criterion: Content: Published */
-$handler->display->display_options['filters']['status']['id'] = 'status';
-$handler->display->display_options['filters']['status']['table'] = 'node';
-$handler->display->display_options['filters']['status']['field'] = 'status';
-$handler->display->display_options['filters']['status']['value'] = '1';
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page');

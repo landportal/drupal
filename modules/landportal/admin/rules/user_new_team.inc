@@ -1,6 +1,6 @@
 <?php
 
-$rule = '{ "rules_new_user_landportal_team" : {
+$rule = '{ "user_new_team" : {
     "LABEL" : "New User - Landportal Team",
     "PLUGIN" : "reaction rule",
     "OWNER" : "rules",
@@ -25,7 +25,5 @@ $rule = '{ "rules_new_user_landportal_team" : {
     ]
   }
 }';
-
-
 
 ?>

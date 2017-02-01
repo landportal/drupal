@@ -105,13 +105,13 @@ function ct_events_strongarm() {
           'weight' => '5',
         ),
         'path' => array(
-          'weight' => '6',
-        ),
-        'language' => array(
           'weight' => '5',
         ),
+        'language' => array(
+          'weight' => '4',
+        ),
         'xmlsitemap' => array(
-          'weight' => '8',
+          'weight' => '6',
         ),
       ),
       'display' => array(
