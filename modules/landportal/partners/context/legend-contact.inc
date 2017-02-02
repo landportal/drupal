@@ -25,6 +25,12 @@ $context->reactions = array(
         'region' => 'content',
         'weight' => '8',
       ),
+      'mailchimp_signup-legend_bulletin' => array(
+        'module' => 'mailchimp_signup',
+        'delta' => 'legend_bulletin',
+        'region' => 'content',
+        'weight' => '9',
+      ),
     ),
   ),
 );
