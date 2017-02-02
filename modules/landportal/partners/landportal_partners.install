@@ -1,0 +1,19 @@
+<?php
+
+
+/*
+ * Install LP Partners
+ */
+
+function landportal_partners_update_7200() {
+
+  // Cleanup existing Partners context
+  $context = context_load('kpmg-faq');
+  context_delete($context);
+  $context = context_load('legend-kpmg');
+  context_delete($context);
+  $context = context_load('legend-menu');
+  context_delete($context);
+  $context = context_load('mailchimp-block-legend-context');
+  context_delete($context);
+}
