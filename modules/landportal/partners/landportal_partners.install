@@ -1,8 +1,6 @@
 <?php
-
-
 /*
- * Install LP Partners
+ * Install LP Partners module
  */
 
 function landportal_partners_update_7200() {
