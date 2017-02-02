@@ -3,7 +3,7 @@
 $context = new stdClass();
 $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
 $context->api_version = 3;
-$context->name = 'partners-legend-menu';
+$context->name = 'partners-legend-promoted';
 $context->description = '';
 $context->tag = 'partners';
 $context->conditions = array(
@@ -12,23 +12,20 @@ $context->conditions = array(
       36570 => 36570,
     ),
     'options' => array(
-      'node_form' => 0,
+      'node_form' => 1,
     ),
   ),
 );
 $context->reactions = array(
   'block' => array(
     'blocks' => array(
-      'menu-menu-legend' => array(
-        'module' => 'menu',
-        'delta' => 'menu-legend',
+      'views-partners_content-block' => array(
+        'module' => 'views',
+        'delta' => 'partners_content-block',
         'region' => 'header',
-        'weight' => '0',
+        'weight' => '-1',
       ),
     ),
-  ),
-  'context_og_reaction_set_group_context' => array(
-    'group' => '36570',
   ),
 );
 $context->condition_mode = 0;
