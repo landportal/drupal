@@ -56,7 +56,7 @@ $handler->display->display_options['filters']['field_iso3_value']['operator'] = 
 /* Display: Page countries */
 $handler = $view->new_display('page', 'Page countries', 'page');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Land Book Countries';
+$handler->display->display_options['title'] = 'Country Portfolios';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'view-grid';
 $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -67,7 +67,8 @@ $handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['header']['area']['id'] = 'area';
 $handler->display->display_options['header']['area']['table'] = 'views';
 $handler->display->display_options['header']['area']['field'] = 'area';
-$handler->display->display_options['header']['area']['content'] = 'The Land Book follows the classification made by the <a href="https://www.iso.org/obp/ui/#search">ISO 3166-1 "Codes for the representation of names of countries and their subdivisions"</a>
+$handler->display->display_options['header']['area']['content'] = '<p class="lead">Access land related-information by country. Take a look at the editorialised narrative section in the featured country portfolios or just select a country from the map or the list: everything you need to know about land issues in a specific country is just one click away.</p>
+<p>The Land Book follows the classification made by the <a href="https://www.iso.org/obp/ui/#search">ISO 3166-1 "Codes for the representation of names of countries and their subdivisions"</a></p>
 ';
 $handler->display->display_options['header']['area']['format'] = 'filtered_html';
 $handler->display->display_options['defaults']['fields'] = FALSE;
@@ -170,6 +171,15 @@ $handler->display->display_options['filters']['status']['table'] = 'node';
 $handler->display->display_options['filters']['status']['field'] = 'status';
 $handler->display->display_options['filters']['status']['relationship'] = 'reverse_field_geographical_focus_node';
 $handler->display->display_options['filters']['status']['value'] = '1';
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['relationship'] = 'reverse_field_geographical_focus_node';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  'und' => 'und',
+);
 $handler->display->display_options['path'] = 'book/countries/%';
 
 /* Display: Countries portfolio */
@@ -225,4 +235,12 @@ $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['relationship'] = 'reverse_field_geographical_focus_node';
 $handler->display->display_options['filters']['type']['value'] = array(
   'landbook_country' => 'landbook_country',
+);
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['relationship'] = 'reverse_field_geographical_focus_node';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
