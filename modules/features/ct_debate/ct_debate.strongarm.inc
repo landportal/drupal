@@ -96,16 +96,22 @@ function ct_debate_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'language' => array(
-          'weight' => '4',
+          'weight' => '5',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '8',
+        ),
+        'metatags' => array(
+          'weight' => '9',
         ),
       ),
       'display' => array(

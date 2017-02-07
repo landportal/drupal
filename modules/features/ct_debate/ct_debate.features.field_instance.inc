@@ -15,7 +15,7 @@ function ct_debate_field_default_field_instances() {
     'bundle' => 'debate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'What is this discussion going to be about?',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -51,9 +51,31 @@ function ct_debate_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Body',
+    'label' => 'Introduction',
     'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
       'display_summary' => 0,
       'entity_translation_sync' => FALSE,
       'text_processing' => 1,
@@ -63,11 +85,11 @@ function ct_debate_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 20,
+        'rows' => 25,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -204,12 +226,12 @@ function ct_debate_field_default_field_instances() {
     'entity_type' => 'node',
     'entityconnect' => array(
       'button' => array(
-        'unload_add_button' => NULL,
-        'unload_edit_button' => NULL,
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
       ),
       'icon' => array(
-        'show_add_icon' => NULL,
-        'show_edit_icon' => NULL,
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
       ),
     ),
     'field_name' => 'field_facilitators',
@@ -221,14 +243,13 @@ function ct_debate_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'entityreference',
       'settings' => array(
-        'apply_chosen' => '',
         'match_operator' => 'CONTAINS',
         'path' => '',
         'size' => 30,
       ),
-      'type' => 'options_select',
+      'type' => 'entityreference_autocomplete',
       'weight' => 27,
     ),
   );
@@ -295,7 +316,7 @@ function ct_debate_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 14,
+      'weight' => 29,
     ),
   );
 
@@ -434,7 +455,7 @@ function ct_debate_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 24,
+      'weight' => 28,
     ),
   );
 
@@ -679,17 +700,18 @@ function ct_debate_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Attach a  file');
-  t('Body');
   t('Date');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Facilitators');
   t('Geographical focus');
   t('Image');
+  t('Introduction');
   t('Overarching categories');
   t('Related concepts');
   t('Status');
   t('The date in which the debate will be open to participate.');
   t('Themes');
+  t('What is this discussion going to be about?');
 
   return $field_instances;
 }
