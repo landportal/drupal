@@ -73,7 +73,7 @@ t('landdebate');
         'news' => 'news',
       ),
       'options' => array(
-        'node_form' => '1',
+        'node_form' => '0',
       ),
     ),
   );
