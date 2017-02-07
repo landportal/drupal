@@ -23,7 +23,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -161,7 +161,7 @@ function ct_organization_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 9,
       ),
       'listing' => array(
         'label' => 'above',
@@ -199,6 +199,49 @@ function ct_organization_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 14,
+    ),
+  );
+
+  // Exported field_instance: 'node-organization-field_country_promoted'.
+  $field_instances['node-organization-field_country_promoted'] = array(
+    'bundle' => 'organization',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_country_promoted',
+    'label' => 'Country Promoted',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 11,
     ),
   );
 
@@ -265,7 +308,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 12,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
@@ -537,7 +580,7 @@ function ct_organization_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 8,
       ),
       'listing' => array(
         'label' => 'above',
@@ -586,7 +629,7 @@ function ct_organization_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'listing' => array(
         'label' => 'above',
@@ -817,7 +860,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'og_ui',
         'settings' => array(),
         'type' => 'og_list_default',
-        'weight' => 7,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -882,6 +925,7 @@ function ct_organization_field_default_field_instances() {
 ');
   t('Acronym');
   t('Attach a  file');
+  t('Country Promoted');
   t('Description');
   t('Email');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');

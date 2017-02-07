@@ -53,13 +53,13 @@ function ct_organization_strongarm() {
           'weight' => '15',
         ),
         'path' => array(
-          'weight' => '10',
+          'weight' => '9',
         ),
         'language' => array(
-          'weight' => '8',
+          'weight' => '6',
         ),
         'xmlsitemap' => array(
-          'weight' => '11',
+          'weight' => '10',
         ),
       ),
       'display' => array(
@@ -69,7 +69,7 @@ function ct_organization_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '8',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -133,18 +133,18 @@ function ct_organization_strongarm() {
           'weight' => '6',
         ),
         'city' => array(
-          'collect' => '0',
+          'collect' => '1',
           'default' => '',
           'weight' => '8',
         ),
         'province' => array(
-          'collect' => '0',
+          'collect' => '1',
           'widget' => 'autocomplete',
           'default' => '',
           'weight' => '10',
         ),
         'postal_code' => array(
-          'collect' => '0',
+          'collect' => '1',
           'default' => '',
           'weight' => '12',
         ),
@@ -154,7 +154,7 @@ function ct_organization_strongarm() {
           'weight' => '14',
         ),
         'locpick' => array(
-          'collect' => '1',
+          'collect' => '0',
           'weight' => '20',
         ),
       ),

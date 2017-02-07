@@ -58,11 +58,12 @@ function ct_news_field_group_info() {
     'label' => 'News details',
     'weight' => '4',
     'children' => array(
-      0 => 'field_file',
-      1 => 'field_link',
-      2 => 'field_language',
-      3 => 'field_doc_people',
-      4 => 'field_pubdate',
+      0 => 'field_image',
+      1 => 'field_file',
+      2 => 'field_link',
+      3 => 'field_language',
+      4 => 'field_doc_people',
+      5 => 'field_pubdate',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -70,7 +71,7 @@ function ct_news_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'id' => '',
-        'classes' => 'group-details field-group-fieldset',
+        'classes' => 'group-details field-group-fieldset lp-2c',
         'description' => '',
       ),
       'formatter' => 'open',

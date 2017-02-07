@@ -55,13 +55,14 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Admin',
-    'weight' => '9',
+    'weight' => '7',
     'children' => array(
       0 => 'field_organization_relationship',
       1 => 'field_user',
       2 => 'field_thematic_promoted',
       3 => 'path',
       4 => 'xmlsitemap',
+      5 => 'field_country_promoted',
     ),
     'format_type' => 'div',
     'format_settings' => array(
