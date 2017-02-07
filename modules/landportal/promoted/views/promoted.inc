@@ -242,7 +242,6 @@ $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
 $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  '***DEFAULT_LANGUAGE***' => '***DEFAULT_LANGUAGE***',
 );
 /* Filter criterion: Field: Image (field_image:fid) */
 $handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
