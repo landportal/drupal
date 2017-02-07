@@ -76,6 +76,7 @@ projects:
   - masquerade
   - media
   - media_ckeditor
+  - metatag
   - module_filter
 #  - nice_menus
   - node_edit_protection
