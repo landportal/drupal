@@ -50,7 +50,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Other known titles for this resource',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -89,7 +89,7 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_alt_title',
-    'label' => 'Subtitle',
+    'label' => 'Other known titles for this resource',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -125,7 +125,7 @@ function landlibrary_resource_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -210,7 +210,7 @@ function landlibrary_resource_field_default_field_instances() {
         'rows' => 1,
       ),
       'type' => 'text_textarea',
-      'weight' => 13,
+      'weight' => 126,
     ),
   );
 
@@ -316,8 +316,8 @@ function landlibrary_resource_field_default_field_instances() {
         ),
         'year_range' => '-5000:+10',
       ),
-      'type' => 'date_select',
-      'weight' => 3,
+      'type' => 'date_popup',
+      'weight' => 11,
     ),
   );
 
@@ -407,7 +407,7 @@ function landlibrary_resource_field_default_field_instances() {
         'rows' => 10,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -491,7 +491,7 @@ function landlibrary_resource_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 14,
     ),
   );
 
@@ -914,7 +914,7 @@ function landlibrary_resource_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 8,
     ),
   );
 
@@ -975,7 +975,7 @@ function landlibrary_resource_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 12,
+      'weight' => 125,
     ),
   );
 
@@ -1096,7 +1096,7 @@ function landlibrary_resource_field_default_field_instances() {
         'size' => 25,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 12,
     ),
     'widget_type' => 'text_textfield',
   );
@@ -1173,7 +1173,7 @@ function landlibrary_resource_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 124,
+      'weight' => 123,
     ),
   );
 
@@ -1557,13 +1557,20 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'media',
       'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'image' => 'image',
+        ),
+        'browser_plugins' => array(),
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
-      'weight' => 4,
+      'type' => 'media_generic',
+      'weight' => 1,
     ),
   );
 
@@ -1660,7 +1667,7 @@ function landlibrary_resource_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 7,
     ),
     'widget_type' => 'options_select',
   );
@@ -1711,7 +1718,7 @@ function landlibrary_resource_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 13,
     ),
   );
 
@@ -1891,7 +1898,7 @@ function landlibrary_resource_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 125,
+      'weight' => 124,
     ),
   );
 
@@ -2107,7 +2114,6 @@ function landlibrary_resource_field_default_field_instances() {
   t('Resource Language');
   t('Resource URL');
   t('Resource type');
-  t('Subtitle');
   t('The URL to the resource on the publisher\'s website (e.g.: http://landportal.info/sites/landportal.info/files/GECDiscussionReport-Final.pdf)');
   t('The abstract of the resource or a description of the resource.');
   t('The date of publication of the resource (YYYY/MM).');
