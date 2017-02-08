@@ -28,6 +28,7 @@ function landportal_promoted_custom_pub_defaults() {
       'event' => t('Event'),
       'landlibrary_resource' => t('LandLibrary Resource'),
       'news' => t('News'),
+      'organization' => t('Organization'),
     ),
   );
 

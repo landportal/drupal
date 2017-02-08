@@ -163,7 +163,7 @@ function landportal_promoted_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 112,
+      'weight' => 10,
     ),
   );
 
@@ -218,7 +218,7 @@ function landportal_promoted_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 114,
+      'weight' => 11,
     ),
   );
 
@@ -269,7 +269,7 @@ function landportal_promoted_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 112,
+      'weight' => 7,
     ),
   );
 
@@ -324,7 +324,7 @@ function landportal_promoted_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 114,
+      'weight' => 8,
     ),
   );
 
@@ -556,7 +556,7 @@ function landportal_promoted_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'listing' => array(
         'label' => 'above',
@@ -590,7 +590,7 @@ function landportal_promoted_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 14,
+      'weight' => 12,
     ),
   );
 
