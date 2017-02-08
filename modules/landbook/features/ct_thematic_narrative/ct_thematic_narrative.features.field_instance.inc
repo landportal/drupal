@@ -158,65 +158,6 @@ function ct_thematic_narrative_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'node-thematic_narrative-field_geographical_focus'.
-  $field_instances['node-thematic_narrative-field_geographical_focus'] = array(
-    'bundle' => 'thematic_narrative',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'listing' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 1,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_geographical_focus',
-    'label' => 'Geographical focus',
-    'required' => 1,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-        'auto_creation' => 0,
-        'size' => 60,
-        'sort' => 'weight',
-        'suggest_only_unique' => 0,
-        'suggestion_size' => 10,
-        'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
-      ),
-      'type' => 'options_select',
-      'weight' => 5,
-    ),
-  );
-
   // Exported field_instance: 'node-thematic_narrative-field_indicator_map'.
   $field_instances['node-thematic_narrative-field_indicator_map'] = array(
     'bundle' => 'thematic_narrative',
@@ -483,182 +424,6 @@ function ct_thematic_narrative_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-thematic_narrative-field_related_domains'.
-  $field_instances['node-thematic_narrative-field_related_domains'] = array(
-    'bundle' => 'thematic_narrative',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
-      'listing' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 2,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_related_domains',
-    'label' => 'Overarching categories',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-        'auto_creation' => 1,
-        'size' => 60,
-        'sort' => 'weight',
-        'suggest_only_unique' => 0,
-        'suggestion_size' => 10,
-        'synonyms_autocomplete_path' => 'synonyms/autocomplete',
-      ),
-      'type' => 'options_select',
-      'weight' => 109,
-    ),
-  );
-
-  // Exported field_instance: 'node-thematic_narrative-field_related_themes'.
-  $field_instances['node-thematic_narrative-field_related_themes'] = array(
-    'bundle' => 'thematic_narrative',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-      'listing' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 3,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_related_themes',
-    'label' => 'Themes',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-        'sort' => 'weight',
-      ),
-      'type' => 'options_select',
-      'weight' => 110,
-    ),
-  );
-
-  // Exported field_instance: 'node-thematic_narrative-field_related_topics'.
-  $field_instances['node-thematic_narrative-field_related_topics'] = array(
-    'bundle' => 'thematic_narrative',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
-      'listing' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'search_result' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_related_topics',
-    'label' => 'Related concepts',
-    'required' => 1,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-        'auto_creation' => 0,
-        'size' => 60,
-        'sort' => 'weight',
-        'suggest_only_unique' => 0,
-        'suggestion_size' => 10,
-        'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
-      ),
-      'type' => 'options_select',
-      'weight' => 5,
-    ),
-  );
-
   // Exported field_instance: 'node-thematic_narrative-title_field'.
   $field_instances['node-thematic_narrative-title_field'] = array(
     'bundle' => 'thematic_narrative',
@@ -749,21 +514,16 @@ function ct_thematic_narrative_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
-  t('Geographical focus');
   t('Info');
   t('LB visualization settings');
   t('Map');
   t('Narrative');
-  t('Overarching categories');
   t('Ranking');
-  t('Related concepts');
   t('SOURCES');
   t('Select a Landvoc Theme or Overarching Category this narrative is about.');
   t('Table');
   t('The narrative (title)');
   t('The subtitle of the narrative');
-  t('Themes');
 
   return $field_instances;
 }

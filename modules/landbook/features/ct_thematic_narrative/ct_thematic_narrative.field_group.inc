@@ -71,7 +71,7 @@ function ct_thematic_narrative_field_group_info() {
   $field_groups['group_topics_regions|node|thematic_narrative|default'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_topics_regions|node|thematic_narrative|form';
   $field_group->group_name = 'group_topics_regions';
