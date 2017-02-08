@@ -32,7 +32,7 @@ function ct_thematic_narrative_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'id' => '',
-        'classes' => 'group-details field-group-fieldset group-meta',
+        'classes' => 'group-aside',
         'description' => '',
       ),
       'formatter' => 'open',

@@ -102,7 +102,7 @@ function landbook_country_strongarm() {
           'weight' => '7',
         ),
         'title' => array(
-          'weight' => '1',
+          'weight' => '0',
         ),
         'path' => array(
           'weight' => '8',
