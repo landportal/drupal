@@ -105,7 +105,7 @@ function ct_page_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '0',
+            'weight' => '1',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -151,8 +151,7 @@ function ct_page_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_page';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_page'] = $strongarm;
 

@@ -16,17 +16,17 @@ $realm_variables = array();
 );
   $realm_variables['language']['es'] = array(
   'site_frontpage' => 'node/10071',
-  'site_name' => 'Landportal',
+  'site_name' => 'Land Portal',
   'site_slogan' => '',
 );
   $realm_variables['language']['fr'] = array(
   'site_frontpage' => 'node/10070',
-  'site_name' => 'Landportal',
+  'site_name' => 'Land Portal',
   'site_slogan' => '',
 );
   $realm_variables['language']['pt'] = array(
   'site_frontpage' => 'node/28444',
-  'site_name' => 'Landportal',
+  'site_name' => 'Land Portal',
   'site_slogan' => '',
 );
 
