@@ -50,7 +50,7 @@ function ct_organization_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '15',
+          'weight' => '16',
         ),
         'path' => array(
           'weight' => '9',
@@ -60,6 +60,9 @@ function ct_organization_strongarm() {
         ),
         'xmlsitemap' => array(
           'weight' => '10',
+        ),
+        'metatags' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(

@@ -455,7 +455,7 @@ function ct_debate_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 28,
+      'weight' => 1,
     ),
   );
 

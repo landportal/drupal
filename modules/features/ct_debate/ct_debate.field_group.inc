@@ -142,10 +142,9 @@ function ct_debate_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_date',
-      1 => 'field_image',
-      2 => 'field_status',
-      3 => 'field_file',
-      4 => 'field_facilitators',
+      1 => 'field_status',
+      2 => 'field_file',
+      3 => 'field_facilitators',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -156,7 +155,7 @@ function ct_debate_field_group_info() {
         'classes' => 'lp-2c',
         'description' => '',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_status|node|debate|form'] = $field_group;

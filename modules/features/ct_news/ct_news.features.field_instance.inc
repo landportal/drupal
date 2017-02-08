@@ -67,7 +67,7 @@ function ct_news_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -343,7 +343,7 @@ function ct_news_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 14,
+      'weight' => 1,
     ),
   );
 

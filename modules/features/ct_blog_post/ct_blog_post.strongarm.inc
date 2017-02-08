@@ -107,6 +107,12 @@ function ct_blog_post_strongarm() {
         'path' => array(
           'weight' => '5',
         ),
+        'metatags' => array(
+          'weight' => '40',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'language' => array(

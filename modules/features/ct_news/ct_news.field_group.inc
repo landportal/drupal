@@ -58,12 +58,11 @@ function ct_news_field_group_info() {
     'label' => 'News details',
     'weight' => '4',
     'children' => array(
-      0 => 'field_image',
-      1 => 'field_file',
-      2 => 'field_link',
-      3 => 'field_language',
-      4 => 'field_doc_people',
-      5 => 'field_pubdate',
+      0 => 'field_file',
+      1 => 'field_link',
+      2 => 'field_language',
+      3 => 'field_doc_people',
+      4 => 'field_pubdate',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -121,7 +120,7 @@ function ct_news_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_topics',

@@ -65,7 +65,7 @@ function ct_organization_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -146,7 +146,7 @@ function ct_organization_field_default_field_instances() {
         'size' => 20,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -198,7 +198,7 @@ function ct_organization_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 14,
+      'weight' => 13,
     ),
   );
 
@@ -293,7 +293,7 @@ function ct_organization_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -356,7 +356,7 @@ function ct_organization_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -564,7 +564,7 @@ function ct_organization_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 12,
+      'weight' => 15,
     ),
   );
 
@@ -665,7 +665,7 @@ function ct_organization_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
