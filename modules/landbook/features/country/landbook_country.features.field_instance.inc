@@ -205,7 +205,7 @@ function landbook_country_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -268,13 +268,13 @@ function landbook_country_field_default_field_instances() {
       'module' => 'field_collection_fieldset',
       'settings' => array(
         'collapsed' => 0,
-        'field_as_label' => '',
+        'field_as_label' => 'field_info_title',
         'last_item_collapsed' => 0,
         'new_item_open' => 0,
         'replace_label' => 0,
       ),
       'type' => 'field_collection_fieldset',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -323,7 +323,7 @@ function landbook_country_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 0,
     ),
   );
 

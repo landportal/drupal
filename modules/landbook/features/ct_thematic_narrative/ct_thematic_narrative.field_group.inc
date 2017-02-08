@@ -23,8 +23,8 @@ function ct_thematic_narrative_field_group_info() {
     'label' => 'About the narrative',
     'weight' => '3',
     'children' => array(
-      0 => 'field_thematic_image',
-      1 => 'field_orgref',
+      0 => 'field_orgref',
+      1 => 'language',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -35,7 +35,7 @@ function ct_thematic_narrative_field_group_info() {
         'classes' => 'group-details field-group-fieldset group-meta',
         'description' => '',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_details|node|thematic_narrative|form'] = $field_group;
@@ -81,7 +81,7 @@ function ct_thematic_narrative_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '5',
+    'weight' => '4',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_domains',
@@ -97,7 +97,7 @@ function ct_thematic_narrative_field_group_info() {
         'classes' => 'group-topics-regions field-group-fieldset',
         'description' => '',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_topics_regions|node|thematic_narrative|form'] = $field_group;
@@ -152,12 +152,14 @@ function ct_thematic_narrative_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Visualizations',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
         'required_fields' => 1,
+        'id' => '',
+        'classes' => 'lp-2c',
+        'description' => '',
       ),
+      'formatter' => 'collapsible',
     ),
   );
   $field_groups['group_view_coda|node|thematic_narrative|form'] = $field_group;

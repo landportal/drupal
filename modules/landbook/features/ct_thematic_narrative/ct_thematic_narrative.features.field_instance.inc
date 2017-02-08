@@ -154,7 +154,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'replace_label' => FALSE,
       ),
       'type' => 'field_collection_fieldset',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -479,7 +479,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -659,69 +659,6 @@ function ct_thematic_narrative_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-thematic_narrative-field_thematic_image'.
-  $field_instances['node-thematic_narrative-field_thematic_image'] = array(
-    'bundle' => 'thematic_narrative',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'file_entity',
-        'settings' => array(
-          'file_view_mode' => 'full',
-        ),
-        'type' => 'file_rendered',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_thematic_image',
-    'label' => 'Thematic Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'entity_translation_sync' => FALSE,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'image' => 'image',
-        ),
-        'browser_plugins' => array(),
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'media_generic',
-      'weight' => 4,
-    ),
-  );
-
   // Exported field_instance: 'node-thematic_narrative-title_field'.
   $field_instances['node-thematic_narrative-title_field'] = array(
     'bundle' => 'thematic_narrative',
@@ -826,7 +763,6 @@ function ct_thematic_narrative_field_default_field_instances() {
   t('Table');
   t('The narrative (title)');
   t('The subtitle of the narrative');
-  t('Thematic Image');
   t('Themes');
 
   return $field_instances;

@@ -21,11 +21,10 @@ function landbook_country_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'About the narrative',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_orgref',
-      1 => 'field_geographical_focus',
-      2 => 'language',
+      1 => 'language',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -52,7 +51,7 @@ function landbook_country_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Visualizations',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_indicators',
       1 => 'field_indicator_ranking',
@@ -64,7 +63,7 @@ function landbook_country_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'id' => '',
-        'classes' => 'group-view-coda field-group-fieldset',
+        'classes' => 'group-view-coda field-group-fieldset lp-2c',
         'description' => '',
       ),
       'formatter' => 'collapsed',
