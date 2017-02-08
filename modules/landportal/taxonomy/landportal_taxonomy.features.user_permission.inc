@@ -145,7 +145,7 @@ function landportal_taxonomy_user_default_permissions() {
   $permissions['merge landvoc_concepts terms'] = array(
     'name' => 'merge landvoc_concepts terms',
     'roles' => array(
-      'landportal' => 'landportal',
+      'administrator' => 'administrator',
     ),
     'module' => 'term_merge',
   );
@@ -173,7 +173,9 @@ function landportal_taxonomy_user_default_permissions() {
   // Exported permission: 'merge overarching_categories terms'.
   $permissions['merge overarching_categories terms'] = array(
     'name' => 'merge overarching_categories terms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'term_merge',
   );
 

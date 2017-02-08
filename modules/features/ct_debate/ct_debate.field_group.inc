@@ -21,10 +21,8 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'About this debate',
-    'weight' => '3',
-    'children' => array(
-      0 => 'field_file',
-    ),
+    'weight' => '12',
+    'children' => array(),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'label' => 'About this debate',
@@ -141,21 +139,23 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Debate configuration',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(
       0 => 'field_date',
-      1 => 'field_image',
-      2 => 'field_status',
+      1 => 'field_status',
+      2 => 'field_file',
       3 => 'field_facilitators',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Debate configuration',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
         'required_fields' => 1,
+        'id' => '',
+        'classes' => 'lp-2c',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_status|node|debate|form'] = $field_group;
@@ -202,7 +202,7 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_topics',
@@ -218,7 +218,7 @@ function ct_debate_field_group_info() {
         'classes' => 'group-topics-regions field-group-fieldset',
         'description' => '',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_topics_regions|node|debate|form'] = $field_group;

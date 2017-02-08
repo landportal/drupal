@@ -113,6 +113,9 @@ function ct_news_strongarm() {
         'xmlsitemap' => array(
           'weight' => '8',
         ),
+        'metatags' => array(
+          'weight' => '11',
+        ),
       ),
       'display' => array(
         'language' => array(

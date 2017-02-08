@@ -57,14 +57,13 @@ function ct_events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Event details',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_date',
-      1 => 'field_image',
-      2 => 'field_contact',
-      3 => 'field_file',
-      4 => 'field_link',
-      5 => 'locations',
+      1 => 'field_contact',
+      2 => 'field_file',
+      3 => 'field_link',
+      4 => 'locations',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -72,10 +71,10 @@ function ct_events_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'id' => '',
-        'classes' => 'group-details field-group-fieldset',
+        'classes' => 'group-details field-group-fieldset lp-2c',
         'description' => '',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_details|node|event|form'] = $field_group;
@@ -184,7 +183,7 @@ function ct_events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_topics',

@@ -59,6 +59,7 @@ features[field_group][] = group_authors|node|landlibrary_resource|form
 features[field_group][] = group_deprecated|node|landlibrary_resource|form
 features[field_group][] = group_detailresource|node|landlibrary_resource|form
 features[field_group][] = group_detailsaccessresource|node|landlibrary_resource|form
+features[field_group][] = group_details|node|landlibrary_resource|form
 features[field_group][] = group_doc_physical_chars|node|landlibrary_resource|form
 features[field_group][] = group_doc_rights|node|landlibrary_resource|form
 features[field_group][] = group_editors_pub|node|landlibrary_resource|default

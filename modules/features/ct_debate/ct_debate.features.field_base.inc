@@ -13,7 +13,7 @@ function ct_debate_field_default_field_bases() {
   // Exported field_base: 'field_facilitators'.
   $field_bases['field_facilitators'] = array(
     'active' => 1,
-    'cardinality' => 5,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_facilitators',
@@ -41,6 +41,7 @@ function ct_debate_field_default_field_bases() {
         ),
         'target_bundles' => array(),
       ),
+      'profile2_private' => FALSE,
       'target_type' => 'user',
     ),
     'translatable' => 0,

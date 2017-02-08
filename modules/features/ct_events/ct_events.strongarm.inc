@@ -102,16 +102,19 @@ function ct_events_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '5',
+          'weight' => '10',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'language' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
         'xmlsitemap' => array(
-          'weight' => '6',
+          'weight' => '7',
+        ),
+        'metatags' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(

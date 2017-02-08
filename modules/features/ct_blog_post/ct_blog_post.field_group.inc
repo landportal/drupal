@@ -68,7 +68,7 @@ function ct_blog_post_field_group_info() {
         'classes' => 'group-topics-regions field-group-fieldset',
         'description' => '',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_topics_regions|node|blog_post|form'] = $field_group;

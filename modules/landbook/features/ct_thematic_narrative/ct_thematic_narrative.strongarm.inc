@@ -99,7 +99,7 @@ function ct_thematic_narrative_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '10',
+          'weight' => '5',
         ),
         'locations' => array(
           'weight' => '8',
@@ -109,6 +109,9 @@ function ct_thematic_narrative_strongarm() {
         ),
         'xmlsitemap' => array(
           'weight' => '7',
+        ),
+        'metatags' => array(
+          'weight' => '10',
         ),
       ),
       'display' => array(

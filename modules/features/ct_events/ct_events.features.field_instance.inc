@@ -67,7 +67,7 @@ function ct_events_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -121,7 +121,7 @@ function ct_events_field_default_field_instances() {
         'size' => 80,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -209,7 +209,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 4,
+      'weight' => 8,
     ),
   );
 
@@ -277,7 +277,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 3,
+      'weight' => 12,
     ),
   );
 
@@ -416,7 +416,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -486,7 +486,7 @@ If it is only a one day event, the end date should be the same as the starting d
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 3,
+      'weight' => 9,
     ),
   );
 

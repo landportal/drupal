@@ -36,8 +36,8 @@ function ct_organization_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'id' => '',
-        'classes' => 'group-about field-group-fieldset',
-        'description' => 'Provide us with more detailed information',
+        'classes' => 'group-about field-group-fieldset lp-2c',
+        'description' => '',
       ),
       'formatter' => 'open',
     ),
@@ -55,27 +55,29 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Admin',
-    'weight' => '9',
+    'weight' => '7',
     'children' => array(
       0 => 'field_organization_relationship',
       1 => 'field_user',
       2 => 'field_thematic_promoted',
-      3 => 'path',
-      4 => 'xmlsitemap',
+      3 => 'field_country_promoted',
+      4 => 'path',
+      5 => 'xmlsitemap',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'open',
+      'label' => 'Admin',
       'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-admin field-group-div lp-2c',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '1',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => 'group-admin field-group-div',
-        'required_fields' => 1,
-        'id' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_admin|node|organization|form'] = $field_group;

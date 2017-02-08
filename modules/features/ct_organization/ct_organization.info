@@ -35,6 +35,7 @@ features[field_group][] = group_topics_regions|node|organization|teaser
 features[field_instance][] = node-organization-body
 features[field_instance][] = node-organization-field_acronym
 features[field_instance][] = node-organization-field_contact
+features[field_instance][] = node-organization-field_country_promoted
 features[field_instance][] = node-organization-field_email
 features[field_instance][] = node-organization-field_file
 features[field_instance][] = node-organization-field_geographical_focus
