@@ -244,7 +244,7 @@ $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
 $handler->display->display_options['row_options']['image'] = 'field_image';
 $handler->display->display_options['row_options']['title'] = 'title';
-$handler->display->display_options['row_options']['description'] = '';
+$handler->display->display_options['row_options']['description'] = 'path';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Title */
@@ -265,3 +265,11 @@ $handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_style' => 'featured',
   'image_link' => '',
 );
+/* Field: Content: Path */
+$handler->display->display_options['fields']['path']['id'] = 'path';
+$handler->display->display_options['fields']['path']['table'] = 'node';
+$handler->display->display_options['fields']['path']['field'] = 'path';
+$handler->display->display_options['fields']['path']['label'] = '';
+$handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]" class="more">read more</a>';
+$handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
