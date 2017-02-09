@@ -34,7 +34,7 @@ function landbook_vis_map_block_info() {
     'status'        => TRUE,
     'region'        => 'content',
     'visibility'    => BLOCK_VISIBILITY_LISTED,
-    'pages'         => "parnters/mlike",
+    'pages'         => "partners/mlike",
     'weight'        => 2
   );
   return $blocks;
