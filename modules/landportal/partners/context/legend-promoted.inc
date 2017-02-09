@@ -21,7 +21,7 @@ $context->reactions = array(
     'blocks' => array(
       'views-partners_content-block' => array(
         'module' => 'views',
-        'delta' => 'partners_content-block',
+        'delta' => 'partners_content-promoted',
         'region' => 'header',
         'weight' => '-1',
       ),
