@@ -141,37 +141,18 @@ function landportal_groups_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
-      ),
     ),
     'extra_fields' => array(
-      'form' => array(
-        'language' => array(
-          'weight' => '0',
-        ),
-        'locations' => array(
-          'weight' => '30',
-        ),
-        'title' => array(
-          'weight' => '-5',
-        ),
-        'path' => array(
-          'weight' => '30',
-        ),
-        'xmlsitemap' => array(
-          'weight' => '30',
-        ),
-      ),
+      'form' => array(),
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '4',
-            'visible' => FALSE,
+            'weight' => '2',
+            'visible' => TRUE,
           ),
           'listing' => array(
             'weight' => '1',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
         ),
       ),
@@ -216,23 +197,26 @@ function landportal_groups_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '0',
+          'weight' => '2',
         ),
         'locations' => array(
-          'weight' => '30',
+          'weight' => '6',
+        ),
+        'metatags' => array(
+          'weight' => '8',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '5',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '4',
         ),
       ),
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '1',
-            'visible' => FALSE,
+            'weight' => '2',
+            'visible' => TRUE,
           ),
         ),
       ),
@@ -250,9 +234,23 @@ function landportal_groups_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_partners_page';
+  $strongarm->value = '1';
+  $export['i18n_node_extended_partners_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_options_partners';
   $strongarm->value = array();
   $export['i18n_node_options_partners'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_partners_page';
+  $strongarm->value = array();
+  $export['i18n_node_options_partners_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -487,6 +485,7 @@ function landportal_groups_strongarm() {
   $strongarm->name = 'menu_options_partners_page';
   $strongarm->value = array(
     0 => 'menu-legend',
+    1 => 'menu-partners-mlike',
   );
   $export['menu_options_partners_page'] = $strongarm;
 
@@ -509,8 +508,7 @@ function landportal_groups_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_partners';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_partners'] = $strongarm;
 
