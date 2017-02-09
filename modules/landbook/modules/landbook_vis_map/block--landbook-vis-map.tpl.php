@@ -8,9 +8,7 @@
 <?php print render($title_suffix); ?>
       </header>
 <?php endif;?>
-      <div class="col-xs-12">
-        <div class="map-fluid">
-          <div id="<?php print $block_html_id; ?>-wrapper" class="map-fluid-wrapper"></div>
-        </div>
+      <div class="map-fluid">
+        <div id="<?php print $block_html_id; ?>-wrapper" class="map-fluid-wrapper"></div>
       </div>
     </section>

@@ -30,12 +30,12 @@ function landbook_vis_map_block_info() {
     'weight'        => -2
   );
   $blocks['partners_map'] = array(
-    'info'          => t('Landbook: Partners map'),
+    'info'          => t('Partners: MLIKE map'),
     'status'        => TRUE,
-    //'region'        => 'content',
-    //'visibility'    => BLOCK_VISIBILITY_LISTED,
-    //'pages'         => "book/countries",
-    //'weight'        => -2
+    'region'        => 'content',
+    'visibility'    => BLOCK_VISIBILITY_LISTED,
+    'pages'         => "parnters/mlike",
+    'weight'        => 2
   );
   return $blocks;
 }
@@ -97,8 +97,9 @@ function landbook_vis_map_block_view($delta = '') {
   case 'partners_map' :
     $jsAttr .= ', selectable: true, tooltip: function () { return "Click to visit " + this.point.name; }'
       . ', events: { click: function () { window.location.href = "/book/countries/" + this.id; } }'
-      . ', iso3: "VNM", zoom: 2.4 '
-      . ', serie: {name: "test", data: [ {id: "VNM", value: 100}, {id: "LAO", value: 100}, {id: "THA", value: 100}  ] }'
+      . ', iso3: "VNM", zoom: 3 '
+      . ', serie: {name: "test", data: [ {id: "VNM", value: 100}, {id: "LAO", value: 100}, {id: "KHM", value: 100}, {id: "THA", value: 100}, {id: "MMR", value: 100}, {id: "MYS", value: 100}  ] }'
+      //. ', serie: {name: "test", data: [ {id: "VNM", value: 100}, {id: "LAO", value: 100}, {id: "KHM", value: 100}, {id: "THA", value: 100}, {id: "MMR", value: 100}  ] }'
       ;
     $block['subject'] = '';
     $block['content'] = array(
