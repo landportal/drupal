@@ -39,17 +39,18 @@ $feeds_importer->config = array(
         'jsonpath_parser:16' => 'name',
         'jsonpath_parser:1' => 'participation[*].company.name',
         'jsonpath_parser:2' => 'government_entity[*].name',
-        'jsonpath_parser:3' => 'date_signed',
-        'jsonpath_parser:15' => 'year_signed',
+        'jsonpath_parser:3' => '',
+        'jsonpath_parser:15' => '',
         'jsonpath_parser:5' => 'language',
         'jsonpath_parser:6' => 'open_contracting_id',
-        'jsonpath_parser:17' => 'participation[*].company.identifier.creator.spatial',
         'jsonpath_parser:9' => 'country.code',
+        'jsonpath_parser:21' => 'participation[*].company.identifier.creator.spatial',
         'jsonpath_parser:14' => 'number_of_pages',
         'jsonpath_parser:19' => 'type',
         'jsonpath_parser:18' => 'resource',
         'jsonpath_parser:20' => 'contract_type',
-        'jsonpath_parser:21' => 'participation[*].company.identifier.creator.spatial',
+        'jsonpath_parser:22' => 'date_signed',
+        'jsonpath_parser:23' => 'year_signed',
       ),
       'debug' => array(
         'options' => array(
@@ -61,13 +62,14 @@ $feeds_importer->config = array(
           'jsonpath_parser:15' => 0,
           'jsonpath_parser:5' => 0,
           'jsonpath_parser:6' => 0,
-          'jsonpath_parser:17' => 0,
           'jsonpath_parser:9' => 0,
+          'jsonpath_parser:21' => 0,
           'jsonpath_parser:14' => 0,
           'jsonpath_parser:19' => 0,
           'jsonpath_parser:18' => 0,
           'jsonpath_parser:20' => 0,
-          'jsonpath_parser:21' => 0,
+          'jsonpath_parser:22' => 0,
+          'jsonpath_parser:23' => 0,
         ),
       ),
       'allow_override' => 0,
@@ -118,128 +120,134 @@ $feeds_importer->config = array(
           'language' => 'und',
         ),
         6 => array(
-          'source' => 'jsonpath_parser:3',
-          'target' => 'field_doc_creation_date:start',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        7 => array(
-          'source' => 'jsonpath_parser:15',
-          'target' => 'field_doc_creation_date:start',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        8 => array(
           'source' => 'jsonpath_parser:5',
           'target' => 'field_doc_language',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        9 => array(
+        7 => array(
           'source' => 'jsonpath_parser:6',
           'target' => 'Temporary target 4',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        10 => array(
+        8 => array(
           'source' => 'Blank source 5',
           'target' => 'field_doc_identifier',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        11 => array(
+        9 => array(
           'source' => 'Blank source 6',
           'target' => 'field_doc_is_shown_at:url',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        12 => array(
+        10 => array(
           'source' => 'jsonpath_parser:9',
           'target' => 'field_geographical_focus',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        13 => array(
+        11 => array(
           'source' => 'jsonpath_parser:21',
           'target' => 'field_geographical_focus',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        14 => array(
+        12 => array(
           'source' => 'Blank source 12',
           'target' => 'field_doc_thumb:uri',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        15 => array(
+        13 => array(
           'source' => 'jsonpath_parser:14',
           'target' => 'field_doc_pagination',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        16 => array(
+        14 => array(
           'source' => 'Blank source 13',
           'target' => 'field_doc_licencing',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        17 => array(
+        15 => array(
           'source' => 'Blank source 14',
           'target' => 'field_doc_type',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        18 => array(
+        16 => array(
           'source' => 'Blank source 8',
           'target' => 'field_related_domains',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        19 => array(
+        17 => array(
           'source' => 'Blank source 10',
           'target' => 'field_related_topics',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        20 => array(
+        18 => array(
           'source' => 'Blank source 16',
           'target' => 'field_related_topics',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        21 => array(
+        19 => array(
           'source' => 'jsonpath_parser:19',
           'target' => 'Temporary target 12',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        22 => array(
+        20 => array(
           'source' => 'Blank source 17',
           'target' => 'field_related_topics',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        23 => array(
+        21 => array(
           'source' => 'jsonpath_parser:18',
           'target' => 'Temporary target 11',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        24 => array(
+        22 => array(
           'source' => 'jsonpath_parser:20',
           'target' => 'Temporary target 13',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        25 => array(
+        23 => array(
           'source' => 'Blank source 11',
           'target' => 'field_doc_description',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        26 => array(
+        24 => array(
           'source' => 'Blank source 18',
           'target' => 'field_doc_description',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        25 => array(
+          'source' => 'jsonpath_parser:22',
+          'target' => 'Temporary target 14',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        26 => array(
+          'source' => 'jsonpath_parser:23',
+          'target' => 'Temporary target 15',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        27 => array(
+          'source' => 'Blank source 19',
+          'target' => 'field_doc_creation_date:start',
           'unique' => FALSE,
           'language' => 'und',
         ),

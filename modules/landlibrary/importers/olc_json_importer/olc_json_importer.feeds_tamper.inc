@@ -140,6 +140,7 @@ $feeds_tamper->settings = array(
       'target' => 'palm oil industries',
     ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 3;
 $feeds_tamper->description = 'Find replace multiple "palm oil industries"';
@@ -213,6 +214,28 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Rewrite (IT is not a Contract)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-blank_source_19-php';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'Blank source 19';
+$feeds_tamper->plugin_id = 'php';
+$feeds_tamper->settings = array(
+  'php' => '$signed_date = $item[\'jsonpath_parser:22\'];
+$year_date = $item[\'jsonpath_parser:23\'];
+
+if (empty($signed_date)) {
+   return $year_date;
+} else {
+   return $signed_date;
+}',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Execute php code';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -329,7 +352,7 @@ $feeds_tamper->description = 'Set value "Land Use, Management & Investment"';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'olc_json_importer-jsonpath_parser_15-feeds_tamper_conditional';
 $feeds_tamper->importer = 'olc_json_importer';
@@ -476,6 +499,7 @@ $feeds_tamper->settings = array(
       'target' => 'TLS',
     ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Find replace multiple';
@@ -660,6 +684,7 @@ $feeds_tamper->settings = array(
       'target' => 'TLS',
     ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 5;
 $feeds_tamper->description = 'Find replace multiple';
