@@ -51,15 +51,6 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="collapsible collapsed panel panel-default">
-                  <div class="panel-heading">
-                    <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-info">Information on indicators</a>
-                  </div>
-                  <div id="vggt-info" class="panel-collapse collapse">
-                    <div class="panel-body"<?php print $content_attributes; ?>><?php print $content ?></div>
-                  </div>
-                </div>
             </div>
           </div>
               <div class="legend text-center">
@@ -71,4 +62,6 @@
                   <li><span class="value-na"></span> <?php print t('Missing Value'); ?></li>
                 </ul>
               </div>
+          <hr/>
+          <footer><div class="panel-body"<?php print $content_attributes; ?>><?php print $content ?></div></footer>
         </article>
