@@ -43,7 +43,8 @@
 
                 <div class="collapsible collapsed panel panel-default">
                   <div class="panel-heading">
-                    <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-laws">Relevant laws</a></div>
+                    <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-laws">Relevant laws</a>
+                  </div>
                   <div id="vggt-laws" class="panel-collapse collapse">
                     <div class="panel-body">
                       <div class="countryInfo"></div>
@@ -54,11 +55,11 @@
                 <div class="collapsible collapsed panel panel-default">
                   <div class="panel-heading">
                     <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-info">Information on indicators</a>
+                  </div>
                   <div id="vggt-info" class="panel-collapse collapse">
                     <div class="panel-body"<?php print $content_attributes; ?>><?php print $content ?></div>
                   </div>
                 </div>
-              <!-- </div> -->
             </div>
           </div>
               <div class="legend text-center">
