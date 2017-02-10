@@ -35,6 +35,7 @@ projects:
   - elysia_cron
   - email
   - entity
+  - entity_embed
   - entity_translation
   - entityconnect
   - entityreference

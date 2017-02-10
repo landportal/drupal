@@ -14,6 +14,9 @@ api: 2
 #   projects:
 #     subdir: "sites/all/modules"
 projects:
+  entityreference_view_widget:
+    patch:
+      - "https://www.drupal.org/files/issues/entityreference_view_widget_suffix-2524296-2.patch"
   profile2:
     version: ~
     patch:
