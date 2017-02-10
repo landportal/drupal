@@ -20,8 +20,8 @@ $context->reactions = array(
       'webform-client-block-14275' => array(
         'module' => 'webform',
         'delta' => 'client-block-14275',
-        'region' => 'sidebar_second',
-        'weight' => '-10',
+        'region' => 'content',
+        'weight' => '1',
       ),
     ),
   ),
