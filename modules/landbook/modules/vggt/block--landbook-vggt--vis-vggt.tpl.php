@@ -44,7 +44,7 @@
                   <div class="panel-heading">
                      <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-exp">Explanation</a>
                   </div>
-                  <div id="vggt-exp" class="panel-collapse collapse">
+                  <div id="vggt-exp" class="panel-collapse collapse in">
                     <div class="panel-body">
                       <div class="panelInfo"><p>Please, select year and panels to show the info.</p></div>
                     </div>
@@ -55,7 +55,7 @@
                   <div class="panel-heading">
                     <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-laws">Relevant laws</a>
                   </div>
-                  <div id="vggt-laws" class="panel-collapse collapse">
+                  <div id="vggt-laws" class="panel-collapse collapse in">
                     <div class="panel-body">
                       <div class="countryInfo"><p>No relevant laws.</p></div>
                     </div>
