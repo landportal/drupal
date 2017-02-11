@@ -28,6 +28,16 @@
             <div id="<?php print $block_html_id; ?>-wrapper" class="">
               <ul class="list-unstyled text-center"><li class="panelVal values-panel"></li></ul>
 
+              <div class="legend text-center">
+                <em><?php print t('Legend'); ?>: <?php print t('National laws adoption of the VGGT principle'); ?></em>
+                <ul class="list-unstyled list-inline values-legend">
+                  <li><span class="value-a"></span> <?php print t('Fully adopt'); ?></li>
+                  <li><span class="value-b"></span> <?php print t('Partially adopt'); ?></li>
+                  <li><span class="value-c"></span> <?php print t('Not adopted'); ?></li>
+                  <li><span class="value-na"></span> <?php print t('Missing Value'); ?></li>
+                </ul>
+              </div>
+
               <!-- <div class="panel-group" id="accordion" aria-multiselectable="true"> -->
 
                 <div class="collapsible collapsed panel panel-default">
@@ -53,15 +63,6 @@
                 </div>
             </div>
           </div>
-              <div class="legend text-center">
-                <em><?php print t('Legend'); ?>: <?php print t('National laws adoption of the VGGT principle'); ?></em>
-                <ul class="list-unstyled list-inline values-legend">
-                  <li><span class="value-a"></span> <?php print t('Fully adopt'); ?></li>
-                  <li><span class="value-b"></span> <?php print t('Partially adopt'); ?></li>
-                  <li><span class="value-c"></span> <?php print t('Not adopted'); ?></li>
-                  <li><span class="value-na"></span> <?php print t('Missing Value'); ?></li>
-                </ul>
-              </div>
           <hr/>
           <footer><div class="panel-body"<?php print $content_attributes; ?>><?php print $content ?></div></footer>
         </article>
