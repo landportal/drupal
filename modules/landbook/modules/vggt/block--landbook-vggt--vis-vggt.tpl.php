@@ -57,7 +57,7 @@
                   </div>
                   <div id="vggt-laws" class="panel-collapse collapse">
                     <div class="panel-body">
-                      <div class="countryInfo"></div>
+                      <div class="countryInfo"><p>No relevant laws.</p></div>
                     </div>
                   </div>
                 </div>
