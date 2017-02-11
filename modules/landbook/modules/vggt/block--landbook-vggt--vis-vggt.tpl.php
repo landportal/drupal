@@ -26,7 +26,7 @@
           </header>
           <div class="view-coda-vis">
             <div id="<?php print $block_html_id; ?>-wrapper" class="">
-              <ul class="list-unstyled text-center"><li class="panelVal values-panel"></li></ul>
+              <ul class="list-unstyled"><li class="panelVal values-panel"></li></ul>
 
               <div class="legend text-center">
                 <em><?php print t('Legend'); ?>: <?php print t('National laws adoption of the VGGT principle'); ?></em>
