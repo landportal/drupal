@@ -9,9 +9,10 @@ function landbook_view_coda_library() {
         'title' => 'JS View Country Data',
         'website' => 'https://github.com/landportal/js-view-coda/',
         'version' => '0.0.1',
-        'js' => array(
-            drupal_get_path('module', 'landbook_view_coda') . '/view-coda.js' => array(),
-        ),
+        'js' => array(array(
+          'type' => 'inline',
+          'data' => "var $ = jQuery.noConflict(); $(document).ready(function($) { LBV = new lbvis({prefix: '/sparql?default-graph-uri=&query='}); });"
+        )),
         'dependencies' => array(
             array('landbook_view_coda', 'lbvis'),
         ),
