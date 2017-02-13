@@ -39,6 +39,39 @@ function landportal_groups_field_group_info() {
   );
   $field_groups['group_details|node|partners_page|form'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|node|partners|form';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'partners';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Details',
+    'weight' => '3',
+    'children' => array(
+      0 => 'group_group',
+      1 => 'field_orgref',
+      2 => 'field_featured',
+      3 => 'locations',
+      4 => 'field_promoted',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Details',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-details field-group-fieldset lp-2c',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_details|node|partners|form'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Details');
