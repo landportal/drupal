@@ -17,7 +17,24 @@ function landportal_partners_views_api($module = NULL, $api = NULL) {
  */
 function landportal_partners_views_default_views() {
     $export = array();
+    include 'views/partners.inc';
+    $export[$view->name] = $view;
     include 'views/partners_content.inc';
     $export[$view->name] = $view;
     return $export;
+}
+
+// Override CKeditor JS
+function landportal_partners_ckeditor_settings_alter(&$settings, $context) {
+  global $node, $page;
+  $path = drupal_get_path('module', 'landportal_partners');
+  $settings['stylesCombo_stylesSet'] = "default:/" . $path . "/ckeditor.styles.js";
+  $settings['contentsCss'][] = "/" . drupal_get_path('theme', 'lpbs') . "/css/style.css";
+  /* dsm('hohohoho'); */
+  /* dpm($page); */
+  /* dpm($context); */
+  // We only add the settings to ckeditor wysiwyg profiles.
+//  if ($context['profile']->editor == 'ckeditor') {
+  //$settings['bodyClass'] = 'partners-page';
+//  dpm($settings);
 }
