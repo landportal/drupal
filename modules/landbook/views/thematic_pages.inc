@@ -21,7 +21,10 @@ $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'full';
-$handler->display->display_options['pager']['options']['items_per_page'] = '9';
+$handler->display->display_options['pager']['options']['items_per_page'] = '12';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['row_plugin'] = 'node';
 $handler->display->display_options['row_options']['links'] = FALSE;
@@ -29,7 +32,7 @@ $handler->display->display_options['row_options']['links'] = FALSE;
 $handler->display->display_options['header']['area']['id'] = 'area';
 $handler->display->display_options['header']['area']['table'] = 'views';
 $handler->display->display_options['header']['area']['field'] = 'area';
-$handler->display->display_options['header']['area']['content'] = '<p class="lead">Get land-related information by theme. Indeed, land and land governance are multidimensional concepts related to a variety of intertwined issues. Try not to get lost and click on a thematic portfolio to read the dedicated thematic narrative, to discover the existing data, to check the latest news, to retrive specific bibliographic resources and much more.</p>';
+$handler->display->display_options['header']['area']['content'] = '<p class="lead">Access land-related information by theme. Indeed, land and land governance are multidimensional concepts related to a variety of intertwined issues. Try not to get lost and click on a thematic portfolio to read the dedicated thematic narrative, to discover the existing data, to check the latest news, to retrive specific bibliographic resources and much more.</p>';
 $handler->display->display_options['header']['area']['format'] = 'filtered_html';
 /* Relationship: Entity Reference: Referenced Entity */
 $handler->display->display_options['relationships']['field_landvoc_to_target_id']['id'] = 'field_landvoc_to_target_id';
@@ -68,10 +71,11 @@ $handler->display->display_options['filters']['type']['value'] = array(
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-grid-3';
 $handler->display->display_options['field_language'] = 'und';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['row_class'] = 'col-sm-4 text-center';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -100,7 +104,7 @@ $handler->display->display_options['fields']['field_image']['alter']['path'] = '
 $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => '',
+  'image_style' => 'square_thumbnail',
   'image_link' => '',
 );
 /* Field: Taxonomy term: Name */
@@ -120,6 +124,18 @@ $handler->display->display_options['fields']['name_field']['settings'] = array(
   'title_class' => '',
 );
 $handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
+/* Field: Content: Published */
+$handler->display->display_options['fields']['status']['id'] = 'status';
+$handler->display->display_options['fields']['status']['table'] = 'node';
+$handler->display->display_options['fields']['status']['field'] = 'status';
+$handler->display->display_options['fields']['status']['label'] = '';
+$handler->display->display_options['fields']['status']['element_class'] = 'error ';
+$handler->display->display_options['fields']['status']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['status']['element_wrapper_class'] = 'alert alert-danger';
+$handler->display->display_options['fields']['status']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['status']['type'] = 'custom';
+$handler->display->display_options['fields']['status']['type_custom_false'] = 'NOT PUBLISHED';
+$handler->display->display_options['fields']['status']['not'] = 0;
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';

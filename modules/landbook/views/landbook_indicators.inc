@@ -27,6 +27,12 @@ $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
+/* Header: Global: Text area */
+$handler->display->display_options['header']['area']['id'] = 'area';
+$handler->display->display_options['header']['area']['table'] = 'views';
+$handler->display->display_options['header']['area']['field'] = 'area';
+$handler->display->display_options['header']['area']['content'] = '<p class="lead">Access land-related information by indicator. Discover the list of different indicators available on the Land Book, filter the list of indicators by theme, get detailed information on each of them and download the data you need.</p>';
+$handler->display->display_options['header']['area']['format'] = 'filtered_html';
 /* Relationship: Field: Themes (field_related_themes) (translated) */
 $handler->display->display_options['relationships']['field_related_themes_tid_i18n']['id'] = 'field_related_themes_tid_i18n';
 $handler->display->display_options['relationships']['field_related_themes_tid_i18n']['table'] = 'field_data_field_related_themes';

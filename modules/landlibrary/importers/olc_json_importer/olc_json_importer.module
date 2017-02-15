@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Code for OLC importer using JSON.
+ */
+
+include_once('olc_json_importer.feeds_importer.inc');
+include_once('olc_json_importer.feeds_tamper.inc');
+
+function olc_json_importer_ctools_plugin_api($module = '', $api = '') {
+    if ($module == "feeds_tamper" && $api == "feeds_tamper_default") {
+        return array("version" => "2");
+    }
+    if ($module == "feeds" && $api == "feeds_importer_default") {
+        return array("version" => "1");
+    }
+}

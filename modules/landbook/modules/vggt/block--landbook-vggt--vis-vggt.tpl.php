@@ -2,7 +2,8 @@
 /* VGGT visualization block */
 //dpm($block);
 ?>
-        <article id="<?php print $block_html_id; ?>" class="view-coda view-coda-ranking <?php print $classes; ?>"<?php print $attributes; ?>>
+        <article><br /></article>
+        <article style="background-color:#F0F0F0" id="<?php print $block_html_id; ?>" class="view-coda view-coda-ranking <?php print $classes; ?>"<?php print $attributes; ?>>
           <header class="text-center">
 <?php print render($title_prefix); ?>
 <?php if ($block->subject): ?>
@@ -26,41 +27,8 @@
           </header>
           <div class="view-coda-vis">
             <div id="<?php print $block_html_id; ?>-wrapper" class="">
-              <ul class="list-unstyled text-center"><li class="panelVal values-panel"></li></ul>
+              <ul class="list-unstyled"><li class="panelVal values-panel"></li></ul>
 
-              <!-- <div class="panel-group" id="accordion" aria-multiselectable="true"> -->
-
-                <div class="collapsible collapsed panel panel-default">
-                  <div class="panel-heading">
-                     <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-exp">Explanation</a>
-                  </div>
-                  <div id="vggt-exp" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <div class="panelInfo"><p>Please, select year and panels to show the info.</p></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="collapsible collapsed panel panel-default">
-                  <div class="panel-heading">
-                    <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-laws">Relevant laws</a></div>
-                  <div id="vggt-laws" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <div class="countryInfo"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="collapsible collapsed panel panel-default">
-                  <div class="panel-heading">
-                    <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-info">Information on indicators</a>
-                  <div id="vggt-info" class="panel-collapse collapse">
-                    <div class="panel-body"<?php print $content_attributes; ?>><?php print $content ?></div>
-                  </div>
-                </div>
-              <!-- </div> -->
-            </div>
-          </div>
               <div class="legend text-center">
                 <em><?php print t('Legend'); ?>: <?php print t('National laws adoption of the VGGT principle'); ?></em>
                 <ul class="list-unstyled list-inline values-legend">
@@ -70,4 +38,32 @@
                   <li><span class="value-na"></span> <?php print t('Missing Value'); ?></li>
                 </ul>
               </div>
+
+              <!-- <div class="panel-group" id="accordion" aria-multiselectable="true"> -->
+
+                <div class="collapsible collapsed panel panel-default">
+                  <div class="panel-heading">
+                     <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-exp">Explanation</a>
+                  </div>
+                  <div id="vggt-exp" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="panelInfo"><p>Please, select year and panels to show the info.</p></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="margin-top:1em" class="collapsible collapsed panel panel-default">
+                  <div class="panel-heading">
+                    <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-laws">Relevant laws</a>
+                  </div>
+                  <div id="vggt-laws" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="countryInfo"><p>No relevant laws.</p></div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <hr/>
+          <footer><div class="panel-body"<?php print $content_attributes; ?>><?php print $content ?></div></footer>
         </article>
