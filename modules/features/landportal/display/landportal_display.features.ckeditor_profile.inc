@@ -123,7 +123,7 @@ function landportal_display_ckeditor_profile_defaults() {
     [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'BidiLtr\',\'BidiRtl\'],
     [\'Link\',\'Unlink\',\'Anchor\'],
     \'/\',
-    [\'CreateDiv\',\'ShowBlocks\',\'BGColor\',\'TextColor\',\'-\',\'Styles\',\'FontSize\',\'Templates\']
+    [\'CreateDiv\',\'ShowBlocks\',\'BGColor\',\'TextColor\',\'-\',\'Styles\',\'FontSize\',\'Templates\',\'node\']
 ]',
         'expand' => 't',
         'default' => 't',
@@ -182,6 +182,18 @@ config.stylesSet = [
               ),
             ),
             'default' => 't',
+          ),
+          'drupalentity' => array(
+            'name' => 'drupalentity',
+            'desc' => 'Plugin for embedding entities',
+            'path' => '/sites/all/modules/entity_embed/js/plugins/drupalentity/',
+            'default' => 'f',
+            'buttons' => array(
+              'node' => array(
+                'label' => 'Content',
+                'icon' => 'entity.png',
+              ),
+            ),
           ),
           'media' => array(
             'name' => 'media',

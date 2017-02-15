@@ -13,15 +13,17 @@ CKEDITOR.addTemplates("default", {
           + '</div>'
           + '</div>'
         },
-        { title:"2 Columns with background",
+        { title:"2 Columns with background 1",
           image:"template2.gif",
           description:"2 columns side by side with a colored background.",
           html:
           '<div class="partners-colored-background">'
+          + '<div class="col-sm-offset-1 col-sm-10">'
           + '<h2>title</h2>'
           + '<div class="row clearfix">'
           + '<div class="col-sm-6"><p>left</p></div>'
           + '<div class="col-sm-6"><p>right</p></div>'
+          + '</div>'
           + '</div>'
           + '</div>'
         },
@@ -29,12 +31,29 @@ CKEDITOR.addTemplates("default", {
           image:"template2.gif",
           description:"2 columns side by side with a colored background.",
           html:
-          '<p style="clear:both;">before</p>'
-          + '<div class="partners-colored-background-2 clearfix">'
-          + '  <div class="col-sm-6">left</div>'
-          + '  <div class="col-sm-6">right</div>'
+          '<div class="partners-colored-background-1">'
+          + '<div class="col-sm-offset-1 col-sm-10">'
+          + '<h2>title</h2>'
+          + '<div class="row clearfix">'
+          + '<div class="col-sm-6"><p>left</p></div>'
+          + '<div class="col-sm-6"><p>right</p></div>'
           + '</div>'
-          + '<p style="clear:both;">after</p>'
+          + '</div>'
+          + '</div>'
+        },
+        { title:"2 Columns with background 3",
+          image:"template2.gif",
+          description:"2 columns side by side with a colored background.",
+          html:
+          '<div class="partners-colored-background-2">'
+          + '<div class="col-sm-offset-1 col-sm-10">'
+          + '<h2>title</h2>'
+          + '<div class="row clearfix">'
+          + '<div class="col-sm-6"><p>left</p></div>'
+          + '<div class="col-sm-6"><p>right</p></div>'
+          + '</div>'
+          + '</div>'
+          + '</div>'
         },
         // repeat
     ]
