@@ -14,6 +14,9 @@ api: 2
 #   projects:
 #     subdir: "sites/all/modules"
 projects:
+  drupal:
+    patch:
+      - "https://github.com/landportal/drupal/files/766584/change-dc-to-dct.txt"
   profile2:
     version: ~
     patch:

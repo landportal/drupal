@@ -30,7 +30,7 @@ projects:
   - date
   - disable_messages
   - draggableviews
-  - drupal
+#  - drupal
   - ds
   - elysia_cron
   - email
