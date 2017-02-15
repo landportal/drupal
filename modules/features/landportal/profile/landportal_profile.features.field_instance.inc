@@ -90,7 +90,7 @@ function landportal_profile_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -158,10 +158,11 @@ function landportal_profile_field_default_field_instances() {
         'weight' => 3,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 8,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -237,7 +238,7 @@ function landportal_profile_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -304,7 +305,7 @@ function landportal_profile_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -373,9 +374,10 @@ function landportal_profile_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'link_default',
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'above',
@@ -500,10 +502,11 @@ function landportal_profile_field_default_field_instances() {
         'weight' => 1,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 9,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -577,7 +580,7 @@ function landportal_profile_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -788,16 +791,15 @@ function landportal_profile_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 4,
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
