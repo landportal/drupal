@@ -2,7 +2,8 @@
 /* VGGT visualization block */
 //dpm($block);
 ?>
-        <article id="<?php print $block_html_id; ?>" class="view-coda view-coda-ranking <?php print $classes; ?>"<?php print $attributes; ?>>
+        <article><br /></article>
+        <article style="background-color:#F0F0F0" id="<?php print $block_html_id; ?>" class="view-coda view-coda-ranking <?php print $classes; ?>"<?php print $attributes; ?>>
           <header class="text-center">
 <?php print render($title_prefix); ?>
 <?php if ($block->subject): ?>
@@ -51,7 +52,7 @@
                   </div>
                 </div>
 
-                <div class="collapsible collapsed panel panel-default">
+                <div style="margin-top:1em" class="collapsible collapsed panel panel-default">
                   <div class="panel-heading">
                     <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-laws">Relevant laws</a>
                   </div>
