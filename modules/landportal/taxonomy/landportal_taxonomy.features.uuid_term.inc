@@ -24,15 +24,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 539,
-          'revision_id' => 539,
           'language' => 'und',
           'source' => '',
-          'uid' => 30,
           'status' => 1,
           'translate' => 0,
           'created' => 1461163450,
-          'changed' => 1461163450,
+          'entity_uuid' => '04125a5f-4dfc-4c52-a3d4-236cf337deae',
+          'user_uuid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
         ),
       ),
     ),
@@ -52,7 +50,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'International or regional financial institution',
           'format' => NULL,
-          'safe_value' => 'International or regional financial institution',
         ),
       ),
     ),
@@ -62,7 +59,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'value' => '',
           'summary' => NULL,
           'format' => 'filtered_html',
-          'safe_value' => '',
           'safe_summary' => '',
         ),
       ),
@@ -72,21 +68,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 7472,
-          'revision_id' => 7472,
           'language' => 'en',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1461586536,
-          'changed' => 1461586536,
+          'entity_uuid' => '168c254f-4c88-49fb-86c8-3163e25272e6',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'International or regional financial institution',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-7472-0',
-    'description_original' => '',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -106,7 +97,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'Non-profit organization',
           'format' => NULL,
-          'safe_value' => 'Non-profit organization',
         ),
       ),
     ),
@@ -116,7 +106,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'value' => '',
           'summary' => NULL,
           'format' => 'filtered_html',
-          'safe_value' => '',
           'safe_summary' => '',
         ),
       ),
@@ -126,21 +115,112 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 7273,
-          'revision_id' => 7273,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1453893930,
-          'changed' => 1453893930,
+          'entity_uuid' => '24f045f4-13ce-46b9-9935-bbac1a9a814c',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'Non-profit organization',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-7273-0',
-    'description_original' => '',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Creative Commons Attribution-NonCommercial-NoDerivs',
+    'description' => '<p>This license only allowing others to download your works and share them with others as long as they credit you, but they can’t change them in any way or use them commercially.</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => '2a4cb06b-c34e-46b1-89f7-34d7c9f80c8c',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'licences',
+    'synonyms_synonyms' => array(),
+    'field_rdflicense_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://purl.org/NET/rdflicense/cc-by-nc-nd4.0',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
+    'field_acronym' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'CC-BY-NC-ND',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'en',
+          'source' => '',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1484839186,
+          'entity_uuid' => '2a4cb06b-c34e-46b1-89f7-34d7c9f80c8c',
+          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Journal',
+    'description' => '<p>An&nbsp;academic&nbsp;or&nbsp;scholarly journal&nbsp;is a&nbsp;periodical publication&nbsp;in which scholarship relating to a particular&nbsp;academic discipline&nbsp;is published.</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => '2aeddca5-861e-497f-a67f-defcb400c3fe',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'organization_types',
+    'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Journal',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'description_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => '<p>An&nbsp;academic&nbsp;or&nbsp;scholarly journal&nbsp;is a&nbsp;periodical publication&nbsp;in which scholarship relating to a particular&nbsp;academic discipline&nbsp;is published.</p>
+',
+          'summary' => '',
+          'format' => 'filtered_html',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'en',
+          'source' => '',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1474543907,
+          'entity_uuid' => '2aeddca5-861e-497f-a67f-defcb400c3fe',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+        ),
+      ),
+    ),
     'path' => array(
       'pathauto' => 1,
     ),
@@ -161,7 +241,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'Governmental institution',
           'format' => NULL,
-          'safe_value' => 'Governmental institution',
         ),
       ),
     ),
@@ -172,8 +251,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
 ',
           'summary' => NULL,
           'format' => 'filtered_html',
-          'safe_value' => '<p>Local, provincial or nationla governmental institutions.</p>
-',
           'safe_summary' => '',
         ),
       ),
@@ -183,22 +260,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 7883,
-          'revision_id' => 7883,
           'language' => 'en',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1467905087,
-          'changed' => 1467905087,
+          'entity_uuid' => '36446160-b9d7-49ae-8357-03819751e8e1',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'Governmental institution',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-7883-0',
-    'description_original' => '<p>Local, provincial or nationla governmental institutions.</p>
-',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -218,7 +289,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'Non Governmental organization',
           'format' => NULL,
-          'safe_value' => 'Non Governmental organization',
         ),
       ),
     ),
@@ -228,7 +298,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'value' => '',
           'summary' => NULL,
           'format' => 'plain_text',
-          'safe_value' => '',
           'safe_summary' => '',
         ),
       ),
@@ -238,21 +307,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3379,
-          'revision_id' => 3379,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1461586271,
-          'changed' => 1461586271,
+          'entity_uuid' => '41e2cc4d-daa1-4936-880c-effba12854f6',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'Non Governmental organization',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-3379-0',
-    'description_original' => '',
     'path' => array(
       'pathauto' => 0,
     ),
@@ -271,15 +335,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 537,
-          'revision_id' => 537,
           'language' => 'und',
           'source' => '',
-          'uid' => 30,
           'status' => 1,
           'translate' => 0,
           'created' => 1461163450,
-          'changed' => 1461163450,
+          'entity_uuid' => '4ee0ea4c-ab0f-48cf-89df-ee1100e656e3',
+          'user_uuid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
         ),
       ),
     ),
@@ -298,15 +360,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 538,
-          'revision_id' => 538,
           'language' => 'und',
           'source' => '',
-          'uid' => 30,
           'status' => 1,
           'translate' => 0,
           'created' => 1461163450,
-          'changed' => 1461163450,
+          'entity_uuid' => '5e5e6046-7a3f-4916-bd6b-6b5f845687b2',
+          'user_uuid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
         ),
       ),
     ),
@@ -326,7 +386,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'United Nations Agency',
           'format' => NULL,
-          'safe_value' => 'United Nations Agency',
         ),
       ),
     ),
@@ -336,7 +395,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'value' => '',
           'summary' => NULL,
           'format' => 'filtered_html',
-          'safe_value' => '',
           'safe_summary' => '',
         ),
       ),
@@ -346,21 +404,63 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 7471,
-          'revision_id' => 7471,
           'language' => 'en',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1461586220,
-          'changed' => 1461586220,
+          'entity_uuid' => '6033cb9a-c3d5-4a90-95b9-bb71dfb39ce4',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'United Nations Agency',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-7471-0',
-    'description_original' => '',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
+    'description' => '<p>This license lets others remix, tweak, and build upon your work non-commercially, as long as they credit you and license their new creations under the identical terms.</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => '64eb8fde-3d81-4468-8e9c-d481207c3700',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'licences',
+    'synonyms_synonyms' => array(),
+    'field_rdflicense_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://purl.org/NET/rdflicense/cc-by-nc-sa4.0',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
+    'field_acronym' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'CC-BY-NC-SA',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'en',
+          'source' => '',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1484839221,
+          'entity_uuid' => '64eb8fde-3d81-4468-8e9c-d481207c3700',
+          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
+        ),
+      ),
+    ),
     'path' => array(
       'pathauto' => 1,
     ),
@@ -379,15 +479,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 6119,
-          'revision_id' => 6119,
           'language' => 'en',
           'source' => '',
-          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
           'created' => 1467288331,
-          'changed' => 1467288331,
+          'entity_uuid' => '6694feb9-cb21-4bc4-b6fe-f4b41e96728a',
+          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
         ),
       ),
     ),
@@ -419,7 +517,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'CC-BY',
           'format' => NULL,
-          'safe_value' => 'CC-BY',
         ),
       ),
     ),
@@ -428,15 +525,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3651,
-          'revision_id' => 3651,
           'language' => 'und',
           'source' => '',
-          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
           'created' => 1484839067,
-          'changed' => 1484839067,
+          'entity_uuid' => '6fc71047-4180-4b14-8239-2c70e1ac4819',
+          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
         ),
       ),
     ),
@@ -459,7 +554,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'Intergovernmental or Multilateral organization',
           'format' => NULL,
-          'safe_value' => 'Intergovernmental or Multilateral organization',
         ),
       ),
     ),
@@ -469,7 +563,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'value' => '',
           'summary' => NULL,
           'format' => 'plain_text',
-          'safe_value' => '',
           'safe_summary' => '',
         ),
       ),
@@ -479,21 +572,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3384,
-          'revision_id' => 3384,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1461586398,
-          'changed' => 1461586398,
+          'entity_uuid' => '77c8540c-8efb-4188-957e-3b8991c6c7fd',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'Intergovernmental or Multilateral organization',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-3384-0',
-    'description_original' => '',
     'path' => array(
       'pathauto' => 0,
     ),
@@ -513,7 +601,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'International professional body',
           'format' => NULL,
-          'safe_value' => 'International professional body',
         ),
       ),
     ),
@@ -523,7 +610,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'value' => '',
           'summary' => NULL,
           'format' => 'filtered_html',
-          'safe_value' => '',
           'safe_summary' => '',
         ),
       ),
@@ -533,21 +619,63 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 7475,
-          'revision_id' => 7475,
           'language' => 'en',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1461586590,
-          'changed' => 1461586590,
+          'entity_uuid' => '85fddaff-46fc-4216-8885-30a17334c1fe',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'International professional body',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-7475-0',
-    'description_original' => '',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Creative Commons Attribution-NoDerivs',
+    'description' => '<p>This license allows for redistribution, commercial and non-commercial, as long as it is passed along unchanged and in whole, with credit to you.</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => '8be61b45-c668-43ac-ae21-113219ce189d',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'licences',
+    'synonyms_synonyms' => array(),
+    'field_rdflicense_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://purl.org/NET/rdflicense/cc-by-nd4.0',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
+    'field_acronym' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'CC-BY-ND',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'en',
+          'source' => '',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1484839102,
+          'entity_uuid' => '8be61b45-c668-43ac-ae21-113219ce189d',
+          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
+        ),
+      ),
+    ),
     'path' => array(
       'pathauto' => 1,
     ),
@@ -567,7 +695,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'Philanthropic foundation',
           'format' => NULL,
-          'safe_value' => 'Philanthropic foundation',
         ),
       ),
     ),
@@ -577,7 +704,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'value' => '',
           'summary' => NULL,
           'format' => 'filtered_html',
-          'safe_value' => '',
           'safe_summary' => '',
         ),
       ),
@@ -587,21 +713,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 7474,
-          'revision_id' => 7474,
           'language' => 'en',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1461586572,
-          'changed' => 1461586572,
+          'entity_uuid' => '8c40ae60-9d3f-4bd2-b243-f166f6d1d8ab',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'Philanthropic foundation',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-7474-0',
-    'description_original' => '',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -621,7 +742,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'Civil Society Organization',
           'format' => NULL,
-          'safe_value' => 'Civil Society Organization',
         ),
       ),
     ),
@@ -631,7 +751,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'value' => '',
           'summary' => NULL,
           'format' => 'plain_text',
-          'safe_value' => '',
           'safe_summary' => '',
         ),
       ),
@@ -641,21 +760,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3147,
-          'revision_id' => 3147,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1461586252,
-          'changed' => 1461586252,
+          'entity_uuid' => '8f6740cc-0114-470f-a675-e3adf7b20969',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'Civil Society Organization',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-3147-0',
-    'description_original' => '',
     'path' => array(
       'pathauto' => 0,
     ),
@@ -674,15 +788,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 6121,
-          'revision_id' => 6121,
           'language' => 'en',
           'source' => '',
-          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
           'created' => 1467288128,
-          'changed' => 1467288128,
+          'entity_uuid' => '9074d34f-b5be-41e2-bbe5-4f12fee7ff47',
+          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
         ),
       ),
     ),
@@ -705,7 +817,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'Private sector',
           'format' => NULL,
-          'safe_value' => 'Private sector',
         ),
       ),
     ),
@@ -715,7 +826,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'value' => '',
           'summary' => NULL,
           'format' => 'filtered_html',
-          'safe_value' => '',
           'safe_summary' => '',
         ),
       ),
@@ -725,21 +835,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 7473,
-          'revision_id' => 7473,
           'language' => 'en',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1461586556,
-          'changed' => 1461586556,
+          'entity_uuid' => 'a46bc627-9f5a-47d9-98c3-062fb95c1cb7',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'Private sector',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-7473-0',
-    'description_original' => '',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -769,7 +874,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'CC-BY-NC',
           'format' => NULL,
-          'safe_value' => 'CC-BY-NC',
         ),
       ),
     ),
@@ -778,15 +882,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3652,
-          'revision_id' => 3652,
           'language' => 'und',
           'source' => '',
-          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
           'created' => 1484839135,
-          'changed' => 1484839135,
+          'entity_uuid' => 'a5d05b88-1783-4d86-a95f-bb203d003986',
+          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
         ),
       ),
     ),
@@ -808,15 +910,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 6120,
-          'revision_id' => 6120,
           'language' => 'en',
           'source' => '',
-          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
           'created' => 1467288309,
-          'changed' => 1467288309,
+          'entity_uuid' => 'b1514f0c-d758-4608-84ad-38f247d5f0cc',
+          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
         ),
       ),
     ),
@@ -840,7 +940,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'Publishing Company',
           'format' => NULL,
-          'safe_value' => 'Publishing Company',
         ),
       ),
     ),
@@ -851,8 +950,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
 ',
           'summary' => NULL,
           'format' => 'filtered_html',
-          'safe_value' => '<p>A company that publishes materials.</p>
-',
           'safe_summary' => '',
         ),
       ),
@@ -862,22 +959,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 7888,
-          'revision_id' => 7888,
           'language' => 'en',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1468509500,
-          'changed' => 1468509500,
+          'entity_uuid' => 'b1ff087a-9e04-4748-bb65-dd40c9ac5e23',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'Publishing Company',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-7888-0',
-    'description_original' => '<p>A company that publishes materials.</p>
-',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -907,7 +998,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'CC-BY-SA',
           'format' => NULL,
-          'safe_value' => 'CC-BY-SA',
         ),
       ),
     ),
@@ -916,15 +1006,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3653,
-          'revision_id' => 3653,
           'language' => 'und',
           'source' => '',
-          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
           'created' => 1484839283,
-          'changed' => 1484839283,
+          'entity_uuid' => 'b340e1a0-fa8d-495d-8cc7-b4370dc746eb',
+          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
         ),
       ),
     ),
@@ -946,15 +1034,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 6122,
-          'revision_id' => 6122,
           'language' => 'en',
           'source' => '',
-          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
           'created' => 1467288323,
-          'changed' => 1467288323,
+          'entity_uuid' => 'c5cbd6e0-889f-4de1-98bc-02531293fc1c',
+          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
         ),
       ),
     ),
@@ -977,7 +1063,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'Farmers Associations',
           'format' => NULL,
-          'safe_value' => 'Farmers Associations',
         ),
       ),
     ),
@@ -987,7 +1072,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'value' => '',
           'summary' => NULL,
           'format' => 'plain_text',
-          'safe_value' => '',
           'safe_summary' => '',
         ),
       ),
@@ -997,21 +1081,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 2830,
-          'revision_id' => 2830,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1461586618,
-          'changed' => 1461586618,
+          'entity_uuid' => 'd1466f18-deaa-418e-aaa5-fc0b6e4eb1e7',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'Farmers Associations',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-2830-0',
-    'description_original' => '',
     'path' => array(
       'pathauto' => 0,
     ),
@@ -1031,7 +1110,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'University or Research Institution',
           'format' => NULL,
-          'safe_value' => 'University or Research Institution',
         ),
       ),
     ),
@@ -1041,7 +1119,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'value' => '',
           'summary' => NULL,
           'format' => 'filtered_html',
-          'safe_value' => '',
           'safe_summary' => '',
         ),
       ),
@@ -1051,21 +1128,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 7278,
-          'revision_id' => 7278,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1461586469,
-          'changed' => 1461586469,
+          'entity_uuid' => 'd821699a-a2a7-443a-89d3-98b60a8dce1b',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'University or Research Institution',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-7278-0',
-    'description_original' => '',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -1095,7 +1167,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'ARR',
           'format' => NULL,
-          'safe_value' => 'ARR',
         ),
       ),
     ),
@@ -1104,15 +1175,69 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 7893,
-          'revision_id' => 7893,
           'language' => 'en',
           'source' => '',
-          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
           'created' => 1484838336,
-          'changed' => 1484838336,
+          'entity_uuid' => 'ddd7a4db-b452-466f-b8d3-2fc5042da10d',
+          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Creative Commons Zero (Public Domain)',
+    'description' => '<p>The person who associated a work with this deed has dedicated the work to the public domain by waiving all of his or her rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.</p>
+
+<p>You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.&nbsp;</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => 'f1616492-a163-4382-b2d3-225cce468c4e',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'licences',
+    'synonyms_synonyms' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'CC Zero',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_rdflicense_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://purl.org/NET/rdflicense/cc-zero1.0',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
+    'field_acronym' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'CC0',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'en',
+          'source' => '',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1484838773,
+          'entity_uuid' => 'f1616492-a163-4382-b2d3-225cce468c4e',
+          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
         ),
       ),
     ),
@@ -1135,7 +1260,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'Network',
           'format' => NULL,
-          'safe_value' => 'Network',
         ),
       ),
     ),
@@ -1145,7 +1269,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'value' => '',
           'summary' => NULL,
           'format' => 'plain_text',
-          'safe_value' => '',
           'safe_summary' => '',
         ),
       ),
@@ -1155,21 +1278,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3157,
-          'revision_id' => 3157,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1461586315,
-          'changed' => 1461586315,
+          'entity_uuid' => 'f18cdf6b-0e61-4305-819d-e8556b565aa6',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'Network',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-3157-0',
-    'description_original' => '',
     'path' => array(
       'pathauto' => 0,
     ),
@@ -1190,7 +1308,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
         0 => array(
           'value' => 'Data aggregator',
           'format' => NULL,
-          'safe_value' => 'Data aggregator',
         ),
       ),
     ),
@@ -1201,8 +1318,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
 ',
           'summary' => NULL,
           'format' => 'filtered_html',
-          'safe_value' => '<p>Data aggregators are websites or databases that compile information and resources from other databases and sources with intent to prepare combined datasets for data processing.</p>
-',
           'safe_summary' => '',
         ),
       ),
@@ -1212,22 +1327,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 7415,
-          'revision_id' => 7415,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1460120020,
-          'changed' => 1460120020,
+          'entity_uuid' => 'ff2269c3-0261-4280-9b46-9ec47db53801',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
-    'name_original' => 'Data aggregator',
-    'entity_translation_handler_id' => 'taxonomy_term-organization_types-eid-7415-0',
-    'description_original' => '<p>Data aggregators&nbsp;are websites or databases that&nbsp;compile&nbsp;information and resources&nbsp;from other&nbsp;databases and sources&nbsp;with intent to prepare combined datasets for&nbsp;data processing.</p>
-',
     'path' => array(
       'pathauto' => 1,
     ),

@@ -11,6 +11,39 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
+    'name' => 'Conference Papers & Reports',
+    'description' => '<p>As a subcategory of Reports &amp; Research, the Land Portal identifies Conference Papers &amp; Reports as a separate category. This category contains reports and papers that have been written for or about a particular conference or event.</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => '06af3c34-b21a-427c-9b59-59e1eab25af8',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'en',
+          'source' => '',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1479224368,
+          'entity_uuid' => '06af3c34-b21a-427c-9b59-59e1eab25af8',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => '0e00119d-b478-4d58-bb38-355e5273da31',
+    ),
+  );
+  $terms[] = array(
     'name' => 'Reports & Research',
     'description' => 'Reports & Research is a resource type under which case, project and status reports are generally nested, as well as workshop and flagship reports. Good practice reviews are also generally nested under this resource type. There is research involved in establishing the reports, but not necessarily with an academic approach.',
     'format' => 'plain_text',
@@ -25,15 +58,13 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3678,
-          'revision_id' => 3678,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479224311,
-          'changed' => 1479224311,
+          'entity_uuid' => '0e00119d-b478-4d58-bb38-355e5273da31',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
@@ -56,15 +87,13 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3992,
-          'revision_id' => 3992,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479225127,
-          'changed' => 1479225127,
+          'entity_uuid' => '12f974ab-0144-47ab-b77a-e984eb4f000c',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
@@ -90,15 +119,46 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3991,
-          'revision_id' => 3991,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479224734,
-          'changed' => 1479224734,
+          'entity_uuid' => '14e2a781-b9d0-436b-be70-325f9aec7e53',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Other',
+    'description' => '<p>The "Other" subcategory for Legislation &amp; Policies is meant for types of law that do not fit under any of the other categories, that are unique for a country.</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 8,
+    'uuid' => '5409c613-1842-4d1c-96fd-d776a3c2d072',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'en',
+          'source' => '',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1479225504,
+          'entity_uuid' => '5409c613-1842-4d1c-96fd-d776a3c2d072',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
@@ -125,15 +185,13 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3659,
-          'revision_id' => 3659,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479224924,
-          'changed' => 1479224924,
+          'entity_uuid' => '5be0c818-ca86-4232-89fb-9f3b0b238d4a',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
@@ -159,15 +217,13 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3993,
-          'revision_id' => 3993,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479224528,
-          'changed' => 1479224528,
+          'entity_uuid' => '6ec5c0b7-e3d4-4f45-9c90-df0da61c68ec',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
@@ -190,20 +246,50 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3655,
-          'revision_id' => 3655,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479224033,
-          'changed' => 1479224033,
+          'entity_uuid' => '795d74c2-9665-4a96-b246-a8ae0b058811',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
     'path' => array(
       'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Maps',
+    'description' => '',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => '84a7e843-efa0-4939-b1eb-73986e128253',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'en',
+          'source' => '',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1479298455,
+          'entity_uuid' => '84a7e843-efa0-4939-b1eb-73986e128253',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => 'f46e9a89-3241-4898-9354-6fb1af1098ad',
     ),
   );
   $terms[] = array(
@@ -221,15 +307,13 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3987,
-          'revision_id' => 3987,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479225662,
-          'changed' => 1479225662,
+          'entity_uuid' => '88d423e7-9956-4822-bd52-6ed84a1664b0',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
@@ -253,15 +337,13 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3673,
-          'revision_id' => 3673,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479224182,
-          'changed' => 1479224182,
+          'entity_uuid' => '8915ee67-2edc-4f9a-9c0e-69a13684844e',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
@@ -287,15 +369,76 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3663,
-          'revision_id' => 3663,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479223924,
-          'changed' => 1479223924,
+          'entity_uuid' => 'c3a76572-fdef-47cf-913f-2216ecc10d63',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Jurisprudence',
+    'description' => '<p>With jurisprudence, the Land Portal identifies case law, or law that has been established by the outcome of former cases in a court of law.</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 2,
+    'uuid' => 'c87b4b7c-d147-4897-9002-40a25443957d',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'en',
+          'source' => '',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1479224804,
+          'entity_uuid' => 'c87b4b7c-d147-4897-9002-40a25443957d',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Institutional & promotional materials',
+    'description' => '<p>Institutional and promotional materials for an organization, such as annual reports and brochures.</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 18,
+    'uuid' => 'd3f3425c-769d-4c92-b302-2f9019b32cda',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'en',
+          'source' => '',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1474370631,
+          'entity_uuid' => 'd3f3425c-769d-4c92-b302-2f9019b32cda',
+          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
         ),
       ),
     ),
@@ -318,15 +461,13 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3994,
-          'revision_id' => 3994,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479225410,
-          'changed' => 1479225410,
+          'entity_uuid' => 'e00ce92f-dadc-4d8a-8a92-b8ba2ca92244',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
@@ -352,15 +493,46 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3677,
-          'revision_id' => 3677,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479225383,
-          'changed' => 1479225383,
+          'entity_uuid' => 'e14b20cf-5cba-4381-8cc4-abc5355582e8',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Agreements & Contracts',
+    'description' => '<p>Agreements and Contracts on a national or regional level.</p>
+',
+    'format' => 'filtered_html',
+    'weight' => 5,
+    'uuid' => 'e84c6fd3-65dc-4557-af3b-5c399fb1b7e8',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'en',
+          'source' => '',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1468595614,
+          'entity_uuid' => 'e84c6fd3-65dc-4557-af3b-5c399fb1b7e8',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
@@ -386,20 +558,50 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3982,
-          'revision_id' => 3982,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479224648,
-          'changed' => 1479224648,
+          'entity_uuid' => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
     'path' => array(
       'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Videos',
+    'description' => '',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => 'f18452a0-990f-4c66-8381-d8700a4f2e39',
+    'language' => 'en',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'landlibrary_resource_type',
+    'synonyms_synonyms' => array(),
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'taxonomy_term',
+          'language' => 'en',
+          'source' => '',
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1479298483,
+          'entity_uuid' => 'f18452a0-990f-4c66-8381-d8700a4f2e39',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => 'f46e9a89-3241-4898-9354-6fb1af1098ad',
     ),
   );
   $terms[] = array(
@@ -417,15 +619,13 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3671,
-          'revision_id' => 3671,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479225743,
-          'changed' => 1479225743,
+          'entity_uuid' => 'f46e9a89-3241-4898-9354-6fb1af1098ad',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
@@ -449,15 +649,13 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
-          'entity_id' => 3668,
-          'revision_id' => 3668,
           'language' => 'und',
           'source' => '',
-          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479225062,
-          'changed' => 1479225062,
+          'entity_uuid' => 'f49e4f01-aaa0-4af0-ac92-2afe31de85f7',
+          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
         ),
       ),
     ),
