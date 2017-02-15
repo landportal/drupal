@@ -18,7 +18,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Organizations';
+$handler->display->display_options['title'] = 'Publishers & Data providers';
 $handler->display->display_options['css_class'] = 'view-grid';
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
@@ -259,8 +259,8 @@ $handler->display->display_options['menu']['name'] = 'landdebate-menu';
 $handler->display->display_options['menu']['context'] = 0;
 $handler->display->display_options['menu']['context_only_inline'] = 0;
 
-/* Display: Book sources */
-$handler = $view->new_display('page', 'Book sources', 'book');
+/* Display: Land Book sources */
+$handler = $view->new_display('page', 'Land Book sources', 'book');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Land Book Sources';
 $handler->display->display_options['defaults']['group_by'] = FALSE;
@@ -275,6 +275,12 @@ $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: Text area */
+$handler->display->display_options['header']['area']['id'] = 'area';
+$handler->display->display_options['header']['area']['table'] = 'views';
+$handler->display->display_options['header']['area']['field'] = 'area';
+$handler->display->display_options['header']['area']['content'] = '<p class="lead">Access land-related information by data provider. See who compile each dataset or indicator and visit the original data source.</p>';
+$handler->display->display_options['header']['area']['format'] = 'filtered_html';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Entity Reference: Referencing entity */
 $handler->display->display_options['relationships']['reverse_field_orgref_taxonomy_term']['id'] = 'reverse_field_orgref_taxonomy_term';
@@ -350,7 +356,6 @@ $handler->display->display_options['defaults']['sorts'] = FALSE;
 $handler->display->display_options['sorts']['title']['id'] = 'title';
 $handler->display->display_options['sorts']['title']['table'] = 'node';
 $handler->display->display_options['sorts']['title']['field'] = 'title';
-$handler->display->display_options['sorts']['title']['exposed'] = TRUE;
 $handler->display->display_options['sorts']['title']['expose']['label'] = 'Title';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['filter_groups']['groups'] = array(
