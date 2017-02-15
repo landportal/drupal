@@ -72,7 +72,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 22,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -157,7 +157,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 19,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -351,7 +351,7 @@ function landlibrary_resource_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_trimmed',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -438,7 +438,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 21,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -521,7 +521,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 20,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -597,7 +597,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 18,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -673,7 +673,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 17,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -745,7 +745,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 15,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -811,7 +811,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 13,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -945,7 +945,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 12,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1006,7 +1006,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1209,12 +1209,9 @@ function landlibrary_resource_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'inline',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 2,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1301,7 +1298,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 9,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1311,11 +1308,8 @@ function landlibrary_resource_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'inline',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
     ),
@@ -1377,7 +1371,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1438,7 +1432,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 14,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1694,7 +1688,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1795,7 +1789,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 16,
       ),
       'promoted_country_page' => array(
         'label' => 'above',

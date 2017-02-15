@@ -47,7 +47,7 @@ function landlibrary_resource_field_group_info() {
   $field_groups['group_access|node|landlibrary_resource|default'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_authors|node|landlibrary_resource|form';
   $field_group->group_name = 'group_authors';
@@ -465,7 +465,7 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_doc_creation_date',
       1 => 'field_doc_type',
@@ -498,8 +498,7 @@ function landlibrary_resource_field_group_info() {
     'children' => array(
       0 => 'field_doc_creation_date',
       1 => 'field_doc_language',
-      2 => 'field_doc_publisher',
-      3 => 'field_doc_type',
+      2 => 'field_doc_type',
     ),
     'format_type' => 'div',
     'format_settings' => array(
