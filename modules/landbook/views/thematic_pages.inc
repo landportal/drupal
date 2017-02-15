@@ -121,6 +121,18 @@ $handler->display->display_options['fields']['name_field']['settings'] = array(
   'title_class' => '',
 );
 $handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
+/* Field: Content: Published */
+$handler->display->display_options['fields']['status']['id'] = 'status';
+$handler->display->display_options['fields']['status']['table'] = 'node';
+$handler->display->display_options['fields']['status']['field'] = 'status';
+$handler->display->display_options['fields']['status']['label'] = '';
+$handler->display->display_options['fields']['status']['element_class'] = 'error ';
+$handler->display->display_options['fields']['status']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['status']['element_wrapper_class'] = 'alert alert-danger';
+$handler->display->display_options['fields']['status']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['status']['type'] = 'custom';
+$handler->display->display_options['fields']['status']['type_custom_false'] = 'NOT PUBLISHED';
+$handler->display->display_options['fields']['status']['not'] = 0;
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -130,16 +142,6 @@ $handler->display->display_options['fields']['title']['alter']['word_boundary'] 
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-/* Field: Content: Published */
-$handler->display->display_options['fields']['status']['id'] = 'status';
-$handler->display->display_options['fields']['status']['table'] = 'node';
-$handler->display->display_options['fields']['status']['field'] = 'status';
-$handler->display->display_options['fields']['status']['label'] = '';
-$handler->display->display_options['fields']['status']['element_class'] = 'error';
-$handler->display->display_options['fields']['status']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['status']['type'] = 'custom';
-$handler->display->display_options['fields']['status']['type_custom_false'] = 'NOT PUBLISHED';
-$handler->display->display_options['fields']['status']['not'] = 0;
 $handler->display->display_options['path'] = 'book/thematic';
 
 /* Display: Entity Reference */
