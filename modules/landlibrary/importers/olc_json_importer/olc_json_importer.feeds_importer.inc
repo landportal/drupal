@@ -251,6 +251,11 @@ $feeds_importer->config = array(
           'unique' => FALSE,
           'language' => 'und',
         ),
+        28 => array(
+          'source' => 'Blank source 20',
+          'target' => 'field_related_themes',
+          'unique' => FALSE,
+        ),
       ),
       'insert_new' => '1',
       'update_existing' => '2',
