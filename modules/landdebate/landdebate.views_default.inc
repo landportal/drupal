@@ -9,10 +9,12 @@
  */
 function landdebate_views_default_views() {
     $export = array();
-    $views = array('news', 'blog', 'debates', 'events');
-    foreach ($views as $v) {
-        include_once 'views/'. $v .'.inc';
-        $export[$view->name] = $view;
+
+    $path = drupal_get_path('module', 'landdebate').'/views/';
+    $files = file_scan_directory($path, '/\.inc$/');
+    foreach ($files as $filepath => $file) {
+      include_once $filepath;
+      $export[$view->name] = $view;
     }
     return $export;
 }
