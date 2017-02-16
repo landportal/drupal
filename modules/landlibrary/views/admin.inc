@@ -44,22 +44,29 @@ $handler->display->display_options['style_options']['columns'] = array(
   'field_doc_people' => 'field_doc_people',
   'field_orgref' => 'field_orgref',
   'field_doc_publisher' => 'field_doc_publisher',
-  'field_doc_copyrights_statement' => 'field_doc_copyrights_statement',
   'field_doc_provider' => 'field_doc_provider',
+  'nothing_2' => 'nothing_2',
+  'field_doc_thumb' => 'field_doc_thumb',
   'field_doc_type' => 'field_doc_type',
-  'field_doc_creation_date' => 'field_doc_creation_date',
+  'field_doc_language' => 'field_doc_language',
+  'field_doc_is_shown_at' => 'field_doc_is_shown_at',
+  'field_doc_is_shown_by' => 'field_doc_is_shown_by',
+  'field_doc_is_shown_by_file' => 'field_doc_is_shown_by_file',
+  'field_doc_identifier' => 'field_doc_identifier',
+  'field_doc_pagination' => 'field_doc_pagination',
+  'field_duration' => 'field_duration',
+  'field_doc_licencing' => 'field_doc_licencing',
+  'field_doc_copyrights_statement' => 'field_doc_copyrights_statement',
+  'nothing_1' => 'nothing_1',
   'field_geographical_focus' => 'field_geographical_focus',
   'field_related_domains' => 'field_related_domains',
   'field_related_themes' => 'field_related_themes',
   'field_related_topics' => 'field_related_topics',
-  'field_doc_language' => 'field_doc_language',
-  'field_doc_is_shown_at' => 'field_doc_is_shown_at',
-  'field_doc_is_shown_by' => 'field_doc_is_shown_by',
-  'field_doc_identifier' => 'field_doc_identifier',
-  'changed' => 'changed',
+  'nothing' => 'nothing',
+  'field_doc_creation_date' => 'field_doc_creation_date',
   'name' => 'name',
-  'field_doc_thumb' => 'field_doc_thumb',
-  'language' => 'language',
+  'changed' => 'changed',
+  'created' => 'created',
 );
 $handler->display->display_options['style_options']['default'] = 'nid';
 $handler->display->display_options['style_options']['info'] = array(
@@ -137,15 +144,20 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_copyrights_statement' => array(
-    'sortable' => 0,
+  'field_doc_provider' => array(
+    'sortable' => 1,
     'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_provider' => array(
-    'sortable' => 1,
+  'nothing_2' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_doc_thumb' => array(
+    'sortable' => 0,
     'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
@@ -156,9 +168,66 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_creation_date' => array(
+  'field_doc_language' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_doc_is_shown_at' => array(
     'sortable' => 1,
     'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_doc_is_shown_by' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_doc_is_shown_by_file' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_doc_identifier' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_doc_pagination' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_duration' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_doc_licencing' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_doc_copyrights_statement' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing_1' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -183,33 +252,12 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_language' => array(
+  'nothing' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_is_shown_at' => array(
-    'sortable' => 1,
-    'default_sort_order' => 'asc',
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'field_doc_is_shown_by' => array(
-    'sortable' => 0,
-    'default_sort_order' => 'asc',
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'field_doc_identifier' => array(
-    'sortable' => 0,
-    'default_sort_order' => 'asc',
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'changed' => array(
+  'field_doc_creation_date' => array(
     'sortable' => 1,
     'default_sort_order' => 'asc',
     'align' => '',
@@ -223,14 +271,14 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_thumb' => array(
-    'sortable' => 0,
+  'changed' => array(
+    'sortable' => 1,
     'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
-  'language' => array(
+  'created' => array(
     'sortable' => 1,
     'default_sort_order' => 'asc',
     'align' => '',
@@ -378,7 +426,7 @@ $handler->display->display_options['fields']['field_doc_description']['table'] =
 $handler->display->display_options['fields']['field_doc_description']['field'] = 'field_doc_description';
 $handler->display->display_options['fields']['field_doc_description']['alter']['max_length'] = '200';
 $handler->display->display_options['fields']['field_doc_description']['alter']['trim'] = TRUE;
-/* Field: Content: Author(s), editor(s), contributor(s) */
+/* Field: Content: Author(s) */
 $handler->display->display_options['fields']['field_doc_people']['id'] = 'field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['table'] = 'field_data_field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['field'] = 'field_doc_people';
@@ -393,7 +441,7 @@ $handler->display->display_options['fields']['field_orgref']['settings'] = array
   'link' => 1,
 );
 $handler->display->display_options['fields']['field_orgref']['delta_offset'] = '0';
-/* Field: Content: Publisher */
+/* Field: Content: Publisher(s) */
 $handler->display->display_options['fields']['field_doc_publisher']['id'] = 'field_doc_publisher';
 $handler->display->display_options['fields']['field_doc_publisher']['table'] = 'field_data_field_doc_publisher';
 $handler->display->display_options['fields']['field_doc_publisher']['field'] = 'field_doc_publisher';
@@ -447,7 +495,7 @@ $handler->display->display_options['fields']['field_doc_language']['table'] = 'f
 $handler->display->display_options['fields']['field_doc_language']['field'] = 'field_doc_language';
 $handler->display->display_options['fields']['field_doc_language']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_doc_language']['delta_offset'] = '0';
-/* Field: Content: Published at */
+/* Field: Content: Originally published at */
 $handler->display->display_options['fields']['field_doc_is_shown_at']['id'] = 'field_doc_is_shown_at';
 $handler->display->display_options['fields']['field_doc_is_shown_at']['table'] = 'field_data_field_doc_is_shown_at';
 $handler->display->display_options['fields']['field_doc_is_shown_at']['field'] = 'field_doc_is_shown_at';
@@ -486,7 +534,7 @@ $handler->display->display_options['fields']['field_doc_identifier']['exclude'] 
 $handler->display->display_options['fields']['field_doc_identifier']['alter']['nl2br'] = TRUE;
 $handler->display->display_options['fields']['field_doc_identifier']['hide_empty'] = TRUE;
 $handler->display->display_options['fields']['field_doc_identifier']['hide_alter_empty'] = FALSE;
-/* Field: Content: Pages / Duration */
+/* Field: Content: Pages */
 $handler->display->display_options['fields']['field_doc_pagination']['id'] = 'field_doc_pagination';
 $handler->display->display_options['fields']['field_doc_pagination']['table'] = 'field_data_field_doc_pagination';
 $handler->display->display_options['fields']['field_doc_pagination']['field'] = 'field_doc_pagination';
@@ -502,7 +550,7 @@ $handler->display->display_options['fields']['field_doc_licencing']['table'] = '
 $handler->display->display_options['fields']['field_doc_licencing']['field'] = 'field_doc_licencing';
 $handler->display->display_options['fields']['field_doc_licencing']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_doc_licencing']['delta_offset'] = '0';
-/* Field: Content: Copyright owner */
+/* Field: Content: Copyright details */
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['id'] = 'field_doc_copyrights_statement';
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['table'] = 'field_data_field_doc_copyrights_statement';
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['field'] = 'field_doc_copyrights_statement';
@@ -799,7 +847,7 @@ $handler->display->display_options['filters']['field_related_themes_tid']['group
 );
 $handler->display->display_options['filters']['field_related_themes_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
-/* Filter criterion: Content: Publisher (field_doc_publisher) (reference filter) */
+/* Filter criterion: Content: Publisher(s) (field_doc_publisher) (reference filter) */
 $handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['id'] = 'field_doc_publisher_target_id_entityreference_filter';
 $handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['table'] = 'field_data_field_doc_publisher';
 $handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['field'] = 'field_doc_publisher_target_id_entityreference_filter';
@@ -827,7 +875,7 @@ $handler->display->display_options['filters']['field_doc_provider_target_id_enti
 $handler->display->display_options['filters']['field_doc_provider_target_id_entityreference_filter']['group'] = 3;
 $handler->display->display_options['filters']['field_doc_provider_target_id_entityreference_filter']['exposed'] = TRUE;
 $handler->display->display_options['filters']['field_doc_provider_target_id_entityreference_filter']['expose']['operator_id'] = 'field_doc_provider_target_id_entityreference_filter_op';
-$handler->display->display_options['filters']['field_doc_provider_target_id_entityreference_filter']['expose']['label'] = 'Provider';
+$handler->display->display_options['filters']['field_doc_provider_target_id_entityreference_filter']['expose']['label'] = 'Data Provider';
 $handler->display->display_options['filters']['field_doc_provider_target_id_entityreference_filter']['expose']['operator'] = 'field_doc_provider_target_id_entityreference_filter_op';
 $handler->display->display_options['filters']['field_doc_provider_target_id_entityreference_filter']['expose']['identifier'] = 'field_doc_provider_target_id_entityreference_filter';
 $handler->display->display_options['filters']['field_doc_provider_target_id_entityreference_filter']['expose']['multiple'] = TRUE;
@@ -835,8 +883,6 @@ $handler->display->display_options['filters']['field_doc_provider_target_id_enti
   2 => '2',
   1 => 0,
   111903911 => 0,
-  111903912 => 0,
-  25521343 => 0,
   111903910 => 0,
   30037204 => 0,
 );
@@ -849,6 +895,43 @@ $handler->display->display_options['filters']['field_doc_provider_target_id_enti
   3 => array(),
 );
 $handler->display->display_options['filters']['field_doc_provider_target_id_entityreference_filter']['reference_display'] = 'organizations:entityreference_3';
+/* Filter criterion: Content: Resource Language (field_doc_language) */
+$handler->display->display_options['filters']['field_doc_language_tid']['id'] = 'field_doc_language_tid';
+$handler->display->display_options['filters']['field_doc_language_tid']['table'] = 'field_data_field_doc_language';
+$handler->display->display_options['filters']['field_doc_language_tid']['field'] = 'field_doc_language_tid';
+$handler->display->display_options['filters']['field_doc_language_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_doc_language_tid']['expose']['operator_id'] = 'field_doc_language_tid_op';
+$handler->display->display_options['filters']['field_doc_language_tid']['expose']['label'] = 'Resource Language';
+$handler->display->display_options['filters']['field_doc_language_tid']['expose']['operator'] = 'field_doc_language_tid_op';
+$handler->display->display_options['filters']['field_doc_language_tid']['expose']['identifier'] = 'field_doc_language_tid';
+$handler->display->display_options['filters']['field_doc_language_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_doc_language_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_doc_language_tid']['vocabulary'] = 'languages';
+/* Filter criterion: Content: Resource type (field_doc_type) */
+$handler->display->display_options['filters']['field_doc_type_tid']['id'] = 'field_doc_type_tid';
+$handler->display->display_options['filters']['field_doc_type_tid']['table'] = 'field_data_field_doc_type';
+$handler->display->display_options['filters']['field_doc_type_tid']['field'] = 'field_doc_type_tid';
+$handler->display->display_options['filters']['field_doc_type_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_doc_type_tid']['expose']['operator_id'] = 'field_doc_type_tid_op';
+$handler->display->display_options['filters']['field_doc_type_tid']['expose']['label'] = 'Resource type';
+$handler->display->display_options['filters']['field_doc_type_tid']['expose']['operator'] = 'field_doc_type_tid_op';
+$handler->display->display_options['filters']['field_doc_type_tid']['expose']['identifier'] = 'field_doc_type_tid';
+$handler->display->display_options['filters']['field_doc_type_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_doc_type_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_doc_type_tid']['vocabulary'] = 'landlibrary_resource_type';
+$handler->display->display_options['filters']['field_doc_type_tid']['hierarchy'] = 1;
 
 /* Display: System */
 $handler = $view->new_display('system', 'System', 'system_1');
