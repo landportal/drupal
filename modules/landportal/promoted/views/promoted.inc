@@ -65,7 +65,6 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'landbook_country' => 'landbook_country',
   'debate' => 'debate',
   'event' => 'event',
-  'landlibrary_resource' => 'landlibrary_resource',
   'news' => 'news',
   'organization' => 'organization',
   'thematic_narrative' => 'thematic_narrative',
