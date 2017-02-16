@@ -1,5 +1,6 @@
 <?php
 
+
 $view = new view();
 $view->name = 'events_calendar';
 $view->description = '';
@@ -42,14 +43,17 @@ $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
 $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
 $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
 $handler->display->display_options['fields']['field_date']['label'] = '';
+$handler->display->display_options['fields']['field_date']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_date']['hide_alter_empty'] = FALSE;
 $handler->display->display_options['fields']['field_date']['settings'] = array(
   'format_type' => 'short',
+  'custom_date_format' => '',
   'fromto' => 'both',
   'multiple_number' => '',
   'multiple_from' => '',
   'multiple_to' => '',
+  'show_remaining_days' => 0,
   'show_repeat_rule' => '',
 );
 $handler->display->display_options['fields']['field_date']['group_rows'] = FALSE;
