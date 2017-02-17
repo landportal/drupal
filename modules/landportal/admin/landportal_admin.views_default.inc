@@ -11,6 +11,7 @@ function landportal_admin_views_default_views_alter(&$views) {
         'admin_views_node',
         'admin_views_taxonomy_terms_ak',
         'admin_views_taxonomy_terms_topics',
+        'admin_views_taxonomy_terms_regions',
         'admin_views_taxonomy_term',
 		'admin_views_taxonomy_terms_overarching_categories',
 		'admin_views_taxonomy_terms_themes',

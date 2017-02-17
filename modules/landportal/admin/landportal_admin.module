@@ -38,6 +38,15 @@ function landportal_admin_menu() {
         //'page callback' => 'node_page_view',//admin_views_taxonomy_terms_topics',
         'page arguments' => array('admin/structure/taxonomy/terms/topics'),
     );	
+    $items['admin/structure/taxonomy/terms/regions'] = array(
+        'title' => 'Manage Regions',
+        'type' => MENU_LOCAL_TASK,
+        'access arguments' => array('administer taxonomy'),
+        'weight' => 10,
+        'callback' => 'systems_view_data',
+        //'page callback' => 'admin_views_taxonomy_terms_regions',
+        'page arguments' => array('admin/structure/taxonomy/terms/regions'),
+    );
     $items['admin/people/moderate'] = array(
         'title' => 'Pending account',
         'type' => MENU_LOCAL_TASK,
