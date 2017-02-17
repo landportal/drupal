@@ -318,12 +318,13 @@ $handler->display->display_options['fields']['field_image']['field'] = 'field_im
 $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_style' => 'thumbnail',
-  'image_link' => '',
+  'image_link' => 'file',
 );
-/* Field: Content: Author(s) */
+/* Field: Content: Author(s), editor(s), contributor(s) */
 $handler->display->display_options['fields']['field_doc_people']['id'] = 'field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['table'] = 'field_data_field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['field'] = 'field_doc_people';
+$handler->display->display_options['fields']['field_doc_people']['label'] = 'Author(s)';
 $handler->display->display_options['fields']['field_doc_people']['exclude'] = TRUE;
 /* Field: Content: Language of the news reported */
 $handler->display->display_options['fields']['field_language']['id'] = 'field_language';
