@@ -108,7 +108,7 @@ function landportal_groups_field_default_field_instances() {
       'module' => 'entityreference_view_widget',
       'settings' => array(
         'allow_duplicates' => 0,
-        'close_modal' => 0,
+        'close_modal' => 1,
         'pass_argument' => 1,
         'pass_arguments' => '',
         'rendered_entity' => 0,
