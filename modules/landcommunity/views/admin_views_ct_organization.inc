@@ -1,18 +1,18 @@
 <?php
 
 $view = new view();
-$view->name = 'admin_views_ct_news';
+$view->name = 'admin_views_ct_organization';
 $view->description = 'Manage News content type resources';
 $view->tag = 'admin';
 $view->base_table = 'node';
-$view->human_name = 'Administration: News';
+$view->human_name = 'Administration: Organizations';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Administration: News';
+$handler->display->display_options['title'] = 'Administration: Organizations';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'role';
 $handler->display->display_options['access']['role'] = array(
@@ -309,7 +309,7 @@ $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['body']['id'] = 'body';
 $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
 $handler->display->display_options['fields']['body']['field'] = 'body';
-$handler->display->display_options['fields']['body']['alter']['max_length'] = '200';
+$handler->display->display_options['fields']['body']['alter']['max_length'] = '50';
 $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
 /* Field: Field: Image */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
@@ -318,38 +318,35 @@ $handler->display->display_options['fields']['field_image']['field'] = 'field_im
 $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_style' => 'thumbnail',
-  'image_link' => 'file',
+  'image_link' => '',
 );
-/* Field: Content: Author(s), editor(s), contributor(s) */
-$handler->display->display_options['fields']['field_doc_people']['id'] = 'field_doc_people';
-$handler->display->display_options['fields']['field_doc_people']['table'] = 'field_data_field_doc_people';
-$handler->display->display_options['fields']['field_doc_people']['field'] = 'field_doc_people';
-$handler->display->display_options['fields']['field_doc_people']['label'] = 'Author(s)';
-$handler->display->display_options['fields']['field_doc_people']['exclude'] = TRUE;
-/* Field: Content: Language of the news reported */
-$handler->display->display_options['fields']['field_language']['id'] = 'field_language';
-$handler->display->display_options['fields']['field_language']['table'] = 'field_data_field_language';
-$handler->display->display_options['fields']['field_language']['field'] = 'field_language';
-$handler->display->display_options['fields']['field_language']['exclude'] = TRUE;
-/* Field: Content: Language */
-$handler->display->display_options['fields']['language']['id'] = 'language';
-$handler->display->display_options['fields']['language']['table'] = 'node';
-$handler->display->display_options['fields']['language']['field'] = 'language';
-$handler->display->display_options['fields']['language']['exclude'] = TRUE;
-/* Field: Content: Publication date */
-$handler->display->display_options['fields']['field_pubdate']['id'] = 'field_pubdate';
-$handler->display->display_options['fields']['field_pubdate']['table'] = 'field_data_field_pubdate';
-$handler->display->display_options['fields']['field_pubdate']['field'] = 'field_pubdate';
-$handler->display->display_options['fields']['field_pubdate']['exclude'] = TRUE;
-$handler->display->display_options['fields']['field_pubdate']['settings'] = array(
-  'format_type' => 'year_month_day',
-  'fromto' => '',
-  'multiple_number' => '',
-  'multiple_from' => '',
-  'multiple_to' => '',
-  'show_remaining_days' => 0,
-  'show_repeat_rule' => 'show',
-);
+/* Field: Content: Organization type */
+$handler->display->display_options['fields']['field_organization_type']['id'] = 'field_organization_type';
+$handler->display->display_options['fields']['field_organization_type']['table'] = 'field_data_field_organization_type';
+$handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
+$handler->display->display_options['fields']['field_organization_type']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_organization_type']['delta_offset'] = '0';
+/* Field: Content: Organization relationship */
+$handler->display->display_options['fields']['field_organization_relationship']['id'] = 'field_organization_relationship';
+$handler->display->display_options['fields']['field_organization_relationship']['table'] = 'field_data_field_organization_relationship';
+$handler->display->display_options['fields']['field_organization_relationship']['field'] = 'field_organization_relationship';
+$handler->display->display_options['fields']['field_organization_relationship']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_organization_relationship']['delta_offset'] = '0';
+/* Field: Field: acronym */
+$handler->display->display_options['fields']['field_acronym']['id'] = 'field_acronym';
+$handler->display->display_options['fields']['field_acronym']['table'] = 'field_data_field_acronym';
+$handler->display->display_options['fields']['field_acronym']['field'] = 'field_acronym';
+$handler->display->display_options['fields']['field_acronym']['exclude'] = TRUE;
+/* Field: Content: Contact / Event organiser */
+$handler->display->display_options['fields']['field_contact']['id'] = 'field_contact';
+$handler->display->display_options['fields']['field_contact']['table'] = 'field_data_field_contact';
+$handler->display->display_options['fields']['field_contact']['field'] = 'field_contact';
+$handler->display->display_options['fields']['field_contact']['exclude'] = TRUE;
+/* Field: Content: Email */
+$handler->display->display_options['fields']['field_email']['id'] = 'field_email';
+$handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
+$handler->display->display_options['fields']['field_email']['field'] = 'field_email';
+$handler->display->display_options['fields']['field_email']['exclude'] = TRUE;
 /* Field: Field: Website */
 $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
 $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
@@ -373,17 +370,24 @@ $handler->display->display_options['fields']['field_file']['type'] = 'file_downl
 $handler->display->display_options['fields']['field_file']['settings'] = array(
   'text' => 'File',
 );
+/* Field: Content: Language */
+$handler->display->display_options['fields']['language']['id'] = 'language';
+$handler->display->display_options['fields']['language']['table'] = 'node';
+$handler->display->display_options['fields']['language']['field'] = 'language';
+$handler->display->display_options['fields']['language']['exclude'] = TRUE;
 /* Field: Global: Custom text */
 $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
 $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
 $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
 $handler->display->display_options['fields']['nothing_1']['label'] = 'Metadata_____details';
-$handler->display->display_options['fields']['nothing_1']['alter']['text'] = 'Author(s): [field_doc_people] <br />
-News Lang: [field_language] <br />
-Node Lang: [language] <br />
-Pub. date: [field_pubdate]<br />
-Source: [field_link] <br />
-File attached: [field_file] <br />';
+$handler->display->display_options['fields']['nothing_1']['alter']['text'] = 'Organization type: [field_organization_type] <br />
+Relation with LP: [field_organization_relationship] <br />
+Acronym: [field_acronym] <br />
+Contact person: [field_contact] <br />
+Email: [field_email] <br />
+Website: [field_link] <br />
+File attached: [field_file] <br />
+Node Lang: [language] <br />';
 /* Field: Field: Geographical focus */
 $handler->display->display_options['fields']['field_geographical_focus']['id'] = 'field_geographical_focus';
 $handler->display->display_options['fields']['field_geographical_focus']['table'] = 'field_data_field_geographical_focus';
@@ -420,6 +424,14 @@ $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Cate
 Themes: [field_related_themes]
 Concepts: [field_related_topics]';
 $handler->display->display_options['fields']['nothing']['alter']['nl2br'] = TRUE;
+/* Field: Content: Members */
+$handler->display->display_options['fields']['field_user']['id'] = 'field_user';
+$handler->display->display_options['fields']['field_user']['table'] = 'field_data_field_user';
+$handler->display->display_options['fields']['field_user']['field'] = 'field_user';
+$handler->display->display_options['fields']['field_user']['settings'] = array(
+  'link' => 1,
+);
+$handler->display->display_options['fields']['field_user']['delta_offset'] = '0';
 /* Field: User: Name */
 $handler->display->display_options['fields']['name']['id'] = 'name';
 $handler->display->display_options['fields']['name']['table'] = 'users';
@@ -445,7 +457,7 @@ $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
-  'news' => 'news',
+  'organization' => 'organization',
 );
 $handler->display->display_options['filters']['type']['group'] = 1;
 /* Filter criterion: Content: Title */
@@ -639,7 +651,45 @@ $handler->display->display_options['filters']['field_related_themes_tid']['group
 );
 $handler->display->display_options['filters']['field_related_themes_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
+/* Filter criterion: Content: Organization type (field_organization_type) */
+$handler->display->display_options['filters']['field_organization_type_tid']['id'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['table'] = 'field_data_field_organization_type';
+$handler->display->display_options['filters']['field_organization_type_tid']['field'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['operator_id'] = 'field_organization_type_tid_op';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['label'] = 'Organization type (field_organization_type)';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['operator'] = 'field_organization_type_tid_op';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['identifier'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_organization_type_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_organization_type_tid']['vocabulary'] = 'organization_types';
+/* Filter criterion: Content: Organization relationship (field_organization_relationship) */
+$handler->display->display_options['filters']['field_organization_relationship_tid']['id'] = 'field_organization_relationship_tid';
+$handler->display->display_options['filters']['field_organization_relationship_tid']['table'] = 'field_data_field_organization_relationship';
+$handler->display->display_options['filters']['field_organization_relationship_tid']['field'] = 'field_organization_relationship_tid';
+$handler->display->display_options['filters']['field_organization_relationship_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_organization_relationship_tid']['expose']['operator_id'] = 'field_organization_relationship_tid_op';
+$handler->display->display_options['filters']['field_organization_relationship_tid']['expose']['label'] = 'Organization relationship (field_organization_relationship)';
+$handler->display->display_options['filters']['field_organization_relationship_tid']['expose']['operator'] = 'field_organization_relationship_tid_op';
+$handler->display->display_options['filters']['field_organization_relationship_tid']['expose']['identifier'] = 'field_organization_relationship_tid';
+$handler->display->display_options['filters']['field_organization_relationship_tid']['expose']['multiple'] = TRUE;
+$handler->display->display_options['filters']['field_organization_relationship_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_organization_relationship_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_organization_relationship_tid']['vocabulary'] = 'organization_relation';
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page_1');
-$handler->display->display_options['path'] = 'admin/content/news';
+$handler->display->display_options['path'] = 'admin/content/organizations';
+

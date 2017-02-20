@@ -286,6 +286,7 @@ $handler->display->display_options['filters']['nid']['group_info']['group_items'
   3 => array(),
 );
 
-/* Display: Page */
-$handler = $view->new_display('page', 'Page', 'page');
+/* Display: System */
+$handler = $view->new_display('system', 'System', 'system_1');
+$handler->display->display_options['defaults']['access'] = FALSE;
 $handler->display->display_options['path'] = 'admin/structure/taxonomy/terms/regions';
