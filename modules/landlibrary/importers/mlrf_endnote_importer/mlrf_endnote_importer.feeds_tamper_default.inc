@@ -105,12 +105,28 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_11-trim';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'xpathparser:11';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 6;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_11-unique';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
 $feeds_tamper->source = 'xpathparser:11';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 6;
+$feeds_tamper->weight = 7;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -128,7 +144,7 @@ $feeds_tamper->settings = array(
   'real_separator' => ';',
 );
 $feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Explode';
+$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -169,14 +185,27 @@ $feeds_tamper->settings = array(
       'source' => 'Policy-law',
       'target' => 'Land Policy & Legislation',
     ),
-    7 => array(
-      'source' => '',
-      'target' => '',
-    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 0;
-$feeds_tamper->description = 'MLRF keyrwords to LP OverArching Categories';
+$feeds_tamper->description = 'MLRF keywords to LP OverArching Categories';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_12-trim';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'xpathparser:12';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -188,7 +217,7 @@ $feeds_tamper->importer = 'mlrf_endnote_importer';
 $feeds_tamper->source = 'xpathparser:12';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 2;
+$feeds_tamper->weight = 3;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -212,7 +241,7 @@ $feeds_tamper->settings = array(
     ),
     2 => array(
       'source' => 'Dispossession-grabbing',
-      'target' => 'Commercial Pressures on Land',
+      'target' => 'Land & Investments',
     ),
     3 => array(
       'source' => 'Environment',
@@ -220,16 +249,33 @@ $feeds_tamper->settings = array(
     ),
     4 => array(
       'source' => 'FDI',
-      'target' => 'Commercial Pressures on Land',
+      'target' => 'Land & Investments',
     ),
     5 => array(
       'source' => 'MigrationLabour',
-      'target' => 'Urbanization',
+      'target' => 'Urban Tenure',
     ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 0;
-$feeds_tamper->description = 'MLRF keyrwords to LP Themes';
+$feeds_tamper->description = 'MLRF keywords to LP Themes';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_14-trim';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'xpathparser:14';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -241,7 +287,7 @@ $feeds_tamper->importer = 'mlrf_endnote_importer';
 $feeds_tamper->source = 'xpathparser:14';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 1;
+$feeds_tamper->weight = 2;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -254,12 +300,12 @@ $feeds_tamper->importer = 'mlrf_endnote_importer';
 $feeds_tamper->source = 'xpathparser:15';
 $feeds_tamper->plugin_id = 'explode';
 $feeds_tamper->settings = array(
-  'separator' => ',',
+  'separator' => ';',
   'limit' => '',
-  'real_separator' => ',',
+  'real_separator' => ';',
 );
 $feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Explode';
+$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -278,7 +324,7 @@ $feeds_tamper->settings = array(
     ),
     1 => array(
       'source' => 'AgriculturalModernization',
-      'target' => 'agriculture, agricultural land management, sustainable land management, sustainable land use, farmers, farming systems',
+      'target' => 'agriculture; agricultural land management; sustainable land management; sustainable land use; farmers; farming systems',
     ),
     2 => array(
       'source' => 'CivilSociety-Donors',
@@ -290,11 +336,11 @@ $feeds_tamper->settings = array(
     ),
     4 => array(
       'source' => 'Dispossession-grabbing',
-      'target' => 'land grabbing, land grabs, extractive industries, security of tenure (land), land ownership',
+      'target' => 'land grabbing; land grabs; extractive industries; security of tenure (land); land ownership',
     ),
     5 => array(
       'source' => 'Distribution',
-      'target' => 'land distribution, land reform',
+      'target' => 'land distribution; land reform',
     ),
     6 => array(
       'source' => 'Environment',
@@ -302,11 +348,11 @@ $feeds_tamper->settings = array(
     ),
     7 => array(
       'source' => 'FDI',
-      'target' => 'land investments, land acquisitions, land grabbing',
+      'target' => 'land investments; land acquisitions; land grabbing',
     ),
     8 => array(
       'source' => 'Formalisation-titling',
-      'target' => 'title deed, land titling, regularization of ownership',
+      'target' => 'title deed; land titling; regularization of ownership',
     ),
     9 => array(
       'source' => 'MarginalisedPeople',
@@ -314,16 +360,33 @@ $feeds_tamper->settings = array(
     ),
     10 => array(
       'source' => 'MigrationLabour',
-      'target' => 'Land development (urbanization), farmers',
+      'target' => 'land development (urbanization); farmers',
     ),
     11 => array(
       'source' => 'Policy-law',
-      'target' => 'land policies, land law',
+      'target' => 'land policies; land law',
     ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 0;
-$feeds_tamper->description = 'MLRF keyrwords to LandVoc Concepts';
+$feeds_tamper->description = 'MLRF keywords to LandVoc Concepts';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_15-trim';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'xpathparser:15';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -335,7 +398,7 @@ $feeds_tamper->importer = 'mlrf_endnote_importer';
 $feeds_tamper->source = 'xpathparser:15';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 2;
+$feeds_tamper->weight = 3;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -422,86 +485,143 @@ $feeds_tamper->settings = array(
       'target' => 'Asian Institute of Technology',
     ),
     1 => array(
-      'source' => 'Asian NGO Coalition for Agrarian Reform and Rural Development \\(ANGOC\\)',
+      'source' => 'Asian NGO Coalition for Agrarian Reform and Rural Development (ANGOC)',
       'target' => 'Asian NGO Coalition (ANGOC)',
     ),
     2 => array(
-      'source' => 'Asian Society of Agricultural Economists \\(ASAE\\)',
+      'source' => 'Asian Society of Agricultural Economists (ASAE)',
       'target' => 'Asian Society of Agricultural Economists',
     ),
     3 => array(
+      'source' => 'Basic Books',
+      'target' => 'Basic Books',
+    ),
+    4 => array(
+      'source' => 'Beacon Press',
+      'target' => 'Beacon Press',
+    ),
+    5 => array(
+      'source' => 'Blackwell Publishing Asia',
+      'target' => 'Blackwell Publishing Asia',
+    ),
+    6 => array(
       'source' => 'Cambodia Land Studies Project; OXFAM',
       'target' => 'Oxfam Great Britain',
     ),
-    4 => array(
-      'source' => 'Center for Peacebuilding \\(KOFF\\), Swiss Peace Foundation \\(swisspeace\\)',
+    7 => array(
+      'source' => 'Cambridge University Press',
+      'target' => 'Cambridge University Press',
+    ),
+    8 => array(
+      'source' => 'Center for Peacebuilding (KOFF), Swiss Peace Foundation (swisspeace)',
       'target' => 'swisspeace',
     ),
-    5 => array(
+    9 => array(
+      'source' => 'Cornell University Press',
+      'target' => 'Cornell University Press',
+    ),
+    10 => array(
       'source' => 'Earthscan',
       'target' => 'Routledge Environment & Sustainability',
     ),
-    6 => array(
+    11 => array(
       'source' => 'Elsevier B.V.',
       'target' => 'Elsevier',
     ),
-    7 => array(
+    12 => array(
       'source' => 'Elsevier Ltd',
       'target' => 'Elsevier',
     ),
-    8 => array(
-      'source' => 'Food & Agricultural Organistion of the United Nations \\(FAO\\)',
+    13 => array(
+      'source' => 'Food & Agricultural Organistion of the United Nations (FAO)',
       'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
     ),
-    9 => array(
+    14 => array(
       'source' => 'Forest Peoples Programme',
       'target' => 'Forest Peoples Programme (FPP)',
     ),
-    10 => array(
+    15 => array(
       'source' => 'IIED',
       'target' => 'International Institute for Environment and Development',
     ),
-    11 => array(
-      'source' => 'International Organization on Migration \\(IOM\\)',
+    16 => array(
+      'source' => 'Institute of Developing Economies, Japan External Trade Organization',
+      'target' => 'Institute of Developing Economies, Japan External Trade Organization',
+    ),
+    17 => array(
+      'source' => 'Institute of Southeast Asian Studies',
+      'target' => 'Institute of Southeast Asian Studies',
+    ),
+    18 => array(
+      'source' => 'International Organization on Migration (IOM)',
       'target' => 'International Organization for Migration',
     ),
-    12 => array(
-      'source' => 'Asia Research Center on Migration \\(ARCM\\), Institute of Asian Studies, Chulalongkorn University.',
+    19 => array(
+      'source' => 'Asia Research Center on Migration (ARCM), Institute of Asian Studies, Chulalongkorn University.',
       'target' => 'Asian Research Center for Migration',
     ),
-    13 => array(
+    20 => array(
+      'source' => 'International Organization on Migration (IOM) and the Asia Research Center on Migration (ARCM), Institute of Asian Studies, Chulalongkorn University.',
+      'target' => 'International Organization for Migration; Asian Research Center for Migration; Chulalongkorn University',
+    ),
+    21 => array(
       'source' => 'IRASEC',
       'target' => 'Institut de Recherche sur l\'Asie du Sud-Est Contemporaine',
     ),
-    14 => array(
+    22 => array(
+      'source' => 'Land Deals Politics Initiative (LDPI)',
+      'target' => 'Land Deal Politics Initiative (LDPI)',
+    ),
+    23 => array(
+      'source' => 'NUS Press',
+      'target' => 'NUS Press Singapore',
+    ),
+    24 => array(
+      'source' => 'Oxford University Press',
+      'target' => 'Oxford University Press',
+    ),
+    25 => array(
+      'source' => 'Routledge',
+      'target' => 'Routledge',
+    ),
+    26 => array(
+      'source' => 'SCW',
+      'target' => 'Save Cambodia\'s Wildlife',
+    ),
+    27 => array(
       'source' => 'Singapore University Press',
       'target' => 'NUS Press Singapore',
     ),
-    15 => array(
-      'source' => 'The Learning Institute \\(LI\\)',
+    28 => array(
+      'source' => 'The Learning Institute (LI)',
       'target' => 'Learning Institute',
     ),
-    16 => array(
+    29 => array(
       'source' => 'The World Bank',
       'target' => 'World Bank Group',
     ),
-    17 => array(
+    30 => array(
       'source' => 'UBC Press',
       'target' => 'University of British Columbia Press',
     ),
-    18 => array(
+    31 => array(
+      'source' => 'University of California Press',
+      'target' => 'University of California Press',
+    ),
+    32 => array(
+      'source' => 'University of Washington Press',
+      'target' => 'University of Washington Press',
+    ),
+    33 => array(
       'source' => 'XXIII FIG Congress',
       'target' => 'International Federation of Surveyors (FIG)',
     ),
-    19 => array(
+    34 => array(
       'source' => 'Yale University Press',
       'target' => 'Yale University Press',
     ),
-    20 => array(
-      'source' => 'Land Deals Politics Initiative \\(LDPI\\)',
-      'target' => 'Land Deal Politics Initiative (LDPI)',
-    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 5;
 $feeds_tamper->description = 'Find replace multiple';
@@ -509,7 +629,7 @@ $feeds_tamper->description = 'Find replace multiple';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_7-php';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -527,7 +647,7 @@ $feeds_tamper->description = 'Execute php code';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_7-php_2';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -774,6 +894,6 @@ $feeds_tamper->description = 'Statute - Reports & Research';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
-
+/***********************/
   return $export;
 }
