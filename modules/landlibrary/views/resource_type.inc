@@ -87,8 +87,7 @@ $handler->display->display_options['path'] = 'library/resource-type';
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
 $handler->display->display_options['defaults']['pager'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '20';
+$handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -175,3 +174,19 @@ $handler->display->display_options['filters']['nid']['relationship'] = 'reverse_
 $handler->display->display_options['filters']['nid']['group_type'] = 'count';
 $handler->display->display_options['filters']['nid']['operator'] = '>';
 $handler->display->display_options['filters']['nid']['value']['value'] = '0';
+
+/* Display: Block-Browse */
+$handler = $view->new_display('block', 'Block-Browse', 'block_1');
+$handler->display->display_options['display_description'] = 'Block to add in browse page';
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Taxonomy vocabulary: Machine name */
+$handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+$handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['value'] = array(
+  'landlibrary_resource_type' => 'landlibrary_resource_type',
+);
