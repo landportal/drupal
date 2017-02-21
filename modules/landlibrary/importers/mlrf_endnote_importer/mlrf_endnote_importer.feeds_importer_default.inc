@@ -29,6 +29,7 @@ $feeds_importer->config = array(
         'public' => 'public',
         'private' => 'private',
       ),
+      'delete_uploaded_file' => FALSE,
     ),
   ),
   'parser' => array(
@@ -112,8 +113,7 @@ $feeds_importer->config = array(
         0 => array(
           'source' => 'xpathparser:0',
           'target' => 'title',
-          'unique' => FALSE,
-          'language' => 'und',
+          'unique' => 1,
         ),
         1 => array(
           'source' => 'xpathparser:10',
@@ -227,10 +227,11 @@ $feeds_importer->config = array(
           'source' => 'xpathparser:19',
           'target' => 'field_doc_copyrights_statement',
           'unique' => FALSE,
+          'language' => 'und',
         ),
       ),
       'insert_new' => '1',
-      'update_existing' => '0',
+      'update_existing' => '2',
       'update_non_existent' => 'skip',
       'input_format' => 'plain_text',
       'skip_hash_check' => 0,
