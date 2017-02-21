@@ -61,11 +61,17 @@ $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_d
 $handler->display->display_options['fields']['name']['field'] = 'name';
 $handler->display->display_options['fields']['name']['label'] = '';
 $handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['name']['alter']['text'] = '[name]<span>[nid]</span>';
+$handler->display->display_options['fields']['name']['alter']['text'] = '[name] <span class="badge">[nid]</span>';
 $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+/* Field: Taxonomy term: Term description */
+$handler->display->display_options['fields']['description']['id'] = 'description';
+$handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['description']['field'] = 'description';
+$handler->display->display_options['fields']['description']['label'] = '';
+$handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
 /* Filter criterion: Taxonomy vocabulary: Machine name */
 $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
 $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
@@ -169,24 +175,3 @@ $handler->display->display_options['filters']['nid']['relationship'] = 'reverse_
 $handler->display->display_options['filters']['nid']['group_type'] = 'count';
 $handler->display->display_options['filters']['nid']['operator'] = '>';
 $handler->display->display_options['filters']['nid']['value']['value'] = '0';
-$translatables['resource_type'] = array(
-  t('Master'),
-  t('Resource type'),
-  t('more'),
-  t('Apply'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Parent'),
-  t('field_doc_type'),
-  t('Term ID'),
-  t('.'),
-  t(','),
-  t('Parent ID'),
-  t('count'),
-  t('[name]<span>[nid]</span>'),
-  t('Page'),
-  t('Block'),
-  t('Entity Reference'),
-);
