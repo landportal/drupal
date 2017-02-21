@@ -184,7 +184,7 @@ $handler->display->display_options['fields']['field_image']['label'] = '';
 $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => '',
+  'image_style' => 'header-menu-logo',
   'image_link' => 'content',
 );
 $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -434,6 +434,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
+$handler->display->display_options['filters']['language']['group'] = 1;
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -445,6 +446,7 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'news' => 'news',
   'organization' => 'organization',
 );
+$handler->display->display_options['filters']['type']['group'] = 1;
 $handler->display->display_options['filters']['type']['exposed'] = TRUE;
 $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
 $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
@@ -457,10 +459,29 @@ $handler->display->display_options['filters']['type']['expose']['remember_roles'
   111903910 => 0,
   30037204 => 0,
 );
+/* Filter criterion: Content: Title */
+$handler->display->display_options['filters']['title']['id'] = 'title';
+$handler->display->display_options['filters']['title']['table'] = 'node';
+$handler->display->display_options['filters']['title']['field'] = 'title';
+$handler->display->display_options['filters']['title']['operator'] = 'contains';
+$handler->display->display_options['filters']['title']['group'] = 1;
+$handler->display->display_options['filters']['title']['exposed'] = TRUE;
+$handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
+$handler->display->display_options['filters']['title']['expose']['label'] = 'Title';
+$handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
+$handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+$handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
 /* Filter criterion: Field: Geographical focus (field_geographical_focus) */
 $handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
 $handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
 $handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['group'] = 1;
 $handler->display->display_options['filters']['field_geographical_focus_tid']['exposed'] = TRUE;
 $handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['operator_id'] = 'field_geographical_focus_tid_op';
 $handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['label'] = 'Geographical focus';
@@ -475,3 +496,41 @@ $handler->display->display_options['filters']['field_geographical_focus_tid']['e
 );
 $handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
+/* Filter criterion: Field: Overarching categories (field_related_domains) */
+$handler->display->display_options['filters']['field_related_domains_tid']['id'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['table'] = 'field_data_field_related_domains';
+$handler->display->display_options['filters']['field_related_domains_tid']['field'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_related_domains_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['operator_id'] = 'field_related_domains_tid_op';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['label'] = 'Categories';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['operator'] = 'field_related_domains_tid_op';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['identifier'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_related_domains_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';
+/* Filter criterion: Field: Themes (field_related_themes) */
+$handler->display->display_options['filters']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_related_themes_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['operator_id'] = 'field_related_themes_tid_op';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['label'] = 'Themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['operator'] = 'field_related_themes_tid_op';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['identifier'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_related_themes_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
