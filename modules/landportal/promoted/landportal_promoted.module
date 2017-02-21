@@ -5,6 +5,7 @@
  */
 
 include_once 'landportal_promoted.features.inc';
+
 /**
  * @file
  * Code for the Landportal Promoted module
@@ -26,24 +27,15 @@ function landportal_promoted_views_default_views() {
 
 /* Attach JS to node form for promoted_to_XXX behaviors */
 function landportal_promoted_form_alter(&$form, &$form_state, $form_id) {
+  if (!isset($form['field_thematic_promoted'])) return;
+  if (!user_access('edit_custom_pub_promoted_to_thematic_page')) {
+    unset($form['field_thematic_promoted']);
+    return ;
+  }
   if (substr($form_id, -10) == '_node_form') {
-    //dpm($form, $form_id);
-    if (isset($form['field_country_promoted']) || isset($form['field_thematic_promoted'])) {
-      //$form['#after_build'][] = 'landportal_promoted_after_build';
-      $form['options']['#attached']['js'][] = drupal_get_path('module', 'landportal_promoted') . '/promoted.js';
-    }
-    foreach(['field_country_promoted', 'field_thematic_promoted'] as $f) {
-      // Move fields to Publishing option "options" box
-      if (isset($form[$f])) {
-        $form['options'][$f] = $form[$f];
-        unset($form[$f]);
-      }
-    }
+    // Move field to node publishing option.
+    $form['options']['#attached']['js'][] = drupal_get_path('module', 'landportal_promoted') . '/promoted.js';
+    $form['options']['field_thematic_promoted'] = $form['field_thematic_promoted'];
+    unset($form['field_thematic_promoted']);
   }
 }
-
-/* function landportal_promoted_after_build($form, &$form_state) { */
-/*   $path = drupal_get_path('module', 'landportal_promoted'); */
-/*   drupal_add_js ($path . "/promoted.js"); */
-/*   return $form; */
-/* } */
