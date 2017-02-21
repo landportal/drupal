@@ -24,7 +24,7 @@ function landportal_display_image_default_styles() {
 
   // Exported image style: featured.
   $styles['featured'] = array(
-    'label' => 'Featured',
+    'label' => 'Featured (480x360 / 320x280)',
     'effects' => array(
       4 => array(
         'name' => 'image_scale_and_crop',
@@ -45,9 +45,24 @@ function landportal_display_image_default_styles() {
     ),
   );
 
-  // Exported image style: header-menu-logo.
-  $styles['header-menu-logo'] = array(
-    'label' => 'Header Logo',
+  // Exported image style: full_width_featured.
+  $styles['full_width_featured'] = array(
+    'label' => 'Full width featured (1200x400)',
+    'effects' => array(
+      9 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 1200,
+          'height' => 400,
+        ),
+        'weight' => -9,
+      ),
+    ),
+  );
+
+  // Exported image style: header_logo.
+  $styles['header_logo'] = array(
+    'label' => 'Header Logo (height 110)',
     'effects' => array(
       8 => array(
         'name' => 'image_scale',
@@ -63,7 +78,7 @@ function landportal_display_image_default_styles() {
 
   // Exported image style: square_thumbnail.
   $styles['square_thumbnail'] = array(
-    'label' => 'Square 180',
+    'label' => 'Square thumbnail (180)',
     'effects' => array(
       5 => array(
         'name' => 'image_scale_and_crop',
