@@ -13,7 +13,7 @@ $context->conditions = array(
       'partners_page' => 'partners_page',
     ),
     'options' => array(
-      'node_form' => '0',
+      'node_form' => '1',
     ),
   ),
 );
