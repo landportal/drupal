@@ -13,6 +13,19 @@ CKEDITOR.addTemplates("default", {
           + '</div>'
           + '</div>'
         },
+        { title:"4 Columns",
+          image:"template2.gif",
+          description:"4 columns side by side.",
+          html:
+          '<div class="col-sm-8 col-sm-offset-2">'
+          + '<div class="row clearfix">'
+          + '<div class="col-sm-6 col-md-3"><p>first</p></div>'
+          + '<div class="col-sm-6 col-md-3"><p>second</p></div>'
+          + '<div class="col-sm-6 col-md-3"><p>third</p></div>'
+          + '<div class="col-sm-6 col-md-3"><p>fourth</p></div>'
+          + '</div>'
+          + '</div>'
+        },
         { title:"2 Columns with background 1",
           image:"template2.gif",
           description:"2 columns side by side with a colored background.",
