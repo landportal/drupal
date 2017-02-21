@@ -185,7 +185,7 @@ $handler->display->display_options['fields']['field_image']['label'] = '';
 $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => 'header-menu-logo',
+  'image_style' => 'header_logo',
   'image_link' => 'content',
 );
 $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -250,7 +250,7 @@ $handler->display->display_options['fields']['field_image']['label'] = '';
 $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => '',
+  'image_style' => 'full_width_featured',
   'image_link' => '',
 );
 /* Field: Content: Path */
