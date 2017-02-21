@@ -3,6 +3,15 @@
  * Install / Upgrade hooks
  */
 
+function landportal_promoted_update_7200() {
+  $CTs = array('blog_post', 'debate', 'event', 'landlibrary_resource', 'news');
+  foreach ($CTs as $ct) {
+    if ($instance = field_info_instance('node', 'field_country_promoted', $ct)) {
+      field_delete_instance($instance);
+    }
+  }
+}
+
 function landportal_promoted_uninstall() {
   $or = db_or()->condition('delta', 'promoted-library')
                ->condition('delta', 'promoted-front')
