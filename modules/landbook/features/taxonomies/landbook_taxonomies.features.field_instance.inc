@@ -10,58 +10,6 @@
 function landbook_taxonomies_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'taxonomy_term-datasets-field_geographical_focus'.
-  $field_instances['taxonomy_term-datasets-field_geographical_focus'] = array(
-    'bundle' => 'datasets',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
-      ),
-      'search_index' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_geographical_focus',
-    'label' => 'Geographical focus',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'synonyms',
-      'settings' => array(
-        'sort' => 'weight',
-      ),
-      'type' => 'synonyms_select_taxonomy_term',
-      'weight' => 112,
-    ),
-  );
-
   // Exported field_instance: 'taxonomy_term-datasets-field_id'.
   $field_instances['taxonomy_term-datasets-field_id'] = array(
     'bundle' => 'datasets',
@@ -436,53 +384,6 @@ function landbook_taxonomies_field_default_field_instances() {
       ),
       'type' => 'synonyms_select_taxonomy_term',
       'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'taxonomy_term-indicators-field_geographical_focus'.
-  $field_instances['taxonomy_term-indicators-field_geographical_focus'] = array(
-    'bundle' => 'indicators',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 10,
-      ),
-      'search_index' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_geographical_focus',
-    'label' => 'Geographical focus',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'synonyms',
-      'settings' => array(
-        'sort' => 'weight',
-      ),
-      'type' => 'synonyms_select_taxonomy_term',
-      'weight' => 112,
     ),
   );
 
@@ -978,7 +879,6 @@ function landbook_taxonomies_field_default_field_instances() {
   t('Dataset');
   t('Dataset it belongs to');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
-  t('Geographical focus');
   t('High / Low');
   t('High means it is better to have a high value, low means the best value is the lowest one (like in rankings)');
   t('ID');
