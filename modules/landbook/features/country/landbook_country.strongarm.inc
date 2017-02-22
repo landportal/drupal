@@ -95,6 +95,9 @@ function landbook_country_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -117,7 +120,22 @@ function landbook_country_strongarm() {
           'weight' => '9',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'language' => array(
+          'default' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'listing' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__landbook_country'] = $strongarm;
@@ -150,8 +168,7 @@ function landbook_country_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_landbook_country';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_landbook_country'] = $strongarm;
 
@@ -166,14 +183,14 @@ function landbook_country_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_landbook_country';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_landbook_country'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_landbook_country_pattern';
-  $strongarm->value = 'book/countries/[node:title]';
+  $strongarm->value = 'book/narratives/[current-date:custom:Y]/countries-[node:title]';
   $export['pathauto_node_landbook_country_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
