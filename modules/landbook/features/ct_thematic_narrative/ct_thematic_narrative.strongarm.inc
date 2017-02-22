@@ -181,8 +181,7 @@ function ct_thematic_narrative_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_thematic_narrative';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_thematic_narrative'] = $strongarm;
 
