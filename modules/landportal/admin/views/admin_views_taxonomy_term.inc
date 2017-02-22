@@ -176,10 +176,6 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'label' => '',
   ),
 );
-/* Field: Taxonomy term: ISO3 */
-$handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
-$handler->display->display_options['fields']['field_iso3']['table'] = 'field_data_field_iso3';
-$handler->display->display_options['fields']['field_iso3']['field'] = 'field_iso3';
 /* Sort criterion: Taxonomy term: Name */
 $handler->display->display_options['sorts']['name']['id'] = 'name';
 $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
