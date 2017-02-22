@@ -58,7 +58,7 @@ function landportal_display_form_alter(&$form, &$form_state, $form_id) {
     // dpm($select, 'selected fields');
     global $theme;
     if ($theme != 'lpbs') {
-      $form['#attached']['css'][] = drupal_get_path('module', 'landportal_display') . '/css/select2.css';
+      $form['#attached']['css'][] = drupal_get_path('module', 'landportal_display') . '/select2.css';
     }
     //$form['#attached']['js'][] = drupal_get_path('theme', 'lpbs') . '/js/select2.min.js';
     $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select2.min.js';
