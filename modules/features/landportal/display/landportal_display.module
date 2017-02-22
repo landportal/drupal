@@ -17,3 +17,54 @@ function landportal_display_entity_info_alter(&$entity_info){
     'custom settings' => TRUE,
   );
 }
+
+function landportal_display_form_alter(&$form, &$form_state, $form_id) {
+  $fields = array(
+    // LL specific
+    'field_doc_type',
+    'field_doc_publisher',
+    'field_doc_provider',
+    // LB specific
+    'field_indicators',
+    'field_indicator_ranking',
+    'field_indicator_map',
+    /* // Admin views */
+    'type', // CT type? // for view admin
+    'field_doc_type_tid',
+    'field_doc_publisher_tid',
+    'field_doc_provider_tid',
+    // Commons
+    'field_featured',
+    'field_orgref',
+    'field_geographical_focus',
+    'field_related_topics',
+    'field_related_domains',
+    'field_related_themes'
+  );
+  $select = array();
+  // Quickly scan form for fields
+  foreach($fields as $field) {
+    if (array_key_exists($field, $form)) {
+      $select[] = $field;
+    }
+  }
+
+    // Do we have any matches (ie select field that uses jquery.select) ?
+  $forms = array(
+    'field_ui_field_overview_form', 'user_profile_form', 'user_register_form',
+    'apachesolr_search_custom_page_search_form', 'views_exposed_form'
+  );
+  if (count($select) || in_array($form_id, $forms)) {
+    // dpm($select, 'selected fields');
+    global $theme;
+    if ($theme != 'lpbs') {
+      $form['#attached']['css'][] = drupal_get_path('module', 'landportal_display') . '/css/select2.css';
+    }
+    //$form['#attached']['js'][] = drupal_get_path('theme', 'lpbs') . '/js/select2.min.js';
+    $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select2.min.js';
+    $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select.js';
+  /* } else { */
+  /*   dsm ('no fields require select'); */
+  /*   dpm($form, $form_id); */
+  }
+}
