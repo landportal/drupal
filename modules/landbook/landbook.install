@@ -9,6 +9,27 @@
  * Drupal refactoring: Jules <jules@ker.bz>
  */
 
+
+/** Cleanup fields
+ */
+function landbook_update_7202() {
+  if ($instance = field_info_instance('node', 'field_related_domains', 'thematic_narrative')) {
+    field_delete_instance($instance);
+  }
+  if ($instance = field_info_instance('node', 'field_related_themes', 'thematic_narrative')) {
+    field_delete_instance($instance);
+  }
+
+  // Remove geo tag from datasets + indicators
+  if ($instance = field_info_instance('taxonomy_term', 'field_geographical_focus', 'datasets')) {
+    field_delete_instance($instance);
+  }
+  if ($instance = field_info_instance('taxonomy_term', 'field_geographical_focus', 'indicators')) {
+    field_delete_instance($instance);
+  }
+
+}
+
 /** LPBS Release
  * Reset blocks position for LP new theme
  */
