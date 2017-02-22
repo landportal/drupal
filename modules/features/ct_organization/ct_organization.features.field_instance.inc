@@ -202,49 +202,6 @@ function ct_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_country_promoted'.
-  $field_instances['node-organization-field_country_promoted'] = array(
-    'bundle' => 'organization',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_country_promoted',
-    'label' => 'Country Promoted',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 11,
-    ),
-  );
-
   // Exported field_instance: 'node-organization-field_email'.
   $field_instances['node-organization-field_email'] = array(
     'bundle' => 'organization',
@@ -681,14 +638,14 @@ function ct_organization_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -724,7 +681,7 @@ function ct_organization_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'options_select',
-      'weight' => 109,
+      'weight' => 8,
     ),
   );
 
@@ -740,14 +697,14 @@ function ct_organization_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -778,7 +735,7 @@ function ct_organization_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 110,
+      'weight' => 9,
     ),
   );
 
@@ -794,14 +751,14 @@ function ct_organization_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -844,7 +801,7 @@ function ct_organization_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 10,
     ),
   );
 
@@ -925,7 +882,6 @@ function ct_organization_field_default_field_instances() {
 ');
   t('Acronym');
   t('Attach a  file');
-  t('Country Promoted');
   t('Description');
   t('Email');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');

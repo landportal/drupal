@@ -117,7 +117,7 @@ function ct_blog_post_strongarm() {
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '5',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'default' => array(

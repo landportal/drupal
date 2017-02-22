@@ -13,6 +13,146 @@ function ct_news_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_landvoc|node|news|default';
+  $field_group->group_name = 'group_landvoc';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'news';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_topics_regions';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_related_topics',
+      1 => 'field_related_domains',
+      2 => 'field_related_themes',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-landvoc',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_landvoc|node|news|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_landvoc|node|news|form';
+  $field_group->group_name = 'group_landvoc';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'news';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_topics_regions';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '115',
+    'children' => array(
+      0 => 'field_related_topics',
+      1 => 'field_related_domains',
+      2 => 'field_related_themes',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-landvoc',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_landvoc|node|news|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_landvoc|node|news|listing';
+  $field_group->group_name = 'group_landvoc';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'news';
+  $field_group->mode = 'listing';
+  $field_group->parent_name = 'group_topics_regions';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_related_topics',
+      1 => 'field_related_domains',
+      2 => 'field_related_themes',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-landvoc',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_landvoc|node|news|listing'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_landvoc|node|news|teaser';
+  $field_group->group_name = 'group_landvoc';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'news';
+  $field_group->mode = 'teaser';
+  $field_group->parent_name = 'group_topics_regions';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_related_topics',
+      1 => 'field_related_domains',
+      2 => 'field_related_themes',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-landvoc',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_landvoc|node|news|teaser'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_opt|node|news|default';
   $field_group->group_name = 'group_opt';
   $field_group->entity_type = 'node';
@@ -92,9 +232,7 @@ function ct_news_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'field_geographical_focus',
-      1 => 'field_related_topics',
-      2 => 'field_related_domains',
-      3 => 'field_related_themes',
+      1 => 'group_landvoc',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -123,9 +261,7 @@ function ct_news_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
-      1 => 'field_related_topics',
-      2 => 'field_related_domains',
-      3 => 'field_related_themes',
+      1 => 'group_landvoc',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -155,9 +291,7 @@ function ct_news_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_geographical_focus',
-      1 => 'field_related_topics',
-      2 => 'field_related_domains',
-      3 => 'field_related_themes',
+      1 => 'group_landvoc',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -186,9 +320,7 @@ function ct_news_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_geographical_focus',
-      1 => 'field_related_topics',
-      2 => 'field_related_domains',
-      3 => 'field_related_themes',
+      1 => 'group_landvoc',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

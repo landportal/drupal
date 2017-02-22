@@ -167,7 +167,7 @@ function ct_debate_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -376,7 +376,7 @@ function ct_debate_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 114,
     ),
   );
 
@@ -471,66 +471,6 @@ function ct_debate_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 5,
-      ),
-      'listing' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 3,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_related_domains',
-    'label' => 'Overarching categories',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-        'auto_creation' => 1,
-        'size' => 60,
-        'sort' => 'weight',
-        'suggest_only_unique' => 0,
-        'suggestion_size' => 10,
-        'synonyms_autocomplete_path' => 'synonyms/autocomplete',
-      ),
-      'type' => 'options_select',
-      'weight' => 109,
-    ),
-  );
-
-  // Exported field_instance: 'node-debate-field_related_themes'.
-  $field_instances['node-debate-field_related_themes'] = array(
-    'bundle' => 'debate',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 6,
       ),
       'listing' => array(
@@ -555,8 +495,8 @@ function ct_debate_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_related_themes',
-    'label' => 'Themes',
+    'field_name' => 'field_related_domains',
+    'label' => 'Overarching categories',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -567,19 +507,24 @@ function ct_debate_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(
         'apply_chosen' => '',
+        'auto_creation' => 1,
+        'size' => 60,
         'sort' => 'weight',
+        'suggest_only_unique' => 0,
+        'suggestion_size' => 10,
+        'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'options_select',
-      'weight' => 110,
+      'weight' => 117,
     ),
   );
 
-  // Exported field_instance: 'node-debate-field_related_topics'.
-  $field_instances['node-debate-field_related_topics'] = array(
+  // Exported field_instance: 'node-debate-field_related_themes'.
+  $field_instances['node-debate-field_related_themes'] = array(
     'bundle' => 'debate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -601,6 +546,61 @@ function ct_debate_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_related_themes',
+    'label' => 'Themes',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+        'sort' => 'weight',
+      ),
+      'type' => 'options_select',
+      'weight' => 118,
+    ),
+  );
+
+  // Exported field_instance: 'node-debate-field_related_topics'.
+  $field_instances['node-debate-field_related_topics'] = array(
+    'bundle' => 'debate',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 8,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'promoted_country_page' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'search_result' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
@@ -613,7 +613,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 9,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'node',
@@ -637,7 +637,7 @@ function ct_debate_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 119,
     ),
   );
 
