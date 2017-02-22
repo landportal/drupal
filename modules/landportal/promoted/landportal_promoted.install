@@ -4,7 +4,7 @@
  */
 
 function landportal_promoted_update_7200() {
-  $CTs = array('blog_post', 'debate', 'event', 'landlibrary_resource', 'news');
+  $CTs = array('blog_post', 'debate', 'event', 'landlibrary_resource', 'news', 'organization');
   foreach ($CTs as $ct) {
     if ($instance = field_info_instance('node', 'field_country_promoted', $ct)) {
       field_delete_instance($instance);
