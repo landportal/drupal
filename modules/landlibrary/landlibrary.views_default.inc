@@ -9,17 +9,12 @@
  */
 function landlibrary_views_default_views() {
     $export = array();
-    $views = array(
-        'admin',
-        'browse',
-        'by_providers',
-        //'organizations',
-        'resource_type',
-    );
-    foreach ($views as $view_name) {
-        include 'views/'.$view_name . '.inc';
-        $export[$view->name] = $view;
 
+    $path = drupal_get_path('module', 'landlibrary').'/views/';
+    $files = file_scan_directory($path, '/\.inc$/');
+    foreach ($files as $filepath => $file) {
+      include_once $filepath;
+      $export[$view->name] = $view;
     }
     return $export;
 }
