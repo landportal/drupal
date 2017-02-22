@@ -607,28 +607,6 @@ function landlibrary_resource_field_default_field_bases() {
     'type_name' => 'agdlios',
   );
 
-  // Exported field_base: 'field_duration'.
-  $field_bases['field_duration'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_duration',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
   // Exported field_base: 'field_local_file_url'.
   $field_bases['field_local_file_url'] = array(
     'active' => 1,

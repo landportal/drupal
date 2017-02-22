@@ -72,7 +72,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 26,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -84,7 +84,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
     ),
     'entity_type' => 'node',
@@ -125,7 +125,7 @@ function landlibrary_resource_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -157,7 +157,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 23,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -169,7 +169,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 20,
       ),
     ),
     'entity_type' => 'node',
@@ -333,7 +333,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -351,7 +351,7 @@ function landlibrary_resource_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_trimmed',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -407,7 +407,7 @@ function landlibrary_resource_field_default_field_instances() {
         'rows' => 10,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -438,7 +438,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 25,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -450,7 +450,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 23,
       ),
     ),
     'entity_type' => 'node',
@@ -506,7 +506,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 15,
       ),
       'full' => array(
         'label' => 'above',
@@ -521,7 +521,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 24,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -533,7 +533,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 22,
       ),
     ),
     'entity_type' => 'node',
@@ -585,7 +585,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -597,7 +597,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 22,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -609,7 +609,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 21,
       ),
     ),
     'entity_type' => 'node',
@@ -661,7 +661,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'above',
@@ -673,7 +673,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 21,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -685,7 +685,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 19,
       ),
     ),
     'entity_type' => 'node',
@@ -739,13 +739,13 @@ function landlibrary_resource_field_default_field_instances() {
           'text' => 'Download [file:name]',
         ),
         'type' => 'file_download_link',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 19,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -757,7 +757,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
     ),
     'entity_type' => 'node',
@@ -794,7 +794,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 16,
       ),
       'full' => array(
         'label' => 'above',
@@ -811,7 +811,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 17,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -823,7 +823,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
       ),
     ),
     'entity_type' => 'node',
@@ -884,7 +884,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 10,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -945,7 +945,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 16,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -957,7 +957,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
     ),
     'entity_type' => 'node',
@@ -1006,7 +1006,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 15,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1045,7 +1045,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 24,
       ),
       'token' => array(
         'label' => 'inline',
@@ -1193,7 +1193,7 @@ function landlibrary_resource_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'above',
@@ -1211,7 +1211,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 7,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1298,7 +1298,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 13,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1310,7 +1310,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -1356,7 +1356,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 13,
       ),
       'full' => array(
         'label' => 'above',
@@ -1371,7 +1371,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 14,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1383,7 +1383,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 13,
       ),
     ),
     'entity_type' => 'node',
@@ -1417,7 +1417,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 14,
       ),
       'full' => array(
         'label' => 'above',
@@ -1432,7 +1432,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 18,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1444,7 +1444,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
     ),
     'entity_type' => 'node',
@@ -1492,13 +1492,9 @@ function landlibrary_resource_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'large',
-        ),
-        'type' => 'image',
-        'weight' => 2,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
       ),
       'full' => array(
         'label' => 'above',
@@ -1508,13 +1504,9 @@ function landlibrary_resource_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => 'content',
-          'image_style' => 'medium',
-        ),
-        'type' => 'image',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1524,13 +1516,9 @@ function landlibrary_resource_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => 'content',
-          'image_style' => 'medium',
-        ),
-        'type' => 'image',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -1564,7 +1552,7 @@ function landlibrary_resource_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -1688,13 +1676,13 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -1772,6 +1760,76 @@ function landlibrary_resource_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-landlibrary_resource-field_image'.
+  $field_instances['node-landlibrary_resource-field_image'] = array(
+    'bundle' => 'landlibrary_resource',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_image',
+    'label' => 'Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'image' => 'image',
+        ),
+        'browser_plugins' => array(),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-landlibrary_resource-field_local_file_url'.
   $field_instances['node-landlibrary_resource-field_local_file_url'] = array(
     'bundle' => 'landlibrary_resource',
@@ -1783,13 +1841,13 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_markup',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 20,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1801,7 +1859,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
       ),
     ),
     'entity_type' => 'node',
@@ -1860,7 +1918,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'node',
@@ -1915,7 +1973,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1928,7 +1986,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -1970,7 +2028,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -1983,7 +2041,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -2018,14 +2076,14 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -2045,7 +2103,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'node',
@@ -2089,6 +2147,7 @@ function landlibrary_resource_field_default_field_instances() {
   t('File Upload');
   t('Geographical focus');
   t('ISBN / Resource ID');
+  t('Image');
   t('Is part of');
   t('Keyword');
   t('License of the resource');

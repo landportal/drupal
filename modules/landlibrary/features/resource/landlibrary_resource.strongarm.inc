@@ -164,7 +164,7 @@ function landlibrary_resource_strongarm() {
           'weight' => '8',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '11',
         ),
       ),
       'display' => array(),
