@@ -6,5 +6,6 @@ CKEDITOR.stylesSet.add('default', [
 ]);
 
 CKEDITOR.config.templates_replaceContent = false;
-CKEDITOR.config.templates_files = ['/sites/landportal.ker/modules/landportal/partners/ckeditor.templates.js'];
+CKEDITOR.config.templates_files = [ Drupal.settings.basePath + Drupal.settings.landportal_partners.path + '/ckeditor.templates.js'];
 //CKEDITOR.config
+console.log(Drupal.settings);
