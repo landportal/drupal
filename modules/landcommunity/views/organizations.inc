@@ -70,7 +70,7 @@ $handler->display->display_options['filters']['type']['value'] = array(
 );
 
 /* Display: All */
-$handler = $view->new_display('entityreference', 'All', 'entityreference_2');
+$handler = $view->new_display('entityreference', 'All', 'ref_all');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';

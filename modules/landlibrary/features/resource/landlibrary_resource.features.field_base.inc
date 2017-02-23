@@ -438,7 +438,7 @@ function landlibrary_resource_field_default_field_bases() {
         ),
         'view' => array(
           'args' => array(),
-          'display_name' => 'entityreference_2',
+          'display_name' => 'ref_all',
           'view_name' => 'organizations',
         ),
       ),
@@ -474,7 +474,7 @@ function landlibrary_resource_field_default_field_bases() {
         ),
         'view' => array(
           'args' => array(),
-          'display_name' => 'entityreference_2',
+          'display_name' => 'ref_all',
           'view_name' => 'organizations',
         ),
       ),

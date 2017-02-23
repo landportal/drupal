@@ -376,5 +376,5 @@ $handler->display->display_options['filters']['field_doc_publisher_target_id_ent
   111903910 => 0,
   30037204 => 0,
 );
-$handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['reference_display'] = 'organizations:entityreference_2';
+$handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['reference_display'] = 'organizations:ref_all';
 $handler->display->display_options['block_caching'] = '-1';
