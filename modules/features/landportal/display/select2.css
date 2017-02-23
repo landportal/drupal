@@ -1,3 +1,7 @@
+.admin-menu > .select2-container--open .select2-dropdown {
+      margin-top: 29px;
+}
+
 .select2-container {
   box-sizing: border-box;
   display: inline-block;
@@ -73,9 +77,6 @@
   .select2-results__option[aria-selected] {
     cursor: pointer; }
 
-.admin-menu .select2-container--open .select2-dropdown {
-      margin-top: 29px;
-}
 .select2-container--open .select2-dropdown {
     left: 0;
 }

@@ -56,6 +56,9 @@ var Drupal = Drupal || {};
                 }
             });
             var single_fields = [
+                'edit-field-indicator-map-und',
+                'edit-field-indicator-ranking-und',
+                'edit-field-landvoc-to-und',
                 'edit-field-doc-type-tid',
                 'edit-field-organization-type-tid',
                 'edit-fields-add-new-field-type',
