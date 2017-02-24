@@ -41,11 +41,6 @@ $handler->display->display_options['style_options']['default_row_class'] = FALSE
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'entity';
 $handler->display->display_options['row_options']['view_mode'] = 'teaser';
-/* Header: Global: Result summary */
-$handler->display->display_options['header']['result']['id'] = 'result';
-$handler->display->display_options['header']['result']['table'] = 'views';
-$handler->display->display_options['header']['result']['field'] = 'result';
-$handler->display->display_options['header']['result']['content'] = 'Showing @start - @end of @total';
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
