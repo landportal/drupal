@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Rural21 - Simple Land Portal CSV importer feature.
+ */
+
+include_once 'rural21_simple_land_portal_csv_importer.features.inc';

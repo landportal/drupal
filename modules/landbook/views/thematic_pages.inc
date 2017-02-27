@@ -7,7 +7,7 @@ $view->name = 'thematic_pages';
 $view->description = '';
 $view->tag = 'default';
 $view->base_table = 'node';
-$view->human_name = 'Thematic pages';
+$view->human_name = 'Land Book - Thematic portfolios';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -15,6 +15,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['title'] = 'Thematic portfolios';
+$handler->display->display_options['css_class'] = 'view-grid-3';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
@@ -26,14 +27,7 @@ $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['row_plugin'] = 'node';
-$handler->display->display_options['row_options']['links'] = FALSE;
-/* Header: Global: Text area */
-$handler->display->display_options['header']['area']['id'] = 'area';
-$handler->display->display_options['header']['area']['table'] = 'views';
-$handler->display->display_options['header']['area']['field'] = 'area';
-$handler->display->display_options['header']['area']['content'] = '<p class="lead">Access land-related information by theme. Indeed, land and land governance are multidimensional concepts related to a variety of intertwined issues. Try not to get lost and click on a thematic portfolio to read the dedicated thematic narrative, to discover the existing data, to check the latest news, to retrive specific bibliographic resources and much more.</p>';
-$handler->display->display_options['header']['area']['format'] = 'filtered_html';
+$handler->display->display_options['row_plugin'] = 'fields';
 /* Relationship: Entity Reference: Referenced Entity */
 $handler->display->display_options['relationships']['field_landvoc_to_target_id']['id'] = 'field_landvoc_to_target_id';
 $handler->display->display_options['relationships']['field_landvoc_to_target_id']['table'] = 'field_data_field_landvoc_to';
@@ -69,19 +63,23 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'thematic_narrative' => 'thematic_narrative',
 );
 
-/* Display: Page */
-$handler = $view->new_display('page', 'Page', 'page');
-$handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'view-grid-3';
-$handler->display->display_options['field_language'] = 'und';
+/* Display: Entity Reference */
+$handler = $view->new_display('entityreference', 'Entity Reference', 'entityreference_1');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['default_row_class'] = FALSE;
-$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'entityreference_style';
+$handler->display->display_options['style_options']['search_fields'] = array(
+  'name_field' => 'name_field',
+  'title' => 0,
+);
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['row_plugin'] = 'entityreference_fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
+
+/* Display: Block-Land Book Thematic portfolios */
+$handler = $view->new_display('block', 'Block-Land Book Thematic portfolios', 'block_lb_thematic_portfolios');
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Path */
 $handler->display->display_options['fields']['path']['id'] = 'path';
@@ -89,10 +87,7 @@ $handler->display->display_options['fields']['path']['table'] = 'node';
 $handler->display->display_options['fields']['path']['field'] = 'path';
 $handler->display->display_options['fields']['path']['label'] = '';
 $handler->display->display_options['fields']['path']['exclude'] = TRUE;
-$handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['path']['alter']['text'] = '[path]';
 $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['path']['absolute'] = TRUE;
 /* Field: Field: Image */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -141,23 +136,5 @@ $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
 $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['label'] = '';
-$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-$handler->display->display_options['path'] = 'book/thematic';
-
-/* Display: Entity Reference */
-$handler = $view->new_display('entityreference', 'Entity Reference', 'entityreference_1');
-$handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'entityreference_style';
-$handler->display->display_options['style_options']['search_fields'] = array(
-  'name_field' => 'name_field',
-  'title' => 0,
-);
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'entityreference_fields';
-$handler->display->display_options['defaults']['row_options'] = FALSE;

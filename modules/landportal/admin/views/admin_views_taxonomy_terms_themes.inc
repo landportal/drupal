@@ -5,7 +5,7 @@ $view->name = 'admin_views_taxonomy_terms_themes';
 $view->description = 'Provide an administrative view to manage Themes';
 $view->tag = 'landportal, taxonomies, themes';
 $view->base_table = 'taxonomy_term_data';
-$view->human_name = 'Themes management';
+$view->human_name = 'Administration: Themes';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -233,7 +233,7 @@ $handler->display->display_options['fields']['edit_term']['field'] = 'edit_term'
 $handler->display->display_options['fields']['edit_term']['label'] = 'Links';
 /* Field: Bulk operations: Taxonomy term */
 $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
-$handler->display->display_options['fields']['views_bulk_operations']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_taxonomy_term';
 $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
