@@ -151,6 +151,15 @@ $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'entityreference_fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Taxonomy term: Term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Taxonomy term: Vocabulary */
