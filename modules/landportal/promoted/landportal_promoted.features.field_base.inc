@@ -35,7 +35,7 @@ function landportal_promoted_field_default_field_bases() {
         ),
         'view' => array(
           'args' => array(),
-          'display_name' => 'entityreference_1',
+          'display_name' => 'ref_landvoc',
           'view_name' => 'thematic_pages',
         ),
       ),

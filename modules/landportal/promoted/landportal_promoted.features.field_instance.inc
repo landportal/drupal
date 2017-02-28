@@ -14,6 +14,7 @@ function landportal_promoted_field_default_field_instances() {
   $field_instances['node-blog_post-field_thematic_promoted'] = array(
     'bundle' => 'blog_post',
     'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -39,10 +40,20 @@ function landportal_promoted_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
     'entityconnect_show_add_icon' => 0,
     'entityconnect_show_edit_icon' => 0,
     'entityconnect_unload_add' => 1,
@@ -51,15 +62,18 @@ function landportal_promoted_field_default_field_instances() {
     'label' => 'Thematic Promoted',
     'required' => 0,
     'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 113,
     ),
@@ -185,18 +199,15 @@ function landportal_promoted_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 49,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 11,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -208,7 +219,7 @@ function landportal_promoted_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'node',
@@ -251,7 +262,7 @@ function landportal_promoted_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -263,7 +274,7 @@ function landportal_promoted_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',

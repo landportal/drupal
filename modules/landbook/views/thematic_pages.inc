@@ -64,7 +64,7 @@ $handler->display->display_options['filters']['type']['value'] = array(
 );
 
 /* Display: Entity Reference */
-$handler = $view->new_display('entityreference', 'Entity Reference', 'entityreference_1');
+$handler = $view->new_display('entityreference', 'Entity Reference', 'ref_landvoc');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
