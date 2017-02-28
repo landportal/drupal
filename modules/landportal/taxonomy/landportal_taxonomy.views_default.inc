@@ -4,19 +4,13 @@
  */
 
 function landportal_taxonomy_views_default_views() {
-    $export = array();
-    $views = array(
-        'concepts',
-        'domains',
-        'themes',
-		'landvoc',
-		'licenses',
-		'languages'
-    );
-    foreach ($views as $view_name) {
-        include 'views/'.$view_name . '.inc';
-        $export[$view->name] = $view;
+  $export = array();
 
-    }
-    return $export;
+  $path = drupal_get_path('module', 'landportal_taxonomy').'/views/';
+  $files = file_scan_directory($path, '/\.inc$/');
+  foreach ($files as $filepath => $file) {
+    include_once $filepath;
+    $export[$view->name] = $view;
+  }
+  return $export;
 }
