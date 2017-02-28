@@ -299,6 +299,7 @@ function ct_thematic_narrative_field_default_field_instances() {
   $field_instances['node-thematic_narrative-field_landvoc_to'] = array(
     'bundle' => 'thematic_narrative',
     'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
     'description' => 'Select a Landvoc Theme or Overarching Category this narrative is about.',
     'display' => array(
@@ -339,6 +340,16 @@ function ct_thematic_narrative_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
     'entityconnect_show_add_icon' => 0,
     'entityconnect_show_edit_icon' => 0,
     'entityconnect_unload_add' => 1,
@@ -348,6 +359,9 @@ function ct_thematic_narrative_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
         'taxonomy-index' => array(
           'status' => TRUE,
         ),
@@ -358,9 +372,7 @@ function ct_thematic_narrative_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 1,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 0,
     ),
