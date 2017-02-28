@@ -163,13 +163,7 @@ function landportal_display_ckeditor_profile_defaults() {
         'html_entities' => 'f',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => 'config.font_names = \'Merriweather ; Open Sans\';
-config.fontSize_sizes = \'medium/16px;large/20px;title/28px;\';
-config.colorButton_colors = \'0096d8,abc029,f9b122\';
-config.stylesSet = [
- { name : \'BG\', element : \'div\' },
-{ name : \'Sp\', element : \'span\' }
-];',
+        'js_conf' => '',
         'loadPlugins' => array(
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',
