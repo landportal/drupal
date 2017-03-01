@@ -250,6 +250,12 @@ $handler->display->display_options['filters']['nid']['value']['value'] = '20';
 
 /* Display: Block-Land Library sources */
 $handler = $view->new_display('block', 'Block-Land Library sources', 'block_1');
+$handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: Result summary */
+$handler->display->display_options['header']['result']['id'] = 'result';
+$handler->display->display_options['header']['result']['table'] = 'views';
+$handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
 
 /* Display: Block-Land Book sources */
 $handler = $view->new_display('block', 'Block-Land Book sources', 'block_lb_sources');
