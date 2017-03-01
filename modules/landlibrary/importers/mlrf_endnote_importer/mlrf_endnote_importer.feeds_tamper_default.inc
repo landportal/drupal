@@ -14,163 +14,6 @@ $export = array();
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_7-find_replace_multiple';
-$feeds_tamper->importer = 'mlrf_endnote_importer';
-$feeds_tamper->source = 'xpathparser:7';
-$feeds_tamper->plugin_id = 'find_replace_multiple';
-$feeds_tamper->settings = array(
-  'pairs' => array(
-    0 => array(
-      'source' => 'Asian Institute of Technology – AIT',
-      'target' => 'Asian Institute of Technology',
-    ),
-    1 => array(
-      'source' => 'Asian NGO Coalition for Agrarian Reform and Rural Development (ANGOC)',
-      'target' => 'Asian NGO Coalition (ANGOC)',
-    ),
-    2 => array(
-      'source' => 'Asian Society of Agricultural Economists (ASAE)',
-      'target' => 'Asian Society of Agricultural Economists',
-    ),
-    3 => array(
-      'source' => 'Basic Books',
-      'target' => 'Basic Books',
-    ),
-    4 => array(
-      'source' => 'Beacon Press',
-      'target' => 'Beacon Press',
-    ),
-    5 => array(
-      'source' => 'Blackwell Publishing Asia',
-      'target' => 'Blackwell Publishing Asia',
-    ),
-    6 => array(
-      'source' => 'Cambodia Land Studies Project; OXFAM',
-      'target' => 'Oxfam Great Britain',
-    ),
-    7 => array(
-      'source' => 'Cambridge University Press',
-      'target' => 'Cambridge University Press',
-    ),
-    8 => array(
-      'source' => 'Center for Peacebuilding (KOFF), Swiss Peace Foundation (swisspeace)',
-      'target' => 'swisspeace',
-    ),
-    9 => array(
-      'source' => 'Cornell University Press',
-      'target' => 'Cornell University Press',
-    ),
-    10 => array(
-      'source' => 'Earthscan',
-      'target' => 'Routledge Environment & Sustainability',
-    ),
-    11 => array(
-      'source' => 'Elsevier B.V.',
-      'target' => 'Elsevier',
-    ),
-    12 => array(
-      'source' => 'Elsevier Ltd',
-      'target' => 'Elsevier',
-    ),
-    13 => array(
-      'source' => 'Food & Agricultural Organistion of the United Nations (FAO)',
-      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
-    ),
-    14 => array(
-      'source' => 'Forest Peoples Programme',
-      'target' => 'Forest Peoples Programme (FPP)',
-    ),
-    15 => array(
-      'source' => 'IIED',
-      'target' => 'International Institute for Environment and Development',
-    ),
-    16 => array(
-      'source' => 'Institute of Developing Economies, Japan External Trade Organization',
-      'target' => 'Institute of Developing Economies, Japan External Trade Organization',
-    ),
-    17 => array(
-      'source' => 'Institute of Southeast Asian Studies',
-      'target' => 'Institute of Southeast Asian Studies',
-    ),
-    18 => array(
-      'source' => 'International Organization on Migration (IOM)',
-      'target' => 'International Organization for Migration',
-    ),
-    19 => array(
-      'source' => 'Asia Research Center on Migration (ARCM), Institute of Asian Studies, Chulalongkorn University.',
-      'target' => 'Asian Research Center for Migration',
-    ),
-    20 => array(
-      'source' => 'International Organization on Migration (IOM) and the Asia Research Center on Migration (ARCM), Institute of Asian Studies, Chulalongkorn University.',
-      'target' => 'International Organization for Migration; Asian Research Center for Migration; Chulalongkorn University',
-    ),
-    21 => array(
-      'source' => 'IRASEC',
-      'target' => 'Institut de Recherche sur l\'Asie du Sud-Est Contemporaine',
-    ),
-    22 => array(
-      'source' => 'Land Deals Politics Initiative (LDPI)',
-      'target' => 'Land Deal Politics Initiative (LDPI)',
-    ),
-    23 => array(
-      'source' => 'NUS Press',
-      'target' => 'NUS Press Singapore',
-    ),
-    24 => array(
-      'source' => 'Oxford University Press',
-      'target' => 'Oxford University Press',
-    ),
-    25 => array(
-      'source' => 'Routledge',
-      'target' => 'Routledge',
-    ),
-    26 => array(
-      'source' => 'SCW',
-      'target' => 'Save Cambodia\'s Wildlife',
-    ),
-    27 => array(
-      'source' => 'Singapore University Press',
-      'target' => 'NUS Press Singapore',
-    ),
-    28 => array(
-      'source' => 'The Learning Institute (LI)',
-      'target' => 'Learning Institute',
-    ),
-    29 => array(
-      'source' => 'The World Bank',
-      'target' => 'World Bank Group',
-    ),
-    30 => array(
-      'source' => 'UBC Press',
-      'target' => 'University of British Columbia Press',
-    ),
-    31 => array(
-      'source' => 'University of California Press',
-      'target' => 'University of California Press',
-    ),
-    32 => array(
-      'source' => 'University of Washington Press',
-      'target' => 'University of Washington Press',
-    ),
-    33 => array(
-      'source' => 'XXIII FIG Congress',
-      'target' => 'International Federation of Surveyors (FIG)',
-    ),
-    34 => array(
-      'source' => 'Yale University Press',
-      'target' => 'Yale University Press',
-    ),
-  ),
-  'full' => 1,
-);
-$feeds_tamper->weight = 5;
-$feeds_tamper->description = 'Find replace multiple';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-blank_source_1-default_value';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
 $feeds_tamper->source = 'Blank source 1';
@@ -629,6 +472,172 @@ $feeds_tamper->description = 'Add the month (12) and day (31) at the end of the 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_7-explode';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'xpathparser:7';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ';',
+  'limit' => '',
+  'real_separator' => ';',
+);
+$feeds_tamper->weight = 7;
+$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_7-find_replace_multiple';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'xpathparser:7';
+$feeds_tamper->plugin_id = 'find_replace_multiple';
+$feeds_tamper->settings = array(
+  'pairs' => array(
+    0 => array(
+      'source' => 'Asian Institute of Technology – AIT',
+      'target' => 'Asian Institute of Technology',
+    ),
+    1 => array(
+      'source' => 'Asian NGO Coalition for Agrarian Reform and Rural Development (ANGOC)',
+      'target' => 'Asian NGO Coalition (ANGOC)',
+    ),
+    2 => array(
+      'source' => 'Asian Society of Agricultural Economists (ASAE)',
+      'target' => 'Asian Society of Agricultural Economists',
+    ),
+    3 => array(
+      'source' => 'Basic Books',
+      'target' => 'Basic Books',
+    ),
+    4 => array(
+      'source' => 'Beacon Press',
+      'target' => 'Beacon Press',
+    ),
+    5 => array(
+      'source' => 'Blackwell Publishing Asia',
+      'target' => 'Blackwell Publishing Asia',
+    ),
+    6 => array(
+      'source' => 'Cambodia Land Studies Project; OXFAM',
+      'target' => 'Oxfam Great Britain',
+    ),
+    7 => array(
+      'source' => 'Cambridge University Press',
+      'target' => 'Cambridge University Press',
+    ),
+    8 => array(
+      'source' => 'Center for Peacebuilding (KOFF), Swiss Peace Foundation (swisspeace)',
+      'target' => 'swisspeace',
+    ),
+    9 => array(
+      'source' => 'Cornell University Press',
+      'target' => 'Cornell University Press',
+    ),
+    10 => array(
+      'source' => 'Earthscan',
+      'target' => 'Routledge Environment & Sustainability',
+    ),
+    11 => array(
+      'source' => 'Elsevier B.V.',
+      'target' => 'Elsevier',
+    ),
+    12 => array(
+      'source' => 'Elsevier Ltd',
+      'target' => 'Elsevier',
+    ),
+    13 => array(
+      'source' => 'Food & Agricultural Organistion of the United Nations (FAO)',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    14 => array(
+      'source' => 'Forest Peoples Programme',
+      'target' => 'Forest Peoples Programme (FPP)',
+    ),
+    15 => array(
+      'source' => 'IIED',
+      'target' => 'International Institute for Environment and Development',
+    ),
+    16 => array(
+      'source' => 'Institute of Developing Economies, Japan External Trade Organization',
+      'target' => 'Institute of Developing Economies, Japan External Trade Organization',
+    ),
+    17 => array(
+      'source' => 'Institute of Southeast Asian Studies',
+      'target' => 'Institute of Southeast Asian Studies',
+    ),
+    18 => array(
+      'source' => 'International Organization on Migration (IOM) and the Asia Research Center on Migration (ARCM), Institute of Asian Studies, Chulalongkorn University.',
+      'target' => 'International Organization for Migration; Asian Research Center for Migration; Chulalongkorn University',
+    ),
+    19 => array(
+      'source' => 'IRASEC',
+      'target' => 'Institut de Recherche sur l\'Asie du Sud-Est Contemporaine',
+    ),
+    20 => array(
+      'source' => 'Land Deals Politics Initiative (LDPI)',
+      'target' => 'Land Deal Politics Initiative (LDPI)',
+    ),
+    21 => array(
+      'source' => 'NUS Press',
+      'target' => 'NUS Press Singapore',
+    ),
+    22 => array(
+      'source' => 'Oxford University Press',
+      'target' => 'Oxford University Press',
+    ),
+    23 => array(
+      'source' => 'Routledge',
+      'target' => 'Routledge',
+    ),
+    24 => array(
+      'source' => 'SCW',
+      'target' => 'Save Cambodia\'s Wildlife',
+    ),
+    25 => array(
+      'source' => 'Singapore University Press',
+      'target' => 'NUS Press Singapore',
+    ),
+    26 => array(
+      'source' => 'The Learning Institute (LI)',
+      'target' => 'Learning Institute',
+    ),
+    27 => array(
+      'source' => 'The World Bank',
+      'target' => 'World Bank Group',
+    ),
+    28 => array(
+      'source' => 'UBC Press',
+      'target' => 'University of British Columbia Press',
+    ),
+    29 => array(
+      'source' => 'University of California Press',
+      'target' => 'University of California Press',
+    ),
+    30 => array(
+      'source' => 'University of Washington Press',
+      'target' => 'University of Washington Press',
+    ),
+    31 => array(
+      'source' => 'XXIII FIG Congress',
+      'target' => 'International Federation of Surveyors (FIG)',
+    ),
+    32 => array(
+      'source' => 'Yale University Press',
+      'target' => 'Yale University Press',
+    ),
+  ),
+  'full' => 1,
+);
+$feeds_tamper->weight = 5;
+$feeds_tamper->description = 'Find replace multiple';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
 $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_7-php';
@@ -661,6 +670,22 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 3;
 $feeds_tamper->description = 'Execute php code';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_7-trim';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'xpathparser:7';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 8;
+$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
