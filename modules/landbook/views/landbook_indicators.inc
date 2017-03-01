@@ -94,16 +94,6 @@ $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
-/* Relationship: Field: Themes (field_related_themes) (translated) */
-$handler->display->display_options['relationships']['field_related_themes_tid_i18n']['id'] = 'field_related_themes_tid_i18n';
-$handler->display->display_options['relationships']['field_related_themes_tid_i18n']['table'] = 'field_data_field_related_themes';
-$handler->display->display_options['relationships']['field_related_themes_tid_i18n']['field'] = 'field_related_themes_tid_i18n';
-$handler->display->display_options['relationships']['field_related_themes_tid_i18n']['label'] = 'themes';
-/* Relationship: Field: Overarching categories (field_related_domains) (translated) */
-$handler->display->display_options['relationships']['field_related_domains_tid_i18n']['id'] = 'field_related_domains_tid_i18n';
-$handler->display->display_options['relationships']['field_related_domains_tid_i18n']['table'] = 'field_data_field_related_domains';
-$handler->display->display_options['relationships']['field_related_domains_tid_i18n']['field'] = 'field_related_domains_tid_i18n';
-$handler->display->display_options['relationships']['field_related_domains_tid_i18n']['label'] = 'domains';
 /* Relationship: Taxonomy term: Dataset (field_dataset) */
 $handler->display->display_options['relationships']['field_dataset_tid']['id'] = 'field_dataset_tid';
 $handler->display->display_options['relationships']['field_dataset_tid']['table'] = 'field_data_field_dataset';
