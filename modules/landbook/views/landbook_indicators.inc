@@ -169,16 +169,6 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
 /* Display: Block-Land Book Indicators */
 $handler = $view->new_display('block', 'Block-Land Book Indicators', 'block_lb_indicators');
 $handler->display->display_options['defaults']['relationships'] = FALSE;
-/* Relationship: Field: Themes (field_related_themes) (translated) */
-$handler->display->display_options['relationships']['field_related_themes_tid_i18n']['id'] = 'field_related_themes_tid_i18n';
-$handler->display->display_options['relationships']['field_related_themes_tid_i18n']['table'] = 'field_data_field_related_themes';
-$handler->display->display_options['relationships']['field_related_themes_tid_i18n']['field'] = 'field_related_themes_tid_i18n';
-$handler->display->display_options['relationships']['field_related_themes_tid_i18n']['label'] = 'themes';
-/* Relationship: Field: Overarching categories (field_related_domains) (translated) */
-$handler->display->display_options['relationships']['field_related_domains_tid_i18n']['id'] = 'field_related_domains_tid_i18n';
-$handler->display->display_options['relationships']['field_related_domains_tid_i18n']['table'] = 'field_data_field_related_domains';
-$handler->display->display_options['relationships']['field_related_domains_tid_i18n']['field'] = 'field_related_domains_tid_i18n';
-$handler->display->display_options['relationships']['field_related_domains_tid_i18n']['label'] = 'domains';
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Taxonomy term: Rendered Taxonomy term */
 $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
@@ -235,6 +225,7 @@ $handler->display->display_options['filters']['field_related_domains_tid']['expo
   111903910 => 0,
   30037204 => 0,
 );
+$handler->display->display_options['filters']['field_related_domains_tid']['reduce_duplicates'] = TRUE;
 $handler->display->display_options['filters']['field_related_domains_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';
 /* Filter criterion: Field: Themes (field_related_themes) */
@@ -254,5 +245,6 @@ $handler->display->display_options['filters']['field_related_themes_tid']['expos
   111903910 => 0,
   30037204 => 0,
 );
+$handler->display->display_options['filters']['field_related_themes_tid']['reduce_duplicates'] = TRUE;
 $handler->display->display_options['filters']['field_related_themes_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
