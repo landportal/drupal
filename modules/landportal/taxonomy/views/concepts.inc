@@ -78,4 +78,4 @@ $handler = $view->new_display('page', 'Page', 'page');
 $handler->display->display_options['path'] = 'voc/landvoc/concept';
 
 /* Display: Block */
-$handler = $view->new_display('block', 'Block', 'block_1');
+$handler = $view->new_display('block', 'Block', 'block_concepts');
