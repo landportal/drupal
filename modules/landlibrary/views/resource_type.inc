@@ -12,7 +12,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Resource type';
+$handler->display->display_options['title'] = 'List of Resource Types';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['group_by'] = TRUE;
 $handler->display->display_options['access']['type'] = 'perm';
@@ -80,12 +80,9 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
   'landlibrary_resource_type' => 'landlibrary_resource_type',
 );
 
-/* Display: Page */
-$handler = $view->new_display('page', 'Page', 'page');
-$handler->display->display_options['path'] = 'library/resource-type';
-
-/* Display: Block */
-$handler = $view->new_display('block', 'Block', 'block');
+/* Display: Block-Tree list */
+$handler = $view->new_display('block', 'Block-Tree list', 'block_treelist');
+$handler->display->display_options['display_description'] = 'Tree list of Resource Types';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -98,11 +95,7 @@ $handler->display->display_options['filters']['machine_name']['field'] = 'machin
 $handler->display->display_options['filters']['machine_name']['value'] = array(
   'landlibrary_resource_type' => 'landlibrary_resource_type',
 );
-/* Filter criterion: Taxonomy term: Parent term */
-$handler->display->display_options['filters']['parent']['id'] = 'parent';
-$handler->display->display_options['filters']['parent']['table'] = 'taxonomy_term_hierarchy';
-$handler->display->display_options['filters']['parent']['field'] = 'parent';
-$handler->display->display_options['filters']['parent']['value']['value'] = '0';
+$handler->display->display_options['filters']['machine_name']['group'] = 1;
 
 /* Display: Entity Reference */
 $handler = $view->new_display('entityreference', 'Entity Reference', 'entityreference_1');
@@ -176,7 +169,9 @@ $handler->display->display_options['filters']['nid']['operator'] = '>';
 $handler->display->display_options['filters']['nid']['value']['value'] = '0';
 
 /* Display: Block-Browse */
-$handler = $view->new_display('block', 'Block-Browse', 'block_1');
+$handler = $view->new_display('block', 'Block-Browse', 'block_browse');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'List of Resource Types';
 $handler->display->display_options['display_description'] = 'Block to add in browse page';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'none';
