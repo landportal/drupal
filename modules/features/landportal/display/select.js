@@ -15,7 +15,6 @@ var Drupal = Drupal || {};
             // Activate on all multiple select
             $('form select').each(function(i, item) {
                 if (item.multiple == true) {
-                    //console.log(i, item);
                     $('#'+item.id).select2({
                         tags: true,
                         createTag: function(params) {
@@ -23,16 +22,14 @@ var Drupal = Drupal || {};
                         }
                     });
                 } else if (item.options.length >= 8) {
-                    // item.setAttribute('tabindex', 42);
-                    // item.removeAttribute('tabindex');
                     $('#'+item.id).select2({
                         dropdownParent: $('#'+item.id).parent()
                     });
-                    console.log('SNGLE', item, $('#'+item.id));                    
                 // } else {
                 //     console.log('SNGLE', item, $(item));                    
                 }
             });
+            // Useful to make sure those fields uses select2
             var single_fields = [
                 'edit-field-indicator-map-und',
                 'edit-field-indicator-ranking-und',
@@ -42,15 +39,11 @@ var Drupal = Drupal || {};
                 'edit-fields-add-new-field-type',
                 'edit-fields-add-existing-field-field-name',
             ];
-            // Should be based on nb of items?
             $(single_fields).each(function(i, item) {
                 $('#'+item).select2({
                     dropdownParent: $('#'+item).parent()
                 });
-                //console.log($('#'+item));
             });
-            //console.log(select);
-            //console.log('hello select', context, fields_select);
         }
     }
 })(jQuery, Drupal);
