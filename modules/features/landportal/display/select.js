@@ -12,36 +12,7 @@ var Drupal = Drupal || {};
 
     Drupal.behaviors.landportal_display = {
         attach: function(context) {
-            var fields_select = [
-                // LL specific
-                'field-doc-type',
-                'field-doc-publisher',
-                'field-doc-provider',
-                // LB specific
-                'field_indicators',
-                'field_indicator_ranking',
-                'field_indicator_map',
-                // Commons
-                'form-item-type', // CT type?
-                'field-featured',
-                'field-orgref',
-                'field-geographical-focus',
-                'field-related-topics',
-                'field-related-domains',
-                'field-related-themes'
-            ];
-            // var forms = [
-            //     '.node-form',
-            //     '#taxonomy-form-term'
-            // ];
-            // $(forms).each(function(i, form) {
-            //     //$(fields_select).each(function(i, field) {
-            //     console.log(form);
-            //     var select = $('form' + form + ' select');
-            //     if (select.length > 0) {
-            //         console.log(form, select);
-            //     }
-            // });
+            // Activate on all multiple select
             $('form select').each(function(i, item) {
                 if (item.multiple == true) {
                     //console.log(i, item);
@@ -51,8 +22,15 @@ var Drupal = Drupal || {};
                             return undefined;
                         }
                     });
+                } else if (item.options.length >= 8) {
+                    // item.setAttribute('tabindex', 42);
+                    // item.removeAttribute('tabindex');
+                    $('#'+item.id).select2({
+                        dropdownParent: $('#'+item.id).parent()
+                    });
+                    console.log('SNGLE', item, $('#'+item.id));                    
                 // } else {
-                //     console.log('Nothing for', item);
+                //     console.log('SNGLE', item, $(item));                    
                 }
             });
             var single_fields = [

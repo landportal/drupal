@@ -3,6 +3,7 @@
 }
 
 .select2-container {
+    z-index: 1400;
   box-sizing: border-box;
   display: inline-block;
   margin: 0;

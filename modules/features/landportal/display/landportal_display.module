@@ -54,7 +54,7 @@ function landportal_display_form_alter(&$form, &$form_state, $form_id) {
     'field_ui_field_overview_form', 'user_profile_form', 'user_register_form',
     'apachesolr_search_custom_page_search_form', 'views_exposed_form'
   );
-  if (count($select) || in_array($form_id, $forms)) {
+  if (count($select) || in_array($form_id, $forms) || preg_match('/^views_ui_/', $form_id)) {
     // dpm($select, 'selected fields');
     global $theme;
     if ($theme != 'lpbs') {
@@ -63,8 +63,7 @@ function landportal_display_form_alter(&$form, &$form_state, $form_id) {
     //$form['#attached']['js'][] = drupal_get_path('theme', 'lpbs') . '/js/select2.min.js';
     $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select2.min.js';
     $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select.js';
-  /* } else { */
-  /*   dsm ('no fields require select'); */
-  /*   dpm($form, $form_id); */
+  } else {
+    dpm($form, $form_id);
   }
 }
