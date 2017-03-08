@@ -63,7 +63,5 @@ function landportal_display_form_alter(&$form, &$form_state, $form_id) {
     //$form['#attached']['js'][] = drupal_get_path('theme', 'lpbs') . '/js/select2.min.js';
     $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select2.min.js';
     $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select.js';
-  } else {
-    dpm($form, $form_id);
   }
 }
