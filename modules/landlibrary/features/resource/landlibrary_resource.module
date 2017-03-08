@@ -5,4 +5,3 @@
  */
 
 include_once 'landlibrary_resource.features.inc';
-include_once 'landlibrary_resource.features.rdf_helper.inc';
