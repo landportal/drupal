@@ -21,6 +21,8 @@ function landportal_blocks_block_info() {
       'status'  => TRUE,
       'theme'   => 'landportal',
       'region'  => 'footer',
+      'visibility'      => BLOCK_VISIBILITY_NOTLISTED,
+      'pages'   => "partners*"
     ),
     /* 'lp_header_social' => array( */
     /*   'info' => t('Header social icons'), */

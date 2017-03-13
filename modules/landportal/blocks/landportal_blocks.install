@@ -1,6 +1,45 @@
 <?php
 
 /**
+ * Remove social blocks, use context for social share buttons
+ */
+function landportal_blocks_update_7202() {
+    // Reset Blocks
+    $blocks = array();
+    $block = array(
+        'keys' => array(
+            'module' => 'landportal_blocks',
+            'delta' => 'lp_footer_social',
+        ),
+        'values' => array(
+            'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+            'pages'  => 'partners*',
+        )
+    );
+    array_push($blocks, $block);
+
+    $block = array(
+        'keys' => array(
+            'module' => 'landportal_blocks',
+            'theme'  => 'lp_share',
+        ),
+        'values' => array(
+            'visibility' => BLOCK_VISIBILITY_LISTED,
+            'pages'  => '',
+        )
+    );
+    array_push($blocks, $block);
+
+    foreach($blocks as $block){
+        db_merge('block')
+            ->key($block['keys'])
+            ->fields($block['values'])
+            ->execute();
+    }
+    return FALSE;
+}
+
+/**
  * Remove un-used blocks
  */
 function landportal_blocks_update_7201() {
