@@ -190,7 +190,6 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'event' => 'event',
   'landlibrary_resource' => 'landlibrary_resource',
   'news' => 'news',
-  'organization' => 'organization',
 );
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
