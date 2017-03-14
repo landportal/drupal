@@ -20,7 +20,6 @@ projects:
   - block_class
   - calendar
   - captcha
-#  - chosen
   - ckeditor
   - complete_profile
   - computed_field
@@ -30,7 +29,6 @@ projects:
   - date
   - disable_messages
   - draggableviews
-#  - drupal
   - ds
   - elysia_cron
   - email
@@ -41,6 +39,7 @@ projects:
   - entityreference
   - entityreference_feeds
   - entityreference_filter
+  - entityreference_prepopulate
   - facetapi
   - facetapi_collapsible
   - features
@@ -73,13 +72,12 @@ projects:
   - login_one_time
   - logintoboggan
 #  - mailchimp
-  - mailchimp_user_lists
+#  - mailchimp_user_lists
   - masquerade
   - media
   - media_ckeditor
   - metatag
   - module_filter
-#  - nice_menus
   - node_edit_protection
   - oauth
   - og

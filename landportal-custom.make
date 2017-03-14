@@ -57,7 +57,9 @@ projects:
       type: "git"
       url: "https://github.com/landportal/rdf_indexer"
       tag: "7.x-1.x-alpha1"
-
+  context_og:
+    patch:
+      - "https://www.drupal.org/files/issues/context_og-reaction_fail-2147405-5.patch"
 
 libraries:
   jsonpath:
