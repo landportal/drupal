@@ -122,7 +122,7 @@ $handler->display->display_options['fields']['title_1']['element_label_colon'] =
 $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
 
 /* Display: Promoted ref */
-$handler = $view->new_display('entityreference', 'Promoted ref', 'promoted');
+$handler = $view->new_display('entityreference', 'Promoted ref', 'promoted_ref');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '5';
