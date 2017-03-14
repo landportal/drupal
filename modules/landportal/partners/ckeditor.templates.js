@@ -5,7 +5,7 @@ CKEDITOR.addTemplates("default", {
           image:"2c.gif",
           description:"2 columns side by side.",
           html:
-          '<div>'
+          '<div class="col-sm-10 col-sm-offset-1">'
           + '<h2>title</h2>'
           + '<div class="row clearfix">'
           + '<div class="col-sm-6"><p>left</p></div>'
@@ -30,7 +30,7 @@ CKEDITOR.addTemplates("default", {
           image:"4c.gif",
           description:"4 columns side by side. Breaks in 2 columns on small screens",
           html:
-          '<div class="col-sm-10 col-sm-offset-1">'
+          '<div class="col-sm-12 col-md-10 col-md-offset-1">'
           + '<p>&nbsp;</p>'
           + '<div class="row clearfix">'
           + '<div class="col-sm-6 col-md-3"><p>first</p></div>'

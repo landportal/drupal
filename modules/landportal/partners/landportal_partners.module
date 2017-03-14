@@ -51,22 +51,6 @@ function landportal_partners_pre_render_ckeditor_element($element) {
     $element['#attributes']['data-ckeditor-body-classes'] .= ' og-context-node-' . $og;
     return $element;
   }
-  dpm($element);
-
-  $class_parts = array_filter(array(
-    isset($element['#entity_type']) ? 'type-' . $element['#entity_type'] : '',
-    isset($element['#bundle']) ? 'bundle-' . $element['#bundle'] : '',
-    isset($element['#field_name']) ? 'field-' . $element['#field_name'] : '',
-  ));
-  $element['#attributes']['data-ckeditor-body-classes'] = implode(' ', $class_parts);
-
-  if (isset($element['#entity_type'], $element['#field_name'], $element['#bundle'])) {
-    $instance = field_info_instance($element['#entity_type'], $element['#field_name'], $element['#bundle']);
-    if (@$instance['settings']['body_classes']) {
-      $element['#attributes']['data-ckeditor-body-classes'] .= ' ' . $instance['settings']['body_classes'];
-    }
-  }
-  return $element;
 }
 
 /**
