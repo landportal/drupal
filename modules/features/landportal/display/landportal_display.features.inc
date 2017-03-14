@@ -24,7 +24,7 @@ function landportal_display_image_default_styles() {
 
   // Exported image style: featured.
   $styles['featured'] = array(
-    'label' => 'Featured (480x360 / 320x280)',
+    'label' => 'Featured',
     'effects' => array(
       4 => array(
         'name' => 'image_scale_and_crop',
@@ -78,7 +78,7 @@ function landportal_display_image_default_styles() {
 
   // Exported image style: square_thumbnail.
   $styles['square_thumbnail'] = array(
-    'label' => 'Square thumbnail (180)',
+    'label' => 'Square 180',
     'effects' => array(
       5 => array(
         'name' => 'image_scale_and_crop',

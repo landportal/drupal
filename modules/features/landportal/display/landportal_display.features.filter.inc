@@ -108,7 +108,7 @@ function landportal_display_filter_default_formats() {
   $formats['full_html'] = array(
     'format' => 'full_html',
     'name' => 'Full HTML',
-    'cache' => 0,
+    'cache' => 1,
     'status' => 1,
     'weight' => -9,
     'filters' => array(
@@ -183,11 +183,6 @@ function landportal_display_filter_default_formats() {
       ),
       'filter_htmlcorrector' => array(
         'weight' => -44,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'entity_embed' => array(
-        'weight' => 0,
         'status' => 1,
         'settings' => array(),
       ),

@@ -113,17 +113,19 @@ function landportal_display_ckeditor_profile_defaults() {
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'Source\'],
-    [\'Cut\',\'Copy\',\'Paste\',\'PasteText\',\'PasteFromWord\',\'-\',\'SpellChecker\',\'Scayt\'],
-    [\'Undo\',\'Redo\',\'Find\',\'Replace\',\'-\',\'SelectAll\'],
-    [\'Table\',\'HorizontalRule\',\'SpecialChar\',\'PageBreak\',\'DrupalBreak\'],
-    [\'Maximize\',\'-\',\'Media\',\'MediaEmbed\'],
+    [\'Format\',\'Styles\',\'FontSize\'],
+    [\'RemoveFormat\',\'-\',\'BGColor\',\'TextColor\',\'-\',\'Bold\',\'Italic\',\'Underline\',\'Strike\'],
+    [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\'],
+    [\'DrupalBreak\'],
+    [\'Templates\'],
+    [\'Maximize\'],
     \'/\',
-    [\'RemoveFormat\',\'Format\',\'-\',\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'Subscript\',\'Superscript\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'Blockquote\'],
-    [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'BidiLtr\',\'BidiRtl\'],
+    [\'Media\',\'MediaEmbed\',\'Table\'],
+    [\'NumberedList\',\'BulletedList\',\'-\',\'HorizontalRule\',\'Blockquote\',\'SpecialChar\'],
     [\'Link\',\'Unlink\',\'Anchor\'],
-    \'/\',
-    [\'CreateDiv\',\'ShowBlocks\',\'BGColor\',\'TextColor\',\'-\',\'Styles\',\'FontSize\',\'Templates\',\'node\']
+    [\'Undo\',\'Redo\',\'-\',\'Find\',\'Replace\'],
+    [\'node\'],
+    [\'ShowBlocks\',\'-\',\'Source\']
 ]',
         'expand' => 't',
         'default' => 't',
