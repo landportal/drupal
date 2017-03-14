@@ -40,3 +40,50 @@ function landportal_partners_ckeditor_settings_alter(&$settings, $context) {
   /* dpm($context); */
   /* dpm($settings); */
 }
+
+// FROM http://cgit.drupalcode.org/sandbox-rudiedirkx-2454217
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function landportal_partners_pre_render_ckeditor_element($element) {
+  if (isset($element['#entity']) && isset($element['#entity']->og_group_ref)) {
+    $og = $element['#entity']->og_group_ref[LANGUAGE_NONE][0]['target_id'];
+    $element['#attributes']['data-ckeditor-body-classes'] .= ' og-context-node-' . $og;
+    return $element;
+  }
+  dpm($element);
+
+  $class_parts = array_filter(array(
+    isset($element['#entity_type']) ? 'type-' . $element['#entity_type'] : '',
+    isset($element['#bundle']) ? 'bundle-' . $element['#bundle'] : '',
+    isset($element['#field_name']) ? 'field-' . $element['#field_name'] : '',
+  ));
+  $element['#attributes']['data-ckeditor-body-classes'] = implode(' ', $class_parts);
+
+  if (isset($element['#entity_type'], $element['#field_name'], $element['#bundle'])) {
+    $instance = field_info_instance($element['#entity_type'], $element['#field_name'], $element['#bundle']);
+    if (@$instance['settings']['body_classes']) {
+      $element['#attributes']['data-ckeditor-body-classes'] .= ' ' . $instance['settings']['body_classes'];
+    }
+  }
+  return $element;
+}
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function landportal_partners_element_info_alter(&$types) {
+  // Used when using ckeditor module.
+  if (isset($types['text_format']['#pre_render']) && is_array($types['text_format']['#pre_render'])) {
+    if (in_array('ckeditor_pre_render_text_format', $types['text_format']['#pre_render'])) {
+
+      $types['text_format']['#pre_render'][] = 'landportal_partners_pre_render_ckeditor_element';
+      $types['text_format']['#attached']['js'][] = array(
+        'data' => drupal_get_path('module', 'landportal_partners') . '/landportal_partners.ckeditor.js',
+        'type' => 'file',
+        'scope' => 'footer',
+        'weight' => 30,
+      );
+    }
+  }
+}
