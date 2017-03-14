@@ -197,7 +197,7 @@ function landlibrary_resource_field_group_info() {
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => 'group-details field-group-div',
+        'classes' => 'group-details col-sm-6 field-group-div',
         'required_fields' => 1,
         'id' => '',
       ),
