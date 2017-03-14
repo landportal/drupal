@@ -53,10 +53,12 @@ function landportal_groups_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'group_group',
-      1 => 'field_orgref',
-      2 => 'field_featured',
-      3 => 'locations',
+      1 => 'field_featured',
+      2 => 'field_image',
+      3 => 'field_orgref',
       4 => 'field_promoted',
+      5 => 'locations',
+      6 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

@@ -148,7 +148,7 @@ function landportal_groups_strongarm() {
           'weight' => '4',
         ),
         'locations' => array(
-          'weight' => '9',
+          'weight' => '3',
         ),
         'metatags' => array(
           'weight' => '7',

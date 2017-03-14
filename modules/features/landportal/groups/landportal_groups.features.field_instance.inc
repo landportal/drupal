@@ -60,7 +60,7 @@ function landportal_groups_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -112,11 +112,11 @@ function landportal_groups_field_default_field_instances() {
         'pass_argument' => 1,
         'pass_arguments' => '',
         'rendered_entity' => 0,
-        'view' => 'partners_content|entityreference_view_widget_1',
+        'view' => 'partners_content|related_refview',
         'view_mode' => 'teaser',
       ),
       'type' => 'entityreference_view_widget',
-      'weight' => 11,
+      'weight' => 5,
     ),
   );
 
@@ -179,7 +179,7 @@ function landportal_groups_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -226,7 +226,7 @@ function landportal_groups_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 2,
     ),
   );
 
@@ -276,11 +276,11 @@ function landportal_groups_field_default_field_instances() {
         'pass_argument' => 0,
         'pass_arguments' => '',
         'rendered_entity' => 0,
-        'view' => 'partners_content|entityreference_view_widget_1',
+        'view' => 'partners_content|related_refview',
         'view_mode' => 'full',
       ),
       'type' => 'entityreference_view_widget',
-      'weight' => 12,
+      'weight' => 6,
     ),
   );
 
@@ -336,7 +336,7 @@ function landportal_groups_field_default_field_instances() {
         'og_hide' => TRUE,
       ),
       'type' => 'options_onoff',
-      'weight' => 10,
+      'weight' => 4,
     ),
   );
 

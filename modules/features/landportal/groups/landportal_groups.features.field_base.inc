@@ -40,6 +40,7 @@ function landportal_groups_field_default_field_bases() {
           'blog_post' => 'blog_post',
           'debate' => 'debate',
           'event' => 'event',
+          'landlibrary_resource' => 'landlibrary_resource',
           'news' => 'news',
         ),
       ),
