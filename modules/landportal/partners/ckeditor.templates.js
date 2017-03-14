@@ -1,8 +1,8 @@
 CKEDITOR.addTemplates("default", {
-    imagesPath: CKEDITOR.getUrl(CKEDITOR.plugins.getPath("templates")+"templates/images/"),
+    imagesPath: Drupal.settings.basePath + Drupal.settings.landportal_partners.path + '/images/',
     templates: [
         { title:"2 Columns",
-          image:"template2.gif",
+          image:"2c.gif",
           description:"2 columns side by side.",
           html:
           '<div>'
@@ -13,11 +13,25 @@ CKEDITOR.addTemplates("default", {
           + '</div>'
           + '</div>'
         },
-        { title:"4 Columns",
-          image:"template2.gif",
+        { title:"3 Columns",
+          image:"3c.gif",
           description:"4 columns side by side.",
           html:
           '<div class="col-sm-8 col-sm-offset-2">'
+          + '<p>&nbsp;</p>'
+          + '<div class="row clearfix">'
+          + '<div class="col-sm-4"><p>first</p></div>'
+          + '<div class="col-sm-4"><p>second</p></div>'
+          + '<div class="col-sm-4"><p>third</p></div>'
+          + '</div>'
+          + '</div>'
+        },
+        { title:"4 Columns",
+          image:"4c.gif",
+          description:"4 columns side by side.",
+          html:
+          '<div class="col-sm-8 col-sm-offset-2">'
+          + '<p>&nbsp;</p>'
           + '<div class="row clearfix">'
           + '<div class="col-sm-6 col-md-3"><p>first</p></div>'
           + '<div class="col-sm-6 col-md-3"><p>second</p></div>'
@@ -26,8 +40,10 @@ CKEDITOR.addTemplates("default", {
           + '</div>'
           + '</div>'
         },
+
+        // should be set another way
         { title:"2 Columns with background 1",
-          image:"template2.gif",
+          image:"2c.gif",
           description:"2 columns side by side with a colored background.",
           html:
           '<div class="partners-colored-background">'
@@ -41,7 +57,7 @@ CKEDITOR.addTemplates("default", {
           + '</div>'
         },
         { title:"2 Columns with background 2",
-          image:"template2.gif",
+          image:"2c.gif",
           description:"2 columns side by side with a colored background.",
           html:
           '<div class="partners-colored-background-1">'
