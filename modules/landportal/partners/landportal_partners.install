@@ -4,7 +4,30 @@
  */
 
 function landportal_partners_install() {
+  // Disable existing LEGEND partner menu block
+  $blocks = array();
 
+  $block = array(
+    'keys' => array(
+      'module' => 'menu',
+      'delta' => 'menu-legend',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'region' => -1,
+    )
+  );
+  array_push($blocks, $block);
+
+  // Execute blocks changes
+  foreach($blocks as $block){
+    db_merge('block')
+      ->key($block['keys'])
+      ->fields($block['values'])
+      ->execute();
+  }
+
+  // Clean up exisitng context
   $old_ctx = array('kpmg-faq', 'legend-kpmg', 'legend-menu', 'mailchimp-block-legend-context');
   foreach ($old_ctx as $ctx) {
     if ($context = context_load($ctx))
