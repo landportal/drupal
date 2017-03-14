@@ -15,7 +15,7 @@ CKEDITOR.addTemplates("default", {
         },
         { title:"3 Columns",
           image:"3c.gif",
-          description:"4 columns side by side.",
+          description:"3 columns side by side.",
           html:
           '<div class="col-sm-8 col-sm-offset-2">'
           + '<p>&nbsp;</p>'
@@ -28,7 +28,7 @@ CKEDITOR.addTemplates("default", {
         },
         { title:"4 Columns",
           image:"4c.gif",
-          description:"4 columns side by side.",
+          description:"4 columns side by side. Breaks in 2 columns on small screens",
           html:
           '<div class="col-sm-8 col-sm-offset-2">'
           + '<p>&nbsp;</p>'
@@ -46,7 +46,7 @@ CKEDITOR.addTemplates("default", {
           image:"2c.gif",
           description:"2 columns side by side with a colored background.",
           html:
-          '<div class="partners-colored-background">'
+          '<div class="partners-colored-background clearfix">'
           + '<div class="col-sm-offset-1 col-sm-10">'
           + '<h2>title</h2>'
           + '<div class="row clearfix">'
@@ -60,7 +60,7 @@ CKEDITOR.addTemplates("default", {
           image:"2c.gif",
           description:"2 columns side by side with a colored background.",
           html:
-          '<div class="partners-colored-background-1">'
+          '<div class="partners-colored-background-1 clearfix">'
           + '<div class="col-sm-offset-1 col-sm-10">'
           + '<h2>title</h2>'
           + '<div class="row clearfix">'
@@ -74,7 +74,7 @@ CKEDITOR.addTemplates("default", {
           image:"template2.gif",
           description:"2 columns side by side with a colored background.",
           html:
-          '<div class="partners-colored-background-2">'
+          '<div class="partners-colored-background-2 clearfix">'
           + '<div class="col-sm-offset-1 col-sm-10">'
           + '<h2>title</h2>'
           + '<div class="row clearfix">'
