@@ -106,6 +106,7 @@ projects:
   - token
   - uuid
   - uuid_features
+  - uuid_redirect
   - variable
   - vertical_tabs_responsive
   - video_filter

@@ -141,8 +141,7 @@ $feeds_importer->config = array(
         15 => array(
           'source' => 'Thumbnail',
           'target' => 'field_doc_thumb:uri',
-          'unique' => FALSE,
-          'language' => 'und',
+          'file_exists' => '5',
         ),
         16 => array(
           'source' => 'License',
@@ -172,6 +171,7 @@ $feeds_importer->config = array(
           'source' => 'Link to the original website',
           'target' => 'field_doc_is_shown_at:url',
           'unique' => FALSE,
+          'language' => 'und',
         ),
       ),
       'update_existing' => '2',
