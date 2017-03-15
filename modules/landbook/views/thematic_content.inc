@@ -20,19 +20,14 @@ $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['query']['options']['distinct'] = TRUE;
 $handler->display->display_options['exposed_form']['type'] = 'basic';
-$handler->display->display_options['pager']['type'] = 'mini';
+$handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '4';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['style_options']['uses_fields'] = TRUE;
 $handler->display->display_options['row_plugin'] = 'node';
 $handler->display->display_options['row_options']['links'] = FALSE;
-/* Header: Global: Result summary */
-$handler->display->display_options['header']['result']['id'] = 'result';
-$handler->display->display_options['header']['result']['table'] = 'views';
-$handler->display->display_options['header']['result']['field'] = 'result';
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -431,7 +426,7 @@ $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'partners view-grid';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '8';
+$handler->display->display_options['pager']['options']['items_per_page'] = '42';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
@@ -507,6 +502,14 @@ $handler->display->display_options['filters']['field_related_topics_tid_entityre
   3 => array(),
 );
 $handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter_1']['reference_display'] = 'thematic:ref_concepts';
+/* Filter criterion: Content: Organization relationship (field_organization_relationship) */
+$handler->display->display_options['filters']['field_organization_relationship_tid']['id'] = 'field_organization_relationship_tid';
+$handler->display->display_options['filters']['field_organization_relationship_tid']['table'] = 'field_data_field_organization_relationship';
+$handler->display->display_options['filters']['field_organization_relationship_tid']['field'] = 'field_organization_relationship_tid';
+$handler->display->display_options['filters']['field_organization_relationship_tid']['value'] = array(
+  0 => '6119',
+);
+$handler->display->display_options['filters']['field_organization_relationship_tid']['vocabulary'] = 'organization_relation';
 
 /* Display: Library */
 $handler = $view->new_display('block', 'Library', 'library');
