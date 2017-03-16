@@ -12,19 +12,17 @@
           <table class="table">
             <thead>
               <tr>
-                <th data-localize="label.iname">Indicator</th>
-                <th data-localize="label.minYear">Min Year</th>
-                <th data-localize="label.maxYear">Max Year</th>
-                <th data-localize="label.unit">Unit</th>
-                <th data-localize="label.nObs">Number Observations</th>
-                <th data-localize="label.nYears">Number Years</th>
-                <th data-localize="label.nCountryWithValue">Total Countries</th>
-                <th data-localize="label.perMissingValue">Missing Values (%)</th>
-                <th data-localize="label.minvalue">Min Value</th>
-                <th data-localize="label.maxValue">Max Value</th>
-                <th data-localize="label.dataset">Dataset</th>
-                <th data-localize="label.source">Source</th>
-                <th data-localize="label.remove">Remove</th>
+           <th>Indicator<br/>Dataset (source)</th>
+                <th>Unit</th>
+                <th>Min Year</th>
+                <th>Max Year</th>
+                <th>Number Years</th>
+                <th>Total Countries</th>
+                <th><acronym title="Number of Observations">Obs</acronym></th>
+           <th>Missing Values&nbsp;(%)</th>
+                <th>Min Value</th>
+                <th>Max Value</th>
+                <th>Remove</th>
               </tr>
             </thead>
             <tbody>
