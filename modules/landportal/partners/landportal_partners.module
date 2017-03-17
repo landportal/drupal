@@ -46,9 +46,17 @@ function landportal_partners_ckeditor_settings_alter(&$settings, $context) {
  * Implements hook_field_widget_form_alter().
  */
 function landportal_partners_pre_render_ckeditor_element($element) {
-  if (isset($element['#entity']) && isset($element['#entity']->og_group_ref)) {
-    $og = $element['#entity']->og_group_ref[LANGUAGE_NONE][0]['target_id'];
-    $element['#attributes']['data-ckeditor-body-classes'] .= ' og-context-node-' . $og;
+  if (!isset($element['#entity'])) {
+    return $element;
+  }
+  $entity = $element['#entity'];
+  if (isset($entity->og_group_ref)) {
+    $element['#attributes']['data-ckeditor-body-classes'] .=
+      ' og-context-node-' . $entity->og_group_ref[LANGUAGE_NONE][0]['target_id'];
+  } else if ($entity->type == 'partners') {
+    $element['#attributes']['data-ckeditor-body-classes'] .= ' og-context-node-' . $entity->nid;
+  /* } else { */
+  /*   dpm($element); */
   }
   return $element;
 }
