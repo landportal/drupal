@@ -69,6 +69,10 @@ $handler->display->display_options['defaults']['row_options'] = FALSE;
 /* Display: Block-Land Book Datasets (Catalog) */
 $handler = $view->new_display('block', 'Block-Land Book Datasets (Catalog)', 'block_lb_datasets');
 $handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: Result summary */
+$handler->display->display_options['header']['result']['id'] = 'result';
+$handler->display->display_options['header']['result']['table'] = 'views';
+$handler->display->display_options['header']['result']['field'] = 'result';
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Taxonomy term: Rendered Taxonomy term */
 $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
