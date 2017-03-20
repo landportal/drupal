@@ -140,7 +140,7 @@ $feeds_importer->config = array(
         ),
         15 => array(
           'source' => 'Thumbnail',
-          'target' => 'field_doc_thumb:uri',
+          'target' => 'field_image:uri',
           'file_exists' => '5',
         ),
         16 => array(

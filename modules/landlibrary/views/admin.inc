@@ -46,7 +46,7 @@ $handler->display->display_options['style_options']['columns'] = array(
   'field_doc_publisher' => 'field_doc_publisher',
   'field_doc_provider' => 'field_doc_provider',
   'nothing_2' => 'nothing_2',
-  'field_doc_thumb' => 'field_doc_thumb',
+  'field_image' => 'field_image',
   'field_doc_type' => 'field_doc_type',
   'field_doc_language' => 'field_doc_language',
   'field_doc_is_shown_at' => 'field_doc_is_shown_at',
@@ -156,7 +156,7 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_doc_thumb' => array(
+  'field_image' => array(
     'sortable' => 0,
     'default_sort_order' => 'asc',
     'align' => '',
@@ -470,11 +470,11 @@ Pub: [field_doc_publisher] <br />
 Prov: [field_doc_provider] <br />
 ';
 /* Field: Content: Thumbnail of the resource */
-$handler->display->display_options['fields']['field_doc_thumb']['id'] = 'field_doc_thumb';
-$handler->display->display_options['fields']['field_doc_thumb']['table'] = 'field_data_field_doc_thumb';
-$handler->display->display_options['fields']['field_doc_thumb']['field'] = 'field_doc_thumb';
-$handler->display->display_options['fields']['field_doc_thumb']['click_sort_column'] = 'fid';
-$handler->display->display_options['fields']['field_doc_thumb']['settings'] = array(
+$handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+$handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+$handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+$handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_style' => 'thumbnail',
   'image_link' => '',
 );

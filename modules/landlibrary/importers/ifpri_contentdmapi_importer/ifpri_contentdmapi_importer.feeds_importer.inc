@@ -178,7 +178,7 @@ $feeds_importer->config = array(
         ),
         10 => array(
           'source' => 'Blank source 6',
-          'target' => 'field_doc_thumb:uri',
+          'target' => 'field_image:uri',
           'unique' => FALSE,
           'language' => 'und',
         ),

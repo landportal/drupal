@@ -218,7 +218,7 @@ $feeds_importer->config = array(
         ),
         17 => array(
           'source' => 'xpathparser:20',
-          'target' => 'field_doc_thumb:uri',
+          'target' => 'field_image:uri',
           'unique' => FALSE,
           'language' => 'und',
         ),

@@ -229,7 +229,7 @@ $feeds_importer->config = array(
         ),
         19 => array(
           'source' => 'xpathparser:20',
-          'target' => 'field_doc_thumb:uri',
+          'target' => 'field_image:uri',
           'unique' => FALSE,
           'language' => 'und',
         ),
