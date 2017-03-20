@@ -30,4 +30,5 @@ features[image][] = full_width_featured
 features[image][] = header_logo
 features[image][] = square_thumbnail
 features[variable][] = ds_extras_fields_extra
+features[variable][] = extlink_exclude
 features[variable][] = extlink_target
