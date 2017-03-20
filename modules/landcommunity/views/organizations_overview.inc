@@ -199,6 +199,8 @@ $handler->display->display_options['inherit_arguments'] = FALSE;
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page_1');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Organizations';
 $handler->display->display_options['path'] = 'organizations';
 
 /* Display: Block-Land Library Featured Providers */
