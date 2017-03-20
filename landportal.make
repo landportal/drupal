@@ -40,6 +40,7 @@ projects:
   - entityreference_feeds
   - entityreference_filter
   - entityreference_prepopulate
+  - extlink
   - facetapi
   - facetapi_collapsible
   - features

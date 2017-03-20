@@ -13,7 +13,7 @@ function landportal_display_ckeditor_profile_defaults() {
       'name' => 'CKEditor Global Profile',
       'settings' => array(
         'skin' => 'moono',
-        'ckeditor_path' => '//cdn.ckeditor.com/4.4.3/full-all',
+        'ckeditor_path' => '//cdn.ckeditor.com/4.5.4/full-all',
         'ckeditor_local_path' => '',
         'ckeditor_plugins_path' => '%m/plugins',
         'ckeditor_plugins_local_path' => '',
@@ -120,7 +120,7 @@ function landportal_display_ckeditor_profile_defaults() {
     [\'Templates\'],
     [\'Maximize\'],
     \'/\',
-    [\'Media\',\'MediaEmbed\',\'Table\'],
+    [\'Media\',\'MediaEmbed\',\'Glyphicons\',\'Fontawesome\',\'Table\'],
     [\'NumberedList\',\'BulletedList\',\'-\',\'HorizontalRule\',\'Blockquote\',\'SpecialChar\'],
     [\'Link\',\'Unlink\',\'Anchor\'],
     [\'Undo\',\'Redo\',\'-\',\'Find\',\'Replace\'],
@@ -190,6 +190,30 @@ function landportal_display_ckeditor_profile_defaults() {
                 'icon' => 'entity.png',
               ),
             ),
+          ),
+          'fontawesome' => array(
+            'name' => 'fontawesome',
+            'desc' => 'Plugin file: fontawesome',
+            'path' => '%plugin_dir%fontawesome/',
+            'buttons' => array(
+              'Fontawesome' => array(
+                'label' => 'Fontawesome',
+                'icon' => 'icons/fontawesome.png',
+              ),
+            ),
+            'default' => 'f',
+          ),
+          'glyphicons' => array(
+            'name' => 'glyphicons',
+            'desc' => 'Plugin file: glyphicons',
+            'path' => '%plugin_dir%glyphicons/',
+            'buttons' => array(
+              'Glyphicons' => array(
+                'label' => 'Glyphicons',
+                'icon' => 'icons/glyphicons.png',
+              ),
+            ),
+            'default' => 'f',
           ),
           'media' => array(
             'name' => 'media',
