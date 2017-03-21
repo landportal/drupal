@@ -15,6 +15,9 @@ function landportal_blocks_block_info() {
     'landportal_footer' => array(
       'info'    => t('Landportal Footer text'),
       'status'  => TRUE,
+      'region'          => -1,
+      'visibility'      => BLOCK_VISIBILITY_LISTED,
+      'pages'           => "",
     ),
     'lp_footer_social' => array(
       'info' => t('Footer social icons'),
@@ -108,6 +111,8 @@ function landportal_blocks_block_configure($delta='') {
        '#default_value' => landportal_blocks_block_default_body('lp_footer_social'),
      );
      break;
+     // DEPREC / BORKEN sidebar share widget.
+     // Superseded by addtoany
    case 'lp_shareit' :
      $form['text_body'] = array(
        '#type' => 'text_format',
@@ -133,6 +138,7 @@ function landportal_blocks_block_save($delta = '', $edit = array()) {
   case 'lp_footer_social' :
     variable_set('lp_footer_social', $edit['text_body']['value']);
     break;
+    // DEPREC
   case 'lp_shareit' :
     variable_set('lp_shareit', $edit['text_body']['value']);
     break;
@@ -161,11 +167,13 @@ function landportal_blocks_block_view($delta = '') {
     $block['content'] = landportal_blocks_block_default_body('lp_facebook');
     $block['subject'] = '<none>';
     break;
+    // DEPREC
   case 'lp_shareit':
     $block['title'] = 'Share it';
     $block['content'] = variable_get('lp_shareit', '');
     $block['subject'] = '<none>';
     break;
+    // Addtoany widget (social networking sharing)
   case 'lp_share':
       $item = menu_get_item();
       $title = $item['title'];
