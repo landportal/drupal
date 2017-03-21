@@ -93,10 +93,11 @@ $handler->display->display_options['fields']['rendered_entity']['table'] = 'view
 $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
 $handler->display->display_options['fields']['rendered_entity']['relationship'] = 'field_landvoc_to_target_id';
 $handler->display->display_options['fields']['rendered_entity']['label'] = '';
-$handler->display->display_options['fields']['rendered_entity']['alter']['alter_text'] = TRUE;
 $handler->display->display_options['fields']['rendered_entity']['alter']['text'] = '<a href="[path]">
 [rendered_entity]
 </a>';
+$handler->display->display_options['fields']['rendered_entity']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['rendered_entity']['alter']['path'] = '[path]';
 $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 0;
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';

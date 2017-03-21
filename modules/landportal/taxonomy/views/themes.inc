@@ -26,6 +26,7 @@ $handler->display->display_options['style_options']['default_row_class'] = FALSE
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['style_options']['uses_fields'] = TRUE;
 $handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['row_options']['default_field_elements'] = FALSE;
 /* Field: Taxonomy term: Path */
 $handler->display->display_options['fields']['path']['id'] = 'path';
 $handler->display->display_options['fields']['path']['table'] = 'taxonomy_term_data';
@@ -38,10 +39,11 @@ $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendere
 $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
 $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
 $handler->display->display_options['fields']['rendered_entity']['label'] = '';
-$handler->display->display_options['fields']['rendered_entity']['alter']['alter_text'] = TRUE;
 $handler->display->display_options['fields']['rendered_entity']['alter']['text'] = '<a href="[path]">
 [rendered_entity]
 </a>';
+$handler->display->display_options['fields']['rendered_entity']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['rendered_entity']['alter']['path'] = '[path]';
 $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
