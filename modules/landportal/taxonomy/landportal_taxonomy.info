@@ -48,6 +48,7 @@ features[field_instance][] = taxonomy_term-countries-field_iso3
 features[field_instance][] = taxonomy_term-countries-field_linked_uris
 features[field_instance][] = taxonomy_term-countries-name_field
 features[field_instance][] = taxonomy_term-countries-synonyms_synonyms
+features[field_instance][] = taxonomy_term-debate_status-name_field
 features[field_instance][] = taxonomy_term-landvoc_concepts-description_field
 features[field_instance][] = taxonomy_term-landvoc_concepts-field_agrovoc_uri
 features[field_instance][] = taxonomy_term-landvoc_concepts-name_field

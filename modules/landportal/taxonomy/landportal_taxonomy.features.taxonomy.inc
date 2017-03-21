@@ -17,7 +17,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => 5,
       'language' => 'und',
-      'i18n_mode' => 1,
+      'i18n_mode' => 32768,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -41,8 +41,8 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => -4,
-      'language' => 'und',
-      'i18n_mode' => 1,
+      'language' => 'en',
+      'i18n_mode' => 32768,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -67,7 +67,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => -6,
       'language' => 'und',
-      'i18n_mode' => 1,
+      'i18n_mode' => 32768,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -217,7 +217,7 @@ function landportal_taxonomy_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => -5,
       'language' => 'und',
-      'i18n_mode' => 1,
+      'i18n_mode' => 32768,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

@@ -26,6 +26,9 @@ function landportal_taxonomy_strongarm() {
         'custom_settings' => FALSE,
       ),
       'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -53,6 +56,10 @@ function landportal_taxonomy_strongarm() {
           'search_index' => array(
             'weight' => '1',
             'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '0',
+            'visible' => TRUE,
           ),
         ),
       ),
@@ -159,78 +166,6 @@ function landportal_taxonomy_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_taxonomy_term_landvoc_concepts';
   $strongarm->value = array(
-    'entity' => 'taxonomy_term',
-    'bundle' => 'landvoc_concepts',
-    'info' => array(
-      'label' => 'Concepts',
-      'admin' => array(
-        'path' => 'admin/structure/taxonomy/%taxonomy_vocabulary_machine_name/edit',
-        'real path' => 'admin/structure/taxonomy/landvoc_concepts/edit',
-        'bundle argument' => 3,
-        'access arguments' => array(
-          0 => 'administer taxonomy',
-        ),
-      ),
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:Concept',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'rdfs:label',
-            1 => 'skos:prefLabel',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'skos:definition',
-          ),
-        ),
-        'vid' => array(
-          'predicates' => array(
-            0 => 'skos:inScheme',
-          ),
-          'type' => 'rel',
-        ),
-        'parent' => array(
-          'predicates' => array(
-            0 => 'skos:broader',
-          ),
-          'type' => 'rel',
-        ),
-        'description_field' => array(
-          'type' => 'property',
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-        'field_agrovoc_uri' => array(
-          'type' => 'rel',
-          'predicates' => array(
-            0 => 'skos:exactMatch',
-            1 => 'owl:sameAs',
-          ),
-        ),
-        'name_field' => array(
-          'type' => 'property',
-          'predicates' => array(
-            0 => 'skos:prefLabel',
-          ),
-        ),
-        'synonyms_synonyms' => array(
-          'type' => 'property',
-          'predicates' => array(
-            0 => 'skos:altLabel',
-          ),
-        ),
-      ),
-      'xmlsitemap' => array(
-        'entity' => 'taxonomy_term',
-        'bundle' => 'landvoc_concepts',
-        'status' => '0',
-        'priority' => '0.5',
-      ),
-    ),
     'status' => '0',
     'priority' => '0.5',
   );
