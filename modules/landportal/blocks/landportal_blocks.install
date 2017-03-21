@@ -5,39 +5,50 @@
  * Re-enable landportal text footer block
  */
 function landportal_blocks_update_7203() {
-    // Reset Blocks
-    $blocks = array();
-    $block = array(
-        'keys' => array(
-            'module' => 'landportal_blocks',
-            'delta' => 'landportal_footer',
-        ),
-        'values' => array(
-            'visibility' => BLOCK_VISIBILITY_LISTED,
-            'pages'  => '',
-            'region'  => 'footer',
-            'weight'  => 1,
-        )
-    );
-    array_push($blocks, $block);
+  // Reset Blocks
+  $blocks = array();
+  $block = array(
+    'keys' => array(
+      'module' => 'landportal_blocks',
+      'delta' => 'landportal_footer',
+    ),
+    'values' => array(
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages'  => '',
+      'region'  => 'footer',
+      'weight'  => 1,
+    )
+  );
+  array_push($blocks, $block);
 
-        $block = array(
-        'keys' => array(
-            'module' => 'landportal_blocks',
-            'delta' => 'lp_footer_social',
-        ),
-        'values' => array(
-            'title'  => '',
-        )
-    );
-    array_push($blocks, $block);
+  $block = array(
+    'keys' => array(
+      'module' => 'landportal_blocks',
+      'delta' => 'lp_footer_social',
+    ),
+    'values' => array(
+      'title'  => '',
+    )
+  );
+  array_push($blocks, $block);
 
-    foreach($blocks as $block){
-        db_merge('block')
-            ->key($block['keys'])
-            ->fields($block['values'])
-            ->execute();
-    }
+  $block = array(
+    'keys' => array(
+      'module' => 'landportal_blocks',
+      'delta' => 'lp_footer_social',
+    ),
+    'values' => array(
+      'title'  => '',
+    )
+  );
+  array_push($blocks, $block);
+
+  foreach($blocks as $block){
+    db_merge('block')
+      ->key($block['keys'])
+      ->fields($block['values'])
+      ->execute();
+  }
 
 }
 

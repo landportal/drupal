@@ -122,7 +122,7 @@ function landportal_blocks_block_configure($delta='') {
      break;
    }
    return $form;
- }
+}
 
 function landportal_blocks_block_save($delta = '', $edit = array()) {
   switch($delta) {
