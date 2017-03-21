@@ -24,13 +24,24 @@ $handler->display->display_options['pager']['options']['items_per_page'] = '25';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'entity';
-$handler->display->display_options['row_options']['view_mode'] = 'teaser';
+$handler->display->display_options['style_options']['uses_fields'] = TRUE;
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Field: Taxonomy term: Path */
+$handler->display->display_options['fields']['path']['id'] = 'path';
+$handler->display->display_options['fields']['path']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['path']['field'] = 'path';
+$handler->display->display_options['fields']['path']['label'] = '';
+$handler->display->display_options['fields']['path']['exclude'] = TRUE;
+$handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
 /* Field: Taxonomy term: Rendered Taxonomy term */
 $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
 $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
 $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
 $handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['rendered_entity']['alter']['text'] = '<a href="[path]">
+[rendered_entity]
+</a>';
 $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
@@ -46,15 +57,6 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['default_row_class'] = FALSE;
-$handler->display->display_options['style_options']['row_class_special'] = FALSE;
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'entity';
-$handler->display->display_options['row_options']['view_mode'] = 'teaser';
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page_1');

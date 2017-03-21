@@ -88,37 +88,33 @@ $handler->display->display_options['fields']['path']['field'] = 'path';
 $handler->display->display_options['fields']['path']['label'] = '';
 $handler->display->display_options['fields']['path']['exclude'] = TRUE;
 $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-/* Field: Field: Image */
-$handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-$handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['relationship'] = 'field_landvoc_to_target_id';
-$handler->display->display_options['fields']['field_image']['label'] = '';
-$handler->display->display_options['fields']['field_image']['alter']['make_link'] = TRUE;
-$handler->display->display_options['fields']['field_image']['alter']['path'] = '[path]';
-$handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-$handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => 'square_thumbnail',
-  'image_link' => '',
-);
-/* Field: Taxonomy term: Name */
-$handler->display->display_options['fields']['name_field']['id'] = 'name_field';
-$handler->display->display_options['fields']['name_field']['table'] = 'field_data_name_field';
-$handler->display->display_options['fields']['name_field']['field'] = 'name_field';
-$handler->display->display_options['fields']['name_field']['relationship'] = 'field_landvoc_to_target_id';
-$handler->display->display_options['fields']['name_field']['label'] = '';
-$handler->display->display_options['fields']['name_field']['alter']['make_link'] = TRUE;
-$handler->display->display_options['fields']['name_field']['alter']['path'] = '[path]';
-$handler->display->display_options['fields']['name_field']['element_type'] = 'h2';
-$handler->display->display_options['fields']['name_field']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['name_field']['element_default_classes'] = FALSE;
-$handler->display->display_options['fields']['name_field']['settings'] = array(
-  'title_style' => 'h2',
-  'title_link' => '',
-  'title_class' => '',
-);
-$handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
+/* Field: Taxonomy term: Rendered Taxonomy term */
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['relationship'] = 'field_landvoc_to_target_id';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['rendered_entity']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['rendered_entity']['alter']['path'] = '[path]';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 0;
+$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+
+/* Display: Block Narrative */
+$handler = $view->new_display('block', 'Block Narrative', 'block_theme_description');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Thematic portfolios (description)';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Path */
+$handler->display->display_options['fields']['path']['id'] = 'path';
+$handler->display->display_options['fields']['path']['table'] = 'node';
+$handler->display->display_options['fields']['path']['field'] = 'path';
+$handler->display->display_options['fields']['path']['label'] = '';
+$handler->display->display_options['fields']['path']['exclude'] = TRUE;
+$handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
 /* Field: Content: Published */
 $handler->display->display_options['fields']['status']['id'] = 'status';
 $handler->display->display_options['fields']['status']['table'] = 'node';
@@ -137,4 +133,14 @@ $handler->display->display_options['fields']['title']['table'] = 'node';
 $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Taxonomy term: Term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['relationship'] = 'field_landvoc_to_target_id';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'empty';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';

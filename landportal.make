@@ -116,6 +116,7 @@ projects:
   - views_contextual_filters_or
   - views_distinct
   - views_php
+  - views_term_path
   - views_tree
   - webform
   - xmlsitemap
