@@ -51,12 +51,8 @@ function ct_thematic_narrative_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Landvoc concepts',
-    'weight' => '6',
-    'children' => array(
-      0 => 'field_related_domains',
-      1 => 'field_related_topics',
-      2 => 'field_related_themes',
-    ),
+    'weight' => '5',
+    'children' => array(),
     'format_type' => 'hidden',
     'format_settings' => array(
       'label' => 'Landvoc concepts',

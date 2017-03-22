@@ -95,6 +95,9 @@ function ct_thematic_narrative_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -117,7 +120,7 @@ function ct_thematic_narrative_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '9',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -125,7 +128,7 @@ function ct_thematic_narrative_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '10',
+            'weight' => '8',
             'visible' => FALSE,
           ),
         ),
