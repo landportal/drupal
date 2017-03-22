@@ -89,7 +89,7 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_doc_alt_title',
-    'label' => 'Other known titles for this resource',
+    'label' => 'Subtitle',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -2084,7 +2084,6 @@ function landlibrary_resource_field_default_field_instances() {
   t('Number of pages of the resource or the page range in case of a journal article or book.');
   t('Organization cited as Author of this material  (linked to an organizational profile on the Land Portal).');
   t('Originally published at');
-  t('Other known titles for this resource');
   t('Overarching Categories');
   t('Pages');
   t('People who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]"
@@ -2095,6 +2094,7 @@ function landlibrary_resource_field_default_field_instances() {
   t('Resource Language');
   t('Resource URL');
   t('Resource type');
+  t('Subtitle');
   t('The URL to the resource on the publisher\'s website (e.g.: http://landportal.info/sites/landportal.info/files/GECDiscussionReport-Final.pdf)');
   t('The abstract of the resource or a description of the resource.');
   t('The date of publication of the resource (YYYY/MM).');
