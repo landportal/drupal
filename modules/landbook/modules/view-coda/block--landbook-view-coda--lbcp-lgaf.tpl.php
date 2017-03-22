@@ -25,16 +25,10 @@
           </header>
           <div class="view-coda-vis">
             <div class="loading hidden">
-              <div class="sk-three-bounce">
-                <div class="sk-child sk-bounce1"></div>
-                <div class="sk-child sk-bounce2"></div>
-                <div class="sk-child sk-bounce3"></div>
-              </div>
-              <p class="text-center" data-localize="feedback.loading">Loading data ...</p>
+              <span><i class="fa fa-spinner fa-spin"></i> Loading data</span>
             </div>
-            <ul id="<?php print $block_html_id; ?>-wrapper" class="list-unstyled">
-              <li>Please, select year and panels to show the info.</li>
-            </ul>
+           <div class="empty"><p>Please, select year and panels to show the info.</p></div>
+            <ul id="<?php print $block_html_id; ?>-wrapper" class="list-unstyled"></ul>
           </div>
             <div class="legend text-center">
               <em>Legend</em>
