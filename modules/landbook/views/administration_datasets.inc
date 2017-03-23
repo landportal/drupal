@@ -15,6 +15,7 @@ $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['title'] = 'Manage Datasets';
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['group_by'] = TRUE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
@@ -24,18 +25,25 @@ $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['style_plugin'] = 'table';
 $handler->display->display_options['style_options']['columns'] = array(
-  'draggableviews' => 'draggableviews',
-  'name' => 'name',
-  'field_id' => 'field_id',
-  'description' => 'description',
-  'field_orgref' => 'field_orgref',
-  'nid' => 'nid',
-  'edit_term' => 'edit_term',
   'views_bulk_operations' => 'views_bulk_operations',
+  'edit_term' => 'edit_term',
+  'name' => 'name',
+  'description' => 'description',
+  'field_id' => 'field_id',
+  'field_orgref' => 'field_orgref',
+  'field_related_domains' => 'field_related_domains',
+  'field_related_themes' => 'field_related_themes',
+  'field_related_topics' => 'field_related_topics',
+  'tid' => 'tid',
 );
-$handler->display->display_options['style_options']['default'] = '-1';
+$handler->display->display_options['style_options']['default'] = 'name';
 $handler->display->display_options['style_options']['info'] = array(
-  'draggableviews' => array(
+  'views_bulk_operations' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'edit_term' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -47,14 +55,14 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_id' => array(
-    'sortable' => 0,
-    'default_sort_order' => 'asc',
+  'description' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
-  'description' => array(
+  'field_id' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -64,19 +72,24 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'nid' => array(
+  'field_related_domains' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_related_themes' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_related_topics' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'tid' => array(
     'sortable' => 1,
-    'default_sort_order' => 'asc',
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'edit_term' => array(
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
-  'views_bulk_operations' => array(
+    'default_sort_order' => 'desc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -86,6 +99,10 @@ $handler->display->display_options['style_options']['info'] = array(
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+/* Relationship: Taxonomy term: Taxonomy term using Dataset */
+$handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['id'] = 'reverse_field_dataset_taxonomy_term';
+$handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['field'] = 'reverse_field_dataset_taxonomy_term';
 /* Field: Bulk operations: Taxonomy term */
 $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
 $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_taxonomy_term';
@@ -159,21 +176,27 @@ $handler->display->display_options['fields']['field_orgref']['delta_offset'] = '
 $handler->display->display_options['fields']['field_related_domains']['id'] = 'field_related_domains';
 $handler->display->display_options['fields']['field_related_domains']['table'] = 'field_data_field_related_domains';
 $handler->display->display_options['fields']['field_related_domains']['field'] = 'field_related_domains';
+$handler->display->display_options['fields']['field_related_domains']['group_column'] = 'entity_id';
 $handler->display->display_options['fields']['field_related_domains']['delta_offset'] = '0';
 /* Field: Field: Themes */
 $handler->display->display_options['fields']['field_related_themes']['id'] = 'field_related_themes';
 $handler->display->display_options['fields']['field_related_themes']['table'] = 'field_data_field_related_themes';
 $handler->display->display_options['fields']['field_related_themes']['field'] = 'field_related_themes';
+$handler->display->display_options['fields']['field_related_themes']['group_column'] = 'entity_id';
 $handler->display->display_options['fields']['field_related_themes']['delta_offset'] = '0';
 /* Field: Field: Related concepts */
 $handler->display->display_options['fields']['field_related_topics']['id'] = 'field_related_topics';
 $handler->display->display_options['fields']['field_related_topics']['table'] = 'field_data_field_related_topics';
 $handler->display->display_options['fields']['field_related_topics']['field'] = 'field_related_topics';
+$handler->display->display_options['fields']['field_related_topics']['group_column'] = 'entity_id';
 $handler->display->display_options['fields']['field_related_topics']['delta_offset'] = '0';
-/* Sort criterion: Taxonomy term: Name */
-$handler->display->display_options['sorts']['name']['id'] = 'name';
-$handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['sorts']['name']['field'] = 'name';
+/* Field: COUNT(DISTINCT Taxonomy term: Term ID) */
+$handler->display->display_options['fields']['tid']['id'] = 'tid';
+$handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['tid']['field'] = 'tid';
+$handler->display->display_options['fields']['tid']['relationship'] = 'reverse_field_dataset_taxonomy_term';
+$handler->display->display_options['fields']['tid']['group_type'] = 'count_distinct';
+$handler->display->display_options['fields']['tid']['label'] = 'Number of indicators';
 /* Filter criterion: Taxonomy term: Vocabulary */
 $handler->display->display_options['filters']['vid']['id'] = 'vid';
 $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
