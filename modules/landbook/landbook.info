@@ -8,6 +8,7 @@ version = 7.x-2.3
 dependencies[] = context
 dependencies[] = ctools
 dependencies[] = landportal_taxonomy
+dependencies[] = landportal_views
 dependencies[] = landbook_taxonomies
 dependencies[] = menu
 dependencies[] = views

@@ -1,6 +1,5 @@
 <?php
 
-// From https://landportal.info/admin/structure/views/view/thematic_pages/export
 $view = new view();
 $view->name = 'thematic_pages';
 $view->description = '';
@@ -14,7 +13,8 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['title'] = 'Thematic portfolios';
-$handler->display->display_options['css_class'] = 'view-grid-3';
+$handler->display->display_options['css_class'] = 'view-grid-3 view-wrapped';
+$handler->display->display_options['hide_admin_links'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
@@ -26,7 +26,9 @@ $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'node';
+$handler->display->display_options['row_options']['links'] = FALSE;
 /* Relationship: Entity Reference: Referenced Entity */
 $handler->display->display_options['relationships']['field_landvoc_to_target_id']['id'] = 'field_landvoc_to_target_id';
 $handler->display->display_options['relationships']['field_landvoc_to_target_id']['table'] = 'field_data_field_landvoc_to';
@@ -93,9 +95,7 @@ $handler->display->display_options['fields']['rendered_entity']['table'] = 'view
 $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
 $handler->display->display_options['fields']['rendered_entity']['relationship'] = 'field_landvoc_to_target_id';
 $handler->display->display_options['fields']['rendered_entity']['label'] = '';
-$handler->display->display_options['fields']['rendered_entity']['alter']['text'] = '<a href="[path]">
-[rendered_entity]
-</a>';
+$handler->display->display_options['fields']['rendered_entity']['alter']['alter_text'] = TRUE;
 $handler->display->display_options['fields']['rendered_entity']['alter']['make_link'] = TRUE;
 $handler->display->display_options['fields']['rendered_entity']['alter']['path'] = '[path]';
 $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
