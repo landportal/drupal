@@ -81,6 +81,13 @@ $handler->display->display_options['defaults']['row_options'] = FALSE;
 
 /* Display: Block-Land Book Thematic portfolios */
 $handler = $view->new_display('block', 'Block-Land Book Thematic portfolios', 'block_lb_thematic_portfolios');
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'landportal_views_wrap';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Path */
 $handler->display->display_options['fields']['path']['id'] = 'path';
