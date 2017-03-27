@@ -1,0 +1,7 @@
+name = Land Portal Views
+description = Provides some wrapper for views
+core = 7.x
+package = Landportal
+version = 7.x-2.4-alpha
+dependencies[] = views
+files[] = landportal_views_plugin_row_fields.inc
