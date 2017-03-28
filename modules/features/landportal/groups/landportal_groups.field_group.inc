@@ -34,7 +34,7 @@ function landportal_groups_field_group_info() {
         'classes' => 'group-details field-group-fieldset group-aside',
         'description' => '',
       ),
-      'formatter' => 'open',
+      'formatter' => 'collapsed',
     ),
   );
   $field_groups['group_details|node|partners_page|form'] = $field_group;
