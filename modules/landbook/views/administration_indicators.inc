@@ -30,17 +30,19 @@ $handler->display->display_options['style_options']['columns'] = array(
   'views_bulk_operations' => 'views_bulk_operations',
   'edit_term' => 'edit_term',
   'name' => 'name',
-  'field_id' => 'field_id',
   'description' => 'description',
+  'field_id' => 'field_id',
   'field_dataset' => 'field_dataset',
   'field_highlow' => 'field_highlow',
   'field_hascodedvalue' => 'field_hascodedvalue',
   'field_min' => 'field_min',
   'field_max' => 'field_max',
   'field_unit' => 'field_unit',
+  'nothing' => 'nothing',
   'field_related_domains' => 'field_related_domains',
   'field_related_themes' => 'field_related_themes',
   'field_related_topics' => 'field_related_topics',
+  'changed' => 'changed',
 );
 $handler->display->display_options['style_options']['default'] = '-1';
 $handler->display->display_options['style_options']['info'] = array(
@@ -61,14 +63,14 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'field_id' => array(
-    'sortable' => 0,
-    'default_sort_order' => 'asc',
+  'description' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
-  'description' => array(
+  'field_id' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -115,6 +117,11 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
+  'nothing' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
   'field_related_domains' => array(
     'align' => '',
     'separator' => '',
@@ -126,6 +133,13 @@ $handler->display->display_options['style_options']['info'] = array(
     'empty_column' => 0,
   ),
   'field_related_topics' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'changed' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -263,6 +277,12 @@ $handler->display->display_options['fields']['field_related_topics']['id'] = 'fi
 $handler->display->display_options['fields']['field_related_topics']['table'] = 'field_data_field_related_topics';
 $handler->display->display_options['fields']['field_related_topics']['field'] = 'field_related_topics';
 $handler->display->display_options['fields']['field_related_topics']['delta_offset'] = '0';
+/* Field: Taxonomy term: Updated date */
+$handler->display->display_options['fields']['changed']['id'] = 'changed';
+$handler->display->display_options['fields']['changed']['table'] = 'term_authoring_info';
+$handler->display->display_options['fields']['changed']['field'] = 'changed';
+$handler->display->display_options['fields']['changed']['date_format'] = 'short';
+$handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
 /* Sort criterion: Taxonomy term: Name */
 $handler->display->display_options['sorts']['name']['id'] = 'name';
 $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';

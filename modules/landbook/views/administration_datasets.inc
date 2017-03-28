@@ -35,6 +35,7 @@ $handler->display->display_options['style_options']['columns'] = array(
   'field_related_themes' => 'field_related_themes',
   'field_related_topics' => 'field_related_topics',
   'tid' => 'tid',
+  'changed' => 'changed',
 );
 $handler->display->display_options['style_options']['default'] = 'name';
 $handler->display->display_options['style_options']['info'] = array(
@@ -90,6 +91,13 @@ $handler->display->display_options['style_options']['info'] = array(
   'tid' => array(
     'sortable' => 1,
     'default_sort_order' => 'desc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'changed' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -197,6 +205,12 @@ $handler->display->display_options['fields']['tid']['field'] = 'tid';
 $handler->display->display_options['fields']['tid']['relationship'] = 'reverse_field_dataset_taxonomy_term';
 $handler->display->display_options['fields']['tid']['group_type'] = 'count_distinct';
 $handler->display->display_options['fields']['tid']['label'] = 'Number of indicators';
+/* Field: Taxonomy term: Updated date */
+$handler->display->display_options['fields']['changed']['id'] = 'changed';
+$handler->display->display_options['fields']['changed']['table'] = 'term_authoring_info';
+$handler->display->display_options['fields']['changed']['field'] = 'changed';
+$handler->display->display_options['fields']['changed']['date_format'] = 'short';
+$handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
 /* Filter criterion: Taxonomy term: Vocabulary */
 $handler->display->display_options['filters']['vid']['id'] = 'vid';
 $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
