@@ -101,6 +101,7 @@ projects:
   - strongarm
   - synonyms
   - taxonomy_edge
+  - term_authoring_info
   - term_merge
   - term_search
   - title
