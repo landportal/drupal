@@ -403,7 +403,7 @@ $handler->display->display_options['fields']['body']['alter']['more_link_path'] 
 $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
 $handler->display->display_options['fields']['body']['settings'] = array(
-  'trim_length' => '150',
+  'trim_length' => '140',
 );
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -468,7 +468,7 @@ $handler->display->display_options['fields']['path']['table'] = 'node';
 $handler->display->display_options['fields']['path']['field'] = 'path';
 $handler->display->display_options['fields']['path']['label'] = '';
 $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]" class="more">read more</a>';
+$handler->display->display_options['fields']['path']['alter']['text'] = '<span class="node-readmore"><a href="[path]">Read more</a></span>';
 $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
