@@ -1,0 +1,7 @@
+name = Indicators from CSV
+description = Generate indicators from a CSV export of the Master google Spreadsheet
+core = 7.x
+version = 7.x-2.3
+project = indicators_csv_importer
+dependencies[] = ctools
+dependencies[] = feeds
