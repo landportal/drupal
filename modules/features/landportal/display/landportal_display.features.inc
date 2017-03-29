@@ -45,6 +45,21 @@ function landportal_display_image_default_styles() {
     ),
   );
 
+  // Exported image style: full_width.
+  $styles['full_width'] = array(
+    'label' => 'Full width',
+    'effects' => array(
+      11 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 1200,
+          'height' => 400,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: full_width_featured.
   $styles['full_width_featured'] = array(
     'label' => 'Full width featured (1200x400)',
@@ -76,6 +91,51 @@ function landportal_display_image_default_styles() {
     ),
   );
 
+  // Exported image style: large.
+  $styles['large'] = array(
+    'label' => 'Large (480x480)',
+    'effects' => array(
+      10 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 480,
+          'height' => 480,
+        ),
+        'weight' => 3,
+      ),
+    ),
+  );
+
+  // Exported image style: media_thumbnail.
+  $styles['media_thumbnail'] = array(
+    'label' => 'Media thumbnail (100x100)',
+    'effects' => array(
+      0 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 100,
+          'height' => 100,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: medium.
+  $styles['medium'] = array(
+    'label' => 'Medium (220x220)',
+    'effects' => array(
+      12 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 220,
+          'height' => 220,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
   // Exported image style: square_thumbnail.
   $styles['square_thumbnail'] = array(
     'label' => 'Square 180',
@@ -88,6 +148,21 @@ function landportal_display_image_default_styles() {
           'weight' => 0,
         ),
         'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: thumbnail.
+  $styles['thumbnail'] = array(
+    'label' => 'Thumbnail (100x100)',
+    'effects' => array(
+      7 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 100,
+          'height' => 100,
+        ),
+        'weight' => 2,
       ),
     ),
   );
