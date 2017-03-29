@@ -52,7 +52,8 @@ function landportal_display_form_alter(&$form, &$form_state, $form_id) {
     // Do we have any matches (ie select field that uses jquery.select) ?
   $forms = array(
     'field_ui_field_overview_form', 'user_profile_form', 'user_register_form',
-    'apachesolr_search_custom_page_search_form', 'views_exposed_form'
+    'apachesolr_search_custom_page_search_form', 'views_exposed_form',
+    'taxonomy-form-term'
   );
   if (count($select) || in_array($form_id, $forms) || preg_match('/^views_ui_/', $form_id)) {
     // dpm($select, 'selected fields');

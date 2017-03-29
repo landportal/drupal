@@ -121,12 +121,22 @@ function ct_debate_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '6',
+            'weight' => '9',
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '6',
+            'weight' => '8',
             'visible' => FALSE,
+          ),
+        ),
+        'title' => array(
+          'teaser' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'listing' => array(
+            'weight' => '0',
+            'visible' => TRUE,
           ),
         ),
       ),

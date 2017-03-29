@@ -167,7 +167,18 @@ function landlibrary_resource_strongarm() {
           'weight' => '11',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'title' => array(
+          'teaser' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'listing' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__landlibrary_resource'] = $strongarm;

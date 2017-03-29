@@ -77,10 +77,9 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_date',
-      1 => 'field_status',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -96,7 +95,7 @@ function ct_debate_field_group_info() {
   $field_groups['group_details|node|debate|listing'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_details|node|debate|teaser';
   $field_group->group_name = 'group_details';
@@ -370,7 +369,7 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
@@ -399,7 +398,7 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',

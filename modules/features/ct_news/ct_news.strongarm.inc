@@ -124,16 +124,26 @@ function ct_news_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '7',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '6',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'promoted_country_page' => array(
             'weight' => '1',
             'visible' => FALSE,
+          ),
+        ),
+        'title' => array(
+          'teaser' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'listing' => array(
+            'weight' => '1',
+            'visible' => TRUE,
           ),
         ),
       ),
