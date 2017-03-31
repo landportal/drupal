@@ -240,10 +240,9 @@ function landbook_taxonomies_field_group_info() {
     'label' => '',
     'weight' => '0',
     'children' => array(
-      0 => 'field_geographical_focus',
-      1 => 'field_related_domains',
-      2 => 'field_related_topics',
-      3 => 'field_related_themes',
+      0 => 'field_related_domains',
+      1 => 'field_related_topics',
+      2 => 'field_related_themes',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
