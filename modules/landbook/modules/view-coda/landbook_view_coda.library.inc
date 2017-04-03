@@ -11,7 +11,7 @@ function landbook_view_coda_library() {
         'version' => '0.0.1',
         'js' => array(array(
           'type' => 'inline',
-          'data' => "var $ = jQuery.noConflict(); $(document).ready(function($) { LBV = new lbvis({prefix: '/sparql?default-graph-uri=&query='}); });"
+          'data' => "var $ = jQuery.noConflict(); $(document).ready(function($) { LBV = new lbvis({prefix: '/sparql?query='}); });"
         )),
         'dependencies' => array(
             array('landbook_view_coda', 'lbvis'),
