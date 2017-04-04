@@ -4,7 +4,7 @@
 
 .select2-container {
     min-width: 150px;
-    z-index: 1400;
+    //z-index: 1400;
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
@@ -62,7 +62,8 @@
   position: absolute;
   left: -100000px;
   width: 100%;
-  z-index: 1451; }
+  z-index: 1451;
+}
 
 .select2-results {
   display: block; }
