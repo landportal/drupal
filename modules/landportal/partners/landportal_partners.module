@@ -53,7 +53,7 @@ function landportal_partners_pre_render_ckeditor_element($element) {
   if (isset($entity->og_group_ref)) {
     $element['#attributes']['data-ckeditor-body-classes'] .=
       ' og-context-node-' . $entity->og_group_ref[LANGUAGE_NONE][0]['target_id'];
-  } else if ($entity->type == 'partners') {
+  } else if (isset($entity->type) && $entity->type == 'partners') {
     $element['#attributes']['data-ckeditor-body-classes'] .= ' og-context-node-' . $entity->nid;
   /* } else { */
   /*   dpm($element); */
