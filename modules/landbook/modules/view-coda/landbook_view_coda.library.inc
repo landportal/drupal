@@ -3,8 +3,8 @@
  * Implement the js-view-coda library in drupal
  */
 function landbook_view_coda_library() {
-    $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
-    
+  $LBVIS_PATH = 'sites/all/libraries/lbvis';
+
     $libraries['view-coda'] = array(
         'title' => 'JS View Country Data',
         'website' => 'https://github.com/landportal/js-view-coda/',
