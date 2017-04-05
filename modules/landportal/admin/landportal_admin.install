@@ -16,7 +16,7 @@ function landportal_admin_update_7203() {
       'hidden' => '1',
     ))
     ->condition('menu_name', 'landdebate-menu')
-    ->condition('vlid', '13415')
+    ->condition('mlid', '13415')
     ->execute();
 
 
