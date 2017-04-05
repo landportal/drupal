@@ -14,7 +14,6 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['title'] = 'Resources';
 $handler->display->display_options['use_ajax'] = TRUE;
-$handler->display->display_options['hide_admin_links'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['use_more_text'] = 'more...';
 $handler->display->display_options['access']['type'] = 'perm';
@@ -126,6 +125,8 @@ $handler->display->display_options['path'] = 'library/browse/by-organizations';
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-with-filters';
 $handler->display->display_options['defaults']['query'] = FALSE;
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['query']['options']['contextual_filters_or'] = TRUE;
