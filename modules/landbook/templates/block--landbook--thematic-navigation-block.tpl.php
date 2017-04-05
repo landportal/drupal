@@ -1,4 +1,4 @@
-<section id="country-navigation">
+<section id="country-navigation" class="clearfix block">
     <div class="container">
         <div class="row">
           <div class="col-md-12">
