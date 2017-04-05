@@ -5,6 +5,44 @@
  *
  */
 
+
+/** Generate titles for managed CTs
+ * news, event, blog_post, organization, debate, library_resource
+ */
+function landportal_admin_update_7203() {
+  // Disable Land Debate menu link 'Home' (no other menu have it)
+  db_update('menu_links')
+    ->fields(array(
+      'hidden' => '1',
+    ))
+    ->condition('menu_name', 'landdebate-menu')
+    ->execute();
+
+
+  $CTs = array('news', 'blog_post', 'debate', 'event', 'organization', 'landlibrary_resource');
+  $import_cts = "'" . implode("', '", $CTs) . "'";
+  // NOTE : will this fail if lang / nid ???
+  $sql = "INSERT INTO field_data_title_field ( SELECT 'node', type, 0, nid, vid, language, 0, title, 'text' FROM node WHERE type IN "
+    . "(" . $import_cts . ") AND nid NOT IN (SELECT entity_id FROM field_data_title_field))";
+
+  // The transaction opens here.
+  $txn = db_transaction();
+
+  try {
+    $id = db_query($sql)
+      ->execute();
+    watchdog('landportal_admin', 'Inserted title_filed for ' . $import_cts, array($id), WATCHDOG_INFO);
+
+    // CTs now have a title_field
+  }
+  catch (Exception $e) {
+    // Something went wrong somewhere, so roll back now.
+    $txn->rollback();
+    // Log the exception to watchdog.
+    watchdog_exception('type', $e);
+  }
+}
+
 /**
  * Fix og module version
  */

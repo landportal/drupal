@@ -22,7 +22,7 @@ function ct_events_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -31,7 +31,7 @@ function ct_events_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -46,7 +46,7 @@ function ct_events_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -112,7 +112,7 @@ function ct_events_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -124,7 +124,7 @@ function ct_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -242,7 +242,7 @@ If it is only a one day event, the end date should be the same as the starting d
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'file_entity',
         'settings' => array(
           'text' => 'Download [file:name]',
@@ -254,7 +254,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -266,7 +266,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'node',
@@ -377,7 +377,7 @@ If it is only a one day event, the end date should be the same as the starting d
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -387,7 +387,7 @@ If it is only a one day event, the end date should be the same as the starting d
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -403,7 +403,7 @@ If it is only a one day event, the end date should be the same as the starting d
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -460,7 +460,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -472,7 +472,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'node',
@@ -694,6 +694,70 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
   );
 
+  // Exported field_instance: 'node-event-title_field'.
+  $field_instances['node-event-title_field'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h1',
+        ),
+        'type' => 'title_linked',
+        'weight' => 3,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => 'h3',
+        ),
+        'type' => 'title_linked',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => 'h3',
+        ),
+        'type' => 'title_linked',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Attach a  file');
@@ -708,6 +772,7 @@ If it is only a one day event, the end date should be the same as the starting d
   t('Overarching categories');
   t('Related concepts');
   t('Themes');
+  t('Title');
   t('Website');
   t('When is this event taking place?
 If it is only a one day event, the end date should be the same as the starting date.');

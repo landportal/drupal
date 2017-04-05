@@ -145,7 +145,7 @@ function landportal_promoted_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -201,13 +201,13 @@ function landportal_promoted_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 9,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -256,7 +256,7 @@ function landportal_promoted_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',

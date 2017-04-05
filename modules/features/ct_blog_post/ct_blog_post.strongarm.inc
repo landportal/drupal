@@ -92,6 +92,9 @@ function ct_blog_post_strongarm() {
       'print' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -121,8 +124,8 @@ function ct_blog_post_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '2',
-            'visible' => TRUE,
+            'weight' => '3',
+            'visible' => FALSE,
           ),
           'listing' => array(
             'weight' => '4',

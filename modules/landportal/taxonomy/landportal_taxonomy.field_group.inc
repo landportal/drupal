@@ -141,13 +141,17 @@ function landportal_taxonomy_field_group_info() {
     'children' => array(
       0 => 'field_related_topics',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-topics-regions field-group-fieldset',
+        'classes' => 'group-topics-regions',
         'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
       ),
       'formatter' => 'open',
     ),
@@ -198,13 +202,17 @@ function landportal_taxonomy_field_group_info() {
     'children' => array(
       0 => 'field_related_topics',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-topics-regions field-group-fieldset',
+        'classes' => 'group-topics-regions',
         'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
       ),
       'formatter' => 'open',
     ),
@@ -226,13 +234,17 @@ function landportal_taxonomy_field_group_info() {
     'children' => array(
       0 => 'field_related_topics',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-topics-regions field-group-fieldset',
+        'classes' => 'group-topics-regions',
         'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
       ),
       'formatter' => 'open',
     ),

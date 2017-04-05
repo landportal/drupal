@@ -92,26 +92,29 @@ function ct_debate_strongarm() {
       'print' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
-        ),
-        'language' => array(
-          'weight' => '5',
-        ),
-        'xmlsitemap' => array(
           'weight' => '8',
         ),
-        'metatags' => array(
+        'language' => array(
+          'weight' => '6',
+        ),
+        'xmlsitemap' => array(
           'weight' => '9',
+        ),
+        'metatags' => array(
+          'weight' => '10',
         ),
       ),
       'display' => array(

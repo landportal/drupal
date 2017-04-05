@@ -22,7 +22,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -105,7 +105,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'listing' => array(
         'label' => 'above',
@@ -173,7 +173,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'listing' => array(
         'label' => 'above',
@@ -302,7 +302,7 @@ function ct_news_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -381,10 +381,11 @@ function ct_news_field_default_field_instances() {
     'description' => 'Select the language of the original article that is reposted',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'type' => 'i18n_taxonomy_term_reference_plain',
+        'weight' => 14,
       ),
       'listing' => array(
         'label' => 'above',
@@ -436,7 +437,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_separate',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'listing' => array(
         'label' => 'above',
@@ -758,6 +759,70 @@ function ct_news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-news-title_field'.
+  $field_instances['node-news-title_field'] = array(
+    'bundle' => 'news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h1',
+        ),
+        'type' => 'title_linked',
+        'weight' => 2,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => 'h3',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => 'h3',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Attach a  file');
@@ -773,6 +838,7 @@ function ct_news_field_default_field_instances() {
   t('Select the language of the original article that is reposted');
   t('Source');
   t('Themes');
+  t('Title');
 
   return $field_instances;
 }

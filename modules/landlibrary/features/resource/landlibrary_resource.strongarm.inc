@@ -145,6 +145,9 @@ function landlibrary_resource_strongarm() {
       'print' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -167,18 +170,7 @@ function landlibrary_resource_strongarm() {
           'weight' => '11',
         ),
       ),
-      'display' => array(
-        'title' => array(
-          'teaser' => array(
-            'weight' => '1',
-            'visible' => TRUE,
-          ),
-          'listing' => array(
-            'weight' => '1',
-            'visible' => TRUE,
-          ),
-        ),
-      ),
+      'display' => array(),
     ),
   );
   $export['field_bundle_settings_node__landlibrary_resource'] = $strongarm;

@@ -13,6 +13,27 @@ function ct_organization_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_organization';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_organization'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_organization';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_organization'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_organization';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_organization'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__organization';
   $strongarm->value = array(
     'view_modes' => array(
@@ -41,6 +62,9 @@ function ct_organization_strongarm() {
         'custom_settings' => TRUE,
       ),
       'print' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -72,7 +96,7 @@ function ct_organization_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '7',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -88,7 +112,7 @@ function ct_organization_strongarm() {
         ),
         'locations' => array(
           'default' => array(
-            'weight' => '6',
+            'weight' => '7',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -118,7 +142,7 @@ function ct_organization_strongarm() {
     'form' => array(
       'weight' => '4',
       'collapsible' => 1,
-      'collapsed' => 0,
+      'collapsed' => 1,
       'fields' => array(
         'name' => array(
           'collect' => '1',
