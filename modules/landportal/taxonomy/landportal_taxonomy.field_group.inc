@@ -178,7 +178,7 @@ function landportal_taxonomy_field_group_info() {
         'classes' => 'group-topics-regions field-group-fieldset',
         'description' => '',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_topics_regions|taxonomy_term|themes|form'] = $field_group;

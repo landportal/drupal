@@ -86,11 +86,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'International or regional financial institution',
-    'description' => '',
-    'format' => 'filtered_html',
+    'description' => '<p>An&nbsp;international financial institution&nbsp;(IFI) is a&nbsp;financial institution&nbsp;that has been established (or chartered) by more than one country, and hence are subjects of&nbsp;international law. Its owners or shareholders are generally national governments, although other&nbsp;international institutions&nbsp;and other organizations occasionally figure as shareholders.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="https://en.wikipedia.org/wiki/International_financial_institutions">Wikipedia</a></p>
+',
+    'format' => 'full_html',
     'weight' => 0,
     'uuid' => '168c254f-4c88-49fb-86c8-3163e25272e6',
-    'language' => 'en',
+    'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
     'synonyms_synonyms' => array(),
@@ -105,9 +110,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_field' => array(
       'en' => array(
         0 => array(
-          'value' => '',
-          'summary' => NULL,
-          'format' => 'filtered_html',
+          'value' => '<p>An&nbsp;international financial institution&nbsp;(IFI) is a&nbsp;financial institution&nbsp;that has been established (or chartered) by more than one country, and hence are subjects of&nbsp;international law. Its owners or shareholders are generally national governments, although other&nbsp;international institutions&nbsp;and other organizations occasionally figure as shareholders.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="https://en.wikipedia.org/wiki/International_financial_institutions">Wikipedia</a></p>
+',
+          'summary' => '',
+          'format' => 'full_html',
           'safe_summary' => '',
         ),
       ),
@@ -136,14 +146,42 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Non-profit organization',
-    'description' => '',
+    'description' => '<p>A&nbsp;nonprofit organization&nbsp;(also known as a&nbsp;non-business entity) is an&nbsp;organization&nbsp;whose purpose is something other than making a profit.&nbsp;A nonprofit organization is often dedicated to furthering a particular&nbsp;social cause&nbsp;or advocating for a particular point of view.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="https://en.wikipedia.org/wiki/Nonprofit_organization">Wikipedia</a></p>
+',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '24f045f4-13ce-46b9-9935-bbac1a9a814c',
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'synonyms_synonyms' => array(),
+    'synonyms_synonyms' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Not-for-profit organization',
+          'format' => NULL,
+        ),
+        1 => array(
+          'value' => 'Nonprofit organization',
+          'format' => NULL,
+        ),
+        2 => array(
+          'value' => 'Non-profit organisation',
+          'format' => NULL,
+        ),
+        3 => array(
+          'value' => 'Not-for-profit organisation',
+          'format' => NULL,
+        ),
+        4 => array(
+          'value' => 'Nonprofit organisation',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -155,8 +193,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_field' => array(
       'und' => array(
         0 => array(
-          'value' => '',
-          'summary' => NULL,
+          'value' => '<p>A&nbsp;nonprofit organization&nbsp;(also known as a&nbsp;non-business entity) is an&nbsp;organization&nbsp;whose purpose is something other than making a profit.&nbsp;A nonprofit organization is often dedicated to furthering a particular&nbsp;social cause&nbsp;or advocating for a particular point of view.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="https://en.wikipedia.org/wiki/Nonprofit_organization">Wikipedia</a></p>
+',
+          'summary' => '',
           'format' => 'filtered_html',
           'safe_summary' => '',
         ),
@@ -339,14 +382,38 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Non Governmental organization',
-    'description' => '',
-    'format' => 'plain_text',
+    'description' => '<p>A non-governmental organization (NGO) is a not-for-profit organization that is independent from states and international governmental organizations.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="https://en.wikipedia.org/wiki/Non-governmental_organization">Wikipedia</a></p>
+',
+    'format' => 'full_html',
     'weight' => 0,
     'uuid' => '41e2cc4d-daa1-4936-880c-effba12854f6',
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'synonyms_synonyms' => array(),
+    'synonyms_synonyms' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'NGO',
+          'format' => NULL,
+        ),
+        1 => array(
+          'value' => 'Non-Governmental organization',
+          'format' => NULL,
+        ),
+        2 => array(
+          'value' => 'Non Governmental organisation',
+          'format' => NULL,
+        ),
+        3 => array(
+          'value' => 'Non-Governmental organisation',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -358,9 +425,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_field' => array(
       'und' => array(
         0 => array(
-          'value' => '',
-          'summary' => NULL,
-          'format' => 'plain_text',
+          'value' => '<p>A non-governmental organization (NGO) is a not-for-profit organization that is independent from states and international governmental organizations.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="https://en.wikipedia.org/wiki/Non-governmental_organization">Wikipedia</a></p>
+',
+          'summary' => '',
+          'format' => 'full_html',
           'safe_summary' => '',
         ),
       ),
@@ -557,11 +629,16 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'United Nations Agency',
-    'description' => '',
+    'description' => '<p>United Nations institutions and the&nbsp;agencies that are linked to the United Nations through special agreements, the separate, autonomous specialized agencies of the UN family set standards and guidelines, help formulate policies, provide technical assistance, and other forms of practical help in virtually all areas of economic and social endeavor.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="http://www.infoplease.com/ipa/A0001308.html">Infoplease.com</a></p>
+',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '6033cb9a-c3d5-4a90-95b9-bb71dfb39ce4',
-    'language' => 'en',
+    'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
     'synonyms_synonyms' => array(),
@@ -576,8 +653,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_field' => array(
       'en' => array(
         0 => array(
-          'value' => '',
-          'summary' => NULL,
+          'value' => '<p>United Nations institutions and the&nbsp;agencies that are linked to the United Nations through special agreements, the separate, autonomous specialized agencies of the UN family set standards and guidelines, help formulate policies, provide technical assistance, and other forms of practical help in virtually all areas of economic and social endeavor.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="http://www.infoplease.com/ipa/A0001308.html">Infoplease.com</a></p>
+',
+          'summary' => '',
           'format' => 'filtered_html',
           'safe_summary' => '',
         ),
@@ -734,8 +816,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Intergovernmental or Multilateral organization',
-    'description' => '',
-    'format' => 'plain_text',
+    'description' => '<p>An intergovernmental organization or international governmental organization (IGO) is an organization composed primarily of sovereign states (referred to as member states), or of other intergovernmental organizations. Multilateral organizations obtain their funding from multiple governments and spend it on projects in various countries.</p>
+
+<p>&nbsp;</p>
+
+<p>Sources: <a href="https://en.wikipedia.org/wiki/Intergovernmental_organization">Wikipedia</a> &amp; <a href="http://www.uniteforsight.org/global-health-careers/module5">Unite for Sight</a></p>
+',
+    'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '77c8540c-8efb-4188-957e-3b8991c6c7fd',
     'language' => 'und',
@@ -753,9 +840,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_field' => array(
       'und' => array(
         0 => array(
-          'value' => '',
-          'summary' => NULL,
-          'format' => 'plain_text',
+          'value' => '<p>An intergovernmental organization or international governmental organization (IGO) is an organization composed primarily of sovereign states (referred to as member states), or of other intergovernmental organizations. Multilateral organizations obtain their funding from multiple governments and spend it on projects in various countries.</p>
+
+<p>&nbsp;</p>
+
+<p>Sources: <a href="https://en.wikipedia.org/wiki/Intergovernmental_organization">Wikipedia</a> &amp; <a href="http://www.uniteforsight.org/global-health-careers/module5">Unite for Sight</a></p>
+',
+          'summary' => '',
+          'format' => 'filtered_html',
           'safe_summary' => '',
         ),
       ),
@@ -784,14 +876,34 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'International professional body',
-    'description' => '',
+    'description' => '<p>A&nbsp;professional association&nbsp;(also called a&nbsp;professional body,&nbsp;professional organization, or&nbsp;professional society) is usually a&nbsp;nonprofit organization&nbsp;seeking to&nbsp;further&nbsp;a particular&nbsp;profession, the interests of individuals engaged in that profession and the&nbsp;public interest.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="https://en.wikipedia.org/wiki/Professional_association">Wikipedia</a></p>
+',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '85fddaff-46fc-4216-8885-30a17334c1fe',
-    'language' => 'en',
+    'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'synonyms_synonyms' => array(),
+    'synonyms_synonyms' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'International professional association',
+          'format' => NULL,
+        ),
+        1 => array(
+          'value' => 'International professional organization',
+          'format' => NULL,
+        ),
+        2 => array(
+          'value' => 'International professional society',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -803,8 +915,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_field' => array(
       'en' => array(
         0 => array(
-          'value' => '',
-          'summary' => NULL,
+          'value' => '<p>A&nbsp;professional association&nbsp;(also called a&nbsp;professional body,&nbsp;professional organization, or&nbsp;professional society) is usually a&nbsp;nonprofit organization&nbsp;seeking to&nbsp;further&nbsp;a particular&nbsp;profession, the interests of individuals engaged in that profession and the&nbsp;public interest.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="https://en.wikipedia.org/wiki/Professional_association">Wikipedia</a></p>
+',
+          'summary' => '',
           'format' => 'filtered_html',
           'safe_summary' => '',
         ),
@@ -883,11 +1000,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Philanthropic foundation',
-    'description' => '',
+    'description' => '<p>Philanthropic&nbsp;foundation, a nongovernmental, nonprofit&nbsp;organization, with assets provided by donors and managed by its own officials and with income expended for socially useful purposes.</p>
+
+<p>Source: <a href="https://www.britannica.com/topic/philanthropic-foundation">Encyclopedia Britannica</a></p>
+',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '8c40ae60-9d3f-4bd2-b243-f166f6d1d8ab',
-    'language' => 'en',
+    'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
     'synonyms_synonyms' => array(),
@@ -902,8 +1022,11 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_field' => array(
       'en' => array(
         0 => array(
-          'value' => '',
-          'summary' => NULL,
+          'value' => '<p>Philanthropic&nbsp;foundation, a nongovernmental, nonprofit&nbsp;organization, with assets provided by donors and managed by its own officials and with income expended for socially useful purposes.</p>
+
+<p>Source: <a href="https://www.britannica.com/topic/philanthropic-foundation">Encyclopedia Britannica</a></p>
+',
+          'summary' => '',
           'format' => 'filtered_html',
           'safe_summary' => '',
         ),
@@ -933,8 +1056,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Civil Society Organization',
-    'description' => '',
-    'format' => 'plain_text',
+    'description' => '<p>Civil society is the "aggregate of non-governmental organizations and institutions that manifest interests and will of citizens."</p>
+
+<p>&nbsp;</p>
+
+<p>Source:&nbsp;&nbsp;<cite><a href="http://dictionary.reference.com/browse/civil+society?r=66" rel="nofollow">"Civil society – Define Civil society at Dictionary.com"</a></cite></p>
+',
+    'format' => 'full_html',
     'weight' => 0,
     'uuid' => '8f6740cc-0114-470f-a675-e3adf7b20969',
     'language' => 'und',
@@ -952,9 +1080,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_field' => array(
       'und' => array(
         0 => array(
-          'value' => '',
-          'summary' => NULL,
-          'format' => 'plain_text',
+          'value' => '<p>Civil society is the "aggregate of non-governmental organizations and institutions that manifest interests and will of citizens."</p>
+
+<p>&nbsp;</p>
+
+<p>Source:&nbsp;&nbsp;<cite><a href="http://dictionary.reference.com/browse/civil+society?r=66" rel="nofollow">"Civil society – Define Civil society at Dictionary.com"</a></cite></p>
+',
+          'summary' => '',
+          'format' => 'full_html',
           'safe_summary' => '',
         ),
       ),
@@ -1013,14 +1146,26 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Private sector',
-    'description' => '',
+    'description' => '<p>The&nbsp;private sector&nbsp;is the part of the economy, sometimes referred to as the&nbsp;citizen sector, which is run by private individuals or groups, usually as a means of enterprise for&nbsp;profit, and is not controlled by the&nbsp;State.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="https://en.wikipedia.org/wiki/Private_sector">Wikipedia</a></p>
+',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'a46bc627-9f5a-47d9-98c3-062fb95c1cb7',
-    'language' => 'en',
+    'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'synonyms_synonyms' => array(),
+    'synonyms_synonyms' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Private companies',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -1032,8 +1177,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_field' => array(
       'en' => array(
         0 => array(
-          'value' => '',
-          'summary' => NULL,
+          'value' => '<p>The&nbsp;private sector&nbsp;is the part of the economy, sometimes referred to as the&nbsp;citizen sector, which is run by private individuals or groups, usually as a means of enterprise for&nbsp;profit, and is not controlled by the&nbsp;State.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="https://en.wikipedia.org/wiki/Private_sector">Wikipedia</a></p>
+',
+          'summary' => '',
           'format' => 'filtered_html',
           'safe_summary' => '',
         ),
@@ -1272,19 +1422,26 @@ function landportal_taxonomy_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Farmers Associations',
-    'description' => '',
+    'name' => 'Farmers Association',
+    'description' => 'Farmers associations or organizations work to the benefit of farmers and are often composed of farmers.',
     'format' => 'plain_text',
     'weight' => 0,
     'uuid' => 'd1466f18-deaa-418e-aaa5-fc0b6e4eb1e7',
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'synonyms_synonyms' => array(),
+    'synonyms_synonyms' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Farmers Organization',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => 'Farmers Associations',
+          'value' => 'Farmers Association',
           'format' => NULL,
         ),
       ),
@@ -1292,8 +1449,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_field' => array(
       'und' => array(
         0 => array(
-          'value' => '',
-          'summary' => NULL,
+          'value' => 'Farmers associations or organizations work to the benefit of farmers and are often composed of farmers.',
+          'summary' => '',
           'format' => 'plain_text',
           'safe_summary' => '',
         ),
@@ -1323,7 +1480,12 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'University or Research Institution',
-    'description' => '',
+    'description' => '<p>A&nbsp;research institute or universities are&nbsp;establishments endowed for doing&nbsp;research and/or education.&nbsp;Research institutes may specialize in basic research or may be oriented to applied research.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="https://en.wikipedia.org/wiki/Research_institute">Wikipedia</a></p>
+',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'd821699a-a2a7-443a-89d3-98b60a8dce1b',
@@ -1342,8 +1504,13 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_field' => array(
       'und' => array(
         0 => array(
-          'value' => '',
-          'summary' => NULL,
+          'value' => '<p>A&nbsp;research institute or universities are&nbsp;establishments endowed for doing&nbsp;research and/or education.&nbsp;Research institutes may specialize in basic research or may be oriented to applied research.</p>
+
+<p>&nbsp;</p>
+
+<p>Source: <a href="https://en.wikipedia.org/wiki/Research_institute">Wikipedia</a></p>
+',
+          'summary' => '',
           'format' => 'filtered_html',
           'safe_summary' => '',
         ),
@@ -1480,14 +1647,21 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Network',
-    'description' => '',
+    'description' => 'A network is a group or association of several organizations working together to achieve a mutual goal, usually facilitated by a dedicated secretariat.',
     'format' => 'plain_text',
     'weight' => 0,
     'uuid' => 'f18cdf6b-0e61-4305-819d-e8556b565aa6',
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
-    'synonyms_synonyms' => array(),
+    'synonyms_synonyms' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Coalition',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -1499,8 +1673,8 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_field' => array(
       'und' => array(
         0 => array(
-          'value' => '',
-          'summary' => NULL,
+          'value' => 'A network is a group or association of several organizations working together to achieve a mutual goal, usually facilitated by a dedicated secretariat.',
+          'summary' => '',
           'format' => 'plain_text',
           'safe_summary' => '',
         ),

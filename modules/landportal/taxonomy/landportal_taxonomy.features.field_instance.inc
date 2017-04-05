@@ -10,212 +10,6 @@
 function landportal_taxonomy_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'taxonomy_term-countries-field_iso3'.
-  $field_instances['taxonomy_term-countries-field_iso3'] = array(
-    'bundle' => 'countries',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'search_index' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_iso3',
-    'label' => 'ISO3',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'fc' => array(
-        'fc_allow_empty' => FALSE,
-        'fc_check_zero' => 0,
-        'fc_include' => 0,
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 4,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'taxonomy_term-countries-field_linked_uris'.
-  $field_instances['taxonomy_term-countries-field_linked_uris'] = array(
-    'bundle' => 'countries',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'This field is for the \'same as\' concepts linked to that one',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_url',
-        'weight' => 1,
-      ),
-      'search_index' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_linked_uris',
-    'label' => 'External Linked URI',
-    'required' => 0,
-    'settings' => array(
-      'absolute_url' => 1,
-      'attributes' => array(
-        'class' => '',
-        'configurable_class' => 0,
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => '_blank',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 0,
-      'entity_translation_sync' => FALSE,
-      'rel_remove' => 'default',
-      'title' => 'none',
-      'title_label_use_field_label' => 0,
-      'title_maxlength' => 255,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 0,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'taxonomy_term-countries-name_field'.
-  $field_instances['taxonomy_term-countries-name_field'] = array(
-    'bundle' => 'countries',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-      'search_index' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'name_field',
-    'label' => 'Label',
-    'required' => 1,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => -10,
-            ),
-            'full_html' => array(
-              'weight' => -9,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-          ),
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => -5,
-    ),
-  );
-
-  // Exported field_instance: 'taxonomy_term-countries-synonyms_synonyms'.
-  $field_instances['taxonomy_term-countries-synonyms_synonyms'] = array(
-    'bundle' => 'countries',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Please, enter the synonyms which should be related to this term.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
-      'search_index' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'synonyms_synonyms',
-    'label' => 'Synonyms',
-    'required' => FALSE,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 7,
-    ),
-  );
-
   // Exported field_instance: 'taxonomy_term-debate_status-name_field'.
   $field_instances['taxonomy_term-debate_status-name_field'] = array(
     'bundle' => 'debate_status',
@@ -1622,7 +1416,7 @@ function landportal_taxonomy_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -1693,7 +1487,7 @@ function landportal_taxonomy_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -1885,11 +1679,9 @@ function landportal_taxonomy_field_default_field_instances() {
   t('Define which themes this content is covering');
   t('Description');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
-  t('External Linked URI');
   t('ID');
   t('ISO3');
   t('Icon');
-  t('Label');
   t('Language code (ISO 639-1)');
   t('Language code (ISO 639-3)');
   t('Name');
@@ -1898,7 +1690,6 @@ function landportal_taxonomy_field_default_field_instances() {
   t('Related concepts');
   t('Synonyms');
   t('Themes');
-  t('This field is for the \'same as\' concepts linked to that one');
   t('URI of the license from the RDFLicense dataset
 ');
   t('acronym');

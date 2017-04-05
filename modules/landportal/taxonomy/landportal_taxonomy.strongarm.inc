@@ -46,6 +46,9 @@ function landportal_taxonomy_strongarm() {
         'xmlsitemap' => array(
           'weight' => '6',
         ),
+        'metatags' => array(
+          'weight' => '8',
+        ),
       ),
       'display' => array(
         'description' => array(
@@ -66,13 +69,6 @@ function landportal_taxonomy_strongarm() {
     ),
   );
   $export['field_bundle_settings_taxonomy_term__themes'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_countries_pattern';
-  $strongarm->value = '';
-  $export['pathauto_taxonomy_term_countries_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -150,16 +146,6 @@ function landportal_taxonomy_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_topics_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_topics_pattern'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_settings_taxonomy_term_countries';
-  $strongarm->value = array(
-    'status' => '0',
-    'priority' => '0.5',
-  );
-  $export['xmlsitemap_settings_taxonomy_term_countries'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
