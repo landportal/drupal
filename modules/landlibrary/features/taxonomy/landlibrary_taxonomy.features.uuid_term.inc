@@ -12,7 +12,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
 
   $terms[] = array(
     'name' => 'Conference Papers & Reports',
-    'description' => '<p>As a subcategory of Reports &amp; Research, the Land Portal identifies Conference Papers &amp; Reports as a separate category. This category contains reports and papers that have been written for or about a particular conference or event.</p>
+    'description' => '<p>As a subcategory of Reports &amp; Research, the Land Portal identifies Conference Papers &amp; Reports as a separate category. This category contains reports and papers or powerpoint presentations that have been created for or about a particular conference or event.</p>
 ',
     'format' => 'filtered_html',
     'weight' => 0,
@@ -26,13 +26,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 7984,
+          'revision_id' => 7984,
           'language' => 'en',
           'source' => '',
+          'uid' => 13655,
           'status' => 1,
           'translate' => 0,
-          'created' => 1479224368,
-          'entity_uuid' => '06af3c34-b21a-427c-9b59-59e1eab25af8',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'created' => 1488471571,
+          'changed' => 1488471571,
         ),
       ),
     ),
@@ -45,7 +47,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Reports & Research',
-    'description' => 'Reports & Research is a resource type under which case, project and status reports are generally nested, as well as workshop and flagship reports. Good practice reviews are also generally nested under this resource type. There is research involved in establishing the reports, but not necessarily with an academic approach.',
+    'description' => 'Reports & Research is a resource type for publications where research was involved in establishing the report, but not necessarily with an academic approach. The resource type aims to bring together under which all the different types of resources that have been identified as "research report", "case report", "research report", "case study", "use case report",  as well as "workshop report" or "flagship reports". Good practice reviews are also generally nested under this resource type. ',
     'format' => 'plain_text',
     'weight' => 13,
     'uuid' => '0e00119d-b478-4d58-bb38-355e5273da31',
@@ -58,13 +60,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3678,
+          'revision_id' => 3678,
           'language' => 'und',
           'source' => '',
+          'uid' => 13655,
           'status' => 1,
           'translate' => 0,
-          'created' => 1479224311,
-          'entity_uuid' => '0e00119d-b478-4d58-bb38-355e5273da31',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'created' => 1488471506,
+          'changed' => 1488471506,
         ),
       ),
     ),
@@ -87,13 +91,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3992,
+          'revision_id' => 3992,
           'language' => 'und',
           'source' => '',
+          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479225127,
-          'entity_uuid' => '12f974ab-0144-47ab-b77a-e984eb4f000c',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'changed' => 1479225127,
         ),
       ),
     ),
@@ -119,13 +125,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3991,
+          'revision_id' => 3991,
           'language' => 'und',
           'source' => '',
+          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479224734,
-          'entity_uuid' => '14e2a781-b9d0-436b-be70-325f9aec7e53',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'changed' => 1479224734,
         ),
       ),
     ),
@@ -138,7 +146,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Other',
-    'description' => '<p>The "Other" subcategory for Legislation &amp; Policies is meant for types of law that do not fit under any of the other categories, that are unique for a country.</p>
+    'description' => '<p>While the Land Portal prefers&nbsp;to avoid using a category such as "Other" in metadata - since it does not provide a user with much information - in the case of legislations and policies it has felt that it was unavoidable. This due to the many different of legislation or regulation-formats different countries identify. Because these types of regulations can be nonetheless very important with regards to land governance, these categories are nested under the "Other"-category in the Land Library resource type taxonomy.</p>
 ',
     'format' => 'filtered_html',
     'weight' => 8,
@@ -152,13 +160,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 7890,
+          'revision_id' => 7890,
           'language' => 'en',
           'source' => '',
+          'uid' => 13655,
           'status' => 1,
           'translate' => 0,
-          'created' => 1479225504,
-          'entity_uuid' => '5409c613-1842-4d1c-96fd-d776a3c2d072',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'created' => 1488471928,
+          'changed' => 1488471928,
         ),
       ),
     ),
@@ -171,7 +181,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Constitution',
-    'description' => '<p>A constitution is a set of fundamental principles or established precedents according to which a state or other organization is governed. These rules together make up, i.e. constitute, what the entity is. (Source: <a href="https://www.google.nl/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=3&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwih6q-LjqvQAhWIIMAKHeHtCjcQFggjMAI&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FConstitution&amp;usg=AFQjCNG9TJP-5obtAsW9m8VnOLoSzJ4Q9g&amp;bvm=bv.138493631,d.d24">Wikipedia</a>)</p>
+    'description' => '<p>A constitution is the highest level of national legislation. Many countries have included land-related provisions in their constitutions.</p>
 ',
     'format' => 'filtered_html',
     'weight' => 1,
@@ -185,13 +195,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3659,
+          'revision_id' => 3659,
           'language' => 'und',
           'source' => '',
+          'uid' => 13655,
           'status' => 1,
           'translate' => 0,
-          'created' => 1479224924,
-          'entity_uuid' => '5be0c818-ca86-4232-89fb-9f3b0b238d4a',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'created' => 1488471676,
+          'changed' => 1488471676,
         ),
       ),
     ),
@@ -217,13 +229,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3993,
+          'revision_id' => 3993,
           'language' => 'und',
           'source' => '',
+          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479224528,
-          'entity_uuid' => '6ec5c0b7-e3d4-4f45-9c90-df0da61c68ec',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'changed' => 1479224528,
         ),
       ),
     ),
@@ -246,13 +260,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3655,
+          'revision_id' => 3655,
           'language' => 'und',
           'source' => '',
+          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479224033,
-          'entity_uuid' => '795d74c2-9665-4a96-b246-a8ae0b058811',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'changed' => 1479224033,
         ),
       ),
     ),
@@ -262,7 +278,8 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Maps',
-    'description' => '',
+    'description' => '<p>For a topic as land governance maps are an extremely important tool. Many organizations and information providers have visualized land-related data in the form of maps, whether they are pictures or advanced geospatial maps. The metadata about and links to these maps are included in this subcategory of the Multimedia-resource type.</p>
+',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '84a7e843-efa0-4939-b1eb-73986e128253',
@@ -275,13 +292,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 7990,
+          'revision_id' => 7990,
           'language' => 'en',
           'source' => '',
+          'uid' => 13655,
           'status' => 1,
           'translate' => 0,
-          'created' => 1479298455,
-          'entity_uuid' => '84a7e843-efa0-4939-b1eb-73986e128253',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'created' => 1488471328,
+          'changed' => 1488471328,
         ),
       ),
     ),
@@ -307,13 +326,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3987,
+          'revision_id' => 3987,
           'language' => 'und',
           'source' => '',
+          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479225662,
-          'entity_uuid' => '88d423e7-9956-4822-bd52-6ed84a1664b0',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'changed' => 1479225662,
         ),
       ),
     ),
@@ -323,7 +344,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Peer-reviewed publication',
-    'description' => '<p>A peer-reviewed publication is a subcategory under Journal Articles &amp; Books, in the sense that it is an article with a more scientific approach. In general, the following description of a peer-reviewed publication is used: "Articles are written by experts and are reviewed by several other experts in the field before the article is published in the journal in order to insure the article\'s quality" (Source: <a href="https://www.google.nl/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwiIkuOci6vQAhUGCcAKHTl5CgMQFgghMAE&amp;url=http%3A%2F%2Fwww.angelo.edu%2Fservices%2Flibrary%2Fhandouts%2Fpeerrev.php&amp;usg=AFQjCNF3r7LqswUItVrQOR-HdumH617xNQ&amp;bvm=bv.138493631,d.d24">Angelo State University</a>).</p>
+    'description' => '<p>A peer-reviewed publication is a subcategory under Journal Articles &amp; Books, in the sense that it is an article with a more scientific approach. In general, the following description of a peer-reviewed publication is used: "Articles are written by experts and are reviewed by several other experts in the field before the article is published in the journal in order to insure the article\'s quality" (Source: <a href="http://www.angelo.edu/services/library/handouts/peerrev.php">Angelo State University</a>).</p>
 ',
     'format' => 'filtered_html',
     'weight' => 0,
@@ -337,13 +358,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3673,
+          'revision_id' => 3673,
           'language' => 'und',
           'source' => '',
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
-          'created' => 1479224182,
-          'entity_uuid' => '8915ee67-2edc-4f9a-9c0e-69a13684844e',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'created' => 1487689226,
+          'changed' => 1487689226,
         ),
       ),
     ),
@@ -356,7 +379,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Manuals & Guidelines',
-    'description' => 'Manuals & Guidelines are that are intended to provide guidance or principles on how to approach issues related to land governance. Different terminologies are used by different organizations and institutions, such as frameworks, how-to-documents, guides, manuals, guidelines and general principles. ',
+    'description' => 'The Manuals and Guidelines-resource type on the Land Portal brings together all the types of resources that aim to provide some sort of capacity building or learning-functions. Different terminologies are used by different organizations and institutions, such as frameworks, how-to-documents, guides, manuals, guidelines and general principles.',
     'format' => 'plain_text',
     'weight' => 8,
     'uuid' => 'c3a76572-fdef-47cf-913f-2216ecc10d63',
@@ -369,13 +392,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3663,
+          'revision_id' => 3663,
           'language' => 'und',
           'source' => '',
+          'uid' => 13655,
           'status' => 1,
           'translate' => 0,
-          'created' => 1479223924,
-          'entity_uuid' => 'c3a76572-fdef-47cf-913f-2216ecc10d63',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'created' => 1488471210,
+          'changed' => 1488471210,
         ),
       ),
     ),
@@ -399,13 +424,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 7889,
+          'revision_id' => 7889,
           'language' => 'en',
           'source' => '',
+          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479224804,
-          'entity_uuid' => 'c87b4b7c-d147-4897-9002-40a25443957d',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'changed' => 1479224804,
         ),
       ),
     ),
@@ -432,13 +459,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 7884,
+          'revision_id' => 7884,
           'language' => 'en',
           'source' => '',
+          'uid' => 8157,
           'status' => 1,
           'translate' => 0,
           'created' => 1474370631,
-          'entity_uuid' => 'd3f3425c-769d-4c92-b302-2f9019b32cda',
-          'user_uuid' => 'cfcfad64-b49a-4645-9ecf-3dbcb4411b56',
+          'changed' => 1474370631,
         ),
       ),
     ),
@@ -461,13 +490,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3994,
+          'revision_id' => 3994,
           'language' => 'und',
           'source' => '',
+          'uid' => 7082,
           'status' => 1,
           'translate' => 0,
           'created' => 1479225410,
-          'entity_uuid' => 'e00ce92f-dadc-4d8a-8a92-b8ba2ca92244',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'changed' => 1479225410,
         ),
       ),
     ),
@@ -480,7 +511,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Regulations',
-    'description' => 'Regulations is used as the general term for lower-level law (below a constitution or statutory law). The category is meant as a broad category for the different terminologies used by various countries to describe lower-level rules and regulations on a national (or regional) level.',
+    'description' => 'Regulations is used as the general term for lower-level law (below a constitution or statutory law). The category is meant as a broad category for the different terminologies used by various countries to describe lower-level rules and regulations on a national (or regional) level that have not been established through the formal process that the establishment of a formal law or legislations require.',
     'format' => 'plain_text',
     'weight' => 6,
     'uuid' => 'e14b20cf-5cba-4381-8cc4-abc5355582e8',
@@ -493,13 +524,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3677,
+          'revision_id' => 3677,
           'language' => 'und',
           'source' => '',
+          'uid' => 13655,
           'status' => 1,
           'translate' => 0,
-          'created' => 1479225383,
-          'entity_uuid' => 'e14b20cf-5cba-4381-8cc4-abc5355582e8',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'created' => 1488471809,
+          'changed' => 1488471809,
         ),
       ),
     ),
@@ -512,7 +545,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Agreements & Contracts',
-    'description' => '<p>Agreements and Contracts on a national or regional level.</p>
+    'description' => '<p>The final Legislation &amp; Policies subcategory is Agreements &amp; Contracts. This subcategory includes metadata from agreements or contracts related to land and land deals. The government is usually a part in one of these contracts, but can also involve solely private sector actors.</p>
 ',
     'format' => 'filtered_html',
     'weight' => 5,
@@ -526,13 +559,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 7891,
+          'revision_id' => 7891,
           'language' => 'en',
           'source' => '',
+          'uid' => 13655,
           'status' => 1,
           'translate' => 0,
-          'created' => 1468595614,
-          'entity_uuid' => 'e84c6fd3-65dc-4557-af3b-5c399fb1b7e8',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'created' => 1488471953,
+          'changed' => 1488471953,
         ),
       ),
     ),
@@ -545,7 +580,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Legislation & Policies',
-    'description' => 'Under the broad category of \'Legislation & Policies\', the Land Portal classifies all types of law (international and national) related to land.',
+    'description' => 'Besides publications and articles about land governance, the Land Library also hosts country-level laws and policies that focus on land governance. The classifcation of different types of laws and policies can differ from country to country, so the classification used on the Land Portal is done through a general classification of elements.',
     'format' => 'plain_text',
     'weight' => 15,
     'uuid' => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
@@ -558,13 +593,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3982,
+          'revision_id' => 3982,
           'language' => 'und',
           'source' => '',
+          'uid' => 13655,
           'status' => 1,
           'translate' => 0,
-          'created' => 1479224648,
-          'entity_uuid' => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'created' => 1488471630,
+          'changed' => 1488471630,
         ),
       ),
     ),
@@ -574,7 +611,8 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Videos',
-    'description' => '',
+    'description' => '<p>The Land Portal hosts many interesting videos related to land governance. These can be embedded in the pages or linked through via the metadata.</p>
+',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => 'f18452a0-990f-4c66-8381-d8700a4f2e39',
@@ -587,13 +625,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'en' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 7991,
+          'revision_id' => 7991,
           'language' => 'en',
           'source' => '',
+          'uid' => 13655,
           'status' => 1,
           'translate' => 0,
-          'created' => 1479298483,
-          'entity_uuid' => 'f18452a0-990f-4c66-8381-d8700a4f2e39',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'created' => 1488471354,
+          'changed' => 1488471354,
         ),
       ),
     ),
@@ -606,7 +646,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Multimedia',
-    'description' => 'The multimedia section contains everything ranging from videos, audio files and podcasts, to infographics and maps.',
+    'description' => 'The multimedia category is fairly self-explanatory in the sense that it contains all non-bibliographic resources that exist in the Land Library. This can vary from videos, maps, audio files, infographics and even website descriptions.',
     'format' => 'plain_text',
     'weight' => 17,
     'uuid' => 'f46e9a89-3241-4898-9354-6fb1af1098ad',
@@ -619,13 +659,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3671,
+          'revision_id' => 3671,
           'language' => 'und',
           'source' => '',
+          'uid' => 13655,
           'status' => 1,
           'translate' => 0,
-          'created' => 1479225743,
-          'entity_uuid' => 'f46e9a89-3241-4898-9354-6fb1af1098ad',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'created' => 1488471300,
+          'changed' => 1488471300,
         ),
       ),
     ),
@@ -635,7 +677,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Legislation',
-    'description' => '<p>Legislation (or "statutory law") is law which has been promulgated (or "enacted") by a legislature or other governing body or the process of making it. (Source: Article 289(3) of the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A12012E%2FTXT">Treaty on the Functioning of the European Union</a>).</p>
+    'description' => '<p>With the legislation subcategory, the Land Portal identifies any formal laws on a national level. A formal law is enacted by an official legislator and/or through an official procedure.</p>
 ',
     'format' => 'filtered_html',
     'weight' => 3,
@@ -649,13 +691,15 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
       'data' => array(
         'und' => array(
           'entity_type' => 'taxonomy_term',
+          'entity_id' => 3668,
+          'revision_id' => 3668,
           'language' => 'und',
           'source' => '',
+          'uid' => 13655,
           'status' => 1,
           'translate' => 0,
-          'created' => 1479225062,
-          'entity_uuid' => 'f49e4f01-aaa0-4af0-ac92-2afe31de85f7',
-          'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+          'created' => 1488471744,
+          'changed' => 1488471744,
         ),
       ),
     ),
