@@ -76,8 +76,11 @@ $handler->display->display_options['filters']['language']['value'] = array(
 $handler = $view->new_display('page', 'Page', 'page');
 $handler->display->display_options['path'] = 'debate/news';
 
-/* Display: Block */
-$handler = $view->new_display('block', 'Block', 'block_1');
+/* Display: Block latest */
+$handler = $view->new_display('block', 'Block latest', 'latest_grid');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-grid-3';
+$handler->display->display_options['display_description'] = 'Latest Land News grid block';
 $handler->display->display_options['defaults']['use_more'] = FALSE;
 $handler->display->display_options['use_more'] = TRUE;
 $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -90,8 +93,7 @@ $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '9';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'grid';
-$handler->display->display_options['style_options']['columns'] = '3';
+$handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
@@ -124,29 +126,3 @@ $handler->display->display_options['arguments']['name']['summary']['format'] = '
 $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
 $handler->display->display_options['arguments']['name']['limit'] = '0';
 $handler->display->display_options['arguments']['name']['case'] = 'ucfirst';
-$translatables['news'] = array(
-  t('Master'),
-  t('Land News'),
-  t('Read more'),
-  t('Apply'),
-  t('Reset'),
-  t('Sort by'),
-  t('Asc'),
-  t('Desc'),
-  t('Items per page'),
-  t('- All -'),
-  t('Offset'),
-  t('« first'),
-  t('‹ previous'),
-  t('next ›'),
-  t('last »'),
-  t('Page'),
-  t('more'),
-  t('Block'),
-  t('Read more news'),
-  t('Latest news on the Landportal'),
-  t('News byC'),
-  t('term from field_geographical_focus'),
-  t('All'),
-  t('News for %1'),
-);
