@@ -39,6 +39,7 @@ features[field_instance][] = node-landbook_country-field_indicator_map
 features[field_instance][] = node-landbook_country-field_indicator_ranking
 features[field_instance][] = node-landbook_country-field_indicators
 features[field_instance][] = node-landbook_country-field_orgref
+features[field_instance][] = node-landbook_country-title_field
 features[node][] = landbook_country
 features[user_permission][] = create landbook_country content
 features[user_permission][] = delete any landbook_country content
