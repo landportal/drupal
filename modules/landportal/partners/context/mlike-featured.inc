@@ -15,6 +15,11 @@ $context->conditions = array(
       'node_form' => 0,
     ),
   ),
+  'path' => array(
+    'values' => array(
+      'partners/mlike*' => 'partners/mlike*',
+    ),
+  ),
 );
 $context->reactions = array(
   'block' => array(
@@ -28,7 +33,7 @@ $context->reactions = array(
     ),
   ),
 );
-$context->condition_mode = 0;
+$context->condition_mode = 1;
 
 // Translatables
 // Included for use with string extractors like potx.
