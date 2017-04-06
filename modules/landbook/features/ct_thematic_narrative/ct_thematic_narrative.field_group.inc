@@ -41,32 +41,6 @@ function ct_thematic_narrative_field_group_info() {
   $field_groups['group_details|node|thematic_narrative|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_topics_regions|node|thematic_narrative|default';
-  $field_group->group_name = 'group_topics_regions';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'thematic_narrative';
-  $field_group->mode = 'default';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Landvoc concepts',
-    'weight' => '5',
-    'children' => array(),
-    'format_type' => 'hidden',
-    'format_settings' => array(
-      'label' => 'Landvoc concepts',
-      'instance_settings' => array(
-        'id' => '',
-        'classes' => 'group-topics-regions field-group-fieldset',
-        'description' => '',
-      ),
-      'formatter' => 'open',
-    ),
-  );
-  $field_groups['group_topics_regions|node|thematic_narrative|default'] = $field_group;
-
-  $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_view_coda|node|thematic_narrative|form';
@@ -100,7 +74,6 @@ function ct_thematic_narrative_field_group_info() {
   // Translatables
   // Included for use with string extractors like potx.
   t('About the narrative');
-  t('Landvoc concepts');
   t('Visualizations');
 
   return $field_groups;

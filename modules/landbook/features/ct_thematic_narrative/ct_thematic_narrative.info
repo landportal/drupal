@@ -1,7 +1,7 @@
 name = CT Thematic narrative
 core = 7.x
 package = Landbook
-version = 7.x-2.4-beta1
+version = 7.x-2.4-beta2
 dependencies[] = ctools
 dependencies[] = entityreference
 dependencies[] = features
@@ -23,7 +23,6 @@ features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[field_base][] = field_landvoc_to
 features[field_group][] = group_details|node|thematic_narrative|form
-features[field_group][] = group_topics_regions|node|thematic_narrative|default
 features[field_group][] = group_view_coda|node|thematic_narrative|form
 features[field_instance][] = node-thematic_narrative-body
 features[field_instance][] = node-thematic_narrative-field_country_info
