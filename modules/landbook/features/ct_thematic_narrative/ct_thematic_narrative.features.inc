@@ -27,7 +27,7 @@ function ct_thematic_narrative_node_info() {
       'description' => '',
       'has_title' => '1',
       'title_label' => t('Thematic'),
-      'help' => t('Should be the same as the Theme or Overarching category it is linked to'),
+      'help' => '',
     ),
   );
   drupal_alter('node_info', $items);
