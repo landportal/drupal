@@ -247,6 +247,8 @@ $handler->display->display_options['filters']['field_organization_relationship_t
 $handler = $view->new_display('block', 'Library', 'library');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Library';
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-with-filters';
 $handler->display->display_options['defaults']['use_ajax'] = FALSE;
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['defaults']['use_more'] = FALSE;
