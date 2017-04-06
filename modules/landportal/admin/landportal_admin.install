@@ -27,7 +27,7 @@ function landportal_admin_update_7203() {
     ->condition('delta', 'news-block_1')
     ->execute();
 
-  $CTs = array('news', 'blog_post', 'debate', 'event', 'organization', 'landlibrary_resource');
+  $CTs = array('news', 'blog_post', 'debate', 'event', 'organization', 'landlibrary_resource', 'landbook-country');
   $import_cts = "'" . implode("', '", $CTs) . "'";
   // NOTE : will this fail if lang / nid ???
   $sql = "INSERT INTO field_data_title_field ( SELECT 'node', type, 0, nid, vid, language, 0, title, 'text' FROM node WHERE type IN "
