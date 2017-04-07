@@ -98,7 +98,7 @@ function landbook_vis_map_block_view($delta = '') {
     $jsAttr .= ', selectable: true, tooltip: function () { return "Click to visit " + this.point.name; }'
       . ', events: { click: function () { window.location.href = "/book/countries/" + this.id; } }'
       . ', iso3: "VNM", zoom: 3, legend: true'
-      . ', serie: {name: "test", cursor: "pointer", data: [ {id: "VNM", value: 1}, {id: "LAO", value: 1}, {id: "KHM", value: 1}, {id: "THA", value: 1}, {id: "MMR", value: 1}, {id: "MYS", value: 1}  ] }'
+      . ', serie: {name: "test", cursor: "pointer", data: [ {id: "VNM", value: 1}, {id: "LAO", value: 1}, {id: "KHM", value: 1}, {id: "THA", value: 1}, {id: "MMR", value: 1}  ] }'
       . ", colors: { background: '#FFFFFF', borders: '#FFFFFF', hover: '#F5A623', select: '#F9B122', max: '#F9B122', min: '#D1DB47', na: '#BBD6D8' }"
       //. ', serie: {name: "test", data: [ {id: "VNM", value: 100}, {id: "LAO", value: 100}, {id: "KHM", value: 100}, {id: "THA", value: 100}, {id: "MMR", value: 100}  ] }'
       ;
