@@ -400,7 +400,7 @@ function landbook_taxonomies_field_default_field_instances() {
 <a href="https://www.w3.org/TR/vocab-data-cube/#schemes">Read more</a>',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
