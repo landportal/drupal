@@ -23,15 +23,16 @@ function landportal_admin_update_7203() {
     ->fields(array(
       'delta' => 'news-latest_grid',
     ))
-    ->condition('module', 'view')
+    ->condition('module', 'views')
     ->condition('delta', 'news-block_1')
+            'theme'  => 'lpbs',
     ->execute();
 
   db_update('block')
     ->fields(array(
-      'region' => -1,
+      'region' => '',
     ))
-    ->condition('module', 'view')
+    ->condition('module', 'views')
     ->condition('delta', 'front_page_teasers-block')
     ->execute();
 
