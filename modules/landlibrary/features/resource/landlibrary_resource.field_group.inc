@@ -21,7 +21,7 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = 'group_left';
   $field_group->data = array(
     'label' => '',
-    'weight' => '7',
+    'weight' => '4',
     'children' => array(
       0 => 'field_doc_is_shown_at',
       1 => 'field_doc_is_shown_by',
@@ -407,7 +407,7 @@ function landlibrary_resource_field_group_info() {
     'label' => 'Header',
     'weight' => '0',
     'children' => array(
-      0 => 'field_doc_type',
+      0 => 'field_doc_alt_title',
       1 => 'title_field',
       2 => 'group_left',
     ),
@@ -638,8 +638,9 @@ function landlibrary_resource_field_group_info() {
     'label' => '',
     'weight' => '3',
     'children' => array(
-      0 => 'field_image',
-      1 => 'group_access',
+      0 => 'field_doc_type',
+      1 => 'field_image',
+      2 => 'group_access',
     ),
     'format_type' => 'div',
     'format_settings' => array(

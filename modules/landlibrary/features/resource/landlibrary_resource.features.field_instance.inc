@@ -61,7 +61,7 @@ function landlibrary_resource_field_default_field_instances() {
           'title_style' => 'h2',
         ),
         'type' => 'title_linked',
-        'weight' => 1,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -1707,7 +1707,7 @@ function landlibrary_resource_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',
