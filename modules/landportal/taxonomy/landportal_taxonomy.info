@@ -76,7 +76,6 @@ features[field_instance][] = taxonomy_term-themes-field_image
 features[field_instance][] = taxonomy_term-themes-field_related_topics
 features[field_instance][] = taxonomy_term-themes-name_field
 features[field_instance][] = taxonomy_term-themes-synonyms_synonyms
-features[taxonomy][] = countries
 features[taxonomy][] = debate_status
 features[taxonomy][] = landvoc_concepts
 features[taxonomy][] = languages
