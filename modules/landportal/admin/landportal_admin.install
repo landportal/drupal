@@ -19,10 +19,7 @@ function landportal_admin_update_7203() {
     ->condition('mlid', '13415')
     ->execute();
 
-  db_update('block')
-    ->fields(array(
-      'delta' => 'news-latest_grid',
-    ))
+  db_delete('block')
     ->condition('module', 'views')
     ->condition('delta', 'news-block_1')
     ->execute();
