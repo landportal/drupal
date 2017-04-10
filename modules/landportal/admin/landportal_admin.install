@@ -32,7 +32,7 @@ function landportal_admin_update_7203() {
       'region' => -1,
     ))
     ->condition('module', 'view')
-    ->condition('delta', 'front_page_teasers')
+    ->condition('delta', 'front_page_teasers-block')
     ->execute();
 
   $CTs = array('news', 'blog_post', 'debate', 'event', 'organization', 'landlibrary_resource', 'landbook-country');
