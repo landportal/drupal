@@ -337,7 +337,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'above',
@@ -510,7 +510,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
@@ -798,7 +798,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
@@ -1360,7 +1360,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'above',
@@ -1421,7 +1421,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
