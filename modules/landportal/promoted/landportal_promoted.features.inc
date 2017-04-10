@@ -18,6 +18,15 @@ function landportal_promoted_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function landportal_promoted_custom_pub_defaults() {
   $options = array();
+  // Exported option: promoted_library
+  $options['promoted_library'] = array(
+    'type' => 'promoted_library',
+    'name' => t('Promoted to Library'),
+    'node_types' => array(
+      'landlibrary_resource' => t('LandLibrary Resource'),
+    ),
+  );
+
   // Exported option: promoted_to_country_page
   $options['promoted_to_country_page'] = array(
     'type' => 'promoted_to_country_page',

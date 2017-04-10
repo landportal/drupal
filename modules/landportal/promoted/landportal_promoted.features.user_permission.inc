@@ -10,6 +10,13 @@
 function landportal_promoted_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'edit_custom_pub_promoted_library'.
+  $permissions['edit_custom_pub_promoted_library'] = array(
+    'name' => 'edit_custom_pub_promoted_library',
+    'roles' => array(),
+    'module' => 'custom_pub',
+  );
+
   // Exported permission: 'edit_custom_pub_promoted_to_country_page'.
   $permissions['edit_custom_pub_promoted_to_country_page'] = array(
     'name' => 'edit_custom_pub_promoted_to_country_page',

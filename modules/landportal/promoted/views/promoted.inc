@@ -112,11 +112,11 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
-/* Filter criterion: Content: Promoted to front page */
-$handler->display->display_options['filters']['promote']['id'] = 'promote';
-$handler->display->display_options['filters']['promote']['table'] = 'node';
-$handler->display->display_options['filters']['promote']['field'] = 'promote';
-$handler->display->display_options['filters']['promote']['value'] = '1';
+/* Filter criterion: Content: Promoted to Library */
+$handler->display->display_options['filters']['promoted_library']['id'] = 'promoted_library';
+$handler->display->display_options['filters']['promoted_library']['table'] = 'node';
+$handler->display->display_options['filters']['promoted_library']['field'] = 'promoted_library';
+$handler->display->display_options['filters']['promoted_library']['value'] = '1';
 
 /* Display: CP block */
 $handler = $view->new_display('block', 'CP block', 'country');
