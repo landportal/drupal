@@ -20,8 +20,8 @@ $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '25';
-$handler->display->display_options['style_plugin'] = 'grid';
-$handler->display->display_options['style_options']['columns'] = '3';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
 /* Field: Taxonomy term: Term ID */
 $handler->display->display_options['fields']['tid']['id'] = 'tid';
@@ -52,6 +52,8 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
 $handler = $view->new_display('block', 'Block', 'block');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Overarching categories';
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-grid-3';
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page_1');
