@@ -14,6 +14,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['title'] = 'Thematic portfolios';
 $handler->display->display_options['css_class'] = 'view-grid-3 view-wrapped';
+$handler->display->display_options['hide_admin_links'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
@@ -109,6 +110,16 @@ $handler->display->display_options['fields']['rendered_entity']['link_to_entity'
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
 $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Updated date */
+$handler->display->display_options['sorts']['changed']['id'] = 'changed';
+$handler->display->display_options['sorts']['changed']['table'] = 'node';
+$handler->display->display_options['sorts']['changed']['field'] = 'changed';
+/* Sort criterion: Taxonomy term: Name */
+$handler->display->display_options['sorts']['name']['id'] = 'name';
+$handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['name']['field'] = 'name';
+$handler->display->display_options['sorts']['name']['relationship'] = 'field_landvoc_to_target_id';
 
 /* Display: Block Narrative */
 $handler = $view->new_display('block', 'Block Narrative', 'block_theme_description');
