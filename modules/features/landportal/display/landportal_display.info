@@ -31,7 +31,6 @@ features[image][] = full_width
 features[image][] = full_width_featured
 features[image][] = header_logo
 features[image][] = large
-features[image][] = media_thumbnail
 features[image][] = medium
 features[image][] = square_thumbnail
 features[image][] = thumbnail

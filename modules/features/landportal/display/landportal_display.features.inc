@@ -95,28 +95,14 @@ function landportal_display_image_default_styles() {
   $styles['large'] = array(
     'label' => 'Large (480x480)',
     'effects' => array(
-      10 => array(
-        'name' => 'image_scale_and_crop',
+      11 => array(
+        'name' => 'image_scale',
         'data' => array(
           'width' => 480,
           'height' => 480,
+          'upscale' => 1,
         ),
-        'weight' => 3,
-      ),
-    ),
-  );
-
-  // Exported image style: media_thumbnail.
-  $styles['media_thumbnail'] = array(
-    'label' => 'Media thumbnail (100x100)',
-    'effects' => array(
-      0 => array(
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 100,
-          'height' => 100,
-        ),
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
   );
@@ -125,11 +111,12 @@ function landportal_display_image_default_styles() {
   $styles['medium'] = array(
     'label' => 'Medium (220x220)',
     'effects' => array(
-      12 => array(
-        'name' => 'image_scale_and_crop',
+      9 => array(
+        'name' => 'image_scale',
         'data' => array(
           'width' => 220,
           'height' => 220,
+          'upscale' => 1,
         ),
         'weight' => 2,
       ),
