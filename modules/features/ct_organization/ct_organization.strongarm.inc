@@ -100,7 +100,7 @@ function ct_organization_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '6',
+            'weight' => '7',
             'visible' => FALSE,
           ),
         ),
@@ -120,7 +120,7 @@ function ct_organization_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '9',
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
