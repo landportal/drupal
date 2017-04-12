@@ -15,7 +15,8 @@ function landportal_base_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'ds_extras_fields_extra_list';
   $strongarm->value = 'node|event|locations
-node|organization|locations';
+node|organization|locations
+node|partners|locations';
   $export['ds_extras_fields_extra_list'] = $strongarm;
 
   return $export;

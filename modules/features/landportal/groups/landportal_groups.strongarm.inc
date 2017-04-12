@@ -121,7 +121,7 @@ function landportal_groups_strongarm() {
         'custom_settings' => FALSE,
       ),
       'teaser' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -139,6 +139,9 @@ function landportal_groups_strongarm() {
         'custom_settings' => FALSE,
       ),
       'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -166,11 +169,25 @@ function landportal_groups_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '1',
+            'weight' => '2',
             'visible' => FALSE,
           ),
           'listing' => array(
             'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+        ),
+        'locations' => array(
+          'teaser' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),
@@ -192,7 +209,7 @@ function landportal_groups_strongarm() {
         'custom_settings' => FALSE,
       ),
       'teaser' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -242,7 +259,11 @@ function landportal_groups_strongarm() {
           ),
           'listing' => array(
             'weight' => '2',
-            'visible' => TRUE,
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '2',
+            'visible' => FALSE,
           ),
         ),
       ),
