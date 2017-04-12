@@ -20,7 +20,7 @@ projects:
   drupal:
     patch:
       - "https://github.com/landportal/drupal/files/766584/change-dc-to-dct.txt"
-	  - "https://github.com/landportal/drupal/files/876566/no-callback-in-RDFa.txt"
+      - "https://github.com/landportal/drupal/files/876566/no-callback-in-RDFa.txt"
   profile2:
     version: ~
     patch:
