@@ -118,7 +118,13 @@ function landportal_groups_field_default_field_bases() {
         'sort' => array(
           'type' => 'none',
         ),
-        'target_bundles' => array(),
+        'target_bundles' => array(
+          'blog_post' => 'blog_post',
+          'debate' => 'debate',
+          'event' => 'event',
+          'landlibrary_resource' => 'landlibrary_resource',
+          'news' => 'news',
+        ),
       ),
       'profile2_private' => FALSE,
       'target_type' => 'node',

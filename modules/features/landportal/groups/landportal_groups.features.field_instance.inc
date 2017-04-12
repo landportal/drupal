@@ -273,7 +273,7 @@ function landportal_groups_field_default_field_instances() {
       'settings' => array(
         'allow_duplicates' => 0,
         'close_modal' => 1,
-        'pass_argument' => 0,
+        'pass_argument' => 1,
         'pass_arguments' => '',
         'rendered_entity' => 0,
         'view' => 'partners_content|related_refview',
@@ -438,7 +438,7 @@ function landportal_groups_field_default_field_instances() {
       'settings' => array(
         'allow_duplicates' => 0,
         'close_modal' => 1,
-        'pass_argument' => 0,
+        'pass_argument' => 1,
         'pass_arguments' => '',
         'rendered_entity' => 0,
         'view' => 'partners_content|related_refview',
