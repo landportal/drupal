@@ -137,6 +137,8 @@ $handler->display->display_options['arguments']['field_iso3_value']['id'] = 'fie
 $handler->display->display_options['arguments']['field_iso3_value']['table'] = 'field_data_field_iso3';
 $handler->display->display_options['arguments']['field_iso3_value']['field'] = 'field_iso3_value';
 $handler->display->display_options['arguments']['field_iso3_value']['default_action'] = 'not found';
+$handler->display->display_options['arguments']['field_iso3_value']['title_enable'] = TRUE;
+$handler->display->display_options['arguments']['field_iso3_value']['title'] = '%1';
 $handler->display->display_options['arguments']['field_iso3_value']['default_argument_type'] = 'raw';
 $handler->display->display_options['arguments']['field_iso3_value']['default_argument_options']['index'] = '0';
 $handler->display->display_options['arguments']['field_iso3_value']['summary']['number_of_records'] = '0';
@@ -271,6 +273,11 @@ $handler->display->display_options['fields']['name_field']['element_type'] = 'di
 $handler->display->display_options['fields']['name_field']['element_class'] = 'text-center';
 $handler->display->display_options['fields']['name_field']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Taxonomy term: Name */
+$handler->display->display_options['sorts']['name']['id'] = 'name';
+$handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['name']['field'] = 'name';
 
 /* Display: Regions vocabulary */
 $handler = $view->new_display('page', 'Regions vocabulary', 'page_voc_regions');
