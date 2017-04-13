@@ -39,11 +39,24 @@ function landportal_groups_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:partners:create webform content'
+  $permissions['node:partners:create webform content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+      'member' => 'member',
+    ),
+  );
+
   // Exported og permission: 'node:partners:delete any partners_page content'
   $permissions['node:partners:delete any partners_page content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
     ),
+  );
+
+  // Exported og permission: 'node:partners:delete any webform content'
+  $permissions['node:partners:delete any webform content'] = array(
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:partners:delete own partners_page content'
@@ -52,6 +65,11 @@ function landportal_groups_og_features_default_permissions() {
       'administrator member' => 'administrator member',
       'member' => 'member',
     ),
+  );
+
+  // Exported og permission: 'node:partners:delete own webform content'
+  $permissions['node:partners:delete own webform content'] = array(
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:partners:manage members'
@@ -101,6 +119,13 @@ function landportal_groups_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:partners:update any webform content'
+  $permissions['node:partners:update any webform content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
   // Exported og permission: 'node:partners:update group'
   $permissions['node:partners:update group'] = array(
     'roles' => array(
@@ -110,6 +135,14 @@ function landportal_groups_og_features_default_permissions() {
 
   // Exported og permission: 'node:partners:update own partners_page content'
   $permissions['node:partners:update own partners_page content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:partners:update own webform content'
+  $permissions['node:partners:update own webform content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
       'member' => 'member',
