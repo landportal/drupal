@@ -89,9 +89,7 @@ function landportal_groups_og_features_default_permissions() {
 
   // Exported og permission: 'node:partners:delete own webform content'
   $permissions['node:partners:delete own webform content'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-    ),
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:partners:delete own webform submissions'
