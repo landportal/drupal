@@ -1,4 +1,5 @@
 <?php
+
 $context = new stdClass();
 $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
 $context->api_version = 3;
@@ -18,11 +19,17 @@ $context->conditions = array(
 $context->reactions = array(
   'block' => array(
     'blocks' => array(
+      'views-partners_content-logo' => array(
+        'module' => 'views',
+        'delta' => 'partners_content-logo',
+        'region' => 'header',
+        'weight' => '-10',
+      ),
       'menu-menu-partners-mlike' => array(
         'module' => 'menu',
         'delta' => 'menu-partners-mlike',
         'region' => 'header',
-        'weight' => '-10',
+        'weight' => '-9',
       ),
     ),
   ),

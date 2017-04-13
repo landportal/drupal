@@ -19,16 +19,19 @@ $context->conditions = array(
 $context->reactions = array(
   'block' => array(
     'blocks' => array(
+      'views-partners_content-logo' => array(
+        'module' => 'views',
+        'delta' => 'partners_content-logo',
+        'region' => 'header',
+        'weight' => '-10',
+      ),
       'menu-menu-legend' => array(
         'module' => 'menu',
         'delta' => 'menu-legend',
         'region' => 'header',
-        'weight' => '0',
+        'weight' => '-9',
       ),
     ),
-  ),
-  'context_og_reaction_set_group_context' => array(
-    'group' => '36570',
   ),
 );
 $context->condition_mode = 0;
