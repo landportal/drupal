@@ -580,7 +580,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Legislation & Policies',
-    'description' => 'Besides publications and articles about land governance, the Land Library also hosts country-level laws and policies that focus on land governance. The classifcation of different types of laws and policies can differ from country to country, so the classification used on the Land Portal is done through a general classification of elements.',
+    'description' => 'Besides publications and articles about land governance, the Land Library also hosts country-level laws and policies that focus on land governance. The classification of different types of laws and policies can differ from country to country, so the classification used on the Land Portal is done through a general classification of elements.',
     'format' => 'plain_text',
     'weight' => 15,
     'uuid' => 'e85fa60b-91d0-49ea-8b44-f46bcc925dcf',
