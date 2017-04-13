@@ -109,29 +109,6 @@ function ct_forms_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'webform_blocks';
-  $strongarm->value = array(
-    'client-block-14275' => array(
-      'display' => 'form',
-      'pages_block' => '1',
-      'confirmation_block' => '0',
-    ),
-    'client-block-30308' => array(
-      'display' => 'form',
-      'pages_block' => '1',
-      'confirmation_block' => '0',
-    ),
-    'client-block-43848' => array(
-      'display' => 'full',
-      'pages_block' => '1',
-      'confirmation_block' => '0',
-    ),
-  );
-  $export['webform_blocks'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_webform';
   $strongarm->value = array(
     'status' => '0',
