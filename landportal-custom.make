@@ -48,6 +48,10 @@ projects:
       - "https://www.drupal.org/files/issues/validate_url-2299657-46.patch"
   mailchimp:
     version: "2.13"
+  og_webform:
+    version: "1.x-dev"
+    patch:
+      - "https://www.drupal.org/files/issues/og_webform_api2-1946432-30.patch"
   rdfx:
     download:
       type: "git"

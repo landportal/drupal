@@ -10,6 +10,21 @@
 function landportal_groups_og_features_default_permissions() {
   $permissions = array();
 
+  // Exported og permission: 'node:partners:access all webform results'
+  $permissions['node:partners:access all webform results'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:partners:access own webform submissions'
+  $permissions['node:partners:access own webform submissions'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+      'member' => 'member',
+    ),
+  );
+
   // Exported og permission: 'node:partners:add user'
   $permissions['node:partners:add user'] = array(
     'roles' => array(
@@ -47,6 +62,11 @@ function landportal_groups_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:partners:delete all webform submissions'
+  $permissions['node:partners:delete all webform submissions'] = array(
+    'roles' => array(),
+  );
+
   // Exported og permission: 'node:partners:delete any partners_page content'
   $permissions['node:partners:delete any partners_page content'] = array(
     'roles' => array(
@@ -69,7 +89,29 @@ function landportal_groups_og_features_default_permissions() {
 
   // Exported og permission: 'node:partners:delete own webform content'
   $permissions['node:partners:delete own webform content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:partners:delete own webform submissions'
+  $permissions['node:partners:delete own webform submissions'] = array(
     'roles' => array(),
+  );
+
+  // Exported og permission: 'node:partners:edit all webform submissions'
+  $permissions['node:partners:edit all webform submissions'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:partners:edit own webform submissions'
+  $permissions['node:partners:edit own webform submissions'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+      'member' => 'member',
+    ),
   );
 
   // Exported og permission: 'node:partners:manage members'
@@ -108,6 +150,7 @@ function landportal_groups_og_features_default_permissions() {
   // Exported og permission: 'node:partners:unsubscribe'
   $permissions['node:partners:unsubscribe'] = array(
     'roles' => array(
+      'administrator member' => 'administrator member',
       'member' => 'member',
     ),
   );

@@ -1,7 +1,7 @@
 name = CT Forms
 description = Provide LP webform defaults
 core = 7.x
-package = Features
+package = Landportal CT
 version = 7.x-2.4-alpha
 dependencies[] = ctools
 dependencies[] = features
