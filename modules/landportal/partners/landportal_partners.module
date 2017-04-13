@@ -21,6 +21,8 @@ function landportal_partners_views_default_views() {
     $export[$view->name] = $view;
     include 'views/partners_content.inc';
     $export[$view->name] = $view;
+    /* include 'views/partners_wrapper.inc'; */
+    /* $export[$view->name] = $view; */
     return $export;
 }
 
@@ -50,6 +52,10 @@ function landportal_partners_pre_render_ckeditor_element($element) {
     return $element;
   }
   $entity = $element['#entity'];
+  //dpm($element, 'cke element');
+  if (!isset($element['#attributes']['data-ckeditor-body-classes'])) {
+    $element['#attributes']['data-ckeditor-body-classes'] = '';
+  }
   if (isset($entity->og_group_ref)) {
     $element['#attributes']['data-ckeditor-body-classes'] .=
       ' og-context-node-' . $entity->og_group_ref[LANGUAGE_NONE][0]['target_id'];

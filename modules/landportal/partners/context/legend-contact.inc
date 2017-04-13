@@ -24,17 +24,11 @@ $context->conditions = array(
 $context->reactions = array(
   'block' => array(
     'blocks' => array(
-      'landportal_partners-legend_contact' => array(
-        'module' => 'landportal_partners',
-        'delta' => 'legend_contact',
-        'region' => 'content',
-        'weight' => '7',
-      ),
       'mailchimp_signup-legend_bulletin' => array(
         'module' => 'mailchimp_signup',
         'delta' => 'legend_bulletin',
         'region' => 'content',
-        'weight' => '8',
+        'weight' => '11',
       ),
     ),
   ),

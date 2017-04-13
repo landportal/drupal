@@ -17,7 +17,8 @@ $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
-$handler->display->display_options['pager']['type'] = 'full';
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['row_plugin'] = 'fields';
 /* Header: Global: Result summary */
@@ -40,7 +41,8 @@ $handler->display->display_options['sorts']['created']['order'] = 'DESC';
 /* Display: Organizations ref */
 $handler = $view->new_display('entityreference', 'Organizations ref', 'org_ref');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'entityreference_style';
 $handler->display->display_options['style_options']['search_fields'] = array(
@@ -60,7 +62,6 @@ $handler->display->display_options['defaults']['fields'] = FALSE;
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
 $handler->display->display_options['fields']['title']['field'] = 'title';
-$handler->display->display_options['fields']['title']['relationship'] = 'field_orgref_target_id';
 $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
@@ -88,7 +89,8 @@ $handler->display->display_options['filters']['type']['value'] = array(
 /* Display: Featured ref */
 $handler = $view->new_display('entityreference', 'Featured ref', 'featured_ref');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'entityreference_style';
 $handler->display->display_options['style_options']['search_fields'] = array(
@@ -124,8 +126,7 @@ $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
 /* Display: Promoted ref */
 $handler = $view->new_display('entityreference', 'Promoted ref', 'promoted_ref');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'entityreference_style';
@@ -179,8 +180,7 @@ $handler->display->display_options['arguments']['nid']['summary_options']['items
 /* Display: Related ref */
 $handler = $view->new_display('entityreference', 'Related ref', 'entityreference_1');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'entityreference_style';

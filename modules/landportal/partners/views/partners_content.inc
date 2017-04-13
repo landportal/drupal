@@ -25,13 +25,6 @@ $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['row_plugin'] = 'entity';
 $handler->display->display_options['row_options']['view_mode'] = 'teaser';
-/* No results behavior: Global: Text area */
-$handler->display->display_options['empty']['area']['id'] = 'area';
-$handler->display->display_options['empty']['area']['table'] = 'views';
-$handler->display->display_options['empty']['area']['field'] = 'area';
-$handler->display->display_options['empty']['area']['empty'] = TRUE;
-$handler->display->display_options['empty']['area']['content'] = 'missed';
-$handler->display->display_options['empty']['area']['format'] = 'full_html';
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -344,6 +337,11 @@ $handler->display->display_options['filters']['type_1']['value'] = array(
   'news' => 'news',
   'organization' => 'organization',
 );
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = '1';
 
 /* Display: Promoted */
 $handler = $view->new_display('block', 'Promoted', 'promoted');
@@ -403,7 +401,7 @@ $handler->display->display_options['fields']['body']['alter']['more_link_path'] 
 $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
 $handler->display->display_options['fields']['body']['settings'] = array(
-  'trim_length' => '140',
+  'trim_length' => '150',
 );
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -468,7 +466,7 @@ $handler->display->display_options['fields']['path']['table'] = 'node';
 $handler->display->display_options['fields']['path']['field'] = 'path';
 $handler->display->display_options['fields']['path']['label'] = '';
 $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['path']['alter']['text'] = '<span class="node-readmore"><a href="[path]">Read more</a></span>';
+$handler->display->display_options['fields']['path']['alter']['text'] = '<span class="node-readmore"><a href="[path]">read more</a></span>';
 $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
