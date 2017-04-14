@@ -52,7 +52,10 @@ function landbook_vis_map_block_view($delta = '') {
   $block = array();
   switch ($delta) {
   case 'region_map' :
-    $jsAttr .= ', zoom: 2, height: 200';
+    $jsAttr .= ', zoom: 2, height: 200'
+      . ', selectable: true, tooltip: function () { return "Click to visit " + this.point.name; }, cursor: "pointer" '
+      . ', events: { click: function () { window.location.href = "/book/countries/" + this.id; } }'
+      . ", colors: { background: '#FFFFFF', hover: '#F5A623', select: '#F5A623', borders: '#FFFFFF', max: '#BBD6D8', min: '#BBD6D8', na: '#BBD6D8' }";
     $block['subject'] = '';
     $block['content'] = array(
       '#attached' => array(
@@ -66,7 +69,7 @@ function landbook_vis_map_block_view($delta = '') {
     );
     break;
   case 'compare_map' :
-    $jsAttr .= $jsAttrInd . ', title: true, subtitle: true, legend: true, tooltip: true, years: true';
+    $jsAttr .= $jsAttrInd . ', title: true, subtitle: true, legend: true, tooltip: true, years: true, nav: true, zoom: 5';
     $block['subject'] = t('Mapping');
     $block['content'] = array(
       '#attached' => array(
@@ -80,7 +83,7 @@ function landbook_vis_map_block_view($delta = '') {
     );
     break;
   case 'world_map' :
-    $jsAttr .= ', selectable: true, tooltip: function () { return "Click to visit " + this.point.name; }'
+    $jsAttr .= ', selectable: true, tooltip: function () { return "Click to visit " + this.point.name; }, cursor: "pointer" '
       . ', events: { click: function () { window.location.href = "/book/countries/" + this.id; } }';
     $block['subject'] = '';
     $block['content'] = array(
