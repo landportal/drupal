@@ -83,7 +83,7 @@ function landbook_vis_map_block_view($delta = '') {
     );
     break;
   case 'world_map' :
-    $jsAttr .= ', selectable: true, tooltip: function () { return "Click to visit " + this.point.name; }, cursor: "pointer" '
+    $jsAttr .= ', selectable: true, tooltip: function () { return "Click to visit " + this.point.name; }, cursor: "pointer", nav:true '
       . ', events: { click: function () { window.location.href = "/book/countries/" + this.id; } }';
     $block['subject'] = '';
     $block['content'] = array(
