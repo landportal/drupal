@@ -39,23 +39,6 @@ function landbook_block_info() {
         'pages'         => "book/countries/*\n",
         'weight'        => 15
     );
-    // @TODO: cleanup this shit
-    $blocks['country_navigation_block'] = array(
-        'info'          => t('Landbook country page navigation'),
-        'status'        => TRUE,
-        'region'        => 'content',
-        'visibility'    => BLOCK_VISIBILITY_LISTED,
-        'pages'         => "book/countries/*",
-        'weight'        => -42
-    );
-    $blocks['thematic_navigation_block'] = array(
-        'info'          => t('Landbook thematic page navigation'),
-        'status'        => TRUE,
-        'region'        => -1,
-        'visibility'    => BLOCK_VISIBILITY_LISTED,
-        'pages'         => "book/thematic/*",
-        'weight'        => -42
-    );
     // @TODO: rename and cleanup , this block provide BOTH the PDF + Feedback links
     $blocks['country_pdf_block'] = array(
         'info'          => t('Landbook country page pdf block'),
@@ -82,17 +65,6 @@ function landbook_block_view($delta = '') {
     case 'infographics' :
         $block['subject'] = t('Infographics');
         $block['content'] = landbook_block_body($delta);
-        break;
-
-    // @TODO: cleanup this shit
-    // all that seems a bit weird...
-    case 'country_navigation_block' :
-        $block['subject'] = '<none>';
-        $block['content'] = ' ';
-        $block['country_info'] = landbook_get_country_info();
-        break;
-    case 'thematic_navigation_block' :
-        $block['subject'] = '<none>';
         break;
     case 'country_pdf_block' :
         $block['subject'] = '<none>';
