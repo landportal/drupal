@@ -5,16 +5,15 @@ $view->name = 'library_pages';
 $view->description = 'Land Library Resources pages by taxonomy filter (theme, geo, type, license...)';
 $view->tag = 'default';
 $view->base_table = 'node';
-$view->human_name = 'Library';
+$view->human_name = 'Library pages';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Land Library resources';
+$handler->display->display_options['title'] = '<none>';
 $handler->display->display_options['use_ajax'] = TRUE;
-$handler->display->display_options['use_more'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['use_more_text'] = 'Find more on the Library';
 $handler->display->display_options['link_display'] = 'page_theme';
@@ -393,3 +392,18 @@ $handler->display->display_options['filters']['field_related_themes_tid_entityre
 $handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['field'] = 'field_related_themes_tid_entityreference_filter';
 $handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['group'] = 2;
 $handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['reference_display'] = 'library:ref_landvoc';
+
+/* Display: Geo */
+$handler = $view->new_display('page', 'Geo', 'page_2');
+$handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: View area */
+$handler->display->display_options['header']['view']['id'] = 'view';
+$handler->display->display_options['header']['view']['table'] = 'views';
+$handler->display->display_options['header']['view']['field'] = 'view';
+$handler->display->display_options['header']['view']['view_to_insert'] = 'library_browse:term';
+$handler->display->display_options['header']['view']['inherit_arguments'] = TRUE;
+/* Header: Global: Result summary */
+$handler->display->display_options['header']['result']['id'] = 'result';
+$handler->display->display_options['header']['result']['table'] = 'views';
+$handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['path'] = 'library/browse/geo/%';

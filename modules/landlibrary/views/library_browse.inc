@@ -37,8 +37,7 @@ $handler->display->display_options['fields']['name']['id'] = 'name';
 $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['fields']['name']['field'] = 'name';
 $handler->display->display_options['fields']['name']['label'] = '';
-$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
-$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
 /* Filter criterion: Taxonomy term: Vocabulary */
 $handler->display->display_options['filters']['vid']['id'] = 'vid';
@@ -365,4 +364,112 @@ $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['relationship'] = 'reverse_field_doc_type_node';
 $handler->display->display_options['filters']['type']['value'] = array(
   'landlibrary_resource' => 'landlibrary_resource',
+);
+
+/* Display: Geo */
+$handler = $view->new_display('block', 'Geo', 'geo');
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Taxonomy term: Vocabulary */
+$handler->display->display_options['filters']['vid']['id'] = 'vid';
+$handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['filters']['vid']['field'] = 'vid';
+$handler->display->display_options['filters']['vid']['value'] = array(
+  7 => '7',
+);
+
+/* Display: Geo from iso */
+$handler = $view->new_display('block', 'Geo from iso', 'br_geo_iso');
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: Term ID */
+$handler->display->display_options['fields']['tid']['id'] = 'tid';
+$handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['tid']['field'] = 'tid';
+$handler->display->display_options['fields']['tid']['label'] = '';
+$handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['tid']['separator'] = '';
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['text'] = '<a href="/library/browse/geo/[tid]">Find more on the Library</a>';
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Taxonomy term: ISO3 (field_iso3) */
+$handler->display->display_options['arguments']['field_iso3_value']['id'] = 'field_iso3_value';
+$handler->display->display_options['arguments']['field_iso3_value']['table'] = 'field_data_field_iso3';
+$handler->display->display_options['arguments']['field_iso3_value']['field'] = 'field_iso3_value';
+$handler->display->display_options['arguments']['field_iso3_value']['default_action'] = 'empty';
+$handler->display->display_options['arguments']['field_iso3_value']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['field_iso3_value']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['field_iso3_value']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['field_iso3_value']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['arguments']['field_iso3_value']['limit'] = '0';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Taxonomy term: Vocabulary */
+$handler->display->display_options['filters']['vid']['id'] = 'vid';
+$handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['filters']['vid']['field'] = 'vid';
+$handler->display->display_options['filters']['vid']['value'] = array(
+  7 => '7',
+);
+
+/* Display: LV from narrative */
+$handler = $view->new_display('block', 'LV from narrative', 'br_lv_narrative');
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Entity Reference: Referencing entity */
+$handler->display->display_options['relationships']['reverse_field_landvoc_to_node']['id'] = 'reverse_field_landvoc_to_node';
+$handler->display->display_options['relationships']['reverse_field_landvoc_to_node']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['relationships']['reverse_field_landvoc_to_node']['field'] = 'reverse_field_landvoc_to_node';
+$handler->display->display_options['relationships']['reverse_field_landvoc_to_node']['label'] = 'thematic';
+$handler->display->display_options['relationships']['reverse_field_landvoc_to_node']['required'] = TRUE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: Term ID */
+$handler->display->display_options['fields']['tid']['id'] = 'tid';
+$handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['tid']['field'] = 'tid';
+$handler->display->display_options['fields']['tid']['label'] = '';
+$handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['tid']['separator'] = '';
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['text'] = 'Find more on the Land Library';
+$handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['path'] = 'library/browse/theme/[tid]';
+$handler->display->display_options['fields']['name']['alter']['absolute'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Content: Nid */
+$handler->display->display_options['arguments']['nid']['id'] = 'nid';
+$handler->display->display_options['arguments']['nid']['table'] = 'node';
+$handler->display->display_options['arguments']['nid']['field'] = 'nid';
+$handler->display->display_options['arguments']['nid']['relationship'] = 'reverse_field_landvoc_to_node';
+$handler->display->display_options['arguments']['nid']['default_action'] = 'empty';
+$handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Taxonomy term: Vocabulary */
+$handler->display->display_options['filters']['vid']['id'] = 'vid';
+$handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['filters']['vid']['field'] = 'vid';
+$handler->display->display_options['filters']['vid']['value'] = array(
+  27 => '27',
+  26 => '26',
+  5 => '5',
 );
