@@ -22,7 +22,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -111,7 +111,7 @@ function ct_thematic_narrative_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fieldset_view',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',
@@ -166,7 +166,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 8,
       ),
       'listing' => array(
         'label' => 'above',
@@ -212,7 +212,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'above',
@@ -258,7 +258,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
@@ -393,7 +393,7 @@ function ct_thematic_narrative_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
@@ -446,14 +446,9 @@ function ct_thematic_narrative_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => '',
-        ),
-        'type' => 'title_linked',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'hidden',
