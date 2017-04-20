@@ -69,6 +69,7 @@ projects:
   - job_scheduler
   - libraries
   - link
+  - linkchecker
   - location
   - login_one_time
   - logintoboggan
