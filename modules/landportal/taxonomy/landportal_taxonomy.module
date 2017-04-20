@@ -12,6 +12,17 @@ function landportal_taxonomy_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
+function landportal_taxonomy_country_term_by_iso($iso3) {
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'taxonomy_term')
+        ->fieldCondition('field_iso3', 'value', $iso3);
+    $result = $query->execute();
+  if (isset($result['taxonomy_term'])) {
+    $terms = entity_load('taxonomy_term', array_keys( $result['taxonomy_term'] ));
+    return $terms[array_keys($terms)[0]];
+  }
+}
+
 /* function landportal_taxonomy_block_info_alter(&$blocks, $theme, $code_blocks) { */
 /*     if ($theme == 'landportal') { */
 /*         $blocks['views']['domains-block'] = array_merge( */
