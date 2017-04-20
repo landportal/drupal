@@ -1,14 +1,14 @@
 <?php
 
 $view = new view();
-$view->name = 'admin_views_taxonomy_term';
+$view->name = 'admin_views_taxonomy_term2';
 $view->description = 'Manage tagging, categorization, and classification of your content.';
 $view->tag = 'admin';
 $view->base_table = 'taxonomy_term_data';
-$view->human_name = 'Administration: Taxonomy terms';
+$view->human_name = 'Administration: Taxonomy terms (LP override - doesn\'t work for hierarchy)';
 $view->core = 0;
 $view->api_version = '3.0';
-$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+$view->disabled = TRUE; /* Edit this to true to make a default view disabled initially */
 
 /* Display: Defaults */
 $handler = $view->new_display('default', 'Defaults', 'default');
@@ -136,7 +136,7 @@ $handler->display->display_options['fields']['tid']['label'] = 'Operations';
 $handler->display->display_options['fields']['tid']['alter']['alter_text'] = TRUE;
 $handler->display->display_options['fields']['tid']['alter']['text'] = 'edit';
 $handler->display->display_options['fields']['tid']['alter']['make_link'] = TRUE;
-$handler->display->display_options['fields']['tid']['alter']['path'] = 'taxonomy/term/[tid]/edit';
+$handler->display->display_options['fields']['tid']['alter']['path'] = 'taxonomy/term2/[tid]/edit';
 $handler->display->display_options['fields']['tid']['separator'] = '';
 /* Field: Bulk operations: Taxonomy term */
 $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
