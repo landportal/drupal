@@ -1,4 +1,4 @@
-        <article id="<?php print $block_html_id; ?>" class="view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
+        <section id="<?php print $block_html_id; ?>" class="view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
           <header class="text-center clearfix">
 <?php print render($title_prefix); ?>
 <?php if ($block->subject): ?>
@@ -38,4 +38,4 @@
           <div class="view-coda-vis">
             <div id="<?php print $block_html_id; ?>-wrapper"></div>
           </div>
-        </article>
+        </section>
