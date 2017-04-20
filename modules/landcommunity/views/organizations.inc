@@ -87,7 +87,7 @@ $handler->display->display_options['row_options']['hide_empty'] = TRUE;
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 
 /* Display: Book provider */
-$handler = $view->new_display('entityreference', 'Book provider', 'entityreference_1');
+$handler = $view->new_display('entityreference', 'Book provider', 'ref_book');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['display_description'] = 'Land book dataset sources';
 $handler->display->display_options['pager']['type'] = 'none';
