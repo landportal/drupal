@@ -21,8 +21,8 @@ function landportal_partners_views_default_views() {
     $export[$view->name] = $view;
     include 'views/partners_content.inc';
     $export[$view->name] = $view;
-    /* include 'views/partners_wrapper.inc'; */
-    /* $export[$view->name] = $view; */
+    include 'views/partners_wrapper.inc';
+    $export[$view->name] = $view;
     return $export;
 }
 
