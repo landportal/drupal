@@ -5,3 +5,27 @@
  */
 
 include_once 'landbook_country.features.inc';
+
+/**
+ * Override country pages title
+ */
+function landbook_country_views_pre_render(&$view) {
+  // Land Book Country Portal (aka narrative) full page
+  if ($view->name == 'landbook_countries' && $view->current_display == 'portfolio') {
+    //dpm($view, $view->current_display);
+    $term = landportal_taxonomy_country_term_by_iso($view->args[0]);
+    $view->set_title($term->name);
+  }
+}
+
+/**
+ * This view / display should have a markup '#page-submenu' to hook to
+ * Will hook JS for page internal nav
+ */
+function landbook_country_views_post_render(&$view, &$output, &$cache) {
+  if ($view->name == 'landbook_countries') {
+    if ($view->current_display == 'cp_header') {
+      $output .= '<script>' . landportal_blocks_page_submenu() . '</script>';
+    }
+  }
+}

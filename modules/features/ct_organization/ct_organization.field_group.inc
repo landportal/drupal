@@ -27,8 +27,9 @@ function ct_organization_field_group_info() {
       1 => 'field_organization_type',
       2 => 'field_link',
       3 => 'field_email',
-      4 => 'field_file',
-      5 => 'locations',
+      4 => 'field_acronym',
+      5 => 'field_file',
+      6 => 'locations',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -160,7 +161,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = 'group_topics_regions';
   $field_group->data = array(
     'label' => '',
-    'weight' => '6',
+    'weight' => '4',
     'children' => array(
       0 => 'field_related_topics',
       1 => 'field_related_domains',

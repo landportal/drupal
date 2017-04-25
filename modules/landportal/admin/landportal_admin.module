@@ -72,3 +72,21 @@ function landportal_admin_default_rules_configuration() {
     //dpm($config);
     return $config;
 }
+
+
+function landportal_admin_mail_alter(&$message) {
+
+  /* // From : https://api.drupal.org/comment/60157#comment-60157 */
+  /* $default_from = variable_get('site_mail', ini_get('sendmail_from')); */
+  /* if($message['from'] == $default_from){ */
+  /*   $message['from'] = '"'. variable_get('site_name', 'Drupal') .'" <'. $default_from .'>'; */
+  /*   $message['headers']['From'] = $message['headers']['Sender'] */
+  /*     = $message['headers']['Return-Path'] = $message['headers']['Errors-To'] */
+  /*     = $message['headers']['Reply-To'] = $message['from']; */
+  /* } */
+
+  /* // Don't send email */
+  /* $message['send'] = FALSE; */
+  /* // Next: Log the mail so it can be debugged if necessary */
+  /* watchdog('Development Env', 'The following email was not sent: !message', array('!message' => '<pre>' . print_r($message, TRUE) . '</pre>')); */
+}

@@ -5,3 +5,18 @@
  */
 
 include_once 'ct_thematic_narrative.features.inc';
+
+function ct_thematic_narrative_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'thematic_narrative' && $view_mode == 'full') {
+    // Set title to be the landvoc_to term
+    $title = $node->field_landvoc_to[LANGUAGE_NONE][0]['entity']->name;
+     drupal_set_title($title);
+    $node->content['field_landvoc_to']['#attached'] = array(
+      'js' => array(array(
+        'type' => 'inline',
+        'data' => landportal_blocks_page_submenu()
+      ))
+    );
+    $node->content['field_landvoc_to']['#suffix'] = '<div id="page-submenu"><ul class="nav"></ul></div>';
+ }
+}

@@ -19,7 +19,7 @@
         </form>
       </nav>
 
-      <div class="col-xs-12">
+      <div>
 
         <div style="position: absolute; z-index: 200; width: 100%; margin-top: -30px;">
           <div class="loading">

@@ -318,7 +318,7 @@ $handler->display->display_options['filters']['type']['group'] = 1;
 $handler->display->display_options['filters']['nid_entityreference_filter']['id'] = 'nid_entityreference_filter';
 $handler->display->display_options['filters']['nid_entityreference_filter']['table'] = 'node';
 $handler->display->display_options['filters']['nid_entityreference_filter']['field'] = 'nid_entityreference_filter';
-$handler->display->display_options['filters']['nid_entityreference_filter']['reference_display'] = 'organizations:entityreference_1';
+$handler->display->display_options['filters']['nid_entityreference_filter']['reference_display'] = 'organizations:ref_book';
 
 /* Display: Block-Land Debate Community */
 $handler = $view->new_display('block', 'Block-Land Debate Community', 'block_ld_community');
