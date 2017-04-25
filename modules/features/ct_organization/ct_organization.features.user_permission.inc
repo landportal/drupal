@@ -15,6 +15,7 @@ function ct_organization_user_default_permissions() {
     'name' => 'create organization content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'contributor' => 'contributor',
       'landportal' => 'landportal',
     ),
@@ -56,6 +57,7 @@ function ct_organization_user_default_permissions() {
     'name' => 'edit own organization content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'contributor' => 'contributor',
       'landportal' => 'landportal',
     ),

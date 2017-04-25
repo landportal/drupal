@@ -33,8 +33,23 @@ $handler->display->display_options['query']['options']['distinct'] = TRUE;
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_plugin'] = 'entityreference_style';
+$handler->display->display_options['style_options']['search_fields'] = array(
+  'title' => 'title',
+  'field_acronym' => 'field_acronym',
+);
 $handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['row_options']['inline'] = array(
+  'title' => 'title',
+  'field_acronym' => 'field_acronym',
+  'language' => 'language',
+  'status' => 'status',
+);
+$handler->display->display_options['row_options']['separator'] = ' - ';
+/* Header: Global: Result summary */
+$handler->display->display_options['header']['result']['id'] = 'result';
+$handler->display->display_options['header']['result']['table'] = 'views';
+$handler->display->display_options['header']['result']['field'] = 'result';
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -44,7 +59,7 @@ $handler->display->display_options['fields']['title']['alter']['word_boundary'] 
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-/* Field: Field: acronym */
+/* Field: Field: Acronym */
 $handler->display->display_options['fields']['field_acronym']['id'] = 'field_acronym';
 $handler->display->display_options['fields']['field_acronym']['table'] = 'field_data_field_acronym';
 $handler->display->display_options['fields']['field_acronym']['field'] = 'field_acronym';
@@ -54,13 +69,6 @@ $handler->display->display_options['fields']['field_acronym']['element_label_col
 $handler->display->display_options['sorts']['title']['id'] = 'title';
 $handler->display->display_options['sorts']['title']['table'] = 'node';
 $handler->display->display_options['sorts']['title']['field'] = 'title';
-/* Filter criterion: Content: Published */
-$handler->display->display_options['filters']['status']['id'] = 'status';
-$handler->display->display_options['filters']['status']['table'] = 'node';
-$handler->display->display_options['filters']['status']['field'] = 'status';
-$handler->display->display_options['filters']['status']['value'] = 1;
-$handler->display->display_options['filters']['status']['group'] = 1;
-$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -71,38 +79,14 @@ $handler->display->display_options['filters']['type']['value'] = array(
 
 /* Display: All */
 $handler = $view->new_display('entityreference', 'All', 'ref_all');
-$handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'entityreference_style';
-$handler->display->display_options['style_options']['search_fields'] = array(
-  'title' => 'title',
-  'field_acronym' => 'field_acronym',
-);
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'entityreference_fields';
-$handler->display->display_options['row_options']['hide_empty'] = TRUE;
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 
 /* Display: Book provider */
 $handler = $view->new_display('entityreference', 'Book provider', 'ref_book');
-$handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['display_description'] = 'Land book dataset sources';
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'entityreference_style';
-$handler->display->display_options['style_options']['search_fields'] = array(
-  'title' => 'title',
-  'field_acronym' => 'field_acronym',
-);
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'entityreference_fields';
-$handler->display->display_options['row_options']['hide_empty'] = TRUE;
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Entity Reference: Referencing entity */
 $handler->display->display_options['relationships']['reverse_field_orgref_taxonomy_term']['id'] = 'reverse_field_orgref_taxonomy_term';
@@ -112,20 +96,8 @@ $handler->display->display_options['relationships']['reverse_field_orgref_taxono
 
 /* Display: LL provider */
 $handler = $view->new_display('entityreference', 'LL provider', 'entityreference_3');
-$handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'entityreference_style';
-$handler->display->display_options['style_options']['search_fields'] = array(
-  'title' => 'title',
-  'field_acronym' => 'field_acronym',
-);
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'entityreference_fields';
-$handler->display->display_options['row_options']['hide_empty'] = TRUE;
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Entity Reference: Referencing entity */
 $handler->display->display_options['relationships']['reverse_field_doc_provider_node']['id'] = 'reverse_field_doc_provider_node';
@@ -136,20 +108,8 @@ $handler->display->display_options['relationships']['reverse_field_doc_provider_
 
 /* Display: LL publisher */
 $handler = $view->new_display('entityreference', 'LL publisher', 'entityreference_4');
-$handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'entityreference_style';
-$handler->display->display_options['style_options']['search_fields'] = array(
-  'title' => 'title',
-  'field_acronym' => 'field_acronym',
-);
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'entityreference_fields';
-$handler->display->display_options['row_options']['hide_empty'] = TRUE;
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Entity Reference: Referencing entity */
 $handler->display->display_options['relationships']['reverse_field_doc_publisher_node']['id'] = 'reverse_field_doc_publisher_node';
@@ -160,21 +120,9 @@ $handler->display->display_options['relationships']['reverse_field_doc_publisher
 
 /* Display: LL Organizations */
 $handler = $view->new_display('entityreference', 'LL Organizations', 'entityreference_5');
-$handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['display_description'] = 'LL publisher or provider DOT NOT USE FOR DISPLAY, only select/filter (?)';
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'entityreference_style';
-$handler->display->display_options['style_options']['search_fields'] = array(
-  'title' => 'title',
-  'field_acronym' => 'field_acronym',
-);
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'entityreference_fields';
-$handler->display->display_options['row_options']['hide_empty'] = TRUE;
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Entity Reference: Referencing entity */
 $handler->display->display_options['relationships']['reverse_field_doc_publisher_node']['id'] = 'reverse_field_doc_publisher_node';
