@@ -68,60 +68,6 @@ $handler->display->display_options['filters']['type']['expose']['remember_roles'
   30037204 => 0,
 );
 
-/* Display: Logo */
-$handler = $view->new_display('block', 'Logo', 'logo');
-$handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['defaults']['pager'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '1';
-$handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'fields';
-$handler->display->display_options['defaults']['row_options'] = FALSE;
-$handler->display->display_options['defaults']['header'] = FALSE;
-$handler->display->display_options['defaults']['relationships'] = FALSE;
-/* Relationship: OG membership: OG membership from Content group */
-$handler->display->display_options['relationships']['og_membership_rel_group']['id'] = 'og_membership_rel_group';
-$handler->display->display_options['relationships']['og_membership_rel_group']['table'] = 'node';
-$handler->display->display_options['relationships']['og_membership_rel_group']['field'] = 'og_membership_rel_group';
-$handler->display->display_options['defaults']['fields'] = FALSE;
-/* Field: Field: Image */
-$handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-$handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['label'] = '';
-$handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-$handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => 'header_logo',
-  'image_link' => 'content',
-);
-$handler->display->display_options['defaults']['arguments'] = FALSE;
-/* Contextual filter: OG membership: Group ID */
-$handler->display->display_options['arguments']['gid']['id'] = 'gid';
-$handler->display->display_options['arguments']['gid']['table'] = 'og_membership';
-$handler->display->display_options['arguments']['gid']['field'] = 'gid';
-$handler->display->display_options['arguments']['gid']['relationship'] = 'og_membership_rel_group';
-$handler->display->display_options['arguments']['gid']['default_action'] = 'default';
-$handler->display->display_options['arguments']['gid']['default_argument_type'] = 'og_context';
-$handler->display->display_options['arguments']['gid']['summary']['number_of_records'] = '0';
-$handler->display->display_options['arguments']['gid']['summary']['format'] = 'default_summary';
-$handler->display->display_options['arguments']['gid']['summary_options']['items_per_page'] = '25';
-$handler->display->display_options['defaults']['filter_groups'] = FALSE;
-$handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Content: Language */
-$handler->display->display_options['filters']['language']['id'] = 'language';
-$handler->display->display_options['filters']['language']['table'] = 'node';
-$handler->display->display_options['filters']['language']['field'] = 'language';
-$handler->display->display_options['filters']['language']['value'] = array(
-  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  'und' => 'und',
-);
-$handler->display->display_options['block_description'] = 'Partners logo';
-
 /* Display: Relate content */
 $handler = $view->new_display('entityreference_view_widget', 'Relate content', 'related_refview');
 $handler->display->display_options['defaults']['title'] = FALSE;
@@ -361,13 +307,20 @@ $handler->display->display_options['row_options']['description'] = 'body';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['empty'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
-/* Field: Content: Path */
-$handler->display->display_options['fields']['path']['id'] = 'path';
-$handler->display->display_options['fields']['path']['table'] = 'node';
-$handler->display->display_options['fields']['path']['field'] = 'path';
-$handler->display->display_options['fields']['path']['label'] = '';
-$handler->display->display_options['fields']['path']['exclude'] = TRUE;
-$handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+/* Field: Global: PHP */
+$handler->display->display_options['fields']['php']['id'] = 'php';
+$handler->display->display_options['fields']['php']['table'] = 'views';
+$handler->display->display_options['fields']['php']['field'] = 'php';
+$handler->display->display_options['fields']['php']['label'] = '';
+$handler->display->display_options['fields']['php']['exclude'] = TRUE;
+$handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['php']['use_php_setup'] = 1;
+$handler->display->display_options['fields']['php']['php_setup'] = '$uri = explode(\'/\', $_SERVER[\'REQUEST_URI\']);
+$static = \'/partners/\' . $uri[2] . \'/content/\';
+';
+$handler->display->display_options['fields']['php']['php_value'] = 'return $static . $data->nid;';
+$handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+$handler->display->display_options['fields']['php']['php_click_sortable'] = '';
 /* Field: Field: Image */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -384,8 +337,13 @@ $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
 $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['title']['alter']['path'] = '[php]';
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
 /* Field: Content: Body */
 $handler->display->display_options['fields']['body']['id'] = 'body';
 $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -393,7 +351,7 @@ $handler->display->display_options['fields']['body']['field'] = 'body';
 $handler->display->display_options['fields']['body']['label'] = '';
 $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
 $handler->display->display_options['fields']['body']['alter']['text'] = '[body]
-<span class="node-readmore"><a href="[path]">read more</a></span>';
+<span class="node-readmore"><a href="[php]">Read more</a></span>';
 $handler->display->display_options['fields']['body']['alter']['max_length'] = '100';
 $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
 $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'more';
@@ -442,13 +400,20 @@ $handler->display->display_options['row_options']['description'] = 'path';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['empty'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
-/* Field: Content: Title */
-$handler->display->display_options['fields']['title']['id'] = 'title';
-$handler->display->display_options['fields']['title']['table'] = 'node';
-$handler->display->display_options['fields']['title']['field'] = 'title';
-$handler->display->display_options['fields']['title']['label'] = '';
-$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+/* Field: Global: PHP */
+$handler->display->display_options['fields']['php']['id'] = 'php';
+$handler->display->display_options['fields']['php']['table'] = 'views';
+$handler->display->display_options['fields']['php']['field'] = 'php';
+$handler->display->display_options['fields']['php']['label'] = '';
+$handler->display->display_options['fields']['php']['exclude'] = TRUE;
+$handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['php']['use_php_setup'] = 1;
+$handler->display->display_options['fields']['php']['php_setup'] = '$uri = explode(\'/\', $_SERVER[\'REQUEST_URI\']);
+$static = \'/partners/\' . $uri[2] . \'/content/\';
+';
+$handler->display->display_options['fields']['php']['php_value'] = 'return $static . $data->nid;';
+$handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+$handler->display->display_options['fields']['php']['php_click_sortable'] = '';
 /* Field: Field: Image */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -460,13 +425,24 @@ $handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_style' => 'full_width_featured',
   'image_link' => '',
 );
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['title']['alter']['path'] = '[php]';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
 /* Field: Content: Path */
 $handler->display->display_options['fields']['path']['id'] = 'path';
 $handler->display->display_options['fields']['path']['table'] = 'node';
 $handler->display->display_options['fields']['path']['field'] = 'path';
 $handler->display->display_options['fields']['path']['label'] = '';
 $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['path']['alter']['text'] = '<span class="node-readmore"><a href="[path]">read more</a></span>';
+$handler->display->display_options['fields']['path']['alter']['text'] = '<span class="node-readmore"><a href="[php]">Read more</a></span>';
 $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;

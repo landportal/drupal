@@ -15,16 +15,15 @@ $context->conditions = array(
       'node_form' => 1,
     ),
   ),
+  'views' => array(
+    'values' => array(
+      'partners_wrapper:page' => 'partners_wrapper:page',
+    ),
+  ),
 );
 $context->reactions = array(
   'block' => array(
     'blocks' => array(
-      'views-partners_content-logo' => array(
-        'module' => 'views',
-        'delta' => 'partners_content-logo',
-        'region' => 'header',
-        'weight' => '-10',
-      ),
       'menu-menu-partners-mlike' => array(
         'module' => 'menu',
         'delta' => 'menu-partners-mlike',

@@ -19,17 +19,17 @@ $context->conditions = array(
 $context->reactions = array(
   'block' => array(
     'blocks' => array(
-      'views-partners_content-logo' => array(
+      'views-partners_content-promoted' => array(
         'module' => 'views',
-        'delta' => 'partners_content-logo',
+        'delta' => 'partners_content-promoted',
         'region' => 'header',
-        'weight' => '-10',
+        'weight' => '-79',
       ),
       'menu-menu-legend' => array(
         'module' => 'menu',
         'delta' => 'menu-legend',
         'region' => 'header',
-        'weight' => '-9',
+        'weight' => '-78',
       ),
     ),
   ),
