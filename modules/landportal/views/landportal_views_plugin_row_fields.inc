@@ -13,6 +13,7 @@ class landportal_views_plugin_row_fields extends entity_views_plugin_row_entity_
     $options['links'] = array('default' => TRUE, 'bool' => TRUE);
     $options['comments'] = array('default' => FALSE, 'bool' => TRUE);
     $options['wrapped'] = array('default' => TRUE, 'bool' => TRUE);
+    $options['wrap_path'] = array('default' => '');
 
     return $options;
   }
@@ -42,10 +43,16 @@ class landportal_views_plugin_row_fields extends entity_views_plugin_row_entity_
       '#title' => t('Wrap me'),
       '#default_value' => $this->options['wrapped'],
     );
+    $form['wrap_path'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Path'),
+      '#default_value' => $this->options['wrap_path'],
+    );
   }
 
   public function render($values) {
     if ($entity = $this->get_value($values)) {
+      //dpm($this);
       // Add the view object as views_plugin_row_node_view::render() would.
       // Otherwise the views theme suggestions won't work properly.
       $entity->view = $this->view;
@@ -57,12 +64,22 @@ class landportal_views_plugin_row_fields extends entity_views_plugin_row_entity_
       // Maybe even cleanup HTML from any remaining link...
       if ($this->options['wrapped']) {
         $url = '';
-        if ($render['#entity_type'] == 'taxonomy_term') {
-          $url = 'taxonomy/term/' . $entity->tid ;
+        if ($this->options['wrap_path']) {
+          // A bit sketchy but it does the job...
+          $tokens = token_scan($this->options['wrap_path']);
+          foreach ($tokens as $t => $td) {
+            $v = $values->{$t}[0]['raw']['value'];
+            $url = str_replace($td[0], $v, $this->options['wrap_path']);
+          }
+          //dpm($values, $url);
         } else {
-          $url = 'node/' . $entity->nid;
+          if ($render['#entity_type'] == 'taxonomy_term') {
+            $url = drupal_get_path_alias('taxonomy/term/' . $entity->tid);
+          } else {
+            $url = drupal_get_path_alias('node/' . $entity->nid);
+          }
         }
-        $html = '<a href="/' . drupal_get_path_alias($url) . '">' . $html . '</a>';
+        $html = '<a href="/' . $url . '">' . $html . '</a>';
       }
       return $html;
     }
