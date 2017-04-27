@@ -849,11 +849,12 @@ function landportal_taxonomy_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'image',
         'settings' => array(
-          'file_view_mode' => 'default',
+          'image_link' => '',
+          'image_style' => 'medium',
         ),
-        'type' => 'file_rendered',
+        'type' => 'image',
         'weight' => 1,
       ),
       'search_index' => array(
@@ -1156,7 +1157,13 @@ function landportal_taxonomy_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1193,9 +1200,14 @@ function landportal_taxonomy_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 2,
       ),
     ),
@@ -1241,6 +1253,47 @@ function landportal_taxonomy_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-regions-field_classification'.
+  $field_instances['taxonomy_term-regions-field_classification'] = array(
+    'bundle' => 'regions',
+    'default_value' => array(
+      0 => array(
+        'value' => 'Other',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_classification',
+    'label' => 'Classification',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 41,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-regions-field_iso3'.
   $field_instances['taxonomy_term-regions-field_iso3'] = array(
     'bundle' => 'regions',
@@ -1250,15 +1303,30 @@ function landportal_taxonomy_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
         'weight' => 1,
       ),
       'search_index' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'span',
+        ),
+        'type' => 'title_linked',
         'weight' => 0,
       ),
     ),
@@ -1281,6 +1349,59 @@ function landportal_taxonomy_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-regions-field_parent'.
+  $field_instances['taxonomy_term-regions-field_parent'] = array(
+    'bundle' => 'regions',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => 'The place this belongs to',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_parent',
+    'label' => 'Parent',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 42,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-regions-name_field'.
   $field_instances['taxonomy_term-regions-name_field'] = array(
     'bundle' => 'regions',
@@ -1298,6 +1419,17 @@ function landportal_taxonomy_field_default_field_instances() {
         ),
         'type' => 'title_linked',
         'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h3',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1334,13 +1466,19 @@ function landportal_taxonomy_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'search_index' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1499,18 +1637,19 @@ function landportal_taxonomy_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'square_thumbnail',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 1,
       ),
       'search_index' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'image',
         'settings' => array(
-          'file_view_mode' => 'default',
+          'image_link' => '',
+          'image_style' => 'medium',
         ),
-        'type' => 'file_rendered',
+        'type' => 'image',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -1521,7 +1660,7 @@ function landportal_taxonomy_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1666,7 +1805,7 @@ function landportal_taxonomy_field_default_field_instances() {
           'title_style' => 'h3',
         ),
         'type' => 'title_linked',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1750,6 +1889,7 @@ function landportal_taxonomy_field_default_field_instances() {
   t('AGROVOC URI');
   t('Acronym');
   t('Area code (UN M.49)');
+  t('Classification');
   t('Define which themes this content is covering');
   t('Description');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
@@ -1759,10 +1899,12 @@ function landportal_taxonomy_field_default_field_instances() {
   t('Language code (ISO 639-1)');
   t('Language code (ISO 639-3)');
   t('Name');
+  t('Parent');
   t('Please, enter the synonyms which should be related to this term.');
   t('RDFLicense URI');
   t('Related concepts');
   t('Synonyms');
+  t('The place this belongs to');
   t('Themes');
   t('URI of the license from the RDFLicense dataset
 ');

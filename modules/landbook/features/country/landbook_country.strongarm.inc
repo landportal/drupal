@@ -123,7 +123,7 @@ function landbook_country_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '3',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -131,7 +131,7 @@ function landbook_country_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '3',
+            'weight' => '2',
             'visible' => FALSE,
           ),
         ),
