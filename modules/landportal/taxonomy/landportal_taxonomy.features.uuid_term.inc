@@ -255,6 +255,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Creative Commons Attribution-NonCommercial-NoDerivs',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -272,6 +280,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-licences-eid-7988-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -715,6 +724,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -732,6 +749,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-licences-eid-7987-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -793,6 +811,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Creative Commons Attribution',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -810,6 +836,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-licences-eid-3651-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -977,6 +1004,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Creative Commons Attribution-NoDerivs',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -994,6 +1029,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-licences-eid-7986-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -1239,6 +1275,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Creative Commons Attribution-NonCommercial',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -1256,6 +1300,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-licences-eid-3652-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -1370,6 +1415,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Creative Commons Attribution-ShareAlike',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -1387,6 +1440,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-licences-eid-3653-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -1566,6 +1620,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'All rights reserved',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -1583,6 +1645,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-licences-eid-7893-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -1624,6 +1687,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Creative Commons Zero (Public Domain)',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -1641,6 +1712,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-licences-eid-7989-0',
     'path' => array(
       'pathauto' => 1,
     ),
