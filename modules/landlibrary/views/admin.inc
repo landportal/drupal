@@ -317,10 +317,22 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_setti
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+  'action::views_bulk_operations_delete_item' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 0,
+    'skip_permission_check' => 0,
+    'override_label' => 0,
+    'label' => '',
+    'settings' => array(
+      'log' => 0,
+    ),
+  ),
   'action::node_make_sticky_action' => array(
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -328,6 +340,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -335,6 +348,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 0,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
     'settings' => array(
@@ -355,6 +369,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -362,6 +377,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -369,6 +385,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -376,6 +393,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -383,6 +401,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 0,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -431,7 +450,7 @@ $handler->display->display_options['fields']['field_doc_people']['id'] = 'field_
 $handler->display->display_options['fields']['field_doc_people']['table'] = 'field_data_field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['field'] = 'field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['exclude'] = TRUE;
-/* Field: Field: Corporate Author(s) */
+/* Field: Field: Organization */
 $handler->display->display_options['fields']['field_orgref']['id'] = 'field_orgref';
 $handler->display->display_options['fields']['field_orgref']['table'] = 'field_data_field_orgref';
 $handler->display->display_options['fields']['field_orgref']['field'] = 'field_orgref';
@@ -469,7 +488,7 @@ Authors (orgs): [field_orgref] <br />
 Pub: [field_doc_publisher] <br />
 Prov: [field_doc_provider] <br />
 ';
-/* Field: Content: Thumbnail of the resource */
+/* Field: Field: Image */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
