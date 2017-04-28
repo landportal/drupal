@@ -213,7 +213,7 @@ $handler->display->display_options['fields']['path']['field'] = 'path';
 $handler->display->display_options['fields']['path']['exclude'] = TRUE;
 /* Field: Bulk operations: Content */
 $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
-$handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
+$handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_node';
 $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
@@ -221,10 +221,22 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_setti
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+  'action::views_bulk_operations_delete_item' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 0,
+    'skip_permission_check' => 0,
+    'override_label' => 0,
+    'label' => '',
+    'settings' => array(
+      'log' => 0,
+    ),
+  ),
   'action::node_make_sticky_action' => array(
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -232,6 +244,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -239,6 +252,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 0,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
     'settings' => array(
@@ -258,6 +272,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -265,6 +280,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -272,6 +288,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -279,6 +296,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -286,6 +304,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 0,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
