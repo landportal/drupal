@@ -21,6 +21,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Conference Papers & Reports',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -38,6 +46,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-7984-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -55,6 +64,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Reports & Research',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -72,6 +89,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3678-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -86,6 +104,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'National Policies',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -103,6 +129,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3992-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -120,6 +147,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'International Conventions or Treaties',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -137,6 +172,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3991-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -155,6 +191,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Other',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -172,6 +216,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-7890-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -190,6 +235,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Constitution',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -207,6 +260,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3659-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -224,6 +278,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Policy Papers & Briefs',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -241,6 +303,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3993-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -255,6 +318,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Journal Articles & Books',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -272,6 +343,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3655-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -287,6 +359,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Maps',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -304,6 +384,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-7990-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -321,6 +402,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Training Resources & Tools',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -338,6 +427,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3987-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -353,6 +443,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Peer-reviewed publication',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -370,6 +468,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3673-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -387,6 +486,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Manuals & Guidelines',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -404,6 +511,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3663-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -419,6 +527,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Jurisprudence',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -436,6 +552,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-7889-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -454,6 +571,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Institutional & promotional materials',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -471,6 +596,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-7884-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -485,6 +611,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'UN Resolutions',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -502,6 +636,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3994-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -519,6 +654,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Regulations',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -536,6 +679,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3677-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -554,6 +698,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Agreements & Contracts',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -571,6 +723,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-7891-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -588,6 +741,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Legislation & Policies',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -605,6 +766,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3982-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -620,6 +782,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Videos',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'en',
       'data' => array(
@@ -637,6 +807,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-7991-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -654,6 +825,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Multimedia',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -671,6 +850,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3671-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -686,6 +866,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Legislation',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => 'und',
       'data' => array(
@@ -703,6 +891,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
         ),
       ),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-landlibrary_resource_type-eid-3668-0',
     'path' => array(
       'pathauto' => 1,
     ),
