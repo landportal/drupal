@@ -3,7 +3,7 @@
 $context = new stdClass();
 $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
 $context->api_version = 3;
-$context->name = 'legend-helper';
+$context->name = 'partners-legend-helper';
 $context->description = '';
 $context->tag = 'partners';
 $context->conditions = array(
