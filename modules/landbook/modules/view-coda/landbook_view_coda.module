@@ -23,10 +23,12 @@ function landbook_view_coda_page_build(&$page) {
   global $LBVIS_PATH;
   // Based on actuall path
   $url = explode('/', drupal_get_path_alias());
+  //dpm($url, count($url));
   if ($url[0] != 'book') return;
-
   // JS var: Drupal.settings.landbook
   $view_coda = array('type' => 'book');
+
+  if (count($url) < 2) return;
   //  + config screen to attach/show vis on a specific CT(?)
   if ($url[1] == 'thematic') {
     landbook_view_coda_js_settings_thematic($url, $view_coda);
