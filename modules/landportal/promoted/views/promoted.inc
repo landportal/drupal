@@ -41,8 +41,18 @@ $handler->display->display_options['fields']['field_image']['label'] = '';
 $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => 'large',
+  'image_style' => 'full_width',
   'image_link' => 'content',
+);
+/* Field: Content: Body */
+$handler->display->display_options['fields']['body']['id'] = 'body';
+$handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+$handler->display->display_options['fields']['body']['field'] = 'body';
+$handler->display->display_options['fields']['body']['label'] = '';
+$handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+$handler->display->display_options['fields']['body']['settings'] = array(
+  'trim_length' => '600',
 );
 /* Sort criterion: Content: Post date */
 $handler->display->display_options['sorts']['created']['id'] = 'created';
@@ -84,6 +94,19 @@ $handler->display->display_options['filters']['promote']['value'] = '1';
 /* Display: Front block */
 $handler = $view->new_display('block', 'Front block', 'front');
 $handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
+$handler->display->display_options['style_options']['interval'] = '5000';
+$handler->display->display_options['style_options']['navigation'] = 1;
+$handler->display->display_options['style_options']['indicators'] = 1;
+$handler->display->display_options['style_options']['pause'] = 1;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
+$handler->display->display_options['row_options']['image'] = 'field_image';
+$handler->display->display_options['row_options']['title'] = 'title';
+$handler->display->display_options['row_options']['description'] = 'body';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
 
 /* Display: Library block */
 $handler = $view->new_display('block', 'Library block', 'library');
@@ -288,3 +311,4 @@ $handler->display->display_options['filters']['promoted_to_thematic_page']['id']
 $handler->display->display_options['filters']['promoted_to_thematic_page']['table'] = 'node';
 $handler->display->display_options['filters']['promoted_to_thematic_page']['field'] = 'promoted_to_thematic_page';
 $handler->display->display_options['filters']['promoted_to_thematic_page']['value'] = '1';
+
