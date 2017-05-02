@@ -3,7 +3,7 @@
 $context = new stdClass();
 $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
 $context->api_version = 3;
-$context->name = 'partners-legend-menu';
+$context->name = 'legend-helper';
 $context->description = '';
 $context->tag = 'partners';
 $context->conditions = array(
@@ -15,31 +15,35 @@ $context->conditions = array(
       'node_form' => 1,
     ),
   ),
-  'views' => array(
+  'node' => array(
     'values' => array(
-      'partners_wrapper:legend' => 'partners_wrapper:legend',
+      'partners' => 'partners',
+      'partners_page' => 'partners_page',
+    ),
+    'options' => array(
+      'node_form' => '2',
+    ),
+  ),
+  'user' => array(
+    'values' => array(
+      'administrator' => 'administrator',
+      'landportal' => 'landportal',
     ),
   ),
 );
 $context->reactions = array(
   'block' => array(
     'blocks' => array(
-      'views-partners_content-promoted' => array(
-        'module' => 'views',
-        'delta' => 'partners_content-promoted',
-        'region' => 'header',
-        'weight' => '-79',
-      ),
-      'menu-menu-legend' => array(
-        'module' => 'menu',
-        'delta' => 'menu-legend',
-        'region' => 'header',
-        'weight' => '-78',
+      'block-4' => array(
+        'module' => 'block',
+        'delta' => '4',
+        'region' => 'help',
+        'weight' => '-10',
       ),
     ),
   ),
 );
-$context->condition_mode = 0;
+$context->condition_mode = 1;
 
 // Translatables
 // Included for use with string extractors like potx.

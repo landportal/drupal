@@ -56,3 +56,8 @@ $handler->display->display_options['filters']['status']['expose']['operator'] = 
 /* Display: MLIKE */
 $handler = $view->new_display('page', 'MLIKE', 'page');
 $handler->display->display_options['path'] = 'partners/mlike/content/%';
+
+/* Display: LEGEND */
+$handler = $view->new_display('page', 'LEGEND', 'legend');
+$handler->display->display_options['path'] = 'partners/legend/content/%';
+
