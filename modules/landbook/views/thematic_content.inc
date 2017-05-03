@@ -554,7 +554,7 @@ $handler->display->display_options['footer']['view']['table'] = 'views';
 $handler->display->display_options['footer']['view']['field'] = 'view';
 $handler->display->display_options['footer']['view']['label'] = 'Read more view';
 $handler->display->display_options['footer']['view']['empty'] = TRUE;
-$handler->display->display_options['footer']['view']['view_to_insert'] = 'library_browse:br_lv_narrative';
+$handler->display->display_options['footer']['view']['view_to_insert'] = 'library:lk_thematic';
 $handler->display->display_options['footer']['view']['inherit_arguments'] = TRUE;
 $handler->display->display_options['defaults']['empty'] = FALSE;
 /* No results behavior: Global: Text area */
@@ -714,3 +714,4 @@ $handler->display->display_options['filters']['field_related_topics_tid_entityre
 );
 $handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter_1']['reference_display'] = 'thematic:ref_concepts';
 $handler->display->display_options['block_caching'] = '-1';
+

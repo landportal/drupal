@@ -84,3 +84,21 @@ $handler->display->display_options['fields']['rendered_entity']['link_to_entity'
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
 $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+
+/* Display: datasets list */
+$handler = $view->new_display('block', 'datasets list', 'ds_list');
+$handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: Result summary */
+$handler->display->display_options['header']['result']['id'] = 'result';
+$handler->display->display_options['header']['result']['table'] = 'views';
+$handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: Rendered Taxonomy term */
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
