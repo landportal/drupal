@@ -608,3 +608,113 @@ $handler->display->display_options['filters']['nid_entityreference_filter']['tab
 $handler->display->display_options['filters']['nid_entityreference_filter']['field'] = 'nid_entityreference_filter';
 $handler->display->display_options['filters']['nid_entityreference_filter']['group'] = 1;
 $handler->display->display_options['filters']['nid_entityreference_filter']['reference_display'] = 'partners:entityreference_1';
+
+/* Display: LEGEND Promoted */
+$handler = $view->new_display('block', 'LEGEND Promoted', 'legendp');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
+$handler->display->display_options['style_options']['interval'] = '5000';
+$handler->display->display_options['style_options']['navigation'] = 1;
+$handler->display->display_options['style_options']['indicators'] = 1;
+$handler->display->display_options['style_options']['pause'] = 1;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
+$handler->display->display_options['row_options']['image'] = 'field_image';
+$handler->display->display_options['row_options']['title'] = 'title';
+$handler->display->display_options['row_options']['description'] = 'body';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['empty'] = FALSE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Entity Reference: Referencing entity */
+$handler->display->display_options['relationships']['reverse_field_promoted_node']['id'] = 'reverse_field_promoted_node';
+$handler->display->display_options['relationships']['reverse_field_promoted_node']['table'] = 'node';
+$handler->display->display_options['relationships']['reverse_field_promoted_node']['field'] = 'reverse_field_promoted_node';
+$handler->display->display_options['relationships']['reverse_field_promoted_node']['label'] = 'PP';
+$handler->display->display_options['relationships']['reverse_field_promoted_node']['required'] = TRUE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Global: PHP */
+$handler->display->display_options['fields']['php']['id'] = 'php';
+$handler->display->display_options['fields']['php']['table'] = 'views';
+$handler->display->display_options['fields']['php']['field'] = 'php';
+$handler->display->display_options['fields']['php']['label'] = '';
+$handler->display->display_options['fields']['php']['exclude'] = TRUE;
+$handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['php']['use_php_setup'] = 1;
+$handler->display->display_options['fields']['php']['php_setup'] = '$uri = explode(\'/\', $_SERVER[\'REQUEST_URI\']);
+$static = \'/partners/\' . $uri[2] . \'/content/\';
+';
+$handler->display->display_options['fields']['php']['php_value'] = 'return $static . $data->nid;';
+$handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+$handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+/* Field: Field: Image */
+$handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+$handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+$handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+$handler->display->display_options['fields']['field_image']['label'] = '';
+$handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image']['settings'] = array(
+  'image_style' => '',
+  'image_link' => '',
+);
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['title']['alter']['path'] = '[php]';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+/* Field: Content: Body */
+$handler->display->display_options['fields']['body']['id'] = 'body';
+$handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+$handler->display->display_options['fields']['body']['field'] = 'body';
+$handler->display->display_options['fields']['body']['label'] = '';
+$handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['body']['alter']['text'] = '[body]
+<span class="node-readmore"><a href="[php]">Read more</a></span>';
+$handler->display->display_options['fields']['body']['alter']['max_length'] = '100';
+$handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
+$handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'more';
+$handler->display->display_options['fields']['body']['alter']['more_link_path'] = '[path]';
+$handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+$handler->display->display_options['fields']['body']['settings'] = array(
+  'trim_length' => '150',
+);
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  'und' => 'und',
+);
+/* Filter criterion: Field: Image (field_image:fid) */
+$handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
+$handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
+$handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
+$handler->display->display_options['filters']['field_image_fid']['operator'] = 'not empty';
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['relationship'] = 'reverse_field_promoted_node';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'partners' => 'partners',
+);
+/* Filter criterion: Content: Nid */
+$handler->display->display_options['filters']['nid']['id'] = 'nid';
+$handler->display->display_options['filters']['nid']['table'] = 'node';
+$handler->display->display_options['filters']['nid']['field'] = 'nid';
+$handler->display->display_options['filters']['nid']['relationship'] = 'reverse_field_promoted_node';
+$handler->display->display_options['filters']['nid']['value']['value'] = '36570';
+

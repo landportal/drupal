@@ -1,29 +1,26 @@
 <?php
 
 $context = new stdClass();
-$context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
+$context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
 $context->api_version = 3;
 $context->name = 'partners-legend-promoted';
 $context->description = '';
 $context->tag = 'partners';
 $context->conditions = array(
-  'context_og_condition_group_node' => array(
+  'views' => array(
     'values' => array(
-      36570 => 36570,
-    ),
-    'options' => array(
-      'node_form' => 0,
+      'partners_wrapper:legend' => 'partners_wrapper:legend',
     ),
   ),
 );
 $context->reactions = array(
   'block' => array(
     'blocks' => array(
-      'views-partners_content-block' => array(
+      'views-partners_content-legendp' => array(
         'module' => 'views',
-        'delta' => 'partners_content-promoted',
+        'delta' => 'partners_content-legendp',
         'region' => 'header',
-        'weight' => '-1',
+        'weight' => '-79',
       ),
     ),
   ),
