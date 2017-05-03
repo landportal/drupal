@@ -42,31 +42,6 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'anacaonas_net_rdf_xml_importer-blank_source_2-keyword_filter';
-$feeds_tamper->importer = 'anacaonas_net_rdf_xml_importer';
-$feeds_tamper->source = 'Blank source 2';
-$feeds_tamper->plugin_id = 'keyword_filter';
-$feeds_tamper->settings = array(
-  'words' => 'Artículo de opinión
-Noticia',
-  'word_boundaries' => 0,
-  'exact' => 1,
-  'case_sensitive' => 0,
-  'invert' => 1,
-  'word_list' => array(
-    0 => '/^Artículo de opinión$/ui',
-    1 => '/^Noticia$/ui',
-  ),
-  'regex' => TRUE,
-);
-$feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Keyword filter';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'anacaonas_net_rdf_xml_importer-xpathparser_11-efq_finder';
 $feeds_tamper->importer = 'anacaonas_net_rdf_xml_importer';
 $feeds_tamper->source = 'xpathparser:11';
