@@ -16,6 +16,7 @@ projects:
   - admin_views
   - apachesolr
   - apachesolr_views
+  - auto_entitylabel
   - better_formats
   - block_class
   - calendar
@@ -83,6 +84,7 @@ projects:
   - node_edit_protection
   - oauth
   - og
+  - og_menu
   - pathauto
   - pcp
   - phpwkhtmltopdf
@@ -97,7 +99,6 @@ projects:
   - search_api_solr
   - services
   - session_cache
-  - shs
   - sparql
   - strongarm
   - synonyms
