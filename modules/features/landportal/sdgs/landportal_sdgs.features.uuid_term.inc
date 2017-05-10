@@ -126,6 +126,68 @@ function landportal_sdgs_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
+    'name' => 'Universal access',
+    'description' => '<p>
+<style type="text/css"><!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+</style>
+11.7 By 2030, provide universal access to safe, inclusive and accessible, green and public spaces, in particular for women and children, older persons and persons with disabilities</p>
+',
+    'format' => 'full_html',
+    'weight' => 2,
+    'uuid' => '24b359a8-4e56-469f-bb34-1ac07c8e9b9a',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs',
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => 11.7,
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'target',
+        ),
+      ),
+    ),
+    'field_parent' => array(
+      'und' => array(
+        0 => array(
+          'target_id' => 'e6afcb19-5d23-4416-919b-7e3ae972150e',
+          'uuid' => 'e6afcb19-5d23-4416-919b-7e3ae972150e',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Universal access',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Universal access',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8246-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => 'e6afcb19-5d23-4416-919b-7e3ae972150e',
+    ),
+  );
+  $terms[] = array(
     'name' => 'Gender equality',
     'description' => '<p>Achieve gender equality and empower all women and girls</p>
 ',
@@ -166,6 +228,68 @@ function landportal_sdgs_uuid_features_default_terms() {
     'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8240-0',
     'path' => array(
       'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Restore degraded land and soil',
+    'description' => '<p>
+<style type="text/css"><!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+</style>
+15.3 By 2030, combat desertification, restore degraded land and soil, including land affected by desertification, drought and floods, and strive to achieve a land degradation-neutral world</p>
+',
+    'format' => 'full_html',
+    'weight' => 1,
+    'uuid' => '439dbb02-9dea-489c-8912-9793b24cfcda',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs',
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => 15.3,
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'target',
+        ),
+      ),
+    ),
+    'field_parent' => array(
+      'und' => array(
+        0 => array(
+          'target_id' => 'e0b77041-b168-417e-93b4-7e7394043190',
+          'uuid' => 'e0b77041-b168-417e-93b4-7e7394043190',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Restore degraded land and soil',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Restore degraded land and soil',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8248-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => 'e0b77041-b168-417e-93b4-7e7394043190',
     ),
   );
   $terms[] = array(
@@ -262,6 +386,68 @@ function landportal_sdgs_uuid_features_default_terms() {
     'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8236-0',
     'path' => array(
       'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Conservation and sustainable use',
+    'description' => '<p>
+<style type="text/css"><!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+</style>
+15.1 By 2020, ensure the conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems and their services, in particular forests, wetlands, mountains and drylands, in line with obligations under international agreements</p>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => '6aa2e871-4ea4-4464-9fdf-4a4ee21f9662',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs',
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => 15.1,
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'target',
+        ),
+      ),
+    ),
+    'field_parent' => array(
+      'und' => array(
+        0 => array(
+          'target_id' => 'e0b77041-b168-417e-93b4-7e7394043190',
+          'uuid' => 'e0b77041-b168-417e-93b4-7e7394043190',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Conservation and sustainable use',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Conservation and sustainable use',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8247-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => 'e0b77041-b168-417e-93b4-7e7394043190',
     ),
   );
   $terms[] = array(
