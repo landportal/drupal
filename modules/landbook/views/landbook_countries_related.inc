@@ -8,7 +8,7 @@ $view->base_table = 'node';
 $view->human_name = 'Landbook Countries Latest related content';
 $view->core = 7;
 $view->api_version = '3.0';
-$view->disabled = TRUE; /* Edit this to true to make a default view disabled initially */
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
@@ -205,6 +205,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
 $handler = $view->new_display('block', 'Partners', 'block_4');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Partners';
+$handler->display->display_options['enabled'] = FALSE;
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'partners';
 $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -248,6 +249,7 @@ $handler->display->display_options['filters']['field_organization_relationship_t
 $handler = $view->new_display('block', 'Library', 'block_5');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Library';
+$handler->display->display_options['enabled'] = FALSE;
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'clearfix';
 $handler->display->display_options['defaults']['use_ajax'] = FALSE;
@@ -359,7 +361,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
-/* Filter criterion: Content: Publisher (field_doc_publisher) (reference filter) */
+/* Filter criterion: Content: Publisher(s) (field_doc_publisher) (reference filter) */
 $handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['id'] = 'field_doc_publisher_target_id_entityreference_filter';
 $handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['table'] = 'field_data_field_doc_publisher';
 $handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['field'] = 'field_doc_publisher_target_id_entityreference_filter';
@@ -376,5 +378,5 @@ $handler->display->display_options['filters']['field_doc_publisher_target_id_ent
   111903910 => 0,
   30037204 => 0,
 );
-$handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['reference_display'] = 'organizations:ref_all';
+$handler->display->display_options['filters']['field_doc_publisher_target_id_entityreference_filter']['reference_display'] = 'organizations:entityreference_2';
 $handler->display->display_options['block_caching'] = '-1';
