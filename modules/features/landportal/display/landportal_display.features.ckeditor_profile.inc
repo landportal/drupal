@@ -120,7 +120,7 @@ function landportal_display_ckeditor_profile_defaults() {
     [\'Templates\',\'-\',\'CreateDiv\',\'ShowBlocks\'],
     [\'Maximize\'],
     \'/\',
-    [\'Media\',\'Enhanced Image\',\'MediaEmbed\',\'Glyphicons\',\'Fontawesome\',\'Table\'],
+    [\'Media\',\'Image\',\'Enhanced Image\',\'MediaEmbed\',\'Glyphicons\',\'Fontawesome\',\'Table\'],
     [\'Superscript\',\'Subscript\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'HorizontalRule\',\'Button\',\'Blockquote\',\'SpecialChar\'],
     [\'Link\',\'Unlink\',\'Anchor\'],
     [\'Undo\',\'Redo\',\'-\',\'Find\',\'Replace\'],
@@ -214,6 +214,18 @@ function landportal_display_ckeditor_profile_defaults() {
               ),
             ),
             'default' => 'f',
+          ),
+          'image2' => array(
+            'name' => 'image2',
+            'desc' => 'Enhanced Image plugin. See <a href="http://ckeditor.com/addon/image2">addon page</a> for more details.',
+            'path' => '//cdn.ckeditor.com/4.5.4/full-all/plugins/image2/',
+            'buttons' => array(
+              'Enhanced Image' => array(
+                'icon' => 'icons/image.png',
+                'label' => 'Insert Enhanced Image',
+              ),
+            ),
+            'default' => 't',
           ),
           'media' => array(
             'name' => 'media',

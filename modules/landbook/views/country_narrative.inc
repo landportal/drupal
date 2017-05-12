@@ -84,6 +84,11 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
+/* Filter criterion: Content: Promoted to front page */
+$handler->display->display_options['filters']['promote']['id'] = 'promote';
+$handler->display->display_options['filters']['promote']['table'] = 'node';
+$handler->display->display_options['filters']['promote']['field'] = 'promote';
+$handler->display->display_options['filters']['promote']['value'] = '1';
 
 /* Display: Portfolios */
 $handler = $view->new_display('block', 'Portfolios', 'cp');
@@ -92,6 +97,14 @@ $handler = $view->new_display('block', 'Portfolios', 'cp');
 $handler = $view->new_display('block', 'Promoted', 'promoted');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Country portfolios highlights';
+$handler->display->display_options['defaults']['footer'] = FALSE;
+/* Footer: Global: Text area */
+$handler->display->display_options['footer']['area']['id'] = 'area';
+$handler->display->display_options['footer']['area']['table'] = 'views';
+$handler->display->display_options['footer']['area']['field'] = 'area';
+$handler->display->display_options['footer']['area']['content'] = '<br/><div style="margin: 0 auto;" class="lp-button"><a href="/book/countries">SEE OTHER COUNTRY PAGES</a></div>
+<br/>';
+$handler->display->display_options['footer']['area']['format'] = 'full_html';
 $handler->display->display_options['defaults']['sorts'] = FALSE;
 /* Sort criterion: Content: Post date */
 $handler->display->display_options['sorts']['created']['id'] = 'created';

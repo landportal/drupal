@@ -385,6 +385,22 @@ $handler->display->display_options['filters']['field_dataset_tid']['expose']['re
 );
 $handler->display->display_options['filters']['field_dataset_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_dataset_tid']['vocabulary'] = 'datasets';
+/* Filter criterion: Taxonomy term: ID (field_id) */
+$handler->display->display_options['filters']['field_id_value']['id'] = 'field_id_value';
+$handler->display->display_options['filters']['field_id_value']['table'] = 'field_data_field_id';
+$handler->display->display_options['filters']['field_id_value']['field'] = 'field_id_value';
+$handler->display->display_options['filters']['field_id_value']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_id_value']['expose']['operator_id'] = 'field_id_value_op';
+$handler->display->display_options['filters']['field_id_value']['expose']['label'] = 'ID';
+$handler->display->display_options['filters']['field_id_value']['expose']['operator'] = 'field_id_value_op';
+$handler->display->display_options['filters']['field_id_value']['expose']['identifier'] = 'field_id_value';
+$handler->display->display_options['filters']['field_id_value']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page_admin_indicators');

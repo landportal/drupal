@@ -1016,7 +1016,7 @@ function landportal_taxonomy_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_related_themes',
     'label' => 'Themes',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -1024,10 +1024,7 @@ function landportal_taxonomy_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-        'sort' => 'weight',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 3,
     ),

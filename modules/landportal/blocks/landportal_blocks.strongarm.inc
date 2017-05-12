@@ -15,6 +15,7 @@ function landportal_blocks_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'addtoany_additional_html';
   $strongarm->value = '<a class="a2a_button_facebook"></a>
+<a class="a2a_button_email"></a>
 <a class="a2a_button_twitter"></a>
 ';
   $export['addtoany_additional_html'] = $strongarm;
@@ -120,7 +121,7 @@ function landportal_blocks_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'addtoany_no_3p';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['addtoany_no_3p'] = $strongarm;
 
   return $export;
