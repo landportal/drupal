@@ -32,16 +32,16 @@ $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['uses_fields'] = TRUE;
 $handler->display->display_options['row_plugin'] = 'entity';
 $handler->display->display_options['row_options']['view_mode'] = 'teaser';
-/* Header: Global: Result summary */
-$handler->display->display_options['header']['result']['id'] = 'result';
-$handler->display->display_options['header']['result']['table'] = 'views';
-$handler->display->display_options['header']['result']['field'] = 'result';
 /* Header: Global: View area */
 $handler->display->display_options['header']['view']['id'] = 'view';
 $handler->display->display_options['header']['view']['table'] = 'views';
 $handler->display->display_options['header']['view']['field'] = 'view';
 $handler->display->display_options['header']['view']['view_to_insert'] = 'library_browse:term';
 $handler->display->display_options['header']['view']['inherit_arguments'] = TRUE;
+/* Header: Global: Result summary */
+$handler->display->display_options['header']['result']['id'] = 'result';
+$handler->display->display_options['header']['result']['table'] = 'views';
+$handler->display->display_options['header']['result']['field'] = 'result';
 /* No results behavior: Global: Text area */
 $handler->display->display_options['empty']['area']['id'] = 'area';
 $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -65,6 +65,7 @@ $handler->display->display_options['sorts']['field_doc_creation_date_value']['or
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';
 $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
 $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
 $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
 $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
 $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
@@ -152,10 +153,12 @@ $handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['defaults']['arguments'] = FALSE;
 $handler->display->display_options['path'] = 'library/browse/all';
 
-/* Display: Type */
-$handler = $view->new_display('page', 'Type', 'page_type');
+/* Display: Term */
+$handler = $view->new_display('page', 'Term', 'by_term');
+$handler->display->display_options['display_description'] = 'Browse the LL by term (TID)';
 $handler->display->display_options['defaults']['header'] = FALSE;
 /* Header: Global: View area */
 $handler->display->display_options['header']['view']['id'] = 'view';
@@ -167,25 +170,10 @@ $handler->display->display_options['header']['view']['inherit_arguments'] = TRUE
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
-$handler->display->display_options['path'] = 'library/browse/type/%';
-
-/* Display: License */
-$handler = $view->new_display('page', 'License', 'page_license');
-$handler->display->display_options['defaults']['header'] = FALSE;
-/* Header: Global: View area */
-$handler->display->display_options['header']['view']['id'] = 'view';
-$handler->display->display_options['header']['view']['table'] = 'views';
-$handler->display->display_options['header']['view']['field'] = 'view';
-$handler->display->display_options['header']['view']['view_to_insert'] = 'library_browse:term';
-$handler->display->display_options['header']['view']['inherit_arguments'] = TRUE;
-/* Header: Global: Result summary */
-$handler->display->display_options['header']['result']['id'] = 'result';
-$handler->display->display_options['header']['result']['table'] = 'views';
-$handler->display->display_options['header']['result']['field'] = 'result';
-$handler->display->display_options['path'] = 'library/browse/license/%';
+$handler->display->display_options['path'] = 'library/browse/by/%';
 
 /* Display: Theme */
-$handler = $view->new_display('page', 'Theme', 'page_theme');
+$handler = $view->new_display('page', 'Theme', 'theme');
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['filter_groups']['groups'] = array(
@@ -299,104 +287,8 @@ $handler->display->display_options['filters']['field_related_topics_tid_entityre
 $handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter_1']['reference_display'] = 'library:ref_rel_concepts';
 $handler->display->display_options['path'] = 'library/browse/theme/%';
 
-/* Display: Block theme */
-$handler = $view->new_display('block', 'Block theme', 'theme');
-$handler->display->display_options['defaults']['arguments'] = FALSE;
-$handler->display->display_options['defaults']['filter_groups'] = FALSE;
-$handler->display->display_options['filter_groups']['groups'] = array(
-  1 => 'AND',
-  2 => 'OR',
-);
-$handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type']['id'] = 'type';
-$handler->display->display_options['filters']['type']['table'] = 'node';
-$handler->display->display_options['filters']['type']['field'] = 'type';
-$handler->display->display_options['filters']['type']['value'] = array(
-  'landlibrary_resource' => 'landlibrary_resource',
-);
-$handler->display->display_options['filters']['type']['group'] = 1;
-/* Filter criterion: Content: Language */
-$handler->display->display_options['filters']['language']['id'] = 'language';
-$handler->display->display_options['filters']['language']['table'] = 'node';
-$handler->display->display_options['filters']['language']['field'] = 'language';
-$handler->display->display_options['filters']['language']['value'] = array(
-  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  'und' => 'und',
-);
-$handler->display->display_options['filters']['language']['group'] = 1;
-/* Filter criterion: Content: Resource type (field_doc_type) (reference filter) */
-$handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['id'] = 'field_doc_type_tid_entityreference_filter';
-$handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['table'] = 'field_data_field_doc_type';
-$handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['field'] = 'field_doc_type_tid_entityreference_filter';
-$handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['group'] = 1;
-$handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['exposed'] = TRUE;
-$handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['expose']['operator_id'] = 'field_doc_type_tid_entityreference_filter_op';
-$handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['expose']['label'] = 'Resource type';
-$handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['expose']['operator'] = 'field_doc_type_tid_entityreference_filter_op';
-$handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['expose']['identifier'] = 'field_doc_type_tid_entityreference_filter';
-$handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['expose']['multiple'] = TRUE;
-$handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111903911 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
-$handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['reference_display'] = 'library:ref_types';
-/* Filter criterion: Content: License of the resource (field_doc_licencing) (reference filter) */
-$handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['id'] = 'field_doc_licencing_tid_entityreference_filter';
-$handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['table'] = 'field_data_field_doc_licencing';
-$handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['field'] = 'field_doc_licencing_tid_entityreference_filter';
-$handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['group'] = 1;
-$handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['exposed'] = TRUE;
-$handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['expose']['operator_id'] = 'field_doc_licencing_tid_entityreference_filter_op';
-$handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['expose']['label'] = 'License of the resource';
-$handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['expose']['operator'] = 'field_doc_licencing_tid_entityreference_filter_op';
-$handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['expose']['identifier'] = 'field_doc_licencing_tid_entityreference_filter';
-$handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['expose']['multiple'] = TRUE;
-$handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111903911 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
-$handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['reference_display'] = 'library:ref_licenses';
-/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
-$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['group'] = 1;
-$handler->display->display_options['filters']['field_geographical_focus_tid']['exposed'] = TRUE;
-$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['operator_id'] = 'field_geographical_focus_tid_op';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['label'] = 'Geographical focus';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['operator'] = 'field_geographical_focus_tid_op';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['identifier'] = 'field_geographical_focus_tid';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111903911 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
-$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
-$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
-/* Filter criterion: Field: Related concepts (field_related_topics) (reference filter) */
-$handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter']['id'] = 'field_related_topics_tid_entityreference_filter';
-$handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter']['table'] = 'field_data_field_related_topics';
-$handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter']['field'] = 'field_related_topics_tid_entityreference_filter';
-$handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter']['group'] = 2;
-$handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter']['reference_display'] = 'library:ref_rel_concepts';
-/* Filter criterion: Field: Themes (field_related_themes) (reference filter) */
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['id'] = 'field_related_themes_tid_entityreference_filter';
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['table'] = 'field_data_field_related_themes';
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['field'] = 'field_related_themes_tid_entityreference_filter';
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['group'] = 2;
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['reference_display'] = 'library:ref_landvoc';
-
 /* Display: Geo */
-$handler = $view->new_display('page', 'Geo', 'page_2');
+$handler = $view->new_display('page', 'Geo', 'geo');
 $handler->display->display_options['defaults']['header'] = FALSE;
 /* Header: Global: View area */
 $handler->display->display_options['header']['view']['id'] = 'view';
