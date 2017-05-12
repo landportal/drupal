@@ -116,6 +116,14 @@ $handler->display->display_options['style_options']['info'] = array(
     'empty_column' => 0,
   ),
 );
+/* Header: Global: Text area */
+$handler->display->display_options['header']['area']['id'] = 'area';
+$handler->display->display_options['header']['area']['table'] = 'views';
+$handler->display->display_options['header']['area']['field'] = 'area';
+$handler->display->display_options['header']['area']['label'] = 'Intro';
+$handler->display->display_options['header']['area']['content'] = 'Land Portal Geography / Regions
+';
+$handler->display->display_options['header']['area']['format'] = 'full_html';
 /* Header: Global: Result summary */
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
@@ -289,4 +297,4 @@ $handler->display->display_options['filters']['nid']['group_info']['group_items'
 /* Display: System */
 $handler = $view->new_display('system', 'System', 'system_1');
 $handler->display->display_options['defaults']['access'] = FALSE;
-$handler->display->display_options['path'] = 'admin/structure/taxonomy/terms/regions';
+$handler->display->display_options['path'] = 'admin/structure/taxonomy/geo';
