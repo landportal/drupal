@@ -27,10 +27,6 @@ $handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
-$handler->display->display_options['row_options']['inline'] = array(
-  'name' => 'name',
-  'nid' => 'nid',
-);
 /* Relationship: Taxonomy term: Content with term */
 $handler->display->display_options['relationships']['nid']['id'] = 'nid';
 $handler->display->display_options['relationships']['nid']['table'] = 'taxonomy_index';
@@ -256,8 +252,10 @@ $handler->display->display_options['fields']['nid']['table'] = 'node';
 $handler->display->display_options['fields']['nid']['field'] = 'nid';
 $handler->display->display_options['fields']['nid']['relationship'] = 'nid';
 $handler->display->display_options['fields']['nid']['group_type'] = 'count';
-$handler->display->display_options['fields']['nid']['label'] = 'Resources';
-$handler->display->display_options['fields']['nid']['suffix'] = '* and more';
+$handler->display->display_options['fields']['nid']['label'] = '';
+$handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['nid']['prefix'] = '(';
+$handler->display->display_options['fields']['nid']['suffix'] = '* and more)';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Taxonomy term: Vocabulary */
@@ -385,6 +383,17 @@ $handler->display->display_options['pager']['type'] = 'mini';
 $handler->display->display_options['pager']['options']['items_per_page'] = '50';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['row_options']['inline'] = array(
+  'name' => 'name',
+  'nid' => 'nid',
+);
+$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Taxonomy term: Content with term */
 $handler->display->display_options['relationships']['nid']['id'] = 'nid';
