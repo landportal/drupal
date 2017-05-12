@@ -13,6 +13,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['title'] = '<none>';
+$handler->display->display_options['css_class'] = 'view-with-filters';
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['use_more_text'] = 'Find more on the Library';
@@ -35,6 +36,12 @@ $handler->display->display_options['row_options']['view_mode'] = 'teaser';
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+/* Header: Global: View area */
+$handler->display->display_options['header']['view']['id'] = 'view';
+$handler->display->display_options['header']['view']['table'] = 'views';
+$handler->display->display_options['header']['view']['field'] = 'view';
+$handler->display->display_options['header']['view']['view_to_insert'] = 'library_browse:term';
+$handler->display->display_options['header']['view']['inherit_arguments'] = TRUE;
 /* No results behavior: Global: Text area */
 $handler->display->display_options['empty']['area']['id'] = 'area';
 $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -58,7 +65,6 @@ $handler->display->display_options['sorts']['field_doc_creation_date_value']['or
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';
 $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
 $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-$handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
 $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
 $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
 $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
@@ -138,7 +144,14 @@ $handler->display->display_options['filters']['field_geographical_focus_tid']['t
 $handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
 
 /* Display: Page */
-$handler = $view->new_display('page', 'Page', 'page_1');
+$handler = $view->new_display('page', 'Page', 'all');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Land Library resources';
+$handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: Result summary */
+$handler->display->display_options['header']['result']['id'] = 'result';
+$handler->display->display_options['header']['result']['table'] = 'views';
+$handler->display->display_options['header']['result']['field'] = 'result';
 $handler->display->display_options['path'] = 'library/browse/all';
 
 /* Display: Type */
@@ -173,17 +186,6 @@ $handler->display->display_options['path'] = 'library/browse/license/%';
 
 /* Display: Theme */
 $handler = $view->new_display('page', 'Theme', 'page_theme');
-$handler->display->display_options['defaults']['header'] = FALSE;
-/* Header: Global: View area */
-$handler->display->display_options['header']['view']['id'] = 'view';
-$handler->display->display_options['header']['view']['table'] = 'views';
-$handler->display->display_options['header']['view']['field'] = 'view';
-$handler->display->display_options['header']['view']['view_to_insert'] = 'library_browse:term';
-$handler->display->display_options['header']['view']['inherit_arguments'] = TRUE;
-/* Header: Global: Result summary */
-$handler->display->display_options['header']['result']['id'] = 'result';
-$handler->display->display_options['header']['result']['table'] = 'views';
-$handler->display->display_options['header']['result']['field'] = 'result';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['filter_groups']['groups'] = array(
@@ -298,7 +300,7 @@ $handler->display->display_options['filters']['field_related_topics_tid_entityre
 $handler->display->display_options['path'] = 'library/browse/theme/%';
 
 /* Display: Block theme */
-$handler = $view->new_display('block', 'Block theme', 'block_1');
+$handler = $view->new_display('block', 'Block theme', 'theme');
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['filter_groups']['groups'] = array(
@@ -407,3 +409,4 @@ $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
 $handler->display->display_options['path'] = 'library/browse/geo/%';
+
