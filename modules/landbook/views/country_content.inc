@@ -281,7 +281,7 @@ $handler->display->display_options['defaults']['footer'] = FALSE;
 $handler->display->display_options['footer']['view']['id'] = 'view';
 $handler->display->display_options['footer']['view']['table'] = 'views';
 $handler->display->display_options['footer']['view']['field'] = 'view';
-$handler->display->display_options['footer']['view']['view_to_insert'] = 'library_browse:br_geo_iso';
+$handler->display->display_options['footer']['view']['view_to_insert'] = 'library:lk_iso3';
 $handler->display->display_options['footer']['view']['inherit_arguments'] = TRUE;
 $handler->display->display_options['defaults']['empty'] = FALSE;
 /* No results behavior: Global: Text area */
@@ -346,3 +346,4 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
+

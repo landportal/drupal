@@ -1493,7 +1493,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The Land Portal identifies certain types of resources from a set list. Please <a href="/library/resource-type/">click here</a> to find the full list and a brief description of what is meant.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -2166,6 +2166,7 @@ function landlibrary_resource_field_default_field_instances() {
   t('Resource URL');
   t('Resource type');
   t('Subtitle');
+  t('The Land Portal identifies certain types of resources from a set list. Please <a href="/library/resource-type/">click here</a> to find the full list and a brief description of what is meant.');
   t('The URL to the resource on the publisher\'s website (e.g.: http://landportal.info/sites/landportal.info/files/GECDiscussionReport-Final.pdf)');
   t('The abstract of the resource or a description of the resource.');
   t('The date of publication of the resource (YYYY/MM).');

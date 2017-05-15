@@ -40,6 +40,7 @@ $handler->display->display_options['style_options']['columns'] = array(
   'field_agrovoc_uri' => 'field_agrovoc_uri',
   'edit_term' => 'edit_term',
   'views_bulk_operations' => 'views_bulk_operations',
+  'language' => 'language',
 );
 $handler->display->display_options['style_options']['default'] = '-1';
 $handler->display->display_options['style_options']['info'] = array(
@@ -131,6 +132,13 @@ $handler->display->display_options['style_options']['info'] = array(
     'empty_column' => 0,
   ),
   'views_bulk_operations' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'language' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -281,6 +289,10 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'label' => '',
   ),
 );
+/* Field: Taxonomy term: Language */
+$handler->display->display_options['fields']['language']['id'] = 'language';
+$handler->display->display_options['fields']['language']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['language']['field'] = 'language';
 /* Filter criterion: Taxonomy vocabulary: Machine name */
 $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
 $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';

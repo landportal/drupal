@@ -8,7 +8,7 @@ $view->base_table = 'taxonomy_term_data';
 $view->human_name = 'Resource type';
 $view->core = 7;
 $view->api_version = '3.0';
-$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+$view->disabled = TRUE; /* Edit this to true to make a default view disabled initially */
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
@@ -185,3 +185,4 @@ $handler->display->display_options['filters']['machine_name']['field'] = 'machin
 $handler->display->display_options['filters']['machine_name']['value'] = array(
   'landlibrary_resource_type' => 'landlibrary_resource_type',
 );
+

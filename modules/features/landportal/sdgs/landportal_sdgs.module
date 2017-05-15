@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the landportal SDGs feature.
+ */
+
+include_once 'landportal_sdgs.features.inc';

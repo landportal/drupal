@@ -14,7 +14,7 @@ function landlibrary_resource_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_landlibrary_resource';
-  $strongarm->value = 'edit-og';
+  $strongarm->value = 'edit-linkchecker';
   $export['additional_settings__active_tab_landlibrary_resource'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -65,6 +65,27 @@ function landlibrary_resource_strongarm() {
   $strongarm->name = 'comment_subject_field_landlibrary_resource';
   $strongarm->value = 1;
   $export['comment_subject_field_landlibrary_resource'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_landlibrary_resource';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_landlibrary_resource'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_landlibrary_resource';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_landlibrary_resource'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_landlibrary_resource';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_landlibrary_resource'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -143,9 +164,6 @@ function landlibrary_resource_strongarm() {
         'custom_settings' => TRUE,
       ),
       'print' => array(
-        'custom_settings' => FALSE,
-      ),
-      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),

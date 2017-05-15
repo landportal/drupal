@@ -7,54 +7,71 @@ include_once 'landportal_admin.views_default.inc';
  * Add a 'Manage' tab to Admin > structure > taxonomy page
  */
 function landportal_admin_menu() {
-    /* $items['admin/structure/taxonomy/terms'] = array( */
-    /*     'title' => 'Manage terms', */
-    /*     'type' => MENU_LOCAL_TASK, */
-    /*     'access arguments' => array('administer taxonomy'), */
-    /*     'weight' => 12, */
-    /* ); */
-    $items['admin/structure/taxonomy/terms/overarching-categories'] = array(
-        'title' => 'Manage Overarching Categories',
-        'type' => MENU_LOCAL_TASK,
-        'access arguments' => array('administer taxonomy'),
-        'weight' => 10,
-        'callback' => 'systems_view_data',
-        'page arguments' => array('admin/structure/taxonomy/terms/overarching-categories'),
-    );
-    $items['admin/structure/taxonomy/terms/themes'] = array(
-        'title' => 'Manage Themes',
-        'type' => MENU_LOCAL_TASK,
-        'access arguments' => array('administer taxonomy'),
-        'weight' => 10,
-        'callback' => 'systems_view_data',
-        'page arguments' => array('admin/structure/taxonomy/terms/themes'),
-    );
-    $items['admin/structure/taxonomy/terms/topics'] = array(
-        'title' => 'Manage LandVoc Concepts',
-        'type' => MENU_LOCAL_TASK,
-        'access arguments' => array('administer taxonomy'),
-        'weight' => 10,
-        'callback' => 'systems_view_data',
-        //'page callback' => 'node_page_view',//admin_views_taxonomy_terms_topics',
-        'page arguments' => array('admin/structure/taxonomy/terms/topics'),
-    );	
-    $items['admin/structure/taxonomy/terms/regions'] = array(
-        'title' => 'Manage Regions',
-        'type' => MENU_LOCAL_TASK,
-        'access arguments' => array('administer taxonomy'),
-        'weight' => 10,
-        'callback' => 'systems_view_data',
-        //'page callback' => 'admin_views_taxonomy_terms_regions',
-        'page arguments' => array('admin/structure/taxonomy/terms/regions'),
-    );
-    $items['admin/people/moderate'] = array(
-        'title' => 'Pending account',
-        'type' => MENU_LOCAL_TASK,
-        'access arguments' => array('administer users'),
-        'weight' => 9,
-        //'page callback' => 'XXX_admin_view_XXX',
-    );
-    return $items;
+  // Geography stuff
+  $items['admin/structure/taxonomy/geo/count'] = array(
+    'title' => 'Geo',
+    'type' => MENU_LOCAL_ACTION,
+    'access arguments' => array('administer taxonomy'),
+    'callback' => 'systems_view_data',
+    'weight' => 10,
+  );
+  $items['admin/structure/taxonomy/geo/library'] = array(
+    'title' => 'Geo LLR',
+    'type' => MENU_LOCAL_ACTION,
+    'access arguments' => array('administer taxonomy'),
+    'callback' => 'systems_view_data',
+    'weight' => 11,
+  );
+  /* $items['admin/structure/taxonomy/geo'] = array( */
+  /*   'title' => 'Geography', */
+  /*   'type' => MENU_NORMAL_ITEM, */
+  /*   'access arguments' => array('administer taxonomy'), */
+  /*   'weight' => 12, */
+  /*   'callback' => 'systems_view_data', */
+  /* ); */
+  $items['admin/structure/taxonomy/geo'] = array(
+    'title' => 'Geography',
+    'type' => MENU_LOCAL_TASK,
+    'access arguments' => array('administer taxonomy'),
+    'weight' => 13,
+    'callback' => 'systems_view_data',
+  );
+  // Land Voc
+  $items['admin/structure/taxonomy/terms/overarching-categories'] = array(
+    'title' => 'Overarching Categories',
+    'type' => MENU_LOCAL_TASK,
+    'access arguments' => array('administer taxonomy'),
+    'weight' => 20,
+    'callback' => 'systems_view_data',
+    'page arguments' => array('admin/structure/taxonomy/terms/overarching-categories'),
+  );
+  $items['admin/structure/taxonomy/terms/themes'] = array(
+    'title' => 'Themes',
+    'type' => MENU_LOCAL_TASK,
+    'access arguments' => array('administer taxonomy'),
+    'weight' => 21,
+    'callback' => 'systems_view_data',
+    'page arguments' => array('admin/structure/taxonomy/terms/themes'),
+  );
+  $items['admin/structure/taxonomy/terms/topics'] = array(
+    'title' => 'Concepts',
+    'type' => MENU_LOCAL_TASK,
+    'access arguments' => array('administer taxonomy'),
+    'weight' => 22,
+    'callback' => 'systems_view_data',
+    //'page callback' => 'node_page_view',//admin_views_taxonomy_terms_topics',
+    'page arguments' => array('admin/structure/taxonomy/terms/topics'),
+  );	
+
+  // People / User stuff
+  $items['admin/people/moderate'] = array(
+    'title' => 'Pending account',
+    'type' => MENU_LOCAL_TASK,
+    'access arguments' => array('administer users'),
+    'weight' => 9,
+    //'page callback' => 'XXX_admin_view_XXX',
+  );
+  return $items;
 }
 
 function landportal_admin_default_rules_configuration() {
