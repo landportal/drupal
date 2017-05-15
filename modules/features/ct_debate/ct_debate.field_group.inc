@@ -21,7 +21,7 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'About this debate',
-    'weight' => '8',
+    'weight' => '6',
     'children' => array(),
     'format_type' => 'hidden',
     'format_settings' => array(
@@ -74,7 +74,7 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '3',
+    'weight' => '1',
     'children' => array(
       0 => 'field_date',
       1 => 'field_status',
@@ -409,7 +409,7 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
