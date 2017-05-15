@@ -1,0 +1,10 @@
+name = Landportal Profiles
+description = Land Portal Drupal profiles
+core = 7.x
+package = Landportal
+version = 7.x-2.4-alpha
+project = landportal_profiles
+dependencies[] = profile2
+dependencies[] = auto_entitylabel
+features[features_api][] = api:2
+project status url = https://github.com/landportal/drupal
