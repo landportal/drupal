@@ -1,0 +1,8 @@
+<?php
+
+function landportal_profile_install() {
+  db_update('system')
+    ->fields(array('weight' => -1))
+    ->condition('name', 'landportal_profile', '=')
+    ->execute();
+}

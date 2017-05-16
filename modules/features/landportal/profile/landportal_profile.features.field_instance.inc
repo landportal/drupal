@@ -476,7 +476,7 @@ function landportal_profile_field_default_field_instances() {
       'module' => 'location_cck',
       'settings' => array(),
       'type' => 'location',
-      'weight' => 1,
+      'weight' => 4,
     ),
   );
 
@@ -788,7 +788,7 @@ function landportal_profile_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',

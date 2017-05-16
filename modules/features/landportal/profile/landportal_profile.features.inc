@@ -36,7 +36,7 @@ function landportal_profile_default_profile2_type() {
     "type" : "work_profile",
     "label" : "Work profile",
     "weight" : "0",
-    "data" : { "registration" : 1, "use_one_page" : 1, "use_page" : 0 },
+    "data" : { "registration" : 0, "use_one_page" : 1, "use_page" : 0 },
     "rdf_mapping" : []
   }');
   return $items;

@@ -5,3 +5,28 @@
  */
 
 include_once 'landportal_profile.features.inc';
+
+// Override admin path to have the LP frontend theme
+function landportal_profiles_admin_paths_alter(&$paths) {
+  //dsm('removed from admin');
+    // Treat all user pages as not administrative.
+  $paths['user/*'] = FALSE;
+  $paths['admin/people/create'] = FALSE;
+  $paths['admin/people/profiles/add/*'] = FALSE;
+}
+
+function landportal_profile_form_user_register_form_alter(&$form, &$form_state) {
+  // Pick LP admin account field_group
+  $admin_grp = $form['#groups']['group_admin_account'];
+    
+  // Move account fields to LP admin account field group
+  foreach (array('roles', 'status', 'notify') as $field) {
+    $form[$field] = $form['account'][$field];
+    unset($form['account'][$field]);
+    $form['#group_children'][$field] = 'group_admin_account';
+    $admin_grp->children[] = $field;
+  }
+  // Re-assign admin group
+  $form['#groups']['group_admin_account'] = $admin_grp;
+  //dpm($form, $form_id);
+}
