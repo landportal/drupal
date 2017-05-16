@@ -1,0 +1,82 @@
+<?php
+
+function profile2_create_entity_info_alter(&$entity_info) {
+  $entity_info['profile2']['admin ui'] = array(
+    'path' => 'admin/people/profiles',
+    'controller class' => 'Profile2UIController',
+    'file' => 'profile2_create.pages.inc',
+    'file path' => drupal_get_path('module', 'profile2_create'),
+  );
+  $entity_info['profile2']['uri callback'] = 'profile2_create_uri';
+}
+
+function profile2_menu() {
+  $items = array();
+
+  foreach (profile2_get_types() as $type_name => $type) {
+    $path = 'profile';
+    $count = count(explode('/', $path));
+    $items['profile/%profile2'] = array(
+      'title callback' => 'profile2_page_title',
+      'title arguments' => array($type_name, $count),
+      'page callback' => 'profile2_page_view',
+      'page arguments' => array($count),
+      'load arguments' => array($type_name),
+      'access callback' => 'profile2_access',
+      'access arguments' => array('view', $count),
+      'file' => 'profile2_page.inc',
+      'file path' => drupal_get_path('module','profile2_page'),
+    );
+    $items['profile/%profile2/view'] = array(
+      'title' => 'View',
+      'type' => MENU_DEFAULT_LOCAL_TASK,
+      'load arguments' => array($type_name),
+      'weight' => -10,
+    );
+    $items[$path . '/%profile2/edit'] = array(
+      'page callback' => 'entity_ui_get_form',
+      'page arguments' => array('profile2_create', $count),
+      'load arguments' => array($type_name),
+      'access callback' => 'profile2_access',
+      'access arguments' => array('edit', $count),
+      'title' => 'Edit',
+      'type' => MENU_LOCAL_TASK,
+      'context' => MENU_CONTEXT_PAGE | MENU_CONTEXT_INLINE,
+      'file' => 'profile2_create.pages.inc',
+      'file path' => drupal_get_path('module', 'profile2_create'),
+    );
+    $items[$path . '/%profile2/delete'] = array(
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('profile2_page_delete_confirm_form', $count),
+      'load arguments' => array($type_name),
+      'access callback' => 'profile2_access',
+      'access arguments' => array('delete', $count),
+      'title' => 'Delete',
+      'type' => MENU_LOCAL_TASK,
+      'context' => MENU_CONTEXT_INLINE,
+      'file' => 'profile2_page.inc',
+      'file path' => drupal_get_path('module', 'profile2_page'),
+    );
+  }
+
+  return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function profile2_create_theme() {
+  return array(
+    'profile2_create_add_list' => array(
+      'variables' => array('content' => NULL),
+      'file' => 'profile2_create.pages.inc',
+    ),
+  );
+}
+
+function profile2_create_uri($profile) {
+  return array(
+    'path' => 'profile/' . $profile->pid,
+  );
+}
+
