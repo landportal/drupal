@@ -26,9 +26,10 @@ function landportal_profile_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
+        'type' => 'text_default',
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'above',
@@ -60,7 +61,7 @@ function landportal_profile_field_default_field_instances() {
         'rows' => 8,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 6,
     ),
   );
 
@@ -152,10 +153,9 @@ function landportal_profile_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 3,
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -182,7 +182,7 @@ function landportal_profile_field_default_field_instances() {
     'field_name' => 'field_geographical_focus',
     'label' => 'Geographical focus',
     'pcp_tag' => 1,
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -191,13 +191,7 @@ function landportal_profile_field_default_field_instances() {
       'active' => 1,
       'module' => 'synonyms',
       'settings' => array(
-        'auto_creation' => 0,
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
         'sort' => 'weight',
-        'suggest_only_unique' => 0,
-        'suggestion_size' => 10,
-        'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'synonyms_select_taxonomy_term',
       'weight' => 2,
@@ -275,7 +269,7 @@ function landportal_profile_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -351,7 +345,7 @@ function landportal_profile_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 10,
+        'size' => 15,
       ),
       'type' => 'text_textfield',
       'weight' => 3,
@@ -367,10 +361,9 @@ function landportal_profile_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 4,
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
@@ -432,7 +425,7 @@ function landportal_profile_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
@@ -454,7 +447,7 @@ function landportal_profile_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -483,7 +476,7 @@ function landportal_profile_field_default_field_instances() {
       'module' => 'location_cck',
       'settings' => array(),
       'type' => 'location',
-      'weight' => 7,
+      'weight' => 1,
     ),
   );
 
@@ -496,10 +489,9 @@ function landportal_profile_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -532,8 +524,8 @@ function landportal_profile_field_default_field_instances() {
     'entity_type' => 'profile2',
     'field_name' => 'field_related_topics',
     'label' => 'Related concepts',
-    'pcp_tag' => 1,
-    'required' => 1,
+    'pcp_tag' => 0,
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -542,12 +534,7 @@ function landportal_profile_field_default_field_instances() {
       'active' => 1,
       'module' => 'synonyms',
       'settings' => array(
-        'auto_creation' => 0,
-        'size' => 60,
         'sort' => 'weight',
-        'suggest_only_unique' => 0,
-        'suggestion_size' => 10,
-        'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
       'type' => 'synonyms_select_taxonomy_term',
       'weight' => 3,
@@ -620,6 +607,7 @@ function landportal_profile_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -640,6 +628,7 @@ function landportal_profile_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -810,7 +799,7 @@ function landportal_profile_field_default_field_instances() {
     ),
     'entity_type' => 'user',
     'field_name' => 'field_hide_profile',
-    'label' => 'Hide profile',
+    'label' => 'Hide my profile on public listings',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -820,10 +809,10 @@ function landportal_profile_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'display_label' => 0,
+        'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 10,
+      'weight' => 6,
     ),
   );
 
@@ -836,7 +825,7 @@ function landportal_profile_field_default_field_instances() {
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('First name');
   t('Geographical focus');
-  t('Hide profile');
+  t('Hide my profile on public listings');
   t('Image');
   t('Last name');
   t('Location');

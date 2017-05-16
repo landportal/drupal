@@ -5,6 +5,7 @@ package = Landportal
 version = 7.x-2.4-alpha
 project = landportal_profiles
 dependencies[] = profile2
+dependencies[] = profile2_create
 dependencies[] = auto_entitylabel
 features[features_api][] = api:2
 project status url = https://github.com/landportal/drupal

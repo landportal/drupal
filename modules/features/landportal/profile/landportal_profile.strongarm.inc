@@ -13,6 +13,13 @@ function landportal_profile_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'googleanalytics_account';
+  $strongarm->value = 'UA-22084982-2';
+  $export['googleanalytics_account'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_interests_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_interests_pattern'] = $strongarm;
@@ -21,7 +28,7 @@ function landportal_profile_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_pictures';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['user_pictures'] = $strongarm;
 
   $strongarm = new stdClass();

@@ -27,7 +27,7 @@ function landportal_profile_default_profile2_type() {
     "type" : "main",
     "label" : "Public profile",
     "weight" : "0",
-    "data" : { "registration" : 1 },
+    "data" : { "registration" : 1, "use_one_page" : 1, "use_page" : 0 },
     "rdf_mapping" : []
   }');
   $items['work_profile'] = entity_import('profile2_type', '{
@@ -36,7 +36,7 @@ function landportal_profile_default_profile2_type() {
     "type" : "work_profile",
     "label" : "Work profile",
     "weight" : "0",
-    "data" : { "registration" : 0 },
+    "data" : { "registration" : 1, "use_one_page" : 1, "use_page" : 0 },
     "rdf_mapping" : []
   }');
   return $items;
