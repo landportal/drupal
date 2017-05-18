@@ -141,6 +141,7 @@ function landportal_profile_field_group_info() {
     'weight' => '6',
     'children' => array(
       0 => 'field_location',
+      1 => 'field_link',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -244,7 +245,7 @@ function landportal_profile_field_group_info() {
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-name',
-        'element' => 'h3',
+        'element' => 'h2',
         'show_label' => '0',
         'label_element' => '',
         'attributes' => '',
