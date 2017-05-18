@@ -37,6 +37,7 @@ features[field_group][] = group_details|profile2|main|full
 features[field_group][] = group_location|profile2|main|form
 features[field_group][] = group_name|profile2|main|form
 features[field_group][] = group_name|profile2|main|full
+features[field_group][] = group_name|profile2|main|teaser
 features[field_group][] = group_profile_grp|profile2|main|form
 features[field_group][] = group_profile_info|profile2|main|form
 features[field_group][] = group_profile_links|profile2|main|form

@@ -141,7 +141,6 @@ function landportal_profile_field_group_info() {
     'weight' => '6',
     'children' => array(
       0 => 'field_location',
-      1 => 'field_link',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -244,17 +243,49 @@ function landportal_profile_field_group_info() {
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => '',
+        'classes' => 'group-name',
         'element' => 'h3',
         'show_label' => '0',
         'label_element' => '',
         'attributes' => '',
-        'required_fields' => 1,
       ),
-      'formatter' => '',
     ),
   );
   $field_groups['group_name|profile2|main|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_name|profile2|main|teaser';
+  $field_group->group_name = 'group_name';
+  $field_group->entity_type = 'profile2';
+  $field_group->bundle = 'main';
+  $field_group->mode = 'teaser';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_firstname',
+      1 => 'field_lastname',
+      2 => 'field_title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-name field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_name|profile2|main|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
