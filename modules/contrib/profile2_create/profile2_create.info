@@ -1,0 +1,6 @@
+name = Profile2 Create
+description = Create Profile2 profiles without creating users.
+core = 7.x
+dependencies[] = profile2
+
+files[] = includes/profile2_create.ui.inc

@@ -1,0 +1,23 @@
+<?php
+
+
+
+/**
+ * Migrate users account picture to main profile
+ */
+function landportal_profile_update_7200() {
+  // make this module hooks run after other modules
+  db_update('system')
+    ->fields(array('weight' => -1))
+    ->condition('name', 'landportal_profile', '=')
+    ->execute();
+
+  $sql = "SELECT 'profile2', 'main', 0, pid, pid, 'und', 0, picture, '', '', 0, 0"
+    . " FROM users u JOIN profile p ON u.uid=p.uid LEFT OUTER JOIN field_data_field_image i ON p.pid=i.entity_id"
+    . " WHERE picture !=0 AND field_image_fid IS NULL"
+    ;
+  $id = db_query('INSERT INTO field_data_field_image (' . $sql . ')');
+  $id_rev = db_query('INSERT INTO field_revision_field_image (' . $sql . ')');
+  watchdog('landportal_profile', 'Migrated users account image to profile', array($id, $id_rev), WATCHDOG_INFO);
+
+}

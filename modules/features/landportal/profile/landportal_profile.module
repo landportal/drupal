@@ -2,6 +2,212 @@
 /**
  * @file
  * Code for the Landportal Profile feature.
+
+For, profile without use accounts, see:
+https://www.drupal.org/node/1612578
+profile2_create
+https://www.drupal.org/sandbox/guillaumev/2039905
+git clone git://git.drupal.org/sandbox/guillaumev/2039905.git profile2_create
+
  */
 
 include_once 'landportal_profile.features.inc';
+
+function landportal_profile_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+function landportal_profile_views_default_views() {
+  $export = array();
+  $path = drupal_get_path('module', 'landportal_profile').'/views';
+  $files = file_scan_directory($path, '/\.inc$/');
+  foreach ($files as $filepath => $file) {
+    include_once $filepath;
+    $export[$view->name] = $view;
+  }
+  return $export;
+}
+
+function landportal_profile_menu() {
+  $items['admin/people/profiles/public'] = array(
+    'title' => 'Profile: public',
+    'type' => MENU_LOCAL_ACTION,
+    'access arguments' => array('administer users'),
+    'callback' => 'systems_view_data',
+    'weight' => 10,
+  );
+  return $items;
+}
+
+// use LP frontend theme for user and profile stuff
+// (treat following URL as non-admin path
+function landportal_profile_admin_paths_alter(&$paths) {
+  $paths['user/*'] = FALSE;
+  $paths['admin/people/create'] = FALSE;
+  $paths['admin/people/profiles/add/*'] = FALSE;
+}
+
+
+// Move Drupal user account fields to LP admin account field group
+function landportal_profile_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id != 'user_profile_form' && $form_id != 'user_register_form') {
+    return ;
+  }
+  // Pick LP admin account field_group
+  $admin_grp = $form['#groups']['group_admin_account'];
+  // Assign following fields to this group
+  foreach (array('roles', 'status', 'notify') as $field) {
+    $form[$field] = $form['account'][$field];
+    unset($form['account'][$field]);
+    $form['#group_children'][$field] = 'group_admin_account';
+    $admin_grp->children[] = $field;
+  }
+  // Re-assign admin group
+  $form['#groups']['group_admin_account'] = $admin_grp;
+  //dpm($form, $form_id);
+}
+
+
+
+
+
+/* function landportal_profile_profile2_view($profile, $view_mode, $langcode) { */
+/*   if (! trim($profile->label) ) { */
+/*     dsm(time() . ' :: landportal_profile_profile2_view #' . $profile->uid); */
+/*     $profile->p2_view = TRUE; */
+/*     $profile->content['field_firstname'] = array( */
+/*       '#markup' => 'toto', */
+/*       '#format' => null, */
+/*     ); */
+/*     dpm($profile, 'p2view'); */
+/*   } */
+/* /\*   //$profile->content['#content_attributes'] = 'stuff'; *\/ */
+/* /\*   // Prevent profile2.tpl.php to output the profile name when showing a teaser *\/ */
+/* /\*   if (! trim($profile->label) ) { *\/ */
+/* /\*     $profile->label = '4242 - 4242'; *\/ */
+/* /\*     $profile->field_firstname = array( *\/ */
+/* /\*       LANGUAGE_NONE => array(array('value' => 'toto')) *\/ */
+/* /\*     ); *\/ */
+/* /\*     $profile->field_lastname = array( *\/ */
+/* /\*       LANGUAGE_NONE => array(array('value' => 'tata')) *\/ */
+/* /\*     ); *\/ */
+    
+/* /\*     //$profile->entity_view_prepared = FALSE; *\/ */
+/* /\*   } *\/ */
+/* } */
+
+
+
+//
+function landportal_profile_profile2_view_alter(&$build) {
+  if ($build['#bundle'] != 'main') return;
+  $profile = $build['#entity'];
+  // Prevent profile2.tpl.php to output the profile name when showing a teaser
+  if ($build['#view_mode'] == 'teaser') {
+    $build['#page'] = -1;
+    $build['#prefix'] = '<a href="'. $profile->url() .'">';
+    $build['#suffix'] = '</a>';
+  }
+
+  if (!trim($profile->label)) {
+    //dsm(time() . ' :: landportal_profile_profile2_view_alter #' . $profile->uid);
+    $puser = user_load($profile->uid);
+    $build['field_lastname'] = array(
+      '#markup' => $puser->name,
+      '#format' => null,
+    );
+    /* dpm($build, 'build'); */
+    /* dpm($build['#entity'], 'build entity'); */
+  }
+  //$build['#post_render'][] = 'landportal_profile_profile2_post_render';
+}
+/* function landportal_profile_profile2_post_render($html) { */
+/*   dsm(time() . ' :: landportal_profile_profile2_post_render'); */
+/*   return $html; */
+/* } */
+
+/* // We never call profile2 page / template directly(?) */
+/* function landportal_profile_preprocess_profile2(&$profile) { */
+/*   dsm(time() . ' :: landportal_profile_preprocess_profile2'); */
+/* /\*     $profile->field_firstname = array( *\/ */
+/* /\*       LANGUAGE_NONE => array(array('value' => 'toto')) *\/ */
+/* /\*     ); *\/ */
+/* /\*     $profile->field_lastname = array( *\/ */
+/* /\*       LANGUAGE_NONE => array(array('value' => 'tata')) *\/ */
+/* /\*     ); *\/ */
+/*   $profile['elements']['#prefix'] = 'oOo'; */
+/*   $profile['elements']['#suffix'] = 'aAa'; */
+/*   dpm($profile, 'p2'); */
+/* } */
+
+
+// Only when processing a user account / profile(?)
+// Display user profiles as container (not profile-category).
+//   fix profile anchor id to be unique (with profile ID) - useful when showing more than one profile
+//   add view_mode ass to profile2 wrapper div
+function landportal_profile_preprocess_user_profile(&$variables) {
+  //dsm(time() . ' :: landportal_profile_preprocess_user_profile #' . $variables['elements']['#account']->uid);
+  // Avoid profile-category
+  if ($main = $variables['user_profile']['profile_main']) {
+    $profiles = $main['view']['profile2'];
+    $pid = array_keys($profiles)[0];
+    $variables['user_profile']['profile_main']['#type'] = 'container';
+    $variables['user_profile']['profile_main']['#title'] = FALSE;
+    $variables['user_profile']['profile_main']['#prefix'] = '<a id="profile-' . $pid . '"></a>';
+    $variables['user_profile']['profile_main']['#attributes']['class'] = $profiles[$pid]['#view_mode'];
+    /* if ($profiles[$pid]['#view_mode'] == 'teaser') { */
+    /*   // Prevent profile2.tpl.php to output the profile name when showing a teaser */
+    /*   $variables['user_profile']['profile_main']['view']['profile2'][$pid]['#page'] = '-1'; */
+    /* } */
+    //$profiles[$pid]
+
+    // DEVEL
+    /* $e = $profiles[$pid]['#entity']; */
+    /* $e->preprocess_user = TRUE; */
+    /* if (!trim($e->label)) { */
+    /*   dpm($profiles[$pid], 'pub profile #' . $pid . ' / ' . $e->label); */
+    /*   dpm($e, 'pub entity #' . $pid . ' / ' . $e->label); */
+
+    /*   $u = user_load($e->uid); */
+    /*   dsm('NO LABEL for #' .$e->uid . ' / ' . $u->name . ' : P#' . $pid ); */
+    /*   dpm($variables, 'NO LABEL'); */
+    /* } */
+  /* } else { */
+  /*   dpm($variables, 'NO PROFILE'); */
+  }
+  //dpm($variables, 'vars');
+}
+
+function landportal_profile_preprocess_user_profile_category(&$variables) {
+  // Suppress profile-category titles (Work , Public profiles, etc...)
+  $variables['title'] = FALSE;
+  /* dpm($variables, 'upc 421'); */
+}
+
+
+//
+// DEVEL
+//
+/* function landportal_profile_entity_view_alter(&$build, $type) { */
+/* //function landportal_profile_entity_view($entity, $type, $view_mode, $langcode) { */
+/*   if ($type == 'profile2' && $build['#bundle'] == 'main') { */
+/*     //dpm($entity, $type . ' / ' .$view_mode); */
+/*     $build['#classes'] = 'teas'; */
+/*     dpm($build, 'vbuild'); */
+/*   } */
+/*   //$variables['classes'][] = 'profile-' . $variables['#view_mode']; */
+/* } */
+
+/* function landportal_profile_preprocess_profile2(&$variables) { */
+/*   dpm($variables, 'PP2'); */
+/* } */
+/* function landportal_profile_preprocess_entity_profile2(&$variables) { */
+/*   dpm($variables, 'PP2'); */
+/* } */
+/* function landportal_profile_preprocess_profile2_entity(&$variables) { */
+/*   dpm($variables, 'PP2'); */
+/* } */
+
+/* function landportal_profile_node_view($node, $view_mode, $langcode) { */
+/*   dpm($node); */
+/* } */
