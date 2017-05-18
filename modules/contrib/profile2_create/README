@@ -1,1 +1,3 @@
 From: git://git.drupal.org/sandbox/guillaumev/2039905.git
+
+Require an additionnal patch to  rename profile2_menu to profile2_create_menu

@@ -10,7 +10,7 @@ function profile2_create_entity_info_alter(&$entity_info) {
   $entity_info['profile2']['uri callback'] = 'profile2_create_uri';
 }
 
-function profile2_menu() {
+function profile2_create_menu() {
   $items = array();
 
   foreach (profile2_get_types() as $type_name => $type) {
