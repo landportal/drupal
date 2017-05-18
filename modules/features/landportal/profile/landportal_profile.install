@@ -14,7 +14,7 @@ function landportal_profile_update_7200() {
 
   $sql = "SELECT 'profile2', 'main', 0, pid, pid, 'und', 0, picture, '', '', 0, 0"
     . " FROM users u JOIN profile p ON u.uid=p.uid LEFT OUTER JOIN field_data_field_image i ON p.pid=i.entity_id"
-    . " WHERE picture !=0 AND field_image_fid IS NULL;"
+    . " WHERE picture !=0 AND field_image_fid IS NULL"
     ;
   $id = db_query('INSERT INTO field_data_field_image (' . $sql . ')');
   $id_rev = db_query('INSERT INTO field_revision_field_image (' . $sql . ')');
