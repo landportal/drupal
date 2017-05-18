@@ -52,6 +52,10 @@ projects:
     version: "1.x-dev"
     patch:
       - "https://www.drupal.org/files/issues/og_webform_api2-1946432-30.patch"
+  # profile2_create:
+  #   download:
+  #     type: "git"
+  #     url: "git://git.drupal.org/sandbox/guillaumev/2039905.git profile2_create"
   rdfx:
     download:
       type: "git"
