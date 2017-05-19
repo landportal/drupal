@@ -39,22 +39,13 @@ function landbook_help($path, $arg) {
   }
 }
 
-// TMP? 
+// TODO: Should be replaced by landportal_taxonomy_country_term_by_iso
+//  update functions using term->tid
 function landbook_get_region_iso($iso){
   $tid = db_select('field_data_field_iso3', 't')
     ->fields('t', array('entity_id'))
     ->condition('t.field_iso3_value', $iso)
     ->condition('t.bundle', 'regions')
-    ->execute()
-    ->fetchField();
-  return $tid;
-}
-
-function landbook_get_country_iso($iso){
-  $tid = db_select('field_data_field_iso3', 't')
-    ->fields('t', array('entity_id'))
-    ->condition('t.field_iso3_value', $iso)
-    ->condition('t.bundle', 'countries')
     ->execute()
     ->fetchField();
   return $tid;
