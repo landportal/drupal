@@ -25,7 +25,8 @@ function landportal_profile_field_group_info() {
     'children' => array(
       0 => 'field_link',
       1 => 'field_interests',
-      2 => 'group_topics_regions',
+      2 => 'field_email',
+      3 => 'group_topics_regions',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -130,6 +131,39 @@ function landportal_profile_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|profile2|main|default';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'profile2';
+  $field_group->bundle = 'main';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Details',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_location',
+      1 => 'field_link',
+      2 => 'field_email',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-details field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_details|profile2|main|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_details|profile2|main|full';
   $field_group->group_name = 'group_details';
   $field_group->entity_type = 'profile2';
@@ -142,6 +176,7 @@ function landportal_profile_field_group_info() {
     'children' => array(
       0 => 'field_location',
       1 => 'field_link',
+      2 => 'field_email',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -158,6 +193,110 @@ function landportal_profile_field_group_info() {
     ),
   );
   $field_groups['group_details|profile2|main|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_landvoc|profile2|main|default';
+  $field_group->group_name = 'group_landvoc';
+  $field_group->entity_type = 'profile2';
+  $field_group->bundle = 'main';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_topics_regions';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_related_topics',
+      1 => 'field_related_domains',
+      2 => 'field_related_themes',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-landvoc field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_landvoc|profile2|main|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_landvoc|profile2|main|form';
+  $field_group->group_name = 'group_landvoc';
+  $field_group->entity_type = 'profile2';
+  $field_group->bundle = 'main';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_topics_regions';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_related_topics',
+      1 => 'field_related_domains',
+      2 => 'field_related_themes',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-landvoc',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_landvoc|profile2|main|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_landvoc|profile2|main|full';
+  $field_group->group_name = 'group_landvoc';
+  $field_group->entity_type = 'profile2';
+  $field_group->bundle = 'main';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_topics_regions';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_related_topics',
+      1 => 'field_related_domains',
+      2 => 'field_related_themes',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-landvoc',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_landvoc|profile2|main|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -302,8 +441,8 @@ function landportal_profile_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'group_about',
-      1 => 'group_profile',
-      2 => 'group_location',
+      1 => 'group_location',
+      2 => 'group_profile',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -417,9 +556,9 @@ function landportal_profile_field_group_info() {
     'label' => 'Settings',
     'weight' => '2',
     'children' => array(
-      0 => 'group_lists',
+      0 => 'group_account',
       1 => 'group_work',
-      2 => 'group_account',
+      2 => 'group_lists',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -436,6 +575,38 @@ function landportal_profile_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_topics_regions|profile2|main|default';
+  $field_group->group_name = 'group_topics_regions';
+  $field_group->entity_type = 'profile2';
+  $field_group->bundle = 'main';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Topics and Regions',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_geographical_focus',
+      1 => 'group_landvoc',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-topics-regions field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_topics_regions|profile2|main|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_topics_regions|profile2|main|form';
   $field_group->group_name = 'group_topics_regions';
   $field_group->entity_type = 'profile2';
@@ -444,16 +615,16 @@ function landportal_profile_field_group_info() {
   $field_group->parent_name = 'group_about';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '6',
+    'weight' => '4',
     'children' => array(
-      0 => 'field_related_topics',
-      1 => 'field_geographical_focus',
+      0 => 'field_geographical_focus',
+      1 => 'group_landvoc',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'label' => 'Topics and Regions',
       'instance_settings' => array(
-        'required_fields' => 1,
+        'required_fields' => 0,
         'id' => '',
         'classes' => 'group-topics-regions field-group-fieldset',
         'description' => '',
@@ -476,8 +647,8 @@ function landportal_profile_field_group_info() {
     'label' => 'Topics and Regions',
     'weight' => '5',
     'children' => array(
-      0 => 'field_related_topics',
-      1 => 'field_geographical_focus',
+      0 => 'field_geographical_focus',
+      1 => 'group_landvoc',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -509,7 +680,7 @@ function landportal_profile_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'og_user_node',
-      1 => 'profile_work_profile',
+      1 => 'profile_work_profile'
     ),
     'format_type' => 'htab',
     'format_settings' => array(
