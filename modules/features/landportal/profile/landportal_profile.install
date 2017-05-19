@@ -12,7 +12,7 @@ function landportal_profile_update_7200() {
     ->condition('name', 'landportal_profile', '=')
     ->execute();
 
-  $sql = "SELECT 'profile2', 'main', 0, pid, pid, 'und', 0, picture, '', '', '', ''"
+  $sql = "SELECT 'profile2', 'main', 0, pid, pid, 'und', 0, picture, '', '', NULL, NULL"
     . " FROM users u JOIN profile p ON u.uid=p.uid LEFT OUTER JOIN field_data_field_image i ON p.pid=i.entity_id"
     . " WHERE picture !=0 AND field_image_fid IS NULL"
     ;
