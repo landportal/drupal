@@ -554,7 +554,7 @@ $handler = $view->new_display('block', 'Blogs', 'blogs');
 $handler->display->display_options['enabled'] = FALSE;
 
 /* Display: Related */
-$handler = $view->new_display('block', 'Related', 'block_1');
+$handler = $view->new_display('block', 'Related', 'related');
 $handler->display->display_options['display_description'] = 'Content related to a PP';
 $handler->display->display_options['defaults']['use_ajax'] = FALSE;
 $handler->display->display_options['use_ajax'] = TRUE;

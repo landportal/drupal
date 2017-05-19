@@ -26,6 +26,14 @@ function landportal_partners_views_default_views() {
     return $export;
 }
 
+function landportal_partners_views_post_render(&$view, &$output, &$cache) {
+  if ( ! ($view->name == 'partners_content' && $view->current_display == 'related') ) return;
+  $jsnew = "<script>(function($) { $(document).ready(function() {
+  $('.view-id-partners_content.view-display-id-related article a[href]').attr({ target: '_blank' })
+}); }(jQuery));</script>";
+  $output .= $jsnew;
+}
+
 // Override CKeditor JS
 function landportal_partners_ckeditor_settings_alter(&$settings, $context) {
   /* global $node, $page; */
