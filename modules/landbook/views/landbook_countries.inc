@@ -169,17 +169,18 @@ $handler->display->display_options['fields']['rendered_entity']['display'] = 'vi
 $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
-/* Contextual filter: Taxonomy term: ISO3 (field_iso3) */
-$handler->display->display_options['arguments']['field_iso3_value']['id'] = 'field_iso3_value';
-$handler->display->display_options['arguments']['field_iso3_value']['table'] = 'field_data_field_iso3';
-$handler->display->display_options['arguments']['field_iso3_value']['field'] = 'field_iso3_value';
-$handler->display->display_options['arguments']['field_iso3_value']['default_action'] = 'not found';
-$handler->display->display_options['arguments']['field_iso3_value']['default_argument_type'] = 'raw';
-$handler->display->display_options['arguments']['field_iso3_value']['default_argument_options']['index'] = '0';
-$handler->display->display_options['arguments']['field_iso3_value']['summary']['number_of_records'] = '0';
-$handler->display->display_options['arguments']['field_iso3_value']['summary']['format'] = 'default_summary';
-$handler->display->display_options['arguments']['field_iso3_value']['summary_options']['items_per_page'] = '25';
-$handler->display->display_options['arguments']['field_iso3_value']['limit'] = '0';
+/* Contextual filter: Taxonomy term: Term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
+$handler->display->display_options['arguments']['tid']['title_enable'] = TRUE;
+$handler->display->display_options['arguments']['tid']['title'] = '%1';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Taxonomy vocabulary: Machine name */
@@ -251,13 +252,12 @@ $handler->display->display_options['fields']['name_field']['element_default_clas
 $handler->display->display_options['fields']['name_field']['type'] = 'text_plain';
 $handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
-/* Contextual filter: Taxonomy term: ISO3 (field_iso3) */
-$handler->display->display_options['arguments']['field_iso3_value']['id'] = 'field_iso3_value';
-$handler->display->display_options['arguments']['field_iso3_value']['table'] = 'field_data_field_iso3';
-$handler->display->display_options['arguments']['field_iso3_value']['field'] = 'field_iso3_value';
-$handler->display->display_options['arguments']['field_iso3_value']['default_action'] = 'empty';
-$handler->display->display_options['arguments']['field_iso3_value']['default_argument_type'] = 'fixed';
-$handler->display->display_options['arguments']['field_iso3_value']['summary']['number_of_records'] = '0';
-$handler->display->display_options['arguments']['field_iso3_value']['summary']['format'] = 'default_summary';
-$handler->display->display_options['arguments']['field_iso3_value']['summary_options']['items_per_page'] = '25';
-$handler->display->display_options['arguments']['field_iso3_value']['limit'] = '0';
+/* Contextual filter: Taxonomy term: Term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+
