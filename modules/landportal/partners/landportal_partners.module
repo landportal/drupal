@@ -12,17 +12,19 @@ function landportal_partners_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
+
 /**
  * Implements hook_views_default_views().
  */
 function landportal_partners_views_default_views() {
     $export = array();
-    include 'views/partners.inc';
-    $export[$view->name] = $view;
-    include 'views/partners_content.inc';
-    $export[$view->name] = $view;
-    include 'views/partners_wrapper.inc';
-    $export[$view->name] = $view;
+
+    $path = drupal_get_path('module', 'landportal_partners').'/views';
+    $files = file_scan_directory($path, '/\.inc$/');
+    foreach ($files as $filepath => $file) {
+      include_once $filepath;
+      $export[$view->name] = $view;
+    }
     return $export;
 }
 
