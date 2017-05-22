@@ -171,10 +171,10 @@ function ct_blog_post_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'full_width',
+          'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'hidden',
