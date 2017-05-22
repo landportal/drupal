@@ -986,6 +986,21 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-odm_url-rewrite';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'ODM url';
+$feeds_tamper->plugin_id = 'rewrite';
+$feeds_tamper->settings = array(
+  'text' => 'https://opendevelopmentmekong.net/dataset/?id=[jsonpath_parser:1]',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Rewrite';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_library_importer-blank_source_1-copy';
 $feeds_tamper->importer = 'odm_library_importer';
 $feeds_tamper->source = 'Blank source 1';
@@ -2774,21 +2789,6 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Set value or default value';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'odm_library_importer-odm_url-rewrite';
-$feeds_tamper->importer = 'odm_library_importer';
-$feeds_tamper->source = 'ODM url';
-$feeds_tamper->plugin_id = 'rewrite';
-$feeds_tamper->settings = array(
-  'text' => 'https://data.opendevelopmentmekong.net/dataset/[jsonpath_parser:1]',
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Rewrite';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
