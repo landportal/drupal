@@ -117,14 +117,6 @@ $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'node';
 $handler->display->display_options['sorts']['created']['field'] = 'created';
 $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-/* Contextual filter: OG membership: Group ID */
-$handler->display->display_options['arguments']['gid']['id'] = 'gid';
-$handler->display->display_options['arguments']['gid']['table'] = 'og_membership';
-$handler->display->display_options['arguments']['gid']['field'] = 'gid';
-$handler->display->display_options['arguments']['gid']['default_argument_type'] = 'fixed';
-$handler->display->display_options['arguments']['gid']['summary']['number_of_records'] = '0';
-$handler->display->display_options['arguments']['gid']['summary']['format'] = 'default_summary';
-$handler->display->display_options['arguments']['gid']['summary_options']['items_per_page'] = '25';
 /* Filter criterion: Content: Published */
 $handler->display->display_options['filters']['status']['id'] = 'status';
 $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -142,3 +134,28 @@ $handler->display->display_options['filters']['type']['value'] = array(
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
+
+/* Display: MLIKE */
+$handler = $view->new_display('block', 'MLIKE', 'mlike');
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'partners_page' => 'partners_page',
+);
+/* Filter criterion: Content: Groups audience (og_group_ref) */
+$handler->display->display_options['filters']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
+$handler->display->display_options['filters']['og_group_ref_target_id']['table'] = 'og_membership';
+$handler->display->display_options['filters']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
+$handler->display->display_options['filters']['og_group_ref_target_id']['value']['value'] = '41826';
+
