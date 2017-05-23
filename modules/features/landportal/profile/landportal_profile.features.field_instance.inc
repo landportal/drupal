@@ -1040,9 +1040,15 @@ function landportal_profile_field_default_field_instances() {
         'interest_groups' => array(
           '7f9a13b9f3' => array(
             '8e4c2fcd12' => 0,
-            '14b097b40a' => 0,
+            '14b097b40a' => '14b097b40a',
             'cae021e16e' => 0,
             'f474c3eaa3' => 0,
+          ),
+          '11d58e9870' => '18b3bcdea3',
+          'c1340ebfba' => array(
+            '7beb2de1f2' => 0,
+            '8a7dbaf285' => '8a7dbaf285',
+            'a0e1a92145' => 0,
           ),
         ),
         'is_default' => TRUE,
