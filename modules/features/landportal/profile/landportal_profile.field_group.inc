@@ -680,7 +680,7 @@ function landportal_profile_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'og_user_node',
-      1 => 'profile_work_profile'
+      1 => 'profile_work_profile',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
