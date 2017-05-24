@@ -45,7 +45,7 @@ function landportal_partners_block_view($delta = '') {
     switch ($delta) {
     default:
       $str = landportal_partners_block_body($delta);
-        $block['subject'] = '<none>';
+        $block['subject'] = '';
         $block['content'] = $str;
         break;
     }
