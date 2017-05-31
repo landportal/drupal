@@ -3,17 +3,17 @@
 /**
  * Implements hook_feeds_importer_default().
  */
-function faolex_csv_importer_feeds_importer_default() {
+function faodocrep_csv_importer_feeds_importer_default() {
     $export = array();
 
 /******/
 $feeds_importer = new stdClass();
 $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
 $feeds_importer->api_version = 1;
-$feeds_importer->id = 'faolex_csv_importer';
+$feeds_importer->id = 'faodocrep_csv_importer';
 $feeds_importer->config = array(
-  'name' => 'FAOLEX - CSV importer',
-  'description' => 'Import FAOLEX Land Library Resources from a CSV file',
+  'name' => 'FAOdocrep - CSV importer',
+  'description' => 'Import FAO Document Repository Land Library Resources from a CSV file',
   'fetcher' => array(
     'plugin_key' => 'FeedsFileFetcher',
     'config' => array(
@@ -203,7 +203,6 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
-
 
 
 /*****/

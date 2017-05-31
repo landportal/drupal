@@ -445,7 +445,7 @@ $handler->display->display_options['fields']['field_doc_description']['table'] =
 $handler->display->display_options['fields']['field_doc_description']['field'] = 'field_doc_description';
 $handler->display->display_options['fields']['field_doc_description']['alter']['max_length'] = '200';
 $handler->display->display_options['fields']['field_doc_description']['alter']['trim'] = TRUE;
-/* Field: Content: Author(s), editor(s), contributor(s) */
+/* Field: Content: Author(s) */
 $handler->display->display_options['fields']['field_doc_people']['id'] = 'field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['table'] = 'field_data_field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['field'] = 'field_doc_people';
@@ -576,6 +576,8 @@ $handler->display->display_options['fields']['field_doc_copyrights_statement']['
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['alter']['alter_text'] = TRUE;
 $handler->display->display_options['fields']['field_doc_copyrights_statement']['alter']['nl2br'] = TRUE;
+$handler->display->display_options['fields']['field_doc_copyrights_statement']['alter']['max_length'] = '50';
+$handler->display->display_options['fields']['field_doc_copyrights_statement']['alter']['trim'] = TRUE;
 /* Field: Global: Custom text */
 $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
 $handler->display->display_options['fields']['nothing_1']['table'] = 'views';

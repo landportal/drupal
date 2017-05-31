@@ -17,7 +17,7 @@ $context->conditions = array(
   ),
   'path' => array(
     'values' => array(
-      'partners/mlike*' => 'partners/mlike*',
+      'partners/mlike' => 'partners/mlike',
     ),
   ),
 );

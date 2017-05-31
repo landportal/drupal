@@ -97,7 +97,7 @@ function landportal_profile_field_default_field_instances() {
     ),
     'entity_type' => 'profile2',
     'field_name' => 'field_email',
-    'label' => 'Email',
+    'label' => 'Public email',
     'pcp_tag' => 0,
     'required' => 0,
     'settings' => array(
@@ -558,14 +558,10 @@ function landportal_profile_field_default_field_instances() {
         'weight' => 9,
       ),
       'full' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => TRUE,
-          'use_content_language' => TRUE,
-          'view_mode' => 'default',
-        ),
-        'type' => 'entityreference_entity_view',
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 0,
       ),
       'listing' => array(
@@ -628,14 +624,10 @@ function landportal_profile_field_default_field_instances() {
         'weight' => 10,
       ),
       'full' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => TRUE,
-          'use_content_language' => TRUE,
-          'view_mode' => 'default',
-        ),
-        'type' => 'entityreference_entity_view',
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
       'listing' => array(
@@ -1112,7 +1104,6 @@ function landportal_profile_field_default_field_instances() {
   t('Check this if you want to hide your public profile from our people listing');
   t('Date');
   t('Description');
-  t('Email');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Fill in this field if you want to make your email public.');
   t('First name');
@@ -1124,6 +1115,7 @@ function landportal_profile_field_default_field_instances() {
   t('Overarching categories');
   t('Picture');
   t('Position');
+  t('Public email');
   t('Related concepts');
   t('Tell us where you are based.');
   t('Themes');

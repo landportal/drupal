@@ -17,7 +17,7 @@ function profile2_create_add_page() {
   // Bypass the node/add listing if only one content type is available.
   if (count($content) == 1) {
     $item = array_shift($content);
-    drupal_goto($item['href']);
+    drupal_goto(array($item['href']));
   }
   return theme('profile2_create_add_list', array('content' => $content));
 }
