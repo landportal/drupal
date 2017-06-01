@@ -32,7 +32,7 @@ function ct_organization_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -88,7 +88,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -172,7 +172,7 @@ function ct_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 15,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -225,7 +225,7 @@ function ct_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 12,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -276,7 +276,7 @@ function ct_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -406,7 +406,7 @@ function ct_organization_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -478,7 +478,7 @@ function ct_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 17,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -548,7 +548,7 @@ function ct_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 11,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -597,7 +597,7 @@ function ct_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 16,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -832,7 +832,7 @@ function ct_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 14,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -911,7 +911,7 @@ function ct_organization_field_default_field_instances() {
           'title_style' => 'h2',
         ),
         'type' => 'title_linked',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',

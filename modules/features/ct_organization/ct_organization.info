@@ -30,6 +30,7 @@ features[field_group][] = group_about|node|organization|form
 features[field_group][] = group_admin|node|organization|form
 features[field_group][] = group_details|node|organization|default
 features[field_group][] = group_header|node|organization|default
+features[field_group][] = group_header|node|organization|listing
 features[field_group][] = group_header|node|organization|teaser
 features[field_group][] = group_landvoc|node|organization|default
 features[field_group][] = group_landvoc|node|organization|form

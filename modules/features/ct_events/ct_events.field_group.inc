@@ -84,7 +84,7 @@ function ct_events_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'event';
   $field_group->mode = 'listing';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_header';
   $field_group->data = array(
     'label' => '',
     'weight' => '3',
@@ -189,6 +189,7 @@ function ct_events_field_group_info() {
     'children' => array(
       0 => 'field_image',
       1 => 'title_field',
+      2 => 'group_details',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(

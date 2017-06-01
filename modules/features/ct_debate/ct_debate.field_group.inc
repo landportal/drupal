@@ -83,12 +83,13 @@ function ct_debate_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'debate';
   $field_group->mode = 'listing';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_header';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(
       0 => 'field_date',
+      1 => 'field_status',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -187,8 +188,8 @@ function ct_debate_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_image',
-      1 => 'field_status',
-      2 => 'title_field',
+      1 => 'title_field',
+      2 => 'group_details',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(

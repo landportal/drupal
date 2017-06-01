@@ -700,7 +700,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -760,7 +760,7 @@ function ct_debate_field_default_field_instances() {
           'title_style' => 'h3',
         ),
         'type' => 'title_linked',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
