@@ -2,6 +2,33 @@
 
 
 /**
+ * Disable twitter block
+ */
+function landportal_blocks_update_7204() {
+  // Reset Blocks
+  $blocks = array();
+
+  $block = array(
+    'keys' => array(
+      'module' => 'landportal_blocks',
+      'delta'  => 'lp_twitter',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'region' => -1,
+    )
+  );
+  array_push($blocks, $block);
+
+  foreach($blocks as $block){
+    db_merge('block')
+      ->key($block['keys'])
+      ->fields($block['values'])
+      ->execute();
+  }
+}
+
+/**
  * Re-enable landportal text footer block
  */
 function landportal_blocks_update_7203() {
