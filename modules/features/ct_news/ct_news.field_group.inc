@@ -26,8 +26,6 @@ function ct_news_field_group_info() {
       0 => 'field_file',
       1 => 'field_link',
       2 => 'field_language',
-      3 => 'field_doc_people',
-      4 => 'field_pubdate',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -124,7 +122,9 @@ function ct_news_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_image',
-      1 => 'title_field',
+      1 => 'field_doc_people',
+      2 => 'field_pubdate',
+      3 => 'title_field',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(

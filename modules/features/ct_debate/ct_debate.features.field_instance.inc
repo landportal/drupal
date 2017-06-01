@@ -56,7 +56,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -146,7 +146,7 @@ function ct_debate_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -230,7 +230,7 @@ function ct_debate_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -256,7 +256,7 @@ function ct_debate_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -297,11 +297,11 @@ function ct_debate_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
@@ -368,7 +368,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -430,7 +430,7 @@ function ct_debate_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -693,7 +693,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 1,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -713,7 +713,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 7,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -771,7 +771,7 @@ function ct_debate_field_default_field_instances() {
           'title_style' => 'h3',
         ),
         'type' => 'title_linked',
-        'weight' => 2,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',

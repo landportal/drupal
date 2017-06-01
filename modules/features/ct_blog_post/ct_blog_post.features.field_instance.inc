@@ -174,7 +174,7 @@ function ct_blog_post_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',

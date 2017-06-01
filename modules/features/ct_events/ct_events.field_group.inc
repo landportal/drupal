@@ -18,23 +18,20 @@ function ct_events_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'event';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_header';
   $field_group->data = array(
     'label' => '',
-    'weight' => '1',
+    'weight' => '7',
     'children' => array(
       0 => 'field_date',
-      1 => 'field_contact',
-      2 => 'field_file',
-      3 => 'field_link',
-      4 => 'locations',
+      1 => 'locations',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-details text-center',
+        'classes' => 'group-details',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -120,7 +117,7 @@ function ct_events_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'event';
   $field_group->mode = 'teaser';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_header';
   $field_group->data = array(
     'label' => '',
     'weight' => '3',
@@ -160,6 +157,7 @@ function ct_events_field_group_info() {
     'children' => array(
       0 => 'field_image',
       1 => 'title_field',
+      2 => 'group_details',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -222,6 +220,7 @@ function ct_events_field_group_info() {
     'children' => array(
       0 => 'field_image',
       1 => 'title_field',
+      2 => 'group_details',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -389,7 +388,7 @@ function ct_events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',

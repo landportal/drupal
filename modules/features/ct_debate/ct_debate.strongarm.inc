@@ -151,11 +151,11 @@ function ct_debate_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '5',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '7',
+            'weight' => '9',
             'visible' => FALSE,
           ),
           'listing' => array(
