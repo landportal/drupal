@@ -159,7 +159,7 @@ function ct_debate_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '8',
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),
