@@ -14,7 +14,7 @@
 /** New Land Debate overview blocks
  *  for News and Debates pages
  */
-function landdebate_update_7202() {
+function landdebate_update_7200() {
 
   // Reset Blocks
   $blocks = array();
