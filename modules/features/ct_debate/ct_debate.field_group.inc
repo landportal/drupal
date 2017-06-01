@@ -122,7 +122,6 @@ function ct_debate_field_group_info() {
     'children' => array(
       0 => 'field_date',
       1 => 'field_status',
-      2 => 'field_facilitators',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -485,7 +484,7 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '4',
+    'weight' => '2',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',

@@ -155,7 +155,7 @@ function ct_debate_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '9',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'listing' => array(
