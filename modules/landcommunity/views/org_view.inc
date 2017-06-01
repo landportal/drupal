@@ -1,10 +1,4 @@
 <?php
-/**
- * LP Organizations view
- *
- * Copy/paste from:
- * http://landportal.info/admin/structure/views/view/organizations_overview/export
- */
 
 $view = new view();
 $view->name = 'org_view';
@@ -19,7 +13,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['title'] = 'Publishers & Data providers';
-$handler->display->display_options['css_class'] = 'view-grid view-with-filters';
+$handler->display->display_options['css_class'] = 'view-grid-4';
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
@@ -259,10 +253,9 @@ $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
 $handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
 
-/* Display: Block-Land Book sources */
-$handler = $view->new_display('block', 'Block-Land Book sources', 'block_lb_sources');
-$handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'view-grid';
+/* Display: Book sources */
+$handler = $view->new_display('block', 'Book sources', 'block_lb_sources');
+$handler->display->display_options['display_description'] = 'Land Book sources overview';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
@@ -320,10 +313,11 @@ $handler->display->display_options['filters']['nid_entityreference_filter']['tab
 $handler->display->display_options['filters']['nid_entityreference_filter']['field'] = 'nid_entityreference_filter';
 $handler->display->display_options['filters']['nid_entityreference_filter']['reference_display'] = 'organizations:ref_book';
 
-/* Display: Block-Land Debate Community */
-$handler = $view->new_display('block', 'Block-Land Debate Community', 'block_ld_community');
+/* Display: Partners */
+$handler = $view->new_display('block', 'Partners', 'block_ld_community');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Land Portal Community';
+$handler->display->display_options['display_description'] = 'Land Debate community partner orgs';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
@@ -401,3 +395,4 @@ $handler->display->display_options['filters']['field_organization_relationship_t
 $handler->display->display_options['filters']['field_organization_relationship_tid']['reduce_duplicates'] = TRUE;
 $handler->display->display_options['filters']['field_organization_relationship_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_organization_relationship_tid']['vocabulary'] = 'organization_relation';
+
