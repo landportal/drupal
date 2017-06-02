@@ -100,8 +100,8 @@ function ct_organization_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'title',
         'settings' => array(
-          'title_class' => 'text-center',
-          'title_link' => 'content',
+          'title_class' => '',
+          'title_link' => '',
           'title_style' => 'div',
         ),
         'type' => 'title_linked',
@@ -418,11 +418,11 @@ function ct_organization_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => 'content',
+          'image_link' => '',
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
@@ -919,7 +919,7 @@ function ct_organization_field_default_field_instances() {
         'settings' => array(
           'title_class' => '',
           'title_link' => '',
-          'title_style' => '',
+          'title_style' => 'h3',
         ),
         'type' => 'title_linked',
         'weight' => 2,

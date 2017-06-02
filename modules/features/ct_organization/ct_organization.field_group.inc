@@ -189,11 +189,10 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '0',
+    'weight' => '1',
     'children' => array(
-      0 => 'field_image',
-      1 => 'field_acronym',
-      2 => 'title_field',
+      0 => 'field_acronym',
+      1 => 'title_field',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
