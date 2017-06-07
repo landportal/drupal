@@ -18,31 +18,30 @@ function landportal_mailchimp_field_group_info() {
   $field_group->entity_type = 'user';
   $field_group->bundle = 'user';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_settings';
   $field_group->data = array(
-    'label' => '',
+    'label' => 'Mailing lists',
     'weight' => '6',
     'children' => array(
       0 => 'field_mc_legend',
       1 => 'field_mc_newsletter',
     ),
-    'format_type' => 'div',
+    'format_type' => 'htab',
     'format_settings' => array(
-      'label' => '',
+      'label' => 'Mailing lists',
       'instance_settings' => array(
         'required_fields' => 1,
-        'id' => '',
-        'classes' => 'group-lists',
+        'classes' => '',
         'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'none',
       ),
-      'formatter' => 'open',
+      'formatter' => 'closed',
     ),
   );
   $field_groups['group_lists|user|user|form'] = $field_group;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Mailing lists');
 
   return $field_groups;
 }

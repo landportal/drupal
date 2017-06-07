@@ -1,13 +1,4 @@
 <?php
-/**
- * LP Organizations Reference filters
- *
- * Those MUST be used by other views that require to narrow down
- * organizations lists
- *
- * Copy/paste from:
- * http://landportal.info/admin/structure/views/view/organizations/export
- */
 
 $view = new view();
 $view->name = 'organizations';
@@ -86,7 +77,7 @@ $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'entityreference_style';
 $handler->display->display_options['style_options']['search_fields'] = array(
   'title' => 'title',
-  'field_acronym' => 0,
+  'field_acronym' => 'field_acronym',
 );
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
@@ -226,3 +217,4 @@ $handler->display->display_options['filters']['nid']['group_type'] = 'count';
 $handler->display->display_options['filters']['nid']['operator'] = 'not empty';
 $handler->display->display_options['filters']['nid']['value']['value'] = '0';
 $handler->display->display_options['filters']['nid']['group'] = 2;
+

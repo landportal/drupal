@@ -34,6 +34,16 @@ function ct_organization_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ds_extras_view_modes_organization';
+  $strongarm->value = array(
+    0 => 'default',
+    1 => 'teaser',
+  );
+  $export['ds_extras_view_modes_organization'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__organization';
   $strongarm->value = array(
     'view_modes' => array(
@@ -100,7 +110,7 @@ function ct_organization_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '7',
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
@@ -120,7 +130,7 @@ function ct_organization_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '10',
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),

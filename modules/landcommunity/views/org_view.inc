@@ -1,10 +1,4 @@
 <?php
-/**
- * LP Organizations view
- *
- * Copy/paste from:
- * http://landportal.info/admin/structure/views/view/organizations_overview/export
- */
 
 $view = new view();
 $view->name = 'org_view';
@@ -19,7 +13,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['title'] = 'Publishers & Data providers';
-$handler->display->display_options['css_class'] = 'view-grid view-with-filters';
+$handler->display->display_options['css_class'] = 'view-grid-4';
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
@@ -28,8 +22,6 @@ $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Filter';
 $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
-$handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
-$handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
 $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'full';
 $handler->display->display_options['pager']['options']['items_per_page'] = '24';
@@ -39,8 +31,7 @@ $handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'entity';
-$handler->display->display_options['row_options']['view_mode'] = 'teaser';
+$handler->display->display_options['row_plugin'] = 'landportal_views_wrap';
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -68,17 +59,6 @@ $handler->display->display_options['arguments']['title']['summary_options']['ite
 $handler->display->display_options['arguments']['title']['glossary'] = TRUE;
 $handler->display->display_options['arguments']['title']['limit'] = '1';
 $handler->display->display_options['arguments']['title']['break_phrase'] = TRUE;
-$handler->display->display_options['filter_groups']['groups'] = array(
-  1 => 'AND',
-  2 => 'OR',
-);
-/* Filter criterion: Content: Published */
-$handler->display->display_options['filters']['status']['id'] = 'status';
-$handler->display->display_options['filters']['status']['table'] = 'node';
-$handler->display->display_options['filters']['status']['field'] = 'status';
-$handler->display->display_options['filters']['status']['value'] = 1;
-$handler->display->display_options['filters']['status']['group'] = 1;
-$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -95,7 +75,7 @@ $handler->display->display_options['filters']['title']['operator'] = 'contains';
 $handler->display->display_options['filters']['title']['group'] = 1;
 $handler->display->display_options['filters']['title']['exposed'] = TRUE;
 $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-$handler->display->display_options['filters']['title']['expose']['label'] = 'Name';
+$handler->display->display_options['filters']['title']['expose']['description'] = 'Organization name';
 $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
 $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
 $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
@@ -112,9 +92,10 @@ $handler->display->display_options['filters']['field_organization_type_tid']['fi
 $handler->display->display_options['filters']['field_organization_type_tid']['group'] = 1;
 $handler->display->display_options['filters']['field_organization_type_tid']['exposed'] = TRUE;
 $handler->display->display_options['filters']['field_organization_type_tid']['expose']['operator_id'] = 'field_organization_type_tid_op';
-$handler->display->display_options['filters']['field_organization_type_tid']['expose']['label'] = 'Organization type';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['description'] = 'Type of organization';
 $handler->display->display_options['filters']['field_organization_type_tid']['expose']['operator'] = 'field_organization_type_tid_op';
 $handler->display->display_options['filters']['field_organization_type_tid']['expose']['identifier'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['multiple'] = TRUE;
 $handler->display->display_options['filters']['field_organization_type_tid']['expose']['remember_roles'] = array(
   2 => '2',
   1 => 0,
@@ -122,25 +103,13 @@ $handler->display->display_options['filters']['field_organization_type_tid']['ex
   111903910 => 0,
   30037204 => 0,
 );
-$handler->display->display_options['filters']['field_organization_type_tid']['reduce_duplicates'] = TRUE;
 $handler->display->display_options['filters']['field_organization_type_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_organization_type_tid']['vocabulary'] = 'organization_types';
-/* Filter criterion: Content: Nid (reference filter) */
-$handler->display->display_options['filters']['nid_entityreference_filter']['id'] = 'nid_entityreference_filter';
-$handler->display->display_options['filters']['nid_entityreference_filter']['table'] = 'node';
-$handler->display->display_options['filters']['nid_entityreference_filter']['field'] = 'nid_entityreference_filter';
-$handler->display->display_options['filters']['nid_entityreference_filter']['group'] = 2;
-$handler->display->display_options['filters']['nid_entityreference_filter']['reference_display'] = 'organizations:entityreference_3';
-/* Filter criterion: Content: Nid (reference filter) */
-$handler->display->display_options['filters']['nid_entityreference_filter_1']['id'] = 'nid_entityreference_filter_1';
-$handler->display->display_options['filters']['nid_entityreference_filter_1']['table'] = 'node';
-$handler->display->display_options['filters']['nid_entityreference_filter_1']['field'] = 'nid_entityreference_filter';
-$handler->display->display_options['filters']['nid_entityreference_filter_1']['group'] = 2;
-$handler->display->display_options['filters']['nid_entityreference_filter_1']['reference_display'] = 'organizations:entityreference_4';
 
 /* Display: Alpha filter */
 $handler = $view->new_display('attachment', 'Alpha filter', 'attachment_1');
 $handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['enabled'] = FALSE;
 $handler->display->display_options['defaults']['group_by'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -203,12 +172,11 @@ $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Organizations';
 $handler->display->display_options['path'] = 'organizations';
 
-/* Display: Block-Land Library Featured Providers */
-$handler = $view->new_display('block', 'Block-Land Library Featured Providers', 'llprovider_featured');
+/* Display: Library Featured */
+$handler = $view->new_display('block', 'Library Featured', 'llprovider_featured');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Featured Providers';
-$handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'view-grid';
+$handler->display->display_options['display_description'] = 'Featured organizations  (providers with more than 20 resources)';
 $handler->display->display_options['defaults']['group_by'] = FALSE;
 $handler->display->display_options['group_by'] = TRUE;
 $handler->display->display_options['defaults']['header'] = FALSE;
@@ -250,27 +218,94 @@ $handler->display->display_options['filters']['nid']['group_type'] = 'count';
 $handler->display->display_options['filters']['nid']['operator'] = '>=';
 $handler->display->display_options['filters']['nid']['value']['value'] = '20';
 
-/* Display: Block-Land Library sources */
-$handler = $view->new_display('block', 'Block-Land Library sources', 'block_1');
+/* Display: Library sources */
+$handler = $view->new_display('block', 'Library sources', 'block_1');
+$handler->display->display_options['display_description'] = 'Library provider and publisher orgs';
 $handler->display->display_options['defaults']['header'] = FALSE;
 /* Header: Global: Result summary */
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
 $handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['filter_groups']['groups'] = array(
+  1 => 'AND',
+  2 => 'OR',
+);
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'organization' => 'organization',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Content: Title */
+$handler->display->display_options['filters']['title']['id'] = 'title';
+$handler->display->display_options['filters']['title']['table'] = 'node';
+$handler->display->display_options['filters']['title']['field'] = 'title';
+$handler->display->display_options['filters']['title']['operator'] = 'contains';
+$handler->display->display_options['filters']['title']['group'] = 1;
+$handler->display->display_options['filters']['title']['exposed'] = TRUE;
+$handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
+$handler->display->display_options['filters']['title']['expose']['description'] = 'Organization name';
+$handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
+$handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+$handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+/* Filter criterion: Content: Organization type (field_organization_type) */
+$handler->display->display_options['filters']['field_organization_type_tid']['id'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['table'] = 'field_data_field_organization_type';
+$handler->display->display_options['filters']['field_organization_type_tid']['field'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_organization_type_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['operator_id'] = 'field_organization_type_tid_op';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['description'] = 'Type of organization';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['operator'] = 'field_organization_type_tid_op';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['identifier'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['multiple'] = TRUE;
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_organization_type_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_organization_type_tid']['vocabulary'] = 'organization_types';
+/* Filter criterion: Content: Nid (reference filter) */
+$handler->display->display_options['filters']['nid_entityreference_filter']['id'] = 'nid_entityreference_filter';
+$handler->display->display_options['filters']['nid_entityreference_filter']['table'] = 'node';
+$handler->display->display_options['filters']['nid_entityreference_filter']['field'] = 'nid_entityreference_filter';
+$handler->display->display_options['filters']['nid_entityreference_filter']['group'] = 2;
+$handler->display->display_options['filters']['nid_entityreference_filter']['reference_display'] = 'organizations:entityreference_3';
+/* Filter criterion: Content: Nid (reference filter) */
+$handler->display->display_options['filters']['nid_entityreference_filter_1']['id'] = 'nid_entityreference_filter_1';
+$handler->display->display_options['filters']['nid_entityreference_filter_1']['table'] = 'node';
+$handler->display->display_options['filters']['nid_entityreference_filter_1']['field'] = 'nid_entityreference_filter';
+$handler->display->display_options['filters']['nid_entityreference_filter_1']['group'] = 2;
+$handler->display->display_options['filters']['nid_entityreference_filter_1']['reference_display'] = 'organizations:entityreference_4';
 
-/* Display: Block-Land Book sources */
-$handler = $view->new_display('block', 'Block-Land Book sources', 'block_lb_sources');
-$handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'view-grid';
+/* Display: Book sources */
+$handler = $view->new_display('block', 'Book sources', 'block_lb_sources');
+$handler->display->display_options['display_description'] = 'Land Book sources overview';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['style_options']['uses_fields'] = TRUE;
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
-$handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+$handler->display->display_options['row_options']['inline'] = array(
+  'tid' => 'tid',
+);
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Entity Reference: Referencing entity */
@@ -299,40 +334,6 @@ $handler->display->display_options['fields']['tid']['group_type'] = 'count';
 $handler->display->display_options['fields']['tid']['label'] = 'Datasets';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Content: Published */
-$handler->display->display_options['filters']['status']['id'] = 'status';
-$handler->display->display_options['filters']['status']['table'] = 'node';
-$handler->display->display_options['filters']['status']['field'] = 'status';
-$handler->display->display_options['filters']['status']['value'] = 1;
-$handler->display->display_options['filters']['status']['group'] = 1;
-$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type']['id'] = 'type';
-$handler->display->display_options['filters']['type']['table'] = 'node';
-$handler->display->display_options['filters']['type']['field'] = 'type';
-$handler->display->display_options['filters']['type']['value'] = array(
-  'organization' => 'organization',
-);
-$handler->display->display_options['filters']['type']['group'] = 1;
-/* Filter criterion: Content: Nid (reference filter) */
-$handler->display->display_options['filters']['nid_entityreference_filter']['id'] = 'nid_entityreference_filter';
-$handler->display->display_options['filters']['nid_entityreference_filter']['table'] = 'node';
-$handler->display->display_options['filters']['nid_entityreference_filter']['field'] = 'nid_entityreference_filter';
-$handler->display->display_options['filters']['nid_entityreference_filter']['reference_display'] = 'organizations:ref_book';
-
-/* Display: Block-Land Debate Community */
-$handler = $view->new_display('block', 'Block-Land Debate Community', 'block_ld_community');
-$handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Land Portal Community';
-$handler->display->display_options['defaults']['filter_groups'] = FALSE;
-$handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Content: Published */
-$handler->display->display_options['filters']['status']['id'] = 'status';
-$handler->display->display_options['filters']['status']['table'] = 'node';
-$handler->display->display_options['filters']['status']['field'] = 'status';
-$handler->display->display_options['filters']['status']['value'] = 1;
-$handler->display->display_options['filters']['status']['group'] = 1;
-$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -349,7 +350,7 @@ $handler->display->display_options['filters']['title']['operator'] = 'contains';
 $handler->display->display_options['filters']['title']['group'] = 1;
 $handler->display->display_options['filters']['title']['exposed'] = TRUE;
 $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-$handler->display->display_options['filters']['title']['expose']['label'] = 'Name';
+$handler->display->display_options['filters']['title']['expose']['description'] = 'Organization name';
 $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
 $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
 $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
@@ -366,9 +367,10 @@ $handler->display->display_options['filters']['field_organization_type_tid']['fi
 $handler->display->display_options['filters']['field_organization_type_tid']['group'] = 1;
 $handler->display->display_options['filters']['field_organization_type_tid']['exposed'] = TRUE;
 $handler->display->display_options['filters']['field_organization_type_tid']['expose']['operator_id'] = 'field_organization_type_tid_op';
-$handler->display->display_options['filters']['field_organization_type_tid']['expose']['label'] = 'Organization type';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['description'] = 'Type of organization';
 $handler->display->display_options['filters']['field_organization_type_tid']['expose']['operator'] = 'field_organization_type_tid_op';
 $handler->display->display_options['filters']['field_organization_type_tid']['expose']['identifier'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['multiple'] = TRUE;
 $handler->display->display_options['filters']['field_organization_type_tid']['expose']['remember_roles'] = array(
   2 => '2',
   1 => 0,
@@ -376,9 +378,29 @@ $handler->display->display_options['filters']['field_organization_type_tid']['ex
   111903910 => 0,
   30037204 => 0,
 );
-$handler->display->display_options['filters']['field_organization_type_tid']['reduce_duplicates'] = TRUE;
 $handler->display->display_options['filters']['field_organization_type_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_organization_type_tid']['vocabulary'] = 'organization_types';
+/* Filter criterion: Content: Nid (reference filter) */
+$handler->display->display_options['filters']['nid_entityreference_filter']['id'] = 'nid_entityreference_filter';
+$handler->display->display_options['filters']['nid_entityreference_filter']['table'] = 'node';
+$handler->display->display_options['filters']['nid_entityreference_filter']['field'] = 'nid_entityreference_filter';
+$handler->display->display_options['filters']['nid_entityreference_filter']['reference_display'] = 'organizations:ref_book';
+
+/* Display: Partners */
+$handler = $view->new_display('block', 'Partners', 'block_ld_community');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Land Portal Community';
+$handler->display->display_options['display_description'] = 'Land Debate community partner orgs';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'organization' => 'organization',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
 /* Filter criterion: Content: Organization relationship (field_organization_relationship) */
 $handler->display->display_options['filters']['field_organization_relationship_tid']['id'] = 'field_organization_relationship_tid';
 $handler->display->display_options['filters']['field_organization_relationship_tid']['table'] = 'field_data_field_organization_relationship';
@@ -387,6 +409,7 @@ $handler->display->display_options['filters']['field_organization_relationship_t
   6122 => '6122',
   6119 => '6119',
 );
+$handler->display->display_options['filters']['field_organization_relationship_tid']['group'] = 1;
 $handler->display->display_options['filters']['field_organization_relationship_tid']['expose']['operator_id'] = 'field_organization_relationship_tid_op';
 $handler->display->display_options['filters']['field_organization_relationship_tid']['expose']['label'] = 'Relationship with Land Portal';
 $handler->display->display_options['filters']['field_organization_relationship_tid']['expose']['operator'] = 'field_organization_relationship_tid_op';
@@ -401,3 +424,42 @@ $handler->display->display_options['filters']['field_organization_relationship_t
 $handler->display->display_options['filters']['field_organization_relationship_tid']['reduce_duplicates'] = TRUE;
 $handler->display->display_options['filters']['field_organization_relationship_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_organization_relationship_tid']['vocabulary'] = 'organization_relation';
+/* Filter criterion: Content: Title */
+$handler->display->display_options['filters']['title']['id'] = 'title';
+$handler->display->display_options['filters']['title']['table'] = 'node';
+$handler->display->display_options['filters']['title']['field'] = 'title';
+$handler->display->display_options['filters']['title']['operator'] = 'contains';
+$handler->display->display_options['filters']['title']['group'] = 1;
+$handler->display->display_options['filters']['title']['exposed'] = TRUE;
+$handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
+$handler->display->display_options['filters']['title']['expose']['description'] = 'Organization name';
+$handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
+$handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+$handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+/* Filter criterion: Content: Organization type (field_organization_type) */
+$handler->display->display_options['filters']['field_organization_type_tid']['id'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['table'] = 'field_data_field_organization_type';
+$handler->display->display_options['filters']['field_organization_type_tid']['field'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_organization_type_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['operator_id'] = 'field_organization_type_tid_op';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['description'] = 'Type of organization';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['operator'] = 'field_organization_type_tid_op';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['identifier'] = 'field_organization_type_tid';
+$handler->display->display_options['filters']['field_organization_type_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_organization_type_tid']['reduce_duplicates'] = TRUE;
+$handler->display->display_options['filters']['field_organization_type_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_organization_type_tid']['vocabulary'] = 'organization_types';
+

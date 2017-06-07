@@ -9,6 +9,110 @@
  * Drupal refactoring: Jules <jules@ker.bz>
  */
 
+
+
+/** New Land Debate overview blocks
+ *  for News and Debates pages
+ */
+function landdebate_update_7200() {
+
+  // Reset Blocks
+  $blocks = array();
+
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'news-overview',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'title' => '<none>',
+      'status' => 1,
+      'weight' => 10,
+      'region' => 'content',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages'  => 'debate/news',
+    )
+  );
+  array_push($blocks, $block);
+
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'debates-overview',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'title' => '<none>',
+      'status' => 1,
+      'weight' => 10,
+      'region' => 'content',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages'  => 'debate/debates',
+    )
+  );
+  array_push($blocks, $block);
+
+  // Events
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'events-future',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'title' => '<none>',
+      'status' => 1,
+      'weight' => 9,
+      'region' => 'content',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages'  => 'debate/events',
+    )
+  );
+  array_push($blocks, $block);
+
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'events_calendar-month',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'weight' => 10,
+      'region' => 'content',
+    )
+  );
+  array_push($blocks, $block);
+
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'events-past',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'title' => '<none>',
+      'status' => 1,
+      'weight' => 11,
+      'region' => 'content',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages'  => 'debate/events',
+    )
+  );
+  array_push($blocks, $block);
+
+
+  // Execute block changes
+  foreach($blocks as $block){
+    db_merge('block')
+      ->key($block['keys'])
+      ->fields($block['values'])
+      ->execute();
+  }
+
+}
+
+
 /**
  * Creates a new menu 'landdebate-menu'
  * see also: landdebate.menu.inc

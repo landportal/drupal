@@ -22,7 +22,7 @@ function ct_events_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -102,11 +102,11 @@ function ct_events_field_default_field_instances() {
 ',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -170,7 +170,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'weight' => 1,
       ),
       'listing' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
@@ -242,13 +242,13 @@ If it is only a one day event, the end date should be the same as the starting d
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'file_entity',
         'settings' => array(
           'text' => 'Download [file:name]',
         ),
         'type' => 'file_download_link',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -321,7 +321,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 6,
       ),
       'promoted_country_page' => array(
@@ -334,7 +334,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 2,
       ),
     ),
@@ -377,7 +377,7 @@ If it is only a one day event, the end date should be the same as the starting d
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -450,11 +450,11 @@ If it is only a one day event, the end date should be the same as the starting d
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -530,7 +530,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 8,
       ),
       'promoted_country_page' => array(
@@ -543,7 +543,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 4,
       ),
     ),
@@ -590,7 +590,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 9,
       ),
       'promoted_country_page' => array(
@@ -603,7 +603,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 5,
       ),
     ),
@@ -645,7 +645,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 10,
       ),
       'promoted_country_page' => array(
@@ -665,7 +665,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 6,
       ),
     ),
@@ -710,7 +710,7 @@ If it is only a one day event, the end date should be the same as the starting d
           'title_style' => 'h1',
         ),
         'type' => 'title_linked',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'hidden',
