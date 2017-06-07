@@ -39,7 +39,7 @@ function landdebate_update_7200() {
   $block = array(
     'keys' => array(
       'module' => 'views',
-      'delta' => 'debate-overview',
+      'delta' => 'debates-overview',
       'theme' => 'lpbs',
     ),
     'values' => array(
@@ -53,6 +53,7 @@ function landdebate_update_7200() {
   );
   array_push($blocks, $block);
 
+  // Events
   $block = array(
     'keys' => array(
       'module' => 'views',
@@ -62,10 +63,23 @@ function landdebate_update_7200() {
     'values' => array(
       'title' => '<none>',
       'status' => 1,
-      'weight' => 10,
+      'weight' => 9,
       'region' => 'content',
       'visibility' => BLOCK_VISIBILITY_LISTED,
       'pages'  => 'debate/events',
+    )
+  );
+  array_push($blocks, $block);
+
+  $block = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta' => 'events_calendar-month',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'weight' => 10,
+      'region' => 'content',
     )
   );
   array_push($blocks, $block);
