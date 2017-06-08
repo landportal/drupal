@@ -102,9 +102,30 @@ function landportal_search_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'cache_flush_cache_apachesolr';
+  $strongarm->value = 0;
+  $export['cache_flush_cache_apachesolr'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'facetapi:block_cache:apachesolr@solr';
   $strongarm->value = -1;
   $export['facetapi:block_cache:apachesolr@solr'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_apachesolr_environment';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_apachesolr_environment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_admin_show_component_apachesolr_search_page';
+  $strongarm->value = 1;
+  $export['features_admin_show_component_apachesolr_search_page'] = $strongarm;
 
   return $export;
 }
