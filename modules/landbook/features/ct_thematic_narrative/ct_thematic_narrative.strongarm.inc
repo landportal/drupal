@@ -145,11 +145,15 @@ function ct_thematic_narrative_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '8',
+            'weight' => '9',
             'visible' => FALSE,
           ),
           'teaser' => array(
             'weight' => '8',
+            'visible' => FALSE,
+          ),
+          'search_result' => array(
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),
