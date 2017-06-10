@@ -14,6 +14,9 @@ api: 2
 #   projects:
 #     subdir: "sites/all/modules"
 projects:
+  apachesolr_search:
+    patch:
+      - "https://www.drupal.org/files/issues/apachesolr-2454167-2-showing.patch"
   calendar:
     patch:
       - "https://www.drupal.org/files/issues/calendar-2160183-18.patch"
