@@ -18,7 +18,7 @@ function library_search_apachesolr_search_default_searchers() {
   $searcher->description = '';
   $searcher->search_path = 'library/search';
   $searcher->page_title = 'Library search';
-  $searcher->env_id = 'landlibrary_search';
+  $searcher->env_id = '';
   $searcher->settings = array(
     'fq' => array(
       0 => 'bundle:landlibrary_resource',

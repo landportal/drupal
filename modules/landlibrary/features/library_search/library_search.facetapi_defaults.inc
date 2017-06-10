@@ -18,6 +18,7 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'dm_field_doc_creation_date';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -64,6 +65,7 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_doc_type';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -110,6 +112,7 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_geographical_focus';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -146,6 +149,7 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_related_domains';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -182,6 +186,7 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_related_themes';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -218,6 +223,7 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_related_topics';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -264,6 +270,7 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'sm_field_doc_provider';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -310,6 +317,7 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'sm_field_doc_publisher';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',

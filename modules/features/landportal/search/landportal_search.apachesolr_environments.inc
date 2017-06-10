@@ -18,11 +18,10 @@ function landportal_search_apachesolr_environments() {
   $environment->service_class = '';
   $environment->conf = array(
     'apachesolr_direct_commit' => 1,
-    'apachesolr_read_only' => '0',
+    'apachesolr_read_only' => '1',
     'apachesolr_search_changed_boost' => '0:0',
     'apachesolr_search_comment_boost' => '2:100.0',
     'apachesolr_search_date_boost' => '4:200.0',
-    'apachesolr_search_facet_pages' => '',
     'apachesolr_search_promote_boost' => '0.2',
     'apachesolr_search_sticky_boost' => '0.5',
     'apachesolr_search_type_boosts' => array(
