@@ -17,8 +17,7 @@ function library_search_facetapi_default_facet_settings() {
   $facet->searcher = 'apachesolr@landlibrary_search';
   $facet->realm = 'block';
   $facet->facet = 'dm_field_doc_creation_date';
-  $facet->enabled = TRUE;
-  $facet->hash = '0';
+  $facet->enabled = FALSE;
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -65,10 +64,9 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_doc_type';
   $facet->enabled = TRUE;
-  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
-    'widget' => 'facetapi_links',
+    'widget' => 'facetapi_checkbox_links',
     'filters' => array(),
     'active_sorts' => array(
       'active' => 'active',
@@ -91,10 +89,10 @@ function library_search_facetapi_default_facet_settings() {
     'empty_behavior' => 'none',
     'facet_more_text' => 'Show more',
     'facet_fewer_text' => 'Show fewer',
-    'soft_limit' => '20',
+    'soft_limit' => '0',
     'nofollow' => 1,
-    'show_expanded' => 0,
-    'keep_open' => 0,
+    'show_expanded' => 1,
+    'keep_open' => 1,
     'expand' => 1,
     'collapsible_children' => 0,
     'empty_text' => array(
@@ -112,32 +110,41 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_geographical_focus';
   $facet->enabled = TRUE;
-  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
-    'widget' => 'facetapi_links',
+    'widget' => 'collapsible',
     'filters' => array(),
     'active_sorts' => array(
       'active' => 'active',
       'count' => 'count',
       'display' => 'display',
+      'indexed' => 0,
     ),
     'sort_weight' => array(
-      'active' => -50,
-      'count' => -49,
-      'display' => -48,
+      'active' => '-50',
+      'count' => '-49',
+      'display' => '-48',
+      'indexed' => '0',
     ),
     'sort_order' => array(
-      'active' => 3,
-      'count' => 3,
-      'display' => 4,
+      'active' => '3',
+      'count' => '3',
+      'display' => '4',
+      'indexed' => '4',
     ),
     'empty_behavior' => 'none',
     'facet_more_text' => 'Show more',
     'facet_fewer_text' => 'Show fewer',
-    'soft_limit' => 20,
+    'soft_limit' => '10',
     'nofollow' => 1,
-    'show_expanded' => 0,
+    'show_expanded' => 1,
+    'keep_open' => 1,
+    'expand' => 1,
+    'collapsible_children' => 0,
+    'empty_text' => array(
+      'value' => '',
+      'format' => 'full_html',
+    ),
   );
   $export['apachesolr@landlibrary_search:block:im_field_geographical_focus'] = $facet;
 
@@ -149,7 +156,6 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_related_domains';
   $facet->enabled = TRUE;
-  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -186,7 +192,6 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_related_themes';
   $facet->enabled = TRUE;
-  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -223,7 +228,6 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_related_topics';
   $facet->enabled = TRUE;
-  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -251,7 +255,7 @@ function library_search_facetapi_default_facet_settings() {
     'facet_fewer_text' => 'Show fewer',
     'soft_limit' => '20',
     'nofollow' => 1,
-    'show_expanded' => 0,
+    'show_expanded' => 1,
     'keep_open' => 0,
     'expand' => 1,
     'collapsible_children' => 0,
@@ -270,7 +274,6 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'sm_field_doc_provider';
   $facet->enabled = TRUE;
-  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -317,7 +320,6 @@ function library_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'sm_field_doc_publisher';
   $facet->enabled = TRUE;
-  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',

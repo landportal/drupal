@@ -22,6 +22,7 @@ function library_search_apachesolr_environments() {
     'apachesolr_search_changed_boost' => '0:0',
     'apachesolr_search_comment_boost' => '0:0',
     'apachesolr_search_date_boost' => '1:100.0',
+    'apachesolr_search_facet_pages' => '',
     'apachesolr_search_promote_boost' => '2.0',
     'apachesolr_search_sticky_boost' => '0',
     'apachesolr_search_type_boosts' => array(
