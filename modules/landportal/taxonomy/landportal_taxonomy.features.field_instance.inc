@@ -1388,7 +1388,7 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'title',
         'settings' => array(
           'title_class' => '',

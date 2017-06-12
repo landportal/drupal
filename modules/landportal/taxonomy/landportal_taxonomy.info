@@ -40,6 +40,7 @@ features[field_base][] = field_parent
 features[field_base][] = field_rdflicense_uri
 features[field_base][] = name_field
 features[field_base][] = synonyms_synonyms
+features[field_group][] = group_header|taxonomy_term|themes|default
 features[field_group][] = group_topics_regions|taxonomy_term|overarching_categories|default
 features[field_group][] = group_topics_regions|taxonomy_term|overarching_categories|form
 features[field_group][] = group_topics_regions|taxonomy_term|overarching_categories|search_index
