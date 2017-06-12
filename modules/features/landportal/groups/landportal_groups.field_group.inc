@@ -57,8 +57,8 @@ function landportal_groups_field_group_info() {
       2 => 'field_image',
       3 => 'field_orgref',
       4 => 'field_promoted',
-      5 => 'locations',
-      6 => 'title',
+      5 => 'title_field',
+      6 => 'locations',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

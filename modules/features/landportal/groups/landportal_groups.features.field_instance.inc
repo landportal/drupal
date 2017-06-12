@@ -122,7 +122,7 @@ function landportal_groups_field_default_field_instances() {
         'view_mode' => 'teaser',
       ),
       'type' => 'entityreference_view_widget',
-      'weight' => 5,
+      'weight' => 0,
     ),
   );
 
@@ -192,7 +192,7 @@ function landportal_groups_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 1,
+      'weight' => -4,
     ),
   );
 
@@ -245,7 +245,7 @@ function landportal_groups_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => -3,
     ),
   );
 
@@ -305,7 +305,7 @@ function landportal_groups_field_default_field_instances() {
         'view_mode' => 'full',
       ),
       'type' => 'entityreference_view_widget',
-      'weight' => 6,
+      'weight' => 1,
     ),
   );
 
@@ -367,7 +367,7 @@ function landportal_groups_field_default_field_instances() {
         'og_hide' => TRUE,
       ),
       'type' => 'options_onoff',
-      'weight' => 4,
+      'weight' => -1,
     ),
   );
 
@@ -502,7 +502,7 @@ function landportal_groups_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -564,7 +564,7 @@ function landportal_groups_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -637,15 +637,10 @@ function landportal_groups_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => 'h1',
-        ),
-        'type' => 'title_linked',
-        'weight' => 0,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -663,7 +658,7 @@ function landportal_groups_field_default_field_instances() {
         'module' => 'title',
         'settings' => array(
           'title_class' => '',
-          'title_link' => 'content',
+          'title_link' => '',
           'title_style' => 'h2',
         ),
         'type' => 'title_linked',
@@ -689,7 +684,7 @@ function landportal_groups_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => -5,
     ),
   );
 

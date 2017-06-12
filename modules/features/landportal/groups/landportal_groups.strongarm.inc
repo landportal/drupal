@@ -151,7 +151,7 @@ function landportal_groups_strongarm() {
           'weight' => '4',
         ),
         'locations' => array(
-          'weight' => '3',
+          'weight' => '-2',
         ),
         'metatags' => array(
           'weight' => '7',
@@ -164,6 +164,9 @@ function landportal_groups_strongarm() {
         ),
         'xmlsitemap' => array(
           'weight' => '6',
+        ),
+        'og_menu' => array(
+          'weight' => '0',
         ),
       ),
       'display' => array(
@@ -266,7 +269,7 @@ function landportal_groups_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '2',
+            'weight' => '3',
             'visible' => FALSE,
           ),
         ),
