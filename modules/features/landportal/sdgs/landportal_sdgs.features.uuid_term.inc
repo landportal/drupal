@@ -25,10 +25,17 @@ function landportal_sdgs_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
     'field_parent' => array(),
-    'field_type' => array(),
-    'name_field' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Housing',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
     'field_singledate' => array(),
+    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -53,10 +60,17 @@ function landportal_sdgs_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
     'field_parent' => array(),
-    'field_type' => array(),
-    'name_field' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Sustainable food production',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
     'field_singledate' => array(),
+    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -84,10 +98,17 @@ function landportal_sdgs_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
     'field_parent' => array(),
-    'field_type' => array(),
-    'name_field' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Universal access',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
     'field_singledate' => array(),
+    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -112,10 +133,17 @@ function landportal_sdgs_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
     'field_parent' => array(),
-    'field_type' => array(),
-    'name_field' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Gender equality',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
     'field_singledate' => array(),
+    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -140,10 +168,17 @@ function landportal_sdgs_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
     'field_parent' => array(),
-    'field_type' => array(),
-    'name_field' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Restore degraded land and soil',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
     'field_singledate' => array(),
+    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -168,10 +203,17 @@ function landportal_sdgs_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
     'field_parent' => array(),
-    'field_type' => array(),
-    'name_field' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Equal rights',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
     'field_singledate' => array(),
+    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -196,10 +238,17 @@ function landportal_sdgs_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
     'field_parent' => array(),
-    'field_type' => array(),
-    'name_field' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'No poverty',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
     'field_singledate' => array(),
+    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -224,10 +273,17 @@ function landportal_sdgs_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
     'field_parent' => array(),
-    'field_type' => array(),
-    'name_field' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Conservation and sustainable use',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
     'field_singledate' => array(),
+    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -281,10 +337,17 @@ function landportal_sdgs_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
     'field_parent' => array(),
-    'field_type' => array(),
-    'name_field' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Undertake reforms',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
     'field_singledate' => array(),
+    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -338,10 +401,17 @@ function landportal_sdgs_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
     'field_parent' => array(),
-    'field_type' => array(),
-    'name_field' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Zero hunger',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
     'field_singledate' => array(),
+    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -395,10 +465,17 @@ function landportal_sdgs_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
     'field_parent' => array(),
-    'field_type' => array(),
-    'name_field' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Urbanization',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
     'field_singledate' => array(),
+    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -426,10 +503,17 @@ Goal 15. Protect, restore and promote sustainable use of terrestrial ecosystems,
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
     'field_parent' => array(),
-    'field_type' => array(),
-    'name_field' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Life on land',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
     'field_singledate' => array(),
+    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -454,10 +538,17 @@ Goal 11. Make cities and human settlements inclusive, safe, resilient and sustai
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
     'field_parent' => array(),
-    'field_type' => array(),
-    'name_field' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Sustainable cities and communities',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
     'field_singledate' => array(),
+    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),

@@ -165,26 +165,26 @@ function landportal_sdgs_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'description' => array(
-          'weight' => '2',
+          'weight' => '4',
         ),
         'xmlsitemap' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
       ),
       'display' => array(
         'description' => array(
           'default' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => TRUE,
           ),
         ),
