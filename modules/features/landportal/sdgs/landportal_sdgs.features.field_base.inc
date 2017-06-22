@@ -141,6 +141,7 @@ function landportal_sdgs_field_default_field_bases() {
       'allowed_values' => array(
         'goal' => 'Goal',
         'target' => 'Target',
+        'indicator' => 'Indicator',
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,
