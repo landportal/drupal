@@ -28,7 +28,8 @@ function landportal_sdgs_field_group_info() {
       2 => 'field_orgref',
       3 => 'field_sdg',
       4 => 'field_sdgs_tier',
-      5 => 'group_milestones',
+      5 => 'field_partners',
+      6 => 'group_milestones',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -90,7 +91,7 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = 'group_details';
   $field_group->data = array(
     'label' => 'Key dates',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_milestone',
     ),

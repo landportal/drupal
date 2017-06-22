@@ -28,6 +28,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_type' => array(),
     'name_field' => array(),
     'field_image' => array(),
+    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -55,6 +56,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_type' => array(),
     'name_field' => array(),
     'field_image' => array(),
+    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -85,6 +87,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_type' => array(),
     'name_field' => array(),
     'field_image' => array(),
+    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -112,6 +115,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_type' => array(),
     'name_field' => array(),
     'field_image' => array(),
+    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -139,6 +143,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_type' => array(),
     'name_field' => array(),
     'field_image' => array(),
+    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -166,6 +171,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_type' => array(),
     'name_field' => array(),
     'field_image' => array(),
+    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -193,6 +199,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_type' => array(),
     'name_field' => array(),
     'field_image' => array(),
+    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -220,6 +227,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_type' => array(),
     'name_field' => array(),
     'field_image' => array(),
+    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -276,6 +284,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_type' => array(),
     'name_field' => array(),
     'field_image' => array(),
+    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -332,6 +341,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_type' => array(),
     'name_field' => array(),
     'field_image' => array(),
+    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -388,6 +398,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_type' => array(),
     'name_field' => array(),
     'field_image' => array(),
+    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -418,6 +429,7 @@ Goal 15. Protect, restore and promote sustainable use of terrestrial ecosystems,
     'field_type' => array(),
     'name_field' => array(),
     'field_image' => array(),
+    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -445,6 +457,7 @@ Goal 11. Make cities and human settlements inclusive, safe, resilient and sustai
     'field_type' => array(),
     'name_field' => array(),
     'field_image' => array(),
+    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
