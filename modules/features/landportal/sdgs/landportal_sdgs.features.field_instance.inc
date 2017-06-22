@@ -252,13 +252,13 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'above',
@@ -279,18 +279,41 @@ function landportal_sdgs_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
+    'label' => 'SDG Indicator',
+    'required' => 1,
     'settings' => array(
-      'display_summary' => TRUE,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'display_summary' => 1,
       'entity_translation_sync' => FALSE,
-      'text_processing' => 1,
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 20,
+        'rows' => 5,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
@@ -306,13 +329,13 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
         ),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
@@ -365,7 +388,7 @@ function landportal_sdgs_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 14,
+      'weight' => 8,
     ),
   );
 
@@ -378,11 +401,8 @@ function landportal_sdgs_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'i18n_taxonomy_term_reference_plain',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'listing' => array(
@@ -466,7 +486,73 @@ function landportal_sdgs_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-sdgi-field_link'.
+  $field_instances['node-sdgi-field_link'] = array(
+    'bundle' => 'sdgi',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
+        'type' => 'link_default',
+        'weight' => 9,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_link',
+    'label' => 'Links',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => 'nofollow',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 7,
     ),
   );
 
@@ -478,13 +564,13 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'field_collection',
         'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
+          'add' => '',
+          'delete' => '',
+          'description' => 1,
+          'edit' => '',
           'field_formatter_class' => '',
           'view_mode' => 'full',
         ),
@@ -517,7 +603,7 @@ function landportal_sdgs_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 7,
+      'weight' => 10,
     ),
   );
 
@@ -537,7 +623,7 @@ function landportal_sdgs_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 9,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -588,7 +674,7 @@ function landportal_sdgs_field_default_field_instances() {
         'view_mode' => 'full',
       ),
       'type' => 'entityreference_view_widget',
-      'weight' => 119,
+      'weight' => 6,
     ),
   );
 
@@ -601,7 +687,7 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => 'The organization responsible for this indicator',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
           'bypass_access' => FALSE,
@@ -609,7 +695,7 @@ function landportal_sdgs_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 7,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',
@@ -669,16 +755,16 @@ function landportal_sdgs_field_default_field_instances() {
         'settings' => array(
           'add' => '',
           'collapsed' => 0,
-          'collapsible' => 1,
+          'collapsible' => 0,
           'delete' => '',
           'description' => 0,
           'edit' => '',
-          'field_formatter_class' => '',
+          'field_formatter_class' => 'col-sm-4',
           'legend' => 'title_field',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fieldset_view',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',
@@ -716,6 +802,70 @@ function landportal_sdgs_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-sdgi-field_partners'.
+  $field_instances['node-sdgi-field_partners'] = array(
+    'bundle' => 'sdgi',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'field_formatter_class' => '',
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 10,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_partners',
+    'label' => 'Partners',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'node-sdgi-field_related_domains'.
   $field_instances['node-sdgi-field_related_domains'] = array(
     'bundle' => 'sdgi',
@@ -725,11 +875,8 @@ function landportal_sdgs_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'i18n_taxonomy_term_reference_plain',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 5,
       ),
       'listing' => array(
@@ -775,7 +922,7 @@ function landportal_sdgs_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'options_select',
-      'weight' => 115,
+      'weight' => 116,
     ),
   );
 
@@ -788,11 +935,8 @@ function landportal_sdgs_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'i18n_taxonomy_term_reference_plain',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 6,
       ),
       'listing' => array(
@@ -833,7 +977,7 @@ function landportal_sdgs_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 116,
+      'weight' => 117,
     ),
   );
 
@@ -846,11 +990,8 @@ function landportal_sdgs_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'i18n_taxonomy_term_reference_plain',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 7,
       ),
       'listing' => array(
@@ -905,7 +1046,7 @@ function landportal_sdgs_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
       'type' => 'options_select',
-      'weight' => 117,
+      'weight' => 118,
     ),
   );
 
@@ -917,7 +1058,7 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'ds',
         'settings' => array(
           'field_formatter_class' => '',
@@ -962,23 +1103,21 @@ function landportal_sdgs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-sdgi-field_tier'.
-  $field_instances['node-sdgi-field_tier'] = array(
+  // Exported field_instance: 'node-sdgi-field_sdgs_tier'.
+  $field_instances['node-sdgi-field_sdgs_tier'] = array(
     'bundle' => 'sdgi',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Tier 1: Indicator is conceptually clear, has an internationally established methodology and standards are available, and data are regularly produced by countries for at least 50 per cent of countries and of the population in every region where the indicator is relevant.
-Tier 2: Indicator is conceptually clear, has an internationally established methodology and standards are available, but data are not regularly produced by countries.
-Tier 3: No internationally established methodology or standards are yet available for the indicator, but methodology/standards are being (or will be) developed or tested.',
+    'description' => 'SDGs Tier this indicator is officially in',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'list',
+        'label' => 'inline',
+        'module' => 'i18n_taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
         ),
-        'type' => 'list_default',
-        'weight' => 6,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -987,19 +1126,16 @@ Tier 3: No internationally established methodology or standards are yet availabl
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'list',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'list_default',
-        'weight' => 5,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_tier',
+    'field_name' => 'field_sdgs_tier',
     'label' => 'Tier',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -1008,8 +1144,8 @@ Tier 3: No internationally established methodology or standards are yet availabl
       'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 5,
+      'type' => 'options_select',
+      'weight' => 9,
     ),
   );
 
@@ -1030,7 +1166,7 @@ Tier 3: No internationally established methodology or standards are yet availabl
           'title_style' => 'h1',
         ),
         'type' => 'title_linked',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1393,7 +1529,6 @@ Tier 3: No internationally established methodology or standards are yet availabl
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Body');
   t('Custodian agency');
   t('Deadline');
   t('Description');
@@ -1404,20 +1539,21 @@ Tier 3: No internationally established methodology or standards are yet availabl
   t('Indicators');
   t('Key Date');
   t('Key contacts');
+  t('Links');
   t('Milestone');
   t('Name');
   t('Overarching categories');
   t('Paragraphs');
   t('Parent');
+  t('Partners');
   t('Related concepts');
   t('Related content');
   t('SDG');
+  t('SDG Indicator');
+  t('SDGs Tier this indicator is officially in');
   t('The organization responsible for this indicator');
   t('Themes');
   t('Tier');
-  t('Tier 1: Indicator is conceptually clear, has an internationally established methodology and standards are available, and data are regularly produced by countries for at least 50 per cent of countries and of the population in every region where the indicator is relevant.
-Tier 2: Indicator is conceptually clear, has an internationally established methodology and standards are available, but data are not regularly produced by countries.
-Tier 3: No internationally established methodology or standards are yet available for the indicator, but methodology/standards are being (or will be) developed or tested.');
   t('Title');
   t('Type');
 

@@ -21,18 +21,21 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '5',
+    'weight' => '1',
     'children' => array(
-      0 => 'field_tier',
-      1 => 'field_orgref',
-      2 => 'field_contact',
+      0 => 'body',
+      1 => 'field_contact',
+      2 => 'field_orgref',
+      3 => 'field_sdg',
+      4 => 'field_sdgs_tier',
+      5 => 'group_milestones',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'col-sm-4 pull-right',
+        'classes' => 'col-sm-8',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -57,9 +60,11 @@ function landportal_sdgs_field_group_info() {
     'label' => 'Details',
     'weight' => '4',
     'children' => array(
-      0 => 'field_tier',
-      1 => 'field_orgref',
-      2 => 'field_milestone',
+      0 => 'field_contact',
+      1 => 'field_milestone',
+      2 => 'field_orgref',
+      3 => 'field_sdgs_tier',
+      4 => 'field_partners',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -82,10 +87,10 @@ function landportal_sdgs_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'sdgi';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_details';
   $field_group->data = array(
     'label' => 'Key dates',
-    'weight' => '6',
+    'weight' => '5',
     'children' => array(
       0 => 'field_milestone',
     ),
@@ -94,7 +99,7 @@ function landportal_sdgs_field_group_info() {
       'label' => 'Key dates',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-milestones field-group-div col-sm-8',
+        'classes' => 'group-milestones field-group-div',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h3',
@@ -117,14 +122,14 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '6',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_domains',
-      2 => 'field_related_topics',
-      3 => 'field_related_themes',
+      2 => 'field_related_themes',
+      3 => 'field_related_topics',
     ),
-    'format_type' => 'div',
+    'format_type' => 'hidden',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
@@ -152,12 +157,12 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '3',
+    'weight' => '5',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_domains',
-      2 => 'field_related_topics',
-      3 => 'field_related_themes',
+      2 => 'field_related_themes',
+      3 => 'field_related_topics',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -184,7 +189,7 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Visualizations',
-    'weight' => '7',
+    'weight' => '3',
     'children' => array(
       0 => 'field_indicators',
     ),

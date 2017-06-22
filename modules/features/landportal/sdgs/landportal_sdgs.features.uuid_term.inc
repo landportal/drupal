@@ -233,6 +233,35 @@ function landportal_sdgs_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
+    'name' => 'Tier 3',
+    'description' => '<p>Indicator for which there are no established methodology and standards or methodology/standards are being developed/tested</p>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => '981b7cc9-9559-4493-b07a-3fec1225640a',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs_tiers',
+    'field_date' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-06-22 00:00:00',
+          'value2' => '2017-06-22 00:00:00',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
     'name' => 'Undertake reforms',
     'description' => '<p>Undertake reforms to give women equal rights to economic resources, as well as access to ownership and control over land and other forms of property, financial services, inheritance and natural resources, in accordance with national laws</p>
 ',
@@ -260,6 +289,35 @@ function landportal_sdgs_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
+    'name' => 'Tier 2',
+    'description' => '<p>Indicator conceptually clear, established methodology and standards available but data are not regularly produced by countries</p>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => 'b8381b37-16f6-4c32-8622-cf8bce134430',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs_tiers',
+    'field_date' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-06-22 00:00:00',
+          'value2' => '2017-06-22 00:00:00',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
     'name' => 'Zero hunger',
     'description' => '<p>End hunger, achieve food security and improved nutrition and promote sustainable agriculture</p>
 ',
@@ -279,6 +337,35 @@ function landportal_sdgs_uuid_features_default_terms() {
       'data' => array(),
     ),
     'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8267-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Tier 1',
+    'description' => '<p>Indicator conceptually clear, established methodology and standards available and data regularly produced by countries</p>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => 'ca682b36-0536-444d-9ad3-58ff30a3e0a6',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs_tiers',
+    'field_date' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-06-22 00:00:00',
+          'value2' => '2017-06-22 00:00:00',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
     'path' => array(
       'pathauto' => 1,
     ),
