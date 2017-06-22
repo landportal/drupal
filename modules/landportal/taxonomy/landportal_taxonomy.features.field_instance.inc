@@ -1227,6 +1227,12 @@ function landportal_taxonomy_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1267,6 +1273,12 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => '3 numbes code for the area (country/region). See the latest list of codes in the <a href="http://unstats.un.org/unsd/publications/statistical-yearbook">UN Statistical Yearbook</a>.',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'listing' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
@@ -1338,6 +1350,12 @@ function landportal_taxonomy_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 3,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1370,7 +1388,7 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'title',
         'settings' => array(
           'title_class' => '',
@@ -1379,6 +1397,17 @@ function landportal_taxonomy_field_default_field_instances() {
         ),
         'type' => 'title_linked',
         'weight' => 1,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1426,6 +1455,12 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => 'The place this belongs to',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1488,6 +1523,12 @@ function landportal_taxonomy_field_default_field_instances() {
         'type' => 'title_linked',
         'weight' => 0,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'title',
@@ -1531,6 +1572,12 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => 'Please, enter the synonyms which should be related to this term.',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'listing' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',

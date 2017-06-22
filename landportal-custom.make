@@ -14,17 +14,19 @@ api: 2
 #   projects:
 #     subdir: "sites/all/modules"
 projects:
-  entityreference_view_widget:
+  apachesolr:
     patch:
-      - "https://www.drupal.org/files/issues/entityreference_view_widget_suffix-2524296-2.patch"
+      - "https://www.drupal.org/files/issues/apachesolr-2454167-2-showing.patch"
+  calendar:
+    patch:
+      - "https://www.drupal.org/files/issues/calendar-2160183-18.patch"
   drupal:
     patch:
       - "https://github.com/landportal/drupal/files/766584/change-dc-to-dct.txt"
       - "https://github.com/landportal/drupal/files/876566/no-callback-in-RDFa.txt"
-  profile2:
-    version: ~
+  entityreference_view_widget:
     patch:
-      - "https://www.drupal.org/files/issues/profile2--inherit-view_mode.patch"
+      - "https://www.drupal.org/files/issues/entityreference_view_widget_suffix-2524296-2.patch"
   feeds_crawler:
     version: "2.x-dev"
   feeds_fetcher_directory:
@@ -52,6 +54,16 @@ projects:
     version: "1.x-dev"
     patch:
       - "https://www.drupal.org/files/issues/og_webform_api2-1946432-30.patch"
+  profile2:
+    version: ~
+    patch:
+      - "https://www.drupal.org/files/issues/profile2--inherit-view_mode.patch"
+  # profile2_create:
+  #   download:
+  #     type: "git"
+  #     url: "git://git.drupal.org/sandbox/guillaumev/2039905.git profile2_create"
+  # + needs a patch, see LP/modules/contrib/profile2_create/README
+  # for now, we use the version baked in code
   rdfx:
     download:
       type: "git"

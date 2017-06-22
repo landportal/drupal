@@ -132,41 +132,6 @@ $handler->display->display_options['header']['result']['field'] = 'result';
 $handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['id'] = 'reverse_field_geographical_focus_node';
 $handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['field'] = 'reverse_field_geographical_focus_node';
-/* Field: Draggableviews: Taxonomy term */
-$handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
-$handler->display->display_options['fields']['draggableviews']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
-$handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
-$handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
-$handler->display->display_options['fields']['draggableviews']['draggableviews']['hierarchy_handler'] = 'draggableviews_hierarchy_handler_native';
-$handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
-/* Field: Taxonomy term: Name */
-$handler->display->display_options['fields']['name']['id'] = 'name';
-$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['fields']['name']['field'] = 'name';
-$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
-$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-$handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-/* Field: Taxonomy term: ISO3 */
-$handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
-$handler->display->display_options['fields']['field_iso3']['table'] = 'field_data_field_iso3';
-$handler->display->display_options['fields']['field_iso3']['field'] = 'field_iso3';
-/* Field: Taxonomy term: Area code (UN M.49) */
-$handler->display->display_options['fields']['field_area_code_un_m_49']['id'] = 'field_area_code_un_m_49';
-$handler->display->display_options['fields']['field_area_code_un_m_49']['table'] = 'field_data_field_area_code_un_m_49';
-$handler->display->display_options['fields']['field_area_code_un_m_49']['field'] = 'field_area_code_un_m_49';
-/* Field: COUNT(Content: Nid) */
-$handler->display->display_options['fields']['nid']['id'] = 'nid';
-$handler->display->display_options['fields']['nid']['table'] = 'node';
-$handler->display->display_options['fields']['nid']['field'] = 'nid';
-$handler->display->display_options['fields']['nid']['relationship'] = 'reverse_field_geographical_focus_node';
-$handler->display->display_options['fields']['nid']['group_type'] = 'count';
-$handler->display->display_options['fields']['nid']['label'] = 'References';
-/* Field: Taxonomy term: Term edit link */
-$handler->display->display_options['fields']['edit_term']['id'] = 'edit_term';
-$handler->display->display_options['fields']['edit_term']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['fields']['edit_term']['field'] = 'edit_term';
-$handler->display->display_options['fields']['edit_term']['label'] = 'Actions';
 /* Field: Bulk operations: Taxonomy term */
 $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
 $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_taxonomy_term';
@@ -205,6 +170,36 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'label' => '',
   ),
 );
+/* Field: Draggableviews: Taxonomy term */
+$handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+$handler->display->display_options['fields']['draggableviews']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+$handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
+$handler->display->display_options['fields']['draggableviews']['draggableviews']['hierarchy_handler'] = 'draggableviews_hierarchy_handler_native';
+$handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+/* Field: Taxonomy term: ISO3 */
+$handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
+$handler->display->display_options['fields']['field_iso3']['table'] = 'field_data_field_iso3';
+$handler->display->display_options['fields']['field_iso3']['field'] = 'field_iso3';
+/* Field: Taxonomy term: Area code (UN M.49) */
+$handler->display->display_options['fields']['field_area_code_un_m_49']['id'] = 'field_area_code_un_m_49';
+$handler->display->display_options['fields']['field_area_code_un_m_49']['table'] = 'field_data_field_area_code_un_m_49';
+$handler->display->display_options['fields']['field_area_code_un_m_49']['field'] = 'field_area_code_un_m_49';
+/* Field: COUNT(DISTINCT Content: Nid) */
+$handler->display->display_options['fields']['nid']['id'] = 'nid';
+$handler->display->display_options['fields']['nid']['table'] = 'node';
+$handler->display->display_options['fields']['nid']['field'] = 'nid';
+$handler->display->display_options['fields']['nid']['relationship'] = 'reverse_field_geographical_focus_node';
+$handler->display->display_options['fields']['nid']['group_type'] = 'count_distinct';
+$handler->display->display_options['fields']['nid']['label'] = 'References';
 /* Field: Entity translation: Name: translated */
 $handler->display->display_options['fields']['name_field_et']['id'] = 'name_field_et';
 $handler->display->display_options['fields']['name_field_et']['table'] = 'field_data_name_field';
@@ -233,6 +228,11 @@ $handler->display->display_options['fields']['name_field_et_3']['field'] = 'name
 $handler->display->display_options['fields']['name_field_et_3']['label'] = 'PT';
 $handler->display->display_options['fields']['name_field_et_3']['group_column'] = 'entity_id';
 $handler->display->display_options['fields']['name_field_et_3']['language'] = 'pt';
+/* Field: Taxonomy term: Term edit link */
+$handler->display->display_options['fields']['edit_term']['id'] = 'edit_term';
+$handler->display->display_options['fields']['edit_term']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['edit_term']['field'] = 'edit_term';
+$handler->display->display_options['fields']['edit_term']['label'] = 'Actions';
 /* Sort criterion: Taxonomy edge: taxonomy hierarchy order */
 $handler->display->display_options['sorts']['term_sort_hierarchy']['id'] = 'term_sort_hierarchy';
 $handler->display->display_options['sorts']['term_sort_hierarchy']['table'] = 'taxonomy_term_data';

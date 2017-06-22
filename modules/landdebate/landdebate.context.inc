@@ -60,7 +60,7 @@ t('landdebate');
 
 
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'debate-twitter-context';
   $context->description = 'Contextually display twitter for some landdebate CT';

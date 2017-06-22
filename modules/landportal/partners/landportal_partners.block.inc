@@ -11,6 +11,15 @@ function landportal_partners_block_info() {
     'weight'        => 10
   );
 
+  $blocks['mlike_header_links'] = array(
+    'info'          => t('Partners - MLIKE Header links'),
+    'status'        => TRUE,
+    'region'        => 'header',
+    'visibility'    => BLOCK_VISIBILITY_LISTED,
+    'pages'         => "partners/mlike*",
+    'weight'        => 10
+  );
+
   $blocks['legend_contact'] = array(
     'info'          => t('Partners - LEGEND contact'),
     'status'        => TRUE,
@@ -36,7 +45,7 @@ function landportal_partners_block_view($delta = '') {
     switch ($delta) {
     default:
       $str = landportal_partners_block_body($delta);
-        $block['subject'] = '<none>';
+        $block['subject'] = '';
         $block['content'] = $str;
         break;
     }
@@ -45,7 +54,8 @@ function landportal_partners_block_view($delta = '') {
 
 function landportal_partners_block_body($delta) {
   $default = array(
-    'legend_contact' => 'For more information, contact <a href="mailto:legend@odi.org.uk">legend@odi.org.uk</a>.'
+    'legend_contact' => 'For more information, contact <a href="mailto:legend@odi.org.uk">legend@odi.org.uk</a>.',
+    'mlike_header_links' => '<ul class="list-inline"><li><a href="https://www.facebook.com/MLIKE.MRLG/" target="_blank"><span class="fa fa-facebook fa-border"></span></a></li></ul>',
   );
 
   $out = variable_get('lpp_' . $delta, (isset($default[$delta]) ? $default[$delta] : ''));

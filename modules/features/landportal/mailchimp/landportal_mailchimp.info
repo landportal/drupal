@@ -5,6 +5,7 @@ version = 7.x-1.0-beta2
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = field_group
+dependencies[] = landportal_profile
 dependencies[] = mailchimp
 dependencies[] = mailchimp_campaign
 dependencies[] = mailchimp_lists

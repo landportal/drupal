@@ -15,7 +15,7 @@ projects:
   - admin_menu
   - admin_views
   - apachesolr
-  - apachesolr_views
+#  - apachesolr_views
   - auto_entitylabel
   - better_formats
   - block_class

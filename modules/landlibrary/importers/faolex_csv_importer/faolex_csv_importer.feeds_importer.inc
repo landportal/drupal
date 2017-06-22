@@ -45,7 +45,7 @@ $feeds_importer->config = array(
         0 => array(
           'source' => 'Title',
           'target' => 'title',
-          'unique' => 1,
+          'unique' => 0,
           'language' => 'und',
         ),
         1 => array(
@@ -179,6 +179,12 @@ $feeds_importer->config = array(
           'source' => '  ',
           'target' => 'field_geographical_focus',
           'unique' => FALSE,
+          'language' => 'und',
+        ),
+        23 => array(
+          'source' => 'ID',
+          'target' => 'guid',
+          'unique' => 1,
         ),
       ),
       'update_existing' => '2',
@@ -197,6 +203,7 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
+
 
 
 /*****/

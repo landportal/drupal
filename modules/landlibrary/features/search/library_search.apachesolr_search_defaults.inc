@@ -20,9 +20,7 @@ function library_search_apachesolr_search_default_searchers() {
   $searcher->page_title = 'Library search';
   $searcher->env_id = 'landlibrary_search';
   $searcher->settings = array(
-    'fq' => array(
-      0 => 'bundle:landlibrary_resource',
-    ),
+    'fq' => array(),
     'apachesolr_search_custom_enable' => 1,
     'apachesolr_search_search_type' => 'custom',
     'apachesolr_search_per_page' => 10,
