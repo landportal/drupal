@@ -180,11 +180,11 @@ function landportal_sdgs_strongarm() {
       'display' => array(
         'description' => array(
           'default' => array(
-            'weight' => '5',
+            'weight' => '3',
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '5',
+            'weight' => '3',
             'visible' => TRUE,
           ),
         ),
@@ -288,6 +288,48 @@ function landportal_sdgs_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_sdgs_pattern';
   $strongarm->value = 'book/sdgs/[term:field_id]';
   $export['pathauto_taxonomy_term_sdgs_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_node_sdgi';
+  $strongarm->value = 0;
+  $export['uuid_features_entity_node_sdgi'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_taxonomy_term_sdgs';
+  $strongarm->value = 'sdgs';
+  $export['uuid_features_entity_taxonomy_term_sdgs'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_taxonomy_term_sdgs_tiers';
+  $strongarm->value = 'sdgs_tiers';
+  $export['uuid_features_entity_taxonomy_term_sdgs_tiers'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_node_sdgi';
+  $strongarm->value = 0;
+  $export['uuid_features_file_node_sdgi'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_taxonomy_term_sdgs';
+  $strongarm->value = 0;
+  $export['uuid_features_file_taxonomy_term_sdgs'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_taxonomy_term_sdgs_tiers';
+  $strongarm->value = 0;
+  $export['uuid_features_file_taxonomy_term_sdgs_tiers'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

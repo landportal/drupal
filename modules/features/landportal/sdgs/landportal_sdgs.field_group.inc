@@ -25,11 +25,11 @@ function landportal_sdgs_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_contact',
-      2 => 'field_orgref',
-      3 => 'field_sdg',
-      4 => 'field_sdgs_tier',
-      5 => 'field_partners',
-      6 => 'group_milestones',
+      2 => 'field_milestone',
+      3 => 'field_orgref',
+      4 => 'field_sdg',
+      5 => 'field_sdgs_tier',
+      6 => 'field_partners',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -81,7 +81,7 @@ function landportal_sdgs_field_group_info() {
   $field_groups['group_details|node|sdgi|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_milestones|node|sdgi|default';
   $field_group->group_name = 'group_milestones';

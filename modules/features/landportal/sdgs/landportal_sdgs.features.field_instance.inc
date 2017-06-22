@@ -590,7 +590,7 @@ function landportal_sdgs_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_milestone',
-    'label' => 'Milestone',
+    'label' => 'Deadlines',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -688,9 +688,9 @@ function landportal_sdgs_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
-          'bypass_access' => FALSE,
+          'bypass_access' => 0,
           'field_formatter_class' => '',
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
         'weight' => 2,
@@ -812,9 +812,9 @@ function landportal_sdgs_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'bypass_access' => FALSE,
+          'bypass_access' => 0,
           'field_formatter_class' => '',
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
         'weight' => 3,
@@ -1217,21 +1217,15 @@ function landportal_sdgs_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'text_plain',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'text_plain',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1291,7 +1285,7 @@ function landportal_sdgs_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1302,7 +1296,7 @@ function landportal_sdgs_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1333,54 +1327,6 @@ function landportal_sdgs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-sdgs-field_parent'.
-  $field_instances['taxonomy_term-sdgs-field_parent'] = array(
-    'bundle' => 'sdgs',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_formatter_class' => '',
-          'links' => 0,
-          'use_content_language' => 1,
-          'view_mode' => 'default',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_formatter_class' => '',
-          'links' => 0,
-          'use_content_language' => 1,
-          'view_mode' => 'teaser',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_parent',
-    'label' => 'Parent',
-    'required' => FALSE,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 5,
-    ),
-  );
-
   // Exported field_instance: 'taxonomy_term-sdgs-field_sdgs_type'.
   $field_instances['taxonomy_term-sdgs-field_sdgs_type'] = array(
     'bundle' => 'sdgs',
@@ -1399,7 +1345,7 @@ function landportal_sdgs_field_default_field_instances() {
           'field_formatter_class' => '',
         ),
         'type' => 'list_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1408,7 +1354,7 @@ function landportal_sdgs_field_default_field_instances() {
           'field_formatter_class' => '',
         ),
         'type' => 'list_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1448,13 +1394,13 @@ function landportal_sdgs_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1504,7 +1450,7 @@ function landportal_sdgs_field_default_field_instances() {
           'title_style' => 'h1',
         ),
         'type' => 'title_linked',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1516,7 +1462,7 @@ function landportal_sdgs_field_default_field_instances() {
           'title_style' => 'h2',
         ),
         'type' => 'title_linked',
-        'weight' => 4,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1600,6 +1546,7 @@ function landportal_sdgs_field_default_field_instances() {
   t('Custodian agency');
   t('Date');
   t('Deadline');
+  t('Deadlines');
   t('Description');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Geographical focus');
@@ -1608,11 +1555,9 @@ function landportal_sdgs_field_default_field_instances() {
   t('Indicators');
   t('Key contacts');
   t('Links');
-  t('Milestone');
   t('Name');
   t('Overarching categories');
   t('Paragraphs');
-  t('Parent');
   t('Partners');
   t('Related concepts');
   t('Related content');
