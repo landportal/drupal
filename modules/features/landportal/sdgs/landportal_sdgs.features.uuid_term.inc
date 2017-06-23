@@ -462,9 +462,8 @@ function landportal_sdgs_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Zero hunger',
-    'description' => 'End hunger, achieve food security and improved nutrition and promote sustainable agriculture
-',
+    'name' => '2 Zero hunger',
+    'description' => 'End hunger, achieve food security and improved nutrition and promote sustainable agriculture',
     'format' => 'plain_text',
     'weight' => 6,
     'uuid' => 'bf413a5b-e03f-4cf0-9a41-45b8075df7a1',
@@ -482,7 +481,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => 'Zero hunger',
+          'value' => '2 Zero hunger',
           'format' => NULL,
         ),
       ),
@@ -534,7 +533,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Urbanization',
+    'name' => '11.3 Urbanization',
     'description' => 'By 2030, enhance inclusive and sustainable urbanization and capacity for participatory, integrated and sustainable human settlement planning and management in all countries',
     'format' => 'plain_text',
     'weight' => 4,
@@ -553,7 +552,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => 'Urbanization',
+          'value' => '11.3 Urbanization',
           'format' => NULL,
         ),
       ),
@@ -599,7 +598,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => 'Life on land',
+          'value' => '15 Life on land',
           'format' => NULL,
         ),
       ),
@@ -642,7 +641,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => 'Sustainable cities and communities',
+          'value' => '11 Sustainable cities and communities',
           'format' => NULL,
         ),
       ),
