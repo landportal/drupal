@@ -27,6 +27,14 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'target',
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -35,20 +43,12 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
     'field_singledate' => array(),
-    'field_sdgs_type' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'target',
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8258-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8261-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -73,6 +73,14 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'target',
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -81,20 +89,12 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
     'field_singledate' => array(),
-    'field_sdgs_type' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'target',
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8259-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8262-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -119,6 +119,14 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'target',
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -127,20 +135,12 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
     'field_singledate' => array(),
-    'field_sdgs_type' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'target',
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8260-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8263-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -165,6 +165,14 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'goal',
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -173,20 +181,12 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
     'field_singledate' => array(),
-    'field_sdgs_type' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'goal',
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8261-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8264-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -208,6 +208,14 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'goal',
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -216,20 +224,12 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
     'field_singledate' => array(),
-    'field_sdgs_type' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'goal',
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8262-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8265-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -254,6 +254,14 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'target',
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -262,20 +270,12 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
     'field_singledate' => array(),
-    'field_sdgs_type' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'target',
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8274-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8266-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -300,6 +300,14 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'goal',
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -308,20 +316,12 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
     'field_singledate' => array(),
-    'field_sdgs_type' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'goal',
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8275-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8267-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -343,6 +343,14 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'target',
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -351,20 +359,12 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
     'field_singledate' => array(),
-    'field_sdgs_type' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'target',
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8265-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8268-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -386,8 +386,8 @@ function landportal_sdgs_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
           'date_type' => 'datetime',
         ),
       ),
@@ -410,6 +410,8 @@ function landportal_sdgs_uuid_features_default_terms() {
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'sdgs',
     'field_id' => array(),
+    'field_image' => array(),
+    'field_sdgs_type' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -418,14 +420,12 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
     'field_singledate' => array(),
-    'field_sdgs_type' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8266-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8270-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -447,8 +447,8 @@ function landportal_sdgs_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
           'date_type' => 'datetime',
         ),
       ),
@@ -478,6 +478,14 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'goal',
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -486,20 +494,12 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
     'field_singledate' => array(),
-    'field_sdgs_type' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'goal',
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8267-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8272-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -518,8 +518,8 @@ function landportal_sdgs_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
           'date_type' => 'datetime',
         ),
       ),
@@ -549,6 +549,14 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'target',
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -557,20 +565,12 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
     'field_singledate' => array(),
-    'field_sdgs_type' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'target',
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8268-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8274-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -595,6 +595,14 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'goal',
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -603,20 +611,12 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
     'field_singledate' => array(),
-    'field_sdgs_type' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'goal',
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8269-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8275-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -638,6 +638,14 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'goal',
+        ),
+      ),
+    ),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -646,20 +654,12 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
     'field_singledate' => array(),
-    'field_sdgs_type' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'goal',
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8270-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8276-0',
     'path' => array(
       'pathauto' => 1,
     ),
