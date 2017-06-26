@@ -74,8 +74,7 @@ projects:
   - location
   - login_one_time
   - logintoboggan
-#  - mailchimp
-#  - mailchimp_user_lists
+  - mailchimp
   - masquerade
   - media
   - media_ckeditor
