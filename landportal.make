@@ -114,6 +114,7 @@ projects:
   - vertical_tabs_responsive
   - video_filter
   - views
+  - views_bootstrap
   - views_bulk_operations
   - views_contextual_filters_or
   - views_distinct

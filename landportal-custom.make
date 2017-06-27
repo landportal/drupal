@@ -53,7 +53,7 @@ projects:
     patch:
       - "https://www.drupal.org/files/issues/og_webform_api2-1946432-30.patch"
   profile2:
-    version: ~
+    version: "7.x-1.x-dev"
     patch:
       - "https://www.drupal.org/files/issues/profile2--inherit-view_mode.patch"
   # profile2_create:
