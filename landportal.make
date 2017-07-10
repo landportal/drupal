@@ -120,6 +120,8 @@ projects:
   - views_php
   - views_term_path
   - views_tree
+  - views_field_view
+  - views_timelinejs
   - webform
   - xmlsitemap
 
