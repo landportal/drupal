@@ -23,6 +23,17 @@ $handler->display->display_options['pager']['options']['items_per_page'] = '0';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['row_options']['inline'] = array(
+  'field_id' => 'field_id',
+  'name' => 'name',
+);
+$handler->display->display_options['row_options']['separator'] = '-';
+/* Field: Taxonomy term: ID */
+$handler->display->display_options['fields']['field_id']['id'] = 'field_id';
+$handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
+$handler->display->display_options['fields']['field_id']['field'] = 'field_id';
+$handler->display->display_options['fields']['field_id']['label'] = '';
+$handler->display->display_options['fields']['field_id']['element_label_colon'] = FALSE;
 /* Field: Taxonomy term: Name */
 $handler->display->display_options['fields']['name']['id'] = 'name';
 $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
@@ -30,7 +41,11 @@ $handler->display->display_options['fields']['name']['field'] = 'name';
 $handler->display->display_options['fields']['name']['label'] = '';
 $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-$handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+/* Sort criterion: Taxonomy term: Weight */
+$handler->display->display_options['sorts']['weight']['id'] = 'weight';
+$handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['weight']['field'] = 'weight';
 /* Contextual filter: Taxonomy term: Parent term */
 $handler->display->display_options['arguments']['parent']['id'] = 'parent';
 $handler->display->display_options['arguments']['parent']['table'] = 'taxonomy_term_hierarchy';
@@ -60,3 +75,4 @@ $handler->display->display_options['filters']['parent']['value']['value'] = '0';
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
+
