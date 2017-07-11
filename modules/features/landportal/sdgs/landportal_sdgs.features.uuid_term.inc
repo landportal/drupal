@@ -22,7 +22,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_id' => array(
       'und' => array(
         0 => array(
-          'value' => '11.1',
+          'value' => 11.1,
           'format' => NULL,
         ),
       ),
@@ -35,6 +35,7 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -43,12 +44,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8261-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8286-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -68,7 +68,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_id' => array(
       'und' => array(
         0 => array(
-          'value' => '2.4',
+          'value' => 2.4,
           'format' => NULL,
         ),
       ),
@@ -81,6 +81,7 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -89,12 +90,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8262-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8287-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -114,7 +114,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_id' => array(
       'und' => array(
         0 => array(
-          'value' => '11.7',
+          'value' => 11.7,
           'format' => NULL,
         ),
       ),
@@ -127,6 +127,7 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -135,12 +136,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8263-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8288-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -160,7 +160,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_id' => array(
       'und' => array(
         0 => array(
-          'value' => '5',
+          'value' => 5,
           'format' => NULL,
         ),
       ),
@@ -173,6 +173,7 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -181,12 +182,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8264-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8289-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -203,7 +203,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_id' => array(
       'und' => array(
         0 => array(
-          'value' => '15.3',
+          'value' => 15.3,
           'format' => NULL,
         ),
       ),
@@ -216,6 +216,7 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -224,12 +225,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8265-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8290-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -249,7 +249,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_id' => array(
       'und' => array(
         0 => array(
-          'value' => '1.4',
+          'value' => 1.4,
           'format' => NULL,
         ),
       ),
@@ -262,6 +262,7 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -270,12 +271,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8266-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8291-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -295,7 +295,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_id' => array(
       'und' => array(
         0 => array(
-          'value' => '1',
+          'value' => 1,
           'format' => NULL,
         ),
       ),
@@ -308,6 +308,7 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -316,12 +317,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8267-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8292-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -338,7 +338,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_id' => array(
       'und' => array(
         0 => array(
-          'value' => '15.1',
+          'value' => 15.1,
           'format' => NULL,
         ),
       ),
@@ -351,6 +351,7 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -359,12 +360,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8268-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8293-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -386,8 +386,8 @@ function landportal_sdgs_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Berlin',
-          'timezone_db' => 'Europe/Berlin',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
           'date_type' => 'datetime',
         ),
       ),
@@ -409,9 +409,6 @@ function landportal_sdgs_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'sdgs',
-    'field_id' => array(),
-    'field_image' => array(),
-    'field_sdgs_type' => array(),
     'field_id' => array(
       'und' => array(
         0 => array(
@@ -420,6 +417,9 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -428,12 +428,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8270-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8295-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -455,8 +454,8 @@ function landportal_sdgs_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Berlin',
-          'timezone_db' => 'Europe/Berlin',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
           'date_type' => 'datetime',
         ),
       ),
@@ -481,7 +480,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_id' => array(
       'und' => array(
         0 => array(
-          'value' => '2',
+          'value' => 2,
           'format' => NULL,
         ),
       ),
@@ -494,6 +493,7 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -502,12 +502,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8272-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8297-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -526,8 +525,8 @@ function landportal_sdgs_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Berlin',
-          'timezone_db' => 'Europe/Berlin',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
           'date_type' => 'datetime',
         ),
       ),
@@ -552,7 +551,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_id' => array(
       'und' => array(
         0 => array(
-          'value' => '11.3',
+          'value' => 11.3,
           'format' => NULL,
         ),
       ),
@@ -565,6 +564,7 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -573,12 +573,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8274-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8299-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -598,7 +597,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_id' => array(
       'und' => array(
         0 => array(
-          'value' => '15',
+          'value' => 15,
           'format' => NULL,
         ),
       ),
@@ -611,6 +610,7 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -619,12 +619,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8275-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8300-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -641,7 +640,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_id' => array(
       'und' => array(
         0 => array(
-          'value' => '11',
+          'value' => 11,
           'format' => NULL,
         ),
       ),
@@ -654,6 +653,7 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -662,12 +662,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8276-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8301-0',
     'path' => array(
       'pathauto' => 1,
     ),
