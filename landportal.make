@@ -11,6 +11,7 @@ api: 2
 #   projects:
 #     subdir: "sites/all/modules"
 projects:
+  - account_profile
   - addtoany
   - admin_menu
   - admin_views
