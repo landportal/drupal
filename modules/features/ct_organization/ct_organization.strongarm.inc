@@ -87,16 +87,16 @@ function ct_organization_strongarm() {
           'weight' => '6',
         ),
         'path' => array(
-          'weight' => '9',
+          'weight' => '11',
         ),
         'language' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'xmlsitemap' => array(
-          'weight' => '10',
+          'weight' => '12',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '7',
         ),
       ),
       'display' => array(

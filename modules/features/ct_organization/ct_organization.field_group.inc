@@ -20,22 +20,19 @@ function ct_organization_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'About this organization',
-    'weight' => '7',
+    'label' => '',
+    'weight' => '5',
     'children' => array(
-      0 => 'field_link',
-      1 => 'field_related_organization',
-      2 => 'locations',
-      3 => 'group_contact',
-      4 => 'group_oa',
+      0 => 'locations',
+      1 => 'group_contact',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'About this organization',
+      'label' => '',
       'instance_settings' => array(
         'required_fields' => 1,
         'id' => '',
-        'classes' => 'group-about field-group-fieldset lp-2c',
+        'classes' => 'lp-2c',
         'description' => '',
       ),
       'formatter' => 'open',
@@ -54,14 +51,15 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Admin',
-    'weight' => '8',
+    'weight' => '6',
     'children' => array(
       0 => 'field_organization_relationship',
       1 => 'field_user',
       2 => 'field_thematic_promoted',
-      3 => 'language',
-      4 => 'path',
-      5 => 'xmlsitemap',
+      3 => 'field_related_organization',
+      4 => 'language',
+      5 => 'path',
+      6 => 'xmlsitemap',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -69,7 +67,7 @@ function ct_organization_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'id' => '',
-        'classes' => 'group-admin lp-2c',
+        'classes' => 'group-admin',
         'description' => '',
       ),
       'formatter' => 'open',
@@ -352,15 +350,11 @@ function ct_organization_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'organization';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_about';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '7',
-    'children' => array(
-      0 => 'field_organization_type',
-      1 => 'field_file',
-      2 => 'field_language',
-    ),
+    'weight' => '8',
+    'children' => array(),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'label' => '',
@@ -419,7 +413,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
@@ -504,7 +498,6 @@ function ct_organization_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('About this organization');
   t('Admin');
   t('Contact information');
   t('Topics and Regions');
