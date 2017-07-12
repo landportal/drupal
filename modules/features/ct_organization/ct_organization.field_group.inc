@@ -21,7 +21,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'About this organization',
-    'weight' => '5',
+    'weight' => '4',
     'children' => array(
       0 => 'field_contact',
       1 => 'field_organization_type',
@@ -29,7 +29,9 @@ function ct_organization_field_group_info() {
       3 => 'field_email',
       4 => 'field_acronym',
       5 => 'field_file',
-      6 => 'locations',
+      6 => 'field_related_organization',
+      7 => 'field_language',
+      8 => 'locations',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -56,7 +58,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Admin',
-    'weight' => '7',
+    'weight' => '6',
     'children' => array(
       0 => 'field_organization_relationship',
       1 => 'field_user',
@@ -358,7 +360,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',

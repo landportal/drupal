@@ -10,6 +10,92 @@
 function ct_organization_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance:
+  // 'field_collection_item-field_related_organization-field_org_affiliation'.
+  $field_instances['field_collection_item-field_related_organization-field_org_affiliation'] = array(
+    'bundle' => 'field_related_organization',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_org_affiliation',
+    'label' => 'Affiliation',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_related_organization-field_orgref'.
+  $field_instances['field_collection_item-field_related_organization-field_orgref'] = array(
+    'bundle' => 'field_related_organization',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_orgref',
+    'label' => 'Organization',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-organization-body'.
   $field_instances['node-organization-body'] = array(
     'bundle' => 'organization',
@@ -146,7 +232,7 @@ function ct_organization_field_default_field_instances() {
         'size' => 20,
       ),
       'type' => 'text_textfield',
-      'weight' => 19,
+      'weight' => 20,
     ),
   );
 
@@ -155,7 +241,7 @@ function ct_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please enter a name of assigned focal point for land issues, if applicable.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -189,9 +275,31 @@ function ct_organization_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contact',
-    'label' => 'Organisation contact',
+    'label' => 'Focal point',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -318,7 +426,7 @@ function ct_organization_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 18,
+      'weight' => 19,
     ),
   );
 
@@ -460,6 +568,54 @@ function ct_organization_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-organization-field_language'.
+  $field_instances['node-organization-field_language'] = array(
+    'bundle' => 'organization',
+    'default_value' => array(
+      0 => array(
+        'tid' => 540,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Languages this organization operates in',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 14,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_language',
+    'label' => 'Working language(s)',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 16,
+    ),
+  );
+
   // Exported field_instance: 'node-organization-field_link'.
   $field_instances['node-organization-field_link'] = array(
     'bundle' => 'organization',
@@ -526,7 +682,7 @@ function ct_organization_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -687,6 +843,62 @@ function ct_organization_field_default_field_instances() {
       ),
       'type' => 'options_select',
       'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-organization-field_related_organization'.
+  $field_instances['node-organization-field_related_organization'] = array(
+    'bundle' => 'organization',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 13,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_related_organization',
+    'label' => 'related organization',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'field_collection_fieldset',
+      'settings' => array(
+        'collapsed' => 0,
+        'field_as_label' => '',
+        'last_item_collapsed' => 0,
+        'new_item_open' => 0,
+        'replace_label' => 0,
+      ),
+      'type' => 'field_collection_fieldset',
+      'weight' => 21,
     ),
   );
 
@@ -954,22 +1166,28 @@ function ct_organization_field_default_field_instances() {
   t('A short text introducing this organisation.
 ');
   t('Acronym');
+  t('Affiliation');
   t('Attach a  file');
   t('Description');
   t('Email');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
+  t('Focal point');
   t('Geographical focus');
+  t('Languages this organization operates in');
   t('Logo');
   t('Members');
-  t('Organisation contact');
+  t('Organization');
   t('Organization relationship');
   t('Organization type');
   t('Overarching categories');
   t('People affiliated to this organization (require a Land Portal account)');
+  t('Please enter a name of assigned focal point for land issues, if applicable.');
   t('Related concepts');
   t('Themes');
   t('Title');
   t('Website');
+  t('Working language(s)');
+  t('related organization');
 
   return $field_instances;
 }

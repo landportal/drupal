@@ -84,19 +84,19 @@ function ct_organization_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '16',
+          'weight' => '17',
         ),
         'path' => array(
           'weight' => '9',
         ),
         'language' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
         'xmlsitemap' => array(
           'weight' => '10',
         ),
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '7',
         ),
       ),
       'display' => array(
@@ -193,6 +193,11 @@ function ct_organization_strongarm() {
         'locpick' => array(
           'collect' => '0',
           'weight' => '20',
+        ),
+        'phone' => array(
+          'collect' => 0,
+          'default' => '',
+          'weight' => 25,
         ),
       ),
     ),
