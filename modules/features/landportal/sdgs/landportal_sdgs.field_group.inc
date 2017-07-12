@@ -45,7 +45,7 @@ function landportal_sdgs_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_details|node|sdgi|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -76,7 +76,7 @@ function landportal_sdgs_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_header|taxonomy_term|sdgs|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -108,7 +108,7 @@ function landportal_sdgs_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_rel|node|sdgi|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -143,7 +143,7 @@ function landportal_sdgs_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_topics_regions|node|sdgi|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -175,7 +175,7 @@ function landportal_sdgs_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_vis|node|sdgi|default'] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.
