@@ -21,14 +21,22 @@ $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '0';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['style_plugin'] = 'timelinejs';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Relationship: Content: Deadlines (field_milestone) */
+$handler->display->display_options['relationships']['field_milestone_value']['id'] = 'field_milestone_value';
+$handler->display->display_options['relationships']['field_milestone_value']['table'] = 'field_data_field_milestone';
+$handler->display->display_options['relationships']['field_milestone_value']['field'] = 'field_milestone_value';
+$handler->display->display_options['relationships']['field_milestone_value']['delta'] = '-1';
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
 $handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['relationship'] = 'field_noderef_target_id';
 $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
 /* Sort criterion: Content: Post date */
 $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -59,33 +67,42 @@ $handler->display->display_options['style_options']['timeline_config']['start_at
 $handler->display->display_options['style_options']['additional_config']['start_at_current'] = 0;
 $handler->display->display_options['style_options']['timeline_fields']['caption'] = 'title';
 $handler->display->display_options['style_options']['timeline_fields']['credit'] = 'title';
-$handler->display->display_options['style_options']['timeline_fields']['start_date'] = 'field_milestone';
-$handler->display->display_options['style_options']['timeline_fields']['display_date'] = 'field_milestone';
-$handler->display->display_options['style_options']['timeline_fields']['text'] = 'body';
+$handler->display->display_options['style_options']['timeline_fields']['start_date'] = 'field_singledate';
+$handler->display->display_options['style_options']['timeline_fields']['display_date'] = 'field_singledate';
+$handler->display->display_options['style_options']['timeline_fields']['text'] = 'field_description';
 $handler->display->display_options['style_options']['timeline_fields']['headline'] = 'title';
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['defaults']['row_options'] = FALSE;
-$handler->display->display_options['defaults']['relationships'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Field: Deadline */
+$handler->display->display_options['fields']['field_singledate']['id'] = 'field_singledate';
+$handler->display->display_options['fields']['field_singledate']['table'] = 'field_data_field_singledate';
+$handler->display->display_options['fields']['field_singledate']['field'] = 'field_singledate';
+$handler->display->display_options['fields']['field_singledate']['relationship'] = 'field_milestone_value';
+$handler->display->display_options['fields']['field_singledate']['label'] = '';
+$handler->display->display_options['fields']['field_singledate']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_singledate']['settings'] = array(
+  'format_type' => 'year_month_day',
+  'custom_date_format' => '',
+  'fromto' => 'both',
+  'multiple_number' => '',
+  'multiple_from' => '',
+  'multiple_to' => '',
+  'show_remaining_days' => 0,
+  'show_repeat_rule' => 'show',
+);
+/* Field: Field: Description */
+$handler->display->display_options['fields']['field_description']['id'] = 'field_description';
+$handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
+$handler->display->display_options['fields']['field_description']['field'] = 'field_description';
+$handler->display->display_options['fields']['field_description']['relationship'] = 'field_milestone_value';
+$handler->display->display_options['fields']['field_description']['label'] = '';
+$handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
 $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['label'] = '';
-$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-/* Field: Content: Body */
-$handler->display->display_options['fields']['body']['id'] = 'body';
-$handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-$handler->display->display_options['fields']['body']['field'] = 'body';
-/* Field: Content: Deadlines */
-$handler->display->display_options['fields']['field_milestone']['id'] = 'field_milestone';
-$handler->display->display_options['fields']['field_milestone']['table'] = 'field_data_field_milestone';
-$handler->display->display_options['fields']['field_milestone']['field'] = 'field_milestone';
-$handler->display->display_options['fields']['field_milestone']['exclude'] = TRUE;
-$handler->display->display_options['fields']['field_milestone']['type'] = 'field_collection_fields';
-$handler->display->display_options['fields']['field_milestone']['settings'] = array(
-  'view_mode' => 'full',
-);
-$handler->display->display_options['fields']['field_milestone']['delta_offset'] = '0';
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
