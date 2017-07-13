@@ -13,6 +13,27 @@ function ct_organization_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_about|node|organization|default';
+  $field_group->group_name = 'group_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'organization';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'More about',
+    'weight' => '6',
+    'children' => array(),
+    'format_type' => 'hidden',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(),
+    ),
+  );
+  $field_groups['group_about|node|organization|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_about|node|organization|form';
   $field_group->group_name = 'group_about';
   $field_group->entity_type = 'node';
@@ -145,6 +166,42 @@ function ct_organization_field_group_info() {
     ),
   );
   $field_groups['group_header|node|organization|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_header|node|organization|form';
+  $field_group->group_name = 'group_header';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'organization';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_image',
+      1 => 'field_organization_type',
+      2 => 'field_acronym',
+      3 => 'field_file',
+      4 => 'field_language',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => '',
+        'element' => 'header',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+      'formatter' => '',
+    ),
+  );
+  $field_groups['group_header|node|organization|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -445,6 +502,8 @@ function ct_organization_field_group_info() {
   // Included for use with string extractors like potx.
   t('About this organization');
   t('Admin');
+  t('Contact information');
+  t('More about');
   t('Topics and Regions');
 
   return $field_groups;
