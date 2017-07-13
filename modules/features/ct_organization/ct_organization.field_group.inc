@@ -41,24 +41,19 @@ function ct_organization_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'About this organization',
+    'label' => '',
     'weight' => '5',
     'children' => array(
-      0 => 'field_contact',
-      1 => 'field_organization_type',
-      2 => 'field_link',
-      3 => 'field_email',
-      4 => 'field_acronym',
-      5 => 'field_file',
-      6 => 'locations',
+      0 => 'locations',
+      1 => 'group_contact',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'About this organization',
+      'label' => '',
       'instance_settings' => array(
         'required_fields' => 1,
         'id' => '',
-        'classes' => 'group-about field-group-fieldset lp-2c',
+        'classes' => 'lp-2c',
         'description' => '',
       ),
       'formatter' => 'open',
@@ -77,13 +72,15 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Admin',
-    'weight' => '7',
+    'weight' => '6',
     'children' => array(
       0 => 'field_organization_relationship',
       1 => 'field_user',
       2 => 'field_thematic_promoted',
-      3 => 'path',
-      4 => 'xmlsitemap',
+      3 => 'field_related_organization',
+      4 => 'language',
+      5 => 'path',
+      6 => 'xmlsitemap',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -91,13 +88,44 @@ function ct_organization_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'id' => '',
-        'classes' => 'group-admin lp-2c',
+        'classes' => 'group-admin',
         'description' => '',
       ),
       'formatter' => 'open',
     ),
   );
   $field_groups['group_admin|node|organization|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_contact|node|organization|form';
+  $field_group->group_name = 'group_contact';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'organization';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_about';
+  $field_group->data = array(
+    'label' => 'Contact information',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_contact',
+      1 => 'field_email',
+      2 => 'field_phone',
+      3 => 'field_postal_address',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-contact field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_contact|node|organization|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -415,7 +443,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
@@ -500,7 +528,6 @@ function ct_organization_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('About this organization');
   t('Admin');
   t('Contact information');
   t('More about');

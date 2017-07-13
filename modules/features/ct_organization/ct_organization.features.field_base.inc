@@ -10,13 +10,13 @@
 function ct_organization_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_organization_relationship'.
-  $field_bases['field_organization_relationship'] = array(
+  // Exported field_base: 'field_orgrel'.
+  $field_bases['field_orgrel'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_organization_relationship',
+    'field_name' => 'field_orgrel',
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
