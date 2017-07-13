@@ -11,6 +11,7 @@ api: 2
 #   projects:
 #     subdir: "sites/all/modules"
 projects:
+  - account_profile
   - addtoany
   - admin_menu
   - admin_views
@@ -121,6 +122,8 @@ projects:
   - views_php
   - views_term_path
   - views_tree
+  - views_field_view
+  - views_timelinejs
   - webform
   - xmlsitemap
 
