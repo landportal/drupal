@@ -11,11 +11,12 @@ api: 2
 #   projects:
 #     subdir: "sites/all/modules"
 projects:
+  - account_profile
   - addtoany
   - admin_menu
   - admin_views
   - apachesolr
-  - apachesolr_views
+#  - apachesolr_views
   - auto_entitylabel
   - better_formats
   - block_class
@@ -74,8 +75,7 @@ projects:
   - location
   - login_one_time
   - logintoboggan
-#  - mailchimp
-#  - mailchimp_user_lists
+  - mailchimp
   - masquerade
   - media
   - media_ckeditor
@@ -115,12 +115,15 @@ projects:
   - vertical_tabs_responsive
   - video_filter
   - views
+  - views_bootstrap
   - views_bulk_operations
   - views_contextual_filters_or
   - views_distinct
   - views_php
   - views_term_path
   - views_tree
+  - views_field_view
+  - views_timelinejs
   - webform
   - xmlsitemap
 

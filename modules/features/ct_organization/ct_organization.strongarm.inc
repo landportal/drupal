@@ -84,19 +84,19 @@ function ct_organization_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '16',
-        ),
-        'path' => array(
-          'weight' => '9',
-        ),
-        'language' => array(
           'weight' => '6',
         ),
+        'path' => array(
+          'weight' => '11',
+        ),
+        'language' => array(
+          'weight' => '7',
+        ),
         'xmlsitemap' => array(
-          'weight' => '10',
+          'weight' => '12',
         ),
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '7',
         ),
       ),
       'display' => array(
@@ -152,7 +152,7 @@ function ct_organization_strongarm() {
     'form' => array(
       'weight' => '4',
       'collapsible' => 1,
-      'collapsed' => 1,
+      'collapsed' => 0,
       'fields' => array(
         'name' => array(
           'collect' => '1',
@@ -194,6 +194,11 @@ function ct_organization_strongarm() {
           'collect' => '0',
           'weight' => '20',
         ),
+        'phone' => array(
+          'collect' => '0',
+          'default' => '',
+          'weight' => '25',
+        ),
       ),
     ),
     'display' => array(
@@ -207,6 +212,7 @@ function ct_organization_strongarm() {
         'postal_code' => 0,
         'country' => 0,
         'locpick' => 0,
+        'phone' => 0,
         'province_name' => 0,
         'country_name' => 0,
         'map_link' => 0,

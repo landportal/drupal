@@ -14,7 +14,7 @@ api: 2
 #   projects:
 #     subdir: "sites/all/modules"
 projects:
-  apachesolr_search:
+  apachesolr:
     patch:
       - "https://www.drupal.org/files/issues/apachesolr-2454167-2-showing.patch"
   calendar:
@@ -48,14 +48,12 @@ projects:
     version: ~
     patch:
       - "https://www.drupal.org/files/issues/validate_url-2299657-46.patch"
-  mailchimp:
-    version: "2.13"
   og_webform:
     version: "1.x-dev"
     patch:
       - "https://www.drupal.org/files/issues/og_webform_api2-1946432-30.patch"
   profile2:
-    version: ~
+    version: "7.x-1.x-dev"
     patch:
       - "https://www.drupal.org/files/issues/profile2--inherit-view_mode.patch"
   # profile2_create:
@@ -110,10 +108,10 @@ libraries:
     download:
       type: "file"
       url: "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.5.4/ckeditor_4.5.4_full.zip"
-  chosen:
-    download:
-      type: "file"
-      url: "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip"
+  # chosen:
+  #   download:
+  #     type: "file"
+  #     url: "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip"
   lbvis:
     download:
       type: "git"

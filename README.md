@@ -22,7 +22,9 @@ This repository contain the custom modules used by the Land Portal website.
     Few improvements to user accounts and profiles as well as organizations.
 - 2.3.1: 2016 - Land Book development
     Narrative pages and visualization.
-- 2.3.2: 2017 - switch to Bootstrap based theme (see drupal-lpbs)
+- 2.3.2: Januray 2017 - switch to Bootstrap based theme (see drupal-lpbs)
+- 2.3.3: March/April 2017 - Partners sites. Cleanup, optimizations and
+  general style update.
 
 # More information
 
@@ -31,10 +33,15 @@ services in the handbooks (Google docs).
  - the Editor one on how to manage the landportal website
  - the Administrator one about the Landportal stack and environment.
 
-## Author
+## Contributors
 
-Jules Clement <jules@ker.bz> - Sept. 2015
+Jules Clement <jules@ker.bz> - Lead
+Carlos Tejo <carlos.tejo@landportal.info> - General + Land Library importers
+Alexey Ostroverkhov (Web Coding Studio) - minor contributions
+Ivo Radulovski (Segments.at) - minor contributions
+Antonella Picarella <antonella.picarella@gmail.com> - Land Libray and importers
+Agroknow dev team - Land Library
+WESO & SBC4D - Initial version
 
 ## License
 This software project is under MIT license (see LICENSE)
-
