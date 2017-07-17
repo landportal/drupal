@@ -20,7 +20,7 @@ $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['row_class'] = 'target-[tid]';
+$handler->display->display_options['style_options']['row_class'] = '[tid]';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
@@ -156,7 +156,7 @@ $handler = $view->new_display('block', 'Goals', 'block_sdgs');
 $handler->display->display_options['display_description'] = 'SDG accordion with Goals, Targets and Indicators';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'views_bootstrap_accordion_plugin_style';
-$handler->display->display_options['style_options']['row_class'] = 'goal-[tid]';
+$handler->display->display_options['style_options']['row_class'] = 'goal [tid]';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['style_options']['title_field'] = 'name';
@@ -224,6 +224,20 @@ $handler->display->display_options['filters']['parent']['field'] = 'parent';
 
 /* Display: Targets */
 $handler = $view->new_display('block', 'Targets', 'targets');
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['row_class'] = 'target [tid]';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['row_options']['inline'] = array(
+  'field_sdgs_type' => 'field_sdgs_type',
+  'field_id' => 'field_id',
+  'name' => 'name',
+);
+$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Taxonomy term: Term ID */
 $handler->display->display_options['fields']['tid']['id'] = 'tid';
