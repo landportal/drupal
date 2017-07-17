@@ -39,6 +39,29 @@ function landportal_sdgs_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
+  // Exported field_base: 'field_sdg_header'.
+  $field_bases['field_sdg_header'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_sdg_header',
+    'indexes' => array(
+      'moddelta' => array(
+        0 => 'moddelta',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'blockreference',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'profile2_private' => FALSE,
+      'referenceable_modules' => array(),
+    ),
+    'translatable' => 0,
+    'type' => 'blockreference',
+  );
+
   // Exported field_base: 'field_sdgs_tier'.
   $field_bases['field_sdgs_tier'] = array(
     'active' => 1,

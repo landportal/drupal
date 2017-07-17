@@ -522,7 +522,7 @@ function landportal_sdgs_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fieldset_view',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
@@ -847,6 +847,92 @@ function landportal_sdgs_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'node-sdgi-field_sdg_header'.
+  $field_instances['node-sdgi-field_sdg_header'] = array(
+    'bundle' => 'sdgi',
+    'default_value' => array(
+      0 => array(
+        'moddelta' => 'views:sdgs-sdgi_parents',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 1,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_sdg_header',
+    'label' => 'SDG header',
+    'required' => 0,
+    'settings' => array(
+      'blockreference_modules' => array(
+        'addtoany' => 0,
+        'apachesolr_search' => 0,
+        'block' => 0,
+        'calendar' => 0,
+        'comment' => 0,
+        'context_ui' => 0,
+        'devel' => 0,
+        'diff' => 0,
+        'facetapi' => 0,
+        'global_filter' => 0,
+        'hybridauth' => 0,
+        'landbook' => 0,
+        'landbook_vggt' => 0,
+        'landbook_view_coda' => 0,
+        'landbook_vis_map' => 0,
+        'landbook_vis_table_indicators' => 0,
+        'landportal_blocks' => 0,
+        'landportal_partners' => 0,
+        'locale' => 0,
+        'login_one_time' => 0,
+        'logintoboggan' => 0,
+        'mailchimp_signup' => 0,
+        'masquerade' => 0,
+        'menu' => 0,
+        'node' => 0,
+        'og_menu' => 0,
+        'pcp' => 0,
+        'print' => 0,
+        'search' => 0,
+        'shortcut' => 0,
+        'system' => 0,
+        'user' => 0,
+        'views' => 'views',
+        'webform' => 0,
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 119,
     ),
   );
 
@@ -1287,6 +1373,7 @@ function landportal_sdgs_field_default_field_instances() {
   t('Related content');
   t('SDG');
   t('SDG Indicator');
+  t('SDG header');
   t('SDGs Tier this indicator is officially in');
   t('The organization responsible for this indicator');
   t('Themes');
