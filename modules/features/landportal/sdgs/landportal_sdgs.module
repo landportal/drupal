@@ -5,3 +5,16 @@
  */
 
 include_once 'landportal_sdgs.features.inc';
+
+function landportal_sdgs_views_plugins_alter(&$plugins) {
+  // Allow rows classes on BS accordion view
+  $plugins['style']['views_bootstrap_accordion_plugin_style']['uses row class'] = TRUE;
+  //dpm($plugins);
+}
+
+// Allow rows classes on BS accordion view
+function landportal_sdgs_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
+  foreach ($vars['rows'] as $key => $item) {
+    $vars['row_classes'][$key] = array($vars['view']->style_plugin->get_row_class($key));
+  }
+}

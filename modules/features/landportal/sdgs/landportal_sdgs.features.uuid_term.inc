@@ -11,7 +11,7 @@ function landportal_sdgs_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
-    'name' => '11.1 Housing',
+    'name' => 'Housing',
     'description' => 'By 2030, ensure access for all to adequate, safe and affordable housing and basic services and upgrade slums',
     'format' => 'plain_text',
     'weight' => 0,
@@ -35,20 +35,20 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => '11.1 Housing',
+          'value' => 'Housing',
           'format' => NULL,
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8261-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8292-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -57,7 +57,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => '2.4 Sustainable food',
+    'name' => 'Sustainable food',
     'description' => 'By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality',
     'format' => 'plain_text',
     'weight' => 0,
@@ -81,20 +81,20 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => '2.4 Sustainable food',
+          'value' => 'Sustainable food',
           'format' => NULL,
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8262-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8293-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -103,7 +103,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => '11.7 Universal access',
+    'name' => 'Universal access',
     'description' => 'By 2030, provide universal access to safe, inclusive and accessible, green and public spaces, in particular for women and children, older persons and persons with disabilities',
     'format' => 'plain_text',
     'weight' => 2,
@@ -127,20 +127,20 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => '11.7 Universal access',
+          'value' => 'Universal access',
           'format' => NULL,
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8263-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8294-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -149,7 +149,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => '5 Gender equality',
+    'name' => 'Gender equality',
     'description' => 'Achieve gender equality and empower all women and girls',
     'format' => 'plain_text',
     'weight' => 7,
@@ -173,26 +173,26 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => '5 Gender equality',
+          'value' => 'Gender equality',
           'format' => NULL,
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8264-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8295-0',
     'path' => array(
       'pathauto' => 1,
     ),
   );
   $terms[] = array(
-    'name' => '15.3 Restore degraded land and soil',
+    'name' => 'Restore degraded land and soil',
     'description' => 'By 2030, combat desertification, restore degraded land and soil, including land affected by desertification, drought and floods, and strive to achieve a land degradation-neutral world',
     'format' => 'plain_text',
     'weight' => 1,
@@ -212,24 +212,24 @@ function landportal_sdgs_uuid_features_default_terms() {
     'field_sdgs_type' => array(
       'und' => array(
         0 => array(
-          'value' => 'goal',
-        ),
-      ),
-    ),
-    'name_field' => array(
-      'und' => array(
-        0 => array(
-          'value' => '15.3 Restore degraded land and soil',
-          'format' => NULL,
+          'value' => 'target',
         ),
       ),
     ),
     'field_singledate' => array(),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Restore degraded land and soil',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8265-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8296-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -238,7 +238,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => '1.4 Equal rights',
+    'name' => 'Equal rights',
     'description' => 'By 2030, ensure that all men and women, in particular the poor and the vulnerable, have equal rights to economic resources, as well as access to basic services, ownership and control over land and other forms of property, inheritance, natural resources, appropriate new technology and financial services, including microfinance',
     'format' => 'plain_text',
     'weight' => 0,
@@ -262,20 +262,20 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => '1.4 Equal rights',
+          'value' => 'Equal rights',
           'format' => NULL,
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8266-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8297-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -284,7 +284,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => '1 No poverty',
+    'name' => 'No poverty',
     'description' => 'End poverty in all its forms everywhere',
     'format' => 'plain_text',
     'weight' => 1,
@@ -308,26 +308,26 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => '1 No poverty',
+          'value' => 'No poverty',
           'format' => NULL,
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8267-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8298-0',
     'path' => array(
       'pathauto' => 1,
     ),
   );
   $terms[] = array(
-    'name' => '15.1 Conservation and sustainable use',
+    'name' => 'Conservation and sustainable use',
     'description' => 'By 2020, ensure the conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems and their services, in particular forests, wetlands, mountains and drylands, in line with obligations under international agreements',
     'format' => 'plain_text',
     'weight' => 0,
@@ -351,20 +351,20 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => '15.1 Conservation and sustainable use',
+          'value' => 'Conservation and sustainable use',
           'format' => NULL,
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8268-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8299-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -409,9 +409,23 @@ function landportal_sdgs_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'sdgs',
-    'field_id' => array(),
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => '5.a',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'field_image' => array(),
-    'field_sdgs_type' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'target',
+        ),
+      ),
+    ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -420,12 +434,11 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8270-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8301-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -447,8 +460,8 @@ function landportal_sdgs_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Berlin',
-          'timezone_db' => 'Europe/Berlin',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
           'date_type' => 'datetime',
         ),
       ),
@@ -462,7 +475,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => '2 Zero hunger',
+    'name' => 'Zero hunger',
     'description' => 'End hunger, achieve food security and improved nutrition and promote sustainable agriculture',
     'format' => 'plain_text',
     'weight' => 6,
@@ -486,20 +499,20 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => '2 Zero hunger',
+          'value' => 'Zero hunger',
           'format' => NULL,
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8272-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8303-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -518,8 +531,8 @@ function landportal_sdgs_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Berlin',
-          'timezone_db' => 'Europe/Berlin',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
           'date_type' => 'datetime',
         ),
       ),
@@ -533,7 +546,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => '11.3 Urbanization',
+    'name' => 'Urbanization',
     'description' => 'By 2030, enhance inclusive and sustainable urbanization and capacity for participatory, integrated and sustainable human settlement planning and management in all countries',
     'format' => 'plain_text',
     'weight' => 4,
@@ -557,20 +570,20 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => '11.3 Urbanization',
+          'value' => 'Urbanization',
           'format' => NULL,
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8274-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8305-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -579,7 +592,7 @@ function landportal_sdgs_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => '15 Life on land',
+    'name' => 'Life on land',
     'description' => 'Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss',
     'format' => 'plain_text',
     'weight' => 9,
@@ -603,26 +616,26 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => '15 Life on land',
+          'value' => 'Life on land',
           'format' => NULL,
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8275-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8306-0',
     'path' => array(
       'pathauto' => 1,
     ),
   );
   $terms[] = array(
-    'name' => '11 Sustainable cities and communities',
+    'name' => 'Sustainable cities and communities',
     'description' => 'Make cities and human settlements inclusive, safe, resilient and sustainable',
     'format' => 'plain_text',
     'weight' => 8,
@@ -646,20 +659,20 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
-          'value' => '11 Sustainable cities and communities',
+          'value' => 'Sustainable cities and communities',
           'format' => NULL,
         ),
       ),
     ),
-    'field_singledate' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8276-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8307-0',
     'path' => array(
       'pathauto' => 1,
     ),

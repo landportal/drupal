@@ -27,16 +27,15 @@ function landportal_sdgs_field_group_info() {
       1 => 'field_contact',
       2 => 'field_milestone',
       3 => 'field_orgref',
-      4 => 'field_sdg',
+      4 => 'field_partners',
       5 => 'field_sdgs_tier',
-      6 => 'field_partners',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'col-sm-8',
+        'classes' => 'col-sm-7',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -51,66 +50,65 @@ function landportal_sdgs_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_details|node|sdgi|form';
-  $field_group->group_name = 'group_details';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'sdgi';
-  $field_group->mode = 'form';
+  $field_group->identifier = 'group_header|taxonomy_term|sdgs|teaser';
+  $field_group->group_name = 'group_header';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'sdgs';
+  $field_group->mode = 'teaser';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Details',
-    'weight' => '4',
+    'label' => '',
+    'weight' => '0',
     'children' => array(
-      0 => 'field_contact',
-      1 => 'field_milestone',
-      2 => 'field_orgref',
-      3 => 'field_sdgs_tier',
-      4 => 'field_partners',
+      0 => 'field_id',
+      1 => 'field_sdgs_type',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'html-element',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => '',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-details field-group-fieldset',
-        'required_fields' => 1,
         'id' => '',
+        'classes' => '',
+        'element' => 'header',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
       ),
     ),
   );
-  $field_groups['group_details|node|sdgi|form'] = $field_group;
+  $field_groups['group_header|taxonomy_term|sdgs|teaser'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_milestones|node|sdgi|default';
-  $field_group->group_name = 'group_milestones';
+  $field_group->identifier = 'group_rel|node|sdgi|default';
+  $field_group->group_name = 'group_rel';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'sdgi';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_details';
+  $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Key dates',
-    'weight' => '6',
+    'label' => 'Related Content',
+    'weight' => '4',
     'children' => array(
-      0 => 'field_milestone',
+      0 => 'field_noderef',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Key dates',
+      'label' => 'Related Content',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-milestones field-group-div',
+        'classes' => 'group-rel field-group-div col-sm-5',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h3',
         'effect' => 'none',
-        'speed' => 'fast',
+        'speed' => 'none',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
-  $field_groups['group_milestones|node|sdgi|default'] = $field_group;
+  $field_groups['group_rel|node|sdgi|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -123,7 +121,7 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '6',
+    'weight' => '8',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_domains',
@@ -150,38 +148,6 @@ function landportal_sdgs_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_topics_regions|node|sdgi|form';
-  $field_group->group_name = 'group_topics_regions';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'sdgi';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Topics and Regions',
-    'weight' => '5',
-    'children' => array(
-      0 => 'field_geographical_focus',
-      1 => 'field_related_domains',
-      2 => 'field_related_themes',
-      3 => 'field_related_topics',
-    ),
-    'format_type' => 'fieldset',
-    'format_settings' => array(
-      'label' => 'Topics and Regions',
-      'instance_settings' => array(
-        'required_fields' => 0,
-        'id' => '',
-        'classes' => 'group-topics-regions field-group-fieldset',
-        'description' => '',
-      ),
-      'formatter' => 'open',
-    ),
-  );
-  $field_groups['group_topics_regions|node|sdgi|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_vis|node|sdgi|default';
   $field_group->group_name = 'group_vis';
   $field_group->entity_type = 'node';
@@ -199,7 +165,7 @@ function landportal_sdgs_field_group_info() {
       'label' => 'Visualizations',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'col-sm-12',
+        'classes' => 'col-sm-7',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h3',
@@ -213,9 +179,7 @@ function landportal_sdgs_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Details');
-  t('Key dates');
-  t('Topics and Regions');
+  t('Related Content');
   t('Visualizations');
 
   return $field_groups;
