@@ -7,7 +7,6 @@ project = landlibrary
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = landcommunity
-dependencies[] = landlibrary_rdfext
 dependencies[] = landlibrary_resource
 dependencies[] = landlibrary_taxonomy
 dependencies[] = landportal_taxonomy
