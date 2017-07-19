@@ -64,3 +64,4 @@ features[field_instance][] = field_collection_item-field_milestone-field_descrip
 features[field_instance][] = field_collection_item-field_milestone-field_singledate
 features[field_instance][] = field_collection_item-field_paragraphs-field_description
 features[field_instance][] = field_collection_item-field_paragraphs-title_field
+features[variable][] = date_format_short

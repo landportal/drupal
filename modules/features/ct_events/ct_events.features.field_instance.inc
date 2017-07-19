@@ -223,9 +223,10 @@ If it is only a one day event, the end date should be the same as the starting d
       'module' => 'date',
       'settings' => array(
         'increment' => 1,
-        'input_format' => 'm/d/Y - H:i:s',
+        'input_format' => 'site-wide',
         'input_format_custom' => '',
         'label_position' => 'above',
+        'no_fieldset' => 0,
         'repeat_collapsed' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',

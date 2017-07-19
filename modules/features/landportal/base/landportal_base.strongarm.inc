@@ -13,11 +13,9 @@ function landportal_base_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'ds_extras_fields_extra_list';
-  $strongarm->value = 'node|event|locations
-node|organization|locations
-node|partners|locations';
-  $export['ds_extras_fields_extra_list'] = $strongarm;
+  $strongarm->name = 'date_format_short';
+  $strongarm->value = 'd/m/Y - H:i';
+  $export['date_format_short'] = $strongarm;
 
   return $export;
 }
