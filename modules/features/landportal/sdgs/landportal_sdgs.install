@@ -1,0 +1,36 @@
+<?php
+
+/** bootstrap SDG
+ * place some blocks
+ */
+function landportal_sdgs_update_7200() {
+  /* Thematic pages */
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'sdgs-block_grid',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/sdgs',
+      'region'      => 'sidebar_second',
+      'weight'      => 24,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+
+  // For dev
+  $block = array(
+    'keys' => array(
+      'type'  => 'sdgi',
+    ),
+    'fields' => array(
+      'status'      => 1,
+    )
+  );
+  db_merge('node')->key($block['keys'])->fields($block['fields'])->execute();
+  
+}
+

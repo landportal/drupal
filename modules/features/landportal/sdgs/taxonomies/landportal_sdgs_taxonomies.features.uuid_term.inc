@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * landportal_sdgs.features.uuid_term.inc
+ * landportal_sdgs_taxonomies.features.uuid_term.inc
  */
 
 /**
  * Implements hook_uuid_features_default_terms().
  */
-function landportal_sdgs_uuid_features_default_terms() {
+function landportal_sdgs_taxonomies_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
@@ -165,7 +165,32 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
+    'field_image' => array(
+      'und' => array(
+        0 => array(
+          'uid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
+          'filename' => '05.png',
+          'uri' => 'public://05.png',
+          'filemime' => 'image/png',
+          'filesize' => 39126,
+          'status' => 1,
+          'type' => 'image',
+          'uuid' => 'cdab1d97-f0cf-40d5-8893-53e592e1aa10',
+          'field_file_image_alt_text' => array(),
+          'field_file_image_title_text' => array(),
+          'rdf_mapping' => array(),
+          'metadata' => array(
+            'height' => 1536,
+            'width' => 1536,
+          ),
+          'alt' => '',
+          'title' => '',
+          'height' => 1536,
+          'width' => 1536,
+          'uuid_features_file_path' => 'public://05.png',
+        ),
+      ),
+    ),
     'field_sdgs_type' => array(
       'und' => array(
         0 => array(
@@ -300,7 +325,32 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
+    'field_image' => array(
+      'und' => array(
+        0 => array(
+          'uid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
+          'filename' => '01.png',
+          'uri' => 'public://01.png',
+          'filemime' => 'image/png',
+          'filesize' => 52125,
+          'status' => 1,
+          'type' => 'image',
+          'uuid' => 'e2a79472-8724-4312-be6d-28833edc3c84',
+          'field_file_image_alt_text' => array(),
+          'field_file_image_title_text' => array(),
+          'rdf_mapping' => array(),
+          'metadata' => array(
+            'height' => 1536,
+            'width' => 1536,
+          ),
+          'alt' => '',
+          'title' => '',
+          'height' => 1536,
+          'width' => 1536,
+          'uuid_features_file_path' => 'public://01.png',
+        ),
+      ),
+    ),
     'field_sdgs_type' => array(
       'und' => array(
         0 => array(
@@ -460,8 +510,8 @@ function landportal_sdgs_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
           'date_type' => 'datetime',
         ),
       ),
@@ -491,7 +541,32 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
+    'field_image' => array(
+      'und' => array(
+        0 => array(
+          'uid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
+          'filename' => '02.png',
+          'uri' => 'public://02.png',
+          'filemime' => 'image/png',
+          'filesize' => 38240,
+          'status' => 1,
+          'type' => 'image',
+          'uuid' => 'f0601b8c-8add-4886-8b9b-d8a479034924',
+          'field_file_image_alt_text' => array(),
+          'field_file_image_title_text' => array(),
+          'rdf_mapping' => array(),
+          'metadata' => array(
+            'height' => 1536,
+            'width' => 1536,
+          ),
+          'alt' => '',
+          'title' => '',
+          'height' => 1536,
+          'width' => 1536,
+          'uuid_features_file_path' => 'public://02.png',
+        ),
+      ),
+    ),
     'field_sdgs_type' => array(
       'und' => array(
         0 => array(
@@ -531,8 +606,8 @@ function landportal_sdgs_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
           'date_type' => 'datetime',
         ),
       ),
@@ -608,7 +683,32 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
+    'field_image' => array(
+      'und' => array(
+        0 => array(
+          'uid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
+          'filename' => '15.png',
+          'uri' => 'public://15.png',
+          'filemime' => 'image/png',
+          'filesize' => 34736,
+          'status' => 1,
+          'type' => 'image',
+          'uuid' => 'ccb683f2-c465-48df-9fea-3636ff51a24e',
+          'field_file_image_alt_text' => array(),
+          'field_file_image_title_text' => array(),
+          'rdf_mapping' => array(),
+          'metadata' => array(
+            'height' => 1536,
+            'width' => 1536,
+          ),
+          'alt' => '',
+          'title' => '',
+          'height' => 1536,
+          'width' => 1536,
+          'uuid_features_file_path' => 'public://15.png',
+        ),
+      ),
+    ),
     'field_sdgs_type' => array(
       'und' => array(
         0 => array(
@@ -651,7 +751,32 @@ function landportal_sdgs_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_image' => array(),
+    'field_image' => array(
+      'und' => array(
+        0 => array(
+          'uid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
+          'filename' => '11.png',
+          'uri' => 'public://11_2.png',
+          'filemime' => 'image/png',
+          'filesize' => 47517,
+          'status' => 1,
+          'type' => 'image',
+          'uuid' => 'fbc5d5a2-42a6-484d-b800-1710f1d2f2da',
+          'field_file_image_alt_text' => array(),
+          'field_file_image_title_text' => array(),
+          'rdf_mapping' => array(),
+          'metadata' => array(
+            'height' => 1536,
+            'width' => 1536,
+          ),
+          'alt' => '',
+          'title' => '',
+          'height' => 1536,
+          'width' => 1536,
+          'uuid_features_file_path' => 'public://11_2.png',
+        ),
+      ),
+    ),
     'field_sdgs_type' => array(
       'und' => array(
         0 => array(
