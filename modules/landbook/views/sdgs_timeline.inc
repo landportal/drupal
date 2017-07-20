@@ -58,7 +58,7 @@ $handler->display->display_options['filters']['type']['value'] = array(
 );
 
 /* Display: Block */
-$handler = $view->new_display('block', 'Block', 'block_sdgs_timeline');
+$handler = $view->new_display('block', 'Block', 'main');
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'timelinejs';
 $handler->display->display_options['style_options']['timeline_config']['height'] = '350px';
@@ -106,3 +106,4 @@ $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+

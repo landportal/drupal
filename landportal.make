@@ -20,6 +20,7 @@ projects:
   - auto_entitylabel
   - better_formats
   - block_class
+  - blockreference
   - calendar
   - captcha
   - ckeditor
