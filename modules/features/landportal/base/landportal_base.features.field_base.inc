@@ -192,7 +192,7 @@ function landportal_base_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'profile2_private' => 0,
+      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'text_long',
