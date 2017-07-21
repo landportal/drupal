@@ -562,6 +562,8 @@ $handler->display->display_options['sorts']['field_id_value']['field'] = 'field_
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'status');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Status of Land-related indicators';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'table';
 $handler->display->display_options['style_options']['columns'] = array(

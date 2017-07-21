@@ -1041,7 +1041,7 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'blockreference',
         'settings' => array(
           'show_empty_blocks' => FALSE,

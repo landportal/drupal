@@ -56,6 +56,12 @@ $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
   'sdgi' => 'sdgi',
 );
+/* Filter criterion: Field: Description (field_description) */
+$handler->display->display_options['filters']['field_description_value']['id'] = 'field_description_value';
+$handler->display->display_options['filters']['field_description_value']['table'] = 'field_data_field_description';
+$handler->display->display_options['filters']['field_description_value']['field'] = 'field_description_value';
+$handler->display->display_options['filters']['field_description_value']['relationship'] = 'field_milestone_value';
+$handler->display->display_options['filters']['field_description_value']['operator'] = 'not empty';
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'main');
