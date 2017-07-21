@@ -124,6 +124,7 @@ projects:
   - views_term_path
   - views_tree
   - views_field_view
+  - views_term_hierarchy
   - views_timelinejs
   - webform
   - xmlsitemap
