@@ -13,7 +13,7 @@ function landportal_sdgs_taxonomies_taxonomy_default_vocabularies() {
       'name' => 'SDGs',
       'machine_name' => 'sdgs',
       'description' => 'UN SDGs terms',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'language' => 'und',

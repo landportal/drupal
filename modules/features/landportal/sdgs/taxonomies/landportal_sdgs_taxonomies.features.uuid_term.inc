@@ -11,6 +11,69 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
+    'name' => 'Agriculture',
+    'description' => '<p>Proportion of agricultural area under productive and sustainable agriculture<br />
+&nbsp;</p>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => '18d70415-746c-4faf-a093-a33ffeccd867',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs',
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2.4.1',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'indicator',
+        ),
+      ),
+    ),
+    'field_singledate' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-07-21 00:00:00',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Agriculture',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Agriculture',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8323-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => '237eb1bb-6cde-4370-b11c-fe715f48f993',
+    ),
+  );
+  $terms[] = array(
     'name' => 'Housing',
     'description' => 'By 2030, ensure access for all to adequate, safe and affordable housing and basic services and upgrade slums',
     'format' => 'plain_text',
@@ -106,7 +169,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'name' => 'Universal access',
     'description' => 'By 2030, provide universal access to safe, inclusive and accessible, green and public spaces, in particular for women and children, older persons and persons with disabilities',
     'format' => 'plain_text',
-    'weight' => 2,
+    'weight' => 1,
     'uuid' => '24b359a8-4e56-469f-bb34-1ac07c8e9b9a',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -149,10 +212,72 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
+    'name' => 'Tenure',
+    'description' => '<p>Proportion of total adult population with secure tenure rights to land, with legally recognized documentation and who perceive their rights to land as secure, by sex and by type of tenure</p>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => '28615a04-52bb-4826-b648-b9af56aaa51a',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs',
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => '1.4.2',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'indicator',
+        ),
+      ),
+    ),
+    'field_singledate' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-07-21 00:00:00',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Tenure',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Tenure',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8322-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => '46907bb4-b4d8-40c8-9004-0cab02c289fe',
+    ),
+  );
+  $terms[] = array(
     'name' => 'Gender equality',
     'description' => 'Achieve gender equality and empower all women and girls',
     'format' => 'plain_text',
-    'weight' => 7,
+    'weight' => 13,
     'uuid' => '33aec81f-00ea-45da-ad09-5e8f11920cf0',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -168,7 +293,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'field_image' => array(
       'und' => array(
         0 => array(
-          'uid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
+          'uid' => 1,
           'filename' => '05.png',
           'uri' => 'public://05.png',
           'filemime' => 'image/png',
@@ -214,6 +339,69 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8295-0',
     'path' => array(
       'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Forest',
+    'description' => '<p>Forest area as a proportion of total land area<br />
+&nbsp;</p>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => '35625f0a-d057-429b-b11a-698e4fc15b89',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs',
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => '15.1.1',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'indicator',
+        ),
+      ),
+    ),
+    'field_singledate' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-07-21 00:00:00',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Forest',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Forest',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8329-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => '6aa2e871-4ea4-4464-9fdf-4a4ee21f9662',
     ),
   );
   $terms[] = array(
@@ -309,10 +497,136 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
+    'name' => 'Rights',
+    'description' => '<p>Proportion of countries where the legal framework (including customary law) guarantees women’s equal rights to land ownership and/or control<br />
+&nbsp;</p>
+',
+    'format' => 'full_html',
+    'weight' => 1,
+    'uuid' => '4c400ae8-4e3f-48f8-b43f-67c65f7dc1b2',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs',
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => '5.a.2',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'indicator',
+        ),
+      ),
+    ),
+    'field_singledate' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-07-21 00:00:00',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Rights',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Rights',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8325-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => 'ae439fb1-7608-44f4-ae45-29ee0111d666',
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Land consumption',
+    'description' => '<p>Ratio of land consumption rate to population growth rate<br />
+&nbsp;</p>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => '4c465b0a-b381-4be8-86c1-23aadac86e99',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs',
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => '11.3.1',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'indicator',
+        ),
+      ),
+    ),
+    'field_singledate' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-07-21 00:00:00',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Land consumption',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Land consumption',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8328-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => 'de58ff7d-8ce4-4138-9f41-0c8b6ac4a278',
+    ),
+  );
+  $terms[] = array(
     'name' => 'No poverty',
     'description' => 'End poverty in all its forms everywhere',
     'format' => 'plain_text',
-    'weight' => 1,
+    'weight' => 9,
     'uuid' => '56410748-9858-4d86-a99f-71654b33b21b',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -328,7 +642,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'field_image' => array(
       'und' => array(
         0 => array(
-          'uid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
+          'uid' => 1,
           'filename' => '01.png',
           'uri' => 'public://01.png',
           'filemime' => 'image/png',
@@ -436,8 +750,8 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Berlin',
-          'timezone_db' => 'Europe/Berlin',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
           'date_type' => 'datetime',
         ),
       ),
@@ -448,6 +762,70 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     ),
     'path' => array(
       'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Agriculture',
+    'description' => '<p>(a) Proportion of total agricultural population with ownership or secure rights over agricultural land, by sex;</p>
+
+<p>(b) share of women among owners or rights-bearers of agricultural land, by type of tenure</p>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => '9917ac6d-3296-48e9-a3de-38c5b31bd2ba',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs',
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => '5.a.1',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'indicator',
+        ),
+      ),
+    ),
+    'field_singledate' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-07-21 00:00:00',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Agriculture',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Ownership',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8324-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => 'ae439fb1-7608-44f4-ae45-29ee0111d666',
     ),
   );
   $terms[] = array(
@@ -497,6 +875,69 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
+    'name' => 'Protection',
+    'description' => '<p>Proportion of important sites for terrestrial and freshwater biodiversity that are covered by protected areas, by ecosystem type<br />
+&nbsp;</p>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => 'b6b77883-127c-4db7-826d-1888b37c4598',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs',
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => '15.1.2',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'indicator',
+        ),
+      ),
+    ),
+    'field_singledate' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-07-21 00:00:00',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Protection',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Protection',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8330-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => '6aa2e871-4ea4-4464-9fdf-4a4ee21f9662',
+    ),
+  );
+  $terms[] = array(
     'name' => 'Tier 2',
     'description' => 'Indicator conceptually clear, established methodology and standards available but data are not regularly produced by countries',
     'format' => 'plain_text',
@@ -510,8 +951,8 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Berlin',
-          'timezone_db' => 'Europe/Berlin',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
           'date_type' => 'datetime',
         ),
       ),
@@ -528,7 +969,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'name' => 'Zero hunger',
     'description' => 'End hunger, achieve food security and improved nutrition and promote sustainable agriculture',
     'format' => 'plain_text',
-    'weight' => 6,
+    'weight' => 12,
     'uuid' => 'bf413a5b-e03f-4cf0-9a41-45b8075df7a1',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -544,7 +985,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'field_image' => array(
       'und' => array(
         0 => array(
-          'uid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
+          'uid' => 1,
           'filename' => '02.png',
           'uri' => 'public://02.png',
           'filemime' => 'image/png',
@@ -593,6 +1034,132 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
+    'name' => 'Urban',
+    'description' => '<p>Proportion of urban population living in slums, informal settlements or inadequate housing<br />
+&nbsp;</p>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => 'c370054f-efc0-482c-8bba-be9945119d40',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs',
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => '11.1.1',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'indicator',
+        ),
+      ),
+    ),
+    'field_singledate' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-07-21 00:00:00',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Urban',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Urban',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8326-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => '1e4fed5b-0b4c-4044-90a2-cfe15a5ff07c',
+    ),
+  );
+  $terms[] = array(
+    'name' => 'Degraded land',
+    'description' => '<p>Proportion of land that is degraded over total land area<br />
+&nbsp;</p>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => 'c64007c2-d84e-4405-b8c0-6624c53adcef',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs',
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => '15.3.1',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'indicator',
+        ),
+      ),
+    ),
+    'field_singledate' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-07-21 00:00:00',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Degraded land',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Degraded land',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8331-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => '439dbb02-9dea-489c-8912-9793b24cfcda',
+    ),
+  );
+  $terms[] = array(
     'name' => 'Tier 1',
     'description' => 'Indicator conceptually clear, established methodology and standards available and data regularly produced by countries',
     'format' => 'plain_text',
@@ -606,8 +1173,8 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Berlin',
-          'timezone_db' => 'Europe/Berlin',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
           'date_type' => 'datetime',
         ),
       ),
@@ -621,10 +1188,73 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
+    'name' => 'Open space',
+    'description' => '<p>Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities<br />
+&nbsp;</p>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => 'd62fe6d1-6051-4764-8237-510a53cbcc31',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'sdgs',
+    'field_id' => array(
+      'und' => array(
+        0 => array(
+          'value' => '11.7.1',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_image' => array(),
+    'field_sdgs_type' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'indicator',
+        ),
+      ),
+    ),
+    'field_singledate' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-07-21 00:00:00',
+          'timezone' => 'Europe/Rome',
+          'timezone_db' => 'Europe/Rome',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Open space',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Open space',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8327-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+    'parent' => array(
+      0 => '24b359a8-4e56-469f-bb34-1ac07c8e9b9a',
+    ),
+  );
+  $terms[] = array(
     'name' => 'Urbanization',
     'description' => 'By 2030, enhance inclusive and sustainable urbanization and capacity for participatory, integrated and sustainable human settlement planning and management in all countries',
     'format' => 'plain_text',
-    'weight' => 4,
+    'weight' => 2,
     'uuid' => 'de58ff7d-8ce4-4138-9f41-0c8b6ac4a278',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -670,7 +1300,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'name' => 'Life on land',
     'description' => 'Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss',
     'format' => 'plain_text',
-    'weight' => 9,
+    'weight' => 15,
     'uuid' => 'e0b77041-b168-417e-93b4-7e7394043190',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -686,7 +1316,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'field_image' => array(
       'und' => array(
         0 => array(
-          'uid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
+          'uid' => 1,
           'filename' => '15.png',
           'uri' => 'public://15.png',
           'filemime' => 'image/png',
@@ -738,7 +1368,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'name' => 'Sustainable cities and communities',
     'description' => 'Make cities and human settlements inclusive, safe, resilient and sustainable',
     'format' => 'plain_text',
-    'weight' => 8,
+    'weight' => 14,
     'uuid' => 'e6afcb19-5d23-4416-919b-7e3ae972150e',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -754,7 +1384,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'field_image' => array(
       'und' => array(
         0 => array(
-          'uid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
+          'uid' => 1,
           'filename' => '11.png',
           'uri' => 'public://11_2.png',
           'filemime' => 'image/png',
