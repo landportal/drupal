@@ -12,7 +12,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'SDGs';
+$handler->display->display_options['title'] = '<none>';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
@@ -44,7 +44,7 @@ $handler->display->display_options['fields']['field_sdgs_type']['field'] = 'fiel
 $handler->display->display_options['fields']['field_sdgs_type']['label'] = '';
 $handler->display->display_options['fields']['field_sdgs_type']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_sdgs_type']['element_label_colon'] = FALSE;
-/* Field: Field: ID */
+/* Field: Taxonomy term: ID */
 $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
 $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
@@ -61,10 +61,10 @@ $handler->display->display_options['fields']['name']['alter']['text'] = '[field_
 $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-/* Sort criterion: Taxonomy term: Weight */
-$handler->display->display_options['sorts']['weight']['id'] = 'weight';
-$handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['sorts']['weight']['field'] = 'weight';
+/* Sort criterion: Taxonomy term: Term hierarchy */
+$handler->display->display_options['sorts']['hierarchy_sort']['id'] = 'hierarchy_sort';
+$handler->display->display_options['sorts']['hierarchy_sort']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['hierarchy_sort']['field'] = 'hierarchy_sort';
 /* Filter criterion: Taxonomy vocabulary: Machine name */
 $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
 $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
@@ -89,6 +89,21 @@ $handler->display->display_options['row_options']['inline'] = array(
   'name' => 'name',
 );
 $handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: Text area */
+$handler->display->display_options['header']['area']['id'] = 'area';
+$handler->display->display_options['header']['area']['table'] = 'views';
+$handler->display->display_options['header']['area']['field'] = 'area';
+$handler->display->display_options['header']['area']['content'] = 'The Sustainable Development Goals (SDGs) is a set of <b>17 "Global Goals"</b>. Five of the Goals are relevant to the Land Portal community.';
+$handler->display->display_options['header']['area']['format'] = 'full_html';
+$handler->display->display_options['defaults']['footer'] = FALSE;
+/* Footer: Global: Text area */
+$handler->display->display_options['footer']['area']['id'] = 'area';
+$handler->display->display_options['footer']['area']['table'] = 'views';
+$handler->display->display_options['footer']['area']['field'] = 'area';
+$handler->display->display_options['footer']['area']['content'] = '<p>Each Goal has a series of <b>"Targets"</b>, in total there are 169 targets between all Goals. Each target has one or more <b>"Indicators"</b> that allow the world to measure progress against Targets and ultimately Goals.</p>
+The Land Portal community is focused on <b>eight Targets</b>, each with one indicator and one with two.';
+$handler->display->display_options['footer']['area']['format'] = 'full_html';
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Taxonomy term: Term ID */
 $handler->display->display_options['fields']['tid']['id'] = 'tid';
@@ -105,7 +120,7 @@ $handler->display->display_options['fields']['field_sdgs_type']['field'] = 'fiel
 $handler->display->display_options['fields']['field_sdgs_type']['label'] = '';
 $handler->display->display_options['fields']['field_sdgs_type']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_sdgs_type']['element_label_colon'] = FALSE;
-/* Field: Field: ID */
+/* Field: Taxonomy term: ID */
 $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
 $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
@@ -180,7 +195,7 @@ $handler->display->display_options['fields']['tid']['label'] = '';
 $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
 $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['tid']['separator'] = '';
-/* Field: Field: ID */
+/* Field: Taxonomy term: ID */
 $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
 $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
@@ -254,7 +269,7 @@ $handler->display->display_options['fields']['field_sdgs_type']['field'] = 'fiel
 $handler->display->display_options['fields']['field_sdgs_type']['label'] = '';
 $handler->display->display_options['fields']['field_sdgs_type']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_sdgs_type']['element_label_colon'] = FALSE;
-/* Field: Field: ID */
+/* Field: Taxonomy term: ID */
 $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
 $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
@@ -339,7 +354,7 @@ $handler->display->display_options['fields']['field_sdgs_type']['field'] = 'fiel
 $handler->display->display_options['fields']['field_sdgs_type']['label'] = '';
 $handler->display->display_options['fields']['field_sdgs_type']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_sdgs_type']['element_label_colon'] = FALSE;
-/* Field: Field: ID */
+/* Field: Taxonomy term: ID */
 $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
 $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
@@ -421,7 +436,7 @@ $handler->display->display_options['fields']['field_sdgs_type']['relationship'] 
 $handler->display->display_options['fields']['field_sdgs_type']['label'] = '';
 $handler->display->display_options['fields']['field_sdgs_type']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_sdgs_type']['element_label_colon'] = FALSE;
-/* Field: Field: ID */
+/* Field: Taxonomy term: ID */
 $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
 $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
@@ -502,9 +517,161 @@ $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'entityreference_fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: Weight */
+$handler->display->display_options['fields']['weight_1']['id'] = 'weight_1';
+$handler->display->display_options['fields']['weight_1']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['weight_1']['field'] = 'weight';
+/* Field: Taxonomy term: Term ID */
+$handler->display->display_options['fields']['tid']['id'] = 'tid';
+$handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['tid']['field'] = 'tid';
+$handler->display->display_options['fields']['tid']['label'] = '';
+$handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['tid']['separator'] = '';
+/* Field: Taxonomy term: Type */
+$handler->display->display_options['fields']['field_sdgs_type']['id'] = 'field_sdgs_type';
+$handler->display->display_options['fields']['field_sdgs_type']['table'] = 'field_data_field_sdgs_type';
+$handler->display->display_options['fields']['field_sdgs_type']['field'] = 'field_sdgs_type';
+$handler->display->display_options['fields']['field_sdgs_type']['label'] = '';
+$handler->display->display_options['fields']['field_sdgs_type']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_sdgs_type']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: ID */
+$handler->display->display_options['fields']['field_id']['id'] = 'field_id';
+$handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
+$handler->display->display_options['fields']['field_id']['field'] = 'field_id';
+$handler->display->display_options['fields']['field_id']['label'] = '';
+$handler->display->display_options['fields']['field_id']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_id']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['text'] = '[field_sdgs_type] [field_id]: [name]';
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
 $handler->display->display_options['defaults']['sorts'] = FALSE;
-/* Sort criterion: Field: ID (field_id) */
+/* Sort criterion: Taxonomy term: ID (field_id) */
 $handler->display->display_options['sorts']['field_id_value']['id'] = 'field_id_value';
 $handler->display->display_options['sorts']['field_id_value']['table'] = 'field_data_field_id';
 $handler->display->display_options['sorts']['field_id_value']['field'] = 'field_id_value';
+
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'status');
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'table';
+$handler->display->display_options['style_options']['columns'] = array(
+  'tid' => 'tid',
+  'field_sdgs_type' => 'field_sdgs_type',
+  'field_id' => 'field_id',
+  'name' => 'name',
+  'field_sdgs_tier' => 'field_sdgs_tier',
+);
+$handler->display->display_options['style_options']['default'] = '-1';
+$handler->display->display_options['style_options']['info'] = array(
+  'tid' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_sdgs_type' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_id' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_sdgs_tier' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+);
+$handler->display->display_options['style_options']['override'] = FALSE;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Taxonomy term: Content using SDG */
+$handler->display->display_options['relationships']['reverse_field_sdg_node']['id'] = 'reverse_field_sdg_node';
+$handler->display->display_options['relationships']['reverse_field_sdg_node']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['relationships']['reverse_field_sdg_node']['field'] = 'reverse_field_sdg_node';
+$handler->display->display_options['relationships']['reverse_field_sdg_node']['label'] = 'sdgi';
+$handler->display->display_options['relationships']['reverse_field_sdg_node']['required'] = TRUE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: Term ID */
+$handler->display->display_options['fields']['tid']['id'] = 'tid';
+$handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['tid']['field'] = 'tid';
+$handler->display->display_options['fields']['tid']['label'] = '';
+$handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['tid']['separator'] = '';
+/* Field: Taxonomy term: Type */
+$handler->display->display_options['fields']['field_sdgs_type']['id'] = 'field_sdgs_type';
+$handler->display->display_options['fields']['field_sdgs_type']['table'] = 'field_data_field_sdgs_type';
+$handler->display->display_options['fields']['field_sdgs_type']['field'] = 'field_sdgs_type';
+$handler->display->display_options['fields']['field_sdgs_type']['label'] = '';
+$handler->display->display_options['fields']['field_sdgs_type']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_sdgs_type']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: ID */
+$handler->display->display_options['fields']['field_id']['id'] = 'field_id';
+$handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
+$handler->display->display_options['fields']['field_id']['field'] = 'field_id';
+$handler->display->display_options['fields']['field_id']['label'] = '';
+$handler->display->display_options['fields']['field_id']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_id']['alter']['text'] = 'Indicator [field_id]';
+$handler->display->display_options['fields']['field_id']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['text'] = '[field_sdgs_type] [field_id]: [name]';
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+/* Field: Content: Tier */
+$handler->display->display_options['fields']['field_sdgs_tier']['id'] = 'field_sdgs_tier';
+$handler->display->display_options['fields']['field_sdgs_tier']['table'] = 'field_data_field_sdgs_tier';
+$handler->display->display_options['fields']['field_sdgs_tier']['field'] = 'field_sdgs_tier';
+$handler->display->display_options['fields']['field_sdgs_tier']['relationship'] = 'reverse_field_sdg_node';
+$handler->display->display_options['fields']['field_sdgs_tier']['label'] = '';
+$handler->display->display_options['fields']['field_sdgs_tier']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_sdgs_tier']['type'] = 'i18n_taxonomy_term_reference_plain';
+/* Field: Content: Path */
+$handler->display->display_options['fields']['path']['id'] = 'path';
+$handler->display->display_options['fields']['path']['table'] = 'node';
+$handler->display->display_options['fields']['path']['field'] = 'path';
+$handler->display->display_options['fields']['path']['relationship'] = 'reverse_field_sdg_node';
+$handler->display->display_options['fields']['path']['label'] = '';
+$handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['path']['alter']['text'] = 'view details';
+$handler->display->display_options['fields']['path']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['path']['alter']['path'] = '[path]';
+$handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
 
