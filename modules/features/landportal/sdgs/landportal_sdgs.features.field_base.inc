@@ -119,5 +119,28 @@ function landportal_sdgs_field_default_field_bases() {
     'type' => 'list_text',
   );
 
+  // Exported field_base: 'field_twitter'.
+  $field_bases['field_twitter'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_twitter',
+    'indexes' => array(
+      'moddelta' => array(
+        0 => 'moddelta',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'blockreference',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'profile2_private' => FALSE,
+      'referenceable_modules' => array(),
+    ),
+    'translatable' => 0,
+    'type' => 'blockreference',
+  );
+
   return $field_bases;
 }

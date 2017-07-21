@@ -57,7 +57,16 @@ function landportal_sdgs_update_7200() {
       'status'      => 1,
     )
   );
-  db_merge('node')->key($block['keys'])->fields($block['fields'])->execute();
-  
+  db_update('node')->condition('type', 'sdgi')->fields($block['fields'])->execute();
+
+  $SDGi = db_select('node', 'n')
+    ->condition('type', 'sdgi')
+    ->fields('n', array('nid'))
+    ;
+  $nodes = $SDGi->execute()->fetchCol();//->fetchAll();
+  $sql = db_update('node_revision')->condition('nid', $nodes, 'IN')->fields(array('status' => 1));
+  //var_dump($nodes);
+  //error_log('=== ' . $sql);
+  $sql->execute();
 }
 

@@ -120,19 +120,19 @@ function landportal_sdgs_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '11',
+          'weight' => '17',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '15',
         ),
         'title' => array(
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '12',
         ),
         'xmlsitemap' => array(
-          'weight' => '9',
+          'weight' => '14',
         ),
       ),
       'display' => array(),
