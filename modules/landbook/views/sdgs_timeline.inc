@@ -56,9 +56,15 @@ $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
   'sdgi' => 'sdgi',
 );
+/* Filter criterion: Field: Description (field_description) */
+$handler->display->display_options['filters']['field_description_value']['id'] = 'field_description_value';
+$handler->display->display_options['filters']['field_description_value']['table'] = 'field_data_field_description';
+$handler->display->display_options['filters']['field_description_value']['field'] = 'field_description_value';
+$handler->display->display_options['filters']['field_description_value']['relationship'] = 'field_milestone_value';
+$handler->display->display_options['filters']['field_description_value']['operator'] = 'not empty';
 
 /* Display: Block */
-$handler = $view->new_display('block', 'Block', 'block_sdgs_timeline');
+$handler = $view->new_display('block', 'Block', 'main');
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'timelinejs';
 $handler->display->display_options['style_options']['timeline_config']['height'] = '350px';
@@ -106,3 +112,4 @@ $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+

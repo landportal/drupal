@@ -145,7 +145,9 @@ function ct_organization_field_group_info() {
       2 => 'field_email',
       3 => 'field_acronym',
       4 => 'field_file',
-      5 => 'locations',
+      5 => 'field_phone',
+      6 => 'field_postal_address',
+      7 => 'locations',
     ),
     'format_type' => 'div',
     'format_settings' => array(

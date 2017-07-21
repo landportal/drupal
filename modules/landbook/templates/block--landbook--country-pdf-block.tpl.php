@@ -14,12 +14,12 @@ if($language->language != 'en'){
         <ul class="list-inline">
           <li><a href="<?php print base_path().current_path().'/pdf';?>">
               <img alt="PDF" src="<?php print '/'.$theme_path.'/images/ico-download.svg';?>">
-              <span>Download PDF</span>
+              <span><?php print t('Download PDF');  ?></span>
             </a></li>
           <li>
             <a href="<?php print $contact_url; ?>">
               <img alt="Feedback" src="<?php print '/'.$theme_path.'/images/ico-feedback.svg';?>">
-              <span>Give us your feedback</span>
+              <span><?php print t('Give us your feedback');  ?></span>
             </a>
           </li>
         </ul>

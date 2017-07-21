@@ -5,6 +5,15 @@
  *
  */
 
+/** Cleanup
+ * deprec module
+ */
+function landportal_admin_update_7204() {
+  // Clenaup leftover
+  db_delete('system')
+    ->condition('name', 'apachesolr_descr')
+    ->execute();
+}
 
 /** Generate titles for managed CTs
  * news, event, blog_post, organization, debate, library_resource

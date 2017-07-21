@@ -20,6 +20,7 @@ projects:
   - auto_entitylabel
   - better_formats
   - block_class
+  - blockreference
   - calendar
   - captcha
   - ckeditor
@@ -123,6 +124,7 @@ projects:
   - views_term_path
   - views_tree
   - views_field_view
+  - views_term_hierarchy
   - views_timelinejs
   - webform
   - xmlsitemap

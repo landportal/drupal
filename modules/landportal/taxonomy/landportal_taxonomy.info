@@ -16,7 +16,6 @@ dependencies[] = link
 dependencies[] = list
 dependencies[] = media
 dependencies[] = options
-dependencies[] = rdfx
 dependencies[] = restws
 dependencies[] = strongarm
 dependencies[] = synonyms

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the landportal sdgs taxonomies feature.
+ */
+
+include_once 'landportal_sdgs_taxonomies.features.inc';
