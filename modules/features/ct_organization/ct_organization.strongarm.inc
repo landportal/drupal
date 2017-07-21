@@ -122,7 +122,7 @@ function ct_organization_strongarm() {
         ),
         'locations' => array(
           'default' => array(
-            'weight' => '7',
+            'weight' => '8',
             'visible' => TRUE,
           ),
           'teaser' => array(
