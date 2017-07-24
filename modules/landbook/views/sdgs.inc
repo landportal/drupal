@@ -77,7 +77,6 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
 $handler = $view->new_display('block', 'Grid', 'block_grid');
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['row_class'] = 'col-sm-2';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -414,6 +413,12 @@ $handler->display->display_options['arguments']['parent']['summary_options']['it
 
 /* Display: SDGi Header */
 $handler = $view->new_display('block', 'SDGi Header', 'sdgi_parents');
+$handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: View area */
+$handler->display->display_options['header']['view']['id'] = 'view';
+$handler->display->display_options['header']['view']['table'] = 'views';
+$handler->display->display_options['header']['view']['field'] = 'view';
+$handler->display->display_options['header']['view']['view_to_insert'] = 'sdgi:block';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Taxonomy term: Content using SDG */
 $handler->display->display_options['relationships']['reverse_field_sdg_node']['id'] = 'reverse_field_sdg_node';
@@ -440,11 +445,23 @@ $handler->display->display_options['fields']['tid']['label'] = '';
 $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
 $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['tid']['separator'] = '';
+/* Field: Field: Image */
+$handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+$handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+$handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+$handler->display->display_options['fields']['field_image']['relationship'] = 'parent_1';
+$handler->display->display_options['fields']['field_image']['label'] = '';
+$handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image']['settings'] = array(
+  'image_style' => 'thumbnail',
+  'image_link' => '',
+);
 /* Field: Taxonomy term: Type */
 $handler->display->display_options['fields']['field_sdgs_type']['id'] = 'field_sdgs_type';
 $handler->display->display_options['fields']['field_sdgs_type']['table'] = 'field_data_field_sdgs_type';
 $handler->display->display_options['fields']['field_sdgs_type']['field'] = 'field_sdgs_type';
-$handler->display->display_options['fields']['field_sdgs_type']['relationship'] = 'parent';
+$handler->display->display_options['fields']['field_sdgs_type']['relationship'] = 'parent_1';
 $handler->display->display_options['fields']['field_sdgs_type']['label'] = '';
 $handler->display->display_options['fields']['field_sdgs_type']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_sdgs_type']['element_label_colon'] = FALSE;
@@ -452,7 +469,7 @@ $handler->display->display_options['fields']['field_sdgs_type']['element_label_c
 $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
 $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
-$handler->display->display_options['fields']['field_id']['relationship'] = 'parent';
+$handler->display->display_options['fields']['field_id']['relationship'] = 'parent_1';
 $handler->display->display_options['fields']['field_id']['label'] = '';
 $handler->display->display_options['fields']['field_id']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_id']['element_label_colon'] = FALSE;
@@ -460,46 +477,13 @@ $handler->display->display_options['fields']['field_id']['element_label_colon'] 
 $handler->display->display_options['fields']['name']['id'] = 'name';
 $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['fields']['name']['field'] = 'name';
-$handler->display->display_options['fields']['name']['relationship'] = 'parent';
+$handler->display->display_options['fields']['name']['relationship'] = 'parent_1';
 $handler->display->display_options['fields']['name']['label'] = '';
-$handler->display->display_options['fields']['name']['exclude'] = TRUE;
 $handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
 $handler->display->display_options['fields']['name']['alter']['text'] = '[field_sdgs_type] [field_id]: [name]';
 $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-/* Field: Taxonomy term: Rendered Taxonomy term */
-$handler->display->display_options['fields']['rendered_entity_2']['id'] = 'rendered_entity_2';
-$handler->display->display_options['fields']['rendered_entity_2']['table'] = 'views_entity_taxonomy_term';
-$handler->display->display_options['fields']['rendered_entity_2']['field'] = 'rendered_entity';
-$handler->display->display_options['fields']['rendered_entity_2']['relationship'] = 'parent_1';
-$handler->display->display_options['fields']['rendered_entity_2']['label'] = '';
-$handler->display->display_options['fields']['rendered_entity_2']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['rendered_entity_2']['link_to_entity'] = 1;
-$handler->display->display_options['fields']['rendered_entity_2']['display'] = 'view';
-$handler->display->display_options['fields']['rendered_entity_2']['view_mode'] = 'teaser';
-$handler->display->display_options['fields']['rendered_entity_2']['bypass_access'] = 0;
-/* Field: Taxonomy term: Rendered Taxonomy term */
-$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
-$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
-$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
-$handler->display->display_options['fields']['rendered_entity']['relationship'] = 'parent';
-$handler->display->display_options['fields']['rendered_entity']['label'] = '';
-$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
-$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
-$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
-$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
-/* Field: Taxonomy term: Rendered Taxonomy term */
-$handler->display->display_options['fields']['rendered_entity_1']['id'] = 'rendered_entity_1';
-$handler->display->display_options['fields']['rendered_entity_1']['table'] = 'views_entity_taxonomy_term';
-$handler->display->display_options['fields']['rendered_entity_1']['field'] = 'rendered_entity';
-$handler->display->display_options['fields']['rendered_entity_1']['label'] = '';
-$handler->display->display_options['fields']['rendered_entity_1']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['rendered_entity_1']['link_to_entity'] = 1;
-$handler->display->display_options['fields']['rendered_entity_1']['display'] = 'view';
-$handler->display->display_options['fields']['rendered_entity_1']['view_mode'] = 'teaser';
-$handler->display->display_options['fields']['rendered_entity_1']['bypass_access'] = 0;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Content: Nid */
 $handler->display->display_options['arguments']['nid']['id'] = 'nid';
