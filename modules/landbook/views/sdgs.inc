@@ -372,23 +372,26 @@ $handler->display->display_options['fields']['rendered_entity_1']['link_to_entit
 $handler->display->display_options['fields']['rendered_entity_1']['display'] = 'view';
 $handler->display->display_options['fields']['rendered_entity_1']['view_mode'] = 'teaser';
 $handler->display->display_options['fields']['rendered_entity_1']['bypass_access'] = 0;
-/* Field: Content: Nid */
-$handler->display->display_options['fields']['nid']['id'] = 'nid';
-$handler->display->display_options['fields']['nid']['table'] = 'node';
-$handler->display->display_options['fields']['nid']['field'] = 'nid';
-$handler->display->display_options['fields']['nid']['relationship'] = 'reverse_field_sdg_node';
-$handler->display->display_options['fields']['nid']['label'] = '';
-$handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-$handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
 /* Field: Content: Path */
 $handler->display->display_options['fields']['path']['id'] = 'path';
 $handler->display->display_options['fields']['path']['table'] = 'node';
 $handler->display->display_options['fields']['path']['field'] = 'path';
 $handler->display->display_options['fields']['path']['relationship'] = 'reverse_field_sdg_node';
 $handler->display->display_options['fields']['path']['label'] = '';
-$handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['path']['alter']['text'] = '<span class="node-readmore"><a href="[path]">Read more</a></span>';
+$handler->display->display_options['fields']['path']['exclude'] = TRUE;
 $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+/* Field: Content: Nid */
+$handler->display->display_options['fields']['nid']['id'] = 'nid';
+$handler->display->display_options['fields']['nid']['table'] = 'node';
+$handler->display->display_options['fields']['nid']['field'] = 'nid';
+$handler->display->display_options['fields']['nid']['relationship'] = 'reverse_field_sdg_node';
+$handler->display->display_options['fields']['nid']['label'] = '';
+$handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['nid']['alter']['text'] = 'Read more';
+$handler->display->display_options['fields']['nid']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['nid']['alter']['path'] = '[path]';
+$handler->display->display_options['fields']['nid']['element_class'] = 'node-readmore';
+$handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
 $handler->display->display_options['defaults']['sorts'] = FALSE;
 /* Sort criterion: Taxonomy term: Term hierarchy */
 $handler->display->display_options['sorts']['hierarchy_sort']['id'] = 'hierarchy_sort';
@@ -632,6 +635,14 @@ $handler->display->display_options['relationships']['reverse_field_sdg_node']['f
 $handler->display->display_options['relationships']['reverse_field_sdg_node']['label'] = 'sdgi';
 $handler->display->display_options['relationships']['reverse_field_sdg_node']['required'] = TRUE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Path */
+$handler->display->display_options['fields']['path']['id'] = 'path';
+$handler->display->display_options['fields']['path']['table'] = 'node';
+$handler->display->display_options['fields']['path']['field'] = 'path';
+$handler->display->display_options['fields']['path']['relationship'] = 'reverse_field_sdg_node';
+$handler->display->display_options['fields']['path']['label'] = '';
+$handler->display->display_options['fields']['path']['exclude'] = TRUE;
+$handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
 /* Field: Taxonomy term: Term ID */
 $handler->display->display_options['fields']['tid']['id'] = 'tid';
 $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
@@ -654,6 +665,8 @@ $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['label'] = '';
 $handler->display->display_options['fields']['field_id']['alter']['alter_text'] = TRUE;
 $handler->display->display_options['fields']['field_id']['alter']['text'] = 'Indicator [field_id]';
+$handler->display->display_options['fields']['field_id']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['field_id']['alter']['path'] = '[path]';
 $handler->display->display_options['fields']['field_id']['element_label_colon'] = FALSE;
 /* Field: Taxonomy term: Name */
 $handler->display->display_options['fields']['name']['id'] = 'name';
@@ -674,15 +687,4 @@ $handler->display->display_options['fields']['field_sdgs_tier']['relationship'] 
 $handler->display->display_options['fields']['field_sdgs_tier']['label'] = '';
 $handler->display->display_options['fields']['field_sdgs_tier']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_sdgs_tier']['type'] = 'i18n_taxonomy_term_reference_plain';
-/* Field: Content: Path */
-$handler->display->display_options['fields']['path']['id'] = 'path';
-$handler->display->display_options['fields']['path']['table'] = 'node';
-$handler->display->display_options['fields']['path']['field'] = 'path';
-$handler->display->display_options['fields']['path']['relationship'] = 'reverse_field_sdg_node';
-$handler->display->display_options['fields']['path']['label'] = '';
-$handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['path']['alter']['text'] = 'view details';
-$handler->display->display_options['fields']['path']['alter']['make_link'] = TRUE;
-$handler->display->display_options['fields']['path']['alter']['path'] = '[path]';
-$handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
 
