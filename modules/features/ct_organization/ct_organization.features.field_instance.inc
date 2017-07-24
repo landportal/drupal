@@ -1242,7 +1242,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'title',
         'settings' => array(
           'title_class' => '',
-          'title_link' => '',
+          'title_link' => 'content',
           'title_style' => 'h3',
         ),
         'type' => 'title_linked',
