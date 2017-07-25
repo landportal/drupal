@@ -592,7 +592,6 @@ $handler->display->display_options['fields']['field_sdgs_tier']['type'] = 'i18n_
 $handler = $view->new_display('block', 'Grid', 'block_grid');
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
@@ -774,6 +773,7 @@ $handler->display->display_options['style_options']['row_class_special'] = FALSE
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['row_options']['default_field_elements'] = FALSE;
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Taxonomy term: Content using SDG */
@@ -819,6 +819,7 @@ $handler->display->display_options['fields']['field_sdgs_tier']['field'] = 'fiel
 $handler->display->display_options['fields']['field_sdgs_tier']['relationship'] = 'reverse_field_sdg_node';
 $handler->display->display_options['fields']['field_sdgs_tier']['label'] = '';
 $handler->display->display_options['fields']['field_sdgs_tier']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_sdgs_tier']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['field_sdgs_tier']['type'] = 'i18n_taxonomy_term_reference_plain';
 $handler->display->display_options['defaults']['sorts'] = FALSE;
 /* Sort criterion: Taxonomy term: Weight */
