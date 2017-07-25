@@ -1,5 +1,11 @@
 <?php
 /**
+ * @file
+ * Code for the Landbook View Coda feature.
+ */
+
+include_once 'landbook_view_coda.features.inc';
+/**
  * This module provides the Land Book visualization
  * It interface with js-view-coda library
  *
@@ -11,6 +17,10 @@ $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
 include_once 'landbook_view_coda.library.inc';
 include_once 'landbook_view_coda.blocks.inc';
 
+
+function landbook_view_coda_cb($vars) {
+  //dpm($vars, 'VC CB');
+}
 
 /**
  * Add JS settings variables for landbook pages / sections

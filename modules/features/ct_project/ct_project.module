@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ct_project feature.
+ */
+
+include_once 'ct_project.features.inc';

@@ -25,7 +25,7 @@ function landportal_sdgs_update_7200() {
   $block = array(
     'keys' => array(
       'module'  => 'views',
-      'delta'   => 'sdgs-status',
+      'delta'   => 'sdgi-menu',
       'theme'   => 'lpbs',
     ),
     'fields' => array(
@@ -34,7 +34,7 @@ function landportal_sdgs_update_7200() {
       'visibility'  => BLOCK_VISIBILITY_LISTED,
       'pages'       => 'book/sdgs',
       'region'      => 'sidebar_second',
-      'weight'      => 24,
+      'weight'      => 23,
     )
   );
   db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();

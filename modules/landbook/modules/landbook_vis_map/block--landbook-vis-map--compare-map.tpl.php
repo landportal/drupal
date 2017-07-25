@@ -9,11 +9,11 @@
       </header>
 <?php endif;?>
       <nav class="text-center">
-        <form>
-          <div class="form-group col-xs-8 col-lg-offset-2 col-lg-5 hidden">
+        <form class="form-inline">
+          <div class="form-group col-sm-8">
             <select name="indicator" class="form-control" disabled="disabled"></select>
           </div>
-          <div class="form-group col-xs-4 col-lg-3 hidden">
+          <div class="form-group col-sm-4 hidden">
             <select name="year" class="form-control" disabled="disabled"></select>
           </div>
         </form>

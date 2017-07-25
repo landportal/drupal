@@ -120,7 +120,7 @@ function landportal_sdgs_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '17',
+          'weight' => '16',
         ),
         'metatags' => array(
           'weight' => '15',
@@ -129,7 +129,7 @@ function landportal_sdgs_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '12',
+          'weight' => '13',
         ),
         'xmlsitemap' => array(
           'weight' => '14',

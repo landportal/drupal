@@ -44,13 +44,13 @@ function landportal_blocks_block_info() {
       'status'          => TRUE,
       'region'          => -1,
     ),
-    'lp_shareit' => array(
-      'info'            => t('Share it widget'),
-      'status'          => TRUE,
-      'region'          => 'sidebar_first',
-      'visibility'      => BLOCK_VISIBILITY_LISTED,
-      'pages'           => "debate/debates/*\ndebate/news/*\ndebate/event/*",
-    ),
+    /* 'lp_shareit' => array( */
+    /*   'info'            => t('Share it widget'), */
+    /*   'status'          => TRUE, */
+    /*   'region'          => 'sidebar_first', */
+    /*   'visibility'      => BLOCK_VISIBILITY_LISTED, */
+    /*   'pages'           => "debate/debates/\*\ndebate/news/\*\ndebate/event/\*", */
+    /* ), */
     'lp_share' => array(
       'info'            => t('Share Buttons Block'),
       'status'          => TRUE,
@@ -113,13 +113,13 @@ function landportal_blocks_block_configure($delta='') {
      break;
      // DEPREC / BORKEN sidebar share widget.
      // Superseded by addtoany
-   case 'lp_shareit' :
-     $form['text_body'] = array(
-       '#type' => 'text_format',
-       '#title' => t('List of link to share current page'),
-       '#default_value' => variable_get('lp_shareit', 'mail, twitter, facebook, linkedin'),
-     );
-     break;
+   /* case 'lp_shareit' : */
+   /*   $form['text_body'] = array( */
+   /*     '#type' => 'text_format', */
+   /*     '#title' => t('List of link to share current page'), */
+   /*     '#default_value' => variable_get('lp_shareit', 'mail, twitter, facebook, linkedin'), */
+   /*   ); */
+   /*   break; */
    }
    return $form;
 }
@@ -139,9 +139,9 @@ function landportal_blocks_block_save($delta = '', $edit = array()) {
     variable_set('lp_footer_social', $edit['text_body']['value']);
     break;
     // DEPREC
-  case 'lp_shareit' :
-    variable_set('lp_shareit', $edit['text_body']['value']);
-    break;
+  /* case 'lp_shareit' : */
+  /*   variable_set('lp_shareit', $edit['text_body']['value']); */
+  /*   break; */
   }
 
 }
@@ -168,11 +168,11 @@ function landportal_blocks_block_view($delta = '') {
     $block['subject'] = '<none>';
     break;
     // DEPREC
-  case 'lp_shareit':
-    $block['title'] = 'Share it';
-    $block['content'] = variable_get('lp_shareit', '');
-    $block['subject'] = '<none>';
-    break;
+  /* case 'lp_shareit': */
+  /*   $block['title'] = 'Share it'; */
+  /*   $block['content'] = variable_get('lp_shareit', ''); */
+  /*   $block['subject'] = '<none>'; */
+  /*   break; */
     // Addtoany widget (social networking sharing)
   case 'lp_share':
       $item = menu_get_item();

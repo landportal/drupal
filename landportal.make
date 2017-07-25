@@ -16,7 +16,6 @@ projects:
   - admin_menu
   - admin_views
   - apachesolr
-#  - apachesolr_views
   - auto_entitylabel
   - better_formats
   - block_class
@@ -70,6 +69,7 @@ projects:
   - i18n
   - i18nviews
   - job_scheduler
+  - jump_menu
   - libraries
   - link
   - linkchecker
