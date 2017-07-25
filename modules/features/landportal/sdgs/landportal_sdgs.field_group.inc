@@ -21,7 +21,7 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(),
     'format_type' => 'hidden',
     'format_settings' => array(
@@ -42,7 +42,7 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Indicator details',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_contact',
       1 => 'field_link',
@@ -67,6 +67,37 @@ function landportal_sdgs_field_group_info() {
     ),
   );
   $field_groups['group_details|node|sdgi|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_info|node|sdgi|form';
+  $field_group->group_name = 'group_info';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'sdgi';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'UN Info',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_contact',
+      1 => 'field_milestone',
+      2 => 'field_orgref',
+      3 => 'field_sdgs_tier',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-info field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_info|node|sdgi|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -111,7 +142,7 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(),
     'format_type' => 'hidden',
     'format_settings' => array(
@@ -132,7 +163,7 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Related LandPortal contents',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_noderef',
     ),
@@ -164,7 +195,7 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Related Content',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_twitter',
     ),
@@ -184,6 +215,36 @@ function landportal_sdgs_field_group_info() {
     ),
   );
   $field_groups['group_rel|node|sdgi|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_settings|node|sdgi|form';
+  $field_group->group_name = 'group_settings';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'sdgi';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Settings',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_sdg',
+      1 => 'field_sdg_header',
+      2 => 'field_twitter',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-settings field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_settings|node|sdgi|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -231,10 +292,11 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Visualizations',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_indicators',
       1 => 'field_paragraphs',
+      2 => 'field_visualization',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -258,6 +320,8 @@ function landportal_sdgs_field_group_info() {
   t('Indicator details');
   t('Related Content');
   t('Related LandPortal contents');
+  t('Settings');
+  t('UN Info');
   t('Visualizations');
 
   return $field_groups;
