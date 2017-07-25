@@ -326,7 +326,7 @@ $handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['header']['view']['id'] = 'view';
 $handler->display->display_options['header']['view']['table'] = 'views';
 $handler->display->display_options['header']['view']['field'] = 'view';
-$handler->display->display_options['header']['view']['view_to_insert'] = 'sdgi:block';
+$handler->display->display_options['header']['view']['view_to_insert'] = 'sdgi:menu';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Taxonomy term: Content using SDG */
 $handler->display->display_options['relationships']['reverse_field_sdg_node']['id'] = 'reverse_field_sdg_node';
