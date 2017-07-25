@@ -327,6 +327,13 @@ $handler->display->display_options['header']['view']['id'] = 'view';
 $handler->display->display_options['header']['view']['table'] = 'views';
 $handler->display->display_options['header']['view']['field'] = 'view';
 $handler->display->display_options['header']['view']['view_to_insert'] = 'sdgi:menu';
+$handler->display->display_options['defaults']['footer'] = FALSE;
+/* Footer: Global: Text area */
+$handler->display->display_options['footer']['area']['id'] = 'area';
+$handler->display->display_options['footer']['area']['table'] = 'views';
+$handler->display->display_options['footer']['area']['field'] = 'area';
+$handler->display->display_options['footer']['area']['content'] = '<a href="..">Return to Goals & Targets</a>';
+$handler->display->display_options['footer']['area']['format'] = 'full_html';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Taxonomy term: Content using SDG */
 $handler->display->display_options['relationships']['reverse_field_sdg_node']['id'] = 'reverse_field_sdg_node';
