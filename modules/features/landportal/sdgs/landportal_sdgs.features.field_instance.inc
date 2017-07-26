@@ -92,7 +92,7 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -266,7 +266,7 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
@@ -310,7 +310,7 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -374,7 +374,7 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => 'Key dates for this SDG indicator',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'field_collection',
         'settings' => array(
           'add' => '',
@@ -500,7 +500,7 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => 'The organization responsible for this indicator',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
           'bypass_access' => 0,
@@ -622,13 +622,14 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'bypass_access' => 0,
-          'link' => 1,
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 14,
       ),
       'listing' => array(
@@ -997,7 +998,7 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => 'SDGs Tier this indicator is officially in',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
