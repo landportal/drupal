@@ -18,7 +18,7 @@ function landbook_admin_settings() {
     '#type'             => 'textfield',
     '#title'            => 'Sparql URL',
     '#description'      => t('URL to the Landportal SPARQL endpoint'),
-    '#default_value'    => variable_get('landbook_api', 'http://localhost/sparql'),
+    '#default_value'    => variable_get('landbook_sparql', 'http://localhost/sparql'),
   );
 
   $form['#submit'][] = 'landbook_admin_settings_submit';
@@ -32,8 +32,8 @@ function landbook_admin_settings() {
 function landbook_admin_settings_validate($form, &$form_state) {
   $t = array('landbook_sparql');
   foreach ($t as $v) {
-    if (!startswith($form_state['values'][$v], 'http') || $form_state['values'][$v][0] == '/') {
-      form_set_error($v, t($v.' must be a valid URL'));
+    if (substr($form_state['values'][$v], 0, 4) != 'http' && $form_state['values'][$v][0] != '/') {
+      form_set_error($v, t($v.': must be a valid URL, got: ') . $form_state['values'][$v]);
     }
     // @TODO ping URL to check if it responds or print warning (not a fatal error)
   }
