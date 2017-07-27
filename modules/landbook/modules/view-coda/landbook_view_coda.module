@@ -12,11 +12,18 @@ include_once 'landbook_view_coda.features.inc';
  * Author: Jules Clement <jules@landportal.info>
  */
 
-$LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
+//$LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
+function _lbvc_types() {
+  return array(
+    'map'   => 'Map projection',
+    'line'  => 'Line chart',
+    'pie'   => 'Pie chart'
+  );
+}
 
 include_once 'landbook_view_coda.library.inc';
 include_once 'landbook_view_coda.blocks.inc';
-
+include_once 'landbook_view_coda.fields.inc';
 
 function landbook_view_coda_cb($vars) {
   //dpm($vars, 'VC CB');
@@ -95,6 +102,7 @@ function landbook_view_coda_js_settings_countries($url, &$vars) {
   );
 }
 
+// For LB Datasets / Indicators (taxonomy) pages
 function landbook_view_coda_taxonomy_term_view($term, $view_mode, $langcode) {
     if (!in_array($term->vocabulary_machine_name, array('indicators', 'catalogs')))
         return;

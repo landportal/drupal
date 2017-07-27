@@ -208,3 +208,17 @@ function landbook_view_coda_update_7200() {
         ))
         ->execute();
 }
+
+function landbook_view_coda_field_schema($field) {
+  $columns = array(
+    'type' => array('type' => 'varchar', 'length' => 42, 'not null' => FALSE),
+    'vcc' => array('type' => 'text', 'not null' => FALSE),
+  );
+  $indexes = array(
+    'type' => array('type'),
+  );
+  return array(
+    'columns' => $columns,
+    'indexes' => $indexes,
+  );
+}
