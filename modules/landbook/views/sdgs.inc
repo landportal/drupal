@@ -322,11 +322,11 @@ $handler->display->display_options['arguments']['parent']['summary_options']['it
 /* Display: SDGi Header */
 $handler = $view->new_display('block', 'SDGi Header', 'sdgi_parents');
 $handler->display->display_options['defaults']['header'] = FALSE;
-/* Header: Global: View area */
-$handler->display->display_options['header']['view']['id'] = 'view';
-$handler->display->display_options['header']['view']['table'] = 'views';
-$handler->display->display_options['header']['view']['field'] = 'view';
-$handler->display->display_options['header']['view']['view_to_insert'] = 'sdgi:menu';
+/* Header: Global: Block area */
+$handler->display->display_options['header']['block']['id'] = 'block';
+$handler->display->display_options['header']['block']['table'] = 'views';
+$handler->display->display_options['header']['block']['field'] = 'block';
+$handler->display->display_options['header']['block']['block_to_insert'] = 'jump_menu:jump_menu-m_menu-sdgs';
 $handler->display->display_options['defaults']['footer'] = FALSE;
 /* Footer: Global: Text area */
 $handler->display->display_options['footer']['area']['id'] = 'area';
