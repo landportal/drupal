@@ -4,7 +4,6 @@
  * Code for the Landbook View Coda feature.
  */
 
-include_once 'landbook_view_coda.features.inc';
 /**
  * This module provides the Land Book visualization
  * It interface with js-view-coda library
@@ -24,6 +23,8 @@ function _lbvc_types() {
 include_once 'landbook_view_coda.library.inc';
 include_once 'landbook_view_coda.blocks.inc';
 include_once 'landbook_view_coda.fields.inc';
+
+include_once 'landbook_view_coda.features.inc';
 
 function landbook_view_coda_cb($vars) {
   //dpm($vars, 'VC CB');
