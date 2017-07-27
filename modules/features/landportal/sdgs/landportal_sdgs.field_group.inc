@@ -162,14 +162,14 @@ function landportal_sdgs_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Related LandPortal contents',
+    'label' => 'Related Land Portal contents',
     'weight' => '5',
     'children' => array(
       0 => 'field_noderef',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Related LandPortal contents',
+      'label' => 'Related Land Portal contents',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-portal-content field-group-div col-sm-8',
@@ -319,7 +319,7 @@ function landportal_sdgs_field_group_info() {
   // Included for use with string extractors like potx.
   t('Indicator details');
   t('Related Content');
-  t('Related LandPortal contents');
+  t('Related Land Portal contents');
   t('Settings');
   t('UN Info');
   t('Visualizations');
