@@ -339,12 +339,12 @@ function landportal_taxonomy_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Governmental institution',
-    'description' => '<p>Local, provincial or nationla governmental institutions.</p>
+    'description' => '<p>Local, provincial or national&nbsp;governmental institutions.</p>
 ',
     'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '36446160-b9d7-49ae-8357-03819751e8e1',
-    'language' => 'en',
+    'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'organization_types',
     'synonyms_synonyms' => array(),
@@ -359,9 +359,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description_field' => array(
       'en' => array(
         0 => array(
-          'value' => '<p>Local, provincial or nationla governmental institutions.</p>
+          'value' => '<p>Local, provincial or national&nbsp;governmental institutions.</p>
 ',
-          'summary' => NULL,
+          'summary' => '',
           'format' => 'filtered_html',
           'safe_summary' => '',
         ),
@@ -1441,36 +1441,6 @@ function landportal_taxonomy_uuid_features_default_terms() {
       ),
     ),
     'entity_translation_handler_id' => 'taxonomy_term-licences-eid-3653-0',
-    'path' => array(
-      'pathauto' => 1,
-    ),
-  );
-  $terms[] = array(
-    'name' => 'Land Portal Hub',
-    'description' => '',
-    'format' => 'filtered_html',
-    'weight' => 0,
-    'uuid' => 'c5cbd6e0-889f-4de1-98bc-02531293fc1c',
-    'language' => 'en',
-    'i18n_tsid' => 0,
-    'vocabulary_machine_name' => 'organization_relation',
-    'translations' => array(
-      'original' => 'en',
-      'data' => array(
-        'en' => array(
-          'entity_type' => 'taxonomy_term',
-          'entity_id' => 6122,
-          'revision_id' => 6122,
-          'language' => 'en',
-          'source' => '',
-          'uid' => 8157,
-          'status' => 1,
-          'translate' => 0,
-          'created' => 1467288323,
-          'changed' => 1467288323,
-        ),
-      ),
-    ),
     'path' => array(
       'pathauto' => 1,
     ),
