@@ -71,7 +71,7 @@ function landportal_pdf_generate_pdf($url,$name){
         $pdf->binary = '/usr/local/bin/wkhtmltopdf';
         $pdf->setOptions(array(
           'page-size'=>'A4',
-          'javascript-delay' => 10000,
+          'javascript-delay' => 1000,
           'margin-top'=>10,
           'margin-left'=>0,
           'margin-right'=>0,
@@ -87,5 +87,8 @@ function landportal_pdf_generate_pdf($url,$name){
           );
          $pdf->addPage($url,$pageOptions);
          $pdf->send($name.'.pdf');
+         if ($error = $pdf->getError()) {
+           watchdog('landportal_pdf', 'PDF generation error', $error, WATCHDOG_ERROR);
+         }
     }
 }
