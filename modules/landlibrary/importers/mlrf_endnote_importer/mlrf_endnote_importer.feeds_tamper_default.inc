@@ -629,6 +629,10 @@ $feeds_tamper->settings = array(
       'source' => 'Yale University Press',
       'target' => 'Yale University Press',
     ),
+    33 => array(
+      'source' => 'BRICS Initiatives for Critical Agrarian Studies (BICAS), MOSAIC Research Project, Land Deal Politics Initiative (LDPI), RCSD Chiang Mai University, Transnational Institute',
+      'target' => 'BRICS Initiatives in Critical Agrarian Studies;International Institute of Social Studies;Land Deal Politics Initiative;Regional Center for Social Science and Sustainable Development - Chiang Mai University;Transnational Institute',
+    ),
   ),
   'full' => 1,
 );

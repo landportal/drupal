@@ -23,7 +23,7 @@ projects:
   drupal:
     patch:
       - "https://github.com/landportal/drupal/files/766584/change-dc-to-dct.txt"
-      - "https://github.com/landportal/drupal/files/876566/no-callback-in-RDFa.txt"
+      - "https://github.com/landportal/drupal/files/1147954/no-callback-in-RDFa.txt"
   entityreference_view_widget:
     patch:
       - "https://www.drupal.org/files/issues/entityreference_view_widget_suffix-2524296-2.patch"
