@@ -1126,15 +1126,12 @@ function landportal_sdgs_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'field_collection',
+        'module' => 'landbook_view_coda',
         'settings' => array(
-          'add' => '',
-          'delete' => '',
-          'description' => 0,
-          'edit' => '',
+          'class' => '',
           'view_mode' => 'full',
         ),
-        'type' => 'field_collection_view',
+        'type' => 'lbvc_block',
         'weight' => 5,
       ),
       'listing' => array(
