@@ -19,9 +19,14 @@ function landbook_view_coda_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
         'weight' => 2,
       ),
     ),
@@ -54,7 +59,7 @@ function landbook_view_coda_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'landbook_view_coda',
         'settings' => array(),
-        'type' => 'lbvc_debug',
+        'type' => 'lbvc_basic',
         'weight' => 3,
       ),
     ),
