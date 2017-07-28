@@ -134,7 +134,7 @@ function landbook_view_coda_field_formatter_view($entity_type, $entity, $field, 
           'js' =>  array(array(
             'type' => 'inline',
             'data' => landbook_view_coda_lbvis_ready_callback(
-              'LBML = new lbvisMap({' . $jsAttr . '}); LBML.init(); console.log(LBML);')
+              'LBML = new lbvisMap(' . $item['vcc'] . '); LBML.init(); console.log(LBML);')
           ))
         ),
         '#value' => 'Loading'
