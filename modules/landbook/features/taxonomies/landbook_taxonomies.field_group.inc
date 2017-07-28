@@ -21,7 +21,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '3',
+    'weight' => '1',
     'children' => array(
       0 => 'field_dataset',
       1 => 'field_unit',
@@ -30,13 +30,16 @@ function landbook_taxonomies_field_group_info() {
       4 => 'field_hascodedvalue',
       5 => 'field_highlow',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-metadata field-group-fieldset',
-        'required_fields' => 1,
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => '',
         'id' => '',
       ),
     ),
@@ -87,7 +90,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '3',
+    'weight' => '5',
     'children' => array(
       0 => 'field_id',
       1 => 'field_unit',
@@ -116,19 +119,23 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '1',
+    'weight' => '3',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_topics',
       2 => 'field_related_themes',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-topics-regions field-group-fieldset',
+        'classes' => '',
         'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
       ),
       'formatter' => 'open',
     ),
@@ -148,10 +155,9 @@ function landbook_taxonomies_field_group_info() {
     'label' => 'Topics and Regions',
     'weight' => '4',
     'children' => array(
-      0 => 'field_geographical_focus',
+      0 => 'field_related_domains',
       1 => 'field_related_topics',
-      2 => 'field_related_domains',
-      3 => 'field_related_themes',
+      2 => 'field_related_themes',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -209,12 +215,12 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_themes',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'hidden',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
@@ -238,19 +244,23 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '0',
+    'weight' => '2',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_topics',
       2 => 'field_related_themes',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-topics-regions',
+        'classes' => '',
         'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
       ),
       'formatter' => 'open',
     ),
@@ -300,20 +310,23 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '1',
+    'weight' => '3',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_themes',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'hidden',
     'format_settings' => array(
-      'label' => '',
+      'formatter' => 'collapsible',
       'instance_settings' => array(
-        'id' => '',
-        'classes' => 'group-topics-regions',
         'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => '',
+        'id' => '',
       ),
-      'formatter' => 'open',
     ),
   );
   $field_groups['group_topics_regions|taxonomy_term|indicators|teaser'] = $field_group;

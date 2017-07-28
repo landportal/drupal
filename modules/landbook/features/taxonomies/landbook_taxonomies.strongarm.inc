@@ -33,7 +33,17 @@ function landbook_taxonomies_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'metatags' => array(
+          'weight' => '7',
+        ),
+        'path' => array(
+          'weight' => '6',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '5',
+        ),
+      ),
       'display' => array(
         'description' => array(
           'search_index' => array(
@@ -55,7 +65,7 @@ function landbook_taxonomies_strongarm() {
         ),
         'authoring_information' => array(
           'default' => array(
-            'weight' => '0',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -63,7 +73,7 @@ function landbook_taxonomies_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),
@@ -126,7 +136,7 @@ function landbook_taxonomies_strongarm() {
         ),
         'authoring_information' => array(
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -134,7 +144,7 @@ function landbook_taxonomies_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '0',
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),
