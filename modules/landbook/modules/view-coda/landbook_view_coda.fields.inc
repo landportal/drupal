@@ -20,7 +20,7 @@ function landbook_view_coda_field_info() {
       'settings' => array('max_length' => ''),
       'instance_settings' => array('text_processing' => 0), //, 'type' => ''),
       'default_widget' => 'landbook_view_coda_config',
-      'default_formatter' => 'lbvc_debug',
+      'default_formatter' => 'lbvc_basic',
     ),
   );
 }
@@ -57,8 +57,12 @@ function landbook_view_coda_field_is_empty($item, $field) {
 function landbook_view_coda_field_formatter_info() {
   return array(
     // This formatter just displays the hex value in the color indicated.
+    'lbvc_basic' => array(
+      'label' => t('LB Visualization'),
+      'field types' => array('field_view_coda_vis'),
+    ),
     'lbvc_debug' => array(
-      'label' => t('LB Congig debug'),
+      'label' => t('LB Config debug'),
       'field types' => array('field_view_coda_vis'),
     ),
     'lbvc_block' => array(
@@ -101,36 +105,58 @@ function landbook_view_coda_field_formatter_view($entity_type, $entity, $field, 
   //dpm($entity, 'formatter entity');
   switch ($display['type']) {
     // This formatter simply outputs the field as text
-    case 'lbvc_debug':
-      foreach ($items as $delta => $item) {
-        // Should ALWAYS have a field_indicators
-        $item['ind'] = array_map(function ($i) { return $i['tid']; }, $entity->field_indicators[$langcode]);
-        $element[$delta] = array(
-          '#type' => 'html_tag',
-          '#tag' => 'pre',
-          '#attributes' => array(),
-          '#value' => 'TYPE: ' . $item['type'] . "\n"
-          . 'IND: ' . join($item['ind'], ', ') . "\n"
-          . $item['vcc'],
-        );
-        //dpm($item, 'LBVC vis field');
-      }
-      break;
-    case 'lbvc_block':
-      /* dpm($entity,  'formatter entity ' . $entity_type); */
-      /* dpm($field,   'formatter field ' . $langcode); */
-      /* dpm($instance, 'formatter instance'); */
-      /* dpm($items,   'formatter items'); */
-      /* dpm($display, 'formatter display'); */
+  case 'lbvc_debug':
+    foreach ($items as $delta => $item) {
+      // Should ALWAYS have a field_indicators
+      $tid = function ($i) { return $i['tid']; };
+//        $items[$delta]['ind'] = $indicators;
+      $element[$delta] = array(
+        '#type' => 'html_tag',
+        '#tag' => 'pre',
+        '#attributes' => array(),
+        '#value' => 'TYPE: ' . $item['type'] . "\n"
+        . 'IND: ' . join(array_map($tid, $item['ind']), ', ') . "\n"
+        . $item['vcc'],
+      );
+      //dpm($item, 'LBVC vis field');
+    }
+    break;
+  case 'lbvc_basic':
+    foreach ($items as $delta => $item) {
+      $element[$delta] = array(
+        '#type' => 'html_tag',
+        '#tag' => 'div',
+        '#attributes' => array(
+          'id' => $item['type'] . '-wrapper' // . $delta
+        ),
+        '#attached' => array(
+          'library' => array(array('landbook_view_coda', 'lbvis.map')),
+          'js' =>  array(array(
+            'type' => 'inline',
+            'data' => landbook_view_coda_lbvis_ready_callback(
+              'LBML = new lbvisMap({' . $jsAttr . '}); LBML.init(); console.log(LBML);')
+          ))
+        ),
+        '#value' => 'Loading'
+      );
+    }
+    break;
+  case 'lbvc_block':
+    // Format field_visualization (a field collection) items output
+    /* dpm($entity,  'formatter entity ' . $entity_type); */
+    /* dpm($field,   'formatter field ' . $langcode); */
+    /* dpm($instance, 'formatter instance'); */
+    /* dpm($items,   'formatter items'); */
+    /* dpm($display, 'formatter display'); */
 
-      $view_mode = !empty($display['settings']['view_mode']) ? $display['settings']['view_mode'] : 'full';
-      foreach ($items as $delta => $item) {
-        if ($field_collection = field_collection_field_get_entity($item)) {
-          //dpm($field_collection,   'LBVC item ' . $delta);
-          $element[$delta]['entity'] = $field_collection->view($view_mode);
-        }
+    $view_mode = !empty($display['settings']['view_mode']) ? $display['settings']['view_mode'] : 'full';
+    foreach ($items as $delta => $item) {
+      if ($field_collection = field_collection_field_get_entity($item)) {
+        //dpm($field_collection,   'LBVC item ' . $delta);
+        $element[$delta]['entity'] = $field_collection->view($view_mode);
       }
-      break;
+    }
+    break;
   }
 
   return $element;
@@ -221,7 +247,7 @@ function landbook_view_coda_config_validate($element, &$form_state) {
     /* } */
     /* $value = sprintf('#%02s%02s%02s', $values['r'], $values['g'], $values['b']); */
     $values = $form_state['values'][$field_name][$element['#language']][$delta]['vcc'];
-    dpm($values, 'VCC values');
+    //dpm($values, 'VCC values');
     form_set_value($element, '4242', $form_state);
   }
 }
@@ -244,3 +270,19 @@ function landbook_view_coda_field_widget_error($element, $error, $form, &$form_s
   }
 }
 
+
+// When loading / before viewing a field_view_coda_vis
+function landbook_view_coda_field_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items, $displays) {
+
+  foreach ($entities as $id => $entity) {
+    //dpm($entity, 'prepview e' . $id);
+    foreach ($items[$id] as $delta => $item) {
+      $items[$id][$delta]['ind'] = $entity->field_indicators[$langcode];
+    }
+    //dpm($items, 'prepview i' . $id);
+    /* foreach ($items[$id] as $delta => $item) { */
+    /*   // Force the array key to prevent duplicates. */
+    /*   $tids[$item['tid']] = $item['tid']; */
+    /* } */
+  }
+}
