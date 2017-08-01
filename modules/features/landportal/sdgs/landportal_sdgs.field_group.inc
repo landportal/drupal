@@ -296,6 +296,7 @@ function landportal_sdgs_field_group_info() {
     'children' => array(
       0 => 'field_paragraphs',
       1 => 'field_visualization',
+      2 => 'field_related_blocks',
     ),
     'format_type' => 'div',
     'format_settings' => array(

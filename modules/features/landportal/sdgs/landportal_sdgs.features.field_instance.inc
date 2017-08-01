@@ -700,7 +700,7 @@ function landportal_sdgs_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'above',
