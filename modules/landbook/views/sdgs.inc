@@ -204,6 +204,15 @@ $handler->display->display_options['fields']['view']['element_label_colon'] = FA
 $handler->display->display_options['fields']['view']['view'] = 'sdgs';
 $handler->display->display_options['fields']['view']['display'] = 'indicators';
 $handler->display->display_options['fields']['view']['arguments'] = '[!tid]';
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Taxonomy term: Term hierarchy */
+$handler->display->display_options['sorts']['hierarchy_sort']['id'] = 'hierarchy_sort';
+$handler->display->display_options['sorts']['hierarchy_sort']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['hierarchy_sort']['field'] = 'hierarchy_sort';
+/* Sort criterion: Taxonomy term: Weight */
+$handler->display->display_options['sorts']['weight']['id'] = 'weight';
+$handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['weight']['field'] = 'weight';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Parent term */
 $handler->display->display_options['arguments']['parent']['id'] = 'parent';
