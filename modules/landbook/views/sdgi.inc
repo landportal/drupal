@@ -135,6 +135,7 @@ $handler->display->display_options['defaults']['arguments'] = FALSE;
 $handler->display->display_options['arguments']['nid']['id'] = 'nid';
 $handler->display->display_options['arguments']['nid']['table'] = 'node';
 $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+$handler->display->display_options['arguments']['nid']['relationship'] = 'reverse_field_noderef_node';
 $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
 $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
 $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
