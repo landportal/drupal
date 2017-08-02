@@ -101,15 +101,12 @@ function landbook_view_coda_field_formatter_settings_form($field, $instance, $vi
  */
 function landbook_view_coda_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
   $element = array();
-  /* dpm($items, 'formatter view items'); */
-  //dpm($entity, 'formatter entity');
   switch ($display['type']) {
     // This formatter simply outputs the field as text
   case 'lbvc_debug':
     foreach ($items as $delta => $item) {
       // Should ALWAYS have a field_indicators
       $tid = function ($i) { return $i['tid']; };
-//        $items[$delta]['ind'] = $indicators;
       $element[$delta] = array(
         '#type' => 'html_tag',
         '#tag' => 'pre',
@@ -122,7 +119,19 @@ function landbook_view_coda_field_formatter_view($entity_type, $entity, $field, 
     }
     break;
   case 'lbvc_basic':
+    $indis = $entity->field_indicators[$langcode];
     foreach ($items as $delta => $item) {
+      // For each indicators as well
+      // TODO : 0 as in only 1 indicators in this vis. block
+      $id = $indis[0]['entity']->field_id[$langcode][0]['value'];
+      // 8< --- 8< --- SHOULD be in a params process function
+      $json = json_decode($item['vcc']);
+      $json->indicator = $id;
+      $json->vis = 'LBV'; // View Coda Data common obj
+      $params = json_encode($json);
+      $params = str_replace('"LBV"', 'LBV', $params); // Force LBV as a JS obj (non-JSON)
+      //dpm($params,   'Basic Params' . $id);
+
       $element[$delta] = array(
         '#type' => 'html_tag',
         '#tag' => 'div',
@@ -134,7 +143,7 @@ function landbook_view_coda_field_formatter_view($entity_type, $entity, $field, 
           'js' =>  array(array(
             'type' => 'inline',
             'data' => landbook_view_coda_lbvis_ready_callback(
-              'LBML = new lbvisMap(' . $item['vcc'] . '); LBML.init(); console.log(LBML);')
+              'LBML = new lbvisMap(' . $params . '); LBML.init(); console.log(LBML);')
           ))
         ),
         '#value' => 'Loading'
@@ -152,7 +161,6 @@ function landbook_view_coda_field_formatter_view($entity_type, $entity, $field, 
     $view_mode = !empty($display['settings']['view_mode']) ? $display['settings']['view_mode'] : 'full';
     foreach ($items as $delta => $item) {
       if ($field_collection = field_collection_field_get_entity($item)) {
-        //dpm($field_collection,   'LBVC item ' . $delta);
         $element[$delta]['entity'] = $field_collection->view($view_mode);
       }
     }
@@ -183,9 +191,6 @@ function landbook_view_coda_field_widget_info_alter(&$info) {
  * landbook_view_coda_config do @@@
  */
 function landbook_view_coda_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
-  /* dpm($items, 'widget items'.$delta); */
-  /* dpm($instance, 'widget instance ' . $delta); */
-
   $value = isset($items[$delta]['vcc']) ? $items[$delta]['vcc'] : '';
   $widget = $element;
 
@@ -216,7 +221,6 @@ function landbook_view_coda_field_widget_form(&$form, &$form_state, $field, $ins
       break;
   }
   $element['vcc'] = $widget;
-
   //dpm($element, 'widget elements');
   return $element;
 }
@@ -273,10 +277,8 @@ function landbook_view_coda_field_widget_error($element, $error, $form, &$form_s
 
 // When loading / before viewing a field_view_coda_vis
 function landbook_view_coda_field_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items, $displays) {
-
-  foreach ($entities as $id => $entity) {
-    //dpm($entity, 'prepview e' . $id);
-    foreach ($items[$id] as $delta => $item) {
+   foreach ($entities as $id => $entity) {
+     foreach ($items[$id] as $delta => $item) {
       $items[$id][$delta]['ind'] = $entity->field_indicators[$langcode];
     }
     //dpm($items, 'prepview i' . $id);
