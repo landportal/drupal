@@ -31,10 +31,10 @@ function landbook_view_coda_field_info() {
  * Validate the View Coda configuration & fields
  */
 function landbook_view_coda_field_validate($entity_type, $entity, $field, $instance, $langcode, $items, &$errors) {
-  dpm($item, 'validate');
+  //dpm($item, 'validate');
   foreach ($items as $delta => $item) {
     if (!empty($item['vcc'])) {
-      dpm($item['vcc'], 'OK');
+      //dpm($item['vcc'], 'OK');
       /* $errors[$field['field_name']][$langcode][$delta][] = array( */
       /*   'error' => 'field_example_invalid', */
       /*   'message' => t('Color must be in the HTML format #abcdef.'), */
