@@ -231,6 +231,8 @@ $handler->display->display_options['filters']['type_1']['value'] = array(
 
 /* Display: Blogs */
 $handler = $view->new_display('block', 'Blogs', 'blogs');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'From the Blog';
 $handler->display->display_options['display_description'] = 'SDGi related blogs';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
@@ -303,6 +305,8 @@ $handler->display->display_options['filters']['type_1']['value'] = array(
 
 /* Display: All Blogs */
 $handler = $view->new_display('block', 'All Blogs', 'blogs_all');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'From the Blog';
 $handler->display->display_options['display_description'] = 'SDGi related blogs';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
