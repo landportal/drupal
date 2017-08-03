@@ -23,7 +23,7 @@ function landportal_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -64,7 +64,7 @@ function landportal_base_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -79,21 +79,21 @@ function landportal_base_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'day_month_year',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_remaining_days' => FALSE,
+          'show_remaining_days' => 0,
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_singledate',
-    'label' => 'Deadline',
+    'label' => 'Date',
     'required' => 1,
     'settings' => array(
       'default_value' => 'now',
@@ -117,7 +117,69 @@ function landportal_base_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 2,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_milestone-title_field'.
+  $field_instances['field_collection_item-field_milestone-title_field'] = array(
+    'bundle' => 'field_milestone',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h3',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
     ),
   );
 
@@ -243,7 +305,7 @@ function landportal_base_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Deadline');
+  t('Date');
   t('Description');
   t('Title');
 

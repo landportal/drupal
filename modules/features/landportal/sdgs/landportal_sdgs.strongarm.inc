@@ -120,19 +120,19 @@ function landportal_sdgs_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '15',
+          'weight' => '16',
         ),
         'metatags' => array(
-          'weight' => '14',
+          'weight' => '15',
         ),
         'title' => array(
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '12',
+          'weight' => '13',
         ),
         'xmlsitemap' => array(
-          'weight' => '13',
+          'weight' => '14',
         ),
       ),
       'display' => array(),
@@ -178,6 +178,102 @@ function landportal_sdgs_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'location_defaultnum_sdgi';
+  $strongarm->value = '1';
+  $export['location_defaultnum_sdgi'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'location_maxnum_sdgi';
+  $strongarm->value = '1';
+  $export['location_maxnum_sdgi'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'location_settings_node_sdgi';
+  $strongarm->value = array(
+    'multiple' => array(
+      'min' => '0',
+      'max' => '1',
+      'add' => '1',
+    ),
+    'form' => array(
+      'weight' => '0',
+      'collapsible' => 1,
+      'collapsed' => 1,
+      'fields' => array(
+        'name' => array(
+          'collect' => '1',
+          'default' => '',
+          'weight' => '2',
+        ),
+        'street' => array(
+          'collect' => '1',
+          'default' => '',
+          'weight' => '4',
+        ),
+        'additional' => array(
+          'collect' => '1',
+          'default' => '',
+          'weight' => '6',
+        ),
+        'city' => array(
+          'collect' => '0',
+          'default' => '',
+          'weight' => '8',
+        ),
+        'province' => array(
+          'collect' => '0',
+          'widget' => 'autocomplete',
+          'default' => '',
+          'weight' => '10',
+        ),
+        'postal_code' => array(
+          'collect' => '0',
+          'default' => '',
+          'weight' => '12',
+        ),
+        'country' => array(
+          'collect' => '1',
+          'default' => 'us',
+          'weight' => '14',
+        ),
+        'locpick' => array(
+          'collect' => '1',
+          'weight' => '20',
+        ),
+      ),
+    ),
+    'display' => array(
+      'weight' => '0',
+      'hide' => array(
+        'name' => 0,
+        'street' => 0,
+        'additional' => 0,
+        'city' => 0,
+        'province' => 0,
+        'postal_code' => 0,
+        'country' => 0,
+        'locpick' => 0,
+        'province_name' => 0,
+        'country_name' => 0,
+        'map_link' => 0,
+        'coords' => 0,
+      ),
+      'teaser' => 1,
+      'full' => 1,
+    ),
+    'rss' => array(
+      'mode' => 'simple',
+    ),
+  );
+  $export['location_settings_node_sdgi'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_sdgi';
   $strongarm->value = array(
     0 => 'landbook-menu',
@@ -189,7 +285,7 @@ function landportal_sdgs_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_sdgi';
-  $strongarm->value = 'landbook-menu:0';
+  $strongarm->value = 'menu-sdgs:0';
   $export['menu_parent_sdgi'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -198,6 +294,7 @@ function landportal_sdgs_strongarm() {
   $strongarm->name = 'node_options_sdgi';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_sdgi'] = $strongarm;
 

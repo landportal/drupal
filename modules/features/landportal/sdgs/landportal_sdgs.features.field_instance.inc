@@ -415,7 +415,7 @@ function landportal_sdgs_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_milestone',
-    'label' => 'Deadlines',
+    'label' => 'Key dates',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1323,11 +1323,11 @@ function landportal_sdgs_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('About this SDGs Indicator');
   t('Custodian agency');
-  t('Deadlines');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Geographical focus');
   t('Indicators');
   t('Key contacts');
+  t('Key dates');
   t('Key dates for this SDG indicator');
   t('Land Book Indicators');
   t('Links');
