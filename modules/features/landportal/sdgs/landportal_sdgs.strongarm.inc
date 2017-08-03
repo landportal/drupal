@@ -179,14 +179,14 @@ function landportal_sdgs_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'location_defaultnum_sdgi';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['location_defaultnum_sdgi'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'location_maxnum_sdgi';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['location_maxnum_sdgi'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -196,8 +196,8 @@ function landportal_sdgs_strongarm() {
   $strongarm->value = array(
     'multiple' => array(
       'min' => '0',
-      'max' => '1',
-      'add' => '1',
+      'max' => '0',
+      'add' => '0',
     ),
     'form' => array(
       'weight' => '0',
@@ -262,8 +262,8 @@ function landportal_sdgs_strongarm() {
         'map_link' => 0,
         'coords' => 0,
       ),
-      'teaser' => 1,
-      'full' => 1,
+      'teaser' => 0,
+      'full' => 0,
     ),
     'rss' => array(
       'mode' => 'simple',
