@@ -329,6 +329,20 @@ $handler->display->display_options['arguments']['parent']['summary_options']['it
 
 /* Display: SDGi Header */
 $handler = $view->new_display('block', 'SDGi Header', 'sdgi_parents');
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['row_class'] = '[tid]';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['row_options']['inline'] = array(
+  'field_sdgs_type' => 'field_sdgs_type',
+  'field_id' => 'field_id',
+  'name' => 'name',
+);
+$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['header'] = FALSE;
 /* Header: Global: Block area */
 $handler->display->display_options['header']['block']['id'] = 'block';
@@ -336,12 +350,6 @@ $handler->display->display_options['header']['block']['table'] = 'views';
 $handler->display->display_options['header']['block']['field'] = 'block';
 $handler->display->display_options['header']['block']['block_to_insert'] = 'jump_menu:jump_menu-m_menu-sdgs';
 $handler->display->display_options['defaults']['footer'] = FALSE;
-/* Footer: Global: Text area */
-$handler->display->display_options['footer']['area']['id'] = 'area';
-$handler->display->display_options['footer']['area']['table'] = 'views';
-$handler->display->display_options['footer']['area']['field'] = 'area';
-$handler->display->display_options['footer']['area']['content'] = '<a href="..">Return to Goals & Targets</a>';
-$handler->display->display_options['footer']['area']['format'] = 'full_html';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Taxonomy term: Content using SDG */
 $handler->display->display_options['relationships']['reverse_field_sdg_node']['id'] = 'reverse_field_sdg_node';
@@ -407,6 +415,23 @@ $handler->display->display_options['fields']['name']['alter']['text'] = '[field_
 $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: Type */
+$handler->display->display_options['fields']['field_sdgs_type_1']['id'] = 'field_sdgs_type_1';
+$handler->display->display_options['fields']['field_sdgs_type_1']['table'] = 'field_data_field_sdgs_type';
+$handler->display->display_options['fields']['field_sdgs_type_1']['field'] = 'field_sdgs_type';
+$handler->display->display_options['fields']['field_sdgs_type_1']['relationship'] = 'parent';
+$handler->display->display_options['fields']['field_sdgs_type_1']['label'] = '';
+$handler->display->display_options['fields']['field_sdgs_type_1']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_sdgs_type_1']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: ID */
+$handler->display->display_options['fields']['field_id_1']['id'] = 'field_id_1';
+$handler->display->display_options['fields']['field_id_1']['table'] = 'field_data_field_id';
+$handler->display->display_options['fields']['field_id_1']['field'] = 'field_id';
+$handler->display->display_options['fields']['field_id_1']['relationship'] = 'parent';
+$handler->display->display_options['fields']['field_id_1']['label'] = '';
+$handler->display->display_options['fields']['field_id_1']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_id_1']['alter']['text'] = '[field_sdgs_type_1] [field_id_1]';
+$handler->display->display_options['fields']['field_id_1']['element_label_colon'] = FALSE;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Content: Nid */
 $handler->display->display_options['arguments']['nid']['id'] = 'nid';
@@ -880,20 +905,11 @@ $handler->display->display_options['fields']['path']['relationship'] = 'reverse_
 $handler->display->display_options['fields']['path']['label'] = '';
 $handler->display->display_options['fields']['path']['exclude'] = TRUE;
 $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-/* Field: Taxonomy term: Type */
-$handler->display->display_options['fields']['field_sdgs_type']['id'] = 'field_sdgs_type';
-$handler->display->display_options['fields']['field_sdgs_type']['table'] = 'field_data_field_sdgs_type';
-$handler->display->display_options['fields']['field_sdgs_type']['field'] = 'field_sdgs_type';
-$handler->display->display_options['fields']['field_sdgs_type']['label'] = '';
-$handler->display->display_options['fields']['field_sdgs_type']['exclude'] = TRUE;
-$handler->display->display_options['fields']['field_sdgs_type']['element_label_colon'] = FALSE;
 /* Field: Taxonomy term: ID */
 $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
 $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['label'] = '';
-$handler->display->display_options['fields']['field_id']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['field_id']['alter']['text'] = '[field_sdgs_type] [field_id]';
 $handler->display->display_options['fields']['field_id']['alter']['make_link'] = TRUE;
 $handler->display->display_options['fields']['field_id']['alter']['path'] = '[path]';
 $handler->display->display_options['fields']['field_id']['element_label_colon'] = FALSE;
