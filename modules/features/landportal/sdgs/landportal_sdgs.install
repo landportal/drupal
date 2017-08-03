@@ -8,7 +8,7 @@ function landportal_sdgs_update_7200() {
   $block = array(
     'keys' => array(
       'module'  => 'views',
-      'delta'   => 'sdgs-block_grid',
+      'delta'   => 'sdgs-tiers',
       'theme'   => 'lpbs',
     ),
     'fields' => array(
@@ -17,27 +17,27 @@ function landportal_sdgs_update_7200() {
       'visibility'  => BLOCK_VISIBILITY_LISTED,
       'pages'       => 'book/sdgs',
       'region'      => 'sidebar_second',
-      'weight'      => 24,
+      'weight'      => -95,
     )
   );
   db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
 
-  $block = array(
-    'keys' => array(
-      'module'  => 'views',
-      'delta'   => 'sdgi-menu',
-      'theme'   => 'lpbs',
-    ),
-    'fields' => array(
-      'status'      => 1,
-      'title'       => '',
-      'visibility'  => BLOCK_VISIBILITY_LISTED,
-      'pages'       => 'book/sdgs',
-      'region'      => 'sidebar_second',
-      'weight'      => 23,
-    )
-  );
-  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+  /* $block = array( */
+  /*   'keys' => array( */
+  /*     'module'  => 'views', */
+  /*     'delta'   => 'sdgi-menu', */
+  /*     'theme'   => 'lpbs', */
+  /*   ), */
+  /*   'fields' => array( */
+  /*     'status'      => 1, */
+  /*     'title'       => '', */
+  /*     'visibility'  => BLOCK_VISIBILITY_LISTED, */
+  /*     'pages'       => 'book/sdgs', */
+  /*     'region'      => 'sidebar_second', */
+  /*     'weight'      => 23, */
+  /*   ) */
+  /* ); */
+  /* db_merge('block')->key($block['keys'])->fields($block['fields'])->execute(); */
 
   $block = array(
     'keys' => array(
@@ -65,26 +65,5 @@ function landportal_sdgs_update_7200() {
     )
   );
   db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
-
-  /* // For dev */
-  /* $block = array( */
-  /*   'keys' => array( */
-  /*     'type'  => 'sdgi', */
-  /*   ), */
-  /*   'fields' => array( */
-  /*     'status'      => 1, */
-  /*   ) */
-  /* ); */
-  /* db_update('node')->condition('type', 'sdgi')->fields($block['fields'])->execute(); */
-
-  /* $SDGi = db_select('node', 'n') */
-  /*   ->condition('type', 'sdgi') */
-  /*   ->fields('n', array('nid')) */
-  /*   ; */
-  /* $nodes = $SDGi->execute()->fetchCol();//->fetchAll(); */
-  /* $sql = db_update('node_revision')->condition('nid', $nodes, 'IN')->fields(array('status' => 1)); */
-  /* //var_dump($nodes); */
-  /* //error_log('=== ' . $sql); */
-  /* $sql->execute(); */
 }
 

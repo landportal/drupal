@@ -689,7 +689,14 @@ function landportal_sdgs_field_default_field_instances() {
   // Exported field_instance: 'node-sdgi-field_related_blocks'.
   $field_instances['node-sdgi-field_related_blocks'] = array(
     'bundle' => 'sdgi',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'moddelta' => 'views:sdgi-blogs',
+      ),
+      1 => array(
+        'moddelta' => 'views:sdgi-related',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -727,7 +734,6 @@ function landportal_sdgs_field_default_field_instances() {
         'calendar' => 0,
         'comment' => 0,
         'context_ui' => 0,
-        'devel' => 0,
         'diff' => 0,
         'facetapi' => 0,
         'global_filter' => 0,
@@ -746,7 +752,6 @@ function landportal_sdgs_field_default_field_instances() {
         'mailchimp_signup' => 0,
         'masquerade' => 0,
         'menu' => 0,
-        'menu_block' => 0,
         'node' => 0,
         'og_menu' => 0,
         'pcp' => 0,
