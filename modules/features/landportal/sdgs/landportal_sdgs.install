@@ -22,22 +22,39 @@ function landportal_sdgs_update_7200() {
   );
   db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
 
-  /* $block = array( */
-  /*   'keys' => array( */
-  /*     'module'  => 'views', */
-  /*     'delta'   => 'sdgi-menu', */
-  /*     'theme'   => 'lpbs', */
-  /*   ), */
-  /*   'fields' => array( */
-  /*     'status'      => 1, */
-  /*     'title'       => '', */
-  /*     'visibility'  => BLOCK_VISIBILITY_LISTED, */
-  /*     'pages'       => 'book/sdgs', */
-  /*     'region'      => 'sidebar_second', */
-  /*     'weight'      => 23, */
-  /*   ) */
-  /* ); */
-  /* db_merge('block')->key($block['keys'])->fields($block['fields'])->execute(); */
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'sdgi-blogs_all',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      //'title'       => '',
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/sdgs',
+      'region'      => 'content',
+      'weight'      => 1,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
+
+  $block = array(
+    'keys' => array(
+      'module'  => 'views',
+      'delta'   => 'sdgi-related_all',
+      'theme'   => 'lpbs',
+    ),
+    'fields' => array(
+      'status'      => 1,
+      //'title'       => '',
+      'visibility'  => BLOCK_VISIBILITY_LISTED,
+      'pages'       => 'book/sdgs',
+      'region'      => 'content',
+      'weight'      => 2,
+    )
+  );
+  db_merge('block')->key($block['keys'])->fields($block['fields'])->execute();
 
   $block = array(
     'keys' => array(
