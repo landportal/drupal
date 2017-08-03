@@ -63,11 +63,6 @@ $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
   'thematic_narrative' => 'thematic_narrative',
 );
-/* Filter criterion: Content: Published */
-$handler->display->display_options['filters']['status']['id'] = 'status';
-$handler->display->display_options['filters']['status']['table'] = 'node';
-$handler->display->display_options['filters']['status']['field'] = 'status';
-$handler->display->display_options['filters']['status']['value'] = '1';
 
 /* Display: Entity Reference */
 $handler = $view->new_display('entityreference', 'Entity Reference', 'ref_landvoc');
@@ -171,4 +166,3 @@ $handler->display->display_options['sorts']['name']['id'] = 'name';
 $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['sorts']['name']['field'] = 'name';
 $handler->display->display_options['sorts']['name']['relationship'] = 'field_landvoc_to_target_id';
-
