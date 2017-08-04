@@ -125,6 +125,7 @@ $handler->display->display_options['fields']['name']['id'] = 'name';
 $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['fields']['name']['field'] = 'name';
 $handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
 $handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
 $handler->display->display_options['fields']['name']['alter']['text'] = '[field_image]  <span>[field_sdgs_type] [field_id]</span>: [name]';
 $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
