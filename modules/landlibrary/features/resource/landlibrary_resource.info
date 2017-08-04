@@ -130,6 +130,7 @@ features[variable][] = entity_translation_hide_translation_links_landlibrary_res
 features[variable][] = entity_translation_node_metadata_landlibrary_resource
 features[variable][] = entity_translation_settings_node__landlibrary_resource
 features[variable][] = field_bundle_settings_node__landlibrary_resource
+features[variable][] = i18n_node_default_language_for_landlibrary_resource
 features[variable][] = i18n_node_extended_landlibrary_resource
 features[variable][] = i18n_node_options_landlibrary_resource
 features[variable][] = i18n_sync_node_type_landlibrary_resource
