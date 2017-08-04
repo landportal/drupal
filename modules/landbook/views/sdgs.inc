@@ -953,7 +953,9 @@ foreach (array(1, 2, 3) as $tier) {
  $output .= \'<div class="tier-\' . $tier . (substr($row->name, -1) == $tier ? \' active\' : \'\' ) . \'">\';
  if (substr($row->name, -1) == $tier) {
    $output .= $row->name;
- }
+ } else {
+   $output .= "&nbsp;";
+}
 $output .= \'</div>\';
 }
 return $output;';
