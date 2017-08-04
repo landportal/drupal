@@ -119,36 +119,21 @@ function landbook_view_coda_field_formatter_view($entity_type, $entity, $field, 
     }
     break;
   case 'lbvc_basic':
-    $indis = $entity->field_indicators[$langcode];
-    foreach ($items as $delta => $item) {
-      // For each indicators as well
-      // TODO : 0 as in only 1 indicators in this vis. block
-      $id = $indis[0]['entity']->field_id[$langcode][0]['value'];
-      // 8< --- 8< --- SHOULD be in a params process function
-      $json = json_decode($item['vcc']);
-      $json->indicator = $id;
-      $json->vis = 'LBV'; // View Coda Data common obj
-      $params = json_encode($json);
-      $params = str_replace('"LBV"', 'LBV', $params); // Force LBV as a JS obj (non-JSON)
-      //dpm($params,   'Basic Params' . $id);
-
-      $element[$delta] = array(
-        '#type' => 'html_tag',
-        '#tag' => 'div',
-        '#attributes' => array(
-          'id' => $item['type'] . '-wrapper' // . $delta
-        ),
-        '#attached' => array(
-          'library' => array(array('landbook_view_coda', 'lbvis.map')),
-          'js' =>  array(array(
-            'type' => 'inline',
-            'data' => landbook_view_coda_lbvis_ready_callback(
-              'LBML = new lbvisMap(' . $params . '); LBML.init(); console.log(LBML);')
-          ))
-        ),
-        '#value' => 'Loading'
-      );
+    $VCC = array(
+      'type'  => $items[0]['type'],
+      'vcc'   => $items[0]['vcc'],
+      //'json'  => json_decode($items[0]['vcc']),
+      'jsid'  => 'VC' . $entity->item_id,
+      'vid'   => $entity->item_id . '-' . $items[0]['type'] . '-wrapper',
+      'indicators' => array(),
+    );
+    //dpm($entity, 'VCC');
+    foreach ($entity->field_indicators[$langcode] as $indicator) {
+      $VCC['indicators'][] = $indicator['entity']->field_id[$langcode][0]['value'];
+      //dpm($indicator, 'ind '. $iid);
     }
+    $element[] = landbook_view_coda_field_formatter_visualization($VCC);
+
     break;
   case 'lbvc_block':
     // Format field_visualization (a field collection) items output
@@ -166,8 +151,48 @@ function landbook_view_coda_field_formatter_view($entity_type, $entity, $field, 
     }
     break;
   }
-
   return $element;
+}
+
+function landbook_view_coda_field_formatter_visualization($VCC) {
+  
+  $params = substr($VCC['vcc'], 0, -1);
+    
+  $js = '';
+  switch ($VCC['type']) {
+  case 'map':
+    
+    $params .= ', "indicator": "' . $VCC['indicators'][0] . '"'
+      . ', "mapTarget": "#' . $VCC['vid'] . '", "vis": LBV}';
+    $value = t('Loading map visualization');
+    $js = $VCC['jsid'] . ' = new lbvisMap(' . $params . '); ' . $VCC['jsid'] . '.init();';
+    break;
+  case 'table':
+    $params .= ', "indicators": ["' . join('", "', $VCC['indicators']) . '"]'
+      . ', "target": "#' . $VCC['vid'] . '", "vis": LBV}';
+    $value = '<table><tbody></tbody></table>';
+    $js = $VCC['jsid'] . ' = new lbvisTable(' . $params . '); ' . $VCC['jsid'] . '.init();';
+    break;
+  }
+  $js .= 'console.log(' . $VCC['jsid'] . '.debug());';
+  
+
+  //dpm($js,   'Basic Params for:' . $VCC['jsid']);
+  return array(
+    '#type' => 'html_tag',
+    '#tag' => 'div',//($VCC['type'] == 'table' ? 'table' : 'div'),
+    '#attributes' => array(
+      'id' => $VCC['vid']
+    ),
+    '#attached' => array(
+      'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
+      'js' =>  array(array(
+        'type' => 'inline',
+        'data' => landbook_view_coda_lbvis_ready_callback($js)
+      ))
+    ),
+    '#value' => $value,
+  );
 }
 
 /**
@@ -236,7 +261,9 @@ function landbook_view_coda_config_validate($element, &$form_state) {
   $field = $form_state['field'][$element['#name']];//[$element['#language']]['field'];
   $field_name = $field['field_name'];
   if (isset($form_state['values'][$field_name][$element['#language']][$delta]['vcc'])) {
-    //dpm($field, 'val-'.$delta);
+    $values = $form_state['values'][$field_name][$element['#language']][$delta]['vcc'];
+    /* dpm($values, 'value for '. $field_name . '/' . $delta); */
+    //dpm($field, 'value for '. $field_name . '/' . $delta);
     /* foreach (array('r', 'g', 'b') as $colorfield) { */
     /*   $colorfield_value = hexdec($values[$colorfield]); */
     /*   // If they left any empty, we'll set the value empty and quit. */
@@ -250,7 +277,6 @@ function landbook_view_coda_config_validate($element, &$form_state) {
     /*   } */
     /* } */
     /* $value = sprintf('#%02s%02s%02s', $values['r'], $values['g'], $values['b']); */
-    $values = $form_state['values'][$field_name][$element['#language']][$delta]['vcc'];
     //dpm($values, 'VCC values');
     form_set_value($element, '4242', $form_state);
   }
