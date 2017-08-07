@@ -227,7 +227,7 @@ function landbook_view_coda_field_widget_form(&$form, &$form_state, $field, $ins
        '#weight' => -1,
        '#title' => t('Visualization'),
        '#options' => _lbvc_types(),
-       '#default_value' => $category['selected'],
+       '#default_value' => $value_type,
        '#description' => t('Select the type of visualization to use.'),
   );
   $element['type'] = $widget_type;
