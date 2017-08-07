@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file
+ * Drupal needs this blank file.
+ */
+
+function landportal_related_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
+ * Implements hook_views_default_views().
+ */
+function landportal_related_views_default_views() {
+    $export = array();
+
+    $path = drupal_get_path('module', 'landportal_related').'/views';
+    $files = file_scan_directory($path, '/\.inc$/');
+    foreach ($files as $filepath => $file) {
+      include_once $filepath;
+      $export[$view->name] = $view;
+    }
+    return $export;
+}
