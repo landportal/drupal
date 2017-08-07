@@ -39,7 +39,6 @@ $handler->display->display_options['relationships']['parent']['table'] = 'taxono
 $handler->display->display_options['relationships']['parent']['field'] = 'parent';
 $handler->display->display_options['relationships']['parent']['relationship'] = 'field_sdg_tid';
 $handler->display->display_options['relationships']['parent']['label'] = 'target';
-$handler->display->display_options['relationships']['parent']['required'] = TRUE;
 /* Relationship: Taxonomy term: Parent term */
 $handler->display->display_options['relationships']['parent_1']['id'] = 'parent_1';
 $handler->display->display_options['relationships']['parent_1']['table'] = 'taxonomy_term_hierarchy';
@@ -93,8 +92,6 @@ $handler->display->display_options['fields']['title_field']['table'] = 'field_da
 $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
 $handler->display->display_options['fields']['title_field']['relationship'] = 'field_milestone_value';
 $handler->display->display_options['fields']['title_field']['label'] = '';
-$handler->display->display_options['fields']['title_field']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['title_field']['alter']['text'] = '[title]: [title_field]';
 $handler->display->display_options['fields']['title_field']['alter']['make_link'] = TRUE;
 $handler->display->display_options['fields']['title_field']['alter']['path'] = '[path]';
 $handler->display->display_options['fields']['title_field']['element_label_colon'] = FALSE;
@@ -123,6 +120,10 @@ $handler->display->display_options['sorts']['weight']['id'] = 'weight';
 $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['sorts']['weight']['field'] = 'weight';
 $handler->display->display_options['sorts']['weight']['relationship'] = 'field_sdg_tid';
+$handler->display->display_options['filter_groups']['groups'] = array(
+  1 => 'AND',
+  2 => 'OR',
+);
 /* Filter criterion: Content: Published */
 $handler->display->display_options['filters']['status']['id'] = 'status';
 $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -130,19 +131,27 @@ $handler->display->display_options['filters']['status']['field'] = 'status';
 $handler->display->display_options['filters']['status']['value'] = 1;
 $handler->display->display_options['filters']['status']['group'] = 1;
 $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type']['id'] = 'type';
-$handler->display->display_options['filters']['type']['table'] = 'node';
-$handler->display->display_options['filters']['type']['field'] = 'type';
-$handler->display->display_options['filters']['type']['value'] = array(
-  'sdgi' => 'sdgi',
-);
 /* Filter criterion: Field: Description (field_description) */
 $handler->display->display_options['filters']['field_description_value']['id'] = 'field_description_value';
 $handler->display->display_options['filters']['field_description_value']['table'] = 'field_data_field_description';
 $handler->display->display_options['filters']['field_description_value']['field'] = 'field_description_value';
 $handler->display->display_options['filters']['field_description_value']['relationship'] = 'field_milestone_value';
 $handler->display->display_options['filters']['field_description_value']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_description_value']['group'] = 1;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+$handler->display->display_options['filters']['type_1']['table'] = 'node';
+$handler->display->display_options['filters']['type_1']['field'] = 'type';
+$handler->display->display_options['filters']['type_1']['value'] = array(
+  'sdgi' => 'sdgi',
+);
+$handler->display->display_options['filters']['type_1']['group'] = 2;
+/* Filter criterion: Content: Nid */
+$handler->display->display_options['filters']['nid']['id'] = 'nid';
+$handler->display->display_options['filters']['nid']['table'] = 'node';
+$handler->display->display_options['filters']['nid']['field'] = 'nid';
+$handler->display->display_options['filters']['nid']['value']['value'] = '52263';
+$handler->display->display_options['filters']['nid']['group'] = 2;
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'main');
@@ -152,7 +161,6 @@ $handler->display->display_options['style_options']['timeline_config']['height']
 $handler->display->display_options['style_options']['timeline_config']['hash_bookmark'] = 0;
 $handler->display->display_options['style_options']['timeline_config']['start_at_end'] = 0;
 $handler->display->display_options['style_options']['additional_config']['start_at_current'] = 0;
-$handler->display->display_options['style_options']['timeline_fields']['group'] = 'field_id';
 $handler->display->display_options['style_options']['timeline_fields']['start_date'] = 'field_singledate';
 $handler->display->display_options['style_options']['timeline_fields']['display_date'] = 'field_singledate';
 $handler->display->display_options['style_options']['timeline_fields']['text'] = 'field_description';
