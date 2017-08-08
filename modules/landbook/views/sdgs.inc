@@ -949,7 +949,7 @@ $handler->display->display_options['fields']['php']['element_label_colon'] = FAL
 $handler->display->display_options['fields']['php']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
 $handler->display->display_options['fields']['php']['php_value'] = '$output = \'\';
-foreach (array(1, 2, 3) as $tier) {
+foreach (array(3, 2, 1) as $tier) {
  $output .= \'<div class="tier-\' . $tier . (substr($row->name, -1) == $tier ? \' active\' : \'\' ) . \'">\';
  if (substr($row->name, -1) == $tier) {
    $output .= $row->name;
