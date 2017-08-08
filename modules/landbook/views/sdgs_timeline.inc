@@ -155,14 +155,16 @@ $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_
 $handler->display->display_options['sorts']['weight']['field'] = 'weight';
 $handler->display->display_options['sorts']['weight']['relationship'] = 'field_sdg_tid';
 $handler->display->display_options['filter_groups']['groups'] = array(
-  1 => 'OR',
+  1 => 'AND',
+  2 => 'OR',
 );
-/* Filter criterion: Content: Nid */
-$handler->display->display_options['filters']['nid']['id'] = 'nid';
-$handler->display->display_options['filters']['nid']['table'] = 'node';
-$handler->display->display_options['filters']['nid']['field'] = 'nid';
-$handler->display->display_options['filters']['nid']['value']['value'] = '52263';
-$handler->display->display_options['filters']['nid']['group'] = 1;
+/* Filter criterion: Field: Description (field_description) */
+$handler->display->display_options['filters']['field_description_value']['id'] = 'field_description_value';
+$handler->display->display_options['filters']['field_description_value']['table'] = 'field_data_field_description';
+$handler->display->display_options['filters']['field_description_value']['field'] = 'field_description_value';
+$handler->display->display_options['filters']['field_description_value']['relationship'] = 'field_milestone_value';
+$handler->display->display_options['filters']['field_description_value']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_description_value']['group'] = 1;
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
 $handler->display->display_options['filters']['type_1']['table'] = 'node';
@@ -170,7 +172,13 @@ $handler->display->display_options['filters']['type_1']['field'] = 'type';
 $handler->display->display_options['filters']['type_1']['value'] = array(
   'sdgi' => 'sdgi',
 );
-$handler->display->display_options['filters']['type_1']['group'] = 1;
+$handler->display->display_options['filters']['type_1']['group'] = 2;
+/* Filter criterion: Content: Nid */
+$handler->display->display_options['filters']['nid']['id'] = 'nid';
+$handler->display->display_options['filters']['nid']['table'] = 'node';
+$handler->display->display_options['filters']['nid']['field'] = 'nid';
+$handler->display->display_options['filters']['nid']['value']['value'] = '52263';
+$handler->display->display_options['filters']['nid']['group'] = 2;
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'main');
@@ -180,7 +188,7 @@ $handler->display->display_options['style_options']['timeline_config']['height']
 $handler->display->display_options['style_options']['timeline_config']['hash_bookmark'] = 0;
 $handler->display->display_options['style_options']['timeline_config']['scale_factor'] = '1';
 $handler->display->display_options['style_options']['timeline_config']['start_at_end'] = 0;
-$handler->display->display_options['style_options']['additional_config']['start_at_current'] = 0;
+$handler->display->display_options['style_options']['additional_config']['start_at_current'] = TRUE;
 $handler->display->display_options['style_options']['timeline_fields']['start_date'] = 'field_date';
 $handler->display->display_options['style_options']['timeline_fields']['end_date'] = 'field_date_1';
 $handler->display->display_options['style_options']['timeline_fields']['display_date'] = 'field_date_2';

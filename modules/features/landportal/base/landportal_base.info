@@ -12,7 +12,6 @@ dependencies[] = entity_translation
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_collection
-dependencies[] = field_collection_fieldset
 dependencies[] = file
 dependencies[] = file_entity
 dependencies[] = i18n
