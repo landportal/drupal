@@ -11,7 +11,6 @@ dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = field_collection_fieldset
 dependencies[] = landbook_taxonomies
-dependencies[] = landbook_view_coda
 dependencies[] = landportal_base
 dependencies[] = options
 dependencies[] = text

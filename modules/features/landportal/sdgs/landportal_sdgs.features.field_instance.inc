@@ -152,7 +152,7 @@ function landportal_sdgs_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -426,14 +426,14 @@ function landportal_sdgs_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'field_collection_fieldset',
       'settings' => array(
-        'collapsed' => FALSE,
-        'field_as_label' => array(),
-        'last_item_collapsed' => FALSE,
-        'new_item_open' => FALSE,
-        'replace_label' => FALSE,
+        'collapsed' => 1,
+        'field_as_label' => 'title_field',
+        'last_item_collapsed' => 1,
+        'new_item_open' => 1,
+        'replace_label' => 0,
       ),
       'type' => 'field_collection_fieldset',
       'weight' => 5,
@@ -506,7 +506,7 @@ function landportal_sdgs_field_default_field_instances() {
         'view_mode' => 'full',
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -569,7 +569,7 @@ function landportal_sdgs_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -692,7 +692,7 @@ function landportal_sdgs_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -782,7 +782,7 @@ function landportal_sdgs_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -1133,7 +1133,7 @@ function landportal_sdgs_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 2,
     ),
   );
 
@@ -1261,12 +1261,12 @@ function landportal_sdgs_field_default_field_instances() {
       'settings' => array(
         'collapsed' => 1,
         'field_as_label' => 'title_field',
-        'last_item_collapsed' => 0,
-        'new_item_open' => 0,
+        'last_item_collapsed' => 1,
+        'new_item_open' => 1,
         'replace_label' => 0,
       ),
       'type' => 'field_collection_fieldset',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
