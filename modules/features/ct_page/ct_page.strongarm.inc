@@ -126,19 +126,19 @@ function ct_page_strongarm() {
           'weight' => '0',
         ),
         'language' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'locations' => array(
-          'weight' => '7',
-        ),
-        'metatags' => array(
-          'weight' => '9',
-        ),
-        'path' => array(
           'weight' => '8',
         ),
+        'metatags' => array(
+          'weight' => '10',
+        ),
+        'path' => array(
+          'weight' => '9',
+        ),
         'xmlsitemap' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
       ),
       'display' => array(

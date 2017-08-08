@@ -262,7 +262,7 @@ function ct_page_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -329,7 +329,7 @@ function ct_page_field_default_field_instances() {
         'view_mode' => 'teaser',
       ),
       'type' => 'entityreference_view_widget',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 

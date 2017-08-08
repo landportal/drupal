@@ -79,22 +79,23 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'UN Info',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_contact',
-      1 => 'field_milestone',
-      2 => 'field_orgref',
+      1 => 'field_orgref',
+      2 => 'field_partners',
       3 => 'field_sdgs_tier',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'UN Info',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-info field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-info field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $field_groups['group_info|node|sdgi|form'] = $field_group;
@@ -231,10 +232,11 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Related content',
-    'weight' => '8',
+    'weight' => '7',
     'children' => array(
-      0 => 'field_noderef',
-      1 => 'field_related_blocks',
+      0 => 'field_link',
+      1 => 'field_noderef',
+      2 => 'field_related_blocks',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -293,7 +295,7 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Settings',
-    'weight' => '9',
+    'weight' => '8',
     'children' => array(
       0 => 'field_indicators',
       1 => 'field_sdg',
