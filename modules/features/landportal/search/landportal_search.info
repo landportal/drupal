@@ -1,13 +1,12 @@
 name = LandPortal Search
 core = 7.x
 package = Landportal
-version = 7.x-2.4-beta2
+version = 7.x-2.4-rc1
 dependencies[] = apachesolr
 dependencies[] = apachesolr_search
 dependencies[] = ctools
 dependencies[] = facetapi
 dependencies[] = fe_block
-;dependencies[] = search_api_solr
 dependencies[] = strongarm
 features[apachesolr_environment][] = solr
 features[apachesolr_search_page][] = core_search
