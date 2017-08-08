@@ -53,12 +53,11 @@ function ct_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Optional fields',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_file',
-      1 => 'field_milestone',
-      2 => 'field_noderef',
-      3 => 'field_related_blocks',
+      1 => 'field_noderef',
+      2 => 'field_related_blocks',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -69,7 +68,7 @@ function ct_page_field_group_info() {
         'classes' => 'group-extra field-group-fieldset',
         'description' => 'Add and relate more specific information to this page',
       ),
-      'formatter' => 'open',
+      'formatter' => 'collapsed',
     ),
   );
   $field_groups['group_extra|node|page|form'] = $field_group;
@@ -122,8 +121,8 @@ function ct_page_field_group_info() {
     'weight' => '6',
     'children' => array(
       0 => 'field_related_domains',
-      1 => 'field_related_topics',
-      2 => 'field_related_themes',
+      1 => 'field_related_themes',
+      2 => 'field_related_topics',
     ),
     'format_type' => 'div',
     'format_settings' => array(
