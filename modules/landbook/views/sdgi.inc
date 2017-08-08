@@ -96,6 +96,8 @@ $handler->display->display_options['filters']['type']['value'] = array(
 
 /* Display: Related */
 $handler = $view->new_display('block', 'Related', 'related');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Land Portal related content';
 $handler->display->display_options['display_description'] = 'SDGi related content';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Entity Reference: Referencing entity */
@@ -169,6 +171,8 @@ $handler->display->display_options['filters']['type_1']['value'] = array(
 
 /* Display: All Related */
 $handler = $view->new_display('block', 'All Related', 'related_all');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Land Portal related content';
 $handler->display->display_options['display_description'] = 'SDGi related content';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Entity Reference: Referencing entity */

@@ -14,7 +14,7 @@ function landlibrary_resource_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_landlibrary_resource';
-  $strongarm->value = 'edit-linkchecker';
+  $strongarm->value = 'edit-submission';
   $export['additional_settings__active_tab_landlibrary_resource'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -192,6 +192,13 @@ function landlibrary_resource_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__landlibrary_resource'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_default_language_for_landlibrary_resource';
+  $strongarm->value = '-- current --';
+  $export['i18n_node_default_language_for_landlibrary_resource'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

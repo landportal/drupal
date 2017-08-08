@@ -116,17 +116,35 @@ function ct_page_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
+        ),
+        'language' => array(
+          'weight' => '5',
+        ),
+        'locations' => array(
+          'weight' => '7',
+        ),
+        'metatags' => array(
+          'weight' => '9',
+        ),
+        'path' => array(
+          'weight' => '8',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '6',
         ),
       ),
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '1',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'teaser' => array(

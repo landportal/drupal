@@ -39,7 +39,6 @@ $handler->display->display_options['relationships']['parent']['table'] = 'taxono
 $handler->display->display_options['relationships']['parent']['field'] = 'parent';
 $handler->display->display_options['relationships']['parent']['relationship'] = 'field_sdg_tid';
 $handler->display->display_options['relationships']['parent']['label'] = 'target';
-$handler->display->display_options['relationships']['parent']['required'] = TRUE;
 /* Relationship: Taxonomy term: Parent term */
 $handler->display->display_options['relationships']['parent_1']['id'] = 'parent_1';
 $handler->display->display_options['relationships']['parent_1']['table'] = 'taxonomy_term_hierarchy';
@@ -70,31 +69,12 @@ $handler->display->display_options['fields']['title']['alter']['word_boundary'] 
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-/* Field: Field: Date */
-$handler->display->display_options['fields']['field_singledate']['id'] = 'field_singledate';
-$handler->display->display_options['fields']['field_singledate']['table'] = 'field_data_field_singledate';
-$handler->display->display_options['fields']['field_singledate']['field'] = 'field_singledate';
-$handler->display->display_options['fields']['field_singledate']['relationship'] = 'field_milestone_value';
-$handler->display->display_options['fields']['field_singledate']['label'] = '';
-$handler->display->display_options['fields']['field_singledate']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['field_singledate']['settings'] = array(
-  'format_type' => 'year_month_day',
-  'custom_date_format' => '',
-  'fromto' => 'both',
-  'multiple_number' => '',
-  'multiple_from' => '',
-  'multiple_to' => '',
-  'show_remaining_days' => 0,
-  'show_repeat_rule' => 'show',
-);
 /* Field: Field: Title */
 $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
 $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
 $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
 $handler->display->display_options['fields']['title_field']['relationship'] = 'field_milestone_value';
 $handler->display->display_options['fields']['title_field']['label'] = '';
-$handler->display->display_options['fields']['title_field']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['title_field']['alter']['text'] = '[title]: [title_field]';
 $handler->display->display_options['fields']['title_field']['alter']['make_link'] = TRUE;
 $handler->display->display_options['fields']['title_field']['alter']['path'] = '[path]';
 $handler->display->display_options['fields']['title_field']['element_label_colon'] = FALSE;
@@ -108,6 +88,57 @@ $handler->display->display_options['fields']['field_description']['field'] = 'fi
 $handler->display->display_options['fields']['field_description']['relationship'] = 'field_milestone_value';
 $handler->display->display_options['fields']['field_description']['label'] = '';
 $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
+/* Field: Field: Date */
+$handler->display->display_options['fields']['field_date']['id'] = 'field_date';
+$handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
+$handler->display->display_options['fields']['field_date']['field'] = 'field_date';
+$handler->display->display_options['fields']['field_date']['relationship'] = 'field_milestone_value';
+$handler->display->display_options['fields']['field_date']['label'] = 'Date start';
+$handler->display->display_options['fields']['field_date']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_date']['settings'] = array(
+  'format_type' => 'year_month_day',
+  'custom_date_format' => '',
+  'fromto' => 'value',
+  'multiple_number' => '',
+  'multiple_from' => '',
+  'multiple_to' => '',
+  'show_remaining_days' => 0,
+  'show_repeat_rule' => 'show',
+);
+/* Field: Field: Date */
+$handler->display->display_options['fields']['field_date_1']['id'] = 'field_date_1';
+$handler->display->display_options['fields']['field_date_1']['table'] = 'field_data_field_date';
+$handler->display->display_options['fields']['field_date_1']['field'] = 'field_date';
+$handler->display->display_options['fields']['field_date_1']['relationship'] = 'field_milestone_value';
+$handler->display->display_options['fields']['field_date_1']['label'] = 'Date end';
+$handler->display->display_options['fields']['field_date_1']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_date_1']['settings'] = array(
+  'format_type' => 'year_month_day',
+  'custom_date_format' => '',
+  'fromto' => 'value2',
+  'multiple_number' => '',
+  'multiple_from' => '',
+  'multiple_to' => '',
+  'show_remaining_days' => 0,
+  'show_repeat_rule' => 'show',
+);
+/* Field: Field: Date */
+$handler->display->display_options['fields']['field_date_2']['id'] = 'field_date_2';
+$handler->display->display_options['fields']['field_date_2']['table'] = 'field_data_field_date';
+$handler->display->display_options['fields']['field_date_2']['field'] = 'field_date';
+$handler->display->display_options['fields']['field_date_2']['label'] = '';
+$handler->display->display_options['fields']['field_date_2']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_date_2']['settings'] = array(
+  'format_type' => 'day_month_year',
+  'custom_date_format' => '',
+  'fromto' => 'both',
+  'multiple_number' => '',
+  'multiple_from' => '',
+  'multiple_to' => '',
+  'show_remaining_days' => 0,
+  'show_repeat_rule' => 'show',
+);
 /* Sort criterion: Taxonomy term: Weight */
 $handler->display->display_options['sorts']['weight_2']['id'] = 'weight_2';
 $handler->display->display_options['sorts']['weight_2']['table'] = 'taxonomy_term_data';
@@ -123,26 +154,23 @@ $handler->display->display_options['sorts']['weight']['id'] = 'weight';
 $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['sorts']['weight']['field'] = 'weight';
 $handler->display->display_options['sorts']['weight']['relationship'] = 'field_sdg_tid';
-/* Filter criterion: Content: Published */
-$handler->display->display_options['filters']['status']['id'] = 'status';
-$handler->display->display_options['filters']['status']['table'] = 'node';
-$handler->display->display_options['filters']['status']['field'] = 'status';
-$handler->display->display_options['filters']['status']['value'] = 1;
-$handler->display->display_options['filters']['status']['group'] = 1;
-$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+$handler->display->display_options['filter_groups']['groups'] = array(
+  1 => 'OR',
+);
+/* Filter criterion: Content: Nid */
+$handler->display->display_options['filters']['nid']['id'] = 'nid';
+$handler->display->display_options['filters']['nid']['table'] = 'node';
+$handler->display->display_options['filters']['nid']['field'] = 'nid';
+$handler->display->display_options['filters']['nid']['value']['value'] = '52263';
+$handler->display->display_options['filters']['nid']['group'] = 1;
 /* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type']['id'] = 'type';
-$handler->display->display_options['filters']['type']['table'] = 'node';
-$handler->display->display_options['filters']['type']['field'] = 'type';
-$handler->display->display_options['filters']['type']['value'] = array(
+$handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+$handler->display->display_options['filters']['type_1']['table'] = 'node';
+$handler->display->display_options['filters']['type_1']['field'] = 'type';
+$handler->display->display_options['filters']['type_1']['value'] = array(
   'sdgi' => 'sdgi',
 );
-/* Filter criterion: Field: Description (field_description) */
-$handler->display->display_options['filters']['field_description_value']['id'] = 'field_description_value';
-$handler->display->display_options['filters']['field_description_value']['table'] = 'field_data_field_description';
-$handler->display->display_options['filters']['field_description_value']['field'] = 'field_description_value';
-$handler->display->display_options['filters']['field_description_value']['relationship'] = 'field_milestone_value';
-$handler->display->display_options['filters']['field_description_value']['operator'] = 'not empty';
+$handler->display->display_options['filters']['type_1']['group'] = 1;
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'main');
@@ -150,11 +178,12 @@ $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'timelinejs';
 $handler->display->display_options['style_options']['timeline_config']['height'] = '350px';
 $handler->display->display_options['style_options']['timeline_config']['hash_bookmark'] = 0;
+$handler->display->display_options['style_options']['timeline_config']['scale_factor'] = '1';
 $handler->display->display_options['style_options']['timeline_config']['start_at_end'] = 0;
 $handler->display->display_options['style_options']['additional_config']['start_at_current'] = 0;
-$handler->display->display_options['style_options']['timeline_fields']['group'] = 'field_id';
-$handler->display->display_options['style_options']['timeline_fields']['start_date'] = 'field_singledate';
-$handler->display->display_options['style_options']['timeline_fields']['display_date'] = 'field_singledate';
+$handler->display->display_options['style_options']['timeline_fields']['start_date'] = 'field_date';
+$handler->display->display_options['style_options']['timeline_fields']['end_date'] = 'field_date_1';
+$handler->display->display_options['style_options']['timeline_fields']['display_date'] = 'field_date_2';
 $handler->display->display_options['style_options']['timeline_fields']['text'] = 'field_description';
 $handler->display->display_options['style_options']['timeline_fields']['headline'] = 'title_field';
 $handler->display->display_options['defaults']['style_options'] = FALSE;

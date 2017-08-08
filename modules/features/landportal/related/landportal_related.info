@@ -1,0 +1,17 @@
+name = Landportal related
+core = 7.x
+package = Landportal
+version = 7.x-2.4-alpha1
+dependencies[] = blockreference
+dependencies[] = ctools
+dependencies[] = entityreference
+dependencies[] = entityreference_view_widget
+dependencies[] = features
+dependencies[] = field_group
+dependencies[] = options
+dependencies[] = views
+features[features_api][] = api:2
+features[field_base][] = field_noderef
+features[field_base][] = field_related_blocks
+features[field_instance][] = node-page-field_related_blocks
+features_exclude[field_group][group_extra|node|page|form] = group_extra|node|page|form

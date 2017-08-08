@@ -223,7 +223,7 @@ function landlibrary_resource_field_default_field_instances() {
   $field_instances['node-landlibrary_resource-field_doc_creation_date'] = array(
     'bundle' => 'landlibrary_resource',
     'deleted' => 0,
-    'description' => 'The date of publication of the resource (YYYY/MM).',
+    'description' => 'The date of publication of the resource. The Land Portal\'s metadata model registers the Year and the Month. The date you input in this field is therefore irrelevant. In case the publisher only specified the year of publication and not the month, we recommend to enter \'December\' - as the resource would have been published in December in any case.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -310,8 +310,8 @@ function landlibrary_resource_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'custom',
-        'input_format_custom' => 'Y/m',
+        'input_format' => 'site-wide',
+        'input_format_custom' => '',
         'label_position' => 'above',
         'no_fieldset' => 0,
         'repeat_collapsed' => 0,
@@ -866,7 +866,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The language of the resource',
+    'description' => 'Please enter the language of the resource. If the language you mean to put in is not included in this list, please send an email to landlibrary@landportal.info to make sure it gets included.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -914,9 +914,7 @@ function landlibrary_resource_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 8,
     ),
@@ -927,7 +925,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Add information about the license under which the resource is published. Please note that this does not apply to the <b>metadata</b> of the resource. <a href="/page/terms-and-conditions-use">Read more here</a>.',
+    'description' => 'Please enter the license under which the resource is published. If no license is specified in the document, then this means the resource is \'All Rights Reserved\'. Please note that this does not apply to the <b>metadata</b> of the resource. <a href="/page/terms-and-conditions-use">Read more here</a>.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -975,9 +973,7 @@ function landlibrary_resource_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 125,
     ),
@@ -1110,7 +1106,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'People who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]"
+    'description' => 'Please enter the names of the people who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]". In case an organization or institution is entered as the author of the resource, please enter them in the \'corporate author\' field instead of this one.
 ',
     'display' => array(
       'default' => array(
@@ -1185,8 +1181,9 @@ function landlibrary_resource_field_default_field_instances() {
   $field_instances['node-landlibrary_resource-field_doc_provider'] = array(
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
-    'description' => 'The organization that makes the resource available (needs to be linked to an organizational profile on the Land Portal).',
+    'description' => 'The organization or aggregator that makes the resource available. Leave this field empty unless you have a specific agreement with the Land Portal Foundation to add many resources to the Library.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1249,20 +1246,18 @@ function landlibrary_resource_field_default_field_instances() {
     'label' => 'Data Provider',
     'required' => 0,
     'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'fc' => array(
-        'fc_allow_empty' => 0,
-        'fc_check_entities' => 0,
-        'fc_include' => 0,
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
       ),
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 1,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 122,
     ),
@@ -1272,8 +1267,9 @@ function landlibrary_resource_field_default_field_instances() {
   $field_instances['node-landlibrary_resource-field_doc_publisher'] = array(
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
-    'description' => 'The organization/s that published the resource (needs to be linked to an organizational profile on the Land Portal).',
+    'description' => 'The organization(s) that published the resource. This publisher is linked to an organizational profile on the Land Portal. If this publisher is not featured in the list, you will have to create a new organizational profile. In case you have just created a new publisher and it does not show up yet in this list, this is because the cache needs to be cleared. Please check back in a few minutes, apologies for the inconvenience.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1336,6 +1332,11 @@ function landlibrary_resource_field_default_field_instances() {
     'label' => 'Publisher(s)',
     'required' => 1,
     'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -1697,7 +1698,7 @@ function landlibrary_resource_field_default_field_instances() {
   $field_instances['node-landlibrary_resource-field_image'] = array(
     'bundle' => 'landlibrary_resource',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please enter the cover image of the resource. This is highly recommended.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1745,6 +1746,7 @@ function landlibrary_resource_field_default_field_instances() {
       'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
+      'wysiwyg_insert' => 0,
     ),
     'widget' => array(
       'active' => 1,
@@ -1829,8 +1831,9 @@ function landlibrary_resource_field_default_field_instances() {
   $field_instances['node-landlibrary_resource-field_orgref'] = array(
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
-    'description' => 'Organization cited as Author of this material  (linked to an organizational profile on the Land Portal).',
+    'description' => 'In case an organization or institution is cited as Author of this material, please enter the organization name here. This field is linked to an organizational profile on the Land Portal. Therefore the organization or institution must already exist on the Land Portal. If not, please create the profile on the Land Portal first.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1881,15 +1884,18 @@ function landlibrary_resource_field_default_field_instances() {
     'label' => 'Corporate Author(s)',
     'required' => 0,
     'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 1,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 124,
     ),
@@ -2010,7 +2016,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter a concept term from Land Portal\'s <a href="/voc/landvoc">LandVoc</a> thesaurus to classify the topical subject of the resource.',
+    'description' => 'Enter a concept term from Land Portal\'s <a href="/voc/landvoc">LandVoc</a> thesaurus to classify the topical subject of the resource. We recommend adding 5-10 concepts as the most effective way to tag your concept.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -2058,10 +2064,7 @@ function landlibrary_resource_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-        'sort' => 'weight',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 116,
     ),
@@ -2136,7 +2139,6 @@ function landlibrary_resource_field_default_field_instances() {
   t('A related resource in which the described resource is physically or logically included.');
   t('A related resource.');
   t('Abstract or Description');
-  t('Add information about the license under which the resource is published. Please note that this does not apply to the <b>metadata</b> of the resource. <a href="/page/terms-and-conditions-use">Read more here</a>.');
   t('Add one (or more) of the Land Portal\'s <a href="/voc/landvoc">Themes</a> to classify the topical subject of the resource.');
   t('An ISBN or another unique label that identifies the resource. (If your resource does not have a unique label, please enter the first six letters of the publisher - first six letters of the title - YYYYMM.E.g.: Landpo-Firsts-201607).');
   t('Author(s), editor(s), contributor(s)');
@@ -2147,23 +2149,26 @@ function landlibrary_resource_field_default_field_instances() {
   t('Date of publication');
   t('Details about the copyright of the resource, like the organization / person that owns the copyrights or a specific copyright statement.');
   t('Duration');
-  t('Enter a concept term from Land Portal\'s <a href="/voc/landvoc">LandVoc</a> thesaurus to classify the topical subject of the resource.');
+  t('Enter a concept term from Land Portal\'s <a href="/voc/landvoc">LandVoc</a> thesaurus to classify the topical subject of the resource. We recommend adding 5-10 concepts as the most effective way to tag your concept.');
   t('Enter one (or several) of the Land Portal\'s <a href="/voc/landvoc">Overarching Categories</a> to classify the topical subject of the resource.');
   t('File Upload');
   t('Geographical focus');
   t('ISBN / Resource ID');
   t('Image');
+  t('In case an organization or institution is cited as Author of this material, please enter the organization name here. This field is linked to an organizational profile on the Land Portal. Therefore the organization or institution must already exist on the Land Portal. If not, please create the profile on the Land Portal first.');
   t('Is part of');
   t('Keyword');
   t('License of the resource');
   t('Local file URL');
   t('Location Source');
   t('Number of pages of the resource or the page range in case of a journal article or book.');
-  t('Organization cited as Author of this material  (linked to an organizational profile on the Land Portal).');
   t('Originally published at');
   t('Overarching Categories');
   t('Pages');
-  t('People who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]"
+  t('Please enter the cover image of the resource. This is highly recommended.');
+  t('Please enter the language of the resource. If the language you mean to put in is not included in this list, please send an email to landlibrary@landportal.info to make sure it gets included.');
+  t('Please enter the license under which the resource is published. If no license is specified in the document, then this means the resource is \'All Rights Reserved\'. Please note that this does not apply to the <b>metadata</b> of the resource. <a href="/page/terms-and-conditions-use">Read more here</a>.');
+  t('Please enter the names of the people who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]". In case an organization or institution is entered as the author of the resource, please enter them in the \'corporate author\' field instead of this one.
 ');
   t('Publisher(s)');
   t('Related Concepts');
@@ -2175,12 +2180,11 @@ function landlibrary_resource_field_default_field_instances() {
   t('The Land Portal identifies certain types of resources from a set list. Please <a href="/library/resource-type/">click here</a> to find the full list and a brief description of what is meant.');
   t('The URL to the resource on the publisher\'s website (e.g.: http://landportal.info/sites/landportal.info/files/GECDiscussionReport-Final.pdf)');
   t('The abstract of the resource or a description of the resource.');
-  t('The date of publication of the resource (YYYY/MM).');
+  t('The date of publication of the resource. The Land Portal\'s metadata model registers the Year and the Month. The date you input in this field is therefore irrelevant. In case the publisher only specified the year of publication and not the month, we recommend to enter \'December\' - as the resource would have been published in December in any case.');
   t('The geographical focus of the resource (possible to select several).');
-  t('The language of the resource');
   t('The location of the source.');
-  t('The organization that makes the resource available (needs to be linked to an organizational profile on the Land Portal).');
-  t('The organization/s that published the resource (needs to be linked to an organizational profile on the Land Portal).');
+  t('The organization or aggregator that makes the resource available. Leave this field empty unless you have a specific agreement with the Land Portal Foundation to add many resources to the Library.');
+  t('The organization(s) that published the resource. This publisher is linked to an organizational profile on the Land Portal. If this publisher is not featured in the list, you will have to create a new organizational profile. In case you have just created a new publisher and it does not show up yet in this list, this is because the cache needs to be cleared. Please check back in a few minutes, apologies for the inconvenience.');
   t('The page on the website of the publisher where the resource is presented (e.g.: http://landportal.info/library/resources/report-sharing-best-practices-and-lessons-learned-supporting-women%E2%80%99s-land-rights).');
   t('Themes');
   t('This is a hidden field storing the value of the URL of the local file (the upload field cannot be mapped to RDF properties).');

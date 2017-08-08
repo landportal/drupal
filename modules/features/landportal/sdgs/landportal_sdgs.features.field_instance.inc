@@ -201,7 +201,7 @@ function landportal_sdgs_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 16,
+      'weight' => 14,
     ),
   );
 
@@ -212,10 +212,14 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -312,7 +316,7 @@ function landportal_sdgs_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 4,
     ),
   );
 
@@ -376,7 +380,7 @@ function landportal_sdgs_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
@@ -423,9 +427,15 @@ function landportal_sdgs_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
+      'module' => 'field_collection_fieldset',
+      'settings' => array(
+        'collapsed' => FALSE,
+        'field_as_label' => array(),
+        'last_item_collapsed' => FALSE,
+        'new_item_open' => FALSE,
+        'replace_label' => FALSE,
+      ),
+      'type' => 'field_collection_fieldset',
       'weight' => 5,
     ),
   );
@@ -496,7 +506,7 @@ function landportal_sdgs_field_default_field_instances() {
         'view_mode' => 'full',
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -601,7 +611,7 @@ function landportal_sdgs_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_paragraphs',
-    'label' => 'Paragraphs',
+    'label' => 'Additional paragraphs',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -611,14 +621,14 @@ function landportal_sdgs_field_default_field_instances() {
       'active' => 1,
       'module' => 'field_collection_fieldset',
       'settings' => array(
-        'collapsed' => 0,
+        'collapsed' => 1,
         'field_as_label' => 'title_field',
-        'last_item_collapsed' => 0,
-        'new_item_open' => 0,
+        'last_item_collapsed' => 1,
+        'new_item_open' => 1,
         'replace_label' => 0,
       ),
       'type' => 'field_collection_fieldset',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -772,7 +782,7 @@ function landportal_sdgs_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -829,7 +839,7 @@ function landportal_sdgs_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 16,
     ),
   );
 
@@ -881,7 +891,7 @@ function landportal_sdgs_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 18,
+      'weight' => 17,
     ),
   );
 
@@ -947,7 +957,7 @@ function landportal_sdgs_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
       'type' => 'options_select',
-      'weight' => 19,
+      'weight' => 18,
     ),
   );
 
@@ -962,7 +972,7 @@ function landportal_sdgs_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1012,7 +1022,7 @@ function landportal_sdgs_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1249,8 +1259,8 @@ function landportal_sdgs_field_default_field_instances() {
       'active' => 1,
       'module' => 'field_collection_fieldset',
       'settings' => array(
-        'collapsed' => 0,
-        'field_as_label' => '',
+        'collapsed' => 1,
+        'field_as_label' => 'title_field',
         'last_item_collapsed' => 0,
         'new_item_open' => 0,
         'replace_label' => 0,
@@ -1327,6 +1337,7 @@ function landportal_sdgs_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('About this SDGs Indicator');
+  t('Additional paragraphs');
   t('Custodian agency');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Geographical focus');
@@ -1337,7 +1348,6 @@ function landportal_sdgs_field_default_field_instances() {
   t('Land Book Indicators');
   t('Links');
   t('Overarching categories');
-  t('Paragraphs');
   t('Partners');
   t('Picture');
   t('Related blocks');

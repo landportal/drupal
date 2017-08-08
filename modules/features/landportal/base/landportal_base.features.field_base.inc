@@ -219,7 +219,7 @@ function landportal_base_field_default_field_bases() {
   // Exported field_base: 'field_file'.
   $field_bases['field_file'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_file',
@@ -550,7 +550,7 @@ function landportal_base_field_default_field_bases() {
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'hide_blank_items' => 1,
-      'hide_initial_item' => 0,
+      'hide_initial_item' => 1,
       'path' => '',
       'profile2_private' => FALSE,
     ),
@@ -645,7 +645,7 @@ function landportal_base_field_default_field_bases() {
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'hide_blank_items' => 1,
-      'hide_initial_item' => 0,
+      'hide_initial_item' => 1,
       'path' => '',
       'profile2_private' => FALSE,
     ),
@@ -766,29 +766,6 @@ function landportal_base_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_related_blocks'.
-  $field_bases['field_related_blocks'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_related_blocks',
-    'indexes' => array(
-      'moddelta' => array(
-        0 => 'moddelta',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'blockreference',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'profile2_private' => FALSE,
-      'referenceable_modules' => array(),
-    ),
-    'translatable' => 0,
-    'type' => 'blockreference',
-  );
-
   // Exported field_base: 'field_related_domains'.
   $field_bases['field_related_domains'] = array(
     'active' => 1,
@@ -877,38 +854,6 @@ function landportal_base_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
-  );
-
-  // Exported field_base: 'field_singledate'.
-  $field_bases['field_singledate'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_singledate',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'date',
-    'settings' => array(
-      'cache_count' => 4,
-      'cache_enabled' => 0,
-      'entity_translation_sync' => FALSE,
-      'granularity' => array(
-        'day' => 'day',
-        'hour' => 0,
-        'minute' => 0,
-        'month' => 'month',
-        'second' => 0,
-        'year' => 'year',
-      ),
-      'profile2_private' => FALSE,
-      'repeat' => 0,
-      'timezone_db' => '',
-      'todate' => '',
-      'tz_handling' => 'none',
-    ),
-    'translatable' => 0,
-    'type' => 'datetime',
   );
 
   // Exported field_base: 'field_twitter'.
