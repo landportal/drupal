@@ -26,7 +26,6 @@ features[field_group][] = group_header|taxonomy_term|sdgs|teaser
 features[field_instance][] = taxonomy_term-sdgs-field_id
 features[field_instance][] = taxonomy_term-sdgs-field_image
 features[field_instance][] = taxonomy_term-sdgs-field_sdgs_type
-features[field_instance][] = taxonomy_term-sdgs-field_singledate
 features[field_instance][] = taxonomy_term-sdgs-name_field
 features[field_instance][] = taxonomy_term-sdgs_tiers-field_date
 features[taxonomy][] = sdgs

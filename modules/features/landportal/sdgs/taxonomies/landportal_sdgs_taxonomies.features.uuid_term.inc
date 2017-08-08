@@ -37,16 +37,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(
-      'und' => array(
-        0 => array(
-          'value' => '2017-07-21 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
-          'date_type' => 'datetime',
-        ),
-      ),
-    ),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -65,7 +55,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8323-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8327-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -98,7 +88,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -144,7 +133,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -169,7 +157,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'name' => 'Universal access',
     'description' => 'By 2030, provide universal access to safe, inclusive and accessible, green and public spaces, in particular for women and children, older persons and persons with disabilities',
     'format' => 'plain_text',
-    'weight' => 1,
+    'weight' => 2,
     'uuid' => '24b359a8-4e56-469f-bb34-1ac07c8e9b9a',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -190,7 +178,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -214,6 +201,8 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
   $terms[] = array(
     'name' => 'Tenure',
     'description' => '<p>Proportion of total adult population with secure tenure rights to land, with legally recognized documentation and who perceive their rights to land as secure, by sex and by type of tenure</p>
+
+<p><strong>Tenure security indicator 1.4.2 is considered by the land community, including policy-makers, development professionals and donors as a crucial indicator for tracking progress on tenure security issues for all, with legally documented and perceived tenure rights.</strong></p>
 ',
     'format' => 'full_html',
     'weight' => 0,
@@ -237,16 +226,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(
-      'und' => array(
-        0 => array(
-          'value' => '2017-07-21 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
-          'date_type' => 'datetime',
-        ),
-      ),
-    ),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -265,7 +244,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8322-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8328-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -277,7 +256,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'name' => 'Gender equality',
     'description' => 'Achieve gender equality and empower all women and girls',
     'format' => 'plain_text',
-    'weight' => 13,
+    'weight' => 20,
     'uuid' => '33aec81f-00ea-45da-ad09-5e8f11920cf0',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -323,7 +302,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -365,16 +343,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
       'und' => array(
         0 => array(
           'value' => 'indicator',
-        ),
-      ),
-    ),
-    'field_singledate' => array(
-      'und' => array(
-        0 => array(
-          'value' => '2017-07-21 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
-          'date_type' => 'datetime',
         ),
       ),
     ),
@@ -429,7 +397,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -475,7 +442,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -523,16 +489,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(
-      'und' => array(
-        0 => array(
-          'value' => '2017-07-21 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
-          'date_type' => 'datetime',
-        ),
-      ),
-    ),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -551,7 +507,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8325-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8330-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -586,16 +542,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(
-      'und' => array(
-        0 => array(
-          'value' => '2017-07-21 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
-          'date_type' => 'datetime',
-        ),
-      ),
-    ),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -614,7 +560,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8328-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8331-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -626,7 +572,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'name' => 'No poverty',
     'description' => 'End poverty in all its forms everywhere',
     'format' => 'plain_text',
-    'weight' => 9,
+    'weight' => 18,
     'uuid' => '56410748-9858-4d86-a99f-71654b33b21b',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -672,7 +618,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -715,7 +660,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -738,7 +682,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Tier 3',
-    'description' => 'Indicator for which there are no established methodology and standards or methodology/standards are being developed/tested',
+    'description' => '"Tier 3" means that internationally established methodology or standards is not yet available for the indicator, but methodology/standards are being (or will be) developed or tested.',
     'format' => 'plain_text',
     'weight' => 0,
     'uuid' => '981b7cc9-9559-4493-b07a-3fec1225640a',
@@ -792,16 +736,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(
-      'und' => array(
-        0 => array(
-          'value' => '2017-07-21 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
-          'date_type' => 'datetime',
-        ),
-      ),
-    ),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -811,7 +745,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
       ),
       'und' => array(
         0 => array(
-          'value' => 'Ownership',
+          'value' => 'Agriculture',
           'format' => NULL,
         ),
       ),
@@ -820,7 +754,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8324-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8332-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -853,7 +787,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -880,7 +813,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
 &nbsp;</p>
 ',
     'format' => 'full_html',
-    'weight' => 0,
+    'weight' => 1,
     'uuid' => 'b6b77883-127c-4db7-826d-1888b37c4598',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -898,16 +831,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
       'und' => array(
         0 => array(
           'value' => 'indicator',
-        ),
-      ),
-    ),
-    'field_singledate' => array(
-      'und' => array(
-        0 => array(
-          'value' => '2017-07-21 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
-          'date_type' => 'datetime',
         ),
       ),
     ),
@@ -929,7 +852,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8330-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8333-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -939,7 +862,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Tier 2',
-    'description' => 'Indicator conceptually clear, established methodology and standards available but data are not regularly produced by countries',
+    'description' => '"Tier 2" means the indicator is conceptually clear, has an internationally established methodology and standards are available, but data is not regularly produced by countries.',
     'format' => 'plain_text',
     'weight' => 0,
     'uuid' => 'b8381b37-16f6-4c32-8622-cf8bce134430',
@@ -969,7 +892,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'name' => 'Zero hunger',
     'description' => 'End hunger, achieve food security and improved nutrition and promote sustainable agriculture',
     'format' => 'plain_text',
-    'weight' => 12,
+    'weight' => 19,
     'uuid' => 'bf413a5b-e03f-4cf0-9a41-45b8075df7a1',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1015,7 +938,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -1060,16 +982,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(
-      'und' => array(
-        0 => array(
-          'value' => '2017-07-21 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
-          'date_type' => 'datetime',
-        ),
-      ),
-    ),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -1088,7 +1000,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8326-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8334-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -1123,16 +1035,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(
-      'und' => array(
-        0 => array(
-          'value' => '2017-07-21 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
-          'date_type' => 'datetime',
-        ),
-      ),
-    ),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -1151,7 +1053,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8331-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8335-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -1161,7 +1063,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Tier 1',
-    'description' => 'Indicator conceptually clear, established methodology and standards available and data regularly produced by countries',
+    'description' => '"Tier 1" means the Indicator is conceptually clear, has an internationally established and available methodology and standards, and that data is regularly produced by countries for at least 50 per cent of countries and of the population in every region where the indicator is relevant.',
     'format' => 'plain_text',
     'weight' => 0,
     'uuid' => 'ca682b36-0536-444d-9ad3-58ff30a3e0a6',
@@ -1171,8 +1073,8 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'field_date' => array(
       'und' => array(
         0 => array(
-          'value' => '2017-06-22 00:00:00',
-          'value2' => '2017-06-22 00:00:00',
+          'value' => '2017-10-02 00:00:00',
+          'value2' => '2017-10-02 00:00:00',
           'timezone' => 'Europe/Rome',
           'timezone_db' => 'Europe/Rome',
           'date_type' => 'datetime',
@@ -1214,16 +1116,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(
-      'und' => array(
-        0 => array(
-          'value' => '2017-07-21 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
-          'date_type' => 'datetime',
-        ),
-      ),
-    ),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -1242,7 +1134,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8327-0',
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs-eid-8336-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -1254,7 +1146,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'name' => 'Urbanization',
     'description' => 'By 2030, enhance inclusive and sustainable urbanization and capacity for participatory, integrated and sustainable human settlement planning and management in all countries',
     'format' => 'plain_text',
-    'weight' => 2,
+    'weight' => 1,
     'uuid' => 'de58ff7d-8ce4-4138-9f41-0c8b6ac4a278',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1275,7 +1167,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -1300,7 +1191,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'name' => 'Life on land',
     'description' => 'Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss',
     'format' => 'plain_text',
-    'weight' => 15,
+    'weight' => 22,
     'uuid' => 'e0b77041-b168-417e-93b4-7e7394043190',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1346,7 +1237,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
@@ -1368,7 +1258,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
     'name' => 'Sustainable cities and communities',
     'description' => 'Make cities and human settlements inclusive, safe, resilient and sustainable',
     'format' => 'plain_text',
-    'weight' => 14,
+    'weight' => 21,
     'uuid' => 'e6afcb19-5d23-4416-919b-7e3ae972150e',
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1414,7 +1304,6 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_singledate' => array(),
     'name_field' => array(
       'und' => array(
         0 => array(
