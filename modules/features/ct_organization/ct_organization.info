@@ -78,5 +78,3 @@ features[variable][] = ds_extras_view_modes_organization
 features[variable][] = field_bundle_settings_node__organization
 features[variable][] = location_settings_node_organization
 features[variable][] = xmlsitemap_settings_node_organization
-features_exclude[field_base][field_organization_relationship] = field_organization_relationship
-features_exclude[field_instance][node-organization-field_organization_relationship] = node-organization-field_organization_relationship

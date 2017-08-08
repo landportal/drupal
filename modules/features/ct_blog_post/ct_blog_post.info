@@ -71,6 +71,3 @@ features[variable][] = pathauto_node_blog_post_pattern
 features[variable][] = pathauto_node_blog_post_pt_pattern
 features[variable][] = pathauto_node_blog_post_und_pattern
 features[variable][] = xmlsitemap_settings_node_blog_post
-features_exclude[dependencies][landbook_promoted_thematic] = landbook_promoted_thematic
-features_exclude[dependencies][landportal_promoted] = landportal_promoted
-features_exclude[dependencies][metatag] = metatag

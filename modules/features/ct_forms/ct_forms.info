@@ -19,7 +19,3 @@ features[variable][] = location_defaultnum_webform
 features[variable][] = location_maxnum_webform
 features[variable][] = location_settings_node_webform
 features[variable][] = xmlsitemap_settings_node_webform
-features_exclude[dependencies][landcommunity] = landcommunity
-features_exclude[dependencies][landportal_groups] = landportal_groups
-features_exclude[dependencies][landportal_multilingual] = landportal_multilingual
-features_exclude[variable][webform_blocks] = webform_blocks

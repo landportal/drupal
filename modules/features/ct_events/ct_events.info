@@ -85,4 +85,3 @@ features[variable][] = pathauto_node_event_pattern
 features[variable][] = pathauto_node_event_pt_pattern
 features[variable][] = pathauto_node_event_und_pattern
 features[variable][] = xmlsitemap_settings_node_event
-features_exclude[dependencies][landportal_promoted] = landportal_promoted

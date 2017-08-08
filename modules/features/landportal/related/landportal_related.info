@@ -14,4 +14,3 @@ features[features_api][] = api:2
 features[field_base][] = field_noderef
 features[field_base][] = field_related_blocks
 features[field_instance][] = node-page-field_related_blocks
-features_exclude[field_group][group_extra|node|page|form] = group_extra|node|page|form

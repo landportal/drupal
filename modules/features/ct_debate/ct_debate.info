@@ -86,5 +86,3 @@ features[variable][] = pathauto_node_debate_pt_pattern
 features[variable][] = pathauto_node_debate_und_pattern
 features[variable][] = xmlsitemap_settings_node_debate
 features[variable][] = xmlsitemap_settings_taxonomy_term_debate_status
-features_exclude[dependencies][landportal_promoted] = landportal_promoted
-features_exclude[field_group][group_status|node|debate|form] = group_status|node|debate|form
