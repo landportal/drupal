@@ -231,6 +231,7 @@ $handler->display->display_options['filters']['type_1']['field'] = 'type';
 $handler->display->display_options['filters']['type_1']['operator'] = 'not in';
 $handler->display->display_options['filters']['type_1']['value'] = array(
   'blog_post' => 'blog_post',
+  'landlibrary_resource' => 'landlibrary_resource',
 );
 
 /* Display: Blogs */
