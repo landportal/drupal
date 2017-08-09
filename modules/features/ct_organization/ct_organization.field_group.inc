@@ -278,8 +278,9 @@ function ct_organization_field_group_info() {
     'label' => '',
     'weight' => '1',
     'children' => array(
-      0 => 'field_acronym',
-      1 => 'title_field',
+      0 => 'field_image',
+      1 => 'field_acronym',
+      2 => 'title_field',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
