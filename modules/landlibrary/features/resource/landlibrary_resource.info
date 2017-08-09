@@ -22,6 +22,7 @@ dependencies[] = landportal_promoted
 dependencies[] = landportal_taxonomy
 dependencies[] = link
 dependencies[] = media
+dependencies[] = node
 dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = synonyms
