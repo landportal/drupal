@@ -105,6 +105,14 @@ $handler = $view->new_display('block', 'Related', 'related');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Land Portal related content';
 $handler->display->display_options['display_description'] = 'SDGi related content';
+$handler->display->display_options['defaults']['use_ajax'] = FALSE;
+$handler->display->display_options['use_ajax'] = TRUE;
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'full';
+$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Entity Reference: Referencing entity */
 $handler->display->display_options['relationships']['reverse_field_noderef_node']['id'] = 'reverse_field_noderef_node';
@@ -132,6 +140,12 @@ $handler->display->display_options['fields']['rendered_entity']['link_to_entity'
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
 $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'listing';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['relationship'] = 'reverse_field_noderef_node';
+$handler->display->display_options['fields']['title']['label'] = 'SDGi';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Content: Nid */
 $handler->display->display_options['arguments']['nid']['id'] = 'nid';
@@ -239,10 +253,13 @@ $handler = $view->new_display('block', 'Blogs', 'blogs');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'From the Blog';
 $handler->display->display_options['display_description'] = 'SDGi related blogs';
+$handler->display->display_options['defaults']['use_ajax'] = FALSE;
+$handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['defaults']['pager'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['type'] = 'mini';
 $handler->display->display_options['pager']['options']['items_per_page'] = '2';
 $handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['row_class'] = 'col-sm-6';
