@@ -170,7 +170,19 @@ function landbook_view_coda_field_formatter_visualization($VCC) {
   case 'table':
     $params .= ', "indicators": ["' . join('", "', $VCC['indicators']) . '"]'
       . ', "target": "#' . $VCC['vid'] . '", "vis": LBV}';
-    $value = '<table><tbody></tbody></table>';
+    $value = '<table class="table"><thead><tr>
+           <th>Indicator<br/>Dataset (source)</th>
+                <th>Unit</th>
+                <th><span class="hidden-xs">Min </span>Year</th>
+                <th><span class="hidden-xs">Max Year</span></th>
+                <th><span class="hidden-xs">Number Years</span></th>
+                <th><span class="hidden-xs">Total Countries</span></th>
+                <th><acronym title="Number of Observations">Obs</acronym></th>
+           <th>Missing Values&nbsp;(%)</th>
+                <th>Min<span class="hidden-xs"> Value</span></th>
+                <th>Max<span class="hidden-xs"> Value</span></th>
+                <th>Remove</th>
+              </tr></thead><tbody></tbody></table>';
     $js = $VCC['jsid'] . ' = new lbvisTable(' . $params . '); ' . $VCC['jsid'] . '.init();';
     break;
   }
