@@ -104,6 +104,15 @@ function landportal_display_image_default_styles() {
         ),
         'weight' => 2,
       ),
+      13 => array(
+        'name' => 'image_crop',
+        'data' => array(
+          'width' => 480,
+          'height' => 320,
+          'anchor' => 'center-center',
+        ),
+        'weight' => 2,
+      ),
     ),
   );
 
