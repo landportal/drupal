@@ -146,6 +146,7 @@ $handler->display->display_options['fields']['title']['table'] = 'node';
 $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['relationship'] = 'reverse_field_noderef_node';
 $handler->display->display_options['fields']['title']['label'] = 'SDGi';
+$handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Content: Nid */
 $handler->display->display_options['arguments']['nid']['id'] = 'nid';
