@@ -16,15 +16,23 @@ function _lbvc_types() {
     'map'   => 'Map projection',
     'table'  => 'Metadata Table',
     /* 'line'  => 'Line chart', */
-    /* 'pie'   => 'Pie chart' */
+    /* 'pie'   => 'Pie chart', */
+    /* 'ranking' => 'Ranking list', */
+    /* 'empty' => 'debug / test', */
   );
 }
 
 include_once 'landbook_view_coda.library.inc';
 include_once 'landbook_view_coda.blocks.inc';
 include_once 'landbook_view_coda.fields.inc';
-
 include_once 'landbook_view_coda.features.inc';
+
+function landbook_view_coda_preprocess_entity(&$variables, $hook) {
+  if ($variables['elements']['#bundle'] == 'field_visualization') {
+    //dpm($variables['field_view_coda'][0], 'VCC');
+    $variables['classes_array'][] = 'view-coda-' . $variables['field_view_coda'][0]['type'];
+  }
+}
 
 function landbook_view_coda_cb($vars) {
   //dpm($vars, 'VC CB');
