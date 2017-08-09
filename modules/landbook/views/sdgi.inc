@@ -127,12 +127,6 @@ $handler->display->display_options['fields']['rendered_entity']['link_to_entity'
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
 $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'listing';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
-/* Field: Content: Title */
-$handler->display->display_options['fields']['title']['id'] = 'title';
-$handler->display->display_options['fields']['title']['table'] = 'node';
-$handler->display->display_options['fields']['title']['field'] = 'title';
-$handler->display->display_options['fields']['title']['relationship'] = 'reverse_field_noderef_node';
-$handler->display->display_options['fields']['title']['label'] = 'SDGs';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Content: Nid */
 $handler->display->display_options['arguments']['nid']['id'] = 'nid';
