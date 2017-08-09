@@ -57,7 +57,7 @@ function ct_project_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -124,11 +124,74 @@ function ct_project_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-project-field_contact'.
+  $field_instances['node-project-field_contact'] = array(
+    'bundle' => 'project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Focal point, email or telephone for contacting',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_contact',
+    'label' => 'Contact information',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-project-field_date'.
   $field_instances['node-project-field_date'] = array(
     'bundle' => 'project',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Starting and end date of the project',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -154,7 +217,7 @@ function ct_project_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date',
-    'label' => 'Date',
+    'label' => 'Extension',
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
@@ -175,7 +238,7 @@ function ct_project_field_default_field_instances() {
         'no_fieldset' => 0,
         'repeat_collapsed' => 0,
         'text_parts' => array(),
-        'year_range' => '-3:+3',
+        'year_range' => '-10:+5',
       ),
       'type' => 'date_popup',
       'weight' => 5,
@@ -238,7 +301,7 @@ function ct_project_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
       'type' => 'options_select',
-      'weight' => 114,
+      'weight' => 116,
     ),
   );
 
@@ -305,6 +368,115 @@ function ct_project_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-project-field_image'.
+  $field_instances['node-project-field_image'] = array(
+    'bundle' => 'project',
+    'deleted' => 0,
+    'description' => 'A medium sized image for the project. Make sure you comply to its policies / guidelines when uploading it.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 13,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_image',
+    'label' => 'Logo',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-project-field_link'.
+  $field_instances['node-project-field_link'] = array(
+    'bundle' => 'project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'List of websites of the project (main site, LinkedIn, twitter, facebook...)',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 11,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_link',
+    'label' => 'Websites of the project',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'node-project-field_related_domains'.
   $field_instances['node-project-field_related_domains'] = array(
     'bundle' => 'project',
@@ -361,15 +533,16 @@ function ct_project_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'options_select',
-      'weight' => 117,
+      'weight' => 11,
     ),
   );
 
   // Exported field_instance: 'node-project-field_related_organization'.
   $field_instances['node-project-field_related_organization'] = array(
     'bundle' => 'project',
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'List of implementing organizations, funded organizations, other project partners',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -393,23 +566,24 @@ function ct_project_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_related_organization',
-    'label' => 'Organizations',
-    'required' => FALSE,
+    'label' => 'Organizations related',
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'field_collection_fieldset',
       'settings' => array(
-        'collapsed' => FALSE,
-        'field_as_label' => array(),
-        'last_item_collapsed' => FALSE,
-        'new_item_open' => FALSE,
-        'replace_label' => FALSE,
+        'collapsed' => 0,
+        'field_as_label' => '',
+        'last_item_collapsed' => 0,
+        'new_item_open' => 0,
+        'replace_label' => 0,
       ),
       'type' => 'field_collection_fieldset',
-      'weight' => 7,
+      'weight' => 11,
     ),
   );
 
@@ -464,7 +638,7 @@ function ct_project_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 118,
+      'weight' => 12,
     ),
   );
 
@@ -531,7 +705,68 @@ function ct_project_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
       'type' => 'options_select',
-      'weight' => 119,
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'node-project-field_user'.
+  $field_instances['node-project-field_user'] = array(
+    'bundle' => 'project',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => 'Associated staff with this project',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 12,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_user',
+    'label' => 'Associated staff',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 9,
     ),
   );
 
@@ -558,7 +793,7 @@ function ct_project_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_value',
-    'label' => 'Value',
+    'label' => 'Project value',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -600,18 +835,28 @@ function ct_project_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A medium sized image for the project. Make sure you comply to its policies / guidelines when uploading it.');
   t('Acronym');
+  t('Associated staff');
+  t('Associated staff with this project');
   t('Body');
-  t('Date');
+  t('Contact information');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
+  t('Extension');
+  t('Focal point, email or telephone for contacting');
   t('Geographical focus');
   t('ID');
-  t('Organizations');
+  t('List of implementing organizations, funded organizations, other project partners');
+  t('List of websites of the project (main site, LinkedIn, twitter, facebook...)');
+  t('Logo');
+  t('Organizations related');
   t('Overarching categories');
+  t('Project value');
   t('Related concepts');
+  t('Starting and end date of the project');
   t('Themes');
   t('Valuation of the project (in Euros, Dollars, Pounds...)');
-  t('Value');
+  t('Websites of the project');
 
   return $field_instances;
 }

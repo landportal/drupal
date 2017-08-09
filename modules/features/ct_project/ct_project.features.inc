@@ -24,7 +24,7 @@ function ct_project_node_info() {
     'project' => array(
       'name' => t('Project'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('A project (USAID project, UE project, national project...) referenced in the Landportal.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
