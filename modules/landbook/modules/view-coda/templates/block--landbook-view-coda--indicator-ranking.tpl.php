@@ -28,10 +28,12 @@
       <span name="year" class="h3"></span>
     </div>
     <div class="text-center h3">
-      <a><span name="dataset"></span></a> -
-      <a><span name="source"></span></a>
+      <a><span name="indicator"></span></a>
+      (<span name="unit"></span>)
+      in <a><span name="dataset"></span></a>
+      (by <a><span name="source"></span></a>)
     </div>
-    <div class="text-center">
+    <div class="text-center text-muted small">
       <p><span name="description"></span></p>
     </div>
   </div>
