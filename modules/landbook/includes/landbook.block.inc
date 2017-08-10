@@ -9,6 +9,75 @@
  * Drupal refactoring: Jules <jules@ker.bz>
  */
 
+function landbook_block_view_alter(&$data, $block) {
+  if ($block->module == 'twitter_block' ||
+    ($block->module == 'views' && $block->delta == 'sdgs_timeline-main')) {
+    $delta = $block->module . '-' . $block->delta;
+    $btest = db_select('block_custom', 'b')
+      ->fields('b', array('body', 'format'))->condition('info', $delta)->execute()->fetchAll()[0];
+    $markup = check_markup($btest->body, $btest->format, '', TRUE);
+    $data['content'] = array(
+      array('#markup' => $markup),
+      $data['content'], // Keep original block content
+    );
+    //dpm($data, 'alter' . $delta);
+  }
+}
+
+function landbook_block_save($delta='', $edit = array()) {
+  $bdelta = $delta['delta']['#value'];
+  $module = $delta['module']['#value'];
+  //dpm($delta, 'save delta');
+  //dpm($edit, 'save edit');
+
+  if ($module == 'twitter_block' || $bdelta == 'sdgs_timeline-main') {
+    db_update('block_custom')
+      ->fields(array(
+        'body' => $edit['values']['body']['value'],
+        'format' => $edit['values']['body']['format'],
+      ))
+      ->condition('info', $module. '-' . $bdelta)
+      ->execute();
+  }
+}
+
+function landbook_form_alter(&$form, &$form_state, $form_id) {
+  if (!isset($form['module']) || !isset($form['delta'])) { return ; }
+  $delta = $form['delta']['#value'];
+  $module = $form['module']['#value'];
+
+  // Add description / body to those blocks
+  if ($module == 'twitter_block' || $delta == 'sdgs_timeline-main') {
+    $edit = array(
+      'body'=> '',
+      'format'=> 'filtered_html',
+      'info' => $module . '-' . $delta
+    );
+    $form['info'] = array('#type' => 'value', '#value' => $edit['info']);
+    $btest = db_select('block_custom', 'b')->fields('b', array('bid'))->condition('info', $edit['info'])->execute()->fetch();
+    if (!$btest) {
+      $bdelta = db_insert('block_custom')->fields($edit)->execute();
+    } else {
+      $edit = db_select('block_custom', 'b')->fields('b')->condition('info', $edit['info'])->execute()->fetchAssoc();
+    }
+
+    //dpm($form, $form_id);
+    // Same as in Drupal core Block module
+    $form['settings']['body_field']['body'] = array(
+      '#type' => 'text_format',
+      '#title' => t('Block body'),
+      '#default_value' => $edit['body'],
+      '#format' => isset($edit['format']) ? $edit['format'] : NULL,
+      '#rows' => 15,
+      '#description' => t('The content of the block as shown to the user.'),
+      '#required' => TRUE,
+      '#weight' => -17,
+    );
+    $form['#submit'][] = 'landbook_block_save';
+  }
+}
+
+
 
 /**
  * Blocks for Landbook country page sections
