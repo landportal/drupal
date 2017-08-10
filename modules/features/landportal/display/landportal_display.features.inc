@@ -95,14 +95,13 @@ function landportal_display_image_default_styles() {
   $styles['large'] = array(
     'label' => 'Large (480x480)',
     'effects' => array(
-      11 => array(
-        'name' => 'image_scale',
+      14 => array(
+        'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 480,
-          'height' => 480,
-          'upscale' => 1,
+          'height' => 320,
         ),
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
   );

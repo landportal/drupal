@@ -427,23 +427,24 @@ $handler->display->display_options['fields']['name']['alter']['text'] = '[field_
 $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-/* Field: Taxonomy term: Type */
-$handler->display->display_options['fields']['field_sdgs_type_1']['id'] = 'field_sdgs_type_1';
-$handler->display->display_options['fields']['field_sdgs_type_1']['table'] = 'field_data_field_sdgs_type';
-$handler->display->display_options['fields']['field_sdgs_type_1']['field'] = 'field_sdgs_type';
-$handler->display->display_options['fields']['field_sdgs_type_1']['relationship'] = 'parent';
-$handler->display->display_options['fields']['field_sdgs_type_1']['label'] = '';
-$handler->display->display_options['fields']['field_sdgs_type_1']['exclude'] = TRUE;
-$handler->display->display_options['fields']['field_sdgs_type_1']['element_label_colon'] = FALSE;
 /* Field: Taxonomy term: ID */
 $handler->display->display_options['fields']['field_id_1']['id'] = 'field_id_1';
 $handler->display->display_options['fields']['field_id_1']['table'] = 'field_data_field_id';
 $handler->display->display_options['fields']['field_id_1']['field'] = 'field_id';
 $handler->display->display_options['fields']['field_id_1']['relationship'] = 'parent';
 $handler->display->display_options['fields']['field_id_1']['label'] = '';
-$handler->display->display_options['fields']['field_id_1']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['field_id_1']['alter']['text'] = '[field_sdgs_type_1] [field_id_1]';
+$handler->display->display_options['fields']['field_id_1']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_id_1']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: Term description */
+$handler->display->display_options['fields']['description']['id'] = 'description';
+$handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['description']['field'] = 'description';
+$handler->display->display_options['fields']['description']['relationship'] = 'parent';
+$handler->display->display_options['fields']['description']['label'] = '';
+$handler->display->display_options['fields']['description']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['description']['alter']['text'] = 'Target [field_id_1]: [description]';
+$handler->display->display_options['fields']['description']['alter']['strip_tags'] = TRUE;
+$handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Content: Nid */
 $handler->display->display_options['arguments']['nid']['id'] = 'nid';
@@ -949,7 +950,7 @@ $handler->display->display_options['fields']['php']['element_label_colon'] = FAL
 $handler->display->display_options['fields']['php']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
 $handler->display->display_options['fields']['php']['php_value'] = '$output = \'\';
-foreach (array(1, 2, 3) as $tier) {
+foreach (array(3, 2, 1) as $tier) {
  $output .= \'<div class="tier-\' . $tier . (substr($row->name, -1) == $tier ? \' active\' : \'\' ) . \'">\';
  if (substr($row->name, -1) == $tier) {
    $output .= $row->name;

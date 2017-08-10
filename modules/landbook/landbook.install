@@ -10,7 +10,17 @@
  */
 
 
-/** Cleanup fields
+/** Make Land Book module runs last (for block hooks)
+ */
+function landbook_update_7203() {
+  db_update('system')
+    ->fields(array('weight' => 42))
+    ->condition('name', 'landbook', '=')
+    ->execute();
+}
+
+/** LPBS Release
+ * Reset blocks position for LP new theme
  */
 function landbook_update_7202() {
   if ($instance = field_info_instance('node', 'field_related_domains', 'thematic_narrative')) {

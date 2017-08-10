@@ -181,6 +181,13 @@ function ct_debate_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_default_language_for_debate';
+  $strongarm->value = '-- current --';
+  $export['i18n_node_default_language_for_debate'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_debate';
   $strongarm->value = '2';
   $export['language_content_type_debate'] = $strongarm;

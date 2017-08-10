@@ -385,7 +385,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'medium',
+          'image_style' => 'large',
         ),
         'type' => 'image',
         'weight' => 1,
@@ -401,7 +401,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'medium',
+          'image_style' => 'large',
         ),
         'type' => 'image',
         'weight' => 1,

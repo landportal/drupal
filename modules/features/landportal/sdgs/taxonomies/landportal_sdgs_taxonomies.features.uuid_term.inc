@@ -694,9 +694,17 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
           'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Tier 3',
+          'format' => NULL,
         ),
       ),
     ),
@@ -704,6 +712,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs_tiers-eid-8300-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -880,10 +889,19 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Tier 2',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs_tiers-eid-8302-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -1081,10 +1099,19 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
+    'name_field' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'Tier 1',
+          'format' => NULL,
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
+    'entity_translation_handler_id' => 'taxonomy_term-sdgs_tiers-eid-8304-0',
     'path' => array(
       'pathauto' => 1,
     ),
