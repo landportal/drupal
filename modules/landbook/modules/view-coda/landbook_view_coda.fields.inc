@@ -171,7 +171,7 @@ function landbook_view_coda_field_formatter_visualization($VCC) {
     $params .= ', "indicators": ["' . join('", "', $VCC['indicators']) . '"]'
       . ', "add": false, "target": "#' . $VCC['vid'] . '", "vis": LBV}';
     $value = '<table class="table"><thead><tr>
-           <th>Indicator<br/>Dataset (source)</th>
+           <th>Indicator</th>
                 <th>Unit</th>
                 <th><span class="hidden-xs">Min </span>Year</th>
                 <th><span class="hidden-xs">Max Year</span></th>
