@@ -423,7 +423,7 @@ $handler = $view->new_display('block', 'Partners', 'partners');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Partners';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'partners view-grid';
+$handler->display->display_options['css_class'] = 'partners view-grid-3';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '42';
@@ -707,4 +707,3 @@ $handler->display->display_options['filters']['field_related_topics_tid_entityre
 );
 $handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter_1']['reference_display'] = 'thematic:ref_concepts';
 $handler->display->display_options['block_caching'] = '-1';
-
