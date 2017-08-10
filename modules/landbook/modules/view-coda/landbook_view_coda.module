@@ -30,6 +30,7 @@ include_once 'landbook_view_coda.features.inc';
 function landbook_view_coda_preprocess_entity(&$variables, $hook) {
   if ($variables['elements']['#bundle'] == 'field_visualization') {
     //dpm($variables['field_view_coda'][0], 'VCC');
+    $variables['classes_array'][] = 'view-coda';
     $variables['classes_array'][] = 'view-coda-' . $variables['field_view_coda'][0]['type'];
   }
 }
