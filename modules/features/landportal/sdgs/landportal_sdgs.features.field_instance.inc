@@ -1126,7 +1126,7 @@ function landportal_sdgs_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sdgs_tier',
-    'label' => 'Tier',
+    'label' => 'Status',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1229,7 +1229,7 @@ function landportal_sdgs_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'landbook_view_coda',
         'settings' => array(
           'class' => '',
@@ -1360,9 +1360,9 @@ function landportal_sdgs_field_default_field_instances() {
   t('SDG');
   t('SDG header');
   t('SDGs Tier this indicator is officially in');
+  t('Status');
   t('The organization responsible for this indicator');
   t('Themes');
-  t('Tier');
   t('Title');
   t('twitter');
 
