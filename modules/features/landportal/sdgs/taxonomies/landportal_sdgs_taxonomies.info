@@ -28,6 +28,7 @@ features[field_instance][] = taxonomy_term-sdgs-field_image
 features[field_instance][] = taxonomy_term-sdgs-field_sdgs_type
 features[field_instance][] = taxonomy_term-sdgs-name_field
 features[field_instance][] = taxonomy_term-sdgs_tiers-field_date
+features[field_instance][] = taxonomy_term-sdgs_tiers-name_field
 features[taxonomy][] = sdgs
 features[taxonomy][] = sdgs_tiers
 features[uuid_term][] = 18d70415-746c-4faf-a093-a33ffeccd867
