@@ -12,7 +12,7 @@
           <table class="table">
             <thead>
               <tr>
-           <th>Indicator<br/>Dataset (source)</th>
+           <th>Indicator<br/>(Source)</th>
                 <th>Unit</th>
                 <th><span class="hidden-xs">Min </span>Year</th>
                 <th><span class="hidden-xs">Max Year</span></th>
