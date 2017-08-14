@@ -2,6 +2,7 @@ name = CT Project
 core = 7.x
 package = Landportal CT
 version = 7.x-1.0-beta1
+description = Provide Land Portal (LP) project content type (CT)
 dependencies[] = ct_organization
 dependencies[] = ctools
 dependencies[] = date
