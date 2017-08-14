@@ -22,7 +22,7 @@ function ct_project_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'above',
@@ -69,11 +69,11 @@ function ct_project_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'above',
@@ -132,11 +132,11 @@ function ct_project_field_default_field_instances() {
     'description' => 'Focal point, email or telephone for contacting',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'listing' => array(
         'label' => 'above',
@@ -194,19 +194,19 @@ function ct_project_field_default_field_instances() {
     'description' => 'Starting and end date of the project',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'month_and_year',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_remaining_days' => FALSE,
+          'show_remaining_days' => 0,
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 3,
+        'weight' => 8,
       ),
       'listing' => array(
         'label' => 'above',
@@ -257,7 +257,7 @@ function ct_project_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 0,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -313,11 +313,11 @@ function ct_project_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
@@ -382,7 +382,7 @@ function ct_project_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 13,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -427,11 +427,11 @@ function ct_project_field_default_field_instances() {
     'description' => 'List of websites of the project (main site, LinkedIn, twitter, facebook...)',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'listing' => array(
         'label' => 'above',
@@ -489,7 +489,7 @@ function ct_project_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -599,7 +599,7 @@ function ct_project_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -654,7 +654,7 @@ function ct_project_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -725,7 +725,7 @@ function ct_project_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'listing' => array(
         'label' => 'above',
@@ -778,11 +778,11 @@ function ct_project_field_default_field_instances() {
     'description' => 'Valuation of the project (in Euros, Dollars, Pounds...)',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 10,
       ),
       'listing' => array(
         'label' => 'above',
