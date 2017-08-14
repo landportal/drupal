@@ -2,7 +2,7 @@
 
 $view = new view();
 $view->name = 'admin_views_ct_organization';
-$view->description = 'Manage News content type resources';
+$view->description = 'Manage Organization content type resources';
 $view->tag = 'admin';
 $view->base_table = 'node';
 $view->human_name = 'Administration: Organizations';
@@ -213,7 +213,7 @@ $handler->display->display_options['fields']['path']['field'] = 'path';
 $handler->display->display_options['fields']['path']['exclude'] = TRUE;
 /* Field: Bulk operations: Content */
 $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
-$handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
+$handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_node';
 $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
@@ -225,6 +225,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -232,6 +233,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -239,18 +241,13 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 0,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
     'settings' => array(
       'show_all_tokens' => 1,
       'display_values' => array(
         '_all_' => '_all_',
-        'language' => 'language',
-        'news::field_geographical_focus' => 'news::field_geographical_focus',
-        'news::field_related_topics' => 'news::field_related_topics',
-        'news::field_language' => 'news::field_language',
-        'news::field_related_domains' => 'news::field_related_domains',
-        'news::field_related_themes' => 'news::field_related_themes',
       ),
     ),
   ),
@@ -258,6 +255,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -265,6 +263,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -272,6 +271,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -279,6 +279,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -286,6 +287,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'selected' => 1,
     'postpone_processing' => 0,
     'skip_confirmation' => 0,
+    'skip_permission_check' => 0,
     'override_label' => 0,
     'label' => '',
   ),
@@ -332,17 +334,17 @@ $handler->display->display_options['fields']['field_organization_relationship'][
 $handler->display->display_options['fields']['field_organization_relationship']['field'] = 'field_organization_relationship';
 $handler->display->display_options['fields']['field_organization_relationship']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_organization_relationship']['delta_offset'] = '0';
-/* Field: Field: acronym */
+/* Field: Field: Acronym */
 $handler->display->display_options['fields']['field_acronym']['id'] = 'field_acronym';
 $handler->display->display_options['fields']['field_acronym']['table'] = 'field_data_field_acronym';
 $handler->display->display_options['fields']['field_acronym']['field'] = 'field_acronym';
 $handler->display->display_options['fields']['field_acronym']['exclude'] = TRUE;
-/* Field: Content: Contact / Event organiser */
+/* Field: Content: Key contacts */
 $handler->display->display_options['fields']['field_contact']['id'] = 'field_contact';
 $handler->display->display_options['fields']['field_contact']['table'] = 'field_data_field_contact';
 $handler->display->display_options['fields']['field_contact']['field'] = 'field_contact';
 $handler->display->display_options['fields']['field_contact']['exclude'] = TRUE;
-/* Field: Content: Email */
+/* Field: Field: Public email */
 $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
 $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
 $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
@@ -692,4 +694,3 @@ $handler->display->display_options['filters']['field_organization_relationship_t
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page_1');
 $handler->display->display_options['path'] = 'admin/content/organizations';
-
