@@ -1,6 +1,6 @@
 <?php
 
-$rule = '{ "workflow_publish_contrib" : {
+$rule = '{ "workflow_published_contrib" : {
     "LABEL" : "publish contrib",
     "PLUGIN" : "reaction rule",
     "WEIGHT" : "-1",
@@ -20,7 +20,9 @@ $rule = '{ "workflow_publish_contrib" : {
               "blog_post" : "blog_post",
               "event" : "event",
               "landlibrary_resource" : "landlibrary_resource",
-              "news" : "news"
+              "news" : "news",
+              "organization" : "organization",
+              "project" : "project"
             }
           }
         }
