@@ -245,6 +245,63 @@ function ct_project_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-project-field_doc_provider'.
+  $field_instances['node-project-field_doc_provider'] = array(
+    'bundle' => 'project',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 14,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_doc_provider',
+    'label' => 'Data Provider',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 118,
+    ),
+  );
+
   // Exported field_instance: 'node-project-field_geographical_focus'.
   $field_instances['node-project-field_geographical_focus'] = array(
     'bundle' => 'project',
@@ -841,6 +898,7 @@ function ct_project_field_default_field_instances() {
   t('Associated staff with this project');
   t('Body');
   t('Contact information');
+  t('Data Provider');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Extension');
   t('Focal point, email or telephone for contacting');

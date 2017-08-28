@@ -23,12 +23,12 @@ function ct_project_field_group_info() {
     'label' => 'More about this project',
     'weight' => '6',
     'children' => array(
-      0 => 'field_date',
-      1 => 'field_related_organization',
-      2 => 'field_value',
-      3 => 'field_contact',
-      4 => 'field_link',
-      5 => 'field_user',
+      0 => 'field_contact',
+      1 => 'field_date',
+      2 => 'field_link',
+      3 => 'field_related_organization',
+      4 => 'field_user',
+      5 => 'field_value',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
