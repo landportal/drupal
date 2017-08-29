@@ -17,7 +17,7 @@ function landbook_taxonomies_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'search_index' => array(
         'custom_settings' => TRUE,
@@ -35,13 +35,13 @@ function landbook_taxonomies_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'xmlsitemap' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
       ),
       'display' => array(
@@ -65,7 +65,7 @@ function landbook_taxonomies_strongarm() {
         ),
         'authoring_information' => array(
           'default' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -74,6 +74,10 @@ function landbook_taxonomies_strongarm() {
           ),
           'teaser' => array(
             'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),
@@ -107,7 +111,7 @@ function landbook_taxonomies_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '11',
+          'weight' => '7',
         ),
         'name' => array(
           'weight' => '0',
@@ -116,7 +120,10 @@ function landbook_taxonomies_strongarm() {
           'weight' => '1',
         ),
         'xmlsitemap' => array(
-          'weight' => '12',
+          'weight' => '8',
+        ),
+        'metatags' => array(
+          'weight' => '9',
         ),
       ),
       'display' => array(
@@ -157,7 +164,7 @@ function landbook_taxonomies_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_datasets_pattern';
-  $strongarm->value = 'book/dataset/[term:field_id]';
+  $strongarm->value = 'book/catalog/[term:field_id]';
   $export['pathauto_taxonomy_term_datasets_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
