@@ -35,13 +35,13 @@ function landbook_taxonomies_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '8',
-        ),
-        'path' => array(
           'weight' => '7',
         ),
-        'xmlsitemap' => array(
+        'path' => array(
           'weight' => '6',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '5',
         ),
       ),
       'display' => array(
@@ -69,7 +69,7 @@ function landbook_taxonomies_strongarm() {
             'visible' => FALSE,
           ),
           'search_index' => array(
-            'weight' => '0',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -77,7 +77,7 @@ function landbook_taxonomies_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '6',
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),
@@ -96,7 +96,7 @@ function landbook_taxonomies_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'token' => array(
         'custom_settings' => FALSE,
@@ -111,7 +111,7 @@ function landbook_taxonomies_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '7',
+          'weight' => '11',
         ),
         'name' => array(
           'weight' => '0',
@@ -120,10 +120,7 @@ function landbook_taxonomies_strongarm() {
           'weight' => '1',
         ),
         'xmlsitemap' => array(
-          'weight' => '8',
-        ),
-        'metatags' => array(
-          'weight' => '9',
+          'weight' => '12',
         ),
       ),
       'display' => array(
@@ -140,6 +137,10 @@ function landbook_taxonomies_strongarm() {
             'weight' => '2',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
         ),
         'authoring_information' => array(
           'teaser' => array(
@@ -151,6 +152,10 @@ function landbook_taxonomies_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'full' => array(
             'weight' => '5',
             'visible' => FALSE,
           ),
@@ -164,7 +169,7 @@ function landbook_taxonomies_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_datasets_pattern';
-  $strongarm->value = 'book/catalog/[term:field_id]';
+  $strongarm->value = 'book/dataset/[term:field_id]';
   $export['pathauto_taxonomy_term_datasets_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

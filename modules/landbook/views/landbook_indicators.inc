@@ -28,7 +28,7 @@ $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
-/* Field: Taxonomy term: ID */
+/* Field: Field: ID */
 $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
 $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
@@ -195,7 +195,7 @@ $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'jump_menu';
 $handler->display->display_options['style_options']['hide'] = TRUE;
 $handler->display->display_options['style_options']['path'] = 'path';
-$handler->display->display_options['style_options']['choose'] = 'Indicators in same catalog...';
+$handler->display->display_options['style_options']['choose'] = 'Indicators in this catalog...';
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
