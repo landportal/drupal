@@ -23,11 +23,8 @@ $handler->display->display_options['exposed_form']['options']['submit_button'] =
 $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
 $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reset filters';
 $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
-$handler->display->display_options['pager']['type'] = 'full';
-$handler->display->display_options['pager']['options']['items_per_page'] = '50';
+$handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['pager']['options']['id'] = '0';
-$handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
@@ -38,6 +35,13 @@ $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['label'] = '';
 $handler->display->display_options['fields']['field_id']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_id']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: Path */
+$handler->display->display_options['fields']['path']['id'] = 'path';
+$handler->display->display_options['fields']['path']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['path']['field'] = 'path';
+$handler->display->display_options['fields']['path']['label'] = '';
+$handler->display->display_options['fields']['path']['exclude'] = TRUE;
+$handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
 /* Field: Taxonomy term: Name */
 $handler->display->display_options['fields']['name']['id'] = 'name';
 $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
@@ -48,13 +52,6 @@ $handler->display->display_options['fields']['name']['alter']['absolute'] = TRUE
 $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-/* Field: Taxonomy term: Path */
-$handler->display->display_options['fields']['path']['id'] = 'path';
-$handler->display->display_options['fields']['path']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['fields']['path']['field'] = 'path';
-$handler->display->display_options['fields']['path']['label'] = '';
-$handler->display->display_options['fields']['path']['exclude'] = TRUE;
-$handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
 /* Sort criterion: Taxonomy term: Name */
 $handler->display->display_options['sorts']['name']['id'] = 'name';
 $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
@@ -153,10 +150,16 @@ $handler->display->display_options['filters']['field_related_themes_tid']['vocab
 $handler = $view->new_display('block', 'Catalog', 'catalog');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = '<none>';
-$handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['display_description'] = 'from a catalog';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'jump_menu';
+$handler->display->display_options['style_options']['grouping'] = array(
+  0 => array(
+    'field' => 'tid',
+    'rendered' => 1,
+    'rendered_strip' => 0,
+  ),
+);
 $handler->display->display_options['style_options']['hide'] = TRUE;
 $handler->display->display_options['style_options']['path'] = 'path';
 $handler->display->display_options['style_options']['choose'] = 'Indicators in this catalog...';
@@ -169,7 +172,7 @@ $handler->display->display_options['defaults']['relationships'] = FALSE;
 $handler->display->display_options['relationships']['field_dataset_tid']['id'] = 'field_dataset_tid';
 $handler->display->display_options['relationships']['field_dataset_tid']['table'] = 'field_data_field_dataset';
 $handler->display->display_options['relationships']['field_dataset_tid']['field'] = 'field_dataset_tid';
-$handler->display->display_options['relationships']['field_dataset_tid']['label'] = 'Dataset';
+$handler->display->display_options['relationships']['field_dataset_tid']['label'] = 'dataset';
 $handler->display->display_options['relationships']['field_dataset_tid']['required'] = TRUE;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
@@ -182,33 +185,17 @@ $handler->display->display_options['arguments']['tid']['default_argument_type'] 
 $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
 $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
 $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-$handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
-$handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-  'datasets' => 'datasets',
-  'indicators' => 'indicators',
-);
-$handler->display->display_options['arguments']['tid']['validate']['fail'] = 'access denied';
-$handler->display->display_options['defaults']['filter_groups'] = FALSE;
-$handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Taxonomy vocabulary: Machine name */
-$handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
-$handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
-$handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
-$handler->display->display_options['filters']['machine_name']['value'] = array(
-  'indicators' => 'indicators',
-);
 
 /* Display: Related */
 $handler = $view->new_display('block', 'Related', 'all');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Indicators in this dataset';
-$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['title'] = '<none>';
 $handler->display->display_options['display_description'] = 'from an indicator';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'jump_menu';
 $handler->display->display_options['style_options']['hide'] = TRUE;
 $handler->display->display_options['style_options']['path'] = 'path';
-$handler->display->display_options['style_options']['choose'] = 'Indicator...';
+$handler->display->display_options['style_options']['choose'] = 'Indicators in same catalog...';
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
@@ -218,14 +205,14 @@ $handler->display->display_options['defaults']['relationships'] = FALSE;
 $handler->display->display_options['relationships']['field_dataset_tid_1']['id'] = 'field_dataset_tid_1';
 $handler->display->display_options['relationships']['field_dataset_tid_1']['table'] = 'field_data_field_dataset';
 $handler->display->display_options['relationships']['field_dataset_tid_1']['field'] = 'field_dataset_tid';
-$handler->display->display_options['relationships']['field_dataset_tid_1']['relationship'] = 'field_dataset_tid';
+$handler->display->display_options['relationships']['field_dataset_tid_1']['label'] = 'dataset';
 $handler->display->display_options['relationships']['field_dataset_tid_1']['required'] = TRUE;
 /* Relationship: Taxonomy term: Taxonomy term using Catalog */
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['id'] = 'reverse_field_dataset_taxonomy_term';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['field'] = 'reverse_field_dataset_taxonomy_term';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['relationship'] = 'field_dataset_tid_1';
-$handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['label'] = 'ind';
+$handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['label'] = 'ds_ind';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['required'] = TRUE;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */

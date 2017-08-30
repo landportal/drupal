@@ -21,7 +21,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'description_field',
       1 => 'group_topics_regions',
@@ -54,7 +54,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'description_field',
       1 => 'group_topics_regions',
@@ -99,7 +99,7 @@ function landbook_taxonomies_field_group_info() {
         'id' => '',
         'classes' => 'col-sm-8',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
@@ -120,7 +120,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_id',
       1 => 'field_orgref',
@@ -153,7 +153,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_id',
       1 => 'field_orgref',
@@ -314,11 +314,11 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '3',
+    'weight' => '1',
     'children' => array(
       0 => 'field_view_indicators',
     ),
-    'format_type' => 'hidden',
+    'format_type' => 'fieldset',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
@@ -534,18 +534,16 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = 'group_content';
   $field_group->data = array(
     'label' => '',
-    'weight' => '3',
+    'weight' => '9',
     'children' => array(
-      0 => 'field_related_domains',
-      1 => 'field_related_topics',
-      2 => 'field_related_themes',
+      0 => 'group_landvoc',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => '',
+        'classes' => 'group-topics-regions',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -608,9 +606,9 @@ function landbook_taxonomies_field_group_info() {
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => '',
+        'classes' => 'group-topics-regions',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
