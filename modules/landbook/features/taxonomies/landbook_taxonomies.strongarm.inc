@@ -168,6 +168,20 @@ function landbook_taxonomies_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_enable_taxonomy_term__datasets';
+  $strongarm->value = TRUE;
+  $export['metatag_enable_taxonomy_term__datasets'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_enable_taxonomy_term__indicators';
+  $strongarm->value = TRUE;
+  $export['metatag_enable_taxonomy_term__indicators'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_datasets_pattern';
   $strongarm->value = 'book/dataset/[term:field_id]';
   $export['pathauto_taxonomy_term_datasets_pattern'] = $strongarm;
@@ -178,6 +192,48 @@ function landbook_taxonomies_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_indicators_pattern';
   $strongarm->value = 'book/indicator/[term:field_id]';
   $export['pathauto_taxonomy_term_indicators_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'term_authoring_info_vocab_datasets_showfield';
+  $strongarm->value = 1;
+  $export['term_authoring_info_vocab_datasets_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'term_authoring_info_vocab_indicators_showfield';
+  $strongarm->value = 1;
+  $export['term_authoring_info_vocab_indicators_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_taxonomy_term_datasets';
+  $strongarm->value = 'datasets';
+  $export['uuid_features_entity_taxonomy_term_datasets'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_taxonomy_term_indicators';
+  $strongarm->value = 'indicators';
+  $export['uuid_features_entity_taxonomy_term_indicators'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_taxonomy_term_datasets';
+  $strongarm->value = 0;
+  $export['uuid_features_file_taxonomy_term_datasets'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_taxonomy_term_indicators';
+  $strongarm->value = 0;
+  $export['uuid_features_file_taxonomy_term_indicators'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

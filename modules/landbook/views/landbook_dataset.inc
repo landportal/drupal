@@ -52,8 +52,8 @@ $handler->display->display_options['arguments']['nid']['summary']['number_of_rec
 $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
 $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
 
-/* Display: Block */
-$handler = $view->new_display('block', 'Block', 'catalog');
+/* Display: Catalog */
+$handler = $view->new_display('block', 'Catalog', 'catalog');
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
