@@ -633,6 +633,99 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-datasets-field_view_latest'.
+  $field_instances['taxonomy_term-datasets-field_view_latest'] = array(
+    'bundle' => 'datasets',
+    'default_value' => array(
+      0 => array(
+        'moddelta' => 'views:landbook_catalog-ds_latest',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 4,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_view_latest',
+    'label' => 'Latest dataset',
+    'required' => 0,
+    'settings' => array(
+      'blockreference_modules' => array(
+        'addtoany' => 0,
+        'apachesolr_search' => 0,
+        'block' => 0,
+        'calendar' => 0,
+        'comment' => 0,
+        'context_ui' => 0,
+        'diff' => 0,
+        'facetapi' => 0,
+        'global_filter' => 0,
+        'hybridauth' => 0,
+        'jump_menu' => 0,
+        'landbook' => 0,
+        'landbook_vggt' => 0,
+        'landbook_view_coda' => 0,
+        'landbook_vis_map' => 0,
+        'landbook_vis_table_indicators' => 0,
+        'landportal_blocks' => 0,
+        'landportal_partners' => 0,
+        'locale' => 0,
+        'login_one_time' => 0,
+        'logintoboggan' => 0,
+        'mailchimp_signup' => 0,
+        'masquerade' => 0,
+        'menu' => 0,
+        'node' => 0,
+        'og_menu' => 0,
+        'pcp' => 0,
+        'print' => 0,
+        'search' => 0,
+        'shortcut' => 0,
+        'system' => 0,
+        'twitter_block' => 0,
+        'user' => 0,
+        'views' => 'views',
+        'webform' => 0,
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-datasets-name_field'.
   $field_instances['taxonomy_term-datasets-name_field'] = array(
     'bundle' => 'datasets',
@@ -1692,6 +1785,7 @@ function landbook_taxonomies_field_default_field_instances() {
   t('ID');
   t('Indicator description');
   t('Indicator name');
+  t('Latest dataset');
   t('Maximun possible value of the indicator');
   t('Measurement unit');
   t('Measurement unit, like % or hectares');
