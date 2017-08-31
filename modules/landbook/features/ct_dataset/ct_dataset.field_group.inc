@@ -21,10 +21,9 @@ function ct_dataset_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '1',
+    'weight' => '0',
     'children' => array(
-      0 => 'field_catalog',
-      1 => 'title_field',
+      0 => 'title_field',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -84,8 +83,8 @@ function ct_dataset_field_group_info() {
     'weight' => '8',
     'children' => array(
       0 => 'field_related_domains',
-      1 => 'field_related_topics',
-      2 => 'field_related_themes',
+      1 => 'field_related_themes',
+      2 => 'field_related_topics',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -210,7 +209,7 @@ function ct_dataset_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '1',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
