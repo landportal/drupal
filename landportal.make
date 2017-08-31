@@ -103,6 +103,7 @@ projects:
   - sparql
   - strongarm
   - synonyms
+  - taxonomy_display
   - taxonomy_edge
   - term_authoring_info
   - term_merge

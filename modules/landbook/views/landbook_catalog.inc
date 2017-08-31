@@ -243,6 +243,8 @@ $handler->display->display_options['arguments']['tid']['summary_options']['items
 
 /* Display: Latest Dataset */
 $handler = $view->new_display('block', 'Latest Dataset', 'ds_latest');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'col-sm-12';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '1';
