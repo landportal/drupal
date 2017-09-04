@@ -7,6 +7,14 @@ $context->name = 'partners-mlike-helper';
 $context->description = '';
 $context->tag = 'partners';
 $context->conditions = array(
+  'context_og_condition_group_node' => array(
+    'values' => array(
+      41826 => 41826,
+    ),
+    'options' => array(
+      'node_form' => 1,
+    ),
+  ),
   'node' => array(
     'values' => array(
       'partners' => 'partners',
@@ -33,7 +41,7 @@ $context->reactions = array(
         'region' => 'help',
         'weight' => '-10',
       ),
-      'views-partners_site-block' => array(
+      'views-partners_site-mlike' => array(
         'module' => 'views',
         'delta' => 'partners_site-mlike',
         'region' => 'help',
@@ -43,3 +51,7 @@ $context->reactions = array(
   ),
 );
 $context->condition_mode = 1;
+
+// Translatables
+// Included for use with string extractors like potx.
+t('partners');
