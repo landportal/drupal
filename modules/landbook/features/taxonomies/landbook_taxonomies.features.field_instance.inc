@@ -1507,28 +1507,22 @@ function landbook_taxonomies_field_default_field_instances() {
   // Exported field_instance: 'taxonomy_term-indicators-field_view_coda'.
   $field_instances['taxonomy_term-indicators-field_view_coda'] = array(
     'bundle' => 'indicators',
-    'default_value' => array(
-      0 => array(
-        'type' => 'map',
-        'vcc' => '{debug: true}',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'landbook_view_coda',
         'settings' => array(),
         'type' => 'lbvc_basic',
-        'weight' => 4,
+        'weight' => 19,
       ),
       'full' => array(
-        'label' => 'hidden',
-        'module' => 'landbook_view_coda',
+        'label' => 'above',
         'settings' => array(),
-        'type' => 'lbvc_basic',
-        'weight' => 4,
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1545,7 +1539,7 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_view_coda',
-    'label' => 'Primary visusualization',
+    'label' => 'View Coda',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1675,7 +1669,7 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 114,
     ),
   );
 
@@ -1791,7 +1785,6 @@ function landbook_taxonomies_field_default_field_instances() {
   t('Name');
   t('Organization');
   t('Overarching categories');
-  t('Primary visusualization');
   t('Published dataset(s)');
   t('Related concepts');
   t('Show indicators within the same catalog');
@@ -1799,6 +1792,7 @@ function landbook_taxonomies_field_default_field_instances() {
   t('The values for this indicator is taken from some controlled term list (could be characters, colors, strings, numbers...)
 <a href="https://www.w3.org/TR/vocab-data-cube/#schemes">Read more</a>');
   t('Themes');
+  t('View Coda');
   t('has Coded Value');
   t('max');
   t('min');

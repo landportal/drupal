@@ -111,7 +111,7 @@ function landbook_taxonomies_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '11',
+          'weight' => '8',
         ),
         'name' => array(
           'weight' => '0',
@@ -120,7 +120,10 @@ function landbook_taxonomies_strongarm() {
           'weight' => '1',
         ),
         'xmlsitemap' => array(
-          'weight' => '12',
+          'weight' => '9',
+        ),
+        'metatags' => array(
+          'weight' => '10',
         ),
       ),
       'display' => array(

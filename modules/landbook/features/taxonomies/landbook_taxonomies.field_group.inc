@@ -819,10 +819,9 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Settings',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
-      0 => 'field_view_coda',
-      1 => 'field_view_indicators',
+      0 => 'field_view_indicators',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
