@@ -50,11 +50,11 @@ function landportal_sdgs_taxonomies_strongarm() {
       'display' => array(
         'description' => array(
           'default' => array(
-            'weight' => '3',
+            'weight' => '0',
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '3',
+            'weight' => '1',
             'visible' => TRUE,
           ),
         ),

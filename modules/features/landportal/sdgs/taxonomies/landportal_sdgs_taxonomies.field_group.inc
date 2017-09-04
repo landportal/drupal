@@ -36,7 +36,9 @@ function landportal_sdgs_taxonomies_field_group_info() {
         'show_label' => '0',
         'label_element' => '',
         'attributes' => '',
+        'required_fields' => 1,
       ),
+      'formatter' => '',
     ),
   );
   $field_groups['group_header|taxonomy_term|sdgs|teaser'] = $field_group;
