@@ -56,7 +56,7 @@ function ct_page_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -112,7 +112,7 @@ function ct_page_field_default_field_instances() {
           'file_view_mode' => 'default',
         ),
         'type' => 'file_rendered',
-        'weight' => 3,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -167,7 +167,7 @@ function ct_page_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 5,
+      'weight' => 13,
     ),
   );
 
@@ -223,52 +223,67 @@ function ct_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_milestone'.
-  $field_instances['node-page-field_milestone'] = array(
+  // Exported field_instance: 'node-page-field_image'.
+  $field_instances['node-page-field_image'] = array(
     'bundle' => 'page',
-    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter key dates related to this page content',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_milestone',
-    'label' => 'Key dates',
+    'field_name' => 'field_image',
+    'label' => 'Picture',
     'required' => 0,
     'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
       'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'field_collection_fieldset',
+      'module' => 'media',
       'settings' => array(
-        'collapsed' => 1,
-        'field_as_label' => 'title_field',
-        'last_item_collapsed' => 1,
-        'new_item_open' => 1,
-        'replace_label' => 0,
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'image' => 'image',
+        ),
+        'browser_plugins' => array(),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
       ),
-      'type' => 'field_collection_fieldset',
-      'weight' => 4,
+      'type' => 'media_generic',
+      'weight' => 12,
     ),
   );
 
@@ -284,7 +299,7 @@ function ct_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 10,
       ),
       'listing' => array(
         'label' => 'above',
@@ -335,7 +350,7 @@ function ct_page_field_default_field_instances() {
         'view_mode' => 'teaser',
       ),
       'type' => 'entityreference_view_widget',
-      'weight' => 6,
+      'weight' => 14,
     ),
   );
 
@@ -360,7 +375,7 @@ function ct_page_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fieldset_view',
-        'weight' => 2,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
@@ -572,21 +587,75 @@ function ct_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-title_field'.
+  $field_instances['node-page-title_field'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h1',
+        ),
+        'type' => 'title_linked',
+        'weight' => 2,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Attach a file relevant to this page');
   t('Body');
   t('Comment');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
-  t('Enter key dates related to this page content');
   t('Files');
   t('Geographical focus');
-  t('Key dates');
   t('Overarching categories');
   t('Paragraphs');
+  t('Picture');
   t('Related concepts');
   t('Related content');
   t('Themes');
+  t('Title');
 
   return $field_instances;
 }

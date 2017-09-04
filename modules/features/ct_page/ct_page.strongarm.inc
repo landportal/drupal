@@ -144,7 +144,7 @@ function ct_page_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '6',
+            'weight' => '9',
             'visible' => FALSE,
           ),
           'teaser' => array(
