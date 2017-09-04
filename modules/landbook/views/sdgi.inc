@@ -111,7 +111,6 @@ $handler->display->display_options['pager']['options']['items_per_page'] = '5';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['row_class'] = 'col-sm-6';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -130,34 +129,16 @@ $handler->display->display_options['relationships']['reverse_field_noderef_node'
 $handler->display->display_options['relationships']['reverse_field_noderef_node']['label'] = 'sdgi';
 $handler->display->display_options['relationships']['reverse_field_noderef_node']['required'] = TRUE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
-/* Field: Content: Nid */
-$handler->display->display_options['fields']['nid']['id'] = 'nid';
-$handler->display->display_options['fields']['nid']['table'] = 'node';
-$handler->display->display_options['fields']['nid']['field'] = 'nid';
-$handler->display->display_options['fields']['nid']['label'] = '';
-$handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-$handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['nid']['alter']['text'] = 'node/[nid]';
-$handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-/* Field: Field: Image */
-$handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-$handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['label'] = '';
-$handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-$handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => 'large',
-  'image_link' => 'content',
-);
-$handler->display->display_options['fields']['field_image']['group_column'] = 'entity_id';
-/* Field: Content: Title */
-$handler->display->display_options['fields']['title']['id'] = 'title';
-$handler->display->display_options['fields']['title']['table'] = 'node';
-$handler->display->display_options['fields']['title']['field'] = 'title';
-$handler->display->display_options['fields']['title']['label'] = '';
-$handler->display->display_options['fields']['title']['element_type'] = 'h4';
-$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+/* Field: Content: Rendered Content */
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
@@ -279,7 +260,7 @@ $handler->display->display_options['defaults']['use_ajax'] = FALSE;
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'full';
-$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['pager']['options']['items_per_page'] = '4';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['pager']['options']['quantity'] = '9';
