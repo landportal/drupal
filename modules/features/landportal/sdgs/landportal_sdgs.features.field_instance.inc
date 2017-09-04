@@ -595,7 +595,7 @@ function landportal_sdgs_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fieldset_view',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',

@@ -167,7 +167,7 @@ function ct_page_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 13,
+      'weight' => 7,
     ),
   );
 
@@ -283,7 +283,63 @@ function ct_page_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 12,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-page-field_milestone'.
+  $field_instances['node-page-field_milestone'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 11,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_milestone',
+    'label' => 'Key dates',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'field_collection_fieldset',
+      'settings' => array(
+        'collapsed' => 1,
+        'field_as_label' => '',
+        'last_item_collapsed' => 1,
+        'new_item_open' => 1,
+        'replace_label' => 0,
+      ),
+      'type' => 'field_collection_fieldset',
+      'weight' => 10,
     ),
   );
 
@@ -350,7 +406,7 @@ function ct_page_field_default_field_instances() {
         'view_mode' => 'teaser',
       ),
       'type' => 'entityreference_view_widget',
-      'weight' => 14,
+      'weight' => 9,
     ),
   );
 
@@ -409,7 +465,7 @@ function ct_page_field_default_field_instances() {
         'replace_label' => 0,
       ),
       'type' => 'field_collection_fieldset',
-      'weight' => 3,
+      'weight' => 8,
     ),
   );
 
@@ -649,6 +705,7 @@ function ct_page_field_default_field_instances() {
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Files');
   t('Geographical focus');
+  t('Key dates');
   t('Overarching categories');
   t('Paragraphs');
   t('Picture');

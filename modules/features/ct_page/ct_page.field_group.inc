@@ -56,7 +56,9 @@ function ct_page_field_group_info() {
       0 => 'field_related_blocks',
       1 => 'field_file',
       2 => 'field_noderef',
-      3 => 'field_image',
+      3 => 'field_paragraphs',
+      4 => 'field_image',
+      5 => 'field_milestone',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

@@ -276,6 +276,7 @@ function landportal_sdgs_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'body',
+      1 => 'field_paragraphs',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -499,9 +500,8 @@ function landportal_sdgs_field_group_info() {
     'label' => 'Visualizations',
     'weight' => '4',
     'children' => array(
-      0 => 'field_paragraphs',
-      1 => 'field_visualization',
-      2 => 'field_related_blocks',
+      0 => 'field_visualization',
+      1 => 'field_related_blocks',
     ),
     'format_type' => 'div',
     'format_settings' => array(
