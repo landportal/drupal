@@ -356,15 +356,18 @@ $handler->display->display_options['row_options']['inline'] = array(
 );
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['header'] = FALSE;
-/* Header: Global: Unfiltered text */
-$handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
-$handler->display->display_options['header']['area_text_custom']['table'] = 'views';
-$handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
-$handler->display->display_options['header']['area_text_custom']['content'] = '<a href="/book/sdgs"><img class="media-element file-default" data-delta="1" alt="" title="" typeof="foaf:Image" src="/sites/landportal.ker/files/land-and-sdg-logo.png"></a>';
+/* Header: Global: Block area */
+$handler->display->display_options['header']['block_1']['id'] = 'block_1';
+$handler->display->display_options['header']['block_1']['table'] = 'views';
+$handler->display->display_options['header']['block_1']['field'] = 'block';
+$handler->display->display_options['header']['block_1']['label'] = 'logo';
+$handler->display->display_options['header']['block_1']['block_to_insert'] = 'block:12';
+$handler->display->display_options['header']['block_1']['title'] = '<none>';
 /* Header: Global: Block area */
 $handler->display->display_options['header']['block']['id'] = 'block';
 $handler->display->display_options['header']['block']['table'] = 'views';
 $handler->display->display_options['header']['block']['field'] = 'block';
+$handler->display->display_options['header']['block']['label'] = 'menu';
 $handler->display->display_options['header']['block']['block_to_insert'] = 'jump_menu:jump_menu-m_menu-sdgs';
 $handler->display->display_options['defaults']['footer'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
