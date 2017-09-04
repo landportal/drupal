@@ -211,7 +211,8 @@ function landportal_sdgs_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'body',
-      1 => 'field_image',
+      1 => 'field_sdg',
+      2 => 'field_image',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -389,7 +390,7 @@ function landportal_sdgs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '12',
+    'weight' => '11',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'field_related_domains',
