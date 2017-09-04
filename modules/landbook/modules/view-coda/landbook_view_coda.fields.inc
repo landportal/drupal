@@ -169,6 +169,14 @@ function landbook_view_coda_field_formatter_visualization($VCC) {
     $value = t('Loading map visualization');
     $js = $VCC['jsid'] . ' = new lbvisMap(' . $params . '); ' . $VCC['jsid'] . '.init();';
     break;
+  case 'pie':
+    $params .= ', "indicator": "' . $VCC['indicators'] . '"'
+      . ', tooltip: true, legend: true, nav: true'
+      . ", colors: { background: 'transparent' }"
+      . ', "target": "#' . $VCC['vid'] . '", "vis": LBV}';
+    $value = t('Loading map visualization');
+    $js = 'console.log(' . $params . ');';
+    break;
   case 'table':
     $params .= ', "indicators": ["' . join('", "', $VCC['indicators']) . '"]'
       . ', "add": false, "target": "#' . $VCC['vid'] . '", "vis": LBV}';
