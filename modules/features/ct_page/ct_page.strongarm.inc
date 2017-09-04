@@ -144,11 +144,11 @@ function ct_page_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '9',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '12',
             'visible' => FALSE,
           ),
           'listing' => array(
