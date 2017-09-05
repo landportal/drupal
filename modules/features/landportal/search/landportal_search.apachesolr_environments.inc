@@ -65,8 +65,9 @@ function landportal_search_apachesolr_environments() {
       7 => 'page',
       8 => 'partners',
       9 => 'partners_page',
-      10 => 'sdgi',
-      11 => 'thematic_narrative',
+      10 => 'project',
+      11 => 'sdgi',
+      12 => 'thematic_narrative',
     ),
   );
   $export['solr'] = $environment;
