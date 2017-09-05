@@ -11,6 +11,21 @@ include_once 'landportal_display.features.inc';
  *    Hacks for drupal node/page title
  */
 
+// Search for the taxonomy term rendering in a page
+function lpbs__taxonomy_term_page($page) {
+  if (
+    !isset($page['content']) ||
+    !isset($page['content']['system_main']) ||
+    !isset($page['content']['system_main']['term_heading']) ||
+    !isset($page['content']['system_main']['term_heading']['term'])
+  ) {
+    return FALSE;
+  }
+  else {
+    return $page['content']['system_main']['term_heading']['term'];
+  }
+}
+
 function landportal_display_preprocess_page(&$variables) {
   // Taxonomy
   if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
