@@ -45,7 +45,7 @@ $handler->display->display_options['relationships']['parent_1']['table'] = 'taxo
 $handler->display->display_options['relationships']['parent_1']['field'] = 'parent';
 $handler->display->display_options['relationships']['parent_1']['relationship'] = 'parent';
 $handler->display->display_options['relationships']['parent_1']['label'] = 'goal';
-/* Field: Taxonomy term: ID */
+/* Field: Field: ID */
 $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
 $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
@@ -97,7 +97,7 @@ $handler->display->display_options['fields']['field_date']['label'] = 'Date star
 $handler->display->display_options['fields']['field_date']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_date']['settings'] = array(
-  'format_type' => 'year_month_day',
+  'format_type' => 'day_month_year',
   'custom_date_format' => '',
   'fromto' => 'value',
   'multiple_number' => '',
@@ -114,7 +114,7 @@ $handler->display->display_options['fields']['field_date_1']['relationship'] = '
 $handler->display->display_options['fields']['field_date_1']['label'] = 'Date end';
 $handler->display->display_options['fields']['field_date_1']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_date_1']['settings'] = array(
-  'format_type' => 'year_month_day',
+  'format_type' => 'day_month_year',
   'custom_date_format' => '',
   'fromto' => 'value2',
   'multiple_number' => '',
