@@ -18,6 +18,7 @@ function landportal_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'bundle';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
@@ -73,6 +74,7 @@ function landportal_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_geographical_focus';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'collapsible',
@@ -128,6 +130,7 @@ function landportal_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_related_domains';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
@@ -181,6 +184,7 @@ function landportal_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_related_themes';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
@@ -234,6 +238,7 @@ function landportal_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'im_field_related_topics';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'collapsible',
@@ -287,6 +292,7 @@ function landportal_search_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'language';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',

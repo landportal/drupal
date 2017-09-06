@@ -18,3 +18,7 @@ function landportal_sdgs_preprocess_views_bootstrap_accordion_plugin_style(&$var
     $vars['row_classes'][$key] = array($vars['view']->style_plugin->get_row_class($key));
   }
 }
+
+function landportal_sdgs_XXXX() {
+  //
+}

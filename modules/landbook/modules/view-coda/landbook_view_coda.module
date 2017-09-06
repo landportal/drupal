@@ -16,7 +16,7 @@ function _lbvc_types() {
     'map'   => 'Map projection',
     'table'  => 'Metadata Table',
     /* 'line'  => 'Line chart', */
-    /* 'pie'   => 'Pie chart', */
+    'pie'   => 'Pie chart',
     /* 'ranking' => 'Ranking list', */
     /* 'empty' => 'debug / test', */
   );

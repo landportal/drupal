@@ -6,6 +6,62 @@
 
 include_once 'landportal_display.features.inc';
 
+/******************************************
+ *
+ *    Hacks for drupal node/page title
+ */
+
+// Search for the taxonomy term rendering in a page
+function lpbs__taxonomy_term_page($page) {
+  if (
+    !isset($page['content']) ||
+    !isset($page['content']['system_main']) ||
+    !isset($page['content']['system_main']['term_heading']) ||
+    !isset($page['content']['system_main']['term_heading']['term'])
+  ) {
+    return FALSE;
+  }
+  else {
+    return $page['content']['system_main']['term_heading']['term'];
+  }
+}
+
+function landportal_display_preprocess_page(&$variables) {
+  // Taxonomy
+  if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
+    $term = lpbs__taxonomy_term_page($variables['page']);
+    if (isset($term['name_field'])) {
+      //dpm($variables['node'], "Got a title_field");
+      $variables['title'] = '';
+    }
+  }
+  else if (isset($variables['node']) && isset($variables['node']->title_field)) {
+    $node = $variables['node'];
+    $content = $variables['page']['content']['system_main']['nodes'][$node->nid];
+    /* dpm($node, "node "); */
+    $variables['page']['title_header'] = array(
+      '#groups' => $content['#groups']['group_header']
+    );
+    unset($variables['page']['content']['system_main']['nodes'][$node->nid]['#groups']['group_header']);
+    foreach ($content['#groups']['group_header']->children as $field) {
+      $variables['page']['title_header'][$field] = $content[$field];
+      unset($variables['page']['content']['system_main']['nodes'][$node->nid][$field]);
+    }
+    //dpm($content, 'page main node');
+    //dpm($content['#groups']['group_header']);
+    //unset($variables['page']['content']['system_main']['nodes'][$node->nid]['title_field']);
+    $variables['title'] = render($variables['page']['title_header']);
+    //dpm($variables['page']);
+  }
+  //dpm($variables, 'vars');
+}
+
+
+
+/******************************************
+ *
+ *    Hacks for select2 on forms
+ */
 
 /**********************
 ** Implementation of hook_entity_info_alter().

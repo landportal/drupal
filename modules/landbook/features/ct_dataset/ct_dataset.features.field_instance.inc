@@ -1,52 +1,18 @@
 <?php
 /**
  * @file
- * ct_page.features.field_instance.inc
+ * ct_dataset.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function ct_page_field_default_field_instances() {
+function ct_dataset_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_page-comment_body'.
-  $field_instances['comment-comment_node_page-comment_body'] = array(
-    'bundle' => 'comment_node_page',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'comment',
-    'field_name' => 'comment_body',
-    'label' => 'Comment',
-    'required' => TRUE,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 0,
-    ),
-  );
-
-  // Exported field_instance: 'node-page-body'.
-  $field_instances['node-page-body'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-dataset-body'.
+  $field_instances['node-dataset-body'] = array(
+    'bundle' => 'dataset',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -58,13 +24,17 @@ function ct_page_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
-      'listing' => array(
+      'full' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -74,7 +44,7 @@ function ct_page_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 2,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -94,85 +64,67 @@ function ct_page_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 3,
     ),
   );
 
-  // Exported field_instance: 'node-page-field_file'.
-  $field_instances['node-page-field_file'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-dataset-field_catalog'.
+  $field_instances['node-dataset-field_catalog'] = array(
+    'bundle' => 'dataset',
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Attach a file relevant to this page',
+    'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
-        'module' => 'file_entity',
-        'settings' => array(
-          'file_view_mode' => 'default',
-        ),
-        'type' => 'file_rendered',
-        'weight' => 5,
-      ),
-      'listing' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 5,
       ),
-      'promoted_country_page' => array(
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_file',
-    'label' => 'Files',
-    'required' => 0,
+    'field_name' => 'field_catalog',
+    'label' => 'Catalog',
+    'required' => 1,
     'settings' => array(
-      'description_field' => 1,
       'entity_translation_sync' => FALSE,
-      'file_directory' => '',
-      'file_extensions' => '',
-      'max_filesize' => '',
       'user_register_form' => FALSE,
-      'wysiwyg_insert' => 0,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 0,
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 'audio',
-          'document' => 'document',
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 0,
-          'upload' => 0,
-        ),
-      ),
-      'type' => 'media_generic',
-      'weight' => 7,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 0,
     ),
   );
 
-  // Exported field_instance: 'node-page-field_geographical_focus'.
-  $field_instances['node-page-field_geographical_focus'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-dataset-field_geographical_focus'.
+  $field_instances['node-dataset-field_geographical_focus'] = array(
+    'bundle' => 'dataset',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -182,14 +134,20 @@ function ct_page_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 6,
       ),
-      'listing' => array(
+      'full' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_plain',
+        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 6,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -199,10 +157,9 @@ function ct_page_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 4,
+        'type' => 'hidden',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -218,152 +175,41 @@ function ct_page_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 14,
     ),
   );
 
-  // Exported field_instance: 'node-page-field_image'.
-  $field_instances['node-page-field_image'] = array(
-    'bundle' => 'page',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 3,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => 'content',
-          'image_style' => 'medium',
-        ),
-        'type' => 'image',
-        'weight' => 3,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_image',
-    'label' => 'Picture',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'entity_translation_sync' => FALSE,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'image' => 'image',
-        ),
-        'browser_plugins' => array(),
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'media_generic',
-      'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-page-field_milestone'.
-  $field_instances['node-page-field_milestone'] = array(
-    'bundle' => 'page',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 10,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_milestone',
-    'label' => 'Key dates',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'field_collection_fieldset',
-      'settings' => array(
-        'collapsed' => 1,
-        'field_as_label' => '',
-        'last_item_collapsed' => 1,
-        'new_item_open' => 1,
-        'replace_label' => 0,
-      ),
-      'type' => 'field_collection_fieldset',
-      'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-page-field_noderef'.
-  $field_instances['node-page-field_noderef'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-dataset-field_noderef'.
+  $field_instances['node-dataset-field_noderef'] = array(
+    'bundle' => 'dataset',
     'default_value' => NULL,
     'default_value_function' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -391,83 +237,123 @@ function ct_page_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference_view_widget',
+      'module' => 'entityreference',
       'settings' => array(
         'allow_duplicates' => 0,
         'close_modal' => 1,
-        'pass_argument' => 1,
+        'match_operator' => 'CONTAINS',
+        'pass_argument' => 0,
         'pass_arguments' => '',
+        'path' => '',
         'rendered_entity' => 0,
-        'view' => 'related|view_widget',
-        'view_mode' => 'teaser',
+        'size' => 60,
+        'view' => 'partners_content|related_refview',
+        'view_mode' => 'full',
       ),
-      'type' => 'entityreference_view_widget',
-      'weight' => 9,
+      'type' => 'entityreference_autocomplete',
+      'weight' => 8,
     ),
   );
 
-  // Exported field_instance: 'node-page-field_paragraphs'.
-  $field_instances['node-page-field_paragraphs'] = array(
-    'bundle' => 'page',
-    'default_value' => NULL,
+  // Exported field_instance: 'node-dataset-field_related_blocks'.
+  $field_instances['node-dataset-field_related_blocks'] = array(
+    'bundle' => 'dataset',
+    'default_value' => array(
+      0 => array(
+        'moddelta' => 'views:sdgi-blogs',
+      ),
+      1 => array(
+        'moddelta' => 'views:sdgi-related',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'field_collection_fieldset',
+        'module' => 'blockreference',
         'settings' => array(
-          'add' => '',
-          'collapsed' => 1,
-          'collapsible' => 1,
-          'delete' => '',
-          'description' => 0,
-          'edit' => '',
-          'legend' => 'title_field',
-          'view_mode' => 'full',
+          'show_empty_blocks' => FALSE,
         ),
-        'type' => 'field_collection_fieldset_view',
+        'type' => 'blockreference_default',
+        'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 10,
       ),
       'teaser' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_paragraphs',
-    'label' => 'Paragraphs',
+    'field_name' => 'field_related_blocks',
+    'label' => 'Related blocks',
     'required' => 0,
     'settings' => array(
+      'blockreference_modules' => array(
+        'addtoany' => 0,
+        'apachesolr_search' => 0,
+        'block' => 0,
+        'calendar' => 0,
+        'comment' => 0,
+        'context_ui' => 0,
+        'diff' => 0,
+        'facetapi' => 0,
+        'global_filter' => 0,
+        'hybridauth' => 0,
+        'jump_menu' => 0,
+        'landbook' => 0,
+        'landbook_vggt' => 0,
+        'landbook_view_coda' => 0,
+        'landbook_vis_map' => 0,
+        'landbook_vis_table_indicators' => 0,
+        'landportal_blocks' => 0,
+        'landportal_partners' => 0,
+        'locale' => 0,
+        'login_one_time' => 0,
+        'logintoboggan' => 0,
+        'mailchimp_signup' => 0,
+        'masquerade' => 0,
+        'menu' => 0,
+        'node' => 0,
+        'og_menu' => 0,
+        'pcp' => 0,
+        'print' => 0,
+        'search' => 0,
+        'shortcut' => 0,
+        'system' => 0,
+        'twitter_block' => 0,
+        'user' => 0,
+        'views' => 'views',
+        'webform' => 0,
+      ),
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'field_collection_fieldset',
-      'settings' => array(
-        'collapsed' => 1,
-        'field_as_label' => 'title_field',
-        'last_item_collapsed' => 1,
-        'new_item_open' => 1,
-        'replace_label' => 0,
-      ),
-      'type' => 'field_collection_fieldset',
-      'weight' => 8,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 9,
     ),
   );
 
-  // Exported field_instance: 'node-page-field_related_domains'.
-  $field_instances['node-page-field_related_domains'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-dataset-field_related_domains'.
+  $field_instances['node-dataset-field_related_domains'] = array(
+    'bundle' => 'dataset',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -477,14 +363,20 @@ function ct_page_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 9,
       ),
-      'listing' => array(
+      'full' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 8,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -494,9 +386,8 @@ function ct_page_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_plain',
+        'type' => 'hidden',
         'weight' => 6,
       ),
     ),
@@ -521,13 +412,13 @@ function ct_page_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 16,
     ),
   );
 
-  // Exported field_instance: 'node-page-field_related_themes'.
-  $field_instances['node-page-field_related_themes'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-dataset-field_related_themes'.
+  $field_instances['node-dataset-field_related_themes'] = array(
+    'bundle' => 'dataset',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -537,14 +428,20 @@ function ct_page_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 10,
       ),
-      'listing' => array(
+      'full' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 9,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -554,9 +451,8 @@ function ct_page_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_plain',
+        'type' => 'hidden',
         'weight' => 7,
       ),
     ),
@@ -576,13 +472,13 @@ function ct_page_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 17,
     ),
   );
 
-  // Exported field_instance: 'node-page-field_related_topics'.
-  $field_instances['node-page-field_related_topics'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-dataset-field_related_topics'.
+  $field_instances['node-dataset-field_related_topics'] = array(
+    'bundle' => 'dataset',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.',
@@ -592,14 +488,20 @@ function ct_page_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 11,
       ),
-      'listing' => array(
+      'full' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 10,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 11,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -610,22 +512,23 @@ function ct_page_field_default_field_instances() {
       'search_result' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 8,
+        'type' => 'hidden',
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_related_topics',
     'label' => 'Related concepts',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -633,15 +536,92 @@ function ct_page_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => '',
+        'auto_creation' => 0,
+        'size' => 60,
+        'sort' => 'weight',
+        'suggest_only_unique' => 0,
+        'suggestion_size' => 10,
+        'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
+      ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 18,
     ),
   );
 
-  // Exported field_instance: 'node-page-title_field'.
-  $field_instances['node-page-title_field'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-dataset-field_visualization'.
+  $field_instances['node-dataset-field_visualization'] = array(
+    'bundle' => 'dataset',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => '',
+          'delete' => '',
+          'description' => 1,
+          'edit' => '',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 3,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_visualization',
+    'label' => 'Land Book Indicators',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'field_collection_fieldset',
+      'settings' => array(
+        'collapsed' => 1,
+        'field_as_label' => 'title_field',
+        'last_item_collapsed' => 1,
+        'new_item_open' => 1,
+        'replace_label' => 0,
+      ),
+      'type' => 'field_collection_fieldset',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-dataset-title_field'.
+  $field_instances['node-dataset-title_field'] = array(
+    'bundle' => 'dataset',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -655,7 +635,18 @@ function ct_page_field_default_field_instances() {
           'title_style' => 'h1',
         ),
         'type' => 'title_linked',
-        'weight' => 2,
+        'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h2',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'above',
@@ -672,7 +663,7 @@ function ct_page_field_default_field_instances() {
           'title_style' => 'h2',
         ),
         'type' => 'title_linked',
-        'weight' => 2,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
@@ -700,16 +691,13 @@ function ct_page_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Attach a file relevant to this page');
   t('Body');
-  t('Comment');
+  t('Catalog');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
-  t('Files');
   t('Geographical focus');
-  t('Key dates');
+  t('Land Book Indicators');
   t('Overarching categories');
-  t('Paragraphs');
-  t('Picture');
+  t('Related blocks');
   t('Related concepts');
   t('Related content');
   t('Themes');

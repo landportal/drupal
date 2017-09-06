@@ -17,7 +17,7 @@ function landbook_taxonomies_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'search_index' => array(
         'custom_settings' => TRUE,
@@ -65,15 +65,19 @@ function landbook_taxonomies_strongarm() {
         ),
         'authoring_information' => array(
           'default' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'search_index' => array(
-            'weight' => '0',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           'teaser' => array(
             'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),
@@ -92,7 +96,7 @@ function landbook_taxonomies_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'token' => array(
         'custom_settings' => FALSE,
@@ -107,7 +111,7 @@ function landbook_taxonomies_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '11',
+          'weight' => '8',
         ),
         'name' => array(
           'weight' => '0',
@@ -116,7 +120,10 @@ function landbook_taxonomies_strongarm() {
           'weight' => '1',
         ),
         'xmlsitemap' => array(
-          'weight' => '12',
+          'weight' => '9',
+        ),
+        'metatags' => array(
+          'weight' => '10',
         ),
       ),
       'display' => array(
@@ -133,6 +140,10 @@ function landbook_taxonomies_strongarm() {
             'weight' => '2',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
         ),
         'authoring_information' => array(
           'teaser' => array(
@@ -147,11 +158,29 @@ function landbook_taxonomies_strongarm() {
             'weight' => '4',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),
   );
   $export['field_bundle_settings_taxonomy_term__indicators'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_enable_taxonomy_term__datasets';
+  $strongarm->value = TRUE;
+  $export['metatag_enable_taxonomy_term__datasets'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_enable_taxonomy_term__indicators';
+  $strongarm->value = TRUE;
+  $export['metatag_enable_taxonomy_term__indicators'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -166,6 +195,48 @@ function landbook_taxonomies_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_indicators_pattern';
   $strongarm->value = 'book/indicator/[term:field_id]';
   $export['pathauto_taxonomy_term_indicators_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'term_authoring_info_vocab_datasets_showfield';
+  $strongarm->value = 1;
+  $export['term_authoring_info_vocab_datasets_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'term_authoring_info_vocab_indicators_showfield';
+  $strongarm->value = 1;
+  $export['term_authoring_info_vocab_indicators_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_taxonomy_term_datasets';
+  $strongarm->value = 'datasets';
+  $export['uuid_features_entity_taxonomy_term_datasets'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_taxonomy_term_indicators';
+  $strongarm->value = 'indicators';
+  $export['uuid_features_entity_taxonomy_term_indicators'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_taxonomy_term_datasets';
+  $strongarm->value = 0;
+  $export['uuid_features_file_taxonomy_term_datasets'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_taxonomy_term_indicators';
+  $strongarm->value = 0;
+  $export['uuid_features_file_taxonomy_term_indicators'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

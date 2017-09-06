@@ -58,7 +58,7 @@ t('landbook');
    * from: /admin/structure/context/list/landbook-dataset-indicators/export
    */
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'landbook-dataset-indicators';
   $context->description = 'Show the indicators of a dataset';
@@ -93,7 +93,7 @@ t('landbook');
   $export[$context->name] = $context;
 
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'view-coda-indicators';
   $context->description = '';

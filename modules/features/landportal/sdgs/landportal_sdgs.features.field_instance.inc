@@ -22,7 +22,7 @@ function landportal_sdgs_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -219,7 +219,7 @@ function landportal_sdgs_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -288,7 +288,7 @@ function landportal_sdgs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
@@ -427,7 +427,7 @@ function landportal_sdgs_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'field_collection_fieldset',
+      'module' => 'field_collection',
       'settings' => array(
         'collapsed' => 1,
         'field_as_label' => 'title_field',
@@ -435,7 +435,7 @@ function landportal_sdgs_field_default_field_instances() {
         'new_item_open' => 1,
         'replace_label' => 0,
       ),
-      'type' => 'field_collection_fieldset',
+      'type' => 'field_collection_embed',
       'weight' => 5,
     ),
   );
@@ -522,10 +522,11 @@ function landportal_sdgs_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'bypass_access' => 0,
-          'link' => 1,
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 13,
       ),
       'listing' => array(
@@ -594,7 +595,7 @@ function landportal_sdgs_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fieldset_view',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',
@@ -970,9 +971,14 @@ function landportal_sdgs_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1022,7 +1028,7 @@ function landportal_sdgs_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1290,7 +1296,7 @@ function landportal_sdgs_field_default_field_instances() {
           'title_style' => 'h1',
         ),
         'type' => 'title_linked',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'hidden',

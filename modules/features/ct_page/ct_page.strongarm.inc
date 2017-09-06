@@ -148,7 +148,7 @@ function ct_page_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '12',
             'visible' => FALSE,
           ),
           'listing' => array(
