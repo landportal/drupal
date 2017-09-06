@@ -60,10 +60,10 @@ $handler->display->display_options['fields']['name']['alter']['text'] = '[field_
 $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-/* Sort criterion: Taxonomy term: Term hierarchy */
-$handler->display->display_options['sorts']['hierarchy_sort']['id'] = 'hierarchy_sort';
-$handler->display->display_options['sorts']['hierarchy_sort']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['sorts']['hierarchy_sort']['field'] = 'hierarchy_sort';
+/* Sort criterion: Taxonomy term: Hierarchical weight */
+$handler->display->display_options['sorts']['hweight']['id'] = 'hweight';
+$handler->display->display_options['sorts']['hweight']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['hweight']['field'] = 'hweight';
 /* Filter criterion: Taxonomy vocabulary: Machine name */
 $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
 $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
@@ -991,4 +991,3 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
   'sdgs' => 'sdgs',
 );
 $handler->display->display_options['filters']['machine_name']['group'] = 1;
-
