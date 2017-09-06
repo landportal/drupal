@@ -288,7 +288,7 @@ function landportal_sdgs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'above',
@@ -452,7 +452,7 @@ function landportal_sdgs_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'above',
@@ -718,7 +718,7 @@ function landportal_sdgs_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1158,7 +1158,7 @@ function landportal_sdgs_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1242,7 +1242,7 @@ function landportal_sdgs_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'lbvc_block',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
