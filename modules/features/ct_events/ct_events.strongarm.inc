@@ -159,7 +159,7 @@ function ct_events_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '8',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'listing' => array(

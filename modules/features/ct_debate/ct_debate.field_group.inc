@@ -122,7 +122,6 @@ function ct_debate_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'field_date',
-      1 => 'field_status',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -220,8 +219,9 @@ function ct_debate_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_image',
-      1 => 'title_field',
-      2 => 'group_details',
+      1 => 'field_status',
+      2 => 'title_field',
+      3 => 'group_details',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
