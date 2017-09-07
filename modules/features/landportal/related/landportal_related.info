@@ -3,6 +3,7 @@ core = 7.x
 package = Landportal
 version = 7.x-2.4-alpha1
 dependencies[] = blockreference
+dependencies[] = ct_page
 dependencies[] = ctools
 dependencies[] = entityreference
 dependencies[] = entityreference_view_widget

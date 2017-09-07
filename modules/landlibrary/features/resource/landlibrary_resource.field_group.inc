@@ -409,7 +409,6 @@ function landlibrary_resource_field_group_info() {
     'children' => array(
       0 => 'field_doc_alt_title',
       1 => 'title_field',
-      2 => 'group_left',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -633,10 +632,10 @@ function landlibrary_resource_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'landlibrary_resource';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_header';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '3',
+    'weight' => '1',
     'children' => array(
       0 => 'field_doc_type',
       1 => 'field_image',
@@ -831,7 +830,7 @@ function landlibrary_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_doc_provider',
       1 => 'group_editors_pub',
