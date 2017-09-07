@@ -38,24 +38,58 @@ function landportal_display_preprocess_page(&$variables) {
   else if (isset($variables['node']) && isset($variables['node']->title_field)) {
     $node = $variables['node'];
     $content = $variables['page']['content']['system_main']['nodes'][$node->nid];
+
+    /* dpm($variables, "vars"); */
+    /* dpm($variables['page'], "page"); */
     /* dpm($node, "node "); */
-    $variables['page']['title_header'] = array(
-      '#groups' => $content['#groups']['group_header']
-    );
-    unset($variables['page']['content']['system_main']['nodes'][$node->nid]['#groups']['group_header']);
-    foreach ($content['#groups']['group_header']->children as $field) {
-      $variables['page']['title_header'][$field] = $content[$field];
-      unset($variables['page']['content']['system_main']['nodes'][$node->nid][$field]);
+    /* dpm($content, 'content'); */
+
+    //
+    // Pick group_header and create a new group (title_header) to render instead of title
+    //
+    if (isset($content['#fieldgroups']) && isset($content['#fieldgroups']['group_header'])) {
+      $header = $content['#fieldgroups']['group_header'];
+      $title = landportal_display_extract_groups('group_header', $content);
+      field_group_fields_nest($title, $content);
+      $variables['page']['title_header'] = $title;
+      $variables['title'] = render($title);
+      //dsm($variables['title']);
+      //unset($variables['page']['content']['system_main']['nodes'][$node->nid]['#groups']['group_header']);
+      unset($variables['page']['content']['system_main']['nodes'][$node->nid]['#fieldgroups']['group_header']);
     }
-    //dpm($content, 'page main node');
-    //dpm($content['#groups']['group_header']);
-    //unset($variables['page']['content']['system_main']['nodes'][$node->nid]['title_field']);
-    $variables['title'] = render($variables['page']['title_header']);
-    //dpm($variables['page']);
   }
   //dpm($variables, 'vars');
 }
 
+function landportal_display_extract_groups($group_name, $content) {
+  static $i = 0;
+  $g = array(
+    '#fieldgroups' => [],
+    '#group_children' => [],
+  );
+  foreach ($content['#groups'][$group_name]->children as $field) {
+    // Process nested groups
+    if (substr($field, 0, 6) == 'group_') {
+      $i++;
+      $cg = landportal_display_extract_groups($field, $content);
+      $i--;
+      $g['#fieldgroups'][$field] = $cg['#fieldgroups'][$field];
+      $g['#group_children'][$field] = $group_name;
+      $g['#group_children'] += $cg['#group_children'];
+      $g['#items'] += $cg['#items'];
+      //unset($variables['page']['content']['system_main']['nodes'][$node->nid][$fieldc]);
+    } else {
+      $g['#items'][$field] = $content[$field];
+      $g['#group_children'][$field] = $group_name;
+      //unset($variables['page']['content']['system_main']['nodes'][$node->nid][$field]);
+    }
+  }
+  //dpm($g, 'E: '.$group_name);
+  $g['#fieldgroups'][$group_name] = $content['#groups'][$group_name];
+  $g += $g['#items'];
+  if (!$i) unset($g['#items']);
+  return $g;
+}
 
 
 /******************************************
