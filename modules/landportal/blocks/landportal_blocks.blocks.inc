@@ -176,13 +176,15 @@ function landportal_blocks_block_view($delta = '') {
     // Addtoany widget (social networking sharing)
   case 'lp_share':
       $item = menu_get_item();
-      $title = $item['title'];
-      if ($item['page_callback'] == 'views_page') {
+      $block['subject'] = '<none>';
+      if (module_exists('addtoany')) {
+        $title = $item['title'];
+        if ($item['page_callback'] == 'views_page') {
           $view = views_get_page_view();
           $title = $view->get_title();
+        }
+        $block['content'] = addtoany_create_buttons(drupal_get_path_alias(), $title);
       }
-      $block['content'] = addtoany_create_buttons(drupal_get_path_alias(), $title);
-      $block['subject'] = '<none>';
       break;
   }
   return $block;
