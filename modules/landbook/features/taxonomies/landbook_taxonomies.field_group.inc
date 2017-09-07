@@ -788,7 +788,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Settings',
-    'weight' => '5',
+    'weight' => '4',
     'children' => array(
       0 => 'field_id',
       1 => 'field_view_dataset',
@@ -879,7 +879,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '3',
+    'weight' => '2',
     'children' => array(
       0 => 'group_landvoc',
     ),
