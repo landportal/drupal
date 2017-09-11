@@ -30,24 +30,81 @@ function landbook_menu() {
 }
 
 function landbook_menu_admin(&$items) {
-    // Admin section
-    $items['admin/config/landbook'] = array(
-        'title'             => 'Landbook',
-        'description'       => 'Configure the landbook',
-        'postition'         => 'right',
-        'weight'            => -4,
-        'page callback'	=> 'system_admin_menu_block_page',
-        'access arguments'  => array('administer site configuration'),
-        'file'              => 'system.admin.inc',
-        'file path'         => drupal_get_path('module', 'system'),
-    );
-    $items['admin/config/landbook/settings'] = array(
-        'title'             => 'Landbook settings',
-        'description'       => 'Base landbook configuration',
-        'page callback'	=> 'drupal_get_form',
-        'page arguments'	=> array('landbook_admin_settings'),
-        'access arguments'  => array('administer site configuration'),
-        'file'              => 'landbook.admin.inc',
-        'file path'         => drupal_get_path('module', 'landbook').'/includes'
-    );
+  // Admin section
+  $items['admin/config/landbook'] = array(
+    'title'             => 'Landbook',
+    'description'       => 'Configure the landbook',
+    'postition'         => 'right',
+    'weight'            => -4,
+    'page callback'	=> 'system_admin_menu_block_page',
+    'access arguments'  => array('administer site configuration'),
+    'file'              => 'system.admin.inc',
+    'file path'         => drupal_get_path('module', 'system'),
+  );
+  $items['admin/config/landbook/settings'] = array(
+    'title'             => 'Landbook settings',
+    'description'       => 'Base landbook configuration',
+    'page callback'	=> 'drupal_get_form',
+    'page arguments'	=> array('landbook_admin_settings'),
+    'access arguments'  => array('administer site configuration'),
+    'file'              => 'landbook.admin.inc',
+    'file path'         => drupal_get_path('module', 'landbook').'/includes'
+  );
+
+  // LB Content admin
+  $items['admin/content/landbook'] = array(
+    'title'             => 'Land Book',
+    'description'       => 'Land Book content admin',
+    'page arguments'	=> array('landdebate_admin_settings'),
+    'access arguments'  => array('administer taxonomy '),
+    'type'              => MENU_LOCAL_TASK,
+    'weight' => 10,
+  );
+  $items['admin/content/landbook/catalog/%'] = array(
+    'title' => 'Indicators',
+    'type' => MENU_LOCAL_TASK,
+    'access arguments' => array('administer taxonomy'),
+    'callback' => 'systems_view_data',
+    //'page arguments' => array(1),
+    'weight' => 12,
+  );
+  // Futur (soon) LB Datasets
+  /* $items['admin/content/landbook/catalogs'] = array( */
+  /*   'title' => 'Catalogs', */
+  /*   'type' => MENU_DEFAULT_LOCAL_TASK, */
+  /*   'access arguments' => array('administer taxonomy'), */
+  /*   'callback' => 'systems_view_data', */
+  /*   'weight' => 10, */
+  /* ); */
+
+  // Shortcut to add tax. term to LB -- BORKEN
+/*   $items['admin/content/landbook/catalogs/add'] = array( */
+/*     'title' => 'New catalog', */
+/*     'type' => MENU_LOCAL_ACTION, */
+/*     'access arguments' => array('administer taxonomy'), */
+/*     'page callback' => 'drupal_get_form', */
+/*     'page arguments' => array('taxonomy_form_vocabulary', array(), 'datasets'), */
+/* //    'callback' => 'systems_view_data', */
+/*     // args: http://landportal.ker/admin/structure/taxonomy/datasets/add */
+/* //    'weight' => 10, */
+/*   ); */
+/*   /\* $items['admin/content/landbook/datasets'] = array( *\/ */
+/*   /\*   'title' => 'Datasets', *\/ */
+/*   /\*   'type' => MENU_LOCAL_TASK, *\/ */
+/*   /\*   'access arguments' => array('administer content'), *\/ */
+/*   /\*   'callback' => 'systems_view_data', *\/ */
+/*   /\*   'weight' => 11, *\/ */
+/*   /\* ); *\/ */
+
+/*   $items['admin/content/landbook/indicators/add'] = array( */
+/*     'title' => 'New indicator', */
+/*     'type' => MENU_LOCAL_ACTION, */
+/*     'access arguments' => array('administer taxonomy'), */
+/*     'page callback' => 'drupal_get_form', */
+/*     'page arguments' => array('taxonomy_form_vocabulary', array('indicators')), */
+/* //    'callback' => 'systems_view_data', */
+/*     // args: http://landportal.ker/admin/structure/taxonomy/datasets/add */
+/* //    'weight' => 10, */
+/*   ); */
+/*     // args: http://landportal.ker/admin/structure/taxonomy/indicators/add */
 }
