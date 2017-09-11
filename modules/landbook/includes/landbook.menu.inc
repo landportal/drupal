@@ -56,7 +56,7 @@ function landbook_menu_admin(&$items) {
     'title'             => 'Land Book',
     'type'              => MENU_LOCAL_TASK,
     'description'       => 'Land Book content admin',
-    'access arguments'  => array('administer taxonomy '),
+    'access arguments'  => array('administer taxonomy'),
     'callback' => 'systems_view_data',
     'weight' => 10,
   );
