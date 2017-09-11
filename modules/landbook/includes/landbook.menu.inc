@@ -51,13 +51,13 @@ function landbook_menu_admin(&$items) {
     'file path'         => drupal_get_path('module', 'landbook').'/includes'
   );
 
-  // LB Content admin
+  // LB Content
   $items['admin/content/landbook'] = array(
     'title'             => 'Land Book',
-    'description'       => 'Land Book content admin',
-    'page arguments'	=> array('landdebate_admin_settings'),
-    'access arguments'  => array('administer taxonomy '),
     'type'              => MENU_LOCAL_TASK,
+    'description'       => 'Land Book content admin',
+    'access arguments'  => array('administer taxonomy '),
+    'callback' => 'systems_view_data',
     'weight' => 10,
   );
   $items['admin/content/landbook/catalog/%'] = array(
@@ -65,14 +65,13 @@ function landbook_menu_admin(&$items) {
     'type' => MENU_LOCAL_TASK,
     'access arguments' => array('administer taxonomy'),
     'callback' => 'systems_view_data',
-    //'page arguments' => array(1),
     'weight' => 12,
   );
   // Futur (soon) LB Datasets
-  /* $items['admin/content/landbook/catalogs'] = array( */
-  /*   'title' => 'Catalogs', */
-  /*   'type' => MENU_DEFAULT_LOCAL_TASK, */
-  /*   'access arguments' => array('administer taxonomy'), */
+  /* $items['admin/content/landbook/datasets'] = array( */
+  /*   'title' => 'Datasets', */
+  /*   'type' => MENU_LOCAL_TASK, */
+  /*   'access arguments' => array('administer content'), */
   /*   'callback' => 'systems_view_data', */
   /*   'weight' => 10, */
   /* ); */
@@ -84,18 +83,7 @@ function landbook_menu_admin(&$items) {
 /*     'access arguments' => array('administer taxonomy'), */
 /*     'page callback' => 'drupal_get_form', */
 /*     'page arguments' => array('taxonomy_form_vocabulary', array(), 'datasets'), */
-/* //    'callback' => 'systems_view_data', */
-/*     // args: http://landportal.ker/admin/structure/taxonomy/datasets/add */
-/* //    'weight' => 10, */
 /*   ); */
-/*   /\* $items['admin/content/landbook/datasets'] = array( *\/ */
-/*   /\*   'title' => 'Datasets', *\/ */
-/*   /\*   'type' => MENU_LOCAL_TASK, *\/ */
-/*   /\*   'access arguments' => array('administer content'), *\/ */
-/*   /\*   'callback' => 'systems_view_data', *\/ */
-/*   /\*   'weight' => 11, *\/ */
-/*   /\* ); *\/ */
-
 /*   $items['admin/content/landbook/indicators/add'] = array( */
 /*     'title' => 'New indicator', */
 /*     'type' => MENU_LOCAL_ACTION, */
