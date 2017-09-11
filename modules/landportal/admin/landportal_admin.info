@@ -9,6 +9,5 @@ dependencies[] = landportal_base
 dependencies[] = rules
 dependencies[] = views
 dependencies[] = views_ui
-dependencies[] = views_taxonomy_edge
 files[] = landportal_admin.module
 files[] = landportal_admin.views_default.inc
