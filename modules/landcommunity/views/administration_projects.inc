@@ -361,19 +361,26 @@ $handler->display->display_options['fields']['field_value']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
 $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
 $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
-$handler->display->display_options['fields']['field_link']['label'] = 'Source';
+$handler->display->display_options['fields']['field_link']['label'] = 'Websites of the project';
 $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
-$handler->display->display_options['fields']['field_link']['type'] = 'link_label';
 $handler->display->display_options['fields']['field_link']['settings'] = array(
   'strip_www' => 0,
 );
 $handler->display->display_options['fields']['field_link']['delta_offset'] = '0';
-/* Field: Content: Associated staff */
+/* Field: Content: Data Provider */
+$handler->display->display_options['fields']['field_doc_provider']['id'] = 'field_doc_provider';
+$handler->display->display_options['fields']['field_doc_provider']['table'] = 'field_data_field_doc_provider';
+$handler->display->display_options['fields']['field_doc_provider']['field'] = 'field_doc_provider';
+$handler->display->display_options['fields']['field_doc_provider']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_doc_provider']['settings'] = array(
+  'bypass_access' => 0,
+  'link' => 1,
+);
+/* Field: Content: Members */
 $handler->display->display_options['fields']['field_user']['id'] = 'field_user';
 $handler->display->display_options['fields']['field_user']['table'] = 'field_data_field_user';
 $handler->display->display_options['fields']['field_user']['field'] = 'field_user';
-$handler->display->display_options['fields']['field_user']['label'] = 'Members';
 $handler->display->display_options['fields']['field_user']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_user']['settings'] = array(
   'bypass_access' => 0,
@@ -391,12 +398,12 @@ Website: [field_link] <br />
 Project value: [field_value] <br />
 Extension: [field_date] <br />
 Contact information: [field_contact] <br />
-Associated staff: [field_user] <br />';
-/* Field: Content: Organizations related */
+Associated staff: [field_user] <br />
+Data Provider: [field_doc_provider]';
+/* Field: Content: Affiliated organization */
 $handler->display->display_options['fields']['field_related_organization']['id'] = 'field_related_organization';
 $handler->display->display_options['fields']['field_related_organization']['table'] = 'field_data_field_related_organization';
 $handler->display->display_options['fields']['field_related_organization']['field'] = 'field_related_organization';
-$handler->display->display_options['fields']['field_related_organization']['label'] = 'Affiliated organization';
 $handler->display->display_options['fields']['field_related_organization']['settings'] = array(
   'add' => '',
   'edit' => 'Edit',
