@@ -48,6 +48,7 @@ projects:
   - features
   - features_extra
   - feeds
+  - feeds_debug_tamper
   - feeds_et
   - feeds_jsonpath_parser
   - feeds_oai_pmh
@@ -56,6 +57,7 @@ projects:
   - feeds_tamper_string2id
   - feeds_xpathparser
   - field_collection
+  - field_collection_feeds
   - field_collection_fieldset
   - field_group
   - field_tools
