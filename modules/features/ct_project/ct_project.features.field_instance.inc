@@ -298,7 +298,7 @@ function ct_project_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 118,
+      'weight' => 7,
     ),
   );
 
@@ -832,7 +832,9 @@ function ct_project_field_default_field_instances() {
     'bundle' => 'project',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Valuation of the project (in Euros, Dollars, Pounds...)',
+    'description' => 'Valuation of the project (in Euros, Dollars, Pounds...). 
+Please use the format Currency (with 3 characters) Space Value (without separators).
+For example: "EUR 1000000" or "USD 549785"',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -913,7 +915,9 @@ function ct_project_field_default_field_instances() {
   t('Related concepts');
   t('Starting and end date of the project');
   t('Themes');
-  t('Valuation of the project (in Euros, Dollars, Pounds...)');
+  t('Valuation of the project (in Euros, Dollars, Pounds...). 
+Please use the format Currency (with 3 characters) Space Value (without separators).
+For example: "EUR 1000000" or "USD 549785"');
   t('Websites of the project');
 
   return $field_instances;

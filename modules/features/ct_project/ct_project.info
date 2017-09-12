@@ -15,7 +15,6 @@ dependencies[] = image
 dependencies[] = landlibrary_resource
 dependencies[] = landportal_base
 dependencies[] = link
-dependencies[] = node
 dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = text
