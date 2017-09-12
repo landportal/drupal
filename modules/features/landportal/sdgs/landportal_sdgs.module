@@ -19,6 +19,15 @@ function landportal_sdgs_preprocess_views_bootstrap_accordion_plugin_style(&$var
   }
 }
 
-function landportal_sdgs_XXXX() {
-  //
+/* function landportal_sdgs_XXXX() { */
+/*   // */
+/* } */
+
+// Force view related block order
+function landportal_sdgs_node_presave($node) {
+  if ($node->type == 'sdgi' && array_key_exists(LANGUAGE_NONE, $node->field_related_blocks)) {
+    if (is_array($node->field_related_blocks[LANGUAGE_NONE]) && count($node->field_related_blocks[LANGUAGE_NONE]) > 1) {
+      $node->field_related_blocks[LANGUAGE_NONE] = array_reverse($node->field_related_blocks[LANGUAGE_NONE]);
+    }
+  }
 }
