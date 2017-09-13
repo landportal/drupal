@@ -106,7 +106,7 @@ function landbook_view_coda_library() {
         'title' => 'view-coda pie',
         'version' => '0.0.1',
         'js' => array(
-            $LBVIS_PATH . '/js/lbvis.pie.js' => array(),
+            $LBVIS_PATH . '/js/lbvis.pie3.js' => array(),
         ),
         'dependencies' => array(
             array('landbook_view_coda', 'view-coda'),

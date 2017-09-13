@@ -27,7 +27,7 @@ function lbvc_plugin_map_formatter($VCC) {
   $value = t('Loading map visualization');
   $js = $VCC['jsid'] . ' = new lbvisMap(' . $params . '); ' . $VCC['jsid'] . '.init();';
   // DEBUG
-  $js .= 'console.log(' . $VCC['jsid'] . '.debug());';
+  $js .= $VCC['jsid'] . '.debug();';
 
   return array(
     '#type' => 'html_tag',

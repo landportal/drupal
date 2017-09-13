@@ -19,9 +19,9 @@ function lbvc_plugin_table_params($VCC) {
 }
 
 function lbvc_plugin_table_formatter($VCC) {
-  if (module_exists('devel')) {
-    dpm($VCC, 'table field');
-  }
+  /* if (module_exists('devel')) { */
+  /*   dpm($VCC, 'table field'); */
+  /* } */
   $params = lbvc_plugin_table_params($VCC);
 
   $value = '<table class="table"><thead><tr>
@@ -32,7 +32,8 @@ function lbvc_plugin_table_formatter($VCC) {
            </tr></thead><tbody></tbody></table>';
   $js = $VCC['jsid'] . ' = new lbvisTable(' . $params . '); ' . $VCC['jsid'] . '.init();';
   // DEBUG
-  $js .= 'console.log(' . $VCC['jsid'] . '.debug());';
+  if (strpos($VCC['vcc'], 'debug'))
+    $js .= $VCC['jsid'] . '.debug();';
 
   return array(
     '#type' => 'html_tag',

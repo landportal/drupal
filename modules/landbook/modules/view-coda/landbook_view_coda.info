@@ -2,7 +2,7 @@ name = Landbook View Coda
 description = Provide js-view-coda interface to Drupal
 core = 7.x
 package = Landbook
-version = 7.x-2.3-beta4
+version = 7.x-2.3-sp1
 dependencies[] = block
 dependencies[] = blockreference
 dependencies[] = ctools
@@ -12,6 +12,7 @@ dependencies[] = field_collection
 dependencies[] = field_collection_fieldset
 dependencies[] = landbook_taxonomies
 dependencies[] = landportal_base
+dependencies[] = libraries
 dependencies[] = options
 dependencies[] = text
 explanation = Field type(s) in use - see <a href="/admin/reports/fields">Field list</a>

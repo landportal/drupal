@@ -8,14 +8,19 @@
  */
 
 function lbvc_plugin_pie_params($VCC) {
-  $params = '';
-  $up = $VCC['vcc'];
-  if ($up && $up[0] == '{' && $up[count($up) - 1] == '}') {
-    $params = substr($up, 1, -1) . ', ';
+  $params = $VCC['vcc'];
+//  dpm($up, 'prams ' . $up[strlen($up) - 1]);
+  if ($params && $params[0] == '{' && $params[strlen($params) - 1] == '}') {
+    $params = substr($params, 1, -1) . ', ';
   }
-  $params .= '"indicators": {"main": "' . $VCC['indicators'][0] . '"'
-    .   ', "chart": ['.$VCC['indicators'].']}' // Inside params.indicators
-    . ', "target": "#' . $VCC['vid'] . '", "vis": LBV';
+
+//  dpm($VCC, 'pie params');
+  //$params .= '"indicators": {"main": "' . $VCC['indicators'][0] . '", "chart": ['.$VCC['indicators'].']}';
+  $params .= '"indicators": ["'.join($VCC['indicators'], '", "').'"]';
+  $params .= ', iso3: "PER"';
+  //$params .= ', options: '. json_encode($VCC['options']);
+  $params .= ', cache: '. json_encode($VCC['fields']);
+  $params .= ', "target": "#' . $VCC['vid'] . '", "vis": LBV';
   return '{' . $params . '}';
 }
 
@@ -36,9 +41,9 @@ function lbvc_plugin_pie_formatter($VCC) {
     - colors: [] // should match indicators.chart or be generated
   */
 
-  $js = $VCC['jsid'] . ' = new lbvisPie(' . $params . '); ' . $VCC['jsid'] . '.init();';
+  $js = $VCC['jsid'] . ' = new lbvisPie3(' . $params . '); ' . $VCC['jsid'] . '.init();';
   // DEBUG
-  $js .= 'console.log(' . $VCC['jsid'] . '.debug());';
+  $js .= $VCC['jsid'] . '.debug();';
 
   return array(
     '#type' => 'html_tag',

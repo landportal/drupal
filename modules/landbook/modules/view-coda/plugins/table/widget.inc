@@ -9,13 +9,15 @@
 
 
 function lbvc_plugin_table_widget_form($item) {
-  dpm($item, 'table item');
+//  dpm($item, 'table item');
   // @@@ explode option s
   $opts = array(
-    '#title' => t('Map options'),
+    '#title' => t('TABLE options'),
     '#type' => 'checkboxes',
-    '#options' => drupal_map_assoc(
-      array(t('nav'), t('zoom'), t('legend'))
+    '#options' => array(
+      'year' => 'Show years boundaries',
+      'coverage' =>  'Display coverage',
+      'country' => 'Show country',
     )
   );
   return $opts;
