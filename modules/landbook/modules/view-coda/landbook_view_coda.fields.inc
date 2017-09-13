@@ -255,7 +255,9 @@ function landbook_view_coda_field_widget_form(&$form, &$form_state, $field, $ins
     include_once $module_path . 'plugins/' . $value_type . '/widget.inc';
     $opts_fx = 'lbvc_plugin_' . $value_type . '_widget_form';
     if (function_exists($opts_fx)) {
+      // TODO / fix: Should be fieldgroup+ delta ?
       $element += $opts_fx($items[$delta]);
+      $widget += array('#disabled' => true);
     }
 
     // DEBUG
@@ -265,6 +267,8 @@ function landbook_view_coda_field_widget_form(&$form, &$form_state, $field, $ins
       '#default_value' => $value,
       '#element_validate' => array('landbook_view_coda_config_validate'),
       '#delta' => $delta,
+      '#weight' => 8,
+
       /* '#attached' => array( */
       /*   'js' => array(array( */
       /*     'type' => 'inline', */
