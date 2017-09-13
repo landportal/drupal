@@ -14,7 +14,7 @@ function lbvc_plugin_pie_options() {
 
 
 function lbvc_plugin_pie_widget_form($item) {
-  dpm($item, 'pie chart');
+  if (module_exists('devel')) dpm($item, 'pie chart');
   $v = json_decode($item['vcc']);
   //dpm($v, 'args');
 
