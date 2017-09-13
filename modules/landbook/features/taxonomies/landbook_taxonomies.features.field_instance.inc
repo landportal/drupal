@@ -738,15 +738,12 @@ function landbook_taxonomies_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'field_collection',
+        'module' => 'landbook_view_coda',
         'settings' => array(
-          'add' => '',
-          'delete' => '',
-          'description' => 1,
-          'edit' => '',
-          'translate' => 'Translate',
+          'class' => '',
+          'view_mode' => 'full',
         ),
-        'type' => 'field_collection_list',
+        'type' => 'lbvc_block',
         'weight' => 5,
       ),
       'search_index' => array(
@@ -771,16 +768,10 @@ function landbook_taxonomies_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'field_collection_fieldset',
-      'settings' => array(
-        'collapsed' => 1,
-        'field_as_label' => '',
-        'last_item_collapsed' => 1,
-        'new_item_open' => 1,
-        'replace_label' => 0,
-      ),
-      'type' => 'field_collection_fieldset',
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
       'weight' => 5,
     ),
   );

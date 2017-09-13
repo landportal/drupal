@@ -38,7 +38,7 @@ function landbook_taxonomies_taxonomy_default_vocabularies() {
       'name' => 'Indicators',
       'machine_name' => 'indicators',
       'description' => 'Landbook Indicators',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 2,
       'language' => 'und',
