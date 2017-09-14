@@ -381,10 +381,9 @@ function ct_news_field_default_field_instances() {
     'description' => 'Select the language of the original article that is reposted',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'i18n_taxonomy',
+        'label' => 'hidden',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_plain',
+        'type' => 'hidden',
         'weight' => 19,
       ),
       'listing' => array(
