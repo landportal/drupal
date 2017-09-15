@@ -6,6 +6,17 @@
  */
 
 
+/** LB view-coda fields
+ * @@@Add default map to indicators with non coded value
+ */
+function landbook_view_coda_update_7206() {
+  // TODO
+  // update all indicators with some default visualization (with fields)
+  // ??? update all datasets with table vis. Only if nb indicators < X?
+  die(); 
+  return false;
+}
+
 /** LPBS Release
  * Vis blocks
  */

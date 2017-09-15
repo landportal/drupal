@@ -8,14 +8,6 @@
  * Drupal refactoring: Jules <jules@ker.bz>
  */
 
-$BOOK_PATH = drupal_get_path('module', 'landbook');
-require_once($BOOK_PATH . '/includes/landbook.block.inc');
-require_once($BOOK_PATH . '/includes/landbook.context.inc');
-require_once($BOOK_PATH . '/includes/landbook.menu.inc');
-require_once($BOOK_PATH . '/includes/landbook.theme.inc');
-require_once($BOOK_PATH . '/includes/landbook.views_default.inc');
-
-
 /**
  * Implements hook_ctools_plugin_api().
  */
@@ -25,10 +17,72 @@ function landbook_ctools_plugin_api($module = NULL, $api = NULL) {
   }
 }
 
+/**
+ * Implements hook_context_default_contexts().
+ * Automatically load all contexts found in MODULE/contexts/*.inc
+ */
+function landbook_context_default_contexts() {
+  $export = array();
+  $path = drupal_get_path('module', 'landbook').'/contexts';
+  $files = file_scan_directory($path, '/\.inc$/');
+  foreach ($files as $filepath => $file) {
+    include_once $filepath;
+    $export[$context->name] = $context;
+  }
+  return $export;
+}
+
+/**
+ * Land Book Views
+ */
 function landbook_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
+/**
+ * Implements hook_views_default_views().
+ * Automatically load all views found in MODULE/views/*.inc
+ */
+function landbook_views_default_views() {
+  $export = array();
+  $path = drupal_get_path('module', 'landbook').'/views';
+  $files = file_scan_directory($path, '/\.inc$/');
+  foreach ($files as $filepath => $file) {
+    include_once $filepath;
+    $export[$view->name] = $view;
+  }
+  return $export;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function landbook_menu() {
+  $items = array();
+  // Provide a basic Landbook Drupal main menu (main-menu) link
+  $items['book'] = array(
+    'title'           => 'Land Book',
+    'menu_name'       => 'main-menu',
+    'type'            => MENU_NORMAL_ITEM,
+    'access callback' => TRUE,
+    'page callback'   => 'drupal_goto',
+    'page arguments'  => array('book'),
+  );
+  $translatables['book'][] = t('Land Book');
+  return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function landbook_theme($existing, $type, $theme, $path) {
+    $templates = drupal_find_theme_templates($existing, '.tpl.php', $path);
+    return $templates;
+}
+
+/**
+ * Implements hook_help().
+ */
 function landbook_help($path, $arg) {
   switch ($path) {
   case "admin/help#landbook":
@@ -39,7 +93,12 @@ function landbook_help($path, $arg) {
   }
 }
 
-// TODO: Should be replaced by landportal_taxonomy_country_term_by_iso
+
+
+//
+// TODO: Cleanup
+//
+// Should be replaced by landportal_taxonomy_country_term_by_iso(?)
 //  update functions using term->tid
 function landbook_get_region_iso($iso){
   $tid = db_select('field_data_field_iso3', 't')
