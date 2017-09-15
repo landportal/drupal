@@ -1550,7 +1550,7 @@ function landbook_taxonomies_field_default_field_instances() {
     'bundle' => 'indicators',
     'default_value' => array(
       0 => array(
-        'moddelta' => 'views:landbook_indicators-in_dataset',
+        'moddelta' => 'views:landbook_indicators-all',
       ),
     ),
     'deleted' => 0,
