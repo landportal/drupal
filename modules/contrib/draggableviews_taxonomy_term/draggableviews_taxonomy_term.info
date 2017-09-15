@@ -1,0 +1,8 @@
+name = Draggableviews Taxonomy Term
+description = Enables taxonomy term support in draggable views
+dependencies[] = draggableviews
+package = Views
+core = 7.x
+
+files[] = handlers/draggableviews_taxonomy_term_handler_taxonomy_term.inc
+files[] = handlers/draggableviews_taxonomy_term_hierarchy_handler_taxonomy_term.inc
