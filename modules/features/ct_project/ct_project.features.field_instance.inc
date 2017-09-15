@@ -217,7 +217,7 @@ function ct_project_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date',
-    'label' => 'Extension',
+    'label' => 'Project duration',
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
@@ -429,7 +429,7 @@ function ct_project_field_default_field_instances() {
   $field_instances['node-project-field_image'] = array(
     'bundle' => 'project',
     'deleted' => 0,
-    'description' => 'A medium sized image for the project. Make sure you comply to its policies / guidelines when uploading it.',
+    'description' => 'A medium sized logo or image for the project. Make sure you comply to its policies / guidelines when uploading it.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -450,7 +450,7 @@ function ct_project_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_image',
-    'label' => 'Logo',
+    'label' => 'Logo or image',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -894,7 +894,7 @@ For example: "EUR 1000000" or "USD 549785"',
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('A medium sized image for the project. Make sure you comply to its policies / guidelines when uploading it.');
+  t('A medium sized logo or image for the project. Make sure you comply to its policies / guidelines when uploading it.');
   t('Acronym');
   t('Associated staff');
   t('Associated staff with this project');
@@ -902,15 +902,15 @@ For example: "EUR 1000000" or "USD 549785"',
   t('Contact information');
   t('Data Provider');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
-  t('Extension');
   t('Focal point, email or telephone for contacting');
   t('Geographical focus');
   t('ID');
   t('List of implementing organizations, funded organizations, other project partners');
   t('List of websites of the project (main site, LinkedIn, twitter, facebook...)');
-  t('Logo');
+  t('Logo or image');
   t('Organizations related');
   t('Overarching categories');
+  t('Project duration');
   t('Project value');
   t('Related concepts');
   t('Starting and end date of the project');
