@@ -130,7 +130,7 @@ $handler->display->display_options['fields']['name_field_1']['field'] = 'name_fi
 $handler->display->display_options['fields']['name_field_1']['relationship'] = 'field_dataset_tid';
 $handler->display->display_options['fields']['name_field_1']['label'] = 'Catalog';
 $handler->display->display_options['fields']['name_field_1']['alter']['make_link'] = TRUE;
-$handler->display->display_options['fields']['name_field_1']['alter']['path'] = 'admin/content/landbook/catalog/[tid_2]';
+$handler->display->display_options['fields']['name_field_1']['alter']['path'] = 'admin/content/landbook/catalogs/[tid_2]';
 $handler->display->display_options['fields']['name_field_1']['link_to_entity'] = 0;
 /* Field: Taxonomy term: Name */
 $handler->display->display_options['fields']['name_field']['id'] = 'name_field';
@@ -379,5 +379,5 @@ $handler->display->display_options['arguments']['tid']['default_argument_type'] 
 $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
 $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
 $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-$handler->display->display_options['path'] = 'admin/content/landbook/catalog/%';
+$handler->display->display_options['path'] = 'admin/content/landbook/catalogs/%';
 

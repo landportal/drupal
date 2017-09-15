@@ -68,7 +68,7 @@ $handler->display->display_options['fields']['name_field']['field'] = 'name_fiel
 $handler->display->display_options['fields']['name_field']['label'] = 'Catalog';
 $handler->display->display_options['fields']['name_field']['alter']['alter_text'] = TRUE;
 $handler->display->display_options['fields']['name_field']['alter']['make_link'] = TRUE;
-$handler->display->display_options['fields']['name_field']['alter']['path'] = 'admin/content/landbook/catalog/[tid]';
+$handler->display->display_options['fields']['name_field']['alter']['path'] = 'admin/content/landbook/catalogs/[tid]';
 $handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
 /* Field: Field: ID */
 $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
