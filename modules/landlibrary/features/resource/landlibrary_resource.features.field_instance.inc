@@ -1186,7 +1186,7 @@ function landlibrary_resource_field_default_field_instances() {
     'description' => 'The organization or aggregator that makes the resource available. Leave this field empty unless you have a specific agreement with the Land Portal Foundation to add many resources to the Library.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
           'links' => 0,

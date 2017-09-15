@@ -78,6 +78,38 @@ function landlibrary_resource_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_data_provider|node|landlibrary_resource|default';
+  $field_group->group_name = 'group_data_provider';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'landlibrary_resource';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_right';
+  $field_group->data = array(
+    'label' => 'Data provider',
+    'weight' => '23',
+    'children' => array(
+      0 => 'field_doc_provider',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Data provider',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-data-provider',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_data_provider|node|landlibrary_resource|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_deprecated|node|landlibrary_resource|form';
   $field_group->group_name = 'group_deprecated';
   $field_group->entity_type = 'node';
@@ -832,11 +864,11 @@ function landlibrary_resource_field_group_info() {
     'label' => '',
     'weight' => '3',
     'children' => array(
-      0 => 'field_doc_provider',
-      1 => 'group_editors_pub',
-      2 => 'group_geo_focus',
-      3 => 'group_meta',
-      4 => 'group_voc',
+      0 => 'group_editors_pub',
+      1 => 'group_geo_focus',
+      2 => 'group_meta',
+      3 => 'group_voc',
+      4 => 'group_data_provider',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1092,6 +1124,7 @@ function landlibrary_resource_field_group_info() {
   t('Access to the resource');
   t('Author(s) and Publisher(s)');
   t('Authors and Publishers');
+  t('Data provider');
   t('Deprecated');
   t('Details');
   t('Geographical Focus');
