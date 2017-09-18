@@ -101,7 +101,7 @@ $handler->display->display_options['filters']['type_1']['value'] = array(
 /* Display: Related */
 $handler = $view->new_display('block', 'Related', 'related');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Land Portal related content';
+$handler->display->display_options['title'] = 'News and Blogs';
 $handler->display->display_options['display_description'] = 'SDGi related content';
 $handler->display->display_options['defaults']['use_ajax'] = FALSE;
 $handler->display->display_options['use_ajax'] = TRUE;
@@ -157,7 +157,7 @@ $handler->display->display_options['filters']['type_1']['value'] = array(
 /* Display: Library */
 $handler = $view->new_display('block', 'Library', 'related_library');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Land Library content';
+$handler->display->display_options['title'] = 'Library Resources';
 $handler->display->display_options['display_description'] = 'SDGi library content';
 $handler->display->display_options['defaults']['use_ajax'] = FALSE;
 $handler->display->display_options['use_ajax'] = TRUE;
