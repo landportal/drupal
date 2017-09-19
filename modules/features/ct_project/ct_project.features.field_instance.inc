@@ -367,10 +367,14 @@ function ct_project_field_default_field_instances() {
         'weight' => 15,
       ),
       'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => 0,
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'inline',
@@ -626,10 +630,14 @@ function ct_project_field_default_field_instances() {
         'weight' => 16,
       ),
       'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => 0,
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'inline',
