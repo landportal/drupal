@@ -117,6 +117,8 @@ class draggableviews_taxonomy_term_handler_taxonomy_term extends draggableviews_
       if ($term->weight != $item['weight'] || $term->parent != $item['parent']) {
         $term->weight = $item['weight'];
         $term->parent = $item['parent'];
+        // Set depth for views_term_hierarchy_weight_field
+        $term->hdepth = $item['depth'];
         taxonomy_term_save($term);
       }
     }
