@@ -153,6 +153,7 @@ function landbook_taxonomies_field_group_info() {
       2 => 'field_highlow',
       3 => 'field_view_indicators',
       4 => 'field_observations',
+      5 => 'field_related_aside',
     ),
     'format_type' => 'div',
     'format_settings' => array(
