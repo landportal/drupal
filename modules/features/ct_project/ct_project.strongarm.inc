@@ -93,7 +93,7 @@ function ct_project_strongarm() {
         'custom_settings' => FALSE,
       ),
       'teaser' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -120,28 +120,36 @@ function ct_project_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '11',
+          'weight' => '204',
         ),
         'locations' => array(
-          'weight' => '8',
+          'weight' => '201',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '203',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '9',
+          'weight' => '202',
         ),
         'xmlsitemap' => array(
-          'weight' => '7',
+          'weight' => '200',
         ),
       ),
       'display' => array(
         'language' => array(
           'default' => array(
             'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '0',
             'visible' => FALSE,
           ),
         ),
