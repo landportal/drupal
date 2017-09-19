@@ -168,6 +168,15 @@ $handler->display->display_options['fields']['field_related_topics']['field'] = 
 $handler->display->display_options['fields']['field_related_topics']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_related_topics']['type'] = 'i18n_taxonomy_term_reference_plain';
 $handler->display->display_options['fields']['field_related_topics']['delta_offset'] = '0';
+/* Field: Taxonomy term: Description */
+$handler->display->display_options['fields']['description_field']['id'] = 'description_field';
+$handler->display->display_options['fields']['description_field']['table'] = 'field_data_description_field';
+$handler->display->display_options['fields']['description_field']['field'] = 'description_field';
+$handler->display->display_options['fields']['description_field']['type'] = 'text_summary_or_trimmed';
+$handler->display->display_options['fields']['description_field']['settings'] = array(
+  'trim_length' => '240',
+);
+$handler->display->display_options['fields']['description_field']['link_to_entity'] = 0;
 /* Field: Global: Custom text */
 $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
 $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -176,6 +185,17 @@ $handler->display->display_options['fields']['nothing']['label'] = 'Tags';
 $handler->display->display_options['fields']['nothing']['alter']['text'] = 'OA: [field_related_domains]<br/>
 TH: [field_related_themes]<br/>
 LV: [field_related_topics]';
+/* Field: Taxonomy term: Updated date */
+$handler->display->display_options['fields']['changed']['id'] = 'changed';
+$handler->display->display_options['fields']['changed']['table'] = 'term_authoring_info';
+$handler->display->display_options['fields']['changed']['field'] = 'changed';
+$handler->display->display_options['fields']['changed']['label'] = 'Updated';
+$handler->display->display_options['fields']['changed']['alter']['max_length'] = '10';
+$handler->display->display_options['fields']['changed']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['changed']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['changed']['alter']['trim'] = TRUE;
+$handler->display->display_options['fields']['changed']['date_format'] = 'short';
+$handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
 /* Field: Taxonomy term: Term edit link */
 $handler->display->display_options['fields']['edit_term']['id'] = 'edit_term';
 $handler->display->display_options['fields']['edit_term']['table'] = 'taxonomy_term_data';
@@ -231,6 +251,88 @@ $handler->display->display_options['filters']['field_id_value']['expose']['remem
 /* Display: Indicators */
 $handler = $view->new_display('page', 'Indicators', 'page');
 $handler->display->display_options['display_description'] = 'All LB indicators';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Taxonomy vocabulary: Machine name */
+$handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+$handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['value'] = array(
+  'indicators' => 'indicators',
+);
+$handler->display->display_options['filters']['machine_name']['group'] = 1;
+/* Filter criterion: Taxonomy term: Name (name_field) */
+$handler->display->display_options['filters']['name_field_value']['id'] = 'name_field_value';
+$handler->display->display_options['filters']['name_field_value']['table'] = 'field_data_name_field';
+$handler->display->display_options['filters']['name_field_value']['field'] = 'name_field_value';
+$handler->display->display_options['filters']['name_field_value']['relationship'] = 'field_dataset_tid';
+$handler->display->display_options['filters']['name_field_value']['operator'] = 'contains';
+$handler->display->display_options['filters']['name_field_value']['group'] = 1;
+$handler->display->display_options['filters']['name_field_value']['exposed'] = TRUE;
+$handler->display->display_options['filters']['name_field_value']['expose']['operator_id'] = 'name_field_value_op';
+$handler->display->display_options['filters']['name_field_value']['expose']['label'] = 'Catalog';
+$handler->display->display_options['filters']['name_field_value']['expose']['operator'] = 'name_field_value_op';
+$handler->display->display_options['filters']['name_field_value']['expose']['identifier'] = 'name_field_value';
+$handler->display->display_options['filters']['name_field_value']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+/* Filter criterion: Taxonomy term: Name */
+$handler->display->display_options['filters']['name']['id'] = 'name';
+$handler->display->display_options['filters']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['filters']['name']['field'] = 'name';
+$handler->display->display_options['filters']['name']['operator'] = 'contains';
+$handler->display->display_options['filters']['name']['group'] = 1;
+$handler->display->display_options['filters']['name']['exposed'] = TRUE;
+$handler->display->display_options['filters']['name']['expose']['operator_id'] = 'name_op';
+$handler->display->display_options['filters']['name']['expose']['label'] = 'Indicator';
+$handler->display->display_options['filters']['name']['expose']['operator'] = 'name_op';
+$handler->display->display_options['filters']['name']['expose']['identifier'] = 'name';
+$handler->display->display_options['filters']['name']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+/* Filter criterion: Field: ID (field_id) */
+$handler->display->display_options['filters']['field_id_value']['id'] = 'field_id_value';
+$handler->display->display_options['filters']['field_id_value']['table'] = 'field_data_field_id';
+$handler->display->display_options['filters']['field_id_value']['field'] = 'field_id_value';
+$handler->display->display_options['filters']['field_id_value']['operator'] = 'contains';
+$handler->display->display_options['filters']['field_id_value']['group'] = 1;
+$handler->display->display_options['filters']['field_id_value']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_id_value']['expose']['operator_id'] = 'field_id_value_op';
+$handler->display->display_options['filters']['field_id_value']['expose']['label'] = 'ID';
+$handler->display->display_options['filters']['field_id_value']['expose']['operator'] = 'field_id_value_op';
+$handler->display->display_options['filters']['field_id_value']['expose']['identifier'] = 'field_id_value';
+$handler->display->display_options['filters']['field_id_value']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+/* Filter criterion: Taxonomy term: Measurement unit (field_unit) */
+$handler->display->display_options['filters']['field_unit_value']['id'] = 'field_unit_value';
+$handler->display->display_options['filters']['field_unit_value']['table'] = 'field_data_field_unit';
+$handler->display->display_options['filters']['field_unit_value']['field'] = 'field_unit_value';
+$handler->display->display_options['filters']['field_unit_value']['operator'] = 'contains';
+$handler->display->display_options['filters']['field_unit_value']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_unit_value']['expose']['operator_id'] = 'field_unit_value_op';
+$handler->display->display_options['filters']['field_unit_value']['expose']['label'] = 'Unit';
+$handler->display->display_options['filters']['field_unit_value']['expose']['operator'] = 'field_unit_value_op';
+$handler->display->display_options['filters']['field_unit_value']['expose']['identifier'] = 'field_unit_value';
+$handler->display->display_options['filters']['field_unit_value']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
 $handler->display->display_options['path'] = 'admin/content/landbook/indicators';
 $handler->display->display_options['menu']['type'] = 'tab';
 $handler->display->display_options['menu']['title'] = 'Indicators';
@@ -340,6 +442,17 @@ $handler->display->display_options['fields']['nothing']['label'] = 'Tags';
 $handler->display->display_options['fields']['nothing']['alter']['text'] = 'OA: [field_related_domains]<br/>
 TH: [field_related_themes]<br/>
 LV: [field_related_topics]';
+/* Field: Taxonomy term: Updated date */
+$handler->display->display_options['fields']['changed']['id'] = 'changed';
+$handler->display->display_options['fields']['changed']['table'] = 'term_authoring_info';
+$handler->display->display_options['fields']['changed']['field'] = 'changed';
+$handler->display->display_options['fields']['changed']['label'] = 'Updated';
+$handler->display->display_options['fields']['changed']['alter']['max_length'] = '10';
+$handler->display->display_options['fields']['changed']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['changed']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['changed']['alter']['trim'] = TRUE;
+$handler->display->display_options['fields']['changed']['date_format'] = 'short';
+$handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
 /* Field: Taxonomy term: Term edit link */
 $handler->display->display_options['fields']['edit_term']['id'] = 'edit_term';
 $handler->display->display_options['fields']['edit_term']['table'] = 'taxonomy_term_data';
@@ -358,16 +471,16 @@ $handler->display->display_options['fields']['draggableviews']['draggableviews']
 $handler->display->display_options['fields']['draggableviews']['draggableviews']['hierarchy_handler'] = 'draggableviews_taxonomy_term_hierarchy_handler_taxonomy_term';
 $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
 $handler->display->display_options['defaults']['sorts'] = FALSE;
-/* Sort criterion: Taxonomy term: Weight */
-$handler->display->display_options['sorts']['weight']['id'] = 'weight';
-$handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['sorts']['weight']['field'] = 'weight';
 /* Sort criterion: Draggableviews: Weight */
 $handler->display->display_options['sorts']['weight_1']['id'] = 'weight_1';
 $handler->display->display_options['sorts']['weight_1']['table'] = 'draggableviews_structure';
 $handler->display->display_options['sorts']['weight_1']['field'] = 'weight';
 $handler->display->display_options['sorts']['weight_1']['draggableviews_setting_view'] = 'lbadm_indicators:system_1';
 $handler->display->display_options['sorts']['weight_1']['draggableviews_setting_new_items_bottom_list'] = 1;
+/* Sort criterion: Taxonomy term: Weight */
+$handler->display->display_options['sorts']['weight']['id'] = 'weight';
+$handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['weight']['field'] = 'weight';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';

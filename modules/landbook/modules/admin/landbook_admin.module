@@ -84,14 +84,44 @@ function landbook_admin_menu() {
     'callback'          => 'systems_view_data',
     'weight'            => 10,
   );
-  // Provided by views/lbadm_indicators.inc
-  $items['admin/content/landbook/catalogs/%'] = array(
-    'title'             => '',
-    'type'              => MENU_LOCAL_TASK,
+
+  $items['admin/content/landbook/catalogs/add'] = array(
+    'title'             => 'Add a catalog',
+    'type'              => MENU_LOCAL_ACTION,
     'access arguments'  => array('administer taxonomy'),
     'callback'          => 'systems_view_data',
     'weight'            => 11,
   );
+
+  $items['admin/content/landbook/catalogs/publish'] = array(
+    'title'             => 'Publish a dataset',
+    'type'              => MENU_LOCAL_ACTION,
+    'access arguments'  => array('administer taxonomy'),
+    'callback'          => 'systems_view_data',
+    'weight'            => 11,
+  );
+
+  // Provided by views/lbadm_indicators.inc
+  $items['admin/content/landbook/catalogs/%taxonomy_term'] = array(
+    'title'             => '',
+    'type'              => MENU_LOCAL_TASK,
+    'access arguments'  => array('administer taxonomy'),
+    'callback'          => 'systems_view_data',
+    'page arguments' => array(2),
+    'weight'            => 11,
+  );
+
+  $items['admin/content/landbook/catalogs/%taxonomy_term/addind'] = array(
+    'title'             => 'Add an indicator',
+    'page callback'     => 'drupal_get_form',
+    'page arguments'    => array('taxonomy_form_term', array(), 3),
+    'access arguments'  => array('administer taxonomy'),
+    'type'              => MENU_LOCAL_ACTION,
+    //'file'              => $_SERVER['DOCUMENT_ROOT'] . '/modules/taxonomy/taxonomy.admin.inc',
+//    'callback'          => 'landbook_admin_add_ind',
+//    'weight'            => 11,
+  );
+
   /* $items['admin/content/landbook/indicators'] = array( */
   /*   'title'             => 'Indicators', */
   /*   'type'              => MENU_, */
@@ -100,4 +130,10 @@ function landbook_admin_menu() {
   /*   'weight'            => 10, */
   /* ); */
   return $items;
+}
+
+function landbook_admin_add_ind($cid, $args) {
+  drupal_set_title('Land Book add indicator');
+  dpm($args, 'lb add ind ', $cid);
+  return ;
 }
