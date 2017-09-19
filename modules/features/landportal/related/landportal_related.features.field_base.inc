@@ -57,6 +57,29 @@ function landportal_related_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
+  // Exported field_base: 'field_related_aside'.
+  $field_bases['field_related_aside'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_related_aside',
+    'indexes' => array(
+      'moddelta' => array(
+        0 => 'moddelta',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'blockreference',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'profile2_private' => FALSE,
+      'referenceable_modules' => array(),
+    ),
+    'translatable' => 0,
+    'type' => 'blockreference',
+  );
+
   // Exported field_base: 'field_related_blocks'.
   $field_bases['field_related_blocks'] = array(
     'active' => 1,
