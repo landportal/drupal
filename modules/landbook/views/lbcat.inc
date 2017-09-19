@@ -39,13 +39,6 @@ $handler->display->display_options['relationships']['field_dataset_tid_1']['tabl
 $handler->display->display_options['relationships']['field_dataset_tid_1']['field'] = 'field_dataset_tid';
 $handler->display->display_options['relationships']['field_dataset_tid_1']['label'] = 'dataset';
 $handler->display->display_options['relationships']['field_dataset_tid_1']['required'] = TRUE;
-/* Relationship: Taxonomy term: Taxonomy term using Catalog */
-$handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['id'] = 'reverse_field_dataset_taxonomy_term';
-$handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['field'] = 'reverse_field_dataset_taxonomy_term';
-$handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['relationship'] = 'field_dataset_tid_1';
-$handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['label'] = 'indicator';
-$handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['required'] = TRUE;
 /* Relationship: Taxonomy term: Parent term */
 $handler->display->display_options['relationships']['parent']['id'] = 'parent';
 $handler->display->display_options['relationships']['parent']['table'] = 'taxonomy_term_hierarchy';
@@ -112,6 +105,50 @@ $handler = $view->new_display('block', 'Related', 'block');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'In this catalog';
 $handler->display->display_options['display_description'] = 'from an indicator';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: Term ID */
+$handler->display->display_options['fields']['tid']['id'] = 'tid';
+$handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['tid']['field'] = 'tid';
+$handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['tid']['separator'] = '';
+/* Field: Taxonomy term: Term ID */
+$handler->display->display_options['fields']['tid_1']['id'] = 'tid_1';
+$handler->display->display_options['fields']['tid_1']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['tid_1']['field'] = 'tid';
+$handler->display->display_options['fields']['tid_1']['relationship'] = 'parent';
+$handler->display->display_options['fields']['tid_1']['label'] = 'Parent ID';
+$handler->display->display_options['fields']['tid_1']['exclude'] = TRUE;
+$handler->display->display_options['fields']['tid_1']['separator'] = '';
+/* Field: Taxonomy term: Path */
+$handler->display->display_options['fields']['path']['id'] = 'path';
+$handler->display->display_options['fields']['path']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['path']['field'] = 'path';
+$handler->display->display_options['fields']['path']['label'] = '';
+$handler->display->display_options['fields']['path']['exclude'] = TRUE;
+$handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['path'] = 'book/indicators/[field_id]';
+$handler->display->display_options['fields']['name']['alter']['absolute'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+/* Field: Taxonomy term: Rendered Taxonomy term */
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';
