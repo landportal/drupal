@@ -1462,7 +1462,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'weight' => 31,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'blockreference',
         'settings' => array(
           'show_empty_blocks' => FALSE,
@@ -1542,7 +1542,7 @@ function landbook_taxonomies_field_default_field_instances() {
     'bundle' => 'indicators',
     'default_value' => array(
       0 => array(
-        'moddelta' => 'views:lbind-block',
+        'moddelta' => 'views:lbind-childs',
       ),
     ),
     'deleted' => 0,
