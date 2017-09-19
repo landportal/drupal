@@ -79,8 +79,10 @@ function landportal_display_extract_groups($group_name, $content) {
       $g['#items'] += $cg['#items'];
       //unset($variables['page']['content']['system_main']['nodes'][$node->nid][$fieldc]);
     } else {
-      $g['#items'][$field] = $content[$field];
-      $g['#group_children'][$field] = $group_name;
+      if (isset($content[$field])) {
+        $g['#items'][$field] = $content[$field];
+        $g['#group_children'][$field] = $group_name;
+      }
       //unset($variables['page']['content']['system_main']['nodes'][$node->nid][$field]);
     }
   }
