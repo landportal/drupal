@@ -35,13 +35,13 @@ function landbook_taxonomies_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'xmlsitemap' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
       ),
       'display' => array(
@@ -111,7 +111,7 @@ function landbook_taxonomies_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '8',
+          'weight' => '13',
         ),
         'name' => array(
           'weight' => '0',
@@ -120,10 +120,10 @@ function landbook_taxonomies_strongarm() {
           'weight' => '1',
         ),
         'xmlsitemap' => array(
-          'weight' => '9',
+          'weight' => '14',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '15',
         ),
       ),
       'display' => array(
@@ -147,7 +147,7 @@ function landbook_taxonomies_strongarm() {
         ),
         'authoring_information' => array(
           'teaser' => array(
-            'weight' => '4',
+            'weight' => '13',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -155,7 +155,7 @@ function landbook_taxonomies_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '8',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -257,6 +257,16 @@ function landbook_taxonomies_strongarm() {
     'priority' => '0.5',
   );
   $export['xmlsitemap_settings_taxonomy_term_indicators'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_taxonomy_term_observations';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_taxonomy_term_observations'] = $strongarm;
 
   return $export;
 }
