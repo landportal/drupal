@@ -13,6 +13,38 @@ function ct_project_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_associated_staff|node|project|default';
+  $field_group->group_name = 'group_associated_staff';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'project';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_right';
+  $field_group->data = array(
+    'label' => 'Associated staff',
+    'weight' => '35',
+    'children' => array(
+      0 => 'field_user',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Associated staff',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-associated-staff',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_associated_staff|node|project|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_data_provider|node|project|default';
   $field_group->group_name = 'group_data_provider';
   $field_group->entity_type = 'node';
@@ -57,9 +89,10 @@ function ct_project_field_group_info() {
     'children' => array(
       0 => 'field_contact',
       1 => 'field_date',
-      2 => 'field_link',
-      3 => 'field_user',
-      4 => 'field_value',
+      2 => 'field_id',
+      3 => 'field_link',
+      4 => 'field_user',
+      5 => 'field_value',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -141,7 +174,7 @@ function ct_project_field_group_info() {
   $field_groups['group_geo_focus|node|project|default'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_header|node|project|form';
   $field_group->group_name = 'group_header';
@@ -356,6 +389,7 @@ function ct_project_field_group_info() {
       2 => 'group_geo_focus',
       3 => 'group_landvoc',
       4 => 'group_data_provider',
+      5 => 'group_associated_staff',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -406,6 +440,7 @@ function ct_project_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Associated staff');
   t('Data provider');
   t('General facts');
   t('Geographical Focus');

@@ -24,6 +24,7 @@ features[features_api][] = api:2
 features[field_base][] = field_donors
 features[field_base][] = field_implementers
 features[field_base][] = field_value
+features[field_group][] = group_associated_staff|node|project|default
 features[field_group][] = group_data_provider|node|project|default
 features[field_group][] = group_desc|node|project|form
 features[field_group][] = group_general_facts|node|project|default
