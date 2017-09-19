@@ -110,7 +110,7 @@ $handler->display->display_options['filters']['hdepth']['value']['value'] = '1';
 /* Display: Related */
 $handler = $view->new_display('block', 'Related', 'block');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = '<none>';
+$handler->display->display_options['title'] = 'In this catalog';
 $handler->display->display_options['display_description'] = 'from an indicator';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
@@ -213,8 +213,11 @@ $handler->display->display_options['arguments']['tid']['summary_options']['items
 /* Display: Childs */
 $handler = $view->new_display('block', 'Childs', 'childs');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = '<none>';
+$handler->display->display_options['title'] = 'sub/obs';
 $handler->display->display_options['display_description'] = 'from an indicator';
+$handler->display->display_options['defaults']['query'] = FALSE;
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['query']['options']['contextual_filters_or'] = TRUE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Taxonomy term: Parent term */
 $handler->display->display_options['relationships']['parent']['id'] = 'parent';
@@ -271,6 +274,8 @@ $handler->display->display_options['fields']['field_id']['element_label_colon'] 
 $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
 $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
 $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
 $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
@@ -286,4 +291,23 @@ $handler->display->display_options['arguments']['tid']['default_argument_type'] 
 $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
 $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
 $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+/* Contextual filter: Taxonomy term: Term ID */
+$handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
+$handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid_1']['relationship'] = 'parent_1';
+$handler->display->display_options['arguments']['tid_1']['default_action'] = 'default';
+$handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'taxonomy_tid';
+$handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Taxonomy vocabulary: Machine name */
+$handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+$handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['value'] = array(
+  'indicators' => 'indicators',
+);
 
