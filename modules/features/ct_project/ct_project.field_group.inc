@@ -128,7 +128,7 @@ function ct_project_field_group_info() {
       'label' => 'Geographical Focus',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-geo-focus',
+        'classes' => 'group-topics-regions',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h3',
