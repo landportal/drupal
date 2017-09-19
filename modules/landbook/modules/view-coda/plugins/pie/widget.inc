@@ -9,7 +9,12 @@
 
 // Returns a list of boolean options understood by js-view-coda projection (vis. type)
 function lbvc_plugin_pie_options() {
-  return ['legend', 'loadMain', 'mainDelta'];
+  return array(
+        'legend' => 'Show legend',
+        'loadMain' => 'Load main indicator data',
+        'mainDelta' => 'Main is the overall value',
+        'loadCoutries' => 'Load available countries',
+  );
 }
 
 
@@ -18,21 +23,19 @@ function lbvc_plugin_pie_widget_form($item) {
   $v = json_decode($item['vcc']);
   //dpm($v, 'args');
 
-  $options = array();
+
+  $options = lbvc_plugin_pie_options();
+  $values = array();
   // opts should be provided / streamlined with js-view-coda lib
-  foreach(lbvc_plugin_pie_options() as $opt) {
-    if ($v->$opt) $options[] = $opt;
+  foreach($options as $opt => $desc) {
+    if ($v->$opt) $values[] = $opt;
   }
   $forms = array(
     'options' => array(
       '#title' => t('PIE stuff'),
       '#type' => 'checkboxes',
-      '#options' => array(
-        'legend' => 'Show legend',
-        'loadMain' => 'Load main indicator data',
-        'mainDelta' => 'Main is the overall value',
-      ),
-      '#default_value' => $options,
+      '#options' => $options,
+      '#default_value' => $values,
     ),
     'main' => array(
       '#title' => t('Main indicator'),
@@ -44,6 +47,11 @@ function lbvc_plugin_pie_widget_form($item) {
       '#type' => 'textfield',
       '#default_value' => $v->year,
     ),
+    'all_countries' => array(
+      '#title' => t('All Countries'),
+      '#type' => 'checkbox',
+      '#default_value' => $v->main,
+    ),
   );
   return $forms;
 }
@@ -52,7 +60,7 @@ function lbvc_plugin_pie_widget_form($item) {
 function lbvc_plugin_pie_field_presave($item) {
   $jsopts = '"main": "'.$item['main'].'"'
     . ($item['year'] ? ', "year": "'.$item['year'].'"' : '');
-  foreach(lbvc_plugin_pie_options() as $opt) {
+  foreach(lbvc_plugin_pie_options() as $opt => $desc) {
     if ($item['options'][$opt]) $jsopts .= ', "' . $opt . '": "true"';
   }
   return '{' . $jsopts. '}';

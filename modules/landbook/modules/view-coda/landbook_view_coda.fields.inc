@@ -19,7 +19,7 @@ function landbook_view_coda_field_info() {
       'label' => t('View Coda Visualization'),
       'description' => t('Visualizations using LB data.'),
       'settings' => array('max_length' => ''),
-      'instance_settings' => array('text_processing' => 0), //, 'type' => ''),
+     'instance_settings' => array('text_processing' => 0), //, 'type' => ''),
       'default_widget' => 'landbook_view_coda_config',
       'default_formatter' => 'lbvc_basic',
     ),
@@ -58,8 +58,7 @@ function landbook_view_coda_field_presave($entity_type, $entity, $field, $instan
       break;
     }
   }
-  if (module_exists('devel'))
-    dpm($items, 'presave');
+  if (module_exists('devel')) dpm($items, 'presave');
 }
   
 

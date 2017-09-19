@@ -11,17 +11,6 @@
  * Author: Jules Clement <jules@landportal.info>
  */
 
-function _lbvc_types() {
-  return array(
-    'map'   => 'Map projection',
-    'table'  => 'Metadata Table',
-    /* 'line'  => 'Line chart', */
-    'pie'   => 'Pie chart',
-    /* 'ranking' => 'Ranking list', */
-    /* 'empty' => 'debug / test', */
-  );
-}
-
 include_once 'landbook_view_coda.library.inc';
 include_once 'landbook_view_coda.blocks.inc';
 include_once 'landbook_view_coda.fields.inc';

@@ -154,3 +154,29 @@ function landbook_view_coda_library() {
     );
     return $libraries;
 }
+
+function _lbvc_types() {
+  return array(
+    'map'   => 'Map projection',
+    'table'  => 'Metadata Table',
+    'line'  => 'Line chart',
+    'pie'   => 'Pie chart',
+    /* 'ranking' => 'Ranking list', */
+    'debug' => 'debug / testing',
+  );
+}
+
+
+function _lbvc_obs() {
+  return array(
+    'cex' => ['value', 'country', 'year'],
+    'geo' => ['country'],
+    'time' => ['year', 'period'],
+    'meta' => [
+      'unit', 'highlow', 'codedvalue',
+      // computed/infered metadata - based on LOD datapoints?
+      'minvalue', 'maxvalue', 'nbobs', 'nbcountries',
+      'minyear', 'maxyear', 'nbyears',
+    ],
+  );
+}
