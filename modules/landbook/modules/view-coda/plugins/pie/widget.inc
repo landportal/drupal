@@ -23,7 +23,6 @@ function lbvc_plugin_pie_widget_form($item) {
   $v = json_decode($item['vcc']);
   //dpm($v, 'args');
 
-
   $options = lbvc_plugin_pie_options();
   $values = array();
   // opts should be provided / streamlined with js-view-coda lib
@@ -47,10 +46,10 @@ function lbvc_plugin_pie_widget_form($item) {
       '#type' => 'textfield',
       '#default_value' => $v->year,
     ),
-    'all_countries' => array(
-      '#title' => t('All Countries'),
-      '#type' => 'checkbox',
-      '#default_value' => $v->main,
+    'country' => array(
+      '#title' => t('Default country'),
+      '#type' => 'textfield',
+      '#default_value' => $v->country,
     ),
   );
   return $forms;
