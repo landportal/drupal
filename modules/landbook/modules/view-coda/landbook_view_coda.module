@@ -12,9 +12,35 @@
  */
 
 include_once 'landbook_view_coda.library.inc';
-include_once 'landbook_view_coda.blocks.inc';
+
 include_once 'landbook_view_coda.fields.inc';
 include_once 'landbook_view_coda.features.inc';
+
+include_once 'landbook_view_coda.blocks.inc';
+
+
+function landbook_view_coda__plugins() {
+  $plugins = array();
+  $path = dirname(__FILE__) . '/plugins/';
+  $results = scandir($path);
+  foreach ($results as $result) {
+    if ($result === '.' or $result === '..') continue;
+    if (is_dir($path.$result)) {
+    dsm($result);
+      //code to use if directory
+      $plugins[] = $result;
+    }
+  }
+  //dpm($plugins, 'LBVC plugins in ' . $path);
+  return $plugins;
+}
+
+
+
+
+
+
+
 
 function landbook_view_coda_preprocess_entity(&$variables, $hook) {
   if ($variables['elements']['#bundle'] == 'field_visualization') {
@@ -28,12 +54,18 @@ function landbook_view_coda_cb($vars) {
   //dpm($vars, 'VC CB');
 }
 
+
+
+
+
+
+
 /**
- * Add JS settings variables for landbook pages / sections
- * that display some visualizations.
+ * Add visualisation settings variables to Drupal JS variables (Drupal.settings.landbook)
+ *   for landbook pages / sections to display (old-style) block-visualizations.
+ * Moslty iso3 for country-based pages (based on iso3 code in URLs, BAD!!! WTFme) and LB indicators ID for TP
  *
- * in JS: Drupal.settings.landbook
-   @TODO: should be based on the CT (or menu_get_item())
+ * @TODO: should be based on the CT (or menu_get_item())
  */
 function landbook_view_coda_page_build(&$page) {
   global $LBVIS_PATH;

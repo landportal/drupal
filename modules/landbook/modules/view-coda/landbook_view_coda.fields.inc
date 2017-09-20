@@ -7,7 +7,7 @@
 /***************************************************************
  * Field Type API hooks
  ***************************************************************/
-$module_path = drupal_get_path('module', 'landbook_vis_map');
+$module_path = drupal_get_path('module', 'landbook_view_coda');
 
 /**
  * Implements hook_field_info().

@@ -1,6 +1,36 @@
 <?php
+/**
+ * Land Portal View Coda
+ *
+ * Module blocks
+ * 
+ * Author: Jules <jules@landportal.info>
+ */
+
+global $plugins_blocks;
+$plugins_blocks = array();
+//$module_path = drupal_get_path('module', 'landbook_view_coda');
+$files = file_scan_directory(dirname(__FILE__) . '/plugins', '/blocks.inc$/');
+foreach($files as $file) {
+  include_once $file->uri;
+  //dpm($file, 'blocks: ' . basename(dirname($file->uri)));
+  $plugins_blocks[] = basename(dirname($file->uri)); // the directory or this file
+}
+//dpm($plugins_blocks, 'PB');
 
 function landbook_view_coda_block_info() {
+  global $plugins_blocks;
+  $blocks = array();
+
+//  dpm($plugins_blocks, 'pb here');
+  foreach($plugins_blocks as $p) {
+    $fxptr = 'lbvc_plugin_' . $p . '_block_info';
+    if (function_exists($fxptr)) {
+      $blocks += $fxptr();
+    }
+  }
+
+  // Old style blocks
   $blocks['lbcp_linechart'] = array(
     'info'      => t('View CODA: Infographics (linechart)'),
     'status'    => TRUE,
@@ -33,14 +63,14 @@ function landbook_view_coda_block_info() {
     'pages'     => "book/countries/*",
     'weight'    => 18
   );
-  $blocks['indicator_dl'] = array(
-    'info'      => t('View CODA: Indicator Download'),
-    'status'    => TRUE,
-    'region'    => 'content',
-    'visibility'=> BLOCK_VISIBILITY_LISTED,
-    'pages'     => "book/indicators/*\n",
-    'weight'    => 13
-  );
+  /* $blocks['indicator_dl'] = array( */
+  /*   'info'      => t('View CODA: Indicator Download'), */
+  /*   'status'    => TRUE, */
+  /*   'region'    => 'content', */
+  /*   'visibility'=> BLOCK_VISIBILITY_LISTED, */
+  /*   'pages'     => "book/indicators/\*\n", */
+  /*   'weight'    => 13 */
+  /* ); */
   $blocks['indicator_ranking'] = array(
     'info'      => t('View CODA: Indicator Ranking'),
     'status'    => TRUE,
@@ -49,6 +79,8 @@ function landbook_view_coda_block_info() {
     'pages'     => "book/indicators/*\nbook/thematic/*",
     'weight'    => 16
   );
+
+  //dpm($blocks, 'LBVC register blocks');
   return $blocks;
 }
 
@@ -58,6 +90,18 @@ function landbook_view_coda_lbvis_ready_callback($callback) {
 }
 
 function landbook_view_coda_block_view($delta = '') {
+  global $plugins_blocks;
+  
+  //dpm($plugins_blocks, 'pb');
+  foreach($plugins_blocks as $p) {
+    $fxptr = 'lbvc_plugin_' . $p . '_block_view';
+    if (function_exists($fxptr)) {
+      $block = $fxptr($delta);
+    }
+  }
+
+
+  
   $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
   $jsAttr = 'vis: LBV, iso3: Drupal.settings.landbook.countryCode';
   $jsRanking = 'vis: LBV, type: "indicators", indicator: Drupal.settings.landbook.ranking || Drupal.settings.landbook.id';

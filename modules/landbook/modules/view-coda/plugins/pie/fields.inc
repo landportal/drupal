@@ -26,7 +26,7 @@ function lbvc_plugin_pie_params($VCC) {
 
 
 function lbvc_plugin_pie_formatter($VCC) {
-  if (module_exists('devel')) dpm($VCC, 'VCC');
+  //if (module_exists('devel')) dpm($VCC, 'VCC');
 
   $params = lbvc_plugin_pie_params($VCC);
   $value = t('Loading pie chart');
