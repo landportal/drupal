@@ -77,7 +77,7 @@ function landbook_taxonomies_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '6',
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),

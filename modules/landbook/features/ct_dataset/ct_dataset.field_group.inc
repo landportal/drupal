@@ -29,16 +29,17 @@ function ct_dataset_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => '',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-aside',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => 'group-aside field-group-div',
-        'id' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_aside|node|dataset|default'] = $field_group;
@@ -120,7 +121,7 @@ function ct_dataset_field_group_info() {
       1 => 'field_related_themes',
       2 => 'field_related_topics',
     ),
-    'format_type' => 'div',
+    'format_type' => 'hidden',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
@@ -216,8 +217,7 @@ function ct_dataset_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'body',
-      1 => 'group_topics_regions',
-      2 => 'group_split',
+      1 => 'group_split',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -337,7 +337,7 @@ function ct_dataset_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'dataset';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_main';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
     'weight' => '11',
@@ -345,7 +345,7 @@ function ct_dataset_field_group_info() {
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
     ),
-    'format_type' => 'div',
+    'format_type' => 'hidden',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
