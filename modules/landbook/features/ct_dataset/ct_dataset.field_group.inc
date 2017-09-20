@@ -13,6 +13,38 @@ function ct_dataset_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_aside|node|dataset|default';
+  $field_group->group_name = 'group_aside';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dataset';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_related_blocks',
+      1 => 'field_link',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-aside field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_aside|node|dataset|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_header|node|dataset|default';
   $field_group->group_name = 'group_header';
   $field_group->entity_type = 'node';
@@ -24,6 +56,7 @@ function ct_dataset_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'title_field',
+      1 => 'field_image',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -80,7 +113,7 @@ function ct_dataset_field_group_info() {
   $field_group->parent_name = 'group_topics_regions';
   $field_group->data = array(
     'label' => '',
-    'weight' => '8',
+    'weight' => '6',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_themes',
@@ -117,8 +150,8 @@ function ct_dataset_field_group_info() {
     'weight' => '115',
     'children' => array(
       0 => 'field_related_domains',
-      1 => 'field_related_topics',
-      2 => 'field_related_themes',
+      1 => 'field_related_themes',
+      2 => 'field_related_topics',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -171,6 +204,39 @@ function ct_dataset_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_main|node|dataset|default';
+  $field_group->group_name = 'group_main';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dataset';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '1',
+    'children' => array(
+      0 => 'body',
+      1 => 'group_topics_regions',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-main',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_main|node|dataset|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_related|node|dataset|form';
   $field_group->group_name = 'group_related';
   $field_group->entity_type = 'node';
@@ -179,10 +245,10 @@ function ct_dataset_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Related content',
-    'weight' => '4',
+    'weight' => '7',
     'children' => array(
-      0 => 'field_related_blocks',
-      1 => 'field_noderef',
+      0 => 'field_noderef',
+      1 => 'field_link',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -201,15 +267,77 @@ function ct_dataset_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_topics_regions|node|dataset|default';
-  $field_group->group_name = 'group_topics_regions';
+  $field_group->identifier = 'group_settings|node|dataset|form';
+  $field_group->group_name = 'group_settings';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dataset';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Settings',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_related_blocks',
+      1 => 'field_view_dataset',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-settings field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_settings|node|dataset|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_split|node|dataset|default';
+  $field_group->group_name = 'group_split';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'dataset';
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '1',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_visualization',
+      1 => 'field_paragraphs',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-split',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_split|node|dataset|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_topics_regions|node|dataset|default';
+  $field_group->group_name = 'group_topics_regions';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dataset';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_main';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '11',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
@@ -242,7 +370,7 @@ function ct_dataset_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
@@ -294,6 +422,7 @@ function ct_dataset_field_group_info() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Related content');
+  t('Settings');
   t('Topics and Regions');
 
   return $field_groups;
