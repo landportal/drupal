@@ -77,13 +77,8 @@ function ct_dataset_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 1,
-          'use_content_language' => 1,
-          'view_mode' => 'full',
-        ),
-        'type' => 'entityreference_entity_view',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'full' => array(
@@ -253,7 +248,7 @@ function ct_dataset_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'above',
@@ -317,7 +312,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -393,7 +388,7 @@ function ct_dataset_field_default_field_instances() {
         'module' => 'field_collection_fieldset',
         'settings' => array(
           'add' => '',
-          'collapsed' => 1,
+          'collapsed' => 0,
           'collapsible' => 1,
           'delete' => '',
           'description' => 1,
@@ -458,7 +453,7 @@ function ct_dataset_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -733,8 +728,11 @@ function ct_dataset_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
         'weight' => 5,
       ),
       'listing' => array(
@@ -800,7 +798,7 @@ function ct_dataset_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 

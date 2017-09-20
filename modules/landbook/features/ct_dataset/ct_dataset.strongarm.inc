@@ -142,7 +142,7 @@ function ct_dataset_strongarm() {
           'weight' => '9',
         ),
         'xmlsitemap' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
       ),
       'display' => array(),

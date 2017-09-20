@@ -23,8 +23,9 @@ function ct_dataset_field_group_info() {
     'label' => '',
     'weight' => '2',
     'children' => array(
-      0 => 'field_related_blocks',
-      1 => 'field_link',
+      0 => 'field_link',
+      1 => 'field_view_dataset',
+      2 => 'field_related_aside',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -216,6 +217,7 @@ function ct_dataset_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'group_topics_regions',
+      2 => 'group_split',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -279,6 +281,7 @@ function ct_dataset_field_group_info() {
     'children' => array(
       0 => 'field_related_blocks',
       1 => 'field_view_dataset',
+      2 => 'field_related_aside',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -301,10 +304,10 @@ function ct_dataset_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'dataset';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_main';
   $field_group->data = array(
     'label' => '',
-    'weight' => '3',
+    'weight' => '13',
     'children' => array(
       0 => 'field_visualization',
       1 => 'field_paragraphs',
