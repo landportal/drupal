@@ -276,6 +276,7 @@ $handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
 $handler->display->display_options['defaults']['footer'] = FALSE;
 /* Footer: Global: View area */
 $handler->display->display_options['footer']['view']['id'] = 'view';
