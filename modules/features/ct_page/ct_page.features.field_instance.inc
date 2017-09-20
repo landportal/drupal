@@ -249,7 +249,7 @@ function ct_page_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'medium',
+          'image_style' => 'large',
         ),
         'type' => 'image',
         'weight' => 3,
@@ -672,7 +672,7 @@ function ct_page_field_default_field_instances() {
           'title_style' => 'h2',
         ),
         'type' => 'title_linked',
-        'weight' => 2,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
