@@ -53,9 +53,14 @@ function landportal_display_preprocess_page(&$variables) {
       field_group_fields_nest($title, $content);
       $variables['page']['title_header'] = $title;
       $variables['title'] = render($title);
-      //dsm($variables['title']);
-      //unset($variables['page']['content']['system_main']['nodes'][$node->nid]['#groups']['group_header']);
       unset($variables['page']['content']['system_main']['nodes'][$node->nid]['#fieldgroups']['group_header']);
+      unset($variables['page']['content']['system_main']['nodes'][$node->nid]['#groups']['group_header']);
+      // Remove fields and groups children that now belong to the page-header
+      foreach ($title['#group_children'] as $c => $g) {
+        unset($variables['page']['content']['system_main']['nodes'][$node->nid][$c]);
+        unset($variables['page']['content']['system_main']['nodes'][$node->nid]['#group_children'][$c]);
+      }
+      //dpm($variables['page']['content']['system_main']['nodes'][$node->nid], 'da node afta');
     }
   }
   //dpm($variables, 'vars');
