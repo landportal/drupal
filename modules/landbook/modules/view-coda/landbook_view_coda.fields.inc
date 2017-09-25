@@ -7,7 +7,6 @@
 /***************************************************************
  * Field Type API hooks
  ***************************************************************/
-$module_path = drupal_get_path('module', 'landbook_view_coda');
 
 /**
  * Implements hook_field_info().
@@ -32,33 +31,31 @@ function landbook_view_coda_field_info() {
  * Validate the View Coda configuration & fields
  */
 function landbook_view_coda_field_validate($entity_type, $entity, $field, $instance, $langcode, $items, &$errors) {
-  //dpm($item, 'validate');
-    /* // Error handling // check vcc field is json OK */
-    /* $chk = json_decode($items[$delta]['vcc'] . '+++'); */
-    /* if (json_last_error()) { */
-    /*   $errors[$field['field_name']][$langcode][$delta][] = array( */
-    /*     'error' => 'field_vcc_invalid', */
-    /*     'message' => t('VCC is no proper JSON.'), */
-    /*   ); */
-    /* } */
+  // Error handling
+  // check 'vcc' field is JSON valid
+  $chk = json_decode($items[0]['vcc']);
+  if ($err = json_last_error()) {
+    $errors[$field['field_name']][$langcode][0][] = array(
+      'error' => 'field_vcc_invalid',
+      'message' => t('VCC is not proper JSON.'),
+      'variables' => array($err, $chk, $items[0]),
+    );
+  }
 }
 
 // Bake various specialized options (per view-coda plugin) in vcc field
 function landbook_view_coda_field_presave($entity_type, $entity, $field, $instance, $langcode, &$items) {
-  global $module_path;
   //dpm($entity, 'presave field');
   foreach ($items as $delta => $item) {
-    //dpm($item, 'presave item');
-    include_once $module_path . 'plugins/'.$item['type'].'/widget.inc';
+    include_once 'plugins/'.$item['type'].'/widget.inc';
     $fxptr = 'lbvc_plugin_' . $item['type'] . '_field_presave';
-    switch ($item['type']) {
-      // Pie options, TODO: this should be in plugins/[TYPE]/ dir
-    case 'pie':
+    if (function_exists($fxptr)) {
+      // serialize visualization-specific params in vcc
       $items[$delta]['vcc'] = $fxptr($item);
-      break;
     }
+    dpm($item, 'presave item');
   }
-  if (module_exists('devel')) dpm($items, 'presave');
+  //if (module_exists('devel')) dpm($items, 'presave');
 }
   
 
@@ -79,13 +76,13 @@ function landbook_view_coda_field_formatter_info() {
       'label' => t('LB Visualization'),
       'field types' => array('field_view_coda_vis'),
     ),
-    'lbvc_debug' => array(
-      'label' => t('LB Config debug'),
-      'field types' => array('field_view_coda_vis'),
-    ),
+    /* 'lbvc_debug' => array( */
+    /*   'label' => t('LB Config debug'), */
+    /*   'field types' => array('field_view_coda_vis'), */
+    /* ), */
     'lbvc_block' => array(
       'label' => t('LB Visualization block'),
-      'field types' => array('field_visualization', 'field_collection'),
+      'field types' => array('field_visualization'),//, 'field_collection'),
       'settings' =>  array(
         'view_mode' => 'full',
         'class' => '',
@@ -114,6 +111,10 @@ function landbook_view_coda_field_formatter_settings_form($field, $instance, $vi
   return $elements;
 }
 
+/* function landbook_view_coda_field_collection_item_view($field_collection_item, $view_mode, $langcode) { */
+/*   dpm($field_collection_item, $view_mode); */
+/* } */
+
 /**
  * Implements hook_field_formatter_view().
  *
@@ -121,52 +122,37 @@ function landbook_view_coda_field_formatter_settings_form($field, $instance, $vi
  */
 function landbook_view_coda_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
   $element = array();
-  /* dpm($entity, $entity_type); */
-  /* dpm($instance, 'instance'); */
-  /* dpm($display, 'display'); */
-  /* dpm($items, 'items'); */
-  /* dpm($field, 'field'); */
+  if ($display['type'] == '2lbvc_block') {
+    dpm($entity, $entity_type);               // Iz ma' field_collection_item
+    dpm($instance, 'instance ' . $langcode);  // Da instance of that (rendered) 'widget'
+    dpm($display, 'display');
+    dpm($items, 'items');                     // Ma' VCC / View Coda Config values (from SQL)
+    dpm($field, 'field');
+  }
   switch ($display['type']) {
-    // This formatter simply outputs the field as text
   case 'lbvc_debug':
-    foreach ($items as $delta => $item) {
-      // Should ALWAYS have a field_indicators
-      $tid = function ($i) { return $i['tid']; };
-      $element[$delta] = array(
-        '#type' => 'html_tag',
-        '#tag' => 'pre',
-        '#attributes' => array(),
-        '#value' => 'TYPE: ' . $item['type'] . "\n"
-        . 'IND: ' . join(array_map($tid, $item['ind']), ', ') . "\n"
-        . $item['vcc'],
-      );
-      //dpm($item, 'LBVC vis field');
-    }
+    // DEBUG
     break;
   case 'lbvc_basic':
-    $VCC = array(
-      'type'  => $items[0]['type'],
-      'vcc'   => $items[0]['vcc'],
-      'jsid'  => 'VC' . $entity->item_id,
+    // This is the 'field_view_coda' drupal field, part of the vis. field collection
+    $VCC = $items[0] + array(
       'vid'   => $entity->item_id . '-' . $items[0]['type'] . '-wrapper',
+      'jsid'  => 'VC' . $entity->item_id,
       'indicators' => array(),
-      'fields' => array(),
     );
     foreach ($entity->field_indicators[$langcode] as $indicator) {
       $lbid = $indicator['entity']->field_id[$langcode][0]['value'];
-      $VCC['indicators'][] = $lbid;
-      $VCC['fields'][$lbid] = array( 'label' => $indicator['entity']->name, 'desc' => $indicator['entity']->description );
-      //dpm($indicator, 'ind');
+      $VCC['indicators'][] = $indicator['entity'];
     }
-    $element[] = landbook_view_coda_field_formatter_visualization($VCC);
+    include_once 'plugins/' . $VCC['type'] . '/fields.inc';
+    $fxptr = 'lbvc_plugin_' . $VCC['type'] . '_formatter';
+    if (function_exists($fxptr)) {
+      // Should have the whole items[0]/entity?
+      $element[] = $fxptr($VCC);
+    }
     break;
   case 'lbvc_block':
     // Format field_visualization (a field collection) items output
-    /* dpm($entity,  'formatter entity ' . $entity_type); */
-    /* dpm($field,   'formatter field ' . $langcode); */
-    /* dpm($instance, 'formatter instance'); */
-    /* dpm($items,   'formatter items'); */
-    /* dpm($display, 'formatter display'); */
     $view_mode = !empty($display['settings']['view_mode']) ? $display['settings']['view_mode'] : 'full';
     foreach ($items as $delta => $item) {
       if ($field_collection = field_collection_field_get_entity($item)) {
@@ -176,31 +162,6 @@ function landbook_view_coda_field_formatter_view($entity_type, $entity, $field, 
     break;
   }
   return $element;
-}
-
-
-/**
- * Implements hook_field_formatter_view().
- *
- * This output the final visualization (field) to be rendered (the actual projection)
- */
-function landbook_view_coda_field_formatter_visualization($VCC) {
-  global $module_path;
-  switch ($VCC['type']) {
-  case 'map':
-    include_once $module_path . 'plugins/map/fields.inc';
-    $value = lbvc_plugin_map_formatter($VCC);
-    break;
-  case 'pie':
-    include_once $module_path . 'plugins/pie/fields.inc';
-    $value = lbvc_plugin_pie_formatter($VCC);
-    break;
-  case 'table':
-    include_once $module_path . 'plugins/table/fields.inc';
-    $value = lbvc_plugin_table_formatter($VCC);
-    break;
-  }
-  return $value;
 }
 
 /**
@@ -214,76 +175,35 @@ function landbook_view_coda_field_widget_info() {
     ),
   );
 }
+
 // Alter existing stuff
+// Allow 'text_textarea' fields to display field_view_coda_vis
 function landbook_view_coda_field_widget_info_alter(&$info) {
   $info['text_textarea']['field types'][] = 'field_view_coda_vis';
 }
 
 /**
  * Implements hook_field_widget_form().
- * landbook_view_coda_config do @@@
+ *
+ * This widget stores data in 2 SQL fields: 'vcc' and 'type'
  */
 function landbook_view_coda_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
-  global $module_path;
-
-  $value = isset($items[$delta]['vcc']) ? $items[$delta]['vcc'] : '';
-  // This F(*#ed up function turn one field to multiple ones
-  $widget = $element;
-
-  switch ($instance['widget']['type']) {
-  case 'landbook_view_coda_config':
-    $value_type = isset($items[$delta]['type']) ? $items[$delta]['type'] : '';
-    $widget_type = array(
-      '#type' => 'select',
-      '#weight' => -1,
-      '#title' => t('Visualization'),
-      '#options' => _lbvc_types(),
-      '#default_value' => $value_type,
-      '#description' => t('Select the type of visualization to use.'),
-      '#attached' => array('js' => array(array(
-        'type' => 'inline',
-        'data' => 'console.log("' . basename( __FILE__ ) . ' l.' . __LINE__ . ': '.$value_type . '", this);'))
-      ),
-      // hook on vis. type change)
-    );
-    $element['type'] = $widget_type;
-
-    //
-    // This is specific to the LBVC type (map, chart, pie...)
-    //
-    include_once $module_path . 'plugins/' . $value_type . '/widget.inc';
-    $opts_fx = 'lbvc_plugin_' . $value_type . '_widget_form';
-    if (function_exists($opts_fx)) {
-      // TODO / fix: Should be fieldgroup+ delta ?
-      $element += $opts_fx($items[$delta]);
-      $widget += array('#disabled' => true);
-    }
-
-    // DEBUG
-    $widget += array(
-      '#type' => 'textarea',
-      '#row' => 10,
-      '#default_value' => $value,
-      '#element_validate' => array('landbook_view_coda_config_validate'),
-      '#delta' => $delta,
-      '#weight' => 8,
-
-      /* '#attached' => array( */
-      /*   'js' => array(array( */
-      /*     'type' => 'inline', */
-      /*     'data' => 'console.log("' . basename( __FILE__ ) . ' l.' . __LINE__ . ' '.$widget . '");')) */
-      /*   )) */
-      /*   //'css' => array(drupal_get_path('module', 'landbook_view_coda') . '/landbook_view_coda.css'), */
-      /* ), */
-    );
-    break;
-  }
-  // Save in vcc field (sql table field)
-  $element['vcc'] = $widget;
+  if ($instance['widget']['type'] != 'landbook_view_coda_config')
+    return;
+//  dpm($items);
+  // Build up vis. form for this item
+  $element = lbvc__forms_vis($items[$delta]);
   //dpm($element, 'widget elements');
   return $element;
 }
 
+/* function landbook_view_coda_field_widget_form_alter(&$form, &$form_state, $form_id) { */
+/*   dpm($form_state, 'alter changed'); */
+/*   if(isset($form_state['values']['field_view_coda']['und'][0]['type'])) { */
+/*     // Generate your sub-select here */
+/*     dpm("VC type"); */
+/*   } */
+/* } */
 
 /**
  * Validate the individual fields and then convert to RGB string.
@@ -313,16 +233,22 @@ function landbook_view_coda_field_widget_error($element, $error, $form, &$form_s
 }
 
 
-// When loading / before viewing a field_view_coda_vis
-function landbook_view_coda_field_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items, $displays) {
-  foreach ($entities as $id => $entity) {
-    foreach ($items[$id] as $delta => $item) {
-      $items[$id][$delta]['ind'] = $entity->field_indicators[$langcode];
-    }
-    //dpm($items, 'prepview i' . $id);
-    /* foreach ($items[$id] as $delta => $item) { */
-    /*   // Force the array key to prevent duplicates. */
-    /*   $tids[$item['tid']] = $item['tid']; */
-    /* } */
-  }
-}
+/* // When loading / before viewing a field_view_coda_vis */
+/* function landbook_view_coda_field_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items, $displays) { */
+/*   /\* dpm($entities, $entity_type);               // Iz ma' field_collection_item *\/ */
+/*   /\* dpm($instances, 'instances ' . $langcode);  // Da instance of that (rendered) 'widget' *\/ */
+/*   /\* dpm($display, 'display'); *\/ */
+/*   /\* dpm($items, 'items');                     // Ma' VCC / View Coda Config values (from SQL) *\/ */
+/*   /\* dpm($field, 'field'); *\/ */
+  
+/*   foreach ($entities as $id => $entity) { */
+/*     foreach ($items[$id] as $delta => $item) { */
+/*       $items[$id][$delta]['ind'] = $entity->field_indicators[$langcode]; */
+/*     } */
+/*     //dpm($items, 'prepview i' . $id); */
+/*     /\* foreach ($items[$id] as $delta => $item) { *\/ */
+/*     /\*   // Force the array key to prevent duplicates. *\/ */
+/*     /\*   $tids[$item['tid']] = $item['tid']; *\/ */
+/*     /\* } *\/ */
+/*   } */
+/* } */

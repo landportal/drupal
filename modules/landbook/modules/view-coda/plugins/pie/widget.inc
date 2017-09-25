@@ -2,7 +2,7 @@
 /**
  * Land Portal View Coda
  *
- * Visualization plugin: map
+ * Visualization plugin: pie
  * 
  * Author: Jules <jules@landportal.info>
  */
@@ -11,9 +11,10 @@
 function lbvc_plugin_pie_options() {
   return array(
         'legend' => 'Show legend',
+        'loadTree' => 'Load sub-indicators',
         'loadMain' => 'Load main indicator data',
         'mainDelta' => 'Main is the overall value',
-        'loadCoutries' => 'Load available countries',
+        'loadCountries' => 'Load available countries',
   );
 }
 
@@ -27,7 +28,7 @@ function lbvc_plugin_pie_widget_form($item) {
   $values = array();
   // opts should be provided / streamlined with js-view-coda lib
   foreach($options as $opt => $desc) {
-    if ($v->$opt) $values[] = $opt;
+    if (isset($v->$opt)) $values[] = $opt;
   }
   $forms = array(
     'options' => array(
@@ -36,20 +37,21 @@ function lbvc_plugin_pie_widget_form($item) {
       '#options' => $options,
       '#default_value' => $values,
     ),
+    // Shall be an indicator selector, ya
     'main' => array(
       '#title' => t('Main indicator'),
       '#type' => 'textfield',
-      '#default_value' => $v->main,
+      '#default_value' => isset($v->main) ? $v->main : '',
     ),
     'year' => array(
       '#title' => t('Year'),
       '#type' => 'textfield',
-      '#default_value' => $v->year,
+      '#default_value' => isset($v->year) ? $v->year : '',
     ),
     'country' => array(
       '#title' => t('Default country'),
       '#type' => 'textfield',
-      '#default_value' => $v->country,
+      '#default_value' => isset($v->country) ? $v->country : '',
     ),
   );
   return $forms;
@@ -57,10 +59,23 @@ function lbvc_plugin_pie_widget_form($item) {
 
 // Returns a string
 function lbvc_plugin_pie_field_presave($item) {
-  $jsopts = '"main": "'.$item['main'].'"'
-    . ($item['year'] ? ', "year": "'.$item['year'].'"' : '');
-  foreach(lbvc_plugin_pie_options() as $opt => $desc) {
-    if ($item['options'][$opt]) $jsopts .= ', "' . $opt . '": "true"';
+  $options = $item;
+  unset($options['vcc']);
+  unset($options['type']);
+  unset($options['options']);
+  foreach(lbvc_plugin_charts_options() as $opt => $desc) {
+    if ($item['options'][$opt]) $options[$opt] = true;
   }
-  return '{' . $jsopts. '}';
+  //dpm($options, 'charts opts');
+  return json_encode($options);
 }
+
+/* // Returns a string */
+/* function lbvc_plugin_pie_field_presave($item) { */
+/*   $jsopts = '"main": "'.$item['main'].'"' */
+/*     . ($item['year'] ? ', "year": "'.$item['year'].'"' : ''); */
+/*   foreach(lbvc_plugin_pie_options() as $opt => $desc) { */
+/*     if (array_key_exists($opt, $item['options'])) $jsopts .= ', "' . $opt . '": "true"'; */
+/*   } */
+/*   return '{' . $jsopts. '}'; */
+/* } */

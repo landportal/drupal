@@ -9,25 +9,26 @@
 
 
 function lbvc_plugin_map_params($VCC) {
-  $params = '';
-  $up = $VCC['vcc'];
-  if ($up && $up[0] == '{' && $up[count($up) - 1] == '}') {
-    $params = substr($up, 1, -1) . ', ';
+  $params = json_decode($VCC['vcc']);
+  $params->indicators = array();
+  $params->cache = array();
+
+  lbvc__indicators_process($params, $VCC['indicators']);
+
+  // IF loadTree, load all indicators 'children', return a complex ind. structure
+  if (isset($params->loadTree)) {
+    lbvc__indicators_tree($params, $VCC['indicators']);
   }
-  $params .= '"indicator": "' . $VCC['indicators'][0] . '"'
-    . ', tooltip: true, legend: true, nav: true'
-    . ", colors: { background: 'transparent' }"
-    . ', "mapTarget": "#' . $VCC['vid'] . '", "vis": LBV';
-  return '{' . $params . '}';
+
+  return $params;
 }
 
 function lbvc_plugin_map_formatter($VCC) {
-  //dpm($VCC, 'map VCC');
+  $value = t('Loading map...');
+
   $params = lbvc_plugin_map_params($VCC);
-  $value = t('Loading map visualization');
-  $js = $VCC['jsid'] . ' = new lbvisMap(' . $params . '); ' . $VCC['jsid'] . '.init();';
-  // DEBUG
-  $js .= $VCC['jsid'] . '.debug();';
+  $params->target = '#' . $VCC['vid'];
+  $js = $VCC['jsid'] . ' = new lbvisMap(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
 
   return array(
     '#type' => 'html_tag',

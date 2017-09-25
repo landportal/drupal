@@ -20,7 +20,7 @@ function lbvc_plugin_charts_options() {
 
 
 function lbvc_plugin_charts_widget_form($item) {
-  //if (module_exists('devel')) dpm($item, 'charts chart');
+//  if (module_exists('devel')) dpm($item, 'charts chart');
   $v = json_decode($item['vcc']);
   //dpm($v, 'args');
 
@@ -37,6 +37,11 @@ function lbvc_plugin_charts_widget_form($item) {
       '#options' => $options,
       '#default_value' => $values,
     ),
+    'main' => array(
+      '#title' => t('Main (title) indicator'),
+      '#type' => 'textfield',
+      '#default_value' => isset($v->main) ? $v->main : '',
+    ),
     'year' => array(
       '#title' => t('Year'),
       '#type' => 'textfield',
@@ -48,5 +53,19 @@ function lbvc_plugin_charts_widget_form($item) {
       '#default_value' => isset($v->country) ? $v->country : '',
     ),
   );
+//  form_process_checkboxes($forms['options']);
   return $forms;
+}
+
+// Returns a string
+function lbvc_plugin_charts_field_presave($item) {
+  $options = $item;
+  unset($options['vcc']);
+  unset($options['type']);
+  unset($options['options']);
+  foreach(lbvc_plugin_charts_options() as $opt => $desc) {
+    if ($item['options'][$opt]) $options[$opt] = true;
+  }
+  //dpm($options, 'charts opts');
+  return json_encode($options);
 }

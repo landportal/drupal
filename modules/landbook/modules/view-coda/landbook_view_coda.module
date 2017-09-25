@@ -11,37 +11,21 @@
  * Author: Jules Clement <jules@landportal.info>
  */
 
-include_once 'landbook_view_coda.library.inc';
+global $_LBVC;
+$_LBVC = array();
 
+// LP taxonomies VID: 25 = indicators , 24 = datasets 
+define("LBVC_IND_VID", 25);
+define("LBVC_CAT_VID", 24);
+
+include_once 'landbook_view_coda.library.inc';
+include_once 'landbook_view_coda.forms.inc';
 include_once 'landbook_view_coda.fields.inc';
+include_once 'landbook_view_coda.blocks.inc';
 include_once 'landbook_view_coda.features.inc';
 
-include_once 'landbook_view_coda.blocks.inc';
 
-
-function landbook_view_coda__plugins() {
-  $plugins = array();
-  $path = dirname(__FILE__) . '/plugins/';
-  $results = scandir($path);
-  foreach ($results as $result) {
-    if ($result === '.' or $result === '..') continue;
-    if (is_dir($path.$result)) {
-    dsm($result);
-      //code to use if directory
-      $plugins[] = $result;
-    }
-  }
-  //dpm($plugins, 'LBVC plugins in ' . $path);
-  return $plugins;
-}
-
-
-
-
-
-
-
-
+// Add view-coda  CSS classes to the Visusalization blocks
 function landbook_view_coda_preprocess_entity(&$variables, $hook) {
   if ($variables['elements']['#bundle'] == 'field_visualization') {
     //dpm($variables['field_view_coda'][0], 'VCC');
@@ -50,15 +34,147 @@ function landbook_view_coda_preprocess_entity(&$variables, $hook) {
   }
 }
 
-function landbook_view_coda_cb($vars) {
-  //dpm($vars, 'VC CB');
+function landbook_view_coda_vis_form($form, &$form_state, $extra) {
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Doit!',
+  );
+  //$form += $extra;
+  return $extra;//$form;
+}
+
+function landbook_view_coda_menu() {
+  // Create an array of block settings.
+  $settings = array(
+    'title' => 'Add Visualization block',
+    'description' => 'Add a new Visualization block.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('landbook_view_coda_add_block_form'),
+    'type' => MENU_LOCAL_ACTION,
+    'file' => 'landbook_view_coda.admin.inc',
+  );
+
+  // Add a local action to the block configuration page.
+  $items['admin/structure/block/add-visualization'] = array(
+    'access arguments' => array('administer blocks'),
+  ) + $settings;
+
+  $items['admin/structure/block/administer/visualization/%/delete'] = array(
+    'title' => 'Delete Visualization block',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('landbook_view_coda_block_delete', 5),
+    'access arguments' => array('administer blocks'),
+    'type' => MENU_CALLBACK,
+    'file' => 'landbook_view_coda.admin.inc',
+  );
+
+  return $items;
 }
 
 
 
+/**
+ * Helper functions
+ */
+
+// ind = indicator taxonomy term id
+function lbvc__indicators_cache($ind) {
+  $pops = taxonomy_term_load($ind); // essentially to get the field_id
+  $sicle = lbvc__indicators_js_serialize($pops);
+  return $sicle;
+}
+
+
+function lbvc__indicators_process(&$stuff, $indicators) {
+  foreach ($indicators as $ind) {
+    $si = lbvc__indicators_js_serialize($ind);
+    $stuff->cache[$si['id']] = $si;
+    array_push($stuff->indicators, $si['id']);
+  }
+}
+
+// Process an array of indicators (terms), fold them by hierarchy
+function lbvc__indicators_tree(&$params, $indicators) {
+  $hind = array();
+  foreach ($indicators as $ind) {
+    $tlbid = $ind->field_id[LANGUAGE_NONE][0]['value'];
+    $htree = hierarchical_taxonomy_get_tree(LBVC_IND_VID, $ind->tid, 2); // max depth: 2
+    $hind[$tlbid] = array();
+    lbvc__indicators_flatten($params, $hind[$tlbid], $htree);
+  }
+  $params->tree = $hind;
+}
+
+// Crawl hierarchical_taxonomy_get_tree results, 'flatten' that
+function lbvc__indicators_flatten(&$params, &$ff, $parent) {
+  foreach($parent as $tid => $term) {
+    $lbt = lbvc__indicators_cache($term->tid);
+    // @TODO CACHE all that stuff
+    if (isset($term->below)) {
+      $ff[$lbt['id']] = array();
+      lbvc__indicators_flatten($params, $ff[$lbt['id']], $term->below);
+    } else {
+      array_push($params->indicators, $lbt['id']);
+      $params->cache[$lbt['id']] = $lbt;
+      array_push($ff, $lbt['id']);
+    }
+  }
+}
+
+
+// Streamline indicator structure between Drupal/JS/LOD
+function lbvc__indicators_js_serialize($entity) {
+//  dpm($entity, 'SER');
+  $render = taxonomy_term_view($entity, 'teaser');
+  return array(
+    //'tid' => $entity->tid,
+    'id' => $entity->field_id[LANGUAGE_NONE][0]['value'],
+    'label' => $entity->name,
+    'desc' => $entity->description,
+    'render' => drupal_render($render),
+  );
+}
+
+function lbvc__indicators_obs() {
+  return array(
+    'cex' => ['value', 'country', 'year'],
+    'geo' => ['country'],
+    'time' => ['year', 'period'],
+    'meta' => [
+      'unit', 'highlow', 'codedvalue',
+      // computed/infered metadata - based on LOD datapoints?
+      'minvalue', 'maxvalue', 'nbobs', 'nbcountries',
+      'minyear', 'maxyear', 'nbyears',
+    ],
+  );
+}
+
+function lbvc__plugins_types() {
+  return variable_get('lbvc.plugins', array());
+}
 
 
 
+/******************************************
+ *
+ * Former hooks for the Land Book
+ *
+ * Add Drupal JS variables for
+ * - Narrative pages (Thematics + Countries)
+ * - LB datasets and indicators terms page
+ */
+
+// For LB Datasets / Indicators (taxonomies)
+function landbook_view_coda_taxonomy_term_view($term, $view_mode, $langcode) {
+  if (!in_array($term->vocabulary_machine_name, array('indicators', 'datasets')))
+    return;
+  drupal_add_js(array(
+    'landbook' => array(
+      'type' => $term->vocabulary_machine_name,
+      'id'   => $term->field_id['und'][0]['value']
+    )
+  ), 'setting');
+}
 
 /**
  * Add visualisation settings variables to Drupal JS variables (Drupal.settings.landbook)
@@ -133,14 +249,3 @@ function landbook_view_coda_js_settings_countries($url, &$vars) {
   );
 }
 
-// For LB Datasets / Indicators (taxonomy) pages
-function landbook_view_coda_taxonomy_term_view($term, $view_mode, $langcode) {
-    if (!in_array($term->vocabulary_machine_name, array('indicators', 'catalogs')))
-        return;
-    drupal_add_js(array(
-        'landbook' => array(
-            'type' => $term->vocabulary_machine_name,
-            'id'   => $term->field_id['und'][0]['value']
-        )
-    ), 'setting');
-}

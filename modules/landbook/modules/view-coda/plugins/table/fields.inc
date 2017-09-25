@@ -8,21 +8,25 @@
  */
 
 function lbvc_plugin_table_params($VCC) {
-  $params = '';
-  $up = $VCC['vcc'];
-  if ($up && $up[0] == '{' && $up[count($up) - 1] == '}') {
-    $params = substr($up, 1, -1) . ', ';
-  }
-  $params .= '"indicators": ["' . join('", "', $VCC['indicators']) . '"]'
-    . ', "add": false, "target": "#' . $VCC['vid'] . '", "vis": LBV';
-  return '{' . $params . '}';
+  $params = json_decode($VCC['vcc']);
+  $params->indicators = array();
+  $params->cache = array();
+
+  lbvc__indicators_process($params, $VCC['indicators']);
+
+  return $params;
 }
 
 function lbvc_plugin_table_formatter($VCC) {
-  /* if (module_exists('devel')) { */
-  /*   dpm($VCC, 'table field'); */
-  /* } */
   $params = lbvc_plugin_table_params($VCC);
+  // All vis should have those
+  $params->target = '#' . $VCC['vid'];
+
+  $js = $VCC['jsid'] . ' = new lbvisTable(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
+
+  if (module_exists('devel')) {  // DEBUG
+    dpm($params, $VCC['type'] . ' params');
+  }
 
   $value = '<table class="table"><thead><tr>
            <th>Indicator</th>
@@ -30,10 +34,6 @@ function lbvc_plugin_table_formatter($VCC) {
            <th><span class="hidden-xs">Countries</span><br/><acronym title="Number of Observations">Obs</acronym> missing</th>
            <th>Min / Max<span class="hidden-xs"> Value</span></th>
            </tr></thead><tbody></tbody></table>';
-  $js = $VCC['jsid'] . ' = new lbvisTable(' . $params . '); ' . $VCC['jsid'] . '.init();';
-  // DEBUG
-  if (strpos($VCC['vcc'], 'debug'))
-    $js .= $VCC['jsid'] . '.debug();';
 
   return array(
     '#type' => 'html_tag',

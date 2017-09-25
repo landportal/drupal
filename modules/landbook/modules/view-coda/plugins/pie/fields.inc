@@ -8,43 +8,82 @@
  */
 
 function lbvc_plugin_pie_params($VCC) {
-  $params = $VCC['vcc'];
-//  dpm($up, 'prams ' . $up[strlen($up) - 1]);
-  if ($params && $params[0] == '{' && $params[strlen($params) - 1] == '}') {
-    $params = substr($params, 1, -1) . ', ';
-  }
+  $params = json_decode($VCC['vcc']);
+  $params->indicators = array();
+  $params->cache = array();
 
-//  dpm($VCC, 'pie params');
-  //$params .= '"indicators": {"main": "' . $VCC['indicators'][0] . '", "chart": ['.$VCC['indicators'].']}';
-  $params .= '"indicators": ["'.join($VCC['indicators'], '", "').'"]';
-  $params .= ', iso3: "PER"';
-  //$params .= ', options: '. json_encode($VCC['options']);
-  $params .= ', cache: '. json_encode($VCC['fields']);
-  $params .= ', "target": "#' . $VCC['vid'] . '", "vis": LBV';
-  return '{' . $params . '}';
+  lbvc__indicators_process($params, $VCC['indicators']);
+
+  // IF loadTree, load all indicators 'children', return a complex ind. structure
+  if (isset($params->loadTree)) {
+    lbvc__indicators_tree($params, $VCC['indicators']);
+  }
+  $params->iso3 = 'PER';
+  return $params;
 }
 
 
-function lbvc_plugin_pie_formatter($VCC) {
-  //if (module_exists('devel')) dpm($VCC, 'VCC');
-
+function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
   $params = lbvc_plugin_pie_params($VCC);
-  $value = t('Loading pie chart');
+  // All vis should have those
+  $params->target = '#' . $VCC['vid'];
 
-  /* Pie should have:
-    - iso3 + year
-    - indicators: [
-      main: IND
-      chart: [IND, IND, IND, ...]
-    ]
-    - colors: [] // should match indicators.chart or be generated
-  */
+  $js = $VCC['jsid'] . ' = new lbvisPie(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
 
-  $js = $VCC['jsid'] . ' = new lbvisPie3(' . $params . '); ' . $VCC['jsid'] . '.init();';
   // DEBUG
-  $js .= $VCC['jsid'] . '.debug();';
+  if (module_exists('devel')) {
+    //dpm($VCC, 'Pie opts');
+    dpm($params, 'Pie params');
+  }
 
-  return array(
+  // Build option / action form for the vis.
+  $fields = array();
+  /*   '#type' => 'container', */
+  /*   '#attributes' => array('class' => 'col-sm-6'), */
+  /*   'children' => array(), */
+  /* ); */
+  if (isset($params->loadCountries)) {
+    $fields['countries'] = array(
+        '#id' => $VCC['vid']. '-countries',
+        '#type' => 'select',
+        '#title' => t('Countries'),
+        '#options' => ['PER', 'EGY'],
+    );
+  }
+
+  if (isset($params->loadTree) && count($params->tree) > 1) {
+//    dpm($ff);
+    $opts = array();
+    /* foreach ($params->tree as $ind => $d) { */
+    /*   $opts[] = $ind; */
+    /* } */
+    $fields['indicators'] = array(
+      '#id' => $VCC['vid']. '-indicators',
+      '#type' => 'select',
+      '#title' => t('Indicators (groups)'),
+      '#options' => array_keys($params->tree)
+    );
+  }
+  
+  $fields['obs'] = array(
+    '#type' => 'checkboxes',
+    '#options' => array(
+      'total' => 'Total',
+      'owners' => 'Owners',
+      'renter' => 'Renters',
+    ),
+    '#default_value' => [],
+  );
+  /* $form = drupal_get_form('landbook_view_coda_vis_form', $fields);//array('f'=>$fields, 'ob'=> $fieldsobs)); */
+  $form = array(
+    '#type' => 'container',
+    'items' => $fields
+  );
+  dpm($form, 'builda pie');
+
+  // The visualization
+  $value = t('Loading pie chart');
+  $pie = array(
     '#type' => 'html_tag',
     '#tag' => 'div',
     '#attributes' => array(
@@ -59,4 +98,7 @@ function lbvc_plugin_pie_formatter($VCC) {
     ),
     '#value' => $value,
   );
+  //dpm($form);
+
+  return array($form, $pie);
 }

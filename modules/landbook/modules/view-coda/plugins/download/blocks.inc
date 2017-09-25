@@ -23,6 +23,7 @@ function lbvc_plugin_download_block_info() {
 }
 
 function lbvc_plugin_download_block_view($delta) {
+  $block = NULL;
   switch ($delta) {
   case 'lbvc_download_ind':
     $block['subject'] = t('Download (ind)');

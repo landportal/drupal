@@ -2,181 +2,62 @@
 /**
  * Implement the js-view-coda library in drupal
  */
+
+
 function landbook_view_coda_library() {
-  $LBVIS_PATH = 'sites/all/libraries/lbvis';
-
-    $libraries['view-coda'] = array(
-        'title' => 'JS View Country Data',
-        'website' => 'https://github.com/landportal/js-view-coda/',
-        'version' => '0.0.1',
-        'js' => array(array(
-          'type' => 'inline',
-          'data' => "var $ = jQuery.noConflict(); $(document).ready(function($) { LBV = new lbvis({prefix: '/sparql?query='}); });"
-        )),
-        'dependencies' => array(
-            array('landbook_view_coda', 'lbvis'),
-        ),
-    );
-
-    // Vendor stuff
-    $libraries['lbvis.highcharts'] = array(
-        'title' => 'view-coda vendor libs',
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/vendor/linkify.min.js' => array('weight' => 0),
-            $LBVIS_PATH . '/js/vendor/linkify-jquery.min.js' => array('weight' => 0),
-            $LBVIS_PATH . '/js/vendor/highstock.js' => array('weight' => 0),
-            $LBVIS_PATH . '/js/vendor/highmaps.js' => array('weight' => 1),
-            $LBVIS_PATH . '/js/vendor/highcharts-more.js' => array('weight' => 2),
-      ),
-    );
-    $libraries['lbvis.map_data'] = array(
-        'title' => 'Map data for highmaps',
-        'website' => 'https://github.com/landportal/js-view-coda/',
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/map_data.js' => array(),
-        ),
-    );
-
-    $libraries['lbvis'] = array(
-        'title' => 'JS View Country Data',
-        'website' => 'https://github.com/landportal/js-view-coda/',
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.js' => array(),
-        ),
-        'dependencies' => array(
-            array('system', 'jquery'),
-            array('landbook_view_coda', 'lbvis.highcharts'),
-            array('landbook_view_coda', 'lbvis.data'),
-        ),
-    );
-    $libraries['lbvis.data'] = array(
-        'title' => 'JS View Country Data',
-        'website' => 'https://github.com/landportal/js-view-coda/',
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.data.js' => array(),
-        ),
-    );
-    $libraries['lbvis.map'] = array(
-        'title' => 'view-coda map',
-        'version' => '0.0.1',
-        'js' => array(
-            //$LBVIS_PATH . '/js/vendor/highmaps.js' => array(),
-            $LBVIS_PATH . '/js/lbvis.map.js' => array(),
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-            array('landbook_view_coda', 'lbvis.map_data'),
-        ),
-    );
-    $libraries['lbvis.table'] = array(
-        'title' => 'view-coda table',
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.table.js' => array(),
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-        ),
-    );
-    $libraries['lbvis.linechart'] = array(
-        'title' => 'view-coda linechart',
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.linechart.js' => array(),
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-        ),
-    );
-    $libraries['lbvis.lgaf'] = array(
-        'title' => 'view-coda lgaf',
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.lgaf.js' => array(),
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-        ),
-    );
-    $libraries['lbvis.pie'] = array(
-        'title' => 'view-coda pie',
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.pie3.js' => array(),
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-        ),
-    );
-    $libraries['lbvis.spider'] = array(
-        'title' => 'view-coda spider',
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.spider.js' => array(),
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-        ),
-    );
-    $libraries['lbvis.ranking'] = array(
-        'title' => 'view-coda ranking',
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.ranking.js' => array(),
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-        ),
-    );
-    $libraries['lbvis.vggt'] = array(
-        'title' => 'view-coda vggt',
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.vggt.js' => array(),
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-        ),
-    );
-    $libraries['lbvis.dl'] = array(
-        'title' => 'view-coda download',
-        'version' => '0.0.1',
-        'js' => array(
-            $LBVIS_PATH . '/js/lbvis.dl.js' => array(),
-        ),
-        'dependencies' => array(
-            array('landbook_view_coda', 'view-coda'),
-        ),
-    );
-    return $libraries;
-}
-
-function _lbvc_types() {
-  return array(
-    'map'   => 'Map projection',
-    'table'  => 'Metadata Table',
-    'line'  => 'Line chart',
-    'pie'   => 'Pie chart',
-    /* 'ranking' => 'Ranking list', */
-    'debug' => 'debug / testing',
+  $PATH = libraries_get_path('js-view-coda');
+  $LIBPATH = DRUPAL_ROOT . '/' . $PATH;
+  $PKG = json_decode(file_get_contents($LIBPATH . "/package.json"), true);
+  
+  $libraries['view-coda'] = array(
+    'title' => 'JS View Country Data',
+    'website' => 'https://github.com/landportal/js-view-coda/',
+    'version' => isset($PKG['version']) ? $PKG['version'] : '0.0.0',
+    'js' => array(
+      $PATH . '/js/lbvis.js' => array(),
+      $PATH . '/js/lbvis.data.js' => array(),
+      array(
+        'type' => 'inline',
+        // TODO: Drupal variable for LB LOD endpoint
+        'data' => "var $ = jQuery.noConflict(); $(document).ready(function($) { LBV = new lbvis({prefix: '/sparql?query='}); });"
+      )
+    ),
+    'dependencies' => array(
+      array('system', 'jquery'),
+      array('landbook_view_coda', 'lbvis.vendors'),
+    ),
   );
-}
 
-
-function _lbvc_obs() {
-  return array(
-    'cex' => ['value', 'country', 'year'],
-    'geo' => ['country'],
-    'time' => ['year', 'period'],
-    'meta' => [
-      'unit', 'highlow', 'codedvalue',
-      // computed/infered metadata - based on LOD datapoints?
-      'minvalue', 'maxvalue', 'nbobs', 'nbcountries',
-      'minyear', 'maxyear', 'nbyears',
-    ],
+  // Vendor stuff
+  $libraries['lbvis.vendors'] = array(
+    'title' => 'view-coda vendor libs',
+    'version' => '0.0.1',
+    'js' => array(
+      $PATH . '/js/vendor/linkify.min.js' => array('weight' => 0),
+      $PATH . '/js/vendor/linkify-jquery.min.js' => array('weight' => 0),
+      $PATH . '/js/vendor/highstock.js' => array('weight' => 0),
+      $PATH . '/js/vendor/highmaps.js' => array('weight' => 1),
+      $PATH . '/js/vendor/highcharts-more.js' => array('weight' => 2),
+    ),
   );
+
+  // Plugins
+  // Scan library 'plugins' directory to find them all...
+  $scan = file_scan_directory($LIBPATH . '/js/plugins', '/.js$/');
+  $plugins = array();
+  foreach($scan as $p => $file) {
+    $plugins[$file->name] = isset($PKG['plugins'][$file->name]) ?
+      $PKG['plugins'][$file->name] : ucfirst($file->name) . ' projection';
+    $libraries['lbvis.' . $file->name] = array(
+      'title' => 'view-coda-' . $file->name,
+      'version' => '0.2.0',
+      'js' => array($PATH . '/js/plugins/' . $file->filename => array()),
+      'dependencies' => array(array('landbook_view_coda', 'view-coda')),
+    );
+  }
+  // Save known plugins
+  variable_set('lbvc.plugins', $PKG['plugins']);//array_keys($plugins));
+  // add map_data js to map plugin
+  $libraries['lbvis.map']['js'][$PATH . '/js/map_data.js'] = array('weight'=>0);
+  return $libraries;
 }

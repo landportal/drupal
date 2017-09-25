@@ -12,7 +12,7 @@
 function lbvc_plugin_table_options() {
   return array(
     //'useLastYear' => 'Use latest year available',
-    //'loadCoutries' => 'Load available countries',
+    'loadCoutries' => 'Load available countries',
     'allowAdd' => 'Allow adding indicators to the table',
   );
 }
@@ -40,14 +40,14 @@ function lbvc_plugin_table_widget_form($item) {
   $values = array();
   // opts should be provided / streamlined with js-view-coda lib
   foreach($options as $opt => $desc) {
-    if ($v->$opt) $values[] = $opt;
+    if (isset($v->$opt)) $values[] = $opt;
   }
 
   $columns = lbvc_plugin_table_columns();
   $columns_values = array();
   // opts should be provided / streamlined with js-view-coda lib
   foreach($columns as $opt => $desc) {
-    if ($v->$opt) $columns_values[] = $opt;
+    if (isset($v->$opt)) $columns_values[] = $opt;
   }
 
   $forms = array(
@@ -66,7 +66,7 @@ function lbvc_plugin_table_widget_form($item) {
     'country' => array(
       '#title' => t('Default country'),
       '#type' => 'textfield',
-      '#default_value' => $v->country,
+      '#default_value' => @$v->country,
     ),
   );
   return $forms;

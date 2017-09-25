@@ -18,6 +18,33 @@ foreach($files as $file) {
 }
 //dpm($plugins_blocks, 'PB');
 
+/* Drupal administration form for block */
+function landbook_view_coda_block_configure($delta='') {
+  $form = NULL;
+  switch ($delta) {
+  case 'lbcp_lgaf':
+  case 'lbcp_spider':
+   $form = array(
+     'text_body' => array(
+       '#type'          => 'text_format',
+       //'#title'         => t('Landbook VIEW_CODA information'),
+       '#default_value' => landbook_view_coda_body()
+     )
+   );
+   break;
+  default:
+    dpm('hello ' . $delta);
+  }
+  return $form;
+}
+
+function landbook_view_coda_block_save($delta = '', $edit = array()) {
+  if (!in_array($delta, array('lbcp_lgaf', 'lbcp_spider'))) return ;
+  variable_set('landbook-' . $delta, $edit['text_body']['value']);
+}
+
+
+
 function landbook_view_coda_block_info() {
   global $plugins_blocks;
   $blocks = array();
@@ -63,14 +90,6 @@ function landbook_view_coda_block_info() {
     'pages'     => "book/countries/*",
     'weight'    => 18
   );
-  /* $blocks['indicator_dl'] = array( */
-  /*   'info'      => t('View CODA: Indicator Download'), */
-  /*   'status'    => TRUE, */
-  /*   'region'    => 'content', */
-  /*   'visibility'=> BLOCK_VISIBILITY_LISTED, */
-  /*   'pages'     => "book/indicators/\*\n", */
-  /*   'weight'    => 13 */
-  /* ); */
   $blocks['indicator_ranking'] = array(
     'info'      => t('View CODA: Indicator Ranking'),
     'status'    => TRUE,
@@ -91,7 +110,8 @@ function landbook_view_coda_lbvis_ready_callback($callback) {
 
 function landbook_view_coda_block_view($delta = '') {
   global $plugins_blocks;
-  
+
+  // Automatically load blocks from 'plugins'
   //dpm($plugins_blocks, 'pb');
   foreach($plugins_blocks as $p) {
     $fxptr = 'lbvc_plugin_' . $p . '_block_view';
@@ -103,8 +123,8 @@ function landbook_view_coda_block_view($delta = '') {
 
   
   $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
-  $jsAttr = 'vis: LBV, iso3: Drupal.settings.landbook.countryCode';
-  $jsRanking = 'vis: LBV, type: "indicators", indicator: Drupal.settings.landbook.ranking || Drupal.settings.landbook.id';
+  $jsAttr = 'iso3: Drupal.settings.landbook.countryCode';
+  $jsRanking = 'type: "indicators", indicator: Drupal.settings.landbook.ranking || Drupal.settings.landbook.id';
 
   switch ($delta) {
   case 'lbcp_linechart' :
@@ -115,7 +135,7 @@ function landbook_view_coda_block_view($delta = '') {
         'js' => array(array(
           'type' => 'inline',
           'data' => landbook_view_coda_lbvis_ready_callback(
-            'COMP = new lbvisLC({'.$jsAttr.', target: "#block-landbook-view-coda-lbcp-linechart"}); COMP.init();')
+            'COMP = new lbvisLC(LBV, {' . $jsAttr . ', target: "#block-landbook-view-coda-lbcp-linechart"}); COMP.init();')
         ))
       ),
     );
@@ -128,42 +148,25 @@ function landbook_view_coda_block_view($delta = '') {
         'js' => array(array(
           'type' => 'inline',
           'data' => landbook_view_coda_lbvis_ready_callback(
-            'LGAF = new lbvisLGAF({'.$jsAttr.', jsonPath: "'.$LBVIS_PATH . '/json/", target: "#block-landbook-view-coda-lbcp-lgaf"}); LGAF.init();')
+            'LGAF = new lbvisLGAF(LBV, {' . $jsAttr . ', jsonPath: "'.$LBVIS_PATH . '/json/", target: "#block-landbook-view-coda-lbcp-lgaf"}); LGAF.init();')
         ))
       ),
       '#markup' => landbook_view_coda_body($delta)
     );
     break;
-  case 'lbcp_pie' :
-    $block['subject'] = '<none>';
-//    $block['classes'][] = 'piechart';
-    $block['content'] = array(
-      '#attached' => array(
-        'library' => array(array('landbook_view_coda', 'lbvis.pie')),
-        'js' => array(array(
-          'type' => 'inline',
-          'data' => landbook_view_coda_lbvis_ready_callback(
-            'PIE = new lbvisPie({' . $jsAttr . ', target: "#block-landbook-view-coda-lbcp-pie-wrapper"}); PIE.init();')
-        ))
-      )
-    );
-//  dpm($block);
-    break;
   case 'lbcp_spider' :
     $block['subject'] = '<none>';
-//    $block['classes'][] = 'spiderchart';
     $block['content'] = array(
       '#attached' => array(
         'library' => array(array('landbook_view_coda', 'lbvis.spider')),
         'js' => array(array(
           'type' => 'inline',
           'data' => landbook_view_coda_lbvis_ready_callback(
-            'SPIDER = new lbvisSpider({' . $jsAttr . ', target: "#block-landbook-view-coda-lbcp-spider-wrapper"}); SPIDER.init();')
+            'SPIDER = new lbvisSpider(LBV, {' . $jsAttr . ', target: "#block-landbook-view-coda-lbcp-spider-wrapper"}); SPIDER.init();')
         ))
       ),
       '#markup' => landbook_view_coda_body($delta)
     );
-//  dpm($block);
     break;
   case 'indicator_ranking' :
     $block['subject'] = t('Ranking');
@@ -173,19 +176,7 @@ function landbook_view_coda_block_view($delta = '') {
         'js' => array(array(
           'type' => 'inline',
           'data' => landbook_view_coda_lbvis_ready_callback(
-            'RANKING = new lbvisRanking({' . $jsRanking . ',  target: "#block-landbook-view-coda-indicator-ranking"}); RANKING.init();')
-        ))
-      )
-    );
-    break;
-  case 'indicator_dl':
-    $block['subject'] = t('Download');
-    $block['content'] = array(
-      '#attached' => array(
-        'library' => array(array('landbook_view_coda', 'lbvis.dl')),
-        'js' => array(array(
-          'type' => 'inline',
-          'data' => landbook_view_coda_lbvis_ready_callback('DL = new lbvis.dl({'.$jsAttr.',  target: "#block-landbook-view-coda-indicator-dl", indicator: Drupal.settings.landbook.id});')
+            'RANKING = new lbvisRanking(LBV, {' . $jsRanking . ',  target: "#block-landbook-view-coda-indicator-ranking"}); RANKING.init();')
         ))
       )
     );
@@ -216,22 +207,4 @@ function landbook_view_coda_body($name) {
         $output = $default[$name];
     }
     return $output;
-}
-
-/* Drupal administration form for block */
-function landbook_view_coda_block_configure($delta='') {
-  if (!in_array($delta, array('lbcp_lgaf', 'lbcp_spider'))) return ;
-   $form = array(
-     'text_body' => array(
-       '#type'          => 'text_format',
-       //'#title'         => t('Landbook VIEW_CODA information'),
-       '#default_value' => landbook_view_coda_body()
-     )
-   );
-   return $form;
-}
-
-function landbook_view_coda_block_save($delta = '', $edit = array()) {
-  if (!in_array($delta, array('lbcp_lgaf', 'lbcp_spider'))) return ;
-  variable_set('landbook-' . $delta, $edit['text_body']['value']);
 }

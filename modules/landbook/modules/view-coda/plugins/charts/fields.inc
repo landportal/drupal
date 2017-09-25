@@ -14,16 +14,18 @@ function lbvc_plugin_charts_params($VCC) {
   /* if (array_key_exists('fields', $VCC)) { */
   /*   $params->cache = $VCC['fields']; */
   /* } */
-  lbvc__indicators_tree($params, $VCC['indicators']);
+  if (isset($params->loadTree)) {
+    // Also generate / load drupal select menu to change ind./serie in chart ...
+    lbvc__indicators_tree($params, $VCC['indicators']);
+  }
   return $params;
 }
 
 function lbvc_plugin_charts_formatter($VCC) {
   $params = lbvc_plugin_charts_params($VCC);
-  // All vis should have those
-  $params->target = $VCC['vid'];
+  $params->target = '#' . $VCC['vid'];
   if (module_exists('devel')) {  // DEBUG
-    dpm($params, $VCC['type'] . ' params');
+    //dpm($params, $VCC['type'] . ' params');
   }
 
   $js = $VCC['jsid'] . ' = new lbvisCharts(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
@@ -41,6 +43,6 @@ function lbvc_plugin_charts_formatter($VCC) {
         'data' => landbook_view_coda_lbvis_ready_callback($js)
       ))
     ),
-    '#value' => 'yo chart',
+    '#value' => t('Loading chart...'),
   );
 }
