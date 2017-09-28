@@ -32,10 +32,16 @@ function lbvc_plugin_charts_widget_form($item) {
   }
   $forms = array(
     'options' => array(
-      '#title' => t('CHARTS stuff'),
+      '#title' => t('Options'),
       '#type' => 'checkboxes',
       '#options' => $options,
       '#default_value' => $values,
+    ),
+    'ctype' => array(
+      '#type' => 'radios',
+      '#title' => t('Chart type'),
+      '#options' => array('bar' => 'Bars', 'line' => 'Lines'),
+      '#default_value' => isset($v->ctype) ? $v->ctype : 'bar',
     ),
     'main' => array(
       '#title' => t('Main (title) indicator'),
@@ -57,15 +63,16 @@ function lbvc_plugin_charts_widget_form($item) {
   return $forms;
 }
 
-// Returns a string
-function lbvc_plugin_charts_field_presave($item) {
-  $options = $item;
-  unset($options['vcc']);
-  unset($options['type']);
-  unset($options['options']);
-  foreach(lbvc_plugin_charts_options() as $opt => $desc) {
-    if ($item['options'][$opt]) $options[$opt] = true;
-  }
-  //dpm($options, 'charts opts');
-  return json_encode($options);
-}
+/* // Returns an obj / hash */
+/* function lbvc_plugin_charts_field_presave($item) { */
+/*   /\* $options = $item['vis']; *\/ */
+/*   /\* /\\* unset($options['vcc']); *\\/ *\/ */
+/*   /\* /\\* unset($options['type']); *\\/ *\/ */
+/*   /\* unset($options['options']); *\/ */
+/*   /\* foreach(lbvc_plugin_charts_options() as $opt => $desc) { *\/ */
+/*   /\*   if ($item['vis']['options'][$opt]) $options[$opt] = true; *\/ */
+/*   /\* } *\/ */
+/*   /\* dpm($options, 'charts opts'); *\/ */
+/*   /\* return json_encode($options);//['vis']); *\/ */
+/*   return []; */
+/* } */

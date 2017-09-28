@@ -8,14 +8,8 @@ function lbvc_plugin_charts_params($VCC) {
   $params->cache = array();
 
   lbvc__indicators_process($params, $VCC['indicators']);
-  /* if (array_key_exists('indicators', $VCC)) { */
-  /*   $params->indicators = $VCC['indicators']; */
-  /* } */
-  /* if (array_key_exists('fields', $VCC)) { */
-  /*   $params->cache = $VCC['fields']; */
-  /* } */
+
   if (isset($params->loadTree)) {
-    // Also generate / load drupal select menu to change ind./serie in chart ...
     lbvc__indicators_tree($params, $VCC['indicators']);
   }
   return $params;
@@ -40,7 +34,7 @@ function lbvc_plugin_charts_formatter($VCC) {
       'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
       'js' =>  array(array(
         'type' => 'inline',
-        'data' => landbook_view_coda_lbvis_ready_callback($js)
+        'data' => lbvc__js_ready($js)
       ))
     ),
     '#value' => t('Loading chart...'),

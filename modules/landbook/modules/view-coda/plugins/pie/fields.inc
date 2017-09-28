@@ -22,7 +22,6 @@ function lbvc_plugin_pie_params($VCC) {
   return $params;
 }
 
-
 function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
   $params = lbvc_plugin_pie_params($VCC);
   // All vis should have those
@@ -93,7 +92,7 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
       'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
       'js' =>  array(array(
         'type' => 'inline',
-        'data' => landbook_view_coda_lbvis_ready_callback($js)
+        'data' => lbvc__js_ready($js)
       ))
     ),
     '#value' => $value,

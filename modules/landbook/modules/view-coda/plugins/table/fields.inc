@@ -45,7 +45,7 @@ function lbvc_plugin_table_formatter($VCC) {
       'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
       'js' =>  array(array(
         'type' => 'inline',
-        'data' => landbook_view_coda_lbvis_ready_callback($js)
+        'data' => lbvc__js_ready($js)
       ))
     ),
     '#value' => $value,

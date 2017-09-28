@@ -10,11 +10,11 @@
 // Returns a list of boolean options understood by js-view-coda projection (vis. type)
 function lbvc_plugin_pie_options() {
   return array(
-        'legend' => 'Show legend',
-        'loadTree' => 'Load sub-indicators',
-        'loadMain' => 'Load main indicator data',
-        'mainDelta' => 'Main is the overall value',
-        'loadCountries' => 'Load available countries',
+    'legend' => 'Show legend',
+    'loadTree' => 'Load sub-indicators',
+    'loadMain' => 'Load main indicator data',
+    'mainDelta' => 'Main is the overall value',
+    'loadCountries' => 'Load available countries',
   );
 }
 
@@ -57,25 +57,15 @@ function lbvc_plugin_pie_widget_form($item) {
   return $forms;
 }
 
-// Returns a string
-function lbvc_plugin_pie_field_presave($item) {
-  $options = $item;
-  unset($options['vcc']);
-  unset($options['type']);
-  unset($options['options']);
-  foreach(lbvc_plugin_charts_options() as $opt => $desc) {
-    if ($item['options'][$opt]) $options[$opt] = true;
-  }
-  //dpm($options, 'charts opts');
-  return json_encode($options);
-}
-
 /* // Returns a string */
 /* function lbvc_plugin_pie_field_presave($item) { */
-/*   $jsopts = '"main": "'.$item['main'].'"' */
-/*     . ($item['year'] ? ', "year": "'.$item['year'].'"' : ''); */
+/*   $options = $item['vis']; */
+/*   /\* unset($options['vcc']); *\/ */
+/*   /\* unset($options['type']); *\/ */
+/*   unset($options['options']); */
 /*   foreach(lbvc_plugin_pie_options() as $opt => $desc) { */
-/*     if (array_key_exists($opt, $item['options'])) $jsopts .= ', "' . $opt . '": "true"'; */
+/*     if ($item['vis']['options'][$opt]) $options[$opt] = true; */
 /*   } */
-/*   return '{' . $jsopts. '}'; */
+/*   dpm($options, 'charts opts'); */
+/*   return json_encode($options); */
 /* } */

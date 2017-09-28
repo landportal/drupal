@@ -32,7 +32,7 @@ function lbvc_plugin_table_columns() {
 
 
 function lbvc_plugin_table_widget_form($item) {
-  if (module_exists('devel')) dpm($item, 'pie chart');
+  //if (module_exists('devel')) dpm($item, $item['type'] . ' chart');
   $v = json_decode($item['vcc']);
   //dpm($v, 'args');
 
@@ -72,19 +72,6 @@ function lbvc_plugin_table_widget_form($item) {
   return $forms;
 }
 
-// Returns a string
-function lbvc_plugin_table_field_presave($item) {
-  $jsopts = '"main": "'.$item['main'].'"'
-    . ($item['year'] ? ', "year": "'.$item['year'].'"' : '');
-  foreach(lbvc_plugin_table_options() as $opt => $desc) {
-    if ($item['options'][$opt]) $jsopts .= ', "' . $opt . '": "true"';
-  }
-  // Table Columns
-  $jsopts .= ', "columns": ["ind"';
-  foreach(lbvc_plugin_table_columns() as $opt => $desc) {
-    if ($item['columns'][$opt]) $jsopts .= ', "' . $opt . '"';
-  }
-  $jsopts .= ']';
-
-  return '{' . $jsopts. '}';
-}
+/* // Returns a JSON / array */
+/* function lbvc_plugin_table_field_presave($item) { */
+/* } */
