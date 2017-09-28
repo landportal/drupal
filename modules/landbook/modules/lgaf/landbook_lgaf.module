@@ -1,0 +1,40 @@
+<?php
+
+/* Declare LGAF block */
+function landbook_lgaf_block_info() {
+  $blocks['vis'] = array(
+    'info'      => t('View CODA: LGAF'),
+    'status'    => TRUE,
+    'region'    => 'content',
+    'visibility'=> BLOCK_VISIBILITY_LISTED,
+    'pages'     => "book/countries/*",
+    'weight'    => 16
+  );
+  return $blocks;
+}
+
+function landbook_lgaf_block_view($delta = '') {
+  if ($delta != 'vis') return ;
+
+  $PATH = libraries_get_path('js-view-coda');
+  $jsAttr = 'jsonPath: "' . $PATH . '/examples/json", iso3: Drupal.settings.landbook.countryCode';
+
+  $block = array(
+    'subject' => t('Land Governance Assessment Framework (LGAF)'),
+    'content' => array(
+      '#markup' => 'YYYYYYYYY',
+    ),
+    '#attached' => array(
+      'library' => array(
+        array('landbook_view_coda', 'lbvis.lgaf')
+      ),
+      'js' => array(
+        array(
+          'type' => 'inline',
+          'data' => lbvc__js_ready('LGAF = new lbvisLGAF(LBV, {'.$jsAttr.', target: "#block-landbook-lgaf-vis"}); LGAF.init();')
+        )
+      )
+    )
+  );
+  return $block;
+}
