@@ -27,6 +27,7 @@ function lpbs__taxonomy_term_page($page) {
 }
 
 function landportal_display_preprocess_page(&$variables) {
+  //dpm($variables, "vars");
   // Taxonomy
   if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
     $term = lpbs__taxonomy_term_page($variables['page']);
@@ -35,11 +36,11 @@ function landportal_display_preprocess_page(&$variables) {
       $variables['title'] = '';
     }
   }
-  else if (isset($variables['node']) && isset($variables['node']->title_field)) {
+  else if (isset($variables['node']) && isset($variables['node']->title_field) &&
+  array_key_exists('nodes', $variables['page']['content']['system_main'])) {
     $node = $variables['node'];
     $content = $variables['page']['content']['system_main']['nodes'][$node->nid];
 
-    /* dpm($variables, "vars"); */
     /* dpm($variables['page'], "page"); */
     /* dpm($node, "node "); */
     /* dpm($content, 'content'); */
