@@ -151,21 +151,6 @@ function landbook_get_pdf_url(){
     }
     return ;
 }
-// TODO: cleanup this shit
-function landbook_get_country_info(){
-    $output = array();
-    $args = arg();
-    if ($args[0] == 'book' && $args[1] == 'countries' && !empty($args[2])) {
-        $iso = $args[2];
-        $output['iso'] = $iso;
-        $tid = landbook_get_region_iso($iso);
-        $term = taxonomy_term_load($tid);
-        if ($term) {
-            $output['country_name'] = $term->name;
-        }
-    }
-    return $output;
-}
 
 function landbook_block_body($name) {
     $default = array(
