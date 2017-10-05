@@ -348,10 +348,10 @@ function ct_thematic_narrative_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
+          'add' => '',
+          'delete' => '',
           'description' => 1,
-          'edit' => 'Edit',
+          'edit' => '',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
@@ -485,8 +485,8 @@ function ct_thematic_narrative_field_default_field_instances() {
   t('Info');
   t('Land Book Indicators');
   t('Narrative');
-  t('Source');
   t('Select a Landvoc Theme or Overarching Category this narrative is about.');
+  t('Source');
   t('The narrative (title)');
   t('The subtitle of the narrative');
 
