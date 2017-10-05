@@ -2,16 +2,13 @@
 /**
  * Land Portal View Coda
  *
- * Visualization plugin: map
+ * Visualization plugin: spider chart
  * 
  * Author: Jules <jules@landportal.info>
  */
 
-
-function lbvc_plugin_map_params($VCC) {
-  $params = json_decode($VCC['vcc'] != 'null' ? $VCC['vcc'] : '{}');
-  /* dpm($params, 'PARAMS'); */
-  /* dpm($VCC, 'VCC'); */
+function lbvc_plugin_spider_params($VCC) {
+  $params = json_decode($VCC['vcc']);
   $params->indicators = array();
   $params->cache = array();
 
@@ -21,18 +18,25 @@ function lbvc_plugin_map_params($VCC) {
   if (isset($params->loadTree)) {
     lbvc__indicators_tree($params, $VCC['indicators']);
   }
-
+  $params->iso3 = 'PER';
   return $params;
 }
 
-function lbvc_plugin_map_formatter($VCC) {
-  $value = t('Loading map...');
-
-  $params = lbvc_plugin_map_params($VCC);
+function lbvc_plugin_spider_formatter($VCC, $form=NULL) {
+  $params = lbvc_plugin_spider_params($VCC);
+  // All vis should have those
   $params->target = '#' . $VCC['vid'];
-  $js = $VCC['jsid'] . ' = new lbvisMap(map_data, LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
 
-  return array(
+  $js = $VCC['jsid'] . ' = new lbvisSpider(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
+
+  // DEBUG
+  if (module_exists('devel')) {
+    //dpm($VCC, 'Spider opts');
+  }
+
+  // The visualization
+  $value = t('Loading spider chart');
+  $spider = array(
     '#type' => 'html_tag',
     '#tag' => 'div',
     '#attributes' => array(
@@ -47,4 +51,7 @@ function lbvc_plugin_map_formatter($VCC) {
     ),
     '#value' => $value,
   );
+  //dpm($form);
+
+  return $spider;
 }

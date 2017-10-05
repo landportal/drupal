@@ -32,7 +32,7 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
   // DEBUG
   if (module_exists('devel')) {
     //dpm($VCC, 'Pie opts');
-    dpm($params, 'Pie params');
+//    dpm($params, 'Pie params');
   }
 
   // Build option / action form for the vis.
@@ -78,7 +78,7 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
     '#type' => 'container',
     'items' => $fields
   );
-  dpm($form, 'builda pie');
+//  dpm($form, 'builda pie');
 
   // The visualization
   $value = t('Loading pie chart');
