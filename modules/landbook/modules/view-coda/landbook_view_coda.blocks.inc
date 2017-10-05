@@ -22,19 +22,13 @@ foreach($files as $file) {
 function landbook_view_coda_block_configure($delta='') {
   $form = NULL;
   switch ($delta) {
-  case 'lbcp_lgaf':
-  case 'lbcp_spider':
-   $form = array(
-     'text_body' => array(
-       '#type'          => 'text_format',
-       //'#title'         => t('Landbook VIEW_CODA information'),
-       '#default_value' => landbook_view_coda_body()
-     )
-   );
-   break;
   default:
-    dpm('hello ' . $delta);
+    $form = array('vis' => array(
+      '#type' => 'fieldgroup',
+      'items' => lbvc__forms_vis(),
+    ));
   }
+  dpm($form, 'hello ' . $delta);
   return $form;
 }
 
@@ -49,63 +43,13 @@ function landbook_view_coda_block_info() {
   global $plugins_blocks;
   $blocks = array();
 
-//  dpm($plugins_blocks, 'pb here');
   foreach($plugins_blocks as $p) {
     $fxptr = 'lbvc_plugin_' . $p . '_block_info';
     if (function_exists($fxptr)) {
       $blocks += $fxptr();
     }
   }
-
-  // Old style blocks
-  $blocks['lbcp_linechart'] = array(
-    'info'      => t('View CODA: Infographics (linechart)'),
-    'status'    => TRUE,
-    'region'    => 'content',
-    'visibility'=> BLOCK_VISIBILITY_LISTED,
-    'pages'     => "book/countries/*",
-    'weight'    => 11
-  );
-  $blocks['lbcp_lgaf'] = array(
-    'info'      => t('View CODA: LGAF'),
-    'status'    => TRUE,
-    'region'    => 'content',
-    'visibility'=> BLOCK_VISIBILITY_LISTED,
-    'pages'     => "book/countries/*",
-    'weight'    => 16
-  );
-  $blocks['lbcp_pie'] = array(
-    'info'      => t('View CODA: Pie chart'),
-    'status'    => TRUE,
-    'region'    => -1,
-    'visibility'=> BLOCK_VISIBILITY_LISTED,
-    'pages'     => "book/countries/*",
-    'weight'    => 17
-  );
-  $blocks['lbcp_spider'] = array(
-    'info'      => t('View CODA: Spider'),
-    'status'    => TRUE,
-    'region'    => -1,
-    'visibility'=> BLOCK_VISIBILITY_LISTED,
-    'pages'     => "book/countries/*",
-    'weight'    => 18
-  );
-  $blocks['indicator_ranking'] = array(
-    'info'      => t('View CODA: Indicator Ranking'),
-    'status'    => TRUE,
-    'region'    => 'content',
-    'visibility'=> BLOCK_VISIBILITY_LISTED,
-    'pages'     => "book/indicators/*\nbook/thematic/*",
-    'weight'    => 16
-  );
-
-  //dpm($blocks, 'LBVC register blocks');
   return $blocks;
-}
-
-// Wrap lbvis.[CHART] callback
-function landbook_view_coda_lbvis_ready_callback($callback) {
-    return 'jQuery(document).ready(function () { LBV.ready().done(function () { ' . $callback . ' }) });';
 }
 
 function landbook_view_coda_block_view($delta = '') {
@@ -119,92 +63,9 @@ function landbook_view_coda_block_view($delta = '') {
       $block = $fxptr($delta);
     }
   }
-
-
   
-  $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
+  // TODO : some automagic here for iso3 from field_related_geo
   $jsAttr = 'iso3: Drupal.settings.landbook.countryCode';
-  $jsRanking = 'type: "indicators", indicator: Drupal.settings.landbook.ranking || Drupal.settings.landbook.id';
 
-  switch ($delta) {
-  case 'lbcp_linechart' :
-    $block['subject'] = t('Compare countries');
-    $block['content'] = array(
-      '#attached' => array(
-        'library' => array(array('landbook_view_coda', 'lbvis.linechart')),
-        'js' => array(array(
-          'type' => 'inline',
-          'data' => landbook_view_coda_lbvis_ready_callback(
-            'COMP = new lbvisLC(LBV, {' . $jsAttr . ', target: "#block-landbook-view-coda-lbcp-linechart"}); COMP.init();')
-        ))
-      ),
-    );
-    break;
-  case 'lbcp_lgaf' :
-    $block['subject'] = t('Land Governance Assessment Framework (LGAF)');
-    $block['content'] = array(
-      '#attached' => array(
-        'library' => array(array('landbook_view_coda', 'lbvis.lgaf')),
-        'js' => array(array(
-          'type' => 'inline',
-          'data' => landbook_view_coda_lbvis_ready_callback(
-            'LGAF = new lbvisLGAF(LBV, {' . $jsAttr . ', jsonPath: "'.$LBVIS_PATH . '/json/", target: "#block-landbook-view-coda-lbcp-lgaf"}); LGAF.init();')
-        ))
-      ),
-      '#markup' => landbook_view_coda_body($delta)
-    );
-    break;
-  case 'lbcp_spider' :
-    $block['subject'] = '<none>';
-    $block['content'] = array(
-      '#attached' => array(
-        'library' => array(array('landbook_view_coda', 'lbvis.spider')),
-        'js' => array(array(
-          'type' => 'inline',
-          'data' => landbook_view_coda_lbvis_ready_callback(
-            'SPIDER = new lbvisSpider(LBV, {' . $jsAttr . ', target: "#block-landbook-view-coda-lbcp-spider-wrapper"}); SPIDER.init();')
-        ))
-      ),
-      '#markup' => landbook_view_coda_body($delta)
-    );
-    break;
-  case 'indicator_ranking' :
-    $block['subject'] = t('Ranking');
-    $block['content'] = array(
-      '#attached' => array(
-        'library' => array(array('landbook_view_coda', 'lbvis.ranking')),
-        'js' => array(array(
-          'type' => 'inline',
-          'data' => landbook_view_coda_lbvis_ready_callback(
-            'RANKING = new lbvisRanking(LBV, {' . $jsRanking . ',  target: "#block-landbook-view-coda-indicator-ranking"}); RANKING.init();')
-        ))
-      )
-    );
-    break;
-  }
   return $block;
-}
-
-function landbook_view_coda_body($name) {
-  $default = array(
-    'lbcp_lgaf'   => '<p>Note: Some Indicators might have multiple values (e.g. Green-Orange), which might refers to different localities or categories of people. For more information please refers to specific country reports and to the methodology made available by the original data source/provider: <a href="http://go.worldbank.org/21M7S7AZO0" target="_blank">The Land GovernanceAssessment Framework (LGAF) website of the World Bank</a></p>',
-
-    'lbcp_spider' => 'Note: This spider chart reflects the level of development of a country on four dimensions, which are measured using four internationally accepted indexes:
-<p class="m-xs-top no-m-bottom"><a href="https://landportal.info/book/indicators/oecd-sigi">The Social Institutions and Gender Index (SIGI) by OECD</a></p>
-
-<p class="no-m-top no-m-bottom"><a href="https://landportal.info/book/indicators/wb-sipovgini">The GINI Index by the World Bank</a></p>
-
-<p class="no-m-top no-m-bottom"><a href="https://landportal.info/book/indicators/undp-hdi-index">The Human Development Index (HDI) by UNDP</a></p>
-
-<p><a href="https://landportal.info/book/indicators/ifpri-ghi">The Global Hunger Index (GHI) by IFPRI</a></p>
-
-<p>All original values for the indexes have been rescaled from 0 to 100, where 0 reflects low development levels and 100 reflects high development levels.For each index the value for the most recent available year is selected by default".</p>'
-    );
-
-    //$default: The default value to use if this variable has never been set.
-    $output = variable_get('landbook-' . $name, $default[$name]);
-    if (empty($output)) {
-        $output = $default[$name];
-    }
-    return $output;
 }

@@ -3,6 +3,9 @@
  * Implement the js-view-coda library in drupal
  */
 
+function lbvc__js_ready($callback) {
+  return 'jQuery(document).ready(function () { LBV.ready().done(function () { ' . $callback . ' }) });';
+}
 
 function landbook_view_coda_library() {
   $PATH = libraries_get_path('js-view-coda');
