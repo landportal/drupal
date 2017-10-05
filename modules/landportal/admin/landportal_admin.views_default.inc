@@ -8,8 +8,11 @@ function landportal_admin_views_default_views_alter(&$views) {
     $path = drupal_get_path('module', 'landportal_admin').'/views';
     $files = file_scan_directory($path, '/\.inc$/');
     foreach ($files as $filepath => $file) {
+      $view = NULL;
       include_once $filepath;
-      $views[$view->name] = $view;
+      if ($view) {
+        $views[$view->name] = $view;
+      }
     }
     //return $export;
 }
