@@ -126,13 +126,13 @@ function lbvc__indicators_flatten(&$params, &$ff, $parent) {
 // Streamline indicator structure between Drupal/JS/LOD
 function lbvc__indicators_js_serialize($entity) {
 //  dpm($entity, 'SER');
-  $render = taxonomy_term_view($entity, 'teaser');
+  //$render = taxonomy_term_view($entity, 'teaser');
   return array(
     //'tid' => $entity->tid,
     'id' => $entity->field_id[LANGUAGE_NONE][0]['value'],
     'label' => $entity->name,
     'desc' => $entity->description,
-    'render' => drupal_render($render),
+    'render' => '<span>' . $entity->name . '</span>',//drupal_render($render),
   );
 }
 
@@ -188,7 +188,6 @@ function landbook_view_coda_page_build(&$page) {
   global $LBVIS_PATH;
   // Based on actuall path
   $url = explode('/', drupal_get_path_alias());
-  //dpm($url, count($url));
   if ($url[0] != 'book') return;
   // JS var: Drupal.settings.landbook
   $view_coda = array('type' => 'book');
@@ -201,7 +200,8 @@ function landbook_view_coda_page_build(&$page) {
   if ($url[1] == 'countries' && count($url) > 2) {
     landbook_view_coda_js_settings_countries($url, $view_coda);
   }
-  drupal_add_js(array('landbook' => $view_coda), 'setting');    
+  //dpm($view_coda, $url[2]);
+  drupal_add_js(array('landbook' => $view_coda), 'setting');
 }
 
 function landbook_view_coda_js_settings_thematic($url, &$vars) {
@@ -245,7 +245,6 @@ function landbook_view_coda_js_settings_countries($url, &$vars) {
   /* drupal_add_css($LBVIS_PATH . '/css/spinkit.css', array('group' => CSS_DEFAULT)); */
   $vars = array(
     'type'        => 'country',
-    'libraryPath' => $LBVIS_PATH,
     'countryCode' => $url[2]
   );
 }

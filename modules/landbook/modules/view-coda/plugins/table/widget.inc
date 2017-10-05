@@ -63,10 +63,10 @@ function lbvc_plugin_table_widget_form($item) {
       '#options' => $options,
       '#default_value' => $values,
     ),
-    'country' => array(
+    'iso3' => array(
       '#title' => t('Default country'),
       '#type' => 'textfield',
-      '#default_value' => @$v->country,
+      '#default_value' => isset($v->iso3) ? $v->iso3 : '',
     ),
   );
   return $forms;

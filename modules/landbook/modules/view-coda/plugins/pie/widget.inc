@@ -48,10 +48,10 @@ function lbvc_plugin_pie_widget_form($item) {
       '#type' => 'textfield',
       '#default_value' => isset($v->year) ? $v->year : '',
     ),
-    'country' => array(
+    'iso3' => array(
       '#title' => t('Default country'),
       '#type' => 'textfield',
-      '#default_value' => isset($v->country) ? $v->country : '',
+      '#default_value' => isset($v->iso3) ? $v->iso3 : '',
     ),
   );
   return $forms;

@@ -9,35 +9,30 @@
 /** LB view-coda fields
  * @@@Add default map to indicators with non coded value
  */
-function landbook_view_coda_update_7206() {
+function landbook_view_coda_update_7207() {
   // TODO
   // update all indicators with some default visualization (with fields)
   // ??? update all datasets with table vis. Only if nb indicators < X?
-
   $terms = entity_load('taxonomy_term', FALSE, array('vid' => LBVC_IND_VID));
   foreach ($terms as $t) {
     // Add map vis to all indicators without a 'coded' value
     if (!$t->field_hascodedvalue[LANGUAGE_NONE][0]['value']) {
       $fc_item = entity_create('field_collection_item', array('field_name' => 'field_visualization'));
       $fc_item->setHostEntity('taxonomy_term', $t);// taxonomy_term_load($t));
-
-      $fc_item->field_view_coda[LANGUAGE_NONE][] = array(
-        'type' => 'map',
-        'vcc' => '{"debug": true}'
+      $fc_item->field_view_coda[LANGUAGE_NONE] = array(
+        array(
+          'type' => 'map',
+          'vcc' => '{"debug": true}'
+        )
       );
       $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = $t->tid;
-//      print_r($t->field_id[LANGUAGE_NONE][0]);
       $fc_item->save();
 
       drush_log('Add map to indicators [' . $t->tid . ']: ' . $t->field_id[LANGUAGE_NONE][0]['value'], 'warning');
     }
-    die();
   }
 
-
-
-
-
+  // Update for CP & TP
   $nodes = [];
   foreach( ['thematic_narrative', 'landbook_country'] as $ct) {
     $nodes += node_load_multiple(array(), array('type' => $ct));
@@ -86,8 +81,9 @@ function landbook_view_coda_update_7206() {
     foreach ($VIS as $k=>$o) {
       $fc_item = entity_create('field_collection_item', array('field_name' => 'field_visualization'));
       $fc_item->setHostEntity('node', $manode);
-      if (array_key_exists('title', $o))
+      if (array_key_exists('title', $o)) {
         $fc_item->title_field[LANGUAGE_NONE][]['value'] = $o['title'];
+      }
       if ($k == 'table') {
         if (count($manode->field_indicators[LANGUAGE_NONE]) > 0) {
           $fc_item->field_indicators = $manode->field_indicators;
@@ -110,6 +106,7 @@ function landbook_view_coda_update_7206() {
       } else if ($k == 'pie') {
         // Add FAO 'default' (aka original) indicators: 'FAO-6621-5110', 'FAO-6650-5110', 'FAO-6655-5110', 'FAO-6661-5110'
         //$fc_item->field_indicators[LANGUAGE_NONE] = array(6950, 6951, 7545, 7546);
+        $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = 6954;
         $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = 6950;
         $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = 6951;
         $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = 7545;

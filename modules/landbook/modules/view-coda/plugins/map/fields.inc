@@ -9,7 +9,7 @@
 
 
 function lbvc_plugin_map_params($VCC) {
-  $params = json_decode($VCC['vcc'] != 'null' ? $VCC['vcc'] : '{}');
+  $params = json_decode($VCC['vcc'] != '' ? $VCC['vcc'] : '{}');
   /* dpm($params, 'PARAMS'); */
   /* dpm($VCC, 'VCC'); */
   $params->indicators = array();
@@ -32,7 +32,7 @@ function lbvc_plugin_map_formatter($VCC) {
   $params->target = '#' . $VCC['vid'];
   $js = $VCC['jsid'] . ' = new lbvisMap(map_data, LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
 
-  return array(
+  return array(array(
     '#type' => 'html_tag',
     '#tag' => 'div',
     '#attributes' => array(
@@ -46,5 +46,5 @@ function lbvc_plugin_map_formatter($VCC) {
       ))
     ),
     '#value' => $value,
-  );
+  ));
 }

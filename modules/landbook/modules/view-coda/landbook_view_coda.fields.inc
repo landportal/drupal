@@ -92,7 +92,7 @@ function landbook_view_coda_field_formatter_info() {
     ),
     'lbvc_block' => array(
       'label' => t('LB Visualization block'),
-      'field types' => array('field_visualization'),//, 'field_collection'),
+      'field types' => array('field_visualization', 'field_collection'),
       'settings' =>  array(
         'view_mode' => 'full',
         'class' => '',

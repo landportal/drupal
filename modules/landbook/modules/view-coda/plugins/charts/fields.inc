@@ -18,11 +18,12 @@ function lbvc_plugin_charts_params($VCC) {
 function lbvc_plugin_charts_formatter($VCC) {
   $params = lbvc_plugin_charts_params($VCC);
   $params->target = '#' . $VCC['vid'];
-  if (module_exists('devel')) {  // DEBUG
-    //dpm($params, $VCC['type'] . ' params');
-  }
 
-  $js = $VCC['jsid'] . ' = new lbvisCharts(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
+  // TMP hack to pick iso code the old way (for CP)
+  $visP = substr(json_encode($params), 0, -1);
+  $visP .= ', iso3: Drupal.settings.landbook.countryCode ? Drupal.settings.landbook.countryCode : "" }';
+
+  $js = $VCC['jsid'] . ' = new lbvisCharts(LBV, ' . $visP . '); ' . $VCC['jsid'] . '.init();';
 
   return array(
     '#type' => 'html_tag',
