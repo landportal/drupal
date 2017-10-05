@@ -87,15 +87,14 @@ function landportal_sdgs_field_group_info() {
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
-      'formatter' => '',
+      'label' => '',
       'instance_settings' => array(
-        'element' => 'div',
-        'show_label' => 0,
-        'label_element' => 'div',
-        'classes' => 'group-header field-group-html-element',
-        'attributes' => '',
-        'required_fields' => 1,
         'id' => '',
+        'classes' => '',
+        'element' => 'header',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
       ),
     ),
   );
