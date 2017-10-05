@@ -3,9 +3,10 @@
  * Land Portal View Coda
  *
  * Module blocks
- * 
+ *
  * Author: Jules <jules@landportal.info>
- */ 
+ */
+
 function lbvc_plugin_spider_block_info() {
   $blocks = array();
   $blocks['lbvc_spider'] = array(

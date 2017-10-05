@@ -74,7 +74,6 @@ function lbvc__forms_vis_type_callback($form, &$form_state) {
 /*   //$commands[] = ajax_command_prepend(NULL, theme('status_messages')); */
 /*   return array('#type' => 'ajax', '#commands' => $commands); */
 
-  
 /* //  $f['vis']['items']['options'] = form_process_checkboxes($f['vis']['items']['options']); */
 /*   //form_process_container($f, $form_state) */
 /*   $form_state['rebuild'] = TRUE; */

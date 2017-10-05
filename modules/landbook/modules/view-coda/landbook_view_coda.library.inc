@@ -11,7 +11,7 @@ function landbook_view_coda_library() {
   $PATH = libraries_get_path('js-view-coda');
   $LIBPATH = DRUPAL_ROOT . '/' . $PATH;
   $PKG = json_decode(file_get_contents($LIBPATH . "/package.json"), true);
-  
+
   $libraries['view-coda'] = array(
     'title' => 'JS View Country Data',
     'website' => 'https://github.com/landportal/js-view-coda/',

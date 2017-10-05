@@ -14,7 +14,7 @@
 global $_LBVC;
 $_LBVC = array();
 
-// LP taxonomies VID: 25 = indicators , 24 = datasets 
+// LP taxonomies VID: 25 = indicators ; 24 = datasets
 define("LBVC_IND_VID", 25);
 define("LBVC_CAT_VID", 24);
 

@@ -3,7 +3,7 @@
  * Land Portal View Coda
  *
  * Visualization plugin: pie
- * 
+ *
  * Author: Jules <jules@landportal.info>
  */
 

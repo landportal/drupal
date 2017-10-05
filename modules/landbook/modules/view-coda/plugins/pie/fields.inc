@@ -63,7 +63,7 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
       '#options' => array_keys($params->tree)
     );
   }
-  
+
   $fields['obs'] = array(
     '#type' => 'checkboxes',
     '#options' => array(

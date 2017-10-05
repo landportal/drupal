@@ -3,7 +3,7 @@
  * Land Portal View Coda
  *
  * Visualization plugin: ranking chart
- * 
+ *
  * Author: Jules <jules@landportal.info>
  */
 
