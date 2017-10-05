@@ -1481,13 +1481,9 @@ function landbook_taxonomies_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 0,
-          'use_content_language' => 1,
-          'view_mode' => 'teaser',
-        ),
-        'type' => 'entityreference_entity_view',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 11,
       ),
       'search_index' => array(
@@ -2164,15 +2160,12 @@ function landbook_taxonomies_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'field_collection',
+        'module' => 'landbook_view_coda',
         'settings' => array(
-          'add' => '',
-          'delete' => '',
-          'description' => 0,
-          'edit' => '',
+          'class' => '',
           'view_mode' => 'full',
         ),
-        'type' => 'field_collection_view',
+        'type' => 'lbvc_block',
         'weight' => 7,
       ),
       'search_index' => array(
