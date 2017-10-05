@@ -54,7 +54,7 @@ function landbook_vggt_block_view($delta = '') {
   if ($delta != 'vis_vggt') return ;
 
   $PATH = libraries_get_path('js-view-coda');
-  $jsAttr = 'jsonPath: "' . $PATH . '/examples/json", iso3: Drupal.settings.landbook.countryCode';
+  $jsAttr = 'jsonPath: "/' . $PATH . '/examples/json", iso3: Drupal.settings.landbook.countryCode';
     $block = array();
     $block['subject'] = t('Voluntary Guidelines on the Responsible Governance of Tenure');
     $block['content'] = array(
