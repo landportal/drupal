@@ -8,7 +8,7 @@ function landbook_lgaf_block_info() {
     'region'    => 'content',
     'visibility'=> BLOCK_VISIBILITY_LISTED,
     'pages'     => "book/countries/*",
-    'weight'    => 16
+    'weight'    => -62,
   );
   return $blocks;
 }
