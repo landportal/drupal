@@ -654,6 +654,8 @@ function landbook_taxonomies_field_group_info() {
       3 => 'field_view_latest',
       4 => 'field_related_blocks',
       5 => 'field_related_aside',
+      6 => 'field_doc_licencing',
+      7 => 'field_license_text',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
