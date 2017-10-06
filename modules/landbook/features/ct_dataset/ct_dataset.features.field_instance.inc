@@ -194,6 +194,16 @@ function ct_dataset_field_default_field_instances() {
         'type' => 'image',
         'weight' => 15,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 15,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -254,7 +264,14 @@ function ct_dataset_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 7,
+        'weight' => 5,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
@@ -405,6 +422,22 @@ function ct_dataset_field_default_field_instances() {
         'type' => 'field_collection_fieldset_view',
         'weight' => 13,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection_fieldset',
+        'settings' => array(
+          'add' => '',
+          'collapsed' => 0,
+          'collapsible' => 1,
+          'delete' => '',
+          'description' => 1,
+          'edit' => '',
+          'legend' => 'title_field',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_fieldset_view',
+        'weight' => 13,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -455,7 +488,16 @@ function ct_dataset_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 8,
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'above',
@@ -542,7 +584,7 @@ function ct_dataset_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 3,
+        'weight' => 15,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -808,7 +850,11 @@ function ct_dataset_field_default_field_instances() {
   // Exported field_instance: 'node-dataset-field_view_dataset'.
   $field_instances['node-dataset-field_view_dataset'] = array(
     'bundle' => 'dataset',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'moddelta' => 'views:lbdat-catalog',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -819,7 +865,16 @@ function ct_dataset_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 5,
+        'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -846,16 +901,14 @@ function ct_dataset_field_default_field_instances() {
         'calendar' => 0,
         'comment' => 0,
         'context_ui' => 0,
-        'devel' => 0,
         'diff' => 0,
         'facetapi' => 0,
         'global_filter' => 0,
         'hybridauth' => 0,
         'jump_menu' => 0,
+        'landbook_lgaf' => 0,
         'landbook_vggt' => 0,
         'landbook_view_coda' => 0,
-        'landbook_vis_map' => 0,
-        'landbook_vis_table_indicators' => 0,
         'landportal_blocks' => 0,
         'landportal_partners' => 0,
         'locale' => 0,
@@ -903,10 +956,10 @@ function ct_dataset_field_default_field_instances() {
           'delete' => '',
           'description' => 1,
           'edit' => '',
-          'view_mode' => 'full',
+          'translate' => 'Translate',
         ),
-        'type' => 'field_collection_view',
-        'weight' => 12,
+        'type' => 'field_collection_list',
+        'weight' => 14,
       ),
       'full' => array(
         'label' => 'hidden',

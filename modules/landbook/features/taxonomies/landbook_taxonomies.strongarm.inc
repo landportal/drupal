@@ -65,7 +65,7 @@ function landbook_taxonomies_strongarm() {
         ),
         'authoring_information' => array(
           'default' => array(
-            'weight' => '9',
+            'weight' => '13',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -159,7 +159,7 @@ function landbook_taxonomies_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '7',
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),

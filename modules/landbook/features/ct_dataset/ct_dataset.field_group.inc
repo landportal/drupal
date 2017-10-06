@@ -24,8 +24,8 @@ function ct_dataset_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'field_link',
-      1 => 'field_view_dataset',
-      2 => 'field_related_aside',
+      1 => 'field_related_aside',
+      2 => 'field_view_dataset',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -57,8 +57,8 @@ function ct_dataset_field_group_info() {
     'label' => '',
     'weight' => '0',
     'children' => array(
-      0 => 'title_field',
-      1 => 'field_image',
+      0 => 'field_image',
+      1 => 'title_field',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -217,7 +217,9 @@ function ct_dataset_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'body',
-      1 => 'group_split',
+      1 => 'field_paragraphs',
+      2 => 'field_related_blocks',
+      3 => 'field_visualization',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -297,7 +299,7 @@ function ct_dataset_field_group_info() {
   $field_groups['group_settings|node|dataset|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_split|node|dataset|default';
   $field_group->group_name = 'group_split';
@@ -340,7 +342,7 @@ function ct_dataset_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
