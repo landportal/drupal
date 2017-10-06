@@ -10,6 +10,153 @@ $export = array();
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'project_land_links_csv_importer-related_concepts-explode';
+$feeds_tamper->importer = 'project_land_links_csv_importer';
+$feeds_tamper->source = 'related_concepts';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ';',
+  'limit' => '',
+  'real_separator' => ';',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'project_land_links_csv_importer-related_concepts-trim';
+$feeds_tamper->importer = 'project_land_links_csv_importer';
+$feeds_tamper->source = 'related_concepts';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'project_land_links_csv_importer-related_overarching_categories-explode';
+$feeds_tamper->importer = 'project_land_links_csv_importer';
+$feeds_tamper->source = 'related_overarching_categories';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ';',
+  'limit' => '',
+  'real_separator' => ';',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'project_land_links_csv_importer-related_overarching_categories-trim';
+$feeds_tamper->importer = 'project_land_links_csv_importer';
+$feeds_tamper->source = 'related_overarching_categories';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'project_land_links_csv_importer-related_themes-explode';
+$feeds_tamper->importer = 'project_land_links_csv_importer';
+$feeds_tamper->source = 'related_themes';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ';',
+  'limit' => '',
+  'real_separator' => ';',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'project_land_links_csv_importer-related_themes-trim';
+$feeds_tamper->importer = 'project_land_links_csv_importer';
+$feeds_tamper->source = 'related_themes';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'project_land_links_csv_importer-tmp_data_provider-default_value';
+$feeds_tamper->importer = 'project_land_links_csv_importer';
+$feeds_tamper->source = 'tmp_data_provider';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => '11324',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set value "11324" (USAID)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'project_land_links_csv_importer-tmp_donor-default_value';
+$feeds_tamper->importer = 'project_land_links_csv_importer';
+$feeds_tamper->source = 'tmp_donor';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => '11324',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set value "11324" (USAID)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'project_land_links_csv_importer-tmp_image-default_value';
+$feeds_tamper->importer = 'project_land_links_csv_importer';
+$feeds_tamper->source = 'tmp_image';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => 'private://feeds/landlinks-projects-thumbnail.png',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set private path for thumbnail';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'project_land_links_csv_importer-tmp_countries-copy';
 $feeds_tamper->importer = 'project_land_links_csv_importer';
 $feeds_tamper->source = 'tmp_countries';
