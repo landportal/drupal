@@ -226,7 +226,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => '',
+          'image_link' => 'content',
           'image_style' => '',
         ),
         'type' => 'image',
