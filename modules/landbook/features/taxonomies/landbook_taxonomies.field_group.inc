@@ -55,7 +55,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(),
     'format_type' => 'hidden',
     'format_settings' => array(
@@ -78,12 +78,11 @@ function landbook_taxonomies_field_group_info() {
     'label' => '',
     'weight' => '3',
     'children' => array(
-      0 => 'field_id',
-      1 => 'field_orgref',
-      2 => 'field_view_dataset',
-      3 => 'field_view_indicators',
-      4 => 'field_related_aside',
-      5 => 'field_image',
+      0 => 'field_orgref',
+      1 => 'field_view_dataset',
+      2 => 'field_view_indicators',
+      3 => 'field_related_aside',
+      4 => 'field_image',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -173,11 +172,10 @@ function landbook_taxonomies_field_group_info() {
     'label' => 'Details',
     'weight' => '6',
     'children' => array(
-      0 => 'field_id',
-      1 => 'field_unit',
-      2 => 'field_highlow',
-      3 => 'field_observations',
-      4 => 'field_related_aside',
+      0 => 'field_unit',
+      1 => 'field_highlow',
+      2 => 'field_observations',
+      3 => 'field_related_aside',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -535,11 +533,10 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
-      0 => 'name_field',
-      1 => 'description_field',
-      2 => 'field_view_indicators',
+      0 => 'description_field',
+      1 => 'field_view_indicators',
     ),
     'format_type' => 'hidden',
     'format_settings' => array(
