@@ -417,15 +417,12 @@ function landbook_country_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'field_collection',
+        'module' => 'landbook_view_coda',
         'settings' => array(
-          'add' => '',
-          'delete' => '',
-          'description' => 1,
-          'edit' => '',
+          'class' => '',
           'view_mode' => 'full',
         ),
-        'type' => 'field_collection_view',
+        'type' => 'lbvc_block',
         'weight' => 9,
       ),
       'listing' => array(
