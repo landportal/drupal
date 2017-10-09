@@ -83,8 +83,10 @@ function landbook_taxonomies_field_group_info() {
       1 => 'field_view_dataset',
       2 => 'field_view_indicators',
       3 => 'field_related_aside',
-      4 => 'field_image',
-      5 => 'group_landvoc',
+      4 => 'field_doc_licencing',
+      5 => 'field_license_text',
+      6 => 'field_image',
+      7 => 'group_landvoc',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -570,7 +572,6 @@ function landbook_taxonomies_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'description_field',
-      1 => 'group_topics_regions',
     ),
     'format_type' => 'div',
     'format_settings' => array(
