@@ -28,9 +28,9 @@ function lbvc_plugin_table_formatter($VCC) {
 
   $js = $VCC['jsid'] . ' = new lbvisTable(LBV, ' . $visP . '); ' . $VCC['jsid'] . '.init();';
 
-  if (module_exists('devel')) {  // DEBUG
-    dpm($params, $VCC['type'] . ' params');
-  }
+  /* if (module_exists('devel')) {  // DEBUG */
+  /*   dpm($params, $VCC['type'] . ' params'); */
+  /* } */
 
   $valueOverall = '<table class="table"><thead><tr>
            <th>Indicator</th>
