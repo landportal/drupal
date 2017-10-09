@@ -186,7 +186,7 @@ function landbook_taxonomies_field_group_info() {
         'classes' => 'group-details',
         'description' => '',
         'show_label' => '1',
-        'label_element' => 'h3',
+        'label_element' => 'h2',
         'effect' => 'none',
         'speed' => 'fast',
       ),

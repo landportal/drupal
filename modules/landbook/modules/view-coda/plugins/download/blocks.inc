@@ -26,7 +26,7 @@ function lbvc_plugin_download_block_view($delta) {
   $block = NULL;
   switch ($delta) {
   case 'lbvc_download_ind':
-    $block['subject'] = t('Download (ind)');
+    $block['subject'] = t('Download');
     $block['content'] = array(
       '#markup' => '<pre>[ ] All years
 
@@ -36,7 +36,7 @@ function lbvc_plugin_download_block_view($delta) {
     );
     break;
   case 'lbvc_download_cat':
-    $block['subject'] = t('Download (cat)');
+    $block['subject'] = t('Download');
     $block['content'] = array(
       '#markup' => '<pre>[x] All indicators
 [x] All years
