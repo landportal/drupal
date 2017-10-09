@@ -31,6 +31,7 @@ function landbook_view_coda_preprocess_entity(&$variables, $hook) {
     $variables['classes_array'][] = 'view-coda';
     if (isset($variables['field_view_coda'][0])) {
       $variables['classes_array'][] = 'view-coda-' . $variables['field_view_coda'][0]['type'];
+      $variables['attributes_array']['id'] = 'vc' . $variables['id'];
     }
   }
 }
