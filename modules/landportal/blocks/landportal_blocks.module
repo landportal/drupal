@@ -32,13 +32,18 @@ function landportal_blocks_context_default_contexts() {
  */
 function landportal_blocks_page_submenu() {
   return 'var $ = jQuery.noConflict(); $(document).ready(function($) {
-menu = $("#page-submenu .nav");
-menu.empty();
+  menu = $("#page-submenu .nav");
+  menu.empty();
+  $(".field-name-field-visualization .view-coda").each(function (i, e) {
+    title = $(e).find(".field-name-title-field h3")[0];
+    if (!title || !title.innerHTML || title.innerHTML == "<none></none>" || title.innerHTML.startsWith("Latest ")) return;
+    menu.append("<li><a href=\"#" + e.id + "\">" + title.innerHTML + "</li>");
+  });
   $(".region-content section.block").each(function (i, e) {
   title = $(e).find("h2.block-title")[0];
-if (!title || !title.innerHTML || title.innerHTML == "<none></none>" || title.innerHTML.startsWith("Latest ")) return;
-//console.log(e.id, title.innerHTML);
-menu.append("<li><a href=\"#" + e.id + "\">" + title.innerHTML + "</li>");
-});
+  if (!title || !title.innerHTML || title.innerHTML == "<none></none>" || title.innerHTML.startsWith("Latest ")) return;
+  //console.log(e.id, title.innerHTML);
+  menu.append("<li><a href=\"#" + e.id + "\">" + title.innerHTML + "</li>");
+  });
 });';
 }
