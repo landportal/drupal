@@ -13,5 +13,5 @@ dependencies[] = landbook_taxonomies
 dependencies[] = menu
 dependencies[] = views
 files[] = landbook.module
-files[] = landbook.blocks.inc
 files[] = landbook.install
+files[] = landbook.block.inc

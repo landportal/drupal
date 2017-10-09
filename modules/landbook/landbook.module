@@ -8,6 +8,8 @@
  * Drupal refactoring: Jules <jules@ker.bz>
  */
 
+include_once 'landbook.block.inc';
+
 /**
  * Implements hook_ctools_plugin_api().
  */
