@@ -10,6 +10,14 @@
  */
 
 
+/** Add Dataset CT and admin for Datasets content
+ */
+function landbook_update_7204() {
+  module_enable(array(
+    'landbook_admin', 'ct_dataset'
+  ));
+}
+
 /** Make Land Book module runs last (for block hooks)
  */
 function landbook_update_7203() {
