@@ -26,6 +26,7 @@ function landbook_taxonomies_field_group_info() {
       0 => 'field_dataset',
       1 => 'field_view_indicators',
       2 => 'group_details',
+      3 => 'group_topics_regions',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -170,12 +171,11 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = 'group_aside';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_unit',
       1 => 'field_highlow',
-      2 => 'field_observations',
-      3 => 'field_related_aside',
+      2 => 'field_related_aside',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -637,8 +637,8 @@ function landbook_taxonomies_field_group_info() {
     'children' => array(
       0 => 'description_field',
       1 => 'field_visualization',
-      2 => 'field_related_blocks',
-      3 => 'group_topics_regions',
+      2 => 'field_observations',
+      3 => 'field_related_blocks',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -952,10 +952,10 @@ function landbook_taxonomies_field_group_info() {
   $field_group->entity_type = 'taxonomy_term';
   $field_group->bundle = 'indicators';
   $field_group->mode = 'full';
-  $field_group->parent_name = 'group_main';
+  $field_group->parent_name = 'group_aside';
   $field_group->data = array(
     'label' => '',
-    'weight' => '3',
+    'weight' => '6',
     'children' => array(
       0 => 'group_landvoc',
     ),

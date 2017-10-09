@@ -1436,7 +1436,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 13,
+        'weight' => 17,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1745,11 +1745,15 @@ function landbook_taxonomies_field_default_field_instances() {
         'weight' => 31,
       ),
       'full' => array(
-        'label' => 'above',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 14,
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'use_content_language' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 6,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1808,7 +1812,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 15,
+        'weight' => 18,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1904,7 +1908,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -2156,7 +2160,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 16,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -2590,6 +2594,48 @@ function landbook_taxonomies_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-observations-name_field'.
+  $field_instances['taxonomy_term-observations-name_field'] = array(
+    'bundle' => 'observations',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h4',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
     ),
   );
 

@@ -124,7 +124,7 @@ function landbook_block_view($delta = '') {
     $block = array();
     switch ($delta) {
     case 'disclaimer_block' :
-        $block['subject'] = '<none>';
+        $block['subject'] = '';
         $block['content'] = landbook_block_body($delta);
         break;
     case 'media' :
@@ -136,7 +136,7 @@ function landbook_block_view($delta = '') {
         $block['content'] = landbook_block_body($delta);
         break;
     case 'country_pdf_block' :
-        $block['subject'] = '<none>';
+        $block['subject'] = '';
         $block['content'] = ' ';
         $block['pdf_url'] = landbook_get_pdf_url();
         break;
