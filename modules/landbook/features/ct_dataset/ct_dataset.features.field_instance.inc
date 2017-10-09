@@ -411,7 +411,7 @@ function ct_dataset_field_default_field_instances() {
         'module' => 'field_collection_fieldset',
         'settings' => array(
           'add' => '',
-          'collapsed' => 0,
+          'collapsed' => 1,
           'collapsible' => 1,
           'delete' => '',
           'description' => 1,
