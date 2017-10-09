@@ -53,19 +53,11 @@ function landportal_taxonomy_field_group_info() {
   $field_group->data = array(
     'label' => '',
     'weight' => '2',
-    'children' => array(
-      0 => 'field_related_topics',
-      1 => 'field_related_themes',
-    ),
-    'format_type' => 'fieldset',
+    'children' => array(),
+    'format_type' => 'hidden',
     'format_settings' => array(
-      'label' => '',
-      'instance_settings' => array(
-        'id' => '',
-        'classes' => 'group-topics-regions field-group-fieldset',
-        'description' => '',
-      ),
-      'formatter' => 'open',
+      'formatter' => '',
+      'instance_settings' => array(),
     ),
   );
   $field_groups['group_topics_regions|taxonomy_term|overarching_categories|default'] = $field_group;
@@ -177,22 +169,11 @@ function landportal_taxonomy_field_group_info() {
   $field_group->data = array(
     'label' => '',
     'weight' => '2',
-    'children' => array(
-      0 => 'field_related_topics',
-    ),
-    'format_type' => 'div',
+    'children' => array(),
+    'format_type' => 'hidden',
     'format_settings' => array(
-      'label' => '',
-      'instance_settings' => array(
-        'id' => '',
-        'classes' => 'group-topics-regions',
-        'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'none',
-      ),
-      'formatter' => 'open',
+      'formatter' => '',
+      'instance_settings' => array(),
     ),
   );
   $field_groups['group_topics_regions|taxonomy_term|themes|default'] = $field_group;
