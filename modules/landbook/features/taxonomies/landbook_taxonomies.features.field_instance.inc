@@ -381,7 +381,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'weight' => 2,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
           'links' => 0,
@@ -389,7 +389,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 16,
+        'weight' => 13,
       ),
       'search_index' => array(
         'label' => 'hidden',
@@ -830,7 +830,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -926,7 +926,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'search_index' => array(
         'label' => 'above',

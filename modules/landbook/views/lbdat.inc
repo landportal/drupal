@@ -294,7 +294,7 @@ $handler->display->display_options['fields']['name_field']['settings'] = array(
   'title_class' => '',
 );
 $handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -305,6 +305,19 @@ $handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_style' => '',
   'image_link' => '',
 );
+/* Field: Field: Organization */
+$handler->display->display_options['fields']['field_orgref']['id'] = 'field_orgref';
+$handler->display->display_options['fields']['field_orgref']['table'] = 'field_data_field_orgref';
+$handler->display->display_options['fields']['field_orgref']['field'] = 'field_orgref';
+$handler->display->display_options['fields']['field_orgref']['label'] = '';
+$handler->display->display_options['fields']['field_orgref']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_orgref']['type'] = 'entityreference_entity_view';
+$handler->display->display_options['fields']['field_orgref']['settings'] = array(
+  'view_mode' => 'teaser',
+  'links' => 0,
+  'use_content_language' => 1,
+);
+$handler->display->display_options['fields']['field_orgref']['delta_offset'] = '0';
 /* Field: Global: View */
 $handler->display->display_options['fields']['view']['id'] = 'view';
 $handler->display->display_options['fields']['view']['table'] = 'views';
@@ -314,18 +327,6 @@ $handler->display->display_options['fields']['view']['element_label_colon'] = FA
 $handler->display->display_options['fields']['view']['view'] = 'lbcat';
 $handler->display->display_options['fields']['view']['display'] = 'jump';
 $handler->display->display_options['fields']['view']['arguments'] = '[!tid]';
-/* Field: Field: Organization */
-$handler->display->display_options['fields']['field_orgref']['id'] = 'field_orgref';
-$handler->display->display_options['fields']['field_orgref']['table'] = 'field_data_field_orgref';
-$handler->display->display_options['fields']['field_orgref']['field'] = 'field_orgref';
-$handler->display->display_options['fields']['field_orgref']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['field_orgref']['type'] = 'entityreference_entity_view';
-$handler->display->display_options['fields']['field_orgref']['settings'] = array(
-  'view_mode' => 'teaser',
-  'links' => 0,
-  'use_content_language' => 1,
-);
-$handler->display->display_options['fields']['field_orgref']['delta_offset'] = '0';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Taxonomy vocabulary: Machine name */

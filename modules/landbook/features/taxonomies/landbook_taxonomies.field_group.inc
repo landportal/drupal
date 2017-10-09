@@ -84,6 +84,7 @@ function landbook_taxonomies_field_group_info() {
       2 => 'field_view_indicators',
       3 => 'field_related_aside',
       4 => 'field_image',
+      5 => 'group_landvoc',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -367,10 +368,10 @@ function landbook_taxonomies_field_group_info() {
   $field_group->entity_type = 'taxonomy_term';
   $field_group->bundle = 'datasets';
   $field_group->mode = 'full';
-  $field_group->parent_name = 'group_topics_regions';
+  $field_group->parent_name = 'group_details';
   $field_group->data = array(
     'label' => '',
-    'weight' => '11',
+    'weight' => '15',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_topics',
@@ -789,7 +790,7 @@ function landbook_taxonomies_field_group_info() {
   $field_groups['group_topics_regions|taxonomy_term|datasets|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_topics_regions|taxonomy_term|datasets|full';
   $field_group->group_name = 'group_topics_regions';
@@ -800,9 +801,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->data = array(
     'label' => '',
     'weight' => '9',
-    'children' => array(
-      0 => 'group_landvoc',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => '',
