@@ -11,14 +11,11 @@ function lbvc_plugin_pie_params($VCC) {
   $params = json_decode($VCC['vcc']);
   $params->indicators = array();
   $params->cache = array();
-
   lbvc__indicators_process($params, $VCC['indicators']);
-
   // IF loadTree, load all indicators 'children', return a complex ind. structure
   if (isset($params->loadTree)) {
     lbvc__indicators_tree($params, $VCC['indicators']);
   }
-//  $params->iso3 = 'PER';
   return $params;
 }
 
@@ -26,18 +23,10 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
   $params = lbvc_plugin_pie_params($VCC);
   // All vis should have those
   $params->target = '#' . $VCC['vid'];
-
   // TMP hack to pick iso code the old way (for CP)
   $visP = substr(json_encode($params), 0, -1);
   $visP .= ', iso3: Drupal.settings.landbook.countryCode ? Drupal.settings.landbook.countryCode : "" }';
-
   $js = $VCC['jsid'] . ' = new lbvisPie(LBV, ' . $visP . '); ' . $VCC['jsid'] . '.init();';
-
-  // DEBUG
-  if (module_exists('devel')) {
-    //dpm($VCC, 'Pie opts');
-//    dpm($params, 'Pie params');
-  }
 
   // Build option / action form for the vis.
   $fields = array();
@@ -60,7 +49,6 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
     foreach (array_keys($params->tree) as $ind) {
       $opts[$ind] = $params->cache[$ind]['label'];
     }
-    dpm($$opts);
     $fields['indicators'] = array(
       '#id' => $VCC['vid']. '-indicators',
       '#name' => 'observations',
