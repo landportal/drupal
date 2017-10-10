@@ -24,9 +24,10 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
   // All vis should have those
   $params->target = '#' . $VCC['vid'];
   // TMP hack to pick iso code the old way (for CP)
-  $visP = substr(json_encode($params), 0, -1);
-  $visP .= ', iso3: Drupal.settings.landbook.countryCode ? Drupal.settings.landbook.countryCode : "" }';
-  $js = $VCC['jsid'] . ' = new lbvisPie(LBV, ' . $visP . '); ' . $VCC['jsid'] . '.init();';
+//  $visP = substr(json_encode($params), 0, -1);
+//  $visP .= ', iso3: Drupal.settings.landbook.countryCode ? Drupal.settings.landbook.countryCode : "" }';
+//  $js = $VCC['jsid'] . ' = new lbvisPie(LBV, ' . $visP . '); ' . $VCC['jsid'] . '.init();';
+  $js = $VCC['jsid'] . ' = new lbvisPie(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
 
   // Build option / action form for the vis.
   $fields = array();
