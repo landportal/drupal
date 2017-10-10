@@ -11,60 +11,55 @@ include_once 'landportal_display.features.inc';
  *    Hacks for drupal node/page title
  */
 
-// Search for the taxonomy term rendering in a page
-function lpbs__taxonomy_term_page($page) {
-  if (
-    !isset($page['content']) ||
-    !isset($page['content']['system_main']) ||
-    !isset($page['content']['system_main']['term_heading']) ||
-    !isset($page['content']['system_main']['term_heading']['term'])
-  ) {
-    return FALSE;
+/* // Search for the taxonomy term rendering in a page */
+/* function lpbs__taxonomy_term_page($page) { */
+/*   if ( */
+/*     !isset($page['content']) || */
+/*     !isset($page['content']['system_main']) || */
+/*     !isset($page['content']['system_main']['term_heading']) || */
+/*     !isset($page['content']['system_main']['term_heading']['term']) */
+/*   ) { */
+/*     return FALSE; */
+/*   } */
+/*   else { */
+/*     return $page['content']['system_main']['term_heading']['term']; */
+/*   } */
+/* } */
+
+function landportal_display_preprocess_page(&$variables) {
+  dpm($variables, "vars");
+  // Taxonomy, clear title if we have a name_field
+  if (@($term = $variables['page']['content']['system_main']['term_heading']['term']) &&
+      isset($term['name_field'])) {
+    $variables['title'] = '';
+    //dpm($term, "Got a term");
   }
-  else {
-    return $page['content']['system_main']['term_heading']['term'];
+  if (isset($variables['node']) && isset($variables['node']->title_field) &&
+      array_key_exists('nodes', $variables['page']['content']['system_main'])) {
+    landportal_display__get_group_header($variables['node']->nid, $variables);
   }
 }
 
-function landportal_display_preprocess_page(&$variables) {
-  //dpm($variables, "vars");
-  // Taxonomy
-  if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
-    $term = lpbs__taxonomy_term_page($variables['page']);
-    if (isset($term['name_field'])) {
-      //dpm($variables['node'], "Got a title_field");
-      $variables['title'] = '';
-    }
-  }
-  else if (isset($variables['node']) && isset($variables['node']->title_field) &&
-  array_key_exists('nodes', $variables['page']['content']['system_main'])) {
-    $node = $variables['node'];
-    $content = $variables['page']['content']['system_main']['nodes'][$node->nid];
-
-    /* dpm($variables['page'], "page"); */
-    /* dpm($node, "node "); */
-    /* dpm($content, 'content'); */
-
-    //
-    // Pick group_header and create a new group (title_header) to render instead of title
-    //
+//
+// Pick group_header and create a new group (title_header) to render instead of title
+//
+function landportal_display__get_group_header($nid, &$variables) {
+    $content = $variables['page']['content']['system_main']['nodes'][$nid];
     if (isset($content['#fieldgroups']) && isset($content['#fieldgroups']['group_header'])) {
       $header = $content['#fieldgroups']['group_header'];
       $title = landportal_display_extract_groups('group_header', $content);
       field_group_fields_nest($title, $content);
       $variables['page']['title_header'] = $title;
       $variables['title'] = render($title);
-      unset($variables['page']['content']['system_main']['nodes'][$node->nid]['#fieldgroups']['group_header']);
-      unset($variables['page']['content']['system_main']['nodes'][$node->nid]['#groups']['group_header']);
+      unset($variables['page']['content']['system_main']['nodes'][$nid]['#fieldgroups']['group_header']);
+      unset($variables['page']['content']['system_main']['nodes'][$nid]['#groups']['group_header']);
       // Remove fields and groups children that now belong to the page-header
       foreach ($title['#group_children'] as $c => $g) {
-        unset($variables['page']['content']['system_main']['nodes'][$node->nid][$c]);
-        unset($variables['page']['content']['system_main']['nodes'][$node->nid]['#group_children'][$c]);
+        unset($variables['page']['content']['system_main']['nodes'][$nid][$c]);
+        unset($variables['page']['content']['system_main']['nodes'][$nid]['#group_children'][$c]);
       }
-      //dpm($variables['page']['content']['system_main']['nodes'][$node->nid], 'da node afta');
+      //dpm($variables['page']['content']['system_main']['nodes'][$nid], 'da node afta');
     }
-  }
-  //dpm($variables, 'vars');
 }
 
 function landportal_display_extract_groups($group_name, $content) {
