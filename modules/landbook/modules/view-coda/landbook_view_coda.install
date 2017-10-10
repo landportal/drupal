@@ -33,7 +33,7 @@ function landbook_view_coda_update_7206() {
       );
       $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = $t->tid;
       $fc_item->save();
-      drush_log('Add map to indicators [' . $t->tid . ']: ' . $t->field_id[LANGUAGE_NONE][0]['value'], 'warning');
+      drush_log('Add map to indicators [' . $t->tid . ']: ' . $t->field_id[LANGUAGE_NONE][0]['value'], 'ok');
     }
   }
 
