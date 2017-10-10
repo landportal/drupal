@@ -48,39 +48,51 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
   if (isset($params->loadCountries)) {
     $fields['countries'] = array(
         '#id' => $VCC['vid']. '-countries',
+        '#name' => 'countries',
         '#type' => 'select',
         '#title' => t('Countries'),
-        '#options' => ['PER', 'EGY'],
+        '#options' => array(),//['PER', 'EGY'],
     );
   }
 
   if (isset($params->loadTree) && count($params->tree) > 1) {
-//    dpm($ff);
     $opts = array();
-    /* foreach ($params->tree as $ind => $d) { */
-    /*   $opts[] = $ind; */
-    /* } */
+    foreach (array_keys($params->tree) as $ind) {
+      $opts[$ind] = $params->cache[$ind]['label'];
+    }
+    dpm($$opts);
     $fields['indicators'] = array(
       '#id' => $VCC['vid']. '-indicators',
+      '#name' => 'observations',
       '#type' => 'select',
       '#title' => t('Indicators (groups)'),
-      '#options' => array_keys($params->tree)
+      '#options' => $opts,// array_keys($params->tree)
     );
   }
 
-  $fields['obs'] = array(
-    '#type' => 'checkboxes',
-    '#options' => array(
-      'total' => 'Total',
-      'owners' => 'Owners',
-      'renter' => 'Renters',
-    ),
-    '#default_value' => [],
-  );
+  /* $fields['obs'] = array( */
+  /*   '#type' => 'checkboxes', */
+  /*   '#options' => array( */
+  /*     'total' => 'Total', */
+  /*     'owners' => 'Owners', */
+  /*     'renter' => 'Renters', */
+  /*   ), */
+  /*   '#default_value' => [], */
+  /* ); */
   /* $form = drupal_get_form('landbook_view_coda_vis_form', $fields);//array('f'=>$fields, 'ob'=> $fieldsobs)); */
   $form = array(
+    '#attributes' => array(
+      'id' => $VCC['vid'] . '-form',
+      'class' => 'view-coda-form form-inline',
+    ),
     '#type' => 'container',
-    'items' => $fields
+    'items' => array(
+      '#attributes' => array(
+        'class' => '',
+      ),
+      '#type' => 'container',
+      'items' => $fields
+    ),
   );
 //  dpm($form, 'builda pie');
 
@@ -103,5 +115,5 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
   );
   //dpm($form);
 
-  return array($form, $pie);
+  return array($pie, $form);
 }
