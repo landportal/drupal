@@ -11,23 +11,7 @@ include_once 'landportal_display.features.inc';
  *    Hacks for drupal node/page title
  */
 
-/* // Search for the taxonomy term rendering in a page */
-/* function lpbs__taxonomy_term_page($page) { */
-/*   if ( */
-/*     !isset($page['content']) || */
-/*     !isset($page['content']['system_main']) || */
-/*     !isset($page['content']['system_main']['term_heading']) || */
-/*     !isset($page['content']['system_main']['term_heading']['term']) */
-/*   ) { */
-/*     return FALSE; */
-/*   } */
-/*   else { */
-/*     return $page['content']['system_main']['term_heading']['term']; */
-/*   } */
-/* } */
-
 function landportal_display_preprocess_page(&$variables) {
-  dpm($variables, "vars");
   // Taxonomy, clear title if we have a name_field
   if (@($term = $variables['page']['content']['system_main']['term_heading']['term']) &&
       isset($term['name_field'])) {
