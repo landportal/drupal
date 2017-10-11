@@ -42,7 +42,7 @@ function landbook_taxonomies_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => 2,
       'language' => 'und',
-      'i18n_mode' => 4,
+      'i18n_mode' => 32768,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
