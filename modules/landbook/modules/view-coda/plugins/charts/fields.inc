@@ -25,7 +25,37 @@ function lbvc_plugin_charts_formatter($VCC) {
   /* $js = $VCC['jsid'] . ' = new lbvisCharts(LBV, ' . $visP . '); ' . $VCC['jsid'] . '.init();'; */
   $js = $VCC['jsid'] . ' = new lbvisCharts(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
 
-  return array(
+  if (isset($params->loadTree) && count($params->ttop) > 1) {
+    $opts = array();
+    //foreach (array_keys($params->tree) as $ind) {
+    foreach ($params->ttop as $ind) {
+      $opts[$ind] = $params->cache[$ind]['label'];
+    }
+    $fields['indicators'] = array(
+      '#id' => $VCC['vid']. '-indicators',
+      '#name' => 'observations',
+      '#type' => 'select',
+      '#title' => t('Indicators'),
+      '#options' => $opts,// array_keys($params->tree)
+    );
+  }
+
+  $form = array(
+    '#attributes' => array(
+      'id' => $VCC['vid'] . '-form',
+      'class' => 'view-coda-form form-inline',
+    ),
+    '#type' => 'container',
+    'items' => array(
+      '#attributes' => array(
+        'class' => '',
+      ),
+      '#type' => 'container',
+      'items' => $fields
+    ),
+  );
+
+  $chart = array(
     '#type' => 'html_tag',
     '#tag' => 'div',
     '#attributes' => array(
@@ -40,4 +70,5 @@ function lbvc_plugin_charts_formatter($VCC) {
     ),
     '#value' => t('Loading chart...'),
   );
+  return array($chart, $form); 
 }

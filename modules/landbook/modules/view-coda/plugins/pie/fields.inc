@@ -45,9 +45,10 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
     );
   }
 
-  if (isset($params->loadTree) && count($params->tree) > 1) {
+  if (isset($params->loadTree) && count($params->ttop) > 1) {
     $opts = array();
-    foreach (array_keys($params->tree) as $ind) {
+    //foreach (array_keys($params->tree) as $ind) {
+    foreach ($params->ttop as $ind) {
       $opts[$ind] = $params->cache[$ind]['label'];
     }
     $fields['indicators'] = array(
@@ -59,16 +60,6 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
     );
   }
 
-  /* $fields['obs'] = array( */
-  /*   '#type' => 'checkboxes', */
-  /*   '#options' => array( */
-  /*     'total' => 'Total', */
-  /*     'owners' => 'Owners', */
-  /*     'renter' => 'Renters', */
-  /*   ), */
-  /*   '#default_value' => [], */
-  /* ); */
-  /* $form = drupal_get_form('landbook_view_coda_vis_form', $fields);//array('f'=>$fields, 'ob'=> $fieldsobs)); */
   $form = array(
     '#attributes' => array(
       'id' => $VCC['vid'] . '-form',

@@ -98,6 +98,7 @@ function lbvc__indicators_process(&$stuff, $indicators) {
 // Process an array of indicators (terms), fold them by hierarchy
 function lbvc__indicators_tree(&$params, $indicators) {
   $hind = array();
+  $params->ttop = [];
   foreach ($indicators as $ind) {
     $tlbid = $ind->field_id[LANGUAGE_NONE][0]['value'];
     /* array_push($params->indicators, $tlbid); */
@@ -115,6 +116,7 @@ function lbvc__indicators_flatten(&$params, &$ff, $parent) {
     $lbt = lbvc__indicators_cache($term->tid);
     // @TODO CACHE all that stuff
     if (isset($term->below)) {
+      array_push($params->ttop, $lbt['id']);
       $ff[$lbt['id']] = array();
       lbvc__indicators_flatten($params, $ff[$lbt['id']], $term->below);
     }
