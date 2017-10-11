@@ -100,6 +100,8 @@ function lbvc__indicators_tree(&$params, $indicators) {
   $hind = array();
   foreach ($indicators as $ind) {
     $tlbid = $ind->field_id[LANGUAGE_NONE][0]['value'];
+    /* array_push($params->indicators, $tlbid); */
+    /* $params->cache[$tlbid] = $ind; */
     $htree = hierarchical_taxonomy_get_tree(LBVC_IND_VID, $ind->tid, 2); // max depth: 2
     $hind[$tlbid] = array();
     lbvc__indicators_flatten($params, $hind[$tlbid], $htree);
@@ -115,11 +117,12 @@ function lbvc__indicators_flatten(&$params, &$ff, $parent) {
     if (isset($term->below)) {
       $ff[$lbt['id']] = array();
       lbvc__indicators_flatten($params, $ff[$lbt['id']], $term->below);
-    } else {
-      array_push($params->indicators, $lbt['id']);
-      $params->cache[$lbt['id']] = $lbt;
+    }
+    else {
       array_push($ff, $lbt['id']);
     }
+    array_push($params->indicators, $lbt['id']);
+    $params->cache[$lbt['id']] = $lbt;
   }
 }
 

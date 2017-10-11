@@ -54,7 +54,7 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
       '#id' => $VCC['vid']. '-indicators',
       '#name' => 'observations',
       '#type' => 'select',
-      '#title' => t('Indicators (groups)'),
+      '#title' => t('Indicators'),
       '#options' => $opts,// array_keys($params->tree)
     );
   }

@@ -20,10 +20,10 @@ function lbvc_plugin_charts_formatter($VCC) {
   $params->target = '#' . $VCC['vid'];
 
   // TMP hack to pick iso code the old way (for CP)
-  $visP = substr(json_encode($params), 0, -1);
-  $visP .= ', iso3: Drupal.settings.landbook.countryCode ? Drupal.settings.landbook.countryCode : "" }';
-
-  $js = $VCC['jsid'] . ' = new lbvisCharts(LBV, ' . $visP . '); ' . $VCC['jsid'] . '.init();';
+  /* $visP = substr(json_encode($params), 0, -1); */
+  /* $visP .= ', iso3: Drupal.settings.landbook.countryCode ? Drupal.settings.landbook.countryCode : "" }'; */
+  /* $js = $VCC['jsid'] . ' = new lbvisCharts(LBV, ' . $visP . '); ' . $VCC['jsid'] . '.init();'; */
+  $js = $VCC['jsid'] . ' = new lbvisCharts(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
 
   return array(
     '#type' => 'html_tag',
