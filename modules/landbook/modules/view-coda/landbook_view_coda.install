@@ -70,7 +70,7 @@ function landbook_view_coda_update_7206() {
         ),
         'charts' => array(
           'title' => 'Compare countries',
-          'vcc' => '{"ctype": "line", "loadYears": true, "loadIndicators": true, "loadCountries"": true, "iso3": "' . $iso3 . '"}',
+          'vcc' => '{"ctype": "line", "loadYears": true, main: "WB-SP.POP.TOTL", "loadIndicators": true, "loadCountries"": true, "iso3": "' . $iso3 . '"}',
         ),
         'spider' => array(
           //'title' => '',
@@ -118,10 +118,10 @@ function landbook_view_coda_update_7206() {
         if (count($manode->field_indicator_map[LANGUAGE_NONE]) > 0) {
           $fc_item->field_indicators = $manode->field_indicator_map;
         } else {
-          $fc_item->field_indicators[LANGUAGE_NONE] = array(array('tid' => 7030));
+          $fc_item->field_indicators[LANGUAGE_NONE] = array(array('tid' => 7030)); // Default ind. is FAO-6601-5110
         }
       } else if ($k == 'charts') {
-        $fc_item->field_indicators[LANGUAGE_NONE] = array(array('tid' => 7030));
+        $fc_item->field_indicators[LANGUAGE_NONE] = array(array('tid' => 7030)); // Default ind. is FAO-6601-5110
       } else if ($k == 'ranking' && $manode->field_indicator_ranking) {
         $fc_item->field_indicators = $manode->field_indicator_ranking;
       } else if ($k == 'pie') {

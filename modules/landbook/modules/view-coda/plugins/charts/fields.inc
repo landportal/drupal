@@ -31,13 +31,26 @@ function lbvc_plugin_charts_formatter($VCC) {
     foreach ($params->ttop as $ind) {
       $opts[$ind] = $params->cache[$ind]['label'];
     }
-    $fields['indicators'] = array(
+    $fields['indicators'] = form_process_checkboxes(array(
       '#id' => $VCC['vid']. '-indicators',
-      '#name' => 'observations',
-      '#type' => 'select',
-      '#title' => t('Indicators'),
+      '#name' => 'indicators',
+      '#type' => 'checkboxes',
+      //'#parent' => 'indicators',
+      '#title' => t('Category'),
+      //'#title_display' => t('Category'),
       '#options' => $opts,// array_keys($params->tree)
-    );
+    ));
+  }
+
+  if (isset($params->observations)) {
+    //dpm($params->observations);
+    $fields['observations'] = form_process_checkboxes(array(
+      '#id' => $VCC['vid']. '-obs',
+      '#name' => 'observations',
+      '#type' => 'checkboxes',
+      '#title' => 'Obs',
+      '#options' => array('all' => t('All Indicators')),
+    ));
   }
 
   $form = array(
@@ -48,7 +61,7 @@ function lbvc_plugin_charts_formatter($VCC) {
     '#type' => 'container',
     'items' => array(
       '#attributes' => array(
-        'class' => '',
+        'class' => 'row',
       ),
       '#type' => 'container',
       'items' => $fields
