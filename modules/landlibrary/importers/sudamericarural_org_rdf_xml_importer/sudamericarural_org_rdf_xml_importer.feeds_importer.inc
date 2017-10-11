@@ -225,8 +225,7 @@ $feeds_importer->config = array(
         17 => array(
           'source' => 'xpathparser:20',
           'target' => 'field_image:uri',
-          'unique' => FALSE,
-          'language' => 'und',
+          'file_exists' => '4',
         ),
         18 => array(
           'source' => 'xpathparser:21',
@@ -256,6 +255,7 @@ $feeds_importer->config = array(
           'source' => 'xpathparser:25',
           'target' => 'field_duration',
           'unique' => FALSE,
+          'language' => 'und',
         ),
       ),
       'insert_new' => '1',
