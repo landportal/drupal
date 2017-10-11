@@ -158,8 +158,7 @@ $feeds_importer->config = array(
         12 => array(
           'source' => 'Blank source 12',
           'target' => 'field_image:uri',
-          'unique' => FALSE,
-          'language' => 'und',
+          'file_exists' => '3',
         ),
         13 => array(
           'source' => 'jsonpath_parser:14',
@@ -255,9 +254,10 @@ $feeds_importer->config = array(
           'source' => 'Blank source 20',
           'target' => 'field_related_themes',
           'unique' => FALSE,
+          'language' => 'und',
         ),
       ),
-      'insert_new' => '1',
+      'insert_new' => '0',
       'update_existing' => '2',
       'update_non_existent' => 'skip',
       'input_format' => 'full_html',
