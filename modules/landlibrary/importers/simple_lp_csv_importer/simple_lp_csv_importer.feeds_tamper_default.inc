@@ -12,23 +12,6 @@ function simple_lp_csv_importer_feeds_tamper_default() {
 $export = array();
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'simple_lp_csv_importer-authors-php';
-$feeds_tamper->importer = 'simple_lp_csv_importer';
-$feeds_tamper->source = 'Authors';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => '$str_remove_char_and_space = str_replace("; ", "\\n", $field); // remove semicolon and space
-$str_remove_char  = str_replace(";", "\\n", $str_remove_char_and_space ); // remove just semicolon
-return $str_remove_char;',
-);
-$feeds_tamper->weight = 3;
-$feeds_tamper->description = 'Process string to have one author ([first name] [laste name]) per line';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
 $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'simple_lp_csv_importer-author_s_-php';
@@ -42,6 +25,91 @@ return $str_remove_comma;
 ',
 );
 $feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Process string to have one author ([first name] [laste name]) per line';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'simple_lp_csv_importer-overarching_category-explode';
+$feeds_tamper->importer = 'simple_lp_csv_importer';
+$feeds_tamper->source = 'Overarching Category';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ';',
+  'limit' => '',
+  'real_separator' => ';',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'simple_lp_csv_importer-publisher-explode';
+$feeds_tamper->importer = 'simple_lp_csv_importer';
+$feeds_tamper->source = 'Publisher';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ';',
+  'limit' => '',
+  'real_separator' => ';',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Explode (multiple values \',\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'simple_lp_csv_importer-related_themes-explode';
+$feeds_tamper->importer = 'simple_lp_csv_importer';
+$feeds_tamper->source = 'Related Themes';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ';',
+  'limit' => '',
+  'real_separator' => ';',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'simple_lp_csv_importer-resource_type-explode';
+$feeds_tamper->importer = 'simple_lp_csv_importer';
+$feeds_tamper->source = 'Resource type';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ',',
+  'limit' => '',
+  'real_separator' => ',',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Explode (multiple values \',\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'simple_lp_csv_importer-authors-php';
+$feeds_tamper->importer = 'simple_lp_csv_importer';
+$feeds_tamper->source = 'Authors';
+$feeds_tamper->plugin_id = 'php';
+$feeds_tamper->settings = array(
+  'php' => '$str_remove_char_and_space = str_replace("; ", "\\n", $field); // remove semicolon and space
+$str_remove_char  = str_replace(";", "\\n", $str_remove_char_and_space ); // remove just semicolon
+return $str_remove_char;',
+);
+$feeds_tamper->weight = 3;
 $feeds_tamper->description = 'Process string to have one author ([first name] [laste name]) per line';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -179,23 +247,6 @@ $feeds_tamper->description = 'Trim';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'simple_lp_csv_importer-overarching_category-explode';
-$feeds_tamper->importer = 'simple_lp_csv_importer';
-$feeds_tamper->source = 'Overarching Category';
-$feeds_tamper->plugin_id = 'explode';
-$feeds_tamper->settings = array(
-  'separator' => ';',
-  'limit' => '',
-  'real_separator' => ';',
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'simple_lp_csv_importer-publicaton_date__yyyy_mm_-find_replace';
@@ -231,23 +282,6 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 1;
 $feeds_tamper->description = 'Add the day (01) at the end of the string';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'simple_lp_csv_importer-publisher-explode';
-$feeds_tamper->importer = 'simple_lp_csv_importer';
-$feeds_tamper->source = 'Publisher';
-$feeds_tamper->plugin_id = 'explode';
-$feeds_tamper->settings = array(
-  'separator' => ';',
-  'limit' => '',
-  'real_separator' => ';',
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Explode (multiple values \',\' separated)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -314,40 +348,6 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 1;
 $feeds_tamper->description = 'Trim';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'simple_lp_csv_importer-related_themes-explode';
-$feeds_tamper->importer = 'simple_lp_csv_importer';
-$feeds_tamper->source = 'Related Themes';
-$feeds_tamper->plugin_id = 'explode';
-$feeds_tamper->settings = array(
-  'separator' => ';',
-  'limit' => '',
-  'real_separator' => ';',
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'simple_lp_csv_importer-resource_type-explode';
-$feeds_tamper->importer = 'simple_lp_csv_importer';
-$feeds_tamper->source = 'Resource type';
-$feeds_tamper->plugin_id = 'explode';
-$feeds_tamper->settings = array(
-  'separator' => ',',
-  'limit' => '',
-  'real_separator' => ',',
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Explode (multiple values \',\' separated)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 

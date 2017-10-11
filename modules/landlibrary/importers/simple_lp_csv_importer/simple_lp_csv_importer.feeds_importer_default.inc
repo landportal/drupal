@@ -172,6 +172,13 @@ $feeds_importer->config = array(
           'source' => 'Link to the original website',
           'target' => 'field_doc_is_shown_at:url',
           'unique' => FALSE,
+          'language' => 'und',
+        ),
+        21 => array(
+          'source' => 'Subtitle',
+          'target' => 'field_doc_alt_title',
+          'unique' => FALSE,
+          'language' => 'und',
         ),
       ),
       'update_existing' => '2',
