@@ -1415,7 +1415,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -1470,7 +1470,7 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 12,
+      'weight' => 9,
     ),
   );
 
@@ -1622,7 +1622,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 117,
+      'weight' => 111,
     ),
   );
 
@@ -1787,7 +1787,7 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 120,
+      'weight' => 115,
     ),
   );
 
@@ -1883,7 +1883,7 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 122,
+      'weight' => 117,
     ),
   );
 
@@ -1979,7 +1979,7 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 121,
+      'weight' => 116,
     ),
   );
 
@@ -2090,7 +2090,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'synonyms_select_taxonomy_term',
-      'weight' => 110,
+      'weight' => 111,
     ),
   );
 
@@ -2143,7 +2143,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'synonyms_select_taxonomy_term',
-      'weight' => 111,
+      'weight' => 112,
     ),
   );
 
@@ -2320,7 +2320,7 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 118,
+      'weight' => 112,
     ),
   );
 
@@ -2416,7 +2416,7 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 119,
+      'weight' => 113,
     ),
   );
 
@@ -2475,7 +2475,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'replace_label' => 0,
       ),
       'type' => 'field_collection_embed',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 

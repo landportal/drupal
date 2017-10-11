@@ -707,7 +707,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Settings',
-    'weight' => '10',
+    'weight' => '11',
     'children' => array(
       0 => 'field_view_indicators',
       1 => 'field_observations',
@@ -1041,7 +1041,7 @@ function landbook_taxonomies_field_group_info() {
   $field_groups['group_vis|taxonomy_term|datasets|full'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_vis|taxonomy_term|indicators|full';
   $field_group->group_name = 'group_vis';

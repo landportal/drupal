@@ -125,6 +125,9 @@ function landbook_taxonomies_strongarm() {
         'metatags' => array(
           'weight' => '15',
         ),
+        'language' => array(
+          'weight' => '12',
+        ),
       ),
       'display' => array(
         'description' => array(
@@ -160,6 +163,20 @@ function landbook_taxonomies_strongarm() {
           ),
           'full' => array(
             'weight' => '5',
+            'visible' => FALSE,
+          ),
+        ),
+        'language' => array(
+          'default' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '0',
             'visible' => FALSE,
           ),
         ),

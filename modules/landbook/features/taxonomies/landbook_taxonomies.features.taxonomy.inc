@@ -38,11 +38,11 @@ function landbook_taxonomies_taxonomy_default_vocabularies() {
       'name' => 'Indicators',
       'machine_name' => 'indicators',
       'description' => 'Landbook Indicators',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 2,
       'language' => 'und',
-      'i18n_mode' => 1,
+      'i18n_mode' => 4,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
