@@ -112,10 +112,10 @@ function ct_dataset_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'dataset';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_topics_regions';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '6',
+    'weight' => '9',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_themes',
@@ -342,10 +342,9 @@ function ct_dataset_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '7',
+    'weight' => '6',
     'children' => array(
       0 => 'field_geographical_focus',
-      1 => 'group_landvoc',
     ),
     'format_type' => 'hidden',
     'format_settings' => array(

@@ -79,7 +79,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -264,7 +264,7 @@ function ct_dataset_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 5,
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'above',
@@ -288,7 +288,7 @@ function ct_dataset_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_link',
-    'label' => 'Links',
+    'label' => 'Official site',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
@@ -335,7 +335,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -488,7 +488,7 @@ function ct_dataset_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 6,
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -670,7 +670,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -734,7 +734,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 12,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -793,7 +793,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -865,7 +865,7 @@ function ct_dataset_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 4,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1083,7 +1083,7 @@ function ct_dataset_field_default_field_instances() {
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Geographical focus');
   t('Land Book Visualizations');
-  t('Links');
+  t('Official site');
   t('Overarching categories');
   t('Picture');
   t('Related aside');
