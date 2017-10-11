@@ -12,7 +12,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Land Book Indicators';
+$handler->display->display_options['title'] = '<none>';
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
@@ -25,9 +25,7 @@ $handler->display->display_options['exposed_form']['options']['reset_button_labe
 $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['style_plugin'] = 'tree';
-$handler->display->display_options['style_options']['main_field'] = 'tid';
-$handler->display->display_options['style_options']['parent_field'] = 'tid_1';
+$handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['row_options']['inline'] = array(
   'field_id' => 'field_id',
@@ -125,8 +123,6 @@ $handler->display->display_options['arguments']['tid']['summary_options']['items
 
 /* Display: Jump */
 $handler = $view->new_display('block', 'Jump', 'jump');
-$handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = '<none>';
 $handler->display->display_options['display_description'] = 'from an indicator';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'jump_menu';
@@ -211,8 +207,6 @@ $handler->display->display_options['arguments']['tid']['summary_options']['items
 
 /* Display: Childs */
 $handler = $view->new_display('block', 'Childs', 'childs');
-$handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'sub/obs';
 $handler->display->display_options['display_description'] = 'from an indicator';
 $handler->display->display_options['defaults']['query'] = FALSE;
 $handler->display->display_options['query']['type'] = 'views_query';
@@ -303,8 +297,6 @@ $handler->display->display_options['arguments']['tid_1']['summary_options']['ite
 
 /* Display: Parents */
 $handler = $view->new_display('block', 'Parents', 'parent');
-$handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = '<none>';
 $handler->display->display_options['display_description'] = 'from an indicator';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
@@ -356,6 +348,76 @@ $handler->display->display_options['fields']['description_field']['relationship'
 $handler->display->display_options['fields']['description_field']['label'] = '';
 $handler->display->display_options['fields']['description_field']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['description_field']['link_to_entity'] = 0;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Taxonomy term: Term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Taxonomy vocabulary: Machine name */
+$handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+$handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['value'] = array(
+  'indicators' => 'indicators',
+);
+
+/* Display: Catalog */
+$handler = $view->new_display('block', 'Catalog', 'catalog');
+$handler->display->display_options['display_description'] = 'from an indicator';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Taxonomy term: Catalog (field_dataset) */
+$handler->display->display_options['relationships']['field_dataset_tid']['id'] = 'field_dataset_tid';
+$handler->display->display_options['relationships']['field_dataset_tid']['table'] = 'field_data_field_dataset';
+$handler->display->display_options['relationships']['field_dataset_tid']['field'] = 'field_dataset_tid';
+$handler->display->display_options['relationships']['field_dataset_tid']['label'] = 'field_dataset';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: Term ID */
+$handler->display->display_options['fields']['tid']['id'] = 'tid';
+$handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['tid']['field'] = 'tid';
+$handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['tid']['separator'] = '';
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name_field']['id'] = 'name_field';
+$handler->display->display_options['fields']['name_field']['table'] = 'field_data_name_field';
+$handler->display->display_options['fields']['name_field']['field'] = 'name_field';
+$handler->display->display_options['fields']['name_field']['label'] = '';
+$handler->display->display_options['fields']['name_field']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name_field']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name_field']['type'] = 'title_linked';
+$handler->display->display_options['fields']['name_field']['settings'] = array(
+  'title_style' => 'h2',
+  'title_link' => 'content',
+  'title_class' => '',
+);
+$handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
+/* Field: Taxonomy term: Rendered Taxonomy term */
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['relationship'] = 'field_dataset_tid';
+$handler->display->display_options['fields']['rendered_entity']['label'] = 'About this dataset';
+$handler->display->display_options['fields']['rendered_entity']['element_label_type'] = 'h2';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';

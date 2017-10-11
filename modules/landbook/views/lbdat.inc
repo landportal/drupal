@@ -207,61 +207,16 @@ $handler->display->display_options['fields']['path']['field'] = 'path';
 $handler->display->display_options['fields']['path']['label'] = '';
 $handler->display->display_options['fields']['path']['exclude'] = TRUE;
 $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-/* Field: Field: ID */
-$handler->display->display_options['fields']['field_id']['id'] = 'field_id';
-$handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
-$handler->display->display_options['fields']['field_id']['field'] = 'field_id';
-$handler->display->display_options['fields']['field_id']['label'] = '';
-$handler->display->display_options['fields']['field_id']['exclude'] = TRUE;
-$handler->display->display_options['fields']['field_id']['element_label_colon'] = FALSE;
-/* Field: Taxonomy term: Name */
-$handler->display->display_options['fields']['name_field']['id'] = 'name_field';
-$handler->display->display_options['fields']['name_field']['table'] = 'field_data_name_field';
-$handler->display->display_options['fields']['name_field']['field'] = 'name_field';
-$handler->display->display_options['fields']['name_field']['label'] = '';
-$handler->display->display_options['fields']['name_field']['exclude'] = TRUE;
-$handler->display->display_options['fields']['name_field']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['name_field']['type'] = 'title_linked';
-$handler->display->display_options['fields']['name_field']['settings'] = array(
-  'title_style' => 'h2',
-  'title_link' => '',
-  'title_class' => '',
-);
-$handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
-/* Field: Field: Picture */
-$handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-$handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['label'] = '';
-$handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-$handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => '',
-  'image_link' => '',
-);
-/* Field: Field: Organization */
-$handler->display->display_options['fields']['field_orgref']['id'] = 'field_orgref';
-$handler->display->display_options['fields']['field_orgref']['table'] = 'field_data_field_orgref';
-$handler->display->display_options['fields']['field_orgref']['field'] = 'field_orgref';
-$handler->display->display_options['fields']['field_orgref']['label'] = '';
-$handler->display->display_options['fields']['field_orgref']['exclude'] = TRUE;
-$handler->display->display_options['fields']['field_orgref']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['field_orgref']['type'] = 'entityreference_entity_view';
-$handler->display->display_options['fields']['field_orgref']['settings'] = array(
-  'view_mode' => 'teaser',
-  'links' => 0,
-  'use_content_language' => 1,
-);
-$handler->display->display_options['fields']['field_orgref']['delta_offset'] = '0';
-/* Field: Global: View */
-$handler->display->display_options['fields']['view']['id'] = 'view';
-$handler->display->display_options['fields']['view']['table'] = 'views';
-$handler->display->display_options['fields']['view']['field'] = 'view';
-$handler->display->display_options['fields']['view']['label'] = '';
-$handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['view']['view'] = 'lbcat';
-$handler->display->display_options['fields']['view']['display'] = 'jump';
-$handler->display->display_options['fields']['view']['arguments'] = '[!tid]';
+/* Field: Taxonomy term: Rendered Taxonomy term */
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 0;
+$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Taxonomy vocabulary: Machine name */
@@ -272,8 +227,8 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
   'datasets' => 'datasets',
 );
 
-/* Display: Related c */
-$handler = $view->new_display('block', 'Related c', 'related');
+/* Display: Related content */
+$handler = $view->new_display('block', 'Related content', 'related');
 $handler->display->display_options['display_description'] = 'Dataset related content';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Taxonomy term: Content using Catalog */
