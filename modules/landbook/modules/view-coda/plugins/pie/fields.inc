@@ -68,7 +68,7 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
     '#type' => 'container',
     'items' => array(
       '#attributes' => array(
-        'class' => '',
+        'class' => 'row',
       ),
       '#type' => 'container',
       'items' => $fields
