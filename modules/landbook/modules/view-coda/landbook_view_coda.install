@@ -70,7 +70,7 @@ function landbook_view_coda_update_7206() {
         ),
         'charts' => array(
           'title' => 'Compare countries',
-          'vcc' => '{"ctype": "line", "loadYears": true, main: "WB-SP.POP.TOTL", "loadIndicators": true, "loadCountries": true, "iso3": "' . $iso3 . '"}',
+          'vcc' => '{"ctype": "line", "loadYears": true, "main": "WB-SP.POP.TOTL", "loadIndicators": true, "loadCountries": true, "iso3": "' . $iso3 . '"}',
         ),
         'spider' => array(
           //'title' => '',
