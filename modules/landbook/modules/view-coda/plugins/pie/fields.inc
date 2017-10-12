@@ -41,7 +41,7 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
         '#name' => 'countries',
         '#type' => 'select',
         '#title' => t('Countries'),
-        '#options' => array(),//['PER', 'EGY'],
+        '#options' => array(),
     );
   }
 

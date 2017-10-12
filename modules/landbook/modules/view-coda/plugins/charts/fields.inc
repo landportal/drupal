@@ -35,21 +35,25 @@ function lbvc_plugin_charts_formatter($VCC) {
       '#id' => $VCC['vid']. '-indicators',
       '#name' => 'indicators',
       '#type' => 'checkboxes',
-      //'#parent' => 'indicators',
+      '#attributes' => array('name' => 'indicators'),
       '#title' => t('Category'),
-      //'#title_display' => t('Category'),
       '#options' => $opts,// array_keys($params->tree)
     ));
   }
 
   if (isset($params->observations)) {
-    //dpm($params->observations);
+    $obs = array();
+    foreach($params->observations as $k => $o) {
+      $obs[$k] = $o['label'];
+    }
+    $obs['all'] = t('All Indicators');
     $fields['observations'] = form_process_checkboxes(array(
-      '#id' => $VCC['vid']. '-obs',
+      '#id' => $VCC['vid']. '-observations',
       '#name' => 'observations',
+      '#attributes' => array('name' => 'observations'),
       '#type' => 'checkboxes',
-      '#title' => 'Obs',
-      '#options' => array('all' => t('All Indicators')),
+      '#title' => t('Indicators'),
+      '#options' => $obs,
     ));
   }
 

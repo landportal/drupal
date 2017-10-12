@@ -87,10 +87,11 @@ function lbvc__indicators_cache(&$params, $tid) {
   // Should be stored / applied by indicators , not globally
   if ($term->field_observations) {
     if (!isset($params->observations)) $params->observations = [];
-    $params->observations[$lb['id']] = [];
+    $lb['obs'] = [];
     foreach($term->field_observations[LANGUAGE_NONE] as $n => $o) {
       $obs = taxonomy_term_load($o['tid']);
-      $params->observations[$lb['id']][$o['tid']] = array('id' => $o['tid'], 'label' => $obs->name, 'desc' => $obs->description);
+      $params->observations[$o['tid']] = array('id' => $o['tid'], 'label' => $obs->name, 'desc' => $obs->description);
+      array_push($lb['obs'], $o['tid']);
     }
     /* dpm($params->observations, 'obs'); */
     /* dpm($term->field_observations[LANGUAGE_NONE], 'obs'); */
