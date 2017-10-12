@@ -1,9 +1,9 @@
 <?php
 /* A generic block to display a LB view coda visualization */
 ?>
-        <article id="<?php print $block_html_id; ?>" class="view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
+        <section id="<?php print $block_html_id; ?>" class="block view-coda <?php print $classes; ?>"<?php print $attributes; ?>>
 <?php if(!empty($block->subject)): ?>
-          <header class="text-center">
+          <header>
 <?php print render($title_prefix); ?>
 <?php if ($block->subject): ?>
             <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
@@ -17,4 +17,4 @@
             <div<?php print $content_attributes; ?>><?php print $content ?></div>
           </footer>
 <?php endif;?>
-        </article>
+        </section>

@@ -335,152 +335,6 @@ function landbook_country_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-landbook_country-field_indicator_map'.
-  $field_instances['node-landbook_country-field_indicator_map'] = array(
-    'bundle' => 'landbook_country',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_indicator_map',
-    'label' => 'Map',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-        'sort' => 'weight',
-      ),
-      'type' => 'options_select',
-      'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-landbook_country-field_indicator_ranking'.
-  $field_instances['node-landbook_country-field_indicator_ranking'] = array(
-    'bundle' => 'landbook_country',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_indicator_ranking',
-    'label' => 'Ranking',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-        'sort' => 'weight',
-      ),
-      'type' => 'options_select',
-      'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'node-landbook_country-field_indicators'.
-  $field_instances['node-landbook_country-field_indicators'] = array(
-    'bundle' => 'landbook_country',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Pre-selected indicators for this country',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_indicators',
-    'label' => 'Indicators',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-        'sort' => 'weight',
-      ),
-      'type' => 'options_select',
-      'weight' => 7,
-    ),
-  );
-
   // Exported field_instance: 'node-landbook_country-field_orgref'.
   $field_instances['node-landbook_country-field_orgref'] = array(
     'bundle' => 'landbook_country',
@@ -537,7 +391,7 @@ function landbook_country_field_default_field_instances() {
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_orgref',
-    'label' => 'Source of the narrative',
+    'label' => 'Source',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -550,6 +404,53 @@ function landbook_country_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-landbook_country-field_visualization'.
+  $field_instances['node-landbook_country-field_visualization'] = array(
+    'bundle' => 'landbook_country',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'landbook_view_coda',
+        'settings' => array(
+          'class' => '',
+          'view_mode' => 'full',
+        ),
+        'type' => 'lbvc_block',
+        'weight' => 9,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_visualization',
+    'label' => 'Land Book Indicators',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
       'weight' => 6,
     ),
   );
@@ -604,7 +505,7 @@ function landbook_country_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 0,
     ),
   );
 
@@ -616,12 +517,9 @@ function landbook_country_field_default_field_instances() {
   t('Description');
   t('Foldable elements of the narrative.
  ');
-  t('Indicators');
-  t('Map');
+  t('Land Book Indicators');
   t('Narrative');
-  t('Pre-selected indicators for this country');
-  t('Ranking');
-  t('Source of the narrative');
+  t('Source');
   t('Title');
 
   return $field_instances;

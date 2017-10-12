@@ -19,10 +19,9 @@ function landbook_taxonomies_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 5,
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -42,12 +41,9 @@ function landbook_taxonomies_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 2,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -94,6 +90,65 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-datasets-field_doc_licencing'.
+  $field_instances['taxonomy_term-datasets-field_doc_licencing'] = array(
+    'bundle' => 'datasets',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 17,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_doc_licencing',
+    'label' => 'License',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-datasets-field_id'.
   $field_instances['taxonomy_term-datasets-field_id'] = array(
     'bundle' => 'datasets',
@@ -105,14 +160,13 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 4,
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'search_index' => array(
         'label' => 'inline',
@@ -124,7 +178,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 14,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -169,6 +223,158 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-datasets-field_image'.
+  $field_instances['taxonomy_term-datasets-field_image'] = array(
+    'bundle' => 'datasets',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 12,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_image',
+    'label' => 'Logo',
+    'required' => FALSE,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'image' => 'image',
+        ),
+        'browser_plugins' => array(),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-datasets-field_license_text'.
+  $field_instances['taxonomy_term-datasets-field_license_text'] = array(
+    'bundle' => 'datasets',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 18,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_license_text',
+    'label' => 'License text',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-datasets-field_orgref'.
   $field_instances['taxonomy_term-datasets-field_orgref'] = array(
     'bundle' => 'datasets',
@@ -177,18 +383,13 @@ function landbook_taxonomies_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 0,
-          'use_content_language' => 1,
-          'view_mode' => 'teaser',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 6,
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
           'links' => 0,
@@ -196,7 +397,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 5,
+        'weight' => 13,
       ),
       'search_index' => array(
         'label' => 'hidden',
@@ -209,14 +410,14 @@ function landbook_taxonomies_field_default_field_instances() {
         'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'bypass_access' => 0,
-          'link' => 1,
+          'bypass_access' => FALSE,
+          'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 1,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -255,6 +456,188 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-datasets-field_related_aside'.
+  $field_instances['taxonomy_term-datasets-field_related_aside'] = array(
+    'bundle' => 'datasets',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 19,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_related_aside',
+    'label' => 'Related aside',
+    'required' => 0,
+    'settings' => array(
+      'blockreference_modules' => array(
+        'addtoany' => 0,
+        'apachesolr_search' => 0,
+        'block' => 'block',
+        'calendar' => 0,
+        'comment' => 0,
+        'context_ui' => 0,
+        'devel' => 0,
+        'diff' => 0,
+        'facetapi' => 0,
+        'global_filter' => 0,
+        'hybridauth' => 0,
+        'jump_menu' => 0,
+        'landbook_vggt' => 0,
+        'landbook_view_coda' => 'landbook_view_coda',
+        'landbook_vis_map' => 0,
+        'landbook_vis_table_indicators' => 0,
+        'landportal_blocks' => 0,
+        'landportal_partners' => 0,
+        'locale' => 0,
+        'login_one_time' => 0,
+        'logintoboggan' => 0,
+        'mailchimp_signup' => 0,
+        'masquerade' => 0,
+        'menu' => 0,
+        'node' => 0,
+        'og_menu' => 0,
+        'pcp' => 0,
+        'print' => 0,
+        'search' => 0,
+        'shortcut' => 0,
+        'system' => 0,
+        'twitter_block' => 0,
+        'user' => 0,
+        'views' => 'views',
+        'webform' => 0,
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-datasets-field_related_blocks'.
+  $field_instances['taxonomy_term-datasets-field_related_blocks'] = array(
+    'bundle' => 'datasets',
+    'default_value' => array(
+      0 => array(
+        'moddelta' => 'views:lbcat-block',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 2,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_related_blocks',
+    'label' => 'Related blocks',
+    'required' => 0,
+    'settings' => array(
+      'blockreference_modules' => array(
+        'addtoany' => 0,
+        'apachesolr_search' => 0,
+        'block' => 0,
+        'calendar' => 0,
+        'comment' => 0,
+        'context_ui' => 0,
+        'devel' => 0,
+        'diff' => 0,
+        'facetapi' => 0,
+        'global_filter' => 0,
+        'hybridauth' => 0,
+        'jump_menu' => 0,
+        'landbook_vggt' => 0,
+        'landbook_view_coda' => 0,
+        'landbook_vis_map' => 0,
+        'landbook_vis_table_indicators' => 0,
+        'landportal_blocks' => 0,
+        'landportal_partners' => 0,
+        'locale' => 0,
+        'login_one_time' => 0,
+        'logintoboggan' => 0,
+        'mailchimp_signup' => 0,
+        'masquerade' => 0,
+        'menu' => 0,
+        'node' => 0,
+        'og_menu' => 0,
+        'pcp' => 0,
+        'print' => 0,
+        'search' => 0,
+        'shortcut' => 0,
+        'system' => 0,
+        'twitter_block' => 0,
+        'user' => 0,
+        'views' => 'views',
+        'webform' => 0,
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-datasets-field_related_domains'.
   $field_instances['taxonomy_term-datasets-field_related_domains'] = array(
     'bundle' => 'datasets',
@@ -288,9 +671,10 @@ function landbook_taxonomies_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -350,9 +734,10 @@ function landbook_taxonomies_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -385,7 +770,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -406,10 +791,11 @@ function landbook_taxonomies_field_default_field_instances() {
         'weight' => 14,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -436,7 +822,7 @@ function landbook_taxonomies_field_default_field_instances() {
     'bundle' => 'datasets',
     'default_value' => array(
       0 => array(
-        'moddelta' => 'views:landbook_catalog-dataset',
+        'moddelta' => 'views:lbcat-published',
       ),
     ),
     'deleted' => 0,
@@ -444,11 +830,8 @@ function landbook_taxonomies_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'blockreference',
-        'settings' => array(
-          'show_empty_blocks' => FALSE,
-        ),
-        'type' => 'blockreference_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 8,
       ),
       'full' => array(
@@ -458,7 +841,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 6,
+        'weight' => 16,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -473,7 +856,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -483,6 +866,7 @@ function landbook_taxonomies_field_default_field_instances() {
     'settings' => array(
       'blockreference_modules' => array(
         'addtoany' => 0,
+        'apachesolr_search' => 0,
         'block' => 0,
         'calendar' => 0,
         'comment' => 0,
@@ -493,7 +877,6 @@ function landbook_taxonomies_field_default_field_instances() {
         'global_filter' => 0,
         'hybridauth' => 0,
         'jump_menu' => 0,
-        'landbook' => 0,
         'landbook_vggt' => 0,
         'landbook_view_coda' => 0,
         'landbook_vis_map' => 0,
@@ -526,7 +909,7 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 7,
     ),
   );
 
@@ -535,7 +918,7 @@ function landbook_taxonomies_field_default_field_instances() {
     'bundle' => 'datasets',
     'default_value' => array(
       0 => array(
-        'moddelta' => 'views:landbook_indicators-catalog',
+        'moddelta' => 'views:lbcat-jump',
       ),
     ),
     'deleted' => 0,
@@ -545,7 +928,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -554,7 +937,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 5,
+        'weight' => 14,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -563,10 +946,13 @@ function landbook_taxonomies_field_default_field_instances() {
         'weight' => 7,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -581,12 +967,12 @@ function landbook_taxonomies_field_default_field_instances() {
         'calendar' => 0,
         'comment' => 0,
         'context_ui' => 0,
+        'devel' => 0,
         'diff' => 0,
         'facetapi' => 0,
         'global_filter' => 0,
         'hybridauth' => 0,
         'jump_menu' => 0,
-        'landbook' => 0,
         'landbook_vggt' => 0,
         'landbook_view_coda' => 0,
         'landbook_vis_map' => 0,
@@ -619,7 +1005,7 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 6,
     ),
   );
 
@@ -638,16 +1024,13 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 12,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'blockreference',
-        'settings' => array(
-          'show_empty_blocks' => FALSE,
-        ),
-        'type' => 'blockreference_default',
-        'weight' => 6,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -659,7 +1042,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 12,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -712,7 +1095,7 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 8,
     ),
   );
 
@@ -725,29 +1108,19 @@ function landbook_taxonomies_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => '',
-          'delete' => '',
-          'description' => 1,
-          'edit' => '',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'field_collection',
+        'module' => 'landbook_view_coda',
         'settings' => array(
-          'add' => '',
-          'delete' => '',
-          'description' => 1,
-          'edit' => '',
-          'translate' => 'Translate',
+          'class' => '',
+          'view_mode' => 'full',
         ),
-        'type' => 'field_collection_list',
-        'weight' => 5,
+        'type' => 'lbvc_block',
+        'weight' => 1,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -759,7 +1132,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -771,16 +1144,10 @@ function landbook_taxonomies_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'field_collection_fieldset',
-      'settings' => array(
-        'collapsed' => 1,
-        'field_as_label' => '',
-        'last_item_collapsed' => 1,
-        'new_item_open' => 1,
-        'replace_label' => 0,
-      ),
-      'type' => 'field_collection_fieldset',
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
       'weight' => 5,
     ),
   );
@@ -794,14 +1161,9 @@ function landbook_taxonomies_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => 'content',
-          'title_style' => 'h2',
-        ),
-        'type' => 'title_linked',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -812,7 +1174,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'title_style' => 'h1',
         ),
         'type' => 'title_linked',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -834,7 +1196,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'title_style' => 'h3',
         ),
         'type' => 'title_linked',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -872,14 +1234,14 @@ function landbook_taxonomies_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 30,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -968,7 +1330,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'view_mode' => 'default',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 1,
+        'weight' => 9,
       ),
       'search_index' => array(
         'label' => 'hidden',
@@ -982,7 +1344,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 15,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1020,7 +1382,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'inline',
@@ -1038,7 +1400,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 17,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1053,10 +1415,10 @@ function landbook_taxonomies_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'display_label' => 0,
+        'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -1076,14 +1438,14 @@ function landbook_taxonomies_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 7,
+        'weight' => 30,
       ),
       'full' => array(
         'label' => 'above',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 10,
+        'weight' => 17,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1095,7 +1457,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 16,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1111,7 +1473,7 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -1131,14 +1493,13 @@ function landbook_taxonomies_field_default_field_instances() {
           'title_style' => '',
         ),
         'type' => 'title_linked',
-        'weight' => 5,
+        'weight' => 27,
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 8,
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1147,10 +1508,10 @@ function landbook_taxonomies_field_default_field_instances() {
         'weight' => 7,
       ),
       'teaser' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1195,6 +1556,79 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-indicators-field_image'.
+  $field_instances['taxonomy_term-indicators-field_image'] = array(
+    'bundle' => 'indicators',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 33,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 4,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_image',
+    'label' => 'Picture',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'image' => 'image',
+        ),
+        'browser_plugins' => array(),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 115,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-indicators-field_max'.
   $field_instances['taxonomy_term-indicators-field_max'] = array(
     'bundle' => 'indicators',
@@ -1204,27 +1638,15 @@ function landbook_taxonomies_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 9,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'full' => array(
-        'label' => 'inline',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 12,
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1236,7 +1658,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 14,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1256,7 +1678,7 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -1269,27 +1691,15 @@ function landbook_taxonomies_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 8,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'full' => array(
-        'label' => 'inline',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 11,
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1301,7 +1711,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 15,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1321,7 +1731,258 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 3,
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-indicators-field_observations'.
+  $field_instances['taxonomy_term-indicators-field_observations'] = array(
+    'bundle' => 'indicators',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 31,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'use_content_language' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 7,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_observations',
+    'label' => 'Observations',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 118,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-indicators-field_related_aside'.
+  $field_instances['taxonomy_term-indicators-field_related_aside'] = array(
+    'bundle' => 'indicators',
+    'default_value' => array(
+      0 => array(
+        'moddelta' => 'landbook_view_coda:indicator_dl',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 32,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 18,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_related_aside',
+    'label' => 'Related aside',
+    'required' => 0,
+    'settings' => array(
+      'blockreference_modules' => array(
+        'addtoany' => 0,
+        'apachesolr_search' => 0,
+        'block' => 'block',
+        'calendar' => 0,
+        'comment' => 0,
+        'context_ui' => 0,
+        'devel' => 0,
+        'diff' => 0,
+        'facetapi' => 0,
+        'global_filter' => 0,
+        'hybridauth' => 0,
+        'jump_menu' => 'jump_menu',
+        'landbook_vggt' => 0,
+        'landbook_view_coda' => 'landbook_view_coda',
+        'landbook_vis_map' => 0,
+        'landbook_vis_table_indicators' => 0,
+        'landportal_blocks' => 0,
+        'landportal_partners' => 0,
+        'locale' => 0,
+        'login_one_time' => 0,
+        'logintoboggan' => 0,
+        'mailchimp_signup' => 0,
+        'masquerade' => 0,
+        'menu' => 0,
+        'node' => 0,
+        'og_menu' => 0,
+        'pcp' => 0,
+        'print' => 0,
+        'search' => 0,
+        'shortcut' => 0,
+        'system' => 0,
+        'twitter_block' => 0,
+        'user' => 0,
+        'views' => 'views',
+        'webform' => 0,
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 121,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-indicators-field_related_blocks'.
+  $field_instances['taxonomy_term-indicators-field_related_blocks'] = array(
+    'bundle' => 'indicators',
+    'default_value' => array(
+      0 => array(
+        'moddelta' => 'views:lbind-childs',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 31,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 8,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_related_blocks',
+    'label' => 'Related blocks',
+    'required' => 0,
+    'settings' => array(
+      'blockreference_modules' => array(
+        'addtoany' => 0,
+        'apachesolr_search' => 0,
+        'block' => 'block',
+        'calendar' => 0,
+        'comment' => 0,
+        'context_ui' => 0,
+        'devel' => 0,
+        'diff' => 0,
+        'facetapi' => 0,
+        'global_filter' => 0,
+        'hybridauth' => 0,
+        'jump_menu' => 0,
+        'landbook_vggt' => 0,
+        'landbook_view_coda' => 0,
+        'landbook_vis_map' => 0,
+        'landbook_vis_table_indicators' => 0,
+        'landportal_blocks' => 0,
+        'landportal_partners' => 0,
+        'locale' => 0,
+        'login_one_time' => 0,
+        'logintoboggan' => 0,
+        'mailchimp_signup' => 0,
+        'masquerade' => 0,
+        'menu' => 0,
+        'node' => 0,
+        'og_menu' => 0,
+        'pcp' => 0,
+        'print' => 0,
+        'search' => 0,
+        'shortcut' => 0,
+        'system' => 0,
+        'twitter_block' => 0,
+        'user' => 0,
+        'views' => 'views',
+        'webform' => 0,
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 120,
     ),
   );
 
@@ -1337,14 +1998,14 @@ function landbook_taxonomies_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 16,
+        'weight' => 26,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 13,
+        'weight' => 10,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1356,7 +2017,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 16,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1395,14 +2056,14 @@ function landbook_taxonomies_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 17,
+        'weight' => 27,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 14,
+        'weight' => 11,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1414,7 +2075,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 17,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1432,7 +2093,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'synonyms_select_taxonomy_term',
-      'weight' => 110,
+      'weight' => 111,
     ),
   );
 
@@ -1448,14 +2109,14 @@ function landbook_taxonomies_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 18,
+        'weight' => 28,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 15,
+        'weight' => 12,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1467,7 +2128,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 18,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1485,7 +2146,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'synonyms_select_taxonomy_term',
-      'weight' => 111,
+      'weight' => 112,
     ),
   );
 
@@ -1501,14 +2162,14 @@ function landbook_taxonomies_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 29,
       ),
       'full' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 16,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1518,8 +2179,13 @@ function landbook_taxonomies_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
         'weight' => 2,
       ),
     ),
@@ -1561,29 +2227,29 @@ function landbook_taxonomies_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-indicators-field_view_indicators'.
-  $field_instances['taxonomy_term-indicators-field_view_indicators'] = array(
+  // Exported field_instance: 'taxonomy_term-indicators-field_view_dataset'.
+  $field_instances['taxonomy_term-indicators-field_view_dataset'] = array(
     'bundle' => 'indicators',
     'default_value' => array(
       0 => array(
-        'moddelta' => 'views:landbook_indicators-in_dataset',
+        'moddelta' => 'views:lbdat-catalog',
       ),
     ),
     'deleted' => 0,
-    'description' => 'Show indicators within the same catalog',
+    'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'blockreference',
         'settings' => array(
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 3,
+        'weight' => 34,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1592,7 +2258,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1608,12 +2274,13 @@ function landbook_taxonomies_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_view_indicators',
-    'label' => 'view_indicators',
-    'required' => 1,
+    'field_name' => 'field_view_dataset',
+    'label' => 'View Catalog',
+    'required' => 0,
     'settings' => array(
       'blockreference_modules' => array(
         'addtoany' => 0,
+        'apachesolr_search' => 0,
         'block' => 0,
         'calendar' => 0,
         'comment' => 0,
@@ -1625,6 +2292,101 @@ function landbook_taxonomies_field_default_field_instances() {
         'hybridauth' => 0,
         'jump_menu' => 0,
         'landbook' => 0,
+        'landbook_lgaf' => 0,
+        'landbook_vggt' => 0,
+        'landbook_view_coda' => 0,
+        'landportal_blocks' => 0,
+        'landportal_partners' => 0,
+        'locale' => 0,
+        'login_one_time' => 0,
+        'logintoboggan' => 0,
+        'mailchimp_signup' => 0,
+        'masquerade' => 0,
+        'menu' => 0,
+        'node' => 0,
+        'og_menu' => 0,
+        'pcp' => 0,
+        'print' => 0,
+        'search' => 0,
+        'shortcut' => 0,
+        'system' => 0,
+        'twitter_block' => 0,
+        'user' => 0,
+        'views' => 'views',
+        'webform' => 0,
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 119,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-indicators-field_view_indicators'.
+  $field_instances['taxonomy_term-indicators-field_view_indicators'] = array(
+    'bundle' => 'indicators',
+    'default_value' => array(
+      0 => array(
+        'moddelta' => 'views:lbind-jump',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Show indicators within the same catalog',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 26,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 10,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_view_indicators',
+    'label' => 'Indicators menu',
+    'required' => 1,
+    'settings' => array(
+      'blockreference_modules' => array(
+        'addtoany' => 0,
+        'apachesolr_search' => 0,
+        'block' => 0,
+        'calendar' => 0,
+        'comment' => 0,
+        'context_ui' => 0,
+        'devel' => 0,
+        'diff' => 0,
+        'facetapi' => 0,
+        'global_filter' => 0,
+        'hybridauth' => 0,
+        'jump_menu' => 0,
         'landbook_vggt' => 0,
         'landbook_view_coda' => 0,
         'landbook_vis_map' => 0,
@@ -1657,35 +2419,38 @@ function landbook_taxonomies_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 114,
+      'weight' => 116,
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-indicators-field_visualization'.
-  $field_instances['taxonomy_term-indicators-field_visualization'] = array(
+  // Exported field_instance: 'taxonomy_term-indicators-field_view_parent'.
+  $field_instances['taxonomy_term-indicators-field_view_parent'] = array(
     'bundle' => 'indicators',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'moddelta' => 'views:lbind-parent',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'field_collection',
+        'module' => 'blockreference',
         'settings' => array(
-          'add' => '',
-          'delete' => '',
-          'description' => 0,
-          'edit' => '',
-          'view_mode' => 'full',
+          'show_empty_blocks' => FALSE,
         ),
-        'type' => 'field_collection_view',
-        'weight' => 7,
+        'type' => 'blockreference_default',
+        'weight' => 2,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1701,6 +2466,96 @@ function landbook_taxonomies_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_view_parent',
+    'label' => 'View parent',
+    'required' => 0,
+    'settings' => array(
+      'blockreference_modules' => array(
+        'addtoany' => 0,
+        'apachesolr_search' => 0,
+        'block' => 0,
+        'calendar' => 0,
+        'comment' => 0,
+        'context_ui' => 0,
+        'devel' => 0,
+        'diff' => 0,
+        'facetapi' => 0,
+        'global_filter' => 0,
+        'hybridauth' => 0,
+        'jump_menu' => 0,
+        'landbook_vggt' => 0,
+        'landbook_view_coda' => 0,
+        'landbook_vis_map' => 0,
+        'landbook_vis_table_indicators' => 0,
+        'landportal_blocks' => 0,
+        'landportal_partners' => 0,
+        'locale' => 0,
+        'login_one_time' => 0,
+        'logintoboggan' => 0,
+        'mailchimp_signup' => 0,
+        'masquerade' => 0,
+        'menu' => 0,
+        'node' => 0,
+        'og_menu' => 0,
+        'pcp' => 0,
+        'print' => 0,
+        'search' => 0,
+        'shortcut' => 0,
+        'system' => 0,
+        'twitter_block' => 0,
+        'user' => 0,
+        'views' => 'views',
+        'webform' => 0,
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 117,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-indicators-field_visualization'.
+  $field_instances['taxonomy_term-indicators-field_visualization'] = array(
+    'bundle' => 'indicators',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'landbook_view_coda',
+        'settings' => array(
+          'class' => '',
+          'view_mode' => 'full',
+        ),
+        'type' => 'lbvc_block',
+        'weight' => 5,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
     'field_name' => 'field_visualization',
     'label' => 'Land Book Indicators',
     'required' => 0,
@@ -1710,7 +2565,7 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'field_collection_fieldset',
+      'module' => 'field_collection',
       'settings' => array(
         'collapsed' => 1,
         'field_as_label' => 'title_field',
@@ -1718,8 +2573,8 @@ function landbook_taxonomies_field_default_field_instances() {
         'new_item_open' => 1,
         'replace_label' => 0,
       ),
-      'type' => 'field_collection_fieldset',
-      'weight' => 6,
+      'type' => 'field_collection_embed',
+      'weight' => 10,
     ),
   );
 
@@ -1739,7 +2594,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'title_style' => 'h1',
         ),
         'type' => 'title_linked',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1767,7 +2622,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'title_style' => 'h3',
         ),
         'type' => 'title_linked',
-        'weight' => 0,
+        'weight' => 13,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1816,6 +2671,79 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-observations-field_obstype'.
+  $field_instances['taxonomy_term-observations-field_obstype'] = array(
+    'bundle' => 'observations',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_obstype',
+    'label' => 'Type',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-observations-name_field'.
+  $field_instances['taxonomy_term-observations-name_field'] = array(
+    'bundle' => 'observations',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h4',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Best value is');
@@ -1827,22 +2755,33 @@ function landbook_taxonomies_field_default_field_instances() {
   t('ID');
   t('Indicator description');
   t('Indicator name');
+  t('Indicators menu');
   t('Land Book Indicators');
   t('Latest dataset');
+  t('License');
+  t('License text');
+  t('Logo');
   t('Maximun possible value of the indicator');
   t('Measurement unit');
   t('Measurement unit, like % or hectares');
   t('Minimun possible value of the indicator');
   t('Name');
+  t('Observations');
   t('Organization');
   t('Overarching categories');
+  t('Picture');
   t('Published dataset(s)');
+  t('Related aside');
+  t('Related blocks');
   t('Related concepts');
   t('Show indicators within the same catalog');
   t('The catalog this indicators it belongs to');
   t('The values for this indicator is taken from some controlled term list (could be characters, colors, strings, numbers...)
 <a href="https://www.w3.org/TR/vocab-data-cube/#schemes">Read more</a>');
   t('Themes');
+  t('Type');
+  t('View Catalog');
+  t('View parent');
   t('has Coded Value');
   t('max');
   t('min');

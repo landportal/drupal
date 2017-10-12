@@ -51,12 +51,10 @@ $handler->display->display_options['fields']['field_acronym']['table'] = 'field_
 $handler->display->display_options['fields']['field_acronym']['field'] = 'field_acronym';
 $handler->display->display_options['fields']['field_acronym']['relationship'] = 'field_orgref_target_id';
 $handler->display->display_options['fields']['field_acronym']['label'] = 'Source';
-/* Sort criterion: Content: Post date */
-$handler->display->display_options['sorts']['created']['id'] = 'created';
-$handler->display->display_options['sorts']['created']['table'] = 'node';
-$handler->display->display_options['sorts']['created']['field'] = 'created';
-$handler->display->display_options['sorts']['created']['relationship'] = 'reverse_field_catalog_node';
-$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Sort criterion: Taxonomy term: Name */
+$handler->display->display_options['sorts']['name']['id'] = 'name';
+$handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['name']['field'] = 'name';
 /* Filter criterion: Taxonomy vocabulary: Machine name */
 $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
 $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
@@ -102,10 +100,6 @@ $handler->display->display_options['row_options']['separator'] = '-';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['defaults']['footer'] = FALSE;
-/* Footer: Global: Result summary */
-$handler->display->display_options['footer']['result']['id'] = 'result';
-$handler->display->display_options['footer']['result']['table'] = 'views';
-$handler->display->display_options['footer']['result']['field'] = 'result';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Taxonomy term: Taxonomy term using Catalog */
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['id'] = 'reverse_field_dataset_taxonomy_term';
@@ -138,6 +132,7 @@ $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
 $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
 $handler->display->display_options['fields']['field_id']['label'] = '';
+$handler->display->display_options['fields']['field_id']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_id']['element_label_colon'] = FALSE;
 /* Field: Taxonomy term: Term ID */
 $handler->display->display_options['fields']['tid']['id'] = 'tid';
@@ -166,7 +161,6 @@ $handler->display->display_options['fields']['title']['table'] = 'node';
 $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['relationship'] = 'field_orgref_target_id';
 $handler->display->display_options['fields']['title']['label'] = 'Source';
-$handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
 /* Field: Global: Custom text */
 $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
 $handler->display->display_options['fields']['nothing']['table'] = 'views';

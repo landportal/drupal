@@ -123,22 +123,22 @@ function landbook_country_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'xmlsitemap' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'language' => array(
           'weight' => '5',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
       ),
       'display' => array(

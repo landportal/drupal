@@ -9,27 +9,30 @@
 
 
 function lbvc_plugin_map_params($VCC) {
-  $params = '';
-  $up = $VCC['vcc'];
-  if ($up && $up[0] == '{' && $up[count($up) - 1] == '}') {
-    $params = substr($up, 1, -1) . ', ';
+  $params = json_decode($VCC['vcc'] != '' ? $VCC['vcc'] : '{}');
+  /* dpm($params, 'PARAMS'); */
+  /* dpm($VCC, 'VCC'); */
+  $params->indicators = array();
+  $params->cache = array();
+
+  lbvc__indicators_process($params, $VCC['indicators']);
+
+  // IF loadTree, load all indicators 'children', return a complex ind. structure
+  if (isset($params->loadTree)) {
+    lbvc__indicators_tree($params, $VCC['indicators']);
   }
-  $params .= '"indicator": "' . $VCC['indicators'][0] . '"'
-    . ', tooltip: true, legend: true, nav: true'
-    . ", colors: { background: 'transparent' }"
-    . ', "mapTarget": "#' . $VCC['vid'] . '", "vis": LBV';
-  return '{' . $params . '}';
+
+  return $params;
 }
 
 function lbvc_plugin_map_formatter($VCC) {
-  //dpm($VCC, 'map VCC');
-  $params = lbvc_plugin_map_params($VCC);
-  $value = t('Loading map visualization');
-  $js = $VCC['jsid'] . ' = new lbvisMap(' . $params . '); ' . $VCC['jsid'] . '.init();';
-  // DEBUG
-  $js .= 'console.log(' . $VCC['jsid'] . '.debug());';
+  $value = t('Loading map...');
 
-  return array(
+  $params = lbvc_plugin_map_params($VCC);
+  $params->target = '#' . $VCC['vid'];
+  $js = $VCC['jsid'] . ' = new lbvisMap(map_data, LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
+
+  return array(array(
     '#type' => 'html_tag',
     '#tag' => 'div',
     '#attributes' => array(
@@ -39,9 +42,9 @@ function lbvc_plugin_map_formatter($VCC) {
       'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
       'js' =>  array(array(
         'type' => 'inline',
-        'data' => landbook_view_coda_lbvis_ready_callback($js)
+        'data' => lbvc__js_ready($js)
       ))
     ),
     '#value' => $value,
-  );
+  ));
 }

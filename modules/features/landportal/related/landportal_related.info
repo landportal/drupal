@@ -1,7 +1,7 @@
 name = Landportal related
 core = 7.x
 package = Landportal
-version = 7.x-2.4-alpha1
+version = 7.x-2.4-beta
 dependencies[] = blockreference
 dependencies[] = ct_page
 dependencies[] = ctools
@@ -13,5 +13,6 @@ dependencies[] = options
 dependencies[] = views
 features[features_api][] = api:2
 features[field_base][] = field_noderef
+features[field_base][] = field_related_aside
 features[field_base][] = field_related_blocks
 features[field_instance][] = node-page-field_related_blocks

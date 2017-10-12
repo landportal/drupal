@@ -66,6 +66,7 @@ projects:
   - global_filter
   - google_adwords
   - google_analytics
+  - hierarchical_taxonomy
   - honeypot
   - hybridauth
   - i18n

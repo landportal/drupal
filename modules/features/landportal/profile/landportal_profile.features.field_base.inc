@@ -121,7 +121,7 @@ function landportal_profile_field_default_field_bases() {
               'weight' => -97,
             ),
             'country' => array(
-              'collect' => 1,
+              'collect' => 2,
               'default' => 'us',
               'weight' => -99,
             ),

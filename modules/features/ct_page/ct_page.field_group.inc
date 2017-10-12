@@ -118,8 +118,8 @@ function ct_page_field_group_info() {
     'label' => '',
     'weight' => '0',
     'children' => array(
-      0 => 'field_image',
-      1 => 'title_field',
+      0 => 'title_field',
+      1 => 'field_image',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(

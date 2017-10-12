@@ -14,8 +14,11 @@ function landportal_partners_context_default_contexts() {
   $path = drupal_get_path('module', 'landportal_partners').'/context';
   $files = file_scan_directory($path, '/\.inc$/');
   foreach ($files as $filepath => $file) {
+    $context = NULL;
     include_once $filepath;
-    $export[$context->name] = $context;
+    if ($context) {
+      $export[$context->name] = $context;
+    }
   }
   return $export;
 }

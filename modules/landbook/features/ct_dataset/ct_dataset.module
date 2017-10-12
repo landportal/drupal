@@ -5,3 +5,42 @@
  */
 
 include_once 'ct_dataset.features.inc';
+
+// Get the latest CT dataset
+function ct_dataset__get_latest($tid) {
+  $query = db_select('node', 'n');
+  $query->join('field_data_field_catalog', 'c', 'n.nid = c.entity_id');
+  $query->fields('n', array('nid'))
+        ->condition('field_catalog_tid', $tid, '=');
+  $catnode = $query->execute()
+    ->fetchAssoc();
+  return $catnode['nid'];
+}
+
+// If we have a latest CT dataset, replace tax. dataset page with it
+function ct_dataset_page_build(&$page) {
+  if (@($term = $page['content']['system_main']['term_heading']['term']['#term'])) {
+    if ($term->vocabulary_machine_name != 'datasets') return;
+    if ($dsid = ct_dataset__get_latest($term->tid)) {
+      $node = node_load($dsid);
+      $page['dsid'] = $dsid;
+      $page['node'] = $node;
+      $page['content']['system_main']['nodes'] = array(
+        $dsid => node_view($node, 'full') + array('#node' => $node)
+      );
+      unset($page['content']['system_main']['term_heading']);
+    }
+    //dpm($page, 'Pbuild');
+  }
+}
+
+function ct_dataset_preprocess(&$variables, $hook) {
+  if (@$variables['page']['dsid']) {
+    $variables['node'] = $variables['page']['node'];
+    $variables['classes_array'][] = 'page-node';
+    $variables['classes_array'][] = 'node-type-' . $variables['page']['node']->type;
+    $variables['tabs']['#primary'][] = array(
+      '#markup' => '<li>' . l('Edit Dataset', 'node/'.$variables['page']['dsid'].'/edit') . '</li>',
+    );
+  }
+}

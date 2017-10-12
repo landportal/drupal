@@ -5,6 +5,146 @@
  * Author: Jules Clement <jules.clement@landportal.info>
  */
 
+/** LB view-coda fields
+ * @@@Add default map to indicators with non coded value
+ */
+function landbook_view_coda_update_7206() {
+  // DISABLE MODULES
+  module_disable(array(
+    'landbook_vis_table_indicators', 'landbook_vis_map'
+  ));
+  module_enable(array(
+    'landbook_lgaf'
+  ));
+
+  // update all indicators with some default visualization (with fields)
+  // @TODO (?): update all datasets with table vis. Only if nb indicators < X?
+  $terms = entity_load('taxonomy_term', FALSE, array('vid' => LBVC_IND_VID));
+  foreach ($terms as $t) {
+    // Add map vis to all indicators without a 'coded' value
+    if (!$t->field_hascodedvalue[LANGUAGE_NONE][0]['value']) {
+      $fc_item = entity_create('field_collection_item', array('field_name' => 'field_visualization'));
+      $fc_item->setHostEntity('taxonomy_term', $t);// taxonomy_term_load($t));
+      $fc_item->field_view_coda[LANGUAGE_NONE] = array(
+        array(
+          'type' => 'map',
+          'vcc' => '{"debug": true}'
+        )
+      );
+      $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = $t->tid;
+      $fc_item->save();
+      drush_log('Add map to indicators [' . $t->tid . ']: ' . $t->field_id[LANGUAGE_NONE][0]['value'], 'ok');
+    }
+  }
+
+  // Get iso3 per countries tid
+  $countries = array();
+  $result = db_select('field_data_field_iso3', 'iso')
+    ->fields('iso', array('entity_id', 'field_iso3_value'))
+    ->execute();
+  while($record = $result->fetchAssoc()) {
+    $countries[$record['entity_id']] = $record['field_iso3_value'];
+  }
+
+  // Update for CP & TP
+  $nodes = [];
+  foreach( ['thematic_narrative', 'landbook_country'] as $ct) {
+    $nodes += node_load_multiple(array(), array('type' => $ct));
+  }
+  $nids = array_keys($nodes);
+  foreach ($nids as $n) {
+    // Fill up node with vis.
+    $manode = $nodes[$n];
+    drush_log('Adding to [' . $n . '] ' . $manode->type, 'ok');
+    if ($manode->type == 'landbook_country') {
+      $iso3t = $manode->field_geographical_focus[LANGUAGE_NONE][0]['tid'];
+      $iso3 = $countries[$iso3t];
+      $VIS = array(
+        'table' => array(
+          'title' => 'Indicators',
+          'vcc' => '{"loadIndicators": true, "loadYears": true, "iso3": "' . $iso3 . '"}',
+        ),
+        'map' => array(
+          'title' => 'Mapping',
+          'vcc' => '{"loadYears": true, "loadIndicators": true, "iso3": "' . $iso3 . '"}',
+        ),
+        'charts' => array(
+          'title' => 'Compare countries',
+          'vcc' => '{"ctype": "line", "loadYears": true, main: "WB-SP.POP.TOTL", "loadIndicators": true, "loadCountries"": true, "iso3": "' . $iso3 . '"}',
+        ),
+        'spider' => array(
+          //'title' => '',
+          'vcc' => '{"loadYears": true, "loadIndicators": true, "iso3": "' . $iso3 . '"}',
+        ),
+        'pie' => array(
+          //'title' => '',
+          'vcc' => '{"legend": true, "main": "FAO-6601-5110", "year": "2014", "iso3": "' . $iso3 . '"}',
+        ),
+      );
+    } elseif ($manode->type == 'thematic_narrative') {
+      $VIS = array(
+        'table' => array(
+          'title' => 'Indicators',
+          'vcc' => '{"loadIndicators": true, "loadYears": true}',
+        ),
+        'map' => array(
+          'title' => 'Mapping',
+          'vcc' => '{"loadYears": true, "loadIndicators": true}',
+        ),
+        'ranking' => array(
+          'title' => 'Ranking',
+          'vcc' => '{"loadYears": true, "loadIndicators": true}',
+        ),
+      );
+      $VIS['table']['vcc'] = '{"loadIndicators": true}';
+    }
+
+    foreach ($VIS as $k=>$o) {
+      $fc_item = entity_create('field_collection_item', array('field_name' => 'field_visualization'));
+      $fc_item->setHostEntity('node', $manode);
+      if (array_key_exists('title', $o)) {
+        $fc_item->title_field[LANGUAGE_NONE][]['value'] = $o['title'];
+      }
+      if ($k == 'table') {
+        if (count($manode->field_indicators[LANGUAGE_NONE]) > 0) {
+          $fc_item->field_indicators = $manode->field_indicators;
+        } else {
+          // Default indicators for CP table: "WB-SP.POP.TOTL", "WB-SP.RUR.TOTL.ZS", "WB-NY.GDP.PCAP.PP.KD", "FAO-6601-5110", "FAO-23045-6083", "DP-MOD-O-F", "DP-MOD-O-N", "FAO-LG.1FB"
+          foreach (array(6954, 7030, 7034, 7517, 7522, 7533, 7543, 7544) as $i) {
+            $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = $i;
+          }
+        }
+      } else if ($k == 'map') {
+        if (count($manode->field_indicator_map[LANGUAGE_NONE]) > 0) {
+          $fc_item->field_indicators = $manode->field_indicator_map;
+        } else {
+          $fc_item->field_indicators[LANGUAGE_NONE] = array(array('tid' => 7030)); // Default ind. is FAO-6601-5110
+        }
+      } else if ($k == 'charts') {
+        $fc_item->field_indicators[LANGUAGE_NONE] = array(array('tid' => 7030)); // Default ind. is FAO-6601-5110
+      } else if ($k == 'ranking' && $manode->field_indicator_ranking) {
+        $fc_item->field_indicators = $manode->field_indicator_ranking;
+      } else if ($k == 'pie') {
+        // Add FAO 'default' (aka original) indicators: 'FAO-6621-5110', 'FAO-6650-5110', 'FAO-6655-5110', 'FAO-6661-5110'
+        //$fc_item->field_indicators[LANGUAGE_NONE] = array(6950, 6951, 7545, 7546);
+        $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = 6954;
+        $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = 6950;
+        $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = 6951;
+        $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = 7545;
+        $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = 7546;
+      } else if ($k != 'spider') {
+        drush_log($k . ' haz no indicators for: ' . $manode->nid . ' / ' . $manode->title, 'warning');
+      }
+      $fc_item->field_view_coda[LANGUAGE_NONE][] = array(
+        'type' => $k,
+        'vcc' => $o['vcc'],
+      );
+      // DEVEL
+      $fc_item->save();
+//      break;
+    }
+  }
+}
 
 /** LPBS Release
  * Vis blocks

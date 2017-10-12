@@ -130,19 +130,19 @@ function ct_dataset_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '8',
+          'weight' => '12',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '13',
         ),
         'title' => array(
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '9',
         ),
         'xmlsitemap' => array(
-          'weight' => '7',
+          'weight' => '11',
         ),
       ),
       'display' => array(),

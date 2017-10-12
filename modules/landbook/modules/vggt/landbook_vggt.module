@@ -50,17 +50,11 @@ function landbook_vggt_body() {
     return $vggtDesc;
 }
 
-// Wrap lbvis.[CHART] callback
-function landbook_vggt_lbvis($callback) {
-    return 'jQuery(document).ready(function () { LBV.ready().done(function () { ' . $callback . ' }) });';
-}
-
 function landbook_vggt_block_view($delta = '') {
-    if ($delta != 'vis_vggt') return ;
+  if ($delta != 'vis_vggt') return ;
 
-      
-    $LBVIS_PATH = base_path() . 'sites/all/libraries/lbvis';
-    $jsAttr = 'vis: LBV, jsonPath: "' . $LBVIS_PATH . '/json", iso3: Drupal.settings.landbook.countryCode';
+  $PATH = libraries_get_path('js-view-coda');
+  $jsAttr = 'jsonPath: "/' . $PATH . '/examples/json", iso3: Drupal.settings.landbook.countryCode';
     $block = array();
     $block['subject'] = t('Voluntary Guidelines on the Responsible Governance of Tenure');
     $block['content'] = array(
@@ -71,7 +65,7 @@ function landbook_vggt_block_view($delta = '') {
         'js' => array(
           array(
             'type' => 'inline',
-            'data' => landbook_view_coda_lbvis_ready_callback('VGGT = new lbvisVGGT({'.$jsAttr.', target: "#block-landbook-vggt-vis-vggt"}); VGGT.init();')
+            'data' => lbvc__js_ready('VGGT = new lbvisVGGT(LBV, {'.$jsAttr.', target: "#block-landbook-vggt-vis-vggt"}); VGGT.init();')
           )
         )
       ),

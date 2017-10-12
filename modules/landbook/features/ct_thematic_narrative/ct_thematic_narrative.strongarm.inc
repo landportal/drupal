@@ -141,7 +141,7 @@ function ct_thematic_narrative_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '6',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'listing' => array(

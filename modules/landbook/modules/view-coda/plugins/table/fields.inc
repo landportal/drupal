@@ -8,32 +8,43 @@
  */
 
 function lbvc_plugin_table_params($VCC) {
-  $params = '';
-  $up = $VCC['vcc'];
-  if ($up && $up[0] == '{' && $up[count($up) - 1] == '}') {
-    $params = substr($up, 1, -1) . ', ';
-  }
-  $params .= '"indicators": ["' . join('", "', $VCC['indicators']) . '"]'
-    . ', "add": false, "target": "#' . $VCC['vid'] . '", "vis": LBV';
-  return '{' . $params . '}';
+  $params = json_decode($VCC['vcc']);
+  $params->indicators = array();
+  $params->cache = array();
+
+  lbvc__indicators_process($params, $VCC['indicators']);
+
+  return $params;
 }
 
 function lbvc_plugin_table_formatter($VCC) {
-  if (module_exists('devel')) {
-    dpm($VCC, 'table field');
-  }
   $params = lbvc_plugin_table_params($VCC);
+  // All vis should have those
+  $params->target = '#' . $VCC['vid'];
 
-  $value = '<table class="table"><thead><tr>
+  // TMP hack to pick iso code the old way (for CP)
+  $visP = substr(json_encode($params), 0, -1);
+  $visP .= ', iso3: Drupal.settings.landbook.countryCode ? Drupal.settings.landbook.countryCode : "" }';
+
+  $js = $VCC['jsid'] . ' = new lbvisTable(LBV, ' . $visP . '); ' . $VCC['jsid'] . '.init();';
+
+  /* if (module_exists('devel')) {  // DEBUG */
+  /*   dpm($params, $VCC['type'] . ' params'); */
+  /* } */
+
+  $valueOverall = '<table class="table"><thead><tr>
            <th>Indicator</th>
            <th>Min-Max<br/>Number of years</th>
            <th><span class="hidden-xs">Countries</span><br/><acronym title="Number of Observations">Obs</acronym> missing</th>
            <th>Min / Max<span class="hidden-xs"> Value</span></th>
            </tr></thead><tbody></tbody></table>';
-  $js = $VCC['jsid'] . ' = new lbvisTable(' . $params . '); ' . $VCC['jsid'] . '.init();';
-  // DEBUG
-  $js .= 'console.log(' . $VCC['jsid'] . '.debug());';
 
+  $valueCountry = '<table class="table"><thead><tr>
+           <th>Indicator</th>
+           <th>Years</th>
+           <th>Value</th>
+           </tr></thead><tbody></tbody></table>';
+  $value = $valueCountry;
   return array(
     '#type' => 'html_tag',
     '#tag' => 'div',
@@ -44,7 +55,7 @@ function lbvc_plugin_table_formatter($VCC) {
       'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
       'js' =>  array(array(
         'type' => 'inline',
-        'data' => landbook_view_coda_lbvis_ready_callback($js)
+        'data' => lbvc__js_ready($js)
       ))
     ),
     '#value' => $value,

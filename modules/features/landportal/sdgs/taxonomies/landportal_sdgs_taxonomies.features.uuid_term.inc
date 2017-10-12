@@ -702,7 +702,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Tier 3',
-    'description' => '"Tier 3" means that internationally established methodology or standards is not yet available for the indicator, but methodology/standards are being (or will be) developed or tested.',
+    'description' => 'Internationally established methodology or standards is not yet available for the indicator, but methodology/standards are being (or will be) developed or tested.',
     'format' => 'plain_text',
     'weight' => 0,
     'uuid' => '981b7cc9-9559-4493-b07a-3fec1225640a',
@@ -716,8 +716,8 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
           'date_type' => 'datetime',
         ),
       ),
@@ -896,7 +896,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Tier 2',
-    'description' => '"Tier 2" means the indicator is conceptually clear, has an internationally established methodology and standards are available, but data is not regularly produced by countries.',
+    'description' => 'The indicator is conceptually clear, has an internationally established methodology and standards are available, but data is not regularly produced by countries.',
     'format' => 'plain_text',
     'weight' => 0,
     'uuid' => 'b8381b37-16f6-4c32-8622-cf8bce134430',
@@ -1112,7 +1112,7 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'Tier 1',
-    'description' => '"Tier 1" means the Indicator is conceptually clear, has an internationally established and available methodology and standards, and that data is regularly produced by countries for at least 50 per cent of countries and of the population in every region where the indicator is relevant.',
+    'description' => 'The Indicator is conceptually clear, has an internationally established and available methodology and standards, and that data is regularly produced by countries for at least 50 per cent of countries and of the population in every region where the indicator is relevant.',
     'format' => 'plain_text',
     'weight' => 0,
     'uuid' => 'ca682b36-0536-444d-9ad3-58ff30a3e0a6',

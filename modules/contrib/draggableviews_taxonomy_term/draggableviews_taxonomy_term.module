@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Implements hook_views_api().
+ */
+function draggableviews_taxonomy_term_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'draggableviews_taxonomy_term'),
+  );
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function draggableviews_taxonomy_term_ctools_plugin_directory($module, $plugin) {
+  if (($module == 'draggableviews') && ($plugin == 'handler' || $plugin == 'hierarchy_handler')) {
+    return 'handlers';
+  }
+}
+
+/**
+ * Implementes hook_views_post_execute().
+ */
+function draggableviews_taxonomy_term_views_post_execute($view) {
+  $display = $view->display[$view->current_display];
+  if(isset($display->handler->handlers['field']['draggableviews'])) {
+    $field = $display->handler->handlers['field']['draggableviews'];
+    $order_view = $field->view;
+    if (!empty($order_view->field['draggableviews']->options['draggableviews']['hierarchy_handler'])) {
+      $hierarchy_handler_object = draggableviews_get_handler_class($order_view->field['draggableviews']->options['draggableviews']['hierarchy_handler'], 'hierarchy_handler');
+      if (is_callable(array($hierarchy_handler_object, 'sort_rows'))) {
+        $hierarchy_handler_object->sort_rows($field, $view->result);
+      }
+    }
+  }
+}

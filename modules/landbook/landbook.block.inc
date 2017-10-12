@@ -124,7 +124,7 @@ function landbook_block_view($delta = '') {
     $block = array();
     switch ($delta) {
     case 'disclaimer_block' :
-        $block['subject'] = '<none>';
+        $block['subject'] = '';
         $block['content'] = landbook_block_body($delta);
         break;
     case 'media' :
@@ -136,7 +136,7 @@ function landbook_block_view($delta = '') {
         $block['content'] = landbook_block_body($delta);
         break;
     case 'country_pdf_block' :
-        $block['subject'] = '<none>';
+        $block['subject'] = '';
         $block['content'] = ' ';
         $block['pdf_url'] = landbook_get_pdf_url();
         break;
@@ -150,21 +150,6 @@ function landbook_get_pdf_url(){
         return file_create_url('public://2016/countries/' . $iso3 . '.pdf');
     }
     return ;
-}
-// TODO: cleanup this shit
-function landbook_get_country_info(){
-    $output = array();
-    $args = arg();
-    if ($args[0] == 'book' && $args[1] == 'countries' && !empty($args[2])) {
-        $iso = $args[2];
-        $output['iso'] = $iso;
-        $tid = landbook_get_region_iso($iso);
-        $term = taxonomy_term_load($tid);
-        if ($term) {
-            $output['country_name'] = $term->name;
-        }
-    }
-    return $output;
 }
 
 function landbook_block_body($name) {
