@@ -125,6 +125,10 @@ function lbvc__indicators_tree(&$params, $indicators) {
 
 // Crawl hierarchical_taxonomy_get_tree results, 'flatten' that
 function lbvc__indicators_flatten(&$params, &$tree, $parent) {
+  // Re-sort terms by weight
+  $stree = array();
+  foreach ($parent as $k => $tind) { $stree[$k] = $tind->weight; }
+  array_multisort($stree, $parent);
   //dpm($parent, 'o');
   foreach($parent as $tid => $term) {
     $lbid = lbvc__indicators_cache($params, $term->tid);

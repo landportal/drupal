@@ -42,11 +42,10 @@ function lbvc_plugin_charts_formatter($VCC) {
   }
 
   if (isset($params->observations)) {
-    $obs = array();
+    $obs = array('all' => t('All Indicators'));
     foreach($params->observations as $k => $o) {
       $obs[$k] = $o['label'];
     }
-    $obs['all'] = t('All Indicators');
     $fields['observations'] = form_process_checkboxes(array(
       '#id' => $VCC['vid']. '-observations',
       '#name' => 'observations',
