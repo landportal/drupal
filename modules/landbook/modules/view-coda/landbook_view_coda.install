@@ -70,7 +70,7 @@ function landbook_view_coda_update_7206() {
         ),
         'charts' => array(
           'title' => 'Compare countries',
-          'vcc' => '{"ctype": "line", "loadYears": true, main: "WB-SP.POP.TOTL", "loadIndicators": true, "loadCountries"": true, "iso3": "' . $iso3 . '"}',
+          'vcc' => '{"ctype": "line", "loadYears": true, main: "WB-SP.POP.TOTL", "loadIndicators": true, "loadCountries": true, "iso3": "' . $iso3 . '"}',
         ),
         'spider' => array(
           //'title' => '',
@@ -78,7 +78,7 @@ function landbook_view_coda_update_7206() {
         ),
         'pie' => array(
           //'title' => '',
-          'vcc' => '{"legend": true, "main": "FAO-6601-5110", "year": "2014", "iso3": "' . $iso3 . '"}',
+          'vcc' => '{"legend": true, "main": "FAO-6601-5110", "year": "2014", "iso3": "' . $iso3 . '", "mainDelta": true}',
         ),
       );
     } elseif ($manode->type == 'thematic_narrative') {
