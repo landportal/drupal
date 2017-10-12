@@ -76,7 +76,7 @@ function landbook_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8391-0',
+    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8379-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -112,7 +112,7 @@ function landbook_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8379-0',
+    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8380-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -147,7 +147,7 @@ function landbook_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8390-0',
+    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8381-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -182,7 +182,7 @@ function landbook_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8389-0',
+    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8382-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -218,7 +218,7 @@ function landbook_taxonomies_uuid_features_default_terms() {
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8380-0',
+    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8383-0',
     'path' => array(
       'pathauto' => 1,
     ),

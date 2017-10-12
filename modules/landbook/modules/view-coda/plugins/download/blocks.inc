@@ -28,22 +28,24 @@ function lbvc_plugin_download_block_view($delta) {
   case 'lbvc_download_ind':
     $block['subject'] = t('Download');
     $block['content'] = array(
-      '#markup' => '<pre>[ ] All years
+      '#markup' => '<p>You will soon be able to download the data we have for this indicator.</p>'
+/*       '#markup' => '<pre>[ ] All years */
 
-<span class="glyphicon glyphicon-download"></span> Choose your format:
-<a href=""><i class="fa fa-table" aria-hidden="true"></i> CSV</a> - <a href=""><i class="fa fa-file-code-o" aria-hidden="true"></i> XML</a> - <a href=""><i class="fa fa-recycle" aria-hidden="true"></i> JSON</a>
-</pre>',
+/* <span class="glyphicon glyphicon-download"></span> Choose your format: */
+/* <a href=""><i class="fa fa-table" aria-hidden="true"></i> CSV</a> - <a href=""><i class="fa fa-file-code-o" aria-hidden="true"></i> XML</a> - <a href=""><i class="fa fa-recycle" aria-hidden="true"></i> JSON</a> */
+/* </pre>', */
     );
     break;
   case 'lbvc_download_cat':
     $block['subject'] = t('Download');
     $block['content'] = array(
-      '#markup' => '<pre>[x] All indicators
-[x] All years
+      '#markup' => '<p>You will soon be able to download the data we have for this dataset.</p>'
+/*       '#markup' => '<pre>[x] All indicators */
+/* [x] All years */
 
-<span class="glyphicon glyphicon-download"></span> Choose your format:
-<a href=""><i class="fa fa-table" aria-hidden="true"></i> CSV</a> - <a href=""><i class="fa fa-file-code-o" aria-hidden="true"></i> XML</a> - <a href=""><i class="fa fa-recycle" aria-hidden="true"></i> JSON</a>
-</pre>',
+/* <span class="glyphicon glyphicon-download"></span> Choose your format: */
+/* <a href=""><i class="fa fa-table" aria-hidden="true"></i> CSV</a> - <a href=""><i class="fa fa-file-code-o" aria-hidden="true"></i> XML</a> - <a href=""><i class="fa fa-recycle" aria-hidden="true"></i> JSON</a> */
+/* </pre>', */
     );
     break;
   }
