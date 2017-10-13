@@ -67,8 +67,8 @@ function lbvc_plugin_map_block_view($delta) {
       'vid' => 'block-landbook-view-coda-lbvc-map-country',
       'vcc' => $vcc,
     ));
-    dsm($vcc);
-    dpm($block);
+    /* dsm($vcc); */
+    /* dpm($block); */
     break;
 
   case 'lbvc_map_mlike':

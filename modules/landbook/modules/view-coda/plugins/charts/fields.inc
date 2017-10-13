@@ -18,13 +18,29 @@ function lbvc_plugin_charts_params($VCC) {
 function lbvc_plugin_charts_formatter($VCC) {
   $params = lbvc_plugin_charts_params($VCC);
   $params->target = '#' . $VCC['vid'];
-
   // TMP hack to pick iso code the old way (for CP)
   /* $visP = substr(json_encode($params), 0, -1); */
   /* $visP .= ', iso3: Drupal.settings.landbook.countryCode ? Drupal.settings.landbook.countryCode : "" }'; */
   /* $js = $VCC['jsid'] . ' = new lbvisCharts(LBV, ' . $visP . '); ' . $VCC['jsid'] . '.init();'; */
   $js = $VCC['jsid'] . ' = new lbvisCharts(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
 
+  $chart = array(
+    '#type' => 'html_tag',
+    '#tag' => 'div',
+    '#attributes' => array(
+      'id' => $VCC['vid']
+    ),
+    '#attached' => array(
+      'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
+      'js' =>  array(array(
+        'type' => 'inline',
+        'data' => lbvc__js_ready($js)
+      ))
+    ),
+    '#value' => t('Loading chart...'),
+  );
+
+  $fields = array();
   if (isset($params->loadTree) && count($params->ttop) > 1) {
     $opts = array();
     //foreach (array_keys($params->tree) as $ind) {
@@ -56,6 +72,9 @@ function lbvc_plugin_charts_formatter($VCC) {
     ));
   }
 
+  if (sizeof($fields) == 0) {
+    return $chart;
+  }
   $form = array(
     '#attributes' => array(
       'id' => $VCC['vid'] . '-form',
@@ -69,22 +88,6 @@ function lbvc_plugin_charts_formatter($VCC) {
       '#type' => 'container',
       'items' => $fields
     ),
-  );
-
-  $chart = array(
-    '#type' => 'html_tag',
-    '#tag' => 'div',
-    '#attributes' => array(
-      'id' => $VCC['vid']
-    ),
-    '#attached' => array(
-      'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
-      'js' =>  array(array(
-        'type' => 'inline',
-        'data' => lbvc__js_ready($js)
-      ))
-    ),
-    '#value' => t('Loading chart...'),
   );
   return array($chart, $form); 
 }
