@@ -14,14 +14,14 @@ function lbvc_plugin_map_params($VCC) {
   /* dpm($VCC, 'VCC'); */
   $params->indicators = array();
   $params->cache = array();
+  if (array_key_exists('indicators', $VCC)) {
+    lbvc__indicators_process($params, $VCC['indicators']);
 
-  lbvc__indicators_process($params, $VCC['indicators']);
-
-  // IF loadTree, load all indicators 'children', return a complex ind. structure
-  if (isset($params->loadTree)) {
-    lbvc__indicators_tree($params, $VCC['indicators']);
+    // IF loadTree, load all indicators 'children', return a complex ind. structure
+    if (isset($params->loadTree)) {
+      lbvc__indicators_tree($params, $VCC['indicators']);
+    }
   }
-
   return $params;
 }
 
@@ -30,7 +30,12 @@ function lbvc_plugin_map_formatter($VCC) {
 
   $params = lbvc_plugin_map_params($VCC);
   $params->target = '#' . $VCC['vid'];
-  $js = $VCC['jsid'] . ' = new lbvisMap(map_data, LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
+  $attr = json_encode($params);
+  if (strstr($attr, '"@') && strstr($attr, '@"')) {
+    $attr = preg_replace('/"@([^@]*)@"/', '$1', $attr);
+  }
+  //dsm($attr);
+  $js = $VCC['jsid'] . ' = new lbvisMap(map_data, LBV, ' . $attr . '); ' . $VCC['jsid'] . '.init();';
 
   return array(array(
     '#type' => 'html_tag',
