@@ -149,14 +149,20 @@ function lbvc__indicators_flatten(&$params, &$tree, $parent) {
 
 // Streamline indicator structure between Drupal/JS/LOD
 function lbvc__indicators_js_serialize($entity) {
-//  dpm($entity, 'SER');
+//  dpm($entity, 'Serial');
   //$render = taxonomy_term_view($entity, 'teaser');
+  $p = drupal_get_path_alias('taxonomy/term/' . $entity->tid);
+  $render = '<span><a href="/'. $p .'">' . $entity->name . '</a></span> <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="' . str_replace('"', "'", strip_tags($entity->description)) .'"></span>';
+  if (isset($entity->field_unit)) {
+    $u = array_pop($entity->field_unit); // workaround language issues
+    $render .= ' <i>(' . $u[0]['value'] . ')</i>';
+  }
   return array(
     //'tid' => $entity->tid,
     'id' => $entity->field_id[LANGUAGE_NONE][0]['value'],
     'label' => $entity->name,
     'desc' => $entity->description,
-    'render' => '<span>' . $entity->name . '</span>',//drupal_render($render),
+    'render' => $render,
   );
 }
 

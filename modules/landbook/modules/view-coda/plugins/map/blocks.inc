@@ -14,7 +14,9 @@ function lbvc_plugin_map_block_info() {
   $blocks['lbvc_map'] = array(
     'info'            => t('LBVC: Map'),
     'status'          => TRUE,
-    'region'          => -1,
+    'region'          => -81,
+    'visibility'      => BLOCK_VISIBILITY_LISTED,
+    'pages'           => "book/countries",
   );
 
   $blocks['lbvc_map_country'] = array(
@@ -43,10 +45,22 @@ function lbvc_plugin_map_block_view($delta) {
   switch ($delta) {
 
   case 'lbvc_map':
+    $vcc = '{
+"debug": true';
+    $vcc .= ', "map": {"selectable": true, "legend": false'
+      . ', "tooltip": "@function () { return \'Click to visit \' + this.point.name; }@"'
+      /* . ', "tooltip": "@function () { return \'Click to visit \' + this.point.name; }@"' */
+      /* . ', "events": "@{ click: function () { window.location.href = \'/book/countries/\' + this.id; }@"' */
+      . '}';
+    $vcc .= '}';
+
     $block['subject'] = '';
-    $block['content'] = array(
-      '#markup' => '<pre>here is map</pre>',
-    );
+    $block['content'] = lbvc_plugin_map_formatter(array(
+      'type' => 'map',
+      'jsid' => 'worldMap',
+      'vid' => 'block-landbook-view-coda-lbvc-map',
+      'vcc' => $vcc,
+    ));
     break;
 
   case 'lbvc_map_country':
