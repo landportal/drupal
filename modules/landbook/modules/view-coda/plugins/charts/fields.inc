@@ -51,10 +51,18 @@ function lbvc_plugin_charts_formatter($VCC) {
       '#id' => $VCC['vid']. '-indicators',
       '#name' => 'indicators',
       '#type' => 'checkboxes',
-      '#attributes' => array('name' => 'indicators'),
+      '#attributes' => array('name' => 'indicators'), // 'checked' => 'checked'),
       '#title' => t('Category'),
+      //'#default' => 'all', // @todo find main value and check the box
       '#options' => $opts,// array_keys($params->tree)
     ));
+    foreach($fields['indicators']['#options'] as $id => $op) {
+      if ($params->main && $params->main == $id) {
+        $fields['indicators'][$id]['#attributes']['checked'] = 'checked';
+      }
+//      dpm($op, $id);
+    }
+//    dpm($fields['indicators']);
   }
 
   if (isset($params->observations)) {
@@ -65,11 +73,12 @@ function lbvc_plugin_charts_formatter($VCC) {
     $fields['observations'] = form_process_checkboxes(array(
       '#id' => $VCC['vid']. '-observations',
       '#name' => 'observations',
-      '#attributes' => array('name' => 'observations'),
+      '#attributes' => array('name' => 'observations', 'checked' => 'checked'),
       '#type' => 'checkboxes',
       '#title' => t('Indicators'),
       '#options' => $obs,
     ));
+//    dpm($fields['observations'], 'obs');
   }
 
   if (sizeof($fields) == 0) {

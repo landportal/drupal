@@ -101,11 +101,11 @@ function lbvc__indicators_cache(&$params, $tid) {
 }
 
 
-function lbvc__indicators_process(&$stuff, $indicators) {
+function lbvc__indicators_process(&$params, $indicators) {
   foreach ($indicators as $ind) {
-    $si = lbvc__indicators_js_serialize($ind);
-    $stuff->cache[$si['id']] = $si;
-    array_push($stuff->indicators, $si['id']);
+    //dpm($ind, $ind->name);
+    $lbid = lbvc__indicators_cache($params, $ind->tid);
+    array_push($params->indicators, $lbid);
   }
 }
 
@@ -153,7 +153,9 @@ function lbvc__indicators_js_serialize($entity) {
   //$render = taxonomy_term_view($entity, 'teaser');
   $p = drupal_get_path_alias('taxonomy/term/' . $entity->tid);
   $render = '<span><a href="/'. $p .'">' . $entity->name . '</a></span> <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="' . str_replace('"', "'", strip_tags($entity->description)) .'"></span>';
-  if (isset($entity->field_unit)) {
+  //dpm($entity, $entity->name); 
+ if (count($entity->field_unit) > 0) {
+   //dpm($entity->field_unit, 'UNIT ' . $entity->name);
     $u = array_pop($entity->field_unit); // workaround language issues
     $render .= ' <i>(' . $u[0]['value'] . ')</i>';
   }
