@@ -93,13 +93,13 @@ function lbvc_plugin_table_form($VCC, $params) {
       '#empty_option' => t('Select an indicator'),
       '#options' => $opts,
     ));
-    $fields['year'] = array(
+    $fields['year'] = form_process_select(array(
       '#id' => $VCC['vid']. '-year',
       '#name' => 'year',
       '#type' => 'select',
       '#empty_option' => t('Year'),
       '#options' => []
-    );
+    ));
     $fields['submit'] = array(
       '#name' => 'add',
       '#type' => 'submit',
