@@ -27,7 +27,7 @@ function landbook_taxonomies_field_group_info() {
       1 => 'field_view_indicators',
       2 => 'field_view_dataset',
       3 => 'group_details',
-      4 => 'group_topics_regions',
+      4 => 'group_landvoc',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -509,10 +509,10 @@ function landbook_taxonomies_field_group_info() {
   $field_group->entity_type = 'taxonomy_term';
   $field_group->bundle = 'indicators';
   $field_group->mode = 'full';
-  $field_group->parent_name = 'group_topics_regions';
+  $field_group->parent_name = 'group_aside';
   $field_group->data = array(
-    'label' => '',
-    'weight' => '11',
+    'label' => 'Related categories',
+    'weight' => '14',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_topics',
@@ -520,13 +520,13 @@ function landbook_taxonomies_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => '',
+      'label' => 'Related categories',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-landvoc',
         'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
+        'show_label' => '1',
+        'label_element' => 'h2',
         'effect' => 'none',
         'speed' => 'fast',
       ),
@@ -981,7 +981,7 @@ function landbook_taxonomies_field_group_info() {
   $field_groups['group_topics_regions|taxonomy_term|indicators|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_topics_regions|taxonomy_term|indicators|full';
   $field_group->group_name = 'group_topics_regions';
@@ -1109,6 +1109,7 @@ function landbook_taxonomies_field_group_info() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Details');
+  t('Related categories');
   t('Settings');
   t('Topics and Regions');
 

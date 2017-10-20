@@ -64,7 +64,7 @@ function ct_dataset_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -174,7 +174,7 @@ function ct_dataset_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 14,
+      'weight' => 5,
     ),
   );
 
@@ -264,7 +264,7 @@ function ct_dataset_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 10,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'above',
@@ -488,7 +488,7 @@ function ct_dataset_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -668,9 +668,10 @@ function ct_dataset_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 12,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -732,9 +733,10 @@ function ct_dataset_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 13,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -791,9 +793,10 @@ function ct_dataset_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 13,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 14,
       ),
       'full' => array(
         'label' => 'hidden',

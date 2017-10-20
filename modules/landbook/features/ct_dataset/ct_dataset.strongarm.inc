@@ -130,10 +130,10 @@ function ct_dataset_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '12',
+          'weight' => '11',
         ),
         'metatags' => array(
-          'weight' => '13',
+          'weight' => '12',
         ),
         'title' => array(
           'weight' => '1',
@@ -142,7 +142,7 @@ function ct_dataset_strongarm() {
           'weight' => '9',
         ),
         'xmlsitemap' => array(
-          'weight' => '11',
+          'weight' => '10',
         ),
       ),
       'display' => array(),

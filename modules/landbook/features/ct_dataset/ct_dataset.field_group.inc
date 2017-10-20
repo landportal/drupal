@@ -26,6 +26,7 @@ function ct_dataset_field_group_info() {
       0 => 'field_link',
       1 => 'field_related_aside',
       2 => 'field_view_dataset',
+      3 => 'group_landvoc',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -112,23 +113,23 @@ function ct_dataset_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'dataset';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_aside';
   $field_group->data = array(
-    'label' => '',
-    'weight' => '9',
+    'label' => 'Related categories',
+    'weight' => '11',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_themes',
       2 => 'field_related_topics',
     ),
-    'format_type' => 'hidden',
+    'format_type' => 'div',
     'format_settings' => array(
-      'label' => '',
+      'label' => 'Related categories',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-landvoc',
         'description' => '',
-        'show_label' => '0',
+        'show_label' => '1',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
@@ -149,7 +150,7 @@ function ct_dataset_field_group_info() {
   $field_group->parent_name = 'group_topics_regions';
   $field_group->data = array(
     'label' => '',
-    'weight' => '115',
+    'weight' => '6',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_themes',
@@ -251,8 +252,8 @@ function ct_dataset_field_group_info() {
     'label' => 'Related content',
     'weight' => '7',
     'children' => array(
-      0 => 'field_noderef',
-      1 => 'field_link',
+      0 => 'field_link',
+      1 => 'field_noderef',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -281,9 +282,9 @@ function ct_dataset_field_group_info() {
     'label' => 'Settings',
     'weight' => '8',
     'children' => array(
-      0 => 'field_related_blocks',
-      1 => 'field_view_dataset',
-      2 => 'field_related_aside',
+      0 => 'field_related_aside',
+      1 => 'field_related_blocks',
+      2 => 'field_view_dataset',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -374,7 +375,7 @@ function ct_dataset_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
@@ -425,6 +426,7 @@ function ct_dataset_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Related categories');
   t('Related content');
   t('Settings');
   t('Topics and Regions');

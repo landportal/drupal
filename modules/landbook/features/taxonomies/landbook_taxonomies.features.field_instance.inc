@@ -379,6 +379,7 @@ function landbook_taxonomies_field_default_field_instances() {
   $field_instances['taxonomy_term-datasets-field_orgref'] = array(
     'bundle' => 'datasets',
     'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -413,8 +414,8 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'bypass_access' => FALSE,
-          'link' => FALSE,
+          'bypass_access' => 0,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
         'weight' => 4,
@@ -436,21 +437,21 @@ function landbook_taxonomies_field_default_field_instances() {
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_orgref',
-    'label' => 'Organization',
+    'label' => 'Data provider',
     'required' => 1,
     'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 3,
     ),
@@ -2754,6 +2755,7 @@ function landbook_taxonomies_field_default_field_instances() {
   t('Best value is');
   t('Catalog');
   t('Catalog description');
+  t('Data provider');
   t('Display this catalog\'s datasets');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('High means it is better to have a high value, low means the best value is the lowest one (like in rankings)');
@@ -2772,7 +2774,6 @@ function landbook_taxonomies_field_default_field_instances() {
   t('Minimun possible value of the indicator');
   t('Name');
   t('Observations');
-  t('Organization');
   t('Overarching categories');
   t('Picture');
   t('Published dataset(s)');

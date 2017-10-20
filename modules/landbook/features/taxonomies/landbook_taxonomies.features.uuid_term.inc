@@ -22,6 +22,7 @@ function landbook_taxonomies_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'observations',
+    'field_obstype' => array(),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -36,12 +37,11 @@ function landbook_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_obstype' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8378-0',
+    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8375-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -57,6 +57,7 @@ function landbook_taxonomies_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'observations',
+    'field_obstype' => array(),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -71,12 +72,11 @@ function landbook_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_obstype' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8379-0',
+    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8383-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -93,6 +93,7 @@ function landbook_taxonomies_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'observations',
+    'field_obstype' => array(),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -107,12 +108,11 @@ function landbook_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_obstype' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8380-0',
+    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8374-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -128,6 +128,7 @@ function landbook_taxonomies_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'observations',
+    'field_obstype' => array(),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -142,12 +143,11 @@ function landbook_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_obstype' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8381-0',
+    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8384-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -163,6 +163,7 @@ function landbook_taxonomies_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'observations',
+    'field_obstype' => array(),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -177,12 +178,11 @@ function landbook_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_obstype' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8382-0',
+    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8385-0',
     'path' => array(
       'pathauto' => 1,
     ),
@@ -199,6 +199,7 @@ function landbook_taxonomies_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'observations',
+    'field_obstype' => array(),
     'name_field' => array(
       'en' => array(
         0 => array(
@@ -213,12 +214,11 @@ function landbook_taxonomies_uuid_features_default_terms() {
         ),
       ),
     ),
-    'field_obstype' => array(),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
     ),
-    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8383-0',
+    'entity_translation_handler_id' => 'taxonomy_term-observations-eid-8376-0',
     'path' => array(
       'pathauto' => 1,
     ),
