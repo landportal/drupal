@@ -70,56 +70,12 @@ function lbvc_plugin_charts_formatter($VCC) {
       'items' => $fields
     ),
   );
-  if ($params->loadTree) {
-    return array($chart, $form);
-  }
   return array($form, $chart);
 }
 
 
 function lbvc_plugin_charts_form($VCC, $params) {
   $fields = array();
-  if (isset($params->loadTree) && count($params->ttop) > 1) {
-    $opts = array();
-    //foreach (array_keys($params->tree) as $ind) {
-    foreach ($params->ttop as $ind) {
-      $opts[$ind] = $params->cache[$ind]['label'];
-    }
-    $fields['indicators'] = form_process_checkboxes(array(
-      '#id' => $VCC['vid']. '-indicators',
-      '#name' => 'indicators',
-      '#type' => 'checkboxes',
-      '#attributes' => array('name' => 'indicators'), // 'checked' => 'checked'),
-      '#title' => t('Category'),
-      //'#default' => 'all', // @todo find main value and check the box
-      '#options' => $opts,// array_keys($params->tree)
-    ));
-    foreach($fields['indicators']['#options'] as $id => $op) {
-      if ($params->main && $params->main == $id) {
-        $fields['indicators'][$id]['#attributes']['checked'] = 'checked';
-      }
-//      dpm($op, $id);
-    }
-//    dpm($fields['indicators']);
-  }
-
-  // Used by vis to filter the indicators to display
-  if (isset($params->observations)) {
-    $obs = array('all' => t('All Indicators'));
-    foreach($params->observations as $k => $o) {
-      $obs[$k] = $o['label'];
-    }
-    $fields['observations'] = form_process_checkboxes(array(
-      '#id' => $VCC['vid']. '-observations',
-      '#name' => 'observations',
-      '#attributes' => array('name' => 'observations', 'checked' => 'checked'),
-      '#type' => 'checkboxes',
-      '#title' => t('Indicators'),
-      '#options' => $obs,
-    ));
-//    dpm($fields['observations'], 'obs');
-  }
-
   if (isset($params->loadIndicators)) {
     $fields['indicator'] = form_process_select(array(
       '#id' => $VCC['vid']. '-indicator',
@@ -161,5 +117,45 @@ function lbvc_plugin_charts_form($VCC, $params) {
       '#options' => []
     ));
   }
+
+  if (isset($params->loadTree) && count($params->ttop) > 1) {
+    $opts = array();
+    //foreach (array_keys($params->tree) as $ind) {
+    foreach ($params->ttop as $ind) {
+      $opts[$ind] = $params->cache[$ind]['label'];
+    }
+    $fields['indicator'] = form_process_select(array(
+      '#id' => $VCC['vid']. '-indicator',
+      '#name' => 'indicator',
+      '#type' => 'select',
+      //'#attributes' => array('name' => 'indicators'), // 'checked' => 'checked'),
+      '#default_value' => t('Select'),
+      //'#default' => 'all', // @todo find main value and check the box
+      '#options' => $opts,// array_keys($params->tree)
+    ));
+    foreach($fields['indicator']['#options'] as $id => $op) {
+      if ($params->main && $params->main == $id) {
+        $fields['indicator'][$id]['#attributes']['checked'] = 'checked';
+      }
+    }
+  }
+
+  // Used by vis to filter the indicators to display
+  if (isset($params->observations)) {
+    $obs = array('all' => t('All Indicators'));
+    foreach($params->observations as $k => $o) {
+      $obs[$k] = $o['label'];
+    }
+    $fields['observations'] = form_process_checkboxes(array(
+      '#id' => $VCC['vid']. '-observations',
+      '#name' => 'observations',
+      '#attributes' => array('name' => 'observations', 'checked' => 'checked'),
+      '#type' => 'checkboxes',
+      '#title' => t('Indicators'),
+      '#options' => $obs,
+    ));
+//    dpm($fields['observations'], 'obs');
+  }
+
   return $fields;
 }
