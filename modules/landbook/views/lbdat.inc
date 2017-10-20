@@ -229,7 +229,14 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
 
 /* Display: Related content */
 $handler = $view->new_display('block', 'Related content', 'related');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'View other related contents';
 $handler->display->display_options['display_description'] = 'Dataset related content';
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'mini';
+$handler->display->display_options['pager']['options']['items_per_page'] = '3';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 /* Relationship: Taxonomy term: Content using Catalog */
 $handler->display->display_options['relationships']['reverse_field_catalog_node']['id'] = 'reverse_field_catalog_node';
