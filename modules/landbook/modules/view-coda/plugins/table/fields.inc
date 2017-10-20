@@ -101,9 +101,15 @@ function lbvc_plugin_table_form($VCC, $params) {
       '#options' => []
     ));
     $fields['submit'] = array(
-      '#name' => 'add',
-      '#type' => 'submit',
-      '#value' => t('Add'),
+        '#attributes' => array(
+          'class' => 'action',
+        ),
+        '#type' => 'container',
+        'items' => array(
+          '#name' => 'add',
+          '#type' => 'submit',
+          '#value' => t('Add'),
+        )
     );
   }
   return $fields;

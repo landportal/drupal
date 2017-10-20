@@ -54,9 +54,15 @@ function lbvc_plugin_map_formatter($VCC) {
   }
 
   $fields['submit'] = array(
-    '#name' => 'add',
-    '#type' => 'submit',
-    '#value' => t('View'),
+        '#attributes' => array(
+          'class' => 'action',
+        ),
+        '#type' => 'container',
+        'items' => array(
+          '#name' => 'update',
+          '#type' => 'submit',
+          '#value' => t('Update'),
+        )
   );
   $form = array(
     '#attributes' => array(

@@ -46,9 +46,15 @@ function lbvc_plugin_charts_formatter($VCC) {
   }
 
   $fields['submit'] = array(
-    '#name' => 'add',
-    '#type' => 'submit',
-    '#value' => t('Update'),
+        '#attributes' => array(
+          'class' => 'action',
+        ),
+        '#type' => 'container',
+        'items' => array(
+          '#name' => 'update',
+          '#type' => 'submit',
+          '#value' => t('Update'),
+        )
   );
   $form = array(
     '#attributes' => array(
@@ -124,27 +130,34 @@ function lbvc_plugin_charts_form($VCC, $params) {
     ));
   }
   if (isset($params->loadYears)) {
-    $fields['from'] = form_process_select(array(
+    $from = form_process_select(array(
       '#id' => $VCC['vid']. '-from',
       '#name' => 'year[from]',
       '#type' => 'select',
       '#empty_option' => t('From'),
       '#options' => []
     ));
-    $fields['to'] = form_process_select(array(
+    $to = form_process_select(array(
       '#id' => $VCC['vid']. '-to',
       '#name' => 'year[to]',
       '#type' => 'select',
       '#empty_option' => t('To'),
       '#options' => []
     ));
+    $fields['years'] = array(
+      '#attributes' => array(
+        'class' => 'years',
+      ),
+      '#type' => 'container',
+      'items' => array($from, $to)
+    );
   }
   if (isset($params->loadCountries)) {
     $fields['country'] = form_process_select(array(
       '#id' => $VCC['vid']. '-country',
       '#name' => 'country',
       '#type' => 'select',
-      '#title' => t('Add a country'),
+      '#empty_option' => t('Add a country'),
       '#options' => []
     ));
   }
