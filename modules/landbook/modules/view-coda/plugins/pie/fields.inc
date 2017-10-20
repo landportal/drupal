@@ -50,12 +50,7 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
     //foreach (array_keys($params->tree) as $ind) {
     //dpm($params);
     foreach ($params->ttop as $ind) {
-      if (!is_array($params->tree[$ind])) {
-      /*   foreach ($params->tree[$ind] as $cind) { */
-      /*   } */
-      /* } else { */
-        $opts[$ind] = $params->cache[$ind]['label'];
-      }
+      $opts[$ind] = $params->cache[$ind]['label'];
     }
     $fields['indicators'] = array(
       '#id' => $VCC['vid']. '-indicators',
