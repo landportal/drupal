@@ -36,9 +36,9 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
   /*   'children' => array(), */
   /* ); */
   if (isset($params->loadCountries)) {
-    $fields['countries'] = array(
-        '#id' => $VCC['vid']. '-countries',
-        '#name' => 'countries',
+    $fields['country'] = array(
+        '#id' => $VCC['vid']. '-country',
+        '#name' => 'country',
         '#type' => 'select',
         '#title' => t('Country'),
         '#options' => array(),
