@@ -124,20 +124,23 @@ function lbvc_plugin_charts_form($VCC, $params) {
     foreach ($params->ttop as $ind) {
       $opts[$ind] = $params->cache[$ind]['label'];
     }
+    //dpm($opts, isset($params->main) ? $params->main : 'all');
     $fields['indicator'] = form_process_select(array(
       '#id' => $VCC['vid']. '-indicator',
       '#name' => 'indicator',
       '#type' => 'select',
       //'#attributes' => array('name' => 'indicators'), // 'checked' => 'checked'),
-      '#default_value' => t('Select'),
-      //'#default' => 'all', // @todo find main value and check the box
+      //'#empty_value' => t('Select a group'),
       '#options' => $opts,// array_keys($params->tree)
+//      '#default_value' => isset($params->main) ? $params->main : 'all', // @todo find main value and check the box
     ));
-    foreach($fields['indicator']['#options'] as $id => $op) {
-      if ($params->main && $params->main == $id) {
-        $fields['indicator'][$id]['#attributes']['checked'] = 'checked';
-      }
-    }
+    /* foreach($fields['indicator']['#options'] as $id => $op) { */
+    /*   if ($params->main && $params->main == $id) { */
+    /*   dpm($op, $id); */
+    /*     $fields['indicator']['#options']['#default_value'] = 'selected'; */
+    /*   } */
+    /* } */
+    /* dpm($fields['indicator'], $id); */
   }
 
   // Used by vis to filter the indicators to display
