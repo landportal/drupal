@@ -4,6 +4,9 @@
  */
 
 function lbvc__js_ready($callback) {
+  if (strstr($callback, '"@') && strstr($callback, '@"')) {
+    $callback = preg_replace('/"@([^@]*)@"/', '$1', $callback);
+  }
   return 'jQuery(document).ready(function () { LBV.ready().done(function () { ' . $callback . ' }) });';
 }
 

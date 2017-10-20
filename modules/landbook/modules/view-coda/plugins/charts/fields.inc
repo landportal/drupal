@@ -40,6 +40,38 @@ function lbvc_plugin_charts_formatter($VCC) {
     '#value' => t('Loading chart...'),
   );
 
+  $fields = lbvc_plugin_charts_form($VCC, $params);
+  if (sizeof($fields) == 0) {
+    return $chart;
+  }
+
+  $fields['submit'] = array(
+    '#name' => 'add',
+    '#type' => 'submit',
+    '#value' => t('Update'),
+  );
+  $form = array(
+    '#attributes' => array(
+      'id' => $VCC['vid'] . '-form',
+      'class' => 'view-coda-form form-inline',
+    ),
+    '#type' => 'container',
+    'items' => array(
+      '#attributes' => array(
+        'class' => 'row',
+      ),
+      '#type' => 'container',
+      'items' => $fields
+    ),
+  );
+  if ($params->loadTree) {
+    return array($chart, $form);
+  }
+  return array($form, $chart);
+}
+
+
+function lbvc_plugin_charts_form($VCC, $params) {
   $fields = array();
   if (isset($params->loadTree) && count($params->ttop) > 1) {
     $opts = array();
@@ -65,6 +97,7 @@ function lbvc_plugin_charts_formatter($VCC) {
 //    dpm($fields['indicators']);
   }
 
+  // Used by vis to filter the indicators to display
   if (isset($params->observations)) {
     $obs = array('all' => t('All Indicators'));
     foreach($params->observations as $k => $o) {
@@ -81,22 +114,39 @@ function lbvc_plugin_charts_formatter($VCC) {
 //    dpm($fields['observations'], 'obs');
   }
 
-  if (sizeof($fields) == 0) {
-    return $chart;
+  if (isset($params->loadIndicators)) {
+    $fields['indicator'] = form_process_select(array(
+      '#id' => $VCC['vid']. '-indicator',
+      '#name' => 'indicator',
+      '#type' => 'select',
+      '#empty_option' => t('Select an indicator'),
+      '#options' => []
+    ));
   }
-  $form = array(
-    '#attributes' => array(
-      'id' => $VCC['vid'] . '-form',
-      'class' => 'view-coda-form form-inline',
-    ),
-    '#type' => 'container',
-    'items' => array(
-      '#attributes' => array(
-        'class' => 'row',
-      ),
-      '#type' => 'container',
-      'items' => $fields
-    ),
-  );
-  return array($chart, $form); 
+  if (isset($params->loadYears)) {
+    $fields['from'] = form_process_select(array(
+      '#id' => $VCC['vid']. '-from',
+      '#name' => 'year[from]',
+      '#type' => 'select',
+      '#empty_option' => t('From'),
+      '#options' => []
+    ));
+    $fields['to'] = form_process_select(array(
+      '#id' => $VCC['vid']. '-to',
+      '#name' => 'year[to]',
+      '#type' => 'select',
+      '#empty_option' => t('To'),
+      '#options' => []
+    ));
+  }
+  if (isset($params->loadCountries)) {
+    $fields['country'] = form_process_select(array(
+      '#id' => $VCC['vid']. '-country',
+      '#name' => 'country',
+      '#type' => 'select',
+      '#title' => t('Add a country'),
+      '#options' => []
+    ));
+  }
+  return $fields;
 }

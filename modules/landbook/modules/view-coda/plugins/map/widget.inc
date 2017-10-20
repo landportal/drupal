@@ -15,6 +15,7 @@ function lbvc_plugin_map_options() {
     'tooltip' => 'Show tooltip',
     'nav' => 'Allow zoom (in/out)',
     //'loadMain' => 'Load main indicator data',
+    'loadIndicators' => 'Load available indicators',
     'loadCountries' => 'Load available countries',
     'loadYears' => 'Load available years',
   );

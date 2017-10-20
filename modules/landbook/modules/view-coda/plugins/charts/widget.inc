@@ -10,11 +10,12 @@
 // Returns a list of boolean options understood by js-view-coda projection (vis. type)
 function lbvc_plugin_charts_options() {
   return array(
-        'legend' => 'Show legend',
-        'loadTree' => 'Load sub-indicators',
-        //'loadMain' => 'Load main indicator data',
-        'loadCountries' => 'Load available countries',
-        'loadYears' => 'Load available years',
+    'legend' => 'Show legend',
+    'loadTree' => 'Load sub-indicators',
+    'loadIndicators' => 'Load available indicators',
+    //'loadMain' => 'Load main indicator data',
+    'loadCountries' => 'Load available countries',
+    'loadYears' => 'Load available years',
   );
 }
 

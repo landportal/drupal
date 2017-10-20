@@ -31,13 +31,8 @@ function lbvc_plugin_map_formatter($VCC) {
   $params = lbvc_plugin_map_params($VCC);
   $params->target = '#' . $VCC['vid'];
   $attr = json_encode($params);
-  if (strstr($attr, '"@') && strstr($attr, '@"')) {
-    $attr = preg_replace('/"@([^@]*)@"/', '$1', $attr);
-  }
-  //dsm($attr);
   $js = $VCC['jsid'] . ' = new lbvisMap(map_data, LBV, ' . $attr . '); ' . $VCC['jsid'] . '.init();';
-
-  return array(array(
+  $chart = array(
     '#type' => 'html_tag',
     '#tag' => 'div',
     '#attributes' => array(
@@ -51,5 +46,55 @@ function lbvc_plugin_map_formatter($VCC) {
       ))
     ),
     '#value' => $value,
-  ));
+  );
+
+  $fields = lbvc_plugin_map_form($VCC, $params);
+  if (sizeof($fields) == 0) {
+    return $chart;
+  }
+
+  $fields['submit'] = array(
+    '#name' => 'add',
+    '#type' => 'submit',
+    '#value' => t('View'),
+  );
+  $form = array(
+    '#attributes' => array(
+      'id' => $VCC['vid'] . '-form',
+      'class' => 'view-coda-form form-inline',
+    ),
+    '#type' => 'container',
+    'items' => array(
+      '#attributes' => array(
+        'class' => 'row',
+      ),
+      '#type' => 'container',
+      'items' => $fields
+    ),
+  );
+  return array($form, $chart);
+}
+
+
+function lbvc_plugin_map_form($VCC, $params) {
+  $fields = array();
+  if (isset($params->loadIndicators)) {
+    $fields['indicator'] = form_process_select(array(
+      '#id' => $VCC['vid']. '-indicator',
+      '#name' => 'indicator',
+      '#type' => 'select',
+      '#empty_option' => t('Select an indicator'),
+      '#options' => []
+    ));
+  }
+  if (isset($params->loadYears)) {
+    $fields['year'] = form_process_select(array(
+      '#id' => $VCC['vid']. '-year',
+      '#name' => 'year',
+      '#type' => 'select',
+      '#empty_option' => t('Select a year'),
+      '#options' => []
+    ));
+  }
+  return $fields;
 }

@@ -149,23 +149,22 @@ function lbvc__indicators_flatten(&$params, &$tree, $parent) {
 
 // Streamline indicator structure between Drupal/JS/LOD
 function lbvc__indicators_js_serialize($entity) {
-//  dpm($entity, 'Serial');
-  //$render = taxonomy_term_view($entity, 'teaser');
-  $p = drupal_get_path_alias('taxonomy/term/' . $entity->tid);
-  $render = '<span><a href="/'. $p .'">' . $entity->name . '</a></span> <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="' . str_replace('"', "'", strip_tags($entity->description)) .'"></span>';
-  //dpm($entity, $entity->name); 
- if (count($entity->field_unit) > 0) {
-   //dpm($entity->field_unit, 'UNIT ' . $entity->name);
-    $u = array_pop($entity->field_unit); // workaround language issues
-    $render .= ' <i>(' . $u[0]['value'] . ')</i>';
-  }
-  return array(
+  $ind = array(
     //'tid' => $entity->tid,
     'id' => $entity->field_id[LANGUAGE_NONE][0]['value'],
     'label' => $entity->name,
     'desc' => $entity->description,
-    'render' => $render,
   );
+//  dpm($entity, 'Serial');
+  //$render = taxonomy_term_view($entity, 'teaser');
+  $p = drupal_get_path_alias('taxonomy/term/' . $entity->tid);
+  $ind['render'] = '<span><a href="/'. $p .'">' . $entity->name . '</a></span> <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="' . str_replace('"', "'", strip_tags($entity->description)) .'"></span>';
+  if (count($entity->field_unit) > 0) {
+    $u = array_pop($entity->field_unit); // workaround language issues
+    $ind['render'] .= ' <i>(' . $u[0]['value'] . ')</i>';
+    $ind['unit'] = $u[0]['value'];
+  }
+  return $ind;
 }
 
 function lbvc__indicators_obs() {

@@ -40,7 +40,7 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
         '#id' => $VCC['vid']. '-countries',
         '#name' => 'countries',
         '#type' => 'select',
-        '#title' => t('Countries'),
+        '#title' => t('Country'),
         '#options' => array(),
     );
   }
@@ -55,7 +55,7 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
       '#id' => $VCC['vid']. '-indicators',
       '#name' => 'observations',
       '#type' => 'select',
-      '#title' => t('Indicators'),
+      '#title' => t('Select'),
       '#options' => $opts,// array_keys($params->tree)
     );
   }
@@ -95,5 +95,5 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
   );
   //dpm($form);
 
-  return array($pie, $form);
+  return array($form, $pie);
 }
