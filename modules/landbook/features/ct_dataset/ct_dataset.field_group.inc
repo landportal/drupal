@@ -26,7 +26,8 @@ function ct_dataset_field_group_info() {
       0 => 'field_link',
       1 => 'field_related_aside',
       2 => 'field_view_dataset',
-      3 => 'group_landvoc',
+      3 => 'field_orgref',
+      4 => 'group_landvoc',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -116,7 +117,7 @@ function ct_dataset_field_group_info() {
   $field_group->parent_name = 'group_aside';
   $field_group->data = array(
     'label' => 'Related categories',
-    'weight' => '11',
+    'weight' => '12',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_themes',
@@ -254,6 +255,7 @@ function ct_dataset_field_group_info() {
     'children' => array(
       0 => 'field_link',
       1 => 'field_noderef',
+      2 => 'field_orgref',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -288,13 +290,14 @@ function ct_dataset_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Settings',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-settings field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-settings field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $field_groups['group_settings|node|dataset|form'] = $field_group;

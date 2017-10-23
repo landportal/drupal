@@ -399,6 +399,70 @@ function ct_dataset_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-dataset-field_orgref'.
+  $field_instances['node-dataset-field_orgref'] = array(
+    'bundle' => 'dataset',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 10,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_orgref',
+    'label' => 'Partners',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 23,
+    ),
+  );
+
   // Exported field_instance: 'node-dataset-field_paragraphs'.
   $field_instances['node-dataset-field_paragraphs'] = array(
     'bundle' => 'dataset',
@@ -488,7 +552,7 @@ function ct_dataset_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -940,7 +1004,7 @@ function ct_dataset_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -1088,6 +1152,7 @@ function ct_dataset_field_default_field_instances() {
   t('Land Book Visualizations');
   t('Official site');
   t('Overarching categories');
+  t('Partners');
   t('Picture');
   t('Related aside');
   t('Related blocks');

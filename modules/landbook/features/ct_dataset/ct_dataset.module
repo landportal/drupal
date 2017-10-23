@@ -39,8 +39,11 @@ function ct_dataset_preprocess(&$variables, $hook) {
     $variables['node'] = $variables['page']['node'];
     $variables['classes_array'][] = 'page-node';
     $variables['classes_array'][] = 'node-type-' . $variables['page']['node']->type;
-    $variables['tabs']['#primary'][] = array(
-      '#markup' => '<li>' . l('Edit Dataset', 'node/'.$variables['page']['dsid'].'/edit') . '</li>',
-    );
+
+    if (user_access('edit any dataset content') || user_access('administer nodes')) { //is_admin()) {
+      $variables['tabs']['#primary'][] = array(
+        '#markup' => '<li>' . l('Edit Dataset', 'node/'.$variables['page']['dsid'].'/edit') . '</li>',
+      );
+    }
   }
 }
