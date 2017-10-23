@@ -22,7 +22,7 @@ function ct_project_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 14,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -144,7 +144,7 @@ function ct_project_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'above',
@@ -220,7 +220,7 @@ function ct_project_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 8,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -364,7 +364,7 @@ function ct_project_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 15,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -431,7 +431,7 @@ function ct_project_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 0,
+        'weight' => 24,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -556,7 +556,7 @@ function ct_project_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 4,
@@ -575,7 +575,7 @@ function ct_project_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => '',
+          'image_link' => 'content',
           'image_style' => '',
         ),
         'type' => 'image',
@@ -627,7 +627,7 @@ function ct_project_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 16,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -694,7 +694,7 @@ function ct_project_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
@@ -869,7 +869,7 @@ function ct_project_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -939,7 +939,7 @@ function ct_project_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 13,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1004,7 +1004,7 @@ For example: "EUR 1000000" or "USD 549785"',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -1063,6 +1063,70 @@ For example: "EUR 1000000" or "USD 549785"',
     ),
   );
 
+  // Exported field_instance: 'node-project-title_field'.
+  $field_instances['node-project-title_field'] = array(
+    'bundle' => 'project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h1',
+        ),
+        'type' => 'title_linked',
+        'weight' => 3,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => 'h3',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => 'h3',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('A medium sized logo or image for the project. Make sure you comply to its policies / guidelines when uploading it.');
@@ -1088,6 +1152,7 @@ For example: "EUR 1000000" or "USD 549785"',
   t('Related concepts');
   t('Starting and end date of the project');
   t('Themes');
+  t('Title');
   t('Valuation of the project (in Euros, Dollars, Pounds...). 
 Please use the format Currency (with 3 characters) Space Value (without separators).
 For example: "EUR 1000000" or "USD 549785"');

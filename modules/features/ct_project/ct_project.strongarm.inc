@@ -141,7 +141,7 @@ function ct_project_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '14',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'teaser' => array(
