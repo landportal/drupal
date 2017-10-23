@@ -33,7 +33,7 @@ $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
 $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -96,7 +96,7 @@ $handler = $view->new_display('block', 'Front block', 'front');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
-$handler->display->display_options['style_options']['interval'] = '5000';
+$handler->display->display_options['style_options']['interval'] = '15000';
 $handler->display->display_options['style_options']['navigation'] = 1;
 $handler->display->display_options['style_options']['indicators'] = 1;
 $handler->display->display_options['style_options']['pause'] = 1;
@@ -159,7 +159,7 @@ $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
 $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -222,7 +222,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
-/* Filter criterion: Field: Image (field_image:fid) */
+/* Filter criterion: Field: Picture (field_image:fid) */
 $handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
 $handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
 $handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
@@ -247,7 +247,7 @@ $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
 $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';

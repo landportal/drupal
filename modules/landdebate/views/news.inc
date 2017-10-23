@@ -194,7 +194,7 @@ $handler->display->display_options['pager']['options']['items_per_page'] = '5';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
-$handler->display->display_options['style_options']['interval'] = '5000';
+$handler->display->display_options['style_options']['interval'] = '20000';
 $handler->display->display_options['style_options']['navigation'] = 1;
 $handler->display->display_options['style_options']['indicators'] = 0;
 $handler->display->display_options['style_options']['pause'] = 0;
@@ -221,7 +221,7 @@ $handler->display->display_options['fields']['created']['label'] = '';
 $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['created']['date_format'] = 'time ago';
 $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
