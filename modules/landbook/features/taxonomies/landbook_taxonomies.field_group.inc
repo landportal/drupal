@@ -244,8 +244,8 @@ function landbook_taxonomies_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'name_field',
-      1 => 'field_view_parent',
-      2 => 'field_image',
+      1 => 'field_image',
+      2 => 'field_view_parent',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -674,8 +674,8 @@ function landbook_taxonomies_field_group_info() {
     'children' => array(
       0 => 'description_field',
       1 => 'field_visualization',
-      2 => 'field_observations',
-      3 => 'field_related_blocks',
+      2 => 'field_related_blocks',
+      3 => 'field_observations',
     ),
     'format_type' => 'div',
     'format_settings' => array(

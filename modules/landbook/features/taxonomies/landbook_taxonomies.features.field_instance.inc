@@ -335,7 +335,7 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_license_text',
-    'label' => 'License text',
+    'label' => 'Copyright details',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1761,13 +1761,12 @@ function landbook_taxonomies_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'entityreference',
+        'module' => 'ds',
         'settings' => array(
-          'links' => 0,
+          'taxonomy_term_reference_view_mode' => 'teaser',
           'use_content_language' => 0,
-          'view_mode' => 'default',
         ),
-        'type' => 'entityreference_entity_view',
+        'type' => 'ds_taxonomy_view_mode',
         'weight' => 7,
       ),
       'search_index' => array(
@@ -2755,6 +2754,7 @@ function landbook_taxonomies_field_default_field_instances() {
   t('Best value is');
   t('Catalog');
   t('Catalog description');
+  t('Copyright details');
   t('Data provider');
   t('Display this catalog\'s datasets');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
@@ -2766,7 +2766,6 @@ function landbook_taxonomies_field_default_field_instances() {
   t('Land Book Indicators');
   t('Latest dataset');
   t('License');
-  t('License text');
   t('Logo');
   t('Maximun possible value of the indicator');
   t('Measurement unit');
