@@ -530,7 +530,7 @@ function landportal_profile_field_default_field_instances() {
     'field_name' => 'field_location',
     'label' => 'Location',
     'pcp_tag' => 1,
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
