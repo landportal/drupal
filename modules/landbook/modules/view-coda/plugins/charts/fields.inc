@@ -18,10 +18,6 @@ function lbvc_plugin_charts_params($VCC) {
 function lbvc_plugin_charts_formatter($VCC) {
   $params = lbvc_plugin_charts_params($VCC);
   $params->target = '#' . $VCC['vid'];
-  // TMP hack to pick iso code the old way (for CP)
-  /* $visP = substr(json_encode($params), 0, -1); */
-  /* $visP .= ', iso3: Drupal.settings.landbook.countryCode ? Drupal.settings.landbook.countryCode : "" }'; */
-  /* $js = $VCC['jsid'] . ' = new lbvisCharts(LBV, ' . $visP . '); ' . $VCC['jsid'] . '.init();'; */
   $js = $VCC['jsid'] . ' = new lbvisCharts(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
 
   $chart = array(
@@ -120,44 +116,39 @@ function lbvc_plugin_charts_form($VCC, $params) {
 
   if (isset($params->loadTree) && count($params->ttop) > 1) {
     $opts = array();
-    //foreach (array_keys($params->tree) as $ind) {
-    foreach ($params->ttop as $ind) {
-      $opts[$ind] = $params->cache[$ind]['label'];
+    // Follow tree, top elements will be optgroup
+    foreach (array_keys($params->tree) as $ind) {
+      $opts[$params->cache[$ind]['label']] = [];
+      foreach (array_keys($params->tree[$ind]) as $sind) {
+        $opts[$params->cache[$ind]['label']][$sind] = $params->cache[$sind]['label'];
+      }
     }
-    //dpm($opts, isset($params->main) ? $params->main : 'all');
+    /* foreach ($params->ttop as $ind) { */
+    /*   $opts[$ind] = $params->cache[$ind]['label']; */
+    /* } */
+    dpm($opts, isset($params->main) ? $params->main : 'all');
+    dpm($params, 'params');
+    dpm($t, 'params');
     $fields['indicator'] = form_process_select(array(
       '#id' => $VCC['vid']. '-indicator',
       '#name' => 'indicator',
       '#type' => 'select',
-      //'#attributes' => array('name' => 'indicators'), // 'checked' => 'checked'),
-      //'#empty_value' => t('Select a group'),
-      '#options' => $opts,// array_keys($params->tree)
-//      '#default_value' => isset($params->main) ? $params->main : 'all', // @todo find main value and check the box
+      '#options' => $opts,
     ));
-    /* foreach($fields['indicator']['#options'] as $id => $op) { */
-    /*   if ($params->main && $params->main == $id) { */
-    /*   dpm($op, $id); */
-    /*     $fields['indicator']['#options']['#default_value'] = 'selected'; */
-    /*   } */
-    /* } */
-    /* dpm($fields['indicator'], $id); */
   }
 
   // Used by vis to filter the indicators to display
   if (isset($params->observations)) {
-    $obs = array('all' => t('All Indicators'));
-    foreach($params->observations as $k => $o) {
-      $obs[$k] = $o['label'];
-    }
     $fields['observations'] = form_process_checkboxes(array(
       '#id' => $VCC['vid']. '-observations',
       '#name' => 'observations',
+      '#prefix' => '<div class="hidden">',
+      '#suffix' => '</div>',
       '#attributes' => array('name' => 'observations', 'checked' => 'checked'),
       '#type' => 'checkboxes',
       '#title' => t('Indicators'),
-      '#options' => $obs,
+      '#options' => [],
     ));
-//    dpm($fields['observations'], 'obs');
   }
 
   return $fields;
