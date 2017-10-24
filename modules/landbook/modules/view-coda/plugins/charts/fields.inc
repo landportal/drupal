@@ -126,9 +126,6 @@ function lbvc_plugin_charts_form($VCC, $params) {
     /* foreach ($params->ttop as $ind) { */
     /*   $opts[$ind] = $params->cache[$ind]['label']; */
     /* } */
-    dpm($opts, isset($params->main) ? $params->main : 'all');
-    dpm($params, 'params');
-    dpm($t, 'params');
     $fields['indicator'] = form_process_select(array(
       '#id' => $VCC['vid']. '-indicator',
       '#name' => 'indicator',
