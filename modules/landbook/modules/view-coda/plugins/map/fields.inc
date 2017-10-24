@@ -26,12 +26,12 @@ function lbvc_plugin_map_params($VCC) {
 }
 
 function lbvc_plugin_map_formatter($VCC) {
-  $value = t('Loading map...');
-
   $params = lbvc_plugin_map_params($VCC);
   $params->target = '#' . $VCC['vid'];
-  $attr = json_encode($params);
-  $js = $VCC['jsid'] . ' = new lbvisMap(map_data, LBV, ' . $attr . '); ' . $VCC['jsid'] . '.init();';
+  $js = $VCC['jsid'] . ' = new lbvisMap(map_data, LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
+
+  // The visualization
+  $value = t('Loading map...');
   $chart = array(
     '#type' => 'html_tag',
     '#tag' => 'div',

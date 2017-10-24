@@ -24,16 +24,14 @@ function lbvc_plugin_ranking_params($VCC) {
 
 function lbvc_plugin_ranking_formatter($VCC, $form=NULL) {
   $params = lbvc_plugin_ranking_params($VCC);
-  // All vis should have those
   $params->target = '#' . $VCC['vid'];
-
   $js = $VCC['jsid'] . ' = new lbvisRanking(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
 
   // The visualization
   $value = t('Loading ranking chart');
-  $ranking = array(
+  $chart = array(
     '#type' => 'html_tag',
-    '#tag' => 'div',
+    '#tag' => 'ul',
     '#attributes' => array(
       'id' => $VCC['vid']
     ),
@@ -48,5 +46,58 @@ function lbvc_plugin_ranking_formatter($VCC, $form=NULL) {
   );
   //dpm($form);
 
-  return $ranking;
+  $fields = lbvc_plugin_ranking_form($VCC, $params);
+  if (sizeof($fields) == 0) {
+    return $chart;
+  }
+
+  $fields['submit'] = array(
+        '#attributes' => array(
+          'class' => 'action',
+        ),
+        '#type' => 'container',
+        'items' => array(
+          '#name' => 'update',
+          '#type' => 'submit',
+          '#value' => t('Update'),
+        )
+  );
+  $form = array(
+    '#attributes' => array(
+      'id' => $VCC['vid'] . '-form',
+      'class' => 'view-coda-form form-inline',
+    ),
+    '#type' => 'container',
+    'items' => array(
+      '#attributes' => array(
+        'class' => 'row',
+      ),
+      '#type' => 'container',
+      'items' => $fields
+    ),
+  );
+  return array($form, $chart);
+}
+
+function lbvc_plugin_ranking_form($VCC, $params) {
+  $fields = array();
+  if (isset($params->loadIndicators)) {
+    $fields['indicator'] = form_process_select(array(
+      '#id' => $VCC['vid']. '-indicator',
+      '#name' => 'indicator',
+      '#type' => 'select',
+      '#empty_option' => t('Select an indicator'),
+      '#options' => []
+    ));
+  }
+  if (isset($params->loadYears)) {
+    $fields['year'] = form_process_select(array(
+      '#id' => $VCC['vid']. '-year',
+      '#name' => 'year',
+      '#type' => 'select',
+      '#empty_option' => t('Select a year'),
+      '#options' => []
+    ));
+  }
+  return $fields;
 }
