@@ -155,13 +155,13 @@ function lbvc__indicators_js_serialize($entity) {
     'label' => $entity->name,
     'desc' => $entity->description,
   );
-//  dpm($entity, 'Serial');
+  //dpm($entity, 'Serial ' . $ind['id']);
   //$render = taxonomy_term_view($entity, 'teaser');
   $p = drupal_get_path_alias('taxonomy/term/' . $entity->tid);
   $ind['render'] = '<span><a href="/'. $p .'">' . $entity->name . '</a></span> <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="' . str_replace('"', "'", strip_tags($entity->description)) .'"></span>';
   if (count($entity->field_unit) > 0) {
     $u = array_pop($entity->field_unit); // workaround language issues
-    $ind['render'] .= ' <i>(' . $u[0]['value'] . ')</i>';
+    //$ind['render'] .= ' <i>(' . $u[0]['value'] . ')</i>';
     $ind['unit'] = $u[0]['value'];
   }
   return $ind;
