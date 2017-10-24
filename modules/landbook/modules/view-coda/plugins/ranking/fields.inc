@@ -33,7 +33,8 @@ function lbvc_plugin_ranking_formatter($VCC, $form=NULL) {
     '#type' => 'html_tag',
     '#tag' => 'ul',
     '#attributes' => array(
-      'id' => $VCC['vid']
+      'id' => $VCC['vid'],
+      'class' => 'view-coda-vis',
     ),
     '#attached' => array(
       'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
