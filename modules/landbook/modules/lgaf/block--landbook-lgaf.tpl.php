@@ -33,11 +33,11 @@
             <div class="legend text-center">
               <em>Legend</em>
               <ul class="list-unstyled list-inline">
-                <li><span class="lgaf-value-a lgaf-value"></span> <?php print t('Very Good Practice'); ?></li>
-                <li><span class="lgaf-value-b lgaf-value"></span> <?php print t('Good Practice'); ?></li>
-                <li><span class="lgaf-value-c lgaf-value"></span> <?php print t('Weak Practice'); ?></li>
-                <li><span class="lgaf-value-d lgaf-value"></span> <?php print t('Very Weak Practice'); ?></li>
-                <li><span class="lgaf-value-na lgaf-value"></span> <?php print t('Missing Value'); ?></li>
+                <li><span class="value-a"></span> <?php print t('Very Good Practice'); ?></li>
+                <li><span class="value-b"></span> <?php print t('Good Practice'); ?></li>
+                <li><span class="value-c"></span> <?php print t('Weak Practice'); ?></li>
+                <li><span class="value-d"></span> <?php print t('Very Weak Practice'); ?></li>
+                <li><span class="value-na"></span> <?php print t('Missing Value'); ?></li>
               </ul>
             </div>
           <footer>
