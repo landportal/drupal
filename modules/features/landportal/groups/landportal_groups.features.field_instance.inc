@@ -68,6 +68,7 @@ function landportal_groups_field_default_field_instances() {
   $field_instances['node-partners-field_featured'] = array(
     'bundle' => 'partners',
     'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
     'description' => 'Content featured on the Partner site.
 ',
@@ -106,6 +107,11 @@ function landportal_groups_field_default_field_instances() {
     'label' => 'Featured',
     'required' => 0,
     'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -118,7 +124,7 @@ function landportal_groups_field_default_field_instances() {
         'pass_argument' => 1,
         'pass_arguments' => '',
         'rendered_entity' => 0,
-        'view' => 'partners_content|related_refview',
+        'view' => 'related|view_widget',
         'view_mode' => 'teaser',
       ),
       'type' => 'entityreference_view_widget',
@@ -252,6 +258,7 @@ function landportal_groups_field_default_field_instances() {
   // Exported field_instance: 'node-partners-field_promoted'.
   $field_instances['node-partners-field_promoted'] = array(
     'bundle' => 'partners',
+    'default_value_function' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -289,6 +296,11 @@ function landportal_groups_field_default_field_instances() {
     'label' => 'Promoted',
     'required' => 0,
     'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -301,7 +313,7 @@ function landportal_groups_field_default_field_instances() {
         'pass_argument' => 1,
         'pass_arguments' => '',
         'rendered_entity' => 0,
-        'view' => 'partners_content|related_refview',
+        'view' => 'related|view_widget',
         'view_mode' => 'full',
       ),
       'type' => 'entityreference_view_widget',
@@ -455,7 +467,7 @@ function landportal_groups_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -475,6 +487,67 @@ function landportal_groups_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-partners_page-field_image'.
+  $field_instances['node-partners_page-field_image'] = array(
+    'bundle' => 'partners_page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_image',
+    'label' => 'Picture',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
       'weight' => 1,
     ),
   );
@@ -483,6 +556,7 @@ function landportal_groups_field_default_field_instances() {
   $field_instances['node-partners_page-field_noderef'] = array(
     'bundle' => 'partners_page',
     'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -502,7 +576,7 @@ function landportal_groups_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -520,6 +594,11 @@ function landportal_groups_field_default_field_instances() {
     'label' => 'Related content',
     'required' => 0,
     'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -532,11 +611,11 @@ function landportal_groups_field_default_field_instances() {
         'pass_argument' => 1,
         'pass_arguments' => '',
         'rendered_entity' => 0,
-        'view' => 'partners_content|related_refview',
+        'view' => 'related|view_widget',
         'view_mode' => 'full',
       ),
       'type' => 'entityreference_view_widget',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -564,7 +643,7 @@ function landportal_groups_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -658,11 +737,11 @@ function landportal_groups_field_default_field_instances() {
         'module' => 'title',
         'settings' => array(
           'title_class' => '',
-          'title_link' => '',
+          'title_link' => 'content',
           'title_style' => 'h2',
         ),
         'type' => 'title_linked',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -684,7 +763,7 @@ function landportal_groups_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 0,
     ),
   );
 
@@ -699,6 +778,7 @@ function landportal_groups_field_default_field_instances() {
   t('Groups audience');
   t('Logo');
   t('Organization');
+  t('Picture');
   t('Promoted');
   t('Related content');
   t('Title');

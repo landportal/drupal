@@ -21,7 +21,7 @@ function landportal_groups_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'og_group_ref',
     ),
