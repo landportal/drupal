@@ -9,7 +9,7 @@
             <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
 <?php endif;?>
 <?php print render($title_suffix); ?>
-            <form class="form-horizontal">
+            <form class="form-horizontal row">
               <div class="form-group col-xs-6 col-sm-2">
                 <select name="year" class="form-control" disabled="disabled">
                 </select>
@@ -38,11 +38,11 @@
                   </div>
                 </div>
 
-                <div style="margin-top:1em" class="collapsible collapsed panel panel-default">
+                <div class="collapsible collapsed panel panel-default">
                   <div class="panel-heading">
                     <a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" data-target="#vggt-laws">Relevant laws</a>
                   </div>
-                  <div id="vggt-laws" class="panel-collapse collapse">
+                  <div id="vggt-laws" class="panel-collapse collapse in">
                     <div class="panel-body">
                       <div class="countryInfo"><p>No relevant laws.</p></div>
                     </div>

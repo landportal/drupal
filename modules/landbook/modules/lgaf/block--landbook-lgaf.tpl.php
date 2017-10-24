@@ -5,7 +5,7 @@
             <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
 <?php endif;?>
 <?php print render($title_suffix); ?>
-            <form class="form-horizontal">
+            <form class="form-horizontal row">
               <div class="form-group col-xs-6 col-sm-2">
                 <select name="year" class="form-control" disabled="disabled">
                   <option data-localize="inputs.subpanels">Year</option>
