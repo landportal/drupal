@@ -65,8 +65,8 @@ function lbvc_plugin_map_block_view($delta) {
 
   case 'lbvc_map_country':
     $vcc = '{ "debug": true, "iso3": "@Drupal.settings.landbook.countryCode@"';
-    $vcc .= ', "series": [ {"name": "Mekong countries", "cursor": "pointer", "data": [ {"id": "VNM", "value": 1}, {"id": "LAO", "value": 1}, {"id": "KHM", "value": 1}, {"id": "THA", "value": 1}, {"id": "MMR", "value": 1} ] } ]';
-//    $vcc .= ', "series": [ {"name": "country Region", "data": [ {"id": "@Drupal.settings.landbook.countryCode@", "value": 100} ] } ]';
+//    $vcc .= ', "series": []';
+    $vcc .= ', "series": [ {"name": "country Region", "data": [ {"id": "@Drupal.settings.landbook.countryCode@", "value": 100} ] } ]';
     $vcc .= ', "colors": { "background": "#FFFFFF", "hover": "#F5A623", "select": "#F5A623", "borders": "#FFFFFF", "max": "#BBD6D8", "min": "#BBD6D8", "na": "#BBD6D8" }';
     $vcc .= ', "map": {"zoom": 2, "height": 200, "selectable": true, "legend": false'
       // Need 'unwrapping'
