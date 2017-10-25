@@ -29,32 +29,64 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
 //  $js = $VCC['jsid'] . ' = new lbvisPie(LBV, ' . $visP . '); ' . $VCC['jsid'] . '.init();';
   $js = $VCC['jsid'] . ' = new lbvisPie(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
 
-  // Build option / action form for the vis.
+  // The visualization
+  $value = t('Loading pie chart');
+  $pie = array(
+    '#type' => 'html_tag',
+    '#tag' => 'div',
+    '#attributes' => array(
+      'id' => $VCC['vid']
+    ),
+    '#attached' => array(
+      'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
+      'js' =>  array(array(
+        'type' => 'inline',
+        'data' => lbvc__js_ready($js)
+      ))
+    ),
+    '#value' => $value,
+  );
+  //dpm($form);
+
+  $fields = lbvc_plugin_pie_form($VCC, $params);
+  if (sizeof($fields) == 0) {
+    return $chart;
+  }
+  $form = lbvc_plugin_ui_form_wrapper($VCC, $fields);
+  return array($form, $pie);
+}
+
+
+
+function lbvc_plugin_pie_form($VCC, $params) {
   $fields = array();
-  /*   '#type' => 'container', */
-  /*   '#attributes' => array('class' => 'col-sm-6'), */
-  /*   'children' => array(), */
-  /* ); */
+
   if (isset($params->loadCountries)) {
     $fields['country'] = array(
-        '#id' => $VCC['vid']. '-country',
-        '#name' => 'country',
-        '#type' => 'select',
-        '#title' => t('Country'),
-        '#options' => array(),
+      '#id' => $VCC['vid']. '-country',
+      '#name' => 'country',
+      '#type' => 'select',
+      '#title' => t('Country'),
+      '#options' => array(),
     );
   }
 
   if (isset($params->loadTree) && count($params->ttop) > 1) {
     $opts = array();
-    //foreach (array_keys($params->tree) as $ind) {
-    //dpm($params);
-    foreach ($params->ttop as $ind) {
-      $opts[$ind] = $params->cache[$ind]['label'];
+    // Follow tree, top elements will be optgroup
+    foreach (array_keys($params->tree) as $ind) {
+      $opts[$params->cache[$ind]['label']] = [];
+      foreach (array_keys($params->tree[$ind]) as $sind) {
+        $opts[$params->cache[$ind]['label']][$sind] = $params->cache[$sind]['label'];
+      }
     }
-    $fields['indicators'] = array(
-      '#id' => $VCC['vid']. '-indicators',
-      '#name' => 'observations',
+    //dpm($params);
+    /* foreach ($params->ttop as $ind) { */
+    /*   $opts[$ind] = $params->cache[$ind]['label']; */
+    /* } */
+    $fields['indicator'] = array(
+      '#id' => $VCC['vid']. '-indicator',
+      '#name' => 'indicator',
       '#type' => 'select',
 //      '#title' => t('Select'),
       '#options' => $opts,// array_keys($params->tree)
@@ -76,25 +108,5 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
     ),
   );
 //  dpm($form, 'builda pie');
-
-  // The visualization
-  $value = t('Loading pie chart');
-  $pie = array(
-    '#type' => 'html_tag',
-    '#tag' => 'div',
-    '#attributes' => array(
-      'id' => $VCC['vid']
-    ),
-    '#attached' => array(
-      'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
-      'js' =>  array(array(
-        'type' => 'inline',
-        'data' => lbvc__js_ready($js)
-      ))
-    ),
-    '#value' => $value,
-  );
-  //dpm($form);
-
-  return array($form, $pie);
+  return $fields;
 }

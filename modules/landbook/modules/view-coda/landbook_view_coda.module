@@ -18,6 +18,7 @@ $_LBVC = array();
 define("LBVC_IND_VID", 25);
 define("LBVC_CAT_VID", 24);
 
+include_once 'landbook_view_coda.ui.inc';
 include_once 'landbook_view_coda.library.inc';
 include_once 'landbook_view_coda.forms.inc';
 include_once 'landbook_view_coda.fields.inc';

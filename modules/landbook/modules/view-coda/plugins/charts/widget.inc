@@ -16,6 +16,7 @@ function lbvc_plugin_charts_options() {
     //'loadMain' => 'Load main indicator data',
     'loadCountries' => 'Load available countries',
     'loadYears' => 'Load available years',
+    'hideTitle' => 'Hide chart title',
   );
 }
 

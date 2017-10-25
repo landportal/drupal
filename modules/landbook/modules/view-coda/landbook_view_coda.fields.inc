@@ -45,27 +45,34 @@ function landbook_view_coda_field_info() {
 
 // Bake options (per view-coda plugin) in vcc field
 function landbook_view_coda_field_presave($entity_type, $entity, $field, $instance, $langcode, &$items) {
-// dpm($items, 'presave field');
+  /* dpm($entity, 'presave field e'); */
+  /* dpm($instance, 'presave field i'); */
+
   foreach ($items as $delta => $item) {
     //dpm($item)
     if (!array_key_exists('vis', $item)) break; // TODO this should never happen
 
     // Generic options processing
     include_once 'plugins/' . $item['type'] . '/widget.inc';
-    $options = $item['vis'];
+    $vopts = $item['vis']['options'];
+    unset($item['vis']['options']);
+    $options = array_merge($vopts, $item['vis']);
+    // Turn checkboxes options into true values or unset from options
     $fxptr = 'lbvc_plugin_' . $item['type'] . '_options';
     if (function_exists($fxptr)) {
-      unset($options['options']);
       foreach($fxptr() as $opt => $desc) {
-        if ($item['vis']['options'][$opt]) $options[$opt] = true;
+        if ($options[$opt]) $options[$opt] = true;
+        else unset($options[$opt]);
       }
     }
+
     // Visualization-specific options
     $fxptr = 'lbvc_plugin_' . $item['type'] . '_field_presave';
     if (function_exists($fxptr)) {
       $options += $fxptr($item);
     }
     // Encode everything as string
+    //dpm($options, 'encode');
     $items[$delta]['vcc'] = json_encode($options);
   }
   //if (module_exists('devel')) dpm($items, 'presave');

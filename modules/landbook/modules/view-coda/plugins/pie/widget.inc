@@ -15,6 +15,7 @@ function lbvc_plugin_pie_options() {
     'loadMain' => 'Load main indicator data',
     'mainDelta' => 'Main is the overall value',
     'loadCountries' => 'Load available countries',
+    'hideTitle' => 'Hide chart title',
   );
 }
 
