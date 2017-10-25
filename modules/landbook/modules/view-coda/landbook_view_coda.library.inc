@@ -41,8 +41,9 @@ function landbook_view_coda_library() {
     'js' => array(
       $PATH . '/js/vendor/linkify.min.js' => array('weight' => 0),
       $PATH . '/js/vendor/linkify-jquery.min.js' => array('weight' => 0),
-      $PATH . '/js/vendor/highstock.js' => array('weight' => 0),
-      $PATH . '/js/vendor/highmaps.js' => array('weight' => 1),
+      $PATH . '/js/vendor/highcharts.js' => array('weight' => 0),
+      $PATH . '/js/vendor/modules/stock.js' => array('weight' => 1),
+      $PATH . '/js/vendor/modules/map.js' => array('weight' => 1),
       $PATH . '/js/vendor/highcharts-more.js' => array('weight' => 2),
     ),
   );
