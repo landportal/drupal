@@ -281,4 +281,3 @@ $handler->display->display_options['filters']['machine_name']['field'] = 'machin
 $handler->display->display_options['filters']['machine_name']['value'] = array(
   'datasets' => 'datasets',
 );
-
