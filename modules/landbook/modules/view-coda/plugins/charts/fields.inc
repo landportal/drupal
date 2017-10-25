@@ -6,11 +6,10 @@ function lbvc_plugin_charts_params($VCC) {
   $params = json_decode($VCC['vcc']);
   $params->indicators = array();
   $params->cache = array();
-
-  lbvc__indicators_process($params, $VCC['indicators']);
-
   if (isset($params->loadTree)) {
     lbvc__indicators_tree($params, $VCC['indicators']);
+  } else {
+    lbvc__indicators_process($params, $VCC['indicators']);
   }
   return $params;
 }
