@@ -1,7 +1,5 @@
 <?php
 
-
-
 function lbvc_plugin_charts_params($VCC) {
   $params = json_decode($VCC['vcc']);
   $params->indicators = array();
@@ -52,6 +50,7 @@ function lbvc_plugin_charts_form($VCC, $params) {
       '#name' => 'indicator',
       '#type' => 'select',
       '#empty_option' => t('Select an indicator'),
+      '#title' => t('Show'),
       '#options' => []
     ));
   }
@@ -104,6 +103,7 @@ function lbvc_plugin_charts_form($VCC, $params) {
       '#id' => $VCC['vid']. '-indicator',
       '#name' => 'indicator',
       '#type' => 'select',
+      '#title' => t('Show'),
       '#options' => $opts,
     ));
   }

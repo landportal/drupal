@@ -15,7 +15,7 @@ function lbvc_plugin_ui_form_wrapper($VCC, $fields) {
   $form = array(
     '#attributes' => array(
       'id' => $VCC['vid'] . '-form',
-      'class' => 'view-coda-form form-inline',
+      'class' => 'view-coda-form form-inline form-items-'. (count($fields) - 1),
     ),
     '#type' => 'container',
     'items' => array(

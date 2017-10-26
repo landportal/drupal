@@ -85,7 +85,7 @@ function lbvc_plugin_pie_form($VCC, $params) {
       '#id' => $VCC['vid']. '-indicator',
       '#name' => 'indicator',
       '#type' => 'select',
-//      '#title' => t('Select'),
+      '#title' => t('Show'),
       '#options' => $opts,// array_keys($params->tree)
     );
   }
