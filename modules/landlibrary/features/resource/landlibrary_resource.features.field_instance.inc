@@ -773,7 +773,7 @@ function landlibrary_resource_field_default_field_instances() {
       'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg zip rar pdf doc xls mp3 wav tif xlsx docx pps ppsx ppt pptx dat txt',
-      'max_filesize' => '8 MB',
+      'max_filesize' => '16 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1737,7 +1737,7 @@ function landlibrary_resource_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
-      'default_image' => 0,
+      'default_image' => 32226,
       'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg tn',
