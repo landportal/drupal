@@ -286,12 +286,8 @@ function landbook_country_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'ds',
-        'settings' => array(
-          'taxonomy_term_reference_view_mode' => 'teaser',
-          'use_content_language' => 1,
-        ),
-        'type' => 'ds_taxonomy_view_mode',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'listing' => array(
