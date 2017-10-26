@@ -45,12 +45,11 @@ function lbvc_plugin_map_block_view($delta) {
   switch ($delta) {
 
   case 'lbvc_map':
-    $vcc = '{
-"debug": true';
-    $vcc .= ', "map": {"selectable": true, "legend": false'
+    $vcc = '{"series": [{"tooltip": {"headerFormat": null, "pointFormat": "{point.name}"}, "data": "@map_data@"}]';
+    $vcc .= ', "colors": { "min": "#BBD6D8" }';
+    $vcc .= ', "map": {"selectable": true, "legend": false, "nav": true'
       . ', "tooltip": "@function () { return \'Click to visit \' + this.point.name; }@"'
-      /* . ', "tooltip": "@function () { return \'Click to visit \' + this.point.name; }@"' */
-      /* . ', "events": "@{ click: function () { window.location.href = \'/book/countries/\' + this.id; }@"' */
+      . ', "events": "@{ click: function () { window.location.href = \'/book/countries/\' + this.id; } }@"'
       . '}';
     $vcc .= '}';
 
@@ -65,13 +64,10 @@ function lbvc_plugin_map_block_view($delta) {
 
   case 'lbvc_map_country':
     $vcc = '{ "debug": true, "iso3": "@Drupal.settings.landbook.countryCode@"';
-//    $vcc .= ', "series": []';
     $vcc .= ', "series": [ {"name": "country Region", "data": [ {"id": "@Drupal.settings.landbook.countryCode@", "value": 100} ] } ]';
-    $vcc .= ', "colors": { "background": "#FFFFFF", "hover": "#F5A623", "select": "#F5A623", "borders": "#FFFFFF", "max": "#BBD6D8", "min": "#BBD6D8", "na": "#BBD6D8" }';
-    $vcc .= ', "map": {"zoom": 2, "height": 200, "selectable": true, "legend": false'
-      // Need 'unwrapping'
+    $vcc .= ', "colors": { "background": "#FFFFFF", "hover": "#F5A623", "select": "#F5A623", "borders": "#FFFFFF", "min": "#BBD6D8", "max": "#BBD6D8", "na": "#BBD6D8" }';
+    $vcc .= ', "map": {"zoom": 2, "height": 200, "selectable": true, "legend": false, "tooltip": false'
       /* . ', "tooltip": "@function () { return \'Click to visit \' + this.point.name; }@"' */
-      /* . ', "events": "@{ click: function () { window.location.href = \'/book/countries/\' + this.id; } }@"' */
       . '}';
     $vcc .= '}';
     $block['subject'] = '';
