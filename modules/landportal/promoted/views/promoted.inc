@@ -33,7 +33,7 @@ $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
 $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Field: Picture */
+/* Field: Field: Image */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -111,6 +111,36 @@ $handler->display->display_options['defaults']['row_options'] = FALSE;
 /* Display: Library block */
 $handler = $view->new_display('block', 'Library block', 'library');
 $handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
+$handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+/* Field: Field: Image */
+$handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+$handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+$handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+$handler->display->display_options['fields']['field_image']['label'] = '';
+$handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image']['settings'] = array(
+  'image_style' => 'large',
+  'image_link' => 'content',
+);
+/* Field: Content: Body */
+$handler->display->display_options['fields']['body']['id'] = 'body';
+$handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+$handler->display->display_options['fields']['body']['field'] = 'body';
+$handler->display->display_options['fields']['body']['label'] = '';
+$handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+$handler->display->display_options['fields']['body']['settings'] = array(
+  'trim_length' => '600',
+);
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
@@ -159,7 +189,7 @@ $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
 $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Field: Picture */
+/* Field: Field: Image */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -222,7 +252,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
-/* Filter criterion: Field: Picture (field_image:fid) */
+/* Filter criterion: Field: Image (field_image:fid) */
 $handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
 $handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
 $handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
@@ -247,7 +277,7 @@ $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
 $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Field: Picture */
+/* Field: Field: Image */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -311,4 +341,3 @@ $handler->display->display_options['filters']['promoted_to_thematic_page']['id']
 $handler->display->display_options['filters']['promoted_to_thematic_page']['table'] = 'node';
 $handler->display->display_options['filters']['promoted_to_thematic_page']['field'] = 'promoted_to_thematic_page';
 $handler->display->display_options['filters']['promoted_to_thematic_page']['value'] = '1';
-
