@@ -21,7 +21,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'More about',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(),
     'format_type' => 'hidden',
     'format_settings' => array(
@@ -138,23 +138,24 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '5',
+    'weight' => '1',
     'children' => array(
-      0 => 'field_contact',
-      1 => 'field_link',
-      2 => 'field_email',
-      3 => 'field_acronym',
-      4 => 'field_file',
-      5 => 'field_phone',
-      6 => 'field_postal_address',
-      7 => 'locations',
+      0 => 'field_image',
+      1 => 'field_contact',
+      2 => 'field_link',
+      3 => 'field_email',
+      4 => 'field_acronym',
+      5 => 'field_file',
+      6 => 'field_phone',
+      7 => 'field_postal_address',
+      8 => 'locations',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-details',
+        'classes' => 'group-aside',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -179,8 +180,7 @@ function ct_organization_field_group_info() {
     'label' => '',
     'weight' => '0',
     'children' => array(
-      0 => 'field_image',
-      1 => 'title_field',
+      0 => 'title_field',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -308,7 +308,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = 'group_topics_regions';
   $field_group->data = array(
     'label' => '',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_related_topics',
       1 => 'field_related_domains',
@@ -413,7 +413,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '3',
+    'weight' => '2',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
