@@ -1746,7 +1746,8 @@ function landbook_taxonomies_field_default_field_instances() {
     'bundle' => 'indicators',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Observations through which this indicator (or it\'s childrens?) can be looked through.
+',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1760,7 +1761,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'weight' => 31,
       ),
       'full' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'ds',
         'settings' => array(
           'taxonomy_term_reference_view_mode' => 'teaser',
@@ -1784,7 +1785,7 @@ function landbook_taxonomies_field_default_field_instances() {
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_observations',
-    'label' => 'Observations',
+    'label' => 'Data definitions',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -2755,6 +2756,7 @@ function landbook_taxonomies_field_default_field_instances() {
   t('Catalog');
   t('Catalog description');
   t('Copyright details');
+  t('Data definitions');
   t('Data provider');
   t('Display this catalog\'s datasets');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
@@ -2772,7 +2774,8 @@ function landbook_taxonomies_field_default_field_instances() {
   t('Measurement unit, like % or hectares');
   t('Minimun possible value of the indicator');
   t('Name');
-  t('Observations');
+  t('Observations through which this indicator (or it\'s childrens?) can be looked through.
+');
   t('Overarching categories');
   t('Picture');
   t('Published dataset(s)');
