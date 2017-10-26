@@ -50,7 +50,7 @@ function lbvc_plugin_charts_form($VCC, $params) {
       '#name' => 'indicator',
       '#type' => 'select',
       '#empty_option' => t('Select an indicator'),
-      '#title' => t('Show'),
+      //'#title' => t('Show'),
       '#options' => []
     ));
   }
