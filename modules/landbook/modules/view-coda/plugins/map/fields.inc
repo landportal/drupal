@@ -48,59 +48,34 @@ function lbvc_plugin_map_formatter($VCC) {
     '#value' => $value,
   );
 
-  $fields = lbvc_plugin_map_form($VCC, $params);
+  $fields = lbvc_plugin_ui_form_options($VCC, $params);
   if (sizeof($fields) == 0) {
     return $chart;
   }
-
-  $fields['submit'] = array(
-        '#attributes' => array(
-          'class' => 'action',
-        ),
-        '#type' => 'container',
-        'items' => array(
-          '#name' => 'update',
-          '#type' => 'submit',
-          '#value' => t('Update'),
-        )
-  );
-  $form = array(
-    '#attributes' => array(
-      'id' => $VCC['vid'] . '-form',
-      'class' => 'view-coda-form form-inline',
-    ),
-    '#type' => 'container',
-    'items' => array(
-      '#attributes' => array(
-        'class' => 'row',
-      ),
-      '#type' => 'container',
-      'items' => $fields
-    ),
-  );
+  $form = lbvc_plugin_ui_form_wrapper($VCC, $fields);
   return array($form, $chart);
 }
 
 
-function lbvc_plugin_map_form($VCC, $params) {
-  $fields = array();
-  if (isset($params->loadIndicators)) {
-    $fields['indicator'] = form_process_select(array(
-      '#id' => $VCC['vid']. '-indicator',
-      '#name' => 'indicator',
-      '#type' => 'select',
-      '#empty_option' => t('Select an indicator'),
-      '#options' => []
-    ));
-  }
-  if (isset($params->loadYears)) {
-    $fields['year'] = form_process_select(array(
-      '#id' => $VCC['vid']. '-year',
-      '#name' => 'year',
-      '#type' => 'select',
-      '#empty_option' => t('Select a year'),
-      '#options' => []
-    ));
-  }
-  return $fields;
-}
+/* function lbvc_plugin_map_form($VCC, $params) { */
+/*   $fields = array(); */
+/*   if (isset($params->loadIndicators)) { */
+/*     $fields['indicator'] = form_process_select(array( */
+/*       '#id' => $VCC['vid']. '-indicator', */
+/*       '#name' => 'indicator', */
+/*       '#type' => 'select', */
+/*       '#empty_option' => t('Select an indicator'), */
+/*       '#options' => [] */
+/*     )); */
+/*   } */
+/*   if (isset($params->loadYears)) { */
+/*     $fields['year'] = form_process_select(array( */
+/*       '#id' => $VCC['vid']. '-year', */
+/*       '#name' => 'year', */
+/*       '#type' => 'select', */
+/*       '#empty_option' => t('Select a year'), */
+/*       '#options' => [] */
+/*     )); */
+/*   } */
+/*   return $fields; */
+/* } */

@@ -76,9 +76,11 @@ function lbvc_plugin_ui_form_options($VCC, $params, $options = array()) {
 }
 
 function lbvc_plugin_ui_form_wrapper($VCC, $fields, $action='update') {
+  $class = array('actions', $action);
+  if ($action == 'update') $class[] = 'hidden';
   $fields['submit'] = array(
         '#attributes' => array(
-          'class' => ['action', $action],
+          'class' => $class
         ),
         '#type' => 'container',
         'items' => array(
@@ -87,11 +89,16 @@ function lbvc_plugin_ui_form_wrapper($VCC, $fields, $action='update') {
           '#value' => ucfirst($action),
         )
   );
+  $fclass = array(
+    'view-coda-form', 'form-inline',
+    'form-items-'. (count($fields) - ($action == 'update' ? 1 : 0)),
+  );
+
   $form = array(
     '#type' => 'form',
     '#attributes' => array(
       'id' => $VCC['vid'] . '-form',
-      'class' => 'view-coda-form form-inline form-items-'. (count($fields) - 1),
+      'class' => $fclass
     ),
 //    '#tag' => 'form',
 //    '#required' => false,

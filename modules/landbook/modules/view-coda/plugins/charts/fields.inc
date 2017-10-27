@@ -21,7 +21,8 @@ function lbvc_plugin_charts_formatter($VCC) {
     '#type' => 'html_tag',
     '#tag' => 'div',
     '#attributes' => array(
-      'id' => $VCC['vid']
+      'id' => $VCC['vid'],
+      'class' => ['map-fuild']
     ),
     '#attached' => array(
       'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
@@ -37,55 +38,15 @@ function lbvc_plugin_charts_formatter($VCC) {
   if (sizeof($fields) == 0) {
     return $chart;
   }
-  $form = lbvc_plugin_ui_form_wrapper($VCC, $fields);
+  $form = lbvc_plugin_ui_form_wrapper($VCC, $fields, (isset($params->loadCountries) ? 'add' : 'update'));
+  // for layout/style purpose
+  if (isset($params->loadCountries)) $form['#attributes']['class'][] = 'form-add';
   return array($form, $chart);
 }
 
 
 function lbvc_plugin_charts_form($VCC, $params) {
-  $fields = array();
-  if (isset($params->loadIndicators)) {
-    $fields['indicator'] = form_process_select(array(
-      '#id' => $VCC['vid']. '-indicator',
-      '#name' => 'indicator',
-      '#type' => 'select',
-      '#empty_option' => t('Select an indicator'),
-      //'#title' => t('Show'),
-      '#options' => []
-    ));
-  }
-  if (isset($params->loadYears)) {
-    $from = form_process_select(array(
-      '#id' => $VCC['vid']. '-from',
-      '#name' => 'year[from]',
-      '#type' => 'select',
-      '#empty_option' => t('From'),
-      '#options' => []
-    ));
-    $to = form_process_select(array(
-      '#id' => $VCC['vid']. '-to',
-      '#name' => 'year[to]',
-      '#type' => 'select',
-      '#empty_option' => t('To'),
-      '#options' => []
-    ));
-    $fields['years'] = array(
-      '#attributes' => array(
-        'class' => 'years',
-      ),
-      '#type' => 'container',
-      'items' => array($from, $to)
-    );
-  }
-  if (isset($params->loadCountries)) {
-    $fields['country'] = form_process_select(array(
-      '#id' => $VCC['vid']. '-country',
-      '#name' => 'country',
-      '#type' => 'select',
-      '#empty_option' => t('Add a country'),
-      '#options' => []
-    ));
-  }
+  $fields = lbvc_plugin_ui_form_options($VCC, $params, array('range' => true));
 
   if (isset($params->loadTree) && count($params->ttop) > 1) {
     $opts = array();
@@ -101,6 +62,8 @@ function lbvc_plugin_charts_form($VCC, $params) {
     /* } */
     $fields['indicator'] = form_process_select(array(
       '#id' => $VCC['vid']. '-indicator',
+      '#multiple' => false,
+      '#required' => false,
       '#name' => 'indicator',
       '#type' => 'select',
       '#title' => t('Show'),
@@ -112,13 +75,16 @@ function lbvc_plugin_charts_form($VCC, $params) {
   if (isset($params->observations)) {
     $fields['observations'] = form_process_checkboxes(array(
       '#id' => $VCC['vid']. '-observations',
+      '#multiple' => false,
+      '#required' => false,
       '#name' => 'observations',
       '#prefix' => '<div class="hidden">',
       '#suffix' => '</div>',
       '#attributes' => array('name' => 'observations', 'checked' => 'checked'),
       '#type' => 'checkboxes',
-      '#title' => t('Indicators'),
-      '#options' => [],
+      //'#title' => t('Obs'), // FIX: throwing some PHP notices. Something in form_pre_render_conditional_form_element...
+      '#options' => ['all'],
+      '#value' => array(),
     ));
   }
 

@@ -40,7 +40,7 @@ function lbvc_plugin_table_formatter($VCC) {
            <th>Value</th>
            </tr></thead><tbody></tbody></table>';
   $value = $valueOverall;
-  if ($params->iso3) {
+  if (isset($params->iso3)) {
     $value = $valueCountry;
   }
   $chart = array(
@@ -60,57 +60,18 @@ function lbvc_plugin_table_formatter($VCC) {
   );
 
   $fields = lbvc_plugin_table_form($VCC, $params);
-  if (count($fields) > 0) {
-    $form = array(
-      '#attributes' => array(
-        'id' => $VCC['vid'] . '-form',
-        'class' => 'view-coda-form form-inline',
-      ),
-      '#type' => 'container',
-      'items' => array(
-        '#attributes' => array(
-          'class' => 'row',
-        ),
-        '#type' => 'container',
-        'items' => $fields
-      ),
-    );
-    return array($chart, $form);
+  if (sizeof($fields) == 0) {
+    return $chart;
   }
-  return $chart;
+  $form = lbvc_plugin_ui_form_wrapper($VCC, $fields, (isset($params->allowAdd) ? 'add' : 'update'));
+  return array($chart, $form);
 }
 
 function lbvc_plugin_table_form($VCC, $params) {
-  $ields = array();
+  $fields = array();
 
   if (isset($params->allowAdd)) {
-    // Select menu with all 'available' indicators
-    $opts = array();
-    $fields['indicator'] = form_process_select(array(
-      '#id' => $VCC['vid']. '-indicator',
-      '#name' => 'indicator',
-      '#type' => 'select',
-      '#empty_option' => t('Select an indicator'),
-      '#options' => $opts,
-    ));
-    $fields['year'] = form_process_select(array(
-      '#id' => $VCC['vid']. '-year',
-      '#name' => 'year',
-      '#type' => 'select',
-      '#empty_option' => t('Year'),
-      '#options' => []
-    ));
-    $fields['submit'] = array(
-        '#attributes' => array(
-          'class' => 'action',
-        ),
-        '#type' => 'container',
-        'items' => array(
-          '#name' => 'add',
-          '#type' => 'submit',
-          '#value' => t('Add'),
-        )
-    );
+    $fields = lbvc_plugin_ui_form_options($VCC, $params);
   }
   return $fields;
 }

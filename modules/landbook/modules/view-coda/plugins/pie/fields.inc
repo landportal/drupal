@@ -56,15 +56,17 @@ function lbvc_plugin_pie_formatter($VCC, $form=NULL) {
 
 
 function lbvc_plugin_pie_form($VCC, $params) {
-  $fields = array();
+  $fields = lbvc_plugin_ui_form_options($VCC, $params);
 
   if (isset($params->loadCountries)) {
-    $fields['country'] = array(
-      '#id' => $VCC['vid']. '-country',
-      '#name' => 'country',
-      '#type' => 'select',
+    $fields['country'] += array(
+  /*     '#id' => $VCC['vid']. '-country', */
+  /*     '#multiple' => false, */
+  /*     '#required' => false, */
+  /*     '#name' => 'country', */
+  /*     '#type' => 'select', */
       '#title' => t('Country'),
-      '#options' => array(),
+  /*     '#options' => array(), */
     );
   }
 
@@ -83,6 +85,8 @@ function lbvc_plugin_pie_form($VCC, $params) {
     /* } */
     $fields['indicator'] = array(
       '#id' => $VCC['vid']. '-indicator',
+      '#multiple' => false,
+      '#required' => false,
       '#name' => 'indicator',
       '#type' => 'select',
       '#title' => t('Show'),
@@ -90,20 +94,20 @@ function lbvc_plugin_pie_form($VCC, $params) {
     );
   }
 
-  $form = array(
-    '#attributes' => array(
-      'id' => $VCC['vid'] . '-form',
-      'class' => 'view-coda-form form-inline',
-    ),
-    '#type' => 'container',
-    'items' => array(
-      '#attributes' => array(
-        'class' => 'row',
-      ),
-      '#type' => 'container',
-      'items' => $fields
-    ),
-  );
+  /* $form = array( */
+  /*   '#attributes' => array( */
+  /*     'id' => $VCC['vid'] . '-form', */
+  /*     'class' => 'view-coda-form form-inline', */
+  /*   ), */
+  /*   '#type' => 'container', */
+  /*   'items' => array( */
+  /*     '#attributes' => array( */
+  /*       'class' => 'row', */
+  /*     ), */
+  /*     '#type' => 'container', */
+  /*     'items' => $fields */
+  /*   ), */
+  /* ); */
 //  dpm($form, 'builda pie');
   return $fields;
 }
