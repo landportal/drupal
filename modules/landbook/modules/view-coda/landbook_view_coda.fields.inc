@@ -155,9 +155,11 @@ function landbook_view_coda_field_formatter_view($entity_type, $entity, $field, 
       'jsid'  => 'VC' . $entity->item_id,
       'indicators' => array(),
     );
-    foreach ($entity->field_indicators[$langcode] as $indicator) {
-      $lbid = $indicator['entity']->field_id[$langcode][0]['value'];
-      $VCC['indicators'][] = $indicator['entity'];
+    if ($entity->field_indicators) {
+      foreach ($entity->field_indicators[$langcode] as $indicator) {
+        $lbid = $indicator['entity']->field_id[$langcode][0]['value'];
+        $VCC['indicators'][] = $indicator['entity'];
+      }
     }
     include_once 'plugins/' . $VCC['type'] . '/fields.inc';
     $fxptr = 'lbvc_plugin_' . $VCC['type'] . '_formatter';
