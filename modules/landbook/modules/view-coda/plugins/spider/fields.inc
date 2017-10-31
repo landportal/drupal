@@ -24,19 +24,8 @@ function lbvc_plugin_spider_params($VCC) {
 
 function lbvc_plugin_spider_formatter($VCC, $form=NULL) {
   $params = lbvc_plugin_spider_params($VCC);
-  // All vis should have those
   $params->target = '#' . $VCC['vid'];
-
-  // TMP hack to pick iso code the old way (for CP)
-  $visP = substr(json_encode($params), 0, -1);
-  $visP .= ', iso3: Drupal.settings.landbook.countryCode ? Drupal.settings.landbook.countryCode : "" }';
-
-  $js = $VCC['jsid'] . ' = new lbvisSpider(LBV, ' . $visP . '); ' . $VCC['jsid'] . '.init();';
-
-  // DEBUG
-  if (module_exists('devel')) {
-    //dpm($VCC, 'Spider opts');
-  }
+  $js = $VCC['jsid'] . ' = new lbvisSpider(LBV, ' . json_encode($params) . '); ' . $VCC['jsid'] . '.init();';
 
   // The visualization
   $value = t('Loading spider chart');
@@ -49,6 +38,7 @@ function lbvc_plugin_spider_formatter($VCC, $form=NULL) {
     '#attached' => array(
       'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
       'js' =>  array(array(
+        'type' => JS_DEFAULT,
         'type' => 'inline',
         'data' => lbvc__js_ready($js)
       ))

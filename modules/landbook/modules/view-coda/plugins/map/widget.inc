@@ -11,35 +11,56 @@
 // Returns a list of boolean options understood by js-view-coda projection (vis. type)
 function lbvc_plugin_map_options() {
   return array(
-    'legend' => 'Show legend',
-    'tooltip' => 'Show tooltip',
-    'nav' => 'Allow zoom (in/out)',
-    //'loadMain' => 'Load main indicator data',
     'loadIndicators' => 'Load available indicators',
-    'loadCountries' => 'Load available countries',
     'loadYears' => 'Load available years',
+    'hideTitle' => 'Hide chart title',
   );
 }
 
+// Returns a list map-specific options
+function lbvc_plugin_map_options_map() {
+  return array(
+    'legend' => 'Show legend',
+    //'tooltip' => 'Show tooltip',
+    'nav' => 'Allow zoom (in/out)',
+    'click' => 'Allow click (go to the Country page)',
+  );
+}
+
+function lbvc_plugin_checkboxes_values($item) {
+  return $item ? TRUE : NULL;
+}
 
 function lbvc_plugin_map_widget_form($item) {
-//  if (module_exists('devel')) dpm($item, 'charts rt');
   $v = json_decode($item['vcc']);
-  //dpm($v, 'args');
+  if (!isset($v->map)) {
+//    dpm($v, 'args');
+    $v->map = [];
+  }
+//  dpm(array_map("lbvc_plugin_checkboxes_values", (array) $v->map), 'map opts');
 
   $options = lbvc_plugin_map_options();
-  $values = array();
-  // opts should be provided / streamlined with js-view-coda lib
-  foreach($options as $opt => $desc) {
-    if (isset($v->$opt)) $values[] = $opt;
-  }
   $forms = array(
-    'options' => array(
-      '#title' => t('MAP stuff'),
+    'options' => form_process_checkboxes(array(
       '#type' => 'checkboxes',
+      '#attributes' => [],
+      //'#value' => array(),
+      '#title' => t('MAP Options'),
+      //'#parent' => 'options',
       '#options' => $options,
-      '#default_value' => $values,
-    ),
+      '#value' => (array) $v,
+    )),
+    'map' => form_process_checkboxes(array(
+      '#type' => 'checkboxes',
+      '#attributes' => [],
+      //'#value' => array(),
+      '#title' => t('MAP Params'),
+      '#tree' => TRUE,
+      '#parent' => 'options',
+      // ???
+      '#value' => array_map("lbvc_plugin_checkboxes_values", (array) $v->map),
+      '#options' => lbvc_plugin_map_options_map(),
+    )),
     'year' => array(
       '#title' => t('Year'),
       '#type' => 'textfield',
@@ -54,15 +75,9 @@ function lbvc_plugin_map_widget_form($item) {
   return $forms;
 }
 
-/* // Returns a string */
-/* function lbvc_plugin_map_field_presave($item) { */
-/*   $options = $item['vis']; */
-/*   /\* unset($options['vcc']); *\/ */
-/*   /\* unset($options['type']); *\/ */
-/*   unset($options['options']); */
-/*   foreach(lbvc_plugin_map_options() as $opt => $desc) { */
-/*     if ($item['vis']['options'][$opt]) $options[$opt] = true; */
-/*   } */
-/*   dpm($options, 'charts opts'); */
-/*   return json_encode($options);//['vis']); */
-/* } */
+// Process map-specific options
+function lbvc_plugin_map_field_presave(&$options, $item) {
+  foreach(lbvc_plugin_map_options_map() as $opt => $desc) {
+    if (!$options['map'][$opt]) unset($options['map'][$opt]);
+  }
+}

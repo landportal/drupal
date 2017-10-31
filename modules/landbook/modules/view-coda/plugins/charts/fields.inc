@@ -27,6 +27,8 @@ function lbvc_plugin_charts_formatter($VCC) {
     '#attached' => array(
       'library' => array(array('landbook_view_coda', 'lbvis.' . $VCC['type'])),
       'js' =>  array(array(
+        'type' => JS_DEFAULT,
+        'weight' => 11,
         'type' => 'inline',
         'data' => lbvc__js_ready($js)
       ))
@@ -38,7 +40,7 @@ function lbvc_plugin_charts_formatter($VCC) {
   if (sizeof($fields) == 0) {
     return $chart;
   }
-  $form = lbvc_plugin_ui_form_wrapper($VCC, $fields, (isset($params->loadCountries) ? 'add' : 'update'));
+  $form = lbvc_plugin_ui_form_wrapper($VCC, $fields);//, (isset($params->loadCountries) ? 'add' : 'update'));
   // for layout/style purpose
   if (isset($params->loadCountries)) $form['#attributes']['class'][] = 'form-add';
   return array($form, $chart);
@@ -46,7 +48,10 @@ function lbvc_plugin_charts_formatter($VCC) {
 
 
 function lbvc_plugin_charts_form($VCC, $params) {
-  $fields = lbvc_plugin_ui_form_options($VCC, $params, array('range' => true));
+  $fields = lbvc_plugin_ui_form_options($VCC, $params);
+  //, array('range' => true));
+  // Remove 'year' field for now
+  if($params->loadYears) unset($fields['year']);
 
   if (isset($params->loadTree) && count($params->ttop) > 1) {
     $opts = array();

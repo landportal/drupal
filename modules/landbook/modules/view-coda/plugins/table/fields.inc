@@ -28,21 +28,27 @@ function lbvc_plugin_table_formatter($VCC) {
   $attr = json_encode($params);
   $js = $VCC['jsid'] . ' = new lbvisTable(LBV, ' . $attr . '); ' . $VCC['jsid'] . '.init();';
 
-  $valueOverall = '<table class="table"><thead><tr>
+  $value = '<table class="table">';
+
+  if (isset($params->iso3)) {
+    $value .= '<thead><tr>
+           <th>Indicator</th>
+           <th>Years</th>
+           <th>Value</th>
+           </tr></thead>';
+  } else {
+    $value .= '<thead><tr>
            <th>Indicator</th>
            <th>Min-Max<br/>Number of years</th>
            <th><span class="hidden-xs">Countries</span><br/><acronym title="Number of Observations">Obs</acronym> missing</th>
            <th>Min / Max<span class="hidden-xs"> Value</span></th>
-           </tr></thead><tbody></tbody></table>';
-  $valueCountry = '<table class="table"><thead><tr>
-           <th>Indicator</th>
-           <th>Years</th>
-           <th>Value</th>
-           </tr></thead><tbody></tbody></table>';
-  $value = $valueOverall;
-  if (isset($params->iso3)) {
-    $value = $valueCountry;
+           </tr></thead>';
   }
+
+  $value .= '<tbody>';
+  foreach ($params->cache as $i) { $value .= '<tr><td><span class="indicator">' . $i['render'] . '</span></td></tr>'; }
+  $value .= '</tbody></table>';
+
   $chart = array(
     '#type' => 'html_tag',
     '#tag' => 'div',
