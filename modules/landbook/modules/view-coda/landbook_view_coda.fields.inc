@@ -69,10 +69,12 @@ function landbook_view_coda_field_presave($entity_type, $entity, $field, $instan
     // Visualization-specific options
     $fxptr = 'lbvc_plugin_' . $item['type'] . '_field_presave';
     if (function_exists($fxptr)) {
-      $options += $fxptr($item);
+      $fxptr($options, $item);
     }
+    if (!$options['year']) unset($options['year']);
+    if (!$options['iso3']) unset($options['iso3']);
     // Encode everything as string
-    //dpm($options, 'encode');
+    dpm($options, 'encode');
     $items[$delta]['vcc'] = json_encode($options);
   }
   //if (module_exists('devel')) dpm($items, 'presave');

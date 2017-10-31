@@ -23,6 +23,8 @@ function landbook_view_coda_library() {
       $PATH . '/js/lbvis.js' => array(),
       $PATH . '/js/lbvis.data.js' => array(),
       array(
+        'weight' => 0,
+        'group' => JS_DEFAULT,
         'type' => 'inline',
         // TODO: Drupal variable for LB LOD endpoint
         'data' => "var $ = jQuery.noConflict(); $(document).ready(function($) { LBV = new lbvis({prefix: '/sparql?query='}); });"
@@ -40,11 +42,13 @@ function landbook_view_coda_library() {
     'version' => '0.0.1',
     'js' => array(
       $PATH . '/js/vendor/linkify.min.js' => array('weight' => 0),
-      $PATH . '/js/vendor/linkify-jquery.min.js' => array('weight' => 0),
-      $PATH . '/js/vendor/highcharts.js' => array('weight' => 0),
-      $PATH . '/js/vendor/modules/stock.js' => array('weight' => 1),
-      $PATH . '/js/vendor/modules/map.js' => array('weight' => 1),
-      $PATH . '/js/vendor/highcharts-more.js' => array('weight' => 2),
+      $PATH . '/js/vendor/linkify-jquery.min.js' => array('weight' => 1),
+      $PATH . '/js/vendor/highcharts.js' => array('weight' => 0, 'group' => JS_LIBRARY),
+      $PATH . '/js/vendor/modules/stock.js' => array('weight' => 1, 'group' => JS_LIBRARY),
+      $PATH . '/js/vendor/modules/map.js' => array('weight' => 1, 'group' => JS_LIBRARY),
+      $PATH . '/js/vendor/modules/exporting.js' => array('weight' => 1, 'group' => JS_LIBRARY),
+      //$PATH . '/js/vendor/modules/offline-exporting.js' => array('weight' => 1, 'group' => JS_LIBRARY),
+      $PATH . '/js/vendor/highcharts-more.js' => array('weight' => 1, 'group' => JS_LIBRARY),
     ),
   );
 
