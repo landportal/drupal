@@ -418,10 +418,10 @@ $handler->display->display_options['filters']['field_related_topics_tid_entityre
 );
 $handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter_1']['reference_display'] = 'thematic:ref_concepts';
 
-/* Display: Partners */
-$handler = $view->new_display('block', 'Partners', 'partners');
+/* Display: Organizations */
+$handler = $view->new_display('block', 'Organizations', 'partners');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Partners';
+$handler->display->display_options['title'] = 'Organizations';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'partners view-grid-3';
 $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -503,14 +503,6 @@ $handler->display->display_options['filters']['field_related_topics_tid_entityre
   3 => array(),
 );
 $handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter_1']['reference_display'] = 'thematic:ref_concepts';
-/* Filter criterion: Content: Organization relationship (field_organization_relationship) */
-$handler->display->display_options['filters']['field_organization_relationship_tid']['id'] = 'field_organization_relationship_tid';
-$handler->display->display_options['filters']['field_organization_relationship_tid']['table'] = 'field_data_field_organization_relationship';
-$handler->display->display_options['filters']['field_organization_relationship_tid']['field'] = 'field_organization_relationship_tid';
-$handler->display->display_options['filters']['field_organization_relationship_tid']['value'] = array(
-  0 => '6119',
-);
-$handler->display->display_options['filters']['field_organization_relationship_tid']['vocabulary'] = 'organization_relation';
 
 /* Display: Library */
 $handler = $view->new_display('block', 'Library', 'library');
@@ -608,7 +600,7 @@ $handler->display->display_options['filters']['field_doc_type_tid_entityreferenc
 );
 $handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['expose']['hide_empty_filter'] = FALSE;
 $handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['reference_display'] = 'library:ref_types';
-/* Filter criterion: Content: License of the resource (field_doc_licencing) (reference filter) */
+/* Filter criterion: Field: License (field_doc_licencing) (reference filter) */
 $handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['id'] = 'field_doc_licencing_tid_entityreference_filter';
 $handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['table'] = 'field_data_field_doc_licencing';
 $handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['field'] = 'field_doc_licencing_tid_entityreference_filter';

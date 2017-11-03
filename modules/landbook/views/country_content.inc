@@ -198,10 +198,10 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
 
-/* Display: Partners */
-$handler = $view->new_display('block', 'Partners', 'partners');
+/* Display: Organizations */
+$handler = $view->new_display('block', 'Organizations', 'partners');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Partners';
+$handler->display->display_options['title'] = 'Organizations';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'view-grid-3';
 $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -233,15 +233,7 @@ $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
   'organization' => 'organization',
 );
-/* Filter criterion: Content: Organization relationship (field_organization_relationship) */
-$handler->display->display_options['filters']['field_organization_relationship_tid']['id'] = 'field_organization_relationship_tid';
-$handler->display->display_options['filters']['field_organization_relationship_tid']['table'] = 'field_data_field_organization_relationship';
-$handler->display->display_options['filters']['field_organization_relationship_tid']['field'] = 'field_organization_relationship_tid';
-$handler->display->display_options['filters']['field_organization_relationship_tid']['value'] = array(
-  6119 => '6119',
-);
-$handler->display->display_options['filters']['field_organization_relationship_tid']['type'] = 'select';
-$handler->display->display_options['filters']['field_organization_relationship_tid']['vocabulary'] = 'organization_relation';
+$handler->display->display_options['filters']['type']['group'] = 1;
 
 /* Display: Library */
 $handler = $view->new_display('block', 'Library', 'library');
