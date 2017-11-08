@@ -1,11 +1,11 @@
 <?php
 
 $rule = '{ "workflow_published_contrib" : {
-    "LABEL" : "publish contrib",
+    "LABEL" : "Published contributions",
     "PLUGIN" : "reaction rule",
     "WEIGHT" : "-1",
     "OWNER" : "rules",
-    "TAGS" : [ "workflow", "content", "contrib" ],
+    "TAGS" : [ "content", "contrib", "workflow" ],
     "REQUIRES" : [ "rules", "rules_i18n" ],
     "ON" : { "node_insert" : [] },
     "IF" : [
@@ -40,4 +40,3 @@ $rule = '{ "workflow_published_contrib" : {
     ]
   }
 }';
-
