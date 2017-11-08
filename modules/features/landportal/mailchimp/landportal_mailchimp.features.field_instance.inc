@@ -24,15 +24,19 @@ function landportal_mailchimp_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'module' => 'mailchimp_lists',
+        'settings' => array(
+          'interest_groups' => array(),
+          'show_interest_groups' => FALSE,
+        ),
+        'type' => 'mailchimp_lists_subscribe_default',
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -50,13 +54,9 @@ function landportal_mailchimp_field_default_field_instances() {
       'interest_groups_title' => 'Interest Groups',
       'mergefields' => array(
         'EMAIL' => '[user:mail]',
-        'FNAME' => '',
-        'LNAME' => '',
+        'FNAME' => '[user:profile-main:field-firstname]',
+        'LNAME' => '[user:profile-main:field-lastname]',
         'MMERGE3' => '',
-        'MMERGE4' => '',
-        'MMERGE5' => '',
-        'MMERGE6' => '',
-        'MMERGE7' => '',
         'advanced' => 0,
       ),
       'options' => array(
@@ -72,7 +72,72 @@ function landportal_mailchimp_field_default_field_instances() {
       'module' => 'mailchimp_lists',
       'settings' => array(),
       'type' => 'mailchimp_lists_select',
-      'weight' => 14,
+      'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_mc_lod'.
+  $field_instances['user-user-field_mc_lod'] = array(
+    'bundle' => 'user',
+    'default_value' => array(
+      0 => array(
+        'subscribe' => 0,
+        'is_default' => TRUE,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'mailchimp_lists',
+        'settings' => array(
+          'interest_groups' => array(),
+          'show_interest_groups' => FALSE,
+        ),
+        'type' => 'mailchimp_lists_subscribe_default',
+        'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_mc_lod',
+    'label' => 'Linked Open Data (LOD) News',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'interest_groups_title' => 'Interest Groups',
+      'mergefields' => array(
+        'EMAIL' => '[user:mail]',
+        'FNAME' => '[user:profile-main:field-firstname]',
+        'LNAME' => '[user:profile-main:field-lastname]',
+        'advanced' => 0,
+      ),
+      'options' => array(
+        'interest_groups' => array(),
+        'subscribe' => FALSE,
+      ),
+      'show_interest_groups' => 1,
+      'unsubscribe_on_delete' => 1,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'mailchimp_lists',
+      'settings' => array(),
+      'type' => 'mailchimp_lists_select',
+      'weight' => 18,
     ),
   );
 
@@ -92,6 +157,9 @@ function landportal_mailchimp_field_default_field_instances() {
             'c735b02f09' => 'c735b02f09',
             'ca9ec347d3' => 0,
           ),
+          'f69c6509ad' => array(
+            '8321154d75' => 0,
+          ),
         ),
         'is_default' => TRUE,
       ),
@@ -101,15 +169,19 @@ function landportal_mailchimp_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
+        'module' => 'mailchimp_lists',
+        'settings' => array(
+          'interest_groups' => array(),
+          'show_interest_groups' => FALSE,
+        ),
+        'type' => 'mailchimp_lists_subscribe_default',
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -124,30 +196,20 @@ function landportal_mailchimp_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'interest_groups_title' => 'Subscribe to',
+      'interest_groups_title' => 'Preferences',
       'mergefields' => array(
         'EMAIL' => '[user:mail]',
         'FNAME' => '[user:profile-main:field-firstname]',
         'LNAME' => '[user:profile-main:field-lastname]',
-        'MMERGE3' => '',
         'MMERGE4' => '',
         'MMERGE5' => '',
         'MMERGE6' => '',
-        'MMERGE7' => '',
-        'MMERGE8' => '',
-        'MMERGE9' => '',
-        'MMERGE10' => '',
-        'MMERGE11' => '',
         'MMERGE12' => '',
         'MMERGE13' => '',
         'MMERGE14' => '',
         'MMERGE15' => '',
         'MMERGE16' => '',
         'MMERGE17' => '',
-        'MMERGE18' => '',
-        'MMERGE19' => '',
-        'MMERGE20' => '',
-        'MMERGE21' => '',
         'advanced' => 0,
       ),
       'options' => array(
@@ -155,7 +217,7 @@ function landportal_mailchimp_field_default_field_instances() {
         'subscribe' => FALSE,
       ),
       'show_interest_groups' => 1,
-      'unsubscribe_on_delete' => 1,
+      'unsubscribe_on_delete' => 0,
       'user_register_form' => 1,
     ),
     'widget' => array(
@@ -163,7 +225,151 @@ function landportal_mailchimp_field_default_field_instances() {
       'module' => 'mailchimp_lists',
       'settings' => array(),
       'type' => 'mailchimp_lists_select',
-      'weight' => 13,
+      'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_mc_sdgs'.
+  $field_instances['user-user-field_mc_sdgs'] = array(
+    'bundle' => 'user',
+    'default_value' => array(
+      0 => array(
+        'subscribe' => 0,
+        'is_default' => TRUE,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'mailchimp_lists',
+        'settings' => array(
+          'interest_groups' => array(),
+          'show_interest_groups' => FALSE,
+        ),
+        'type' => 'mailchimp_lists_subscribe_default',
+        'weight' => 10,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_mc_sdgs',
+    'label' => 'Land and the Sustainable Development Goals (SDGs)',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'interest_groups_title' => 'Interest Groups',
+      'mergefields' => array(
+        'EMAIL' => '[user:mail]',
+        'FNAME' => '[user:profile-main:field-firstname]',
+        'LNAME' => '[user:profile-main:field-lastname]',
+        'advanced' => 0,
+      ),
+      'options' => array(
+        'interest_groups' => array(),
+        'subscribe' => FALSE,
+      ),
+      'show_interest_groups' => 0,
+      'unsubscribe_on_delete' => 0,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'mailchimp_lists',
+      'settings' => array(),
+      'type' => 'mailchimp_lists_select',
+      'weight' => 19,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_mc_users'.
+  $field_instances['user-user-field_mc_users'] = array(
+    'bundle' => 'user',
+    'default_value' => array(
+      0 => array(
+        'subscribe' => 1,
+        'interest_groups' => array(
+          '7f9a13b9f3' => array(
+            '8e4c2fcd12' => 0,
+            '14b097b40a' => '14b097b40a',
+            'cae021e16e' => 0,
+            'f474c3eaa3' => 0,
+          ),
+          'c1340ebfba' => array(
+            '7beb2de1f2' => 0,
+            '8a7dbaf285' => '8a7dbaf285',
+            'a0e1a92145' => 0,
+          ),
+        ),
+        'is_default' => TRUE,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'mailchimp_lists',
+        'settings' => array(
+          'interest_groups' => array(),
+          'show_interest_groups' => FALSE,
+        ),
+        'type' => 'mailchimp_lists_subscribe_default',
+        'weight' => 11,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_mc_users',
+    'label' => 'MC Users',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'interest_groups_title' => 'List settings',
+      'mergefields' => array(
+        'CLIST' => '[user:profile-main:field-location:country_name]',
+        'EMAIL' => '[user:mail]',
+        'FNAME' => '[user:profile-main:field-firstname]',
+        'LNAME' => '[user:profile-main:field-lastname]',
+        'advanced' => 1,
+      ),
+      'options' => array(
+        'interest_groups' => array(),
+        'subscribe' => FALSE,
+      ),
+      'show_interest_groups' => 1,
+      'unsubscribe_on_delete' => 1,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'mailchimp_lists',
+      'settings' => array(),
+      'type' => 'mailchimp_lists_select',
+      'weight' => 44,
     ),
   );
 
@@ -171,6 +377,9 @@ function landportal_mailchimp_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('LEGEND Bulletin');
   t('Land Portal Newsletter');
+  t('Land and the Sustainable Development Goals (SDGs)');
+  t('Linked Open Data (LOD) News');
+  t('MC Users');
 
   return $field_instances;
 }

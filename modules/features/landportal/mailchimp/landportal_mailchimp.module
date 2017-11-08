@@ -6,24 +6,127 @@
 
 include_once 'landportal_mailchimp.features.inc';
 
-/* // At user registration */
-/* function mailchimp_feature_form_user_register_form_alter(&$form, &$form_state,$form_id){ */
-/*   // Validate MC subscription */
-/*   $form['#validate'][]='mailchimp_feature_validate_mailchimp_lists_user_subscribe'; */
-/* } */
+/**
+ * Implements hook_rules_action_info().
+ *
+ * This rule intends to update MC mergevars after a profile have been updated (or created?)
+ *
+ * On the Land Portal we store 'users' (human) information on the profile2 entity, linked to a Drupal user account.
+ * The MC fields a typically attached the account entity, thus making it impossible to use user's profile tokens
+ *  (or location as an entity attached to a profile) to update mailchimp fields.
+ * Right thing would probably simply to wait after everty sub-entities of 'user' have created/updated their stuff,
+ * THEN do update the MC mergevars values.
+ *
+ * Many related issues on Drupal site:
+ * https://www.drupal.org/node/1097684 is a good start
+ *
+ */
+function landportal_mailchimp_rules_action_info() {
+  $items = array();
+  $items['landportal_mailchimp_user_update'] = array(
+    'label' => t('Update entity from Drupal to a MailChimp list'),
+    'parameter' => array(
+      'entity' => array(
+        'type' => 'entity',
+        'label' => t('Entity'),
+        'description' => t('The entity to update'),
+      ),
+      'field' => array(
+        'type' => '*',
+        'label' => t('MailChimp List Subscription Field'),
+        'description' => t('Subscription Field connected to the desired Mailchimp List.'),
+        'restriction' => 'selector',
+        'wrapped' => TRUE,
+        'allow null' => FALSE,
+      ),
+    ),
+    'group' => t('MailChimp'),
+    'access callback' => 'landportal_mailchimp_rules_access_callback',
+    'base' => 'landportal_mailchimp_rules_action_entity_update',
+  );
+  return $items;
+}
 
-/* // Check that the user chose at least one language? */
-/* function landportal_mailchimp_validate_mailchimp_lists_user_subscribe($form, &$form_state){ */
-/*   if($form_state['values']['mailchimp_lists']['mailchimp_land_portal_news_digest']['subscribe'] == 1){ */
-/*     $languages=$form_state['values']['mailchimp_lists']['mailchimp_land_portal_news_digest']['interest_groups'][1]; */
-/*     $flag = false; */
-/*     foreach($languages as $lang){ */
-/*       if($lang !== 0){ */
-/*         $flag = TRUE; */
-/*       } */
-/*     } */
-/*     if($flag == false){ */
-/*       form_set_error('', 'Please select language'); */
-/*     } */
-/*   } */
-/* } */
+/**
+ * Action callback: Subscribe an entity to a list.
+ */
+function landportal_mailchimp_rules_action_entity_update($entitywrapper, $fieldwrapper) {
+  $field_info = $fieldwrapper->info();
+  $field = $field_info['field'];
+  $instance = $field_info['instance'];
+  $entity = $entitywrapper->value();
+  $list_id = $field['settings']['mc_list_id'];
+  $merge_vars = mailchimp_mergevars_populate($instance['settings']['mergefields'], $entity, 'user', $list_id);
+//  dpm($merge_vars, 'MV for ' . $entity->mail);
+  $upd = mailchimp_update_member_process($list_id, $entity->mail, $merge_vars);
+//  dpm($upd, 'update result');
+}
+
+/**
+ * Access callback for the rules integration.
+ */
+function landportal_mailchimp_rules_access_callback() {
+  return user_access('administer mailchimp');
+}
+
+
+function landportal_mailchimp_default_rules_configuration() {
+    $config = array(
+      'mailchimp_sync_test' => rules_import('{ "mailchimp_sync_test" : {
+    "LABEL" : "Mailchimp sync test",
+    "PLUGIN" : "reaction rule",
+    "OWNER" : "rules",
+    "REQUIRES" : [ "landportal_mailchimp", "profile2" ],
+    "ON" : { "profile2_update" : [] },
+    "DO" : [
+      { "landportal_mailchimp_user_update" : {
+          "entity" : [ "profile2:user" ],
+          "field" : [ "profile2:user:field-mc-test" ]
+        }
+      }
+    ]
+  }
+}'),
+      'mailchimp_sync_users' => rules_import('{ "mailchimp_sync_users" : {
+    "LABEL" : "Mailchimp sync users",
+    "PLUGIN" : "reaction rule",
+    "OWNER" : "rules",
+    "REQUIRES" : [ "landportal_mailchimp", "profile2" ],
+    "ON" : { "profile2_update" : [] },
+    "DO" : [
+      { "landportal_mailchimp_user_update" : {
+          "entity" : [ "profile2:user" ],
+          "field" : [ "profile2:user:field-mc-users" ]
+        }
+      }
+    ]
+  }
+}'),
+      'mailchimp_sync_newsletter' => rules_import('{ "mailchimp_sync_newsletter" : {
+    "LABEL" : "Mailchimp sync newsletter",
+    "PLUGIN" : "reaction rule",
+    "OWNER" : "rules",
+    "REQUIRES" : [ "landportal_mailchimp", "profile2" ],
+    "ON" : { "profile2_update" : [] },
+    "DO" : [
+      { "landportal_mailchimp_user_update" : {
+          "entity" : [ "profile2:user" ],
+          "field" : [ "profile2:user:field-mc-newsletter" ]
+        }
+      }
+    ]
+  }
+}')
+    );
+    
+    /* $rules_path = dirname(__FILE__) . '/rules'; */
+    /* $files = file_scan_directory($rules_path, '/\.inc$/'); */
+    /* foreach ($files as $filepath => $file) { */
+    /*     require $filepath; */
+    /*     if (isset($rule)) { */
+    /*       //error_log('RULES: ' . $file->name); */
+    /*         $config[$file->name] = rules_import($rule); */
+    /*     } */
+    /* } */
+    return $config;
+}

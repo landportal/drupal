@@ -18,23 +18,30 @@ function landportal_mailchimp_field_group_info() {
   $field_group->entity_type = 'user';
   $field_group->bundle = 'user';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_settings';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Mailing lists',
-    'weight' => '6',
+    'weight' => '3',
     'children' => array(
-      0 => 'field_mc_legend',
-      1 => 'field_mc_newsletter',
+      0 => 'field_mc_newsletter',
+      1 => 'field_mc_legend',
+      2 => 'field_mc_lod',
+      3 => 'field_mc_sdgs',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Mailing lists',
       'instance_settings' => array(
         'required_fields' => 1,
+        'id' => '',
         'classes' => '',
         'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
       ),
-      'formatter' => 'closed',
+      'formatter' => 'collapsed',
     ),
   );
   $field_groups['group_lists|user|user|form'] = $field_group;
