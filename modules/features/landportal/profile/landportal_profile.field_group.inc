@@ -82,9 +82,9 @@ function landportal_profile_field_group_info() {
   $field_group->parent_name = 'group_admin';
   $field_group->data = array(
     'label' => 'Account admin',
-    'weight' => '27',
+    'weight' => '7',
     'children' => array(
-      0 => 'field_mc_users',
+      0 => 'field_mc_test',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -112,8 +112,10 @@ function landportal_profile_field_group_info() {
     'label' => 'LP admin',
     'weight' => '3',
     'children' => array(
-      0 => 'masquerade',
-      1 => 'metatags',
+      0 => 'field_mc_test',
+      1 => 'field_mc_users',
+      2 => 'masquerade',
+      3 => 'metatags',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
@@ -170,7 +172,7 @@ function landportal_profile_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '6',
+    'weight' => '4',
     'children' => array(
       0 => 'field_location',
       1 => 'field_link',
@@ -642,7 +644,7 @@ function landportal_profile_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '5',
+    'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
@@ -662,6 +664,40 @@ function landportal_profile_field_group_info() {
     ),
   );
   $field_groups['group_topics_regions|profile2|main|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_work|profile2|main|default';
+  $field_group->group_name = 'group_work';
+  $field_group->entity_type = 'profile2';
+  $field_group->bundle = 'main';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Work',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_occupation',
+      1 => 'field_orgref',
+      2 => 'field_position',
+      3 => 'field_sector',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-work field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_work|profile2|main|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
