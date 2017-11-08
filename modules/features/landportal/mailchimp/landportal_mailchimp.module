@@ -56,9 +56,11 @@ function landportal_mailchimp_rules_action_entity_update($entitywrapper, $fieldw
   $instance = $field_info['instance'];
   $entity = $entitywrapper->value();
   $list_id = $field['settings']['mc_list_id'];
+  /* dpm($entity); */
+  /* dpm($field_info); */
   $merge_vars = mailchimp_mergevars_populate($instance['settings']['mergefields'], $entity, 'user', $list_id);
 //  dpm($merge_vars, 'MV for ' . $entity->mail);
-  $upd = mailchimp_update_member_process($list_id, $entity->mail, $merge_vars);
+  $upd = mailchimp_update_member_process($list_id, $entity->mail, $merge_vars, $interests, $format);
 //  dpm($upd, 'update result');
 }
 
@@ -118,7 +120,6 @@ function landportal_mailchimp_default_rules_configuration() {
   }
 }')
     );
-    
     /* $rules_path = dirname(__FILE__) . '/rules'; */
     /* $files = file_scan_directory($rules_path, '/\.inc$/'); */
     /* foreach ($files as $filepath => $file) { */
