@@ -96,11 +96,11 @@ function landportal_profile_field_default_field_bases() {
           'hide' => array(
             'additional' => 0,
             'city' => 0,
-            'coords' => 0,
+            'coords' => 'coords',
             'country' => 0,
             'country_name' => 0,
             'locpick' => 0,
-            'map_link' => 0,
+            'map_link' => 'map_link',
             'name' => 0,
             'postal_code' => 0,
             'province' => 0,
@@ -159,25 +159,33 @@ function landportal_profile_field_default_field_bases() {
     'type' => 'location',
   );
 
-  // Exported field_base: 'field_mc_users'.
-  $field_bases['field_mc_users'] = array(
+  // Exported field_base: 'field_occupation'.
+  $field_bases['field_occupation'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_mc_users',
-    'indexes' => array(),
+    'field_name' => 'field_occupation',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
     'locked' => 0,
-    'module' => 'mailchimp_lists',
+    'module' => 'taxonomy',
     'settings' => array(
-      'double_opt_in' => 0,
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'occupation',
+          'parent' => 0,
+        ),
+      ),
       'entity_translation_sync' => FALSE,
-      'mc_list_id' => '7af51d3d66',
-      'profile2_private' => FALSE,
-      'unsubscribe_action' => 'unsubscribe',
+      'options_list_callback' => 'i18n_taxonomy_allowed_values',
+      'profile2_private' => 0,
     ),
     'translatable' => 0,
-    'type' => 'mailchimp_lists_subscription',
+    'type' => 'taxonomy_term_reference',
   );
 
   // Exported field_base: 'field_position'.
@@ -201,6 +209,35 @@ function landportal_profile_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_sector'.
+  $field_bases['field_sector'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_sector',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'organization_types',
+          'parent' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'options_list_callback' => 'i18n_taxonomy_allowed_values',
+      'profile2_private' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
   );
 
   // Exported field_base: 'field_title'.

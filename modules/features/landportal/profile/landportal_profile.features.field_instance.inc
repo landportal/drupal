@@ -111,7 +111,7 @@ function landportal_profile_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 6,
+      'weight' => 10,
     ),
   );
 
@@ -249,7 +249,7 @@ function landportal_profile_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 12,
     ),
   );
 
@@ -407,7 +407,7 @@ function landportal_profile_field_default_field_instances() {
         'size' => 15,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -485,7 +485,7 @@ function landportal_profile_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 7,
+      'weight' => 11,
     ),
   );
 
@@ -530,7 +530,7 @@ function landportal_profile_field_default_field_instances() {
     'field_name' => 'field_location',
     'label' => 'Location',
     'pcp_tag' => 1,
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -540,7 +540,168 @@ function landportal_profile_field_default_field_instances() {
       'module' => 'location_cck',
       'settings' => array(),
       'type' => 'location',
-      'weight' => 4,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-main-field_occupation'.
+  $field_instances['profile2-main-field_occupation'] = array(
+    'bundle' => 'main',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 18,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_occupation',
+    'label' => 'Occupation',
+    'pcp_tag' => 0,
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-main-field_orgref'.
+  $field_instances['profile2-main-field_orgref'] = array(
+    'bundle' => 'main',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 19,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_orgref',
+    'label' => 'Affiliation',
+    'pcp_tag' => 0,
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-main-field_position'.
+  $field_instances['profile2-main-field_position'] = array(
+    'bundle' => 'main',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_position',
+    'label' => 'Position',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 12,
     ),
   );
 
@@ -606,7 +767,7 @@ function landportal_profile_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -667,7 +828,7 @@ function landportal_profile_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -733,7 +894,52 @@ function landportal_profile_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-main-field_sector'.
+  $field_instances['profile2-main-field_sector'] = array(
+    'bundle' => 'main',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 17,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_sector',
+    'label' => 'Sector',
+    'pcp_tag' => 0,
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 14,
     ),
   );
 
@@ -1024,81 +1230,6 @@ function landportal_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_mc_users'.
-  $field_instances['user-user-field_mc_users'] = array(
-    'bundle' => 'user',
-    'default_value' => array(
-      0 => array(
-        'subscribe' => 1,
-        'interest_groups' => array(
-          '7f9a13b9f3' => array(
-            '8e4c2fcd12' => 0,
-            '14b097b40a' => '14b097b40a',
-            'cae021e16e' => 0,
-            'f474c3eaa3' => 0,
-          ),
-          '11d58e9870' => '18b3bcdea3',
-          'c1340ebfba' => array(
-            '7beb2de1f2' => 0,
-            '8a7dbaf285' => '8a7dbaf285',
-            'a0e1a92145' => 0,
-          ),
-        ),
-        'is_default' => TRUE,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'user',
-    'field_name' => 'field_mc_users',
-    'label' => 'MC Users',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'interest_groups_title' => 'Interest Groups',
-      'mergefields' => array(
-        'EMAIL' => '[user:mail]',
-        'FNAME' => '[user:profile-main:field-firstname]',
-        'LNAME' => '[user:profile-main:field-lastname]',
-        'advanced' => 0,
-      ),
-      'options' => array(
-        'interest_groups' => array(),
-        'subscribe' => FALSE,
-      ),
-      'show_interest_groups' => 1,
-      'unsubscribe_on_delete' => 1,
-      'user_register_form' => 0,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'mailchimp_lists',
-      'settings' => array(),
-      'type' => 'mailchimp_lists_select',
-      'weight' => 41,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Affiliation');
@@ -1112,12 +1243,13 @@ function landportal_profile_field_default_field_instances() {
   t('Hide my profile on public listings');
   t('Last name');
   t('Location');
-  t('MC Users');
+  t('Occupation');
   t('Overarching categories');
   t('Picture');
   t('Position');
   t('Public email');
   t('Related concepts');
+  t('Sector');
   t('Tell us where you are based.');
   t('Themes');
   t('Title');

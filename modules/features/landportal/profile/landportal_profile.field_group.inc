@@ -24,9 +24,9 @@ function landportal_profile_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_link',
-      1 => 'field_interests',
-      2 => 'field_email',
-      3 => 'group_topics_regions',
+      1 => 'field_email',
+      2 => 'group_topics_regions',
+      3 => 'group_work',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -72,7 +72,7 @@ function landportal_profile_field_group_info() {
   $field_groups['group_account|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_admin_account|user|user|form';
   $field_group->group_name = 'group_admin_account';
@@ -113,9 +113,7 @@ function landportal_profile_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'masquerade',
-      1 => 'googleanalytics',
-      2 => 'metatags',
-      3 => 'group_admin_account',
+      1 => 'metatags',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
@@ -239,7 +237,7 @@ function landportal_profile_field_group_info() {
   $field_group->parent_name = 'group_topics_regions';
   $field_group->data = array(
     'label' => '',
-    'weight' => '6',
+    'weight' => '13',
     'children' => array(
       0 => 'field_related_topics',
       1 => 'field_related_domains',
@@ -310,9 +308,7 @@ function landportal_profile_field_group_info() {
   $field_group->data = array(
     'label' => 'Location',
     'weight' => '2',
-    'children' => array(
-      0 => 'field_location',
-    ),
+    'children' => array(),
     'format_type' => 'htab',
     'format_settings' => array(
       'label' => 'Location',
@@ -528,7 +524,8 @@ function landportal_profile_field_group_info() {
     'children' => array(
       0 => 'field_image',
       1 => 'field_description',
-      2 => 'group_name',
+      2 => 'field_location',
+      3 => 'group_name',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -556,9 +553,9 @@ function landportal_profile_field_group_info() {
     'label' => 'Settings',
     'weight' => '2',
     'children' => array(
-      0 => 'group_account',
-      1 => 'group_work',
-      2 => 'group_lists',
+      0 => 'group_lists',
+      1 => 'group_account',
+      2 => 'group_work',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -615,7 +612,7 @@ function landportal_profile_field_group_info() {
   $field_group->parent_name = 'group_about';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '4',
+    'weight' => '9',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
@@ -669,6 +666,37 @@ function landportal_profile_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_work|profile2|main|form';
+  $field_group->group_name = 'group_work';
+  $field_group->entity_type = 'profile2';
+  $field_group->bundle = 'main';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_about';
+  $field_group->data = array(
+    'label' => 'Work',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_occupation',
+      1 => 'field_orgref',
+      2 => 'field_position',
+      3 => 'field_sector',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-work field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_work|profile2|main|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_work|user|user|form';
   $field_group->group_name = 'group_work';
   $field_group->entity_type = 'user';
@@ -680,7 +708,6 @@ function landportal_profile_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'og_user_node',
-      1 => 'profile_work_profile',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -708,6 +735,7 @@ function landportal_profile_field_group_info() {
   t('Public profile');
   t('Settings');
   t('Topics and Regions');
+  t('Work');
   t('Work / groups');
 
   return $field_groups;
