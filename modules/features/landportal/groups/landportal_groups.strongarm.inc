@@ -261,7 +261,7 @@ function landportal_groups_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '2',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'listing' => array(
