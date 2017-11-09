@@ -25,8 +25,8 @@ function landportal_profile_field_group_info() {
     'children' => array(
       0 => 'field_link',
       1 => 'field_email',
-      2 => 'group_topics_regions',
-      3 => 'group_work',
+      2 => 'group_work',
+      3 => 'group_topics_regions',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -72,7 +72,7 @@ function landportal_profile_field_group_info() {
   $field_groups['group_account|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_admin_account|user|user|form';
   $field_group->group_name = 'group_admin_account';
@@ -82,9 +82,10 @@ function landportal_profile_field_group_info() {
   $field_group->parent_name = 'group_admin';
   $field_group->data = array(
     'label' => 'Account admin',
-    'weight' => '7',
+    'weight' => '43',
     'children' => array(
-      0 => 'field_mc_test',
+      0 => 'og_user_node',
+      1 => 'masquerade',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -94,7 +95,7 @@ function landportal_profile_field_group_info() {
         'classes' => 'group-admin-account field-group-tab',
         'description' => '',
       ),
-      'formatter' => 'closed',
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_admin_account|user|user|form'] = $field_group;
@@ -112,16 +113,15 @@ function landportal_profile_field_group_info() {
     'label' => 'LP admin',
     'weight' => '3',
     'children' => array(
-      0 => 'field_mc_test',
-      1 => 'field_mc_users',
-      2 => 'masquerade',
-      3 => 'metatags',
+      0 => 'group_seo',
+      1 => 'group_admin_account',
+      2 => 'group_sync',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
-        'classes' => 'group-admin field-group-tabs',
+        'classes' => '',
         'id' => '',
       ),
     ),
@@ -299,7 +299,7 @@ function landportal_profile_field_group_info() {
   $field_groups['group_landvoc|profile2|main|full'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_location|profile2|main|form';
   $field_group->group_name = 'group_location';
@@ -545,6 +545,33 @@ function landportal_profile_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_seo|user|user|form';
+  $field_group->group_name = 'group_seo';
+  $field_group->entity_type = 'user';
+  $field_group->bundle = 'user';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_admin';
+  $field_group->data = array(
+    'label' => 'SEO',
+    'weight' => '44',
+    'children' => array(
+      0 => 'metatags',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-seo field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_seo|user|user|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_settings|user|user|form';
   $field_group->group_name = 'group_settings';
   $field_group->entity_type = 'user';
@@ -570,6 +597,33 @@ function landportal_profile_field_group_info() {
     ),
   );
   $field_groups['group_settings|user|user|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_sync|user|user|form';
+  $field_group->group_name = 'group_sync';
+  $field_group->entity_type = 'user';
+  $field_group->bundle = 'user';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_admin';
+  $field_group->data = array(
+    'label' => 'Sync',
+    'weight' => '45',
+    'children' => array(
+      0 => 'field_mc_users',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-sync field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_sync|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -719,19 +773,20 @@ function landportal_profile_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Work',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-work field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-work field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_work|profile2|main|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_work|user|user|form';
   $field_group->group_name = 'group_work';
@@ -769,7 +824,9 @@ function landportal_profile_field_group_info() {
   t('More about you');
   t('Profile');
   t('Public profile');
+  t('SEO');
   t('Settings');
+  t('Sync');
   t('Topics and Regions');
   t('Work');
   t('Work / groups');
