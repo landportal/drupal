@@ -17,6 +17,7 @@ projects:
   apachesolr:
     patch:
       - "https://www.drupal.org/files/issues/apachesolr-2454167-2-showing.patch"
+      - "https://www.drupal.org/files/issues/apachesolr-add_search_block-326375-46.patch"
   calendar:
     patch:
       - "https://www.drupal.org/files/issues/calendar-2160183-18.patch"
