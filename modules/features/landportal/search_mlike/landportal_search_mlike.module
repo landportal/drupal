@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the MLIKE search feature.
+ */
+
+include_once 'landportal_search_mlike.features.inc';
