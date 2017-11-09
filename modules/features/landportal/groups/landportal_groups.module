@@ -5,3 +5,9 @@
  */
 
 include_once 'landportal_groups.features.inc';
+
+// use LP frontend theme for user and profile stuff
+// (treat following URL as non-admin path
+function landportal_groups_admin_paths_alter(&$paths) {
+  $paths['node/*/group'] = FALSE;
+}
