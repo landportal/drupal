@@ -7,6 +7,11 @@ $context->name = 'partners-mlike-menu';
 $context->description = '';
 $context->tag = 'partners';
 $context->conditions = array(
+  'apachesolr_page' => array(
+    'values' => array(
+      'mlike_search' => 'mlike_search',
+    ),
+  ),
   'context_og_condition_group_node' => array(
     'values' => array(
       41826 => 41826,
