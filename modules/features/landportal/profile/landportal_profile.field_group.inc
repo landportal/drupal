@@ -52,7 +52,7 @@ function landportal_profile_field_group_info() {
   $field_group->parent_name = 'group_settings';
   $field_group->data = array(
     'label' => 'Account settings',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(
       0 => 'field_hide_profile',
       1 => 'ckeditor',
@@ -439,8 +439,7 @@ function landportal_profile_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'group_about',
-      1 => 'group_location',
-      2 => 'group_profile',
+      1 => 'group_profile',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -584,7 +583,6 @@ function landportal_profile_field_group_info() {
     'children' => array(
       0 => 'group_lists',
       1 => 'group_account',
-      2 => 'group_work',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(

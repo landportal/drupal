@@ -123,7 +123,7 @@ function landportal_profile_field_default_field_bases() {
             'country' => array(
               'collect' => 2,
               'default' => 'us',
-              'weight' => -99,
+              'weight' => -100,
             ),
             'locpick' => array(
               'collect' => 0,
@@ -132,7 +132,7 @@ function landportal_profile_field_default_field_bases() {
             'name' => array(
               'collect' => 1,
               'default' => '',
-              'weight' => -100,
+              'weight' => -99,
             ),
             'postal_code' => array(
               'collect' => 1,

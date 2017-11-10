@@ -63,7 +63,7 @@ function landportal_profile_field_default_field_instances() {
         'rows' => 8,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -326,7 +326,7 @@ function landportal_profile_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
@@ -540,7 +540,7 @@ function landportal_profile_field_default_field_instances() {
       'module' => 'location_cck',
       'settings' => array(),
       'type' => 'location',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -647,9 +647,13 @@ function landportal_profile_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
       'weight' => 13,
     ),
   );
