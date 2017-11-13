@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the User Menu Feature feature.
- */
-
-include_once 'user_menu_feature.features.inc';

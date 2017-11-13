@@ -5,9 +5,21 @@
  *
  * The Landportal landdebate
  *
- * Original work by: WESO
- * Drupal refactoring: Jules <jules@ker.bz>
+ * Author: Jules <jules@ker.bz>
  */
+
+/** Land Portal new UX
+ *  cleanup former Debate menu section
+ */
+function landdebate_update_7201() {
+
+  watchdog('Landdebate', 'Removing ' . 'landdebate-menu');
+  menu_delete(array('menu_name' => 'landdebate-menu'));
+
+  // @todo: cleanup (delete) context
+  // debate-menu-context
+}
+
 
 
 
@@ -118,32 +130,32 @@ function landdebate_update_7200() {
  * see also: landdebate.menu.inc
  */
 function landdebate_enable() {
-  watchdog('Landdebate', 'Adding ' . $GLOBALS['landdebate_menu']);
-  $menu = array(
-    'menu_name'		=> $GLOBALS['landdebate_menu'],
-    'title'		=> "Debate with others",
-    'description'       => "Land Debate serves to stimulate debate with others in the land community through sharing news and events, blog posts and online discussions.",
-                             );
-  if (!menu_load($GLOBALS['landdebate_menu'])) {
-    drupal_set_message('Landdebate', 'Adding ' . $GLOBALS['landdebate_menu']);
-    menu_save($menu);
-    cache_clear_all('*', 'cache_menu', TRUE);
-  }
-  cache_clear_all();
+  /* watchdog('Landdebate', 'Adding ' . 'landdebate-menu'); */
+  /* $menu = array( */
+  /*   'menu_name'		=> 'landdebate-menu', */
+  /*   'title'		=> "Debate with others", */
+  /*   'description'       => "Land Debate serves to stimulate debate with others in the land community through sharing news and events, blog posts and online discussions.", */
+  /*                            ); */
+  /* if (!menu_load('landdebate-menu')) { */
+  /*   drupal_set_message('Landdebate', 'Adding ' . 'landdebate-menu'); */
+  /*   menu_save($menu); */
+  /*   cache_clear_all('*', 'cache_menu', TRUE); */
+  /* } */
+  /* cache_clear_all(); */
 
-  // TODO: check about that...
-  $translatables['debate'] = array(
-    t($menu['title']),
-    t($menu['description']),
-  );
+  /* // TODO: check about that... */
+  /* $translatables['debate'] = array( */
+  /*   t($menu['title']), */
+  /*   t($menu['description']), */
+  /* ); */
 }
 
 function landdebate_disable() {
-  watchdog('Landdebate', 'Removing ' . $GLOBALS['landdebate_menu']);
-  menu_delete(array('menu_name' => $GLOBALS['landdebate_menu']));
-  cache_clear_all();
+  /* watchdog('Landdebate', 'Removing ' . 'landdebate-menu'); */
+  /* menu_delete(array('menu_name' => 'landdebate-menu')); */
+  /* cache_clear_all(); */
 
-  $status = variable_get('views_defaults', array());
-  $status['debate'] = TRUE;
-  variable_set('views_defaults', $status);
+  /* $status = variable_get('views_defaults', array()); */
+  /* $status['debate'] = TRUE; */
+  /* variable_set('views_defaults', $status); */
 }

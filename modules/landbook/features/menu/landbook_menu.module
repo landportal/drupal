@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the landbook menu feature.
- */
-
-include_once 'landbook_menu.features.inc';
