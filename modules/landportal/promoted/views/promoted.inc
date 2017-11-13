@@ -167,35 +167,6 @@ $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '2';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
-$handler->display->display_options['defaults']['fields'] = FALSE;
-/* Field: Content: Title */
-$handler->display->display_options['fields']['title']['id'] = 'title';
-$handler->display->display_options['fields']['title']['table'] = 'node';
-$handler->display->display_options['fields']['title']['field'] = 'title';
-$handler->display->display_options['fields']['title']['label'] = '';
-$handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
-$handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
-$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Field: Image */
-$handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-$handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['label'] = '';
-$handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-$handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => 'large',
-  'image_link' => 'content',
-);
-/* Field: Content: Title */
-$handler->display->display_options['fields']['title_1']['id'] = 'title_1';
-$handler->display->display_options['fields']['title_1']['table'] = 'node';
-$handler->display->display_options['fields']['title_1']['field'] = 'title';
-$handler->display->display_options['fields']['title_1']['relationship'] = 'field_thematic_promoted_target_id';
-$handler->display->display_options['fields']['title_1']['label'] = '';
-$handler->display->display_options['fields']['title_1']['exclude'] = TRUE;
-$handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Promoted to front page */
@@ -249,7 +220,7 @@ $handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
 $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -310,7 +281,7 @@ $handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
 $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
