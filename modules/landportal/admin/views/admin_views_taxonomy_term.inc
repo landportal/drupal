@@ -1,14 +1,14 @@
 <?php
 
 $view = new view();
-$view->name = 'admin_views_taxonomy_term2';
+$view->name = 'admin_views_taxonomy_term';
 $view->description = 'Manage tagging, categorization, and classification of your content.';
 $view->tag = 'admin';
 $view->base_table = 'taxonomy_term_data';
-$view->human_name = 'Administration: Taxonomy terms (LP override - doesn\'t work for hierarchy)';
+$view->human_name = 'Administration: Taxonomy terms';
 $view->core = 0;
 $view->api_version = '3.0';
-$view->disabled = TRUE; /* Edit this to true to make a default view disabled initially */
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
 /* Display: Defaults */
 $handler = $view->new_display('default', 'Defaults', 'default');
@@ -136,11 +136,11 @@ $handler->display->display_options['fields']['tid']['label'] = 'Operations';
 $handler->display->display_options['fields']['tid']['alter']['alter_text'] = TRUE;
 $handler->display->display_options['fields']['tid']['alter']['text'] = 'edit';
 $handler->display->display_options['fields']['tid']['alter']['make_link'] = TRUE;
-$handler->display->display_options['fields']['tid']['alter']['path'] = 'taxonomy/term2/[tid]/edit';
+$handler->display->display_options['fields']['tid']['alter']['path'] = 'taxonomy/term/[tid]/edit';
 $handler->display->display_options['fields']['tid']['separator'] = '';
 /* Field: Bulk operations: Taxonomy term */
 $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
-$handler->display->display_options['fields']['views_bulk_operations']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_taxonomy_term';
 $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
@@ -209,6 +209,8 @@ $handler->display->display_options['filters']['name']['expose']['remember'] = TR
 
 /* Display: System */
 $handler = $view->new_display('system', 'System', 'system_1');
+$handler->display->display_options['enabled'] = FALSE;
 $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
 $handler->display->display_options['defaults']['access'] = FALSE;
 $handler->display->display_options['path'] = 'admin/structure/taxonomy/%';
+

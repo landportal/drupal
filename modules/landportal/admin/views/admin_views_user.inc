@@ -120,6 +120,11 @@ $handler->display->display_options['relationships']['profile']['label'] = 'Publi
 $handler->display->display_options['relationships']['profile']['bundle_types'] = array(
   'main' => 'main',
 );
+/* Relationship: Profile: Location (field_location) */
+$handler->display->display_options['relationships']['field_location_lid']['id'] = 'field_location_lid';
+$handler->display->display_options['relationships']['field_location_lid']['table'] = 'field_data_field_location';
+$handler->display->display_options['relationships']['field_location_lid']['field'] = 'field_location_lid';
+$handler->display->display_options['relationships']['field_location_lid']['relationship'] = 'profile';
 /* Field: User: Uid */
 $handler->display->display_options['fields']['uid']['id'] = 'uid';
 $handler->display->display_options['fields']['uid']['table'] = 'users';
@@ -158,8 +163,19 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'override_label' => 0,
     'label' => '',
     'settings' => array(
-      'mailchimp_field' => array(),
+      'mailchimp_field' => array(
+        'field_mc_newsletter' => 'field_mc_newsletter',
+        'field_mc_users' => 'field_mc_users',
+      ),
     ),
+  ),
+  'action::user_block_user_action' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 0,
+    'skip_permission_check' => 0,
+    'override_label' => 0,
+    'label' => '',
   ),
   'action::views_bulk_operations_user_cancel_action' => array(
     'selected' => 1,
@@ -169,10 +185,21 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'override_label' => 0,
     'label' => '',
   ),
+  'action::views_bulk_operations_delete_item' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 0,
+    'skip_permission_check' => 0,
+    'override_label' => 0,
+    'label' => '',
+    'settings' => array(
+      'log' => 0,
+    ),
+  ),
   'action::views_bulk_operations_modify_action' => array(
     'selected' => 1,
     'postpone_processing' => 0,
-    'skip_confirmation' => 1,
+    'skip_confirmation' => 0,
     'skip_permission_check' => 0,
     'override_label' => 1,
     'label' => 'Change value',
@@ -193,7 +220,7 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
   ),
   'action::system_send_email_action' => array(
     'selected' => 1,
-    'postpone_processing' => 0,
+    'postpone_processing' => 1,
     'skip_confirmation' => 0,
     'skip_permission_check' => 0,
     'override_label' => 1,
@@ -257,6 +284,11 @@ $handler->display->display_options['fields']['cancel_node']['field'] = 'cancel_n
 $handler->display->display_options['fields']['cancel_node']['label'] = '';
 $handler->display->display_options['fields']['cancel_node']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['cancel_node']['hide_alter_empty'] = FALSE;
+/* Field: Profile: Location */
+$handler->display->display_options['fields']['field_location']['id'] = 'field_location';
+$handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
+$handler->display->display_options['fields']['field_location']['field'] = 'field_location';
+$handler->display->display_options['fields']['field_location']['relationship'] = 'profile';
 /* Sort criterion: User: Created date */
 $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'users';
@@ -323,15 +355,14 @@ $handler->display->display_options['filters']['rid']['group'] = 1;
 $handler->display->display_options['filters']['rid']['exposed'] = TRUE;
 $handler->display->display_options['filters']['rid']['expose']['operator_id'] = 'rid_op';
 $handler->display->display_options['filters']['rid']['expose']['label'] = 'Role';
+$handler->display->display_options['filters']['rid']['expose']['use_operator'] = TRUE;
 $handler->display->display_options['filters']['rid']['expose']['operator'] = 'rid_op';
 $handler->display->display_options['filters']['rid']['expose']['identifier'] = 'rid';
-$handler->display->display_options['filters']['rid']['expose']['remember'] = TRUE;
+$handler->display->display_options['filters']['rid']['expose']['multiple'] = TRUE;
 $handler->display->display_options['filters']['rid']['expose']['remember_roles'] = array(
   2 => 0,
   1 => 0,
   111903911 => 0,
-  111903912 => 0,
-  25521343 => 0,
   111903910 => 0,
   30037204 => 0,
 );
@@ -339,12 +370,20 @@ $handler->display->display_options['filters']['rid']['expose']['remember_roles']
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'users';
 $handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  'en' => 'en',
+  'fr' => 'fr',
+  'es' => 'es',
+  'pt' => 'pt',
+);
 $handler->display->display_options['filters']['language']['group'] = 1;
 $handler->display->display_options['filters']['language']['exposed'] = TRUE;
 $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
 $handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
+$handler->display->display_options['filters']['language']['expose']['use_operator'] = TRUE;
 $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
 $handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
+$handler->display->display_options['filters']['language']['expose']['multiple'] = TRUE;
 $handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
   2 => '2',
   1 => 0,
@@ -364,6 +403,23 @@ $handler->display->display_options['filters']['label']['expose']['label'] = 'Lab
 $handler->display->display_options['filters']['label']['expose']['operator'] = 'label_op';
 $handler->display->display_options['filters']['label']['expose']['identifier'] = 'label';
 $handler->display->display_options['filters']['label']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+/* Filter criterion: Location: Country */
+$handler->display->display_options['filters']['country']['id'] = 'country';
+$handler->display->display_options['filters']['country']['table'] = 'location';
+$handler->display->display_options['filters']['country']['field'] = 'country';
+$handler->display->display_options['filters']['country']['relationship'] = 'field_location_lid';
+$handler->display->display_options['filters']['country']['exposed'] = TRUE;
+$handler->display->display_options['filters']['country']['expose']['operator_id'] = 'country_op';
+$handler->display->display_options['filters']['country']['expose']['label'] = 'Country';
+$handler->display->display_options['filters']['country']['expose']['operator'] = 'country_op';
+$handler->display->display_options['filters']['country']['expose']['identifier'] = 'country';
+$handler->display->display_options['filters']['country']['expose']['remember_roles'] = array(
   2 => '2',
   1 => 0,
   111903911 => 0,
@@ -457,3 +513,4 @@ $handler->display->display_options['filters']['rid']['expose']['remember_roles']
   30037204 => 0,
 );
 $handler->display->display_options['path'] = 'admin/people/moderate';
+

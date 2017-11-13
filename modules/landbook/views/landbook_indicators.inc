@@ -63,6 +63,11 @@ $handler->display->display_options['filters']['machine_name']['field'] = 'machin
 $handler->display->display_options['filters']['machine_name']['value'] = array(
   'indicators' => 'indicators',
 );
+/* Filter criterion: Taxonomy term: Hierarchical depth */
+$handler->display->display_options['filters']['hdepth']['id'] = 'hdepth';
+$handler->display->display_options['filters']['hdepth']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['filters']['hdepth']['field'] = 'hdepth';
+$handler->display->display_options['filters']['hdepth']['value']['value'] = '0';
 
 /* Display: Teasers */
 $handler = $view->new_display('block', 'Teasers', 'teasers');
@@ -174,6 +179,11 @@ $handler->display->display_options['relationships']['field_dataset_tid']['table'
 $handler->display->display_options['relationships']['field_dataset_tid']['field'] = 'field_dataset_tid';
 $handler->display->display_options['relationships']['field_dataset_tid']['label'] = 'dataset';
 $handler->display->display_options['relationships']['field_dataset_tid']['required'] = TRUE;
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Taxonomy term: Name */
+$handler->display->display_options['sorts']['name']['id'] = 'name';
+$handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['name']['field'] = 'name';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';

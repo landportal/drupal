@@ -700,3 +700,4 @@ $handler->display->display_options['filters']['field_related_topics_tid_entityre
 );
 $handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter_1']['reference_display'] = 'thematic:ref_concepts';
 $handler->display->display_options['block_caching'] = '-1';
+
