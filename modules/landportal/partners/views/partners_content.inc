@@ -446,21 +446,6 @@ $handler->display->display_options['fields']['path']['alter']['text'] = '<span c
 $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Content: Language */
-$handler->display->display_options['filters']['language']['id'] = 'language';
-$handler->display->display_options['filters']['language']['table'] = 'node';
-$handler->display->display_options['filters']['language']['field'] = 'language';
-$handler->display->display_options['filters']['language']['value'] = array(
-  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  'und' => 'und',
-);
-$handler->display->display_options['filters']['language']['group'] = 1;
-/* Filter criterion: Field: Image (field_image:fid) */
-$handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
-$handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
-$handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
-$handler->display->display_options['filters']['field_image_fid']['operator'] = 'not empty';
-$handler->display->display_options['filters']['field_image_fid']['group'] = 1;
 /* Filter criterion: Content: Nid (reference filter) */
 $handler->display->display_options['filters']['nid_entityreference_filter']['id'] = 'nid_entityreference_filter';
 $handler->display->display_options['filters']['nid_entityreference_filter']['table'] = 'node';
@@ -717,4 +702,3 @@ $handler->display->display_options['filters']['nid']['table'] = 'node';
 $handler->display->display_options['filters']['nid']['field'] = 'nid';
 $handler->display->display_options['filters']['nid']['relationship'] = 'reverse_field_promoted_node';
 $handler->display->display_options['filters']['nid']['value']['value'] = '36570';
-

@@ -47,7 +47,7 @@ function landbook_view_coda_add_block_form_validate($form, &$form_state) {
  */
 function landbook_view_coda_add_block_form_submit($form, &$form_state) {
   // The serialized 'data' column contains the timeline settings.
-  dpm($form_state['values'], 'POST');
+  //dpm($form_state['values'], 'POST');
   /* $data = array( */
   /*   'theme' => $form_state['values']['theme'], */
   /*   'link_color' => $form_state['values']['link_color'], */
@@ -136,7 +136,7 @@ function landbook_view_coda_block_delete($form, &$form_state, $delta) {
   /* $landbook_view_coda = landbook_view_coda_block_get($block->delta); */
   /* $form['info'] = array('#type' => 'hidden', '#value' => $landbook_view_coda['info'] ? $landbook_view_coda['info'] : $landbook_view_coda['title']); */
   /* $form['bid'] = array('#type' => 'hidden', '#value' => $block->delta); */
-  dpm($block);
+  //dpm($block);
   return FALSE;// confirm_form($form, t('Are you sure you want to delete the block %name?', array('%name' => $landbook_view_coda['info'])), 'admin/structure/block', '', t('Delete'), t('Cancel'));
 }
 

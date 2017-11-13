@@ -129,11 +129,11 @@ function lbvc_plugin_ui_form_wrapper($VCC, $fields, $action='update') {
       'class' => $fclass
     ),
     'items' => $fields,
-    '#after_build' => array('lbvc_after_build'), // no worky worky
+//    '#after_build' => array('lbvc_after_build'), // no worky worky
   );
   return $form;
 }
 
-function lbvc_after_build() {
-  dsm('hello after build');
-}
+/* function lbvc_after_build() { */
+/*   dsm('hello after build'); */
+/* } */

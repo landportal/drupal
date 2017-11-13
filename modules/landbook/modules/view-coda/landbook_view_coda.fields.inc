@@ -74,7 +74,7 @@ function landbook_view_coda_field_presave($entity_type, $entity, $field, $instan
     if (!$options['year']) unset($options['year']);
     if (!$options['iso3']) unset($options['iso3']);
     // Encode everything as string
-    dpm($options, 'encode');
+    //dpm($options, 'encode');
     $items[$delta]['vcc'] = json_encode($options);
   }
   //if (module_exists('devel')) dpm($items, 'presave');
@@ -137,13 +137,13 @@ function landbook_view_coda_field_formatter_settings_form($field, $instance, $vi
  */
 function landbook_view_coda_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
   $element = array();
-  if ($display['type'] == '2lbvc_block') {
-    dpm($entity, $entity_type);               // Iz ma' field_collection_item
-    dpm($instance, 'instance ' . $langcode);  // Da instance of that (rendered) 'widget'
-    dpm($display, 'display');
-    dpm($items, 'items');                     // Ma' VCC / View Coda Config values (from SQL)
-    dpm($field, 'field');
-  }
+  /* if ($display['type'] == '2lbvc_block') { */
+  /*   dpm($entity, $entity_type);               // Iz ma' field_collection_item */
+  /*   dpm($instance, 'instance ' . $langcode);  // Da instance of that (rendered) 'widget' */
+  /*   dpm($display, 'display'); */
+  /*   dpm($items, 'items');                     // Ma' VCC / View Coda Config values (from SQL) */
+  /*   dpm($field, 'field'); */
+  /* } */
   switch ($display['type']) {
   case 'lbvc_basic':
     if (!isset($items[0])) {
