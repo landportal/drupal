@@ -329,11 +329,14 @@ function ct_thematic_narrative_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'entityreference',
       'settings' => array(
         'apply_chosen' => '',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
       ),
-      'type' => 'options_select',
+      'type' => 'entityreference_autocomplete_tags',
       'weight' => 6,
     ),
   );

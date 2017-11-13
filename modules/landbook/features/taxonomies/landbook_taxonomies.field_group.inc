@@ -26,8 +26,9 @@ function landbook_taxonomies_field_group_info() {
       0 => 'field_dataset',
       1 => 'field_view_indicators',
       2 => 'field_view_dataset',
-      3 => 'group_details',
-      4 => 'group_landvoc',
+      3 => 'field_related_aside',
+      4 => 'group_details',
+      5 => 'group_landvoc',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -179,7 +180,6 @@ function landbook_taxonomies_field_group_info() {
     'children' => array(
       0 => 'field_unit',
       1 => 'field_highlow',
-      2 => 'field_related_aside',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -189,7 +189,7 @@ function landbook_taxonomies_field_group_info() {
         'classes' => 'group-details',
         'description' => '',
         'show_label' => '1',
-        'label_element' => 'h2',
+        'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
       ),

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * library_search.facetapi_defaults.inc
+ * landlibrary_search.facetapi_defaults.inc
  */
 
 /**
  * Implements hook_facetapi_default_facet_settings().
  */
-function library_search_facetapi_default_facet_settings() {
+function landlibrary_search_facetapi_default_facet_settings() {
   $export = array();
 
   $facet = new stdClass();

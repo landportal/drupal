@@ -189,7 +189,7 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Other',
+    'name' => 'Other legal document',
     'description' => '<p>While the Land Portal prefers&nbsp;to avoid using a category such as "Other" in metadata - since it does not provide a user with much information - in the case of legislations and policies it has felt that it was unavoidable. This due to the many different of legislation or regulation-formats different countries identify. Because these types of regulations can be nonetheless very important with regards to land governance, these categories are nested under the "Other"-category in the Land Library resource type taxonomy.</p>
 ',
     'format' => 'filtered_html',
@@ -197,14 +197,14 @@ function landlibrary_taxonomy_uuid_features_default_terms() {
     'uuid' => '5409c613-1842-4d1c-96fd-d776a3c2d072',
     'hweight' => 15,
     'hdepth' => 1,
-    'language' => 'en',
+    'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'landlibrary_resource_type',
     'synonyms_synonyms' => array(),
     'name_field' => array(
       'en' => array(
         0 => array(
-          'value' => 'Other',
+          'value' => 'Other legal document',
           'format' => NULL,
         ),
       ),

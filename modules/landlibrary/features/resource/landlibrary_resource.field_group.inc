@@ -57,10 +57,7 @@ function landlibrary_resource_field_group_info() {
   $field_group->data = array(
     'label' => 'Author(s) and Publisher(s)',
     'weight' => '6',
-    'children' => array(
-      0 => 'field_orgref',
-      1 => 'field_doc_people',
-    ),
+    'children' => array(),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'label' => 'Author(s) and Publisher(s)',
@@ -902,11 +899,10 @@ function landlibrary_resource_field_group_info() {
     'children' => array(
       0 => 'field_doc_keyword',
       1 => 'field_thematic_promoted',
-      2 => 'field_country_promoted',
-      3 => 'locations',
-      4 => 'path',
-      5 => 'xmlsitemap',
-      6 => 'language',
+      2 => 'locations',
+      3 => 'path',
+      4 => 'xmlsitemap',
+      5 => 'language',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

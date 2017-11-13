@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * library_search.strongarm.inc
+ * landlibrary_search.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function library_search_strongarm() {
+function landlibrary_search_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

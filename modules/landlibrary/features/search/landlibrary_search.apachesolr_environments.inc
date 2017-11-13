@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * library_search.apachesolr_environments.inc
+ * landlibrary_search.apachesolr_environments.inc
  */
 
 /**
  * Implements hook_apachesolr_environments().
  */
-function library_search_apachesolr_environments() {
+function landlibrary_search_apachesolr_environments() {
   $export = array();
 
   $environment = new stdClass();
@@ -55,7 +55,8 @@ function library_search_apachesolr_environments() {
   );
   $environment->index_bundles = array(
     'node' => array(
-      0 => 'landlibrary_resource',
+      0 => 'dataset',
+      1 => 'landlibrary_resource',
     ),
   );
   $export['landlibrary_search'] = $environment;

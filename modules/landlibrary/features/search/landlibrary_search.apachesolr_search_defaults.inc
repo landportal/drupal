@@ -1,20 +1,20 @@
 <?php
 /**
  * @file
- * library_search.apachesolr_search_defaults.inc
+ * landlibrary_search.apachesolr_search_defaults.inc
  */
 
 /**
  * Implements hook_apachesolr_search_default_searchers().
  */
-function library_search_apachesolr_search_default_searchers() {
+function landlibrary_search_apachesolr_search_default_searchers() {
   $export = array();
 
   $searcher = new stdClass();
   $searcher->disabled = FALSE; /* Edit this to true to make a default searcher disabled initially */
   $searcher->api_version = 3;
-  $searcher->page_id = 'library_search';
-  $searcher->label = 'Library search';
+  $searcher->page_id = 'landlibrary_search';
+  $searcher->label = 'Land Library search';
   $searcher->description = '';
   $searcher->search_path = 'library/search';
   $searcher->page_title = 'Library search';
@@ -29,7 +29,7 @@ function library_search_apachesolr_search_default_searchers() {
     'apachesolr_search_allow_user_input' => 0,
     'apachesolr_search_browse' => 'browse',
   );
-  $export['library_search'] = $searcher;
+  $export['landlibrary_search'] = $searcher;
 
   return $export;
 }

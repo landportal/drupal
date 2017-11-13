@@ -63,7 +63,7 @@ function landportal_profile_field_default_field_instances() {
         'rows' => 8,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -326,7 +326,7 @@ function landportal_profile_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -540,7 +540,7 @@ function landportal_profile_field_default_field_instances() {
       'module' => 'location_cck',
       'settings' => array(),
       'type' => 'location',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 

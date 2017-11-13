@@ -1256,9 +1256,13 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
       'weight' => 122,
     ),
   );
@@ -1342,9 +1346,13 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
       'weight' => 121,
     ),
   );
@@ -1687,6 +1695,8 @@ function landlibrary_resource_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(
         'apply_chosen' => '',
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
         'sort' => 'name',
       ),
       'type' => 'options_select',
@@ -1894,9 +1904,13 @@ function landlibrary_resource_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
       'weight' => 124,
     ),
   );
@@ -2064,7 +2078,10 @@ function landlibrary_resource_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
       'type' => 'options_select',
       'weight' => 116,
     ),

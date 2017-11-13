@@ -68,7 +68,7 @@ function landportal_mailchimp_field_default_field_instances() {
       'module' => 'mailchimp_lists',
       'settings' => array(),
       'type' => 'mailchimp_lists_select',
-      'weight' => 17,
+      'weight' => 19,
     ),
   );
 
@@ -129,7 +129,7 @@ function landportal_mailchimp_field_default_field_instances() {
       'module' => 'mailchimp_lists',
       'settings' => array(),
       'type' => 'mailchimp_lists_select',
-      'weight' => 18,
+      'weight' => 20,
     ),
   );
 
@@ -140,17 +140,11 @@ function landportal_mailchimp_field_default_field_instances() {
       0 => array(
         'subscribe' => 1,
         'interest_groups' => array(
-          'd31198d278' => array(
-            '823ccc98a6' => 0,
-          ),
           'de34aaa8f6' => array(
             '47a1376805' => 0,
             '81e85f76e5' => 0,
             'c735b02f09' => 'c735b02f09',
             'ca9ec347d3' => 0,
-          ),
-          'f69c6509ad' => array(
-            '8321154d75' => 0,
           ),
         ),
         'is_default' => TRUE,
@@ -161,15 +155,19 @@ function landportal_mailchimp_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'module' => 'mailchimp_lists',
+        'settings' => array(
+          'interest_groups' => array(),
+          'show_interest_groups' => FALSE,
+        ),
+        'type' => 'mailchimp_lists_subscribe_default',
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -189,7 +187,7 @@ function landportal_mailchimp_field_default_field_instances() {
         'EMAIL' => '[user:mail]',
         'FNAME' => '[user:profile-main:field-firstname]',
         'LNAME' => '[user:profile-main:field-lastname]',
-        'MMERGE4' => '',
+        'MMERGE4' => '[user:profile-main:field-location:country_name]',
         'MMERGE5' => '',
         'MMERGE6' => '',
         'MMERGE12' => '',
@@ -198,14 +196,14 @@ function landportal_mailchimp_field_default_field_instances() {
         'MMERGE15' => '',
         'MMERGE16' => '',
         'MMERGE17' => '',
-        'advanced' => 0,
+        'advanced' => 1,
       ),
       'options' => array(
         'interest_groups' => array(),
         'subscribe' => FALSE,
       ),
       'show_interest_groups' => 1,
-      'unsubscribe_on_delete' => 0,
+      'unsubscribe_on_delete' => 1,
       'user_register_form' => 1,
     ),
     'widget' => array(
@@ -213,7 +211,7 @@ function landportal_mailchimp_field_default_field_instances() {
       'module' => 'mailchimp_lists',
       'settings' => array(),
       'type' => 'mailchimp_lists_select',
-      'weight' => 15,
+      'weight' => 18,
     ),
   );
 
@@ -274,7 +272,7 @@ function landportal_mailchimp_field_default_field_instances() {
       'module' => 'mailchimp_lists',
       'settings' => array(),
       'type' => 'mailchimp_lists_select',
-      'weight' => 19,
+      'weight' => 21,
     ),
   );
 

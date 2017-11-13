@@ -23,10 +23,10 @@ function landportal_mailchimp_field_group_info() {
     'label' => 'Mailing lists',
     'weight' => '3',
     'children' => array(
-      0 => 'field_mc_newsletter',
-      1 => 'field_mc_legend',
-      2 => 'field_mc_lod',
-      3 => 'field_mc_sdgs',
+      0 => 'field_mc_legend',
+      1 => 'field_mc_lod',
+      2 => 'field_mc_sdgs',
+      3 => 'field_mc_newsletter',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
