@@ -1,5 +1,33 @@
 <?php
+/**
+ * @file
+ * This module provide an interface to the landbook section of the Landportal.
+ *
+ * The Landportal landbook
+ *
+ * Author: Jules <jules@ker.bz>
+ */
 
+/** Land Portal 2.5 new UX
+ *  cleanup block & context
+ */
+function landbook_update_7205() {
+  // Disable share icons (addtoany)
+  $block = array(
+    'keys' => array(
+      'module' => 'landportal_blocks',
+      'delta'  => 'lp_share',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'region' => -1,
+    )
+  );
+  db_merge('block')
+    ->key($block['keys'])
+    ->fields($block['values'])
+    ->execute();
+}
 
 /**
  * Disable twitter block
