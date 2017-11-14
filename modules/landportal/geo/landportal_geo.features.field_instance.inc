@@ -125,7 +125,7 @@ function landportal_geo_field_default_field_instances() {
         'size' => 3,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -172,7 +172,7 @@ function landportal_geo_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 41,
+      'weight' => 9,
     ),
   );
 
@@ -181,7 +181,7 @@ function landportal_geo_field_default_field_instances() {
     'bundle' => 'regions',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => '3 characters code for the area (country). See the latest list of codes in the <a href="https://www.iso.org/obp/ui/#iso:pub:PUB500001:en">Country Codes Collection from ISO</a>.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -221,13 +221,36 @@ function landportal_geo_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_iso3',
     'label' => 'ISO3',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'size' => 60,
@@ -297,7 +320,7 @@ function landportal_geo_field_default_field_instances() {
         'size' => 2,
       ),
       'type' => 'text_textfield',
-      'weight' => 43,
+      'weight' => 3,
     ),
   );
 
@@ -407,13 +430,14 @@ function landportal_geo_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('2 characters code for the area (country). See the latest list of codes in the <a href="https://www.iso.org/obp/ui/#iso:pub:PUB500001:en">Country Codes Collection from ISO</a>.');
+  t('3 characters code for the area (country). See the latest list of codes in the <a href="https://www.iso.org/obp/ui/#iso:pub:PUB500001:en">Country Codes Collection from ISO</a>.');
   t('3 numbes code for the area (country/region). See the latest list of codes in the <a href="http://unstats.un.org/unsd/publications/statistical-yearbook">UN Statistical Yearbook</a>.');
   t('Area code (UN M.49)');
   t('Classification');
