@@ -11,7 +11,7 @@
 /** Land Portal 2.5 new UX
  *  cleanup block & context
  */
-function landbook_update_7205() {
+function landportal_blocks_update_7205() {
   // Disable share icons (addtoany)
   $block = array(
     'keys' => array(

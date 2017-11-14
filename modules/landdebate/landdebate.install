@@ -8,7 +8,7 @@
  * Author: Jules <jules@ker.bz>
  */
 
-/** Land Portal new UX
+/** Land Portal 2.5 new UX
  *  cleanup former Debate menu section
  */
 function landdebate_update_7201() {
