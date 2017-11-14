@@ -66,14 +66,12 @@ function landbook_menu() {
   $items = array();
   // Create hook for Country narrative pages
   $items['book/countries/%'] = array(
-    'title'           => 'Land Book Country portfolio',
-    'menu_name'       => 'new-nav',
+    'title'           => 'Land Portal Country portfolio',
     'type'            => MENU_CALLBACK,
     'access callback' => TRUE,
     'page callback'   => 'landbook_country_page',
     'page arguments'  => array(2),
   );
-  $translatables['book'][] = t('Land Book');
   return $items;
 }
 
