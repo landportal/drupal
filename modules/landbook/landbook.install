@@ -5,9 +5,23 @@
  *
  * The Landportal landbook
  *
- * Original work by: WESO
- * Drupal refactoring: Jules <jules@ker.bz>
+ * Author: Jules <jules@ker.bz>
  */
+
+/** Land Portal 2.5 new UX
+ *  cleanup fields
+ */
+function landbook_update_7205() {
+  // Remove from CP & TP field superseded by new visualizations
+  foreach(array('field_indicator_ranking', 'field_indicator_map') as $name) {
+    if ($instance = field_info_instance('node', $name, 'landbook_country')) {
+      field_delete_instance($instance);
+    }
+    if ($instance = field_info_instance('node', $name, 'thematic_narrative')) {
+      field_delete_instance($instance);
+    }
+  }
+}
 
 
 /** Add Dataset CT and admin for Datasets content

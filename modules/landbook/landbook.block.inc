@@ -9,6 +9,9 @@
  * Drupal refactoring: Jules <jules@ker.bz>
  */
 
+// Add body + format to the following blocks
+// twitter_blocks
+// sdgs_timeline
 function landbook_block_view_alter(&$data, $block) {
   if ($block->module == 'twitter_block' ||
     ($block->module == 'views' && $block->delta == 'sdgs_timeline-main')) {
@@ -20,16 +23,13 @@ function landbook_block_view_alter(&$data, $block) {
       array('#markup' => $markup),
       $data['content'], // Keep original block content
     );
-    //dpm($data, 'alter' . $delta);
   }
 }
 
+// Save body for those blocks
 function landbook_block_save($delta='', $edit = array()) {
   $bdelta = $delta['delta']['#value'];
   $module = $delta['module']['#value'];
-  //dpm($delta, 'save delta');
-  //dpm($edit, 'save edit');
-
   if ($module == 'twitter_block' || $bdelta == 'sdgs_timeline-main') {
     db_update('block_custom')
       ->fields(array(
@@ -41,12 +41,11 @@ function landbook_block_save($delta='', $edit = array()) {
   }
 }
 
+// Add textarea for the body
 function landbook_form_alter(&$form, &$form_state, $form_id) {
   if (!isset($form['module']) || !isset($form['delta'])) { return ; }
   $delta = $form['delta']['#value'];
   $module = $form['module']['#value'];
-
-  // Add description / body to those blocks
   if ($module == 'twitter_block' || $delta == 'sdgs_timeline-main') {
     $edit = array(
       'body'=> '',
@@ -60,8 +59,6 @@ function landbook_form_alter(&$form, &$form_state, $form_id) {
     } else {
       $edit = db_select('block_custom', 'b')->fields('b')->condition('info', $edit['info'])->execute()->fetchAssoc();
     }
-
-    //dpm($form, $form_id);
     // Same as in Drupal core Block module
     $form['settings']['body_field']['body'] = array(
       '#type' => 'text_format',
@@ -108,15 +105,6 @@ function landbook_block_info() {
         'pages'         => "book/countries/*\n",
         'weight'        => 15
     );
-    // @TODO: rename and cleanup , this block provide BOTH the PDF + Feedback links
-    $blocks['country_pdf_block'] = array(
-        'info'          => t('Landbook country page pdf block'),
-        'status'        => TRUE,
-        'region'        => 'content',
-        'visibility'    => BLOCK_VISIBILITY_LISTED,
-        'pages'         => "book/countries/*",
-        'weight'        => -40
-    );
     return $blocks;
 }
 
@@ -135,29 +123,14 @@ function landbook_block_view($delta = '') {
         $block['subject'] = t('Infographics');
         $block['content'] = landbook_block_body($delta);
         break;
-    case 'country_pdf_block' :
-        $block['subject'] = '';
-        $block['content'] = ' ';
-        $block['pdf_url'] = landbook_get_pdf_url();
-        break;
     }
     return $block;
-}
-// TMP
-function landbook_get_pdf_url(){
-    $iso3 = arg(2);
-    if (in_array($iso3, ['KHM', 'LAO', 'MMR', 'THA', 'VNM'])) {
-        return file_create_url('public://2016/countries/' . $iso3 . '.pdf');
-    }
-    return ;
 }
 
 function landbook_block_body($name) {
     $default = array(
         'disclaimer_block' => '<p><b>Disclaimer:</b> The data displayed on the Land Portal is provided by third parties indicated as the data source or as the data provider. The Land Portal team is constantly working to ensure the highest possible standard of data quality and accuracy, yet the data is by its nature approximate and will contain some inaccuracies. The data may contain errors introduced by the data provider(s) and/or by the Land Portal team. In addition, this page allows you to compare data from different sources, but not all indicators are necessarily statistically comparable. The Land Portal Foundation (A) expressly disclaims the accuracy, adequacy, or completeness of any data and (B) shall not be liable for any errors, omissions or other defects in, delays or interruptions in such data, or for any actions taken in reliance thereon. Neither the Land Portal Foundation nor any of its data providers will be liable for any damages relating to your use of the data provided herein.</p>',
     );
-    
-    //$default: The default value to use if this variable has never been set.
     $output = variable_get('landbook-' . $name, (isset($default[$name]) ? $default[$name] : ''));
     if (empty($output)) {
       $output = (isset($default[$name]) ? $default[$name] : ' ');
