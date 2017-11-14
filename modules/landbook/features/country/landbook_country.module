@@ -5,26 +5,3 @@
  */
 
 include_once 'landbook_country.features.inc';
-
-/* /\** */
-/*  * Transform ISO3 to tid */
-/*  *\/ */
-/* function landbook_country_views_pre_view(&$view, &$display_id, &$args) { */
-/*   if ( ! ($view->name == 'landbook_countries' && $display_id == 'portfolio') ) return; */
-/*   if ($term = landportal_taxonomy_country_term_by_iso($args[0])) { */
-/*     $args[0] = $term->tid; */
-/*   } */
-/* } */
-
-/* /\** */
-/*  * This view / display should have a markup '#page-submenu' to hook to */
-/*  * Will hook JS for page internal nav */
-/*  *\/ */
-/* function landbook_country_views_post_render(&$view, &$output, &$cache) { */
-/*   // TODO: should be a proper JS attachement to the view ... */
-/*   if ($view->name == 'landbook_countries') { */
-/*     if ($view->current_display == 'cp_header') { */
-/*       $output .= '<script>' . landportal_blocks_page_submenu() . '</script>'; */
-/*     } */
-/*   } */
-/* } */

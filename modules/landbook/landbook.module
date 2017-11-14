@@ -64,53 +64,59 @@ function landbook_views_default_views() {
  */
 function landbook_menu() {
   $items = array();
-  // Provide a basic Landbook Drupal main menu (main-menu) link
-  $items['book'] = array(
-    'title'           => 'Land Book',
-    'menu_name'       => 'main-menu',
-    'type'            => MENU_NORMAL_ITEM,
+  // Create hook for Country narrative pages
+  $items['book/countries/%'] = array(
+    'title'           => 'Land Book Country portfolio',
+    'menu_name'       => 'new-nav',
+    'type'            => MENU_CALLBACK,
     'access callback' => TRUE,
-    'page callback'   => 'drupal_goto',
-    'page arguments'  => array('book'),
+    'page callback'   => 'landbook_country_page',
+    'page arguments'  => array(2),
   );
   $translatables['book'][] = t('Land Book');
   return $items;
 }
 
-/**
- * Implements hook_theme().
- */
-function landbook_theme($existing, $type, $theme, $path) {
-    $templates = drupal_find_theme_templates($existing, '.tpl.php', $path);
-    return $templates;
-}
+// Render either a Country Narrative (node) or the Country term (taxonomy term)
+function landbook_country_page($iso3) {
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'taxonomy_term')
+        ->entityCondition('bundle', 'regions')
+        ->fieldCondition('field_iso3', 'value', $iso3, '=');
+  $result = $query->execute();
+  $tid = array_keys($result['taxonomy_term'])[0];
 
-/**
- * Implements hook_help().
- */
-function landbook_help($path, $arg) {
-  switch ($path) {
-  case "admin/help#landbook":
-    return '<p>' . t("Landbook section of the Landportal") . '</p>'
-      . '<p>' . t("It provides differents menus, block, pages and hooks plus a few configuration pages"). '</p>'
-        . '<p>' . t("The Landbook is composed of different modules: catalog, countries, indicators, regions, reuse, sources, widgets") . '</p>';
-    break;
+  // Search for Country narrative (landbook_country)
+  $cp = new EntityFieldQuery();
+  $cp->entityCondition('entity_type', 'node')
+     ->entityCondition('bundle', 'landbook_country')
+     ->fieldCondition('field_geographical_focus', 'tid', $tid, '=');
+  $cpresult = $cp->execute();
+  if ($cpresult) {
+    $nid = array_keys($cpresult['node'])[0];
+    $node = node_load($nid);
+    return node_page_view($node);
+  } else {
+    $term = taxonomy_term_load($tid);
+    return taxonomy_term_view($term, 'full');
   }
 }
 
-
-
-//
-// TODO: Cleanup
-//
-// Should be replaced by landportal_taxonomy_country_term_by_iso(?)
-//  update functions using term->tid
-function landbook_get_region_iso($iso){
-  $tid = db_select('field_data_field_iso3', 't')
-    ->fields('t', array('entity_id'))
-    ->condition('t.field_iso3_value', $iso)
-    ->condition('t.bundle', 'regions')
-    ->execute()
-    ->fetchField();
-  return $tid;
+// Add the edit link to landbook_country pages
+function landbook_preprocess(&$variables, $hook) {
+  // Only for user that can administrer nodes
+  if (user_access('administer nodes')) {
+    if ($hook == 'page' && @($nodes = $variables['page']['content']['system_main']['nodes'])) {
+      $nid = array_keys($nodes)[0];
+      if ($nodes[$nid]['#bundle'] == 'landbook_country' && !$variables['tabs']['#primary']) {
+        // dpm($variables['tabs']['#primary']);
+        $variables['tabs']['#primary'][] = array(
+          '#markup' => '<li>' . l('View', 'node/' . $nid ) . '</li>',
+        );
+        $variables['tabs']['#primary'][] = array(
+          '#markup' => '<li>' . l('Edit', 'node/' . $nid . '/edit') . '</li>',
+        );
+      }
+    }
+  }
 }
