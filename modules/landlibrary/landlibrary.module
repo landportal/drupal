@@ -11,32 +11,3 @@ include_once 'landlibrary.features.inc';
 function landlibrary_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
-
-/* LandLibrary breadcrumbs */
-function landlibrary_node_view_alter(&$build) {
-    $node = $build['#node'];
-    if ($node->type == 'landlibrary_resource') {
-  $breadcrumb[] = l('LandLibrary', 'library');
-    }
-    $breadcrumb[] = l(t(drupal_get_title()), $_GET['q']);
-    drupal_set_breadcrumb($breadcrumb);
-}
-
-/**
- * Add a tab directly in admin/content
- * to browse Library resources (next to nodes, comments and files
- */
-function landlibrary_menu() {
-    $items['admin/content/library'] = array(
-        'title' => 'Library',
-        'type' => MENU_LOCAL_TASK,
-        'access arguments' => array('administer nodes'),
-        'weight' => 12,
-        //'page callback' => 'landlibrary_admin_view_library',
-    );
-    return $items;
-}
-
-function landlibrary_admin_view_library() {
-    return 'hallo<p>This should be replaced by admin_view_library system view</p>';
-}
