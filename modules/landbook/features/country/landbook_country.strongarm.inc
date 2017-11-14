@@ -123,28 +123,28 @@ function landbook_country_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
         'xmlsitemap' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'language' => array(
           'weight' => '5',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
       ),
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '4',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -152,7 +152,7 @@ function landbook_country_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '2',
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),

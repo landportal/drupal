@@ -126,22 +126,22 @@ function ct_thematic_narrative_strongarm() {
           'weight' => '5',
         ),
         'locations' => array(
-          'weight' => '8',
-        ),
-        'path' => array(
           'weight' => '9',
         ),
+        'path' => array(
+          'weight' => '10',
+        ),
         'xmlsitemap' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
       ),
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '7',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -149,7 +149,7 @@ function ct_thematic_narrative_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '8',
+            'weight' => '11',
             'visible' => FALSE,
           ),
           'search_result' => array(

@@ -21,7 +21,7 @@ function ct_thematic_narrative_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'About the narrative',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_orgref',
       1 => 'language',
@@ -54,6 +54,7 @@ function ct_thematic_narrative_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_landvoc_to',
+      1 => 'field_image',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -104,6 +105,38 @@ function ct_thematic_narrative_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_header|node|thematic_narrative|teaser';
+  $field_group->group_name = 'group_header';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'thematic_narrative';
+  $field_group->mode = 'teaser';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_landvoc_to',
+      1 => 'field_image',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'element' => 'div',
+        'show_label' => 0,
+        'label_element' => 'div',
+        'classes' => 'group-header field-group-html-element',
+        'attributes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_header|node|thematic_narrative|teaser'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_view_coda|node|thematic_narrative|form';
   $field_group->group_name = 'group_view_coda';
   $field_group->entity_type = 'node';
@@ -112,7 +145,7 @@ function ct_thematic_narrative_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Visualizations',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_indicators',
       1 => 'field_indicator_ranking',
