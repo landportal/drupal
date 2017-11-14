@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Landportal Geo feature.
+ */
+
+include_once 'landportal_geo.features.inc';
