@@ -40,6 +40,9 @@ function landportal_geo_strongarm() {
         'xmlsitemap' => array(
           'weight' => '5',
         ),
+        'metatags' => array(
+          'weight' => '40',
+        ),
       ),
       'display' => array(),
     ),

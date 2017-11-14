@@ -237,6 +237,70 @@ function landportal_geo_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'taxonomy_term-regions-field_iso_3166_1_alpha_2_code'.
+  $field_instances['taxonomy_term-regions-field_iso_3166_1_alpha_2_code'] = array(
+    'bundle' => 'regions',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '2 characters code for the area (country). See the latest list of codes in the <a href="https://www.iso.org/obp/ui/#iso:pub:PUB500001:en">Country Codes Collection from ISO</a>.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_iso_3166_1_alpha_2_code',
+    'label' => 'ISO 3166-1 alpha-2 code',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 2,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 43,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-regions-name_field'.
   $field_instances['taxonomy_term-regions-name_field'] = array(
     'bundle' => 'regions',
@@ -349,10 +413,12 @@ function landportal_geo_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('2 characters code for the area (country). See the latest list of codes in the <a href="https://www.iso.org/obp/ui/#iso:pub:PUB500001:en">Country Codes Collection from ISO</a>.');
   t('3 numbes code for the area (country/region). See the latest list of codes in the <a href="http://unstats.un.org/unsd/publications/statistical-yearbook">UN Statistical Yearbook</a>.');
   t('Area code (UN M.49)');
   t('Classification');
   t('Description');
+  t('ISO 3166-1 alpha-2 code');
   t('ISO3');
   t('Name');
   t('Please, enter the synonyms which should be related to this term.');
