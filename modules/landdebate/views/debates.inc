@@ -12,6 +12,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Debates';
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['use_more_text'] = 'Read more';
@@ -38,10 +39,12 @@ $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FAL
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+$handler->display->display_options['fields']['field_image']['label'] = '';
+$handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => '',
-  'image_link' => '',
+  'image_style' => 'large',
+  'image_link' => 'content',
 );
 /* Field: Field: Date */
 $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
@@ -254,4 +257,26 @@ $handler->display->display_options['filters']['field_status_tid']['vocabulary'] 
 /* Display: All */
 $handler = $view->new_display('page', 'All', 'page');
 $handler->display->display_options['path'] = 'discussions/all';
+
+/* Display: Latest */
+$handler = $view->new_display('block', 'Latest', 'latest');
+$handler->display->display_options['display_description'] = 'show Upcoming + Open';
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '2';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
+$handler->display->display_options['style_options']['uses_fields'] = TRUE;
+$handler->display->display_options['style_options']['interval'] = '15000';
+$handler->display->display_options['style_options']['navigation'] = 0;
+$handler->display->display_options['style_options']['indicators'] = 1;
+$handler->display->display_options['style_options']['pause'] = 1;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
+$handler->display->display_options['row_options']['image'] = 'field_image';
+$handler->display->display_options['row_options']['title'] = 'title';
+$handler->display->display_options['row_options']['description'] = 'body';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
 

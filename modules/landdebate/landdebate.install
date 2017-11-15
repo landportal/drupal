@@ -52,8 +52,8 @@ debate/debates',
   }
 
   // Update blocks for News & Events page
-  $i = 31;
-  foreach(array('news-latest', 'events-latest', 'blog-latest', 'news-overview',) as $blockid) {
+  $i += 2;
+  foreach(array('news-promoted', 'events-promoted', 'blog-promoted', 'news-overview',) as $blockid) {
     $blocks[] = array(
       'keys' => array(
         'module' => 'views',
@@ -61,11 +61,33 @@ debate/debates',
         'theme'  => 'lpbs',
       ),
       'values' => array(
+        'title' => '',
         'status' => 1,
         'region' => 'content',
         'weight' => $i++,
         'visibility' => BLOCK_VISIBILITY_LISTED,
         'pages' => 'news-events',
+      )
+    );
+  }
+
+  // Update blocks for Community page
+  $i += 2;
+  foreach(array('org_view-promoted', 'projects-promoted', 'debates-latest', 'events-latest', 'blog-latest') as $blockid) {
+    $blocks[] = array(
+      'keys' => array(
+        'module' => 'views',
+        'delta'  => $blockid,
+        'theme'  => 'lpbs',
+      ),
+      'values' => array(
+        'title' => '',
+        'status' => 1,
+        'region' => 'content',
+        'weight' => $i++,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'community
+debate/community',
       )
     );
   }
