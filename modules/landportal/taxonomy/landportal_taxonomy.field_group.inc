@@ -140,7 +140,7 @@ function landportal_taxonomy_field_group_info() {
     'children' => array(
       0 => 'field_related_themes',
     ),
-    'format_type' => 'div',
+    'format_type' => 'hidden',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
