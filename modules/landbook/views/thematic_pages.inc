@@ -48,7 +48,6 @@ $handler->display->display_options['relationships']['term_node_tid']['vocabulari
   'datasets' => 0,
   'languages' => 0,
   'indicators' => 0,
-  'keywords' => 0,
   'tags' => 0,
 );
 /* Field: Content: Title */
