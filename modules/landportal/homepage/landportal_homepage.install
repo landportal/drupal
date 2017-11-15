@@ -1,0 +1,92 @@
+<?php
+/**
+ * @file
+ * Provide Land Portal home page stuff.
+ *
+ * The Landportal homapge
+ *
+ * Author: Jules <jules@ker.bz>
+ */
+
+/** Land Portal 2.5 new UX
+ *  cleanup block & context
+ */
+function landportal_homepage_update_7200() {
+  $blocks = array();
+  // Hide old blocks
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'block',
+      'delta'  => '5',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'news-latest_grid',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'country_narrative-promoted',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
+
+  // Show new blocks (promoted)
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'promoted-front',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'weight' => 1,
+      'region' => 'highlighted',
+      'weight' => 1,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => '<front>',
+    )
+  );
+  $i = 1;
+  foreach(array('promoted-country', 'promoted-thematic', 'promoted-discussions', 'promoted-events', 'promoted-data', 'promoted-library', 'promoted-projects',) as $blockid) {
+    $blocks[] = array(
+      'keys' => array(
+        'module' => 'views',
+        'delta'  => $blockid,
+        'theme'  => 'lpbs',
+      ),
+      'values' => array(
+        'status' => 1,
+        'region' => 'content',
+        'weight' => $i++,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => '<front>',
+      )
+    );
+  }
+
+  foreach($blocks as $block) {
+    drush_log('Updated [' . $block['keys']['module'] . ': ' . $block['keys']['delta'] . ']', 'ok');
+    db_merge('block')
+      ->key($block['keys'])
+      ->fields($block['values'])
+      ->execute();
+  }
+}

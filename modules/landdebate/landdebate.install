@@ -18,8 +18,47 @@ function landdebate_update_7201() {
 
   // @todo: cleanup (delete) context
   // debate-menu-context
-}
 
+  // Update blocks for Discussions
+  $blocks = array();
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'debates-overview',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
+  $i = 11;
+  foreach(array('debates-open', 'debates-upcoming', 'debates-past',) as $blockid) {
+    $blocks[] = array(
+      'keys' => array(
+        'module' => 'views',
+        'delta'  => $blockid,
+        'theme'  => 'lpbs',
+      ),
+      'values' => array(
+        'status' => 1,
+        'region' => 'content',
+        'weight' => $i++,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'discussions
+debate/debates',
+      )
+    );
+  }
+
+  foreach($blocks as $block) {
+    drush_log('Updated [' . $block['keys']['module'] . ': ' . $block['keys']['delta'] . ']', 'ok');
+    db_merge('block')
+      ->key($block['keys'])
+      ->fields($block['values'])
+      ->execute();
+  }
+}
 
 
 
