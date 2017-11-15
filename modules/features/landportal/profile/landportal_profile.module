@@ -17,6 +17,22 @@ function landportal_profile_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
+// from landcommunity feature / module
+function landportal_profile_entity_info_alter(&$entity_info) {
+    /* dpm($entity_info['user']['view modes']); */
+    /* dpm($entity_info); */
+    foreach (array ('user', 'profile2') as $entity) {
+        $entity_info[$entity]['view modes']['teaser'] = array(
+            'label' => t('Teaser'),
+            'custom settings' => TRUE,
+        );
+        $entity_info[$entity]['view modes']['full'] = array(
+            'label' => t('User account (Full)'),
+            'custom settings' => TRUE,
+        );
+    }
+}
+
 function landportal_profile_views_default_views() {
   $export = array();
   $path = drupal_get_path('module', 'landportal_profile').'/views';
