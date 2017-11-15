@@ -324,12 +324,6 @@ $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Projects';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Content: Promoted to front page */
-$handler->display->display_options['filters']['promote']['id'] = 'promote';
-$handler->display->display_options['filters']['promote']['table'] = 'node';
-$handler->display->display_options['filters']['promote']['field'] = 'promote';
-$handler->display->display_options['filters']['promote']['value'] = '1';
-$handler->display->display_options['filters']['promote']['group'] = 1;
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
@@ -344,7 +338,7 @@ $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
-  'project' => 'project',
+  'partners' => 'partners',
 );
 $handler->display->display_options['filters']['type']['group'] = 1;
 
