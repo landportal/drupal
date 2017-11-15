@@ -12,7 +12,6 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Land Debates';
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['use_more_text'] = 'Read more';
@@ -35,7 +34,7 @@ $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -116,23 +115,6 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
-/* Filter criterion: Content: Body (body) */
-$handler->display->display_options['filters']['body_value']['id'] = 'body_value';
-$handler->display->display_options['filters']['body_value']['table'] = 'field_data_body';
-$handler->display->display_options['filters']['body_value']['field'] = 'body_value';
-$handler->display->display_options['filters']['body_value']['operator'] = 'contains';
-$handler->display->display_options['filters']['body_value']['exposed'] = TRUE;
-$handler->display->display_options['filters']['body_value']['expose']['operator_id'] = 'body_value_op';
-$handler->display->display_options['filters']['body_value']['expose']['description'] = 'Search';
-$handler->display->display_options['filters']['body_value']['expose']['operator'] = 'body_value_op';
-$handler->display->display_options['filters']['body_value']['expose']['identifier'] = 'body_value';
-$handler->display->display_options['filters']['body_value']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111903911 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
 /* Filter criterion: Field: Geographical focus (field_geographical_focus) */
 $handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
 $handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
@@ -176,77 +158,100 @@ $handler->display->display_options['filters']['date_filter_1']['date_fields'] = 
   'field_data_field_date.field_date_value2' => 'field_data_field_date.field_date_value2',
 );
 
-/* Display: Slider */
-$handler = $view->new_display('block', 'Slider', 'slider');
-$handler->display->display_options['enabled'] = FALSE;
-$handler->display->display_options['defaults']['pager'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '5';
-$handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
-$handler->display->display_options['style_options']['interval'] = 'false';
-$handler->display->display_options['style_options']['navigation'] = 1;
-$handler->display->display_options['style_options']['indicators'] = 0;
-$handler->display->display_options['style_options']['pause'] = 0;
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
-$handler->display->display_options['row_options']['image'] = 'field_image';
-$handler->display->display_options['row_options']['title'] = 'title';
-$handler->display->display_options['row_options']['description'] = 'rendered_entity';
-$handler->display->display_options['defaults']['row_options'] = FALSE;
-$handler->display->display_options['defaults']['header'] = FALSE;
-$handler->display->display_options['defaults']['fields'] = FALSE;
-/* Field: Content: Title */
-$handler->display->display_options['fields']['title']['id'] = 'title';
-$handler->display->display_options['fields']['title']['table'] = 'node';
-$handler->display->display_options['fields']['title']['field'] = 'title';
-$handler->display->display_options['fields']['title']['label'] = '';
-$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-/* Field: Field: Image */
-$handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-$handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-$handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => '',
-  'image_link' => '',
+/* Display: Open */
+$handler = $view->new_display('block', 'Open', 'open');
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'debate' => 'debate',
 );
-/* Field: Field: Date */
-$handler->display->display_options['fields']['field_date']['id'] = 'field_date';
-$handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
-$handler->display->display_options['fields']['field_date']['field'] = 'field_date';
-$handler->display->display_options['fields']['field_date']['settings'] = array(
-  'format_type' => 'day_month_year',
-  'custom_date_format' => '',
-  'fromto' => 'both',
-  'multiple_number' => '',
-  'multiple_from' => '',
-  'multiple_to' => '',
-  'show_remaining_days' => 1,
-  'show_repeat_rule' => 'show',
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  'und' => 'und',
 );
-/* Field: Content: Body */
-$handler->display->display_options['fields']['body']['id'] = 'body';
-$handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-$handler->display->display_options['fields']['body']['field'] = 'body';
-$handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['body']['alter']['text'] = '[field_date]
-[body]';
-$handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-$handler->display->display_options['fields']['body']['settings'] = array(
-  'trim_length' => '600',
+$handler->display->display_options['filters']['language']['group'] = 1;
+/* Filter criterion: Content: Status (field_status) */
+$handler->display->display_options['filters']['field_status_tid']['id'] = 'field_status_tid';
+$handler->display->display_options['filters']['field_status_tid']['table'] = 'field_data_field_status';
+$handler->display->display_options['filters']['field_status_tid']['field'] = 'field_status_tid';
+$handler->display->display_options['filters']['field_status_tid']['value'] = array(
+  538 => '538',
 );
-/* Field: Content: Rendered Content */
-$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
-$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_node';
-$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
-$handler->display->display_options['fields']['rendered_entity']['label'] = '';
-$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
-$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
-$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
-$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+$handler->display->display_options['filters']['field_status_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_status_tid']['vocabulary'] = 'debate_status';
+
+/* Display: Upcoming */
+$handler = $view->new_display('block', 'Upcoming', 'upcoming');
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'debate' => 'debate',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  'und' => 'und',
+);
+$handler->display->display_options['filters']['language']['group'] = 1;
+/* Filter criterion: Content: Status (field_status) */
+$handler->display->display_options['filters']['field_status_tid']['id'] = 'field_status_tid';
+$handler->display->display_options['filters']['field_status_tid']['table'] = 'field_data_field_status';
+$handler->display->display_options['filters']['field_status_tid']['field'] = 'field_status_tid';
+$handler->display->display_options['filters']['field_status_tid']['value'] = array(
+  537 => '537',
+);
+$handler->display->display_options['filters']['field_status_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_status_tid']['vocabulary'] = 'debate_status';
+
+/* Display: Past */
+$handler = $view->new_display('block', 'Past', 'past');
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'debate' => 'debate',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  'und' => 'und',
+);
+$handler->display->display_options['filters']['language']['group'] = 1;
+/* Filter criterion: Content: Status (field_status) */
+$handler->display->display_options['filters']['field_status_tid']['id'] = 'field_status_tid';
+$handler->display->display_options['filters']['field_status_tid']['table'] = 'field_data_field_status';
+$handler->display->display_options['filters']['field_status_tid']['field'] = 'field_status_tid';
+$handler->display->display_options['filters']['field_status_tid']['value'] = array(
+  539 => '539',
+);
+$handler->display->display_options['filters']['field_status_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_status_tid']['vocabulary'] = 'debate_status';
+
+/* Display: All */
+$handler = $view->new_display('page', 'All', 'page');
+$handler->display->display_options['path'] = 'discussions/all';
 
