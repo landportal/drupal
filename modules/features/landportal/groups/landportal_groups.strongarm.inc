@@ -180,13 +180,13 @@ function landportal_groups_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '2',
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),
         'locations' => array(
           'teaser' => array(
-            'weight' => '1',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'default' => array(
