@@ -21,6 +21,34 @@ function landbook_update_7205() {
       field_delete_instance($instance);
     }
   }
+
+  // Blocks for Issues
+  $i = 21;
+  foreach(array('thematic_pages-all', 'thematic_pages-promoted',) as $blockid) {
+    $blocks[] = array(
+      'keys' => array(
+        'module' => 'views',
+        'delta'  => $blockid,
+        'theme'  => 'lpbs',
+      ),
+      'values' => array(
+        'status' => 1,
+        'region' => 'content',
+        'weight' => $i++,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'issues
+book/thematic',
+      )
+    );
+  }
+
+  foreach($blocks as $block) {
+    drush_log('Updated [' . $block['keys']['module'] . ': ' . $block['keys']['delta'] . ']', 'ok');
+    db_merge('block')
+      ->key($block['keys'])
+      ->fields($block['values'])
+      ->execute();
+  }
 }
 
 

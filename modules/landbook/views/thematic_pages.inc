@@ -27,7 +27,6 @@ $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'node';
-$handler->display->display_options['row_options']['links'] = FALSE;
 /* Relationship: Content: Taxonomy terms on node */
 $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
 $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
