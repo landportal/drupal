@@ -19,7 +19,7 @@ function landdebate_update_7201() {
   // @todo: cleanup (delete) context
   // debate-menu-context
 
-  // Update blocks for Discussions
+  // Update blocks for Discussions page
   $blocks = array();
   $blocks[] = array(
     'keys' => array(
@@ -47,6 +47,25 @@ function landdebate_update_7201() {
         'visibility' => BLOCK_VISIBILITY_LISTED,
         'pages' => 'discussions
 debate/debates',
+      )
+    );
+  }
+
+  // Update blocks for News & Events page
+  $i = 31;
+  foreach(array('news-latest', 'events-latest', 'blog-latest', 'news-overview',) as $blockid) {
+    $blocks[] = array(
+      'keys' => array(
+        'module' => 'views',
+        'delta'  => $blockid,
+        'theme'  => 'lpbs',
+      ),
+      'values' => array(
+        'status' => 1,
+        'region' => 'content',
+        'weight' => $i++,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'news-events',
       )
     );
   }
