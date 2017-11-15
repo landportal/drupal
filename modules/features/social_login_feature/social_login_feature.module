@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Social Login Feature feature.
- */
-
-include_once 'social_login_feature.features.inc';
