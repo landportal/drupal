@@ -111,7 +111,7 @@ function landportal_profile_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 10,
+      'weight' => 6,
     ),
   );
 
@@ -250,6 +250,56 @@ function landportal_profile_field_default_field_instances() {
       ),
       'type' => 'options_select',
       'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-main-field_hide_profile'.
+  $field_instances['profile2-main-field_hide_profile'] = array(
+    'bundle' => 'main',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 17,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_hide_profile',
+    'label' => 'Hide profile from public listings',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 8,
     ),
   );
 
@@ -485,7 +535,7 @@ function landportal_profile_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 11,
+      'weight' => 7,
     ),
   );
 
@@ -1000,8 +1050,8 @@ function landportal_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_hide_profile'.
-  $field_instances['user-user-field_hide_profile'] = array(
+  // Exported field_instance: 'user-user-field_tnc'.
+  $field_instances['user-user-field_tnc'] = array(
     'bundle' => 'user',
     'default_value' => array(
       0 => array(
@@ -1009,19 +1059,21 @@ function landportal_profile_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'Check this if you want to hide your public profile from our people listing',
+    'description' => '<a href="/about/terms-and-conditions-use">Land Portal Terms and Conditions</a>
+',
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_default',
         'weight' => 9,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1031,12 +1083,12 @@ function landportal_profile_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'user',
-    'field_name' => 'field_hide_profile',
-    'label' => 'Hide my profile on public listings',
-    'required' => 0,
+    'field_name' => 'field_tnc',
+    'label' => 'I agree to the Terms and Conditions',
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -1045,20 +1097,22 @@ function landportal_profile_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 6,
+      'weight' => 3,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('<a href="/about/terms-and-conditions-use">Land Portal Terms and Conditions</a>
+');
   t('Affiliation');
-  t('Check this if you want to hide your public profile from our people listing');
   t('Description');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Fill in this field if you want to make your email public.');
   t('First name');
   t('Geographical focus');
-  t('Hide my profile on public listings');
+  t('Hide profile from public listings');
+  t('I agree to the Terms and Conditions');
   t('Last name');
   t('Location');
   t('Occupation');
