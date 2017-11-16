@@ -43,6 +43,26 @@ book/thematic',
     );
   }
 
+  // Countries page
+  $i += 3;
+  foreach(array('country_narrative-cp', 'country_narrative-highlight',) as $blockid) {
+    $blocks[] = array(
+      'keys' => array(
+        'module' => 'views',
+        'delta'  => $blockid,
+        'theme'  => 'lpbs',
+      ),
+      'values' => array(
+        'status' => 1,
+        'region' => 'content',
+        'title' => '',
+        'weight' => $i++,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'book/countries',
+      )
+    );
+  }
+
   foreach($blocks as $block) {
     drush_log('Updated [' . $block['keys']['module'] . ': ' . $block['keys']['delta'] . ']', 'ok');
     db_merge('block')

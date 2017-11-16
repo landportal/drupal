@@ -36,17 +36,6 @@ function landportal_homepage_update_7200() {
       'region' => -1,
     )
   );
-  $blocks[] = array(
-    'keys' => array(
-      'module' => 'views',
-      'delta'  => 'country_narrative-promoted',
-      'theme'  => 'lpbs',
-    ),
-    'values' => array(
-      'status' => 0,
-      'region' => -1,
-    )
-  );
 
   // Show new blocks (promoted)
   $blocks[] = array(
