@@ -12,7 +12,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Land News';
+$handler->display->display_options['title'] = 'News';
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['use_more_text'] = 'Read more';
@@ -259,6 +259,7 @@ $handler->display->display_options['filters']['date_filter']['date_fields'] = ar
 
 /* Display: Latest */
 $handler = $view->new_display('block', 'Latest', 'latest');
+$handler->display->display_options['enabled'] = FALSE;
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'grid-2 grid-news';
 $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -277,6 +278,7 @@ $handler->display->display_options['defaults']['row_options'] = FALSE;
 
 /* Display: Promoted */
 $handler = $view->new_display('block', 'Promoted', 'promoted');
+$handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'grid-2 grid-news';
 $handler->display->display_options['defaults']['pager'] = FALSE;
