@@ -43,6 +43,11 @@ $handler->display->display_options['fields']['rendered_entity']['link_to_entity'
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
 $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+/* Sort criterion: Content: Promoted to front page */
+$handler->display->display_options['sorts']['promote']['id'] = 'promote';
+$handler->display->display_options['sorts']['promote']['table'] = 'node';
+$handler->display->display_options['sorts']['promote']['field'] = 'promote';
+$handler->display->display_options['sorts']['promote']['order'] = 'DESC';
 /* Sort criterion: Content: Post date */
 $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -89,7 +94,7 @@ $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Land Library';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '4';
+$handler->display->display_options['pager']['options']['items_per_page'] = '2';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -169,12 +174,6 @@ $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Content: Promoted to front page */
-$handler->display->display_options['filters']['promote']['id'] = 'promote';
-$handler->display->display_options['filters']['promote']['table'] = 'node';
-$handler->display->display_options['filters']['promote']['field'] = 'promote';
-$handler->display->display_options['filters']['promote']['value'] = '1';
-$handler->display->display_options['filters']['promote']['group'] = 1;
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -208,7 +207,7 @@ $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
 $handler->display->display_options['row_options']['image'] = 'field_image';
 $handler->display->display_options['row_options']['title'] = 'title';
-$handler->display->display_options['row_options']['description'] = '';
+$handler->display->display_options['row_options']['description'] = 'body';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Title */
@@ -220,7 +219,7 @@ $handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
 $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Field: Picture */
+/* Field: Field: Image */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -231,6 +230,24 @@ $handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_style' => 'large',
   'image_link' => '',
 );
+/* Field: Content: Body */
+$handler->display->display_options['fields']['body']['id'] = 'body';
+$handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+$handler->display->display_options['fields']['body']['field'] = 'body';
+$handler->display->display_options['fields']['body']['label'] = '';
+$handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+$handler->display->display_options['fields']['body']['settings'] = array(
+  'trim_length' => '600',
+);
+/* Field: Content: Status */
+$handler->display->display_options['fields']['field_status']['id'] = 'field_status';
+$handler->display->display_options['fields']['field_status']['table'] = 'field_data_field_status';
+$handler->display->display_options['fields']['field_status']['field'] = 'field_status';
+$handler->display->display_options['fields']['field_status']['label'] = '';
+$handler->display->display_options['fields']['field_status']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_status']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_status']['type'] = 'i18n_taxonomy_term_reference_plain';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Promoted to front page */
@@ -269,7 +286,10 @@ $handler->display->display_options['style_options']['indicators'] = 1;
 $handler->display->display_options['style_options']['pause'] = 1;
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
+$handler->display->display_options['row_options']['image'] = 'field_image';
+$handler->display->display_options['row_options']['title'] = 'title';
+$handler->display->display_options['row_options']['description'] = 'body';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Title */
@@ -281,7 +301,7 @@ $handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
 $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Field: Picture */
+/* Field: Field: Image */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -291,6 +311,36 @@ $handler->display->display_options['fields']['field_image']['click_sort_column']
 $handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_style' => 'large',
   'image_link' => '',
+);
+/* Field: Field: Date */
+$handler->display->display_options['fields']['field_date']['id'] = 'field_date';
+$handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
+$handler->display->display_options['fields']['field_date']['field'] = 'field_date';
+$handler->display->display_options['fields']['field_date']['label'] = '';
+$handler->display->display_options['fields']['field_date']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_date']['settings'] = array(
+  'format_type' => 'day_month_year',
+  'custom_date_format' => '',
+  'fromto' => 'both',
+  'multiple_number' => '',
+  'multiple_from' => '',
+  'multiple_to' => '',
+  'show_remaining_days' => 0,
+  'show_repeat_rule' => 'show',
+);
+/* Field: Content: Body */
+$handler->display->display_options['fields']['body']['id'] = 'body';
+$handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+$handler->display->display_options['fields']['body']['field'] = 'body';
+$handler->display->display_options['fields']['body']['label'] = '';
+$handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['body']['alter']['text'] = '<span class="glyphicon glyphicon-calendar"></span> [field_date]
+[body]';
+$handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+$handler->display->display_options['fields']['body']['settings'] = array(
+  'trim_length' => '600',
 );
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -352,12 +402,6 @@ $handler->display->display_options['pager']['options']['items_per_page'] = '1';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Content: Promoted to front page */
-$handler->display->display_options['filters']['promote']['id'] = 'promote';
-$handler->display->display_options['filters']['promote']['table'] = 'node';
-$handler->display->display_options['filters']['promote']['field'] = 'promote';
-$handler->display->display_options['filters']['promote']['value'] = '1';
-$handler->display->display_options['filters']['promote']['group'] = 1;
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
