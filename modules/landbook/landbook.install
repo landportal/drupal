@@ -24,7 +24,7 @@ function landbook_update_7205() {
 
   // Blocks for Issues
   $i = 21;
-  foreach(array('thematic_pages-all', 'thematic_pages-promoted',) as $blockid) {
+  foreach(array('thematic_pages-highlight', 'thematic_pages-all',) as $blockid) {
     $blocks[] = array(
       'keys' => array(
         'module' => 'views',
@@ -34,6 +34,7 @@ function landbook_update_7205() {
       'values' => array(
         'status' => 1,
         'region' => 'content',
+        'title' => '',
         'weight' => $i++,
         'visibility' => BLOCK_VISIBILITY_LISTED,
         'pages' => 'issues
