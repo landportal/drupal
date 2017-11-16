@@ -1,0 +1,6 @@
+name = Land Portal menus
+description = Provides LP base navigation menus.
+core = 7.x
+package = Landportal
+version = 7.x-2.5-dev
+dependencies[] = menu
