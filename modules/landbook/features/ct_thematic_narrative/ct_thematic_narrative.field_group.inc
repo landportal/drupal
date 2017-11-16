@@ -53,8 +53,9 @@ function ct_thematic_narrative_field_group_info() {
     'label' => '',
     'weight' => '1',
     'children' => array(
-      0 => 'field_landvoc_to',
-      1 => 'field_image',
+      0 => 'title_field',
+      1 => 'field_landvoc_to',
+      2 => 'field_image',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(

@@ -24,7 +24,8 @@ function landbook_country_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_geographical_focus',
-      1 => 'field_image',
+      1 => 'title_field',
+      2 => 'field_image',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -85,8 +86,9 @@ function landbook_country_field_group_info() {
     'label' => '',
     'weight' => '0',
     'children' => array(
-      0 => 'title_field',
-      1 => 'field_image',
+      0 => 'field_geographical_focus',
+      1 => 'title_field',
+      2 => 'field_image',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
