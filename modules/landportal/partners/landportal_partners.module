@@ -16,7 +16,7 @@ function landportal_partners_views_api($module = NULL, $api = NULL) {
 // Show
 // Add block descriptions to Partners header menu
 function landportal_partners_preprocess_page(&$variables) {
-  if ($variables['page']['header']) {
+  if (@$variables['page']['header']) {
     $pheader = $variables['page']['header'];
     foreach (array('menu-partners-mlike', 'menu-legend') as $i) {
       if (isset($pheader['menu_'.$i]) && $pheader['menu_'.$i]) {
