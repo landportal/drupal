@@ -6,11 +6,14 @@
  */
 
 function landportal_menus_update_7200() {
-
   // Cleanup main menu
   $menu_del = db_delete('menu_links')
     ->condition('menu_name', 'main-menu')
     ->execute();
+
+  // Delete old LP header menu
+  menu_delete(array('menu_name' => 'landbook-menu'));
+  menu_delete(array('menu_name' => 'landlibrary-menu'));
 }
 
 function landportal_menus_enable() {
