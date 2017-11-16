@@ -11,8 +11,9 @@ function landportal_menus_update_7200() {
     ->condition('menu_name', 'main-menu')
     ->execute();
 
-  // Delete old LP header menu
+  // Delete old LP header menus
   menu_delete(array('menu_name' => 'landbook-menu'));
+  menu_delete(array('menu_name' => 'landdebate-menu'));
   menu_delete(array('menu_name' => 'landlibrary-menu'));
 }
 
