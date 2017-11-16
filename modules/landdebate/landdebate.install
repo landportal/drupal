@@ -33,7 +33,7 @@ function landdebate_update_7201() {
     )
   );
   $i = 11;
-  foreach(array('debates-open', 'debates-upcoming', 'debates-past',) as $blockid) {
+  foreach(array('debates-open', 'debates-past',) as $blockid) {
     $blocks[] = array(
       'keys' => array(
         'module' => 'views',
