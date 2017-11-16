@@ -57,6 +57,7 @@ function landportal_homepage_update_7200() {
     ),
     'values' => array(
       'status' => 1,
+      'title' => '',
       'weight' => 1,
       'region' => 'highlighted',
       'weight' => 1,
@@ -73,6 +74,7 @@ function landportal_homepage_update_7200() {
         'theme'  => 'lpbs',
       ),
       'values' => array(
+        'title' => '',
         'status' => 1,
         'region' => 'content',
         'weight' => $i++,
