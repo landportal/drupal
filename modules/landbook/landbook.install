@@ -62,6 +62,18 @@ book/thematic',
       )
     );
   }
+  // Hide this block (for now)
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'country_narrative-cp',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
 
   foreach($blocks as $block) {
     drush_log('Updated [' . $block['keys']['module'] . ': ' . $block['keys']['delta'] . ']', 'ok');
