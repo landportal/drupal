@@ -45,7 +45,7 @@ book/thematic',
 
   // Countries page
   $i += 3;
-  foreach(array('country_narrative-cp', 'country_narrative-highlight',) as $blockid) {
+  foreach(array('lbgeo-regions', 'country_narrative-highlight') as $blockid) {
     $blocks[] = array(
       'keys' => array(
         'module' => 'views',

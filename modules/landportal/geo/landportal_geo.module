@@ -5,3 +5,41 @@
  */
 
 include_once 'landportal_geo.features.inc';
+
+/**
+ * Views hook
+ */
+function landportal_geo_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
+ * Implements hook_views_default_views().
+ * Automatically load all views found in MODULE/views/*.inc
+ */
+function landportal_geo_views_default_views() {
+  $export = array();
+  $path = drupal_get_path('module', 'landportal_geo').'/views';
+  $files = file_scan_directory($path, '/\.inc$/');
+  foreach ($files as $filepath => $file) {
+    include_once $filepath;
+    $export[$view->name] = $view;
+  }
+  return $export;
+}
+
+
+function landportal_geo_menu() {
+  $items = array();
+
+  // Provided by views/geo.inc
+  $items['admin/content/landbook/countries'] = array(
+    'title'             => 'Land Book Countries',
+    'type'              => MENU_DEFAULT_LOCAL_TASK,
+    'access arguments'  => array('administer taxonomy'),
+    'callback'          => 'systems_view_data',
+    'weight'            => 9,
+  );
+
+  return $items;
+}
