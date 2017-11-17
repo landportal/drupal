@@ -31,7 +31,6 @@ function landportal_geo_views_default_views() {
 
 function landportal_geo_menu() {
   $items = array();
-
   // Provided by views/geo.inc
   $items['admin/content/landbook/countries'] = array(
     'title'             => 'Land Book Countries',
@@ -40,6 +39,18 @@ function landportal_geo_menu() {
     'callback'          => 'systems_view_data',
     'weight'            => 9,
   );
-
   return $items;
+}
+
+// Add country flag to iso3 field
+function landportal_geo_field_attach_preprocess_alter(&$variables, $context) {
+  if ($context['entity_type'] != 'taxonomy_term') return;
+  $term = $context['entity'];
+  if ($term->vocabulary_machine_name != 'regions') return;
+  if (@$iso3 = $term->field_iso3[LANGUAGE_NONE][0]['value']) {
+    $variables['content']['field_iso3'][0] = array(
+      '#markup' => '<span class="iso3">'. $iso3 . '</span>',
+      '#suffix' => '<span class="flag-icon flag-'. $iso3 . '"></span>'
+    );
+  }
 }
