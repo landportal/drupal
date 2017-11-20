@@ -3,9 +3,9 @@
 $view = new view();
 $view->name = 'resource_type';
 $view->description = '';
-$view->tag = 'library';
+$view->tag = 'landlibrary';
 $view->base_table = 'taxonomy_term_data';
-$view->human_name = 'Resource type';
+$view->human_name = 'Land Library Resource type (DEPREC?)';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = TRUE; /* Edit this to true to make a default view disabled initially */

@@ -13,7 +13,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['title'] = 'Publications';
-$handler->display->display_options['css_class'] = 'view-grid-3';
+$handler->display->display_options['css_class'] = 'view-grid-3 teaser-fullwidth';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
@@ -46,10 +46,10 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'landlibrary_resource' => 'landlibrary_resource',
 );
 
-/* Display: Latest */
-$handler = $view->new_display('block', 'Latest', 'latest');
+/* Display: Latest additions */
+$handler = $view->new_display('block', 'Latest additions', 'last_add');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Latest publications';
+$handler->display->display_options['title'] = 'Latest additions';
 
 /* Display: Promoted */
 $handler = $view->new_display('block', 'Promoted', 'promoted');
@@ -69,4 +69,15 @@ $handler->display->display_options['filters']['promote']['id'] = 'promote';
 $handler->display->display_options['filters']['promote']['table'] = 'node';
 $handler->display->display_options['filters']['promote']['field'] = 'promote';
 $handler->display->display_options['filters']['promote']['value'] = '1';
+
+/* Display: Latest publications */
+$handler = $view->new_display('block', 'Latest publications', 'last_pub');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Latest publications';
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Date of publication (field_doc_creation_date) */
+$handler->display->display_options['sorts']['field_doc_creation_date_value']['id'] = 'field_doc_creation_date_value';
+$handler->display->display_options['sorts']['field_doc_creation_date_value']['table'] = 'field_data_field_doc_creation_date';
+$handler->display->display_options['sorts']['field_doc_creation_date_value']['field'] = 'field_doc_creation_date_value';
+$handler->display->display_options['sorts']['field_doc_creation_date_value']['order'] = 'DESC';
 

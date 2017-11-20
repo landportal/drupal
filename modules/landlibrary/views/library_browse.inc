@@ -3,7 +3,7 @@
 $view = new view();
 $view->name = 'library_browse';
 $view->description = '';
-$view->tag = 'default';
+$view->tag = 'landlibrary';
 $view->base_table = 'taxonomy_term_data';
 $view->human_name = 'library browse';
 $view->core = 7;

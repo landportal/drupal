@@ -3,7 +3,7 @@
 $view = new view();
 $view->name = 'library_pages';
 $view->description = 'Land Library Resources pages by taxonomy filter (theme, geo, type, license...)';
-$view->tag = 'default';
+$view->tag = 'landlibrary';
 $view->base_table = 'node';
 $view->human_name = 'Library pages';
 $view->core = 7;
