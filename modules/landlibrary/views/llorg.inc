@@ -153,3 +153,45 @@ $handler->display->display_options['filters']['nid']['expose']['label'] = 'Nid';
 $handler->display->display_options['filters']['nid']['expose']['operator'] = 'nid_op';
 $handler->display->display_options['filters']['nid']['expose']['identifier'] = 'nid';
 
+/* Display: Providers 100 */
+$handler = $view->new_display('block', 'Providers 100', 'block_1');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Top providers';
+$handler->display->display_options['display_description'] = 'with 100+ LLR';
+$handler->display->display_options['defaults']['group_by'] = FALSE;
+$handler->display->display_options['group_by'] = TRUE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Entity Reference: Referencing entity */
+$handler->display->display_options['relationships']['reverse_field_doc_provider_node']['id'] = 'reverse_field_doc_provider_node';
+$handler->display->display_options['relationships']['reverse_field_doc_provider_node']['table'] = 'node';
+$handler->display->display_options['relationships']['reverse_field_doc_provider_node']['field'] = 'reverse_field_doc_provider_node';
+$handler->display->display_options['relationships']['reverse_field_doc_provider_node']['label'] = 'provider';
+$handler->display->display_options['relationships']['reverse_field_doc_provider_node']['required'] = TRUE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'organization' => 'organization',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Content: Nid (reference filter) */
+$handler->display->display_options['filters']['nid_entityreference_filter']['id'] = 'nid_entityreference_filter';
+$handler->display->display_options['filters']['nid_entityreference_filter']['table'] = 'node';
+$handler->display->display_options['filters']['nid_entityreference_filter']['field'] = 'nid_entityreference_filter';
+$handler->display->display_options['filters']['nid_entityreference_filter']['reference_display'] = 'llorg_ref:pub';
+/* Filter criterion: Content: Nid */
+$handler->display->display_options['filters']['nid']['id'] = 'nid';
+$handler->display->display_options['filters']['nid']['table'] = 'node';
+$handler->display->display_options['filters']['nid']['field'] = 'nid';
+$handler->display->display_options['filters']['nid']['relationship'] = 'reverse_field_doc_provider_node';
+$handler->display->display_options['filters']['nid']['group_type'] = 'count';
+$handler->display->display_options['filters']['nid']['operator'] = '>=';
+$handler->display->display_options['filters']['nid']['value']['value'] = '100';
+$handler->display->display_options['filters']['nid']['expose']['operator_id'] = 'nid_op';
+$handler->display->display_options['filters']['nid']['expose']['label'] = 'Nid';
+$handler->display->display_options['filters']['nid']['expose']['operator'] = 'nid_op';
+$handler->display->display_options['filters']['nid']['expose']['identifier'] = 'nid';
+
