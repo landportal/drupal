@@ -16,7 +16,7 @@ function landlibrary_update_7201() {
   $blocks = array();
   // Blocks for LL Landing page
   $i = 41;
-  foreach(array('llr-promoted', 'llr-last-pub', 'llr-last-add',) as $blockid) {
+  foreach(array('llr-promoted', 'llr-last_pub', 'llr-last_add',) as $blockid) {
     $blocks[] = array(
       'keys' => array(
         'module' => 'views',
