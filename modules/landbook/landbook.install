@@ -9,7 +9,7 @@
  */
 
 /** Land Portal 2.5 new UX
- *  cleanup fields
+ *  cleanup fields + bootstrap blocks
  */
 function landbook_update_7205() {
   // Remove from CP & TP field superseded by new visualizations
@@ -22,6 +22,7 @@ function landbook_update_7205() {
     }
   }
 
+  $blocks = array();
   // Blocks for Issues
   $i = 21;
   foreach(array('thematic_pages-highlight', 'thematic_pages-all',) as $blockid) {
