@@ -7,6 +7,77 @@
  * Author: Jules <jules@ker.bz>
  */
 
+
+/** Land Portal 2.5 new UX
+ *  bootstrap blocks
+ */
+function landlibrary_update_7201() {
+
+  $blocks = array();
+  // Blocks for LL Landing page
+  $i = 41;
+  foreach(array('llr-promoted', 'llr-last-pub', 'llr-last-add',) as $blockid) {
+    $blocks[] = array(
+      'keys' => array(
+        'module' => 'views',
+        'delta'  => $blockid,
+        'theme'  => 'lpbs',
+      ),
+      'values' => array(
+        'status' => 1,
+        'region' => 'content',
+        'title' => '',
+        'weight' => $i++,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'library',
+      )
+    );
+  }
+
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'apachesolr_search',
+      'delta'  => 'search_form_landlibrary_search',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => '',
+      'weight' => -1,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'library',
+    )
+  );
+
+  // Sidebar
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'llorg-publishers_100',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'sidebar_second',
+      'title' => '',
+      'weight' => 3,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'library',
+    )
+  );
+
+  foreach($blocks as $block) {
+    drush_log('Updated [' . $block['keys']['module'] . ': ' . $block['keys']['delta'] . ']', 'ok');
+    db_merge('block')
+      ->key($block['keys'])
+      ->fields($block['values'])
+      ->execute();
+  }
+
+}
+
+
 /*
  * Remove view by_uuid (now baked in code)
  */
