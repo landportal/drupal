@@ -23,6 +23,7 @@ var Drupal = Drupal || {};
                     });
                 } else if (item.options.length >= 8) {
                     $('#'+item.id).select2({
+                        containerCssClass: 'form-control',
                         dropdownParent: $('#'+item.id).parent()
                     });
                 // } else {
@@ -41,6 +42,7 @@ var Drupal = Drupal || {};
             ];
             $(single_fields).each(function(i, item) {
                 $('#'+item).select2({
+                    containerCssClass: 'form-control',
                     dropdownParent: $('#'+item).parent()
                 });
             });

@@ -82,12 +82,14 @@ function landportal_display_extract_groups($group_name, $content) {
 /******************************************
  *
  *    Hacks for select2 on forms
+ *
+ * npm install select2
+ *
  */
 
-/**********************
-** Implementation of hook_entity_info_alter().
-***********************/
-
+/*
+ * Implement hook_entity_info_alter().
+ */
 function landportal_display_entity_info_alter(&$entity_info){
   $entity_info['node']['view modes']['listing'] = array(
     'label' => t('Listing'),
@@ -139,7 +141,7 @@ function landportal_display_form_alter(&$form, &$form_state, $form_id) {
       $form['#attached']['css'][] = drupal_get_path('module', 'landportal_display') . '/select2.css';
     }
     //$form['#attached']['js'][] = drupal_get_path('theme', 'lpbs') . '/js/select2.min.js';
-    $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select2.min.js';
+    $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select2.full.min.js';
     $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select.js';
   }
 }
