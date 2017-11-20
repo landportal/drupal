@@ -1,7 +1,7 @@
 name = Landportal Geo
 core = 7.x
 package = Landportal
-version = 7.x-1.0-dev
+version = 7.x-2.5-dev
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = landportal_taxonomy
@@ -13,6 +13,7 @@ dependencies[] = text
 dependencies[] = title
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
+features[field_base][] = field_iso3
 features[field_base][] = field_iso_3166_1_alpha_2_code
 features[field_instance][] = taxonomy_term-regions-description_field
 features[field_instance][] = taxonomy_term-regions-field_area_code_un_m_49
