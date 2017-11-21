@@ -13,6 +13,45 @@ function landbook_taxonomies_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_aside|taxonomy_term|datasets|full';
+  $field_group->group_name = 'group_aside';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'datasets';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_orgref',
+      1 => 'field_view_dataset',
+      2 => 'field_view_indicators',
+      3 => 'field_doc_licencing',
+      4 => 'field_image',
+      5 => 'field_license_text',
+      6 => 'field_related_aside',
+      7 => 'group_landvoc',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-aside',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_aside|taxonomy_term|datasets|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_aside|taxonomy_term|indicators|full';
   $field_group->group_name = 'group_aside';
   $field_group->entity_type = 'taxonomy_term';
@@ -79,7 +118,7 @@ function landbook_taxonomies_field_group_info() {
   $field_groups['group_details|taxonomy_term|datasets|default'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_details|taxonomy_term|datasets|full';
   $field_group->group_name = 'group_details';
@@ -414,10 +453,10 @@ function landbook_taxonomies_field_group_info() {
   $field_group->entity_type = 'taxonomy_term';
   $field_group->bundle = 'datasets';
   $field_group->mode = 'full';
-  $field_group->parent_name = 'group_details';
+  $field_group->parent_name = 'group_aside';
   $field_group->data = array(
     'label' => '',
-    'weight' => '15',
+    'weight' => '24',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_topics',
@@ -646,7 +685,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '1',
     'children' => array(
       0 => 'description_field',
     ),
