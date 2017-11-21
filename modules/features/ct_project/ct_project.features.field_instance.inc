@@ -60,7 +60,7 @@ function ct_project_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -128,7 +128,7 @@ function ct_project_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -197,7 +197,73 @@ function ct_project_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-project-field_currency'.
+  $field_instances['node-project-field_currency'] = array(
+    'bundle' => 'project',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 25,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_currency',
+    'label' => 'Project Currency',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 3,
     ),
   );
 
@@ -279,7 +345,7 @@ function ct_project_field_default_field_instances() {
         'year_range' => '-10:+5',
       ),
       'type' => 'date_popup',
-      'weight' => 5,
+      'weight' => 2,
     ),
   );
 
@@ -343,7 +409,7 @@ function ct_project_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -606,7 +672,7 @@ function ct_project_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -742,7 +808,7 @@ function ct_project_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 7,
+      'weight' => 5,
     ),
   );
 
@@ -986,7 +1052,7 @@ function ct_project_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 9,
+      'weight' => 7,
     ),
   );
 
@@ -995,9 +1061,7 @@ function ct_project_field_default_field_instances() {
     'bundle' => 'project',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Valuation of the project (in Euros, Dollars, Pounds...). 
-Please use the format Currency (with 3 characters) Space Value (without separators).
-For example: "EUR 1000000" or "USD 549785"',
+    'description' => 'Valuation of the project (Number), for instance "1000000" or "549785"',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -1059,7 +1123,7 @@ For example: "EUR 1000000" or "USD 549785"',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -1123,7 +1187,7 @@ For example: "EUR 1000000" or "USD 549785"',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 0,
     ),
   );
 
@@ -1147,15 +1211,14 @@ For example: "EUR 1000000" or "USD 549785"',
   t('List of websites of the project (main site, LinkedIn, twitter, facebook...)');
   t('Logo or image');
   t('Overarching categories');
+  t('Project Currency');
   t('Project duration');
   t('Project value');
   t('Related concepts');
   t('Starting and end date of the project');
   t('Themes');
   t('Title');
-  t('Valuation of the project (in Euros, Dollars, Pounds...). 
-Please use the format Currency (with 3 characters) Space Value (without separators).
-For example: "EUR 1000000" or "USD 549785"');
+  t('Valuation of the project (Number), for instance "1000000" or "549785"');
   t('Websites of the project');
 
   return $field_instances;
