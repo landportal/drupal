@@ -43,7 +43,7 @@ function ct_dataset_preprocess(&$variables, $hook) {
 
     if (user_access('edit any dataset content') || user_access('administer nodes')) { //is_admin()) {
       $variables['tabs']['#primary'][] = array(
-        '#markup' => '<li>' . l('Edit Dataset', 'node/'.$variables['page']['dsid'].'/edit') . '</li>',
+        '#markup' => '<li>' . l('Edit narrative', 'node/'.$variables['page']['dsid'].'/edit') . '</li>',
       );
     }
   }

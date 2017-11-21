@@ -99,11 +99,23 @@ book/thematic',
       )
     );
   }
+
   // Hide this block (for now)
   $blocks[] = array(
     'keys' => array(
       'module' => 'views',
       'delta'  => 'country_narrative-cp',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'landbook_catalog-all',
       'theme'  => 'lpbs',
     ),
     'values' => array(

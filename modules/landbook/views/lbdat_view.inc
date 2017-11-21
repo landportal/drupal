@@ -157,7 +157,7 @@ $handler->display->display_options['filters']['field_related_themes_tid_entityre
 $handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['group'] = 1;
 $handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['exposed'] = TRUE;
 $handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['operator_id'] = 'field_related_themes_tid_entityreference_filter_op';
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['label'] = 'Themes (field_related_themes) (reference filter)';
+$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['label'] = 'Issue';
 $handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['operator'] = 'field_related_themes_tid_entityreference_filter_op';
 $handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['identifier'] = 'field_related_themes_tid_entityreference_filter';
 $handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['remember_roles'] = array(
@@ -171,6 +171,12 @@ $handler->display->display_options['filters']['field_related_themes_tid_entityre
 
 /* Display: All */
 $handler = $view->new_display('block', 'All', 'all');
+$handler->display->display_options['defaults']['use_more'] = FALSE;
+$handler->display->display_options['defaults']['use_more_always'] = FALSE;
+$handler->display->display_options['defaults']['use_more_always'] = FALSE;
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['defaults']['use_more_text'] = FALSE;
+$handler->display->display_options['use_more_text'] = 'See all datasets';
 $handler->display->display_options['link_url'] = 'book/datasets';
 
 /* Display: Latest */
