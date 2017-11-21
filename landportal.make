@@ -83,6 +83,7 @@ projects:
   - masquerade
   - media
   - media_ckeditor
+  - menu_attach_block
   - metatag
   - module_filter
   - node_edit_protection
