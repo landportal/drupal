@@ -27,7 +27,7 @@ function lbvc_plugin_ui_form_options($VCC, $params, $options = array()) {
       '#attached' => array(
         'css' => array(drupal_get_path('module', 'landportal_display') . '/select2.css'),
         'js'  => array(
-          array('type' => 'file', 'data' => drupal_get_path('module', 'landportal_display') . '/select2.min.js'),
+          array('type' => 'file', 'data' => drupal_get_path('module', 'landportal_display') . '/select2.full.min.js'),
           array(
             'type' => 'inline',
             /* 'group' => JS_DEFAULT, */
