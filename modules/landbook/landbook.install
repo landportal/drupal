@@ -23,8 +23,44 @@ function landbook_update_7205() {
   }
 
   $blocks = array();
-  // Blocks for Issues
   $i = 21;
+  // Blocks for Data page
+  foreach(array('lbdat_view-highlight', 'lbdat_view-latest',) as $blockid) {
+    $blocks[] = array(
+      'keys' => array(
+        'module' => 'views',
+        'delta'  => $blockid,
+        'theme'  => 'lpbs',
+      ),
+      'values' => array(
+        'status' => 1,
+        'region' => 'content',
+        'title' => '',
+        'weight' => $i++,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'book/data',
+      )
+    );
+  }
+  // Block in Datasets page
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'lbdat_view-all',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => '',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'book/datasets',
+    )
+  );
+
+  // Blocks for Issues page
+  $i += 3;
   foreach(array('thematic_pages-highlight', 'thematic_pages-all',) as $blockid) {
     $blocks[] = array(
       'keys' => array(

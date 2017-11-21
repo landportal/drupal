@@ -34,6 +34,7 @@ function ct_dataset_page_build(&$page) {
   }
 }
 
+// dataset pages
 function ct_dataset_preprocess(&$variables, $hook) {
   if (@$variables['page']['dsid']) {
     $variables['node'] = $variables['page']['node'];
@@ -44,6 +45,19 @@ function ct_dataset_preprocess(&$variables, $hook) {
       $variables['tabs']['#primary'][] = array(
         '#markup' => '<li>' . l('Edit Dataset', 'node/'.$variables['page']['dsid'].'/edit') . '</li>',
       );
+    }
+  }
+}
+
+// Hide image
+function ct_dataset_preprocess_field(&$variables) {
+  $name = $variables['element']['#field_name'];
+  // for Dataset name_field in default view mode, hide if there is a logo
+  if ($variables['element']['#bundle'] == 'datasets' && $name == 'name_field'
+  && in_array($variables['element']['#view_mode'], ['teaser', 'default'])
+  ) {
+    if ($variables['element']['#object']->field_image) {
+//      $variables['classes_array'][] = 'sr-only';
     }
   }
 }

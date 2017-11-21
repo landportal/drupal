@@ -256,6 +256,22 @@ function ct_dataset_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_dataset';
+  $strongarm->value = array(
+    0 => 'landbook-menu',
+  );
+  $export['menu_options_dataset'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_dataset';
+  $strongarm->value = 'landbook-menu:32153';
+  $export['menu_parent_dataset'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_dataset';
   $strongarm->value = array();
   $export['node_options_dataset'] = $strongarm;

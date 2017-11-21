@@ -47,7 +47,7 @@ function ct_dataset_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -80,9 +80,14 @@ function ct_dataset_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'header',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -105,7 +110,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'node',
@@ -161,7 +166,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
       ),
     ),
     'entity_type' => 'node',
@@ -225,7 +230,7 @@ function ct_dataset_field_default_field_instances() {
           'image_style' => 'large',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -275,7 +280,7 @@ function ct_dataset_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 9,
+        'weight' => 13,
       ),
       'full' => array(
         'label' => 'above',
@@ -294,7 +299,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -364,7 +369,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
     ),
     'entity_type' => 'node',
@@ -427,7 +432,7 @@ function ct_dataset_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 10,
+        'weight' => 14,
       ),
       'listing' => array(
         'label' => 'above',
@@ -439,7 +444,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -527,7 +532,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -567,7 +572,7 @@ function ct_dataset_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 11,
+        'weight' => 15,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -588,7 +593,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -681,7 +686,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'node',
@@ -775,7 +780,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 13,
       ),
     ),
     'entity_type' => 'node',
@@ -840,7 +845,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
     ),
     'entity_type' => 'node',
@@ -909,7 +914,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
     ),
     'entity_type' => 'node',
@@ -926,100 +931,6 @@ function ct_dataset_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 19,
-    ),
-  );
-
-  // Exported field_instance: 'node-dataset-field_view_dataset'.
-  $field_instances['node-dataset-field_view_dataset'] = array(
-    'bundle' => 'dataset',
-    'default_value' => array(
-      0 => array(
-        'moddelta' => 'views:lbdat-catalog',
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'blockreference',
-        'settings' => array(
-          'show_empty_blocks' => FALSE,
-        ),
-        'type' => 'blockreference_default',
-        'weight' => 8,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'blockreference',
-        'settings' => array(
-          'show_empty_blocks' => FALSE,
-        ),
-        'type' => 'blockreference_default',
-        'weight' => 4,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_view_dataset',
-    'label' => 'View Catalog',
-    'required' => 0,
-    'settings' => array(
-      'blockreference_modules' => array(
-        'addtoany' => 0,
-        'apachesolr_search' => 0,
-        'block' => 0,
-        'calendar' => 0,
-        'comment' => 0,
-        'context_ui' => 0,
-        'diff' => 0,
-        'facetapi' => 0,
-        'global_filter' => 0,
-        'hybridauth' => 0,
-        'jump_menu' => 0,
-        'landbook_lgaf' => 0,
-        'landbook_vggt' => 0,
-        'landbook_view_coda' => 0,
-        'landportal_blocks' => 0,
-        'landportal_partners' => 0,
-        'locale' => 0,
-        'login_one_time' => 0,
-        'logintoboggan' => 0,
-        'mailchimp_signup' => 0,
-        'masquerade' => 0,
-        'menu' => 0,
-        'node' => 0,
-        'og_menu' => 0,
-        'pcp' => 0,
-        'print' => 0,
-        'search' => 0,
-        'shortcut' => 0,
-        'system' => 0,
-        'twitter_block' => 0,
-        'user' => 0,
-        'views' => 'views',
-        'webform' => 0,
-      ),
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 13,
     ),
   );
 
@@ -1066,7 +977,7 @@ function ct_dataset_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'node',
@@ -1091,7 +1002,8 @@ function ct_dataset_field_default_field_instances() {
     'bundle' => 'dataset',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Give a title to this dataset publication (ex: Land use in 2018)
+',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1135,23 +1047,46 @@ function ct_dataset_field_default_field_instances() {
           'title_style' => 'h3',
         ),
         'type' => 'title_linked',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'title_field',
-    'label' => 'Title',
-    'required' => TRUE,
+    'label' => 'Title for this release',
+    'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'hide_label' => array(
-        'entity' => FALSE,
-        'page' => FALSE,
+        'entity' => 0,
+        'page' => 0,
       ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'size' => 60,
@@ -1169,6 +1104,8 @@ function ct_dataset_field_default_field_instances() {
   t('Catalog');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Geographical focus');
+  t('Give a title to this dataset publication (ex: Land use in 2018)
+');
   t('Land Book Visualizations');
   t('Official site');
   t('Overarching categories');
@@ -1179,8 +1116,7 @@ function ct_dataset_field_default_field_instances() {
   t('Related concepts');
   t('Related content');
   t('Themes');
-  t('Title');
-  t('View Catalog');
+  t('Title for this release');
 
   return $field_instances;
 }

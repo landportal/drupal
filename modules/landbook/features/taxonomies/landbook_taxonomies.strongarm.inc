@@ -31,6 +31,9 @@ function landbook_taxonomies_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'header' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -62,6 +65,10 @@ function landbook_taxonomies_strongarm() {
             'weight' => '3',
             'visible' => TRUE,
           ),
+          'header' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
         ),
         'authoring_information' => array(
           'default' => array(
@@ -78,6 +85,10 @@ function landbook_taxonomies_strongarm() {
           ),
           'full' => array(
             'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'header' => array(
+            'weight' => '17',
             'visible' => FALSE,
           ),
         ),
@@ -105,6 +116,9 @@ function landbook_taxonomies_strongarm() {
         'custom_settings' => TRUE,
       ),
       'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'header' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -158,7 +172,7 @@ function landbook_taxonomies_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '7',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'full' => array(
