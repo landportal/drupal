@@ -120,22 +120,22 @@ function ct_project_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '204',
+          'weight' => '12',
         ),
         'locations' => array(
-          'weight' => '201',
+          'weight' => '9',
         ),
         'metatags' => array(
-          'weight' => '203',
+          'weight' => '11',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '202',
+          'weight' => '10',
         ),
         'xmlsitemap' => array(
-          'weight' => '200',
+          'weight' => '8',
         ),
       ),
       'display' => array(
@@ -297,6 +297,48 @@ function ct_project_strongarm() {
   $strongarm->name = 'node_submitted_project';
   $strongarm->value = 0;
   $export['node_submitted_project'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_project_en_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_project_en_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_project_es_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_project_es_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_project_fr_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_project_fr_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_project_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_project_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_project_pt_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_project_pt_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_project_und_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_project_und_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
