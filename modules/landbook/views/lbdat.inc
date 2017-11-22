@@ -5,7 +5,7 @@ $view->name = 'lbdat';
 $view->description = 'Provide ref and base views for dataset based lists';
 $view->tag = 'taxonomy, landbook';
 $view->base_table = 'taxonomy_term_data';
-$view->human_name = 'LB Datasets';
+$view->human_name = 'Land Book Datasets ref';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -33,12 +33,6 @@ $handler->display->display_options['row_options']['inline'] = array(
   'php' => 'php',
   'name' => 'name',
 );
-/* No results behavior: Global: PHP */
-$handler->display->display_options['empty']['php']['id'] = 'php';
-$handler->display->display_options['empty']['php']['table'] = 'views';
-$handler->display->display_options['empty']['php']['field'] = 'php';
-$handler->display->display_options['empty']['php']['empty'] = TRUE;
-$handler->display->display_options['empty']['php']['php_output'] = '<?php dpm($view, \'NO\'); ?>';
 /* Field: Taxonomy term: Term ID */
 $handler->display->display_options['fields']['tid']['id'] = 'tid';
 $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
@@ -70,6 +64,48 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
   'datasets' => 'datasets',
 );
 $handler->display->display_options['filters']['machine_name']['group'] = 1;
+
+/* Display: RefID */
+$handler = $view->new_display('entityreference', 'RefID', 'refid');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['display_description'] = 'LB datasets ref';
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'entityreference_style';
+$handler->display->display_options['style_options']['search_fields'] = array(
+  'tid' => 'tid',
+  'name' => 0,
+);
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'entityreference_fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: Term ID */
+$handler->display->display_options['fields']['tid']['id'] = 'tid';
+$handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['tid']['field'] = 'tid';
+$handler->display->display_options['fields']['tid']['label'] = '';
+$handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['tid']['separator'] = '';
+
+/* Display: Ref Datasets */
+$handler = $view->new_display('entityreference', 'Ref Datasets', 'ref');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['display_description'] = 'LB datasets ref list';
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'entityreference_style';
+$handler->display->display_options['style_options']['search_fields'] = array(
+  'name' => 'name',
+  'tid' => 0,
+);
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'entityreference_fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
 
 /* Display: Ref Theme */
 $handler = $view->new_display('entityreference', 'Ref Theme', 'ref_theme');
@@ -123,8 +159,6 @@ $handler->display->display_options['fields']['tid_1']['relationship'] = 'reverse
 $handler->display->display_options['fields']['tid_1']['group_type'] = 'count';
 $handler->display->display_options['fields']['tid_1']['label'] = '';
 $handler->display->display_options['fields']['tid_1']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['tid_1']['prefix'] = '(';
-$handler->display->display_options['fields']['tid_1']['suffix'] = ')';
 $handler->display->display_options['defaults']['sorts'] = FALSE;
 /* Sort criterion: Taxonomy term: Name */
 $handler->display->display_options['sorts']['name']['id'] = 'name';
@@ -170,7 +204,7 @@ $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'entityreference_fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
-/* Relationship: Taxonomy term: Taxonomy term using Catalog */
+/* Relationship: Taxonomy term: Taxonomy term using Dataset */
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['id'] = 'reverse_field_dataset_taxonomy_term';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['field'] = 'reverse_field_dataset_taxonomy_term';
@@ -247,7 +281,7 @@ $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'entityreference_fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
-/* Relationship: Taxonomy term: Taxonomy term using Catalog */
+/* Relationship: Taxonomy term: Taxonomy term using Dataset */
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['id'] = 'reverse_field_dataset_taxonomy_term';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['field'] = 'reverse_field_dataset_taxonomy_term';
@@ -370,7 +404,7 @@ $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '1';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
-/* Relationship: Taxonomy term: Taxonomy term using Catalog */
+/* Relationship: Taxonomy term: Taxonomy term using Dataset */
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['id'] = 'reverse_field_dataset_taxonomy_term';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['field'] = 'reverse_field_dataset_taxonomy_term';
@@ -392,7 +426,7 @@ $handler->display->display_options['fields']['view']['field'] = 'view';
 $handler->display->display_options['fields']['view']['label'] = '';
 $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['view']['view'] = 'lbdat';
-$handler->display->display_options['fields']['view']['display'] = 'menu';
+$handler->display->display_options['fields']['view']['display'] = 'menu_ind';
 $handler->display->display_options['fields']['view']['arguments'] = '[!tid]';
 $handler->display->display_options['defaults']['sorts'] = FALSE;
 $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -430,7 +464,7 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
 $handler->display->display_options['filters']['machine_name']['group'] = 1;
 
 /* Display: Indicators menu */
-$handler = $view->new_display('block', 'Indicators menu', 'menu');
+$handler = $view->new_display('block', 'Indicators menu', 'menu_ind');
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'jump_menu';
 $handler->display->display_options['style_options']['hide'] = TRUE;
@@ -444,7 +478,7 @@ $handler->display->display_options['row_options']['inline'] = array(
 );
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['relationships'] = FALSE;
-/* Relationship: Taxonomy term: Taxonomy term using Catalog */
+/* Relationship: Taxonomy term: Taxonomy term using Dataset */
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['id'] = 'reverse_field_dataset_taxonomy_term';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['field'] = 'reverse_field_dataset_taxonomy_term';
@@ -544,6 +578,10 @@ $handler->display->display_options['filters']['hdepth']['table'] = 'taxonomy_ter
 $handler->display->display_options['filters']['hdepth']['field'] = 'hdepth';
 $handler->display->display_options['filters']['hdepth']['relationship'] = 'reverse_field_dataset_taxonomy_term';
 $handler->display->display_options['filters']['hdepth']['operator'] = '<=';
-$handler->display->display_options['filters']['hdepth']['value']['value'] = '1';
+$handler->display->display_options['filters']['hdepth']['value']['value'] = '0';
 $handler->display->display_options['filters']['hdepth']['group'] = 1;
+$handler->display->display_options['filters']['hdepth']['expose']['operator_id'] = 'hdepth_op';
+$handler->display->display_options['filters']['hdepth']['expose']['label'] = 'Hierarchical depth';
+$handler->display->display_options['filters']['hdepth']['expose']['operator'] = 'hdepth_op';
+$handler->display->display_options['filters']['hdepth']['expose']['identifier'] = 'hdepth';
 
