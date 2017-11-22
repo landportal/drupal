@@ -1,7 +1,7 @@
 name = Landportal Mailchimp
 core = 7.x
-package = Landportal Comm
-version = 7.x-1.2
+package = Landportal
+version = 7.x-2.5-dev
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = field_group
