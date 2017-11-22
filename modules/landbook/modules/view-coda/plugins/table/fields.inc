@@ -46,7 +46,8 @@ function lbvc_plugin_table_formatter($VCC) {
   }
 
   $value .= '<tbody>';
-  foreach ($params->cache as $i) { $value .= '<tr><td><span class="indicator">' . $i['render'] . '</span></td></tr>'; }
+  foreach ($params->cache as $i) { $value .= '<tr lbid="' . $i['id'] . '"><td><span class="indicator">' . $i['render'] . '</span></td></tr>'; }
+  // add td to value (depends on table type / columns)
   $value .= '</tbody></table>';
 
   $chart = array(
