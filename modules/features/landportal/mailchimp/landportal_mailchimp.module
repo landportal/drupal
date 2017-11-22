@@ -73,22 +73,23 @@ function landportal_mailchimp_rules_access_callback() {
 
 
 function landportal_mailchimp_default_rules_configuration() {
-    $config = array(
+  $config = array(
       'mailchimp_sync_test' => rules_import('{ "mailchimp_sync_test" : {
-    "LABEL" : "Mailchimp sync test",
-    "PLUGIN" : "reaction rule",
-    "OWNER" : "rules",
-    "REQUIRES" : [ "landportal_mailchimp", "profile2" ],
-    "ON" : { "profile2_update" : [] },
-    "DO" : [
-      { "landportal_mailchimp_user_update" : {
-          "entity" : [ "profile2:user" ],
-          "field" : [ "profile2:user:field-mc-test" ]
-        }
-      }
-    ]
-  }
-}'),
+      "LABEL" : "Mailchimp sync test",
+        "PLUGIN" : "reaction rule",
+        "ACTIVE" : false,
+        "OWNER" : "rules",
+        "REQUIRES" : [ "landportal_mailchimp", "profile2" ],
+        "ON" : { "profile2_update" : [] },
+        "DO" : [
+          { "landportal_mailchimp_user_update" : {
+              "entity" : [ "profile2:user" ],
+                "field" : [ "profile2:user:field-mc-test" ]
+                }
+          }
+              ]
+          }
+  }'),
       'mailchimp_sync_users' => rules_import('{ "mailchimp_sync_users" : {
     "LABEL" : "Mailchimp sync users",
     "PLUGIN" : "reaction rule",
