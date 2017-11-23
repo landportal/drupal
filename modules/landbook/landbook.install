@@ -100,6 +100,39 @@ book/thematic',
     );
   }
 
+  //Indicators page
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'lbind_view-all',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => '',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'book/indicators',
+    )
+  );
+  // Providers
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'lborg-all',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => '',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'book/sources',
+    )
+  );
+
   // Hide this block (for now)
   $blocks[] = array(
     'keys' => array(
