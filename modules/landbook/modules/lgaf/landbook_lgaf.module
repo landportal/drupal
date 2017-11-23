@@ -1,4 +1,12 @@
 <?php
+/**
+ * Implements hook_theme().
+ */
+function landbook_lgaf_theme($existing, $type, $theme, $path) {
+  // Scan this directory for template files
+  $templates = drupal_find_theme_templates($existing, '.tpl.php', $path);
+  return $templates;
+}
 
 /* Declare LGAF block */
 function landbook_lgaf_block_info() {
