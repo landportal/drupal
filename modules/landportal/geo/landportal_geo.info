@@ -1,7 +1,7 @@
 name = Landportal Geo
 core = 7.x
 package = Landportal
-version = 7.x-2.5-dev1
+version = 7.x-2.5-dev2
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = landportal_taxonomy
