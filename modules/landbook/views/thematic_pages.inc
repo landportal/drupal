@@ -64,6 +64,7 @@ $handler->display->display_options['sorts']['promote']['order'] = 'DESC';
 $handler->display->display_options['sorts']['changed']['id'] = 'changed';
 $handler->display->display_options['sorts']['changed']['table'] = 'node';
 $handler->display->display_options['sorts']['changed']['field'] = 'changed';
+$handler->display->display_options['sorts']['changed']['order'] = 'DESC';
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
