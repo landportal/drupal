@@ -293,7 +293,7 @@ function landbook_country_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 7,
+        'weight' => 9,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -353,7 +353,7 @@ function landbook_country_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 9,
+        'weight' => 11,
       ),
       'listing' => array(
         'label' => 'above',
@@ -546,7 +546,7 @@ function landbook_country_field_default_field_instances() {
           'title_style' => 'h1',
         ),
         'type' => 'title_linked',
-        'weight' => 8,
+        'weight' => 10,
       ),
       'listing' => array(
         'label' => 'hidden',

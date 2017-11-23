@@ -5,3 +5,17 @@
  */
 
 include_once 'landbook_country.features.inc';
+
+// TODO: simply have this as a block
+function landbook_country_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'landbook_country' && $view_mode == 'full') {
+    // Add page-internal menu
+    $node->content['group_header']['#attached'] = array(
+      'js' => array(array(
+        'type' => 'inline',
+        'data' => landportal_blocks_page_submenu()
+      ))
+    );
+    $node->content['group_header']['#suffix'] = '<div id="page-submenu"><ul class="nav"></ul></div>';
+ }
+}
