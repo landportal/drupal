@@ -6,22 +6,44 @@
 
 include_once 'landportal_display.features.inc';
 
+/*
+ * Implement hook_entity_info_alter().
+ */
+function landportal_display_entity_info_alter(&$entity_info){
+  $entity_info['node']['view modes']['listing'] = array(
+    'label' => t('Listing'),
+    'custom settings' => TRUE,
+  );
+}
+
+
+
 /******************************************
  *
  *    Hacks for drupal node/page title
  */
-
 function landportal_display_preprocess_page(&$variables) {
-  // Taxonomy, clear title if we have a name_field
-  if (@($term = $variables['page']['content']['system_main']['term_heading']['term']) &&
-      isset($term['name_field'])) {
-    $variables['title'] = '';
+  $sysmain = &$variables['page']['content']['system_main'];
+  $content = null;
+  // Taxonomy term page
+  if (array_key_exists('term_heading', $sysmain)) {
+    $term = $sysmain['term_heading']['term'];
     //dpm($term, "Got a term");
+    // If we have a name_field set, clear page title
+    if (@isset($term['name_field'])) {
+      $variables['title'] = '';
+    }
   }
-  if (isset($variables['node']) && isset($variables['node']->title_field) &&
-      array_key_exists('nodes', $variables['page']['content']['system_main'])) {
-    landportal_display__get_group_header($variables['node']->nid, $variables);
+  // Node page
+  else if (array_key_exists('nodes', $sysmain)) {
+    $first = array_keys($sysmain['nodes'])[0];
+    //dpm($sysmain['nodes'][$first], $first);
+    landportal_display__get_group_header($first, $variables);
   }
+  /* if (isset($variables['node']) && isset($variables['node']->title_field) && */
+  /*     array_key_exists('nodes', $variables['page']['content']['system_main'])) { */
+  /*   landportal_display__get_group_header($variables['node']->nid, $variables); */
+  /* } */
 }
 
 //
@@ -87,17 +109,31 @@ function landportal_display_extract_groups($group_name, $content) {
  *
  */
 
-/*
- * Implement hook_entity_info_alter().
- */
-function landportal_display_entity_info_alter(&$entity_info){
-  $entity_info['node']['view modes']['listing'] = array(
-    'label' => t('Listing'),
-    'custom settings' => TRUE,
-  );
+/* function landportal_display_theme_registry_alter(&$theme_registry) { */
+/*   $theme_registry['select']['preprocess functions'][] = 'landportal_display_select'; */
+/*   $theme_registry['select']['process functions'][] = 'landportal_display_select'; */
+/*   dpm($theme_registry['select']); */
+/* } */
+
+/* function landportal_display_select(&$variables, $hook) { */
+/*   landportal_display_add_select2($variables['element']); */
+/*   $variables['element']['#attributes']['class'][] = 'STUFF'; */
+/*   dpm($variables, $hook);//$variables['element']['#id']); */
+/*   //return jump_menu_select($variables); */
+/* } */
+
+function landportal_display_add_select2(&$elem) {
+  /* global $theme; */
+  /* if ($theme != 'lpbs') { */
+    /* $elem['#attached']['css'][] = drupal_get_path('module', 'landportal_display') . '/select2.css'; */
+  /* } */
+  //$elem['#attached']['js'][] = drupal_get_path('theme', 'lpbs') . '/js/select2.min.js';
+  $elem['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select2.full.min.js';
+  $elem['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select.js';
 }
 
 function landportal_display_form_alter(&$form, &$form_state, $form_id) {
+  //dsm($form_id);
   $fields = array(
     // LL specific
     'field_doc_type',
@@ -132,16 +168,10 @@ function landportal_display_form_alter(&$form, &$form_state, $form_id) {
   $forms = array(
     'field_ui_field_overview_form', 'user_profile_form', 'user_register_form',
     'apachesolr_search_custom_page_search_form', 'views_exposed_form',
-    'taxonomy-form-term'
+    'taxonomy-form-term', 'ctools_jump_menu'
   );
   if (count($select) || in_array($form_id, $forms) || preg_match('/^views_ui_/', $form_id)) {
-    // dpm($select, 'selected fields');
-    global $theme;
-    if ($theme != 'lpbs') {
-      $form['#attached']['css'][] = drupal_get_path('module', 'landportal_display') . '/select2.css';
-    }
-    //$form['#attached']['js'][] = drupal_get_path('theme', 'lpbs') . '/js/select2.min.js';
-    $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select2.full.min.js';
-    $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select.js';
+    //dpm($select, 'selected fields');
+    landportal_display_add_select2($form);
   }
 }
