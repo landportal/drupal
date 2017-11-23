@@ -171,7 +171,7 @@ function lbvc__indicators_js_serialize($entity) {
     $u = array_pop($entity->field_unit); // workaround language issues
     $ind['unit'] = $u[0]['value'];
   }
-  if (count($entity->field_orgref) > 0) {
+  if (@count($entity->field_orgref) > 0) {
     $u = array_pop($entity->field_orgref); // workaround language issues
     $ind['dataset'] = $u[0]['value'];
   }
