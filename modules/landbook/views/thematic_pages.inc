@@ -104,6 +104,8 @@ $handler->display->display_options['pager']['options']['offset'] = '0';
 
 /* Display: All */
 $handler = $view->new_display('block', 'All', 'all');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'All issues';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'teaser-fullwidth view-grid-4 view-wrapped';
 
