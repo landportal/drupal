@@ -288,9 +288,9 @@ function landbook_country_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'links' => TRUE,
-          'use_content_language' => TRUE,
-          'view_mode' => 'default',
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 7,
@@ -328,11 +328,13 @@ function landbook_country_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'taxonomy',
       'settings' => array(
         'apply_chosen' => '',
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
       ),
-      'type' => 'options_select',
+      'type' => 'taxonomy_autocomplete',
       'weight' => 0,
     ),
   );
@@ -541,7 +543,7 @@ function landbook_country_field_default_field_instances() {
         'settings' => array(
           'title_class' => '',
           'title_link' => '',
-          'title_style' => '',
+          'title_style' => 'h1',
         ),
         'type' => 'title_linked',
         'weight' => 8,
