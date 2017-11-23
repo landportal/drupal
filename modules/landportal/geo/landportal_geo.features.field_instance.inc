@@ -72,7 +72,7 @@ function landportal_geo_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -144,7 +144,7 @@ function landportal_geo_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -173,6 +173,79 @@ function landportal_geo_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-regions-field_iso2'.
+  $field_instances['taxonomy_term-regions-field_iso2'] = array(
+    'bundle' => 'regions',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The country ISO2 (aka ISO 3166-1 alpha-2 code)
+',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_iso2',
+    'label' => 'ISO2',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 2,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
     ),
   );
 
@@ -220,7 +293,7 @@ function landportal_geo_field_default_field_instances() {
           'title_style' => '',
         ),
         'type' => 'title_linked',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -262,70 +335,6 @@ function landportal_geo_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'taxonomy_term-regions-field_iso_3166_1_alpha_2_code'.
-  $field_instances['taxonomy_term-regions-field_iso_3166_1_alpha_2_code'] = array(
-    'bundle' => 'regions',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '2 characters code for the area (country). See the latest list of codes in the <a href="https://www.iso.org/obp/ui/#iso:pub:PUB500001:en">Country Codes Collection from ISO</a>.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 7,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_iso_3166_1_alpha_2_code',
-    'label' => 'ISO 3166-1 alpha-2 code',
-    'required' => 0,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => -9,
-            ),
-            'full_html' => array(
-              'weight' => -10,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-          ),
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 2,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 3,
     ),
   );
 
@@ -441,17 +450,18 @@ function landportal_geo_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('2 characters code for the area (country). See the latest list of codes in the <a href="https://www.iso.org/obp/ui/#iso:pub:PUB500001:en">Country Codes Collection from ISO</a>.');
   t('3 characters code for the area (country). See the latest list of codes in the <a href="https://www.iso.org/obp/ui/#iso:pub:PUB500001:en">Country Codes Collection from ISO</a>.');
   t('3 numbes code for the area (country/region). See the latest list of codes in the <a href="http://unstats.un.org/unsd/publications/statistical-yearbook">UN Statistical Yearbook</a>.');
   t('Area code (UN M.49)');
   t('Classification');
   t('Description');
-  t('ISO 3166-1 alpha-2 code');
+  t('ISO2');
   t('ISO3');
   t('Name');
   t('Please, enter the synonyms which should be related to this term.');
   t('Synonyms');
+  t('The country ISO2 (aka ISO 3166-1 alpha-2 code)
+');
 
   return $field_instances;
 }

@@ -1,0 +1,33 @@
+<?php
+/**
+ * @file
+ *
+ * The Land Portal Geo taxonomy
+*  
+ * Author: Jules <jules@ker.bz>
+ */
+
+/** Land Portal 2.5
+ */
+function landportal_geo_update_7200() {
+
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'taxonomy_term')
+        ->entityCondition('bundle', 'regions')
+        ->fieldCondition('field_iso3', 'value', '', '<>')
+    ;
+  $result = $query->execute();
+  $tids = array_keys($result['taxonomy_term']);
+  drush_log("Updating " . count($tids) . " countries in regions tax.\n", 'ok');
+  $terms = taxonomy_term_load_multiple($tids);
+  foreach($terms as $term) {
+    $iso3 = $term->field_iso3[LANGUAGE_NONE][0]['value'];
+    $iso2 = $term->field_iso2[LANGUAGE_NONE][0]['value'];
+    //print '('. $term->tid .') ' . $term->name . ' - ' . $iso3 . ':' . $iso2 . "\n";
+    if ($iso3 && !$iso2) {
+      $term->field_iso2 = $term->field_iso3;
+      $term->field_iso2[LANGUAGE_NONE][0]['value'] = iso3toiso2($iso3);
+      field_attach_update('taxonomy_term', $term);
+    }
+  }
+}

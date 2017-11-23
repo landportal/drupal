@@ -4,6 +4,8 @@
  * Code for the Landportal Geo feature.
  */
 
+define('LP_REGIONS_VID', 7);
+
 include_once 'landportal_geo.features.inc';
 
 /**
