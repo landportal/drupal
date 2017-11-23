@@ -16,7 +16,7 @@
 function lbvc_plugin_ui_form_options($VCC, $params, $options = array()) {
   $fields = array();
   if (isset($params->loadIndicators)) {
-    $fields['indicator'] = form_process_select(array(
+    $select = array(
       '#id' => $VCC['vid']. '-indicator',
       '#multiple' => false,
       '#required' => false,
@@ -24,25 +24,8 @@ function lbvc_plugin_ui_form_options($VCC, $params, $options = array()) {
       '#type' => 'select',
       '#empty_option' => t('Select an indicator'),
       '#options' => [],
-      '#attached' => array(
-        'css' => array(drupal_get_path('module', 'landportal_display') . '/select2.css'),
-        'js'  => array(
-          array('type' => 'file', 'data' => drupal_get_path('module', 'landportal_display') . '/select2.full.min.js'),
-          array(
-            'type' => 'inline',
-            /* 'group' => JS_DEFAULT, */
-            /* 'weight' => 100, */
-            'data' => "(function($, Drupal) {
-Drupal.behaviors.landbook_view_coda = { attach: function () {
-  var el = $('select[name=\"indicator\"]').each(function (i, s) {
-    $(s).select2({ dropdownParent: $(s).parent() });
-  });
-}};
-})(jQuery, Drupal);
-")
-        )
-      )
-    ));
+    );
+    $fields['indicator'] = form_process_select($select);
   }
   if (isset($params->loadYears)) {
     /* if (array_key_exists('range', $options)) { */
@@ -131,6 +114,8 @@ function lbvc_plugin_ui_form_wrapper($VCC, $fields, $action='update') {
     'items' => $fields,
 //    '#after_build' => array('lbvc_after_build'), // no worky worky
   );
+  landportal_display_add_select2($form);
+//  dpm($form);
   return $form;
 }
 

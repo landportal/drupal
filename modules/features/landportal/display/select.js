@@ -18,13 +18,14 @@ var Drupal = Drupal || {};
 
     // Force select elements matching those DOM ids
     var force_ids = [
-        'edit-field-indicator-map-und',
-        'edit-field-indicator-ranking-und',
-        'edit-field-landvoc-to-und',
-        'edit-field-doc-type-tid',
-        'edit-field-organization-type-tid',
-        'edit-fields-add-new-field-type',
-        'edit-fields-add-existing-field-field-name',
+        // '#edit-field-indicator-map-und',
+        // '#edit-field-indicator-ranking-und',
+        '#edit-field-landvoc-to-und',
+        '#edit-field-doc-type-tid',
+        '#edit-field-organization-type-tid',
+        '#edit-fields-add-new-field-type',
+        '#edit-fields-add-existing-field-field-name',
+        '.view-coda-form select'
     ];
 
     var select2opts = function (item) {
@@ -36,6 +37,7 @@ var Drupal = Drupal || {};
 
     var select2init = function (item) {
         // If multi-select, add 'tags' style option to select2
+        //console.log('GAME ON B#$%', item);
         if (item.multiple == true) {
             $(item).select2($.extend(select2opts(item), {
                 tags: true,
@@ -51,17 +53,24 @@ var Drupal = Drupal || {};
     // Drupal action stuff
     Drupal.behaviors.landportal_display = {
         attach: function(context) {
+            //console.log('yooo', context);
             // Loop through all form select elements
             $('form select').each(function(i, item) {
                 // Activate select2 on all multiple select
                 // or if we have at least 8 options
-                if (item.multiple == true || item.options.length >= 8) {
+                //console.log('select ' + i, item.length, item.multiple, item);
+                if (item.multiple == true || item.length >= 8) {
                     select2init(item);
                 }
             });
             // Specific select elements based on DOM ids
-            $(force_ids).each(function(i, item) {
-                $('#'+item).select2(select2opts(item));
+            force_ids.forEach(function(id) {
+                var items = $(id);
+                if (items.length) {
+                    items.each(function (i, item) {
+                        select2init(item);
+                    });
+                }
             });
         }
     }
