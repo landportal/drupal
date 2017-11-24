@@ -1,9 +1,6 @@
-Landlibrary {"url":"library","lang":"und","weight":"0"}
-Land Debate {"url":"debate","hidden":true,"lang":"und","weight":"-49"}
-Land Book {"url":"book","hidden":true,"lang":"und","weight":"-50"}
 About us {"url":"about","expanded":true,"lang":"und","weight":"0"}
 -What we do {"url":"about\/what-we-do","lang":"und","weight":"-49"}
--Contact us {"url":"webform\/2016\/04\/contact-form","lang":"und","weight":"-48"}
+-Contact us {"url":"about\/contact-us","lang":"und","weight":"-48"}
 -About us {"url":"about","lang":"und","weight":"-50"}
 Open Data {"url":"opendata","expanded":true,"lang":"und","weight":"0"}
 -Vocabularies {"url":"voc","lang":"und","weight":"-48"}

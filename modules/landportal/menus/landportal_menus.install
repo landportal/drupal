@@ -5,16 +5,36 @@
  * Author: Jules <jules@ker.bz>
  */
 
+/** Land Portal 2.5 new UX
+ *  cleanup old menus
+ */
 function landportal_menus_update_7200() {
   // Cleanup main menu
-  $menu_del = db_delete('menu_links')
-    ->condition('menu_name', 'main-menu')
-    ->execute();
+  /* $menu_del = db_delete('menu_links') */
+  /*   ->condition('menu_name', 'main-menu') */
+  /*   ->execute(); */
 
   // Delete old LP header menus
   menu_delete(array('menu_name' => 'landbook-menu'));
   menu_delete(array('menu_name' => 'landdebate-menu'));
   menu_delete(array('menu_name' => 'landlibrary-menu'));
+  menu_delete(array('menu_name' => 'user-signin'));
+
+  // Force new menu in header
+  $block = array(
+    'keys' => array(
+      'theme' => 'lpbs',
+      'module' => 'menu',
+      'delta'  => 'menu-land-portal-about',
+    ),
+    'values' => array(
+      'region' => 'sidebar_second',
+    )
+  );
+  db_merge('block')
+    ->key($block['keys'])
+    ->fields($block['values'])
+    ->execute();
 }
 
 function landportal_menus_enable() {
@@ -23,6 +43,7 @@ function landportal_menus_enable() {
     'keys' => array(
       'module' => 'menu',
       'delta'  => 'landportal-menu',
+      'theme' => 'lpbs',
     ),
     'values' => array(
       'status' => 1,
