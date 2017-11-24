@@ -30,10 +30,10 @@ function landportal_promoted_default_fe_block_settings() {
         'weight' => 0,
       ),
       'lpbs' => array(
-        'region' => 'highlighted',
+        'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'seven' => array(
         'region' => '',
@@ -44,6 +44,108 @@ function landportal_promoted_default_fe_block_settings() {
     ),
     'title' => '',
     'visibility' => 1,
+  );
+
+  $export['views-promoted-data'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'promoted-data',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'lpbs' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'lpbs',
+        'weight' => 5,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-promoted-discussions'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'promoted-discussions',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'lpbs' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'lpbs',
+        'weight' => 3,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-promoted-events'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'promoted-events',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'lpbs' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'lpbs',
+        'weight' => 4,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
   );
 
   $export['views-promoted-front'] = array(
@@ -67,7 +169,7 @@ function landportal_promoted_default_fe_block_settings() {
         'region' => 'highlighted',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'seven' => array(
         'region' => '',
@@ -98,10 +200,10 @@ function landportal_promoted_default_fe_block_settings() {
         'weight' => 0,
       ),
       'lpbs' => array(
-        'region' => 'highlighted',
+        'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 0,
+        'weight' => 6,
       ),
       'seven' => array(
         'region' => '',
@@ -112,6 +214,40 @@ function landportal_promoted_default_fe_block_settings() {
     ),
     'title' => '',
     'visibility' => 1,
+  );
+
+  $export['views-promoted-projects'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'promoted-projects',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'lpbs' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'lpbs',
+        'weight' => 7,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
   );
 
   $export['views-promoted-thematic'] = array(
@@ -132,10 +268,10 @@ function landportal_promoted_default_fe_block_settings() {
         'weight' => 0,
       ),
       'lpbs' => array(
-        'region' => 'highlighted',
+        'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'seven' => array(
         'region' => '',
