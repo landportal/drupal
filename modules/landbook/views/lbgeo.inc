@@ -179,6 +179,7 @@ $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'jump_menu';
 $handler->display->display_options['style_options']['hide'] = TRUE;
 $handler->display->display_options['style_options']['path'] = 'field_iso3';
+$handler->display->display_options['style_options']['inline'] = FALSE;
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
