@@ -109,8 +109,24 @@ book/thematic',
       )
     );
   }
+  // Move map down
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'landbook_view_coda',
+      'delta'  => 'lbvc_map',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => '',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'book/countries',
+    )
+  );
 
-  //Indicators page
+  // Indicators page
   $blocks[] = array(
     'keys' => array(
       'module' => 'views',
