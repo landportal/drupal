@@ -12,7 +12,7 @@
  *  cleanup fields + bootstrap blocks
  */
 function landbook_update_7205() {
-  // Remove from CP & TP field superseded by new visualizations
+  // Remove from CP & TP fields superseded by new visualizations
   foreach(array('field_indicator_ranking', 'field_indicator_map') as $name) {
     if ($instance = field_info_instance('node', $name, 'landbook_country')) {
       field_delete_instance($instance);
@@ -20,6 +20,16 @@ function landbook_update_7205() {
     if ($instance = field_info_instance('node', $name, 'thematic_narrative')) {
       field_delete_instance($instance);
     }
+  }
+  // Remove fields from DS & Ind
+  if ($instance = field_info_instance('node', 'field_view_dataset', 'dataset')) {
+    field_delete_instance($instance);
+  }
+  if ($instance = field_info_instance('taxonomy_term', 'field_view_dataset', 'indicators')) {
+    field_delete_instance($instance);
+  }
+  if ($instance = field_info_instance('taxonomy_term', 'field_view_indicators', 'indicators')) {
+    field_delete_instance($instance);
   }
 
   $blocks = array();
