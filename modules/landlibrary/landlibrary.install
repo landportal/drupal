@@ -54,7 +54,7 @@ function landlibrary_update_7201() {
   $blocks[] = array(
     'keys' => array(
       'module' => 'views',
-      'delta'  => 'llorg-publishers_100',
+      'delta'  => 'llorg-providers_100',
       'theme'  => 'lpbs',
     ),
     'values' => array(
