@@ -254,31 +254,3 @@ $handler->display->display_options['filters']['language']['group'] = 1;
 $handler = $view->new_display('block', 'All', 'all');
 $handler->display->display_options['link_url'] = 'debate/news';
 
-/* Display: Feed */
-$handler = $view->new_display('feed', 'Feed', 'feed');
-$handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '42';
-$handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['style_plugin'] = 'rss';
-$handler->display->display_options['row_plugin'] = 'node_rss';
-$handler->display->display_options['defaults']['filter_groups'] = FALSE;
-$handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type']['id'] = 'type';
-$handler->display->display_options['filters']['type']['table'] = 'node';
-$handler->display->display_options['filters']['type']['field'] = 'type';
-$handler->display->display_options['filters']['type']['value'] = array(
-  'news' => 'news',
-);
-$handler->display->display_options['filters']['type']['group'] = 1;
-/* Filter criterion: Content: Language */
-$handler->display->display_options['filters']['language']['id'] = 'language';
-$handler->display->display_options['filters']['language']['table'] = 'node';
-$handler->display->display_options['filters']['language']['field'] = 'language';
-$handler->display->display_options['filters']['language']['value'] = array(
-  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  'und' => 'und',
-);
-$handler->display->display_options['filters']['language']['group'] = 1;
-$handler->display->display_options['path'] = 'news/feed';
-
