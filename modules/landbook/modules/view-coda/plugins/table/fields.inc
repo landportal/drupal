@@ -21,10 +21,6 @@ function lbvc_plugin_table_formatter($VCC) {
   $params = lbvc_plugin_table_params($VCC);
   // All vis should have those
   $params->target = '#' . $VCC['vid'];
-
-  // TMP hack to pick iso code the old way (for CP)
-  /* $visP = substr(json_encode($params), 0, -1); */
-  /* $visP .= ', iso3: Drupal.settings.landbook.countryCode ? Drupal.settings.landbook.countryCode : "" }'; */
   $attr = json_encode($params);
   $js = $VCC['jsid'] . ' = new lbvisTable(LBV, ' . $attr . '); ' . $VCC['jsid'] . '.init();';
 
