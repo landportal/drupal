@@ -25,7 +25,7 @@ function landbook_lgaf_block_view($delta = '') {
   if ($delta != 'vis') return ;
 
   $PATH = libraries_get_path('js-view-coda');
-  $jsAttr = 'jsonPath: "/' . $PATH . '/examples/json", iso3: Drupal.settings.landbook.countryCode';
+  $jsAttr = 'jsonPath: "/' . $PATH . '/examples/json", iso3: Drupal.settings.iso3';
 
   $block = array(
     'subject' => t('Land Governance Assessment Framework (LGAF)'),

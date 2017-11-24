@@ -66,7 +66,7 @@ function landbook_view_coda_block_view($delta = '') {
     }
   }
   // TODO : some automagic here for iso3 from field_related_geo
-  $jsAttr = 'iso3: Drupal.settings.landbook.countryCode';
+  $jsAttr = 'iso3: Drupal.settings.iso3';
 //  dsm($jsAttr . '<br/><br/>');
   return $block;
 }

@@ -208,6 +208,7 @@ function lbvc__plugins_types() {
  */
 
 // For LB Datasets / Indicators (taxonomies)
+// @TODO should be in landbook_taxonomies
 function landbook_view_coda_taxonomy_term_view($term, $view_mode, $langcode) {
   if (!in_array($term->vocabulary_machine_name, array('indicators', 'datasets')))
     return;
@@ -219,33 +220,7 @@ function landbook_view_coda_taxonomy_term_view($term, $view_mode, $langcode) {
   ), 'setting');
 }
 
-/**
- * Add visualisation settings variables to Drupal JS variables (Drupal.settings.landbook)
- *   for landbook pages / sections to display (old-style) block-visualizations.
- * Moslty iso3 for country-based pages (based on iso3 code in URLs, BAD!!! WTFme) and LB indicators ID for TP
- *
- * @TODO: should be based on the CT (or menu_get_item())
- */
-function landbook_view_coda_page_build(&$page) {
-  global $LBVIS_PATH;
-  // Based on actuall path
-  $url = explode('/', drupal_get_path_alias());
-  if ($url[0] != 'book') return;
-  // JS var: Drupal.settings.landbook
-  $view_coda = array('type' => 'book');
-
-  if (count($url) < 2) return;
-  //  + config screen to attach/show vis on a specific CT(?)
-  if ($url[1] == 'thematic') {
-    landbook_view_coda_js_settings_thematic($url, $view_coda);
-  }
-  if ($url[1] == 'countries' && count($url) > 2) {
-    landbook_view_coda_js_settings_countries($url, $view_coda);
-  }
-  //dpm($view_coda, $url[2]);
-  drupal_add_js(array('landbook' => $view_coda), 'setting');
-}
-
+// @TODO: fix hook + should be in ct_thematic_narratives
 function landbook_view_coda_js_settings_thematic($url, &$vars) {
   // For thematic narrative nodes, pick indicators to show in the table (field_indicators)
   $item = menu_get_item();
@@ -279,15 +254,3 @@ function landbook_view_coda_js_settings_thematic($url, &$vars) {
     'map'         => $map_ind,
   );
 }
-
-function landbook_view_coda_js_settings_countries($url, &$vars) {
-  global $LBVIS_PATH;
-  //drupal_add_css($LBVIS_PATH . '/css/screen.css', array('group' => CSS_DEFAULT));
-  // Borken / @todo: put back a nice loading in js-view-coda // not here?
-  /* drupal_add_css($LBVIS_PATH . '/css/spinkit.css', array('group' => CSS_DEFAULT)); */
-  $vars = array(
-    'type'        => 'country',
-    'countryCode' => $url[2]
-  );
-}
-

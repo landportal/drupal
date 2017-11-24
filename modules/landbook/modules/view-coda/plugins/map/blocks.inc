@@ -63,8 +63,8 @@ function lbvc_plugin_map_block_view($delta) {
     break;
 
   case 'lbvc_map_country':
-    $vcc = '{ "debug": true, "iso3": "@Drupal.settings.landbook.countryCode@"';
-    $vcc .= ', "series": [ {"name": "country Region", "data": [ {"id": "@Drupal.settings.landbook.countryCode@", "value": 100} ] } ]';
+    $vcc = '{ "debug": true, "iso3": "@Drupal.settings.iso3@"';
+    $vcc .= ', "series": [ {"name": "country Region", "data": [ {"id": "@Drupal.settings.iso3@", "value": 100} ] } ]';
     $vcc .= ', "colors": { "background": "#FFFFFF", "hover": "#F5A623", "select": "#F5A623", "borders": "#FFFFFF", "min": "#BBD6D8", "max": "#BBD6D8", "na": "#BBD6D8" }';
     $vcc .= ', "map": {"zoom": 2, "height": 200, "selectable": true, "legend": false, "tooltip": false'
       /* . ', "tooltip": "@function () { return \'Click to visit \' + this.point.name; }@"' */
