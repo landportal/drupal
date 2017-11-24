@@ -139,6 +139,13 @@ function landportal_sdgs_taxonomies_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_sdgs_tiers_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_sdgs_tiers_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'uuid_features_entity_taxonomy_term_sdgs';
   $strongarm->value = 'sdgs';
   $export['uuid_features_entity_taxonomy_term_sdgs'] = $strongarm;

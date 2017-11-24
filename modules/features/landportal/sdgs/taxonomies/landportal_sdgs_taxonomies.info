@@ -62,6 +62,7 @@ features[variable][] = field_bundle_settings_taxonomy_term__sdgs_tiers
 features[variable][] = metatag_enable_taxonomy_term__sdgs
 features[variable][] = metatag_enable_taxonomy_term__sdgs_tiers
 features[variable][] = pathauto_taxonomy_term_sdgs_pattern
+features[variable][] = pathauto_taxonomy_term_sdgs_tiers_pattern
 features[variable][] = uuid_features_entity_taxonomy_term_sdgs
 features[variable][] = uuid_features_entity_taxonomy_term_sdgs_tiers
 features[variable][] = uuid_features_file_taxonomy_term_sdgs
