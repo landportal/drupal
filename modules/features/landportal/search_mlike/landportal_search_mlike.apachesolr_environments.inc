@@ -34,9 +34,8 @@ function landportal_search_mlike_apachesolr_environments() {
       7 => 'organization',
       8 => 'page',
       9 => 'partners_page',
-      10 => 'project',
-      11 => 'sdgi',
-      12 => 'thematic_narrative',
+      10 => 'sdgi',
+      11 => 'thematic_narrative',
     ),
   );
   $export['mlike_search'] = $environment;
