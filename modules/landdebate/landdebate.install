@@ -21,17 +21,17 @@ function landdebate_update_7201() {
 
   $blocks = array();
   // Hide old block
-  $blocks[] = array(
-    'keys' => array(
-      'module' => 'views',
-      'delta'  => 'debates-overview',
-      'theme'  => 'lpbs',
-    ),
-    'values' => array(
-      'status' => 0,
-      'region' => -1,
-    )
-  );
+  /* $blocks[] = array( */
+  /*   'keys' => array( */
+  /*     'module' => 'views', */
+  /*     'delta'  => 'debates-overview', */
+  /*     'theme'  => 'lpbs', */
+  /*   ), */
+  /*   'values' => array( */
+  /*     'status' => 0, */
+  /*     'region' => -1, */
+  /*   ) */
+  /* ); */
 
   // Update blocks for Discussions page
   $i = 11;
@@ -47,15 +47,44 @@ function landdebate_update_7201() {
         'region' => 'content',
         'weight' => $i++,
         'visibility' => BLOCK_VISIBILITY_LISTED,
-        'pages' => 'discussions
-debate/debates',
+        'pages' => 'debate/debates',
       )
     );
   }
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'debates-all',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'title' => '',
+      'status' => 1,
+      'region' => 'content',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'debates',
+    )
+  );
 
   // Update blocks for News & Events page
   $i += 2;
-  foreach(array('news-promoted', 'events-promoted', 'blog-promoted', 'news-overview',) as $blockid) {
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'news-promoted',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'title' => '',
+      'status' => 1,
+      'region' => 'highlighted',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'news-events',
+    )
+  );
+  foreach(array('events-promoted', 'blog-promoted', 'news-overview',) as $blockid) {
     $blocks[] = array(
       'keys' => array(
         'module' => 'views',
@@ -72,6 +101,7 @@ debate/debates',
       )
     );
   }
+  // News archive page
   $blocks[] = array(
     'keys' => array(
       'module' => 'views',
@@ -85,6 +115,38 @@ debate/debates',
       'weight' => $i++,
       'visibility' => BLOCK_VISIBILITY_LISTED,
       'pages' => 'debate/news',
+    )
+  );
+  // Events archive page
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'events-all',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'title' => '',
+      'status' => 1,
+      'region' => 'content',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'events',
+    )
+  );
+  // Blogs archive page
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'blog-all',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'title' => '',
+      'status' => 1,
+      'region' => 'content',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'blogs',
     )
   );
 

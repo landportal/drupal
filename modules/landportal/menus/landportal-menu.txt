@@ -1,8 +1,9 @@
 Home {"url":"<front>","hidden":true,"lang":"und","weight":"-50"}
 Countries {"url":"book\/countries","expanded":true,"lang":"und","weight":"-49"}
--India {"url":"book\/countries\/IND","description":"India","hidden":true,"lang":"und","weight":"0"}
 -Overview {"url":"book\/countries","hidden":true,"lang":"und","weight":"-1"}
 Issues {"url":"book\/thematic","lang":"und","weight":"-48"}
+-Overview {"url":"book\/thematic","hidden":true,"lang":"und","weight":"-50"}
+-SDGs {"url":"book\/sdgs","lang":"und","weight":"-49"}
 -Forest tenure {"url":"book\/thematic\/forest-tenure","description":"Forest tenure issues","lang":"und","weight":"-48"}
 -Indigenous communities {"url":"book\/thematic\/indigenous-community-land-rights","description":"Indigenous community issues","lang":"und","weight":"-47"}
 -Land & food security {"url":"book\/thematic\/land-food-security","description":"Land & food security issues","lang":"und","weight":"-46"}
@@ -10,26 +11,26 @@ Issues {"url":"book\/thematic","lang":"und","weight":"-48"}
 -Land & investments {"url":"book\/thematic\/land-investments","description":"Land & investments issues","lang":"und","weight":"-44"}
 -Land conflicts {"url":"book\/thematic\/land-conflicts","description":"Land conflict issues","lang":"und","weight":"-43"}
 -Urban tenure {"url":"book\/thematic\/urban-tenure","description":"Urban tenure issues","lang":"und","weight":"-42"}
--Overview {"url":"book\/thematic","hidden":true,"lang":"und","weight":"-50"}
--SDGs {"url":"book\/sdgs","lang":"und","weight":"-49"}
-Discussions {"url":"debate\/debates","expanded":true,"lang":"und","weight":"-47"}
+Discussions {"url":"debate\/debates","lang":"und","weight":"-47"}
+-Archives {"url":"debates","expanded":true,"lang":"und","weight":"-49"}
 Data {"url":"book\/data","lang":"und","weight":"-46"}
+-Overview {"url":"book\/data","hidden":true,"lang":"und","weight":"-50"}
 -Datasets {"url":"book\/datasets","expanded":true,"lang":"und","weight":"-49"}
+-PRIndex {"url":"book\/dataset\/la-pri","lang":"und","weight":"-48"}
 -Indicators {"url":"book\/indicators","lang":"und","weight":"-47"}
 -Providers {"url":"book\/sources","lang":"und","weight":"-46"}
--Overview {"url":"book\/data","hidden":true,"lang":"und","weight":"-50"}
--PRIndex {"url":"book\/dataset\/la-pri","lang":"und","weight":"-48"}
 Community {"url":"debate\/community","lang":"und","weight":"-42"}
+-Land community {"url":"debate\/community","hidden":true,"lang":"und","weight":"-1"}
 -Organizations {"url":"organizations","lang":"und","weight":"0"}
 -People {"url":"people","hidden":true,"lang":"und","weight":"0"}
--Land community {"url":"debate\/community","hidden":true,"lang":"und","weight":"-1"}
 -Partners {"url":"partners","lang":"und","weight":"0"}
 Library {"url":"library","lang":"und","weight":"-45"}
--Search {"url":"library\/search","lang":"und","weight":"-49"}
 -Overview {"url":"library","hidden":true,"lang":"und","weight":"-50"}
+-Search {"url":"library\/search","lang":"und","weight":"-49"}
 -Sources {"url":"library\/sources","lang":"und","weight":"0"}
 News & events {"url":"news-events","lang":"und","weight":"-44"}
+-Lastest {"url":"news-events","hidden":true,"lang":"und","weight":"-49"}
 -News {"url":"debate\/news","lang":"und","weight":"-46"}
 -Events {"url":"debate\/events","lang":"und","weight":"-47"}
--Blogs {"url":"debate\/blog","lang":"und","weight":"-48"}
--Lastest {"url":"news-events","hidden":true,"lang":"und","weight":"-49"}
+--Archives {"url":"events","lang":"und","weight":"-47"}
+-Blogs {"url":"blogs","lang":"und","weight":"-48"}
