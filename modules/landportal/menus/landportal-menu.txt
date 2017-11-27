@@ -1,4 +1,4 @@
-Home {"url":"<front>","hidden":true,"lang":"und","weight":"-50"}
+Home {"url":"home","lang":"und","weight":"-50"}
 Countries {"url":"book\/countries","expanded":true,"lang":"und","weight":"-49"}
 -Overview {"url":"book\/countries","hidden":true,"lang":"und","weight":"-1"}
 Issues {"url":"book\/thematic","lang":"und","weight":"-48"}
@@ -16,17 +16,15 @@ Discussions {"url":"debate\/debates","lang":"und","weight":"-47"}
 Data {"url":"book\/data","lang":"und","weight":"-46"}
 -Overview {"url":"book\/data","hidden":true,"lang":"und","weight":"-50"}
 -Datasets {"url":"book\/datasets","expanded":true,"lang":"und","weight":"-49"}
--PRIndex {"url":"book\/dataset\/la-pri","lang":"und","weight":"-48"}
 -Indicators {"url":"book\/indicators","lang":"und","weight":"-47"}
 -Providers {"url":"book\/sources","lang":"und","weight":"-46"}
 Community {"url":"debate\/community","lang":"und","weight":"-42"}
 -Land community {"url":"debate\/community","hidden":true,"lang":"und","weight":"-1"}
 -Organizations {"url":"organizations","lang":"und","weight":"0"}
--People {"url":"people","hidden":true,"lang":"und","weight":"0"}
+-People {"url":"people","lang":"und","weight":"0"}
 -Partners {"url":"partners","lang":"und","weight":"0"}
 Library {"url":"library","lang":"und","weight":"-45"}
 -Overview {"url":"library","hidden":true,"lang":"und","weight":"-50"}
--Search {"url":"library\/search","lang":"und","weight":"-49"}
 -Sources {"url":"library\/sources","lang":"und","weight":"0"}
 News & events {"url":"news-events","lang":"und","weight":"-44"}
 -Lastest {"url":"news-events","hidden":true,"lang":"und","weight":"-49"}
