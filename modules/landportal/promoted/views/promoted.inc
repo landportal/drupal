@@ -219,7 +219,7 @@ $handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
 $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -230,16 +230,6 @@ $handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_style' => 'large',
   'image_link' => '',
 );
-/* Field: Content: Body */
-$handler->display->display_options['fields']['body']['id'] = 'body';
-$handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-$handler->display->display_options['fields']['body']['field'] = 'body';
-$handler->display->display_options['fields']['body']['label'] = '';
-$handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-$handler->display->display_options['fields']['body']['settings'] = array(
-  'trim_length' => '600',
-);
 /* Field: Content: Status */
 $handler->display->display_options['fields']['field_status']['id'] = 'field_status';
 $handler->display->display_options['fields']['field_status']['table'] = 'field_data_field_status';
@@ -248,6 +238,37 @@ $handler->display->display_options['fields']['field_status']['label'] = '';
 $handler->display->display_options['fields']['field_status']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_status']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_status']['type'] = 'i18n_taxonomy_term_reference_plain';
+/* Field: Field: Date */
+$handler->display->display_options['fields']['field_date']['id'] = 'field_date';
+$handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
+$handler->display->display_options['fields']['field_date']['field'] = 'field_date';
+$handler->display->display_options['fields']['field_date']['label'] = '';
+$handler->display->display_options['fields']['field_date']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_date']['settings'] = array(
+  'format_type' => 'day_month_year',
+  'custom_date_format' => '',
+  'fromto' => 'both',
+  'multiple_number' => '',
+  'multiple_from' => '',
+  'multiple_to' => '',
+  'show_remaining_days' => 0,
+  'show_repeat_rule' => 'show',
+);
+/* Field: Content: Body */
+$handler->display->display_options['fields']['body']['id'] = 'body';
+$handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+$handler->display->display_options['fields']['body']['field'] = 'body';
+$handler->display->display_options['fields']['body']['label'] = '';
+$handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['body']['alter']['text'] = '<span class="glyphicon glyphicon-calendar"></span> [field_date]<br/>
+Status: [field_status]<br/>
+[body]';
+$handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+$handler->display->display_options['fields']['body']['settings'] = array(
+  'trim_length' => '200',
+);
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Promoted to front page */
@@ -301,7 +322,7 @@ $handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
 $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -329,18 +350,26 @@ $handler->display->display_options['fields']['field_date']['settings'] = array(
   'show_remaining_days' => 0,
   'show_repeat_rule' => 'show',
 );
+/* Field: Location: Country */
+$handler->display->display_options['fields']['country']['id'] = 'country';
+$handler->display->display_options['fields']['country']['table'] = 'location';
+$handler->display->display_options['fields']['country']['field'] = 'country';
+$handler->display->display_options['fields']['country']['label'] = '';
+$handler->display->display_options['fields']['country']['exclude'] = TRUE;
+$handler->display->display_options['fields']['country']['element_label_colon'] = FALSE;
 /* Field: Content: Body */
 $handler->display->display_options['fields']['body']['id'] = 'body';
 $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
 $handler->display->display_options['fields']['body']['field'] = 'body';
 $handler->display->display_options['fields']['body']['label'] = '';
 $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['body']['alter']['text'] = '<span class="glyphicon glyphicon-calendar"></span> [field_date]
+$handler->display->display_options['fields']['body']['alter']['text'] = '<span class="glyphicon glyphicon-calendar"></span> [field_date]<br/>
+<span class="glyphicon glyphicon-map-marker"></span> [country]<br/>
 [body]';
 $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
 $handler->display->display_options['fields']['body']['settings'] = array(
-  'trim_length' => '600',
+  'trim_length' => '200',
 );
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
