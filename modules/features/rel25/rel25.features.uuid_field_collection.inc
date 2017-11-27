@@ -14,14 +14,14 @@ function rel25_uuid_features_default_field_collections() {
     'field_name' => 'field_milestone',
     'default_revision' => 1,
     'archived' => 0,
-    'uuid' => 'b85bb2e1-8757-4550-b8aa-9ec0010411b7',
+    'uuid' => '3d78da3a-a0ea-4ad9-97d2-8e9f9d092f51',
     'field_description' => array(),
     'title_field' => array(),
     'field_date' => array(
       'und' => array(
         0 => array(
-          'value' => '2017-09-06 00:00:00',
-          'value2' => '2017-09-06 00:00:00',
+          'value' => '2017-11-20 00:00:00',
+          'value2' => '2017-11-20 00:00:00',
           'timezone' => 'Europe/Berlin',
           'timezone_db' => 'Europe/Berlin',
           'date_type' => 'datetime',
@@ -34,16 +34,56 @@ function rel25_uuid_features_default_field_collections() {
     'field_name' => 'field_milestone',
     'default_revision' => 1,
     'archived' => 0,
-    'uuid' => 'be57a255-b64d-43c8-ae4f-c9504ea2e084',
+    'uuid' => '418e551a-ca00-4bfc-a297-4ea379183885',
     'field_description' => array(),
     'title_field' => array(),
     'field_date' => array(
       'und' => array(
         0 => array(
-          'value' => '2017-11-15 00:00:00',
-          'value2' => '2017-11-15 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
+          'value' => '2017-11-10 00:00:00',
+          'value2' => '2017-11-10 00:00:00',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(),
+  );
+  $field_collections[] = array(
+    'field_name' => 'field_milestone',
+    'default_revision' => 1,
+    'archived' => 0,
+    'uuid' => '8fdbe146-ec78-498c-95ae-8c2a81428aaa',
+    'field_description' => array(),
+    'title_field' => array(),
+    'field_date' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-11-21 00:00:00',
+          'value2' => '2017-11-21 00:00:00',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(),
+  );
+  $field_collections[] = array(
+    'field_name' => 'field_milestone',
+    'default_revision' => 1,
+    'archived' => 0,
+    'uuid' => 'b85bb2e1-8757-4550-b8aa-9ec0010411b7',
+    'field_description' => array(),
+    'title_field' => array(),
+    'field_date' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-09-06 00:00:00',
+          'value2' => '2017-09-06 00:00:00',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
           'date_type' => 'datetime',
         ),
       ),
