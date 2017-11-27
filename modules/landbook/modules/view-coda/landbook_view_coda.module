@@ -25,6 +25,14 @@ include_once 'landbook_view_coda.fields.inc';
 include_once 'landbook_view_coda.blocks.inc';
 include_once 'landbook_view_coda.features.inc';
 
+/**
+ * Implements hook_theme().
+ */
+function landbook_view_coda_theme($existing, $type, $theme, $path) {
+  // Scan this directory for template files
+  $templates = drupal_find_theme_templates($existing, '.tpl.php', $path);
+  return $templates;
+}
 
 // Add view-coda  CSS classes to the Visusalization blocks
 function landbook_view_coda_preprocess_entity(&$variables, $hook) {
@@ -196,61 +204,15 @@ function lbvc__plugins_types() {
   return variable_get('lbvc.plugins', array());
 }
 
-
-
-/******************************************
- *
- * Former hooks for the Land Book
- *
- * Add Drupal JS variables for
- * - Narrative pages (Thematics + Countries)
- * - LB datasets and indicators terms page
- */
-
 // For LB Datasets / Indicators (taxonomies)
-// @TODO should be in landbook_taxonomies
-function landbook_view_coda_taxonomy_term_view($term, $view_mode, $langcode) {
+// Add JS variable to identify them by Land Book ID
+function landbook_taxonomies_taxonomy_term_view($term, $view_mode, $langcode) {
   if (!in_array($term->vocabulary_machine_name, array('indicators', 'datasets')))
     return;
   drupal_add_js(array(
     'landbook' => array(
-      'type' => $term->vocabulary_machine_name,
-      'id'   => $term->field_id['und'][0]['value']
+      'type' => substr($term->vocabulary_machine_name, 0, -1),
+      'lbid'   => $term->field_id[LANGUAGE_NONE][0]['value'],
     )
   ), 'setting');
-}
-
-// @TODO: fix hook + should be in ct_thematic_narratives
-function landbook_view_coda_js_settings_thematic($url, &$vars) {
-  // For thematic narrative nodes, pick indicators to show in the table (field_indicators)
-  $item = menu_get_item();
-  $node = array_pop($item['page_arguments']);
-  // Indicators for visualization
-  $table_ind = array();
-  if (!empty($node->field_indicators[LANGUAGE_NONE])) {
-    foreach($node->field_indicators['und'] as $ind) {
-      $term = taxonomy_term_load($ind['tid']);
-      $id = field_get_items('taxonomy_term', $term, 'field_id');
-      array_push($table_ind, $id[0]['value']);
-    }
-  }
-  $ranking_ind = null;
-  if (!empty($node->field_indicator_ranking[LANGUAGE_NONE])) {
-    $term = taxonomy_term_load($node->field_indicator_ranking[LANGUAGE_NONE][0]['tid']);
-    $id = field_get_items('taxonomy_term', $term, 'field_id');
-    $ranking_ind = $id[0]['value'];
-  }
-  $map_ind = null;
-  if (!empty($node->field_indicator_map[LANGUAGE_NONE])) {
-    $term = taxonomy_term_load($node->field_indicator_map[LANGUAGE_NONE][0]['tid']);
-    $id = field_get_items('taxonomy_term', $term, 'field_id');
-    $map_ind = $id[0]['value'];
-  }
-  // Fill up JS settings
-  $vars = array(
-    'type'        => 'thematic',
-    'indicators'  => $table_ind,
-    'ranking'     => $ranking_ind,
-    'map'         => $map_ind,
-  );
 }

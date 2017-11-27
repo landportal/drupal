@@ -5,16 +5,3 @@
  */
 
 include_once 'landbook_taxonomies.features.inc';
-
-// For LB Datasets / Indicators (taxonomies)
-// Add JS variable to identify them by Land Book ID
-function landbook_taxonomies_taxonomy_term_view($term, $view_mode, $langcode) {
-  if (!in_array($term->vocabulary_machine_name, array('indicators', 'datasets')))
-    return;
-  drupal_add_js(array(
-    'landbook' => array(
-      'type' => substr($term->vocabulary_machine_name, 0, -1),
-      'lbid'   => $term->field_id[LANGUAGE_NONE][0]['value'],
-    )
-  ), 'setting');
-}
