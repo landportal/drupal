@@ -229,13 +229,21 @@ $handler->display->display_options['fields']['field_date']['settings'] = array(
   'show_remaining_days' => 0,
   'show_repeat_rule' => 'show',
 );
+/* Field: Location: Country */
+$handler->display->display_options['fields']['country']['id'] = 'country';
+$handler->display->display_options['fields']['country']['table'] = 'location';
+$handler->display->display_options['fields']['country']['field'] = 'country';
+$handler->display->display_options['fields']['country']['label'] = '';
+$handler->display->display_options['fields']['country']['exclude'] = TRUE;
+$handler->display->display_options['fields']['country']['element_label_colon'] = FALSE;
 /* Field: Content: Body */
 $handler->display->display_options['fields']['body']['id'] = 'body';
 $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
 $handler->display->display_options['fields']['body']['field'] = 'body';
 $handler->display->display_options['fields']['body']['label'] = '';
 $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['body']['alter']['text'] = '<span class="glyphicon glyphicon-calendar"></span> [field_date]
+$handler->display->display_options['fields']['body']['alter']['text'] = '<span class="glyphicon glyphicon-calendar"></span> [field_date]<br/>
+<span class="glyphicon glyphicon-map-marker"></span> [country]<br/>
 [body]';
 $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';

@@ -24,6 +24,8 @@ $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'node';
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
