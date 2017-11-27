@@ -123,11 +123,10 @@ function landportal_display_extract_groups($group_name, $content) {
 /* } */
 
 function landportal_display_add_select2(&$elem) {
-  /* global $theme; */
-  /* if ($theme != 'lpbs') { */
-    /* $elem['#attached']['css'][] = drupal_get_path('module', 'landportal_display') . '/select2.css'; */
-  /* } */
-  //$elem['#attached']['js'][] = drupal_get_path('theme', 'lpbs') . '/js/select2.min.js';
+  global $theme;
+  if ($theme != 'lpbs') {
+    $elem['#attached']['css'][] = drupal_get_path('module', 'landportal_display') . '/select2.css';
+  }
   $elem['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select2.full.min.js';
   $elem['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select.js';
 }

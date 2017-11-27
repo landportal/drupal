@@ -58,7 +58,7 @@ var Drupal = Drupal || {};
             $('form select').each(function(i, item) {
                 // Activate select2 on all multiple select
                 // or if we have at least 8 options
-                console.log('select ' + i, item.multiple, $(item).multiple, item);
+                //console.log('select ' + i, item.multiple, $(item).multiple, item);
                 if (item.multiple == true || item.length >= 8) {
                     select2init(item);
                 }
