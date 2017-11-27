@@ -1,0 +1,15 @@
+name = rel25
+core = 7.x
+package = Features
+version = 7.x-1.0-dev1
+dependencies[] = ct_page
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = landportal_base
+dependencies[] = landportal_related
+dependencies[] = strongarm
+dependencies[] = uuid_features
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[uuid_field_collection][] = b85bb2e1-8757-4550-b8aa-9ec0010411b7
+features[uuid_node][] = 7be95fe1-0e58-40d9-93fa-cd885d9c1b9c
