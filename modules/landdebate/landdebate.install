@@ -20,18 +20,6 @@ function landdebate_update_7201() {
   // debate-menu-context
 
   $blocks = array();
-  // Hide old block
-  /* $blocks[] = array( */
-  /*   'keys' => array( */
-  /*     'module' => 'views', */
-  /*     'delta'  => 'debates-overview', */
-  /*     'theme'  => 'lpbs', */
-  /*   ), */
-  /*   'values' => array( */
-  /*     'status' => 0, */
-  /*     'region' => -1, */
-  /*   ) */
-  /* ); */
 
   // Update blocks for Discussions page
   $i = 11;
@@ -170,6 +158,22 @@ debate/community',
       )
     );
   }
+  // Blogs archive page
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'org_view-all',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'title' => '',
+      'status' => 1,
+      'region' => 'content',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'organizations',
+    )
+  );
 
   foreach($blocks as $block) {
     drush_log('Updated [' . $block['keys']['module'] . ': ' . $block['keys']['delta'] . ']', 'ok');

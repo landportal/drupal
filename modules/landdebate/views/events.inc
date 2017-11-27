@@ -191,7 +191,7 @@ $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
 $handler->display->display_options['row_options']['image'] = 'field_image';
 $handler->display->display_options['row_options']['title'] = 'title';
-$handler->display->display_options['row_options']['description'] = '';
+$handler->display->display_options['row_options']['description'] = 'body';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Title */
