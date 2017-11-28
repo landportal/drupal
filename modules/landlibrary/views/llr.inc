@@ -3,7 +3,7 @@
 $view = new view();
 $view->name = 'llr';
 $view->description = '';
-$view->tag = 'default';
+$view->tag = 'landlibrary';
 $view->base_table = 'node';
 $view->human_name = 'Land Library Resources';
 $view->core = 7;
