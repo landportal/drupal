@@ -228,7 +228,7 @@ $handler->display->display_options['fields']['field_image']['element_label_colon
 $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_style' => 'large',
-  'image_link' => '',
+  'image_link' => 'content',
 );
 /* Field: Content: Status */
 $handler->display->display_options['fields']['field_status']['id'] = 'field_status';
@@ -331,7 +331,7 @@ $handler->display->display_options['fields']['field_image']['element_label_colon
 $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['field_image']['settings'] = array(
   'image_style' => 'large',
-  'image_link' => '',
+  'image_link' => 'content',
 );
 /* Field: Field: Date */
 $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
