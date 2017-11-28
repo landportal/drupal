@@ -8,11 +8,7 @@
 /** Land Portal 2.5 new UX
  *  cleanup old menus
  */
-function landportal_menus_update_7200() {
-  // Cleanup main menu
-  /* $menu_del = db_delete('menu_links') */
-  /*   ->condition('menu_name', 'main-menu') */
-  /*   ->execute(); */
+function landportal_menus_enable() {
 
   // Delete old LP header menus
   menu_delete(array('menu_name' => 'landbook-menu'));
@@ -20,7 +16,7 @@ function landportal_menus_update_7200() {
   menu_delete(array('menu_name' => 'landlibrary-menu'));
   menu_delete(array('menu_name' => 'user-signin'));
 
-  // Force new menu in header
+  // Move about menu to sidebar
   $block = array(
     'keys' => array(
       'theme' => 'lpbs',
@@ -35,9 +31,7 @@ function landportal_menus_update_7200() {
     ->key($block['keys'])
     ->fields($block['values'])
     ->execute();
-}
 
-function landportal_menus_enable() {
   // Show LP Navigation menu in header / top-bar region
   $block = array(
     'keys' => array(
