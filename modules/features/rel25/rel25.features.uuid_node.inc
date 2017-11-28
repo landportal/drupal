@@ -166,21 +166,21 @@ function rel25_uuid_features_default_content() {
       0 => array(
         'value' => '<div class="block-wrapped row">
 <div class="col-sm-6 col-md-3">
-<h3>500+</h3>
+<h3>500+ land related indicators</h3>
 
-<p>Land related indicators</p>
+<p>Browse around our data section to access specific and detailed information!&nbsp;</p>
 </div>
 
 <div class="col-sm-6 col-md-3">
-<h3>500+</h3>
+<h3>45,000+ land related resources</h3>
 
-<p>Land related indicators</p>
+<p>Browse around our library to take advantage of our wide array of materials!&nbsp;</p>
 </div>
 
 <div class="col-sm-6 col-md-3">
 <h3>Join us</h3>
 
-<p>Register your Land Portal account and sign up for our Newsletter!</p>
+<p>Create&nbsp;your own Land Portal account and sign up for our newsletter!</p>
 </div>
 
 <div class="col-sm-6 col-md-3">
@@ -190,10 +190,10 @@ function rel25_uuid_features_default_content() {
 </div>
 </div>
 ',
-        'summary' => '<p>By increasing access to information on land, Land Portal aims to ensure responsible&nbsp;land governance and secure land rights for the world\'s poor and vulnerable.&nbsp;Learn more <a href="/about">about us</a>.</p>
+        'summary' => '<p>By increasing access to information on land, the Land Portal aims to ensure responsible&nbsp;land governance and secure land rights for the world\'s poor and vulnerable.&nbsp;Learn more <a href="/about">about us</a>.</p>
 ',
         'format' => 'full_html',
-        'safe_summary' => '<p>By increasing access to information on land, Land Portal aims to ensure responsible land governance and secure land rights for the world\'s poor and vulnerable. Learn more <a href="/about">about us</a>.</p>
+        'safe_summary' => '<p>By increasing access to information on land, the Land Portal aims to ensure responsible land governance and secure land rights for the world\'s poor and vulnerable. Learn more <a href="/about">about us</a>.</p>
 ',
       ),
     ),
@@ -325,7 +325,10 @@ function rel25_uuid_features_default_content() {
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '<p>Access land-related information by indicator. Discover the list of different indicators available on the Land Book, filter the list of indicators by theme, get detailed information on each of them and download the data you need.</p>
+        'value' => '<p>Access land-related information by indicator. Discover the list of different indicators available, filter the list of indicators by theme, get detailed information on each of them and download the data you need.</p>
+
+<p><strong>Keep scrolling and let the learning begin!&nbsp;</strong></p>
+
 <hr>',
         'summary' => '',
         'format' => 'filtered_html',
@@ -336,7 +339,15 @@ function rel25_uuid_features_default_content() {
   'field_related_blocks' => array(),
   'field_file' => array(),
   'field_geographical_focus' => array(),
-  'field_milestone' => array(),
+  'field_milestone' => array(
+    'und' => array(
+      0 => array(
+        'value' => 'f055b60a-446a-45aa-9e8e-d8aefddfde21',
+        'revision_id' => 'f055b60a-446a-45aa-9e8e-d8aefddfde21',
+        'uuid' => 'f055b60a-446a-45aa-9e8e-d8aefddfde21',
+      ),
+    ),
+  ),
   'field_noderef' => array(),
   'field_paragraphs' => array(),
   'field_related_domains' => array(),
@@ -565,7 +576,169 @@ function rel25_uuid_features_default_content() {
   'user_uuid' => 'c571526a-567e-4c48-bd1c-f4cec8f6eddb',
 );
   $nodes[] = array(
-  'title' => 'Discussion archive',
+  'title' => 'What we do',
+  'log' => '',
+  'status' => 1,
+  'comment' => 1,
+  'promote' => 0,
+  'sticky' => 0,
+  'ds_switch' => '',
+  'type' => 'page',
+  'language' => 'und',
+  'created' => 1490371039,
+  'tnid' => 0,
+  'translate' => 0,
+  'uuid' => 'ac9aeff5-bd9a-47fb-bc56-04f518048687',
+  'promoted_library' => 0,
+  'promoted_to_country_page' => 0,
+  'promoted_to_thematic_page' => 0,
+  'base_promoted_library' => 0,
+  'base_promoted_to_country_page' => 0,
+  'base_promoted_to_thematic_page' => 0,
+  'body' => array(
+    'und' => array(
+      0 => array(
+        'value' => '<h2>Access to information as a basis for improved and informed&nbsp;land governance</h2>
+
+<p>The Land Portal Foundation believes that <strong>access to information</strong>&nbsp;is crucial to achieving good land governance and to securing land rights for landless and vulnerable people.&nbsp;</p>
+
+<p>Finding solid evidence upon which to develop land-related laws, policies, and practices can be difficult and involve a lot of work. Land-related data and&nbsp;information available online is often fragmented and dispersed across various websites and databases.</p>
+
+<p>The Land Portal Foundation\'s mission is to improve access to land-related data and&nbsp;information. The Land Portal website gathers information from a broad range of information providers and is&nbsp;organized and visualized&nbsp;in ways that are intuitive and usable&nbsp;for researchers, private sector actors and&nbsp;policy makers at global and local&nbsp;levels. The information provided can strengthen research, advocacy, and policy-making&nbsp;efforts by enabling a better understanding of land governance issues affecting various countries and regions.</p>
+
+<h2>Serving as a \'data aggregator\'</h2>
+
+<p>The Land Portal Foundation is an online resource that directs users&nbsp;to the great variety of sources that publish land related information online. The Land Portal Foundation collects and disseminates&nbsp;knowledge and data from various&nbsp;information providers around the world - from global organizations to local ones - on the Land Portal website.</p>
+
+<p>The Land Portal website serves as&nbsp;an intuitive gateway -&nbsp;a Portal -&nbsp;to the different information providers on land related issues. The Land Portal website hosts metadata (information about information) that is linked directly to the websites of data provides. The Land Portal website does not currently produce original information itself.</p>
+
+<h2>Providing Land Portal services</h2>
+
+<p>The Land Portal provides a wide array of services, including gathering statistical and numerical information and providing thematic and a country-level overview of key contextual and actionable land governance information, revealing both trends and gaps in available information.&nbsp; It also serves as a free virtual repository of bibliographic and multimedia resources with highly curated metadata.&nbsp; Finally, it serves as a space to stimulate debate with others in the land community through sharing of news and events, blog posts and online discussions.&nbsp; The online discussion is a powerful tool to expose knowledge that has not been already captured in publications or datasets.</p>
+
+<p>&nbsp;</p>
+
+<h2>Adhering to Open Data Principles &amp; the Linked Information Ecosystem</h2>
+
+<p>Every single piece of information available on the Land Portal&nbsp;is enriched according to Open Data standards and principles. This means that the metadata -&nbsp;the information describing what the information is about -&nbsp;is arranged through commonly agreed standards - making sure that all the information is categorized so that users can determine which dataset, publication, and other resources are relevant to their needs. By applying these Open Data principles and standards, the information becomes more searchable and discoverable&nbsp;for users.</p>
+
+<p>Open Data principles and standards do not only make information more easy to find and accessible on the user-end, but are&nbsp;also&nbsp;critical for machines to be able to read and understand the information. Currently&nbsp;the amount&nbsp;of knowledge published online is increasing exponentially, so we need the assistance of machines to be able to digest, analyze, and organize&nbsp;this wealth of information in an effective manner.&nbsp;</p>
+
+<p>When many online databases - on both global and local levels - are linked together, we establish an \'information ecosystem\'. It is the Land Portal\'s mission to stimulate and enable the move from siloed and stand-alone databases&nbsp;to such an online information ecosystem. This will improve the potential&nbsp;impact of each knowledge piece significantly because all the fragmented data sources are linked together.</p>
+
+<h2>Acting as a support service for open data</h2>
+
+<p>The Land Portal Foundation is willing to work with many&nbsp;information providers on land to publish and expose their information according to Open Data principles- ultimately allowing their information to&nbsp;become a part of the land information ecosystem.</p>
+
+<p>The Land Portal Foundations supports land-focused organizations around the world in adopting and implementing Open Data standards and principles.&nbsp;These standards include&nbsp;<a href="http://landportal.info/voc/landvoc">LandVoc</a>, a standardized vocabulary on land that topically classifies resources based on subject matter using keywords. Using a controlled vocabulary such as LandVoc ensures that all information is topically classified in the same way (regardless of different languages, the use of synonyms or others) and makes sure that the keywords also can be read by machines. Therefore machines will also be able to understand what the resource is about. This makes sure that the land-related information in any database can be linked together to other databases, because machines can understand which resources address the same topics.</p>
+
+<p>Information from local organizations, particularly organizations in the Global South, can be difficult to find and access. To address this issue, the Land Portal Foundation &nbsp;partners with and provides technical support to many organizations in the Global South.&nbsp; The Land Portal helps local organizations to publish, organize and (technically) expose their information according to Open Data principles - making it more easy to find on a global level and linkable to global databases.</p>
+',
+        'summary' => '',
+        'format' => 'full_html',
+        'safe_summary' => '',
+      ),
+    ),
+  ),
+  'field_related_blocks' => array(),
+  'field_file' => array(),
+  'field_geographical_focus' => array(),
+  'field_milestone' => array(
+    'und' => array(
+      0 => array(
+        'value' => '8c8c80d1-4e10-4c40-908d-d978b0c3186c',
+        'revision_id' => '8c8c80d1-4e10-4c40-908d-d978b0c3186c',
+        'uuid' => '8c8c80d1-4e10-4c40-908d-d978b0c3186c',
+      ),
+    ),
+  ),
+  'field_noderef' => array(),
+  'field_paragraphs' => array(),
+  'field_related_domains' => array(),
+  'field_related_themes' => array(),
+  'field_related_topics' => array(),
+  'title_field' => array(
+    'und' => array(
+      0 => array(
+        'value' => 'What we do',
+        'format' => NULL,
+      ),
+    ),
+  ),
+  'field_image' => array(),
+  'field_visualization' => array(),
+  'translations' => array(
+    'original' => NULL,
+    'data' => array(),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dct:title',
+      ),
+      'type' => 'property',
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+      'type' => 'property',
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
+  'path' => array(
+    'pathauto' => 0,
+  ),
+  'comment_count' => 0,
+  'locations' => array(),
+  'location' => array(),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2017-03-24 16:57:19 +0100',
+  'user_uuid' => 'e1121b36-5660-46c3-8eb9-f42afa7221be',
+);
+  $nodes[] = array(
+  'title' => 'Discussions',
   'log' => '',
   'status' => 1,
   'comment' => 1,
@@ -587,16 +760,24 @@ function rel25_uuid_features_default_content() {
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '<p>Debates&nbsp;provide a platform to stimulate conversation on diverse issues of importance to the land governance community. All debates are open discussions facilitated by land governance experts, on a specific topic, for a specified period of time. While anyone can view these online discussions, you must be a registered user to contribute to a debate.</p>
+        'value' => '<div class="row">
+<div class="col-sm-6">
+<p>Debates&nbsp;provide a platform to stimulate conversation on diverse issues of importance to the land governance community. All debates are open discussions facilitated by land governance experts, on a specific topic, for a specified period of time. While anyone can view these online discussions, you must be a registered user to contribute to a debate.</p>
+</div>
 
+<div class="col-sm-6">
 <p>By participating in a discussion, users agree to be respectful of the diversity of opinions, and are reminded to stay on topic, cite your sources, and refer users to other resources for more information. For more information, see the terms and conditions of our site.&nbsp;</p>
+</div>
+</div>
+
+<p>&nbsp;</p>
 
 <p>If you or your organization is interested in hosting a debate, please contact us at hello@landportal.info</p>
 
 <p><strong>Keep scrolling and let the learning begin!&nbsp;</strong></p>
 ',
         'summary' => '',
-        'format' => 'filtered_html',
+        'format' => 'full_html',
         'safe_summary' => '',
       ),
     ),
@@ -621,7 +802,7 @@ function rel25_uuid_features_default_content() {
   'title_field' => array(
     'und' => array(
       0 => array(
-        'value' => 'Discussion archive',
+        'value' => 'Discussions',
         'format' => NULL,
       ),
     ),

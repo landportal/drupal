@@ -54,6 +54,26 @@ function rel25_uuid_features_default_field_collections() {
     'field_name' => 'field_milestone',
     'default_revision' => 1,
     'archived' => 0,
+    'uuid' => '8c8c80d1-4e10-4c40-908d-d978b0c3186c',
+    'field_description' => array(),
+    'title_field' => array(),
+    'field_date' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-11-27 00:00:00',
+          'value2' => '2017-11-27 00:00:00',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(),
+  );
+  $field_collections[] = array(
+    'field_name' => 'field_milestone',
+    'default_revision' => 1,
+    'archived' => 0,
     'uuid' => '8fdbe146-ec78-498c-95ae-8c2a81428aaa',
     'field_description' => array(),
     'title_field' => array(),
@@ -82,6 +102,26 @@ function rel25_uuid_features_default_field_collections() {
         0 => array(
           'value' => '2017-09-06 00:00:00',
           'value2' => '2017-09-06 00:00:00',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
+          'date_type' => 'datetime',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(),
+  );
+  $field_collections[] = array(
+    'field_name' => 'field_milestone',
+    'default_revision' => 1,
+    'archived' => 0,
+    'uuid' => 'f055b60a-446a-45aa-9e8e-d8aefddfde21',
+    'field_description' => array(),
+    'title_field' => array(),
+    'field_date' => array(
+      'und' => array(
+        0 => array(
+          'value' => '2017-11-27 00:00:00',
+          'value2' => '2017-11-27 00:00:00',
           'timezone' => 'Europe/Berlin',
           'timezone_db' => 'Europe/Berlin',
           'date_type' => 'datetime',
