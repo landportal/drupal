@@ -33,7 +33,23 @@ function landlibrary_update_7201() {
       )
     );
   }
-
+  // Landing page Sidebar
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'llorg-providers_100',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'sidebar_second',
+      'title' => '',
+      'weight' => 3,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'library',
+    )
+  );
+  // Landing page search block
   $blocks[] = array(
     'keys' => array(
       'module' => 'apachesolr_search',
@@ -50,20 +66,20 @@ function landlibrary_update_7201() {
     )
   );
 
-  // Sidebar
+  // Sources page
   $blocks[] = array(
     'keys' => array(
       'module' => 'views',
-      'delta'  => 'llorg-providers_100',
+      'delta'  => 'llorg-all',
       'theme'  => 'lpbs',
     ),
     'values' => array(
       'status' => 1,
-      'region' => 'sidebar_second',
+      'region' => 'content',
       'title' => '',
-      'weight' => 3,
+      'weight' => 1,
       'visibility' => BLOCK_VISIBILITY_LISTED,
-      'pages' => 'library',
+      'pages' => 'library/sources',
     )
   );
 
