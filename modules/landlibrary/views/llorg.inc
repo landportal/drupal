@@ -96,25 +96,6 @@ $handler->display->display_options['filters']['nid_entityreference_filter']['exp
   30037204 => 0,
 );
 $handler->display->display_options['filters']['nid_entityreference_filter']['reference_display'] = 'llorg_ref:all';
-/* Filter criterion: Field: Themes (field_related_themes) (reference filter) */
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['id'] = 'field_related_themes_tid_entityreference_filter';
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['table'] = 'field_data_field_related_themes';
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['field'] = 'field_related_themes_tid_entityreference_filter';
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['group'] = 1;
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['exposed'] = TRUE;
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['operator_id'] = 'field_related_themes_tid_entityreference_filter_op';
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['label'] = 'Issue';
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['operator'] = 'field_related_themes_tid_entityreference_filter_op';
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['identifier'] = 'field_related_themes_tid_entityreference_filter';
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111903911 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['reference_display'] = 'llref:org_theme';
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['reference_arguments'] = 'organization';
 /* Filter criterion: Content: Nid (reference filter) */
 $handler->display->display_options['filters']['nid_entityreference_filter_1']['id'] = 'nid_entityreference_filter_1';
 $handler->display->display_options['filters']['nid_entityreference_filter_1']['table'] = 'node';
@@ -122,7 +103,7 @@ $handler->display->display_options['filters']['nid_entityreference_filter_1']['f
 $handler->display->display_options['filters']['nid_entityreference_filter_1']['group'] = 1;
 $handler->display->display_options['filters']['nid_entityreference_filter_1']['exposed'] = TRUE;
 $handler->display->display_options['filters']['nid_entityreference_filter_1']['expose']['operator_id'] = 'nid_entityreference_filter_1_op';
-$handler->display->display_options['filters']['nid_entityreference_filter_1']['expose']['label'] = 'Nid (reference filter)';
+$handler->display->display_options['filters']['nid_entityreference_filter_1']['expose']['label'] = 'Organization name';
 $handler->display->display_options['filters']['nid_entityreference_filter_1']['expose']['operator'] = 'nid_entityreference_filter_1_op';
 $handler->display->display_options['filters']['nid_entityreference_filter_1']['expose']['identifier'] = 'nid_entityreference_filter_1';
 $handler->display->display_options['filters']['nid_entityreference_filter_1']['expose']['remember_roles'] = array(

@@ -41,6 +41,7 @@ $handler->display->display_options['fields']['nid']['field'] = 'nid';
 $handler->display->display_options['fields']['nid']['relationship'] = 'nid';
 $handler->display->display_options['fields']['nid']['group_type'] = 'count';
 $handler->display->display_options['fields']['nid']['label'] = '';
+$handler->display->display_options['fields']['nid']['exclude'] = TRUE;
 $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['nid']['separator'] = '';
 $handler->display->display_options['fields']['nid']['prefix'] = '(';
@@ -220,4 +221,29 @@ $handler->display->display_options['filters']['nid_entityreference_filter']['tab
 $handler->display->display_options['filters']['nid_entityreference_filter']['field'] = 'nid_entityreference_filter';
 $handler->display->display_options['filters']['nid_entityreference_filter']['relationship'] = 'nid';
 $handler->display->display_options['filters']['nid_entityreference_filter']['reference_display'] = 'llorg_ref:all';
+
+/* Display: Resource type */
+$handler = $view->new_display('entityreference', 'Resource type', 'res_type');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'entityreference_style';
+$handler->display->display_options['style_options']['search_fields'] = array(
+  'name' => 'name',
+  'nid' => 0,
+);
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'entityreference_fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Taxonomy term: Vocabulary */
+$handler->display->display_options['filters']['vid']['id'] = 'vid';
+$handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['filters']['vid']['field'] = 'vid';
+$handler->display->display_options['filters']['vid']['value'] = array(
+  19 => '19',
+);
 
