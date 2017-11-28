@@ -148,11 +148,11 @@ function ct_page_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '12',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '1',
+            'weight' => '7',
             'visible' => FALSE,
           ),
         ),

@@ -108,6 +108,37 @@ function ct_page_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_header|node|page|listing';
+  $field_group->group_name = 'group_header';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = 'listing';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '1',
+    'children' => array(
+      0 => 'title_field',
+      1 => 'field_image',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'element' => 'header',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_header|node|page|listing'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_header|node|page|teaser';
   $field_group->group_name = 'group_header';
   $field_group->entity_type = 'node';
@@ -204,6 +235,40 @@ function ct_page_field_group_info() {
     ),
   );
   $field_groups['group_landvoc|node|page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_landvoc|node|page|listing';
+  $field_group->group_name = 'group_landvoc';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = 'listing';
+  $field_group->parent_name = 'group_topics_regions';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_related_domains',
+      1 => 'field_related_themes',
+      2 => 'field_related_topics',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-landvoc',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_landvoc|node|page|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -305,6 +370,39 @@ function ct_page_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_topics_regions|node|page|listing';
+  $field_group->group_name = 'group_topics_regions';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = 'listing';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_geographical_focus',
+      1 => 'group_landvoc',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_topics_regions|node|page|listing'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_topics_regions|node|page|teaser';
   $field_group->group_name = 'group_topics_regions';
   $field_group->entity_type = 'node';
@@ -313,7 +411,7 @@ function ct_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '3',
+    'weight' => '1',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
