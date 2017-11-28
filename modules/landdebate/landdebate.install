@@ -158,7 +158,23 @@ debate/community',
       )
     );
   }
-  // Blogs archive page
+  // People page
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'people-all',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'title' => '',
+      'status' => 1,
+      'region' => 'content',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'people',
+    )
+  );
+  // Organizations page
   $blocks[] = array(
     'keys' => array(
       'module' => 'views',
