@@ -8,9 +8,13 @@
  */
 
 /** Land Portal 2.5
+ *  add/fillup iso2
  */
-function landportal_geo_update_7200() {
+function landportal_geo_enable() {
 
+  // FR
+  features_revert(array('module' => array('landportal_geo')));
+  
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'taxonomy_term')
         ->entityCondition('bundle', 'regions')
@@ -30,8 +34,12 @@ function landportal_geo_update_7200() {
       field_attach_update('taxonomy_term', $term);
     }
   }
+}
 
-
+/** Land Portal 2.5
+ *  fix geo terms parent
+ */
+function landportal_geo_install() {
   /**
    * Fix regions
    * Set those terms as 'top'
