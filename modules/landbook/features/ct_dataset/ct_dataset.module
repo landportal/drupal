@@ -8,13 +8,14 @@ include_once 'ct_dataset.features.inc';
 
 // Get the latest CT dataset
 function ct_dataset__get_latest($tid) {
-  $query = db_select('node', 'n');
-  $query->join('field_data_field_catalog', 'c', 'n.nid = c.entity_id');
-  $query->fields('n', array('nid'))
-        ->condition('field_catalog_tid', $tid, '=');
-  $catnode = $query->execute()
-    ->fetchAssoc();
-  return $catnode['nid'];
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+        ->fieldCondition('field_catalog', 'tid', $tid, '=')
+        ->range(0, 1)
+        ->propertyOrderBy('created', 'DESC');
+  $result = $query->execute();
+  $last = array_keys($result['node'])[0];
+  return $last;
 }
 
 // If we have a latest CT dataset, replace tax. dataset page with it
