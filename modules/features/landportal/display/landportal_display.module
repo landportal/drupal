@@ -20,52 +20,57 @@ function landportal_display_entity_info_alter(&$entity_info){
 
 /******************************************
  *
- *    Hacks for drupal node/page title
+ * Hacks for drupal page headers (title)
+ *
+ * Maybe this should be back in theme as this is pretty much appearence related and will only work nicely with LPBS theme
  */
 function landportal_display_preprocess_page(&$variables) {
   $sysmain = &$variables['page']['content']['system_main'];
-  $content = null;
   // Taxonomy term page
   if (array_key_exists('term_heading', $sysmain)) {
-    $term = $sysmain['term_heading']['term'];
-    //dpm($term, "Got a term");
-    // If we have a name_field set, clear page title
-    if (@isset($term['name_field'])) {
-      $variables['title'] = '';
+    $term = &$sysmain['term_heading']['term'];
+    if (@$header = landportal_display__get_header($term)) {
+      //dpm($header);
+      $variables['title_group'] = $header;
+      $variables['title'] = render($header);
+    }
+    // For Tax. term pages without a header group
+    else if (@isset($term['name_field'])) {
+      $variables['title'] = render($term['name_field']);
+      unset($term['name_field']);
     }
   }
   // Node page
   else if (array_key_exists('nodes', $sysmain)) {
     $first = array_keys($sysmain['nodes'])[0];
-    //dpm($sysmain['nodes'][$first], $first);
-    landportal_display__get_group_header($first, $variables);
+    $node = &$sysmain['nodes'][$first];
+    if (@$header = landportal_display__get_header($node)) {
+      $variables['title_group'] = $header;
+      $variables['title'] = render($header);
+    }
   }
-  /* if (isset($variables['node']) && isset($variables['node']->title_field) && */
-  /*     array_key_exists('nodes', $variables['page']['content']['system_main'])) { */
-  /*   landportal_display__get_group_header($variables['node']->nid, $variables); */
-  /* } */
+  else {
+    // Wrap page title in an h1
+    //$variables['title'] = '<h1>' . $variables['title'] . '</h1>';
+  }
+  //dpm($variables);
 }
 
-//
-// Pick group_header and create a new group (title_header) to render instead of title
-//
-function landportal_display__get_group_header($nid, &$variables) {
-    $content = $variables['page']['content']['system_main']['nodes'][$nid];
-    if (isset($content['#fieldgroups']) && isset($content['#fieldgroups']['group_header'])) {
-      $header = $content['#fieldgroups']['group_header'];
-      $title = landportal_display_extract_groups('group_header', $content);
-      field_group_fields_nest($title, $content);
-      $variables['page']['title_header'] = $title;
-      $variables['title'] = render($title);
-      unset($variables['page']['content']['system_main']['nodes'][$nid]['#fieldgroups']['group_header']);
-      unset($variables['page']['content']['system_main']['nodes'][$nid]['#groups']['group_header']);
-      // Remove fields and groups children that now belong to the page-header
-      foreach ($title['#group_children'] as $c => $g) {
-        unset($variables['page']['content']['system_main']['nodes'][$nid][$c]);
-        unset($variables['page']['content']['system_main']['nodes'][$nid]['#group_children'][$c]);
-      }
-      //dpm($variables['page']['content']['system_main']['nodes'][$nid], 'da node afta');
+// Pick group_header if it exists, return it and suppress it from content
+function landportal_display__get_header(&$content) {
+  if (isset($content['#fieldgroups']) && isset($content['#fieldgroups']['group_header'])) {
+    $header = $content['#fieldgroups']['group_header'];
+    $header = landportal_display_extract_groups('group_header', $content);
+    field_group_fields_nest($header, $content);
+    unset($content['#fieldgroups']['group_header']);
+    unset($content['#groups']['group_header']);
+    foreach ($header['#group_children'] as $c => $g) {
+      unset($content[$c]);
+      unset($content['#group_children'][$c]);
     }
+    return $header;
+  }
+  return null;
 }
 
 function landportal_display_extract_groups($group_name, $content) {
