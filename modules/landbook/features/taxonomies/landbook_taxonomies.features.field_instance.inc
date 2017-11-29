@@ -34,7 +34,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'search_index' => array(
         'label' => 'hidden',
@@ -197,7 +197,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 8,
       ),
       'search_index' => array(
         'label' => 'inline',
@@ -539,13 +539,13 @@ function landbook_taxonomies_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 25,
+        'weight' => 24,
       ),
       'header' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 4,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -644,7 +644,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 12,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -731,13 +731,13 @@ function landbook_taxonomies_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 26,
       ),
       'header' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 6,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -800,13 +800,13 @@ function landbook_taxonomies_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 27,
       ),
       'header' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 7,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -864,13 +864,13 @@ function landbook_taxonomies_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 9,
+        'weight' => 28,
       ),
       'header' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 9,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -940,7 +940,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 10,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1143,7 +1143,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 13,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1239,7 +1239,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 11,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1704,11 +1704,12 @@ function landbook_taxonomies_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'image',
         'settings' => array(
-          'file_view_mode' => 'default',
+          'image_link' => '',
+          'image_style' => 'full_width_featured',
         ),
-        'type' => 'file_rendered',
+        'type' => 'image',
         'weight' => 4,
       ),
       'search_index' => array(

@@ -167,7 +167,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Dataset details',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_orgref',
       1 => 'field_doc_licencing',
@@ -221,7 +221,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Details',
+    'label' => 'Indicator details',
     'weight' => '2',
     'children' => array(
       0 => 'field_unit',
@@ -231,7 +231,7 @@ function landbook_taxonomies_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Details',
+      'label' => 'Indicator details',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-details',
@@ -256,7 +256,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = 'group_aside';
   $field_group->data = array(
-    'label' => 'Details',
+    'label' => 'Indicator details',
     'weight' => '13',
     'children' => array(
       0 => 'field_unit',
@@ -264,7 +264,7 @@ function landbook_taxonomies_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Details',
+      'label' => 'Indicator details',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-details',
@@ -455,8 +455,8 @@ function landbook_taxonomies_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = 'group_aside';
   $field_group->data = array(
-    'label' => '',
-    'weight' => '24',
+    'label' => 'Related categories',
+    'weight' => '25',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_topics',
@@ -464,13 +464,12 @@ function landbook_taxonomies_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => '',
+      'label' => 'Related categories',
       'instance_settings' => array(
-        'required_fields' => 1,
         'id' => '',
         'classes' => 'group-landvoc',
         'description' => '',
-        'show_label' => '0',
+        'show_label' => '1',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'none',
@@ -608,7 +607,7 @@ function landbook_taxonomies_field_group_info() {
         'classes' => 'group-landvoc',
         'description' => '',
         'show_label' => '1',
-        'label_element' => 'h2',
+        'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
       ),
@@ -1222,6 +1221,7 @@ function landbook_taxonomies_field_group_info() {
   // Included for use with string extractors like potx.
   t('Dataset details');
   t('Details');
+  t('Indicator details');
   t('Metadata');
   t('Related categories');
   t('Settings');

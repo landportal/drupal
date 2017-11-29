@@ -88,7 +88,7 @@ function landbook_taxonomies_strongarm() {
             'visible' => FALSE,
           ),
           'header' => array(
-            'weight' => '17',
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),
@@ -226,6 +226,13 @@ function landbook_taxonomies_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_indicators_pattern';
   $strongarm->value = 'book/indicator/[term:field_id]';
   $export['pathauto_taxonomy_term_indicators_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_observations_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_observations_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

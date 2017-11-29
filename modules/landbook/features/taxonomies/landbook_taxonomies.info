@@ -135,6 +135,7 @@ features[variable][] = metatag_enable_taxonomy_term__datasets
 features[variable][] = metatag_enable_taxonomy_term__indicators
 features[variable][] = pathauto_taxonomy_term_datasets_pattern
 features[variable][] = pathauto_taxonomy_term_indicators_pattern
+features[variable][] = pathauto_taxonomy_term_observations_pattern
 features[variable][] = term_authoring_info_vocab_datasets_showfield
 features[variable][] = term_authoring_info_vocab_indicators_showfield
 features[variable][] = uuid_features_entity_taxonomy_term_datasets
