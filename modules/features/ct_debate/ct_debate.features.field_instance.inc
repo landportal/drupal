@@ -56,7 +56,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -295,10 +295,10 @@ function ct_debate_field_default_field_instances() {
   $field_instances['node-debate-field_file'] = array(
     'bundle' => 'debate',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Some useful files or materials to support this debate.',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
@@ -325,7 +325,7 @@ function ct_debate_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_file',
-    'label' => 'Attach a  file',
+    'label' => 'Related materials',
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
@@ -334,26 +334,30 @@ function ct_debate_field_default_field_instances() {
       'file_extensions' => 'txt zip pdf',
       'max_filesize' => '',
       'user_register_form' => FALSE,
+      'wysiwyg_insert' => 0,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'default' => 0,
+          'audio' => 'audio',
+          'document' => 'document',
           'image' => 'image',
-          'video' => 0,
+          'video' => 'video',
         ),
-        'browser_plugins' => array(),
-        'progress_indicator' => 'throbber',
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
       ),
       'type' => 'media_generic',
-      'weight' => 28,
+      'weight' => 29,
     ),
   );
 
@@ -493,6 +497,73 @@ function ct_debate_field_default_field_instances() {
       ),
       'type' => 'media_generic',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-debate-field_orgref'.
+  $field_instances['node-debate-field_orgref'] = array(
+    'bundle' => 'debate',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_orgref',
+    'label' => 'Partners',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 28,
     ),
   );
 
@@ -800,7 +871,6 @@ function ct_debate_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Attach a  file');
   t('Comment');
   t('Date');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
@@ -809,7 +879,10 @@ function ct_debate_field_default_field_instances() {
   t('Image');
   t('Introduction');
   t('Overarching categories');
+  t('Partners');
   t('Related concepts');
+  t('Related materials');
+  t('Some useful files or materials to support this debate.');
   t('Status');
   t('The date in which the debate will be open to participate.');
   t('Themes');

@@ -27,6 +27,7 @@ function ct_debate_field_group_info() {
       1 => 'field_status',
       2 => 'field_file',
       3 => 'field_facilitators',
+      4 => 'field_orgref',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -41,6 +42,38 @@ function ct_debate_field_group_info() {
     ),
   );
   $field_groups['group_about|node|debate|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_aside|node|debate|default';
+  $field_group->group_name = 'group_aside';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'debate';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_file',
+      1 => 'field_orgref',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-aside field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_aside|node|debate|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
