@@ -87,7 +87,7 @@ function ct_dataset_field_default_field_instances() {
           'view_mode' => 'header',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 11,
+        'weight' => 16,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -280,7 +280,7 @@ function ct_dataset_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 13,
+        'weight' => 17,
       ),
       'full' => array(
         'label' => 'above',
@@ -349,9 +349,14 @@ function ct_dataset_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 15,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -432,7 +437,7 @@ function ct_dataset_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 14,
+        'weight' => 18,
       ),
       'listing' => array(
         'label' => 'above',
@@ -572,7 +577,7 @@ function ct_dataset_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 15,
+        'weight' => 19,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -668,7 +673,7 @@ function ct_dataset_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -755,7 +760,7 @@ function ct_dataset_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 12,
+        'weight' => 23,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -820,7 +825,7 @@ function ct_dataset_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 13,
+        'weight' => 24,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -880,7 +885,7 @@ function ct_dataset_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 14,
+        'weight' => 25,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -943,15 +948,12 @@ function ct_dataset_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'field_collection',
+        'module' => 'landbook_view_coda',
         'settings' => array(
-          'add' => '',
-          'delete' => '',
-          'description' => 1,
-          'edit' => '',
-          'translate' => 'Translate',
+          'class' => '',
+          'view_mode' => 'full',
         ),
-        'type' => 'field_collection_list',
+        'type' => 'lbvc_block',
         'weight' => 14,
       ),
       'full' => array(

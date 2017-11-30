@@ -148,7 +148,7 @@ function ct_dataset_field_group_info() {
   $field_group->parent_name = 'group_aside';
   $field_group->data = array(
     'label' => 'Related categories',
-    'weight' => '16',
+    'weight' => '21',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_themes',
@@ -251,8 +251,8 @@ function ct_dataset_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_paragraphs',
-      2 => 'field_related_blocks',
-      3 => 'field_visualization',
+      2 => 'field_visualization',
+      3 => 'group_related',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -270,6 +270,39 @@ function ct_dataset_field_group_info() {
     ),
   );
   $field_groups['group_main|node|dataset|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_related|node|dataset|default';
+  $field_group->group_name = 'group_related';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dataset';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_main';
+  $field_group->data = array(
+    'label' => 'Related content on the Land Portal',
+    'weight' => '16',
+    'children' => array(
+      0 => 'field_noderef',
+      1 => 'field_related_blocks',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Related content on the Land Portal',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-related field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_related|node|dataset|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -462,6 +495,7 @@ function ct_dataset_field_group_info() {
   // Included for use with string extractors like potx.
   t('Related categories');
   t('Related content');
+  t('Related content on the Land Portal');
   t('Settings');
   t('Topics and Regions');
 
