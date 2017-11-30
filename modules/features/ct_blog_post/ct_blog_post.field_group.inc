@@ -25,6 +25,8 @@ function ct_blog_post_field_group_info() {
     'children' => array(
       0 => 'field_image',
       1 => 'title_field',
+      2 => 'field_authors',
+      3 => 'field_pubdate',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -87,6 +89,8 @@ function ct_blog_post_field_group_info() {
     'children' => array(
       0 => 'field_image',
       1 => 'title_field',
+      2 => 'field_authors',
+      3 => 'field_pubdate',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -114,7 +118,7 @@ function ct_blog_post_field_group_info() {
   $field_group->parent_name = 'group_topics_regions';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '22',
     'children' => array(
       0 => 'field_related_topics',
       1 => 'field_related_domains',
@@ -149,7 +153,7 @@ function ct_blog_post_field_group_info() {
   $field_group->parent_name = 'group_topics_regions';
   $field_group->data = array(
     'label' => '',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_related_topics',
       1 => 'field_related_domains',
@@ -287,7 +291,7 @@ function ct_blog_post_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
@@ -350,7 +354,7 @@ function ct_blog_post_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '1',
+    'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
