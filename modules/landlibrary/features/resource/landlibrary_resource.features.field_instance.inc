@@ -740,7 +740,7 @@ function landlibrary_resource_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'file_entity',
         'settings' => array(
-          'text' => 'Download [file:name]',
+          'text' => 'Download file',
         ),
         'type' => 'file_download_link',
         'weight' => 4,
