@@ -61,16 +61,17 @@ function ct_debate_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => '',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-aside',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => 'group-aside field-group-div',
-        'id' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_aside|node|debate|default'] = $field_group;
