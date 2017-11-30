@@ -22,7 +22,7 @@ function ct_events_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -46,7 +46,7 @@ function ct_events_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 5,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -102,11 +102,11 @@ function ct_events_field_default_field_instances() {
 ',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -124,7 +124,7 @@ function ct_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -143,7 +143,7 @@ function ct_events_field_default_field_instances() {
         'size' => 80,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -151,8 +151,7 @@ function ct_events_field_default_field_instances() {
   $field_instances['node-event-field_date'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => 'When is this event taking place?
-If it is only a one day event, the end date should be the same as the starting date.',
+    'description' => 'If it is only a one day event, the end date should be the same as the starting date.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -208,7 +207,7 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date',
-    'label' => 'Date',
+    'label' => 'When is this event taking place?',
     'required' => 1,
     'settings' => array(
       'default_value' => 'now',
@@ -232,7 +231,7 @@ If it is only a one day event, the end date should be the same as the starting d
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 8,
+      'weight' => 12,
     ),
   );
 
@@ -243,13 +242,13 @@ If it is only a one day event, the end date should be the same as the starting d
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'file_entity',
         'settings' => array(
           'text' => 'Download [file:name]',
         ),
         'type' => 'file_download_link',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -272,7 +271,7 @@ If it is only a one day event, the end date should be the same as the starting d
     ),
     'entity_type' => 'node',
     'field_name' => 'field_file',
-    'label' => 'Attach a  file',
+    'label' => 'Related materials',
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
@@ -281,26 +280,30 @@ If it is only a one day event, the end date should be the same as the starting d
       'file_extensions' => 'txt zip pdf',
       'max_filesize' => '',
       'user_register_form' => FALSE,
+      'wysiwyg_insert' => 0,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
-          0 => 0,
           'audio' => 0,
-          'default' => 0,
+          'document' => 0,
           'image' => 'image',
           'video' => 0,
         ),
-        'browser_plugins' => array(),
-        'progress_indicator' => 'throbber',
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
       ),
       'type' => 'media_generic',
-      'weight' => 12,
+      'weight' => 10,
     ),
   );
 
@@ -451,11 +454,11 @@ If it is only a one day event, the end date should be the same as the starting d
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -509,7 +512,79 @@ If it is only a one day event, the end date should be the same as the starting d
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 9,
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_orgref'.
+  $field_instances['node-event-field_orgref'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'use_content_language' => 0,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 5,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_orgref',
+    'label' => 'Organizations',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 13,
     ),
   );
 
@@ -755,28 +830,28 @@ If it is only a one day event, the end date should be the same as the starting d
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 0,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Attach a  file');
   t('Body');
   t('Contact / Event organiser');
-  t('Date');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Geographical focus');
   t('Give the name, eventually the email of the contact organiser.
 ');
+  t('If it is only a one day event, the end date should be the same as the starting date.');
   t('Image');
+  t('Organizations');
   t('Overarching categories');
   t('Related concepts');
+  t('Related materials');
   t('Themes');
   t('Title');
   t('Website');
-  t('When is this event taking place?
-If it is only a one day event, the end date should be the same as the starting date.');
+  t('When is this event taking place?');
 
   return $field_instances;
 }
