@@ -89,7 +89,8 @@ $handler->display->display_options['filters']['language']['value'] = array(
 /* Display: themes */
 $handler = $view->new_display('entityreference', 'themes', 'themes');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'entityreference_style';
 $handler->display->display_options['style_options']['search_fields'] = array(
@@ -105,7 +106,8 @@ $handler->display->display_options['defaults']['row_options'] = FALSE;
 /* Display: geo */
 $handler = $view->new_display('entityreference', 'geo', 'geo');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'entityreference_style';
 $handler->display->display_options['style_options']['search_fields'] = array(
