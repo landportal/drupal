@@ -176,17 +176,17 @@ function landportal_groups_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '5',
+            'weight' => '2',
             'visible' => FALSE,
           ),
         ),
         'locations' => array(
           'teaser' => array(
-            'weight' => '4',
+            'weight' => '1',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -194,7 +194,7 @@ function landportal_groups_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '2',
+            'weight' => '3',
             'visible' => FALSE,
           ),
         ),

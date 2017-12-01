@@ -119,6 +119,7 @@ function landportal_groups_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_image',
+      1 => 'title_field',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
