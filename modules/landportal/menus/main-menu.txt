@@ -1,4 +1,4 @@
 Who we are {"url":"about","lang":"und","weight":"0"}
 What we do {"url":"about\/what-we-do","lang":"und","weight":"1"}
 Get involved {"url":"get-involved","lang":"und","weight":"2"}
-Donate {"url":"about\/donate","lang":"und","weight":"3"}
+Donate {"url":"about\/donate","lang":"en","weight":"3"}
