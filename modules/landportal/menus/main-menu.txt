@@ -1,10 +1,4 @@
-About us {"url":"about","expanded":true,"lang":"und","weight":"0"}
--What we do {"url":"about\/what-we-do","lang":"und","weight":"-49"}
--Contact us {"url":"about\/contact-us","lang":"und","weight":"-48"}
--About us {"url":"about","lang":"und","weight":"-50"}
-Open Data {"url":"opendata","expanded":true,"lang":"und","weight":"0"}
--Vocabularies {"url":"voc","lang":"und","weight":"-48"}
--Reuse {"url":"library\/reuse","lang":"und","weight":"-46"}
--About Open Data {"url":"opendata","lang":"und","weight":"-50"}
--Contribute {"url":"library\/contribute","lang":"und","weight":"-47"}
--Land Portal Data model {"url":"library\/data-model","lang":"und","weight":"-49"}
+Who we are {"url":"about","lang":"und","weight":"0"}
+What we do {"url":"about\/what-we-do","lang":"und","weight":"1"}
+Get involved {"url":"get-involved","lang":"und","weight":"2"}
+Donate {"url":"about\/donate","lang":"und","weight":"3"}
