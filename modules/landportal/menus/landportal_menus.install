@@ -15,22 +15,7 @@ function landportal_menus_enable() {
   menu_delete(array('menu_name' => 'landdebate-menu'));
   menu_delete(array('menu_name' => 'landlibrary-menu'));
   menu_delete(array('menu_name' => 'user-signin'));
-
-  // Move about menu to sidebar
-  $block = array(
-    'keys' => array(
-      'theme' => 'lpbs',
-      'module' => 'menu',
-      'delta'  => 'menu-land-portal-about',
-    ),
-    'values' => array(
-      'region' => 'sidebar_second',
-    )
-  );
-  db_merge('block')
-    ->key($block['keys'])
-    ->fields($block['values'])
-    ->execute();
+  menu_delete(array('menu_name' => 'menu-land-portal-about'));
 
   // Show LP Navigation menu in header / top-bar region
   $block = array(
@@ -52,7 +37,27 @@ function landportal_menus_enable() {
     ->key($block['keys'])
     ->fields($block['values'])
     ->execute();
-  drush_log('Show landportal-menu in main/top region', 'ok');
+
+  $block = array(
+    'keys' => array(
+      'module' => 'menu',
+      'delta'  => 'about-menu',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'sidebar_second',
+      'title' => '<none>',
+      'weight' => 0,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'about/*',
+    )
+  );
+  db_merge('block')
+    ->key($block['keys'])
+    ->fields($block['values'])
+    ->execute();
+  drush_log('Show landportal-menu and about-menu', 'ok');
 }
 
 function landportal_menus_disable() {
@@ -61,9 +66,9 @@ function landportal_menus_disable() {
     'keys' => array(
       'module' => 'menu',
       'delta'  => 'landportal-menu',
+      'theme'  => 'lpbs',
     ),
     'values' => array(
-      'status' => 0,
       'region' => -1,
     )
   );
@@ -71,7 +76,22 @@ function landportal_menus_disable() {
     ->key($block['keys'])
     ->fields($block['values'])
     ->execute();
-  drush_log('Hide landportal-menu in main/top region', 'ok');
+
+  /* $block = array( */
+  /*   'keys' => array( */
+  /*     'module' => 'menu', */
+  /*     'delta'  => 'about-menu', */
+  /*     'theme'  => 'lpbs', */
+  /*   ), */
+  /*   'values' => array( */
+  /*     'region' => -1, */
+  /*   ) */
+  /* ); */
+  /* db_merge('block') */
+  /*   ->key($block['keys']) */
+  /*   ->fields($block['values']) */
+  /*   ->execute(); */
+  drush_log('Hide landportal-menu and about-menu', 'ok');
 }
 
 function landportal_menus_install() {
@@ -80,10 +100,16 @@ function landportal_menus_install() {
     'title' => 'LP Navigation',
     'description' => 'Land Portal main navigation menu'
   ));
-  drush_log('Created menu "LP Navigation" (landportal-menu)', 'ok');
+  menu_save(array(
+    'menu_name' => 'about-menu',
+    'title' => 'LP About',
+    'description' => 'Land Portal main navigation menu'
+  ));
+  drush_log('Created main Landportal menu and About menu', 'ok');
 }
 
 function landportal_menus_uninstall() {
   menu_delete(array('menu_name' => 'landportal-menu'));
+  menu_delete(array('menu_name' => 'about-menu'));
   drush_log('Removed menu "LP Navigation" (landportal-menu)', 'ok');
 }
