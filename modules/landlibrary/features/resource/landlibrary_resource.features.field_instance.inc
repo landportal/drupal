@@ -320,7 +320,7 @@ function landlibrary_resource_field_default_field_instances() {
         ),
         'year_range' => '-5000:+10',
       ),
-      'type' => 'date_popup',
+      'type' => 'date_select',
       'weight' => 11,
     ),
   );
