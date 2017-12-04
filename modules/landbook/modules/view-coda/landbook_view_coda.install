@@ -5,6 +5,51 @@
  * Author: Jules Clement <jules.clement@landportal.info>
  */
 
+
+/** Land Portal 2.5 release
+ * add tables to datasets (tax.) pages.
+ */
+function landbook_view_coda_update_7207() {
+  // update all datasets, add a table vis.
+  $inds = array();
+  $terms = entity_load('taxonomy_term', FALSE, array('vid' => LBVC_IND_VID));
+  foreach ($terms as $t) {
+    $entity = entity_metadata_wrapper('taxonomy_term', $t->tid);
+    $dsid = $entity->field_dataset->value()->tid;
+    if (!array_key_exists($dsid, $inds)) {
+      $inds[$dsid] = array();
+    }
+    //print $dsid . ' add ' . $t->tid . "\n";
+    $inds[$dsid][] = $t->tid;
+  }
+
+  foreach (array_keys($inds) as $dsid) {
+    //$ds = entity_metadata_wrapper('taxonomy_term', $dsid);
+    $ets = entity_load('taxonomy_term', [$dsid]);//, [], TRUE);
+    $ds = $ets[$dsid];
+
+    print $dsid . ' / ' . $ds->bundle . ' #' . count($inds[$dsid]);
+    print "\n";
+
+    // add new table vis.
+    $fc_item = entity_create('field_collection_item', array('field_name' => 'field_visualization'));
+    $fc_item->setHostEntity('taxonomy_term', $ds);
+    foreach ($inds[$dsid] as $iid) {
+      $fc_item->field_indicators[LANGUAGE_NONE][]['tid'] = $iid;
+    }
+    $fc_item->field_view_coda[LANGUAGE_NONE][] = array(
+      'type' => 'table',
+      'vcc' => '{"allowAdd": true}',
+    );
+    $fc_item->save();
+  }
+  drush_log('Added tables to ' . count($inds) . ' datasets', 'ok');
+}
+
+
+
+
+        
 /** LB view-coda fields
  * @@@Add default map to indicators with non coded value
  */
@@ -18,7 +63,6 @@ function landbook_view_coda_update_7206() {
   ));
 
   // update all indicators with some default visualization (with fields)
-  // @TODO (?): update all datasets with table vis. Only if nb indicators < X?
   $terms = entity_load('taxonomy_term', FALSE, array('vid' => LBVC_IND_VID));
   foreach ($terms as $t) {
     // Add map vis to all indicators without a 'coded' value
