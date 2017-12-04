@@ -8,12 +8,21 @@ include_once 'landbook_country.features.inc';
 
 // @TODO: hook tax. term page display / redirect to book/countries/[ISO3]
 
+// If we have a latest CT dataset, replace tax. dataset page with it
+function landbook_country_page_build(&$page) {
+  if (@($term = $page['content']['system_main']['term_heading']['term']['#term'])) {
+    if ($term->vocabulary_machine_name != 'regions') return;
+    $iso3 = $term->field_iso3[LANGUAGE_NONE][0]['value'];
+    drupal_add_js(array('iso3' => $iso3), 'setting');
+  }
+}
+
 // @todo: also do this on term page load?
 function landbook_country_node_view($node, $view_mode, $langcode) {
-  // PRovide a drupal JS var
+  // Provide a iso3 to Drupal JS var (mainly for VGGT / LGAF blocks)
   if ($node->type == 'landbook_country') {
-    $geo = $node->field_geographical_focus[LANGUAGE_NONE][0]['entity'];
-    $iso3 = $geo->field_iso3[LANGUAGE_NONE][0]['value'];
+    $term = $node->field_geographical_focus[LANGUAGE_NONE][0]['entity'];
+    $iso3 = $term->field_iso3[LANGUAGE_NONE][0]['value'];
     drupal_add_js(array('iso3' => $iso3), 'setting');
   }
 
