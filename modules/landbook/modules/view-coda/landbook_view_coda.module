@@ -107,10 +107,9 @@ function lbvc__plugins_types() {
   return variable_get('lbvc.plugins', array());
 }
 
-// For LB Datasets / Indicators (taxonomies)
-// Add JS variable to identify them by Land Book ID
+// on dataset/indicator full or dataset header view mode
 function landbook_view_coda_taxonomy_term_view($term, $view_mode, $langcode) {
-  if (!in_array($term->vocabulary_machine_name, array('indicators', 'datasets')))
+  if (!in_array($term->vocabulary_machine_name, array('indicators', 'datasets')) || $view_mode == 'teaser')
     return;
   drupal_add_js(array(
     'landbook' => array(
@@ -118,18 +117,4 @@ function landbook_view_coda_taxonomy_term_view($term, $view_mode, $langcode) {
       'lbid'   => $term->field_id[LANGUAGE_NONE][0]['value'],
     )
   ), 'setting');
-}
-
-// Nodes Dataset pages
-function landbook_view_coda_preprocess(&$variables, $hook) {
-  // From ct_dataset
-  if (@$variables['page']['dsid']) {
-    $entity = entity_metadata_wrapper('node', $variables['page']['node']);
-    drupal_add_js(array(
-      'landbook' => array(
-        'type' => 'dataset',
-        'lbid' => $entity->field_catalog->field_id->value()
-      )
-    ), 'setting');
-  }
 }
