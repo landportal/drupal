@@ -39,7 +39,7 @@ function landbook_view_coda_update_7207() {
     }
     $fc_item->field_view_coda[LANGUAGE_NONE][] = array(
       'type' => 'table',
-      'vcc' => '{"allowAdd": true}',
+      'vcc' => '{"useLastYear": true}',
     );
     $fc_item->save();
   }
