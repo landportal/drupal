@@ -8,7 +8,7 @@
  */
 
 function lbvc_plugin_ranking_params($VCC) {
-  $params = json_decode($VCC['vcc'] != 'null' ? $VCC['vcc'] : '{}');
+  $params = json_decode($VCC['vcc'] != '' ? $VCC['vcc'] : '{}');
   $params->indicators = array();
   $params->cache = array();
 
