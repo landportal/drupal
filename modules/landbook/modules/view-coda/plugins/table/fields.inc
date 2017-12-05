@@ -66,7 +66,7 @@ function lbvc_plugin_table_formatter($VCC) {
   if (sizeof($fields) == 0) {
     return $chart;
   }
-  $form = lbvc_plugin_ui_form_wrapper($VCC, $fields, (isset($params->allowAdd) ? 'add' : 'update'));
+  $form = lbvc_plugin_ui_form_wrapper($VCC, $fields);//, (isset($params->allowAdd) ? 'add' : 'update'));
   return array($chart, $form);
 }
 
