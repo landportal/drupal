@@ -60,7 +60,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_dataset',
       1 => 'field_related_aside',
@@ -257,7 +257,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = 'group_aside';
   $field_group->data = array(
     'label' => 'Indicator details',
-    'weight' => '13',
+    'weight' => '5',
     'children' => array(
       0 => 'field_unit',
       1 => 'field_highlow',
@@ -593,7 +593,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = 'group_aside';
   $field_group->data = array(
     'label' => 'Related categories',
-    'weight' => '14',
+    'weight' => '6',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_topics',
@@ -752,7 +752,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '1',
     'children' => array(
       0 => 'description_field',
       1 => 'field_visualization',
