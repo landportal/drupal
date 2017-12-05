@@ -1,5 +1,5 @@
 CKEDITOR.addTemplates("default", {
-    imagesPath: Drupal.settings.basePath + Drupal.settings.landportal_partners.path + '/images/',
+    imagesPath: Drupal.settings.basePath + Drupal.settings.landportal_cke.path + '/images/',
     templates: [
         { title:"2 Columns",
           image:"2c.gif",

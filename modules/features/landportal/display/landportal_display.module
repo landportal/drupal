@@ -17,6 +17,21 @@ function landportal_display_entity_info_alter(&$entity_info){
 }
 
 
+/******************************************
+ *
+ * CKEditor
+ */
+// Override CKeditor JS
+function landportal_display_ckeditor_settings_alter(&$settings, $context) {
+  //dpm($context);
+  $path = drupal_get_path('module', 'landportal_display');
+  drupal_add_js(array('landportal_cke' => array('path' => $path)), 'setting');
+  $settings['stylesCombo_stylesSet'] = "default:/" . $path . "/ckeditor.styles.js";
+  $settings['contentsCss'][] = "/" . drupal_get_path('theme', 'lpbs') . "/css/lp-bootstrap.css";
+  $settings['contentsCss'][] = "/" . drupal_get_path('theme', 'lpbs') . "/css/style.css";
+}
+
+
 
 /******************************************
  *

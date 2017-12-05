@@ -53,27 +53,33 @@ function landportal_partners_views_post_render(&$view, &$output, &$cache) {
   $output .= $jsnew;
 }
 
-// Override CKeditor JS
-function landportal_partners_ckeditor_settings_alter(&$settings, $context) {
-  /* global $node, $page; */
-  /* dpm($page); */
-  $path = drupal_get_path('module', 'landportal_partners');
-  drupal_add_js(array('landportal_partners' => array('path' => $path)), 'setting');
-
-  $settings['stylesCombo_stylesSet'] = "default:/" . $path . "/ckeditor.styles.js";
-  $settings['contentsCss'][] = "/" . drupal_get_path('theme', 'lpbs') . "/css/style.css";
-
-  // We only add the settings to ckeditor wysiwyg profiles.
-//  if ($context['profile']->editor == 'ckeditor') {
-  //$settings['bodyClass'] = 'partners-page';
-  /* dpm($context); */
-  /* dpm($settings); */
+/**
+ * Implements hook_element_info_alter().
+ *
+ * Add callback to inject body class.
+ * See hook_field_widget_form_alter
+ */
+function landportal_partners_element_info_alter(&$types) {
+  // Used when using ckeditor module.
+  if (isset($types['text_format']['#pre_render']) && is_array($types['text_format']['#pre_render'])) {
+    if (in_array('ckeditor_pre_render_text_format', $types['text_format']['#pre_render'])) {
+      $types['text_format']['#pre_render'][] = 'landportal_partners_pre_render_ckeditor_element';
+      $types['text_format']['#attached']['js'][] = array(
+        'data' => drupal_get_path('module', 'landportal_partners') . '/ckeditor.js',
+        'type' => 'file',
+        'scope' => 'footer',
+        'weight' => 30,
+      );
+    }
+  }
 }
 
-// FROM http://cgit.drupalcode.org/sandbox-rudiedirkx-2454217
 /**
  * Implements hook_field_widget_form_alter().
+ *
+ * Add partners OG id / page info to CKE body class
  */
+// FROM http://cgit.drupalcode.org/sandbox-rudiedirkx-2454217
 function landportal_partners_pre_render_ckeditor_element($element) {
   if (!isset($element['#entity'])) {
     return $element;
@@ -92,23 +98,4 @@ function landportal_partners_pre_render_ckeditor_element($element) {
   /*   dpm($element); */
   }
   return $element;
-}
-
-/**
- * Implements hook_element_info_alter().
- */
-function landportal_partners_element_info_alter(&$types) {
-  // Used when using ckeditor module.
-  if (isset($types['text_format']['#pre_render']) && is_array($types['text_format']['#pre_render'])) {
-    if (in_array('ckeditor_pre_render_text_format', $types['text_format']['#pre_render'])) {
-
-      $types['text_format']['#pre_render'][] = 'landportal_partners_pre_render_ckeditor_element';
-      $types['text_format']['#attached']['js'][] = array(
-        'data' => drupal_get_path('module', 'landportal_partners') . '/landportal_partners.ckeditor.js',
-        'type' => 'file',
-        'scope' => 'footer',
-        'weight' => 30,
-      );
-    }
-  }
 }

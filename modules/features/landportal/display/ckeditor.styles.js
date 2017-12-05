@@ -14,7 +14,7 @@ CKEDITOR.stylesSet.add('default', [
 
 // This should happen in ckeditor.config.js
 CKEDITOR.config.templates_replaceContent = false;
-CKEDITOR.config.templates_files = [ Drupal.settings.basePath + Drupal.settings.landportal_partners.path + '/ckeditor.templates.js'];
+CKEDITOR.config.templates_files = [ Drupal.settings.basePath + Drupal.settings.landportal_cke.path + '/ckeditor.templates.js'];
 CKEDITOR.config.colorButton_colors = '0096d8,abc029,f9b122';
 CKEDITOR.config.font_names = 'Merriweather ; Open Sans';
 CKEDITOR.config.fontSize_sizes = 'small/.9em;medium/1em;large/1.6em;title/2em;';
