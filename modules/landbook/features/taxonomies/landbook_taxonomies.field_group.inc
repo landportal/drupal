@@ -456,7 +456,7 @@ function landbook_taxonomies_field_group_info() {
   $field_group->parent_name = 'group_aside';
   $field_group->data = array(
     'label' => 'Related categories',
-    'weight' => '25',
+    'weight' => '11',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_topics',
@@ -687,6 +687,8 @@ function landbook_taxonomies_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'description_field',
+      1 => 'field_visualization',
+      2 => 'field_related_blocks',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1155,7 +1157,7 @@ function landbook_taxonomies_field_group_info() {
   $field_groups['group_topics_regions|taxonomy_term|indicators|teaser'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_vis|taxonomy_term|datasets|full';
   $field_group->group_name = 'group_vis';
