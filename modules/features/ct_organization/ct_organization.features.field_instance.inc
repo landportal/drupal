@@ -406,7 +406,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'listing' => array(
         'label' => 'above',
@@ -612,7 +612,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 14,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1030,7 +1030,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -1084,7 +1084,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'hidden',
