@@ -12,8 +12,41 @@
  *  cleanup block & context
  */
 function landportal_blocks_update_7205() {
+  $blocks = array();
+  $block[] = array(
+    'keys' => array(
+      'module' => 'addtoany',
+      'delta'  => 'addtoany_button',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => 'Share this page',
+      'weight' => 42,
+      'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+      'pages' => '',
+    )
+  );
+
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'landportal_blocks',
+      'delta'  => 'landportal_footer',
+      'theme' => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'footer',
+      'title' => '',
+      'weight' => '1',
+      'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+      'pages' => 'partners/*',
+    )
+  );
+
   // Disable share icons (addtoany)
-  $block = array(
+  $blocks[] = array(
     'keys' => array(
       'module' => 'landportal_blocks',
       'delta'  => 'lp_share',
@@ -23,10 +56,24 @@ function landportal_blocks_update_7205() {
       'region' => -1,
     )
   );
-  db_merge('block')
-    ->key($block['keys'])
-    ->fields($block['values'])
-    ->execute();
+  // Disable footer block
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'landportal_blocks',
+      'delta'  => 'lp_footer_social',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'region' => -1,
+    )
+  );
+
+  foreach($blocks as $block){
+    db_merge('block')
+      ->key($block['keys'])
+      ->fields($block['values'])
+      ->execute();
+  }
 }
 
 /**
