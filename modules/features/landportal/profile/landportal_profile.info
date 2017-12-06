@@ -97,6 +97,7 @@ features[uuid_term][] = fff342aa-c849-48cc-886a-9e89e6c8bf81
 features[variable][] = auto_entitylabel_pattern_profile2_main
 features[variable][] = auto_entitylabel_profile2_main
 features[variable][] = googleanalytics_account
+features[variable][] = pathauto_taxonomy_term_occupation_pattern
 features[variable][] = user_picture_style
 features[variable][] = user_pictures
 features[variable][] = uuid_features_file_taxonomy_term_occupation
