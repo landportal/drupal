@@ -1230,8 +1230,8 @@ function landlibrary_resource_field_default_field_instances() {
     'entity_type' => 'node',
     'entityconnect' => array(
       'button' => array(
-        'unload_add_button' => 1,
-        'unload_edit_button' => 1,
+        'unload_add_button' => 0,
+        'unload_edit_button' => 0,
       ),
       'icon' => array(
         'show_add_icon' => 0,
@@ -1262,7 +1262,7 @@ function landlibrary_resource_field_default_field_instances() {
         'path' => '',
         'size' => 60,
       ),
-      'type' => 'entityreference_autocomplete_tags',
+      'type' => 'entityreference_autocomplete',
       'weight' => 122,
     ),
   );
@@ -1320,8 +1320,8 @@ function landlibrary_resource_field_default_field_instances() {
     'entity_type' => 'node',
     'entityconnect' => array(
       'button' => array(
-        'unload_add_button' => 1,
-        'unload_edit_button' => 1,
+        'unload_add_button' => 0,
+        'unload_edit_button' => 0,
       ),
       'icon' => array(
         'show_add_icon' => 0,
@@ -1352,7 +1352,7 @@ function landlibrary_resource_field_default_field_instances() {
         'path' => '',
         'size' => 60,
       ),
-      'type' => 'entityreference_autocomplete_tags',
+      'type' => 'entityreference_autocomplete',
       'weight' => 121,
     ),
   );
@@ -1878,8 +1878,8 @@ function landlibrary_resource_field_default_field_instances() {
     'entity_type' => 'node',
     'entityconnect' => array(
       'button' => array(
-        'unload_add_button' => 1,
-        'unload_edit_button' => 1,
+        'unload_add_button' => 0,
+        'unload_edit_button' => 0,
       ),
       'icon' => array(
         'show_add_icon' => 0,
