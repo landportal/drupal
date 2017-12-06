@@ -1217,6 +1217,13 @@ function landportal_taxonomy_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 3,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
       'search_index' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -1266,6 +1273,12 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
@@ -1342,6 +1355,16 @@ function landportal_taxonomy_field_default_field_instances() {
         'type' => 'image',
         'weight' => 1,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'thumbnail',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
       'search_index' => array(
         'label' => 'hidden',
         'module' => 'image',
@@ -1406,6 +1429,12 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => 'Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
@@ -1483,6 +1512,17 @@ function landportal_taxonomy_field_default_field_instances() {
         'type' => 'title_linked',
         'weight' => 0,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h1',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
+      ),
       'search_index' => array(
         'label' => 'hidden',
         'module' => 'title',
@@ -1499,7 +1539,7 @@ function landportal_taxonomy_field_default_field_instances() {
         'module' => 'title',
         'settings' => array(
           'title_class' => '',
-          'title_link' => '',
+          'title_link' => 'content',
           'title_style' => 'h3',
         ),
         'type' => 'title_linked',
@@ -1537,6 +1577,12 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => 'Please, enter the synonyms which should be related to this term.',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'full' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
