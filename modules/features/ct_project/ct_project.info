@@ -1,7 +1,7 @@
 name = CT Project
 core = 7.x
 package = Landportal CT
-version = 7.x-1.0-beta1
+version = 7.x-1.0-beta3
 dependencies[] = ct_organization
 dependencies[] = ctools
 dependencies[] = date
@@ -96,6 +96,7 @@ features[variable][] = pathauto_node_project_fr_pattern
 features[variable][] = pathauto_node_project_pattern
 features[variable][] = pathauto_node_project_pt_pattern
 features[variable][] = pathauto_node_project_und_pattern
+features[variable][] = uuid_features_entity_taxonomy_term_currency
 features[variable][] = xmlsitemap_settings_node_project
 features_exclude[field_base][field_currency_code] = field_currency_code
 features_exclude[field_base][field_currency_symbol] = field_currency_symbol

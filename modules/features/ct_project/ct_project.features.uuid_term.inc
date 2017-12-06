@@ -21,22 +21,6 @@ function ct_project_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'currency',
-    'field_currency_code' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'EUR',
-          'format' => NULL,
-        ),
-      ),
-    ),
-    'field_currency_symbol' => array(
-      'und' => array(
-        0 => array(
-          'value' => '€',
-          'format' => NULL,
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -56,22 +40,6 @@ function ct_project_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'currency',
-    'field_currency_code' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'USD',
-          'format' => NULL,
-        ),
-      ),
-    ),
-    'field_currency_symbol' => array(
-      'und' => array(
-        0 => array(
-          'value' => '$',
-          'format' => NULL,
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -91,22 +59,6 @@ function ct_project_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'currency',
-    'field_currency_code' => array(
-      'und' => array(
-        0 => array(
-          'value' => 'GBP',
-          'format' => NULL,
-        ),
-      ),
-    ),
-    'field_currency_symbol' => array(
-      'und' => array(
-        0 => array(
-          'value' => '£',
-          'format' => NULL,
-        ),
-      ),
-    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),

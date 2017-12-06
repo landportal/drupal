@@ -343,6 +343,13 @@ function ct_project_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_taxonomy_term_currency';
+  $strongarm->value = 'currency';
+  $export['uuid_features_entity_taxonomy_term_currency'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_project';
   $strongarm->value = array(
     'status' => '0',
