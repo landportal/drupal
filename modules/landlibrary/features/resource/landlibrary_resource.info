@@ -67,6 +67,7 @@ features[field_group][] = group_editors_pub|node|landlibrary_resource|teaser
 features[field_group][] = group_header|node|landlibrary_resource|default
 features[field_group][] = group_header|node|landlibrary_resource|listing
 features[field_group][] = group_header|node|landlibrary_resource|teaser
+features[field_group][] = group_landvoc|node|landlibrary_resource|default
 features[field_group][] = group_landvoc|node|landlibrary_resource|form
 features[field_group][] = group_landvoc|node|landlibrary_resource|listing
 features[field_group][] = group_landvoc|node|landlibrary_resource|teaser
