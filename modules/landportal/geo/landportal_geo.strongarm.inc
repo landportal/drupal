@@ -17,7 +17,7 @@ function landportal_geo_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'search_index' => array(
         'custom_settings' => FALSE,
@@ -38,13 +38,10 @@ function landportal_geo_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '7',
-        ),
-        'xmlsitemap' => array(
           'weight' => '6',
         ),
-        'metatags' => array(
-          'weight' => '8',
+        'xmlsitemap' => array(
+          'weight' => '5',
         ),
       ),
       'display' => array(),

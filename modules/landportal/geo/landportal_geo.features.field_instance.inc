@@ -23,6 +23,13 @@ function landportal_geo_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -73,6 +80,12 @@ function landportal_geo_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -146,6 +159,12 @@ function landportal_geo_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 4,
       ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -194,6 +213,17 @@ function landportal_geo_field_default_field_instances() {
         ),
         'type' => 'title_linked',
         'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -266,6 +296,12 @@ function landportal_geo_field_default_field_instances() {
         ),
         'type' => 'title_linked',
         'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -351,6 +387,17 @@ function landportal_geo_field_default_field_instances() {
         'type' => 'title_linked',
         'weight' => 0,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h1',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
+      ),
       'listing' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -362,7 +409,7 @@ function landportal_geo_field_default_field_instances() {
         'module' => 'title',
         'settings' => array(
           'title_class' => '',
-          'title_link' => '',
+          'title_link' => 'content',
           'title_style' => 'h3',
         ),
         'type' => 'title_linked',
@@ -404,6 +451,12 @@ function landportal_geo_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 5,
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'inline',

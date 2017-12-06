@@ -17,7 +17,9 @@ function landportal_geo_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => -5,
       'language' => 'und',
-      'i18n_mode' => 32768,
+      'i18n_mode' => 1,
+      'base_i18n_mode' => 1,
+      'base_language' => 'und',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
