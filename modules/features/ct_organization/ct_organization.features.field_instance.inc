@@ -611,7 +611,7 @@ function ct_organization_field_default_field_instances() {
         'label' => 'above',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 14,
       ),
       'listing' => array(
