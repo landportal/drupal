@@ -53,7 +53,7 @@ function ct_dataset_page_build(&$page) {
 
 // dataset pages
 function ct_dataset_preprocess(&$variables, $hook) {
-  if ($hook != 'page' || !$variables['page']['dsid']) return;
+  if ($hook != 'page' || !@$variables['page']['dsid']) return;
   $dsid = $variables['page']['dsid'];
 
   /* $variables['node'] = $variables['page']['node']; */
