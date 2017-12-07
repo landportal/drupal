@@ -11,3 +11,15 @@ include_once 'landportal_taxonomy.features.inc';
 function landportal_taxonomy_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
+
+// on dataset/indicator full or dataset header view mode
+function landportal_taxonomy_taxonomy_term_view($term, $view_mode, $langcode) {
+  if ($term->vocabulary_machine_name != 'themes' || $view_mode != 'full')
+    return;
+  menu_tree_set_path('landportal-menu', 'node/42574'); // @todo should be something with alias + lang
+  $bc = array();
+  $bc[] = l('Home', '');
+  $bc[] = l('Issues', 'book/thematic');
+  //$bc[] = l(drupal_get_title());
+  drupal_set_breadcrumb($bc);
+}
