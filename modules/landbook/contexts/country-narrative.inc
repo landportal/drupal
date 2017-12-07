@@ -4,8 +4,8 @@ $context = new stdClass();
 $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
 $context->api_version = 3;
 $context->name = 'country-narrative';
-$context->description = 'Country narrative';
-$context->tag = 'countries, landbook';
+$context->description = 'Country narrative blocks';
+$context->tag = 'narrative';
 $context->conditions = array(
   'node' => array(
     'values' => array(
@@ -56,5 +56,5 @@ $context->condition_mode = 0;
 
 // Translatables
 // Included for use with string extractors like potx.
-t('Country narrative');
-t('countries, landbook');
+t('Country narrative blocks');
+t('narrative');
