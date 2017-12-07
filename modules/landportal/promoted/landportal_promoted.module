@@ -24,18 +24,3 @@ function landportal_promoted_views_default_views() {
     $export[$view->name] = $view;
     return $export;
 }
-
-/* Attach JS to node form for promoted_to_XXX behaviors */
-function landportal_promoted_form_alter(&$form, &$form_state, $form_id) {
-  if (!isset($form['field_thematic_promoted'])) return;
-  if (!user_access('edit_custom_pub_promoted_to_thematic_page')) {
-    unset($form['field_thematic_promoted']);
-    return ;
-  }
-  if (substr($form_id, -10) == '_node_form') {
-    // Move field to node publishing option.
-    $form['options']['#attached']['js'][] = drupal_get_path('module', 'landportal_promoted') . '/promoted.js';
-    $form['options']['field_thematic_promoted'] = $form['field_thematic_promoted'];
-    unset($form['field_thematic_promoted']);
-  }
-}
