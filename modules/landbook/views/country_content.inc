@@ -44,18 +44,21 @@ $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'node';
 $handler->display->display_options['sorts']['created']['field'] = 'created';
 $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-/* Contextual filter: Taxonomy term: ISO3 (field_iso3) */
-$handler->display->display_options['arguments']['field_iso3_value']['id'] = 'field_iso3_value';
-$handler->display->display_options['arguments']['field_iso3_value']['table'] = 'field_data_field_iso3';
-$handler->display->display_options['arguments']['field_iso3_value']['field'] = 'field_iso3_value';
-$handler->display->display_options['arguments']['field_iso3_value']['relationship'] = 'field_geographical_focus_tid';
-$handler->display->display_options['arguments']['field_iso3_value']['default_action'] = 'default';
-$handler->display->display_options['arguments']['field_iso3_value']['default_argument_type'] = 'raw';
-$handler->display->display_options['arguments']['field_iso3_value']['default_argument_options']['index'] = '2';
-$handler->display->display_options['arguments']['field_iso3_value']['summary']['number_of_records'] = '0';
-$handler->display->display_options['arguments']['field_iso3_value']['summary']['format'] = 'default_summary';
-$handler->display->display_options['arguments']['field_iso3_value']['summary_options']['items_per_page'] = '25';
-$handler->display->display_options['arguments']['field_iso3_value']['limit'] = '0';
+/* Contextual filter: Taxonomy term: Term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['relationship'] = 'field_geographical_focus_tid';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+$handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = TRUE;
+$handler->display->display_options['arguments']['tid']['default_argument_options']['limit'] = TRUE;
+$handler->display->display_options['arguments']['tid']['default_argument_options']['vocabularies'] = array(
+  'regions' => 'regions',
+);
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
 /* Filter criterion: Content: Published */
 $handler->display->display_options['filters']['status']['id'] = 'status';
 $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -352,3 +355,4 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
+

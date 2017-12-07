@@ -23,7 +23,7 @@ $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['row_plugin'] = 'node';
 /* Relationship: Field: Geographical focus (field_geographical_focus) */
 $handler->display->display_options['relationships']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
 $handler->display->display_options['relationships']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
@@ -80,8 +80,8 @@ $handler->display->display_options['filters']['language']['value'] = array(
 );
 $handler->display->display_options['filters']['language']['group'] = 1;
 
-/* Display: Portfolios */
-$handler = $view->new_display('block', 'Portfolios', 'cp');
+/* Display: Portfolios jump */
+$handler = $view->new_display('block', 'Portfolios jump', 'cp');
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'jump_menu';
 $handler->display->display_options['style_options']['hide'] = TRUE;
@@ -90,25 +90,46 @@ $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['exclude'] = TRUE;
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+/* Field: Taxonomy term: ISO3 */
+$handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
+$handler->display->display_options['fields']['field_iso3']['table'] = 'field_data_field_iso3';
+$handler->display->display_options['fields']['field_iso3']['field'] = 'field_iso3';
+$handler->display->display_options['fields']['field_iso3']['relationship'] = 'field_geographical_focus_tid';
+$handler->display->display_options['fields']['field_iso3']['label'] = '';
+$handler->display->display_options['fields']['field_iso3']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_iso3']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_iso3']['alter']['text'] = 'book/countries/[field_iso3]';
+$handler->display->display_options['fields']['field_iso3']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['relationship'] = 'field_geographical_focus_tid';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
 
-/* Display: Promoted */
-$handler = $view->new_display('block', 'Promoted', 'highlight');
+/* Display: Highlights */
+$handler = $view->new_display('block', 'Highlights', 'highlight');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Country highlights';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'view-wrapped';
+$handler->display->display_options['display_description'] = 'Promoted Country narrative on Countries page';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '4';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['default_row_class'] = FALSE;
-$handler->display->display_options['style_options']['row_class_special'] = FALSE;
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'node';
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['sorts'] = FALSE;
 /* Sort criterion: Content: Post date */
 $handler->display->display_options['sorts']['created']['id'] = 'created';
@@ -137,4 +158,55 @@ $handler->display->display_options['filters']['promote']['id'] = 'promote';
 $handler->display->display_options['filters']['promote']['table'] = 'node';
 $handler->display->display_options['filters']['promote']['field'] = 'promote';
 $handler->display->display_options['filters']['promote']['value'] = '1';
+
+/* Display: Last */
+$handler = $view->new_display('block', 'Last', 'last');
+$handler->display->display_options['display_description'] = 'Show last CP narrative';
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '1';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+/* Field: Taxonomy term: ISO3 */
+$handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
+$handler->display->display_options['fields']['field_iso3']['table'] = 'field_data_field_iso3';
+$handler->display->display_options['fields']['field_iso3']['field'] = 'field_iso3';
+$handler->display->display_options['fields']['field_iso3']['relationship'] = 'field_geographical_focus_tid';
+$handler->display->display_options['fields']['field_iso3']['label'] = '';
+$handler->display->display_options['fields']['field_iso3']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_iso3']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_iso3']['alter']['text'] = 'book/countries/[field_iso3]';
+$handler->display->display_options['fields']['field_iso3']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['relationship'] = 'field_geographical_focus_tid';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Taxonomy term: Term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['relationship'] = 'field_geographical_focus_tid';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+$handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = TRUE;
+$handler->display->display_options['arguments']['tid']['default_argument_options']['limit'] = TRUE;
+$handler->display->display_options['arguments']['tid']['default_argument_options']['vocabularies'] = array(
+  'regions' => 'regions',
+);
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
 
