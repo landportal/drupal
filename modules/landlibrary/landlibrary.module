@@ -11,3 +11,13 @@ include_once 'landlibrary.features.inc';
 function landlibrary_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
+
+function landlibrary_menu() {
+  $items = array();
+  $items['admin/content/library'] = array(
+    'title'             => 'Land Library',
+    'access arguments'  => array('administer content'),
+    'callback'          => 'systems_view_data',
+  );
+  return $items;
+}
