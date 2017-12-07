@@ -787,80 +787,6 @@ function landlibrary_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-landlibrary_resource-field_doc_keyword'.
-  $field_instances['node-landlibrary_resource-field_doc_keyword'] = array(
-    'bundle' => 'landlibrary_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'ds',
-        'settings' => array(
-          'conditions' => array(),
-          'taxonomy_term_link' => TRUE,
-          'taxonomy_term_separator' => ', ',
-        ),
-        'type' => 'ds_taxonomy_separator_localized',
-        'weight' => 1,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 16,
-      ),
-      'promoted_country_page' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_doc_keyword',
-    'label' => 'Keyword',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'agrovocfield' => array(
-          'autocomplete' => array(
-            'agrovocfield_autocomplete' => array(
-              'agrovocfield_agrovoc_uri' => 'http://aims.fao.org/aos/agrovoc/c_',
-              'agrovocfield_agrovoc_ws_uri' => 'AgrovocWS',
-              'agrovocfield_agrovoc_ws_url' => 'http://agrovoc.fao.org/axis/services/SKOSWS',
-              'agrovocfield_connection' => 'remote',
-              'agrovocfield_enable' => 0,
-            ),
-          ),
-        ),
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 9,
-    ),
-  );
-
   // Exported field_instance: 'node-landlibrary_resource-field_doc_language'.
   $field_instances['node-landlibrary_resource-field_doc_language'] = array(
     'bundle' => 'landlibrary_resource',
@@ -2174,7 +2100,6 @@ function landlibrary_resource_field_default_field_instances() {
   t('Image');
   t('In case an organization or institution is cited as Author of this material, please enter the organization name here. This field is linked to an organizational profile on the Land Portal. Therefore the organization or institution must already exist on the Land Portal. If not, please create the profile on the Land Portal first.');
   t('Is part of');
-  t('Keyword');
   t('License of the resource');
   t('Local file URL');
   t('Location Source');

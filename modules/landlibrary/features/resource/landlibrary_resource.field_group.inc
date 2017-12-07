@@ -896,11 +896,10 @@ function landlibrary_resource_field_group_info() {
     'label' => 'Settings',
     'weight' => '9',
     'children' => array(
-      0 => 'field_doc_keyword',
-      1 => 'locations',
-      2 => 'path',
-      3 => 'xmlsitemap',
-      4 => 'language',
+      0 => 'locations',
+      1 => 'path',
+      2 => 'xmlsitemap',
+      3 => 'language',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
