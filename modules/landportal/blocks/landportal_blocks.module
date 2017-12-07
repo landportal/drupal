@@ -41,9 +41,14 @@ function landportal_blocks_page_submenu() {
   });
   $(".region-content section.block").each(function (i, e) {
   title = $(e).find("h2.block-title")[0];
+//console.log(e.id);
+  if (e.id == "block-addtoany-addtoany-button") return;
   if (!title || !title.innerHTML || title.innerHTML == "<none></none>" || title.innerHTML.startsWith("Latest ")) return;
+  var t = title.innerHTML;
+  if (e.id == "block-landbook-vggt-vis-vggt") t = "VGGT";
+  if (e.id == "block-landbook-lgaf-vis") t = "LGAF";
   //console.log(e.id, title.innerHTML);
-  menu.append("<li><a href=\"#" + e.id + "\">" + title.innerHTML + "</li>");
+  menu.append("<li><a href=\"#" + e.id + "\" title=\"" + title.innerHTML + "\">" + t + "</li>");
   });
 });';
 }
