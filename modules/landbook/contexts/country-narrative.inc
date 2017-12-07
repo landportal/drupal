@@ -47,7 +47,7 @@ $context->reactions = array(
         'module' => 'landbook',
         'delta' => 'disclaimer_block',
         'region' => 'content',
-        'weight' => '14',
+        'weight' => '90',
       ),
     ),
   ),
