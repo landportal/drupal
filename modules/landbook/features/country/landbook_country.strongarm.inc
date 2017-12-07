@@ -152,7 +152,7 @@ function landbook_country_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '6',
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),
