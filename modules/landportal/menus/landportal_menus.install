@@ -5,6 +5,33 @@
  * Author: Jules <jules@ker.bz>
  */
 
+  // Inject login block in user-menu
+
+/** Land Portal 2.5 new UX
+ *  cleanup old menus
+ */
+function landportal_menus_update_7200() {
+
+  $item = array(
+    'link_path' => '<droplink>',
+    'link_title' => 'Login',
+    'menu_name' => 'user-menu', // Menu machine name, for example: main-menu
+    'weight' => 0,
+    'language' => 'und',
+    'plid' => 2, // Parent menu item, 0 if menu item is on top level
+    'module' => 'menu',
+  );
+  $mlid = menu_link_save($item);
+  $up = menu_link_load($mlid); // user/login link
+  global $base_url;
+  drush_log('Update '.$base_url.'/admin/structure/menu/item/' . $mlid . '/edit', 'ok');
+
+  $login = menu_link_load(1991); // user/login link
+  $login['expanded'] = '1';
+  menu_link_save($login);
+//  die();
+}
+
 /** Land Portal 2.5 new UX
  *  cleanup old menus
  */
@@ -16,6 +43,7 @@ function landportal_menus_enable() {
   menu_delete(array('menu_name' => 'landlibrary-menu'));
   menu_delete(array('menu_name' => 'user-signin'));
   menu_delete(array('menu_name' => 'menu-land-portal-about'));
+  menu_delete(array('menu_name' => 'menu-footer-menu'));
 
   // Show LP Navigation menu in header / top-bar region
   $block = array(
