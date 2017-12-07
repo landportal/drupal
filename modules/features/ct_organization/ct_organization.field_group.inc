@@ -76,11 +76,10 @@ function ct_organization_field_group_info() {
     'children' => array(
       0 => 'field_organization_relationship',
       1 => 'field_user',
-      2 => 'field_thematic_promoted',
-      3 => 'field_related_organization',
-      4 => 'language',
-      5 => 'path',
-      6 => 'xmlsitemap',
+      2 => 'field_related_organization',
+      3 => 'language',
+      4 => 'path',
+      5 => 'xmlsitemap',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
