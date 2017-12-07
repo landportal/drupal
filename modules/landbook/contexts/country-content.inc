@@ -3,8 +3,8 @@
 $context = new stdClass();
 $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
 $context->api_version = 3;
-$context->name = 'cp-related';
-$context->description = 'CP related content';
+$context->name = 'country-content';
+$context->description = 'Country related content';
 $context->tag = 'countries, landbook';
 $context->conditions = array(
   'taxonomy_term' => array(
@@ -61,6 +61,12 @@ $context->reactions = array(
         'region' => 'content',
         'weight' => '19',
       ),
+      'landbook-media' => array(
+        'module' => 'landbook',
+        'delta' => 'media',
+        'region' => 'content',
+        'weight' => '10',
+      ),
     ),
   ),
 );
@@ -68,5 +74,5 @@ $context->condition_mode = 0;
 
 // Translatables
 // Included for use with string extractors like potx.
-t('CP related content');
+t('Country related content');
 t('countries, landbook');
