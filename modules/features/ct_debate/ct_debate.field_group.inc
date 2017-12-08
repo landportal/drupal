@@ -173,7 +173,7 @@ function ct_debate_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Header',
+    'label' => '',
     'weight' => '0',
     'children' => array(
       0 => 'field_image',
@@ -183,13 +183,13 @@ function ct_debate_field_group_info() {
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
-      'label' => 'Header',
+      'label' => '',
       'instance_settings' => array(
         'id' => '',
         'classes' => '',
         'element' => 'header',
         'show_label' => '0',
-        'label_element' => 'div',
+        'label_element' => '',
         'attributes' => '',
       ),
     ),
