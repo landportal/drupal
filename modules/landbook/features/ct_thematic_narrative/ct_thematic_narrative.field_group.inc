@@ -51,11 +51,10 @@ function ct_thematic_narrative_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '1',
+    'weight' => '0',
     'children' => array(
       0 => 'title_field',
-      1 => 'field_landvoc_to',
-      2 => 'field_image',
+      1 => 'group_lay',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -134,6 +133,67 @@ function ct_thematic_narrative_field_group_info() {
     ),
   );
   $field_groups['group_header|node|thematic_narrative|teaser'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_lay|node|thematic_narrative|default';
+  $field_group->group_name = 'group_lay';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'thematic_narrative';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_header';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '12',
+    'children' => array(
+      0 => 'group_spit',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'lp-layout',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_lay|node|thematic_narrative|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_spit|node|thematic_narrative|default';
+  $field_group->group_name = 'group_spit';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'thematic_narrative';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_lay';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '12',
+    'children' => array(
+      0 => 'field_landvoc_to',
+      1 => 'field_image',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'lp-grid-2',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_spit|node|thematic_narrative|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */

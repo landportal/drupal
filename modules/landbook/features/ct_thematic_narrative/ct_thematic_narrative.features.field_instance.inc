@@ -22,7 +22,7 @@ function ct_thematic_narrative_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -121,7 +121,7 @@ function ct_thematic_narrative_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fieldset_view',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',
@@ -185,7 +185,7 @@ function ct_thematic_narrative_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 12,
       ),
       'listing' => array(
         'label' => 'above',
@@ -256,7 +256,7 @@ function ct_thematic_narrative_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 1,
+        'weight' => 13,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -352,7 +352,7 @@ function ct_thematic_narrative_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
@@ -426,7 +426,7 @@ function ct_thematic_narrative_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -473,7 +473,7 @@ function ct_thematic_narrative_field_default_field_instances() {
           'title_style' => 'h1',
         ),
         'type' => 'title_linked',
-        'weight' => 2,
+        'weight' => 11,
       ),
       'listing' => array(
         'label' => 'hidden',
