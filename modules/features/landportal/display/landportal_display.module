@@ -31,26 +31,24 @@ function landportal_display_ckeditor_settings_alter(&$settings, $context) {
   $settings['contentsCss'][] = "/" . drupal_get_path('theme', 'lpbs') . "/css/style.css";
 }
 
-
-
 /******************************************
  *
  * Hacks for drupal page headers (title)
  *
  * Maybe this should be back in theme as this is pretty much appearence related and will only work nicely with LPBS theme
  */
-function landportal_display_preprocess_page(&$variables) {
+// function landportal_display_preprocess_page(&$variables) { }
+function landportal_display_process_page(&$variables) {
   $sysmain = &$variables['page']['content']['system_main'];
+  /* dpm($sysmain); */
   // Taxonomy term page
   if (array_key_exists('term_heading', $sysmain)) {
     $term = &$sysmain['term_heading']['term'];
-    if (@$header = landportal_display__get_header($term)) {
-      //dpm($header);
-      $variables['title_group'] = $header;
+    if ($header = landportal_display__get_header($term)) {
       $variables['title'] = render($header);
     }
     // For Tax. term pages without a header group
-    else if (@isset($term['name_field'])) {
+    else if (isset($term['name_field'])) {
       $variables['title'] = render($term['name_field']);
       unset($term['name_field']);
     }
@@ -59,8 +57,7 @@ function landportal_display_preprocess_page(&$variables) {
   else if (array_key_exists('nodes', $sysmain)) {
     $first = array_keys($sysmain['nodes'])[0];
     $node = &$sysmain['nodes'][$first];
-    if (@$header = landportal_display__get_header($node)) {
-      $variables['title_group'] = $header;
+    if ($header = landportal_display__get_header($node)) {
       $variables['title'] = render($header);
     }
   }
@@ -73,52 +70,38 @@ function landportal_display_preprocess_page(&$variables) {
 
 // Pick group_header if it exists, return it and suppress it from content
 function landportal_display__get_header(&$content) {
-  if (isset($content['#fieldgroups']) && isset($content['#fieldgroups']['group_header'])) {
-    $header = $content['#fieldgroups']['group_header'];
-    $header = landportal_display_extract_groups('group_header', $content);
-    field_group_fields_nest($header, $content);
-    unset($content['#fieldgroups']['group_header']);
-    unset($content['#groups']['group_header']);
-    foreach ($header['#group_children'] as $c => $g) {
-      unset($content[$c]);
-      unset($content['#group_children'][$c]);
-    }
-    return $header;
-  }
-  return null;
+  if (!isset($content['#fieldgroups']) || !isset($content['#fieldgroups']['group_header'])) return null;
+  //dpm($content, 'content');
+  $header = array(
+    '#fieldgroups' => array(
+      'group_header' => $content['#fieldgroups']['group_header']
+    ),
+    '#group_children' => array(),
+  );
+  landportal_display__get_group($header, 'group_header', $content);
+  unset($content['#fieldgroups']['group_header']);
+  field_group_fields_nest($header, $content);
+  //dpm($header, 'header');
+  return $header;
 }
 
-function landportal_display_extract_groups($group_name, $content) {
-  static $i = 0;
-  $g = array(
-    '#fieldgroups' => [],
-    '#group_children' => [],
-  );
-  foreach ($content['#groups'][$group_name]->children as $field) {
-    // Process nested groups
-    if (substr($field, 0, 6) == 'group_') {
-      $i++;
-      $cg = landportal_display_extract_groups($field, $content);
-      $i--;
-      $g['#fieldgroups'][$field] = $cg['#fieldgroups'][$field];
-      $g['#group_children'][$field] = $group_name;
-      $g['#group_children'] += $cg['#group_children'];
-      $g['#items'] += $cg['#items'];
-      //unset($variables['page']['content']['system_main']['nodes'][$node->nid][$fieldc]);
-    } else {
-      if (isset($content[$field])) {
-        $g['#items'][$field] = $content[$field];
-        $g['#group_children'][$field] = $group_name;
-      }
-      //unset($variables['page']['content']['system_main']['nodes'][$node->nid][$field]);
+function landportal_display__get_group(&$group, $group_name, &$vars) {
+  if (!$vars['#fieldgroups'][$group_name]->children) return FALSE;
+  foreach($vars['#fieldgroups'][$group_name]->children as $c) {
+    $group['#group_children'][$c] = $group_name;
+    if (isset($vars[$c])) {
+      $group[$c] = $vars[$c];
+      unset($vars[$c]);
+    }
+    if (isset($vars['#fieldgroups'][$c])) {
+      $group['#fieldgroups'][$c] = $vars['#fieldgroups'][$c];
+      landportal_display__get_group($group, $c, $vars);
+      unset($vars[$c]);
     }
   }
-  //dpm($g, 'E: '.$group_name);
-  $g['#fieldgroups'][$group_name] = $content['#groups'][$group_name];
-  $g += $g['#items'];
-  if (!$i) unset($g['#items']);
-  return $g;
+  return TRUE;
 }
+
 
 
 /******************************************
