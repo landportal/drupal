@@ -9,6 +9,7 @@ $context->tag = 'related content';
 $context->conditions = array(
   'taxonomy_term' => array(
     'values' => array(
+      'landvoc_concepts' => 'landvoc_concepts',
       'overarching_categories' => 'overarching_categories',
       'themes' => 'themes',
     ),
