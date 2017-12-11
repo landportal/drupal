@@ -51,15 +51,15 @@ $context->reactions = array(
         'region' => 'content',
         'weight' => '7',
       ),
-      'views-thematic_content-partners' => array(
-        'module' => 'views',
-        'delta' => 'thematic_content-partners',
-        'region' => 'content',
-        'weight' => '8',
-      ),
       'views-thematic_content-library' => array(
         'module' => 'views',
         'delta' => 'thematic_content-library',
+        'region' => 'content',
+        'weight' => '8',
+      ),
+      'views-thematic_content-partners' => array(
+        'module' => 'views',
+        'delta' => 'thematic_content-partners',
         'region' => 'content',
         'weight' => '9',
       ),
