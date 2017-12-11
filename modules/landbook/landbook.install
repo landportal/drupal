@@ -173,6 +173,17 @@ book/thematic',
   );
   $blocks[] = array(
     'keys' => array(
+      'module' => 'landbook',
+      'delta'  => 'media',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
+  $blocks[] = array(
+    'keys' => array(
       'module' => 'views',
       'delta'  => 'landbook_catalog-all',
       'theme'  => 'lpbs',
