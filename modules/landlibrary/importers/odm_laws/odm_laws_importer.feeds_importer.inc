@@ -27,6 +27,7 @@ $feeds_importer->config = array(
       'request_timeout' => NULL,
       'auto_scheme' => 'http',
       'accept_invalid_cert' => FALSE,
+      'cache_http_result' => TRUE,
     ),
   ),
   'parser' => array(
@@ -38,17 +39,15 @@ $feeds_importer->config = array(
         'jsonpath_parser:2' => 'title',
         'jsonpath_parser:4' => 'notes',
         'jsonpath_parser:5' => 'resources[0].url',
-        'jsonpath_parser:6' => 'taxonomy',
         'jsonpath_parser:7' => 'taxonomy',
-        'jsonpath_parser:8' => 'odm_access_and_use_constraints[en]',
+        'jsonpath_parser:8' => 'odm_access_and_use_constraints.en',
         'jsonpath_parser:9' => 'odm_promulgation_date',
         'jsonpath_parser:10' => 'odm_language',
         'jsonpath_parser:11' => 'odm_document_type',
         'jsonpath_parser:15' => 'organization.title',
-        'jsonpath_parser:17' => 'marc21_700',
         'jsonpath_parser:18' => 'license_id',
         'jsonpath_parser:19' => 'odm_spatial_range',
-        'jsonpath_parser:20' => 'odm_document_number',
+        'jsonpath_parser:20' => 'odm_document_number.en',
         'jsonpath_parser:22' => 'taxonomy',
         'jsonpath_parser:23' => 'odm_laws_issuing_agency_parties',
       ),
@@ -59,14 +58,12 @@ $feeds_importer->config = array(
           'jsonpath_parser:2' => 0,
           'jsonpath_parser:4' => 0,
           'jsonpath_parser:5' => 0,
-          'jsonpath_parser:6' => 0,
           'jsonpath_parser:7' => 0,
           'jsonpath_parser:8' => 0,
           'jsonpath_parser:9' => 0,
           'jsonpath_parser:10' => 0,
           'jsonpath_parser:11' => 0,
           'jsonpath_parser:15' => 0,
-          'jsonpath_parser:17' => 0,
           'jsonpath_parser:18' => 0,
           'jsonpath_parser:19' => 0,
           'jsonpath_parser:20' => 0,
@@ -112,8 +109,7 @@ $feeds_importer->config = array(
         4 => array(
           'source' => 'jsonpath_parser:4',
           'target' => 'field_doc_description',
-          'unique' => FALSE,
-          'language' => 'und',
+          'format' => 'plain_text',
         ),
         5 => array(
           'source' => 'jsonpath_parser:5',
@@ -122,107 +118,101 @@ $feeds_importer->config = array(
           'language' => 'und',
         ),
         6 => array(
-          'source' => 'jsonpath_parser:6',
-          'target' => 'field_doc_keyword',
-          'term_search' => '0',
-          'autocreate' => 1,
-          'language' => 'und',
-        ),
-        7 => array(
           'source' => 'jsonpath_parser:7',
           'target' => 'field_related_topics',
           'term_search' => '0',
           'autocreate' => 0,
           'language' => 'und',
         ),
-        8 => array(
+        7 => array(
           'source' => 'jsonpath_parser:8',
           'target' => 'field_doc_copyrights_statement',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        9 => array(
+        8 => array(
           'source' => 'jsonpath_parser:9',
           'target' => 'field_doc_creation_date:start',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        10 => array(
+        9 => array(
           'source' => 'jsonpath_parser:10',
           'target' => 'field_doc_language',
-          'unique' => FALSE,
+          'term_search' => '1',
+          'autocreate' => 0,
           'language' => 'und',
         ),
-        11 => array(
+        10 => array(
           'source' => 'jsonpath_parser:11',
           'target' => 'field_doc_type',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        12 => array(
+        11 => array(
           'source' => 'jsonpath_parser:15',
           'target' => 'field_doc_provider:label',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        13 => array(
-          'source' => 'jsonpath_parser:17',
-          'target' => 'Temporary target 1',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        14 => array(
+        12 => array(
           'source' => 'jsonpath_parser:18',
           'target' => 'field_doc_licencing',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        15 => array(
+        13 => array(
           'source' => 'jsonpath_parser:19',
           'target' => 'field_geographical_focus',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        16 => array(
+        14 => array(
           'source' => 'jsonpath_parser:20',
           'target' => 'field_doc_identifier',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        17 => array(
-          'source' => 'Blank source 1',
-          'target' => 'field_related_domains',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        18 => array(
+        15 => array(
           'source' => 'jsonpath_parser:22',
           'target' => 'Temporary target 2',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        19 => array(
+        16 => array(
+          'source' => 'Blank source 1',
+          'target' => 'field_related_domains',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        17 => array(
           'source' => 'Blank source 2',
           'target' => 'field_related_themes',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        20 => array(
+        18 => array(
           'source' => 'jsonpath_parser:23',
           'target' => 'Temporary target 3',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        21 => array(
+        19 => array(
           'source' => 'Blank source 3',
           'target' => 'field_orgref:label',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        22 => array(
+        20 => array(
           'source' => 'Blank source 4',
           'target' => 'field_doc_publisher:label',
           'unique' => FALSE,
+          'language' => 'und',
+        ),
+        21 => array(
+          'source' => 'Blank source 5',
+          'target' => 'field_image:uri',
+          'file_exists' => '4',
           'language' => 'und',
         ),
       ),
