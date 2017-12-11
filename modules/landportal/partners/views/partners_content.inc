@@ -126,7 +126,7 @@ $handler->display->display_options['fields']['entityreference_view_widget']['fie
 $handler->display->display_options['fields']['entityreference_view_widget']['label'] = '';
 $handler->display->display_options['fields']['entityreference_view_widget']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['entityreference_view_widget']['ervw']['force_single'] = 0;
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -321,7 +321,7 @@ $static = \'/partners/\' . $uri[2] . \'/content/\';
 $handler->display->display_options['fields']['php']['php_value'] = 'return $static . $data->nid;';
 $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
 $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -371,7 +371,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
-/* Filter criterion: Field: Image (field_image:fid) */
+/* Filter criterion: Field: Picture (field_image:fid) */
 $handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
 $handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
 $handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
@@ -414,7 +414,7 @@ $static = \'/partners/\' . $uri[2] . \'/content/\';
 $handler->display->display_options['fields']['php']['php_value'] = 'return $static . $data->nid;';
 $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
 $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -574,7 +574,7 @@ $handler->display->display_options['fields']['rendered_entity']['label'] = '';
 $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
-$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'listing';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -633,7 +633,7 @@ $static = \'/partners/\' . $uri[2] . \'/content/\';
 $handler->display->display_options['fields']['php']['php_value'] = 'return $static . $data->nid;';
 $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
 $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -683,7 +683,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
 );
-/* Filter criterion: Field: Image (field_image:fid) */
+/* Filter criterion: Field: Picture (field_image:fid) */
 $handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
 $handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
 $handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
@@ -702,3 +702,4 @@ $handler->display->display_options['filters']['nid']['table'] = 'node';
 $handler->display->display_options['filters']['nid']['field'] = 'nid';
 $handler->display->display_options['filters']['nid']['relationship'] = 'reverse_field_promoted_node';
 $handler->display->display_options['filters']['nid']['value']['value'] = '36570';
+
