@@ -14,993 +14,6 @@ $export = array();
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'odm_library_importer-blank_source_4-find_replace_multiple';
-$feeds_tamper->importer = 'odm_library_importer';
-$feeds_tamper->source = 'Blank source 4';
-$feeds_tamper->plugin_id = 'find_replace_multiple';
-$feeds_tamper->settings = array(
-  'pairs' => array(
-    0 => array(
-      'source' => 'ADHOC',
-      'target' => 'Cambodian Human Rights and Development Association',
-    ),
-    1 => array(
-      'source' => 'Amnesty International',
-      'target' => 'Amnesty International',
-    ),
-    2 => array(
-      'source' => 'APRODEV',
-      'target' => 'Act Alliance EU',
-    ),
-    3 => array(
-      'source' => 'ARD, Inc.',
-      'target' => 'ARD, Inc.',
-    ),
-    4 => array(
-      'source' => 'Ash Center for Democratic Governance and Innovation',
-      'target' => 'Ash Center for Democratic Governance and Innovation',
-    ),
-    5 => array(
-      'source' => 'Ash Center for Democratic Governance and Innovation; UNDP',
-      'target' => 'Ash Center for Democratic Governance and Innovation;United Nations Development Programme',
-    ),
-    6 => array(
-      'source' => 'Asian Coalition for Agrarian Reform and Rural Development \\(ANGOC\\)',
-      'target' => 'Asian NGO Coalition (ANGOC)',
-    ),
-    7 => array(
-      'source' => 'Asian Development Bank',
-      'target' => 'Asian Development Bank',
-    ),
-    8 => array(
-      'source' => 'Bridges Across Borders',
-      'target' => 'Bridges Across Borders',
-    ),
-    9 => array(
-      'source' => 'CamAgra',
-      'target' => 'CAMAGRA Investment Group Ltd',
-    ),
-    10 => array(
-      'source' => 'Cambodia Center for Human Rights',
-      'target' => 'Cambodian Center for Human Rights',
-    ),
-    11 => array(
-      'source' => 'Cambodia Investment Board \\(CIB\\) of CDC',
-      'target' => 'Cambodian Investment Board of the Council for the Development of Cambodia',
-    ),
-    12 => array(
-      'source' => 'Cambodia. Ministry of Commerce',
-      'target' => 'Cambodian Ministry of Commerce',
-    ),
-    13 => array(
-      'source' => 'Cambodian Center for Human Rights',
-      'target' => 'Cambodian Center for Human Rights',
-    ),
-    14 => array(
-      'source' => 'Cambodian Human Rights Action Committee \\(CHRAC\\)',
-      'target' => 'The Cambodian Human Rights Action Committee',
-    ),
-    15 => array(
-      'source' => 'Cambodian Human Rights and Development Association \\(ADHOC\\)',
-      'target' => 'Cambodian Human Rights and Development Association',
-    ),
-    16 => array(
-      'source' => 'Cambodian Institute for Cooperation and Peace',
-      'target' => 'Cambodian Institute for Cooperation and Peace',
-    ),
-    17 => array(
-      'source' => 'Cambodian League for the Promotion and Defense of Human Rights \\(LICADHO\\)',
-      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
-    ),
-    18 => array(
-      'source' => 'Cambodian League for the Promotion and Defense of Human Rights \\(LICADHO\\); LICADHO Canada',
-      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
-    ),
-    19 => array(
-      'source' => 'Centre for Agricultural Policy \\(CAP\\), Vietnam Farmers’ Union, Vietnam Chamber of Commerce and Industry \\(VCCI\\), and Advancement of Community Empowerment and Partnership \\(ACEP\\)',
-      'target' => 'Vietnam Farmers Union;Vietnam Chamber of Commerce and Industry',
-    ),
-    20 => array(
-      'source' => 'CGIAR Program on Collective Action and Property Rights \\(CAPRi\\)',
-      'target' => 'CGIAR System-wide Program on Property Rights and Collective Action',
-    ),
-    21 => array(
-      'source' => 'CHRAC',
-      'target' => 'Cambodian Human Rights Action Committee',
-    ),
-    22 => array(
-      'source' => 'CIDSE-Laos, Plan International',
-      'target' => 'Plan International CIDSE-Laos',
-    ),
-    23 => array(
-      'source' => 'Columbia University School of International and Public Affairs',
-      'target' => 'Columbia University',
-    ),
-    24 => array(
-      'source' => 'Community Forest International',
-      'target' => 'Community Forestry International',
-    ),
-    25 => array(
-      'source' => 'Community Forestry International',
-      'target' => 'Community Forestry International',
-    ),
-    26 => array(
-      'source' => 'Community Forestry International \\(CFI\\)',
-      'target' => 'Community Forestry International',
-    ),
-    27 => array(
-      'source' => 'Community Forestry International / The East-West Center',
-      'target' => 'Community Forestry International',
-    ),
-    28 => array(
-      'source' => 'Deutsche Gesellschaft für Internationale Zusammenarbeit \\(GIZ\\) GmbH',
-      'target' => 'GIZ',
-    ),
-    29 => array(
-      'source' => 'Development Alternatives Inc,International Centre for Environmental Management',
-      'target' => 'Development Alternatives International Inc;International Centre for Environmental Management',
-    ),
-    30 => array(
-      'source' => 'EarthRights International',
-      'target' => 'EarthRights International',
-    ),
-    31 => array(
-      'source' => 'E-Investment Cambodia',
-      'target' => 'E-Investment Cambodia',
-    ),
-    32 => array(
-      'source' => 'FAO',
-      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
-    ),
-    33 => array(
-      'source' => 'Focus on the Global South',
-      'target' => 'Focus on the Global South',
-    ),
-    34 => array(
-      'source' => 'Food and Agriculture Organization of the United Nations',
-      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
-    ),
-    35 => array(
-      'source' => 'Food and Agriculture Organization of the United Nations \\(FAO\\)',
-      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
-    ),
-    36 => array(
-      'source' => 'Food and Agriculture Organization of the United Nations \\(FAO\\); International Institute for Environment and Development',
-      'target' => 'Food and Agriculture Organization of the United Nations (FAO);International Institute for Environment and Development',
-    ),
-    37 => array(
-      'source' => 'Food Security Working Group’s Land Core Group',
-      'target' => 'Food Security Working Group',
-    ),
-    38 => array(
-      'source' => 'Forest Trends',
-      'target' => 'Forest Trends',
-    ),
-    39 => array(
-      'source' => 'Forest Trends Association',
-      'target' => 'Forest Trends',
-    ),
-    40 => array(
-      'source' => 'Future Directions International',
-      'target' => 'Future Directions International',
-    ),
-    41 => array(
-      'source' => 'Genetic Resources Action International \\(GRAIN\\)',
-      'target' => 'GRAIN',
-    ),
-    42 => array(
-      'source' => 'Geoffrey Payne and Associates',
-      'target' => 'Geoffrey Payne and Associates',
-    ),
-    43 => array(
-      'source' => 'Germanwatch e.V.',
-      'target' => 'Germanwatch e.V.',
-    ),
-    44 => array(
-      'source' => 'Global Witness',
-      'target' => 'Global Witness',
-    ),
-    45 => array(
-      'source' => 'Heinrich Boll Foundation',
-      'target' => 'Heinrich Böll Foundation',
-    ),
-    46 => array(
-      'source' => 'Heinrich Boll Stiftung',
-      'target' => 'Heinrich Böll Foundation',
-    ),
-    47 => array(
-      'source' => 'HLH Agriculture \\(Cambodia\\) Co., Ltd',
-      'target' => 'HLH Group Unlimited',
-    ),
-    48 => array(
-      'source' => 'Institute of Environmental Systems Research',
-      'target' => 'Osnabrück University',
-    ),
-    49 => array(
-      'source' => 'International Federation for Human Rights \\(FIDH\\)',
-      'target' => 'International Federation for Human Rights',
-    ),
-    50 => array(
-      'source' => 'International Food Policy Research Institute \\(IFPRI\\)',
-      'target' => 'International Food Policy Research Institute',
-    ),
-    51 => array(
-      'source' => 'International Fund for Agricultural Development \\(IFAD\\)',
-      'target' => 'IFAD',
-    ),
-    52 => array(
-      'source' => 'International Fund for Agricultural Development',
-      'target' => 'IFAD',
-    ),
-    53 => array(
-      'source' => 'IFAD',
-      'target' => 'International Fund for Agricultural Development (IFAD)',
-    ),
-    54 => array(
-      'source' => 'International Land Coalition \\(ILC\\)',
-      'target' => 'International Land Coalition (ILC)',
-    ),
-    55 => array(
-      'source' => 'International Water Management Institute, and iDE Cambodia',
-      'target' => 'International Water Management Institute',
-    ),
-    56 => array(
-      'source' => 'International Water Management Institute, iDE Cambodia',
-      'target' => 'iDe',
-    ),
-    57 => array(
-      'source' => 'IUCN',
-      'target' => 'IUCN',
-    ),
-    58 => array(
-      'source' => 'Kepa',
-      'target' => 'Kepa',
-    ),
-    59 => array(
-      'source' => 'L.Y.P Group',
-      'target' => 'L.Y.P. Group',
-    ),
-    60 => array(
-      'source' => 'L.Y.P. Group',
-      'target' => 'L.Y.P. Group',
-    ),
-    61 => array(
-      'source' => 'Land Deal Politics Inititiative \\(LDPI\\)',
-      'target' => 'Land Deal Politics Initiative (LDPI)',
-    ),
-    62 => array(
-      'source' => 'landobservatory.org',
-      'target' => 'Land Observatory',
-    ),
-    63 => array(
-      'source' => 'Lao Embassy',
-      'target' => 'Embassy of the Lao People\'s Democratic Republic in the United States of America',
-    ),
-    64 => array(
-      'source' => 'Lao-German Land Policy Development Project',
-      'target' => 'GIZ',
-    ),
-    65 => array(
-      'source' => 'LICADHO',
-      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
-    ),
-    66 => array(
-      'source' => 'LICADHO Canada',
-      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
-    ),
-    67 => array(
-      'source' => 'Long Sreng.Com',
-      'target' => 'Long Sreng International',
-    ),
-    68 => array(
-      'source' => 'Mega First Corporation Berhad \\(MFCB\\)',
-      'target' => 'Mega First Corporation Berhad',
-    ),
-    69 => array(
-      'source' => 'Mekong Land Research Forum',
-      'target' => 'Mekong Land Research Forum',
-    ),
-    70 => array(
-      'source' => 'Mekong Region Land Governance',
-      'target' => 'Mekong Region Land Governance',
-    ),
-    71 => array(
-      'source' => 'Mekong Region Land Governance \\(MRLG\\)',
-      'target' => 'Mekong Region Land Governance',
-    ),
-    72 => array(
-      'source' => 'Ministry of Agriculture, Forestry and Fisheries \\(MAFF\\)',
-      'target' => 'Cambodian Ministry of Agriculture, Forestry and Fisheries',
-    ),
-    73 => array(
-      'source' => 'Ministry of Commerce \\(MoC\\)',
-      'target' => 'Cambodian Ministry of Commerce',
-    ),
-    74 => array(
-      'source' => 'Ministry of Environment \\(MoE\\)',
-      'target' => 'Cambodia Ministry of Environment',
-    ),
-    75 => array(
-      'source' => 'National Statistical Office, Ministry of Information and Communication Technology',
-      'target' => 'Cambodian National Institute of Statistics',
-    ),
-    76 => array(
-      'source' => 'New Proposals: Journal of Marxism and Interdisciplinary Inquiry.',
-      'target' => 'University of British Colombia - Journal of Marxism and Interdisciplinary Inquiry.',
-    ),
-    77 => array(
-      'source' => 'NGO Forum on Cambodia',
-      'target' => 'The NGO Forum on Cambodia',
-    ),
-    78 => array(
-      'source' => 'Office of High Commissioner for Human Rights',
-      'target' => 'Office of the United Nations High Commissioner for Human Rights',
-    ),
-    79 => array(
-      'source' => 'Office of the High Commissioner for Human Rights',
-      'target' => 'Office of the United Nations High Commissioner for Human Rights',
-    ),
-    80 => array(
-      'source' => 'Office of the United Nations High Commissioner for Human Rights',
-      'target' => 'Office of the United Nations High Commissioner for Human Rights',
-    ),
-    81 => array(
-      'source' => 'Office of the United Nations High Commissioner for Human Rights, Cambodia Country Office',
-      'target' => 'Office of the United Nations High Commissioner for Human Rights',
-    ),
-    82 => array(
-      'source' => 'Oxfam',
-      'target' => 'Oxfam International',
-    ),
-    83 => array(
-      'source' => 'Oxfam Australia',
-      'target' => 'Oxfam Australia',
-    ),
-    84 => array(
-      'source' => 'Oxfam Country office Vietnam',
-      'target' => 'Oxfam Country office Vietnam',
-    ),
-    85 => array(
-      'source' => 'Potsdam Institute for Climate Impact Research, Mekong River Commission',
-      'target' => 'Potsdam Institute for Climate Impact Research',
-    ),
-    86 => array(
-      'source' => 'Princess Maha Chakri Sirindhorn Anthropology Centre',
-      'target' => 'Princess Maha Chakri Sirindhorn Anthropology Centre',
-    ),
-    87 => array(
-      'source' => 'Rights and Resources Initiative',
-      'target' => 'Rights and Resources Initiative',
-    ),
-    88 => array(
-      'source' => 'Rivers Coalition in Cambodia',
-      'target' => 'The NGO Forum on Cambodia',
-    ),
-    89 => array(
-      'source' => 'Royal University of Phnom Penh \\(RUPP\\)',
-      'target' => 'Royal University of Phnom Penh',
-    ),
-    90 => array(
-      'source' => 'Sahmakum Teang Tnaut',
-      'target' => 'Sahmakum Teang Tnaut',
-    ),
-    91 => array(
-      'source' => 'Sahmakum Teang Tnaut \\(STT\\)',
-      'target' => 'Sahmakum Teang Tnaut',
-    ),
-    92 => array(
-      'source' => 'Sahrika.com',
-      'target' => 'Sahrika',
-    ),
-    93 => array(
-      'source' => 'SEAS – Gesellschaft für Südostasienwissenschaften / Society for South-East Asian Studies',
-      'target' => 'Society for South-East Asian Studies',
-    ),
-    94 => array(
-      'source' => 'SIT Graduate Institute',
-      'target' => 'SIT Graduate Institute',
-    ),
-    95 => array(
-      'source' => 'Sustainable Development Institute \\(SDI\\)',
-      'target' => 'Sustainable Development Institute',
-    ),
-    96 => array(
-      'source' => 'Sustainable Development Institute \\(SDI\\); Namati',
-      'target' => 'Sustainable Development Institute',
-    ),
-    97 => array(
-      'source' => 'Thai Society of Higher Education Institutes on Environment',
-      'target' => 'Thai Society of Higher Education Institutes on Environment',
-    ),
-    98 => array(
-      'source' => 'The Cambodia Daily',
-      'target' => 'The Cambodia Daily',
-    ),
-    99 => array(
-      'source' => 'The Center for Lao Studies',
-      'target' => 'Center for Lao Studies',
-    ),
-    100 => array(
-      'source' => 'The Council for the Development of Cambodia \\(CDC\\)',
-      'target' => 'The Council for the Development of Cambodia',
-    ),
-    101 => array(
-      'source' => 'The Land Core Group',
-      'target' => 'International Institute of Social Studies',
-    ),
-    102 => array(
-      'source' => 'The NGO Forum on Cambodia',
-      'target' => 'The NGO Forum on Cambodia',
-    ),
-    103 => array(
-      'source' => 'The NGO Forum on Cambodia \\(NGOF\\)',
-      'target' => 'The NGO Forum on Cambodia',
-    ),
-    104 => array(
-      'source' => 'The Phnom Penh Post',
-      'target' => 'The Phnom Penh Post',
-    ),
-    105 => array(
-      'source' => 'ttycorp.com',
-      'target' => 'TTY Corporation Co., Ltd',
-    ),
-    106 => array(
-      'source' => 'U.S. State Department',
-      'target' => 'US Department of State',
-    ),
-    107 => array(
-      'source' => 'UN Human Rights Council',
-      'target' => 'Office of the United Nations High Commissioner for Human Rights',
-    ),
-    108 => array(
-      'source' => 'UN-Habitat',
-      'target' => 'United Nations Human Settlements Programme',
-    ),
-    109 => array(
-      'source' => 'United Nations',
-      'target' => 'United Nations',
-    ),
-    110 => array(
-      'source' => 'United Nations \\(UN\\)',
-      'target' => 'United Nations',
-    ),
-    111 => array(
-      'source' => 'United Nations, Human Rights Council',
-      'target' => 'Office of the United Nations High Commissioner for Human Rights',
-    ),
-    112 => array(
-      'source' => 'University of Liege',
-      'target' => 'University of Liege',
-    ),
-    113 => array(
-      'source' => 'USAID',
-      'target' => 'USAID',
-    ),
-    114 => array(
-      'source' => 'WITNESS Forced Evictions',
-      'target' => 'WITNESS Forced Evictions',
-    ),
-    115 => array(
-      'source' => 'Working Group on Land Issues',
-      'target' => 'Food Security Working Group',
-    ),
-    116 => array(
-      'source' => 'World Bank',
-      'target' => 'World Bank Group',
-    ),
-    117 => array(
-      'source' => 'WorldFish',
-      'target' => 'WorldFish',
-    ),
-  ),
-);
-$feeds_tamper->weight = 2;
-$feeds_tamper->description = 'Find replace multiple (organizations)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_25-find_replace_multiple';
-$feeds_tamper->importer = 'odm_library_importer';
-$feeds_tamper->source = 'jsonpath_parser:25';
-$feeds_tamper->plugin_id = 'find_replace_multiple';
-$feeds_tamper->settings = array(
-  'pairs' => array(
-    0 => array(
-      'source' => 'ADHOC',
-      'target' => 'Cambodian Human Rights and Development Association',
-    ),
-    1 => array(
-      'source' => 'Amnesty International',
-      'target' => 'Amnesty International',
-    ),
-    2 => array(
-      'source' => 'APRODEV',
-      'target' => 'Act Alliance EU',
-    ),
-    3 => array(
-      'source' => 'ARD, Inc.',
-      'target' => 'ARD, Inc.',
-    ),
-    4 => array(
-      'source' => 'Ash Center for Democratic Governance and Innovation',
-      'target' => 'Ash Center for Democratic Governance and Innovation',
-    ),
-    5 => array(
-      'source' => 'Ash Center for Democratic Governance and Innovation; UNDP',
-      'target' => 'Ash Center for Democratic Governance and Innovation;United Nations Development Programme',
-    ),
-    6 => array(
-      'source' => 'Asian Coalition for Agrarian Reform and Rural Development \\(ANGOC\\)',
-      'target' => 'Asian NGO Coalition (ANGOC)',
-    ),
-    7 => array(
-      'source' => 'Asian Development Bank',
-      'target' => 'Asian Development Bank',
-    ),
-    8 => array(
-      'source' => 'Bridges Across Borders',
-      'target' => 'Bridges Across Borders',
-    ),
-    9 => array(
-      'source' => 'CamAgra',
-      'target' => 'CAMAGRA Investment Group Ltd',
-    ),
-    10 => array(
-      'source' => 'Cambodia Center for Human Rights',
-      'target' => 'Cambodian Center for Human Rights',
-    ),
-    11 => array(
-      'source' => 'Cambodia Investment Board \\(CIB\\) of CDC',
-      'target' => 'Cambodian Investment Board of the Council for the Development of Cambodia',
-    ),
-    12 => array(
-      'source' => 'Cambodia. Ministry of Commerce',
-      'target' => 'Cambodian Ministry of Commerce',
-    ),
-    13 => array(
-      'source' => 'Cambodian Center for Human Rights',
-      'target' => 'Cambodian Center for Human Rights',
-    ),
-    14 => array(
-      'source' => 'Cambodian Human Rights Action Committee \\(CHRAC\\)',
-      'target' => 'The Cambodian Human Rights Action Committee',
-    ),
-    15 => array(
-      'source' => 'Cambodian Human Rights and Development Association \\(ADHOC\\)',
-      'target' => 'Cambodian Human Rights and Development Association',
-    ),
-    16 => array(
-      'source' => 'Cambodian Institute for Cooperation and Peace',
-      'target' => 'Cambodian Institute for Cooperation and Peace',
-    ),
-    17 => array(
-      'source' => 'Cambodian League for the Promotion and Defense of Human Rights \\(LICADHO\\)',
-      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
-    ),
-    18 => array(
-      'source' => 'Cambodian League for the Promotion and Defense of Human Rights \\(LICADHO\\); LICADHO Canada',
-      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
-    ),
-    19 => array(
-      'source' => 'Centre for Agricultural Policy \\(CAP\\), Vietnam Farmers’ Union, Vietnam Chamber of Commerce and Industry \\(VCCI\\), and Advancement of Community Empowerment and Partnership \\(ACEP\\)',
-      'target' => 'Vietnam Farmers Union;Vietnam Chamber of Commerce and Industry',
-    ),
-    20 => array(
-      'source' => 'CGIAR Program on Collective Action and Property Rights \\(CAPRi\\)',
-      'target' => 'CGIAR System-wide Program on Property Rights and Collective Action',
-    ),
-    21 => array(
-      'source' => 'CHRAC',
-      'target' => 'Cambodian Human Rights Action Committee',
-    ),
-    22 => array(
-      'source' => 'CIDSE-Laos, Plan International',
-      'target' => 'Plan International CIDSE-Laos',
-    ),
-    23 => array(
-      'source' => 'Columbia University School of International and Public Affairs',
-      'target' => 'Columbia University',
-    ),
-    24 => array(
-      'source' => 'Community Forest International',
-      'target' => 'Community Forestry International',
-    ),
-    25 => array(
-      'source' => 'Community Forestry International',
-      'target' => 'Community Forestry International',
-    ),
-    26 => array(
-      'source' => 'Community Forestry International \\(CFI\\)',
-      'target' => 'Community Forestry International',
-    ),
-    27 => array(
-      'source' => 'Community Forestry International / The East-West Center',
-      'target' => 'Community Forestry International',
-    ),
-    28 => array(
-      'source' => 'Deutsche Gesellschaft für Internationale Zusammenarbeit \\(GIZ\\) GmbH',
-      'target' => 'GIZ',
-    ),
-    29 => array(
-      'source' => 'Development Alternatives Inc,International Centre for Environmental Management',
-      'target' => 'Development Alternatives International Inc;International Centre for Environmental Management',
-    ),
-    30 => array(
-      'source' => 'EarthRights International',
-      'target' => 'EarthRights International',
-    ),
-    31 => array(
-      'source' => 'E-Investment Cambodia',
-      'target' => 'E-Investment Cambodia',
-    ),
-    32 => array(
-      'source' => 'FAO',
-      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
-    ),
-    33 => array(
-      'source' => 'Focus on the Global South',
-      'target' => 'Focus on the Global South',
-    ),
-    34 => array(
-      'source' => 'Food and Agriculture Organization of the United Nations',
-      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
-    ),
-    35 => array(
-      'source' => 'Food and Agriculture Organization of the United Nations \\(FAO\\)',
-      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
-    ),
-    36 => array(
-      'source' => 'Food and Agriculture Organization of the United Nations \\(FAO\\); International Institute for Environment and Development',
-      'target' => 'Food and Agriculture Organization of the United Nations (FAO);International Institute for Environment and Development',
-    ),
-    37 => array(
-      'source' => 'Food Security Working Group’s Land Core Group',
-      'target' => 'Food Security Working Group',
-    ),
-    38 => array(
-      'source' => 'Forest Trends',
-      'target' => 'Forest Trends',
-    ),
-    39 => array(
-      'source' => 'Forest Trends Association',
-      'target' => 'Forest Trends',
-    ),
-    40 => array(
-      'source' => 'Future Directions International',
-      'target' => 'Future Directions International',
-    ),
-    41 => array(
-      'source' => 'Genetic Resources Action International \\(GRAIN\\)',
-      'target' => 'GRAIN',
-    ),
-    42 => array(
-      'source' => 'Geoffrey Payne and Associates',
-      'target' => 'Geoffrey Payne and Associates',
-    ),
-    43 => array(
-      'source' => 'Germanwatch e.V.',
-      'target' => 'Germanwatch e.V.',
-    ),
-    44 => array(
-      'source' => 'Global Witness',
-      'target' => 'Global Witness',
-    ),
-    45 => array(
-      'source' => 'Heinrich Boll Foundation',
-      'target' => 'Heinrich Böll Foundation',
-    ),
-    46 => array(
-      'source' => 'Heinrich Boll Stiftung',
-      'target' => 'Heinrich Böll Foundation',
-    ),
-    47 => array(
-      'source' => 'HLH Agriculture \\(Cambodia\\) Co., Ltd',
-      'target' => 'HLH Group Unlimited',
-    ),
-    48 => array(
-      'source' => 'Institute of Environmental Systems Research',
-      'target' => 'Osnabrück University',
-    ),
-    49 => array(
-      'source' => 'International Federation for Human Rights \\(FIDH\\)',
-      'target' => 'International Federation for Human Rights',
-    ),
-    50 => array(
-      'source' => 'International Food Policy Research Institute \\(IFPRI\\)',
-      'target' => 'International Food Policy Research Institute',
-    ),
-    51 => array(
-      'source' => 'International Fund for Agricultural Development \\(IFAD\\)',
-      'target' => 'IFAD',
-    ),
-    52 => array(
-      'source' => 'International Fund for Agricultural Development',
-      'target' => 'IFAD',
-    ),
-    53 => array(
-      'source' => 'IFAD',
-      'target' => 'International Fund for Agricultural Development (IFAD)',
-    ),
-    54 => array(
-      'source' => 'International Land Coalition \\(ILC\\)',
-      'target' => 'International Land Coalition (ILC)',
-    ),
-    55 => array(
-      'source' => 'International Water Management Institute, and iDE Cambodia',
-      'target' => 'International Water Management Institute',
-    ),
-    56 => array(
-      'source' => 'International Water Management Institute, iDE Cambodia',
-      'target' => 'iDe',
-    ),
-    57 => array(
-      'source' => 'IUCN',
-      'target' => 'IUCN',
-    ),
-    58 => array(
-      'source' => 'Kepa',
-      'target' => 'Kepa',
-    ),
-    59 => array(
-      'source' => 'L.Y.P Group',
-      'target' => 'L.Y.P. Group',
-    ),
-    60 => array(
-      'source' => 'L.Y.P. Group',
-      'target' => 'L.Y.P. Group',
-    ),
-    61 => array(
-      'source' => 'Land Deal Politics Inititiative \\(LDPI\\)',
-      'target' => 'Land Deal Politics Initiative (LDPI)',
-    ),
-    62 => array(
-      'source' => 'landobservatory.org',
-      'target' => 'Land Observatory',
-    ),
-    63 => array(
-      'source' => 'Lao Embassy',
-      'target' => 'Embassy of the Lao People\'s Democratic Republic in the United States of America',
-    ),
-    64 => array(
-      'source' => 'Lao-German Land Policy Development Project',
-      'target' => 'GIZ',
-    ),
-    65 => array(
-      'source' => 'LICADHO',
-      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
-    ),
-    66 => array(
-      'source' => 'LICADHO Canada',
-      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
-    ),
-    67 => array(
-      'source' => 'Long Sreng.Com',
-      'target' => 'Long Sreng International',
-    ),
-    68 => array(
-      'source' => 'Mega First Corporation Berhad \\(MFCB\\)',
-      'target' => 'Mega First Corporation Berhad',
-    ),
-    69 => array(
-      'source' => 'Mekong Land Research Forum',
-      'target' => 'Mekong Land Research Forum',
-    ),
-    70 => array(
-      'source' => 'Mekong Region Land Governance',
-      'target' => 'Mekong Region Land Governance',
-    ),
-    71 => array(
-      'source' => 'Mekong Region Land Governance \\(MRLG\\)',
-      'target' => 'Mekong Region Land Governance',
-    ),
-    72 => array(
-      'source' => 'Ministry of Agriculture, Forestry and Fisheries \\(MAFF\\)',
-      'target' => 'Cambodian Ministry of Agriculture, Forestry and Fisheries',
-    ),
-    73 => array(
-      'source' => 'Ministry of Commerce \\(MoC\\)',
-      'target' => 'Cambodian Ministry of Commerce',
-    ),
-    74 => array(
-      'source' => 'Ministry of Environment \\(MoE\\)',
-      'target' => 'Cambodia Ministry of Environment',
-    ),
-    75 => array(
-      'source' => 'National Statistical Office, Ministry of Information and Communication Technology',
-      'target' => 'Cambodian National Institute of Statistics',
-    ),
-    76 => array(
-      'source' => 'New Proposals: Journal of Marxism and Interdisciplinary Inquiry.',
-      'target' => 'University of British Colombia - Journal of Marxism and Interdisciplinary Inquiry.',
-    ),
-    77 => array(
-      'source' => 'NGO Forum on Cambodia',
-      'target' => 'The NGO Forum on Cambodia',
-    ),
-    78 => array(
-      'source' => 'Office of High Commissioner for Human Rights',
-      'target' => 'Office of the United Nations High Commissioner for Human Rights',
-    ),
-    79 => array(
-      'source' => 'Office of the High Commissioner for Human Rights',
-      'target' => 'Office of the United Nations High Commissioner for Human Rights',
-    ),
-    80 => array(
-      'source' => 'Office of the United Nations High Commissioner for Human Rights',
-      'target' => 'Office of the United Nations High Commissioner for Human Rights',
-    ),
-    81 => array(
-      'source' => 'Office of the United Nations High Commissioner for Human Rights, Cambodia Country Office',
-      'target' => 'Office of the United Nations High Commissioner for Human Rights',
-    ),
-    82 => array(
-      'source' => 'Oxfam',
-      'target' => 'Oxfam International',
-    ),
-    83 => array(
-      'source' => 'Oxfam Australia',
-      'target' => 'Oxfam Australia',
-    ),
-    84 => array(
-      'source' => 'Oxfam Country office Vietnam',
-      'target' => 'Oxfam Country office Vietnam',
-    ),
-    85 => array(
-      'source' => 'Potsdam Institute for Climate Impact Research, Mekong River Commission',
-      'target' => 'Potsdam Institute for Climate Impact Research',
-    ),
-    86 => array(
-      'source' => 'Princess Maha Chakri Sirindhorn Anthropology Centre',
-      'target' => 'Princess Maha Chakri Sirindhorn Anthropology Centre',
-    ),
-    87 => array(
-      'source' => 'Rights and Resources Initiative',
-      'target' => 'Rights and Resources Initiative',
-    ),
-    88 => array(
-      'source' => 'Rivers Coalition in Cambodia',
-      'target' => 'The NGO Forum on Cambodia',
-    ),
-    89 => array(
-      'source' => 'Royal University of Phnom Penh \\(RUPP\\)',
-      'target' => 'Royal University of Phnom Penh',
-    ),
-    90 => array(
-      'source' => 'Sahmakum Teang Tnaut',
-      'target' => 'Sahmakum Teang Tnaut',
-    ),
-    91 => array(
-      'source' => 'Sahmakum Teang Tnaut \\(STT\\)',
-      'target' => 'Sahmakum Teang Tnaut',
-    ),
-    92 => array(
-      'source' => 'Sahrika.com',
-      'target' => 'Sahrika',
-    ),
-    93 => array(
-      'source' => 'SEAS – Gesellschaft für Südostasienwissenschaften / Society for South-East Asian Studies',
-      'target' => 'Society for South-East Asian Studies',
-    ),
-    94 => array(
-      'source' => 'SIT Graduate Institute',
-      'target' => 'SIT Graduate Institute',
-    ),
-    95 => array(
-      'source' => 'Sustainable Development Institute \\(SDI\\)',
-      'target' => 'Sustainable Development Institute',
-    ),
-    96 => array(
-      'source' => 'Sustainable Development Institute \\(SDI\\); Namati',
-      'target' => 'Sustainable Development Institute',
-    ),
-    97 => array(
-      'source' => 'Thai Society of Higher Education Institutes on Environment',
-      'target' => 'Thai Society of Higher Education Institutes on Environment',
-    ),
-    98 => array(
-      'source' => 'The Cambodia Daily',
-      'target' => 'The Cambodia Daily',
-    ),
-    99 => array(
-      'source' => 'The Center for Lao Studies',
-      'target' => 'Center for Lao Studies',
-    ),
-    100 => array(
-      'source' => 'The Council for the Development of Cambodia \\(CDC\\)',
-      'target' => 'The Council for the Development of Cambodia',
-    ),
-    101 => array(
-      'source' => 'The Land Core Group',
-      'target' => 'International Institute of Social Studies',
-    ),
-    102 => array(
-      'source' => 'The NGO Forum on Cambodia \\(NGOF\\)',
-      'target' => 'The NGO Forum on Cambodia',
-    ),
-    103 => array(
-      'source' => 'The Phnom Penh Post',
-      'target' => 'The Phnom Penh Post',
-    ),
-    104 => array(
-      'source' => 'ttycorp.com',
-      'target' => 'TTY Corporation Co., Ltd',
-    ),
-    105 => array(
-      'source' => 'U.S. State Department',
-      'target' => 'US Department of State',
-    ),
-    106 => array(
-      'source' => 'UN Human Rights Council',
-      'target' => 'Office of the United Nations High Commissioner for Human Rights',
-    ),
-    107 => array(
-      'source' => 'UN-Habitat',
-      'target' => 'United Nations Human Settlements Programme',
-    ),
-    108 => array(
-      'source' => 'United Nations',
-      'target' => 'United Nations',
-    ),
-    109 => array(
-      'source' => 'United Nations \\(UN\\)',
-      'target' => 'United Nations',
-    ),
-    110 => array(
-      'source' => 'United Nations, Human Rights Council',
-      'target' => 'Office of the United Nations High Commissioner for Human Rights',
-    ),
-    111 => array(
-      'source' => 'University of Liege',
-      'target' => 'University of Liege',
-    ),
-    112 => array(
-      'source' => 'USAID',
-      'target' => 'USAID',
-    ),
-    113 => array(
-      'source' => 'WITNESS Forced Evictions',
-      'target' => 'WITNESS Forced Evictions',
-    ),
-    114 => array(
-      'source' => 'Working Group on Land Issues',
-      'target' => 'Food Security Working Group',
-    ),
-    115 => array(
-      'source' => 'World Bank',
-      'target' => 'World Bank Group',
-    ),
-    116 => array(
-      'source' => 'WorldFish',
-      'target' => 'WorldFish',
-    ),
-  ),
-);
-$feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Find replace multiple (organizations)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'odm_library_importer-odm_url-rewrite';
-$feeds_tamper->importer = 'odm_library_importer';
-$feeds_tamper->source = 'ODM url';
-$feeds_tamper->plugin_id = 'rewrite';
-$feeds_tamper->settings = array(
-  'text' => 'https://opendevelopmentmekong.net/dataset/?id=[jsonpath_parser:1]',
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Rewrite';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_library_importer-blank_source_1-copy';
 $feeds_tamper->importer = 'odm_library_importer';
 $feeds_tamper->source = 'Blank source 1';
@@ -1260,10 +273,39 @@ $feeds_tamper->settings = array(
       'source' => 'Wild capture commercial fishing and natural fisheries',
       'target' => 'Land Use, Management & Investment',
     ),
+    55 => array(
+      'source' => 'Law and judiciary',
+      'target' => 'Land Policy & Legislation',
+    ),
+    56 => array(
+      'source' => 'Law making process',
+      'target' => 'Land Policy & Legislation',
+    ),
+    57 => array(
+      'source' => 'Regulation of legal professions',
+      'target' => 'Land Policy & Legislation',
+    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 6;
 $feeds_tamper->description = 'ODM taxonomy to LandVoc OA categories';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-blank_source_1-trim';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'Blank source 1';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 8;
+$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -1279,7 +321,7 @@ $feeds_tamper->settings = array(
   'ellipses' => 0,
   'wordsafe' => 0,
 );
-$feeds_tamper->weight = 9;
+$feeds_tamper->weight = 10;
 $feeds_tamper->description = 'Truncate';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -1292,7 +334,7 @@ $feeds_tamper->importer = 'odm_library_importer';
 $feeds_tamper->source = 'Blank source 1';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 8;
+$feeds_tamper->weight = 9;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -1369,7 +411,7 @@ $feeds_tamper->settings = array(
     ),
     7 => array(
       'source' => 'Climate change',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     8 => array(
       'source' => 'Communal land',
@@ -1381,7 +423,7 @@ $feeds_tamper->settings = array(
     ),
     10 => array(
       'source' => 'Deforestration drivers',
-      'target' => 'Forest Tenure;Land, Climate Change & Environment',
+      'target' => 'Forest Tenure;Land, Climate change & Environment',
     ),
     11 => array(
       'source' => 'Development and assistance for land tenure and land titling',
@@ -1389,23 +431,23 @@ $feeds_tamper->settings = array(
     ),
     12 => array(
       'source' => 'Disasters and emergency response',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     13 => array(
       'source' => 'Environment and natural resources',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     14 => array(
       'source' => 'Environment and natural resources policy and administration',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     15 => array(
       'source' => 'Environmental and biodiversity protection',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     16 => array(
       'source' => 'Environmental impact assessments',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     17 => array(
       'source' => 'Ethnic minorities and indigenous people',
@@ -1417,7 +459,7 @@ $feeds_tamper->settings = array(
     ),
     19 => array(
       'source' => 'Extractive industries',
-      'target' => 'Commercial pressures on land',
+      'target' => 'Land & Investments',
     ),
     20 => array(
       'source' => 'Food and Agriculture Organization FAO',
@@ -1425,7 +467,7 @@ $feeds_tamper->settings = array(
     ),
     21 => array(
       'source' => 'Foreign investors',
-      'target' => 'Commercial Pressures on Land',
+      'target' => 'Land & Investments',
     ),
     22 => array(
       'source' => 'Forest cover',
@@ -1441,7 +483,7 @@ $feeds_tamper->settings = array(
     ),
     25 => array(
       'source' => 'Forest protection',
-      'target' => 'Forest Tenure;Land, Climate Change & Environment',
+      'target' => 'Forest Tenure;Land, Climate change & Environment',
     ),
     26 => array(
       'source' => 'Forests and forestry',
@@ -1469,7 +511,7 @@ $feeds_tamper->settings = array(
     ),
     32 => array(
       'source' => 'Land transfers',
-      'target' => 'Commercial Pressures on Land',
+      'target' => 'Land & Investments',
     ),
     33 => array(
       'source' => 'National government',
@@ -1485,11 +527,11 @@ $feeds_tamper->settings = array(
     ),
     36 => array(
       'source' => 'Protected areas',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     37 => array(
       'source' => 'Protected forests',
-      'target' => 'Forest Tenure;Land, Climate Change & Environment',
+      'target' => 'Forest Tenure;Land, Climate change & Environment',
     ),
     38 => array(
       'source' => 'United Nations',
@@ -1511,10 +553,31 @@ $feeds_tamper->settings = array(
       'source' => 'World Bank',
       'target' => 'Land Stakeholders & Institutions',
     ),
+    43 => array(
+      'source' => 'Forest classifications',
+      'target' => 'Forest Tenure',
+    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 1;
 $feeds_tamper->description = 'ODM taxonomy to LandVoc themes';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-blank_source_2-trim';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'Blank source 2';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -1526,7 +589,7 @@ $feeds_tamper->importer = 'odm_library_importer';
 $feeds_tamper->source = 'Blank source 2';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 3;
+$feeds_tamper->weight = 4;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -1561,8 +624,602 @@ $feeds_tamper->settings = array(
   'limit' => '',
   'real_separator' => ';',
 );
-$feeds_tamper->weight = 3;
+$feeds_tamper->weight = 4;
 $feeds_tamper->description = 'Explode (multiple values \';\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-blank_source_4-find_replace_multiple';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'Blank source 4';
+$feeds_tamper->plugin_id = 'find_replace_multiple';
+$feeds_tamper->settings = array(
+  'pairs' => array(
+    0 => array(
+      'source' => 'ADHOC',
+      'target' => 'Cambodian Human Rights and Development Association',
+    ),
+    1 => array(
+      'source' => 'Amnesty International',
+      'target' => 'Amnesty International',
+    ),
+    2 => array(
+      'source' => 'APRODEV',
+      'target' => 'Act Alliance EU',
+    ),
+    3 => array(
+      'source' => 'ARD, Inc.',
+      'target' => 'ARD, Inc.',
+    ),
+    4 => array(
+      'source' => 'Ash Center for Democratic Governance and Innovation',
+      'target' => 'Ash Center for Democratic Governance and Innovation',
+    ),
+    5 => array(
+      'source' => 'Ash Center for Democratic Governance and Innovation; UNDP',
+      'target' => 'Ash Center for Democratic Governance and Innovation;United Nations Development Programme',
+    ),
+    6 => array(
+      'source' => 'Asian Coalition for Agrarian Reform and Rural Development (ANGOC)',
+      'target' => 'Asian NGO Coalition (ANGOC)',
+    ),
+    7 => array(
+      'source' => 'Asian Development Bank',
+      'target' => 'Asian Development Bank',
+    ),
+    8 => array(
+      'source' => 'Bridges Across Borders',
+      'target' => 'Bridges Across Borders',
+    ),
+    9 => array(
+      'source' => 'CamAgra',
+      'target' => 'CAMAGRA Investment Group Ltd',
+    ),
+    10 => array(
+      'source' => 'Cambodia Center for Human Rights',
+      'target' => 'Cambodian Center for Human Rights',
+    ),
+    11 => array(
+      'source' => 'Cambodia Investment Board (CIB) of CDC',
+      'target' => 'Cambodian Investment Board of the Council for the Development of Cambodia',
+    ),
+    12 => array(
+      'source' => 'Cambodia. Ministry of Commerce',
+      'target' => 'Cambodian Ministry of Commerce',
+    ),
+    13 => array(
+      'source' => 'Cambodian Center for Human Rights',
+      'target' => 'Cambodian Center for Human Rights',
+    ),
+    14 => array(
+      'source' => 'Cambodian Human Rights Action Committee (CHRAC)',
+      'target' => 'The Cambodian Human Rights Action Committee',
+    ),
+    15 => array(
+      'source' => 'Cambodian Human Rights and Development Association (ADHOC)',
+      'target' => 'Cambodian Human Rights and Development Association',
+    ),
+    16 => array(
+      'source' => 'Cambodian Institute for Cooperation and Peace',
+      'target' => 'Cambodian Institute for Cooperation and Peace',
+    ),
+    17 => array(
+      'source' => 'Cambodian League for the Promotion and Defense of Human Rights (LICADHO)',
+      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
+    ),
+    18 => array(
+      'source' => 'Cambodian League for the Promotion and Defense of Human Rights (LICADHO); LICADHO Canada',
+      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
+    ),
+    19 => array(
+      'source' => 'Centre for Agricultural Policy (CAP), Vietnam Farmers’ Union, Vietnam Chamber of Commerce and Industry (VCCI), and Advancement of Community Empowerment and Partnership (ACEP)',
+      'target' => 'Vietnam Farmers Union;Vietnam Chamber of Commerce and Industry',
+    ),
+    20 => array(
+      'source' => 'CGIAR Program on Collective Action and Property Rights (CAPRi)',
+      'target' => 'CGIAR System-wide Program on Property Rights and Collective Action',
+    ),
+    21 => array(
+      'source' => 'CHRAC',
+      'target' => 'Cambodian Human Rights Action Committee',
+    ),
+    22 => array(
+      'source' => 'CIDSE-Laos, Plan International',
+      'target' => 'Plan International CIDSE-Laos',
+    ),
+    23 => array(
+      'source' => 'Columbia University School of International and Public Affairs',
+      'target' => 'Columbia University',
+    ),
+    24 => array(
+      'source' => 'Community Forest International',
+      'target' => 'Community Forestry International',
+    ),
+    25 => array(
+      'source' => 'Community Forestry International',
+      'target' => 'Community Forestry International',
+    ),
+    26 => array(
+      'source' => 'Community Forestry International (CFI)',
+      'target' => 'Community Forestry International',
+    ),
+    27 => array(
+      'source' => 'Community Forestry International / The East-West Center',
+      'target' => 'Community Forestry International',
+    ),
+    28 => array(
+      'source' => 'Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH',
+      'target' => 'GIZ',
+    ),
+    29 => array(
+      'source' => 'Development Alternatives Inc,International Centre for Environmental Management',
+      'target' => 'Development Alternatives International Inc;International Centre for Environmental Management',
+    ),
+    30 => array(
+      'source' => 'EarthRights International',
+      'target' => 'EarthRights International',
+    ),
+    31 => array(
+      'source' => 'E-Investment Cambodia',
+      'target' => 'E-Investment Cambodia',
+    ),
+    32 => array(
+      'source' => 'FAO',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    33 => array(
+      'source' => 'Focus on the Global South',
+      'target' => 'Focus on the Global South',
+    ),
+    34 => array(
+      'source' => 'Food and Agriculture Organization of the United Nations',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    35 => array(
+      'source' => 'Food and Agriculture Organization of the United Nations (FAO)',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    36 => array(
+      'source' => 'Food and Agriculture Organization of the United Nations (FAO); International Institute for Environment and Development',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO);International Institute for Environment and Development',
+    ),
+    37 => array(
+      'source' => 'Food Security Working Group’s Land Core Group',
+      'target' => 'Food Security Working Group',
+    ),
+    38 => array(
+      'source' => 'Forest Trends',
+      'target' => 'Forest Trends',
+    ),
+    39 => array(
+      'source' => 'Forest Trends Association',
+      'target' => 'Forest Trends',
+    ),
+    40 => array(
+      'source' => 'Future Directions International',
+      'target' => 'Future Directions International',
+    ),
+    41 => array(
+      'source' => 'Genetic Resources Action International (GRAIN)',
+      'target' => 'GRAIN',
+    ),
+    42 => array(
+      'source' => 'Geoffrey Payne and Associates',
+      'target' => 'Geoffrey Payne and Associates',
+    ),
+    43 => array(
+      'source' => 'Germanwatch e.V.',
+      'target' => 'Germanwatch e.V.',
+    ),
+    44 => array(
+      'source' => 'Global Witness',
+      'target' => 'Global Witness',
+    ),
+    45 => array(
+      'source' => 'Heinrich Boll Foundation',
+      'target' => 'Heinrich Böll Foundation',
+    ),
+    46 => array(
+      'source' => 'Heinrich Boll Stiftung',
+      'target' => 'Heinrich Böll Foundation',
+    ),
+    47 => array(
+      'source' => 'HLH Agriculture (Cambodia) Co., Ltd',
+      'target' => 'HLH Group Unlimited',
+    ),
+    48 => array(
+      'source' => 'Institute of Environmental Systems Research',
+      'target' => 'Osnabrück University',
+    ),
+    49 => array(
+      'source' => 'International Federation for Human Rights (FIDH)',
+      'target' => 'International Federation for Human Rights',
+    ),
+    50 => array(
+      'source' => 'International Food Policy Research Institute (IFPRI)',
+      'target' => 'International Food Policy Research Institute',
+    ),
+    51 => array(
+      'source' => 'International Fund for Agricultural Development (IFAD)',
+      'target' => 'IFAD',
+    ),
+    52 => array(
+      'source' => 'International Fund for Agricultural Development',
+      'target' => 'IFAD',
+    ),
+    53 => array(
+      'source' => 'IFAD',
+      'target' => 'International Fund for Agricultural Development (IFAD)',
+    ),
+    54 => array(
+      'source' => 'International Land Coalition (ILC)',
+      'target' => 'International Land Coalition (ILC)',
+    ),
+    55 => array(
+      'source' => 'International Water Management Institute, and iDE Cambodia',
+      'target' => 'International Water Management Institute',
+    ),
+    56 => array(
+      'source' => 'International Water Management Institute, iDE Cambodia',
+      'target' => 'iDe',
+    ),
+    57 => array(
+      'source' => 'IUCN',
+      'target' => 'IUCN',
+    ),
+    58 => array(
+      'source' => 'Kepa',
+      'target' => 'Kepa',
+    ),
+    59 => array(
+      'source' => 'L.Y.P Group',
+      'target' => 'L.Y.P. Group',
+    ),
+    60 => array(
+      'source' => 'L.Y.P. Group',
+      'target' => 'L.Y.P. Group',
+    ),
+    61 => array(
+      'source' => 'Land Deal Politics Inititiative (LDPI)',
+      'target' => 'Land Deal Politics Initiative (LDPI)',
+    ),
+    62 => array(
+      'source' => 'landobservatory.org',
+      'target' => 'Land Observatory',
+    ),
+    63 => array(
+      'source' => 'Lao Embassy',
+      'target' => 'Embassy of the Lao People\'s Democratic Republic in the United States of America',
+    ),
+    64 => array(
+      'source' => 'Lao-German Land Policy Development Project',
+      'target' => 'GIZ',
+    ),
+    65 => array(
+      'source' => 'LICADHO',
+      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
+    ),
+    66 => array(
+      'source' => 'LICADHO Canada',
+      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
+    ),
+    67 => array(
+      'source' => 'Long Sreng.Com',
+      'target' => 'Long Sreng International',
+    ),
+    68 => array(
+      'source' => 'Mega First Corporation Berhad (MFCB)',
+      'target' => 'Mega First Corporation Berhad',
+    ),
+    69 => array(
+      'source' => 'Mekong Land Research Forum',
+      'target' => 'Mekong Land Research Forum',
+    ),
+    70 => array(
+      'source' => 'Mekong Region Land Governance',
+      'target' => 'Mekong Region Land Governance',
+    ),
+    71 => array(
+      'source' => 'Mekong Region Land Governance (MRLG)',
+      'target' => 'Mekong Region Land Governance',
+    ),
+    72 => array(
+      'source' => 'Ministry of Agriculture, Forestry and Fisheries (MAFF)',
+      'target' => 'Cambodian Ministry of Agriculture, Forestry and Fisheries',
+    ),
+    73 => array(
+      'source' => 'Ministry of Commerce (MoC)',
+      'target' => 'Cambodian Ministry of Commerce',
+    ),
+    74 => array(
+      'source' => 'Ministry of Environment (MoE)',
+      'target' => 'Cambodia Ministry of Environment',
+    ),
+    75 => array(
+      'source' => 'National Statistical Office, Ministry of Information and Communication Technology',
+      'target' => 'Cambodian National Institute of Statistics',
+    ),
+    76 => array(
+      'source' => 'New Proposals: Journal of Marxism and Interdisciplinary Inquiry.',
+      'target' => 'University of British Colombia - Journal of Marxism and Interdisciplinary Inquiry.',
+    ),
+    77 => array(
+      'source' => 'NGO Forum on Cambodia',
+      'target' => 'The NGO Forum on Cambodia',
+    ),
+    78 => array(
+      'source' => 'Office of High Commissioner for Human Rights',
+      'target' => 'Office of the United Nations High Commissioner for Human Rights',
+    ),
+    79 => array(
+      'source' => 'Office of the High Commissioner for Human Rights',
+      'target' => 'Office of the United Nations High Commissioner for Human Rights',
+    ),
+    80 => array(
+      'source' => 'Office of the United Nations High Commissioner for Human Rights',
+      'target' => 'Office of the United Nations High Commissioner for Human Rights',
+    ),
+    81 => array(
+      'source' => 'Office of the United Nations High Commissioner for Human Rights, Cambodia Country Office',
+      'target' => 'Office of the United Nations High Commissioner for Human Rights',
+    ),
+    82 => array(
+      'source' => 'Oxfam',
+      'target' => 'Oxfam International',
+    ),
+    83 => array(
+      'source' => 'Oxfam Australia',
+      'target' => 'Oxfam Australia',
+    ),
+    84 => array(
+      'source' => 'Oxfam Country office Vietnam',
+      'target' => 'Oxfam Country office Vietnam',
+    ),
+    85 => array(
+      'source' => 'Potsdam Institute for Climate Impact Research, Mekong River Commission',
+      'target' => 'Potsdam Institute for Climate Impact Research',
+    ),
+    86 => array(
+      'source' => 'Princess Maha Chakri Sirindhorn Anthropology Centre',
+      'target' => 'Princess Maha Chakri Sirindhorn Anthropology Centre',
+    ),
+    87 => array(
+      'source' => 'Rights and Resources Initiative',
+      'target' => 'Rights and Resources Initiative',
+    ),
+    88 => array(
+      'source' => 'Rivers Coalition in Cambodia',
+      'target' => 'The NGO Forum on Cambodia',
+    ),
+    89 => array(
+      'source' => 'Royal University of Phnom Penh (RUPP)',
+      'target' => 'Royal University of Phnom Penh',
+    ),
+    90 => array(
+      'source' => 'Sahmakum Teang Tnaut',
+      'target' => 'Sahmakum Teang Tnaut',
+    ),
+    91 => array(
+      'source' => 'Sahmakum Teang Tnaut (STT)',
+      'target' => 'Sahmakum Teang Tnaut',
+    ),
+    92 => array(
+      'source' => 'Sahrika.com',
+      'target' => 'Sahrika',
+    ),
+    93 => array(
+      'source' => 'SEAS – Gesellschaft für Südostasienwissenschaften / Society for South-East Asian Studies',
+      'target' => 'Society for South-East Asian Studies',
+    ),
+    94 => array(
+      'source' => 'SIT Graduate Institute',
+      'target' => 'SIT Graduate Institute',
+    ),
+    95 => array(
+      'source' => 'Sustainable Development Institute (SDI)',
+      'target' => 'Sustainable Development Institute',
+    ),
+    96 => array(
+      'source' => 'Sustainable Development Institute (SDI); Namati',
+      'target' => 'Sustainable Development Institute',
+    ),
+    97 => array(
+      'source' => 'Thai Society of Higher Education Institutes on Environment',
+      'target' => 'Thai Society of Higher Education Institutes on Environment',
+    ),
+    98 => array(
+      'source' => 'The Cambodia Daily',
+      'target' => 'The Cambodia Daily',
+    ),
+    99 => array(
+      'source' => 'The Center for Lao Studies',
+      'target' => 'Center for Lao Studies',
+    ),
+    100 => array(
+      'source' => 'The Council for the Development of Cambodia (CDC)',
+      'target' => 'The Council for the Development of Cambodia',
+    ),
+    101 => array(
+      'source' => 'The Land Core Group',
+      'target' => 'International Institute of Social Studies',
+    ),
+    102 => array(
+      'source' => 'The NGO Forum on Cambodia',
+      'target' => 'The NGO Forum on Cambodia',
+    ),
+    103 => array(
+      'source' => 'The NGO Forum on Cambodia (NGOF)',
+      'target' => 'The NGO Forum on Cambodia',
+    ),
+    104 => array(
+      'source' => 'The Phnom Penh Post',
+      'target' => 'The Phnom Penh Post',
+    ),
+    105 => array(
+      'source' => 'ttycorp.com',
+      'target' => 'TTY Corporation Co., Ltd',
+    ),
+    106 => array(
+      'source' => 'U.S. State Department',
+      'target' => 'US Department of State',
+    ),
+    107 => array(
+      'source' => 'UN Human Rights Council',
+      'target' => 'Office of the United Nations High Commissioner for Human Rights',
+    ),
+    108 => array(
+      'source' => 'UN-Habitat',
+      'target' => 'United Nations Human Settlements Programme',
+    ),
+    109 => array(
+      'source' => 'United Nations',
+      'target' => 'United Nations',
+    ),
+    110 => array(
+      'source' => 'United Nations (UN)',
+      'target' => 'United Nations',
+    ),
+    111 => array(
+      'source' => 'United Nations, Human Rights Council',
+      'target' => 'Office of the United Nations High Commissioner for Human Rights',
+    ),
+    112 => array(
+      'source' => 'University of Liege',
+      'target' => 'University of Liege',
+    ),
+    113 => array(
+      'source' => 'USAID',
+      'target' => 'USAID',
+    ),
+    114 => array(
+      'source' => 'WITNESS Forced Evictions',
+      'target' => 'WITNESS Forced Evictions',
+    ),
+    115 => array(
+      'source' => 'Working Group on Land Issues',
+      'target' => 'Food Security Working Group',
+    ),
+    116 => array(
+      'source' => 'World Bank',
+      'target' => 'World Bank Group',
+    ),
+    117 => array(
+      'source' => 'The World Bank',
+      'target' => 'World Bank Group',
+    ),
+    118 => array(
+      'source' => 'WorldFish',
+      'target' => 'WorldFish',
+    ),
+    119 => array(
+      'source' => 'Center for International Forestry Research; Probe International; Rights and Resources Initiative; York Centre for Asian Research',
+      'target' => 'Center for International Forestry Research;Probe International;Rights and Resources Initiative;York Centre for Asian Research',
+    ),
+    120 => array(
+      'source' => 'Inclusive Development International, Bank Information Center, 11.11.11, Urgewald and Accountability Counsel',
+      'target' => 'Inclusive Development International;Bank Information Center;Accountability Counsel',
+    ),
+    121 => array(
+      'source' => 'OHRE International Secretariat',
+      'target' => 'Centre on Housing Rights and Evictions',
+    ),
+    122 => array(
+      'source' => 'Center for International Forestry Research (CIFOR)',
+      'target' => 'Center for International Forestry Research',
+    ),
+    123 => array(
+      'source' => 'Food and Agriculture Organization (FAO)',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    124 => array(
+      'source' => 'GIZ',
+      'target' => 'GIZ',
+    ),
+    125 => array(
+      'source' => 'Geoforum',
+      'target' => 'Geoforum',
+    ),
+    126 => array(
+      'source' => 'Geographica Bernensia',
+      'target' => 'University of Bern',
+    ),
+    127 => array(
+      'source' => 'Information Management and Strategic Planning Division - Lao National Agriculture and Forestry Research Institute',
+      'target' => 'National Agriculture and Forestry Research Institute (Lao)',
+    ),
+    128 => array(
+      'source' => 'Institut de hautes études internationales et du développement',
+      'target' => 'The Graduate Institute of International and Development Studies',
+    ),
+    129 => array(
+      'source' => 'International Fund for Agricultural Development	International',
+      'target' => 'Fund for Agricultural Development (IFAD)',
+    ),
+    130 => array(
+      'source' => 'Journal of Social Sciences and Humanities',
+      'target' => 'Journal of Social Sciences and Humanities',
+    ),
+    131 => array(
+      'source' => 'Land Core Group, Loka Ahlinn and Mekong Region Land Governance',
+      'target' => 'Land Core Group;Loka Ahlinn;Mekong Region Land Governance',
+    ),
+    132 => array(
+      'source' => 'Land Matrix Partnership;Land Matrix
+',
+      'target' => '',
+    ),
+    133 => array(
+      'source' => '',
+      'target' => '',
+    ),
+    134 => array(
+      'source' => 'Mekong Region Land Governance (MRLG), Ministry of Natural Resources and Environmental Conservation - Myanmar (MOREC)',
+      'target' => 'Mekong Region Land Governance;Ministry of Natural Resources and Environmental Conservation (Myanmar)',
+    ),
+    135 => array(
+      'source' => 'Mekong Region Land Governance and the Ministry of Natural Resources and Environmental Conservation, Myanmar',
+      'target' => 'Mekong Region Land Governance;Ministry of Natural Resources and Environmental Conservation (Myanmar)',
+    ),
+    136 => array(
+      'source' => 'Mekong Regional Land Governance',
+      'target' => 'Mekong Region Land Governance',
+    ),
+    137 => array(
+      'source' => 'NGO Forum on Cambodia',
+      'target' => 'The NGO Forum on Cambodia',
+    ),
+    138 => array(
+      'source' => 'National Political Publishing House',
+      'target' => 'National Political Publishing House of Vietnam',
+    ),
+    139 => array(
+      'source' => 'Oxfarm Vietnam',
+      'target' => 'Oxfam Country office Vietnam',
+    ),
+    140 => array(
+      'source' => 'Routledge',
+      'target' => 'Routledge',
+    ),
+    141 => array(
+      'source' => 'The Land Core Group',
+      'target' => 'Land Core Group',
+    ),
+    142 => array(
+      'source' => 'UNDP',
+      'target' => 'United Nations Development Programme',
+    ),
+    143 => array(
+      'source' => 'សម្ព័ន្ធខ្មែរជំរឿន និងការពារសិទ្ធិមនុស្ស (លីកាដូ)',
+      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
+    ),
+  ),
+  'full' => 1,
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Find replace multiple (organizations)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -1585,13 +1242,45 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-blank_source_4-trim';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'Blank source 4';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_library_importer-blank_source_4-unique';
 $feeds_tamper->importer = 'odm_library_importer';
 $feeds_tamper->source = 'Blank source 4';
 $feeds_tamper->plugin_id = 'unique';
-$feeds_tamper->settings = '';
-$feeds_tamper->weight = 4;
+$feeds_tamper->settings = array();
+$feeds_tamper->weight = 5;
 $feeds_tamper->description = 'Unique';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-blank_source_5-default_value';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'Blank source 5';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => 'private://feeds/ODM-thumbnail.png',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set private path for thumbnail';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -1667,7 +1356,7 @@ $feeds_tamper->description = 'Keyword filter';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_library_importer-jsonpath_parser_10-php';
 $feeds_tamper->importer = 'odm_library_importer';
@@ -1699,6 +1388,19 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_10-unique';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:10';
+$feeds_tamper->plugin_id = 'unique';
+$feeds_tamper->settings = array();
+$feeds_tamper->weight = 5;
+$feeds_tamper->description = 'Unique';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_library_importer-jsonpath_parser_11-find_replace_multiple';
 $feeds_tamper->importer = 'odm_library_importer';
 $feeds_tamper->source = 'jsonpath_parser:11';
@@ -1710,12 +1412,12 @@ $feeds_tamper->settings = array(
       'target' => 'Institutional & promotional materials',
     ),
     1 => array(
-      'source' => 'books_and_book_chapters',
-      'target' => 'Journal Articles & Books',
-    ),
-    2 => array(
       'source' => 'analysis_discussion_papers_and_blogs',
       'target' => 'Policy Papers & Briefs',
+    ),
+    2 => array(
+      'source' => 'books_and_book_chapters',
+      'target' => 'Journal Articles & Books',
     ),
     3 => array(
       'source' => 'case_studies',
@@ -1737,7 +1439,12 @@ $feeds_tamper->settings = array(
       'source' => 'company_profiles',
       'target' => 'Institutional & promotional materials',
     ),
+    8 => array(
+      'source' => 'guidelines_manuals_handbooks',
+      'target' => 'Manuals & Guidelines',
+    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 4;
 $feeds_tamper->description = 'Find replace document type';
@@ -1752,19 +1459,19 @@ $feeds_tamper->importer = 'odm_library_importer';
 $feeds_tamper->source = 'jsonpath_parser:11';
 $feeds_tamper->plugin_id = 'keyword_filter';
 $feeds_tamper->settings = array(
-  'words' => 'profiles_people
+  'words' => 'archived_web_content
+profiles_people
 profiles_organizations_and_projects
-profiles_geographical_areas_and_sites
-',
+profiles_geographical_areas_and_sites',
   'word_boundaries' => 0,
   'exact' => 1,
   'case_sensitive' => 0,
   'invert' => 1,
   'word_list' => array(
-    0 => '/^profiles_people$/ui',
-    1 => '/^profiles_organizations_and_projects$/ui',
-    2 => '/^profiles_geographical_areas_and_sites$/ui',
-    3 => '/^$/ui',
+    0 => '/^archived_web_content$/ui',
+    1 => '/^profiles_people$/ui',
+    2 => '/^profiles_organizations_and_projects$/ui',
+    3 => '/^profiles_geographical_areas_and_sites$/ui',
   ),
   'regex' => TRUE,
 );
@@ -1790,7 +1497,7 @@ $feeds_tamper->description = 'Rewrite';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_library_importer-jsonpath_parser_13-explode';
 $feeds_tamper->importer = 'odm_library_importer';
@@ -1809,6 +1516,35 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_15-find_replace_multiple';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:15';
+$feeds_tamper->plugin_id = 'find_replace_multiple';
+$feeds_tamper->settings = array(
+  'pairs' => array(
+    0 => array(
+      'source' => 'MRLG',
+      'target' => 'Open Development Mekong',
+    ),
+    1 => array(
+      'source' => 'Village Focus International',
+      'target' => 'Open Development Mekong',
+    ),
+    2 => array(
+      'source' => 'GIZ',
+      'target' => 'Open Development Mekong',
+    ),
+  ),
+  'full' => 1,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Find replace multiple';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_library_importer-jsonpath_parser_18-find_replace_multiple';
 $feeds_tamper->importer = 'odm_library_importer';
 $feeds_tamper->source = 'jsonpath_parser:18';
@@ -1820,18 +1556,31 @@ $feeds_tamper->settings = array(
       'target' => 'Creative Commons Attribution',
     ),
     1 => array(
+      'source' => 'CC-BY-3.0-IGO',
+      'target' => 'Creative Commons Attribution',
+    ),
+    2 => array(
       'source' => 'CC-BY-SA-4.0',
       'target' => 'Creative Commons Attribution-ShareAlike',
     ),
-    2 => array(
+    3 => array(
+      'source' => 'CC-BY-SA-3.0-IGO',
+      'target' => 'Creative Commons Attribution-ShareAlike',
+    ),
+    4 => array(
+      'source' => 'CC-BY-NC-4.0',
+      'target' => 'Creative Commons Attribution-NonCommercial',
+    ),
+    5 => array(
       'source' => 'CC0-1.0',
       'target' => 'Creative Commons Zero (Public Domain)',
     ),
-    3 => array(
+    6 => array(
       'source' => 'unspecified',
       'target' => '',
     ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Find replace multiple';
@@ -1839,7 +1588,7 @@ $feeds_tamper->description = 'Find replace multiple';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_library_importer-jsonpath_parser_19-explode';
 $feeds_tamper->importer = 'odm_library_importer';
@@ -1908,7 +1657,20 @@ $feeds_tamper->settings = array(
       'source' => 'bn',
       'target' => 'Brunei Darussalam',
     ),
+    11 => array(
+      'source' => 'cx',
+      'target' => 'Christmas Island',
+    ),
+    12 => array(
+      'source' => 'tl',
+      'target' => 'Timor-Leste',
+    ),
+    13 => array(
+      'source' => 'cc',
+      'target' => 'Cocos (Keeling) Islands',
+    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 3;
 $feeds_tamper->description = 'Find replace multiple(from ISO2 code to Country names)';
@@ -1916,7 +1678,7 @@ $feeds_tamper->description = 'Find replace multiple(from ISO2 code to Country na
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_library_importer-jsonpath_parser_19-find_replace_multiple_regions';
 $feeds_tamper->importer = 'odm_library_importer';
@@ -2010,8 +1772,618 @@ $feeds_tamper->settings = array(
   'limit' => '',
   'real_separator' => ';',
 );
-$feeds_tamper->weight = 2;
+$feeds_tamper->weight = 3;
 $feeds_tamper->description = 'Explode (multiple values \';\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_25-find_replace_multiple';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:25';
+$feeds_tamper->plugin_id = 'find_replace_multiple';
+$feeds_tamper->settings = array(
+  'pairs' => array(
+    0 => array(
+      'source' => 'ADHOC',
+      'target' => 'Cambodian Human Rights and Development Association',
+    ),
+    1 => array(
+      'source' => 'Amnesty International',
+      'target' => 'Amnesty International',
+    ),
+    2 => array(
+      'source' => 'APRODEV',
+      'target' => 'Act Alliance EU',
+    ),
+    3 => array(
+      'source' => 'ARD, Inc.',
+      'target' => 'ARD, Inc.',
+    ),
+    4 => array(
+      'source' => 'Ash Center for Democratic Governance and Innovation',
+      'target' => 'Ash Center for Democratic Governance and Innovation',
+    ),
+    5 => array(
+      'source' => 'Ash Center for Democratic Governance and Innovation; UNDP',
+      'target' => 'Ash Center for Democratic Governance and Innovation;United Nations Development Programme',
+    ),
+    6 => array(
+      'source' => 'Asian Coalition for Agrarian Reform and Rural Development (ANGOC)',
+      'target' => 'Asian NGO Coalition (ANGOC)',
+    ),
+    7 => array(
+      'source' => 'Asian Development Bank',
+      'target' => 'Asian Development Bank',
+    ),
+    8 => array(
+      'source' => 'Bridges Across Borders',
+      'target' => 'Bridges Across Borders',
+    ),
+    9 => array(
+      'source' => 'CamAgra',
+      'target' => 'CAMAGRA Investment Group Ltd',
+    ),
+    10 => array(
+      'source' => 'Cambodia Center for Human Rights',
+      'target' => 'Cambodian Center for Human Rights',
+    ),
+    11 => array(
+      'source' => 'Cambodia Investment Board (CIB) of CDC',
+      'target' => 'Cambodian Investment Board of the Council for the Development of Cambodia',
+    ),
+    12 => array(
+      'source' => 'Cambodia. Ministry of Commerce',
+      'target' => 'Cambodian Ministry of Commerce',
+    ),
+    13 => array(
+      'source' => 'Cambodian Center for Human Rights',
+      'target' => 'Cambodian Center for Human Rights',
+    ),
+    14 => array(
+      'source' => 'Cambodian Human Rights Action Committee (CHRAC)',
+      'target' => 'The Cambodian Human Rights Action Committee',
+    ),
+    15 => array(
+      'source' => 'Cambodian Human Rights and Development Association (ADHOC)',
+      'target' => 'Cambodian Human Rights and Development Association',
+    ),
+    16 => array(
+      'source' => 'Cambodian Institute for Cooperation and Peace',
+      'target' => 'Cambodian Institute for Cooperation and Peace',
+    ),
+    17 => array(
+      'source' => 'Cambodian League for the Promotion and Defense of Human Rights (LICADHO)',
+      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
+    ),
+    18 => array(
+      'source' => 'Cambodian League for the Promotion and Defense of Human Rights (LICADHO); LICADHO Canada',
+      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
+    ),
+    19 => array(
+      'source' => 'Centre for Agricultural Policy (CAP), Vietnam Farmers’ Union, Vietnam Chamber of Commerce and Industry (VCCI), and Advancement of Community Empowerment and Partnership (ACEP)',
+      'target' => 'Vietnam Farmers Union;Vietnam Chamber of Commerce and Industry',
+    ),
+    20 => array(
+      'source' => 'CGIAR Program on Collective Action and Property Rights (CAPRi)',
+      'target' => 'CGIAR System-wide Program on Property Rights and Collective Action',
+    ),
+    21 => array(
+      'source' => 'CHRAC',
+      'target' => 'Cambodian Human Rights Action Committee',
+    ),
+    22 => array(
+      'source' => 'CIDSE-Laos, Plan International',
+      'target' => 'Plan International CIDSE-Laos',
+    ),
+    23 => array(
+      'source' => 'Columbia University School of International and Public Affairs',
+      'target' => 'Columbia University',
+    ),
+    24 => array(
+      'source' => 'Community Forest International',
+      'target' => 'Community Forestry International',
+    ),
+    25 => array(
+      'source' => 'Community Forestry International',
+      'target' => 'Community Forestry International',
+    ),
+    26 => array(
+      'source' => 'Community Forestry International (CFI)',
+      'target' => 'Community Forestry International',
+    ),
+    27 => array(
+      'source' => 'Community Forestry International / The East-West Center',
+      'target' => 'Community Forestry International',
+    ),
+    28 => array(
+      'source' => 'Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH',
+      'target' => 'GIZ',
+    ),
+    29 => array(
+      'source' => 'Development Alternatives Inc,International Centre for Environmental Management',
+      'target' => 'Development Alternatives International Inc;International Centre for Environmental Management',
+    ),
+    30 => array(
+      'source' => 'EarthRights International',
+      'target' => 'EarthRights International',
+    ),
+    31 => array(
+      'source' => 'E-Investment Cambodia',
+      'target' => 'E-Investment Cambodia',
+    ),
+    32 => array(
+      'source' => 'FAO',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    33 => array(
+      'source' => 'Focus on the Global South',
+      'target' => 'Focus on the Global South',
+    ),
+    34 => array(
+      'source' => 'Food and Agriculture Organization of the United Nations',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    35 => array(
+      'source' => 'Food and Agriculture Organization of the United Nations (FAO)',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    36 => array(
+      'source' => 'Food and Agriculture Organization of the United Nations (FAO); International Institute for Environment and Development',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO);International Institute for Environment and Development',
+    ),
+    37 => array(
+      'source' => 'Food Security Working Group’s Land Core Group',
+      'target' => 'Food Security Working Group',
+    ),
+    38 => array(
+      'source' => 'Forest Trends',
+      'target' => 'Forest Trends',
+    ),
+    39 => array(
+      'source' => 'Forest Trends Association',
+      'target' => 'Forest Trends',
+    ),
+    40 => array(
+      'source' => 'Future Directions International',
+      'target' => 'Future Directions International',
+    ),
+    41 => array(
+      'source' => 'Genetic Resources Action International (GRAIN)',
+      'target' => 'GRAIN',
+    ),
+    42 => array(
+      'source' => 'Geoffrey Payne and Associates',
+      'target' => 'Geoffrey Payne and Associates',
+    ),
+    43 => array(
+      'source' => 'Germanwatch e.V.',
+      'target' => 'Germanwatch e.V.',
+    ),
+    44 => array(
+      'source' => 'Global Witness',
+      'target' => 'Global Witness',
+    ),
+    45 => array(
+      'source' => 'Heinrich Boll Foundation',
+      'target' => 'Heinrich Böll Foundation',
+    ),
+    46 => array(
+      'source' => 'Heinrich Boll Stiftung',
+      'target' => 'Heinrich Böll Foundation',
+    ),
+    47 => array(
+      'source' => 'HLH Agriculture (Cambodia) Co., Ltd',
+      'target' => 'HLH Group Unlimited',
+    ),
+    48 => array(
+      'source' => 'Institute of Environmental Systems Research',
+      'target' => 'Osnabrück University',
+    ),
+    49 => array(
+      'source' => 'International Federation for Human Rights (FIDH)',
+      'target' => 'International Federation for Human Rights',
+    ),
+    50 => array(
+      'source' => 'International Food Policy Research Institute (IFPRI)',
+      'target' => 'International Food Policy Research Institute',
+    ),
+    51 => array(
+      'source' => 'International Fund for Agricultural Development (IFAD)',
+      'target' => 'IFAD',
+    ),
+    52 => array(
+      'source' => 'International Fund for Agricultural Development',
+      'target' => 'IFAD',
+    ),
+    53 => array(
+      'source' => 'IFAD',
+      'target' => 'International Fund for Agricultural Development (IFAD)',
+    ),
+    54 => array(
+      'source' => 'International Land Coalition (ILC)',
+      'target' => 'International Land Coalition (ILC)',
+    ),
+    55 => array(
+      'source' => 'International Water Management Institute, and iDE Cambodia',
+      'target' => 'International Water Management Institute',
+    ),
+    56 => array(
+      'source' => 'International Water Management Institute, iDE Cambodia',
+      'target' => 'iDe',
+    ),
+    57 => array(
+      'source' => 'IUCN',
+      'target' => 'IUCN',
+    ),
+    58 => array(
+      'source' => 'Kepa',
+      'target' => 'Kepa',
+    ),
+    59 => array(
+      'source' => 'L.Y.P Group',
+      'target' => 'L.Y.P. Group',
+    ),
+    60 => array(
+      'source' => 'L.Y.P. Group',
+      'target' => 'L.Y.P. Group',
+    ),
+    61 => array(
+      'source' => 'Land Deal Politics Inititiative (LDPI)',
+      'target' => 'Land Deal Politics Initiative (LDPI)',
+    ),
+    62 => array(
+      'source' => 'landobservatory.org',
+      'target' => 'Land Observatory',
+    ),
+    63 => array(
+      'source' => 'Lao Embassy',
+      'target' => 'Embassy of the Lao People\'s Democratic Republic in the United States of America',
+    ),
+    64 => array(
+      'source' => 'Lao-German Land Policy Development Project',
+      'target' => 'GIZ',
+    ),
+    65 => array(
+      'source' => 'LICADHO',
+      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
+    ),
+    66 => array(
+      'source' => 'LICADHO Canada',
+      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
+    ),
+    67 => array(
+      'source' => 'Long Sreng.Com',
+      'target' => 'Long Sreng International',
+    ),
+    68 => array(
+      'source' => 'Mega First Corporation Berhad (MFCB)',
+      'target' => 'Mega First Corporation Berhad',
+    ),
+    69 => array(
+      'source' => 'Mekong Land Research Forum',
+      'target' => 'Mekong Land Research Forum',
+    ),
+    70 => array(
+      'source' => 'Mekong Region Land Governance',
+      'target' => 'Mekong Region Land Governance',
+    ),
+    71 => array(
+      'source' => 'Mekong Region Land Governance (MRLG)',
+      'target' => 'Mekong Region Land Governance',
+    ),
+    72 => array(
+      'source' => 'Ministry of Agriculture, Forestry and Fisheries (MAFF)',
+      'target' => 'Cambodian Ministry of Agriculture, Forestry and Fisheries',
+    ),
+    73 => array(
+      'source' => 'Ministry of Commerce (MoC)',
+      'target' => 'Cambodian Ministry of Commerce',
+    ),
+    74 => array(
+      'source' => 'Ministry of Environment (MoE)',
+      'target' => 'Cambodia Ministry of Environment',
+    ),
+    75 => array(
+      'source' => 'National Statistical Office, Ministry of Information and Communication Technology',
+      'target' => 'Cambodian National Institute of Statistics',
+    ),
+    76 => array(
+      'source' => 'New Proposals: Journal of Marxism and Interdisciplinary Inquiry.',
+      'target' => 'University of British Colombia - Journal of Marxism and Interdisciplinary Inquiry.',
+    ),
+    77 => array(
+      'source' => 'NGO Forum on Cambodia',
+      'target' => 'The NGO Forum on Cambodia',
+    ),
+    78 => array(
+      'source' => 'Office of High Commissioner for Human Rights',
+      'target' => 'Office of the United Nations High Commissioner for Human Rights',
+    ),
+    79 => array(
+      'source' => 'Office of the High Commissioner for Human Rights',
+      'target' => 'Office of the United Nations High Commissioner for Human Rights',
+    ),
+    80 => array(
+      'source' => 'Office of the United Nations High Commissioner for Human Rights',
+      'target' => 'Office of the United Nations High Commissioner for Human Rights',
+    ),
+    81 => array(
+      'source' => 'Office of the United Nations High Commissioner for Human Rights, Cambodia Country Office',
+      'target' => 'Office of the United Nations High Commissioner for Human Rights',
+    ),
+    82 => array(
+      'source' => 'Oxfam',
+      'target' => 'Oxfam International',
+    ),
+    83 => array(
+      'source' => 'Oxfam Australia',
+      'target' => 'Oxfam Australia',
+    ),
+    84 => array(
+      'source' => 'Oxfam Country office Vietnam',
+      'target' => 'Oxfam Country office Vietnam',
+    ),
+    85 => array(
+      'source' => 'Potsdam Institute for Climate Impact Research, Mekong River Commission',
+      'target' => 'Potsdam Institute for Climate Impact Research',
+    ),
+    86 => array(
+      'source' => 'Princess Maha Chakri Sirindhorn Anthropology Centre',
+      'target' => 'Princess Maha Chakri Sirindhorn Anthropology Centre',
+    ),
+    87 => array(
+      'source' => 'Rights and Resources Initiative',
+      'target' => 'Rights and Resources Initiative',
+    ),
+    88 => array(
+      'source' => 'Rivers Coalition in Cambodia',
+      'target' => 'The NGO Forum on Cambodia',
+    ),
+    89 => array(
+      'source' => 'Royal University of Phnom Penh (RUPP)',
+      'target' => 'Royal University of Phnom Penh',
+    ),
+    90 => array(
+      'source' => 'Sahmakum Teang Tnaut',
+      'target' => 'Sahmakum Teang Tnaut',
+    ),
+    91 => array(
+      'source' => 'Sahmakum Teang Tnaut (STT)',
+      'target' => 'Sahmakum Teang Tnaut',
+    ),
+    92 => array(
+      'source' => 'Sahrika.com',
+      'target' => 'Sahrika',
+    ),
+    93 => array(
+      'source' => 'SEAS – Gesellschaft für Südostasienwissenschaften / Society for South-East Asian Studies',
+      'target' => 'Society for South-East Asian Studies',
+    ),
+    94 => array(
+      'source' => 'SIT Graduate Institute',
+      'target' => 'SIT Graduate Institute',
+    ),
+    95 => array(
+      'source' => 'Sustainable Development Institute (SDI)',
+      'target' => 'Sustainable Development Institute',
+    ),
+    96 => array(
+      'source' => 'Sustainable Development Institute (SDI); Namati',
+      'target' => 'Sustainable Development Institute',
+    ),
+    97 => array(
+      'source' => 'Thai Society of Higher Education Institutes on Environment',
+      'target' => 'Thai Society of Higher Education Institutes on Environment',
+    ),
+    98 => array(
+      'source' => 'The Cambodia Daily',
+      'target' => 'The Cambodia Daily',
+    ),
+    99 => array(
+      'source' => 'The Center for Lao Studies',
+      'target' => 'Center for Lao Studies',
+    ),
+    100 => array(
+      'source' => 'The Council for the Development of Cambodia (CDC)',
+      'target' => 'The Council for the Development of Cambodia',
+    ),
+    101 => array(
+      'source' => 'The Land Core Group',
+      'target' => 'International Institute of Social Studies',
+    ),
+    102 => array(
+      'source' => 'The NGO Forum on Cambodia',
+      'target' => 'The NGO Forum on Cambodia',
+    ),
+    103 => array(
+      'source' => 'The NGO Forum on Cambodia (NGOF)',
+      'target' => 'The NGO Forum on Cambodia',
+    ),
+    104 => array(
+      'source' => 'The Phnom Penh Post',
+      'target' => 'The Phnom Penh Post',
+    ),
+    105 => array(
+      'source' => 'ttycorp.com',
+      'target' => 'TTY Corporation Co., Ltd',
+    ),
+    106 => array(
+      'source' => 'U.S. State Department',
+      'target' => 'US Department of State',
+    ),
+    107 => array(
+      'source' => 'UN Human Rights Council',
+      'target' => 'Office of the United Nations High Commissioner for Human Rights',
+    ),
+    108 => array(
+      'source' => 'UN-Habitat',
+      'target' => 'United Nations Human Settlements Programme',
+    ),
+    109 => array(
+      'source' => 'United Nations',
+      'target' => 'United Nations',
+    ),
+    110 => array(
+      'source' => 'United Nations (UN)',
+      'target' => 'United Nations',
+    ),
+    111 => array(
+      'source' => 'United Nations, Human Rights Council',
+      'target' => 'Office of the United Nations High Commissioner for Human Rights',
+    ),
+    112 => array(
+      'source' => 'University of Liege',
+      'target' => 'University of Liege',
+    ),
+    113 => array(
+      'source' => 'USAID',
+      'target' => 'USAID',
+    ),
+    114 => array(
+      'source' => 'WITNESS Forced Evictions',
+      'target' => 'WITNESS Forced Evictions',
+    ),
+    115 => array(
+      'source' => 'Working Group on Land Issues',
+      'target' => 'Food Security Working Group',
+    ),
+    116 => array(
+      'source' => 'World Bank',
+      'target' => 'World Bank Group',
+    ),
+    117 => array(
+      'source' => 'The World Bank',
+      'target' => 'World Bank Group',
+    ),
+    118 => array(
+      'source' => 'WorldFish',
+      'target' => 'WorldFish',
+    ),
+    119 => array(
+      'source' => 'Center for International Forestry Research; Probe International; Rights and Resources Initiative; York Centre for Asian Research',
+      'target' => 'Center for International Forestry Research;Probe International;Rights and Resources Initiative;York Centre for Asian Research',
+    ),
+    120 => array(
+      'source' => 'Inclusive Development International, Bank Information Center, 11.11.11, Urgewald and Accountability Counsel',
+      'target' => 'Inclusive Development International;Bank Information Center;Accountability Counsel',
+    ),
+    121 => array(
+      'source' => 'OHRE International Secretariat',
+      'target' => 'Centre on Housing Rights and Evictions',
+    ),
+    122 => array(
+      'source' => 'Center for International Forestry Research (CIFOR)',
+      'target' => 'Center for International Forestry Research',
+    ),
+    123 => array(
+      'source' => 'Food and Agriculture Organization (FAO)',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    124 => array(
+      'source' => 'GIZ',
+      'target' => 'GIZ',
+    ),
+    125 => array(
+      'source' => 'Geoforum',
+      'target' => 'Geoforum',
+    ),
+    126 => array(
+      'source' => 'Geographica Bernensia',
+      'target' => 'University of Bern',
+    ),
+    127 => array(
+      'source' => 'Information Management and Strategic Planning Division - Lao National Agriculture and Forestry Research Institute',
+      'target' => 'National Agriculture and Forestry Research Institute (Lao)',
+    ),
+    128 => array(
+      'source' => 'Institut de hautes études internationales et du développement',
+      'target' => 'The Graduate Institute of International and Development Studies',
+    ),
+    129 => array(
+      'source' => 'International Fund for Agricultural Development	International',
+      'target' => 'Fund for Agricultural Development (IFAD)',
+    ),
+    130 => array(
+      'source' => 'Journal of Social Sciences and Humanities',
+      'target' => 'Journal of Social Sciences and Humanities',
+    ),
+    131 => array(
+      'source' => 'Land Core Group, Loka Ahlinn and Mekong Region Land Governance',
+      'target' => 'Land Core Group;Loka Ahlinn;Mekong Region Land Governance',
+    ),
+    132 => array(
+      'source' => 'Land Matrix Partnership;Land Matrix
+',
+      'target' => '',
+    ),
+    133 => array(
+      'source' => '',
+      'target' => '',
+    ),
+    134 => array(
+      'source' => 'Mekong Region Land Governance (MRLG), Ministry of Natural Resources and Environmental Conservation - Myanmar (MOREC)',
+      'target' => 'Mekong Region Land Governance;Ministry of Natural Resources and Environmental Conservation (Myanmar)',
+    ),
+    135 => array(
+      'source' => 'Mekong Region Land Governance and the Ministry of Natural Resources and Environmental Conservation, Myanmar',
+      'target' => 'Mekong Region Land Governance;Ministry of Natural Resources and Environmental Conservation (Myanmar)',
+    ),
+    136 => array(
+      'source' => 'Mekong Regional Land Governance',
+      'target' => 'Mekong Region Land Governance',
+    ),
+    137 => array(
+      'source' => 'NGO Forum on Cambodia',
+      'target' => 'The NGO Forum on Cambodia',
+    ),
+    138 => array(
+      'source' => 'National Political Publishing House',
+      'target' => 'National Political Publishing House of Vietnam',
+    ),
+    139 => array(
+      'source' => 'Oxfarm Vietnam',
+      'target' => 'Oxfam Country office Vietnam',
+    ),
+    140 => array(
+      'source' => 'Routledge',
+      'target' => 'Routledge',
+    ),
+    141 => array(
+      'source' => 'The Land Core Group',
+      'target' => 'Land Core Group',
+    ),
+    142 => array(
+      'source' => 'UNDP',
+      'target' => 'United Nations Development Programme',
+    ),
+    143 => array(
+      'source' => 'សម្ព័ន្ធខ្មែរជំរឿន និងការពារសិទ្ធិមនុស្ស (លីកាដូ)',
+      'target' => 'Cambodian League for the Promotion and Defense of Human Rights',
+    ),
+  ),
+  'full' => 1,
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Find replace multiple (organizations)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_25-trim';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:25';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -2022,8 +2394,8 @@ $feeds_tamper->id = 'odm_library_importer-jsonpath_parser_25-unique';
 $feeds_tamper->importer = 'odm_library_importer';
 $feeds_tamper->source = 'jsonpath_parser:25';
 $feeds_tamper->plugin_id = 'unique';
-$feeds_tamper->settings = '';
-$feeds_tamper->weight = 3;
+$feeds_tamper->settings = array();
+$feeds_tamper->weight = 4;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -2101,7 +2473,7 @@ $feeds_tamper->description = 'is a pdf, doc or zip';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_library_importer-jsonpath_parser_6-explode';
 $feeds_tamper->importer = 'odm_library_importer';
@@ -2145,11 +2517,11 @@ $feeds_tamper->settings = array(
   'pairs' => array(
     0 => array(
       'source' => 'Agricultural commodities processing and products',
-      'target' => 'agricultural land management, farming systems',
+      'target' => 'agricultural land management; farming systems',
     ),
     1 => array(
       'source' => 'Agricultural management systems and technologies',
-      'target' => 'agricultural land management, farming systems',
+      'target' => 'agricultural land management; farming systems',
     ),
     2 => array(
       'source' => 'Agricultural policy and administration',
@@ -2161,11 +2533,11 @@ $feeds_tamper->settings = array(
     ),
     4 => array(
       'source' => 'Agriculture and fishing',
-      'target' => 'agriculture, fisheries',
+      'target' => 'agriculture; fisheries',
     ),
     5 => array(
       'source' => 'Agro-industrial production',
-      'target' => 'agricultural land management, farming systems',
+      'target' => 'agricultural land management; farming systems',
     ),
     6 => array(
       'source' => 'Aid and development',
@@ -2173,7 +2545,7 @@ $feeds_tamper->settings = array(
     ),
     7 => array(
       'source' => 'Alternative dispute resolution',
-      'target' => 'dispute resolution',
+      'target' => 'land dispute resolution',
     ),
     8 => array(
       'source' => 'Anti-corruption',
@@ -2181,11 +2553,11 @@ $feeds_tamper->settings = array(
     ),
     9 => array(
       'source' => 'Biodiversity',
-      'target' => 'agricultural land management, agriculture',
+      'target' => 'agricultural land management; agriculture',
     ),
     10 => array(
       'source' => 'Biofuel crops',
-      'target' => 'agricultural land management, agriculture',
+      'target' => 'agricultural land management; agriculture',
     ),
     11 => array(
       'source' => 'Censuses',
@@ -2205,7 +2577,7 @@ $feeds_tamper->settings = array(
     ),
     15 => array(
       'source' => 'Communal land',
-      'target' => 'communal lands',
+      'target' => 'common lands',
     ),
     16 => array(
       'source' => 'Community fisheries',
@@ -2217,15 +2589,15 @@ $feeds_tamper->settings = array(
     ),
     18 => array(
       'source' => 'Concessions',
-      'target' => 'land concessions',
+      'target' => 'concession (land)',
     ),
     19 => array(
       'source' => 'Construction policy and regulation',
-      'target' => 'land policies, urban planning',
+      'target' => 'land policies; urban planning',
     ),
     20 => array(
       'source' => 'Contract farming',
-      'target' => 'contract farming, farming systems',
+      'target' => 'contract farming; farming systems',
     ),
     21 => array(
       'source' => 'Deforestration drivers',
@@ -2233,7 +2605,7 @@ $feeds_tamper->settings = array(
     ),
     22 => array(
       'source' => 'Development and assistance for land tenure and land titling',
-      'target' => 'development agencies, capacity building, land tenure systems, continuum in land rights',
+      'target' => 'development agencies; capacity building; land tenure systems; continuum in land rights',
     ),
     23 => array(
       'source' => 'Development assistance',
@@ -2245,7 +2617,7 @@ $feeds_tamper->settings = array(
     ),
     25 => array(
       'source' => 'Economic land concessions and plantations',
-      'target' => 'land concessions',
+      'target' => 'concession (land)',
     ),
     26 => array(
       'source' => 'Economic social and cultural rights',
@@ -2253,15 +2625,15 @@ $feeds_tamper->settings = array(
     ),
     27 => array(
       'source' => 'Environment and natural resources',
-      'target' => 'environment, natural resources management',
+      'target' => 'environment; natural resources management',
     ),
     28 => array(
       'source' => 'Environment and natural resources policy and administration',
-      'target' => 'natural resources management, environment',
+      'target' => 'natural resources management; environment',
     ),
     29 => array(
       'source' => 'Environmental and biodiversity protection',
-      'target' => 'environment, sustainable land management',
+      'target' => 'environment; sustainable land management',
     ),
     30 => array(
       'source' => 'Environmental impact assessments',
@@ -2269,11 +2641,11 @@ $feeds_tamper->settings = array(
     ),
     31 => array(
       'source' => 'Ethnic minorities and indigenous people',
-      'target' => 'indigenous peoples, local community',
+      'target' => 'indigenous peoples; local community',
     ),
     32 => array(
       'source' => 'Ethnic minorities and indigenous people policy and rights',
-      'target' => 'indigenous land rights, indigenous peoples',
+      'target' => 'indigenous land rights; indigenous peoples',
     ),
     33 => array(
       'source' => 'Expropriation',
@@ -2285,15 +2657,15 @@ $feeds_tamper->settings = array(
     ),
     35 => array(
       'source' => 'Fertilizer',
-      'target' => 'agricultural land management, agriculture',
+      'target' => 'agricultural land management; agriculture',
     ),
     36 => array(
       'source' => 'Fisheries production',
-      'target' => 'fisheries, farming systems',
+      'target' => 'fisheries; farming systems',
     ),
     37 => array(
       'source' => 'Fishing fisheries and aquaculture',
-      'target' => 'fisheries, aquaculture',
+      'target' => 'fisheries; aquaculture',
     ),
     38 => array(
       'source' => 'Food and Agriculture Organization FAO',
@@ -2309,7 +2681,7 @@ $feeds_tamper->settings = array(
     ),
     41 => array(
       'source' => 'Forest cover',
-      'target' => 'forest land, land cover',
+      'target' => 'forest land; land cover',
     ),
     42 => array(
       'source' => 'Forest industry',
@@ -2317,15 +2689,15 @@ $feeds_tamper->settings = array(
     ),
     43 => array(
       'source' => 'Forest policy and administration',
-      'target' => 'forest policies',
+      'target' => 'forestry policies',
     ),
     44 => array(
       'source' => 'Forest protection',
-      'target' => 'forest conservation, forestry, sustainable land use, sustainable land managament',
+      'target' => 'forest conservation; forestry; sustainable land use; sustainable land management',
     ),
     45 => array(
       'source' => 'Forests and forestry',
-      'target' => 'forestry, forest land',
+      'target' => 'forestry; forest land',
     ),
     46 => array(
       'source' => 'German aid',
@@ -2361,11 +2733,11 @@ $feeds_tamper->settings = array(
     ),
     54 => array(
       'source' => 'Land sales and trades',
-      'target' => 'land investments, land economics',
+      'target' => 'land investments; land economics',
     ),
     55 => array(
       'source' => 'Land tenure and land titling',
-      'target' => 'land tenure systems, title deed',
+      'target' => 'land tenure systems; title deed',
     ),
     56 => array(
       'source' => 'Land transfers',
@@ -2373,7 +2745,7 @@ $feeds_tamper->settings = array(
     ),
     57 => array(
       'source' => 'Laws and regulations',
-      'target' => 'land law, land policies',
+      'target' => 'land law; land policies',
     ),
     58 => array(
       'source' => 'Legal aid',
@@ -2385,11 +2757,11 @@ $feeds_tamper->settings = array(
     ),
     60 => array(
       'source' => 'Maize corn',
-      'target' => 'farming systems, agricultural land management',
+      'target' => 'farming systems; agricultural land management',
     ),
     61 => array(
       'source' => 'Overview of policy and legal framework',
-      'target' => 'land policies, land law',
+      'target' => 'land policies; land law',
     ),
     62 => array(
       'source' => 'Palm oil',
@@ -2397,11 +2769,11 @@ $feeds_tamper->settings = array(
     ),
     63 => array(
       'source' => 'Pest management',
-      'target' => 'agricultural land management, farming systems',
+      'target' => 'agricultural land management; farming systems',
     ),
     64 => array(
       'source' => 'Population',
-      'target' => 'rural population, urban population',
+      'target' => 'rural population; urban population',
     ),
     65 => array(
       'source' => 'Poverty policy and regulation',
@@ -2421,11 +2793,11 @@ $feeds_tamper->settings = array(
     ),
     69 => array(
       'source' => 'Protected forests',
-      'target' => 'forest conservation, environment',
+      'target' => 'forest conservation; environment',
     ),
     70 => array(
       'source' => 'Public land lease',
-      'target' => 'leases, land tenure systems',
+      'target' => 'leases; land tenure systems',
     ),
     71 => array(
       'source' => 'Rail',
@@ -2437,7 +2809,7 @@ $feeds_tamper->settings = array(
     ),
     73 => array(
       'source' => 'Rivers and lakes',
-      'target' => 'water management, land cover',
+      'target' => 'water management; land cover',
     ),
     74 => array(
       'source' => 'Rubber',
@@ -2453,7 +2825,7 @@ $feeds_tamper->settings = array(
     ),
     77 => array(
       'source' => 'Soil management',
-      'target' => 'land management, sustainable land management',
+      'target' => 'land management; sustainable land management',
     ),
     78 => array(
       'source' => 'Special economic zones',
@@ -2461,7 +2833,7 @@ $feeds_tamper->settings = array(
     ),
     79 => array(
       'source' => 'State public land',
-      'target' => 'state property, public ownership',
+      'target' => 'state property; public ownership',
     ),
     80 => array(
       'source' => 'System of government',
@@ -2481,7 +2853,7 @@ $feeds_tamper->settings = array(
     ),
     84 => array(
       'source' => 'Tree plantation',
-      'target' => 'agricultural land management, agriculture',
+      'target' => 'agricultural land management; agriculture',
     ),
     85 => array(
       'source' => 'United Nations',
@@ -2489,15 +2861,15 @@ $feeds_tamper->settings = array(
     ),
     86 => array(
       'source' => 'Urban administration and development',
-      'target' => 'urbanization, urban areas, urban population',
+      'target' => 'urbanization; urban areas; urban population',
     ),
     87 => array(
       'source' => 'Urban development trends',
-      'target' => 'urbanization, land development (urbanization)',
+      'target' => 'urbanization; land development (urbanization)',
     ),
     88 => array(
       'source' => 'Urban policy and administration',
-      'target' => 'urbanization, land policies',
+      'target' => 'urbanization; land policies',
     ),
     89 => array(
       'source' => 'Water and sanitation policy and administration',
@@ -2505,11 +2877,11 @@ $feeds_tamper->settings = array(
     ),
     90 => array(
       'source' => 'Water policy and administration',
-      'target' => 'water management, water rights',
+      'target' => 'water management; water rights',
     ),
     91 => array(
       'source' => 'Water resources',
-      'target' => 'water management, natural resources management',
+      'target' => 'water management; natural resources management',
     ),
     92 => array(
       'source' => 'Water rights',
@@ -2523,10 +2895,51 @@ $feeds_tamper->settings = array(
       'source' => 'World Bank',
       'target' => 'development agencies',
     ),
+    95 => array(
+      'source' => 'Agricultural production',
+      'target' => 'farming systems;agriculture',
+    ),
+    96 => array(
+      'source' => 'Forest classifications',
+      'target' => 'forest land',
+    ),
+    97 => array(
+      'source' => 'Law and judiciary',
+      'target' => 'land governance;land law',
+    ),
+    98 => array(
+      'source' => 'Law making process',
+      'target' => 'land governance;land law',
+    ),
+    99 => array(
+      'source' => 'Regulation of legal professions',
+      'target' => 'land governance',
+    ),
+    100 => array(
+      'source' => 'State private land',
+      'target' => 'private ownership;state property',
+    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 1;
 $feeds_tamper->description = 'ODM taxonomy to LandVoc Concepts';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-jsonpath_parser_7-trim';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'jsonpath_parser:7';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -2538,7 +2951,7 @@ $feeds_tamper->importer = 'odm_library_importer';
 $feeds_tamper->source = 'jsonpath_parser:7';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 3;
+$feeds_tamper->weight = 4;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -2789,6 +3202,21 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Set value or default value';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_library_importer-odm_url-rewrite';
+$feeds_tamper->importer = 'odm_library_importer';
+$feeds_tamper->source = 'ODM url';
+$feeds_tamper->plugin_id = 'rewrite';
+$feeds_tamper->settings = array(
+  'text' => 'https://opendevelopmentmekong.net/dataset/?id=[jsonpath_parser:1]',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Rewrite';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 

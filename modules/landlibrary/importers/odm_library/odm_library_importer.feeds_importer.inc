@@ -11,6 +11,7 @@ function odm_library_importer_feeds_importer_default() {
     $export = array();
 
 /************/
+
 $feeds_importer = new stdClass();
 $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
 $feeds_importer->api_version = 1;
@@ -27,6 +28,7 @@ $feeds_importer->config = array(
       'request_timeout' => NULL,
       'auto_scheme' => 'http',
       'accept_invalid_cert' => FALSE,
+      'cache_http_result' => TRUE,
     ),
   ),
   'parser' => array(
@@ -94,7 +96,7 @@ $feeds_importer->config = array(
     'plugin_key' => 'FeedsNodeProcessor',
     'config' => array(
       'expire' => '-1',
-      'author' => '',
+      'author' => 0,
       'authorize' => 1,
       'mappings' => array(
         0 => array(
@@ -134,40 +136,40 @@ $feeds_importer->config = array(
           'language' => 'und',
         ),
         6 => array(
-          'source' => 'jsonpath_parser:6',
-          'target' => 'field_doc_keyword',
-          'term_search' => '0',
-          'autocreate' => 1,
-          'language' => 'und',
-        ),
-        7 => array(
           'source' => 'jsonpath_parser:7',
           'target' => 'field_related_topics',
           'term_search' => '0',
           'autocreate' => 0,
           'language' => 'und',
         ),
-        8 => array(
+        7 => array(
           'source' => 'jsonpath_parser:8',
           'target' => 'field_doc_copyrights_statement',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        9 => array(
+        8 => array(
           'source' => 'jsonpath_parser:9',
           'target' => 'field_doc_creation_date:start',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        10 => array(
+        9 => array(
           'source' => 'jsonpath_parser:10',
           'target' => 'field_doc_language',
+          'term_search' => '1',
+          'autocreate' => 0,
+          'language' => 'und',
+        ),
+        10 => array(
+          'source' => 'jsonpath_parser:11',
+          'target' => 'field_doc_type',
           'unique' => FALSE,
           'language' => 'und',
         ),
         11 => array(
-          'source' => 'jsonpath_parser:11',
-          'target' => 'field_doc_type',
+          'source' => 'jsonpath_parser:17',
+          'target' => 'Temporary target 1',
           'unique' => FALSE,
           'language' => 'und',
         ),
@@ -178,100 +180,93 @@ $feeds_importer->config = array(
           'language' => 'und',
         ),
         13 => array(
-          'source' => 'jsonpath_parser:13',
-          'target' => 'field_doc_publisher_place',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        14 => array(
           'source' => 'jsonpath_parser:15',
           'target' => 'field_doc_provider:label',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        15 => array(
+        14 => array(
           'source' => 'jsonpath_parser:16',
           'target' => 'field_doc_pagination',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        16 => array(
-          'source' => 'jsonpath_parser:17',
-          'target' => 'Temporary target 1',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        17 => array(
+        15 => array(
           'source' => 'jsonpath_parser:18',
           'target' => 'field_doc_licencing',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        18 => array(
+        16 => array(
           'source' => 'jsonpath_parser:19',
           'target' => 'field_geographical_focus',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        19 => array(
+        17 => array(
           'source' => 'jsonpath_parser:20',
           'target' => 'field_doc_identifier',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        20 => array(
+        18 => array(
           'source' => 'jsonpath_parser:21',
           'target' => 'field_doc_identifier',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        21 => array(
-          'source' => 'Blank source 1',
-          'target' => 'field_related_domains',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        22 => array(
+        19 => array(
           'source' => 'jsonpath_parser:22',
           'target' => 'Temporary target 2',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        23 => array(
+        20 => array(
+          'source' => 'Blank source 1',
+          'target' => 'field_related_domains',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        21 => array(
           'source' => 'Blank source 2',
           'target' => 'field_related_themes',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        24 => array(
+        22 => array(
           'source' => 'jsonpath_parser:23',
           'target' => 'Temporary target 3',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        25 => array(
+        23 => array(
           'source' => 'jsonpath_parser:24',
           'target' => 'Temporary target 4',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        26 => array(
+        24 => array(
           'source' => 'jsonpath_parser:25',
           'target' => 'field_doc_publisher:label',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        27 => array(
+        25 => array(
           'source' => 'Blank source 4',
           'target' => 'field_orgref:label',
           'unique' => FALSE,
           'language' => 'und',
         ),
+        26 => array(
+          'source' => 'Blank source 5',
+          'target' => 'field_image:uri',
+          'file_exists' => '4',
+        ),
       ),
       'update_existing' => '2',
       'update_non_existent' => 'skip',
       'input_format' => 'plain_text',
-      'skip_hash_check' => 0,
+      'skip_hash_check' => 1,
       'bundle' => 'landlibrary_resource',
       'insert_new' => '1',
       'language' => 'und',
