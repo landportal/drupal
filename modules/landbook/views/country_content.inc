@@ -23,8 +23,11 @@ $handler->display->display_options['exposed_form']['options']['autosubmit'] = TR
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '2';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
+$handler->display->display_options['style_options']['interval'] = '6500';
+$handler->display->display_options['style_options']['navigation'] = 0;
+$handler->display->display_options['style_options']['indicators'] = 1;
+$handler->display->display_options['style_options']['pause'] = 1;
 $handler->display->display_options['row_plugin'] = 'node';
 $handler->display->display_options['row_options']['links'] = FALSE;
 /* Relationship: Field: Geographical focus (field_geographical_focus) */
@@ -102,23 +105,10 @@ $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
 );
 
-/* Display: Latest Debates */
-$handler = $view->new_display('block', 'Latest Debates', 'debates');
+/* Display: Debates */
+$handler = $view->new_display('block', 'Debates', 'debates');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Discussions';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
-$handler->display->display_options['style_options']['interval'] = '8000';
-$handler->display->display_options['style_options']['navigation'] = 0;
-$handler->display->display_options['style_options']['indicators'] = 1;
-$handler->display->display_options['style_options']['pause'] = 1;
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
-$handler->display->display_options['row_options']['image'] = 'field_image';
-$handler->display->display_options['row_options']['title'] = 'title';
-$handler->display->display_options['row_options']['description'] = 'body';
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
@@ -144,23 +134,10 @@ $handler->display->display_options['filters']['language']['value'] = array(
   'und' => 'und',
 );
 
-/* Display: Latest Blogs */
-$handler = $view->new_display('block', 'Latest Blogs', 'blogs');
+/* Display: Blogs */
+$handler = $view->new_display('block', 'Blogs', 'blogs');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Blog';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
-$handler->display->display_options['style_options']['interval'] = '11000';
-$handler->display->display_options['style_options']['navigation'] = 0;
-$handler->display->display_options['style_options']['indicators'] = 1;
-$handler->display->display_options['style_options']['pause'] = 1;
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
-$handler->display->display_options['row_options']['image'] = 'field_image';
-$handler->display->display_options['row_options']['title'] = 'title';
-$handler->display->display_options['row_options']['description'] = 'body';
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */
@@ -186,23 +163,10 @@ $handler->display->display_options['filters']['language']['value'] = array(
   'und' => 'und',
 );
 
-/* Display: Latest Events */
-$handler = $view->new_display('block', 'Latest Events', 'events');
+/* Display: Events */
+$handler = $view->new_display('block', 'Events', 'events');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Events';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
-$handler->display->display_options['style_options']['interval'] = '9500';
-$handler->display->display_options['style_options']['navigation'] = 0;
-$handler->display->display_options['style_options']['indicators'] = 1;
-$handler->display->display_options['style_options']['pause'] = 1;
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
-$handler->display->display_options['row_options']['image'] = 'field_image';
-$handler->display->display_options['row_options']['title'] = 'title';
-$handler->display->display_options['row_options']['description'] = 'body';
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['sorts'] = FALSE;
 /* Sort criterion: Field: Date -  start date (field_date) */
 $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
@@ -242,6 +206,15 @@ $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '5';
 $handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'node';
+$handler->display->display_options['row_options']['links'] = FALSE;
+$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Published */

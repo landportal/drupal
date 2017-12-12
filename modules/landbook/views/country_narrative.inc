@@ -30,13 +30,6 @@ $handler->display->display_options['relationships']['field_geographical_focus_ti
 $handler->display->display_options['relationships']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
 $handler->display->display_options['relationships']['field_geographical_focus_tid']['label'] = 'country';
 $handler->display->display_options['relationships']['field_geographical_focus_tid']['required'] = TRUE;
-/* Relationship: Field: Land Book Indicators (field_visualization) */
-$handler->display->display_options['relationships']['field_visualization_value']['id'] = 'field_visualization_value';
-$handler->display->display_options['relationships']['field_visualization_value']['table'] = 'field_data_field_visualization';
-$handler->display->display_options['relationships']['field_visualization_value']['field'] = 'field_visualization_value';
-$handler->display->display_options['relationships']['field_visualization_value']['label'] = 'vis';
-$handler->display->display_options['relationships']['field_visualization_value']['required'] = TRUE;
-$handler->display->display_options['relationships']['field_visualization_value']['delta'] = '-1';
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -234,6 +227,20 @@ $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Field: Geographical focus (field_geographical_focus) */
+$handler->display->display_options['relationships']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
+$handler->display->display_options['relationships']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['relationships']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
+$handler->display->display_options['relationships']['field_geographical_focus_tid']['label'] = 'country';
+$handler->display->display_options['relationships']['field_geographical_focus_tid']['required'] = TRUE;
+/* Relationship: Field: Land Book Indicators (field_visualization) */
+$handler->display->display_options['relationships']['field_visualization_value']['id'] = 'field_visualization_value';
+$handler->display->display_options['relationships']['field_visualization_value']['table'] = 'field_data_field_visualization';
+$handler->display->display_options['relationships']['field_visualization_value']['field'] = 'field_visualization_value';
+$handler->display->display_options['relationships']['field_visualization_value']['label'] = 'vis';
+$handler->display->display_options['relationships']['field_visualization_value']['required'] = TRUE;
+$handler->display->display_options['relationships']['field_visualization_value']['delta'] = '-1';
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Nid */
 $handler->display->display_options['fields']['nid']['id'] = 'nid';
