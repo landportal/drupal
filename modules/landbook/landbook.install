@@ -173,6 +173,17 @@ book/thematic',
   );
   $blocks[] = array(
     'keys' => array(
+      'module' => 'landbook_view_coda',
+      'delta'  => 'lbvc_map_country',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
+  $blocks[] = array(
+    'keys' => array(
       'module' => 'landbook',
       'delta'  => 'media',
       'theme'  => 'lpbs',

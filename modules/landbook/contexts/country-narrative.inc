@@ -19,12 +19,12 @@ $context->conditions = array(
 $context->reactions = array(
   'block' => array(
     'blocks' => array(
-      'landbook_view_coda-lbvc_map_country' => array(
-        'module' => 'landbook_view_coda',
-        'delta' => 'lbvc_map_country',
-        'region' => 'highlighted',
-        'weight' => '10',
-      ),
+      /* 'landbook_view_coda-lbvc_map_country' => array( */
+      /*   'module' => 'landbook_view_coda', */
+      /*   'delta' => 'lbvc_map_country', */
+      /*   'region' => 'highlighted', */
+      /*   'weight' => '10', */
+      /* ), */
       'landbook-infographics' => array(
         'module' => 'landbook',
         'delta' => 'infographics',
