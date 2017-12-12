@@ -25,12 +25,6 @@ $context->reactions = array(
         'region' => 'content',
         'weight' => '3',
       ),
-      'landbook-media' => array(
-        'module' => 'landbook',
-        'delta' => 'media',
-        'region' => 'content',
-        'weight' => '4',
-      ),
       'views-country_content-news' => array(
         'module' => 'views',
         'delta' => 'country_content-news',
