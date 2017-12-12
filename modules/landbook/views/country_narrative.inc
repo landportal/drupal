@@ -281,20 +281,6 @@ $handler->display->display_options['fields']['rendered_entity']['link_to_entity'
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
 $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
-/* Field: Global: PHP */
-$handler->display->display_options['fields']['php']['id'] = 'php';
-$handler->display->display_options['fields']['php']['table'] = 'views';
-$handler->display->display_options['fields']['php']['field'] = 'php';
-$handler->display->display_options['fields']['php']['label'] = '';
-$handler->display->display_options['fields']['php']['exclude'] = TRUE;
-$handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['php']['use_php_setup'] = 0;
-$handler->display->display_options['fields']['php']['php_value'] = '$vis = entity_load(\'field_collection_item\', array($row->rendered_entity));
-$static = $vis[$row->rendered_entity]->field_view_coda[\'und\'][0];
-//dpm($static, $row->rendered_entity);';
-$handler->display->display_options['fields']['php']['php_output'] = '<?php echo $value[\'type\']; ?>';
-$handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
-$handler->display->display_options['fields']['php']['php_click_sortable'] = '';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';
