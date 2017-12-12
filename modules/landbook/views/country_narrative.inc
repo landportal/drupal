@@ -12,7 +12,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Country portfolios';
+$handler->display->display_options['title'] = 'Context';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
@@ -30,6 +30,13 @@ $handler->display->display_options['relationships']['field_geographical_focus_ti
 $handler->display->display_options['relationships']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
 $handler->display->display_options['relationships']['field_geographical_focus_tid']['label'] = 'country';
 $handler->display->display_options['relationships']['field_geographical_focus_tid']['required'] = TRUE;
+/* Relationship: Field: Land Book Indicators (field_visualization) */
+$handler->display->display_options['relationships']['field_visualization_value']['id'] = 'field_visualization_value';
+$handler->display->display_options['relationships']['field_visualization_value']['table'] = 'field_data_field_visualization';
+$handler->display->display_options['relationships']['field_visualization_value']['field'] = 'field_visualization_value';
+$handler->display->display_options['relationships']['field_visualization_value']['label'] = 'vis';
+$handler->display->display_options['relationships']['field_visualization_value']['required'] = TRUE;
+$handler->display->display_options['relationships']['field_visualization_value']['delta'] = '-1';
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -209,4 +216,127 @@ $handler->display->display_options['arguments']['tid']['default_argument_options
 $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
 $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
 $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+
+/* Display: Last vis */
+$handler = $view->new_display('block', 'Last vis', 'last_vis');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Context data';
+$handler->display->display_options['display_description'] = 'Show last CP narrative vis';
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '3';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Nid */
+$handler->display->display_options['fields']['nid']['id'] = 'nid';
+$handler->display->display_options['fields']['nid']['table'] = 'node';
+$handler->display->display_options['fields']['nid']['field'] = 'nid';
+$handler->display->display_options['fields']['nid']['label'] = '';
+$handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['exclude'] = TRUE;
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+/* Field: Taxonomy term: ISO3 */
+$handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
+$handler->display->display_options['fields']['field_iso3']['table'] = 'field_data_field_iso3';
+$handler->display->display_options['fields']['field_iso3']['field'] = 'field_iso3';
+$handler->display->display_options['fields']['field_iso3']['relationship'] = 'field_geographical_focus_tid';
+$handler->display->display_options['fields']['field_iso3']['label'] = '';
+$handler->display->display_options['fields']['field_iso3']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_iso3']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_iso3']['alter']['text'] = 'book/countries/[field_iso3]';
+$handler->display->display_options['fields']['field_iso3']['element_label_colon'] = FALSE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['relationship'] = 'field_geographical_focus_tid';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+/* Field: Field collection item: Rendered Field collection item */
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_field_collection_item';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['relationship'] = 'field_visualization_value';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+/* Field: Global: PHP */
+$handler->display->display_options['fields']['php']['id'] = 'php';
+$handler->display->display_options['fields']['php']['table'] = 'views';
+$handler->display->display_options['fields']['php']['field'] = 'php';
+$handler->display->display_options['fields']['php']['label'] = '';
+$handler->display->display_options['fields']['php']['exclude'] = TRUE;
+$handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+$handler->display->display_options['fields']['php']['php_value'] = '$vis = entity_load(\'field_collection_item\', array($row->rendered_entity));
+$static = $vis[$row->rendered_entity]->field_view_coda[\'und\'][0];
+//dpm($static, $row->rendered_entity);';
+$handler->display->display_options['fields']['php']['php_output'] = '<?php echo $value[\'type\']; ?>';
+$handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+$handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Taxonomy term: Term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['relationship'] = 'field_geographical_focus_tid';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+$handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = TRUE;
+$handler->display->display_options['arguments']['tid']['default_argument_options']['limit'] = TRUE;
+$handler->display->display_options['arguments']['tid']['default_argument_options']['vocabularies'] = array(
+  'regions' => 'regions',
+);
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'landbook_country' => 'landbook_country',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  'und' => 'und',
+);
+$handler->display->display_options['filters']['language']['group'] = 1;
+/* Filter criterion: Global: PHP */
+$handler->display->display_options['filters']['php']['id'] = 'php';
+$handler->display->display_options['filters']['php']['table'] = 'views';
+$handler->display->display_options['filters']['php']['field'] = 'php';
+$handler->display->display_options['filters']['php']['use_php_setup'] = 0;
+$handler->display->display_options['filters']['php']['php_filter'] = '$vis = entity_load(\'field_collection_item\', array($row->rendered_entity));
+$v = $vis[$row->rendered_entity]->field_view_coda[\'und\'][0];
+return $v[\'type\'] != \'charts\';
+';
 
