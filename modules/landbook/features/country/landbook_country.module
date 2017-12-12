@@ -25,16 +25,26 @@ function landbook_country_node_view($node, $view_mode, $langcode) {
   $display_settings = taxonomy_display_fetch_taxonomy_display($term->vocabulary_machine_name);
   $breadcrumb_display = new $display_settings->breadcrumb_display_plugin;
   $breadcrumb_display->buildBreadcrumb($term);
-  menu_tree_set_path('landportal-menu', 'node/14170'); // @todo should be something with alias + lang
 
-  // @TODO: 'simply' have this hack as a block on the whole LP
-  $node->content['group_header']['#attached'] = array(
-    'js' => array(array(
-      'type' => 'inline',
-      'data' => landportal_blocks_page_submenu()
-    ))
+  /* dpm($node); */
+  menu_tree_set_path('landportal-menu', 'node/14170'); // @todo should be something with alias + lang
+}
+
+function landbook_country_node_view_alter(&$build) {
+  if ($build['#bundle'] != 'landbook_country' || $build['#view_mode'] != 'full' || !isset($build['#groups']['group_aside']))
+    return ;
+  $build['submenu'] = array(
+    '#markup' => '<div id="page-submenu"><ul class="nav"><li><a href="#">Top</a></li></ul></div>',
+    '#attached' => array(
+      'js' => array(array(
+        'type' => 'inline',
+        'data' => landportal_blocks_page_submenu()
+      ))
+    ),
   );
-  $node->content['group_header']['#suffix'] = '<div id="page-submenu"><ul class="nav"></ul></div>';
+  $build['#groups']['group_aside']->children[] = 'submenu';
+  $build['#group_children']['submenu'] = 'group_aside';
+//  dpm($build);
 }
 
 /**
