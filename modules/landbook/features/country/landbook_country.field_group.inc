@@ -13,6 +13,34 @@ function landbook_country_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_aside|node|landbook_country|default';
+  $field_group->group_name = 'group_aside';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'landbook_country';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '1',
+    'children' => array(),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-aside',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_aside|node|landbook_country|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_header|node|landbook_country|default';
   $field_group->group_name = 'group_header';
   $field_group->entity_type = 'node';
