@@ -123,8 +123,6 @@ $handler->display->display_options['fields']['name']['element_label_colon'] = FA
 $handler = $view->new_display('block', 'Highlights', 'highlight');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Country highlights';
-$handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'view-wrapped';
 $handler->display->display_options['display_description'] = 'Promoted Country narrative on Countries page';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
@@ -210,14 +208,13 @@ $handler->display->display_options['arguments']['tid']['summary']['number_of_rec
 $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
 $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
 
-/* Display: Last vis */
-$handler = $view->new_display('block', 'Last vis', 'last_vis');
+/* Display: Context data */
+$handler = $view->new_display('block', 'Context data', 'last_vis');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Context data';
 $handler->display->display_options['display_description'] = 'Show last CP narrative vis';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '3';
+$handler->display->display_options['pager']['options']['items_per_page'] = '5';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
@@ -330,6 +327,6 @@ $handler->display->display_options['filters']['php']['field'] = 'php';
 $handler->display->display_options['filters']['php']['use_php_setup'] = 0;
 $handler->display->display_options['filters']['php']['php_filter'] = '$vis = entity_load(\'field_collection_item\', array($row->rendered_entity));
 $v = $vis[$row->rendered_entity]->field_view_coda[\'und\'][0];
-return $v[\'type\'] != \'charts\';
+return !in_array($v[\'type\'], array(\'charts\', \'pie\', \'spider\'));
 ';
 
