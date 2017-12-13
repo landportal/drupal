@@ -112,7 +112,7 @@ $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Open & upcoming';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'mini';
-$handler->display->display_options['pager']['options']['items_per_page'] = '2';
+$handler->display->display_options['pager']['options']['items_per_page'] = '4';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
@@ -194,6 +194,8 @@ $handler->display->display_options['filters']['field_status_tid']['vocabulary'] 
 
 /* Display: Latest */
 $handler = $view->new_display('block', 'Latest', 'latest');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'teaser-fullwidth';
 $handler->display->display_options['display_description'] = 'show Upcoming + Open';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
@@ -208,10 +210,8 @@ $handler->display->display_options['style_options']['indicators'] = 1;
 $handler->display->display_options['style_options']['pause'] = 1;
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
-$handler->display->display_options['row_options']['image'] = 'field_image';
-$handler->display->display_options['row_options']['title'] = 'title';
-$handler->display->display_options['row_options']['description'] = 'body';
+$handler->display->display_options['row_plugin'] = 'node';
+$handler->display->display_options['row_options']['links'] = FALSE;
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 
 /* Display: All */
