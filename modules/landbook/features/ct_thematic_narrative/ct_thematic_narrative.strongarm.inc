@@ -149,7 +149,7 @@ function ct_thematic_narrative_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '8',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'search_result' => array(

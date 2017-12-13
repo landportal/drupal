@@ -35,6 +35,6 @@ features[user_permission][] = merge regions terms
 features[variable][] = field_bundle_settings_taxonomy_term__regions
 features[variable][] = pathauto_taxonomy_term_regions_pattern
 features[variable][] = xmlsitemap_settings_taxonomy_term_regions
-features_exclude[field_instance][taxonomy_term-regions-field_parent] = taxonomy_term-regions-field_parent
 features_exclude[dependencies][entityreference] = entityreference
 features_exclude[field_base][field_parent] = field_parent
+features_exclude[field_instance][taxonomy_term-regions-field_parent] = taxonomy_term-regions-field_parent

@@ -223,7 +223,7 @@ function landportal_geo_field_default_field_instances() {
           'title_style' => '_none',
         ),
         'type' => 'title_linked',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',

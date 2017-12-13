@@ -3,14 +3,27 @@
  * Install / Upgrade hooks
  */
 
-/* function landportal_promoted_update_7200() { */
-/*   $CTs = array('blog_post', 'debate', 'event', 'landlibrary_resource', 'news', 'organization'); */
-/*   foreach ($CTs as $ct) { */
-/*     if ($instance = field_info_instance('node', 'field_country_promoted', $ct)) { */
-/*       field_delete_instance($instance); */
-/*     } */
-/*   } */
-/* } */
+
+/** Land Portal 2.5 new UX
+ *  cleanup fields
+ */
+function landportal_promoted_update_7201() {
+  $CTs = array('blog_post', 'debate', 'event', 'landlibrary_resource', 'news', 'organization');
+  foreach ($CTs as $ct) {
+    if ($instance = field_info_instance('node', 'field_thematic_promoted', $ct)) {
+      field_delete_instance($instance);
+    }
+  }
+}
+
+function landportal_promoted_update_7200() {
+  $CTs = array('blog_post', 'debate', 'event', 'landlibrary_resource', 'news', 'organization');
+  foreach ($CTs as $ct) {
+    if ($instance = field_info_instance('node', 'field_country_promoted', $ct)) {
+      field_delete_instance($instance);
+    }
+  }
+}
 
 /* function landportal_promoted_uninstall() { */
 /*   $or = db_or()->condition('delta', 'promoted-library') */

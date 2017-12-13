@@ -11,6 +11,158 @@ function rel25_uuid_features_default_content() {
   $nodes = array();
 
   $nodes[] = array(
+  'title' => 'About the Land Portal',
+  'log' => '',
+  'status' => 1,
+  'comment' => 1,
+  'promote' => 0,
+  'sticky' => 0,
+  'ds_switch' => '',
+  'type' => 'page',
+  'language' => 'en',
+  'created' => 1291166008,
+  'tnid' => 6900,
+  'translate' => 0,
+  'uuid' => '112eadcc-c766-4eb3-a5f5-b1f3610b7336',
+  'promoted_library' => 0,
+  'promoted_to_country_page' => 0,
+  'promoted_to_thematic_page' => 0,
+  'base_promoted_library' => 0,
+  'base_promoted_to_country_page' => 0,
+  'base_promoted_to_thematic_page' => 0,
+  'body' => array(
+    'und' => array(
+      0 => array(
+        'value' => '<h2><strong>Our Challenge: Information for Land Governance</strong></h2>
+
+<p>Land governance is central to sustainable development. But without better data and information, many opportunities to improve land governance are being lost.&nbsp;</p>
+
+<p>Goal 1.4 of the Sustainable Development Goals commits the world to: &nbsp;<strong>"<em>By 2030, ensure that all men and women, in particular the poor and the vulnerable, have equal rights to economic resources, as well as access to basic services, ownership and control over land and other forms of property, inheritance, natural resources, appropriate new technology and financial services, including microfinance</em>."</strong></p>
+
+<p>With climate change increasing pressures on land, and the legacy of large-scale land deals in recent years, meeting this goal requires actions from many different stakeholders. These actions need to be supported by clear, accessible and inclusive data and information.&nbsp;</p>
+
+<div class="row">
+<div class="col-sm-6">
+<h2><strong>Our Mission: Linking Open Data and Land Rights</strong></h2>
+
+<p>The Land Portal Foundation works to create a better information ecosystem for land governance through a platform based on cutting-edge linked and open data technologies. We help partners to create, curate and disseminate land governance data and information to become part of a more inclusive information landscape. Current information sources are often fragmented, represent a restricted set of perspectives, and are not structured, curated and licensed in ways that support maximum discovery, engagement and reuse.</p>
+
+<p>By empowering institutions and organizations and building their capacity to develop and manage effective and open information and knowledge systems, the Land Portal is giving policy makers and decision makers, intermediaries and grassroots groups the tools to access reliable evidence, information and data, which results in better decision making, more effective programs and policies and successful campaigns.</p>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<p><em>For any questions or comments&nbsp;regarding the Land Portal\'s knowledge products, or if you would like to contribute content to the Land Portal, please contact hello@landportal.info</em></p>
+
+<p>&nbsp;</p>
+',
+        'summary' => '<p>The Land Portal Foundation works to create a better information ecosystem for land governance through a platform based on cutting-edge linked and open data technologies.</p>
+',
+        'format' => 'full_html',
+        'safe_summary' => '<p>The Land Portal Foundation works to create a better information ecosystem for land governance through a platform based on cutting-edge linked and open data technologies.</p>
+',
+      ),
+    ),
+  ),
+  'field_related_blocks' => array(),
+  'field_file' => array(),
+  'field_geographical_focus' => array(),
+  'field_milestone' => array(
+    'und' => array(
+      0 => array(
+        'value' => '17ea612d-906f-4d22-b968-9f11fb1025b9',
+        'revision_id' => '17ea612d-906f-4d22-b968-9f11fb1025b9',
+        'uuid' => '17ea612d-906f-4d22-b968-9f11fb1025b9',
+      ),
+    ),
+  ),
+  'field_noderef' => array(),
+  'field_paragraphs' => array(),
+  'field_related_domains' => array(),
+  'field_related_themes' => array(),
+  'field_related_topics' => array(),
+  'title_field' => array(
+    'en' => array(
+      0 => array(
+        'value' => 'About the Land Portal',
+        'format' => NULL,
+      ),
+    ),
+  ),
+  'field_image' => array(),
+  'field_visualization' => array(),
+  'translations' => array(
+    'original' => NULL,
+    'data' => array(),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dct:title',
+      ),
+      'type' => 'property',
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+      'type' => 'property',
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
+  'path' => array(
+    'pathauto' => 0,
+  ),
+  'comment_count' => 0,
+  'locations' => array(),
+  'location' => array(),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2010-12-01 02:13:28 +0100',
+  'user_uuid' => 'db9788c8-ee0f-4a8c-9fc0-46ebe2d339e8',
+);
+  $nodes[] = array(
   'title' => 'Land Book Datasets',
   'log' => '',
   'status' => 1,
@@ -142,7 +294,138 @@ function rel25_uuid_features_default_content() {
   'user_uuid' => '0552abe9-7b28-483f-a7ac-ea80f81db020',
 );
   $nodes[] = array(
-  'title' => 'The leading online resource for information, data and knowledge-exchange on land governance issues. ',
+  'title' => 'Consult the library',
+  'log' => '',
+  'status' => 1,
+  'comment' => 1,
+  'promote' => 0,
+  'sticky' => 0,
+  'ds_switch' => '',
+  'type' => 'page',
+  'language' => 'en',
+  'created' => 1431261805,
+  'tnid' => 10158,
+  'translate' => 0,
+  'uuid' => '26bf0bf2-c788-4680-81b3-dc5d20302354',
+  'promoted_library' => 0,
+  'promoted_to_country_page' => 0,
+  'promoted_to_thematic_page' => 0,
+  'base_promoted_library' => 0,
+  'base_promoted_to_country_page' => 0,
+  'base_promoted_to_thematic_page' => 0,
+  'body' => array(
+    'und' => array(
+      0 => array(
+        'value' => '<p>Are you looking for information and knowledge about property rights and&nbsp;land governance? The library&nbsp;is a free online repository that gives you access to&nbsp;over 35,000 land-related publications, laws&nbsp;and multimedia items. You can consult&nbsp;the Library through our <a href="http://landportal.info/library/search">search engine</a> or browsing through our <a href="/library/browse">browse page</a>.</p>
+
+<p>If you would like to contribute materials to the Land Library, please have a look at our <a href="http://landportal.info/library/contribute">contribute page</a>&nbsp;for more information.</p>
+
+<hr>',
+        'summary' => '',
+        'format' => 'filtered_html',
+        'safe_summary' => '',
+      ),
+    ),
+  ),
+  'field_related_blocks' => array(),
+  'field_file' => array(),
+  'field_geographical_focus' => array(),
+  'field_milestone' => array(
+    'und' => array(
+      0 => array(
+        'value' => 'f86b1532-266a-438d-85d1-56cd0d1c3af7',
+        'revision_id' => 'f86b1532-266a-438d-85d1-56cd0d1c3af7',
+        'uuid' => 'f86b1532-266a-438d-85d1-56cd0d1c3af7',
+      ),
+    ),
+  ),
+  'field_noderef' => array(),
+  'field_paragraphs' => array(),
+  'field_related_domains' => array(),
+  'field_related_themes' => array(),
+  'field_related_topics' => array(),
+  'title_field' => array(
+    'en' => array(
+      0 => array(
+        'value' => 'Consult the library',
+        'format' => NULL,
+      ),
+    ),
+  ),
+  'field_image' => array(),
+  'field_visualization' => array(),
+  'translations' => array(
+    'original' => NULL,
+    'data' => array(),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dct:title',
+      ),
+      'type' => 'property',
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+      'type' => 'property',
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
+  'path' => array(
+    'pathauto' => 0,
+  ),
+  'comment_count' => 0,
+  'locations' => array(),
+  'location' => array(),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2015-05-10 14:43:25 +0200',
+  'user_uuid' => 'db9788c8-ee0f-4a8c-9fc0-46ebe2d339e8',
+);
+  $nodes[] = array(
+  'title' => 'Linking open data for land rights ',
   'log' => '',
   'status' => 1,
   'comment' => 1,
@@ -164,27 +447,27 @@ function rel25_uuid_features_default_content() {
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '<div class="block-wrapped row">
+        'value' => '<div class="block-wrapped">
 <div class="col-sm-6 col-md-3">
-<h3>500+ land related indicators</h3>
+<h3><a href="https://dev.landportal.info/book/data" target="_blank">500+ land related indicators</a></h3>
 
 <p>Browse around our data section to access specific and detailed information!&nbsp;</p>
 </div>
 
 <div class="col-sm-6 col-md-3">
-<h3>45,000+ land related resources</h3>
+<h3><a href="https://dev.landportal.info/library" target="_blank">45,000+ land related resources</a></h3>
 
 <p>Browse around our library to take advantage of our wide array of materials!&nbsp;</p>
 </div>
 
 <div class="col-sm-6 col-md-3">
-<h3>Join us</h3>
+<h3><a href="https://dev.landportal.info/get-involved" target="_blank">Join us</a></h3>
 
 <p>Create&nbsp;your own Land Portal account and sign up for our newsletter!</p>
 </div>
 
 <div class="col-sm-6 col-md-3">
-<h3>Partner | MLIKE</h3>
+<h3><a href="https://dev.landportal.info/debate/community" target="_blank">Partner | MLIKE</a></h3>
 
 <p>Visit our partner hosted site.</p>
 </div>
@@ -218,7 +501,7 @@ function rel25_uuid_features_default_content() {
   'title_field' => array(
     'en' => array(
       0 => array(
-        'value' => 'The leading online resource for information, data and knowledge-exchange on land governance issues. ',
+        'value' => 'Linking open data for land rights ',
         'format' => NULL,
       ),
     ),
@@ -434,7 +717,7 @@ function rel25_uuid_features_default_content() {
   'user_uuid' => '0552abe9-7b28-483f-a7ac-ea80f81db020',
 );
   $nodes[] = array(
-  'title' => 'Data',
+  'title' => 'Discover the data',
   'log' => '',
   'status' => 1,
   'comment' => 1,
@@ -456,9 +739,7 @@ function rel25_uuid_features_default_content() {
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '<p>The Land Portal provides users with a broad range of open data for the land sector.&nbsp;</p>
-
-<p>All indicators and datasets&nbsp;—&nbsp;originally developed by a number of reputable organizations from around the world&nbsp;—&nbsp;are presented with detailed metadata and can be freely accessed, visualised and downloaded.</p>
+        'value' => '<p>The Land Portal provides users with a broad range of open data for the land sector.&nbsp;All indicators and datasets&nbsp;—&nbsp;originally developed by a number of reputable organizations from around the world&nbsp;—&nbsp;are presented with detailed metadata and can be freely accessed, visualised and downloaded.</p>
 
 <div>
 <div>Discover the data by&nbsp;<a data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://landportal.info/book/indicators&amp;source=gmail&amp;ust=1511471379368000&amp;usg=AFQjCNHvt75M9CgkISjaaBB4DITAvxq2Pw" href="http://landportal.info/book/indicators" target="_blank">indicator</a>, by&nbsp;<a data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://landportal.info/book/datasets&amp;source=gmail&amp;ust=1511471379368000&amp;usg=AFQjCNHjv5i6BJjozKtEkzBQ4daUjdp2tQ" href="http://landportal.info/book/datasets" target="_blank">dataset</a>&nbsp;or by&nbsp;<a data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://landportal.info/book/sources&amp;source=gmail&amp;ust=1511471379368000&amp;usg=AFQjCNGqkgjhj5t_SXy9ijgNur9W_DBTdQ" href="http://landportal.info/book/sources" target="_blank">datasource</a>.&nbsp;<em>&nbsp;</em></div>
@@ -498,7 +779,7 @@ function rel25_uuid_features_default_content() {
   'title_field' => array(
     'und' => array(
       0 => array(
-        'value' => 'Data',
+        'value' => 'Discover the data',
         'format' => NULL,
       ),
     ),
@@ -877,6 +1158,136 @@ function rel25_uuid_features_default_content() {
   'location' => array(),
   'pathauto_perform_alias' => FALSE,
   'date' => '2015-09-14 19:02:47 +0200',
+  'user_uuid' => '0552abe9-7b28-483f-a7ac-ea80f81db020',
+);
+  $nodes[] = array(
+  'title' => 'Land Portal Community',
+  'log' => '',
+  'status' => 1,
+  'comment' => 1,
+  'promote' => 0,
+  'sticky' => 0,
+  'ds_switch' => '',
+  'type' => 'page',
+  'language' => 'en',
+  'created' => 1442250934,
+  'tnid' => 14168,
+  'translate' => 0,
+  'uuid' => 'f3045eb9-e928-473f-8abb-085f5ea31366',
+  'promoted_library' => 0,
+  'promoted_to_country_page' => 0,
+  'promoted_to_thematic_page' => 0,
+  'base_promoted_library' => 0,
+  'base_promoted_to_country_page' => 0,
+  'base_promoted_to_thematic_page' => 0,
+  'body' => array(
+    'und' => array(
+      0 => array(
+        'value' => '<p>The Land Portal community is composed of diverse users and organizations from around the globe who contribute to the Portal in various ways, whether by serving on the Board or Advisory Committee, sharing their datasets and libraries, leading and facilitating debates, or contributing research documents, issue papers, media content, news and events.&nbsp;</p>
+
+<p><strong>Make your voice heard and join the community!&nbsp;</strong></p>
+',
+        'summary' => '',
+        'format' => 'filtered_html',
+        'safe_summary' => '',
+      ),
+    ),
+  ),
+  'field_related_blocks' => array(),
+  'field_file' => array(),
+  'field_geographical_focus' => array(),
+  'field_milestone' => array(
+    'und' => array(
+      0 => array(
+        'value' => 'd5d60aa5-5ce6-4584-a8ee-04c5014da869',
+        'revision_id' => 'd5d60aa5-5ce6-4584-a8ee-04c5014da869',
+        'uuid' => 'd5d60aa5-5ce6-4584-a8ee-04c5014da869',
+      ),
+    ),
+  ),
+  'field_noderef' => array(),
+  'field_paragraphs' => array(),
+  'field_related_domains' => array(),
+  'field_related_themes' => array(),
+  'field_related_topics' => array(),
+  'title_field' => array(
+    'en' => array(
+      0 => array(
+        'value' => 'Land Portal Community',
+        'format' => NULL,
+      ),
+    ),
+  ),
+  'field_image' => array(),
+  'field_visualization' => array(),
+  'translations' => array(
+    'original' => NULL,
+    'data' => array(),
+  ),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dct:title',
+      ),
+      'type' => 'property',
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+      'type' => 'property',
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
+  'path' => array(
+    'pathauto' => 0,
+  ),
+  'comment_count' => 0,
+  'locations' => array(),
+  'location' => array(),
+  'pathauto_perform_alias' => FALSE,
+  'date' => '2015-09-14 19:15:34 +0200',
   'user_uuid' => '0552abe9-7b28-483f-a7ac-ea80f81db020',
 );
   return $nodes;

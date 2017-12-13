@@ -168,6 +168,8 @@ $handler->display->display_options['filters']['field_date_value']['year_range'] 
 
 /* Display: Latest */
 $handler = $view->new_display('block', 'Latest', 'latest');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'teaser-fullwidth';
 $handler->display->display_options['defaults']['use_more'] = FALSE;
 $handler->display->display_options['use_more'] = TRUE;
 $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -188,10 +190,8 @@ $handler->display->display_options['style_options']['indicators'] = 1;
 $handler->display->display_options['style_options']['pause'] = 1;
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
-$handler->display->display_options['row_options']['image'] = 'field_image';
-$handler->display->display_options['row_options']['title'] = 'title';
-$handler->display->display_options['row_options']['description'] = 'body';
+$handler->display->display_options['row_plugin'] = 'node';
+$handler->display->display_options['row_options']['links'] = FALSE;
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Title */

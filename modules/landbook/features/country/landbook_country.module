@@ -11,55 +11,115 @@ include_once 'landbook_country.features.inc';
  *
  * For Country narrative pages (node landbook_country, view_mode full)
  * - Provide an iso3 to Drupal JS settings (mainly for VGGT / LGAF blocks)
- * - Attach an Internal page menu to group_header (see landportal_blocks)
  *
  */
 function landbook_country_node_view($node, $view_mode, $langcode) {
-  if ($node->type != 'landbook_country' || $view_mode != 'full') return;
+  if ($node->type != 'landbook_country') return;
+  if ($view_mode == 'teaser') {
+    //dpm($node);
+  }
+  if ($view_mode == 'full') {
+    $term = $node->field_geographical_focus[LANGUAGE_NONE][0]['entity'];
+    $iso3 = $term->field_iso3[LANGUAGE_NONE][0]['value'];
+    drupal_add_js(array('iso3' => $iso3), 'setting');
 
-  $term = $node->field_geographical_focus[LANGUAGE_NONE][0]['entity'];
-  $iso3 = $term->field_iso3[LANGUAGE_NONE][0]['value'];
-  drupal_add_js(array('iso3' => $iso3), 'setting');
+    // Breadcrumbs
+    $display_settings = taxonomy_display_fetch_taxonomy_display($term->vocabulary_machine_name);
+    $breadcrumb_display = new $display_settings->breadcrumb_display_plugin;
+    $breadcrumb_display->buildBreadcrumb($term);
 
-  // Breadcrumbs
-  $display_settings = taxonomy_display_fetch_taxonomy_display($term->vocabulary_machine_name);
-  $breadcrumb_display = new $display_settings->breadcrumb_display_plugin;
-  $breadcrumb_display->buildBreadcrumb($term);
-  menu_tree_set_path('landportal-menu', 'node/14170'); // @todo should be something with alias + lang
+    // Menus
+    menu_tree_set_path('landportal-menu', 'node/14170'); // @todo should be something with alias + lang
+  }
+}
 
-  // @TODO: 'simply' have this hack as a block on the whole LP
-  $node->content['group_header']['#attached'] = array(
-    'js' => array(array(
-      'type' => 'inline',
-      'data' => landportal_blocks_page_submenu()
-    ))
+
+/**
+ * Implements hook_node_view_alter().
+ *
+ * Attach an Internal page menu to group_aside (see landportal_blocks)
+ */
+function landbook_country_node_view_alter(&$build) {
+  if ($build['#bundle'] != 'landbook_country') return;
+  if ($build['#view_mode'] == 'teaser') {
+    //dpm($build, 'CP teaser');
+  }
+  if ($build['#view_mode'] != 'full' || !isset($build['#groups']['group_aside']))
+    return ;
+  $geo = $build['field_geographical_focus']['#items'][0]['entity'];
+  $path = drupal_get_path_alias('taxonomy/term/' . $geo->tid);
+  $build['submenu'] = array(
+    '#markup' => '<div id="page-submenu"><ul class="nav">'
+    . '<li><a href="/' . $path . '" title="' . t('Back to overview for'). ' ' . $geo->name . '">' . $geo->name . '</a></li>'
+    . '</ul></div>',
+    '#attached' => array(
+      'js' => array(array(
+        'type' => 'inline',
+        'data' => landportal_blocks_page_submenu()
+      ))
+    ),
   );
-  $node->content['group_header']['#suffix'] = '<div id="page-submenu"><ul class="nav"></ul></div>';
+  $build['#groups']['group_aside']->children[] = 'submenu';
+  $build['#group_children']['submenu'] = 'group_aside';
+}
+
+// For CP , not showing up inside the 1st lvl page ( in the 'last' narrative view )
+// Note this might be an issue later with more than 1 per theme
+function landbook_country_entity_prepare_view($entities, $type, $langcode) {
+  if ($type == 'node') {
+    $nid = array_keys($entities)[0];
+    if ($entities[$nid]->type == 'landbook_country'
+    && $entities[$nid]->view->current_display != 'last') {
+      $entities[$nid]->node_url = 'XXXXX';
+      // LP Hack
+      $entities[$nid]->alias = url('taxonomy/term/' . $entities[$nid]->field_geographical_focus[LANGUAGE_NONE][0]['tid']);
+      //dpm($entities[$nid], 'prepare view for' . $type);
+    }
+  }
+}
+
+function landbook_country_field_display_landbook_country_alter(&$display, $context) {
+//  if ($context['entity_type'] == 'node' && $context['view_mode'] == 'teaser') {
+    dpm($context, 'context');
+    dpm($display, 'display');
+//  }
+}
+
+function landbook_country_preprocess_node(&$variables) {
+  $view_mode = $variables['elements']['#view_mode'];
+  if ($variables['type'] != 'landbook_country' || $view_mode != 'teaser') return;
+  // Should be set in landbook_country_entity_prepare_view
+  if ($variables['alias']) {
+    // Hack in the title with new link
+    $title = &$variables['content']['title_field'];
+    $link = l($title['#items'][0]['safe_value'], $variables['alias']);
+    $title[0]['#markup'] = '<h3>' . $link . '</h3>';
+    //$variables['elements']['#children'] = $t;
+    //dpm($title, 'title');
+    if (isset($variables['content']['field_image'])) {
+      $img = &$variables['content']['field_image'];
+      $img[0]['#path']['path'] = $variables['alias'];
+      //dpm($img, 'IMG');
+    }
+  }
+  //dpm($variables, 'preprocess');
 }
 
 /**
  * Implements hook_theme().
+ *
+ * From the former Land Book coutries / regions
+ * pages with URL as /book/countries/[ISO3]
+ * now redirect to the corresponding regions taxonomy term
  */
 function landbook_country_menu() {
   $items = array();
   $items['book/countries/%'] = array(
-    //'title'           => 'Land Portal Country portfolio',
-    //'type'            => MENU_CALLBACK,
-    /* 'title callback'   => 'landbook_country_title', */
-    /* 'title arguments'  => array(2), */
     'page callback'   => 'landbook_country_page',
     'page arguments'  => array(2),
-    'access callback' => TRUE,//array('access content'),
+    'access callback' => TRUE,
     'module'          => 'landbook_country',
   );
-  /* $items['countries/%term'] = array( */
-  /*   'title'           => 'Land Portal Country', */
-  /*   'type'            => MENU_CALLBACK, */
-  /*   'access callback' => array('access content'), */
-  /*   'page callback'   => 'landbook_countries_page', */
-  /*   'page arguments'  => array(2), */
-  /*   //'module'          => 'taxonomy', */
-  /* ); */
   return $items;
 }
 
@@ -74,69 +134,3 @@ function landbook_country_page($iso3) {
   // For now let's cut the crap and simply send the use to the term page
   return drupal_goto(drupal_get_path_alias('taxonomy/term/' . $tid));
 }
-
-// THEN, all this is DEPRECATED!
-
-/* dpm(arg(), 'CP CB ' . $iso3 . ' #' . $tid); */
-/* $term = taxonomy_term_load($tid); */
-/* return taxonomy_display_taxonomy_term_page($term); */
-
-/* if (@($last = landbook_country__get_latest($tid))) { */
-/*   //dpm($last); */
-/*   $node = node_load($last); */
-/*   return node_page_view($node); */
-/* } */
-
-/* // Helper to get the latest Country narrative */
-/* function landbook_country__get_latest($tid) { */
-/*   $query = new EntityFieldQuery(); */
-/*   $query->entityCondition('entity_type', 'node') */
-/*         ->entityCondition('bundle', 'landbook_country') */
-/*         ->fieldCondition('field_geographical_focus', 'tid', $tid, '=') */
-/*         ->range(0, 1) */
-/*         ->propertyOrderBy('created', 'DESC'); */
-/*   $result = $query->execute(); */
-/*   if ($result) { */
-/*     $last = array_keys($result['node'])[0]; */
-/*     return $last; */
-/*   } */
-/*   return null; */
-/* } */
-
-/* // If we have a latest CT dataset, replace tax. dataset page with it */
-/* function landbook_country_page_build(&$page) { */
-/*   //dpm($page, 'pbuild'); */
-/*   /\* if (@($term = $page['content']['system_main']['term_heading']['term']['#term'])) { *\/ */
-/*   /\*   if ($term->vocabulary_machine_name != 'regions') return; *\/ */
-/*   /\*   $iso3 = $term->field_iso3[LANGUAGE_NONE][0]['value']; *\/ */
-/*   /\*   drupal_add_js(array('iso3' => $iso3), 'setting'); *\/ */
-/*   /\* } *\/ */
-/* } */
-
-/* // Render either a Country Narrative (node) or the Country term (taxonomy term) */
-/* function landbook_countries_page($term) { */
-/*   dpm($term, 'CC'); */
-/* } */
-
-/* function landbook_country_menu_alter(&$items) { */
-/*   dpm($items['taxonomy/term/%taxonomy_term'], 'TT'); */
-/* } */
-
-/* // Add the edit link to landbook_country pages */
-/* function landbook_country_preprocess(&$variables, $hook) { */
-/*   // Only for user that can administrer nodes */
-/*   if (user_access('administer nodes')) { */
-/*     if ($hook == 'page' && @($nodes = $variables['page']['content']['system_main']['nodes'])) { */
-/*       $nid = array_keys($nodes)[0]; */
-/*       if ($nodes[$nid]['#bundle'] == 'landbook_country' && !$variables['tabs']['#primary']) { */
-/*         // dpm($variables['tabs']['#primary']); */
-/*         $variables['tabs']['#primary'][] = array( */
-/*           '#markup' => '<li>' . l('View', 'node/' . $nid ) . '</li>', */
-/*         ); */
-/*         $variables['tabs']['#primary'][] = array( */
-/*           '#markup' => '<li>' . l('Edit', 'node/' . $nid . '/edit') . '</li>', */
-/*         ); */
-/*       } */
-/*     } */
-/*   } */
-/* } */

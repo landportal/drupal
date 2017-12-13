@@ -10,7 +10,7 @@
 /** Land Portal 2.5 new UX
  *  cleanup old menus
  */
-function landportal_menus_update_7200() {
+function landportal_menus_update_7201() {
 
   $item = array(
     'link_path' => '<droplink>',

@@ -9,6 +9,8 @@ function lbvc__indicators_cache(&$params, $tid) {
   // @TODO: should be a better way to cache this globaly
   //  BUG: if we don't reset entity_load, entities after the first ones won't have all fields data
   $ents = entity_load('taxonomy_term', [$tid], [], TRUE);
+  //dpm($ents);
+  if (!$ents) return;
   $entity = entity_metadata_wrapper('taxonomy_term', $ents[$tid]);
   $lb = lbvc__indicators_js_serialize($entity);
   // Should be stored / applied by indicators , not globally

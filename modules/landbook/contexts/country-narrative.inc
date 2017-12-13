@@ -19,29 +19,17 @@ $context->conditions = array(
 $context->reactions = array(
   'block' => array(
     'blocks' => array(
-      'landbook_view_coda-lbvc_map_country' => array(
-        'module' => 'landbook_view_coda',
-        'delta' => 'lbvc_map_country',
-        'region' => 'highlighted',
-        'weight' => '10',
-      ),
-      'landbook-infographics' => array(
-        'module' => 'landbook',
-        'delta' => 'infographics',
-        'region' => 'content',
-        'weight' => '11',
-      ),
       'landbook_lgaf-vis' => array(
         'module' => 'landbook_lgaf',
         'delta' => 'vis',
         'region' => 'content',
-        'weight' => '12',
+        'weight' => '4',
       ),
       'landbook_vggt-vis_vggt' => array(
         'module' => 'landbook_vggt',
         'delta' => 'vis_vggt',
         'region' => 'content',
-        'weight' => '13',
+        'weight' => '5',
       ),
       'landbook-disclaimer_block' => array(
         'module' => 'landbook',

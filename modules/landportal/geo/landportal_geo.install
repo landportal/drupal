@@ -10,11 +10,12 @@
 /** Land Portal 2.5
  *  add/fillup iso2
  */
-function landportal_geo_enable() {
+function landportal_geo_update_7200() {
 
   // FR
-  features_revert(array('module' => array('landportal_geo')));
-  
+  //features_revert(array('module' => array('landportal_geo')));
+
+  // AFTER field_iso2 is created!
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'taxonomy_term')
         ->entityCondition('bundle', 'regions')
