@@ -91,7 +91,7 @@ $handler->display->display_options['pager']['options']['offset'] = '0';
 /* Display: Library */
 $handler = $view->new_display('block', 'Library', 'library');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Land Library';
+$handler->display->display_options['title'] = 'Library';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '2';
