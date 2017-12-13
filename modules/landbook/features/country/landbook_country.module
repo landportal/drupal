@@ -92,7 +92,7 @@ function landbook_country_preprocess_node(&$variables) {
   if ($variables['alias']) {
     // Hack in the title with new link
     $title = &$variables['content']['title_field'];
-    $link = l($title['#items'][0]['safe_value'], $variables['alias']);
+    $link = l($title['#items'][0]['value'], $variables['alias']);
     $title[0]['#markup'] = '<h3>' . $link . '</h3>';
     //$variables['elements']['#children'] = $t;
     //dpm($title, 'title');
