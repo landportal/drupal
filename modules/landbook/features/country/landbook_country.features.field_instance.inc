@@ -194,7 +194,7 @@ function landbook_country_field_default_field_instances() {
           ),
         ),
       ),
-      'display_summary' => 0,
+      'display_summary' => 1,
       'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
