@@ -55,7 +55,7 @@ function landportal_homepage_update_7200() {
     )
   );
   $i = 1;
-  foreach(array('promoted-country', 'promoted-thematic', 'promoted-discussions', 'promoted-events', 'promoted-data', 'promoted-library', 'promoted-projects',) as $blockid) {
+  foreach(array('promoted-country', 'promoted-thematic', 'promoted-discussions', 'promoted-events', 'promoted-data', 'promoted-library') as $blockid) {
     $blocks[] = array(
       'keys' => array(
         'module' => 'views',
