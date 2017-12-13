@@ -1634,7 +1634,8 @@ function landlibrary_resource_field_default_field_instances() {
   $field_instances['node-landlibrary_resource-field_image'] = array(
     'bundle' => 'landlibrary_resource',
     'deleted' => 0,
-    'description' => 'Please enter the cover image of the resource. This is highly recommended.',
+    'description' => 'The cover image (ideally portrait orientation), of the resource.
+',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1661,7 +1662,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => '',
+          'image_style' => 'library_3x4',
         ),
         'type' => 'image',
         'weight' => 7,
@@ -1701,6 +1702,7 @@ function landlibrary_resource_field_default_field_instances() {
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
           'upload' => 0,
         ),
       ),
@@ -2107,7 +2109,6 @@ function landlibrary_resource_field_default_field_instances() {
   t('Originally published at');
   t('Overarching Categories');
   t('Pages');
-  t('Please enter the cover image of the resource. This is highly recommended.');
   t('Please enter the language of the resource. If the language you mean to put in is not included in this list, please send an email to landlibrary@landportal.info to make sure it gets included.');
   t('Please enter the license under which the resource is published. If no license is specified in the document, then this means the resource is \'All Rights Reserved\'. Please note that this does not apply to the <b>metadata</b> of the resource. <a href="/page/terms-and-conditions-use">Read more here</a>.');
   t('Please enter the names of the people who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]". In case an organization or institution is entered as the author of the resource, please enter them in the \'corporate author\' field instead of this one.
@@ -2122,6 +2123,8 @@ function landlibrary_resource_field_default_field_instances() {
   t('The Land Portal identifies certain types of resources from a set list. Please <a href="/library/resource-type/">click here</a> to find the full list and a brief description of what is meant.');
   t('The URL to the resource on the publisher\'s website (e.g.: http://www.gltn.net/jdownloads/GLTN%20Documents/gltn_youth_led_action_workshop_report.pdf)');
   t('The abstract of the resource or a description of the resource.');
+  t('The cover image (ideally portrait orientation), of the resource.
+');
   t('The date of publication of the resource. The Land Portal\'s metadata model registers the Year and the Month. The date you input in this field is therefore irrelevant. In case the publisher only specified the year of publication and not the month, we recommend to enter \'December\' - as the resource would have been published in December in any case.');
   t('The geographical focus of the resource (possible to select several).');
   t('The location of the source.');
