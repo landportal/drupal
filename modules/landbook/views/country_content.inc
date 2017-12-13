@@ -13,6 +13,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['title'] = 'Book Latest Blocks';
+$handler->display->display_options['css_class'] = 'teaser-fullwidth';
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
@@ -202,6 +203,8 @@ $handler->display->display_options['filters']['language']['value'] = array(
 $handler = $view->new_display('block', 'Latest News', 'news');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Latest News';
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'grid-1and2';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '5';
