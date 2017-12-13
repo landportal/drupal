@@ -91,7 +91,6 @@ function rel25_uuid_features_default_content() {
     ),
   ),
   'field_image' => array(),
-  'field_visualization' => array(),
   'translations' => array(
     'original' => NULL,
     'data' => array(),
@@ -222,7 +221,6 @@ function rel25_uuid_features_default_content() {
     ),
   ),
   'field_image' => array(),
-  'field_visualization' => array(),
   'translations' => array(
     'original' => NULL,
     'data' => array(),
@@ -353,7 +351,6 @@ function rel25_uuid_features_default_content() {
     ),
   ),
   'field_image' => array(),
-  'field_visualization' => array(),
   'translations' => array(
     'original' => NULL,
     'data' => array(),
@@ -447,29 +444,43 @@ function rel25_uuid_features_default_content() {
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '<div class="block-wrapped">
-<div class="col-sm-6 col-md-3">
-<h3><a href="https://dev.landportal.info/book/data" target="_blank">500+ land related indicators</a></h3>
+        'value' => '<p>&nbsp;</p>
+
+<div class="block-wrapped">
+<div class="col-xs-6 col-md-3">
+<h3><a href="/book/data" target="_blank">500+ land related indicators</a></h3>
 
 <p>Browse around our data section to access specific and detailed information!&nbsp;</p>
 </div>
 
-<div class="col-sm-6 col-md-3">
-<h3><a href="https://dev.landportal.info/library" target="_blank">45,000+ land related resources</a></h3>
+<div class="col-xs-6 col-md-3">
+<h3><a href="/library" target="_blank">45,000+ land related resources</a></h3>
 
 <p>Browse around our library to take advantage of our wide array of materials!&nbsp;</p>
 </div>
 
-<div class="col-sm-6 col-md-3">
-<h3><a href="https://dev.landportal.info/get-involved" target="_blank">Join us</a></h3>
+<div class="col-xs-6 col-md-3">
+<h3><a href="/get-involved" target="_blank">Join us</a></h3>
 
 <p>Create&nbsp;your own Land Portal account and sign up for our newsletter!</p>
 </div>
 
-<div class="col-sm-6 col-md-3">
-<h3><a href="https://dev.landportal.info/debate/community" target="_blank">Partner | MLIKE</a></h3>
+<div class="col-xs-6 col-md-3">
+<h3><a href="/debate/community" target="_blank">Partner organisations</a></h3>
 
 <p>Visit our partner hosted site.</p>
+
+<div class="row">
+<div class="col-sm-6">
+<div><a href="/partners/mlike"><img alt="M-LIKE logo" class="media-element file-teaser" data-delta="4" data-fid="19018" data-media-element="1" src="/sites/landportal.info/files/styles/medium/public/mlike.png" title="" typeof="foaf:Image" /></a></div>
+</div>
+
+<div class="col-sm-6">
+<div><a href="/partners/legend"><img alt="Land: Enhancing Governance for Economic Development (LEGEND)" class="media-element file-teaser" data-delta="2" data-fid="10710" data-media-element="1" src="/sites/landportal.info/files/styles/medium/public/LEGEND_logo.png" title="Land: Enhancing Governance for Economic Development (LEGEND)" typeof="foaf:Image" /></a></div>
+</div>
+</div>
+
+<p>&nbsp;</p>
 </div>
 </div>
 ',
@@ -507,7 +518,6 @@ function rel25_uuid_features_default_content() {
     ),
   ),
   'field_image' => array(),
-  'field_visualization' => array(),
   'translations' => array(
     'original' => NULL,
     'data' => array(),
@@ -645,7 +655,6 @@ function rel25_uuid_features_default_content() {
     ),
   ),
   'field_image' => array(),
-  'field_visualization' => array(),
   'translations' => array(
     'original' => NULL,
     'data' => array(),
@@ -785,7 +794,6 @@ function rel25_uuid_features_default_content() {
     ),
   ),
   'field_image' => array(),
-  'field_visualization' => array(),
   'translations' => array(
     'original' => NULL,
     'data' => array(),
@@ -947,7 +955,6 @@ function rel25_uuid_features_default_content() {
     ),
   ),
   'field_image' => array(),
-  'field_visualization' => array(),
   'translations' => array(
     'original' => NULL,
     'data' => array(),
@@ -1089,7 +1096,6 @@ function rel25_uuid_features_default_content() {
     ),
   ),
   'field_image' => array(),
-  'field_visualization' => array(),
   'translations' => array(
     'original' => NULL,
     'data' => array(),
@@ -1219,7 +1225,6 @@ function rel25_uuid_features_default_content() {
     ),
   ),
   'field_image' => array(),
-  'field_visualization' => array(),
   'translations' => array(
     'original' => NULL,
     'data' => array(),
