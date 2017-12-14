@@ -67,6 +67,7 @@ features[variable][] = diff_enable_revisions_page_node_page
 features[variable][] = diff_show_preview_changes_node_page
 features[variable][] = diff_view_mode_preview_node_page
 features[variable][] = field_bundle_settings_node__page
+features[variable][] = i18n_node_default_language_for_page
 features[variable][] = language_content_type_page
 features[variable][] = menu_options_page
 features[variable][] = menu_parent_page
