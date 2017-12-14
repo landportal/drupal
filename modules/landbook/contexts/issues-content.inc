@@ -21,12 +21,6 @@ $context->conditions = array(
 $context->reactions = array(
   'block' => array(
     'blocks' => array(
-      'landbook-media' => array(
-        'module' => 'landbook',
-        'delta' => 'media',
-        'region' => 'content',
-        'weight' => '3',
-      ),
       'views-thematic_content-news' => array(
         'module' => 'views',
         'delta' => 'thematic_content-news',
