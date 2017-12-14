@@ -173,15 +173,12 @@ $handler->display->display_options['pager']['options']['items_per_page'] = '2';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['relationships'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-$handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type']['id'] = 'type';
-$handler->display->display_options['filters']['type']['table'] = 'node';
-$handler->display->display_options['filters']['type']['field'] = 'type';
-$handler->display->display_options['filters']['type']['value'] = array(
-  'thematic_narrative' => 'thematic_narrative',
+$handler->display->display_options['filter_groups']['operator'] = 'OR';
+$handler->display->display_options['filter_groups']['groups'] = array(
+  1 => 'AND',
+  2 => 'AND',
 );
-$handler->display->display_options['filters']['type']['group'] = 1;
+$handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
@@ -191,6 +188,24 @@ $handler->display->display_options['filters']['language']['value'] = array(
   'und' => 'und',
 );
 $handler->display->display_options['filters']['language']['group'] = 1;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'thematic_narrative' => 'thematic_narrative',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Content: Nid */
+$handler->display->display_options['filters']['nid']['id'] = 'nid';
+$handler->display->display_options['filters']['nid']['table'] = 'node';
+$handler->display->display_options['filters']['nid']['field'] = 'nid';
+$handler->display->display_options['filters']['nid']['value']['value'] = '52263';
+$handler->display->display_options['filters']['nid']['group'] = 2;
+$handler->display->display_options['filters']['nid']['expose']['operator_id'] = 'nid_op';
+$handler->display->display_options['filters']['nid']['expose']['label'] = 'Nid';
+$handler->display->display_options['filters']['nid']['expose']['operator'] = 'nid_op';
+$handler->display->display_options['filters']['nid']['expose']['identifier'] = 'nid';
 
 /* Display: Discussions */
 $handler = $view->new_display('block', 'Discussions', 'discussions');
