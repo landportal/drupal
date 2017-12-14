@@ -124,6 +124,7 @@ $handler->display->display_options['filters']['type']['group'] = 1;
 $handler = $view->new_display('block', 'All', 'all');
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'view-grid-4 view-wrapped';
+$handler->display->display_options['link_url'] = 'organizations';
 $handler->display->display_options['defaults']['header'] = FALSE;
 /* Header: Global: Result summary */
 $handler->display->display_options['header']['result']['id'] = 'result';
