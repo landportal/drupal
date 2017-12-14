@@ -1,35 +1,99 @@
 Home {"url":"<front>","lang":"und","weight":"-50"}
-Countries {"url":"book\/countries","expanded":true,"lang":"und","weight":"-49"}
--Overview {"url":"book\/countries","hidden":true,"lang":"und","weight":"-1"}
-Issues {"url":"book\/thematic","lang":"und","weight":"-48"}
--Overview {"url":"book\/thematic","hidden":true,"lang":"und","weight":"-50"}
--SDGs {"url":"book\/sdgs","lang":"und","weight":"-49"}
--Forest tenure {"url":"book\/thematic\/forest-tenure","description":"Forest tenure issues","lang":"und","weight":"-48"}
--Indigenous communities {"url":"book\/thematic\/indigenous-community-land-rights","description":"Indigenous community issues","lang":"und","weight":"-47"}
--Land & food security {"url":"book\/thematic\/land-food-security","description":"Land & food security issues","lang":"und","weight":"-46"}
--Land & gender {"url":"book\/thematic\/land-and-gender","description":"Land & gender issues","lang":"und","weight":"-45"}
--Land & investments {"url":"book\/thematic\/land-investments","description":"Land & investments issues","lang":"und","weight":"-44"}
--Land conflicts {"url":"book\/thematic\/land-conflicts","description":"Land conflict issues","lang":"und","weight":"-43"}
--Urban tenure {"url":"book\/thematic\/urban-tenure","description":"Urban tenure issues","lang":"und","weight":"-42"}
-Discussions {"url":"debate\/debates","lang":"und","weight":"-47"}
--Archives {"url":"debates","expanded":true,"lang":"und","weight":"-49"}
-Data {"url":"book\/data","lang":"und","weight":"-46"}
--Overview {"url":"book\/data","hidden":true,"lang":"und","weight":"-50"}
--Datasets {"url":"book\/datasets","expanded":true,"lang":"und","weight":"-49"}
--Indicators {"url":"book\/indicators","lang":"und","weight":"-47"}
--Providers {"url":"book\/sources","lang":"und","weight":"-46"}
-Community {"url":"debate\/community","lang":"und","weight":"-42"}
--Land community {"url":"debate\/community","hidden":true,"lang":"und","weight":"-1"}
--Organizations {"url":"organizations","lang":"und","weight":"0"}
--People {"url":"people","lang":"und","weight":"0"}
--Partners {"url":"partners","lang":"und","weight":"0"}
-Library {"url":"library","lang":"und","weight":"-45"}
--Overview {"url":"library","hidden":true,"lang":"und","weight":"-50"}
--Search {"url":"library\/search","lang":"und","weight":"-1"}
--Sources {"url":"library\/sources","lang":"und","weight":"0"}
-News & events {"url":"news-events","lang":"und","weight":"-44"}
--Lastest {"url":"news-events","hidden":true,"lang":"und","weight":"-49"}
+
+Countries {"url":"book\/countries","lang":"en","weight":"-43"}
+Pays {"url":"book\/countries","lang":"fr","weight":"-42"}
+Países {"url":"book\/countries","lang":"es","weight":"-41"}
+Países {"url":"book\/countries","lang":"pt","weight":"-40"}
+
+Issues {"url":"book\/thematic","lang":"en","weight":"-33"}
+-SDGs {"url":"book\/sdgs","lang":"en","weight":"-49"}
+-Forest tenure {"url":"book\/thematic\/forest-tenure","description":"Forest tenure issues","lang":"en","weight":"-48"}
+-Indigenous communities {"url":"book\/thematic\/indigenous-community-land-rights","description":"Indigenous community issues","lang":"en","weight":"-47"}
+-Land & food security {"url":"book\/thematic\/land-food-security","description":"Land & food security issues","lang":"en","weight":"-46"}
+-Land & gender {"url":"book\/thematic\/land-and-gender","description":"Land & gender issues","lang":"en","weight":"-45"}
+-Land & investments {"url":"book\/thematic\/land-investments","description":"Land & investments issues","lang":"en","weight":"-44"}
+-Land conflicts {"url":"book\/thematic\/land-conflicts","description":"Land conflict issues","lang":"en","weight":"-43"}
+-Urban tenure {"url":"book\/thematic\/urban-tenure","description":"Urban tenure issues","lang":"en","weight":"-42"}
+Thèmes {"url":"book\/thematic","lang":"fr","weight":"-32"}
+-SDGs {"url":"book\/sdgs","lang":"fr","weight":"-49"}
+-Forest tenure {"url":"book\/thematic\/forest-tenure","description":"Forest tenure issues","lang":"fr","weight":"-48"}
+-Indigenous communities {"url":"book\/thematic\/indigenous-community-land-rights","description":"Indigenous community issues","lang":"fr","weight":"-47"}
+-Land & food security {"url":"book\/thematic\/land-food-security","description":"Land & food security issues","lang":"fr","weight":"-46"}
+-Land & gender {"url":"book\/thematic\/land-and-gender","description":"Land & gender issues","lang":"fr","weight":"-45"}
+-Land & investments {"url":"book\/thematic\/land-investments","description":"Land & investments issues","lang":"fr","weight":"-44"}
+-Land conflicts {"url":"book\/thematic\/land-conflicts","description":"Land conflict issues","lang":"fr","weight":"-43"}
+-Urban tenure {"url":"book\/thematic\/urban-tenure","description":"Urban tenure issues","lang":"fr","weight":"-42"}
+Temáticas {"url":"book\/thematic","lang":"es","weight":"-31"}
+-SDGs {"url":"book\/sdgs","lang":"es","weight":"-49"}
+-Forest tenure {"url":"book\/thematic\/forest-tenure","description":"Forest tenure issues","lang":"es","weight":"-48"}
+-Indigenous communities {"url":"book\/thematic\/indigenous-community-land-rights","description":"Indigenous community issues","lang":"es","weight":"-47"}
+-Land & food security {"url":"book\/thematic\/land-food-security","description":"Land & food security issues","lang":"es","weight":"-46"}
+-Land & gender {"url":"book\/thematic\/land-and-gender","description":"Land & gender issues","lang":"es","weight":"-45"}
+-Land & investments {"url":"book\/thematic\/land-investments","description":"Land & investments issues","lang":"es","weight":"-44"}
+-Land conflicts {"url":"book\/thematic\/land-conflicts","description":"Land conflict issues","lang":"es","weight":"-43"}
+-Urban tenure {"url":"book\/thematic\/urban-tenure","description":"Urban tenure issues","lang":"es","weight":"-42"}
+Temas {"url":"book\/thematic","lang":"pt","weight":"-30"}
+-SDGs {"url":"book\/sdgs","lang":"pt","weight":"-49"}
+-Forest tenure {"url":"book\/thematic\/forest-tenure","description":"Forest tenure issues","lang":"pt","weight":"-48"}
+-Indigenous communities {"url":"book\/thematic\/indigenous-community-land-rights","description":"Indigenous community issues","lang":"pt","weight":"-47"}
+-Land & food security {"url":"book\/thematic\/land-food-security","description":"Land & food security issues","lang":"pt","weight":"-46"}
+-Land & gender {"url":"book\/thematic\/land-and-gender","description":"Land & gender issues","lang":"pt","weight":"-45"}
+-Land & investments {"url":"book\/thematic\/land-investments","description":"Land & investments issues","lang":"pt","weight":"-44"}
+-Land conflicts {"url":"book\/thematic\/land-conflicts","description":"Land conflict issues","lang":"pt","weight":"-43"}
+-Urban tenure {"url":"book\/thematic\/urban-tenure","description":"Urban tenure issues","lang":"pt","weight":"-42"}
+
+Discussions {"url":"debate\/debates","lang":"en","weight":"-23"}
+-Archives {"url":"debates","lang":"en","weight":"-49"}
+Débats {"url":"debate\/debates","lang":"fr","weight":"-22"}
+-Archives {"url":"debates","lang":"fr","weight":"-49"}
+Debates {"url":"debate\/debates","lang":"en","weight":"-21"}
+-Archives {"url":"debates","lang":"en","weight":"-49"}
+Debates {"url":"debate\/debates","lang":"pt","weight":"-20"}
+-Archives {"url":"debates","lang":"pt","weight":"-49"}
+
+Data {"url":"book\/data","lang":"en","weight":"-13"}
+-Datasets {"url":"book\/datasets","lang":"en","weight":"-49"}
+-Indicators {"url":"book\/indicators","lang":"en","weight":"-47"}
+-Providers {"url":"book\/sources","lang":"en","weight":"-46"}
+Data {"url":"book\/data","lang":"fr","weight":"-12"}
+-Datasets {"url":"book\/datasets","lang":"fr","weight":"-49"}
+-Indicateurs {"url":"book\/indicators","lang":"fr","weight":"-47"}
+-Fournisseur {"url":"book\/sources","lang":"fr","weight":"-46"}
+Data {"url":"book\/data","lang":"es","weight":"-11"}
+-Datasets {"url":"book\/datasets","lang":"es","weight":"-49"}
+-Indicateurs {"url":"book\/indicators","lang":"es","weight":"-47"}
+-Fournisseur {"url":"book\/sources","lang":"es","weight":"-46"}
+Data {"url":"book\/data","lang":"pt","weight":"-10"}
+-Datasets {"url":"book\/datasets","lang":"pt","weight":"-49"}
+-Indicateurs {"url":"book\/indicators","lang":"pt","weight":"-47"}
+-Fournisseur {"url":"book\/sources","lang":"pt","weight":"-46"}
+
+Library {"url":"library","lang":"en","weight":"3"}
+-Search {"url":"library\/search","lang":"en","weight":"-1"}
+-Sources {"url":"library\/sources","lang":"en","weight":"0"}
+Bibliothèque {"url":"library","lang":"fr","weight":"2"}
+-Rechercher {"url":"library\/search","lang":"fr","weight":"-1"}
+-Sources {"url":"library\/sources","lang":"fr","weight":"0"}
+Biblioteca {"url":"library","lang":"es","weight":"1"}
+-Busca {"url":"library\/search","lang":"es","weight":"-1"}
+-Fuentes {"url":"library\/sources","lang":"es","weight":"0"}
+Biblioteca {"url":"library","lang":"pt","weight":"0"}
+-Busca {"url":"library\/search","lang":"pt","weight":"-1"}
+-Fontes {"url":"library\/sources","lang":"pt","weight":"0"}
+
+News & Events {"url":"news-events","lang":"en","weight":"10"}
 -News {"url":"debate\/news","lang":"und","weight":"-46"}
 -Events {"url":"debate\/events","lang":"und","weight":"-47"}
 --Archives {"url":"events","lang":"und","weight":"-47"}
 -Blogs {"url":"blogs","lang":"und","weight":"-48"}
+Actualités & Événements {"url":"news-events","lang":"fr","weight":"11"}
+Noticias & Eventos {"url":"news-events","lang":"es","weight":"12"}
+Notícias & Eventos {"url":"news-events","lang":"pt","weight":"13"}
+
+Community {"url":"debate\/community","lang":"en","weight":"20"}
+-Organizations {"url":"organizations","lang":"und","weight":"0"}
+-People {"url":"people","lang":"und","weight":"0"}
+-Partners {"url":"sponsors","lang":"und","weight":"0"}
+Communauté {"url":"debate\/community","lang":"fr","weight":"21"}
+Communidad {"url":"debate\/community","lang":"es","weight":"22"}
+Communidade {"url":"debate\/community","lang":"pt","weight":"23"}
