@@ -37,6 +37,10 @@ $handler->display->display_options['fields']['title']['table'] = 'node';
 $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+/* Sort criterion: Content: Type */
+$handler->display->display_options['sorts']['type']['id'] = 'type';
+$handler->display->display_options['sorts']['type']['table'] = 'node';
+$handler->display->display_options['sorts']['type']['field'] = 'type';
 /* Sort criterion: Content: Promoted to front page */
 $handler->display->display_options['sorts']['promote']['id'] = 'promote';
 $handler->display->display_options['sorts']['promote']['table'] = 'node';
@@ -47,6 +51,11 @@ $handler->display->display_options['sorts']['changed']['id'] = 'changed';
 $handler->display->display_options['sorts']['changed']['table'] = 'node';
 $handler->display->display_options['sorts']['changed']['field'] = 'changed';
 $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
+$handler->display->display_options['filter_groups']['operator'] = 'OR';
+$handler->display->display_options['filter_groups']['groups'] = array(
+  1 => 'AND',
+  2 => 'AND',
+);
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -54,6 +63,13 @@ $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
   'thematic_narrative' => 'thematic_narrative',
 );
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Content: Nid */
+$handler->display->display_options['filters']['nid']['id'] = 'nid';
+$handler->display->display_options['filters']['nid']['table'] = 'node';
+$handler->display->display_options['filters']['nid']['field'] = 'nid';
+$handler->display->display_options['filters']['nid']['value']['value'] = '52263';
+$handler->display->display_options['filters']['nid']['group'] = 2;
 
 /* Display: Highlight */
 $handler = $view->new_display('block', 'Highlight', 'highlight');
