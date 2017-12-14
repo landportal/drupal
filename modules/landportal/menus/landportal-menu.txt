@@ -46,7 +46,7 @@ Discussions {"url":"debate\/debates","lang":"en","weight":"-23"}
 -Archives {"url":"debates","lang":"en","weight":"-49"}
 Débats {"url":"debate\/debates","lang":"fr","weight":"-22"}
 -Archives {"url":"debates","lang":"fr","weight":"-49"}
-Debates {"url":"debate\/debates","lang":"en","weight":"-21"}
+Debates {"url":"debate\/debates","lang":"es","weight":"-21"}
 -Archives {"url":"debates","lang":"en","weight":"-49"}
 Debates {"url":"debate\/debates","lang":"pt","weight":"-20"}
 -Archives {"url":"debates","lang":"pt","weight":"-49"}
