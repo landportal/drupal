@@ -170,8 +170,9 @@ function landportal_display_form_alter(&$form, &$form_state, $form_id) {
   $forms = array(
     'field_ui_field_overview_form', 'user_profile_form', 'user_register_form',
     'apachesolr_search_custom_page_search_form', 'views_exposed_form',
-    'taxonomy-form-term', 'ctools_jump_menu'
+    'taxonomy-form-term', 'ctools_jump_menu', 'menu_position_add_rule_form'
   );
+  //dpm($form, $form_id);
   if (count($select) || in_array($form_id, $forms) || preg_match('/^views_ui_/', $form_id)) {
     //dpm($select, 'selected fields');
     landportal_display_add_select2($form);
