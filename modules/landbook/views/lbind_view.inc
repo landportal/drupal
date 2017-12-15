@@ -12,7 +12,6 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Land Book Indicators';
 $handler->display->display_options['css_class'] = 'teaser-fullwidth view-grid-4 view-wrapped';
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more'] = TRUE;
@@ -40,7 +39,7 @@ $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
-/* Relationship: Taxonomy term: Dataset (field_dataset) */
+/* Relationship: Taxonomy term: Catalog (field_dataset) */
 $handler->display->display_options['relationships']['field_dataset_tid']['id'] = 'field_dataset_tid';
 $handler->display->display_options['relationships']['field_dataset_tid']['table'] = 'field_data_field_dataset';
 $handler->display->display_options['relationships']['field_dataset_tid']['field'] = 'field_dataset_tid';
@@ -116,7 +115,7 @@ $handler->display->display_options['filters']['name']['expose']['remember_roles'
   111903910 => 0,
   30037204 => 0,
 );
-/* Filter criterion: Field: Source (field_orgref) (reference filter) */
+/* Filter criterion: Field: Organization (field_orgref) (reference filter) */
 $handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['id'] = 'field_orgref_target_id_entityreference_filter';
 $handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['table'] = 'field_data_field_orgref';
 $handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['field'] = 'field_orgref_target_id_entityreference_filter';
@@ -153,7 +152,7 @@ $handler->display->display_options['filters']['field_related_themes_tid_entityre
   30037204 => 0,
 );
 $handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['reference_display'] = 'lbind:ref_theme';
-/* Filter criterion: Taxonomy term: Dataset (field_dataset) (reference filter) */
+/* Filter criterion: Taxonomy term: Catalog (field_dataset) (reference filter) */
 $handler->display->display_options['filters']['field_dataset_tid_entityreference_filter']['id'] = 'field_dataset_tid_entityreference_filter';
 $handler->display->display_options['filters']['field_dataset_tid_entityreference_filter']['table'] = 'field_data_field_dataset';
 $handler->display->display_options['filters']['field_dataset_tid_entityreference_filter']['field'] = 'field_dataset_tid_entityreference_filter';

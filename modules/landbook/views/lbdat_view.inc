@@ -12,7 +12,6 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Land Book Datasets';
 $handler->display->display_options['css_class'] = 'teaser-fullwidth view-grid-4 view-wrapped';
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more'] = TRUE;
@@ -40,7 +39,7 @@ $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
-/* Relationship: Taxonomy term: Taxonomy term using Dataset */
+/* Relationship: Taxonomy term: Taxonomy term using Catalog */
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['id'] = 'reverse_field_dataset_taxonomy_term';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['relationships']['reverse_field_dataset_taxonomy_term']['field'] = 'reverse_field_dataset_taxonomy_term';
