@@ -35,18 +35,16 @@ function ct_thematic_narrative_node_view_alter(&$build) {
   $build['#group_children']['submenu'] = 'group_aside';
 }
 
-// For CP , not showing up inside the 1st lvl page ( in the 'last' narrative view )
+// For TP, not showing up inside the 1st lvl page ( in the 'last' narrative view )
 // Note this might be an issue later with more than 1 per theme
 function ct_thematic_narrative_entity_prepare_view($entities, $type, $langcode) {
-  if ($type == 'node') {
-    $nid = array_keys($entities)[0];
-    if ($entities[$nid]->type == 'thematic_narrative'
-    && $entities[$nid]->view->current_display != 'last') {
-      //$entities[$nid]->node_url = 'XXXXX';
-      // LP Hack
-      $entities[$nid]->alias = url('taxonomy/term/' . $entities[$nid]->field_landvoc_to[LANGUAGE_NONE][0]['tid']);
-      //dpm($entities[$nid], 'prepare view for' . $type);
-    }
+  if ($type != 'node') return;
+  $nid = array_keys($entities)[0];
+  if ($entities[$nid]->type == 'thematic_narrative'
+  && $entities[$nid]->view->current_display != 'last') {
+    //dpm($entities[$nid], $nid);
+    $tid = $entities[$nid]->field_landvoc_to[LANGUAGE_NONE][0]['target_id'];
+    if ($tid) $entities[$nid]->alias = url('taxonomy/term/' . $tid);
   }
 }
 

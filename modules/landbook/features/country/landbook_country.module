@@ -66,15 +66,13 @@ function landbook_country_node_view_alter(&$build) {
 // For CP , not showing up inside the 1st lvl page ( in the 'last' narrative view )
 // Note this might be an issue later with more than 1 per theme
 function landbook_country_entity_prepare_view($entities, $type, $langcode) {
-  if ($type == 'node') {
-    $nid = array_keys($entities)[0];
-    if ($entities[$nid]->type == 'landbook_country'
-    && $entities[$nid]->view->current_display != 'last') {
-      //$entities[$nid]->node_url = 'XXXXX';
-      // LP Hack
-      $entities[$nid]->alias = url('taxonomy/term/' . $entities[$nid]->field_geographical_focus[LANGUAGE_NONE][0]['tid']);
-      //dpm($entities[$nid], 'prepare view for' . $type);
-    }
+  if ($type != 'node') return;
+  $nid = array_keys($entities)[0];
+  if ($entities[$nid]->type == 'landbook_country'
+  && $entities[$nid]->view->current_display != 'last') {
+    $tid = $entities[$nid]->field_geographical_focus[LANGUAGE_NONE][0]['tid'];
+    if ($tid) $entities[$nid]->alias = url('taxonomy/term/' . $tid);
+    //dpm($entities[$nid], 'prepare view for' . $type);
   }
 }
 
