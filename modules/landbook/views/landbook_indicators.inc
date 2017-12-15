@@ -71,6 +71,7 @@ $handler->display->display_options['filters']['hdepth']['value']['value'] = '0';
 
 /* Display: Teasers */
 $handler = $view->new_display('block', 'Teasers', 'teasers');
+$handler->display->display_options['enabled'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Taxonomy term: Rendered Taxonomy term */
 $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
