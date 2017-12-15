@@ -117,4 +117,93 @@ $handler->display->display_options['arguments']['tid']['default_argument_type'] 
 $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
 $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
 $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['filter_groups']['operator'] = 'OR';
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'thematic_narrative' => 'thematic_narrative',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+
+/* Display: Context data */
+$handler = $view->new_display('block', 'Context data', 'last_vis');
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Entity Reference: Referenced Entity */
+$handler->display->display_options['relationships']['field_landvoc_to_target_id']['id'] = 'field_landvoc_to_target_id';
+$handler->display->display_options['relationships']['field_landvoc_to_target_id']['table'] = 'field_data_field_landvoc_to';
+$handler->display->display_options['relationships']['field_landvoc_to_target_id']['field'] = 'field_landvoc_to_target_id';
+$handler->display->display_options['relationships']['field_landvoc_to_target_id']['label'] = 'issue';
+$handler->display->display_options['relationships']['field_landvoc_to_target_id']['required'] = TRUE;
+/* Relationship: Field: Land Book Indicators (field_visualization) */
+$handler->display->display_options['relationships']['field_visualization_value']['id'] = 'field_visualization_value';
+$handler->display->display_options['relationships']['field_visualization_value']['table'] = 'field_data_field_visualization';
+$handler->display->display_options['relationships']['field_visualization_value']['field'] = 'field_visualization_value';
+$handler->display->display_options['relationships']['field_visualization_value']['label'] = 'vis';
+$handler->display->display_options['relationships']['field_visualization_value']['required'] = TRUE;
+$handler->display->display_options['relationships']['field_visualization_value']['delta'] = '-1';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+/* Field: Field collection item: Rendered Field collection item */
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_field_collection_item';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['relationship'] = 'field_visualization_value';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Taxonomy term: Term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['relationship'] = 'field_landvoc_to_target_id';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['filter_groups']['operator'] = 'OR';
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'thematic_narrative' => 'thematic_narrative',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Global: PHP */
+$handler->display->display_options['filters']['php']['id'] = 'php';
+$handler->display->display_options['filters']['php']['table'] = 'views';
+$handler->display->display_options['filters']['php']['field'] = 'php';
+$handler->display->display_options['filters']['php']['use_php_setup'] = 0;
+$handler->display->display_options['filters']['php']['php_filter'] = '$vis = entity_load(\'field_collection_item\', array($row->rendered_entity));
+$v = $vis[$row->rendered_entity]->field_view_coda[\'und\'][0];
+return !in_array($v[\'type\'], array(\'table\', \'map\'));
+';
 

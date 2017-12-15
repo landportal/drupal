@@ -70,19 +70,12 @@ function landbook_country_entity_prepare_view($entities, $type, $langcode) {
     $nid = array_keys($entities)[0];
     if ($entities[$nid]->type == 'landbook_country'
     && $entities[$nid]->view->current_display != 'last') {
-      $entities[$nid]->node_url = 'XXXXX';
+      //$entities[$nid]->node_url = 'XXXXX';
       // LP Hack
       $entities[$nid]->alias = url('taxonomy/term/' . $entities[$nid]->field_geographical_focus[LANGUAGE_NONE][0]['tid']);
       //dpm($entities[$nid], 'prepare view for' . $type);
     }
   }
-}
-
-function landbook_country_field_display_landbook_country_alter(&$display, $context) {
-//  if ($context['entity_type'] == 'node' && $context['view_mode'] == 'teaser') {
-    dpm($context, 'context');
-    dpm($display, 'display');
-//  }
 }
 
 function landbook_country_preprocess_node(&$variables) {

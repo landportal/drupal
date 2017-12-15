@@ -84,8 +84,7 @@ function landbook_update_7205() {
         'title' => '',
         'weight' => $i++,
         'visibility' => BLOCK_VISIBILITY_LISTED,
-        'pages' => 'issues
-book/thematic',
+        'pages' => 'book/thematic',
       )
     );
   }

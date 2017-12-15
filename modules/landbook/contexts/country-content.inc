@@ -53,7 +53,7 @@ $context->reactions = array(
         'module' => 'views',
         'delta' => 'country_content-library',
         'region' => 'content',
-        'weight' => '8',
+        'weight' => '9',
       ),
       'views-country_content-partners' => array(
         'module' => 'views',
