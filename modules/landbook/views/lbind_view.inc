@@ -178,7 +178,7 @@ $handler->display->display_options['defaults']['use_more_always'] = FALSE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['defaults']['use_more_text'] = FALSE;
 $handler->display->display_options['use_more_text'] = 'See all datasets';
-$handler->display->display_options['link_url'] = 'book/datasets';
+$handler->display->display_options['link_url'] = 'book/indicators';
 
 /* Display: Latest */
 $handler = $view->new_display('block', 'Latest', 'latest');
