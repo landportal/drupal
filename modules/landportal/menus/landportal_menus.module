@@ -5,3 +5,129 @@
  * Author: Jules <jules@ker.bz>
  */
 
+// see: menu_import/includes/import.inc / menu_import_save_menu
+function landportal_menus_import_save($menu, $options) {
+
+  foreach ($menu as $item) {
+    if (!isset($item['children'])) {
+      continue;
+    }
+
+    foreach ($item['children'] as $index) {
+      //print_r($menu[$index]['options']);
+      $menuitem = $menu[$index];
+      $menuitem['options'] = array('alter' => 1);
+
+      // Ensure we link to at least front page.
+      if (empty($menuitem['link_path'])) {
+        $menuitem['link_path'] = '<front>';
+      }
+
+      // Save description if available.
+      if (isset($menuitem['description'])) {
+        $menuitem['options']['attributes']['title'] = $menuitem['description'];
+      }
+    }
+    $mlid = menu_link_save($menuitem);
+    if (!$mlid) {
+      print "FAIL \n";
+      print_r($menuitem);
+    }
+  }
+}
+
+function landportal_menus_menu_insert($menu) {
+  // Enable translations on menu
+  /* $status = db_update('menu_custom') */
+  /*   ->fields(array( */
+  /*     'menu_name' => $menu['menu_name'], */
+  /*     'title' => $menu['title'], */
+  /*     'description' => $menu['description'], */
+  /*     'i18n_mode' => 5 */
+  /*   )) */
+  /*   ->condition('menu_name', $menu['menu_name']) */
+  /*   ->execute(); */
+  //print $status . "---\n";
+
+  // Import menus from file
+  //foreach(array('en', 'fr', 'es', 'pt') as $langcode) {
+  //foreach(array('en') as $langcode) {
+  /* $options = array( */
+  /*   'create_content'  => FALSE, */
+  /*   'link_to_content' => TRUE, */
+  /*   'remove_menu_items' => TRUE, */
+  /*   'language' => NULL, */
+  /* ); */
+  $file = drupal_get_path('module', 'landportal_menus').'/' . $menu['menu_name'] . '.txt';
+  module_load_include('inc', 'menu_import', 'includes/import');
+  $result = menu_import_parse_menu_from_file($file, $menu['menu_name'], array('language'=>NULL));
+  landportal_menus_import_save($result);
+//  menu_cache_clear_all();
+  if (!empty($result['errors'])) {
+    print_r($result['errors']);
+  } else {
+    if (!empty($result['warnings'])) {
+      print_r($result['warnings']);
+    }
+    drush_log('Imported ' . $menu['menu_name'], 'ok');
+    if ($menu['menu_name'] == 'landportal-menu') {
+      $map = array(
+        'landlibrary_resource' => 'library',
+        'news' => 'news-events',
+        'event' => 'news-events',
+        'debate' => 'debate/debates',
+        'blog_post' => 'news-events',
+        'organization' => 'debate/community',
+        'partners' => 'debate/community',
+        'project' => 'debate/community',
+        'dataset' => 'book/data',
+        'landbook_country' => 'book/countries',
+        'thematic_narrative' => 'book/thematic',
+        'sdgi' => 'book/thematic', // @todo SDG cover + about page
+      );
+      //foreach(array('en', 'fr', 'es', 'pt') as $langcode) {
+      foreach(array('en') as $langcode) {
+        foreach($map as $ct => $path) {
+          //landportal_menus_bind_cts($ct, $path, $langcode);
+        }
+      }
+    }
+  }
+}
+
+function landportal_menus_bind_cts($ctype, $path, $langcode) {
+  $q = db_select('url_alias', 'url');
+  $q->join('menu_links', 'menu', 'menu.link_path = url.source AND menu.menu_name = :menun', array(':menun' => 'landportal-menu'));
+  $q->fields('url', array('source'))
+    ->fields('menu', array('mlid', 'plid'))
+    ->condition('alias', $path)
+    ->condition('url.language', $langcode);
+  $result = $q->execute()
+              ->fetchAssoc();
+  print 'Remap ' .$langcode . ' / ' . $ctype . ' to ' . $ctype . ' ' . $result['mlid'] . "\n";
+  if ($result && isset($result['mlid'])) {
+    // create the array to populate the rule
+    $rule = array(
+      'admin_title' => 'CT ' . $ctype . ' ' . $langcode,
+      'conditions' => array(
+        'content_type' => array(
+          'content_type' => array(
+            $ctype => $ctype
+          ),
+        ),
+      ),
+      'menu_name' => 'landportal-menu',
+      'plid' => $result['plid'],
+      'mlid' => $result['mlid'],
+    );
+    if ($langcode != 'en' ) {
+      $rule['language'] = array(
+        'language' => array($langcode)
+      );
+    }
+    //dpm($rule);
+    //print_r($rule);
+    // By calling menu_position_add_rule() here, we're assuming that this exact rule does not exist
+    menu_position_add_rule($rule);
+  }
+}
