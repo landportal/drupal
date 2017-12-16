@@ -41,6 +41,7 @@ function ct_thematic_narrative_entity_prepare_view($entities, $type, $langcode) 
   if ($type != 'node') return;
   $nid = array_keys($entities)[0];
   if ($entities[$nid]->type == 'thematic_narrative'
+  && isset($entities[$nid]->view)
   && $entities[$nid]->view->current_display != 'last') {
     //dpm($entities[$nid], $nid);
     $tid = $entities[$nid]->field_landvoc_to[LANGUAGE_NONE][0]['target_id'];

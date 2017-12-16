@@ -69,6 +69,7 @@ function landbook_country_entity_prepare_view($entities, $type, $langcode) {
   if ($type != 'node') return;
   $nid = array_keys($entities)[0];
   if ($entities[$nid]->type == 'landbook_country'
+  && isset($entities[$nid]->view)
   && $entities[$nid]->view->current_display != 'last') {
     $tid = $entities[$nid]->field_geographical_focus[LANGUAGE_NONE][0]['tid'];
     if ($tid) $entities[$nid]->alias = url('taxonomy/term/' . $tid);
