@@ -27,10 +27,7 @@ function landbook_view_coda_update_7207() {
     //$ds = entity_metadata_wrapper('taxonomy_term', $dsid);
     $ets = entity_load('taxonomy_term', [$dsid]);//, [], TRUE);
     $ds = $ets[$dsid];
-
-    print $dsid . ' / ' . $ds->bundle . ' #' . count($inds[$dsid]);
-    print "\n";
-
+    //print $dsid . ' / ' . $ds->bundle . ' #' . count($inds[$dsid]) . "\n";
     // add new table vis.
     $fc_item = entity_create('field_collection_item', array('field_name' => 'field_visualization'));
     $fc_item->setHostEntity('taxonomy_term', $ds);
