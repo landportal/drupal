@@ -44,6 +44,7 @@ function landportal_menus_update_7200() {
  *  cleanup old menus
  */
 function landportal_menus_enable() {
+  variable_set('menu_position_active_link_display', 'parent');
   // Show LP Navigation menu in header / top-bar region
   $block = array(
     'keys' => array(
