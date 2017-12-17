@@ -1,4 +1,16 @@
-Who we are {"url":"about","lang":"und","weight":"0"}
-What we do {"url":"what-we-do","lang":"und","weight":"1"}
-Get involved {"url":"get-involved","lang":"und","weight":"2"}
+Who we are {"url":"about","lang":"en","weight":"0"}
+Qui nous sommes {"url":"about","lang":"fr","weight":"0"}
+Who we are {"url":"about","lang":"es","weight":"0"}
+Who we are {"url":"about","lang":"pt","weight":"0"}
+What we do {"url":"whatwedo","lang":"en","weight":"1"}
+Ce que nous fesons {"url":"whatwedo","lang":"fr","weight":"1"}
+What we do {"url":"whatwedo","lang":"es","weight":"1"}
+What we do {"url":"whatwedo","lang":"pt","weight":"1"}
+Get involved {"url":"about/get-involved","lang":"en","weight":"2"}
+Get involved {"url":"about/get-involved","lang":"fr","weight":"2"}
+Get involved {"url":"about/get-involved","lang":"es","weight":"2"}
+Get involved {"url":"about/get-involved","lang":"pt","weight":"2"}
 Donate {"url":"donate","lang":"en","weight":"3"}
+Donnez {"url":"donate","lang":"fr","weight":"3"}
+Donate {"url":"donate","lang":"es","weight":"3"}
+Donate {"url":"donate","lang":"pt","weight":"3"}
