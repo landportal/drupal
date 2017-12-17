@@ -14,11 +14,12 @@ include_once 'landportal_menus.import.inc';
 function landportal_menus_menu_insert($menu) {
   landportal_menus_import_menu($menu);
   // menu_cache_clear_all();
-  //landportal_menus_map_cts($menu);
+  landportal_menus_map_cts($menu);
 }
 
 function landportal_menus_map_cts($menu) {
   if ($menu['menu_name'] != 'landportal-menu') return;
+  $errors = array();
   $nb = db_delete('menu_position_rules')
     ->condition('menu_name', 'landportal-menu')
     ->condition('machine_name', 'ct_%', 'LIKE')
@@ -42,9 +43,13 @@ function landportal_menus_map_cts($menu) {
   foreach(array('en', 'fr', 'es', 'pt') as $langcode) {
   //foreach(array('en') as $langcode) {
     foreach($map as $ct => $path) {
-      landportal_menus_bind_cts($ct, $path, $langcode);
+      $e = landportal_menus_bind_cts($ct, $path, $langcode);
+      if ($e) {
+        $errors[] = $e;
+      }
     }
   }
+  if (count($errors)) print_r($errors);
 }
 
 // Create the association between landportal-menu top items and CTs
@@ -58,7 +63,6 @@ function landportal_menus_bind_cts($ctype, $path, $langcode) {
   $qlink->fields('url', array('source', 'language'))
         ->fields('menu', array('mlid', 'plid'))
         ->condition('alias', $path);
-
   // Build up menu links + rule
   $rule = array(
     'admin_title' => 'CT ' . $ctype,
@@ -79,23 +83,15 @@ function landportal_menus_bind_cts($ctype, $path, $langcode) {
     $rule['admin_title'] = '[' . $langcode . '] ' . $rule['admin_title'];
     $rule['machine_name'] .= '_' . $langcode;
     $qlink->condition('url.language', $langcode);
-  /* } else { */
-  /*   $langcode = NULL; */
   }
   $link = $qlink->execute()->fetchAssoc();
   if (!count($link) || !$link['mlid']) {
-    print "NO link\n";
-    print_r($link);
-    return FALSE;
+    return 'No link for [' .$langcode . '] ' . $ctype . ' to ' . $path;
   }
-  print 'Remap [' .$langcode . '] ' . $ctype . ' to ' . $path . ' #' . $link['mlid'] . "\n";
   $rule += array(
     'plid' => $link['mlid'], // bind new item to parent
     'mlid' => NULL, // create a new link (see: menu_position_add_menu_link)
-    //$result['mlid'],
   );
-  //print_r($rule);
-    // By calling menu_position_add_rule() here, we're assuming that this exact rule does not exist
   menu_position_add_rule($rule);
-  return TRUE;
+  return NULL;
 }
