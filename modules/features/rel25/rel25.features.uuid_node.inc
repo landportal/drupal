@@ -472,7 +472,7 @@ function rel25_uuid_features_default_content() {
 
 <div class="row">
 <div class="col-sm-6">
-<div><a href="/partners/mlike"><img alt="M-LIKE logo" class="media-element file-teaser" data-delta="4" data-fid="19018" data-media-element="1" src="/sites/landportal.info/files/styles/medium/public/mlike.png" title="" typeof="foaf:Image" /></a></div>
+<div><a href="/partners/mlike"><img alt="M-LIKE logo" class="media-element file-teaser" data-delta="4" data-fid="19018" data-media-element="1" src="/sites/landportal.info/files/mlike-small.png" title="" typeof="foaf:Image" /></a></div>
 </div>
 
 <div class="col-sm-6">
