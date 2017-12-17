@@ -19,6 +19,7 @@ projects:
   - auto_entitylabel
   - better_formats
   - block_class
+  - block_titlelink
   - blockreference
   - calendar
   - captcha
