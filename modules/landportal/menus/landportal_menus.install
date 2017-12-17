@@ -11,7 +11,6 @@
  *  cleanup old menus
  */
 function landportal_menus_update_7200() {
-  return ;
   // Delete old LP header menus
   menu_delete(array('menu_name' => 'landbook-menu'));
   menu_delete(array('menu_name' => 'landdebate-menu'));
@@ -19,6 +18,9 @@ function landportal_menus_update_7200() {
   menu_delete(array('menu_name' => 'user-signin'));
   menu_delete(array('menu_name' => 'menu-land-portal-about'));
   menu_delete(array('menu_name' => 'menu-footer-menu'));
+
+  // Re-import main menu
+  landportal_menus_import_menu(['menu_name' => 'main-menu']);
 
   $item = array(
     'link_path' => '<droplink>',

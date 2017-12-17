@@ -8,7 +8,7 @@
  */
 
 function landportal_menus_import_menu($menu) {
-  if (!in_array($menu['menu_name'], array('landportal-menu', 'about-menu'))) {
+  if (!in_array($menu['menu_name'], array('landportal-menu', 'about-menu', 'main-menu'))) {
     return;
   }
   // Import menus from file
