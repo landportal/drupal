@@ -84,7 +84,6 @@ function landportal_menus_enable() {
       'weight' => 0,
       'visibility' => BLOCK_VISIBILITY_LISTED,
       'pages' => "about*
-get-involved
 donate
 ",
     )
