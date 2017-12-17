@@ -113,8 +113,9 @@ function landbook_country_field_group_info() {
     'label' => '',
     'weight' => '0',
     'children' => array(
-      0 => 'title_field',
-      1 => 'field_image',
+      0 => 'field_geographical_focus',
+      1 => 'title_field',
+      2 => 'field_image',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -146,7 +147,9 @@ function landbook_country_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_orgref',
-      2 => 'field_image',
+      2 => 'field_country_info',
+      3 => 'field_visualization',
+      4 => 'field_image',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -195,7 +198,7 @@ function landbook_country_field_group_info() {
   $field_groups['group_meta|node|landbook_country|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_view_coda|node|landbook_country|form';
   $field_group->group_name = 'group_view_coda';

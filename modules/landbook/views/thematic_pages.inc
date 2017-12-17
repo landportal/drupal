@@ -163,6 +163,7 @@ $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
 $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
 /* Field: Field collection item: Rendered Field collection item */
 $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
