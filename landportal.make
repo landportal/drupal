@@ -84,6 +84,7 @@ projects:
   - media
   - media_ckeditor
   - menu_attach_block
+  - menu_position
   - metatag
   - module_filter
   - node_edit_protection
