@@ -254,7 +254,6 @@ $handler->display->display_options['fields']['body']['settings'] = array(
 /* Display: All */
 $handler = $view->new_display('block', 'All', 'all');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Events archive';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
