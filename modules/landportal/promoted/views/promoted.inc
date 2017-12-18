@@ -84,6 +84,8 @@ $handler->display->display_options['filters']['type']['group'] = 1;
 /* Display: News, blogs */
 $handler = $view->new_display('block', 'News, blogs', 'front');
 $handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'grid-1and2';
 $handler->display->display_options['display_description'] = 'First Block on the front page';
 $handler->display->display_options['link_url'] = 'news-events';
 $handler->display->display_options['defaults']['pager'] = FALSE;
