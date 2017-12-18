@@ -14,7 +14,11 @@ include_once 'landportal_menus.import.inc';
 function landportal_menus_menu_insert($menu) {
   landportal_menus_import_menu($menu);
   // menu_cache_clear_all();
-  landportal_menus_map_cts($menu);
+  module_load_include('inc', 'menu_position', 'menu_position.admin');
+  $errors = landportal_menus_map_cts($menu);
+  if (count($errors)) print_r($errors);
+  $errors = landportal_menus_map_terms($menu);
+  if (count($errors)) print_r($errors);
 }
 
 function landportal_menus_map_cts($menu) {
@@ -24,8 +28,6 @@ function landportal_menus_map_cts($menu) {
     ->condition('menu_name', 'landportal-menu')
     ->condition('machine_name', 'ct_%', 'LIKE')
     ->execute();
-
-  module_load_include('inc', 'menu_position', 'menu_position.admin');
   $map = array(
     'landlibrary_resource' => 'library',
     'news' => 'news-events',
@@ -41,7 +43,7 @@ function landportal_menus_map_cts($menu) {
     'sdgi' => 'book/thematic', // @todo SDG cover + about page
   );
   foreach(array('en', 'fr', 'es', 'pt') as $langcode) {
-  //foreach(array('en') as $langcode) {
+    //foreach(array('en') as $langcode) {
     foreach($map as $ct => $path) {
       $e = landportal_menus_bind_cts($ct, $path, $langcode);
       if ($e) {
@@ -49,8 +51,68 @@ function landportal_menus_map_cts($menu) {
       }
     }
   }
-  if (count($errors)) print_r($errors);
+  return $errors;
 }
+
+function landportal_menus_map_terms($menu) {
+  $errors = array();
+  $vocs = array();
+  $vocabs = taxonomy_get_vocabularies();
+  foreach($vocabs as $v) {
+    $vocs[$v->machine_name] = $v->vid;
+  }
+  $terms_map = array(
+    'indicators' => 'book/indicators',
+    'datasets' => 'book/datasets',
+  );
+  foreach($terms_map as $voc => $path) {
+    $e = landportal_menus_bind_terms($voc, $path, $vocs);
+    if ($e) {
+      $errors[] = $e;
+    }
+  }
+  return $errors;
+}
+
+// Create the association between landportal-menu top items and CTs
+function landportal_menus_bind_terms($voc, $path, $vocs) {
+  $qlink = db_select('url_alias', 'url');
+  $qlink->join(
+    'menu_links', 'menu',
+    'menu.link_path = url.source AND menu.menu_name = :menun',
+    array(':menun' => 'landportal-menu')
+  );
+  $qlink->fields('url', array('source', 'language'))
+        ->fields('menu', array('mlid', 'plid'))
+        ->condition('alias', $path);
+  // Build up menu links + rule
+  $rule = array(
+    'admin_title' => 'TAX ' . $voc,
+    'machine_name' => 'tax_' . $voc,
+    'conditions' => array(
+      "taxonomy" => [
+        "vid" => $vocs[$voc],
+        "tid" => [],
+        "match_types" => [
+          "terms" => "terms",
+          "content" => 0,
+        ],
+      ],
+    ),
+    'menu_name' => 'landportal-menu',
+  );
+  $link = $qlink->execute()->fetchAssoc();
+  if (!count($link) || !$link['mlid']) {
+    return 'No link for ' . $voc . ' to ' . $path;
+  }
+  $rule += array(
+    'plid' => $link['mlid'], // bind new item to parent
+    'mlid' => NULL, // create a new link (see: menu_position_add_menu_link)
+  );
+  menu_position_add_rule($rule);
+  return NULL;
+}
+
 
 // Create the association between landportal-menu top items and CTs
 function landportal_menus_bind_cts($ctype, $path, $langcode) {
