@@ -215,7 +215,7 @@ $handler->display->display_options['filters']['nid']['expose']['identifier'] = '
 /* Display: Providers 100 */
 $handler = $view->new_display('block', 'Providers 100', 'providers_100');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Top providers';
+$handler->display->display_options['title'] = 'Featured providers';
 $handler->display->display_options['display_description'] = 'with 100+ LLR';
 $handler->display->display_options['defaults']['group_by'] = FALSE;
 $handler->display->display_options['group_by'] = TRUE;

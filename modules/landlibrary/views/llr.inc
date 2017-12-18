@@ -57,7 +57,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
 /* Display: Latest additions */
 $handler = $view->new_display('block', 'Latest additions', 'last_add');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Latest additions';
+$handler->display->display_options['title'] = 'Recently published';
 
 /* Display: Promoted */
 $handler = $view->new_display('block', 'Promoted', 'promoted');
