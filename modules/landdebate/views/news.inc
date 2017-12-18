@@ -145,6 +145,8 @@ $handler->display->display_options['filters']['field_geographical_focus_tid_enti
 $handler = $view->new_display('block', 'Overview', 'overview');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Recent news';
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-grid-2';
 $handler->display->display_options['defaults']['use_more'] = FALSE;
 $handler->display->display_options['use_more'] = TRUE;
 $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -155,7 +157,7 @@ $handler->display->display_options['use_more_text'] = 'View all news';
 $handler->display->display_options['link_url'] = 'debate/news';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '3';
+$handler->display->display_options['pager']['options']['items_per_page'] = '4';
 $handler->display->display_options['pager']['options']['offset'] = '3';
 $handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['defaults']['sorts'] = FALSE;
