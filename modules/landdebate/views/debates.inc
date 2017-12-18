@@ -225,7 +225,7 @@ $handler->display->display_options['defaults']['row_options'] = FALSE;
 /* Display: All */
 $handler = $view->new_display('block', 'All', 'all');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['link_url'] = 'debate';
+$handler->display->display_options['link_url'] = 'debates';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
