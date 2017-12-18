@@ -57,7 +57,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
 /* Display: Latest additions */
 $handler = $view->new_display('block', 'Latest additions', 'last_add');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Recently published';
+$handler->display->display_options['title'] = 'Latest additions';
 
 /* Display: Promoted */
 $handler = $view->new_display('block', 'Promoted', 'promoted');
@@ -89,7 +89,7 @@ $handler->display->display_options['filters']['promote']['value'] = '1';
 /* Display: Latest publications */
 $handler = $view->new_display('block', 'Latest publications', 'last_pub');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Latest publications';
+$handler->display->display_options['title'] = 'Recently published';
 $handler->display->display_options['defaults']['sorts'] = FALSE;
 /* Sort criterion: Content: Date of publication (field_doc_creation_date) */
 $handler->display->display_options['sorts']['field_doc_creation_date_value']['id'] = 'field_doc_creation_date_value';
