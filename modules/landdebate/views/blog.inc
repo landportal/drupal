@@ -82,6 +82,7 @@ $handler->display->display_options['defaults']['use_more_always'] = FALSE;
 $handler->display->display_options['use_more_always'] = TRUE;
 $handler->display->display_options['defaults']['use_more_text'] = FALSE;
 $handler->display->display_options['use_more_text'] = 'More blogs';
+$handler->display->display_options['link_url'] = 'blogs';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '2';
