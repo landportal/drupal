@@ -3,6 +3,7 @@ description = Global display settings for fields, view modes, etc...
 core = 7.x
 package = landportal
 version = 7.x-2.5-beta
+dependencies[] = block_titlelink
 dependencies[] = ckeditor
 dependencies[] = ctools
 dependencies[] = ds
