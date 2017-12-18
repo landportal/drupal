@@ -6,10 +6,10 @@ What we do {"url":"whatwedo","lang":"en","weight":"1"}
 Ce que nous fesons {"url":"whatwedo","lang":"fr","weight":"1"}
 What we do {"url":"whatwedo","lang":"es","weight":"1"}
 What we do {"url":"whatwedo","lang":"pt","weight":"1"}
-Get involved {"url":"about/get-involved","lang":"en","weight":"2"}
-Get involved {"url":"about/get-involved","lang":"fr","weight":"2"}
-Get involved {"url":"about/get-involved","lang":"es","weight":"2"}
-Get involved {"url":"about/get-involved","lang":"pt","weight":"2"}
+Get involved {"url":"get-involved","lang":"en","weight":"2"}
+Get involved {"url":"get-involved","lang":"fr","weight":"2"}
+Get involved {"url":"get-involved","lang":"es","weight":"2"}
+Get involved {"url":"get-involved","lang":"pt","weight":"2"}
 Donate {"url":"donate","lang":"en","weight":"3"}
 Donnez {"url":"donate","lang":"fr","weight":"3"}
 Donate {"url":"donate","lang":"es","weight":"3"}
