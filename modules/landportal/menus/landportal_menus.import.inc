@@ -37,6 +37,7 @@ function landportal_menus_import_menu($menu) {
 
 // see: menu_import/includes/import.inc / menu_import_save_menu
 function landportal_menus_import_save($menu) {
+  static $fmlid;
   $menu_name = $menu[0]['menu_name'];
   $menu[0]['mlid'] = 0;
   // Delete all items
@@ -68,6 +69,32 @@ function landportal_menus_import_save($menu) {
       // Allow other modules to alter the imported data.
       drupal_alter('menu_import', $menuitem);
       $mlid = menu_link_save($menuitem);
+      // main menu Dropdown for lang
+      if ($menu_name == 'main-menu') {
+        if ($menuitem['link_path'] == 'voc/language' && $menuitem['link_title'] == 'Language') {
+          $fmlid = $mlid;
+        }
+        if ($menuitem['link_path'] == '<droplink>') {
+          $menuitem['options'] = array(
+            "menu_attach_block" => [
+              "name" => "locale|language_content",
+              "use_ajax" => 0,
+              "no_drop" => 1,
+              "dropped" => 0,
+              "on_hover" => 0,
+              "orientation" => "vertical",
+              "mlid" => $mlid,
+              "plid" => $fmlid,
+            ],
+            "attributes" => [
+              "title" => "",
+            ],
+            "alter" => true
+          );
+          $mlid = menu_link_save($menuitem);
+          print "Language dropdown on " . $fmlid . ' / ' . $mlid . "\n";
+        }
+      }
       if (!$mlid) {
         print "FAIL \n";
         print_r($menuitem);

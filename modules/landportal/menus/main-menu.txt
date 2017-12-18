@@ -14,3 +14,5 @@ Donate {"url":"donate","lang":"en","weight":"3"}
 Donnez {"url":"donate","lang":"fr","weight":"3"}
 Donate {"url":"donate","lang":"es","weight":"3"}
 Donate {"url":"donate","lang":"pt","weight":"3"}
+Language {"url":"voc/language","expanded":true,"lang":"und","weight":"20"}
+-Language {"url":"<droplink>","lang":"und","weight":"-50"}

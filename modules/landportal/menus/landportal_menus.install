@@ -24,22 +24,43 @@ function landportal_menus_update_7200() {
 
   $item = array(
     'link_path' => '<droplink>',
+    'router_path' => '<droplink>',
     'link_title' => 'Login',
     'menu_name' => 'user-menu', // Menu machine name, for example: main-menu
     'weight' => 0,
     'language' => 'und',
-    'plid' => 2, // Parent menu item, 0 if menu item is on top level
+    'plid' => 1991, //2, // Parent menu item, 0 if menu item is on top level
     'module' => 'menu',
+    'customized' => 1,
+    'depth' => 2,
+    'options' => ["alter" => true]
   );
   $mlid = menu_link_save($item);
   $up = menu_link_load($mlid); // user/login link
+  $up['options'] = array(
+      "menu_attach_block" => [
+        "name" => "user|login",
+        "use_ajax" => 0,
+        "no_drop" => 1,
+        "dropped" => 0,
+        "on_hover" => 0,
+        "orientation" => "vertical",
+        "mlid" => $mlid,
+        "plid" => 1991,
+      ],
+      "attributes" => [
+        "title" => "",
+      ],
+      "alter" => true
+  );
+  $mlid = menu_link_save($up);
+
   global $base_url;
-  drush_log('Update '.$base_url.'/admin/structure/menu/item/' . $mlid . '/edit', 'ok');
+  drush_log('Update / check '.$base_url.'/admin/structure/menu/item/' . $mlid . '/edit', 'ok');
 
   $login = menu_link_load(1991); // user/login link
   $login['expanded'] = '1';
   menu_link_save($login);
-//  die();
 }
 
 /** Land Portal 2.5 new UX
