@@ -22,7 +22,7 @@ CKEDITOR.config.templates_files = [ Drupal.settings.basePath + Drupal.settings.l
 // See LP colors
 CKEDITOR.config.colorButton_colors = '333366,006633,7A1F1F,EBEBE5,666666,333333';
 CKEDITOR.config.font_names = 'Merriweather Sans';
-CKEDITOR.config.fontSize_sizes = 'small/13px;normal/16px;medium/18px;large/22em;title/32px;';
+CKEDITOR.config.fontSize_sizes = 'small/13px;normal/16px;medium/18px;large/22px;title/32px;';
 //CKEDITOR.config.bodyClass = '.4242body';
 CKEDITOR.dtd.$removeEmpty.span = 0;
 //CKEDITOR.config
