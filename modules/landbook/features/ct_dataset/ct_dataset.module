@@ -53,14 +53,13 @@ function ct_dataset_page_build(&$page) {
 
 // dataset pages
 function ct_dataset_preprocess(&$variables, $hook) {
-  if ($hook != 'page' || !@$variables['page']['dsid']) return;
+  if (!isset($variables['page']['dsid'])) return;
   $dsid = $variables['page']['dsid'];
-
-  /* $variables['node'] = $variables['page']['node']; */
-  /* $variables['classes_array'][] = 'page-node'; */
-  /* $variables['classes_array'][] = 'node-type-' . $variables['page']['node']->type; */
-
-  if (user_access('edit any dataset content') || user_access('administer nodes')) { //is_admin()) {
+  //dpm($variables, $hook . ' / ' .$dsid);
+  //$variables['attributes_array']['class'] = array('page-taxonomy-datasets');
+  if ($hook == 'html') $variables['classes_array'][] = 'page-taxonomy-datasets';
+  // Add short cut to edit dataset taxonomy term
+  if ($hook == 'page' && (user_access('edit any dataset content') || user_access('administer nodes'))) {
     $variables['tabs']['#primary'][] = array(
       '#markup' => '<li>' . l('Edit narrative', 'node/' . $dsid . '/edit') . '</li>',
     );
