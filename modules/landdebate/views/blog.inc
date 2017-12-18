@@ -184,6 +184,8 @@ $handler->display->display_options['filters']['promote']['value'] = '1';
 
 /* Display: All */
 $handler = $view->new_display('block', 'All', 'all');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-grid-2';
 $handler->display->display_options['link_url'] = 'blogs';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
