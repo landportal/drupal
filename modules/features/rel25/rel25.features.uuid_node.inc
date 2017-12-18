@@ -444,43 +444,47 @@ function rel25_uuid_features_default_content() {
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '<p>&nbsp;</p>
-
-<div class="block-wrapped">
+        'value' => '<div class="bg-grey clearfix">
+<div class="row">
 <div class="col-xs-6 col-md-3">
-<h3><a href="/book/data" target="_blank">500+ land related indicators</a></h3>
+<div class="block-wrapped bg-white top-green">
+<h3><a href="/book/data" target="_blank"><span style="font-size:22px;"><span class="fa fa-database" style="color:rgb(0, 102, 204);"></span> 500+</span> indicators</a></h3>
 
-<p>Browse around our data section to access specific and detailed information!&nbsp;</p>
+<p>Data aggregated from trusted providers&nbsp;<span style="background-color:#EBEBE5;"></span><span style="background-color:#666666;"></span></p>
+</div>
 </div>
 
 <div class="col-xs-6 col-md-3">
-<h3><a href="/library" target="_blank">45,000+ land related resources</a></h3>
+<div class="block-wrapped bg-white top-red">
+<h3><a href="/library" target="_blank"><span style="font-size:22px;"><span class="fa fa-file-text" style="color:rgb(0, 102, 204);"></span> 45</span>,000+ resources</a></h3>
 
-<p>Browse around our library to take advantage of our wide array of materials!&nbsp;</p>
+<p>Searchable library of publications and reports&nbsp;</p>
+</div>
 </div>
 
 <div class="col-xs-6 col-md-3">
-<h3><a href="/get-involved" target="_blank">Join us</a></h3>
+<div class="block-wrapped bg-white top-blue">
+<h3><a href="/get-involved" target="_blank"><span style="font-size:22px;"><span class="fa fa-users" style="color:rgb(0, 102, 204);"></span></span> Join us</a></h3>
 
-<p>Create&nbsp;your own Land Portal account and sign up for our newsletter!</p>
+<p>Sign up to contribute; subscribe to newsletter</p>
+</div>
 </div>
 
 <div class="col-xs-6 col-md-3">
-<h3><a href="/debate/community" target="_blank">Partner organisations</a></h3>
-
-<p>Visit our partner hosted site.</p>
+<div class="block-wrapped bg-white top-blue">
+<h3><a href="/debate/community" target="_blank"><span style="font-size:22px;"><span class="fa fa-sitemap" style="color:rgb(0, 102, 204);"></span></span> Partner pages</a></h3>
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-xs-6">
 <div><a href="/partners/mlike"><img alt="M-LIKE logo" class="media-element file-teaser" data-delta="4" data-fid="19018" data-media-element="1" src="/sites/landportal.info/files/mlike-small.png" title="" typeof="foaf:Image" /></a></div>
 </div>
 
-<div class="col-sm-6">
+<div class="col-xs-6">
 <div><a href="/partners/legend"><img alt="Land: Enhancing Governance for Economic Development (LEGEND)" class="media-element file-teaser" data-delta="2" data-fid="10710" data-media-element="1" src="/sites/landportal.info/files/styles/medium/public/LEGEND_logo.png" title="Land: Enhancing Governance for Economic Development (LEGEND)" typeof="foaf:Image" /></a></div>
 </div>
 </div>
-
-<p>&nbsp;</p>
+</div>
+</div>
 </div>
 </div>
 ',
