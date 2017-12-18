@@ -45,20 +45,6 @@ $handler->display->display_options['sorts']['title']['id'] = 'title';
 $handler->display->display_options['sorts']['title']['table'] = 'node';
 $handler->display->display_options['sorts']['title']['field'] = 'title';
 $handler->display->display_options['sorts']['title']['expose']['label'] = 'Title';
-/* Contextual filter: Content: Title */
-$handler->display->display_options['arguments']['title']['id'] = 'title';
-$handler->display->display_options['arguments']['title']['table'] = 'node';
-$handler->display->display_options['arguments']['title']['field'] = 'title';
-$handler->display->display_options['arguments']['title']['default_action'] = 'default';
-$handler->display->display_options['arguments']['title']['default_argument_type'] = 'fixed';
-$handler->display->display_options['arguments']['title']['default_argument_options']['argument'] = 'all';
-$handler->display->display_options['arguments']['title']['summary']['number_of_records'] = '0';
-$handler->display->display_options['arguments']['title']['summary']['format'] = 'default_summary';
-$handler->display->display_options['arguments']['title']['summary_options']['count'] = FALSE;
-$handler->display->display_options['arguments']['title']['summary_options']['items_per_page'] = '25';
-$handler->display->display_options['arguments']['title']['glossary'] = TRUE;
-$handler->display->display_options['arguments']['title']['limit'] = '1';
-$handler->display->display_options['arguments']['title']['break_phrase'] = TRUE;
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
 $handler->display->display_options['filters']['type']['table'] = 'node';
