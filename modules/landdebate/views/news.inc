@@ -27,7 +27,7 @@ $handler->display->display_options['exposed_form']['options']['expose_sort_order
 $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
 $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'full';
-$handler->display->display_options['pager']['options']['items_per_page'] = '10';
+$handler->display->display_options['pager']['options']['items_per_page'] = '12';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['pager']['options']['quantity'] = '9';
@@ -206,7 +206,7 @@ $handler->display->display_options['filters']['language']['group'] = 1;
 $handler = $view->new_display('block', 'Promoted', 'promoted');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'grid-2 grid-news';
+$handler->display->display_options['css_class'] = 'grid-1and2';
 $handler->display->display_options['link_url'] = 'debate/news';
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
@@ -267,5 +267,7 @@ $handler->display->display_options['filters']['language']['group'] = 1;
 /* Display: All */
 $handler = $view->new_display('block', 'All', 'all');
 $handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-grid-2';
 $handler->display->display_options['link_url'] = 'debate/news';
 

@@ -24,7 +24,7 @@ $handler->display->display_options['exposed_form']['options']['reset_button'] = 
 $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
 $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'full';
-$handler->display->display_options['pager']['options']['items_per_page'] = '24';
+$handler->display->display_options['pager']['options']['items_per_page'] = '12';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['pager']['options']['quantity'] = '9';
@@ -110,7 +110,7 @@ $handler->display->display_options['filters']['type']['group'] = 1;
 /* Display: All */
 $handler = $view->new_display('block', 'All', 'all');
 $handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'view-grid-4 view-wrapped';
+$handler->display->display_options['css_class'] = 'view-grid-2';
 $handler->display->display_options['link_url'] = 'organizations';
 $handler->display->display_options['defaults']['header'] = FALSE;
 /* Header: Global: Result summary */
