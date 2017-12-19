@@ -40,7 +40,7 @@ function landportal_geo_update_7200() {
 /** Land Portal 2.5
  *  fix geo terms parent
  */
-function landportal_geo_install() {
+function landportal_geo_fix_top_regions() {
   /**
    * Fix regions
    * Set those terms as 'top'
