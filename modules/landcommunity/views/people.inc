@@ -87,7 +87,7 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'main' => 'main',
 );
 $handler->display->display_options['filters']['type']['group'] = 1;
-/* Filter criterion: Field: Hide my profile on public listings (field_hide_profile) */
+/* Filter criterion: Profile: Hide profile from public listings (field_hide_profile) */
 $handler->display->display_options['filters']['field_hide_profile_value']['id'] = 'field_hide_profile_value';
 $handler->display->display_options['filters']['field_hide_profile_value']['table'] = 'field_data_field_hide_profile';
 $handler->display->display_options['filters']['field_hide_profile_value']['field'] = 'field_hide_profile_value';
@@ -114,23 +114,30 @@ $handler->display->display_options['filters']['country']['expose']['remember_rol
   111903910 => 0,
   30037204 => 0,
 );
-/* Filter criterion: Profile: Last name (field_lastname) */
-$handler->display->display_options['filters']['field_lastname_value']['id'] = 'field_lastname_value';
-$handler->display->display_options['filters']['field_lastname_value']['table'] = 'field_data_field_lastname';
-$handler->display->display_options['filters']['field_lastname_value']['field'] = 'field_lastname_value';
-$handler->display->display_options['filters']['field_lastname_value']['operator'] = 'not empty';
-$handler->display->display_options['filters']['field_lastname_value']['group'] = 2;
-/* Filter criterion: Profile: First name (field_firstname) */
-$handler->display->display_options['filters']['field_firstname_value']['id'] = 'field_firstname_value';
-$handler->display->display_options['filters']['field_firstname_value']['table'] = 'field_data_field_firstname';
-$handler->display->display_options['filters']['field_firstname_value']['field'] = 'field_firstname_value';
-$handler->display->display_options['filters']['field_firstname_value']['operator'] = 'not empty';
-$handler->display->display_options['filters']['field_firstname_value']['group'] = 2;
+/* Filter criterion: Field: Themes (field_related_themes) (reference filter) */
+$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['id'] = 'field_related_themes_tid_entityreference_filter';
+$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['field'] = 'field_related_themes_tid_entityreference_filter';
+$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['group'] = 1;
+$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['operator_id'] = 'field_related_themes_tid_entityreference_filter_op';
+$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['label'] = 'Issues';
+$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['operator'] = 'field_related_themes_tid_entityreference_filter_op';
+$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['identifier'] = 'field_related_themes_tid_entityreference_filter';
+$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['reference_display'] = 'landvoc:ref_themes';
 /* Filter criterion: Profile: Label */
 $handler->display->display_options['filters']['label']['id'] = 'label';
 $handler->display->display_options['filters']['label']['table'] = 'profile';
 $handler->display->display_options['filters']['label']['field'] = 'label';
 $handler->display->display_options['filters']['label']['operator'] = 'contains';
+$handler->display->display_options['filters']['label']['group'] = 1;
 $handler->display->display_options['filters']['label']['exposed'] = TRUE;
 $handler->display->display_options['filters']['label']['expose']['operator_id'] = 'label_op';
 $handler->display->display_options['filters']['label']['expose']['label'] = 'Name';
@@ -143,6 +150,18 @@ $handler->display->display_options['filters']['label']['expose']['remember_roles
   111903910 => 0,
   30037204 => 0,
 );
+/* Filter criterion: Profile: Last name (field_lastname) */
+$handler->display->display_options['filters']['field_lastname_value']['id'] = 'field_lastname_value';
+$handler->display->display_options['filters']['field_lastname_value']['table'] = 'field_data_field_lastname';
+$handler->display->display_options['filters']['field_lastname_value']['field'] = 'field_lastname_value';
+$handler->display->display_options['filters']['field_lastname_value']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_lastname_value']['group'] = 2;
+/* Filter criterion: Profile: First name (field_firstname) */
+$handler->display->display_options['filters']['field_firstname_value']['id'] = 'field_firstname_value';
+$handler->display->display_options['filters']['field_firstname_value']['table'] = 'field_data_field_firstname';
+$handler->display->display_options['filters']['field_firstname_value']['field'] = 'field_firstname_value';
+$handler->display->display_options['filters']['field_firstname_value']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_firstname_value']['group'] = 2;
 
 /* Display: All */
 $handler = $view->new_display('block', 'All', 'all');
@@ -219,7 +238,7 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'main' => 'main',
 );
 $handler->display->display_options['filters']['type']['group'] = 1;
-/* Filter criterion: Field: Hide my profile on public listings (field_hide_profile) */
+/* Filter criterion: Profile: Hide profile from public listings (field_hide_profile) */
 $handler->display->display_options['filters']['field_hide_profile_value']['id'] = 'field_hide_profile_value';
 $handler->display->display_options['filters']['field_hide_profile_value']['table'] = 'field_data_field_hide_profile';
 $handler->display->display_options['filters']['field_hide_profile_value']['field'] = 'field_hide_profile_value';
