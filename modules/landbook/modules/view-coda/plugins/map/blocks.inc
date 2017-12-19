@@ -83,11 +83,11 @@ function lbvc_plugin_map_block_view($delta) {
 
   case 'lbvc_map_mlike':
     $vcc = '{ "debug": true, "iso3": "VNM"';
-    $vcc .= ', "series": [ {"name": "Mekong countries", "cursor": "pointer", "data": [ {"id": "VNM", "value": 1}, {"id": "LAO", "value": 1}, {"id": "KHM", "value": 1}, {"id": "THA", "value": 1}, {"id": "MMR", "value": 1} ] } ]';
+    $vcc .= ', "series": [ {"name": "Mekong countries", "cursor": "pointer", "data": [ {"id": "VNM", "value": 0}, {"id": "LAO", "value": 1}, {"id": "KHM", "value": 1}, {"id": "THA", "value": 1}, {"id": "MMR", "value": 1} ] } ]';
     $vcc .= ', "colors": { "background": "#FFFFFF", "borders": "#FFFFFF", "hover": "#F5A623", "select": "#F9B122", "max": "#F9B122", "min": "#D1DB47", "na": "#BBD6D8" }';
-    $vcc .= ', "map": {"selectable": true, "zoom": 3, "legend": false'
+    $vcc .= ', "map": {"selectable": true, "zoom": 3, "legend": true'
       // Need 'unwrapping'
-      . ', "tooltip": "@function () { return \'Click to visit \' + this.point.name; }@"'
+      . ', "tooltip": "@function () { return \'Click to visit \' + this.name; }@"'
       . ', "events": "@{ click: function () { window.location.href = \'/book/countries/\' + this.id; } }@"'
       . '}';
     $vcc .= '}';
