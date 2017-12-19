@@ -149,7 +149,7 @@ function landbook_country_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -239,7 +239,7 @@ function landbook_country_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 6,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -299,9 +299,9 @@ function landbook_country_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'links' => 1,
+          'links' => 0,
           'use_content_language' => 1,
-          'view_mode' => 'listing',
+          'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 1,
@@ -352,9 +352,13 @@ function landbook_country_field_default_field_instances() {
         'weight' => 1,
       ),
       'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'large',
+        ),
+        'type' => 'image',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -420,7 +424,7 @@ function landbook_country_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 7,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -477,7 +481,7 @@ function landbook_country_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'promoted_country_page' => array(
         'label' => 'above',
@@ -549,7 +553,7 @@ function landbook_country_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',

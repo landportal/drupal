@@ -80,10 +80,11 @@ function landbook_country_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '0',
+    'weight' => '1',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'title_field',
+      2 => 'field_image',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
