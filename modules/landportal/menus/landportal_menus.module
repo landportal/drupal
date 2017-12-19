@@ -17,8 +17,8 @@ function landportal_menus_menu_insert($menu) {
   module_load_include('inc', 'menu_position', 'menu_position.admin');
   $errors = landportal_menus_map_cts($menu);
   if (count($errors)) print_r($errors);
-  $errors = landportal_menus_map_terms($menu);
-  if (count($errors)) print_r($errors);
+//  $errors = landportal_menus_map_terms($menu);
+//  if (count($errors)) print_r($errors);
 }
 
 function landportal_menus_map_cts($menu) {
@@ -144,8 +144,8 @@ function landportal_menus_bind_cts($ctype, $path, $langcode) {
     );
     $rule['admin_title'] = '[' . $langcode . '] ' . $rule['admin_title'];
     $rule['machine_name'] .= '_' . $langcode;
-    $qlink->condition('url.language', $langcode);
   }
+  $qlink->condition('url.language', $langcode);
   $link = $qlink->execute()->fetchAssoc();
   if (!count($link) || !$link['mlid']) {
     return 'No link for [' .$langcode . '] ' . $ctype . ' to ' . $path;
