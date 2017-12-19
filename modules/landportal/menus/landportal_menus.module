@@ -35,7 +35,7 @@ function landportal_menus_map_cts($menu) {
     'debate' => 'debate/debates',
     'blog_post' => 'news-events',
     'organization' => 'debate/community',
-    'partners' => 'debate/community',
+//    'partners' => 'debate/community',
     'project' => 'debate/community',
     'dataset' => 'book/data',
     'landbook_country' => 'book/countries',
