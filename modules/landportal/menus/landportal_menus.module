@@ -17,8 +17,8 @@ function landportal_menus_menu_insert($menu) {
   module_load_include('inc', 'menu_position', 'menu_position.admin');
   $errors = landportal_menus_map_cts($menu);
   if (count($errors)) print_r($errors);
-//  $errors = landportal_menus_map_terms($menu);
-//  if (count($errors)) print_r($errors);
+  $errors = landportal_menus_map_terms($menu);
+  if (count($errors)) print_r($errors);
 }
 
 function landportal_menus_map_cts($menu) {
@@ -37,7 +37,7 @@ function landportal_menus_map_cts($menu) {
     'organization' => 'debate/community',
 //    'partners' => 'debate/community',
     'project' => 'debate/community',
-    'dataset' => 'book/data',
+    'dataset' => 'book/datasets',
     'landbook_country' => 'book/countries',
     'thematic_narrative' => 'book/thematic',
     'sdgi' => 'book/thematic', // @todo SDG cover + about page
@@ -55,6 +55,7 @@ function landportal_menus_map_cts($menu) {
 }
 
 function landportal_menus_map_terms($menu) {
+  if ($menu['menu_name'] != 'landportal-menu') return;
   $errors = array();
   $vocs = array();
   $vocabs = taxonomy_get_vocabularies();
@@ -65,17 +66,19 @@ function landportal_menus_map_terms($menu) {
     'indicators' => 'book/indicators',
     'datasets' => 'book/datasets',
   );
-  foreach($terms_map as $voc => $path) {
-    $e = landportal_menus_bind_terms($voc, $path, $vocs);
-    if ($e) {
-      $errors[] = $e;
+  foreach(array('en', 'fr', 'es', 'pt') as $langcode) {
+    foreach($terms_map as $voc => $path) {
+      $e = landportal_menus_bind_terms($voc, $path, $vocs, $langcode);
+      if ($e) {
+        $errors[] = $e;
+      }
     }
   }
   return $errors;
 }
 
 // Create the association between landportal-menu top items and CTs
-function landportal_menus_bind_terms($voc, $path, $vocs) {
+function landportal_menus_bind_terms($voc, $path, $vocs, $langcode) {
   $qlink = db_select('url_alias', 'url');
   $qlink->join(
     'menu_links', 'menu',
@@ -84,11 +87,12 @@ function landportal_menus_bind_terms($voc, $path, $vocs) {
   );
   $qlink->fields('url', array('source', 'language'))
         ->fields('menu', array('mlid', 'plid'))
+        ->condition('url.language', [$langcode, 'und'], 'IN')
         ->condition('alias', $path);
   // Build up menu links + rule
   $rule = array(
-    'admin_title' => 'TAX ' . $voc,
-    'machine_name' => 'tax_' . $voc,
+    'admin_title' => 'TAX [' . $langcode . '] ' . $voc,
+    'machine_name' => 'tax_' . $voc . '_' . $langcode,
     'conditions' => array(
       "taxonomy" => [
         "vid" => $vocs[$voc],
@@ -103,12 +107,14 @@ function landportal_menus_bind_terms($voc, $path, $vocs) {
   );
   $link = $qlink->execute()->fetchAssoc();
   if (!count($link) || !$link['mlid']) {
+    //print_r($qlink);
     return 'No link for ' . $voc . ' to ' . $path;
   }
   $rule += array(
     'plid' => $link['mlid'], // bind new item to parent
     'mlid' => NULL, // create a new link (see: menu_position_add_menu_link)
   );
+  //print_r($rule);
   menu_position_add_rule($rule);
   return NULL;
 }
@@ -145,9 +151,10 @@ function landportal_menus_bind_cts($ctype, $path, $langcode) {
     $rule['admin_title'] = '[' . $langcode . '] ' . $rule['admin_title'];
     $rule['machine_name'] .= '_' . $langcode;
   }
-  $qlink->condition('url.language', $langcode);
+  $qlink->condition('url.language', [$langcode, 'und'], 'IN');
   $link = $qlink->execute()->fetchAssoc();
   if (!count($link) || !$link['mlid']) {
+    print_r($qlink);
     return 'No link for [' .$langcode . '] ' . $ctype . ' to ' . $path;
   }
   $rule += array(
