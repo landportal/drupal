@@ -586,3 +586,66 @@ $handler->display->display_options['filters']['hdepth']['expose']['label'] = 'Hi
 $handler->display->display_options['filters']['hdepth']['expose']['operator'] = 'hdepth_op';
 $handler->display->display_options['filters']['hdepth']['expose']['identifier'] = 'hdepth';
 
+/* Display: Ref Org */
+$handler = $view->new_display('block', 'Ref Org', 'ref_org');
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Entity Reference: Referenced Entity */
+$handler->display->display_options['relationships']['field_orgref_target_id']['id'] = 'field_orgref_target_id';
+$handler->display->display_options['relationships']['field_orgref_target_id']['table'] = 'field_data_field_orgref';
+$handler->display->display_options['relationships']['field_orgref_target_id']['field'] = 'field_orgref_target_id';
+$handler->display->display_options['relationships']['field_orgref_target_id']['label'] = 'org';
+$handler->display->display_options['relationships']['field_orgref_target_id']['required'] = TRUE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: Term ID */
+$handler->display->display_options['fields']['tid']['id'] = 'tid';
+$handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['tid']['field'] = 'tid';
+$handler->display->display_options['fields']['tid']['label'] = '';
+$handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['tid']['separator'] = '';
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['alter']['path'] = 'book/indicators/[field_id]';
+$handler->display->display_options['fields']['name']['alter']['absolute'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Content: Nid */
+$handler->display->display_options['arguments']['nid']['id'] = 'nid';
+$handler->display->display_options['arguments']['nid']['table'] = 'node';
+$handler->display->display_options['arguments']['nid']['field'] = 'nid';
+$handler->display->display_options['arguments']['nid']['relationship'] = 'field_orgref_target_id';
+$handler->display->display_options['arguments']['nid']['default_action'] = 'empty';
+$handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+
+/* Display: RefID Org */
+$handler = $view->new_display('block', 'RefID Org', 'refid_org');
+$handler->display->display_options['display_description'] = 'dataset ids by org';
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Entity Reference: Referenced Entity */
+$handler->display->display_options['relationships']['field_orgref_target_id']['id'] = 'field_orgref_target_id';
+$handler->display->display_options['relationships']['field_orgref_target_id']['table'] = 'field_data_field_orgref';
+$handler->display->display_options['relationships']['field_orgref_target_id']['field'] = 'field_orgref_target_id';
+$handler->display->display_options['relationships']['field_orgref_target_id']['label'] = 'org';
+$handler->display->display_options['relationships']['field_orgref_target_id']['required'] = TRUE;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Content: Nid */
+$handler->display->display_options['arguments']['nid']['id'] = 'nid';
+$handler->display->display_options['arguments']['nid']['table'] = 'node';
+$handler->display->display_options['arguments']['nid']['field'] = 'nid';
+$handler->display->display_options['arguments']['nid']['relationship'] = 'field_orgref_target_id';
+$handler->display->display_options['arguments']['nid']['default_action'] = 'empty';
+$handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+

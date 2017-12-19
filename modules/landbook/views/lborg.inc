@@ -209,7 +209,7 @@ $handler->display->display_options['fields']['tid']['suffix'] = ')';
 /* Display: All providers */
 $handler = $view->new_display('block', 'All providers', 'all');
 $handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'view-grid-4';
+$handler->display->display_options['css_class'] = 'view-grid-2';
 $handler->display->display_options['display_description'] = 'Land Book data providers';
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Nid */
@@ -236,5 +236,16 @@ $handler->display->display_options['fields']['tid']['field'] = 'tid';
 $handler->display->display_options['fields']['tid']['relationship'] = 'reverse_field_orgref_taxonomy_term';
 $handler->display->display_options['fields']['tid']['group_type'] = 'count';
 $handler->display->display_options['fields']['tid']['label'] = 'Datasets';
+$handler->display->display_options['fields']['tid']['exclude'] = TRUE;
 $handler->display->display_options['fields']['tid']['separator'] = '';
+/* Field: Global: View */
+$handler->display->display_options['fields']['view']['id'] = 'view';
+$handler->display->display_options['fields']['view']['table'] = 'views';
+$handler->display->display_options['fields']['view']['field'] = 'view';
+$handler->display->display_options['fields']['view']['label'] = 'Datasets';
+$handler->display->display_options['fields']['view']['element_wrapper_class'] = 'col-sm-9';
+$handler->display->display_options['fields']['view']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['view']['view'] = 'lbdat';
+$handler->display->display_options['fields']['view']['display'] = 'ref_org';
+$handler->display->display_options['fields']['view']['arguments'] = '[!nid]';
 
