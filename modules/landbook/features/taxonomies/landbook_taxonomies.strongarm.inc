@@ -31,6 +31,9 @@ function landbook_taxonomies_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'header' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -62,6 +65,10 @@ function landbook_taxonomies_strongarm() {
             'weight' => '3',
             'visible' => TRUE,
           ),
+          'header' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
         ),
         'authoring_information' => array(
           'default' => array(
@@ -77,7 +84,11 @@ function landbook_taxonomies_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '5',
+            'weight' => '6',
+            'visible' => FALSE,
+          ),
+          'header' => array(
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),
@@ -105,6 +116,9 @@ function landbook_taxonomies_strongarm() {
         'custom_settings' => TRUE,
       ),
       'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'header' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -158,11 +172,11 @@ function landbook_taxonomies_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '7',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '5',
+            'weight' => '3',
             'visible' => FALSE,
           ),
         ),
@@ -212,6 +226,13 @@ function landbook_taxonomies_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_indicators_pattern';
   $strongarm->value = 'book/indicator/[term:field_id]';
   $export['pathauto_taxonomy_term_indicators_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_observations_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_observations_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

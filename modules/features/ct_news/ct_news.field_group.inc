@@ -76,7 +76,7 @@ function ct_news_field_group_info() {
   $field_groups['group_details|node|news|listing'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_details|node|news|teaser';
   $field_group->group_name = 'group_details';

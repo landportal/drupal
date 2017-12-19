@@ -3,7 +3,7 @@
 $view = new view();
 $view->name = 'by_uuid';
 $view->description = '';
-$view->tag = 'default';
+$view->tag = 'landlibrary';
 $view->base_table = 'node';
 $view->human_name = 'Library Resource by uuid';
 $view->core = 7;

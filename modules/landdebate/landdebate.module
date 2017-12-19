@@ -5,67 +5,7 @@
  *
  * The Landportal landdebate
  *
- * Original work by: WESO
- * Drupal refactoring: Jules <jules@ker.bz>
+ * Author: Jules <jules@ker.bz>
  */
-
-$GLOBALS['landdebate_menu'] = 'landdebate-menu';
-$GLOBALS['landdebate_content_types'] = array(
-  'news' => 'news',
-  'debate' => 'debates',
-  'event' => 'events',
-  'blog_post' => 'blog',
-  'organization' => 'community'
-);
 
 include_once 'landdebate.features.inc';
-
-function landdebate_help($path, $arg) {
-  switch ($path) {
-  case "admin/help#landdebate":
-    return '<p>' . t("Landdebate section of the Landportal") . '</p>'
-      . '<p>'. t("This come with a (header) Block, customised View(s) and a landdebate main-menu item").'</p>'
-      . '<p>'. t("Landdebate sections are:").'</p>'
-      ;
-    break;
-  }
-}
-
-ctools_include('landdebate.menu', 'landdebate');
-function landdebate_menu() {
-  $items = array();
-  landdebate_menu_admin($items);
-  landdebate_menu_build($items);
-
-  // Landdebate frontend
-  $items['debate'] = array(
-    'title'		=> 'Landdebate',
-    'menu_name'		=> 'main-menu',
-    //'type'              => MENU_NORMAL_ITEM,
-    'access callback'	=> TRUE,
-    'page callback'	=> 'drupal_goto',
-    'page arguments'	=> array('debate/news'),
-  );
-  return $items;
-}
-
-/**
- * Rewrite breadcrumbs for landdebate
- * First link will point to the landdebate section.
- * When viewing a single page for a content type covered by the landdebate,
- * the second link will point to the landdebate overview of this type.
- * Last link is always the curent page
- */
-function landdebate_node_view_alter(&$build) {
-    $node = $build['#node'];
-    if(in_array($node->type, array_keys($GLOBALS['landdebate_content_types']))) {
-      $breadcrumb[0] = l(t('Landdebate'), 'debate');
-      // Nasty hack to add a link to the landdebate overviews
-      if ($build['#view_mode'] == 'full') {
-        $title = ucfirst($GLOBALS['landdebate_content_types'][$node->type]);
-        $breadcrumb[] = l(t($title), 'debate/' . $GLOBALS['landdebate_content_types'][$node->type]);
-      }
-      $breadcrumb[] = l(t(drupal_get_title()), $_GET['q']);
-      drupal_set_breadcrumb($breadcrumb);
-    }
-}

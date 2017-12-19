@@ -1,0 +1,30 @@
+<?php
+/**
+ * @file
+ *
+ * The Land Portal Multilingual
+*  
+ * Author: Jules <jules@ker.bz>
+ */
+
+/** Land Portal 2.5
+ *  Hide Language block (to be shown in menu)
+ */
+function landportal_multilingual_update_7200() {
+  //block-locale-language
+  $block = array(
+    'keys' => array(
+      'module' => 'locale',
+      'delta'  => 'language',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
+  db_merge('block')
+    ->key($block['keys'])
+    ->fields($block['values'])
+    ->execute();
+}

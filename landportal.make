@@ -19,6 +19,7 @@ projects:
   - auto_entitylabel
   - better_formats
   - block_class
+  - block_titlelink
   - blockreference
   - calendar
   - captcha
@@ -83,6 +84,8 @@ projects:
   - masquerade
   - media
   - media_ckeditor
+  - menu_attach_block
+  - menu_position
   - metatag
   - module_filter
   - node_edit_protection

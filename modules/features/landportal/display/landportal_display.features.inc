@@ -106,6 +106,21 @@ function landportal_display_image_default_styles() {
     ),
   );
 
+  // Exported image style: library_3x4.
+  $styles['library_3x4'] = array(
+    'label' => 'Library 3x4',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 480,
+          'height' => 640,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: medium.
   $styles['medium'] = array(
     'label' => 'Medium (220x220)',

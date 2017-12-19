@@ -1,0 +1,84 @@
+<?php
+/**
+ * @file
+ *
+ * The Land Portal Geo taxonomy
+*  
+ * Author: Jules <jules@ker.bz>
+ */
+
+/** Land Portal 2.5
+ *  add/fillup iso2
+ */
+function landportal_geo_update_7200() {
+
+  // FR
+  //features_revert(array('module' => array('landportal_geo')));
+
+  // AFTER field_iso2 is created!
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'taxonomy_term')
+        ->entityCondition('bundle', 'regions')
+        ->fieldCondition('field_iso3', 'value', '', '<>')
+    ;
+  $result = $query->execute();
+  $tids = array_keys($result['taxonomy_term']);
+  drush_log("Updating " . count($tids) . " countries in regions tax.\n", 'ok');
+  $terms = taxonomy_term_load_multiple($tids);
+  foreach($terms as $term) {
+    $iso3 = $term->field_iso3[LANGUAGE_NONE][0]['value'];
+    $iso2 = $term->field_iso2[LANGUAGE_NONE][0]['value'];
+    //print '('. $term->tid .') ' . $term->name . ' - ' . $iso3 . ':' . $iso2 . "\n";
+    if ($iso3 && !$iso2) {
+      $term->field_iso2 = $term->field_iso3;
+      $term->field_iso2[LANGUAGE_NONE][0]['value'] = iso3toiso2($iso3);
+      field_attach_update('taxonomy_term', $term);
+    }
+  }
+}
+
+/** Land Portal 2.5
+ *  fix geo terms parent
+ */
+function landportal_geo_fix_top_regions() {
+  /**
+   * Fix regions
+   * Set those terms as 'top'
+ 544 | Africa
+7952 | Americas
+ 548 | Asia
+ 546 | Europe
+ 547 | Oceania
+
+   * 'hide' those in 'Global' (#1542)
+ 560 | Antarctica
+7258 | Amazonia
+7362 | CPLP countries
+7936 | England
+1542 | Global
+ 671 | Kosovo
+7354 | Scotland
+7892 | Taiwan
+7935 | Wales
+  */
+  $REGION_global = 1542;
+
+  $set_global = array('7258', '7362', '7936', ' 671', '7354', '7892', '7935', '560');
+  $set_top = array('544', '546', '547', '548', '7952');
+  $terms = taxonomy_term_load_multiple(array_merge($set_global, $set_top));
+  foreach($terms as $term) {
+    //if ($term->tid == '1542') continue;
+    // Set those terms as children of 'Global'
+    if (in_array($term->tid, $set_global)) {
+      //print ' set parent => ' . $REGION_global;
+      $term->parent = [$REGION_global];
+    }
+    // Set those as top
+    if (in_array($term->tid, $set_top)) {
+      //print ' set as top';
+      $term->parent = [0];
+    }
+    drush_log("fixin' term " . $term->name . ' #'.$term->tid . ' = ' . $term->parent[0], 'ok');
+    taxonomy_term_save($term);
+  }
+}

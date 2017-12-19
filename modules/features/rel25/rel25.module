@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the rel25 feature.
+ */
+
+include_once 'rel25.features.inc';

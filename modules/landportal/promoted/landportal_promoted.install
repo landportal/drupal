@@ -3,6 +3,19 @@
  * Install / Upgrade hooks
  */
 
+
+/** Land Portal 2.5 new UX
+ *  cleanup fields
+ */
+function landportal_promoted_update_7201() {
+  $CTs = array('blog_post', 'debate', 'event', 'landlibrary_resource', 'news', 'organization');
+  foreach ($CTs as $ct) {
+    if ($instance = field_info_instance('node', 'field_thematic_promoted', $ct)) {
+      field_delete_instance($instance);
+    }
+  }
+}
+
 function landportal_promoted_update_7200() {
   $CTs = array('blog_post', 'debate', 'event', 'landlibrary_resource', 'news', 'organization');
   foreach ($CTs as $ct) {
@@ -12,14 +25,14 @@ function landportal_promoted_update_7200() {
   }
 }
 
-function landportal_promoted_uninstall() {
-  $or = db_or()->condition('delta', 'promoted-library')
-               ->condition('delta', 'promoted-front')
-               ->condition('delta', 'promoted-thematic')
-               ->condition('delta', 'promoted-country')
-    ;
-  db_delete('block')
-    ->condition('module', 'views')
-    ->condition($or)
-    ->execute();
-}
+/* function landportal_promoted_uninstall() { */
+/*   $or = db_or()->condition('delta', 'promoted-library') */
+/*                ->condition('delta', 'promoted-front') */
+/*                ->condition('delta', 'promoted-thematic') */
+/*                ->condition('delta', 'promoted-country') */
+/*     ; */
+/*   db_delete('block') */
+/*     ->condition('module', 'views') */
+/*     ->condition($or) */
+/*     ->execute(); */
+/* } */

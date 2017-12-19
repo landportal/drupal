@@ -21,10 +21,6 @@ function lbvc_plugin_table_formatter($VCC) {
   $params = lbvc_plugin_table_params($VCC);
   // All vis should have those
   $params->target = '#' . $VCC['vid'];
-
-  // TMP hack to pick iso code the old way (for CP)
-  /* $visP = substr(json_encode($params), 0, -1); */
-  /* $visP .= ', iso3: Drupal.settings.landbook.countryCode ? Drupal.settings.landbook.countryCode : "" }'; */
   $attr = json_encode($params);
   $js = $VCC['jsid'] . ' = new lbvisTable(LBV, ' . $attr . '); ' . $VCC['jsid'] . '.init();';
 
@@ -46,7 +42,8 @@ function lbvc_plugin_table_formatter($VCC) {
   }
 
   $value .= '<tbody>';
-  foreach ($params->cache as $i) { $value .= '<tr><td><span class="indicator">' . $i['render'] . '</span></td></tr>'; }
+  foreach ($params->cache as $i) { $value .= '<tr lbid="' . $i['id'] . '"><td><span class="indicator">' . $i['render'] . '</span></td></tr>'; }
+  // add td to value (depends on table type / columns)
   $value .= '</tbody></table>';
 
   $chart = array(
@@ -69,7 +66,7 @@ function lbvc_plugin_table_formatter($VCC) {
   if (sizeof($fields) == 0) {
     return $chart;
   }
-  $form = lbvc_plugin_ui_form_wrapper($VCC, $fields, (isset($params->allowAdd) ? 'add' : 'update'));
+  $form = lbvc_plugin_ui_form_wrapper($VCC, $fields);//, (isset($params->allowAdd) ? 'add' : 'update'));
   return array($chart, $form);
 }
 

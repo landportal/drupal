@@ -7,6 +7,93 @@
  * Author: Jules <jules@ker.bz>
  */
 
+
+/** Land Portal 2.5 new UX
+ *  bootstrap blocks
+ */
+function landlibrary_update_7201() {
+
+  $blocks = array();
+  // Blocks for LL Landing page
+  $i = 41;
+  foreach(array('llr-promoted', 'llr-last_pub', 'llr-last_add',) as $blockid) {
+    $blocks[] = array(
+      'keys' => array(
+        'module' => 'views',
+        'delta'  => $blockid,
+        'theme'  => 'lpbs',
+      ),
+      'values' => array(
+        'status' => 1,
+        'region' => 'content',
+        'title' => '',
+        'weight' => $i++,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'library',
+      )
+    );
+  }
+  // Landing page Sidebar
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'llorg-providers_100',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'sidebar_second',
+      'title' => '',
+      'weight' => 3,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'library',
+    )
+  );
+  // Landing page search block
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'apachesolr_search',
+      'delta'  => 'search_form_landlibrary_search',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => '',
+      'weight' => -1,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'library',
+    )
+  );
+
+  // Sources page
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'llorg-all',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => '',
+      'weight' => 1,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'library/sources',
+    )
+  );
+
+  foreach($blocks as $block) {
+    drush_log('Updated [' . $block['keys']['module'] . ': ' . $block['keys']['delta'] . ']', 'ok');
+    db_merge('block')
+      ->key($block['keys'])
+      ->fields($block['values'])
+      ->execute();
+  }
+
+}
+
+
 /*
  * Remove view by_uuid (now baked in code)
  */

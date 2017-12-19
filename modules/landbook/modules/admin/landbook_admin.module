@@ -44,26 +44,27 @@ function landportal_admin_help($path, $arg) {
 
 function landbook_admin_menu() {
   $items = array();
-  // LB module configuration (original / to be updated with useful, internal, LB module settings)
-  $items['admin/config/landbook'] = array(
-    'title'             => 'Landbook',
-    'description'       => 'Configure the landbook',
-    'postition'         => 'right',
-    'weight'            => -4,
-    'page callback'   	=> 'system_admin_menu_block_page',
-    'access arguments'  => array('administer site configuration'),
-    'file'              => 'system.admin.inc',
-    'file path'         => drupal_get_path('module', 'system'),
-  );
-  $items['admin/config/landbook/settings'] = array(
-    'title'             => 'Landbook settings',
-    'description'       => 'Base landbook configuration',
-    'page callback'     => 'drupal_get_form',
-    'page arguments'    => array('landbook_admin_settings'),
-    'access arguments'  => array('administer site configuration'),
-    'file'              => 'landbook_admin.admin.inc',
-    'file path'         => drupal_get_path('module', 'landbook_admin'),
-  );
+  // @todo: cleanup view + php page
+  /* // LB module configuration (original / to be updated with useful, internal, LB module settings) */
+  /* $items['admin/config/landbook'] = array( */
+  /*   'title'             => 'Landbook', */
+  /*   'description'       => 'Configure the landbook', */
+  /*   'postition'         => 'right', */
+  /*   'weight'            => -4, */
+  /*   'page callback'   	=> 'system_admin_menu_block_page', */
+  /*   'access arguments'  => array('administer site configuration'), */
+  /*   'file'              => 'system.admin.inc', */
+  /*   'file path'         => drupal_get_path('module', 'system'), */
+  /* ); */
+  /* $items['admin/config/landbook/settings'] = array( */
+  /*   'title'             => 'Landbook settings', */
+  /*   'description'       => 'Base landbook configuration', */
+  /*   'page callback'     => 'drupal_get_form', */
+  /*   'page arguments'    => array('landbook_admin_settings'), */
+  /*   'access arguments'  => array('administer site configuration'), */
+  /*   'file'              => 'landbook_admin.admin.inc', */
+  /*   'file path'         => drupal_get_path('module', 'landbook_admin'), */
+  /* ); */
 
   // LB content management
   $items['admin/content/landbook'] = array(

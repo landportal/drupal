@@ -123,7 +123,7 @@ function ct_project_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'More about this project',
-    'weight' => '6',
+    'weight' => '5',
     'children' => array(
       0 => 'field_contact',
       1 => 'field_date',
@@ -131,6 +131,7 @@ function ct_project_field_group_info() {
       3 => 'field_link',
       4 => 'field_user',
       5 => 'field_value',
+      6 => 'field_currency',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -517,7 +518,7 @@ function ct_project_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Related organizations',
-    'weight' => '7',
+    'weight' => '6',
     'children' => array(
       0 => 'field_donors',
       1 => 'field_implementers',
@@ -583,7 +584,7 @@ function ct_project_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '5',
+    'weight' => '4',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',

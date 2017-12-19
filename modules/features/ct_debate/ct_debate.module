@@ -5,3 +5,15 @@
  */
 
 include_once 'ct_debate.features.inc';
+
+function ct_debate_preprocess_field(&$variables) {
+  if ($variables['element']['#field_name'] != 'field_status') return;
+  $variables['item_attributes_array'] = array();
+  foreach($variables['items'] as $delta => $item) {
+    $classes = array(
+      'status-' . strtolower(str_replace(' ', '-', $item['#markup'])),
+      'status-' . $variables['element']['#items'][$delta]['tid']
+    );
+    $variables['item_attributes_array'][$delta] = array('class' => $classes);
+  }
+}

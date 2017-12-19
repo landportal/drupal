@@ -1,0 +1,9 @@
+Developers {"url":"developers","lang":"und","weight":"0"}
+-Overview {"url":"developers\/overview","lang":"und","weight":"0"}
+-What is Linked Open Data {"url":"developers\/linked-open-data","lang":"und","weight":"1"}
+-Data Model {"url":"developers\/data-model","lang":"und","weight":"2"}
+-Vocabularies {"url":"developers\/voc","lang":"und","weight":"3"}
+-Reuse the data {"url":"developers\/reuse-data","lang":"und","weight":"4"}
+-SPARQL Endpoint {"url":"developers\/sparql","lang":"und","weight":"5"}
+-License {"url":"developers\/license","lang":"und","weight":"6"}
+-Subscribe to the LOD newsletter {"url":"developers\/suscribe-lod-newsletter","lang":"und","weight":"7"}

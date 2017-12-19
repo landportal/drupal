@@ -33,7 +33,7 @@ $handler->display->display_options['row_options']['inline'] = array(
   'field_id' => 'field_id',
   'hdepth' => 'hdepth',
 );
-/* Relationship: Taxonomy term: Catalog (field_dataset) */
+/* Relationship: Taxonomy term: Dataset (field_dataset) */
 $handler->display->display_options['relationships']['field_dataset_tid_1']['id'] = 'field_dataset_tid_1';
 $handler->display->display_options['relationships']['field_dataset_tid_1']['table'] = 'field_data_field_dataset';
 $handler->display->display_options['relationships']['field_dataset_tid_1']['field'] = 'field_dataset_tid';

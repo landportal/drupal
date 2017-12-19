@@ -29,6 +29,12 @@ $context->conditions = array(
 $context->reactions = array(
   'block' => array(
     'blocks' => array(
+      'apachesolr_search-search_form_mlike_search' => array(
+        'module' => 'apachesolr_search',
+        'delta' => 'search_form_mlike_search',
+        'region' => 'header',
+        'weight' => '-10',
+      ),
       'menu-menu-partners-mlike' => array(
         'module' => 'menu',
         'delta' => 'menu-partners-mlike',

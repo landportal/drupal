@@ -6,88 +6,9 @@
 
 include_once 'landportal_display.features.inc';
 
-/******************************************
- *
- *    Hacks for drupal node/page title
+/*
+ * Implement hook_entity_info_alter().
  */
-
-function landportal_display_preprocess_page(&$variables) {
-  // Taxonomy, clear title if we have a name_field
-  if (@($term = $variables['page']['content']['system_main']['term_heading']['term']) &&
-      isset($term['name_field'])) {
-    $variables['title'] = '';
-    //dpm($term, "Got a term");
-  }
-  if (isset($variables['node']) && isset($variables['node']->title_field) &&
-      array_key_exists('nodes', $variables['page']['content']['system_main'])) {
-    landportal_display__get_group_header($variables['node']->nid, $variables);
-  }
-}
-
-//
-// Pick group_header and create a new group (title_header) to render instead of title
-//
-function landportal_display__get_group_header($nid, &$variables) {
-    $content = $variables['page']['content']['system_main']['nodes'][$nid];
-    if (isset($content['#fieldgroups']) && isset($content['#fieldgroups']['group_header'])) {
-      $header = $content['#fieldgroups']['group_header'];
-      $title = landportal_display_extract_groups('group_header', $content);
-      field_group_fields_nest($title, $content);
-      $variables['page']['title_header'] = $title;
-      $variables['title'] = render($title);
-      unset($variables['page']['content']['system_main']['nodes'][$nid]['#fieldgroups']['group_header']);
-      unset($variables['page']['content']['system_main']['nodes'][$nid]['#groups']['group_header']);
-      // Remove fields and groups children that now belong to the page-header
-      foreach ($title['#group_children'] as $c => $g) {
-        unset($variables['page']['content']['system_main']['nodes'][$nid][$c]);
-        unset($variables['page']['content']['system_main']['nodes'][$nid]['#group_children'][$c]);
-      }
-      //dpm($variables['page']['content']['system_main']['nodes'][$nid], 'da node afta');
-    }
-}
-
-function landportal_display_extract_groups($group_name, $content) {
-  static $i = 0;
-  $g = array(
-    '#fieldgroups' => [],
-    '#group_children' => [],
-  );
-  foreach ($content['#groups'][$group_name]->children as $field) {
-    // Process nested groups
-    if (substr($field, 0, 6) == 'group_') {
-      $i++;
-      $cg = landportal_display_extract_groups($field, $content);
-      $i--;
-      $g['#fieldgroups'][$field] = $cg['#fieldgroups'][$field];
-      $g['#group_children'][$field] = $group_name;
-      $g['#group_children'] += $cg['#group_children'];
-      $g['#items'] += $cg['#items'];
-      //unset($variables['page']['content']['system_main']['nodes'][$node->nid][$fieldc]);
-    } else {
-      if (isset($content[$field])) {
-        $g['#items'][$field] = $content[$field];
-        $g['#group_children'][$field] = $group_name;
-      }
-      //unset($variables['page']['content']['system_main']['nodes'][$node->nid][$field]);
-    }
-  }
-  //dpm($g, 'E: '.$group_name);
-  $g['#fieldgroups'][$group_name] = $content['#groups'][$group_name];
-  $g += $g['#items'];
-  if (!$i) unset($g['#items']);
-  return $g;
-}
-
-
-/******************************************
- *
- *    Hacks for select2 on forms
- */
-
-/**********************
-** Implementation of hook_entity_info_alter().
-***********************/
-
 function landportal_display_entity_info_alter(&$entity_info){
   $entity_info['node']['view modes']['listing'] = array(
     'label' => t('Listing'),
@@ -95,7 +16,126 @@ function landportal_display_entity_info_alter(&$entity_info){
   );
 }
 
+
+/******************************************
+ *
+ * CKEditor
+ */
+// Override CKeditor JS
+function landportal_display_ckeditor_settings_alter(&$settings, $context) {
+  //dpm($context);
+  $path = drupal_get_path('module', 'landportal_display');
+  drupal_add_js(array('landportal_cke' => array('path' => $path)), 'setting');
+  $settings['stylesCombo_stylesSet'] = "default:/" . $path . "/ckeditor.styles.js";
+  $settings['contentsCss'][] = "/" . drupal_get_path('theme', 'lpbs') . "/css/lp-bootstrap.css";
+  $settings['contentsCss'][] = "/" . drupal_get_path('theme', 'lpbs') . "/css/style.css";
+}
+
+/******************************************
+ *
+ * Hacks for drupal page headers (title)
+ *
+ * Maybe this should be back in theme as this is pretty much appearence related and will only work nicely with LPBS theme
+ */
+// function landportal_display_preprocess_page(&$variables) { }
+function landportal_display_process_page(&$variables) {
+  $sysmain = &$variables['page']['content']['system_main'];
+  /* dpm($sysmain); */
+  // Taxonomy term page
+  if (array_key_exists('term_heading', $sysmain)) {
+    $term = &$sysmain['term_heading']['term'];
+    if ($header = landportal_display__get_header($term)) {
+      $variables['title'] = render($header);
+    }
+    // For Tax. term pages without a header group
+    else if (isset($term['name_field'])) {
+      $variables['title'] = render($term['name_field']);
+      unset($term['name_field']);
+    }
+  }
+  // Node page
+  else if (array_key_exists('nodes', $sysmain)) {
+    $first = array_keys($sysmain['nodes'])[0];
+    $node = &$sysmain['nodes'][$first];
+    if ($header = landportal_display__get_header($node)) {
+      $variables['title'] = render($header);
+    }
+  }
+  else {
+    // Wrap page title in an h1
+    //$variables['title'] = '<h1>' . $variables['title'] . '</h1>';
+  }
+  //dpm($variables);
+}
+
+// Pick group_header if it exists, return it and suppress it from content
+function landportal_display__get_header(&$content) {
+  if (!isset($content['#fieldgroups']) || !isset($content['#fieldgroups']['group_header'])) return null;
+  //dpm($content, 'content');
+  $header = array(
+    '#fieldgroups' => array(
+      'group_header' => $content['#fieldgroups']['group_header']
+    ),
+    '#group_children' => array(),
+  );
+  landportal_display__get_group($header, 'group_header', $content);
+  unset($content['#fieldgroups']['group_header']);
+  field_group_fields_nest($header, $content);
+  //dpm($header, 'header');
+  return $header;
+}
+
+function landportal_display__get_group(&$group, $group_name, &$vars) {
+  if (!$vars['#fieldgroups'][$group_name]->children) return FALSE;
+  foreach($vars['#fieldgroups'][$group_name]->children as $c) {
+    $group['#group_children'][$c] = $group_name;
+    if (isset($vars[$c])) {
+      $group[$c] = $vars[$c];
+      unset($vars[$c]);
+    }
+    if (isset($vars['#fieldgroups'][$c])) {
+      $group['#fieldgroups'][$c] = $vars['#fieldgroups'][$c];
+      landportal_display__get_group($group, $c, $vars);
+      unset($vars[$c]);
+    }
+  }
+  return TRUE;
+}
+
+
+
+/******************************************
+ *
+ *    Hacks for select2 on forms
+ *
+ * npm install select2
+ *
+ */
+
+/* function landportal_display_theme_registry_alter(&$theme_registry) { */
+/*   $theme_registry['select']['preprocess functions'][] = 'landportal_display_select'; */
+/*   $theme_registry['select']['process functions'][] = 'landportal_display_select'; */
+/*   dpm($theme_registry['select']); */
+/* } */
+
+/* function landportal_display_select(&$variables, $hook) { */
+/*   landportal_display_add_select2($variables['element']); */
+/*   $variables['element']['#attributes']['class'][] = 'STUFF'; */
+/*   dpm($variables, $hook);//$variables['element']['#id']); */
+/*   //return jump_menu_select($variables); */
+/* } */
+
+function landportal_display_add_select2(&$elem) {
+  global $theme;
+  if ($theme != 'lpbs') {
+    $elem['#attached']['css'][] = drupal_get_path('module', 'landportal_display') . '/select2.css';
+  }
+  $elem['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select2.full.min.js';
+  $elem['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select.js';
+}
+
 function landportal_display_form_alter(&$form, &$form_state, $form_id) {
+  //dsm($form_id);
   $fields = array(
     // LL specific
     'field_doc_type',
@@ -130,16 +170,11 @@ function landportal_display_form_alter(&$form, &$form_state, $form_id) {
   $forms = array(
     'field_ui_field_overview_form', 'user_profile_form', 'user_register_form',
     'apachesolr_search_custom_page_search_form', 'views_exposed_form',
-    'taxonomy-form-term'
+    'taxonomy-form-term', 'ctools_jump_menu', 'menu_position_add_rule_form'
   );
+  //dpm($form, $form_id);
   if (count($select) || in_array($form_id, $forms) || preg_match('/^views_ui_/', $form_id)) {
-    // dpm($select, 'selected fields');
-    global $theme;
-    if ($theme != 'lpbs') {
-      $form['#attached']['css'][] = drupal_get_path('module', 'landportal_display') . '/select2.css';
-    }
-    //$form['#attached']['js'][] = drupal_get_path('theme', 'lpbs') . '/js/select2.min.js';
-    $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select2.min.js';
-    $form['#attached']['js'][] = drupal_get_path('module', 'landportal_display') . '/select.js';
+    //dpm($select, 'selected fields');
+    landportal_display_add_select2($form);
   }
 }

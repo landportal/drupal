@@ -5,9 +5,223 @@
  *
  * The Landportal landbook
  *
- * Original work by: WESO
- * Drupal refactoring: Jules <jules@ker.bz>
+ * Author: Jules <jules@ker.bz>
  */
+
+/** Land Portal 2.5 new UX
+ *  cleanup fields + bootstrap blocks
+ */
+function landbook_update_7205() {
+  // Remove from CP & TP fields superseded by new visualizations
+  foreach(array('field_indicator_ranking', 'field_indicator_map') as $name) {
+    if ($instance = field_info_instance('node', $name, 'landbook_country')) {
+      field_delete_instance($instance);
+    }
+    if ($instance = field_info_instance('node', $name, 'thematic_narrative')) {
+      field_delete_instance($instance);
+    }
+  }
+  // Remove fields from DS & Ind
+  if ($instance = field_info_instance('node', 'field_view_dataset', 'dataset')) {
+    field_delete_instance($instance);
+  }
+  if ($instance = field_info_instance('taxonomy_term', 'field_view_dataset', 'indicators')) {
+    field_delete_instance($instance);
+  }
+  if ($instance = field_info_instance('taxonomy_term', 'field_view_indicators', 'indicators')) {
+    field_delete_instance($instance);
+  }
+
+  $blocks = array();
+  $i = 21;
+  // Blocks for Data page
+  foreach(array('lbdat_view-highlight', 'lbdat_view-latest',) as $blockid) {
+    $blocks[] = array(
+      'keys' => array(
+        'module' => 'views',
+        'delta'  => $blockid,
+        'theme'  => 'lpbs',
+      ),
+      'values' => array(
+        'status' => 1,
+        'region' => 'content',
+        'title' => '',
+        'weight' => $i++,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'book/data',
+      )
+    );
+  }
+  // Block in Datasets page
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'lbdat_view-all',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => '',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'book/datasets',
+    )
+  );
+
+  // Blocks for Issues page
+  $i += 3;
+  foreach(array('thematic_pages-highlight', 'thematic_pages-all',) as $blockid) {
+    $blocks[] = array(
+      'keys' => array(
+        'module' => 'views',
+        'delta'  => $blockid,
+        'theme'  => 'lpbs',
+      ),
+      'values' => array(
+        'status' => 1,
+        'region' => 'content',
+        'title' => '',
+        'weight' => $i++,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'book/thematic',
+      )
+    );
+  }
+
+  // Countries page
+  $i += 3;
+  foreach(array('lbgeo-regions', 'country_narrative-highlight') as $blockid) {
+    $blocks[] = array(
+      'keys' => array(
+        'module' => 'views',
+        'delta'  => $blockid,
+        'theme'  => 'lpbs',
+      ),
+      'values' => array(
+        'status' => 1,
+        'region' => 'content',
+        'title' => '',
+        'weight' => $i++,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'book/countries',
+      )
+    );
+  }
+  // Move map down
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'landbook_view_coda',
+      'delta'  => 'lbvc_map',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => '',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'book/countries',
+    )
+  );
+
+  // Indicators page
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'lbind_view-all',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => '',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'book/indicators',
+    )
+  );
+  // Providers
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'lborg-all',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => '',
+      'weight' => $i++,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'book/sources',
+    )
+  );
+  // Hide this block (for now)
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'country_narrative-cp',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'landbook_view_coda',
+      'delta'  => 'lbvc_map_country',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'landbook',
+      'delta'  => 'media',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'landbook',
+      'delta'  => 'infographics',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'landbook_catalog-all',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 0,
+      'region' => -1,
+    )
+  );
+
+  foreach($blocks as $block) {
+    drush_log('Updated [' . $block['keys']['module'] . ': ' . $block['keys']['delta'] . ']', 'ok');
+    db_merge('block')
+      ->key($block['keys'])
+      ->fields($block['values'])
+      ->execute();
+  }
+}
 
 
 /** Add Dataset CT and admin for Datasets content

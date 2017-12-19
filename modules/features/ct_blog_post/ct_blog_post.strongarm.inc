@@ -130,22 +130,22 @@ function ct_blog_post_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'language' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '10',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '9',
         ),
       ),
       'display' => array(
@@ -209,7 +209,7 @@ function ct_blog_post_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_blog_post';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_blog_post'] = $strongarm;
 
   $strongarm = new stdClass();

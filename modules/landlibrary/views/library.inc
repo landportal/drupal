@@ -4,7 +4,7 @@
 $view = new view();
 $view->name = 'library';
 $view->description = 'Provide ref filters to LLR';
-$view->tag = 'default';
+$view->tag = 'landlibrary';
 $view->base_table = 'taxonomy_term_data';
 $view->human_name = 'Library';
 $view->core = 7;

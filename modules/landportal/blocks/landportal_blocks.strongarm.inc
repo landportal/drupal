@@ -16,7 +16,9 @@ function landportal_blocks_strongarm() {
   $strongarm->name = 'addtoany_additional_html';
   $strongarm->value = '<a class="a2a_button_facebook"></a>
 <a class="a2a_button_email"></a>
+<a class="a2a_button_google_plus"></a>
 <a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
 ';
   $export['addtoany_additional_html'] = $strongarm;
 
@@ -31,7 +33,7 @@ function landportal_blocks_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'addtoany_buttons_size';
-  $strongarm->value = '45';
+  $strongarm->value = '25';
   $export['addtoany_buttons_size'] = $strongarm;
 
   $strongarm = new stdClass();

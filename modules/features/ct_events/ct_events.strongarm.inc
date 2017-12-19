@@ -137,29 +137,29 @@ function ct_events_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '10',
+          'weight' => '13',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'language' => array(
           'weight' => '5',
         ),
         'xmlsitemap' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '10',
         ),
       ),
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '6',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '6',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -183,11 +183,11 @@ function ct_events_strongarm() {
         ),
         'locations' => array(
           'default' => array(
-            'weight' => '2',
+            'weight' => '3',
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '3',
+            'weight' => '2',
             'visible' => TRUE,
           ),
           'listing' => array(

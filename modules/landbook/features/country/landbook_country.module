@@ -7,23 +7,122 @@
 include_once 'landbook_country.features.inc';
 
 /**
- * Transform ISO3 to tid
+ * Implements hook_node_view().
+ *
+ * For Country narrative pages (node landbook_country, view_mode full)
+ * - Provide an iso3 to Drupal JS settings (mainly for VGGT / LGAF blocks)
+ *
  */
-function landbook_country_views_pre_view(&$view, &$display_id, &$args) {
-  if ( ! ($view->name == 'landbook_countries' && $display_id == 'portfolio') ) return;
-  if ($term = landportal_taxonomy_country_term_by_iso($args[0])) {
-    $args[0] = $term->tid;
+function landbook_country_node_view($node, $view_mode, $langcode) {
+  if ($node->type != 'landbook_country') return;
+  if ($view_mode == 'teaser') {
+    //dpm($node);
+  }
+  if ($view_mode == 'full') {
+    $term = $node->field_geographical_focus[LANGUAGE_NONE][0]['entity'];
+    $iso3 = $term->field_iso3[LANGUAGE_NONE][0]['value'];
+    drupal_add_js(array('iso3' => $iso3), 'setting');
+
+    // Breadcrumbs
+    $display_settings = taxonomy_display_fetch_taxonomy_display($term->vocabulary_machine_name);
+    $breadcrumb_display = new $display_settings->breadcrumb_display_plugin;
+    $breadcrumb_display->buildBreadcrumb($term);
+
+    // Menus
+    menu_tree_set_path('landportal-menu', 'node/14170'); // @todo should be something with alias + lang
   }
 }
+
+
 /**
- * This view / display should have a markup '#page-submenu' to hook to
- * Will hook JS for page internal nav
+ * Implements hook_node_view_alter().
+ *
+ * Attach an Internal page menu to group_aside (see landportal_blocks)
  */
-function landbook_country_views_post_render(&$view, &$output, &$cache) {
-  // TODO: should be a proper JS attachement to the view ...
-  if ($view->name == 'landbook_countries') {
-    if ($view->current_display == 'cp_header') {
-      $output .= '<script>' . landportal_blocks_page_submenu() . '</script>';
+function landbook_country_node_view_alter(&$build) {
+  if ($build['#bundle'] != 'landbook_country') return;
+  if ($build['#view_mode'] == 'teaser') {
+    //dpm($build, 'CP teaser');
+  }
+  if ($build['#view_mode'] != 'full' || !isset($build['#groups']['group_aside']))
+    return ;
+  $geo = $build['field_geographical_focus']['#items'][0]['entity'];
+  $path = drupal_get_path_alias('taxonomy/term/' . $geo->tid);
+  $build['submenu'] = array(
+    '#markup' => '<div id="page-submenu"><ul class="nav">'
+    . '<li><a href="/' . $path . '" title="' . t('Back to overview for'). ' ' . $geo->name . '">' . $geo->name . '</a></li>'
+    . '</ul></div>',
+    '#attached' => array(
+      'js' => array(array(
+        'type' => 'inline',
+        'data' => landportal_blocks_page_submenu()
+      ))
+    ),
+  );
+  $build['#groups']['group_aside']->children[] = 'submenu';
+  $build['#group_children']['submenu'] = 'group_aside';
+}
+
+// For CP , not showing up inside the 1st lvl page ( in the 'last' narrative view )
+// Note this might be an issue later with more than 1 per theme
+function landbook_country_entity_prepare_view($entities, $type, $langcode) {
+  if ($type != 'node') return;
+  $nid = array_keys($entities)[0];
+  if ($entities[$nid]->type != 'landbook_country') return;
+  if (isset($entities[$nid]->view) && $entities[$nid]->view->current_display != 'last') {
+    $tid = $entities[$nid]->field_geographical_focus[LANGUAGE_NONE][0]['tid'];
+    if ($tid) $entities[$nid]->alias = url('taxonomy/term/' . $tid);
+    //dpm($entities[$nid], 'prepare view for' . $type);
+  }
+}
+
+function landbook_country_preprocess_node(&$variables) {
+  $view_mode = $variables['elements']['#view_mode'];
+  if ($variables['type'] != 'landbook_country' || $view_mode != 'teaser') return;
+  // Should be set in landbook_country_entity_prepare_view
+  if ($variables['alias']) {
+    // Hack in the title with new link
+    $title = &$variables['content']['title_field'];
+    $link = l($title['#items'][0]['value'], $variables['alias']);
+    $title[0]['#markup'] = '<h3>' . $link . '</h3>';
+    //$variables['elements']['#children'] = $t;
+    //dpm($title, 'title');
+    // Hack: Image link to the taxonomy term
+    if (isset($variables['content']['field_image'])) {
+      $img = &$variables['content']['field_image'];
+      $img[0]['#path']['path'] = $variables['alias'];
+      //dpm($img, 'IMG');
     }
   }
+  //dpm($variables, 'preprocess');
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * From the former Land Book coutries / regions
+ * pages with URL as /book/countries/[ISO3]
+ * now redirect to the corresponding regions taxonomy term
+ */
+function landbook_country_menu() {
+  $items = array();
+  $items['book/countries/%'] = array(
+    'page callback'   => 'landbook_country_page',
+    'page arguments'  => array(2),
+    'access callback' => TRUE,
+    'module'          => 'landbook_country',
+  );
+  return $items;
+}
+
+// Render either a Country Narrative (node) or the Country term (taxonomy term)
+function landbook_country_page($iso3) {
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'taxonomy_term')
+        ->entityCondition('bundle', 'regions')
+        ->fieldCondition('field_iso3', 'value', $iso3, '=');
+  $result = $query->execute();
+  $tid = array_keys($result['taxonomy_term'])[0];
+  // For now let's cut the crap and simply send the use to the term page
+  return drupal_goto(drupal_get_path_alias('taxonomy/term/' . $tid));
 }

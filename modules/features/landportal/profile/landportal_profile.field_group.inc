@@ -25,8 +25,9 @@ function landportal_profile_field_group_info() {
     'children' => array(
       0 => 'field_link',
       1 => 'field_email',
-      2 => 'group_work',
-      3 => 'group_topics_regions',
+      2 => 'field_hide_profile',
+      3 => 'group_work',
+      4 => 'group_topics_regions',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -52,12 +53,11 @@ function landportal_profile_field_group_info() {
   $field_group->parent_name = 'group_settings';
   $field_group->data = array(
     'label' => 'Account settings',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(
-      0 => 'field_hide_profile',
-      1 => 'ckeditor',
-      2 => 'timezone',
-      3 => 'locale',
+      0 => 'ckeditor',
+      1 => 'timezone',
+      2 => 'locale',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -111,10 +111,10 @@ function landportal_profile_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'LP admin',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
-      0 => 'group_admin_account',
-      1 => 'group_seo',
+      0 => 'group_seo',
+      1 => 'group_admin_account',
       2 => 'group_sync',
     ),
     'format_type' => 'tabs',
@@ -436,7 +436,7 @@ function landportal_profile_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Profile',
-    'weight' => '3',
+    'weight' => '0',
     'children' => array(
       0 => 'group_about',
       1 => 'group_profile',
@@ -581,8 +581,8 @@ function landportal_profile_field_group_info() {
     'label' => 'Settings',
     'weight' => '2',
     'children' => array(
-      0 => 'group_account',
-      1 => 'group_lists',
+      0 => 'group_lists',
+      1 => 'group_account',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -666,7 +666,7 @@ function landportal_profile_field_group_info() {
   $field_group->parent_name = 'group_about';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '9',
+    'weight' => '5',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',

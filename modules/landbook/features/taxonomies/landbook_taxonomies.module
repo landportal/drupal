@@ -5,3 +5,15 @@
  */
 
 include_once 'landbook_taxonomies.features.inc';
+
+// Hide dataset title on teaser and default view if there is a logo (field_image)
+function landbook_taxonomies_preprocess_field(&$variables) {
+  if ($variables['element']['#bundle'] != 'datasets'
+   || $variables['element']['#field_name'] != 'name_field') return;
+  $view_mode = $variables['element']['#view_mode'];
+  // for Dataset name_field in default view mode, hide if there is a logo
+  if ($view_mode != 'full' && $view_mode != 'default'
+   && $variables['element']['#object']->field_image) {
+      $variables['classes_array'][] = 'sr-only';
+  }
+}

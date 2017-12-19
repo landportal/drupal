@@ -34,9 +34,9 @@ function landportal_profile_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_interests_pattern';
+  $strongarm->name = 'pathauto_taxonomy_term_occupation_pattern';
   $strongarm->value = '';
-  $export['pathauto_taxonomy_term_interests_pattern'] = $strongarm;
+  $export['pathauto_taxonomy_term_occupation_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -55,12 +55,9 @@ function landportal_profile_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_settings_taxonomy_term_interests';
-  $strongarm->value = array(
-    'status' => '0',
-    'priority' => '0.5',
-  );
-  $export['xmlsitemap_settings_taxonomy_term_interests'] = $strongarm;
+  $strongarm->name = 'uuid_features_file_taxonomy_term_occupation';
+  $strongarm->value = 0;
+  $export['uuid_features_file_taxonomy_term_occupation'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

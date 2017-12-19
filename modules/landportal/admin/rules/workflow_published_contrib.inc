@@ -1,7 +1,7 @@
 <?php
 
 $rule = '{ "workflow_published_contrib" : {
-    "LABEL" : "Published contributions",
+    "LABEL" : "publish contrib",
     "PLUGIN" : "reaction rule",
     "WEIGHT" : "-1",
     "OWNER" : "rules",
@@ -33,7 +33,7 @@ $rule = '{ "workflow_published_contrib" : {
       { "mail" : {
           "to" : "admin@landportal.info, team-comm@landportal.info",
           "subject" : "[node:author] published: [node:title]",
-          "message" : "Hi there!\r\n\r\n[node:author] have published:\r\n[node:title] \/ [node:url]\r\n\r\n--\r\nYour beloved Land Portal site.",
+          "message" : "Dear web manager,\r\n\r\n[node:author] has published:\r\n[node:title] \/ [node:url]",
           "language" : [ "" ]
         }
       }

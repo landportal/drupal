@@ -313,7 +313,7 @@ $handler->display->display_options['fields']['body']['table'] = 'field_data_body
 $handler->display->display_options['fields']['body']['field'] = 'body';
 $handler->display->display_options['fields']['body']['alter']['max_length'] = '50';
 $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -400,7 +400,7 @@ Extension: [field_date] <br />
 Contact information: [field_contact] <br />
 Associated staff: [field_user] <br />
 Data Provider: [field_doc_provider]';
-/* Field: Content: Affiliated organization */
+/* Field: Content: Organizations */
 $handler->display->display_options['fields']['field_related_organization']['id'] = 'field_related_organization';
 $handler->display->display_options['fields']['field_related_organization']['table'] = 'field_data_field_related_organization';
 $handler->display->display_options['fields']['field_related_organization']['field'] = 'field_related_organization';
@@ -774,7 +774,7 @@ $handler->display->display_options['fields']['body']['table'] = 'field_data_body
 $handler->display->display_options['fields']['body']['field'] = 'body';
 $handler->display->display_options['fields']['body']['alter']['max_length'] = '50';
 $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
-/* Field: Field: Image */
+/* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
 $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -812,6 +812,17 @@ $handler->display->display_options['fields']['field_date']['settings'] = array(
   'multiple_to' => '',
   'show_remaining_days' => 0,
   'show_repeat_rule' => 'show',
+);
+/* Field: Content: Project Currency */
+$handler->display->display_options['fields']['field_currency']['id'] = 'field_currency';
+$handler->display->display_options['fields']['field_currency']['table'] = 'field_data_field_currency';
+$handler->display->display_options['fields']['field_currency']['field'] = 'field_currency';
+$handler->display->display_options['fields']['field_currency']['label'] = '';
+$handler->display->display_options['fields']['field_currency']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_currency']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_currency']['settings'] = array(
+  'bypass_access' => 0,
+  'link' => 0,
 );
 /* Field: Content: Project value */
 $handler->display->display_options['fields']['field_value']['id'] = 'field_value';
@@ -856,7 +867,7 @@ $handler->display->display_options['fields']['nothing_1']['label'] = 'Metadata__
 $handler->display->display_options['fields']['nothing_1']['alter']['text'] = 'ID: [field_id] <br />
 Acronym: [field_acronym] <br />
 Website: [field_link] <br />
-Project value: [field_value] <br />
+Project value: [field_currency] [field_value] <br />
 Extension: [field_date] <br />
 Contact information: [field_contact] <br />
 Associated staff: [field_user] <br />

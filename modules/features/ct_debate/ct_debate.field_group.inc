@@ -27,6 +27,7 @@ function ct_debate_field_group_info() {
       1 => 'field_status',
       2 => 'field_file',
       3 => 'field_facilitators',
+      4 => 'field_orgref',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -41,6 +42,39 @@ function ct_debate_field_group_info() {
     ),
   );
   $field_groups['group_about|node|debate|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_aside|node|debate|default';
+  $field_group->group_name = 'group_aside';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'debate';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_file',
+      1 => 'field_orgref',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-aside',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_aside|node|debate|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -139,7 +173,7 @@ function ct_debate_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Header',
+    'label' => '',
     'weight' => '0',
     'children' => array(
       0 => 'field_image',
@@ -149,13 +183,13 @@ function ct_debate_field_group_info() {
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
-      'label' => 'Header',
+      'label' => '',
       'instance_settings' => array(
         'id' => '',
         'classes' => '',
         'element' => 'header',
         'show_label' => '0',
-        'label_element' => 'div',
+        'label_element' => '',
         'attributes' => '',
       ),
     ),
@@ -343,7 +377,7 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = 'group_topics_regions';
   $field_group->data = array(
     'label' => '',
-    'weight' => '7',
+    'weight' => '6',
     'children' => array(
       0 => 'field_related_topics',
       1 => 'field_related_domains',

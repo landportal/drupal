@@ -23,10 +23,10 @@ function ct_dataset_field_group_info() {
     'label' => '',
     'weight' => '2',
     'children' => array(
-      0 => 'field_link',
-      1 => 'field_related_aside',
-      2 => 'field_view_dataset',
-      3 => 'field_orgref',
+      0 => 'field_catalog',
+      1 => 'field_link',
+      2 => 'field_orgref',
+      3 => 'field_related_aside',
       4 => 'group_landvoc',
     ),
     'format_type' => 'div',
@@ -109,6 +109,37 @@ function ct_dataset_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_header|node|dataset|teaser';
+  $field_group->group_name = 'group_header';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dataset';
+  $field_group->mode = 'teaser';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_image',
+      1 => 'title_field',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'element' => 'header',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_header|node|dataset|teaser'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_landvoc|node|dataset|default';
   $field_group->group_name = 'group_landvoc';
   $field_group->entity_type = 'node';
@@ -117,7 +148,7 @@ function ct_dataset_field_group_info() {
   $field_group->parent_name = 'group_aside';
   $field_group->data = array(
     'label' => 'Related categories',
-    'weight' => '12',
+    'weight' => '21',
     'children' => array(
       0 => 'field_related_domains',
       1 => 'field_related_themes',
@@ -220,8 +251,8 @@ function ct_dataset_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_paragraphs',
-      2 => 'field_related_blocks',
-      3 => 'field_visualization',
+      2 => 'field_visualization',
+      3 => 'group_related',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -239,6 +270,39 @@ function ct_dataset_field_group_info() {
     ),
   );
   $field_groups['group_main|node|dataset|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_related|node|dataset|default';
+  $field_group->group_name = 'group_related';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'dataset';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_main';
+  $field_group->data = array(
+    'label' => 'Related content on the Land Portal',
+    'weight' => '16',
+    'children' => array(
+      0 => 'field_noderef',
+      1 => 'field_related_blocks',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Related content on the Land Portal',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-related field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_related|node|dataset|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -431,6 +495,7 @@ function ct_dataset_field_group_info() {
   // Included for use with string extractors like potx.
   t('Related categories');
   t('Related content');
+  t('Related content on the Land Portal');
   t('Settings');
   t('Topics and Regions');
 

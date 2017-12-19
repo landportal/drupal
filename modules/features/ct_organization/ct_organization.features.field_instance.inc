@@ -406,7 +406,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'listing' => array(
         'label' => 'above',
@@ -502,17 +502,18 @@ function ct_organization_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'taxonomy',
       'settings' => array(
         'apply_chosen' => '',
         'auto_creation' => 0,
+        'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
         'sort' => 'weight',
         'suggest_only_unique' => 0,
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'options_select',
+      'type' => 'taxonomy_autocomplete',
       'weight' => 3,
     ),
   );
@@ -611,8 +612,8 @@ function ct_organization_field_default_field_instances() {
         'label' => 'above',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'type' => 'i18n_taxonomy_term_reference_plain',
+        'weight' => 14,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1030,7 +1031,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -1084,7 +1085,7 @@ function ct_organization_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -1123,17 +1124,18 @@ function ct_organization_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'taxonomy',
       'settings' => array(
         'apply_chosen' => '',
         'auto_creation' => 0,
+        'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
         'sort' => 'weight',
         'suggest_only_unique' => 0,
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'options_select',
+      'type' => 'taxonomy_autocomplete',
       'weight' => 10,
     ),
   );

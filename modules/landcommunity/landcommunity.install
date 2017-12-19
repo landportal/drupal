@@ -1,0 +1,56 @@
+<?php
+/**
+ * @file
+ * This module provide stuff for Land Portal community
+ *
+ * Land Portal community
+ *
+ * Author: Jules <jules@ker.bz>
+ */
+
+/** Land Portal 2.5 new UX
+ *  add views
+ */
+
+/* Fill out regions terms with iso code from countries taxonomy */
+function landcommunity_update_7200() {
+  $blocks = array();
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'users_content-related',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => '',
+      'weight' => 10,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'users/*',
+    )
+  );
+
+  $blocks[] = array(
+    'keys' => array(
+      'module' => 'views',
+      'delta'  => 'users_content-dashboard',
+      'theme'  => 'lpbs',
+    ),
+    'values' => array(
+      'status' => 1,
+      'region' => 'content',
+      'title' => '',
+      'weight' => 11,
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'users/*',
+    )
+  );
+  foreach($blocks as $block) {
+    drush_log('Updated [' . $block['keys']['module'] . ': ' . $block['keys']['delta'] . ']', 'ok');
+    db_merge('block')
+      ->key($block['keys'])
+      ->fields($block['values'])
+      ->execute();
+  }
+}

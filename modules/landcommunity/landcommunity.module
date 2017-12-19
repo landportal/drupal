@@ -4,7 +4,12 @@
  * Code for the Land Community feature.
  */
 
-include_once 'landcommunity.features.inc';
+/**
+ * Implements hook_views_api().
+ */
+function landcommunity_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
 
 /**
  * Land Community
@@ -22,17 +27,4 @@ function landcommunity_help($path, $arg) {
     break;
   }
 }
-function landcommunity_entity_info_alter(&$entity_info) {
-    /* dpm($entity_info['user']['view modes']); */
-    /* dpm($entity_info); */
-    foreach (array ('user', 'profile2') as $entity) {
-        $entity_info[$entity]['view modes']['teaser'] = array(
-            'label' => t('Teaser'),
-            'custom settings' => TRUE,
-        );
-        $entity_info[$entity]['view modes']['full'] = array(
-            'label' => t('User account (Full)'),
-            'custom settings' => TRUE,
-        );
-    }
-}
+

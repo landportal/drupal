@@ -273,10 +273,39 @@ $feeds_tamper->settings = array(
       'source' => 'Wild capture commercial fishing and natural fisheries',
       'target' => 'Land Use, Management & Investment',
     ),
+    55 => array(
+      'source' => 'Law and judiciary',
+      'target' => 'Land Policy & Legislation',
+    ),
+    56 => array(
+      'source' => 'Law making process',
+      'target' => 'Land Policy & Legislation',
+    ),
+    57 => array(
+      'source' => 'Regulation of legal professions',
+      'target' => 'Land Policy & Legislation',
+    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 6;
 $feeds_tamper->description = 'ODM taxonomy to LandVoc OA categories';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_laws_importer-blank_source_1-trim';
+$feeds_tamper->importer = 'odm_laws_importer';
+$feeds_tamper->source = 'Blank source 1';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 8;
+$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -288,7 +317,7 @@ $feeds_tamper->importer = 'odm_laws_importer';
 $feeds_tamper->source = 'Blank source 1';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 8;
+$feeds_tamper->weight = 9;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -365,7 +394,7 @@ $feeds_tamper->settings = array(
     ),
     7 => array(
       'source' => 'Climate change',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     8 => array(
       'source' => 'Communal land',
@@ -377,7 +406,7 @@ $feeds_tamper->settings = array(
     ),
     10 => array(
       'source' => 'Deforestration drivers',
-      'target' => 'Forest Tenure;Land, Climate Change & Environment',
+      'target' => 'Forest Tenure;Land, Climate change & Environment',
     ),
     11 => array(
       'source' => 'Development and assistance for land tenure and land titling',
@@ -385,23 +414,23 @@ $feeds_tamper->settings = array(
     ),
     12 => array(
       'source' => 'Disasters and emergency response',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     13 => array(
       'source' => 'Environment and natural resources',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     14 => array(
       'source' => 'Environment and natural resources policy and administration',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     15 => array(
       'source' => 'Environmental and biodiversity protection',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     16 => array(
       'source' => 'Environmental impact assessments',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     17 => array(
       'source' => 'Ethnic minorities and indigenous people',
@@ -413,7 +442,7 @@ $feeds_tamper->settings = array(
     ),
     19 => array(
       'source' => 'Extractive industries',
-      'target' => 'Commercial pressures on land',
+      'target' => 'Land & Investments',
     ),
     20 => array(
       'source' => 'Food and Agriculture Organization FAO',
@@ -421,7 +450,7 @@ $feeds_tamper->settings = array(
     ),
     21 => array(
       'source' => 'Foreign investors',
-      'target' => 'Commercial Pressures on Land',
+      'target' => 'Land & Investments',
     ),
     22 => array(
       'source' => 'Forest cover',
@@ -437,7 +466,7 @@ $feeds_tamper->settings = array(
     ),
     25 => array(
       'source' => 'Forest protection',
-      'target' => 'Forest Tenure;Land, Climate Change & Environment',
+      'target' => 'Forest Tenure;Land, Climate change & Environment',
     ),
     26 => array(
       'source' => 'Forests and forestry',
@@ -465,7 +494,7 @@ $feeds_tamper->settings = array(
     ),
     32 => array(
       'source' => 'Land transfers',
-      'target' => 'Commercial Pressures on Land',
+      'target' => 'Land & Investments',
     ),
     33 => array(
       'source' => 'National government',
@@ -481,11 +510,11 @@ $feeds_tamper->settings = array(
     ),
     36 => array(
       'source' => 'Protected areas',
-      'target' => 'Land, Climate Change & Environment',
+      'target' => 'Land, Climate change & Environment',
     ),
     37 => array(
       'source' => 'Protected forests',
-      'target' => 'Forest Tenure;Land, Climate Change & Environment',
+      'target' => 'Forest Tenure;Land, Climate change & Environment',
     ),
     38 => array(
       'source' => 'United Nations',
@@ -507,10 +536,31 @@ $feeds_tamper->settings = array(
       'source' => 'World Bank',
       'target' => 'Land Stakeholders & Institutions',
     ),
+    43 => array(
+      'source' => 'Forest classifications',
+      'target' => 'Forest Tenure',
+    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 1;
 $feeds_tamper->description = 'ODM taxonomy to LandVoc themes';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_laws_importer-blank_source_2-trim';
+$feeds_tamper->importer = 'odm_laws_importer';
+$feeds_tamper->source = 'Blank source 2';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -522,7 +572,7 @@ $feeds_tamper->importer = 'odm_laws_importer';
 $feeds_tamper->source = 'Blank source 2';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 3;
+$feeds_tamper->weight = 4;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -553,29 +603,38 @@ $feeds_tamper->plugin_id = 'find_replace_multiple';
 $feeds_tamper->settings = array(
   'pairs' => array(
     0 => array(
-      'source' => 'Council of Ministers',
-      'target' => 'COCM',
-    ),
-    1 => array(
-      'source' => 'Office of the Council of Ministers',
-      'target' => 'COCM',
-    ),
-    2 => array(
-      'source' => 'The Office of the Council of Ministers',
-      'target' => 'COCM',
-    ),
-    3 => array(
-      'source' => 'The office of the Council of Ministers',
-      'target' => 'COCM',
-    ),
-    4 => array(
-      'source' => 'COCM',
+      'source' => 'council_of_ministers',
       'target' => 'Cambodian Office of the Council of Ministers',
     ),
+    1 => array(
+      'source' => 'ministry_of_agriculture_forestry_and_fisheries',
+      'target' => 'Cambodian Ministry of Agriculture, Forestry and Fisheries',
+    ),
+    2 => array(
+      'source' => 'national_assembly',
+      'target' => 'The National Assembly of the Kingdom of Cambodia',
+    ),
+    3 => array(
+      'source' => 'office_of_the_council_of_ministers',
+      'target' => 'Cambodian Office of the Council of Ministers',
+    ),
+    4 => array(
+      'source' => 'office_of_the_prime_minister',
+      'target' => 'Office of the Prime Minister Royal Government of Cambodia',
+    ),
+    5 => array(
+      'source' => 'royal_government_of_cambodia',
+      'target' => 'Government of the Kingdom of Cambodia',
+    ),
+    6 => array(
+      'source' => 'royal_palace',
+      'target' => 'Government of the Kingdom of Cambodia',
+    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Find replace multiple (Cambodian Office of the Council of Ministers)';
+$feeds_tamper->description = 'Find replace multiple';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -605,29 +664,54 @@ $feeds_tamper->plugin_id = 'find_replace_multiple';
 $feeds_tamper->settings = array(
   'pairs' => array(
     0 => array(
-      'source' => 'Council of Ministers',
-      'target' => 'COCM',
-    ),
-    1 => array(
-      'source' => 'Office of the Council of Ministers',
-      'target' => 'COCM',
-    ),
-    2 => array(
-      'source' => 'The Office of the Council of Ministers',
-      'target' => 'COCM',
-    ),
-    3 => array(
-      'source' => 'The office of the Council of Ministers',
-      'target' => 'COCM',
-    ),
-    4 => array(
-      'source' => 'COCM',
+      'source' => 'council_of_ministers',
       'target' => 'Cambodian Office of the Council of Ministers',
     ),
+    1 => array(
+      'source' => 'ministry_of_agriculture_forestry_and_fisheries',
+      'target' => 'Cambodian Ministry of Agriculture, Forestry and Fisheries',
+    ),
+    2 => array(
+      'source' => 'national_assembly',
+      'target' => 'The National Assembly of the Kingdom of Cambodia',
+    ),
+    3 => array(
+      'source' => 'office_of_the_council_of_ministers',
+      'target' => 'Cambodian Office of the Council of Ministers',
+    ),
+    4 => array(
+      'source' => 'office_of_the_prime_minister',
+      'target' => 'Office of the Prime Minister Royal Government of Cambodia',
+    ),
+    5 => array(
+      'source' => 'royal_government_of_cambodia',
+      'target' => 'Government of the Kingdom of Cambodia',
+    ),
+    6 => array(
+      'source' => 'royal_palace',
+      'target' => 'Government of the Kingdom of Cambodia',
+    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Find replace multiple (Cambodian Office of the Council of Ministers)';
+$feeds_tamper->description = 'Find replace multiple';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_laws_importer-blank_source_5-default_value';
+$feeds_tamper->importer = 'odm_laws_importer';
+$feeds_tamper->source = 'Blank source 5';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => 'private://feeds/ODM-thumbnail.png',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set private path for thumbnail';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -652,7 +736,7 @@ $feeds_tamper->description = 'Get the Entity TID from ISO 639-1 code	';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_laws_importer-jsonpath_parser_10-php';
 $feeds_tamper->importer = 'odm_laws_importer';
@@ -684,6 +768,19 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_laws_importer-jsonpath_parser_10-unique';
+$feeds_tamper->importer = 'odm_laws_importer';
+$feeds_tamper->source = 'jsonpath_parser:10';
+$feeds_tamper->plugin_id = 'unique';
+$feeds_tamper->settings = array();
+$feeds_tamper->weight = 5;
+$feeds_tamper->description = 'Unique';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_laws_importer-jsonpath_parser_11-find_replace_multiple';
 $feeds_tamper->importer = 'odm_laws_importer';
 $feeds_tamper->source = 'jsonpath_parser:11';
@@ -691,26 +788,19 @@ $feeds_tamper->plugin_id = 'find_replace_multiple';
 $feeds_tamper->settings = array(
   'pairs' => array(
     0 => array(
-      'source' => 'anukretsub-decree',
+      'source' => 'sub-decree',
       'target' => 'Regulations',
     ),
     1 => array(
-      'source' => 'chbablawkram',
+      'source' => 'law',
       'target' => 'Legislation',
     ),
     2 => array(
-      'source' => 'kech-sonyacontractagreement',
-      'target' => 'Agreements & Contracts',
-    ),
-    3 => array(
-      'source' => 'sarachorcircular',
+      'source' => 'circular',
       'target' => 'Regulations',
     ),
-    4 => array(
-      'source' => '',
-      'target' => '',
-    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 4;
 $feeds_tamper->description = 'Find replace document type';
@@ -725,19 +815,17 @@ $feeds_tamper->importer = 'odm_laws_importer';
 $feeds_tamper->source = 'jsonpath_parser:11';
 $feeds_tamper->plugin_id = 'keyword_filter';
 $feeds_tamper->settings = array(
-  'words' => 'prakasjoint-prakasproclamation
-sechkdei-chhun-damneoungnoticeannouncement
-likhetletter
-',
+  'words' => 'proclamation
+letter
+notification',
   'word_boundaries' => 0,
   'exact' => 1,
   'case_sensitive' => 0,
   'invert' => 1,
   'word_list' => array(
-    0 => '/^prakasjoint\\-prakasproclamation$/ui',
-    1 => '/^sechkdei\\-chhun\\-damneoungnoticeannouncement$/ui',
-    2 => '/^likhetletter$/ui',
-    3 => '/^$/ui',
+    0 => '/^proclamation$/ui',
+    1 => '/^letter$/ui',
+    2 => '/^notification$/ui',
   ),
   'regex' => TRUE,
 );
@@ -760,18 +848,27 @@ $feeds_tamper->settings = array(
       'target' => 'Creative Commons Attribution',
     ),
     1 => array(
+      'source' => 'CC-BY-3.0-IGO',
+      'target' => 'Creative Commons Attribution',
+    ),
+    2 => array(
       'source' => 'CC-BY-SA-4.0',
       'target' => 'Creative Commons Attribution-ShareAlike',
     ),
-    2 => array(
+    3 => array(
+      'source' => 'CC-BY-NC-4.0',
+      'target' => 'Creative Commons Attribution-NonCommercial',
+    ),
+    4 => array(
       'source' => 'CC0-1.0',
       'target' => 'Creative Commons Zero (Public Domain)',
     ),
-    3 => array(
+    5 => array(
       'source' => 'unspecified',
       'target' => '',
     ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Find replace multiple';
@@ -808,47 +905,8 @@ $feeds_tamper->settings = array(
       'source' => 'kh',
       'target' => 'Cambodia',
     ),
-    1 => array(
-      'source' => 'vn',
-      'target' => 'Vietnam',
-    ),
-    2 => array(
-      'source' => 'la',
-      'target' => 'Lao',
-    ),
-    3 => array(
-      'source' => 'th',
-      'target' => 'Thailand',
-    ),
-    4 => array(
-      'source' => 'mm',
-      'target' => 'Myanmar',
-    ),
-    5 => array(
-      'source' => 'my',
-      'target' => 'Malaysia',
-    ),
-    6 => array(
-      'source' => 'id',
-      'target' => 'Indonesia',
-    ),
-    7 => array(
-      'source' => 'cn',
-      'target' => 'China',
-    ),
-    8 => array(
-      'source' => 'ph',
-      'target' => 'Philippines',
-    ),
-    9 => array(
-      'source' => 'sg',
-      'target' => 'Singapore',
-    ),
-    10 => array(
-      'source' => 'bn',
-      'target' => 'Brunei Darussalam',
-    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 3;
 $feeds_tamper->description = 'Find replace multiple(from ISO2 code to Country names)';
@@ -856,7 +914,7 @@ $feeds_tamper->description = 'Find replace multiple(from ISO2 code to Country na
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_laws_importer-jsonpath_parser_19-find_replace_multiple_regions';
 $feeds_tamper->importer = 'odm_laws_importer';
@@ -922,7 +980,7 @@ $feeds_tamper->description = 'Truncate';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'odm_laws_importer-jsonpath_parser_6-explode';
 $feeds_tamper->importer = 'odm_laws_importer';
@@ -946,12 +1004,12 @@ $feeds_tamper->importer = 'odm_laws_importer';
 $feeds_tamper->source = 'jsonpath_parser:7';
 $feeds_tamper->plugin_id = 'explode';
 $feeds_tamper->settings = array(
-  'separator' => ',',
+  'separator' => ';',
   'limit' => '',
-  'real_separator' => ',',
+  'real_separator' => ';',
 );
 $feeds_tamper->weight = 2;
-$feeds_tamper->description = 'Explode (multiple values \',\' separated)';
+$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -966,11 +1024,11 @@ $feeds_tamper->settings = array(
   'pairs' => array(
     0 => array(
       'source' => 'Agricultural commodities processing and products',
-      'target' => 'agricultural land management, farming systems',
+      'target' => 'agricultural land management; farming systems',
     ),
     1 => array(
       'source' => 'Agricultural management systems and technologies',
-      'target' => 'agricultural land management, farming systems',
+      'target' => 'agricultural land management; farming systems',
     ),
     2 => array(
       'source' => 'Agricultural policy and administration',
@@ -982,11 +1040,11 @@ $feeds_tamper->settings = array(
     ),
     4 => array(
       'source' => 'Agriculture and fishing',
-      'target' => 'agriculture, fisheries',
+      'target' => 'agriculture; fisheries',
     ),
     5 => array(
       'source' => 'Agro-industrial production',
-      'target' => 'agricultural land management, farming systems',
+      'target' => 'agricultural land management; farming systems',
     ),
     6 => array(
       'source' => 'Aid and development',
@@ -994,7 +1052,7 @@ $feeds_tamper->settings = array(
     ),
     7 => array(
       'source' => 'Alternative dispute resolution',
-      'target' => 'dispute resolution',
+      'target' => 'land dispute resolution',
     ),
     8 => array(
       'source' => 'Anti-corruption',
@@ -1002,11 +1060,11 @@ $feeds_tamper->settings = array(
     ),
     9 => array(
       'source' => 'Biodiversity',
-      'target' => 'agricultural land management, agriculture',
+      'target' => 'agricultural land management; agriculture',
     ),
     10 => array(
       'source' => 'Biofuel crops',
-      'target' => 'agricultural land management, agriculture',
+      'target' => 'agricultural land management; agriculture',
     ),
     11 => array(
       'source' => 'Censuses',
@@ -1026,7 +1084,7 @@ $feeds_tamper->settings = array(
     ),
     15 => array(
       'source' => 'Communal land',
-      'target' => 'communal lands',
+      'target' => 'common lands',
     ),
     16 => array(
       'source' => 'Community fisheries',
@@ -1038,15 +1096,15 @@ $feeds_tamper->settings = array(
     ),
     18 => array(
       'source' => 'Concessions',
-      'target' => 'land concessions',
+      'target' => 'concession (land)',
     ),
     19 => array(
       'source' => 'Construction policy and regulation',
-      'target' => 'land policies, urban planning',
+      'target' => 'land policies; urban planning',
     ),
     20 => array(
       'source' => 'Contract farming',
-      'target' => 'contract farming, farming systems',
+      'target' => 'contract farming; farming systems',
     ),
     21 => array(
       'source' => 'Deforestration drivers',
@@ -1054,7 +1112,7 @@ $feeds_tamper->settings = array(
     ),
     22 => array(
       'source' => 'Development and assistance for land tenure and land titling',
-      'target' => 'development agencies, capacity building, land tenure systems, continuum in land rights',
+      'target' => 'development agencies; capacity building; land tenure systems; continuum in land rights',
     ),
     23 => array(
       'source' => 'Development assistance',
@@ -1066,7 +1124,7 @@ $feeds_tamper->settings = array(
     ),
     25 => array(
       'source' => 'Economic land concessions and plantations',
-      'target' => 'land concessions',
+      'target' => 'concession (land)',
     ),
     26 => array(
       'source' => 'Economic social and cultural rights',
@@ -1074,15 +1132,15 @@ $feeds_tamper->settings = array(
     ),
     27 => array(
       'source' => 'Environment and natural resources',
-      'target' => 'environment, natural resources management',
+      'target' => 'environment; natural resources management',
     ),
     28 => array(
       'source' => 'Environment and natural resources policy and administration',
-      'target' => 'natural resources management, environment',
+      'target' => 'natural resources management; environment',
     ),
     29 => array(
       'source' => 'Environmental and biodiversity protection',
-      'target' => 'environment, sustainable land management',
+      'target' => 'environment; sustainable land management',
     ),
     30 => array(
       'source' => 'Environmental impact assessments',
@@ -1090,11 +1148,11 @@ $feeds_tamper->settings = array(
     ),
     31 => array(
       'source' => 'Ethnic minorities and indigenous people',
-      'target' => 'indigenous peoples, local community',
+      'target' => 'indigenous peoples; local community',
     ),
     32 => array(
       'source' => 'Ethnic minorities and indigenous people policy and rights',
-      'target' => 'indigenous land rights, indigenous peoples',
+      'target' => 'indigenous land rights; indigenous peoples',
     ),
     33 => array(
       'source' => 'Expropriation',
@@ -1106,15 +1164,15 @@ $feeds_tamper->settings = array(
     ),
     35 => array(
       'source' => 'Fertilizer',
-      'target' => 'agricultural land management, agriculture',
+      'target' => 'agricultural land management; agriculture',
     ),
     36 => array(
       'source' => 'Fisheries production',
-      'target' => 'fisheries, farming systems',
+      'target' => 'fisheries; farming systems',
     ),
     37 => array(
       'source' => 'Fishing fisheries and aquaculture',
-      'target' => 'fisheries, aquaculture',
+      'target' => 'fisheries; aquaculture',
     ),
     38 => array(
       'source' => 'Food and Agriculture Organization FAO',
@@ -1130,7 +1188,7 @@ $feeds_tamper->settings = array(
     ),
     41 => array(
       'source' => 'Forest cover',
-      'target' => 'forest land, land cover',
+      'target' => 'forest land; land cover',
     ),
     42 => array(
       'source' => 'Forest industry',
@@ -1138,15 +1196,15 @@ $feeds_tamper->settings = array(
     ),
     43 => array(
       'source' => 'Forest policy and administration',
-      'target' => 'forest policies',
+      'target' => 'forestry policies',
     ),
     44 => array(
       'source' => 'Forest protection',
-      'target' => 'forest conservation, forestry, sustainable land use, sustainable land managament',
+      'target' => 'forest conservation; forestry; sustainable land use; sustainable land management',
     ),
     45 => array(
       'source' => 'Forests and forestry',
-      'target' => 'forestry, forest land',
+      'target' => 'forestry; forest land',
     ),
     46 => array(
       'source' => 'German aid',
@@ -1182,11 +1240,11 @@ $feeds_tamper->settings = array(
     ),
     54 => array(
       'source' => 'Land sales and trades',
-      'target' => 'land investments, land economics',
+      'target' => 'land investments; land economics',
     ),
     55 => array(
       'source' => 'Land tenure and land titling',
-      'target' => 'land tenure systems, title deed',
+      'target' => 'land tenure systems; title deed',
     ),
     56 => array(
       'source' => 'Land transfers',
@@ -1194,7 +1252,7 @@ $feeds_tamper->settings = array(
     ),
     57 => array(
       'source' => 'Laws and regulations',
-      'target' => 'land law, land policies',
+      'target' => 'land law; land policies',
     ),
     58 => array(
       'source' => 'Legal aid',
@@ -1206,11 +1264,11 @@ $feeds_tamper->settings = array(
     ),
     60 => array(
       'source' => 'Maize corn',
-      'target' => 'farming systems, agricultural land management',
+      'target' => 'farming systems; agricultural land management',
     ),
     61 => array(
       'source' => 'Overview of policy and legal framework',
-      'target' => 'land policies, land law',
+      'target' => 'land policies; land law',
     ),
     62 => array(
       'source' => 'Palm oil',
@@ -1218,11 +1276,11 @@ $feeds_tamper->settings = array(
     ),
     63 => array(
       'source' => 'Pest management',
-      'target' => 'agricultural land management, farming systems',
+      'target' => 'agricultural land management; farming systems',
     ),
     64 => array(
       'source' => 'Population',
-      'target' => 'rural population, urban population',
+      'target' => 'rural population; urban population',
     ),
     65 => array(
       'source' => 'Poverty policy and regulation',
@@ -1242,11 +1300,11 @@ $feeds_tamper->settings = array(
     ),
     69 => array(
       'source' => 'Protected forests',
-      'target' => 'forest conservation, environment',
+      'target' => 'forest conservation; environment',
     ),
     70 => array(
       'source' => 'Public land lease',
-      'target' => 'leases, land tenure systems',
+      'target' => 'leases; land tenure systems',
     ),
     71 => array(
       'source' => 'Rail',
@@ -1258,7 +1316,7 @@ $feeds_tamper->settings = array(
     ),
     73 => array(
       'source' => 'Rivers and lakes',
-      'target' => 'water management, land cover',
+      'target' => 'water management; land cover',
     ),
     74 => array(
       'source' => 'Rubber',
@@ -1274,7 +1332,7 @@ $feeds_tamper->settings = array(
     ),
     77 => array(
       'source' => 'Soil management',
-      'target' => 'land management, sustainable land management',
+      'target' => 'land management; sustainable land management',
     ),
     78 => array(
       'source' => 'Special economic zones',
@@ -1282,7 +1340,7 @@ $feeds_tamper->settings = array(
     ),
     79 => array(
       'source' => 'State public land',
-      'target' => 'state property, public ownership',
+      'target' => 'state property; public ownership',
     ),
     80 => array(
       'source' => 'System of government',
@@ -1302,7 +1360,7 @@ $feeds_tamper->settings = array(
     ),
     84 => array(
       'source' => 'Tree plantation',
-      'target' => 'agricultural land management, agriculture',
+      'target' => 'agricultural land management; agriculture',
     ),
     85 => array(
       'source' => 'United Nations',
@@ -1310,15 +1368,15 @@ $feeds_tamper->settings = array(
     ),
     86 => array(
       'source' => 'Urban administration and development',
-      'target' => 'urbanization, urban areas, urban population',
+      'target' => 'urbanization; urban areas; urban population',
     ),
     87 => array(
       'source' => 'Urban development trends',
-      'target' => 'urbanization, land development (urbanization)',
+      'target' => 'urbanization; land development (urbanization)',
     ),
     88 => array(
       'source' => 'Urban policy and administration',
-      'target' => 'urbanization, land policies',
+      'target' => 'urbanization; land policies',
     ),
     89 => array(
       'source' => 'Water and sanitation policy and administration',
@@ -1326,11 +1384,11 @@ $feeds_tamper->settings = array(
     ),
     90 => array(
       'source' => 'Water policy and administration',
-      'target' => 'water management, water rights',
+      'target' => 'water management; water rights',
     ),
     91 => array(
       'source' => 'Water resources',
-      'target' => 'water management, natural resources management',
+      'target' => 'water management; natural resources management',
     ),
     92 => array(
       'source' => 'Water rights',
@@ -1344,10 +1402,51 @@ $feeds_tamper->settings = array(
       'source' => 'World Bank',
       'target' => 'development agencies',
     ),
+    95 => array(
+      'source' => 'Agricultural production',
+      'target' => 'farming systems;agriculture',
+    ),
+    96 => array(
+      'source' => 'Forest classifications',
+      'target' => 'forest land',
+    ),
+    97 => array(
+      'source' => 'Law and judiciary',
+      'target' => 'land governance;land law',
+    ),
+    98 => array(
+      'source' => 'Law making process',
+      'target' => 'land governance;land law',
+    ),
+    99 => array(
+      'source' => 'Regulation of legal professions',
+      'target' => 'land governance',
+    ),
+    100 => array(
+      'source' => 'State private land',
+      'target' => 'private ownership;state property',
+    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 1;
 $feeds_tamper->description = 'ODM taxonomy to LandVoc Concepts';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'odm_laws_importer-jsonpath_parser_7-trim';
+$feeds_tamper->importer = 'odm_laws_importer';
+$feeds_tamper->source = 'jsonpath_parser:7';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -1359,7 +1458,7 @@ $feeds_tamper->importer = 'odm_laws_importer';
 $feeds_tamper->source = 'jsonpath_parser:7';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 3;
+$feeds_tamper->weight = 4;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;

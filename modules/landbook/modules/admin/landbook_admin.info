@@ -12,4 +12,3 @@ dependencies[] = entityreference
 dependencies[] = landbook_taxonomies
 dependencies[] = landportal_base
 dependencies[] = views
-configure=admin/config/landbook

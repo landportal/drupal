@@ -1,4 +1,12 @@
 <?php
+/**
+ * Implements hook_theme().
+ */
+function landbook_vggt_theme($existing, $type, $theme, $path) {
+  // Scan this directory for template files
+  $templates = drupal_find_theme_templates($existing, '.tpl.php', $path);
+  return $templates;
+}
 
 /* Declare VGGT block */
 function landbook_vggt_block_info() {
@@ -13,7 +21,6 @@ function landbook_vggt_block_info() {
   return $blocks;
 }
 
-
 /* Drupal administration form for block */
 function landbook_vggt_block_configure($delta='') {
   if ($delta != 'vis_vggt') return ;
@@ -27,10 +34,10 @@ function landbook_vggt_block_configure($delta='') {
    return $form;
 }
 
-function landbook_vggt_block_save($delta = '', $edit = array()) {
-  if ($delta != 'vis_vggt') return ;
-  variable_set('landbook_vggt', $edit['text_body']['value']);
-}
+/* function landbook_vggt_block_save($delta = '', $edit = array()) { */
+/*   if ($delta != 'vis_vggt') return ; */
+/*   variable_set('landbook_vggt', $edit['text_body']['value']); */
+/* } */
 
 /* VGGT block description (shown everytime the VGGT vis appears) */
 function landbook_vggt_body() {
@@ -54,22 +61,19 @@ function landbook_vggt_block_view($delta = '') {
   if ($delta != 'vis_vggt') return ;
 
   $PATH = libraries_get_path('js-view-coda');
-  $jsAttr = 'jsonPath: "/' . $PATH . '/examples/json", iso3: Drupal.settings.landbook.countryCode';
-    $block = array();
-    $block['subject'] = t('Voluntary Guidelines on the Responsible Governance of Tenure');
-    $block['content'] = array(
-      '#attached' => array(
-        'library' => array(
-          array('landbook_view_coda', 'lbvis.vggt')
-        ),
-        'js' => array(
-          array(
-            'type' => 'inline',
-            'data' => lbvc__js_ready('VGGT = new lbvisVGGT(LBV, {'.$jsAttr.', target: "#block-landbook-vggt-vis-vggt"}); VGGT.init();')
-          )
+  $jsAttr = 'iso3: Drupal.settings.iso3';
+  $block = array();
+  $block['subject'] = t('Voluntary Guidelines on the Responsible Governance of Tenure');
+  $block['content'] = array(
+    '#attached' => array(
+      'library' => array(array('landbook_view_coda', 'lbvis.vggt')),
+      'js' => array(array(
+          'type' => 'inline',
+          'data' => lbvc__js_ready('VGGT = new lbvisVGGT(LBV, {'.$jsAttr.', target: "#block-landbook-vggt-vis-vggt"}); VGGT.init();')
         )
-      ),
-      '#markup' => landbook_vggt_body()
-    );
-    return $block;
+      )
+    ),
+    '#markup' => landbook_vggt_body()
+  );
+  return $block;
 }

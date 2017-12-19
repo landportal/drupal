@@ -11,9 +11,9 @@
 // Returns a list of boolean options understood by js-view-coda projection (vis. type)
 function lbvc_plugin_table_options() {
   return array(
-    'useLastYear' => 'Use latest year available',
-    //'loadCountries' => 'Load available countries',
-    'allowAdd' => 'Allow adding indicators to the table',
+    //'useLastYear' => 'Use latest year available', // NOT understood by view coda lib!
+    //'loadYears' => 'Load available years',
+    'loadIndicators' => 'Allow adding indicators to the table',
   );
 }
 

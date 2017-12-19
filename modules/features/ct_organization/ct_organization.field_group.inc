@@ -76,11 +76,10 @@ function ct_organization_field_group_info() {
     'children' => array(
       0 => 'field_organization_relationship',
       1 => 'field_user',
-      2 => 'field_thematic_promoted',
-      3 => 'field_related_organization',
-      4 => 'language',
-      5 => 'path',
-      6 => 'xmlsitemap',
+      2 => 'field_related_organization',
+      3 => 'language',
+      4 => 'path',
+      5 => 'xmlsitemap',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -146,9 +145,10 @@ function ct_organization_field_group_info() {
       3 => 'field_email',
       4 => 'field_acronym',
       5 => 'field_file',
-      6 => 'field_phone',
-      7 => 'field_postal_address',
-      8 => 'locations',
+      6 => 'field_language',
+      7 => 'field_phone',
+      8 => 'field_postal_address',
+      9 => 'locations',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -308,7 +308,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = 'group_topics_regions';
   $field_group->data = array(
     'label' => '',
-    'weight' => '5',
+    'weight' => '4',
     'children' => array(
       0 => 'field_related_topics',
       1 => 'field_related_domains',

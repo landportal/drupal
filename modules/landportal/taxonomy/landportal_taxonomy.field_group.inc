@@ -44,6 +44,37 @@ function landportal_taxonomy_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_header|taxonomy_term|themes|full';
+  $field_group->group_name = 'group_header';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'themes';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_image',
+      1 => 'name_field',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'element' => 'header',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_header|taxonomy_term|themes|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_topics_regions|taxonomy_term|overarching_categories|default';
   $field_group->group_name = 'group_topics_regions';
   $field_group->entity_type = 'taxonomy_term';
@@ -140,7 +171,7 @@ function landportal_taxonomy_field_group_info() {
     'children' => array(
       0 => 'field_related_themes',
     ),
-    'format_type' => 'div',
+    'format_type' => 'hidden',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
@@ -250,11 +281,11 @@ function landportal_taxonomy_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_related_topics',
     ),
-    'format_type' => 'div',
+    'format_type' => 'hidden',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
