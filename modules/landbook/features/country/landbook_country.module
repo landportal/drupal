@@ -50,7 +50,7 @@ function landbook_country_node_view_alter(&$build) {
   $path = drupal_get_path_alias('taxonomy/term/' . $geo->tid);
   $build['submenu'] = array(
     '#markup' => '<div id="page-submenu"><ul class="nav">'
-    . '<li><a href="/' . $path . '" title="' . t('Back to overview for'). ' ' . $geo->name . '">' . $geo->name . '</a></li>'
+    . '<li><a href="/' . $path . '" title="' . t('Go back to'). ' ' . $geo->name . '">' . t('Go back to') . ' ' . $geo->name . '</a></li>'
     . '</ul></div>',
     '#attached' => array(
       'js' => array(array(
