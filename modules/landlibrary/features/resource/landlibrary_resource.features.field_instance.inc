@@ -146,7 +146,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'full' => array(
         'label' => 'above',
@@ -238,7 +238,7 @@ function landlibrary_resource_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'above',
@@ -427,7 +427,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'above',
@@ -589,7 +589,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
@@ -665,7 +665,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 2,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
@@ -743,7 +743,7 @@ function landlibrary_resource_field_default_field_instances() {
           'text' => 'Download file',
         ),
         'type' => 'file_download_link',
-        'weight' => 4,
+        'weight' => 8,
       ),
       'listing' => array(
         'label' => 'above',
@@ -799,7 +799,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'above',
@@ -858,7 +858,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'full' => array(
         'label' => 'above',
@@ -917,7 +917,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'inline',
@@ -1538,7 +1538,7 @@ function landlibrary_resource_field_default_field_instances() {
           'title_style' => '',
         ),
         'type' => 'title_linked',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1722,7 +1722,7 @@ function landlibrary_resource_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_markup',
-        'weight' => 3,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'above',
