@@ -57,6 +57,7 @@ function ct_dataset_preprocess(&$variables, $hook) {
   $dsid = $variables['page']['dsid'];
   //dpm($variables, $hook . ' / ' .$dsid);
   //$variables['attributes_array']['class'] = array('page-taxonomy-datasets');
+  if ($hook == 'html') $variables['classes_array'][] = 'node-type-dataset';
   if ($hook == 'html') $variables['classes_array'][] = 'page-taxonomy-datasets';
   // Add short cut to edit dataset taxonomy term
   if ($hook == 'page' && (user_access('edit any dataset content') || user_access('administer nodes'))) {
