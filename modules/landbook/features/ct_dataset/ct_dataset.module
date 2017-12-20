@@ -20,6 +20,37 @@ function ct_dataset__get_latest($tid) {
   }
 }
 
+// TMP(?)
+// For Dataset nodes, associate the taxonomy url
+function ct_dataset_entity_prepare_view($entities, $type, $langcode) {
+  if ($type != 'node') return;
+  $nid = array_keys($entities)[0];
+  if ($entities[$nid]->type != 'dataset') return;
+  $tid = $entities[$nid]->field_catalog[LANGUAGE_NONE][0]['tid'];
+  if ($tid) {
+    $entities[$nid]->alias = url('taxonomy/term/' . $tid);
+  }
+}
+
+// Replace Dataset node teasers links by the term ones.
+function ct_dataset_preprocess_node(&$variables) {
+  $view_mode = $variables['elements']['#view_mode'];
+  if ($variables['type'] != 'dataset' || $view_mode != 'teaser') return;
+  // Should be set to dataset term
+  if ($variables['alias']) {
+    // Hack in the title with new link
+    $title = &$variables['content']['title_field'];
+    $link = l($title['#items'][0]['value'], $variables['alias']);
+    $title[0]['#markup'] = '<h3>' . $link . '</h3>';
+    if (isset($variables['content']['field_image'])) {
+      $img = &$variables['content']['field_image'];
+      $img[0]['#path']['path'] = $variables['alias'];
+    }
+  }
+}
+
+// Highjack DS taxonomy term full page view
+// Show the latest Dataset node, if any (and force view_mode to 'header')
 function ct_dataset_entity_view_mode_alter(&$view_mode, $context) {
   if ($view_mode == 'full' && $context['entity_type'] == 'taxonomy_term') {
     $entity = $context['entity'] ;
@@ -51,7 +82,7 @@ function ct_dataset_page_build(&$page) {
   }
 }
 
-// dataset pages
+// Add edit link for dataset node showing term pages
 function ct_dataset_preprocess(&$variables, $hook) {
   if (!isset($variables['page']['dsid'])) return;
   $dsid = $variables['page']['dsid'];
@@ -66,5 +97,3 @@ function ct_dataset_preprocess(&$variables, $hook) {
     );
   }
 }
-
-
