@@ -60,13 +60,13 @@ Data {"url":"book\/data","lang":"fr","weight":"-12","expanded": true}
 -Indicateurs {"url":"book\/indicators","lang":"fr","weight":"-47"}
 -Fournisseur {"url":"book\/sources","lang":"fr","weight":"-46"}
 Data {"url":"book\/data","lang":"es","weight":"-11","expanded": true}
--Datasets {"url":"book\/datasets","lang":"es","weight":"-49"}
--Indicateurs {"url":"book\/indicators","lang":"es","weight":"-47"}
--Fournisseur {"url":"book\/sources","lang":"es","weight":"-46"}
+-Conjuntos de datos {"url":"book\/datasets","lang":"es","weight":"-49"}
+-Indicadores {"url":"book\/indicators","lang":"es","weight":"-47"}
+-Fuentes {"url":"book\/sources","lang":"es","weight":"-46"}
 Data {"url":"book\/data","lang":"pt","weight":"-10","expanded": true}
--Datasets {"url":"book\/datasets","lang":"pt","weight":"-49"}
--Indicateurs {"url":"book\/indicators","lang":"pt","weight":"-47"}
--Fournisseur {"url":"book\/sources","lang":"pt","weight":"-46"}
+-Conjuntos de dados {"url":"book\/datasets","lang":"pt","weight":"-49"}
+-Indicadores {"url":"book\/indicators","lang":"pt","weight":"-47"}
+-Fontes {"url":"book\/sources","lang":"pt","weight":"-46"}
 
 Library {"url":"library","lang":"en","weight":"3","expanded": true}
 -Search {"url":"library\/search","lang":"en","weight":"-1"}
@@ -82,13 +82,18 @@ Biblioteca {"url":"library","lang":"pt","weight":"0","expanded": true}
 -Fontes {"url":"library\/sources","lang":"pt","weight":"0"}
 
 News & Events {"url":"news-events","lang":"en","weight":"10","expanded": true}
--News {"url":"debate\/news","lang":"und","weight":"-46"}
--Events {"url":"debate\/events","lang":"und","weight":"-47"}
---Archives {"url":"events","lang":"und","weight":"-47"}
--Blogs {"url":"blogs","lang":"und","weight":"-48"}
+-News {"url":"debate\/news","lang":"en","weight":"0"}
+-Events {"url":"debate\/events","lang":"en","weight":"1"}
+-Blogs {"url":"blogs","lang":"und","weight":"2"}
 Actualités & Événements {"url":"news-events","lang":"fr","weight":"11","expanded": true}
+-Actualités {"url":"debate\/news","lang":"fr","weight":"0"}
+-Événements {"url":"debate\/events","lang":"fr","weight":"1"}
 Noticias & Eventos {"url":"news-events","lang":"es","weight":"12","expanded": true}
+-Noticias {"url":"debate\/news","lang":"es","weight":"0"}
+-Eventos {"url":"debate\/events","lang":"es","weight":"1"}
 Notícias & Eventos {"url":"news-events","lang":"pt","weight":"13","expanded": true}
+-Notícias {"url":"debate\/news","lang":"pt","weight":"0"}
+-Eventos {"url":"debate\/events","lang":"pt","weight":"1"}
 
 Community {"url":"debate\/community","lang":"en","weight":"20","expanded": true}
 -Organizations {"url":"organizations","lang":"und","weight":"0"}
