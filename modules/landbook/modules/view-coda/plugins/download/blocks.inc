@@ -31,7 +31,7 @@ function lbvc_plugin_download_block_view($delta) {
   switch ($delta) {
   case 'lbvc_download_ind':
     $block['subject'] = t('Download');
-    $block['content'] = array(
+    $block['vis'] = array(
       '#markup' => '<p>Download this Indicator data.</p>',
       '#attached' => array(
         'library' => array(array('landbook_view_coda', 'lbvis.dl')),
@@ -45,7 +45,7 @@ function lbvc_plugin_download_block_view($delta) {
     break;
   case 'lbvc_download_cat':
     $block['subject'] = t('Download');
-    $block['content'] = array(
+    $block['vis'] = array(
       '#markup' => '<p>Download this Dataset data.</p>',
       '#attached' => array(
         'library' => array(array('landbook_view_coda', 'lbvis.dl')),
