@@ -45,19 +45,20 @@ function lbvc_plugin_map_block_view($delta) {
   switch ($delta) {
 
   case 'lbvc_map':
-    $vcc = '{"series": [{"tooltip": {"headerFormat": null, "pointFormat": "{point.name}"}, "data": "@map_data@"}]';
+    $vcc = '{"series": [{"name": "World map", "data": "@map_data@"}]';
     $vcc .= ', "colors": { "min": "#BBD6D8" }';
     $vcc .= ', "map": {"selectable": true, "legend": false, "nav": true'
-      . ', "tooltip": "@function () { return \'Click to visit \' + this.point.name; }@"'
+      . ', "tooltip": "@function () { return \'Click to visit \' + this.name; }@"'
       . ', "events": "@{ click: function () { window.location.href = \'/book/countries/\' + this.id; } }@"'
       . '}';
     $vcc .= '}';
 
-    $block['subject'] = '';
-    $block['content'] = lbvc_plugin_map_formatter(array(
+    $block['subject'] = NULL;
+    $block['content'] = array('#markup' => '');
+    $block['vis'] = lbvc_plugin_map_formatter(array(
       'type' => 'map',
       'jsid' => 'worldMap',
-      'vid' => 'block-landbook-view-coda-lbvc-map',
+      'vid' => 'block-landbook-view-coda-lbvc-map-wrapper',
       'vcc' => $vcc,
     ));
     break;
@@ -66,15 +67,16 @@ function lbvc_plugin_map_block_view($delta) {
     $vcc = '{ "debug": true, "iso3": "@Drupal.settings.iso3@"';
     $vcc .= ', "series": [ {"name": "country Region", "data": [ {"id": "@Drupal.settings.iso3@", "value": 100} ] } ]';
     $vcc .= ', "colors": { "background": "#FFFFFF", "hover": "#F5A623", "select": "#F5A623", "borders": "#FFFFFF", "min": "#BBD6D8", "max": "#BBD6D8", "na": "#BBD6D8" }';
-    $vcc .= ', "map": {"zoom": 2, "height": 200, "selectable": true, "legend": false, "tooltip": false'
-      /* . ', "tooltip": "@function () { return \'Click to visit \' + this.point.name; }@"' */
+    $vcc .= ', "map": {"zoom": 2, "height": 200, "selectable": true, "legend": false'
+      . ', "tooltip": "@function () { return \'Click to visit \' + this.name; }@"'
       . '}';
     $vcc .= '}';
-    $block['subject'] = '';
-    $block['content'] = lbvc_plugin_map_formatter(array(
+    $block['subject'] = NULL;
+    $block['content'] = array('#markup' => '');
+    $block['vis'] = lbvc_plugin_map_formatter(array(
       'type' => 'map',
       'jsid' => 'countryRegionMap',
-      'vid' => 'block-landbook-view-coda-lbvc-map-country',
+      'vid' => 'block-landbook-view-coda-lbvc-map-country-wrapper',
       'vcc' => $vcc,
     ));
     /* dsm($vcc); */
@@ -94,12 +96,13 @@ function lbvc_plugin_map_block_view($delta) {
     $vis = lbvc_plugin_map_formatter(array(
       'type' => 'map',
       'jsid' => 'mlikeMap',
-      'vid' => 'block-landbook-view-coda-lbvc-map-mlike',
+      'vid' => 'block-landbook-view-coda-lbvc-map-mlike-wrapper',
       'vcc' => $vcc,
     ));
     //dpm($vis, 'map');
-    $block['subject'] = '';
-    $block['content'] = $vis;
+    $block['subject'] = NULL;
+    $block['content'] = array('#markup' => '');
+    $block['vis'] = $vis;
     break;
   }
   return $block;

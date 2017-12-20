@@ -11,7 +11,9 @@
 <?php print render($title_suffix); ?>
           </header>
 <?php endif;?>
-          <div id="<?php print $block_html_id; ?>-wrapper"></div>
+<?php if ($block->vis): ?>
+<div id="<?php print $block_html_id; ?>-wrapper"><?php print render($block->vis) ?></div>
+<?php endif;?>
 <?php if ($content): ?>
           <footer>
             <div<?php print $content_attributes; ?>><?php print $content ?></div>
