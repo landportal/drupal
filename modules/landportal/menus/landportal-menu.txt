@@ -97,8 +97,8 @@ Notícias & Eventos {"url":"news-events","lang":"pt","weight":"13","expanded": t
 
 Community {"url":"debate\/community","lang":"en","weight":"20","expanded": true}
 -Organizations {"url":"organizations","lang":"und","weight":"0"}
--People {"url":"people","lang":"und","weight":"0"}
--Partners {"url":"sponsors","lang":"und","weight":"0"}
+-People {"url":"people","lang":"und","weight":"1"}
+-Partners {"url":"partners","lang":"und","weight":"2"}
 Communauté {"url":"debate\/community","lang":"fr","weight":"21","expanded": true}
 Communidad {"url":"debate\/community","lang":"es","weight":"22","expanded": true}
 Communidade {"url":"debate\/community","lang":"pt","weight":"23","expanded": true}
