@@ -1,12 +1,7 @@
-About the portal {"url":"about","lang":"en","weight":"0"}
-Contact us {"url":"about\/contact-us","lang":"en","weight":"1"}
-Land Portal Foundation {"url":"about\/foundation","lang":"en","weight":"2"}
--Vision, values, activities {"url":"about\/vision","lang":"en","weight":"-1"}
--Plan & policies {"url":"about\/foundation","lang":"en","weight":"0"}
--Activity reports {"url":"about\/foundation","lang":"en","weight":"1"}
-Team {"url":"about\/team","lang":"en","weight":"3"}
-Board of Directors {"url":"about\/foundation\/board","lang":"und","weight":"4"}
-Technical Advisory Group {"url":"about\/technical-advisory-group","lang":"en","weight":"5"}
-Terms of service {"url":"about\/terms-and-conditions-use","lang":"en","weight":"6"}
-Privacy policy {"url":"about\/privacy-policy","lang":"en","weight":"7"}
-FAQ {"url":"about\/faq","lang":"und","weight":"8"}
+Who we are {"url":"about","lang":"en","weight":"1"}
+The Foundation {"url":"about\/foundation","lang":"en","weight":"2"}
+The People {"url":"about\/the-people","lang":"und","weight":"3"}
+-Land Portal Team {"url":"about\/team","lang":"en","weight":"-49"}
+-Land Portal Board of Directors {"url":"about\/foundation\/board","lang":"und","weight":"-50"}
+-Technical Advisory Group {"url":"about\/technical-advisory-group","lang":"en","weight":"-48"}
+Contact us {"url":"about\/contact-us","lang":"en","weight":"4"}
