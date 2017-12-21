@@ -16,7 +16,7 @@ function landlibrary_menu() {
   $items = array();
   $items['admin/content/library'] = array(
     'title'             => 'Land Library',
-    'access arguments'  => array('administer content'),
+    'access arguments'  => array('edit any landlibrary_resource content'),
     'callback'          => 'systems_view_data',
   );
   return $items;
