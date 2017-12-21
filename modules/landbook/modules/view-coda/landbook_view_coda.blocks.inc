@@ -37,8 +37,6 @@ function landbook_view_coda_block_save($delta = '', $edit = array()) {
   variable_set('landbook-' . $delta, $edit['text_body']['value']);
 }
 
-
-
 function landbook_view_coda_block_info() {
   global $plugins_blocks;
   $blocks = array();
@@ -54,10 +52,9 @@ function landbook_view_coda_block_info() {
 
 function landbook_view_coda_block_view($delta = '') {
   global $plugins_blocks;
-
+  $block = NULL;
   // Automatically load blocks from 'plugins'
   //dpm($plugins_blocks, 'pb');
-//  $block = '';
   foreach($plugins_blocks as $p) {
     $fxptr = 'lbvc_plugin_' . $p . '_block_view';
     if (function_exists($fxptr)) {
@@ -65,8 +62,5 @@ function landbook_view_coda_block_view($delta = '') {
       if ($block) break;
     }
   }
-  // TODO : some automagic here for iso3 from field_related_geo
-  $jsAttr = 'iso3: Drupal.settings.iso3';
-//  dsm($jsAttr . '<br/><br/>');
   return $block;
 }

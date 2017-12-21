@@ -85,6 +85,33 @@ function landbook_view_coda_menu() {
 
 
 
+/*
+ * Drupal hooks
+ */
+// on dataset/indicator full or dataset header view mode
+function landbook_view_coda_taxonomy_term_view($term, $view_mode, $langcode) {
+  if (!in_array($term->vocabulary_machine_name, array('indicators', 'datasets'))
+   || !in_array($view_mode, array('full', 'header')))
+    return;
+  //dpm($term, $view_mode . ' ' . $term->tid);
+  $lbid = $term->field_id[LANGUAGE_NONE][0]['value'];
+  $jsparams = array(
+    'landbook' => array(
+      'type' => substr($term->vocabulary_machine_name, 0, -1),
+      'lbid'   => $lbid,
+    )
+  );
+  if ($term->vocabulary_machine_name == 'indicators') {
+    $params = json_decode("{}");
+    lbvc__indicators_tree($params, [$term]);
+    $jsparams['landbook']['tree'] = $params->tree;
+    $jsparams['landbook']['cache'] = $params->cache;
+  }
+  drupal_add_js($jsparams, 'setting');
+}
+
+
+
 /**
  * Helper functions
  */
@@ -105,16 +132,4 @@ function lbvc__indicators_obs() {
 
 function lbvc__plugins_types() {
   return variable_get('lbvc.plugins', array());
-}
-
-// on dataset/indicator full or dataset header view mode
-function landbook_view_coda_taxonomy_term_view($term, $view_mode, $langcode) {
-  if (!in_array($term->vocabulary_machine_name, array('indicators', 'datasets')) || $view_mode == 'teaser')
-    return;
-  drupal_add_js(array(
-    'landbook' => array(
-      'type' => substr($term->vocabulary_machine_name, 0, -1),
-      'lbid'   => $term->field_id[LANGUAGE_NONE][0]['value'],
-    )
-  ), 'setting');
 }
