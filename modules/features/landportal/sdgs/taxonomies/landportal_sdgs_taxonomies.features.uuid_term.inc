@@ -716,8 +716,8 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
           'date_type' => 'datetime',
         ),
       ),
@@ -910,8 +910,8 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-06-22 00:00:00',
           'value2' => '2017-06-22 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
           'date_type' => 'datetime',
         ),
       ),
@@ -1126,8 +1126,8 @@ function landportal_sdgs_taxonomies_uuid_features_default_terms() {
         0 => array(
           'value' => '2017-10-02 00:00:00',
           'value2' => '2017-10-02 00:00:00',
-          'timezone' => 'Europe/Rome',
-          'timezone_db' => 'Europe/Rome',
+          'timezone' => 'Europe/Berlin',
+          'timezone_db' => 'Europe/Berlin',
           'date_type' => 'datetime',
         ),
       ),
