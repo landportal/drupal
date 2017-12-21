@@ -78,18 +78,14 @@ function lbvc__indicators_flatten(&$params, &$tree, $parent) {
 // Streamline indicator structure between Drupal/JS/LOD
 function lbvc__indicators_js_serialize($entity) {
   $path = drupal_get_path_alias('taxonomy/term/' . $entity->value()->tid);
-  $unit = $entity->field_unit;
-  $dataset = $entity->field_dataset;
-  $source = $entity->field_dataset->field_orgref[0];//->value()->title;
-  //dpm($unit->value(), 'unit');
-
+  //dpm($entity->value());
   $ind = array(
     'id'      => $entity->field_id->value(),
     'label'   => $entity->value()->name,
     'description' => $entity->value()->description,
-    'unit'    => $unit->value(),
-    'dataset' => $dataset->value()->name,
-    'source'  => $source->value()->title,
+    'unit'    => $entity->field_unit->value(),
+    'dataset' => $entity->field_dataset->value()->name,
+    'source'  => $entity->field_dataset->field_orgref[0]->value()->title,
     'indicatorSeeAlso' => $path
   );
 
