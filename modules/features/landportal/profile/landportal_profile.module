@@ -45,8 +45,8 @@ function landportal_profile_views_default_views() {
 }
 
 function landportal_profile_menu() {
-  $items['admin/people/profiles/public'] = array(
-    'title' => 'Profile: public',
+  $items['admin/people/profiles'] = array(
+    'title' => 'Public profiles',
     'type' => MENU_LOCAL_ACTION,
     'access arguments' => array('administer users'),
     'callback' => 'systems_view_data',
