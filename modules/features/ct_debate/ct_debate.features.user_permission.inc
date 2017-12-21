@@ -26,7 +26,6 @@ function ct_debate_user_default_permissions() {
     'name' => 'delete any debate content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -36,7 +35,6 @@ function ct_debate_user_default_permissions() {
     'name' => 'delete own debate content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );

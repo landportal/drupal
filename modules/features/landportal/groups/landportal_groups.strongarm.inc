@@ -176,7 +176,7 @@ function landportal_groups_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '5',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -194,7 +194,7 @@ function landportal_groups_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '3',
+            'weight' => '2',
             'visible' => FALSE,
           ),
         ),

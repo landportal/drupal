@@ -27,7 +27,6 @@ function ct_blog_post_user_default_permissions() {
     'name' => 'delete any blog_post content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -37,7 +36,6 @@ function ct_blog_post_user_default_permissions() {
     'name' => 'delete own blog_post content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );

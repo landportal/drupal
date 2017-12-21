@@ -26,7 +26,6 @@ function ct_events_user_default_permissions() {
     'name' => 'delete any event content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
@@ -36,7 +35,6 @@ function ct_events_user_default_permissions() {
     'name' => 'delete own event content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );

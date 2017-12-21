@@ -55,7 +55,6 @@ function landportal_groups_user_default_permissions() {
     'name' => 'delete own partners content',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal' => 'landportal',
     ),
     'module' => 'node',
   );
