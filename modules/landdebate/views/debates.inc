@@ -34,6 +34,7 @@ $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'node';
+$handler->display->display_options['row_options']['links'] = FALSE;
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -123,13 +124,6 @@ $handler->display->display_options['pager']['type'] = 'mini';
 $handler->display->display_options['pager']['options']['items_per_page'] = '4';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['row_class_special'] = FALSE;
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'node';
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Type */
@@ -243,13 +237,6 @@ $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'view-grid-2';
 $handler->display->display_options['link_url'] = 'debates';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['row_class_special'] = FALSE;
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'node';
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Type */

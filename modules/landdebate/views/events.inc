@@ -12,7 +12,6 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Events';
 $handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['link_display'] = 'custom_url';
@@ -32,6 +31,7 @@ $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'node';
+$handler->display->display_options['row_options']['links'] = FALSE;
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -258,17 +258,9 @@ $handler->display->display_options['fields']['body']['settings'] = array(
 
 /* Display: All */
 $handler = $view->new_display('block', 'All', 'all');
-$handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'view-grid-2';
 $handler->display->display_options['link_url'] = 'events';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['row_class_special'] = FALSE;
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'node';
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Type */
@@ -349,6 +341,8 @@ $handler->display->display_options['filters']['field_geographical_focus_tid_enti
 
 /* Display: Promoted */
 $handler = $view->new_display('block', 'Promoted', 'promoted');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Events';
 $handler->display->display_options['defaults']['use_more'] = FALSE;
 $handler->display->display_options['use_more'] = TRUE;
 $handler->display->display_options['defaults']['use_more_always'] = FALSE;
