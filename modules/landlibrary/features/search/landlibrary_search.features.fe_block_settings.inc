@@ -33,7 +33,7 @@ function landlibrary_search_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => -1,
+        'weight' => 0,
       ),
       'seven' => array(
         'region' => '',
@@ -54,7 +54,7 @@ function landlibrary_search_default_fe_block_settings() {
     'i18n_mode' => 0,
     'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'library/search*',
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
@@ -77,7 +77,7 @@ function landlibrary_search_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['facetapi-Dz09BvvNFhfLdnmwFu0Zl165RuMvV0RW'] = array(
@@ -122,7 +122,7 @@ function landlibrary_search_default_fe_block_settings() {
     'i18n_mode' => 0,
     'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'library/search*',
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
@@ -145,7 +145,7 @@ function landlibrary_search_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['facetapi-On1jGuEOqF5IBeLzkIySMDCRhYYUP40E'] = array(
@@ -156,7 +156,7 @@ function landlibrary_search_default_fe_block_settings() {
     'i18n_mode' => 0,
     'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'library/search*',
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
@@ -169,7 +169,7 @@ function landlibrary_search_default_fe_block_settings() {
         'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 15,
+        'weight' => 14,
       ),
       'seven' => array(
         'region' => '',
@@ -179,7 +179,7 @@ function landlibrary_search_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['facetapi-Q01KZ01pgIWhRBhu0uMVfwMYKhC5heYa'] = array(
@@ -224,7 +224,7 @@ function landlibrary_search_default_fe_block_settings() {
     'i18n_mode' => 0,
     'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'library/search*',
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
@@ -237,7 +237,7 @@ function landlibrary_search_default_fe_block_settings() {
         'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'seven' => array(
         'region' => '',
@@ -247,7 +247,7 @@ function landlibrary_search_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['facetapi-bNQti3i1QvYnpxR8B11gXwNRUVDR3Loz'] = array(
@@ -258,7 +258,7 @@ function landlibrary_search_default_fe_block_settings() {
     'i18n_mode' => 0,
     'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'library/search*',
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
@@ -281,7 +281,7 @@ function landlibrary_search_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['facetapi-ooMYLroTu5LFURMPW11d154eswrQld0K'] = array(
@@ -292,7 +292,7 @@ function landlibrary_search_default_fe_block_settings() {
     'i18n_mode' => 0,
     'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'library/search*',
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
@@ -315,7 +315,7 @@ function landlibrary_search_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['facetapi-xl143zAiuT3sYRQrYU4Ri6yOYzvDRMM5'] = array(
@@ -326,7 +326,7 @@ function landlibrary_search_default_fe_block_settings() {
     'i18n_mode' => 0,
     'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'library/search*',
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
@@ -349,7 +349,7 @@ function landlibrary_search_default_fe_block_settings() {
       ),
     ),
     'title' => 'Filter by Issues',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['facetapi-yUhemNJf8izLiuofmSC6AQ3PVGRxP5Hp'] = array(
