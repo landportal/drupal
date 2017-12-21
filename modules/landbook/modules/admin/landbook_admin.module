@@ -44,27 +44,6 @@ function landportal_admin_help($path, $arg) {
 
 function landbook_admin_menu() {
   $items = array();
-  // @todo: cleanup view + php page
-  /* // LB module configuration (original / to be updated with useful, internal, LB module settings) */
-  /* $items['admin/config/landbook'] = array( */
-  /*   'title'             => 'Landbook', */
-  /*   'description'       => 'Configure the landbook', */
-  /*   'postition'         => 'right', */
-  /*   'weight'            => -4, */
-  /*   'page callback'   	=> 'system_admin_menu_block_page', */
-  /*   'access arguments'  => array('administer site configuration'), */
-  /*   'file'              => 'system.admin.inc', */
-  /*   'file path'         => drupal_get_path('module', 'system'), */
-  /* ); */
-  /* $items['admin/config/landbook/settings'] = array( */
-  /*   'title'             => 'Landbook settings', */
-  /*   'description'       => 'Base landbook configuration', */
-  /*   'page callback'     => 'drupal_get_form', */
-  /*   'page arguments'    => array('landbook_admin_settings'), */
-  /*   'access arguments'  => array('administer site configuration'), */
-  /*   'file'              => 'landbook_admin.admin.inc', */
-  /*   'file path'         => drupal_get_path('module', 'landbook_admin'), */
-  /* ); */
 
   // LB content management
   $items['admin/content/landbook'] = array(
@@ -73,7 +52,7 @@ function landbook_admin_menu() {
     'postition'         => 'right',
     'weight'            => -4,
     'page callback'     => 'system_admin_menu_block_page',
-    'access arguments'  => array('administer taxonomy'), // Should be admin 'edit terms in' datasets, indicators
+    'access arguments'  => array('edit any dataset content'), // Should be admin 'edit terms in' datasets, indicators
     'file'              => 'system.admin.inc',
     'file path'         => drupal_get_path('module', 'system'),
   );
@@ -81,55 +60,20 @@ function landbook_admin_menu() {
   $items['admin/content/landbook/catalogs'] = array(
     'title'             => 'Land Book Catalogs',
     'type'              => MENU_DEFAULT_LOCAL_TASK,
-    'access arguments'  => array('administer taxonomy'),
+    'access arguments'  => array('edit terms in 24'), // 24 = datasets
     'callback'          => 'systems_view_data',
     'weight'            => 10,
-  );
-
-  $items['admin/content/landbook/catalogs/add'] = array(
-    'title'             => 'Add a catalog',
-    'type'              => MENU_LOCAL_ACTION,
-    'access arguments'  => array('administer taxonomy'),
-    'callback'          => 'systems_view_data',
-    'weight'            => 11,
-  );
-
-  $items['admin/content/landbook/catalogs/publish'] = array(
-    'title'             => 'Publish a dataset',
-    'type'              => MENU_LOCAL_ACTION,
-    'access arguments'  => array('administer taxonomy'),
-    'callback'          => 'systems_view_data',
-    'weight'            => 11,
   );
 
   // Provided by views/lbadm_indicators.inc
   $items['admin/content/landbook/catalogs/%taxonomy_term'] = array(
     'title'             => '',
     'type'              => MENU_LOCAL_TASK,
-    'access arguments'  => array('administer taxonomy'),
+    'access arguments'  => array('edit terms in 25'), // 25 = indicators
     'callback'          => 'systems_view_data',
     'page arguments' => array(2),
     'weight'            => 11,
   );
-
-  $items['admin/content/landbook/catalogs/%taxonomy_term/addind'] = array(
-    'title'             => 'Add an indicator',
-    'page callback'     => 'drupal_get_form',
-    'page arguments'    => array('taxonomy_form_term', array(), 3),
-    'access arguments'  => array('administer taxonomy'),
-    'type'              => MENU_LOCAL_ACTION,
-    //'file'              => $_SERVER['DOCUMENT_ROOT'] . '/modules/taxonomy/taxonomy.admin.inc',
-//    'callback'          => 'landbook_admin_add_ind',
-//    'weight'            => 11,
-  );
-
-  /* $items['admin/content/landbook/indicators'] = array( */
-  /*   'title'             => 'Indicators', */
-  /*   'type'              => MENU_, */
-  /*   'access arguments'  => array('administer taxonomy'), */
-  /*   'callback'          => 'systems_view_data', */
-  /*   'weight'            => 10, */
-  /* ); */
   return $items;
 }
 
