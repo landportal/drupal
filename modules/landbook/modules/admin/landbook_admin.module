@@ -46,27 +46,26 @@ function landbook_admin_menu() {
   $items = array();
 
   // LB content management
+  /* $items['admin/content/landbook'] = array( */
+  /*   'title'             => 'Land Book', */
+  /*   'description'       => 'Land Book content (Catalogs, Datasets, Indicators...)', */
+  /*   'postition'         => 'right', */
+  /*   'weight'            => -4, */
+  /*   'page callback'     => 'system_admin_menu_block_page', */
+  /*   'access arguments'  => array('edit any dataset content'), // Should be admin 'edit terms in' datasets, indicators */
+  /*   'file'              => 'system.admin.inc', */
+  /*   'file path'         => drupal_get_path('module', 'system'), */
+  /* ); */
+  // Provided by views/lbadm_catalogs.inc
   $items['admin/content/landbook'] = array(
     'title'             => 'Land Book',
-    'description'       => 'Land Book content (Catalogs, Datasets, Indicators...)',
-    'postition'         => 'right',
-    'weight'            => -4,
-    'page callback'     => 'system_admin_menu_block_page',
-    'access arguments'  => array('edit any dataset content'), // Should be admin 'edit terms in' datasets, indicators
-    'file'              => 'system.admin.inc',
-    'file path'         => drupal_get_path('module', 'system'),
-  );
-  // Provided by views/lbadm_catalogs.inc
-  $items['admin/content/landbook/catalogs'] = array(
-    'title'             => 'Land Book Catalogs',
-    'type'              => MENU_DEFAULT_LOCAL_TASK,
+    //'type'              => MENU_DEFAULT_LOCAL_TASK,
     'access arguments'  => array('edit terms in 24'), // 24 = datasets
     'callback'          => 'systems_view_data',
-    'weight'            => 10,
   );
 
   // Provided by views/lbadm_indicators.inc
-  $items['admin/content/landbook/catalogs/%taxonomy_term'] = array(
+  $items['admin/content/landbook/ds/%taxonomy_term'] = array(
     'title'             => '',
     'type'              => MENU_LOCAL_TASK,
     'access arguments'  => array('edit terms in 25'), // 25 = indicators

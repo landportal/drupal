@@ -86,11 +86,11 @@ $handler->display->display_options['empty']['area_text_custom']['content'] = 'No
 $handler->display->display_options['relationships']['parent']['id'] = 'parent';
 $handler->display->display_options['relationships']['parent']['table'] = 'taxonomy_term_hierarchy';
 $handler->display->display_options['relationships']['parent']['field'] = 'parent';
-/* Relationship: Taxonomy term: Catalog (field_dataset) */
+/* Relationship: Taxonomy term: Dataset (field_dataset) */
 $handler->display->display_options['relationships']['field_dataset_tid']['id'] = 'field_dataset_tid';
 $handler->display->display_options['relationships']['field_dataset_tid']['table'] = 'field_data_field_dataset';
 $handler->display->display_options['relationships']['field_dataset_tid']['field'] = 'field_dataset_tid';
-$handler->display->display_options['relationships']['field_dataset_tid']['label'] = 'Catalog';
+$handler->display->display_options['relationships']['field_dataset_tid']['label'] = 'Dataset';
 /* Field: Taxonomy term: Term ID */
 $handler->display->display_options['fields']['tid']['id'] = 'tid';
 $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
@@ -128,9 +128,9 @@ $handler->display->display_options['fields']['name_field_1']['id'] = 'name_field
 $handler->display->display_options['fields']['name_field_1']['table'] = 'field_data_name_field';
 $handler->display->display_options['fields']['name_field_1']['field'] = 'name_field';
 $handler->display->display_options['fields']['name_field_1']['relationship'] = 'field_dataset_tid';
-$handler->display->display_options['fields']['name_field_1']['label'] = 'Catalog';
+$handler->display->display_options['fields']['name_field_1']['label'] = 'Dataset';
 $handler->display->display_options['fields']['name_field_1']['alter']['make_link'] = TRUE;
-$handler->display->display_options['fields']['name_field_1']['alter']['path'] = 'admin/content/landbook/catalogs/[tid_2]';
+$handler->display->display_options['fields']['name_field_1']['alter']['path'] = 'admin/content/landbook/ds/[tid_2]';
 $handler->display->display_options['fields']['name_field_1']['link_to_entity'] = 0;
 /* Field: Taxonomy term: Name */
 $handler->display->display_options['fields']['name_field']['id'] = 'name_field';
@@ -270,7 +270,7 @@ $handler->display->display_options['filters']['name_field_value']['operator'] = 
 $handler->display->display_options['filters']['name_field_value']['group'] = 1;
 $handler->display->display_options['filters']['name_field_value']['exposed'] = TRUE;
 $handler->display->display_options['filters']['name_field_value']['expose']['operator_id'] = 'name_field_value_op';
-$handler->display->display_options['filters']['name_field_value']['expose']['label'] = 'Catalog';
+$handler->display->display_options['filters']['name_field_value']['expose']['label'] = 'Dataset';
 $handler->display->display_options['filters']['name_field_value']['expose']['operator'] = 'name_field_value_op';
 $handler->display->display_options['filters']['name_field_value']['expose']['identifier'] = 'name_field_value';
 $handler->display->display_options['filters']['name_field_value']['expose']['remember_roles'] = array(
@@ -343,7 +343,7 @@ $handler->display->display_options['menu']['context_only_inline'] = 0;
 /* Display: System */
 $handler = $view->new_display('system', 'System', 'system_1');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Land Book Catalog Indicators';
+$handler->display->display_options['title'] = 'Land Book Dataset Indicators';
 $handler->display->display_options['defaults']['access'] = FALSE;
 $handler->display->display_options['defaults']['header'] = FALSE;
 /* Header: Global: Unfiltered text */
@@ -395,7 +395,7 @@ $handler->display->display_options['fields']['name_field_1']['id'] = 'name_field
 $handler->display->display_options['fields']['name_field_1']['table'] = 'field_data_name_field';
 $handler->display->display_options['fields']['name_field_1']['field'] = 'name_field';
 $handler->display->display_options['fields']['name_field_1']['relationship'] = 'field_dataset_tid';
-$handler->display->display_options['fields']['name_field_1']['label'] = 'Catalog';
+$handler->display->display_options['fields']['name_field_1']['label'] = 'Dataset';
 $handler->display->display_options['fields']['name_field_1']['exclude'] = TRUE;
 $handler->display->display_options['fields']['name_field_1']['link_to_entity'] = 1;
 /* Field: Taxonomy term: Name */
