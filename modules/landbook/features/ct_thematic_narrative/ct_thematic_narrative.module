@@ -43,14 +43,14 @@ function ct_thematic_narrative_entity_prepare_view($entities, $type, $langcode) 
   if ($entities[$nid]->type == 'thematic_narrative'
   && isset($entities[$nid]->view)
   && $entities[$nid]->view->current_display != 'last') {
+    global $base_url;
     //dpm($entities[$nid], $nid);
     $tid = $entities[$nid]->field_landvoc_to[LANGUAGE_NONE][0]['target_id'];
-    if ($tid) $entities[$nid]->alias = url('taxonomy/term/' . $tid);
+    if ($tid) $entities[$nid]->alias = $base_url . url('taxonomy/term/' . $tid);
   }
 }
 
 function ct_thematic_narrative_preprocess_node(&$variables) {
-  global $base_url;
   $view_mode = $variables['elements']['#view_mode'];
   if ($variables['type'] != 'thematic_narrative' || $view_mode != 'teaser') return;
   // Should be set in landbook_country_entity_prepare_view
@@ -63,7 +63,7 @@ function ct_thematic_narrative_preprocess_node(&$variables) {
     //dpm($title, 'title');
     if (isset($variables['content']['field_image'])) {
       $img = &$variables['content']['field_image'];
-      $img[0]['#path']['path'] = $base_url . $variables['alias'];
+      $img[0]['#path']['path'] = $variables['alias'];
       //dpm($img, 'IMG');
     }
   }
