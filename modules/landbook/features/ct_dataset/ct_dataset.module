@@ -26,9 +26,10 @@ function ct_dataset_entity_prepare_view($entities, $type, $langcode) {
   if ($type != 'node') return;
   $nid = array_keys($entities)[0];
   if ($entities[$nid]->type != 'dataset') return;
+  global $base_url;
   $tid = $entities[$nid]->field_catalog[LANGUAGE_NONE][0]['tid'];
   if ($tid) {
-    $entities[$nid]->alias = url('taxonomy/term/' . $tid);
+    $entities[$nid]->alias = $base_url . url('taxonomy/term/' . $tid);
   }
 }
 

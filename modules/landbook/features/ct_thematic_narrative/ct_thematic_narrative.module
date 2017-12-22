@@ -50,6 +50,7 @@ function ct_thematic_narrative_entity_prepare_view($entities, $type, $langcode) 
 }
 
 function ct_thematic_narrative_preprocess_node(&$variables) {
+  global $base_url;
   $view_mode = $variables['elements']['#view_mode'];
   if ($variables['type'] != 'thematic_narrative' || $view_mode != 'teaser') return;
   // Should be set in landbook_country_entity_prepare_view
@@ -62,7 +63,7 @@ function ct_thematic_narrative_preprocess_node(&$variables) {
     //dpm($title, 'title');
     if (isset($variables['content']['field_image'])) {
       $img = &$variables['content']['field_image'];
-      $img[0]['#path']['path'] = $variables['alias'];
+      $img[0]['#path']['path'] = $base_url . $variables['alias'];
       //dpm($img, 'IMG');
     }
   }
