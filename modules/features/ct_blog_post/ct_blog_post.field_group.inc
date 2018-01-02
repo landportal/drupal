@@ -13,6 +13,34 @@ function ct_blog_post_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_admin|node|blog_post|form';
+  $field_group->group_name = 'group_admin';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'blog_post';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'admin',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_noderef',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-admin field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_admin|node|blog_post|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_header|node|blog_post|default';
   $field_group->group_name = 'group_header';
   $field_group->entity_type = 'node';
@@ -380,6 +408,7 @@ function ct_blog_post_field_group_info() {
   // Included for use with string extractors like potx.
   t('Header');
   t('Topics and Regions');
+  t('admin');
 
   return $field_groups;
 }

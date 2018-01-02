@@ -287,7 +287,7 @@ function ct_debate_field_default_field_instances() {
         'size' => 30,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 27,
+      'weight' => 29,
     ),
   );
 
@@ -807,7 +807,7 @@ function ct_debate_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 25,
+      'weight' => 28,
     ),
   );
 

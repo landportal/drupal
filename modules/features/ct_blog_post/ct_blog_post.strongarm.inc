@@ -130,22 +130,22 @@ function ct_blog_post_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '7',
+          'weight' => '9',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'language' => array(
-          'weight' => '8',
-        ),
-        'path' => array(
-          'weight' => '6',
-        ),
-        'metatags' => array(
           'weight' => '10',
         ),
+        'path' => array(
+          'weight' => '7',
+        ),
+        'metatags' => array(
+          'weight' => '12',
+        ),
         'xmlsitemap' => array(
-          'weight' => '9',
+          'weight' => '11',
         ),
       ),
       'display' => array(

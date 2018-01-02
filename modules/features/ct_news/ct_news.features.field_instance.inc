@@ -158,7 +158,7 @@ function ct_news_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 10,
+      'weight' => 6,
     ),
   );
 
@@ -224,7 +224,7 @@ function ct_news_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 15,
+      'weight' => 9,
     ),
   );
 
@@ -420,7 +420,7 @@ function ct_news_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 12,
+      'weight' => 5,
     ),
   );
 
@@ -490,7 +490,7 @@ function ct_news_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 11,
+      'weight' => 7,
     ),
   );
 
@@ -572,7 +572,7 @@ function ct_news_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 13,
+      'weight' => 8,
     ),
   );
 
@@ -632,7 +632,7 @@ function ct_news_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete',
       ),
       'type' => 'options_select',
-      'weight' => 117,
+      'weight' => 7,
     ),
   );
 
@@ -687,7 +687,7 @@ function ct_news_field_default_field_instances() {
         'sort' => 'weight',
       ),
       'type' => 'options_select',
-      'weight' => 118,
+      'weight' => 8,
     ),
   );
 
@@ -754,7 +754,7 @@ function ct_news_field_default_field_instances() {
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
       'type' => 'options_select',
-      'weight' => 119,
+      'weight' => 9,
     ),
   );
 
@@ -818,7 +818,7 @@ function ct_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 0,
     ),
   );
 

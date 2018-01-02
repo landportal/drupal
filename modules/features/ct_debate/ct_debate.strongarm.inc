@@ -130,7 +130,7 @@ function ct_debate_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '6',
+          'weight' => '30',
         ),
         'title' => array(
           'weight' => '0',
@@ -139,7 +139,7 @@ function ct_debate_strongarm() {
           'weight' => '8',
         ),
         'language' => array(
-          'weight' => '5',
+          'weight' => '7',
         ),
         'xmlsitemap' => array(
           'weight' => '9',

@@ -139,13 +139,13 @@ function ct_news_strongarm() {
           'weight' => '6',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '8',
         ),
         'language' => array(
           'weight' => '7',
         ),
         'xmlsitemap' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'metatags' => array(
           'weight' => '11',

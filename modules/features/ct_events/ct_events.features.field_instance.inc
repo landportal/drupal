@@ -231,7 +231,7 @@ function ct_events_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 12,
+      'weight' => 17,
     ),
   );
 

@@ -13,6 +13,27 @@ function ct_debate_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_about|node|debate|default';
+  $field_group->group_name = 'group_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'debate';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'About this debate',
+    'weight' => '8',
+    'children' => array(),
+    'format_type' => 'hidden',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(),
+    ),
+  );
+  $field_groups['group_about|node|debate|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_about|node|debate|form';
   $field_group->group_name = 'group_about';
   $field_group->entity_type = 'node';
@@ -24,10 +45,8 @@ function ct_debate_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_date',
-      1 => 'field_status',
-      2 => 'field_file',
-      3 => 'field_facilitators',
-      4 => 'field_orgref',
+      1 => 'field_file',
+      2 => 'field_orgref',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -42,6 +61,37 @@ function ct_debate_field_group_info() {
     ),
   );
   $field_groups['group_about|node|debate|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_admin|node|debate|form';
+  $field_group->group_name = 'group_admin';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'debate';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'admin',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_status',
+      1 => 'field_facilitators',
+      2 => 'locations',
+      3 => 'field_noderef',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-admin field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_admin|node|debate|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -404,6 +454,32 @@ function ct_debate_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_status|node|debate|default';
+  $field_group->group_name = 'group_status';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'debate';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '4',
+    'children' => array(),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_status|node|debate|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_topics_regions|node|debate|default';
   $field_group->group_name = 'group_topics_regions';
   $field_group->entity_type = 'node';
@@ -535,6 +611,7 @@ function ct_debate_field_group_info() {
   t('About this debate');
   t('Header');
   t('Topics and Regions');
+  t('admin');
 
   return $field_groups;
 }

@@ -179,16 +179,16 @@ function landlibrary_resource_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '12',
         ),
         'language' => array(
           'weight' => '5',
         ),
         'xmlsitemap' => array(
-          'weight' => '8',
+          'weight' => '11',
         ),
         'metatags' => array(
-          'weight' => '11',
+          'weight' => '10',
         ),
       ),
       'display' => array(),

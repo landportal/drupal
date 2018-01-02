@@ -1,8 +1,10 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Landportal related feature.
  */
+
+include_once 'landportal_related.features.inc';
 
 function landportal_related_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
