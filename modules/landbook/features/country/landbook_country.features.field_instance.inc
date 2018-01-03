@@ -233,7 +233,7 @@ function landbook_country_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fieldset_view',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
@@ -274,6 +274,73 @@ function landbook_country_field_default_field_instances() {
       ),
       'type' => 'field_collection_fieldset',
       'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-landbook_country-field_file'.
+  $field_instances['node-landbook_country-field_file'] = array(
+    'bundle' => 'landbook_country',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 4,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_file',
+    'label' => 'Additional materials',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => '',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+      'wysiwyg_insert' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 6,
     ),
   );
 
@@ -547,7 +614,7 @@ function landbook_country_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'lbvc_block',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'above',
@@ -645,6 +712,7 @@ function landbook_country_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Additional materials');
   t('Additional paragraph');
   t('Country');
   t('Country narrative');

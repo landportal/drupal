@@ -151,6 +151,7 @@ function landbook_country_field_group_info() {
       2 => 'field_country_info',
       3 => 'field_visualization',
       4 => 'field_image',
+      5 => 'field_file',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -180,9 +181,8 @@ function landbook_country_field_group_info() {
     'label' => 'About the narrative',
     'weight' => '4',
     'children' => array(
-      0 => 'field_indicators',
-      1 => 'field_orgref',
-      2 => 'language',
+      0 => 'field_orgref',
+      1 => 'language',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -209,11 +209,9 @@ function landbook_country_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Visualizations',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_indicators',
-      1 => 'field_indicator_ranking',
-      2 => 'field_indicator_map',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
