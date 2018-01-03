@@ -13,6 +13,13 @@ function ct_organization_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_organization';
+  $strongarm->value = 'edit-linkchecker';
+  $export['additional_settings__active_tab_organization'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_organization';
   $strongarm->value = 0;
   $export['comment_anonymous_organization'] = $strongarm;
@@ -198,6 +205,20 @@ function ct_organization_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'location_defaultnum_organization';
+  $strongarm->value = '1';
+  $export['location_defaultnum_organization'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'location_maxnum_organization';
+  $strongarm->value = '1';
+  $export['location_maxnum_organization'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'location_settings_node_organization';
   $strongarm->value = array(
     'multiple' => array(
@@ -296,6 +317,13 @@ function ct_organization_strongarm() {
   $strongarm->name = 'menu_parent_organization';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_organization'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_enable_node__organization';
+  $strongarm->value = TRUE;
+  $export['metatag_enable_node__organization'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

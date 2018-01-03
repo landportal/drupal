@@ -1006,7 +1006,7 @@ function ct_organization_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'field_collection_fieldset',
+      'module' => 'field_collection',
       'settings' => array(
         'collapsed' => 0,
         'field_as_label' => '',
@@ -1014,7 +1014,7 @@ function ct_organization_field_default_field_instances() {
         'new_item_open' => 0,
         'replace_label' => 0,
       ),
-      'type' => 'field_collection_fieldset',
+      'type' => 'field_collection_embed',
       'weight' => 8,
     ),
   );
@@ -1124,7 +1124,7 @@ function ct_organization_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'taxonomy',
+      'module' => 'options',
       'settings' => array(
         'apply_chosen' => '',
         'auto_creation' => 0,
@@ -1135,7 +1135,7 @@ function ct_organization_field_default_field_instances() {
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'options_select',
       'weight' => 10,
     ),
   );

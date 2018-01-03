@@ -20,20 +20,21 @@ function ct_events_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'admin',
+    'label' => 'Publication options',
     'weight' => '5',
     'children' => array(
       0 => 'field_noderef',
+      1 => 'language',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Publication options',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-admin field-group-fieldset',
         'required_fields' => 1,
-        'id' => '',
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups['group_admin|node|event|form'] = $field_group;
@@ -638,8 +639,8 @@ function ct_events_field_group_info() {
   // Included for use with string extractors like potx.
   t('Event details');
   t('Header');
+  t('Publication options');
   t('Topics and Regions');
-  t('admin');
 
   return $field_groups;
 }

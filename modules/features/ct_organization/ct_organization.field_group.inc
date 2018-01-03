@@ -83,16 +83,14 @@ function ct_organization_field_group_info() {
       2 => 'field_related_organization',
       3 => 'language',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Admin',
+      'formatter' => 'closed',
       'instance_settings' => array(
-        'required_fields' => 1,
-        'id' => '',
-        'classes' => 'group-admin',
         'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'open',
     ),
   );
   $field_groups['group_admin|node|organization|form'] = $field_group;
