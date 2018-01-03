@@ -1775,9 +1775,13 @@ function landlibrary_resource_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 19,
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => 0,
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 11,
       ),
       'listing' => array(
         'label' => 'above',
