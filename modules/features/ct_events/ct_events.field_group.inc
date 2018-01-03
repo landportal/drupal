@@ -56,6 +56,7 @@ function ct_events_field_group_info() {
       1 => 'field_file',
       2 => 'field_link',
       3 => 'field_orgref',
+      4 => 'field_noderef',
     ),
     'format_type' => 'div',
     'format_settings' => array(
