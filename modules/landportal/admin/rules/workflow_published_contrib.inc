@@ -1,7 +1,7 @@
 <?php
 
 $rule = '{ "workflow_published_contrib" : {
-    "LABEL" : "publish contrib",
+    "LABEL" : "New content published contrib",
     "PLUGIN" : "reaction rule",
     "WEIGHT" : "-1",
     "OWNER" : "rules",
@@ -25,6 +25,12 @@ $rule = '{ "workflow_published_contrib" : {
               "project" : "project"
             }
           }
+        }
+      },
+      { "text_matches" : {
+          "text" : [ "site:url" ],
+          "match" : "https?:\/\/landportal.org\/",
+          "operation" : "regex"
         }
       }
     ],
