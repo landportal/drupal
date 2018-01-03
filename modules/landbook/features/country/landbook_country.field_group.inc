@@ -182,7 +182,8 @@ function landbook_country_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_orgref',
-      1 => 'language',
+      1 => 'field_file',
+      2 => 'language',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

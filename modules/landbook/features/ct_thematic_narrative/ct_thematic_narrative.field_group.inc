@@ -54,6 +54,7 @@ function ct_thematic_narrative_field_group_info() {
     'children' => array(
       0 => 'field_orgref',
       1 => 'language',
+      2 => 'field_file',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -174,11 +175,9 @@ function ct_thematic_narrative_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Visualizations',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_indicators',
-      1 => 'field_indicator_ranking',
-      2 => 'field_indicator_map',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

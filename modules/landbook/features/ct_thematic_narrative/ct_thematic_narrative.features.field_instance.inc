@@ -121,7 +121,7 @@ function ct_thematic_narrative_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fieldset_view',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'above',
@@ -167,7 +167,72 @@ function ct_thematic_narrative_field_default_field_instances() {
         'replace_label' => FALSE,
       ),
       'type' => 'field_collection_fieldset',
-      'weight' => 5,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-thematic_narrative-field_file'.
+  $field_instances['node-thematic_narrative-field_file'] = array(
+    'bundle' => 'thematic_narrative',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 5,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_file',
+    'label' => 'Additional materials',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => '',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+      'wysiwyg_insert' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 7,
     ),
   );
 
@@ -351,7 +416,7 @@ function ct_thematic_narrative_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -425,7 +490,7 @@ function ct_thematic_narrative_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'above',
@@ -452,7 +517,7 @@ function ct_thematic_narrative_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -562,6 +627,7 @@ function ct_thematic_narrative_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Additional materials');
   t('Info');
   t('Land Book Indicators');
   t('Narrative');
