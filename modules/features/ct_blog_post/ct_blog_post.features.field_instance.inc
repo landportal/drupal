@@ -217,17 +217,18 @@ function ct_blog_post_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
         'apply_chosen' => '',
         'auto_creation' => 0,
+        'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
         'sort' => 'weight',
         'suggest_only_unique' => 0,
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_autocomplete_taxonomy_term',
       'weight' => 5,
     ),
   );

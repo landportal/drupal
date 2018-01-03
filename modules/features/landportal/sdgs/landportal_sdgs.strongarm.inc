@@ -322,20 +322,6 @@ function landportal_sdgs_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'uuid_features_entity_node_sdgi';
-  $strongarm->value = 0;
-  $export['uuid_features_entity_node_sdgi'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'uuid_features_file_node_sdgi';
-  $strongarm->value = 0;
-  $export['uuid_features_file_node_sdgi'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_sdgi';
   $strongarm->value = array(
     'status' => '0',

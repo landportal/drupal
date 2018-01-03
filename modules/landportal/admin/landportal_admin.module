@@ -90,9 +90,7 @@ function landportal_admin_default_rules_configuration() {
     return $config;
 }
 
-
 function landportal_admin_mail_alter(&$message) {
-
   /* // From : https://api.drupal.org/comment/60157#comment-60157 */
   /* $default_from = variable_get('site_mail', ini_get('sendmail_from')); */
   /* if($message['from'] == $default_from){ */
@@ -101,9 +99,40 @@ function landportal_admin_mail_alter(&$message) {
   /*     = $message['headers']['Return-Path'] = $message['headers']['Errors-To'] */
   /*     = $message['headers']['Reply-To'] = $message['from']; */
   /* } */
-
   /* // Don't send email */
   /* $message['send'] = FALSE; */
   /* // Next: Log the mail so it can be debugged if necessary */
   /* watchdog('Development Env', 'The following email was not sent: !message', array('!message' => '<pre>' . print_r($message, TRUE) . '</pre>')); */
+}
+
+define ('ROLE_ADMINISTRATOR', 30037204);
+define ('ROLE_LANDPORTAL',    111903910);
+define ('ROLE_CONTRIBUTOR',   111903911);
+
+function landportal_admin_form_alter(&$form, &$form_state, $form_id) {
+  if (!isset($form['#fieldgroups'])) return;
+  // Hide group_admin and non-required fields
+  if (!(user_has_role(ROLE_LANDPORTAL) || user_has_role(ROLE_ADMINISTRATOR))) {
+    if (isset($form['#fieldgroups']['group_admin'])) {
+      foreach($form['#fieldgroups']['group_admin']->children as $c) {
+        $i = &$form[$c];
+        if (isset($i['#language']) && isset($i[$i['#language']]['#required'])) {
+          $i['#access'] = FALSE;
+        }
+      }
+      $form['#fieldgroups']['group_admin']->format_type = 'hiddem';
+    }
+  }
+}
+
+function landportal_admin_field_widget_properties_node_alter(&$widget, $context) {
+  if (!in_array($context['field']['field_name'], array(
+    'field_geographical_focus', 'field_related_domains', 'field_related_topics'))) return;
+  return ;
+  if ($context['field']['field_name'] == 'field_geographical_focus') {
+    $widget['module'] = 'options';
+    $widget['type'] = 'options_select';
+    //dpm($context, 'C');
+    //dpm($widget, 'W');
+  }
 }

@@ -54,27 +54,28 @@ function landlibrary_resource_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'admin',
+    'label' => 'Publication options',
     'weight' => '9',
     'children' => array(
       0 => 'field_noderef',
-      1 => 'group_deprecated',
+      1 => 'language',
+      2 => 'group_deprecated',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Publication options',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-admin field-group-fieldset',
         'required_fields' => 1,
-        'id' => '',
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups['group_admin|node|landlibrary_resource|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_authors|node|landlibrary_resource|form';
   $field_group->group_name = 'group_authors';
@@ -140,10 +141,10 @@ function landlibrary_resource_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'landlibrary_resource';
   $field_group->mode = 'form';
-  $field_group->parent_name = '_add_new_group';
+  $field_group->parent_name = 'group_admin';
   $field_group->data = array(
     'label' => 'Deprecated',
-    'weight' => '14',
+    'weight' => '9',
     'children' => array(
       0 => 'field_doc_is_part_of',
       1 => 'field_doc_publisher_place',
@@ -912,7 +913,7 @@ function landlibrary_resource_field_group_info() {
   $field_groups['group_right|node|landlibrary_resource|default'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_settings|node|landlibrary_resource|form';
   $field_group->group_name = 'group_settings';
@@ -1149,13 +1150,13 @@ function landlibrary_resource_field_group_info() {
   t('Header');
   t('More details about access to resource');
   t('More details about resource');
+  t('Publication options');
   t('Publishing rights');
   t('Related categories');
   t('Resource information');
   t('Settings');
   t('Source information');
   t('Subject of the resource');
-  t('admin');
   t('remove');
 
   return $field_groups;

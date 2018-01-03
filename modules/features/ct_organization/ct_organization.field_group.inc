@@ -42,10 +42,14 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
-      0 => 'locations',
-      1 => 'group_contact',
+      0 => 'field_organization_type',
+      1 => 'field_link',
+      2 => 'field_file',
+      3 => 'field_language',
+      4 => 'locations',
+      5 => 'group_contact',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -72,14 +76,12 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Admin',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_organization_relationship',
       1 => 'field_user',
       2 => 'field_related_organization',
       3 => 'language',
-      4 => 'path',
-      5 => 'xmlsitemap',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -106,19 +108,23 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = 'group_about';
   $field_group->data = array(
     'label' => 'Contact information',
-    'weight' => '5',
+    'weight' => '9',
     'children' => array(
       0 => 'field_contact',
       1 => 'field_email',
       2 => 'field_phone',
       3 => 'field_postal_address',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-contact field-group-fieldset',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => '',
         'required_fields' => 1,
         'id' => '',
       ),
@@ -198,7 +204,7 @@ function ct_organization_field_group_info() {
   $field_groups['group_header|node|organization|default'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_header|node|organization|form';
   $field_group->group_name = 'group_header';
@@ -446,7 +452,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topics and Regions',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',

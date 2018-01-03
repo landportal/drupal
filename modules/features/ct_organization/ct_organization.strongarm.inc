@@ -133,19 +133,19 @@ function ct_organization_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '6',
+          'weight' => '10',
         ),
         'path' => array(
-          'weight' => '11',
+          'weight' => '8',
         ),
         'language' => array(
           'weight' => '7',
         ),
         'xmlsitemap' => array(
-          'weight' => '12',
+          'weight' => '9',
         ),
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '10',
         ),
       ),
       'display' => array(

@@ -287,7 +287,7 @@ function ct_debate_field_default_field_instances() {
         'size' => 30,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 29,
+      'weight' => 28,
     ),
   );
 
@@ -357,7 +357,7 @@ function ct_debate_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 29,
+      'weight' => 30,
     ),
   );
 
@@ -406,7 +406,7 @@ function ct_debate_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'taxonomy',
+      'module' => 'synonyms',
       'settings' => array(
         'apply_chosen' => '',
         'auto_creation' => 0,
@@ -417,7 +417,7 @@ function ct_debate_field_default_field_instances() {
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'synonyms_autocomplete_taxonomy_term',
       'weight' => 114,
     ),
   );
@@ -539,7 +539,7 @@ function ct_debate_field_default_field_instances() {
     'entity_type' => 'node',
     'entityconnect' => array(
       'button' => array(
-        'unload_add_button' => 1,
+        'unload_add_button' => 0,
         'unload_edit_button' => 1,
       ),
       'icon' => array(
@@ -568,7 +568,7 @@ function ct_debate_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 28,
+      'weight' => 29,
     ),
   );
 
@@ -739,7 +739,7 @@ function ct_debate_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'taxonomy',
+      'module' => 'options',
       'settings' => array(
         'apply_chosen' => '',
         'auto_creation' => 0,
@@ -750,7 +750,7 @@ function ct_debate_field_default_field_instances() {
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'options_select',
       'weight' => 119,
     ),
   );
@@ -807,7 +807,7 @@ function ct_debate_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 28,
+      'weight' => 27,
     ),
   );
 

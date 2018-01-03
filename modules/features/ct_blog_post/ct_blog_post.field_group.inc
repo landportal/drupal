@@ -20,19 +20,19 @@ function ct_blog_post_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'admin',
+    'label' => 'Publication options',
     'weight' => '6',
     'children' => array(
       0 => 'field_noderef',
+      1 => 'language',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-admin field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
@@ -407,8 +407,8 @@ function ct_blog_post_field_group_info() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Header');
+  t('Publication options');
   t('Topics and Regions');
-  t('admin');
 
   return $field_groups;
 }

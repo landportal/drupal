@@ -142,7 +142,7 @@ function ct_news_strongarm() {
           'weight' => '8',
         ),
         'language' => array(
-          'weight' => '7',
+          'weight' => '16',
         ),
         'xmlsitemap' => array(
           'weight' => '9',
@@ -154,7 +154,7 @@ function ct_news_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'teaser' => array(

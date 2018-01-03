@@ -20,6 +20,7 @@ dependencies[] = media
 dependencies[] = node
 dependencies[] = options
 dependencies[] = strongarm
+dependencies[] = synonyms
 dependencies[] = text
 dependencies[] = title
 features[ctools][] = field_group:field_group:1

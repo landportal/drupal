@@ -21,7 +21,7 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'About this debate',
-    'weight' => '8',
+    'weight' => '7',
     'children' => array(),
     'format_type' => 'hidden',
     'format_settings' => array(
@@ -45,8 +45,10 @@ function ct_debate_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_date',
-      1 => 'field_file',
-      2 => 'field_orgref',
+      1 => 'field_status',
+      2 => 'field_file',
+      3 => 'field_facilitators',
+      4 => 'field_orgref',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -72,23 +74,22 @@ function ct_debate_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'admin',
+    'label' => 'Publication options',
     'weight' => '5',
     'children' => array(
-      0 => 'field_status',
-      1 => 'field_facilitators',
+      0 => 'field_noderef',
+      1 => 'language',
       2 => 'locations',
-      3 => 'field_noderef',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Publication options',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-admin field-group-fieldset',
         'required_fields' => 1,
-        'id' => '',
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_admin|node|debate|form'] = $field_group;
@@ -462,17 +463,12 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '4',
+    'weight' => '6',
     'children' => array(),
-    'format_type' => 'fieldset',
+    'format_type' => 'hidden',
     'format_settings' => array(
-      'label' => '',
-      'instance_settings' => array(
-        'id' => '',
-        'classes' => '',
-        'description' => '',
-      ),
-      'formatter' => 'open',
+      'formatter' => '',
+      'instance_settings' => array(),
     ),
   );
   $field_groups['group_status|node|debate|default'] = $field_group;
@@ -610,8 +606,8 @@ function ct_debate_field_group_info() {
   // Included for use with string extractors like potx.
   t('About this debate');
   t('Header');
+  t('Publication options');
   t('Topics and Regions');
-  t('admin');
 
   return $field_groups;
 }

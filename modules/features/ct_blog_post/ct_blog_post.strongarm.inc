@@ -136,7 +136,7 @@ function ct_blog_post_strongarm() {
           'weight' => '0',
         ),
         'language' => array(
-          'weight' => '10',
+          'weight' => '9',
         ),
         'path' => array(
           'weight' => '7',
@@ -155,7 +155,7 @@ function ct_blog_post_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '3',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'listing' => array(

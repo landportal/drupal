@@ -20,20 +20,21 @@ function ct_news_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'admin',
+    'label' => 'Publication options',
     'weight' => '5',
     'children' => array(
       0 => 'field_noderef',
+      1 => 'language',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Publication options',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-admin field-group-fieldset',
         'required_fields' => 1,
-        'id' => '',
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_admin|node|news|form'] = $field_group;
@@ -53,6 +54,7 @@ function ct_news_field_group_info() {
     'children' => array(
       0 => 'field_file',
       1 => 'field_link',
+      2 => 'field_language',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -92,13 +94,14 @@ function ct_news_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Details',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-details field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-details field-group-fieldset lp-2c',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_details|node|news|form'] = $field_group;
@@ -535,8 +538,8 @@ function ct_news_field_group_info() {
   // Included for use with string extractors like potx.
   t('Details');
   t('Header');
+  t('Publication options');
   t('Topics and Regions');
-  t('admin');
 
   return $field_groups;
 }

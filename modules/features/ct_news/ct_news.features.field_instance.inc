@@ -158,7 +158,7 @@ function ct_news_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -196,35 +196,40 @@ function ct_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_file',
-    'label' => 'Attach a  file',
+    'label' => 'Attach a file',
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => '',
-      'file_extensions' => 'txt pdf zip',
+      'file_extensions' => '',
       'max_filesize' => '',
       'user_register_form' => FALSE,
+      'wysiwyg_insert' => 0,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
-          0 => 0,
           'audio' => 0,
-          'default' => 0,
+          'document' => 'document',
           'image' => 'image',
           'video' => 0,
         ),
-        'browser_plugins' => array(),
-        'progress_indicator' => 'throbber',
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+        ),
       ),
       'type' => 'media_generic',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -273,17 +278,18 @@ function ct_news_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'synonyms',
       'settings' => array(
         'apply_chosen' => '',
         'auto_creation' => 0,
+        'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
         'sort' => 'weight',
         'suggest_only_unique' => 0,
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'options_select',
+      'type' => 'synonyms_autocomplete_taxonomy_term',
       'weight' => 114,
     ),
   );
@@ -382,8 +388,9 @@ function ct_news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 19,
       ),
       'listing' => array(
@@ -420,7 +427,7 @@ function ct_news_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
@@ -467,16 +474,16 @@ function ct_news_field_default_field_instances() {
         'class' => '',
         'configurable_class' => 0,
         'configurable_title' => 0,
-        'rel' => '',
+        'rel' => 'nofollow',
         'target' => '_blank',
         'title' => '',
       ),
       'display' => array(
         'url_cutoff' => 80,
       ),
-      'enable_tokens' => 1,
+      'enable_tokens' => 0,
       'entity_translation_sync' => FALSE,
-      'rel_remove' => 'default',
+      'rel_remove' => 'rel_remove_internal',
       'title' => 'optional',
       'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
@@ -490,7 +497,7 @@ function ct_news_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -572,7 +579,7 @@ function ct_news_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 8,
+      'weight' => 6,
     ),
   );
 
@@ -588,7 +595,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 20,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -648,7 +655,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 21,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -703,7 +710,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 22,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -824,7 +831,7 @@ function ct_news_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Attach a  file');
+  t('Attach a file');
   t('Author(s)');
   t('Body');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');

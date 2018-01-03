@@ -130,7 +130,7 @@ function ct_debate_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '30',
+          'weight' => '32',
         ),
         'title' => array(
           'weight' => '0',
@@ -139,7 +139,7 @@ function ct_debate_strongarm() {
           'weight' => '8',
         ),
         'language' => array(
-          'weight' => '7',
+          'weight' => '29',
         ),
         'xmlsitemap' => array(
           'weight' => '9',
@@ -151,7 +151,7 @@ function ct_debate_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'teaser' => array(
