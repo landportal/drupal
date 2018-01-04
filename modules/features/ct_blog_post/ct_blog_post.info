@@ -76,4 +76,5 @@ features[variable][] = pathauto_node_blog_post_pattern
 features[variable][] = pathauto_node_blog_post_pt_pattern
 features[variable][] = pathauto_node_blog_post_und_pattern
 features[variable][] = xmlsitemap_settings_node_blog_post
+features_exclude[dependencies][landportal_multilingual] = landportal_multilingual
 features_exclude[dependencies][landportal_related] = landportal_related

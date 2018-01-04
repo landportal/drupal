@@ -62,7 +62,7 @@ function ct_news_field_group_info() {
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-details',
+        'classes' => 'group-aside',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',

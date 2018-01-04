@@ -22,11 +22,11 @@ function landportal_related_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'bypass_access' => FALSE,
-          'link' => FALSE,
+          'bypass_access' => 0,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 26,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
@@ -93,11 +93,11 @@ function landportal_related_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'bypass_access' => FALSE,
-          'link' => FALSE,
+          'bypass_access' => 0,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 9,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'above',
@@ -164,8 +164,8 @@ function landportal_related_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'bypass_access' => FALSE,
-          'link' => FALSE,
+          'bypass_access' => 0,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
         'weight' => 9,
@@ -309,7 +309,7 @@ function landportal_related_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 20,
+        'weight' => 21,
       ),
       'listing' => array(
         'label' => 'above',

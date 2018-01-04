@@ -137,19 +137,19 @@ function ct_events_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '19',
+          'weight' => '13',
         ),
         'path' => array(
           'weight' => '7',
         ),
         'language' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
         'xmlsitemap' => array(
           'weight' => '8',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
       ),
       'display' => array(

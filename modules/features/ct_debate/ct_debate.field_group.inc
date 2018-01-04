@@ -109,6 +109,7 @@ function ct_debate_field_group_info() {
     'children' => array(
       0 => 'field_file',
       1 => 'field_orgref',
+      2 => 'field_noderef',
     ),
     'format_type' => 'div',
     'format_settings' => array(

@@ -169,11 +169,11 @@ function ct_news_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 17,
+        'weight' => 20,
       ),
       'listing' => array(
         'label' => 'above',
@@ -196,7 +196,7 @@ function ct_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_file',
-    'label' => 'Attach a file',
+    'label' => 'Related materials',
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
@@ -217,8 +217,8 @@ function ct_news_field_default_field_instances() {
         ),
         'allowed_types' => array(
           'audio' => 0,
-          'document' => 'document',
-          'image' => 'image',
+          'document' => 0,
+          'image' => 0,
           'video' => 0,
         ),
         'browser_plugins' => array(
@@ -387,7 +387,7 @@ function ct_news_field_default_field_instances() {
     'description' => 'Select the language of the original article that is reposted',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_plain',
@@ -831,7 +831,6 @@ function ct_news_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Attach a file');
   t('Author(s)');
   t('Body');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
@@ -841,6 +840,7 @@ function ct_news_field_default_field_instances() {
   t('Overarching categories');
   t('Publication date');
   t('Related concepts');
+  t('Related materials');
   t('Select the language of the original article that is reposted');
   t('Source');
   t('Themes');

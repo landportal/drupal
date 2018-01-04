@@ -302,7 +302,7 @@ function ct_debate_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',

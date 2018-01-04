@@ -54,6 +54,15 @@ function landportal_related_default_cer() {
     "identifier" : "node:dataset:field_noderef*node:news:field_noderef",
     "rdf_mapping" : []
   }');
+  $items['node:event:field_noderef*node:landlibrary_resource:field_noderef'] = entity_import('cer', '{
+    "cer_bidirectional" : { "und" : [ { "value" : "1" } ] },
+    "cer_enabled" : { "und" : [ { "value" : "1" } ] },
+    "cer_left" : { "und" : [ { "path" : "node:event:field_noderef" } ] },
+    "cer_right" : { "und" : [ { "path" : "node:landlibrary_resource:field_noderef" } ] },
+    "cer_weight" : { "und" : [ { "value" : "0" } ] },
+    "identifier" : "node:event:field_noderef*node:landlibrary_resource:field_noderef",
+    "rdf_mapping" : []
+  }');
   $items['node:partners_page:field_noderef*node:blog_post:field_noderef'] = entity_import('cer', '{
     "cer_bidirectional" : { "und" : [ { "value" : "1" } ] },
     "cer_enabled" : { "und" : [ { "value" : "1" } ] },
