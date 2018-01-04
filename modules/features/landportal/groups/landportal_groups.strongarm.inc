@@ -148,7 +148,7 @@ function landportal_groups_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '4',
+          'weight' => '-3',
         ),
         'locations' => array(
           'weight' => '-2',
@@ -166,7 +166,7 @@ function landportal_groups_strongarm() {
           'weight' => '6',
         ),
         'og_menu' => array(
-          'weight' => '0',
+          'weight' => '-2',
         ),
       ),
       'display' => array(
@@ -243,19 +243,19 @@ function landportal_groups_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '3',
+          'weight' => '10',
         ),
         'locations' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'xmlsitemap' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
       ),
       'display' => array(

@@ -60,7 +60,7 @@ function landportal_groups_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -123,9 +123,9 @@ function landportal_groups_field_default_field_instances() {
         'close_modal' => 1,
         'pass_argument' => 1,
         'pass_arguments' => '',
-        'rendered_entity' => 0,
+        'rendered_entity' => 1,
         'view' => 'related|view_widget',
-        'view_mode' => 'teaser',
+        'view_mode' => 'listing',
       ),
       'type' => 'entityreference_view_widget',
       'weight' => 0,
@@ -320,9 +320,9 @@ function landportal_groups_field_default_field_instances() {
         'close_modal' => 1,
         'pass_argument' => 1,
         'pass_arguments' => '',
-        'rendered_entity' => 0,
+        'rendered_entity' => 1,
         'view' => 'related|view_widget',
-        'view_mode' => 'full',
+        'view_mode' => 'listing',
       ),
       'type' => 'entityreference_view_widget',
       'weight' => 1,
@@ -555,12 +555,19 @@ function landportal_groups_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'media',
       'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'image' => 'image',
+        ),
+        'browser_plugins' => array(),
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'media_generic',
       'weight' => 1,
     ),
   );
@@ -628,7 +635,7 @@ function landportal_groups_field_default_field_instances() {
         'view_mode' => 'listing',
       ),
       'type' => 'entityreference_view_widget',
-      'weight' => 8,
+      'weight' => 11,
     ),
   );
 
@@ -717,7 +724,7 @@ function landportal_groups_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 7,
+      'weight' => 12,
     ),
   );
 
