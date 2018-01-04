@@ -19,20 +19,24 @@ $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'menu';
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
-$handler->display->display_options['query']['options']['distinct'] = TRUE;
-$handler->display->display_options['query']['options']['query_comment'] = FALSE;
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
 $handler->display->display_options['pager']['type'] = 'full';
-$handler->display->display_options['pager']['options']['items_per_page'] = 50;
+$handler->display->display_options['pager']['options']['items_per_page'] = '10';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['style_plugin'] = 'table';
 $handler->display->display_options['style_options']['columns'] = array(
   'views_bulk_operations' => 'views_bulk_operations',
   'title' => 'title',
   'timestamp' => 'title',
   'type' => 'type',
+  'language' => 'type',
   'name' => 'name',
-  'status' => 'status',
+  'status' => 'title',
+  'promote' => 'title',
+  'sticky' => 'title',
   'changed' => 'changed',
   'edit_node' => 'edit_node',
   'delete_node' => 'edit_node',
@@ -60,6 +64,13 @@ $handler->display->display_options['style_options']['info'] = array(
     'sortable' => 1,
     'default_sort_order' => 'asc',
     'align' => '',
+    'separator' => '<br/>',
+    'empty_column' => 0,
+  ),
+  'language' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
     'separator' => '',
     'empty_column' => 0,
   ),
@@ -73,6 +84,20 @@ $handler->display->display_options['style_options']['info'] = array(
   'status' => array(
     'sortable' => 1,
     'default_sort_order' => 'desc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'promote' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'sticky' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -107,19 +132,11 @@ $handler->display->display_options['empty']['area_text_custom']['id'] = 'area_te
 $handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
 $handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
 $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
-$handler->display->display_options['empty']['area_text_custom']['content'] = 'No content available.';
+$handler->display->display_options['empty']['area_text_custom']['content'] = 'No content found.';
 /* Relationship: Content: Author */
 $handler->display->display_options['relationships']['uid']['id'] = 'uid';
 $handler->display->display_options['relationships']['uid']['table'] = 'node';
 $handler->display->display_options['relationships']['uid']['field'] = 'uid';
-/* Relationship: Content: Taxonomy terms on node */
-$handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
-$handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
-$handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
-$handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
-  'forums' => 0,
-  'tags' => 0,
-);
 /* Field: Bulk operations: Content */
 $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
 $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_node';
@@ -216,6 +233,10 @@ $handler->display->display_options['fields']['timestamp']['element_label_colon']
 $handler->display->display_options['fields']['type']['id'] = 'type';
 $handler->display->display_options['fields']['type']['table'] = 'node';
 $handler->display->display_options['fields']['type']['field'] = 'type';
+/* Field: Content: Language */
+$handler->display->display_options['fields']['language']['id'] = 'language';
+$handler->display->display_options['fields']['language']['table'] = 'node';
+$handler->display->display_options['fields']['language']['field'] = 'language';
 /* Field: User: Name */
 $handler->display->display_options['fields']['name']['id'] = 'name';
 $handler->display->display_options['fields']['name']['table'] = 'users';
@@ -227,7 +248,26 @@ $handler->display->display_options['fields']['name']['hide_alter_empty'] = FALSE
 $handler->display->display_options['fields']['status']['id'] = 'status';
 $handler->display->display_options['fields']['status']['table'] = 'node';
 $handler->display->display_options['fields']['status']['field'] = 'status';
+$handler->display->display_options['fields']['status']['element_type'] = 'em';
+$handler->display->display_options['fields']['status']['type'] = 'custom';
+$handler->display->display_options['fields']['status']['type_custom_false'] = 'not published';
 $handler->display->display_options['fields']['status']['not'] = 0;
+/* Field: Content: Promoted to front page */
+$handler->display->display_options['fields']['promote']['id'] = 'promote';
+$handler->display->display_options['fields']['promote']['table'] = 'node';
+$handler->display->display_options['fields']['promote']['field'] = 'promote';
+$handler->display->display_options['fields']['promote']['label'] = 'Promoted';
+$handler->display->display_options['fields']['promote']['element_type'] = 'strong';
+$handler->display->display_options['fields']['promote']['type'] = 'custom';
+$handler->display->display_options['fields']['promote']['type_custom_true'] = 'promoted';
+$handler->display->display_options['fields']['promote']['not'] = 0;
+/* Field: Content: Sticky */
+$handler->display->display_options['fields']['sticky']['id'] = 'sticky';
+$handler->display->display_options['fields']['sticky']['table'] = 'node';
+$handler->display->display_options['fields']['sticky']['field'] = 'sticky';
+$handler->display->display_options['fields']['sticky']['type'] = 'custom';
+$handler->display->display_options['fields']['sticky']['type_custom_true'] = 'sticky';
+$handler->display->display_options['fields']['sticky']['not'] = 0;
 /* Field: Content: Updated date */
 $handler->display->display_options['fields']['changed']['id'] = 'changed';
 $handler->display->display_options['fields']['changed']['table'] = 'node';
@@ -244,106 +284,6 @@ $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node
 $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
 $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
 $handler->display->display_options['fields']['delete_node']['label'] = '';
-/* Field: Content: Language */
-$handler->display->display_options['fields']['language']['id'] = 'language';
-$handler->display->display_options['fields']['language']['table'] = 'node';
-$handler->display->display_options['fields']['language']['field'] = 'language';
-/* Filter criterion: Content: Title */
-$handler->display->display_options['filters']['title']['id'] = 'title';
-$handler->display->display_options['filters']['title']['table'] = 'node';
-$handler->display->display_options['filters']['title']['field'] = 'title';
-$handler->display->display_options['filters']['title']['operator'] = 'contains';
-$handler->display->display_options['filters']['title']['exposed'] = TRUE;
-$handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-$handler->display->display_options['filters']['title']['expose']['label'] = 'Title';
-$handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
-$handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
-$handler->display->display_options['filters']['title']['expose']['remember'] = TRUE;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type']['id'] = 'type';
-$handler->display->display_options['filters']['type']['table'] = 'node';
-$handler->display->display_options['filters']['type']['field'] = 'type';
-$handler->display->display_options['filters']['type']['exposed'] = TRUE;
-$handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
-$handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
-$handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
-$handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
-$handler->display->display_options['filters']['type']['expose']['remember'] = TRUE;
-/* Filter criterion: User: Name */
-$handler->display->display_options['filters']['uid']['id'] = 'uid';
-$handler->display->display_options['filters']['uid']['table'] = 'users';
-$handler->display->display_options['filters']['uid']['field'] = 'uid';
-$handler->display->display_options['filters']['uid']['relationship'] = 'uid';
-$handler->display->display_options['filters']['uid']['value'] = '';
-$handler->display->display_options['filters']['uid']['exposed'] = TRUE;
-$handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
-$handler->display->display_options['filters']['uid']['expose']['label'] = 'Author';
-$handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
-$handler->display->display_options['filters']['uid']['expose']['identifier'] = 'author';
-$handler->display->display_options['filters']['uid']['expose']['remember'] = TRUE;
-/* Filter criterion: Content: Published */
-$handler->display->display_options['filters']['status']['id'] = 'status';
-$handler->display->display_options['filters']['status']['table'] = 'node';
-$handler->display->display_options['filters']['status']['field'] = 'status';
-$handler->display->display_options['filters']['status']['value'] = 'All';
-$handler->display->display_options['filters']['status']['exposed'] = TRUE;
-$handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
-$handler->display->display_options['filters']['status']['expose']['label'] = 'Published';
-$handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
-$handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
-$handler->display->display_options['filters']['status']['expose']['remember'] = TRUE;
-/* Filter criterion: Taxonomy term: Vocabulary */
-$handler->display->display_options['filters']['vid']['id'] = 'vid';
-$handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['filters']['vid']['field'] = 'vid';
-$handler->display->display_options['filters']['vid']['relationship'] = 'term_node_tid';
-$handler->display->display_options['filters']['vid']['exposed'] = TRUE;
-$handler->display->display_options['filters']['vid']['expose']['operator_id'] = 'vid_op';
-$handler->display->display_options['filters']['vid']['expose']['label'] = 'Vocabulary';
-$handler->display->display_options['filters']['vid']['expose']['operator'] = 'vid_op';
-$handler->display->display_options['filters']['vid']['expose']['identifier'] = 'vid';
-
-/* Display: System */
-$handler = $view->new_display('system', 'System', 'system_1');
-$handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-$handler->display->display_options['hide_admin_links'] = TRUE;
-$handler->display->display_options['defaults']['access'] = FALSE;
-$handler->display->display_options['defaults']['filter_groups'] = FALSE;
-$handler->display->display_options['filter_groups']['groups'] = array(
-  1 => 'AND',
-  2 => 'AND',
-);
-$handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type']['id'] = 'type';
-$handler->display->display_options['filters']['type']['table'] = 'node';
-$handler->display->display_options['filters']['type']['field'] = 'type';
-$handler->display->display_options['filters']['type']['group'] = 1;
-$handler->display->display_options['filters']['type']['exposed'] = TRUE;
-$handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
-$handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
-$handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
-$handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
-$handler->display->display_options['filters']['type']['expose']['multiple'] = TRUE;
-$handler->display->display_options['filters']['type']['expose']['remember_roles'] = array(
-  2 => '2',
-  111903910 => '111903910',
-  30037204 => '30037204',
-  1 => 0,
-  111731461 => 0,
-  111903911 => 0,
-  111903912 => 0,
-  25521343 => 0,
-);
-$handler->display->display_options['filters']['type']['group_info']['label'] = 'Type';
-$handler->display->display_options['filters']['type']['group_info']['identifier'] = 'type';
-$handler->display->display_options['filters']['type']['group_info']['widget'] = 'radios';
-$handler->display->display_options['filters']['type']['group_info']['multiple'] = TRUE;
-$handler->display->display_options['filters']['type']['group_info']['group_items'] = array(
-  1 => array(),
-  2 => array(),
-  3 => array(),
-);
 /* Filter criterion: Content: Title */
 $handler->display->display_options['filters']['title']['id'] = 'title';
 $handler->display->display_options['filters']['title']['table'] = 'node';
@@ -356,54 +296,6 @@ $handler->display->display_options['filters']['title']['expose']['label'] = 'Tit
 $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
 $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
 $handler->display->display_options['filters']['title']['expose']['remember'] = TRUE;
-/* Filter criterion: Content: Published */
-$handler->display->display_options['filters']['status']['id'] = 'status';
-$handler->display->display_options['filters']['status']['table'] = 'node';
-$handler->display->display_options['filters']['status']['field'] = 'status';
-$handler->display->display_options['filters']['status']['value'] = 'All';
-$handler->display->display_options['filters']['status']['group'] = 1;
-$handler->display->display_options['filters']['status']['exposed'] = TRUE;
-$handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
-$handler->display->display_options['filters']['status']['expose']['label'] = 'Published';
-$handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
-$handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
-$handler->display->display_options['filters']['status']['expose']['remember'] = TRUE;
-/* Filter criterion: Content: Sticky */
-$handler->display->display_options['filters']['sticky']['id'] = 'sticky';
-$handler->display->display_options['filters']['sticky']['table'] = 'node';
-$handler->display->display_options['filters']['sticky']['field'] = 'sticky';
-$handler->display->display_options['filters']['sticky']['group'] = 1;
-$handler->display->display_options['filters']['sticky']['exposed'] = TRUE;
-$handler->display->display_options['filters']['sticky']['expose']['operator_id'] = '';
-$handler->display->display_options['filters']['sticky']['expose']['label'] = 'Sticky';
-$handler->display->display_options['filters']['sticky']['expose']['operator'] = 'sticky_op';
-$handler->display->display_options['filters']['sticky']['expose']['identifier'] = 'sticky';
-$handler->display->display_options['filters']['sticky']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111731461 => 0,
-  25521343 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
-/* Filter criterion: Content: Promoted to front page */
-$handler->display->display_options['filters']['promote']['id'] = 'promote';
-$handler->display->display_options['filters']['promote']['table'] = 'node';
-$handler->display->display_options['filters']['promote']['field'] = 'promote';
-$handler->display->display_options['filters']['promote']['group'] = 1;
-$handler->display->display_options['filters']['promote']['exposed'] = TRUE;
-$handler->display->display_options['filters']['promote']['expose']['operator_id'] = '';
-$handler->display->display_options['filters']['promote']['expose']['label'] = 'Promoted';
-$handler->display->display_options['filters']['promote']['expose']['operator'] = 'promote_op';
-$handler->display->display_options['filters']['promote']['expose']['identifier'] = 'promote';
-$handler->display->display_options['filters']['promote']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111731461 => 0,
-  25521343 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
 /* Filter criterion: User: Name */
 $handler->display->display_options['filters']['uid']['id'] = 'uid';
 $handler->display->display_options['filters']['uid']['table'] = 'users';
@@ -417,109 +309,103 @@ $handler->display->display_options['filters']['uid']['expose']['label'] = 'Autho
 $handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
 $handler->display->display_options['filters']['uid']['expose']['identifier'] = 'author';
 $handler->display->display_options['filters']['uid']['expose']['remember'] = TRUE;
-/* Filter criterion: Taxonomy term: Vocabulary */
-$handler->display->display_options['filters']['vid']['id'] = 'vid';
-$handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['filters']['vid']['field'] = 'vid';
-$handler->display->display_options['filters']['vid']['relationship'] = 'term_node_tid';
-$handler->display->display_options['filters']['vid']['value'] = array(
-  3 => '3',
-  4 => '4',
-  6 => '6',
-  15 => '15',
-  7 => '7',
-  13 => '13',
-  17 => '17',
-  8 => '8',
-  18 => '18',
-  19 => '19',
-  20 => '20',
-  22 => '22',
-  21 => '21',
-  5 => '5',
-  2 => '2',
-);
-$handler->display->display_options['filters']['vid']['group'] = 2;
-$handler->display->display_options['filters']['vid']['exposed'] = TRUE;
-$handler->display->display_options['filters']['vid']['expose']['operator_id'] = 'vid_op';
-$handler->display->display_options['filters']['vid']['expose']['label'] = 'Vocabulary';
-$handler->display->display_options['filters']['vid']['expose']['operator'] = 'vid_op';
-$handler->display->display_options['filters']['vid']['expose']['identifier'] = 'vid';
-$handler->display->display_options['filters']['vid']['expose']['multiple'] = TRUE;
-$handler->display->display_options['filters']['vid']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111731461 => 0,
-  25521343 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
-$handler->display->display_options['filters']['vid']['expose']['reduce'] = TRUE;
-/* Filter criterion: Taxonomy term: Name */
-$handler->display->display_options['filters']['name']['id'] = 'name';
-$handler->display->display_options['filters']['name']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['filters']['name']['field'] = 'name';
-$handler->display->display_options['filters']['name']['relationship'] = 'term_node_tid';
-$handler->display->display_options['filters']['name']['operator'] = 'contains';
-$handler->display->display_options['filters']['name']['group'] = 2;
-$handler->display->display_options['filters']['name']['exposed'] = TRUE;
-$handler->display->display_options['filters']['name']['expose']['operator_id'] = 'name_op';
-$handler->display->display_options['filters']['name']['expose']['label'] = 'Term / Tag';
-$handler->display->display_options['filters']['name']['expose']['operator'] = 'name_op';
-$handler->display->display_options['filters']['name']['expose']['identifier'] = 'name';
-$handler->display->display_options['filters']['name']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111731461 => 0,
-  25521343 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
-/* Filter criterion: Content: Language */
-$handler->display->display_options['filters']['language']['id'] = 'language';
-$handler->display->display_options['filters']['language']['table'] = 'node';
-$handler->display->display_options['filters']['language']['field'] = 'language';
-$handler->display->display_options['filters']['language']['exposed'] = TRUE;
-$handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
-$handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
-$handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
-$handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
-$handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111903911 => 0,
-  111903912 => 0,
-  25521343 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
-/* Filter criterion: Field: Themes (field_related_themes) */
-$handler->display->display_options['filters']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
-$handler->display->display_options['filters']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
-$handler->display->display_options['filters']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
-$handler->display->display_options['filters']['field_related_themes_tid']['exposed'] = TRUE;
-$handler->display->display_options['filters']['field_related_themes_tid']['expose']['operator_id'] = 'field_related_themes_tid_op';
-$handler->display->display_options['filters']['field_related_themes_tid']['expose']['label'] = 'Themes';
-$handler->display->display_options['filters']['field_related_themes_tid']['expose']['operator'] = 'field_related_themes_tid_op';
-$handler->display->display_options['filters']['field_related_themes_tid']['expose']['identifier'] = 'field_related_themes_tid';
-$handler->display->display_options['filters']['field_related_themes_tid']['expose']['remember_roles'] = array(
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 'All';
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['exposed'] = TRUE;
+$handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
+$handler->display->display_options['filters']['status']['expose']['label'] = 'Published';
+$handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
+$handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
+$handler->display->display_options['filters']['status']['expose']['remember'] = TRUE;
+/* Filter criterion: Content: Promoted to front page */
+$handler->display->display_options['filters']['promote']['id'] = 'promote';
+$handler->display->display_options['filters']['promote']['table'] = 'node';
+$handler->display->display_options['filters']['promote']['field'] = 'promote';
+$handler->display->display_options['filters']['promote']['group'] = 1;
+$handler->display->display_options['filters']['promote']['exposed'] = TRUE;
+$handler->display->display_options['filters']['promote']['expose']['operator_id'] = '';
+$handler->display->display_options['filters']['promote']['expose']['label'] = 'Promoted';
+$handler->display->display_options['filters']['promote']['expose']['operator'] = 'promote_op';
+$handler->display->display_options['filters']['promote']['expose']['identifier'] = 'promote';
+$handler->display->display_options['filters']['promote']['expose']['remember_roles'] = array(
   2 => '2',
   1 => 0,
   111903911 => 0,
   111903910 => 0,
   30037204 => 0,
 );
-$handler->display->display_options['filters']['field_related_themes_tid']['type'] = 'select';
-$handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
+/* Filter criterion: Content: Sticky */
+$handler->display->display_options['filters']['sticky']['id'] = 'sticky';
+$handler->display->display_options['filters']['sticky']['table'] = 'node';
+$handler->display->display_options['filters']['sticky']['field'] = 'sticky';
+$handler->display->display_options['filters']['sticky']['group'] = 1;
+$handler->display->display_options['filters']['sticky']['exposed'] = TRUE;
+$handler->display->display_options['filters']['sticky']['expose']['operator_id'] = '';
+$handler->display->display_options['filters']['sticky']['expose']['label'] = 'Sticky';
+$handler->display->display_options['filters']['sticky']['expose']['operator'] = 'sticky_op';
+$handler->display->display_options['filters']['sticky']['expose']['identifier'] = 'sticky';
+$handler->display->display_options['filters']['sticky']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['group'] = 1;
+$handler->display->display_options['filters']['type']['exposed'] = TRUE;
+$handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
+$handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
+$handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
+$handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+$handler->display->display_options['filters']['type']['expose']['remember'] = TRUE;
+$handler->display->display_options['filters']['type']['expose']['multiple'] = TRUE;
+$handler->display->display_options['filters']['type']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
+$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_geographical_focus_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['operator_id'] = 'field_geographical_focus_tid_op';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['label'] = 'Geography';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['operator'] = 'field_geographical_focus_tid_op';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['identifier'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['multiple'] = TRUE;
+$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['hierarchy'] = 1;
 /* Filter criterion: Field: Overarching categories (field_related_domains) */
 $handler->display->display_options['filters']['field_related_domains_tid']['id'] = 'field_related_domains_tid';
 $handler->display->display_options['filters']['field_related_domains_tid']['table'] = 'field_data_field_related_domains';
 $handler->display->display_options['filters']['field_related_domains_tid']['field'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['group'] = 1;
 $handler->display->display_options['filters']['field_related_domains_tid']['exposed'] = TRUE;
 $handler->display->display_options['filters']['field_related_domains_tid']['expose']['operator_id'] = 'field_related_domains_tid_op';
-$handler->display->display_options['filters']['field_related_domains_tid']['expose']['label'] = 'Overarching categories';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['label'] = 'Categories';
 $handler->display->display_options['filters']['field_related_domains_tid']['expose']['operator'] = 'field_related_domains_tid_op';
 $handler->display->display_options['filters']['field_related_domains_tid']['expose']['identifier'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['multiple'] = TRUE;
 $handler->display->display_options['filters']['field_related_domains_tid']['expose']['remember_roles'] = array(
   2 => '2',
   1 => 0,
@@ -529,4 +415,51 @@ $handler->display->display_options['filters']['field_related_domains_tid']['expo
 );
 $handler->display->display_options['filters']['field_related_domains_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';
+/* Filter criterion: Field: Themes (field_related_themes) */
+$handler->display->display_options['filters']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_related_themes_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['operator_id'] = 'field_related_themes_tid_op';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['label'] = 'Issues';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['operator'] = 'field_related_themes_tid_op';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['identifier'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['multiple'] = TRUE;
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_related_themes_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
+/* Filter criterion: Field: Related concepts (field_related_topics) */
+$handler->display->display_options['filters']['field_related_topics_tid']['id'] = 'field_related_topics_tid';
+$handler->display->display_options['filters']['field_related_topics_tid']['table'] = 'field_data_field_related_topics';
+$handler->display->display_options['filters']['field_related_topics_tid']['field'] = 'field_related_topics_tid';
+$handler->display->display_options['filters']['field_related_topics_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_related_topics_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['operator_id'] = 'field_related_topics_tid_op';
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['label'] = 'Concepts';
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['operator'] = 'field_related_topics_tid_op';
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['identifier'] = 'field_related_topics_tid';
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['multiple'] = TRUE;
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_related_topics_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_related_topics_tid']['vocabulary'] = 'landvoc_concepts';
+
+/* Display: System */
+$handler = $view->new_display('system', 'System', 'system_1');
+$handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+$handler->display->display_options['hide_admin_links'] = TRUE;
+$handler->display->display_options['defaults']['access'] = FALSE;
 $handler->display->display_options['path'] = 'admin/content';
+

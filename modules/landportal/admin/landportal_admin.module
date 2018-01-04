@@ -3,6 +3,7 @@
  * Provide facilities to manage the Land Portal
  */
 include_once 'landportal_admin.views_default.inc';
+
 /**
  * Add a 'Manage' tab to Admin > structure > taxonomy page
  */
@@ -110,6 +111,12 @@ define ('ROLE_LANDPORTAL',    111903910);
 define ('ROLE_CONTRIBUTOR',   111903911);
 
 function landportal_admin_form_alter(&$form, &$form_state, $form_id) {
+  // Hide custom CSS (for admin mostly)
+  global $theme;
+  if ($theme != 'lpbs') {
+    $form['#attached']['css'][] = drupal_get_path('module', 'landportal_admin') . '/admin-form.css';
+  }
+
   if (!isset($form['#fieldgroups'])) return;
   // Hide group_admin and non-required fields
   if (!(user_has_role(ROLE_LANDPORTAL) || user_has_role(ROLE_ADMINISTRATOR))) {
