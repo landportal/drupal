@@ -12,7 +12,6 @@ dependencies[] = file_entity
 dependencies[] = image
 dependencies[] = landportal_base
 dependencies[] = landportal_partners
-dependencies[] = landportal_promoted
 dependencies[] = landportal_related
 dependencies[] = list
 dependencies[] = media
