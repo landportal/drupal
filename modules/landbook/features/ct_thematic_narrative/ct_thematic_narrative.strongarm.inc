@@ -126,22 +126,22 @@ function ct_thematic_narrative_strongarm() {
           'weight' => '5',
         ),
         'locations' => array(
-          'weight' => '10',
-        ),
-        'path' => array(
-          'weight' => '11',
-        ),
-        'xmlsitemap' => array(
           'weight' => '8',
         ),
+        'path' => array(
+          'weight' => '9',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '7',
+        ),
         'metatags' => array(
-          'weight' => '12',
+          'weight' => '10',
         ),
       ),
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '8',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -252,7 +252,7 @@ function ct_thematic_narrative_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_thematic_narrative_pattern';
-  $strongarm->value = 'book/thematic/[node:title]';
+  $strongarm->value = 'book/thematic/[node:created:custom:Y]/[node:title]';
   $export['pathauto_node_thematic_narrative_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

@@ -78,6 +78,7 @@ features[variable][] = pathauto_node_landbook_country_pt_pattern
 features[variable][] = pathauto_node_landbook_country_und_pattern
 features[variable][] = xmlsitemap_settings_node_landbook_country
 features_exclude[dependencies][ds] = ds
+features_exclude[dependencies][landportal_multilingual] = landportal_multilingual
 features_exclude[field_base][field_info_description] = field_info_description
 features_exclude[field_base][field_info_title] = field_info_title
 features_exclude[field_base][field_indicator_ranking] = field_indicator_ranking
