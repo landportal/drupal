@@ -128,7 +128,8 @@ function landportal_admin_form_alter(&$form, &$form_state, $form_id) {
 function landportal_admin_field_widget_properties_node_alter(&$widget, $context) {
   if (!in_array($context['field']['field_name'], array(
     'field_geographical_focus', 'field_related_domains', 'field_related_topics'))) return;
-  return ;
+  //return ;
+  // Force field to render as a select input
   if ($context['field']['field_name'] == 'field_geographical_focus') {
     $widget['module'] = 'options';
     $widget['type'] = 'options_select';
