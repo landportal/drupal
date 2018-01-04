@@ -51,6 +51,7 @@ $handler->display->display_options['sorts']['created']['granularity'] = 'minute'
 
 /* Display: Related Widget */
 $handler = $view->new_display('entityreference_view_widget', 'Related Widget', 'view_widget');
+$handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['defaults']['use_ajax'] = FALSE;
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'table';
@@ -124,10 +125,50 @@ $handler->display->display_options['fields']['entityreference_view_widget']['fie
 $handler->display->display_options['fields']['entityreference_view_widget']['label'] = '';
 $handler->display->display_options['fields']['entityreference_view_widget']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['entityreference_view_widget']['ervw']['force_single'] = 0;
+/* Field: Content: Language */
+$handler->display->display_options['fields']['language']['id'] = 'language';
+$handler->display->display_options['fields']['language']['table'] = 'node';
+$handler->display->display_options['fields']['language']['field'] = 'language';
+$handler->display->display_options['fields']['language']['label'] = '';
+$handler->display->display_options['fields']['language']['exclude'] = TRUE;
+$handler->display->display_options['fields']['language']['element_label_colon'] = FALSE;
+/* Field: Global: PHP */
+$handler->display->display_options['fields']['php']['id'] = 'php';
+$handler->display->display_options['fields']['php']['table'] = 'views';
+$handler->display->display_options['fields']['php']['field'] = 'php';
+$handler->display->display_options['fields']['php']['label'] = '';
+$handler->display->display_options['fields']['php']['exclude'] = TRUE;
+$handler->display->display_options['fields']['php']['alter']['max_length'] = '80';
+$handler->display->display_options['fields']['php']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['php']['alter']['trim'] = TRUE;
+$handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+$handler->display->display_options['fields']['php']['php_value'] = '$url = drupal_get_path_alias(\'node/\'.$data->nid, $row->language);
+if ($row->language && $row->language != \'en\') {
+$url = $row->language . \'/\' . $url;
+}
+return url($url);';
+$handler->display->display_options['fields']['php']['php_output'] = '<?php echo $value; ?>';
+$handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+$handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+/* Field: Field: Picture */
+$handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+$handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+$handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+$handler->display->display_options['fields']['field_image']['label'] = '';
+$handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image']['settings'] = array(
+  'image_style' => 'thumbnail',
+  'image_link' => '',
+);
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
 $handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['title']['alter']['text'] = '[title]<br/>
+<small>[php]</small>';
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
 /* Field: Field: Geographical focus */

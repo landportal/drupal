@@ -71,6 +71,7 @@ $handler->display->display_options['filters']['type']['expose']['remember_roles'
 /* Display: Relate content */
 $handler = $view->new_display('entityreference_view_widget', 'Relate content', 'related_refview');
 $handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['enabled'] = FALSE;
 $handler->display->display_options['defaults']['use_ajax'] = FALSE;
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'full';
@@ -294,7 +295,7 @@ $handler = $view->new_display('block', 'Promoted', 'promoted');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
-$handler->display->display_options['style_options']['interval'] = '5000';
+$handler->display->display_options['style_options']['interval'] = '15000';
 $handler->display->display_options['style_options']['navigation'] = 1;
 $handler->display->display_options['style_options']['indicators'] = 1;
 $handler->display->display_options['style_options']['pause'] = 1;
@@ -329,7 +330,7 @@ $handler->display->display_options['fields']['field_image']['label'] = '';
 $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => '',
+  'image_style' => 'full_width_featured',
   'image_link' => '',
 );
 /* Field: Content: Title */
@@ -350,7 +351,7 @@ $handler->display->display_options['fields']['body']['table'] = 'field_data_body
 $handler->display->display_options['fields']['body']['field'] = 'body';
 $handler->display->display_options['fields']['body']['label'] = '';
 $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['body']['alter']['text'] = '[body]
+$handler->display->display_options['fields']['body']['alter']['text'] = '<div class="node-teaser"><div class="field-name-body">[body]</div></div>
 <span class="node-readmore"><a href="[php]">Read more</a></span>';
 $handler->display->display_options['fields']['body']['alter']['max_length'] = '100';
 $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
