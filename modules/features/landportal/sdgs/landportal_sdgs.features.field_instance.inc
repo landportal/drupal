@@ -443,76 +443,6 @@ function landportal_sdgs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-sdgi-field_noderef'.
-  $field_instances['node-sdgi-field_noderef'] = array(
-    'bundle' => 'sdgi',
-    'default_value' => NULL,
-    'default_value_function' => '',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 19,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 20,
-      ),
-    ),
-    'entity_type' => 'node',
-    'entityconnect' => array(
-      'button' => array(
-        'unload_add_button' => 1,
-        'unload_edit_button' => 1,
-      ),
-      'icon' => array(
-        'show_add_icon' => 0,
-        'show_edit_icon' => 0,
-      ),
-    ),
-    'field_name' => 'field_noderef',
-    'label' => 'Related content',
-    'required' => 0,
-    'settings' => array(
-      'behaviors' => array(
-        'prepopulate' => array(
-          'status' => 0,
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'allow_duplicates' => 0,
-        'close_modal' => 1,
-        'match_operator' => 'CONTAINS',
-        'pass_argument' => 0,
-        'pass_arguments' => '',
-        'path' => '',
-        'rendered_entity' => 0,
-        'size' => 60,
-        'view' => 'partners_content|related_refview',
-        'view_mode' => 'full',
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 8,
-    ),
-  );
-
   // Exported field_instance: 'node-sdgi-field_orgref'.
   $field_instances['node-sdgi-field_orgref'] = array(
     'bundle' => 'sdgi',
@@ -1376,7 +1306,6 @@ function landportal_sdgs_field_default_field_instances() {
   t('Picture');
   t('Related blocks');
   t('Related concepts');
-  t('Related content');
   t('SDG');
   t('SDG header');
   t('SDGs Tier this indicator is officially in');
