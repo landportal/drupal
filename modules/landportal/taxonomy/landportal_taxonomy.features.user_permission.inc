@@ -15,6 +15,7 @@ function landportal_taxonomy_user_default_permissions() {
     'name' => 'administer taxonomy',
     'roles' => array(
       'administrator' => 'administrator',
+      'landportal' => 'landportal',
     ),
     'module' => 'taxonomy',
   );

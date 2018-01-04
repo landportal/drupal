@@ -1675,6 +1675,71 @@ function landportal_taxonomy_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
+    'name' => 'Open Data Commons Public Domain Dedication and License',
+    'description' => '<p><strong>You are free:</strong></p>
+
+<ul>
+	<li><em>To Share:</em>&nbsp;To copy, distribute and use the database.</li>
+	<li><em>To Create:</em>&nbsp;To produce works from the database.</li>
+	<li><em>To Adapt:</em>&nbsp;To modify, transform and build upon the database.</li>
+</ul>
+
+<p><strong>As long as you:</strong></p>
+
+<ul>
+	<li><em>Blank:</em>&nbsp;This section is intentionally left blank. The PDDL imposes no restrictions on your use of the PDDL licensed database.</li>
+</ul>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => 'e892afd3-889d-4cda-bbe1-a1bd4789727f',
+    'hweight' => 8,
+    'hdepth' => 0,
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'licences',
+    'synonyms_synonyms' => array(),
+    'field_rdflicense_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://purl.org/NET/rdflicense/odbc-pddl1.0',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
+    'field_acronym' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'PDDL',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Open Data Commons Public Domain Dedication and License',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Open Data Commons Public Domain Dedication and License',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-licences-eid-8432-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
     'name' => 'Creative Commons Zero (Public Domain)',
     'description' => '<p>The person who associated a work with this deed has dedicated the work to the public domain by waiving all of his or her rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.</p>
 
