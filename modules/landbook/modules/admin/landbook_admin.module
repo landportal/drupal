@@ -76,8 +76,8 @@ function landbook_admin_menu() {
   return $items;
 }
 
-function landbook_admin_add_ind($cid, $args) {
-  drupal_set_title('Land Book add indicator');
-  dpm($args, 'lb add ind ', $cid);
-  return ;
-}
+/* function landbook_admin_add_ind($cid, $args) { */
+/*   drupal_set_title('Land Book add indicator'); */
+/*   dpm($args, 'lb add ind ', $cid); */
+/*   return ; */
+/* } */
