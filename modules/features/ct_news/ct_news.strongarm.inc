@@ -136,19 +136,19 @@ function ct_news_strongarm() {
           'weight' => '0',
         ),
         'locations' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'path' => array(
           'weight' => '8',
         ),
         'language' => array(
-          'weight' => '16',
+          'weight' => '11',
         ),
         'xmlsitemap' => array(
           'weight' => '9',
         ),
         'metatags' => array(
-          'weight' => '11',
+          'weight' => '10',
         ),
       ),
       'display' => array(
@@ -254,7 +254,7 @@ function ct_news_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_news_pattern';
-  $strongarm->value = 'news/[current-date:custom:Y]/[current-date:custom:m]/[node:title]';
+  $strongarm->value = 'news/[node:created:custom:Y]/[node:created:custom:m]/[node:title]';
   $export['pathauto_node_news_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

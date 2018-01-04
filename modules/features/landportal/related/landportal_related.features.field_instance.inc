@@ -137,13 +137,17 @@ function landportal_related_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'entityreference_view_widget',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
+        'allow_duplicates' => 0,
+        'close_modal' => 1,
+        'pass_argument' => 1,
+        'pass_arguments' => '',
+        'rendered_entity' => 1,
+        'view' => 'entityreference_view_widget_sample|entityreference_view_widget_1',
+        'view_mode' => 'listing',
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'entityreference_view_widget',
       'weight' => 31,
     ),
   );
@@ -216,6 +220,147 @@ function landportal_related_field_default_field_instances() {
       ),
       'type' => 'entityreference_view_widget',
       'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'node-landlibrary_resource-field_noderef'.
+  $field_instances['node-landlibrary_resource-field_noderef'] = array(
+    'bundle' => 'landlibrary_resource',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => 0,
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 11,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_noderef',
+    'label' => 'Related content',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference_view_widget',
+      'settings' => array(
+        'allow_duplicates' => 0,
+        'close_modal' => 1,
+        'pass_argument' => 1,
+        'pass_arguments' => '',
+        'rendered_entity' => 1,
+        'view' => 'related|view_widget',
+        'view_mode' => 'listing',
+      ),
+      'type' => 'entityreference_view_widget',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-news-field_noderef'.
+  $field_instances['node-news-field_noderef'] = array(
+    'bundle' => 'news',
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => 0,
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'entityconnect' => array(
+      'button' => array(
+        'unload_add_button' => 1,
+        'unload_edit_button' => 1,
+      ),
+      'icon' => array(
+        'show_add_icon' => 0,
+        'show_edit_icon' => 0,
+      ),
+    ),
+    'field_name' => 'field_noderef',
+    'label' => 'Related content',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference_view_widget',
+      'settings' => array(
+        'allow_duplicates' => 0,
+        'close_modal' => 1,
+        'pass_argument' => 1,
+        'pass_arguments' => '',
+        'rendered_entity' => 1,
+        'view' => 'related|view_widget',
+        'view_mode' => 'listing',
+      ),
+      'type' => 'entityreference_view_widget',
+      'weight' => 12,
     ),
   );
 

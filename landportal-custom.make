@@ -21,6 +21,8 @@ projects:
   calendar:
     patch:
       - "https://www.drupal.org/files/issues/calendar-2160183-18.patch"
+  cer:
+    version: "3.x-dev"
   drupal:
     patch:
       - "https://github.com/landportal/drupal/files/766584/change-dc-to-dct.txt"

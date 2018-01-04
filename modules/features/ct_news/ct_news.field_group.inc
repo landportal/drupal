@@ -23,8 +23,8 @@ function ct_news_field_group_info() {
     'label' => 'Publication options',
     'weight' => '5',
     'children' => array(
-      0 => 'field_noderef',
-      1 => 'language',
+      0 => 'language',
+      1 => 'field_noderef',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -55,6 +55,7 @@ function ct_news_field_group_info() {
       0 => 'field_file',
       1 => 'field_link',
       2 => 'field_language',
+      3 => 'field_noderef',
     ),
     'format_type' => 'div',
     'format_settings' => array(

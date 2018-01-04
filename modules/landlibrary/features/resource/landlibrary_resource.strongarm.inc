@@ -173,22 +173,22 @@ function landlibrary_resource_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '11',
+          'weight' => '6',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '13',
-        ),
-        'language' => array(
           'weight' => '7',
         ),
+        'language' => array(
+          'weight' => '5',
+        ),
         'xmlsitemap' => array(
-          'weight' => '12',
+          'weight' => '8',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
       ),
       'display' => array(),

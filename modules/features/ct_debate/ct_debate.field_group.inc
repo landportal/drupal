@@ -21,7 +21,7 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'About this debate',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(),
     'format_type' => 'hidden',
     'format_settings' => array(
@@ -463,12 +463,17 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '6',
+    'weight' => '4',
     'children' => array(),
-    'format_type' => 'hidden',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => array(),
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_status|node|debate|default'] = $field_group;
