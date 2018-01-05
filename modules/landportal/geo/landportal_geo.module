@@ -34,9 +34,9 @@ function landportal_geo_views_default_views() {
 function landportal_geo_menu() {
   $items = array();
   // Provided by views/geo.inc
-  $items['admin/content/landbook/countries'] = array(
+  $items['admin/structure/taxonomy/countries'] = array(
     'title'             => 'Land Book Countries',
-    'type'              => MENU_DEFAULT_LOCAL_TASK,
+    //'type'              => MENU_DEFAULT_LOCAL_TASK,
     'access arguments'  => array('administer taxonomy'),
     'callback'          => 'systems_view_data',
     'weight'            => 9,

@@ -119,7 +119,7 @@ $handler->display->display_options['fields']['nothing']['label'] = 'Tags';
 $handler->display->display_options['fields']['nothing']['alter']['text'] = 'OA: [field_related_domains]<br/>
 TH: [field_related_themes]<br/>
 LV: [field_related_topics]<br/>
-Term: [name]';
+';
 /* Field: Taxonomy term: Updated date */
 $handler->display->display_options['fields']['changed']['id'] = 'changed';
 $handler->display->display_options['fields']['changed']['table'] = 'term_authoring_info';
@@ -184,7 +184,7 @@ $handler->display->display_options['filters']['field_id_value']['expose']['remem
   111903910 => 0,
   30037204 => 0,
 );
-/* Filter criterion: Field: Organization (field_orgref) (reference filter) */
+/* Filter criterion: Field: Source (field_orgref) (reference filter) */
 $handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['id'] = 'field_orgref_target_id_entityreference_filter';
 $handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['table'] = 'field_data_field_orgref';
 $handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['field'] = 'field_orgref_target_id_entityreference_filter';
@@ -202,12 +202,8 @@ $handler->display->display_options['filters']['field_orgref_target_id_entityrefe
 );
 $handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['reference_display'] = 'organizations:ref_book';
 
-/* Display: Page */
-$handler = $view->new_display('page', 'Page', 'page');
+/* Display: Datasets */
+$handler = $view->new_display('system', 'Datasets', 'system');
+$handler->display->display_options['defaults']['access'] = FALSE;
 $handler->display->display_options['path'] = 'admin/content/landbook/datasets';
-$handler->display->display_options['menu']['type'] = 'tab';
-$handler->display->display_options['menu']['title'] = 'Datasets';
-$handler->display->display_options['menu']['weight'] = '0';
-$handler->display->display_options['menu']['context'] = 0;
-$handler->display->display_options['menu']['context_only_inline'] = 0;
 

@@ -45,39 +45,37 @@ function landportal_admin_help($path, $arg) {
 function landbook_admin_menu() {
   $items = array();
 
-  // LB content management
-  /* $items['admin/content/landbook'] = array( */
-  /*   'title'             => 'Land Book', */
-  /*   'description'       => 'Land Book content (Catalogs, Datasets, Indicators...)', */
-  /*   'postition'         => 'right', */
-  /*   'weight'            => -4, */
-  /*   'page callback'     => 'system_admin_menu_block_page', */
-  /*   'access arguments'  => array('edit any dataset content'), // Should be admin 'edit terms in' datasets, indicators */
-  /*   'file'              => 'system.admin.inc', */
-  /*   'file path'         => drupal_get_path('module', 'system'), */
-  /* ); */
   // Provided by views/lbadm_catalogs.inc
   $items['admin/content/landbook'] = array(
     'title'             => 'Land Book',
-    //'type'              => MENU_DEFAULT_LOCAL_TASK,
+    'type'              => MENU_NORMAL_ITEM,
     'access arguments'  => array('edit terms in 24'), // 24 = datasets
-    'callback'          => 'systems_view_data',
+    'page callback' => 'views_embed_view',
+    'page arguments' => array('lbadm_catalogs', 'system'),
+    'file path' => drupal_get_path('module', 'views'),
+    'file'      => 'views.module',
+  );
+
+  $items['admin/content/landbook/datasets'] = array(
+    'title'             => 'Datasets',
+    'type'              => MENU_DEFAULT_LOCAL_TASK,
+    'access arguments'  => array('edit terms in 24'), // 24 = datasets
+    'weight'            => 9,
+  );
+
+  $items['admin/content/landbook/indicators'] = array(
+    'title'             => 'Indicators',
+    'type'              => MENU_LOCAL_TASK,
+    'access arguments'  => array('edit terms in 25'), // 25 = indicators
+    'weight'            => 10,
   );
 
   // Provided by views/lbadm_indicators.inc
   $items['admin/content/landbook/datasets/%taxonomy_term'] = array(
-    'title'             => '',
-    'type'              => MENU_LOCAL_TASK,
+    'title'             => 'I in D',
+    'type'              => MENU_CALLBACK,
     'access arguments'  => array('edit terms in 25'), // 25 = indicators
-    'callback'          => 'systems_view_data',
     'page arguments' => array(2),
-    'weight'            => 11,
   );
   return $items;
 }
-
-/* function landbook_admin_add_ind($cid, $args) { */
-/*   drupal_set_title('Land Book add indicator'); */
-/*   dpm($args, 'lb add ind ', $cid); */
-/*   return ; */
-/* } */
