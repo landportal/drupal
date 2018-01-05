@@ -65,7 +65,7 @@ function landbook_admin_menu() {
   );
 
   // Provided by views/lbadm_indicators.inc
-  $items['admin/content/landbook/ds/%taxonomy_term'] = array(
+  $items['admin/content/landbook/datasets/%taxonomy_term'] = array(
     'title'             => '',
     'type'              => MENU_LOCAL_TASK,
     'access arguments'  => array('edit terms in 25'), // 25 = indicators
