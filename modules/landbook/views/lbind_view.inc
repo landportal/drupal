@@ -77,6 +77,7 @@ $handler->display->display_options['fields']['changed']['id'] = 'changed';
 $handler->display->display_options['fields']['changed']['table'] = 'term_authoring_info';
 $handler->display->display_options['fields']['changed']['field'] = 'changed';
 $handler->display->display_options['fields']['changed']['label'] = 'Updated';
+$handler->display->display_options['fields']['changed']['exclude'] = TRUE;
 $handler->display->display_options['fields']['changed']['date_format'] = 'day_month_year';
 $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
 /* Sort criterion: Taxonomy term: Name */
@@ -196,4 +197,3 @@ $handler->display->display_options['sorts']['changed']['id'] = 'changed';
 $handler->display->display_options['sorts']['changed']['table'] = 'term_authoring_info';
 $handler->display->display_options['sorts']['changed']['field'] = 'changed';
 $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
-
