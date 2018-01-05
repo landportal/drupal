@@ -429,7 +429,7 @@ $handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-/* Field: Content: Author(s) */
+/* Field: Content: Author(s), editor(s), contributor(s) */
 $handler->display->display_options['fields']['field_doc_people']['id'] = 'field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['table'] = 'field_data_field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['field'] = 'field_doc_people';
@@ -1176,5 +1176,21 @@ $handler->display->display_options['filters']['field_doc_type_tid']['expose']['r
 $handler->display->display_options['filters']['field_doc_type_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_doc_type_tid']['vocabulary'] = 'landlibrary_resource_type';
 $handler->display->display_options['filters']['field_doc_type_tid']['hierarchy'] = 1;
+/* Filter criterion: Content: Author uid */
+$handler->display->display_options['filters']['uid']['id'] = 'uid';
+$handler->display->display_options['filters']['uid']['table'] = 'node';
+$handler->display->display_options['filters']['uid']['field'] = 'uid';
+$handler->display->display_options['filters']['uid']['value'] = '';
+$handler->display->display_options['filters']['uid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
+$handler->display->display_options['filters']['uid']['expose']['label'] = 'Author';
+$handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
+$handler->display->display_options['filters']['uid']['expose']['identifier'] = 'uid';
+$handler->display->display_options['filters']['uid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
 $handler->display->display_options['path'] = 'admin/content/library';
-
