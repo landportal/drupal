@@ -58,7 +58,7 @@ function landbook_admin_menu() {
 
   $items['admin/content/landbook/datasets'] = array(
     'title'             => 'Datasets',
-    'type'              => MENU_DEFAULT_LOCAL_TASK,
+    'type'              => MENU_LOCAL_TASK,
     'access arguments'  => array('edit terms in 24'), // 24 = datasets
     'weight'            => 9,
   );
