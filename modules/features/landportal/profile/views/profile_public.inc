@@ -213,6 +213,7 @@ $handler->display->display_options['fields']['field_related_topics']['delta_offs
 $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
 $handler->display->display_options['fields']['nothing']['table'] = 'views';
 $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['label'] = 'Metadata___details';
 $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Geo: [field_geographical_focus]<br/>
 <b>LandVoc</b> OA: [field_related_domains] / Theme: [field_related_themes] / Concepts: [field_related_topics]';
 /* Field: User: Last access */
@@ -269,7 +270,7 @@ $handler->display->display_options['filters']['label']['field'] = 'label';
 $handler->display->display_options['filters']['label']['operator'] = 'contains';
 $handler->display->display_options['filters']['label']['exposed'] = TRUE;
 $handler->display->display_options['filters']['label']['expose']['operator_id'] = 'label_op';
-$handler->display->display_options['filters']['label']['expose']['label'] = 'Label';
+$handler->display->display_options['filters']['label']['expose']['label'] = 'Profile Label';
 $handler->display->display_options['filters']['label']['expose']['operator'] = 'label_op';
 $handler->display->display_options['filters']['label']['expose']['identifier'] = 'label';
 $handler->display->display_options['filters']['label']['expose']['remember_roles'] = array(
@@ -279,9 +280,82 @@ $handler->display->display_options['filters']['label']['expose']['remember_roles
   111903910 => 0,
   30037204 => 0,
 );
+/* Filter criterion: Field: Geographical focus (field_geographical_focus) */
+$handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['operator_id'] = 'field_geographical_focus_tid_op';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['label'] = 'Geographical focus';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['operator'] = 'field_geographical_focus_tid_op';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['identifier'] = 'field_geographical_focus_tid';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['hierarchy'] = 1;
+/* Filter criterion: Field: Overarching categories (field_related_domains) */
+$handler->display->display_options['filters']['field_related_domains_tid']['id'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['table'] = 'field_data_field_related_domains';
+$handler->display->display_options['filters']['field_related_domains_tid']['field'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_domains_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['operator_id'] = 'field_related_domains_tid_op';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['label'] = 'Overarching categories';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['operator'] = 'field_related_domains_tid_op';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['identifier'] = 'field_related_domains_tid';
+$handler->display->display_options['filters']['field_related_domains_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_related_domains_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_related_domains_tid']['vocabulary'] = 'overarching_categories';
+/* Filter criterion: Field: Themes (field_related_themes) */
+$handler->display->display_options['filters']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['operator_id'] = 'field_related_themes_tid_op';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['label'] = 'Themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['operator'] = 'field_related_themes_tid_op';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['identifier'] = 'field_related_themes_tid';
+$handler->display->display_options['filters']['field_related_themes_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_related_themes_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
+/* Filter criterion: Field: Related concepts (field_related_topics) */
+$handler->display->display_options['filters']['field_related_topics_tid']['id'] = 'field_related_topics_tid';
+$handler->display->display_options['filters']['field_related_topics_tid']['table'] = 'field_data_field_related_topics';
+$handler->display->display_options['filters']['field_related_topics_tid']['field'] = 'field_related_topics_tid';
+$handler->display->display_options['filters']['field_related_topics_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['operator_id'] = 'field_related_topics_tid_op';
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['label'] = 'Related concepts';
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['operator'] = 'field_related_topics_tid_op';
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['identifier'] = 'field_related_topics_tid';
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_related_topics_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_related_topics_tid']['vocabulary'] = 'landvoc_concepts';
 
 /* Display: System */
 $handler = $view->new_display('system', 'System', 'system_1');
 $handler->display->display_options['defaults']['access'] = FALSE;
 $handler->display->display_options['path'] = 'admin/people/profiles';
-
