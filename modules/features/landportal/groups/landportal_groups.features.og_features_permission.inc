@@ -39,6 +39,11 @@ function landportal_groups_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:partners:administer og menu'
+  $permissions['node:partners:administer og menu'] = array(
+    'roles' => array(),
+  );
+
   // Exported og permission: 'node:partners:approve and deny subscription'
   $permissions['node:partners:approve and deny subscription'] = array(
     'roles' => array(
