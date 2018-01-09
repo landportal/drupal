@@ -1,7 +1,7 @@
 <?php
 
 $view = new view();
-$view->name = 'admin_views_geo_term_content';
+$view->name = 'geo_count';
 $view->description = 'Overview of content by type and geography.';
 $view->tag = 'admin';
 $view->base_table = 'taxonomy_term_data';
@@ -160,7 +160,7 @@ $handler->display->display_options['filters']['type']['expose']['remember_roles'
 $handler = $view->new_display('system', 'System', 'system_all');
 $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
 $handler->display->display_options['defaults']['access'] = FALSE;
-$handler->display->display_options['path'] = 'admin/structure/taxonomy/geo/count';
+$handler->display->display_options['path'] = 'admin/content/geo/count';
 
 /* Display: System LLR */
 $handler = $view->new_display('system', 'System LLR', 'system_llr');
@@ -265,166 +265,4 @@ $handler->display->display_options['filters']['type']['expose']['remember_roles'
   111903910 => 0,
   30037204 => 0,
 );
-$handler->display->display_options['path'] = 'admin/structure/taxonomy/geo/library';
-
-/* Display: System FULL */
-$handler = $view->new_display('system', 'System FULL', 'system_borken');
-$handler->display->display_options['enabled'] = FALSE;
-$handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-$handler->display->display_options['defaults']['access'] = FALSE;
-$handler->display->display_options['defaults']['query'] = FALSE;
-$handler->display->display_options['query']['type'] = 'views_query';
-$handler->display->display_options['query']['options']['disable_sql_rewrite'] = TRUE;
-$handler->display->display_options['query']['options']['distinct'] = TRUE;
-$handler->display->display_options['defaults']['pager'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'mini';
-$handler->display->display_options['pager']['options']['items_per_page'] = '1';
-$handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['pager']['options']['id'] = '0';
-$handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '20, 50, 100, 200';
-$handler->display->display_options['defaults']['relationships'] = FALSE;
-/* Relationship: Taxonomy term: Content using Geographical focus */
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['id'] = 'reverse_field_geographical_focus_node';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['field'] = 'reverse_field_geographical_focus_node';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['label'] = 'news';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['required'] = TRUE;
-/* Relationship: Taxonomy term: Content using Geographical focus */
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_1']['id'] = 'reverse_field_geographical_focus_node_1';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_1']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_1']['field'] = 'reverse_field_geographical_focus_node';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_1']['label'] = 'debates';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_1']['required'] = TRUE;
-/* Relationship: Taxonomy term: Content using Geographical focus */
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_2']['id'] = 'reverse_field_geographical_focus_node_2';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_2']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_2']['field'] = 'reverse_field_geographical_focus_node';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_2']['label'] = 'blogs';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_2']['required'] = TRUE;
-/* Relationship: Taxonomy term: Content using Geographical focus */
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_3']['id'] = 'reverse_field_geographical_focus_node_3';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_3']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_3']['field'] = 'reverse_field_geographical_focus_node';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_3']['label'] = 'events';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_3']['required'] = TRUE;
-/* Relationship: Taxonomy term: Content using Geographical focus */
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_4']['id'] = 'reverse_field_geographical_focus_node_4';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_4']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_4']['field'] = 'reverse_field_geographical_focus_node';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_4']['label'] = 'org';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node_4']['required'] = TRUE;
-$handler->display->display_options['defaults']['fields'] = FALSE;
-/* Field: Taxonomy term: Name */
-$handler->display->display_options['fields']['name']['id'] = 'name';
-$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['fields']['name']['field'] = 'name';
-$handler->display->display_options['fields']['name']['label'] = 'Term';
-$handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-/* Field: COUNT(DISTINCT Content: Nid) */
-$handler->display->display_options['fields']['nid_1']['id'] = 'nid_1';
-$handler->display->display_options['fields']['nid_1']['table'] = 'node';
-$handler->display->display_options['fields']['nid_1']['field'] = 'nid';
-$handler->display->display_options['fields']['nid_1']['relationship'] = 'reverse_field_geographical_focus_node';
-$handler->display->display_options['fields']['nid_1']['group_type'] = 'count_distinct';
-$handler->display->display_options['fields']['nid_1']['label'] = 'Geo';
-$handler->display->display_options['fields']['nid_1']['exclude'] = TRUE;
-/* Field: COUNT(DISTINCT Content: Nid) */
-$handler->display->display_options['fields']['nid_2']['id'] = 'nid_2';
-$handler->display->display_options['fields']['nid_2']['table'] = 'node';
-$handler->display->display_options['fields']['nid_2']['field'] = 'nid';
-$handler->display->display_options['fields']['nid_2']['relationship'] = 'reverse_field_geographical_focus_node_1';
-$handler->display->display_options['fields']['nid_2']['group_type'] = 'count_distinct';
-$handler->display->display_options['fields']['nid_2']['label'] = 'Geo';
-$handler->display->display_options['fields']['nid_2']['exclude'] = TRUE;
-/* Field: COUNT(DISTINCT Content: Nid) */
-$handler->display->display_options['fields']['nid_3']['id'] = 'nid_3';
-$handler->display->display_options['fields']['nid_3']['table'] = 'node';
-$handler->display->display_options['fields']['nid_3']['field'] = 'nid';
-$handler->display->display_options['fields']['nid_3']['relationship'] = 'reverse_field_geographical_focus_node_2';
-$handler->display->display_options['fields']['nid_3']['group_type'] = 'count_distinct';
-$handler->display->display_options['fields']['nid_3']['label'] = 'Geo';
-$handler->display->display_options['fields']['nid_3']['exclude'] = TRUE;
-/* Field: COUNT(DISTINCT Content: Nid) */
-$handler->display->display_options['fields']['nid_4']['id'] = 'nid_4';
-$handler->display->display_options['fields']['nid_4']['table'] = 'node';
-$handler->display->display_options['fields']['nid_4']['field'] = 'nid';
-$handler->display->display_options['fields']['nid_4']['relationship'] = 'reverse_field_geographical_focus_node_3';
-$handler->display->display_options['fields']['nid_4']['group_type'] = 'count_distinct';
-$handler->display->display_options['fields']['nid_4']['label'] = 'Geo';
-$handler->display->display_options['fields']['nid_4']['exclude'] = TRUE;
-/* Field: COUNT(DISTINCT Content: Nid) */
-$handler->display->display_options['fields']['nid_5']['id'] = 'nid_5';
-$handler->display->display_options['fields']['nid_5']['table'] = 'node';
-$handler->display->display_options['fields']['nid_5']['field'] = 'nid';
-$handler->display->display_options['fields']['nid_5']['relationship'] = 'reverse_field_geographical_focus_node_4';
-$handler->display->display_options['fields']['nid_5']['group_type'] = 'count_distinct';
-$handler->display->display_options['fields']['nid_5']['label'] = 'Geo';
-$handler->display->display_options['fields']['nid_5']['exclude'] = TRUE;
-$handler->display->display_options['defaults']['filter_groups'] = FALSE;
-$handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Taxonomy term: Name */
-$handler->display->display_options['filters']['name']['id'] = 'name';
-$handler->display->display_options['filters']['name']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['filters']['name']['field'] = 'name';
-$handler->display->display_options['filters']['name']['operator'] = 'word';
-$handler->display->display_options['filters']['name']['group'] = 1;
-$handler->display->display_options['filters']['name']['exposed'] = TRUE;
-$handler->display->display_options['filters']['name']['expose']['operator_id'] = 'name_op';
-$handler->display->display_options['filters']['name']['expose']['label'] = 'Name';
-$handler->display->display_options['filters']['name']['expose']['operator'] = 'name_op';
-$handler->display->display_options['filters']['name']['expose']['identifier'] = 'name';
-$handler->display->display_options['filters']['name']['expose']['remember'] = TRUE;
-/* Filter criterion: Taxonomy term: Vocabulary */
-$handler->display->display_options['filters']['vid']['id'] = 'vid';
-$handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['filters']['vid']['field'] = 'vid';
-$handler->display->display_options['filters']['vid']['value'] = array(
-  7 => '7',
-);
-$handler->display->display_options['filters']['vid']['group'] = 1;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type']['id'] = 'type_4';
-$handler->display->display_options['filters']['type']['table'] = 'node';
-$handler->display->display_options['filters']['type']['field'] = 'type';
-$handler->display->display_options['filters']['type']['relationship'] = 'reverse_field_geographical_focus_node_4';
-$handler->display->display_options['filters']['type']['value'] = array(
-  'organization' => 'organization',
-);
-$handler->display->display_options['filters']['type']['group'] = 1;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type_1']['id'] = 'type_1';
-$handler->display->display_options['filters']['type_1']['table'] = 'node';
-$handler->display->display_options['filters']['type_1']['field'] = 'type';
-$handler->display->display_options['filters']['type_1']['relationship'] = 'reverse_field_geographical_focus_node';
-$handler->display->display_options['filters']['type_1']['value'] = array(
-  'news' => 'news',
-);
-$handler->display->display_options['filters']['type_1']['group'] = 1;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type_2']['id'] = 'type_2';
-$handler->display->display_options['filters']['type_2']['table'] = 'node';
-$handler->display->display_options['filters']['type_2']['field'] = 'type';
-$handler->display->display_options['filters']['type_2']['relationship'] = 'reverse_field_geographical_focus_node_1';
-$handler->display->display_options['filters']['type_2']['value'] = array(
-  'debate' => 'debate',
-);
-$handler->display->display_options['filters']['type_2']['group'] = 1;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type_3']['id'] = 'type_3';
-$handler->display->display_options['filters']['type_3']['table'] = 'node';
-$handler->display->display_options['filters']['type_3']['field'] = 'type';
-$handler->display->display_options['filters']['type_3']['relationship'] = 'reverse_field_geographical_focus_node_3';
-$handler->display->display_options['filters']['type_3']['value'] = array(
-  'event' => 'event',
-);
-$handler->display->display_options['filters']['type_3']['group'] = 1;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type_4']['id'] = 'type_4';
-$handler->display->display_options['filters']['type_4']['table'] = 'node';
-$handler->display->display_options['filters']['type_4']['field'] = 'type';
-$handler->display->display_options['filters']['type_4']['relationship'] = 'reverse_field_geographical_focus_node_2';
-$handler->display->display_options['filters']['type_4']['value'] = array(
-  'blog_post' => 'blog_post',
-);
-$handler->display->display_options['filters']['type_4']['group'] = 1;
-$handler->display->display_options['path'] = 'admin/structure/borken';
+$handler->display->display_options['path'] = 'admin/content/geo/library';

@@ -179,7 +179,7 @@ $handler->display->display_options['sorts']['weight_1']['draggableviews_setting_
 $handler->display->display_options['sorts']['weight']['id'] = 'weight';
 $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-$handler->display->display_options['path'] = 'admin/content/landbook/countries';
+$handler->display->display_options['path'] = 'admin/content/geo/tree';
 
 /* Display: Ref top regions */
 $handler = $view->new_display('entityreference', 'Ref top regions', 'ref_top');
@@ -277,4 +277,3 @@ $handler->display->display_options['filters']['field_iso3_value']['id'] = 'field
 $handler->display->display_options['filters']['field_iso3_value']['table'] = 'field_data_field_iso3';
 $handler->display->display_options['filters']['field_iso3_value']['field'] = 'field_iso3_value';
 $handler->display->display_options['filters']['field_iso3_value']['operator'] = 'not empty';
-

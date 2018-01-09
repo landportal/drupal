@@ -34,12 +34,40 @@ function landportal_geo_views_default_views() {
 function landportal_geo_menu() {
   $items = array();
   // Provided by views/geo.inc
-  $items['admin/structure/taxonomy/countries'] = array(
-    'title'             => 'Land Book Countries',
+  $items['admin/content/geo'] = array(
+    'title'             => 'Geography',
+    'access arguments'  => array('edit terms in 7'), // 7 = regions
+    'page callback' => 'views_embed_view',
+    'page arguments' => array('lbadm_catalogs', 'system'),
+    'file path' => drupal_get_path('module', 'views'),
+    'file'      => 'views.module',
     //'type'              => MENU_DEFAULT_LOCAL_TASK,
-    'access arguments'  => array('administer taxonomy'),
-    'callback'          => 'systems_view_data',
-    'weight'            => 9,
+    /* 'access arguments'  => array('administer taxonomy'), */
+    /* 'callback'          => 'systems_view_data', */
+    /* 'weight'            => 9, */
+  );
+  $items['admin/content/geo/tree'] = array(
+    'title' => 'Terms',
+    'type' => MENU_LOCAL_TASK,
+    'access arguments'  => array('edit terms in 7'), // 7 = regions
+    'callback' => 'systems_view_data',
+    'weight' => 8,
+  );
+
+  // Geography count, in views/geo_count.inc
+  $items['admin/content/geo/count'] = array(
+    'title' => 'Count',
+    'type' => MENU_LOCAL_TASK,
+    'access arguments'  => array('edit terms in 7'), // 7 = regions
+    'callback' => 'systems_view_data',
+    'weight' => 10,
+  );
+  $items['admin/content/geo/library'] = array(
+    'title' => 'LLR count',
+    'type' => MENU_LOCAL_TASK,
+    'access arguments'  => array('edit terms in 7'), // 7 = regions
+    'callback' => 'systems_view_data',
+    'weight' => 11,
   );
   return $items;
 }

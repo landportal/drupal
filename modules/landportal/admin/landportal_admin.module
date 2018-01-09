@@ -8,21 +8,21 @@ include_once 'landportal_admin.views_default.inc';
  * Add a 'Manage' tab to Admin > structure > taxonomy page
  */
 function landportal_admin_menu() {
-  // Geography stuff
-  $items['admin/structure/taxonomy/geo/count'] = array(
-    'title' => 'Geo',
-    'type' => MENU_LOCAL_ACTION,
-    'access arguments' => array('administer taxonomy'),
-    'callback' => 'systems_view_data',
-    'weight' => 10,
-  );
-  $items['admin/structure/taxonomy/geo/library'] = array(
-    'title' => 'Geo LLR',
-    'type' => MENU_LOCAL_ACTION,
-    'access arguments' => array('administer taxonomy'),
-    'callback' => 'systems_view_data',
-    'weight' => 11,
-  );
+  /* // Geography stuff */
+  /* $items['admin/structure/taxonomy/geo/count'] = array( */
+  /*   'title' => 'Geo', */
+  /*   'type' => MENU_LOCAL_ACTION, */
+  /*   'access arguments' => array('administer taxonomy'), */
+  /*   'callback' => 'systems_view_data', */
+  /*   'weight' => 10, */
+  /* ); */
+  /* $items['admin/structure/taxonomy/geo/library'] = array( */
+  /*   'title' => 'Geo LLR', */
+  /*   'type' => MENU_LOCAL_ACTION, */
+  /*   'access arguments' => array('administer taxonomy'), */
+  /*   'callback' => 'systems_view_data', */
+  /*   'weight' => 11, */
+  /* ); */
   /* $items['admin/structure/taxonomy/geo'] = array( */
   /*   'title' => 'Geography', */
   /*   'type' => MENU_NORMAL_ITEM, */
@@ -37,6 +37,7 @@ function landportal_admin_menu() {
     'weight' => 13,
     'callback' => 'systems_view_data',
   );
+
   // Land Voc
   $items['admin/structure/taxonomy/terms/overarching-categories'] = array(
     'title' => 'Overarching Categories',
