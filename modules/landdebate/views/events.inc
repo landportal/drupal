@@ -318,7 +318,7 @@ $handler->display->display_options['filters']['field_related_themes_tid_entityre
   111903910 => 0,
   30037204 => 0,
 );
-$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['reference_display'] = 'ldref:list';
+$handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['reference_display'] = 'ldref:themes';
 $handler->display->display_options['filters']['field_related_themes_tid_entityreference_filter']['reference_arguments'] = 'event';
 /* Filter criterion: Field: Geographical focus (field_geographical_focus) (reference filter) */
 $handler->display->display_options['filters']['field_geographical_focus_tid_entityreference_filter']['id'] = 'field_geographical_focus_tid_entityreference_filter';
