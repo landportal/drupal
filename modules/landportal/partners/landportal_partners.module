@@ -32,7 +32,7 @@ function landportal_partners_preprocess_page(&$variables) {
     /*     //dpm($menu); */
     /*     //dpm($variables, $i); */
     /* } */
-    foreach (array('menu-partners-mlike', 'menu-legend') as $i) {
+    foreach (array('menu-partners-mlike', 'menu-legend', 'menu-squatting-conflicts') as $i) {
       if (isset($pheader['menu_'.$i]) && $pheader['menu_'.$i]) {
         $menu = menu_load($i);
         $desc = i18n_string_translate('menu:menu:'.$i.':description', $menu['description']);
