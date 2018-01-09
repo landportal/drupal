@@ -374,6 +374,32 @@ $handler->display->display_options['filters']['type']['expose']['remember_roles'
   111903910 => 0,
   30037204 => 0,
 );
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  'und' => 'und',
+  'en' => 'en',
+  'fr' => 'fr',
+  'es' => 'es',
+  'pt' => 'pt',
+);
+$handler->display->display_options['filters']['language']['group'] = 1;
+$handler->display->display_options['filters']['language']['exposed'] = TRUE;
+$handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
+$handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
+$handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
+$handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
+$handler->display->display_options['filters']['language']['expose']['multiple'] = TRUE;
+$handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['language']['expose']['reduce'] = TRUE;
 /* Filter criterion: Field: Geographical focus (field_geographical_focus) */
 $handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
 $handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
