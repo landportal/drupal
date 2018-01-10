@@ -26,6 +26,8 @@ $handler->display->display_options['pager']['options']['items_per_page'] = '10';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['pager']['options']['quantity'] = '9';
+$handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
+$handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '10, 20, 40, 60';
 $handler->display->display_options['style_plugin'] = 'table';
 $handler->display->display_options['style_options']['columns'] = array(
   'views_bulk_operations' => 'views_bulk_operations',
@@ -38,6 +40,10 @@ $handler->display->display_options['style_options']['columns'] = array(
   'promote' => 'title',
   'sticky' => 'title',
   'changed' => 'changed',
+  'field_related_domains' => 'nothing',
+  'field_related_topics' => 'nothing',
+  'field_related_themes' => 'nothing',
+  'nothing' => 'title',
   'edit_node' => 'edit_node',
   'delete_node' => 'edit_node',
 );
@@ -107,6 +113,26 @@ $handler->display->display_options['style_options']['info'] = array(
     'default_sort_order' => 'desc',
     'align' => '',
     'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_related_domains' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_related_topics' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_related_themes' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing' => array(
+    'align' => '',
+    'separator' => '/',
     'empty_column' => 0,
   ),
   'edit_node' => array(
@@ -274,6 +300,36 @@ $handler->display->display_options['fields']['changed']['table'] = 'node';
 $handler->display->display_options['fields']['changed']['field'] = 'changed';
 $handler->display->display_options['fields']['changed']['label'] = 'Updated';
 $handler->display->display_options['fields']['changed']['date_format'] = 'short';
+/* Field: Field: Overarching categories */
+$handler->display->display_options['fields']['field_related_domains']['id'] = 'field_related_domains';
+$handler->display->display_options['fields']['field_related_domains']['table'] = 'field_data_field_related_domains';
+$handler->display->display_options['fields']['field_related_domains']['field'] = 'field_related_domains';
+$handler->display->display_options['fields']['field_related_domains']['label'] = 'Categories';
+$handler->display->display_options['fields']['field_related_domains']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_related_domains']['type'] = 'i18n_taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_related_domains']['delta_offset'] = '0';
+/* Field: Field: Related concepts */
+$handler->display->display_options['fields']['field_related_topics']['id'] = 'field_related_topics';
+$handler->display->display_options['fields']['field_related_topics']['table'] = 'field_data_field_related_topics';
+$handler->display->display_options['fields']['field_related_topics']['field'] = 'field_related_topics';
+$handler->display->display_options['fields']['field_related_topics']['label'] = 'Concepts';
+$handler->display->display_options['fields']['field_related_topics']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_related_topics']['type'] = 'i18n_taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_related_topics']['delta_offset'] = '0';
+/* Field: Field: Themes */
+$handler->display->display_options['fields']['field_related_themes']['id'] = 'field_related_themes';
+$handler->display->display_options['fields']['field_related_themes']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['fields']['field_related_themes']['field'] = 'field_related_themes';
+$handler->display->display_options['fields']['field_related_themes']['label'] = 'Issues';
+$handler->display->display_options['fields']['field_related_themes']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_related_themes']['type'] = 'i18n_taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_related_themes']['delta_offset'] = '0';
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['table'] = 'views';
+$handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['label'] = 'LP Tags';
+$handler->display->display_options['fields']['nothing']['alter']['text'] = '<br/><small>OA: [field_related_domains] / T: [field_related_themes] / C: [field_related_topics]</small>';
 /* Field: Content: Edit link */
 $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
 $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
