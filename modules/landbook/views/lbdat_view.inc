@@ -260,11 +260,12 @@ $handler->display->display_options['filters']['vid']['value'] = array(
 );
 $handler->display->display_options['filters']['vid']['group'] = 1;
 
-/* Display: Promoted */
-$handler = $view->new_display('block', 'Promoted', 'highlight');
+/* Display: Highlight */
+$handler = $view->new_display('block', 'Highlight', 'highlight');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Featured datasets';
 $handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-grid-2';
 $handler->display->display_options['defaults']['group_by'] = FALSE;
 $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
@@ -338,3 +339,4 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
   'datasets' => 'datasets',
 );
 $handler->display->display_options['filters']['machine_name']['group'] = 1;
+
