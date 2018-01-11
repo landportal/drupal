@@ -40,15 +40,37 @@ function lbvc_plugin_map_block_info() {
   return $blocks;
 }
 
+// Returns a list of all countries, where
+// key is the iso3, value is 0 = country, 1 = with narrative, 2 = promoted
+function lbvc__map_cps() {
+  $countries = array();
+  $tids = taxonomy_term_load_multiple($tids = array(), $conditions = array('vid' => LP_REGIONS_VID));
+  foreach($tids as $term) {
+    if (!$term->field_iso3) continue;
+    $wrapper = entity_metadata_wrapper('taxonomy_term', $term);
+    $iso3 = $wrapper->field_iso3->value();
+    $countries[$iso3] = array('id' => $iso3, 'value' => 0);
+  }
+  // Load narratives
+  $nodes = node_load_multiple(array(), array('type' => 'landbook_country'));
+  foreach($nodes as $node) {
+    $wrapper = entity_metadata_wrapper('node', $node);
+    $iso3 = $wrapper->field_geographical_focus[0]->field_iso3->value();
+    $countries[$iso3] = array('id' => $iso3, 'value' => $node->promote + 1);
+  }
+  return array_values($countries);
+}
+
 function lbvc_plugin_map_block_view($delta) {
   $block = array();
   switch ($delta) {
 
   case 'lbvc_map':
-    $vcc = '{"series": [{"name": "World map", "data": "@map_data@"}]';
-    $vcc .= ', "colors": { "min": "#BBD6D8" }';
-    $vcc .= ', "map": {"selectable": true, "legend": false, "nav": true'
-      . ', "tooltip": "@function () { return \'Click to visit \' + this.name; }@"'
+    $countries = lbvc__map_cps();
+    $vcc = '{"series": [ {"name": "click to visit", "data": ' . json_encode($countries) . ' } ]';
+    $vcc .= ', "colors": { "background": "#FFFFFF", "hover": "#F5A623", "select": "#F5A623", "borders": "#FFFFFF", "min": "#BBD6D8", "max": "#E58517", "na": "#BBD6D8" }';
+    $vcc .= ', "map": {"selectable": true, "legend": true, "nav": true'
+      . ', "tooltip": "@function () { return this.name + (this.value ?  \' portfolio\' : \' overview page\'); }@"'
       . ', "events": "@{ click: function () { window.location.href = \'/book/countries/\' + this.id; } }@"'
       . '}';
     $vcc .= '}';
