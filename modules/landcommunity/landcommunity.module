@@ -28,3 +28,13 @@ function landcommunity_help($path, $arg) {
   }
 }
 
+// For Organization CT teasers, happen acronym to the title
+function landcommunity_node_view($node, $view_mode, $langcode) {
+  if ($node->type != 'organization' || !in_array($view_mode, array('teaser'))) return;
+  if (!isset($node->content['field_acronym'])) return;
+  $acronym = '<span class="acronym">(' . $node->content['field_acronym']['#items'][0]['safe_value'] . ')</span>';
+  $node->content['title_field'][0]['#markup'] = str_replace(
+    '</h4>', ' ' . $acronym . '</h4>', $node->content['title_field'][0]['#markup']);
+  unset($node->content['field_acronym']);
+  // dpm($node->content);
+}
