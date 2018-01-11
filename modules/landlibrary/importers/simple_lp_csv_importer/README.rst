@@ -1,7 +1,7 @@
 Simple LP CSV importer
 ======================
 
-:URL: https://landportal.info/admin/structure/feeds/simple_lp_csv_importer
+:URL: https://landportal.org/admin/structure/feeds/simple_lp_csv_importer
 :source code: https://github.com/landportal/drupal/tree/master/modules/landlibrary/importers/simple_lp_csv_importer
 :Author: Carlos Tejo-Alonso (based on the work of Antonella and Jules)
 
@@ -20,9 +20,9 @@ Workflow Simple LP CSV importer
 - Open with editor (as Notepad++) and convert codification to "UTF-8 without BOM"
 - Clean the plain text file for any strange characters
 
-- Go to http://landportal.info
+- Go to https://landportal.org
 - Create a user for the importer (importer_ACRONYM_simple_lp_csv) with the role "landportal editor"
-- Go to https://landportal.info/admin/structure/feeds
+- Go to https://landportal.org/admin/structure/feeds
 - Clone the Simple LP CSV importer 
 - Change the Tamper process to set the new username
-- Go to http://landportal.info/import/ to start the import process
+- Go to https://landportal.org/import/ to start the import process

@@ -1,7 +1,7 @@
 Mekong Land Research Forum importer
 ===================================
 
-:URL: https://landportal.info/admin/structure/feeds/mlrf_endnote_importer
+:URL: https://landportal.org/admin/structure/feeds/mlrf_endnote_importer
 :source code: https://github.com/landportal/drupal/tree/master/modules/landlibrary/importers/mlrf_endnote_importer
 :Author: Carlos Tejo-Alonso
 
@@ -16,11 +16,11 @@ http://endnote.com/support/helpdocs/endnote.zip
 
 Workflow 
 --------
-- Go to https://landportal.info/admin/modules
+- Go to https://landportal.org/admin/modules
 - Enable module "Mekong Land Research Forum - EndNote importer"
-- Go to https://landportal.info/admin/people/create
+- Go to https://landportal.org/admin/people/create
 - Create a user for the importer (importer_mlrf_endnote) with the role "landportal editor"
-- Go to http://landportal.info/import/ to start the import process
+- Go to https://landportal.org/import/ to start the import process
 
 
 Files imported

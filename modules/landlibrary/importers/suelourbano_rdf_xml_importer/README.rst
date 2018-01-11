@@ -1,7 +1,7 @@
 suelourbano.org - RDF/XML importer 
 ==================================
 
-:URL: https://landportal.info/admin/structure/feeds/suelourbano_rdf_xml_importer
+:URL: https://landportal.org/admin/structure/feeds/suelourbano_rdf_xml_importer
 :source code: https://github.com/landportal/drupal/tree/master/modules/landlibrary/importers/suelourbano_rdf_xml_importer
 :Author: Carlos Tejo-Alonso
 
@@ -12,11 +12,11 @@ The source file is a RDF/XML file from http://www.suelourbano.org/bibliotecas-rd
 
 Workflow 
 --------
-- Go to https://landportal.info/admin/modules
+- Go to https://landportal.org/admin/modules
 - Enable module "suelourbano.org - RDF/XML importer"
-- Go to https://landportal.info/admin/people/create
+- Go to https://landportal.org/admin/people/create
 - Create a user for the importer (importer_suelourbano_rdf_xml) with the role "landportal editor"
-- Go to http://landportal.info/import/ to start the import process
+- Go to https://landportal.org/import/ to start the import process
 
 
 Files imported
