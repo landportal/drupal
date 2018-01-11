@@ -38,12 +38,10 @@ function landportal_geo_menu() {
     'title'             => 'Geography',
     'access arguments'  => array('edit terms in 7'), // 7 = regions
     'page callback' => 'views_embed_view',
-    'page arguments' => array('lbadm_catalogs', 'system'),
+    'page arguments' => array('geo', 'system'),
     'file path' => drupal_get_path('module', 'views'),
     'file'      => 'views.module',
     //'type'              => MENU_DEFAULT_LOCAL_TASK,
-    /* 'access arguments'  => array('administer taxonomy'), */
-    /* 'callback'          => 'systems_view_data', */
     /* 'weight'            => 9, */
   );
   $items['admin/content/geo/tree'] = array(

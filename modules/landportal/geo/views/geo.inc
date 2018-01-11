@@ -79,7 +79,7 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
 );
 
 /* Display: System */
-$handler = $view->new_display('system', 'System', 'system_1');
+$handler = $view->new_display('system', 'System', 'system');
 $handler->display->display_options['defaults']['group_by'] = FALSE;
 $handler->display->display_options['group_by'] = TRUE;
 $handler->display->display_options['defaults']['access'] = FALSE;
@@ -173,7 +173,7 @@ $handler->display->display_options['defaults']['sorts'] = FALSE;
 $handler->display->display_options['sorts']['weight_1']['id'] = 'weight_1';
 $handler->display->display_options['sorts']['weight_1']['table'] = 'draggableviews_structure';
 $handler->display->display_options['sorts']['weight_1']['field'] = 'weight';
-$handler->display->display_options['sorts']['weight_1']['draggableviews_setting_view'] = 'geo:system_1';
+$handler->display->display_options['sorts']['weight_1']['draggableviews_setting_view'] = 'geo:system';
 $handler->display->display_options['sorts']['weight_1']['draggableviews_setting_new_items_bottom_list'] = 1;
 /* Sort criterion: Taxonomy term: Weight */
 $handler->display->display_options['sorts']['weight']['id'] = 'weight';
