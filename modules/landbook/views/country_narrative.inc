@@ -193,6 +193,13 @@ $handler->display->display_options['fields']['name']['field'] = 'name';
 $handler->display->display_options['fields']['name']['relationship'] = 'field_geographical_focus_tid';
 $handler->display->display_options['fields']['name']['label'] = '';
 $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+$handler->display->display_options['sorts']['created']['granularity'] = 'minute';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -287,6 +294,18 @@ $handler->display->display_options['fields']['rendered_entity']['link_to_entity'
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
 $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+$handler->display->display_options['sorts']['created']['granularity'] = 'minute';
+/* Sort criterion: Field: Land Book Indicators (field_visualization:delta) */
+$handler->display->display_options['sorts']['delta']['id'] = 'delta';
+$handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_visualization';
+$handler->display->display_options['sorts']['delta']['field'] = 'delta';
+$handler->display->display_options['sorts']['delta']['relationship'] = 'field_geographical_focus_tid';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -327,7 +346,10 @@ $handler->display->display_options['filters']['php']['id'] = 'php';
 $handler->display->display_options['filters']['php']['table'] = 'views';
 $handler->display->display_options['filters']['php']['field'] = 'php';
 $handler->display->display_options['filters']['php']['use_php_setup'] = 0;
-$handler->display->display_options['filters']['php']['php_filter'] = '$vis = entity_load(\'field_collection_item\', array($row->rendered_entity));
+$handler->display->display_options['filters']['php']['php_filter'] = 'static $lastid;
+if (!$lastid) $lastid = $row->nid;
+if ($lastid != $row->nid) return true;
+$vis = entity_load(\'field_collection_item\', array($row->rendered_entity));
 $v = $vis[$row->rendered_entity]->field_view_coda[\'und\'][0];
 return !in_array($v[\'type\'], array(\'charts\', \'pie\', \'spider\'));
 ';
