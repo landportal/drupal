@@ -299,7 +299,7 @@ $handler->display->display_options['use_more_always'] = TRUE;
 $handler->display->display_options['defaults']['use_more_text'] = FALSE;
 $handler->display->display_options['use_more_text'] = 'View more';
 $handler->display->display_options['defaults']['link_display'] = FALSE;
-$handler->display->display_options['link_display'] = 'page_1';
+$handler->display->display_options['link_display'] = 'explore_org';
 $handler->display->display_options['defaults']['exposed_form'] = FALSE;
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Filter';
@@ -342,6 +342,7 @@ $handler->display->display_options['arguments']['type']['field'] = 'type';
 $handler->display->display_options['arguments']['type']['default_action'] = 'default';
 $handler->display->display_options['arguments']['type']['default_argument_type'] = 'fixed';
 $handler->display->display_options['arguments']['type']['default_argument_options']['argument'] = 'organization';
+$handler->display->display_options['arguments']['type']['default_argument_skip_url'] = TRUE;
 $handler->display->display_options['arguments']['type']['summary']['number_of_records'] = '0';
 $handler->display->display_options['arguments']['type']['summary']['format'] = 'default_summary';
 $handler->display->display_options['arguments']['type']['summary_options']['items_per_page'] = '25';
@@ -678,5 +679,5 @@ $handler->display->display_options['filters']['field_organization_type_tid_entit
 );
 $handler->display->display_options['filters']['field_organization_type_tid_entityreference_filter']['reference_display'] = 'orgtypes:ref';
 $handler->display->display_options['filters']['field_organization_type_tid_entityreference_filter']['reference_arguments'] = '!1';
-$handler->display->display_options['path'] = 'issues/%/org';
+$handler->display->display_options['path'] = 'issues/%/organizations';
 
