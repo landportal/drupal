@@ -151,7 +151,7 @@ function ct_debate_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '4',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -159,7 +159,7 @@ function ct_debate_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '5',
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),
@@ -196,9 +196,7 @@ function ct_debate_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_debate';
-  $strongarm->value = array(
-    0 => 'landdebate-menu',
-  );
+  $strongarm->value = array();
   $export['menu_options_debate'] = $strongarm;
 
   $strongarm = new stdClass();

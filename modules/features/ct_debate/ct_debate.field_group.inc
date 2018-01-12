@@ -13,27 +13,6 @@ function ct_debate_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_about|node|debate|default';
-  $field_group->group_name = 'group_about';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'debate';
-  $field_group->mode = 'default';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'About this debate',
-    'weight' => '8',
-    'children' => array(),
-    'format_type' => 'hidden',
-    'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => array(),
-    ),
-  );
-  $field_groups['group_about|node|debate|default'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_about|node|debate|form';
   $field_group->group_name = 'group_about';
   $field_group->entity_type = 'node';
@@ -110,6 +89,7 @@ function ct_debate_field_group_info() {
       0 => 'field_file',
       1 => 'field_orgref',
       2 => 'field_noderef',
+      3 => 'group_topics_regions',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -394,7 +374,7 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = 'group_topics_regions';
   $field_group->data = array(
     'label' => '',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_related_topics',
       1 => 'field_related_domains',
@@ -456,41 +436,15 @@ function ct_debate_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_status|node|debate|default';
-  $field_group->group_name = 'group_status';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'debate';
-  $field_group->mode = 'default';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => '',
-    'weight' => '4',
-    'children' => array(),
-    'format_type' => 'fieldset',
-    'format_settings' => array(
-      'label' => '',
-      'instance_settings' => array(
-        'id' => '',
-        'classes' => '',
-        'description' => '',
-      ),
-      'formatter' => 'open',
-    ),
-  );
-  $field_groups['group_status|node|debate|default'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_topics_regions|node|debate|default';
   $field_group->group_name = 'group_topics_regions';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'debate';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_aside';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '5',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
@@ -553,7 +507,7 @@ function ct_debate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
