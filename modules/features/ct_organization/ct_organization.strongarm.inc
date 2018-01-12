@@ -166,7 +166,7 @@ function ct_organization_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '10',
+            'weight' => '9',
             'visible' => FALSE,
           ),
         ),
@@ -178,7 +178,7 @@ function ct_organization_strongarm() {
         ),
         'locations' => array(
           'default' => array(
-            'weight' => '12',
+            'weight' => '13',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -186,7 +186,7 @@ function ct_organization_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '13',
+            'weight' => '12',
             'visible' => FALSE,
           ),
         ),

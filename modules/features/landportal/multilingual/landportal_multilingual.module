@@ -5,3 +5,19 @@
  */
 
 include_once 'landportal_multilingual.features.inc';
+
+function landportal_multilingual_language_switch_links_alter(array &$links, $type, $path) {
+  global $language;
+
+  // Hide non official LP languages
+  foreach($links as $lang => $link) {
+    if (!in_array($lang, array('en', 'es', 'fr', 'pt'))) {
+      if (!in_array('hide-language', $links[$link]['attributes']['class'])) {
+        $links[$link]['attributes']['class'][] = 'hide-language';
+      }
+    }
+  }
+  /* if ($type == LANGUAGE_TYPE_CONTENT && isset($links[$language->language])) { */
+  /*   $links[$language->language]['attributes']['class'][] = 'active-language'; */
+  /* } */
+}

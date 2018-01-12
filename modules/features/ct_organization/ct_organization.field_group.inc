@@ -145,14 +145,15 @@ function ct_organization_field_group_info() {
     'children' => array(
       0 => 'field_image',
       1 => 'field_contact',
-      2 => 'field_link',
-      3 => 'field_email',
-      4 => 'field_acronym',
-      5 => 'field_file',
-      6 => 'field_language',
-      7 => 'field_phone',
-      8 => 'field_postal_address',
-      9 => 'locations',
+      2 => 'field_organization_type',
+      3 => 'field_link',
+      4 => 'field_email',
+      5 => 'field_acronym',
+      6 => 'field_file',
+      7 => 'field_language',
+      8 => 'field_phone',
+      9 => 'field_postal_address',
+      10 => 'locations',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -382,7 +383,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = 'group_topics_regions';
   $field_group->data = array(
     'label' => '',
-    'weight' => '4',
+    'weight' => '18',
     'children' => array(
       0 => 'field_related_topics',
       1 => 'field_related_domains',
@@ -417,7 +418,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
@@ -480,7 +481,7 @@ function ct_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '4',
+    'weight' => '2',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
