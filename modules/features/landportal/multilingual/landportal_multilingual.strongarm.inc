@@ -20,6 +20,48 @@ function landportal_multilingual_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_language_list';
+  $strongarm->value = '4';
+  $export['i18n_language_list'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_default_language_for_blog_post';
+  $strongarm->value = '-- current --';
+  $export['i18n_node_default_language_for_blog_post'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_default_language_for_event';
+  $strongarm->value = '-- current --';
+  $export['i18n_node_default_language_for_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_default_language_for_landbook_country';
+  $strongarm->value = '-- current --';
+  $export['i18n_node_default_language_for_landbook_country'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_default_language_for_news';
+  $strongarm->value = '-- current --';
+  $export['i18n_node_default_language_for_news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_default_language_for_thematic_narrative';
+  $strongarm->value = '-- current --';
+  $export['i18n_node_default_language_for_thematic_narrative'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_default_language_none';
   $strongarm->value = '1';
   $export['i18n_node_default_language_none'] = $strongarm;
@@ -28,21 +70,21 @@ function landportal_multilingual_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_blog_post';
-  $strongarm->value = '1';
+  $strongarm->value = '4';
   $export['i18n_node_extended_blog_post'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_debate';
-  $strongarm->value = '1';
+  $strongarm->value = '4';
   $export['i18n_node_extended_debate'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_event';
-  $strongarm->value = '1';
+  $strongarm->value = '4';
   $export['i18n_node_extended_event'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -56,7 +98,7 @@ function landportal_multilingual_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_landbook_country';
-  $strongarm->value = '1';
+  $strongarm->value = '4';
   $export['i18n_node_extended_landbook_country'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -70,7 +112,7 @@ function landportal_multilingual_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_news';
-  $strongarm->value = '1';
+  $strongarm->value = '4';
   $export['i18n_node_extended_news'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -84,8 +126,22 @@ function landportal_multilingual_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_page';
-  $strongarm->value = '1';
+  $strongarm->value = '4';
   $export['i18n_node_extended_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_person';
+  $strongarm->value = 1;
+  $export['i18n_node_extended_person'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_thematic_narrative';
+  $strongarm->value = '4';
+  $export['i18n_node_extended_thematic_narrative'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -99,8 +155,7 @@ function landportal_multilingual_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_options_blog_post';
   $strongarm->value = array(
-    0 => 'required',
-    1 => 'lock',
+    0 => 'lock',
   );
   $export['i18n_node_options_blog_post'] = $strongarm;
 
@@ -109,8 +164,7 @@ function landportal_multilingual_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_options_debate';
   $strongarm->value = array(
-    0 => 'required',
-    1 => 'lock',
+    0 => 'lock',
   );
   $export['i18n_node_options_debate'] = $strongarm;
 
@@ -164,6 +218,20 @@ function landportal_multilingual_strongarm() {
   $strongarm->name = 'i18n_node_options_page';
   $strongarm->value = array();
   $export['i18n_node_options_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_person';
+  $strongarm->value = array();
+  $export['i18n_node_options_person'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_thematic_narrative';
+  $strongarm->value = array();
+  $export['i18n_node_options_thematic_narrative'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -277,9 +345,23 @@ function landportal_multilingual_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_person';
+  $strongarm->value = array();
+  $export['i18n_sync_node_type_person'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_sync_node_type_syspage';
   $strongarm->value = array();
   $export['i18n_sync_node_type_syspage'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_thematic_narrative';
+  $strongarm->value = array();
+  $export['i18n_sync_node_type_thematic_narrative'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

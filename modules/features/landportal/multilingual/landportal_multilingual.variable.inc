@@ -116,11 +116,13 @@ Your account on [site:name] has been canceled.
   'site_name' => 'Land Portal',
   'site_slogan' => '',
 );
+  $realm_variables['language']['nl'] = array();
   $realm_variables['language']['pt'] = array(
   'site_frontpage' => 'node/28444',
   'site_name' => 'Land Portal',
   'site_slogan' => '',
 );
+  $realm_variables['language']['ru'] = array();
 
 return $realm_variables;
 }
