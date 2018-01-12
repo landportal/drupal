@@ -29,7 +29,7 @@ function lbvc_plugin_table_formatter($VCC) {
   if (isset($params->iso3)) {
     $value .= '<thead><tr>
            <th>Indicator</th>
-           <th>Years</th>
+           <th>Year</th>
            <th>Value</th>
            </tr></thead>';
   } else {
