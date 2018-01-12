@@ -305,7 +305,6 @@ $handler->display->display_options['sorts']['created']['granularity'] = 'minute'
 $handler->display->display_options['sorts']['delta']['id'] = 'delta';
 $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_visualization';
 $handler->display->display_options['sorts']['delta']['field'] = 'delta';
-$handler->display->display_options['sorts']['delta']['relationship'] = 'field_geographical_focus_tid';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';

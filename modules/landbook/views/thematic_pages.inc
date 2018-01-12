@@ -41,11 +41,6 @@ $handler->display->display_options['fields']['title']['element_label_colon'] = F
 $handler->display->display_options['sorts']['type']['id'] = 'type';
 $handler->display->display_options['sorts']['type']['table'] = 'node';
 $handler->display->display_options['sorts']['type']['field'] = 'type';
-/* Sort criterion: Content: Promoted to front page */
-$handler->display->display_options['sorts']['promote']['id'] = 'promote';
-$handler->display->display_options['sorts']['promote']['table'] = 'node';
-$handler->display->display_options['sorts']['promote']['field'] = 'promote';
-$handler->display->display_options['sorts']['promote']['order'] = 'DESC';
 /* Sort criterion: Content: Updated date */
 $handler->display->display_options['sorts']['changed']['id'] = 'changed';
 $handler->display->display_options['sorts']['changed']['table'] = 'node';
@@ -81,6 +76,21 @@ $handler->display->display_options['defaults']['pager'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '2';
 $handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Type */
+$handler->display->display_options['sorts']['type']['id'] = 'type';
+$handler->display->display_options['sorts']['type']['table'] = 'node';
+$handler->display->display_options['sorts']['type']['field'] = 'type';
+/* Sort criterion: Content: Promoted (field_promoted) */
+$handler->display->display_options['sorts']['field_promoted_target_id']['id'] = 'field_promoted_target_id';
+$handler->display->display_options['sorts']['field_promoted_target_id']['table'] = 'field_data_field_promoted';
+$handler->display->display_options['sorts']['field_promoted_target_id']['field'] = 'field_promoted_target_id';
+$handler->display->display_options['sorts']['field_promoted_target_id']['order'] = 'DESC';
+/* Sort criterion: Content: Updated date */
+$handler->display->display_options['sorts']['changed']['id'] = 'changed';
+$handler->display->display_options['sorts']['changed']['table'] = 'node';
+$handler->display->display_options['sorts']['changed']['field'] = 'changed';
+$handler->display->display_options['sorts']['changed']['order'] = 'DESC';
 
 /* Display: All */
 $handler = $view->new_display('block', 'All', 'all');
@@ -108,6 +118,12 @@ $handler->display->display_options['relationships']['field_landvoc_to_target_id'
 $handler->display->display_options['relationships']['field_landvoc_to_target_id']['field'] = 'field_landvoc_to_target_id';
 $handler->display->display_options['relationships']['field_landvoc_to_target_id']['label'] = 'issue';
 $handler->display->display_options['relationships']['field_landvoc_to_target_id']['required'] = TRUE;
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Updated date */
+$handler->display->display_options['sorts']['changed']['id'] = 'changed';
+$handler->display->display_options['sorts']['changed']['table'] = 'node';
+$handler->display->display_options['sorts']['changed']['field'] = 'changed';
+$handler->display->display_options['sorts']['changed']['order'] = 'DESC';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -178,6 +194,16 @@ $handler->display->display_options['fields']['rendered_entity']['link_to_entity'
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
 $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Updated date */
+$handler->display->display_options['sorts']['changed']['id'] = 'changed';
+$handler->display->display_options['sorts']['changed']['table'] = 'node';
+$handler->display->display_options['sorts']['changed']['field'] = 'changed';
+$handler->display->display_options['sorts']['changed']['order'] = 'DESC';
+/* Sort criterion: Field: Land Book Indicators (field_visualization:delta) */
+$handler->display->display_options['sorts']['delta']['id'] = 'delta';
+$handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_visualization';
+$handler->display->display_options['sorts']['delta']['field'] = 'delta';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';
