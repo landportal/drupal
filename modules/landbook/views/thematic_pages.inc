@@ -233,6 +233,6 @@ $handler->display->display_options['filters']['php']['field'] = 'php';
 $handler->display->display_options['filters']['php']['use_php_setup'] = 0;
 $handler->display->display_options['filters']['php']['php_filter'] = '$vis = entity_load(\'field_collection_item\', array($row->rendered_entity));
 $v = $vis[$row->rendered_entity]->field_view_coda[\'und\'][0];
-return !in_array($v[\'type\'], array(\'table\', \'map\'));
+return !in_array($v[\'type\'], array(\'map\'));
 ';
 
