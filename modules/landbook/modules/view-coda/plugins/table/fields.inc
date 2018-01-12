@@ -36,7 +36,7 @@ function lbvc_plugin_table_formatter($VCC) {
     $value .= '<thead><tr>
            <th>Indicator</th>
            <th>Min-Max<br/>Number of years</th>
-           <th><span class="hidden-xs">Countries</span><br/><acronym title="Number of Observations">Obs</acronym> missing</th>
+           <th><span class="hidden-xs">Countries</span> / <acronym title="Number of Observations">Obs</acronym></th>
            <th>Min / Max<span class="hidden-xs"> Value</span></th>
            </tr></thead>';
   }
