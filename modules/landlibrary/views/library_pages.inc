@@ -105,7 +105,7 @@ $handler->display->display_options['filters']['field_doc_type_tid_entityreferenc
   30037204 => 0,
 );
 $handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['reference_display'] = 'library:ref_types';
-/* Filter criterion: Content: License of the resource (field_doc_licencing) (reference filter) */
+/* Filter criterion: Field: License (field_doc_licencing) (reference filter) */
 $handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['id'] = 'field_doc_licencing_tid_entityreference_filter';
 $handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['table'] = 'field_data_field_doc_licencing';
 $handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['field'] = 'field_doc_licencing_tid_entityreference_filter';
@@ -216,7 +216,7 @@ $handler->display->display_options['filters']['field_doc_type_tid_entityreferenc
   30037204 => 0,
 );
 $handler->display->display_options['filters']['field_doc_type_tid_entityreference_filter']['reference_display'] = 'library:ref_types';
-/* Filter criterion: Content: License of the resource (field_doc_licencing) (reference filter) */
+/* Filter criterion: Field: License (field_doc_licencing) (reference filter) */
 $handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['id'] = 'field_doc_licencing_tid_entityreference_filter';
 $handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['table'] = 'field_data_field_doc_licencing';
 $handler->display->display_options['filters']['field_doc_licencing_tid_entityreference_filter']['field'] = 'field_doc_licencing_tid_entityreference_filter';
@@ -299,5 +299,5 @@ $handler->display->display_options['header']['view']['inherit_arguments'] = TRUE
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
-$handler->display->display_options['path'] = 'library/browse/geo/%';
+$handler->display->display_options['path'] = 'library/browse/regions/%';
 
