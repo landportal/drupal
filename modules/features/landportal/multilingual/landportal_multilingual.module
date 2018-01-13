@@ -6,13 +6,18 @@
 
 include_once 'landportal_multilingual.features.inc';
 
+// 'Official LP langs'
+global $LP_LANG;
+$LP_LANG = array('en', 'es', 'fr', 'pt');
+
 function landportal_multilingual_language_switch_links_alter(array &$links, $type, $path) {
-  global $language;
+  global $language, $LP_LANG;
 
   // Hide non official LP languages
   foreach($links as $lang => $link) {
-    if (!in_array($lang, array('en', 'es', 'fr', 'pt'))) {
-      if (!in_array('hide-language', $links[$link]['attributes']['class'])) {
+    if (!in_array($lang, $LP_LANG)) {
+      if (!in_array('hide-language', $links[$lang]['attributes']['class'])) {
+        //dsm($lang . ' NON OFFICIAL');
         $links[$link]['attributes']['class'][] = 'hide-language';
       }
     }
@@ -20,4 +25,24 @@ function landportal_multilingual_language_switch_links_alter(array &$links, $typ
   /* if ($type == LANGUAGE_TYPE_CONTENT && isset($links[$language->language])) { */
   /*   $links[$language->language]['attributes']['class'][] = 'active-language'; */
   /* } */
+  //dpm($links, $path);
+}
+
+function landportal_multilingual_preprocess_links(&$variables) {
+  global $LP_LANG;
+
+  if ($variables['theme_hook_original'] == 'links__locale_block') {
+    $url = $variables['links']['en']['href'];
+    foreach($variables['links'] as $id => $link) {
+      // Hide unstranslated links
+      if (in_array('locale-untranslated', $link['attributes']['class'])) {
+        unset($variables['links'][$id]);
+      }
+      // Hide links from non official languages
+      if ($link['href'] == $url && !in_array($id, $LP_LANG)) {
+        unset($variables['links'][$id]);
+      }
+    }
+//    dpm($variables, $url);
+  }
 }
