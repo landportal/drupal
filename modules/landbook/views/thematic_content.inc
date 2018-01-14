@@ -79,7 +79,7 @@ $handler->display->display_options['arguments']['tid']['id'] = 'tid';
 $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
 $handler->display->display_options['arguments']['tid']['field'] = 'tid';
 $handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
-$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
 $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
 $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
 $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
@@ -91,6 +91,8 @@ $handler->display->display_options['arguments']['type']['field'] = 'type';
 $handler->display->display_options['arguments']['type']['default_action'] = 'not found';
 $handler->display->display_options['arguments']['type']['title_enable'] = TRUE;
 $handler->display->display_options['arguments']['type']['title'] = '%1 related %2';
+$handler->display->display_options['arguments']['type']['breadcrumb_enable'] = TRUE;
+$handler->display->display_options['arguments']['type']['breadcrumb'] = 'Issues';
 $handler->display->display_options['arguments']['type']['default_argument_type'] = 'fixed';
 $handler->display->display_options['arguments']['type']['summary']['number_of_records'] = '0';
 $handler->display->display_options['arguments']['type']['summary']['format'] = 'default_summary';
@@ -110,8 +112,8 @@ $handler->display->display_options['filters']['language']['value'] = array(
 );
 $handler->display->display_options['filters']['language']['group'] = 1;
 
-/* Display: Debate */
-$handler = $view->new_display('block', 'Debate', 'debates');
+/* Display: Debates */
+$handler = $view->new_display('block', 'Debates', 'debates');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Discussions';
 $handler->display->display_options['defaults']['use_more'] = FALSE;
@@ -150,8 +152,8 @@ $handler->display->display_options['arguments']['type']['summary']['format'] = '
 $handler->display->display_options['arguments']['type']['summary_options']['items_per_page'] = '25';
 $handler->display->display_options['arguments']['type']['limit'] = '0';
 
-/* Display: Blog */
-$handler = $view->new_display('block', 'Blog', 'blogs');
+/* Display: Blogs */
+$handler = $view->new_display('block', 'Blogs', 'blogs');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Blogs';
 $handler->display->display_options['defaults']['use_more'] = FALSE;
@@ -511,10 +513,46 @@ $handler->display->display_options['row_plugin'] = 'node';
 $handler->display->display_options['row_options']['links'] = FALSE;
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: PHP */
+$handler->display->display_options['header']['php']['id'] = 'php';
+$handler->display->display_options['header']['php']['table'] = 'views';
+$handler->display->display_options['header']['php']['field'] = 'php';
+$handler->display->display_options['header']['php']['php_output'] = '<?php
+$term = taxonomy_term_load($view->args[0]);
+$rterm = taxonomy_term_view($term, \'teaser\');
+print render($rterm);
+?>';
 /* Header: Global: Result summary */
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Taxonomy term: Term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['tid']['breadcrumb'] = 'Issues';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '1';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['count'] = FALSE;
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+/* Contextual filter: Content: Type */
+$handler->display->display_options['arguments']['type']['id'] = 'type';
+$handler->display->display_options['arguments']['type']['table'] = 'node';
+$handler->display->display_options['arguments']['type']['field'] = 'type';
+$handler->display->display_options['arguments']['type']['default_action'] = 'not found';
+$handler->display->display_options['arguments']['type']['title_enable'] = TRUE;
+$handler->display->display_options['arguments']['type']['title'] = '%1 related %2';
+$handler->display->display_options['arguments']['type']['breadcrumb_enable'] = TRUE;
+$handler->display->display_options['arguments']['type']['breadcrumb'] = 'Issues';
+$handler->display->display_options['arguments']['type']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['type']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['type']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['type']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['arguments']['type']['limit'] = '0';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Language */
@@ -634,6 +672,16 @@ $handler->display->display_options['row_plugin'] = 'node';
 $handler->display->display_options['row_options']['links'] = FALSE;
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: PHP */
+$handler->display->display_options['header']['php']['id'] = 'php';
+$handler->display->display_options['header']['php']['table'] = 'views';
+$handler->display->display_options['header']['php']['field'] = 'php';
+$handler->display->display_options['header']['php']['php_output'] = '<?php
+$term = taxonomy_term_load($view->args[0]);
+$rterm = taxonomy_term_view($term, \'teaser\');
+print render($rterm);
+?>
+<h2><?php print $view->args[1]; ?></h2>';
 /* Header: Global: Result summary */
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
@@ -645,7 +693,8 @@ $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term
 $handler->display->display_options['arguments']['tid']['field'] = 'tid';
 $handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
 $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
-$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+$handler->display->display_options['arguments']['tid']['breadcrumb'] = 'Issues';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
 $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
 $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
 $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
@@ -711,5 +760,11 @@ $handler->display->display_options['filters']['field_organization_type_tid_entit
 );
 $handler->display->display_options['filters']['field_organization_type_tid_entityreference_filter']['reference_display'] = 'orgtypes:ref';
 $handler->display->display_options['filters']['field_organization_type_tid_entityreference_filter']['reference_arguments'] = '!1';
-$handler->display->display_options['path'] = 'issues/%/organizations';
+$handler->display->display_options['path'] = 'issues/%/organization';
+$handler->display->display_options['menu']['type'] = 'tab';
+$handler->display->display_options['menu']['title'] = 'issue org';
+$handler->display->display_options['menu']['weight'] = '0';
+$handler->display->display_options['menu']['name'] = 'landportal-menu';
+$handler->display->display_options['menu']['context'] = 0;
+$handler->display->display_options['menu']['context_only_inline'] = 0;
 

@@ -158,7 +158,7 @@ $handler->display->display_options['filters']['language']['value'] = array(
 /* Display: Blogs */
 $handler = $view->new_display('block', 'Blogs', 'blogs');
 $handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Blog';
+$handler->display->display_options['title'] = 'Blogs';
 $handler->display->display_options['defaults']['use_more'] = FALSE;
 $handler->display->display_options['use_more'] = TRUE;
 $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -504,14 +504,21 @@ $handler->display->display_options['filters']['language']['value'] = array(
 );
 
 /* Display: Explore */
-$handler = $view->new_display('page', 'Explore', 'page_1');
+$handler = $view->new_display('page', 'Explore', 'explore');
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'view-grid-2';
+$handler->display->display_options['defaults']['use_more'] = FALSE;
+$handler->display->display_options['defaults']['use_more_always'] = FALSE;
+$handler->display->display_options['defaults']['use_more_always'] = FALSE;
+$handler->display->display_options['use_more_always'] = TRUE;
+$handler->display->display_options['defaults']['use_more_text'] = FALSE;
+$handler->display->display_options['use_more_text'] = 'View more';
 $handler->display->display_options['defaults']['pager'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'mini';
+$handler->display->display_options['pager']['type'] = 'full';
 $handler->display->display_options['pager']['options']['items_per_page'] = '12';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['default_row_class'] = FALSE;
@@ -522,10 +529,46 @@ $handler->display->display_options['row_plugin'] = 'node';
 $handler->display->display_options['row_options']['links'] = FALSE;
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: PHP */
+$handler->display->display_options['header']['php']['id'] = 'php';
+$handler->display->display_options['header']['php']['table'] = 'views';
+$handler->display->display_options['header']['php']['field'] = 'php';
+$handler->display->display_options['header']['php']['php_output'] = '<?php
+$term = taxonomy_term_load($view->args[0]);
+$rterm = taxonomy_term_view($term, \'teaser\');
+print render($rterm);
+?>';
 /* Header: Global: Result summary */
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Taxonomy term: Term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['relationship'] = 'field_geographical_focus_tid';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['tid']['breadcrumb_enable'] = TRUE;
+$handler->display->display_options['arguments']['tid']['breadcrumb'] = 'Countries';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+/* Contextual filter: Content: Type */
+$handler->display->display_options['arguments']['type']['id'] = 'type';
+$handler->display->display_options['arguments']['type']['table'] = 'node';
+$handler->display->display_options['arguments']['type']['field'] = 'type';
+$handler->display->display_options['arguments']['type']['default_action'] = 'not found';
+$handler->display->display_options['arguments']['type']['title_enable'] = TRUE;
+$handler->display->display_options['arguments']['type']['title'] = '%1 related %2';
+$handler->display->display_options['arguments']['type']['breadcrumb_enable'] = TRUE;
+$handler->display->display_options['arguments']['type']['breadcrumb'] = '%1';
+$handler->display->display_options['arguments']['type']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['type']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['type']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['type']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['arguments']['type']['limit'] = '0';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Language */
