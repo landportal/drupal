@@ -1,7 +1,7 @@
 <?php
 
 $view = new view();
-$view->name = 'profile_public';
+$view->name = 'admin_people';
 $view->description = '';
 $view->tag = 'default, users';
 $view->base_table = 'profile';
@@ -359,3 +359,4 @@ $handler->display->display_options['filters']['field_related_topics_tid']['vocab
 $handler = $view->new_display('system', 'System', 'system_1');
 $handler->display->display_options['defaults']['access'] = FALSE;
 $handler->display->display_options['path'] = 'admin/people/profiles';
+
