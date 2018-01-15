@@ -371,14 +371,6 @@ return !in_array($v[\'type\'], array(\'charts\', \'pie\', \'spider\'));
 $handler = $view->new_display('page', 'Page', 'page');
 $handler->display->display_options['defaults']['group_by'] = FALSE;
 $handler->display->display_options['group_by'] = TRUE;
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['default_row_class'] = FALSE;
-$handler->display->display_options['style_options']['row_class_special'] = FALSE;
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'fields';
-$handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['header'] = FALSE;
 /* Header: Entity: Rendered entity */
 $handler->display->display_options['header']['entity']['id'] = 'entity';
@@ -413,22 +405,6 @@ $handler->display->display_options['fields']['title']['alter']['word_boundary'] 
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-/* Field: Taxonomy term: ISO3 */
-$handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
-$handler->display->display_options['fields']['field_iso3']['table'] = 'field_data_field_iso3';
-$handler->display->display_options['fields']['field_iso3']['field'] = 'field_iso3';
-$handler->display->display_options['fields']['field_iso3']['relationship'] = 'field_geographical_focus_tid';
-$handler->display->display_options['fields']['field_iso3']['label'] = 'iso3';
-$handler->display->display_options['fields']['field_iso3']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['field_iso3']['alter']['text'] = 'book/countries/[field_iso3]';
-$handler->display->display_options['fields']['field_iso3']['element_label_colon'] = FALSE;
-/* Field: Taxonomy term: Name */
-$handler->display->display_options['fields']['name']['id'] = 'name';
-$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['fields']['name']['field'] = 'name';
-$handler->display->display_options['fields']['name']['relationship'] = 'parent';
-$handler->display->display_options['fields']['name']['label'] = 'R';
-$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
 /* Field: Content: Rendered Content */
 $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
 $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_node';
@@ -485,7 +461,7 @@ $handler->display->display_options['filters']['tid_entityreference_filter']['exp
 $handler->display->display_options['filters']['tid_entityreference_filter']['expose']['operator_id'] = 'tid_entityreference_filter_op';
 $handler->display->display_options['filters']['tid_entityreference_filter']['expose']['label'] = 'Region';
 $handler->display->display_options['filters']['tid_entityreference_filter']['expose']['operator'] = 'tid_entityreference_filter_op';
-$handler->display->display_options['filters']['tid_entityreference_filter']['expose']['identifier'] = 'tid_entityreference_filter';
+$handler->display->display_options['filters']['tid_entityreference_filter']['expose']['identifier'] = 'region';
 $handler->display->display_options['filters']['tid_entityreference_filter']['expose']['remember_roles'] = array(
   2 => '2',
   1 => 0,
