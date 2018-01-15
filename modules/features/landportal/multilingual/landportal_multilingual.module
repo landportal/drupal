@@ -17,8 +17,9 @@ function landportal_multilingual_language_switch_links_alter(array &$links, $typ
   foreach($links as $lang => $link) {
     if (!in_array($lang, $LP_LANG)) {
       if (!in_array('hide-language', $links[$lang]['attributes']['class'])) {
-        //dsm($lang . ' NON OFFICIAL');
-        $links[$link]['attributes']['class'][] = 'hide-language';
+        if (!isset($links[$lang]['attributes'])) $links[$lang]['attributes'] = array();
+        if (!isset($links[$lang]['attributes']['class'])) $links[$lang]['attributes']['class'] = array();
+        $links[$lang]['attributes']['class'][] = 'hide-language';
       }
     }
   }
