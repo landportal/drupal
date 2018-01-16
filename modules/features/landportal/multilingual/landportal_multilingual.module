@@ -40,7 +40,7 @@ function landportal_multilingual_preprocess_links(&$variables) {
         unset($variables['links'][$id]);
       }
       // Hide links from non official languages
-      if ($link['href'] == $url && !in_array($id, $LP_LANG)) {
+      if (isset($link['href']) && $link['href'] == $url && !in_array($id, $LP_LANG)) {
         unset($variables['links'][$id]);
       }
     }
