@@ -81,7 +81,7 @@ function landbook_country_preprocess_node(&$variables) {
   $view_mode = $variables['elements']['#view_mode'];
   if ($variables['type'] != 'landbook_country' || $view_mode != 'teaser') return;
   // Should be set in landbook_country_entity_prepare_view
-  if ($variables['alias']) {
+  if (isset($variables['alias']) && $variables['alias']) {
     // Hack in the title with new link
     $title = &$variables['content']['title_field'];
     $link = l($title['#items'][0]['value'], $variables['alias']);
