@@ -12,7 +12,6 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['css_class'] = 'view-grid-2';
 $handler->display->display_options['use_more_always'] = TRUE;
 $handler->display->display_options['use_more_text'] = '';
 $handler->display->display_options['access']['type'] = 'perm';
@@ -369,6 +368,8 @@ return !in_array($v[\'type\'], array(\'charts\', \'pie\', \'spider\'));
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-grid-2';
 $handler->display->display_options['defaults']['group_by'] = FALSE;
 $handler->display->display_options['group_by'] = TRUE;
 $handler->display->display_options['defaults']['header'] = FALSE;
