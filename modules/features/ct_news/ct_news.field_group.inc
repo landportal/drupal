@@ -56,6 +56,7 @@ function ct_news_field_group_info() {
       1 => 'field_link',
       2 => 'field_language',
       3 => 'field_noderef',
+      4 => 'group_topics_regions',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -414,10 +415,10 @@ function ct_news_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'news';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_details';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '19',
     'children' => array(
       0 => 'field_geographical_focus',
       1 => 'group_landvoc',
