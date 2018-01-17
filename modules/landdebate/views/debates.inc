@@ -13,10 +13,9 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['title'] = 'Discussions';
-$handler->display->display_options['use_ajax'] = TRUE;
 $handler->display->display_options['use_more_always'] = TRUE;
 $handler->display->display_options['use_more_text'] = 'More debates';
-$handler->display->display_options['link_display'] = 'custom_url';
+$handler->display->display_options['link_display'] = 'page';
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
@@ -42,42 +41,6 @@ $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-/* Field: Field: Picture */
-$handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-$handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-$handler->display->display_options['fields']['field_image']['label'] = '';
-$handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-$handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => 'large',
-  'image_link' => 'content',
-);
-/* Field: Field: Date */
-$handler->display->display_options['fields']['field_date']['id'] = 'field_date';
-$handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
-$handler->display->display_options['fields']['field_date']['field'] = 'field_date';
-$handler->display->display_options['fields']['field_date']['settings'] = array(
-  'format_type' => 'day_month_year',
-  'custom_date_format' => '',
-  'fromto' => 'both',
-  'multiple_number' => '',
-  'multiple_from' => '',
-  'multiple_to' => '',
-  'show_remaining_days' => 1,
-  'show_repeat_rule' => 'show',
-);
-/* Field: Content: Body */
-$handler->display->display_options['fields']['body']['id'] = 'body';
-$handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-$handler->display->display_options['fields']['body']['field'] = 'body';
-$handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['body']['alter']['text'] = '<span class="glyphicon glyphicon-calendar"></span> [field_date]
-[body]';
-$handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-$handler->display->display_options['fields']['body']['settings'] = array(
-  'trim_length' => '200',
-);
 /* Sort criterion: Field: Date -  start date (field_date) */
 $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
 $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
@@ -106,137 +69,44 @@ $handler->display->display_options['filters']['language']['value'] = array(
 );
 $handler->display->display_options['filters']['language']['group'] = 1;
 
-/* Display: Open */
-$handler = $view->new_display('block', 'Open', 'open');
-$handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Open & upcoming';
-$handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'view-grid-2';
-$handler->display->display_options['defaults']['use_more'] = FALSE;
-$handler->display->display_options['defaults']['use_more_always'] = FALSE;
-$handler->display->display_options['defaults']['use_more_always'] = FALSE;
-$handler->display->display_options['use_more_always'] = TRUE;
-$handler->display->display_options['defaults']['use_more_text'] = FALSE;
-$handler->display->display_options['use_more_text'] = 'More debates';
-$handler->display->display_options['link_url'] = 'debates';
-$handler->display->display_options['defaults']['pager'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'mini';
-$handler->display->display_options['pager']['options']['items_per_page'] = '4';
-$handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['pager']['options']['id'] = '0';
-$handler->display->display_options['defaults']['filter_groups'] = FALSE;
-$handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type']['id'] = 'type';
-$handler->display->display_options['filters']['type']['table'] = 'node';
-$handler->display->display_options['filters']['type']['field'] = 'type';
-$handler->display->display_options['filters']['type']['value'] = array(
-  'debate' => 'debate',
-);
-$handler->display->display_options['filters']['type']['group'] = 1;
-/* Filter criterion: Content: Language */
-$handler->display->display_options['filters']['language']['id'] = 'language';
-$handler->display->display_options['filters']['language']['table'] = 'node';
-$handler->display->display_options['filters']['language']['field'] = 'language';
-$handler->display->display_options['filters']['language']['value'] = array(
-  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  'und' => 'und',
-);
-$handler->display->display_options['filters']['language']['group'] = 1;
-/* Filter criterion: Content: Status (field_status) */
-$handler->display->display_options['filters']['field_status_tid']['id'] = 'field_status_tid';
-$handler->display->display_options['filters']['field_status_tid']['table'] = 'field_data_field_status';
-$handler->display->display_options['filters']['field_status_tid']['field'] = 'field_status_tid';
-$handler->display->display_options['filters']['field_status_tid']['value'] = array(
-  537 => '537',
-  538 => '538',
-);
-$handler->display->display_options['filters']['field_status_tid']['type'] = 'select';
-$handler->display->display_options['filters']['field_status_tid']['vocabulary'] = 'debate_status';
-
-/* Display: Past */
-$handler = $view->new_display('block', 'Past', 'past');
-$handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['title'] = 'Recently closed';
-$handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'teaser-fullwidth view-grid-4';
-$handler->display->display_options['defaults']['use_more'] = FALSE;
-$handler->display->display_options['use_more'] = TRUE;
-$handler->display->display_options['defaults']['use_more_always'] = FALSE;
-$handler->display->display_options['defaults']['use_more_always'] = FALSE;
-$handler->display->display_options['use_more_always'] = TRUE;
-$handler->display->display_options['defaults']['use_more_text'] = FALSE;
-$handler->display->display_options['use_more_text'] = 'More debates';
-$handler->display->display_options['link_url'] = 'debates';
-$handler->display->display_options['defaults']['pager'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '4';
-$handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['filter_groups'] = FALSE;
-$handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Content: Type */
-$handler->display->display_options['filters']['type']['id'] = 'type';
-$handler->display->display_options['filters']['type']['table'] = 'node';
-$handler->display->display_options['filters']['type']['field'] = 'type';
-$handler->display->display_options['filters']['type']['value'] = array(
-  'debate' => 'debate',
-);
-$handler->display->display_options['filters']['type']['group'] = 1;
-/* Filter criterion: Content: Language */
-$handler->display->display_options['filters']['language']['id'] = 'language';
-$handler->display->display_options['filters']['language']['table'] = 'node';
-$handler->display->display_options['filters']['language']['field'] = 'language';
-$handler->display->display_options['filters']['language']['value'] = array(
-  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  'und' => 'und',
-);
-$handler->display->display_options['filters']['language']['group'] = 1;
-/* Filter criterion: Content: Status (field_status) */
-$handler->display->display_options['filters']['field_status_tid']['id'] = 'field_status_tid';
-$handler->display->display_options['filters']['field_status_tid']['table'] = 'field_data_field_status';
-$handler->display->display_options['filters']['field_status_tid']['field'] = 'field_status_tid';
-$handler->display->display_options['filters']['field_status_tid']['value'] = array(
-  539 => '539',
-);
-$handler->display->display_options['filters']['field_status_tid']['type'] = 'select';
-$handler->display->display_options['filters']['field_status_tid']['vocabulary'] = 'debate_status';
-
-/* Display: Latest */
-$handler = $view->new_display('block', 'Latest', 'latest');
-$handler->display->display_options['defaults']['css_class'] = FALSE;
-$handler->display->display_options['css_class'] = 'teaser-fullwidth';
-$handler->display->display_options['display_description'] = 'show Upcoming + Open';
-$handler->display->display_options['defaults']['use_more'] = FALSE;
-$handler->display->display_options['use_more'] = TRUE;
-$handler->display->display_options['defaults']['use_more_always'] = FALSE;
-$handler->display->display_options['defaults']['use_more_always'] = FALSE;
-$handler->display->display_options['use_more_always'] = TRUE;
-$handler->display->display_options['defaults']['use_more_text'] = FALSE;
-$handler->display->display_options['use_more_text'] = 'More debates';
-$handler->display->display_options['link_url'] = 'debate/debates';
-$handler->display->display_options['defaults']['pager'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '2';
-$handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
-$handler->display->display_options['style_options']['uses_fields'] = TRUE;
-$handler->display->display_options['style_options']['interval'] = '15000';
-$handler->display->display_options['style_options']['navigation'] = 0;
-$handler->display->display_options['style_options']['indicators'] = 1;
-$handler->display->display_options['style_options']['pause'] = 1;
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'node';
-$handler->display->display_options['row_options']['links'] = FALSE;
-$handler->display->display_options['defaults']['row_options'] = FALSE;
-
 /* Display: All */
 $handler = $view->new_display('block', 'All', 'all');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'view-grid-2';
+$handler->display->display_options['defaults']['use_ajax'] = FALSE;
+$handler->display->display_options['defaults']['use_more'] = FALSE;
+$handler->display->display_options['use_more'] = TRUE;
+$handler->display->display_options['defaults']['use_more_always'] = FALSE;
+$handler->display->display_options['defaults']['use_more_always'] = FALSE;
+$handler->display->display_options['use_more_always'] = TRUE;
+$handler->display->display_options['defaults']['use_more_text'] = FALSE;
+$handler->display->display_options['use_more_text'] = 'More debates';
 $handler->display->display_options['link_url'] = 'debates';
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'date_views_pager';
+$handler->display->display_options['pager']['options']['link_format'] = 'clean';
+$handler->display->display_options['pager']['options']['skip_empty_pages'] = 1;
+$handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: Result summary */
+$handler->display->display_options['header']['result']['id'] = 'result';
+$handler->display->display_options['header']['result']['table'] = 'views';
+$handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = '<span class="badge count">@total</span> discussions for this year';
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Date: Date (node) */
+$handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+$handler->display->display_options['arguments']['date_argument']['table'] = 'node';
+$handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+$handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+$handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+$handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['date_argument']['year_range'] = '-5:+1';
+$handler->display->display_options['arguments']['date_argument']['granularity'] = 'year';
+$handler->display->display_options['arguments']['date_argument']['granularity_reset'] = 0;
+$handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+  'field_data_field_date.field_date_value' => 'field_data_field_date.field_date_value',
+);
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Type */
@@ -294,4 +164,183 @@ $handler->display->display_options['filters']['field_geographical_focus_tid_enti
 );
 $handler->display->display_options['filters']['field_geographical_focus_tid_entityreference_filter']['reference_display'] = 'ldref:geo';
 $handler->display->display_options['filters']['field_geographical_focus_tid_entityreference_filter']['reference_arguments'] = 'debate';
+
+/* Display: Open */
+$handler = $view->new_display('block', 'Open', 'open');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Open & upcoming';
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-grid-2';
+$handler->display->display_options['defaults']['use_more'] = FALSE;
+$handler->display->display_options['defaults']['use_more_always'] = FALSE;
+$handler->display->display_options['defaults']['use_more_always'] = FALSE;
+$handler->display->display_options['use_more_always'] = TRUE;
+$handler->display->display_options['defaults']['use_more_text'] = FALSE;
+$handler->display->display_options['use_more_text'] = 'More debates';
+$handler->display->display_options['link_url'] = 'debates';
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'debate' => 'debate',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  'und' => 'und',
+);
+$handler->display->display_options['filters']['language']['group'] = 1;
+/* Filter criterion: Content: Status (field_status) */
+$handler->display->display_options['filters']['field_status_tid']['id'] = 'field_status_tid';
+$handler->display->display_options['filters']['field_status_tid']['table'] = 'field_data_field_status';
+$handler->display->display_options['filters']['field_status_tid']['field'] = 'field_status_tid';
+$handler->display->display_options['filters']['field_status_tid']['value'] = array(
+  537 => '537',
+  538 => '538',
+);
+$handler->display->display_options['filters']['field_status_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_status_tid']['vocabulary'] = 'debate_status';
+
+/* Display: Latest */
+$handler = $view->new_display('block', 'Latest', 'latest');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'teaser-fullwidth';
+$handler->display->display_options['display_description'] = 'show Upcoming + Open';
+$handler->display->display_options['defaults']['use_more'] = FALSE;
+$handler->display->display_options['use_more'] = TRUE;
+$handler->display->display_options['defaults']['use_more_always'] = FALSE;
+$handler->display->display_options['defaults']['use_more_always'] = FALSE;
+$handler->display->display_options['use_more_always'] = TRUE;
+$handler->display->display_options['defaults']['use_more_text'] = FALSE;
+$handler->display->display_options['use_more_text'] = 'More debates';
+$handler->display->display_options['defaults']['link_display'] = FALSE;
+$handler->display->display_options['link_display'] = 'custom_url';
+$handler->display->display_options['link_url'] = 'debates';
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '2';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
+$handler->display->display_options['style_options']['uses_fields'] = TRUE;
+$handler->display->display_options['style_options']['interval'] = '15000';
+$handler->display->display_options['style_options']['navigation'] = 0;
+$handler->display->display_options['style_options']['indicators'] = 1;
+$handler->display->display_options['style_options']['pause'] = 1;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'node';
+$handler->display->display_options['row_options']['links'] = FALSE;
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+
+/* Display: Past */
+$handler = $view->new_display('block', 'Past', 'past');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Recently closed';
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'teaser-fullwidth view-grid-4';
+$handler->display->display_options['defaults']['use_more'] = FALSE;
+$handler->display->display_options['use_more'] = TRUE;
+$handler->display->display_options['defaults']['use_more_always'] = FALSE;
+$handler->display->display_options['defaults']['use_more_always'] = FALSE;
+$handler->display->display_options['use_more_always'] = TRUE;
+$handler->display->display_options['defaults']['use_more_text'] = FALSE;
+$handler->display->display_options['use_more_text'] = 'More debates';
+$handler->display->display_options['link_url'] = 'debates';
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '4';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Content: Created year */
+$handler->display->display_options['arguments']['created_year']['id'] = 'created_year';
+$handler->display->display_options['arguments']['created_year']['table'] = 'node';
+$handler->display->display_options['arguments']['created_year']['field'] = 'created_year';
+$handler->display->display_options['arguments']['created_year']['default_argument_type'] = 'date';
+$handler->display->display_options['arguments']['created_year']['default_argument_skip_url'] = TRUE;
+$handler->display->display_options['arguments']['created_year']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['created_year']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['created_year']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'debate' => 'debate',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  'und' => 'und',
+);
+$handler->display->display_options['filters']['language']['group'] = 1;
+/* Filter criterion: Content: Status (field_status) */
+$handler->display->display_options['filters']['field_status_tid']['id'] = 'field_status_tid';
+$handler->display->display_options['filters']['field_status_tid']['table'] = 'field_data_field_status';
+$handler->display->display_options['filters']['field_status_tid']['field'] = 'field_status_tid';
+$handler->display->display_options['filters']['field_status_tid']['value'] = array(
+  539 => '539',
+);
+$handler->display->display_options['filters']['field_status_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_status_tid']['vocabulary'] = 'debate_status';
+
+/* Display: Archives */
+$handler = $view->new_display('page', 'Archives', 'page');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-grid-2';
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'date_views_pager';
+$handler->display->display_options['pager']['options']['link_format'] = 'clean';
+$handler->display->display_options['pager']['options']['skip_empty_pages'] = 0;
+$handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Entity: Rendered entity */
+$handler->display->display_options['header']['entity']['id'] = 'entity';
+$handler->display->display_options['header']['entity']['table'] = 'entity__global';
+$handler->display->display_options['header']['entity']['field'] = 'entity';
+$handler->display->display_options['header']['entity']['empty'] = TRUE;
+$handler->display->display_options['header']['entity']['entity_id'] = '63181';
+$handler->display->display_options['header']['entity']['bypass_access'] = 0;
+/* Header: Global: Result summary */
+$handler->display->display_options['header']['result']['id'] = 'result';
+$handler->display->display_options['header']['result']['table'] = 'views';
+$handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = '<span class="badge count">@total</span> discussions';
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Date: Date (node) */
+$handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+$handler->display->display_options['arguments']['date_argument']['table'] = 'node';
+$handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+$handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+$handler->display->display_options['arguments']['date_argument']['title_enable'] = TRUE;
+$handler->display->display_options['arguments']['date_argument']['title'] = '%1 discussions archives';
+$handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+$handler->display->display_options['arguments']['date_argument']['year_range'] = '-7:+2';
+$handler->display->display_options['arguments']['date_argument']['granularity'] = 'year';
+$handler->display->display_options['arguments']['date_argument']['granularity_reset'] = 0;
+$handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+  'field_data_field_date.field_date_value' => 'field_data_field_date.field_date_value',
+);
+$handler->display->display_options['path'] = 'debates/%';
+$handler->display->display_options['menu']['title'] = 'Archives';
+$handler->display->display_options['menu']['weight'] = '0';
+$handler->display->display_options['menu']['name'] = 'landportal-menu';
+$handler->display->display_options['menu']['context'] = 0;
+$handler->display->display_options['menu']['context_only_inline'] = 0;
 
