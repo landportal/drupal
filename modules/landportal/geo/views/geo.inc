@@ -15,9 +15,9 @@ $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'time';
-$handler->display->display_options['cache']['results_lifespan'] = '21600';
+$handler->display->display_options['cache']['results_lifespan'] = '300';
 $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-$handler->display->display_options['cache']['output_lifespan'] = '21600';
+$handler->display->display_options['cache']['output_lifespan'] = '-1';
 $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -277,61 +277,4 @@ $handler->display->display_options['filters']['field_iso3_value']['id'] = 'field
 $handler->display->display_options['filters']['field_iso3_value']['table'] = 'field_data_field_iso3';
 $handler->display->display_options['filters']['field_iso3_value']['field'] = 'field_iso3_value';
 $handler->display->display_options['filters']['field_iso3_value']['operator'] = 'not empty';
-
-/* Display: RefId top regions */
-$handler = $view->new_display('entityreference', 'RefId top regions', 'refid_top');
-$handler->display->display_options['defaults']['title'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'none';
-$handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['defaults']['style_plugin'] = FALSE;
-$handler->display->display_options['style_plugin'] = 'entityreference_style';
-$handler->display->display_options['style_options']['grouping'] = array(
-  0 => array(
-    'field' => 'name_field',
-    'rendered' => 1,
-    'rendered_strip' => 0,
-  ),
-);
-$handler->display->display_options['style_options']['search_fields'] = array(
-  'name' => 'name',
-  'tid' => 0,
-  'tid_1' => 0,
-  'name_field' => 0,
-);
-$handler->display->display_options['defaults']['style_options'] = FALSE;
-$handler->display->display_options['defaults']['row_plugin'] = FALSE;
-$handler->display->display_options['row_plugin'] = 'entityreference_fields';
-$handler->display->display_options['defaults']['row_options'] = FALSE;
-$handler->display->display_options['defaults']['sorts'] = FALSE;
-/* Sort criterion: Taxonomy term: Name */
-$handler->display->display_options['sorts']['name']['id'] = 'name';
-$handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['sorts']['name']['field'] = 'name';
-$handler->display->display_options['sorts']['name']['relationship'] = 'parent';
-/* Sort criterion: Taxonomy term: Weight */
-$handler->display->display_options['sorts']['weight']['id'] = 'weight';
-$handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['sorts']['weight']['field'] = 'weight';
-$handler->display->display_options['defaults']['filter_groups'] = FALSE;
-$handler->display->display_options['defaults']['filters'] = FALSE;
-/* Filter criterion: Taxonomy vocabulary: Machine name */
-$handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
-$handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
-$handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
-$handler->display->display_options['filters']['machine_name']['value'] = array(
-  'regions' => 'regions',
-);
-/* Filter criterion: Taxonomy term: Term ID */
-$handler->display->display_options['filters']['tid_raw']['id'] = 'tid_raw';
-$handler->display->display_options['filters']['tid_raw']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['filters']['tid_raw']['field'] = 'tid_raw';
-$handler->display->display_options['filters']['tid_raw']['relationship'] = 'parent';
-$handler->display->display_options['filters']['tid_raw']['operator'] = 'empty';
-$handler->display->display_options['filters']['tid_raw']['value']['value'] = '0';
-/* Filter criterion: Taxonomy term: Term ID */
-$handler->display->display_options['filters']['tid_raw_1']['id'] = 'tid_raw_1';
-$handler->display->display_options['filters']['tid_raw_1']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['filters']['tid_raw_1']['field'] = 'tid_raw';
-$handler->display->display_options['filters']['tid_raw_1']['operator'] = '!=';
-$handler->display->display_options['filters']['tid_raw_1']['value']['value'] = '1542';
 
