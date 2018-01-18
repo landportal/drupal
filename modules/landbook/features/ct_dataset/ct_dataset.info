@@ -6,6 +6,7 @@ version = 7.x-2.5-rc2
 dependencies[] = blockreference
 dependencies[] = ctools
 dependencies[] = entityreference
+dependencies[] = entityreference_view_widget
 dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = field_collection_fieldset

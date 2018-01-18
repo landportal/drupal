@@ -74,12 +74,13 @@ function landportal_geo_menu() {
 function landportal_geo_taxonomy_term_view($term, $view_mode, $langcode) {
   if ($term->vocabulary_machine_name != 'regions' || $view_mode != 'full')
     return;
-  menu_tree_set_path('landportal-menu', 'node/14170'); // @todo should be something with alias + lang
-  drupal_add_js(array(
-    'iso3'   => $term->field_iso3[LANGUAGE_NONE][0]['value'],
-  ), 'setting');
+  $iso3 = @$term->field_iso3[LANGUAGE_NONE][0]['value'];
+  if ($iso3) {
+    drupal_add_js(array(
+      'iso3'   => $term->field_iso3[LANGUAGE_NONE][0]['value'],
+    ), 'setting');
+  }
 }
-
 
 function landportal_geo_entity_view_alter(&$build, $type) {
   if ($type != 'taxonomy_term') return;

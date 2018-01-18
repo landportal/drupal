@@ -106,7 +106,7 @@ function ct_events_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -248,7 +248,7 @@ function ct_events_field_default_field_instances() {
           'text' => 'Download [file:name]',
         ),
         'type' => 'file_download_link',
-        'weight' => 4,
+        'weight' => 8,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -459,7 +459,7 @@ function ct_events_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -534,7 +534,7 @@ function ct_events_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 5,
+        'weight' => 9,
       ),
       'listing' => array(
         'label' => 'above',

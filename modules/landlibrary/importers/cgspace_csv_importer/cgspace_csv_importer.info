@@ -1,9 +1,9 @@
-name = FAOdocrep - CSV importer
-description = Import FAO Document Repository Land Library Resources from a CSV file
+name = CGSpace - CSV importer
+description = Import CGSpace Land Library Resources from a CSV file
 core = 7.x
 package = Landlibrary Importers
 version = 7.x-2.5
-project = faodocrep_csv_importer
+project = cgspace_csv_importer
 dependencies[] = ctools
 dependencies[] = feeds
 dependencies[] = feeds_tamper

@@ -57,6 +57,7 @@ function ct_events_field_group_info() {
       2 => 'field_link',
       3 => 'field_orgref',
       4 => 'field_noderef',
+      5 => 'group_topics_regions',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -515,7 +516,7 @@ function ct_events_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'event';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_aside';
   $field_group->data = array(
     'label' => '',
     'weight' => '5',

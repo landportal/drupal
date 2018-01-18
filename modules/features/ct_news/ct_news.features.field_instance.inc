@@ -173,7 +173,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 20,
+        'weight' => 22,
       ),
       'listing' => array(
         'label' => 'above',
@@ -391,7 +391,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 19,
+        'weight' => 21,
       ),
       'listing' => array(
         'label' => 'above',
@@ -443,7 +443,7 @@ function ct_news_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'listing' => array(
         'label' => 'above',
