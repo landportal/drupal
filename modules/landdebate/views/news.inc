@@ -204,11 +204,6 @@ $handler->display->display_options['pager']['options']['items_per_page'] = '3';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['defaults']['sorts'] = FALSE;
-/* Sort criterion: Content: Promoted to front page */
-$handler->display->display_options['sorts']['promote']['id'] = 'promote';
-$handler->display->display_options['sorts']['promote']['table'] = 'node';
-$handler->display->display_options['sorts']['promote']['field'] = 'promote';
-$handler->display->display_options['sorts']['promote']['order'] = 'DESC';
 /* Sort criterion: Content: Sticky */
 $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
 $handler->display->display_options['sorts']['sticky']['table'] = 'node';
@@ -244,6 +239,11 @@ $handler->display->display_options['filters']['language']['value'] = array(
   'und' => 'und',
 );
 $handler->display->display_options['filters']['language']['group'] = 1;
+/* Filter criterion: Content: Promoted to front page */
+$handler->display->display_options['filters']['promote']['id'] = 'promote';
+$handler->display->display_options['filters']['promote']['table'] = 'node';
+$handler->display->display_options['filters']['promote']['field'] = 'promote';
+$handler->display->display_options['filters']['promote']['value'] = '1';
 
 /* Display: All */
 $handler = $view->new_display('block', 'All', 'all');

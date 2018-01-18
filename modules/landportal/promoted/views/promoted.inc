@@ -45,11 +45,6 @@ $handler->display->display_options['fields']['rendered_entity']['link_to_entity'
 $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
 $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
 $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
-/* Sort criterion: Content: Promoted to front page */
-$handler->display->display_options['sorts']['promote']['id'] = 'promote';
-$handler->display->display_options['sorts']['promote']['table'] = 'node';
-$handler->display->display_options['sorts']['promote']['field'] = 'promote';
-$handler->display->display_options['sorts']['promote']['order'] = 'DESC';
 /* Sort criterion: Content: Post date */
 $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -226,6 +221,12 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'thematic_narrative' => 'thematic_narrative',
 );
 $handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Content: Promoted to front page */
+$handler->display->display_options['filters']['promote']['id'] = 'promote';
+$handler->display->display_options['filters']['promote']['table'] = 'node';
+$handler->display->display_options['filters']['promote']['field'] = 'promote';
+$handler->display->display_options['filters']['promote']['value'] = '1';
+$handler->display->display_options['filters']['promote']['group'] = 1;
 /* Filter criterion: Content: Nid */
 $handler->display->display_options['filters']['nid']['id'] = 'nid';
 $handler->display->display_options['filters']['nid']['table'] = 'node';
@@ -418,6 +419,12 @@ $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_
 $handler->display->display_options['fields']['body']['settings'] = array(
   'trim_length' => '200',
 );
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Field: Date -  start date (field_date) */
+$handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
+$handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
+$handler->display->display_options['sorts']['field_date_value']['field'] = 'field_date_value';
+$handler->display->display_options['sorts']['field_date_value']['order'] = 'DESC';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Content: Promoted to front page */
