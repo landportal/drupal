@@ -363,7 +363,7 @@ if (!$lastid) $lastid = $row->nid;
 if ($lastid != $row->nid) return true;
 $vis = entity_load(\'field_collection_item\', array($row->rendered_entity));
 $v = $vis[$row->rendered_entity]->field_view_coda[\'und\'][0];
-return !in_array($v[\'type\'], array(\'charts\', \'pie\', \'spider\'));
+return !in_array($v[\'type\'], array(\'charts\'));
 ';
 
 /* Display: Page */
