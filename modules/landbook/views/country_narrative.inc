@@ -18,6 +18,8 @@ $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+$handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
 $handler->display->display_options['pager']['type'] = 'full';
 $handler->display->display_options['pager']['options']['items_per_page'] = '12';
 $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -453,23 +455,5 @@ $handler->display->display_options['filters']['parent']['table'] = 'taxonomy_ter
 $handler->display->display_options['filters']['parent']['field'] = 'parent';
 $handler->display->display_options['filters']['parent']['relationship'] = 'parent';
 $handler->display->display_options['filters']['parent']['value']['value'] = '0';
-/* Filter criterion: Taxonomy term: Term (reference filter) */
-$handler->display->display_options['filters']['tid_entityreference_filter']['id'] = 'tid_entityreference_filter';
-$handler->display->display_options['filters']['tid_entityreference_filter']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['filters']['tid_entityreference_filter']['field'] = 'tid_entityreference_filter';
-$handler->display->display_options['filters']['tid_entityreference_filter']['relationship'] = 'parent';
-$handler->display->display_options['filters']['tid_entityreference_filter']['exposed'] = TRUE;
-$handler->display->display_options['filters']['tid_entityreference_filter']['expose']['operator_id'] = 'tid_entityreference_filter_op';
-$handler->display->display_options['filters']['tid_entityreference_filter']['expose']['label'] = 'Region';
-$handler->display->display_options['filters']['tid_entityreference_filter']['expose']['operator'] = 'tid_entityreference_filter_op';
-$handler->display->display_options['filters']['tid_entityreference_filter']['expose']['identifier'] = 'region';
-$handler->display->display_options['filters']['tid_entityreference_filter']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  111903911 => 0,
-  111903910 => 0,
-  30037204 => 0,
-);
-$handler->display->display_options['filters']['tid_entityreference_filter']['reference_display'] = 'geo:refid_top';
 $handler->display->display_options['path'] = 'countries';
 
