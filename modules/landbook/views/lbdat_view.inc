@@ -80,6 +80,7 @@ $handler->display->display_options['fields']['tid_1']['field'] = 'tid';
 $handler->display->display_options['fields']['tid_1']['relationship'] = 'reverse_field_dataset_taxonomy_term';
 $handler->display->display_options['fields']['tid_1']['group_type'] = 'count';
 $handler->display->display_options['fields']['tid_1']['label'] = 'Indicators';
+$handler->display->display_options['fields']['tid_1']['element_wrapper_class'] = 'small font-grey';
 $handler->display->display_options['fields']['tid_1']['separator'] = '';
 /* Field: Taxonomy term: Updated date */
 $handler->display->display_options['fields']['changed']['id'] = 'changed';
@@ -133,7 +134,7 @@ $handler->display->display_options['filters']['name']['expose']['remember_roles'
   111903910 => 0,
   30037204 => 0,
 );
-/* Filter criterion: Field: Organization (field_orgref) (reference filter) */
+/* Filter criterion: Field: Partners (field_orgref) (reference filter) */
 $handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['id'] = 'field_orgref_target_id_entityreference_filter';
 $handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['table'] = 'field_data_field_orgref';
 $handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['field'] = 'field_orgref_target_id_entityreference_filter';

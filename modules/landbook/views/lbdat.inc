@@ -469,6 +469,7 @@ $handler->display->display_options['defaults']['style_plugin'] = FALSE;
 $handler->display->display_options['style_plugin'] = 'jump_menu';
 $handler->display->display_options['style_options']['hide'] = TRUE;
 $handler->display->display_options['style_options']['path'] = 'path';
+$handler->display->display_options['style_options']['choose'] = '- Choose an indicator -';
 $handler->display->display_options['style_options']['inline'] = FALSE;
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
