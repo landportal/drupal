@@ -221,6 +221,7 @@ $handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Content: Organization type (field_organization_type) */
 $handler->display->display_options['arguments']['field_organization_type_tid']['id'] = 'field_organization_type_tid';
