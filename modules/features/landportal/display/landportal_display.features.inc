@@ -49,11 +49,11 @@ function landportal_display_image_default_styles() {
   $styles['full_width'] = array(
     'label' => 'Full width',
     'effects' => array(
-      11 => array(
+      2 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 1200,
-          'height' => 400,
+          'width' => 1400,
+          'height' => 300,
         ),
         'weight' => 1,
       ),
@@ -64,7 +64,7 @@ function landportal_display_image_default_styles() {
   $styles['full_width_featured'] = array(
     'label' => 'Full width featured (1200x400)',
     'effects' => array(
-      9 => array(
+      1 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 1200,
