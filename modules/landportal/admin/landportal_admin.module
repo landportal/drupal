@@ -4,6 +4,23 @@
  */
 include_once 'landportal_admin.views_default.inc';
 
+function lpadm_update_block($module, $delta, $fields) {
+  return db_merge('block')
+    ->fields($fields)
+    ->key(array(
+      'module' => $module,
+      'delta'  => $delta,
+      'theme'  => 'lpbs'))
+    ->execute();
+
+  /* return db_update('block') */
+  /*   ->fields($fields) */
+  /*   ->condition('module', $module) */
+  /*   ->condition('delta',  $delta) */
+  /*   ->condition('theme',  'lpbs') */
+  /*   ->execute(); */
+}
+
 /**
  * Add a 'Manage' tab to Admin > structure > taxonomy page
  */
