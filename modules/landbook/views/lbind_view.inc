@@ -39,6 +39,7 @@ $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
 /* Relationship: Taxonomy term: Catalog (field_dataset) */
 $handler->display->display_options['relationships']['field_dataset_tid']['id'] = 'field_dataset_tid';
 $handler->display->display_options['relationships']['field_dataset_tid']['table'] = 'field_data_field_dataset';

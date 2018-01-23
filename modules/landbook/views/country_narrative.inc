@@ -381,6 +381,7 @@ $handler->display->display_options['header']['entity']['table'] = 'entity__globa
 $handler->display->display_options['header']['entity']['field'] = 'entity';
 $handler->display->display_options['header']['entity']['entity_id'] = '14170';
 $handler->display->display_options['header']['entity']['bypass_access'] = 0;
+$handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
 /* Header: Global: Result summary */
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
