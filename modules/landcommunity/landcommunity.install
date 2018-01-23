@@ -8,10 +8,50 @@
  * Author: Jules <jules@ker.bz>
  */
 
+/** Land Portal 2.5.1
+ *  do stuff
+ */
+function landcommunity_update_7201() {
+  module_load_include('module', 'landportal_admin', 'landportal_admin');
+  lpadm_update_block('views', 'org_ref-jump_types', array(
+    'status' => 1,
+    'region' => 'content',
+    'weight' => 10,
+    'visibility' => BLOCK_VISIBILITY_LISTED,
+    'pages' => 'organizations',
+  ));
+  lpadm_update_block('views', 'org_ref-jump_themes', array(
+    'status' => 1,
+    'region' => 'content',
+    'weight' => 11,
+    'visibility' => BLOCK_VISIBILITY_LISTED,
+    'pages' => 'organizations',
+  ));
+  lpadm_update_block('views', 'org_ref-jump_geo', array(
+    'status' => 1,
+    'region' => 'content',
+    'weight' => 12,
+    'visibility' => BLOCK_VISIBILITY_LISTED,
+    'pages' => 'organizations',
+  ));
+
+  module_load_include('inc', 'menu_position', 'menu_position.admin');
+  module_load_include('module', 'landportal_menus', 'landportal_menus');
+  $vocs = array();
+  $vocabs = taxonomy_get_vocabularies();
+  foreach($vocabs as $v) {
+    $vocs[$v->machine_name] = $v->vid;
+  }
+  landportal_menus_bind_terms('organization_types', 'organizations', $vocs, 'en');
+  landportal_menus_bind_terms('organization_types', 'organizations', $vocs, 'fr');
+  landportal_menus_bind_terms('organization_types', 'organizations', $vocs, 'es');
+  landportal_menus_bind_terms('organization_types', 'organizations', $vocs, 'pt');
+
+}
+
 /** Land Portal 2.5 new UX
  *  add views
  */
-
 /* Fill out regions terms with iso code from countries taxonomy */
 function landcommunity_update_7200() {
   $blocks = array();

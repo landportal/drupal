@@ -100,6 +100,15 @@ $handler->display->display_options['filters']['type']['relationship'] = 'nid';
 $handler->display->display_options['filters']['type']['value'] = array(
   'organization' => 'organization',
 );
+/* Filter criterion: Content: Language */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['relationship'] = 'nid';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  'und' => 'und',
+);
 
 /* Display: Tree */
 $handler = $view->new_display('block', 'Tree', 'tree');
@@ -126,7 +135,7 @@ $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 
 /* Display: By types */
-$handler = $view->new_display('block', 'By types', 'jump_type');
+$handler = $view->new_display('block', 'By types', 'jump_types');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'By type of organization';
 $handler->display->display_options['link_url'] = 'organizations';
@@ -190,7 +199,7 @@ $handler->display->display_options['fields']['path']['field'] = 'path';
 $handler->display->display_options['fields']['path']['label'] = '';
 $handler->display->display_options['fields']['path']['exclude'] = TRUE;
 $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['path']['alter']['text'] = 'issues/[tid]/organization';
+$handler->display->display_options['fields']['path']['alter']['text'] = 'countries/[tid]/organization';
 $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
 /* Field: Taxonomy term: Name */
 $handler->display->display_options['fields']['name']['id'] = 'name';
@@ -261,7 +270,7 @@ $handler->display->display_options['fields']['path']['field'] = 'path';
 $handler->display->display_options['fields']['path']['label'] = '';
 $handler->display->display_options['fields']['path']['exclude'] = TRUE;
 $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['path']['alter']['text'] = 'countries/[tid]/organization';
+$handler->display->display_options['fields']['path']['alter']['text'] = 'issues/[tid]/organization';
 $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
 /* Field: Taxonomy term: Name */
 $handler->display->display_options['fields']['name']['id'] = 'name';
