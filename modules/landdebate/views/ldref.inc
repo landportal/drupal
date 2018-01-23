@@ -64,7 +64,6 @@ $handler->display->display_options['fields']['nid']['relationship'] = 'nid';
 $handler->display->display_options['fields']['nid']['group_type'] = 'count_distinct';
 $handler->display->display_options['fields']['nid']['label'] = '';
 $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['nid']['separator'] = '';
 $handler->display->display_options['fields']['nid']['prefix'] = '(';
 $handler->display->display_options['fields']['nid']['suffix'] = ')';
 /* Sort criterion: Taxonomy term: Name */
@@ -81,11 +80,38 @@ $handler->display->display_options['arguments']['type']['summary']['number_of_re
 $handler->display->display_options['arguments']['type']['summary']['format'] = 'default_summary';
 $handler->display->display_options['arguments']['type']['summary_options']['items_per_page'] = '25';
 $handler->display->display_options['arguments']['type']['limit'] = '0';
+/* Contextual filter: Field: Geographical focus (field_geographical_focus) */
+$handler->display->display_options['arguments']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
+$handler->display->display_options['arguments']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
+$handler->display->display_options['arguments']['field_geographical_focus_tid']['field'] = 'field_geographical_focus_tid';
+$handler->display->display_options['arguments']['field_geographical_focus_tid']['relationship'] = 'nid';
+$handler->display->display_options['arguments']['field_geographical_focus_tid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['field_geographical_focus_tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['field_geographical_focus_tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['field_geographical_focus_tid']['summary_options']['items_per_page'] = '25';
+/* Contextual filter: Field: Themes (field_related_themes) */
+$handler->display->display_options['arguments']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
+$handler->display->display_options['arguments']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
+$handler->display->display_options['arguments']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
+$handler->display->display_options['arguments']['field_related_themes_tid']['relationship'] = 'nid';
+$handler->display->display_options['arguments']['field_related_themes_tid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['field_related_themes_tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['field_related_themes_tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['field_related_themes_tid']['summary_options']['items_per_page'] = '25';
+/* Contextual filter: Content: Organization type (field_organization_type) */
+$handler->display->display_options['arguments']['field_organization_type_tid']['id'] = 'field_organization_type_tid';
+$handler->display->display_options['arguments']['field_organization_type_tid']['table'] = 'field_data_field_organization_type';
+$handler->display->display_options['arguments']['field_organization_type_tid']['field'] = 'field_organization_type_tid';
+$handler->display->display_options['arguments']['field_organization_type_tid']['relationship'] = 'nid';
+$handler->display->display_options['arguments']['field_organization_type_tid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['field_organization_type_tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['field_organization_type_tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['field_organization_type_tid']['summary_options']['items_per_page'] = '25';
 /* Filter criterion: Content: Language */
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
-$handler->display->display_options['filters']['language']['relationship'] = 'reverse_field_related_themes_node';
+$handler->display->display_options['filters']['language']['relationship'] = 'nid';
 $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',
@@ -137,7 +163,9 @@ $handler->display->display_options['style_plugin'] = 'entityreference_style';
 $handler->display->display_options['style_options']['search_fields'] = array(
   'tid' => 'tid',
   'name' => 'name',
+  'field_iso2' => 'field_iso2',
   'field_iso3' => 'field_iso3',
+  'machine_name' => 0,
   'nid' => 0,
 );
 $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -145,13 +173,6 @@ $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'entityreference_fields';
 $handler->display->display_options['row_options']['separator'] = '';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
-$handler->display->display_options['defaults']['relationships'] = FALSE;
-/* Relationship: Taxonomy term: Content using Geographical focus */
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['id'] = 'reverse_field_geographical_focus_node';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['table'] = 'taxonomy_term_data';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['field'] = 'reverse_field_geographical_focus_node';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['label'] = 'geo';
-$handler->display->display_options['relationships']['reverse_field_geographical_focus_node']['required'] = TRUE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Taxonomy term: Term ID */
 $handler->display->display_options['fields']['tid']['id'] = 'tid';
@@ -161,6 +182,13 @@ $handler->display->display_options['fields']['tid']['label'] = '';
 $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
 $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['tid']['separator'] = '';
+/* Field: Taxonomy vocabulary: Machine name */
+$handler->display->display_options['fields']['machine_name']['id'] = 'machine_name';
+$handler->display->display_options['fields']['machine_name']['table'] = 'taxonomy_vocabulary';
+$handler->display->display_options['fields']['machine_name']['field'] = 'machine_name';
+$handler->display->display_options['fields']['machine_name']['label'] = '';
+$handler->display->display_options['fields']['machine_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['machine_name']['element_label_colon'] = FALSE;
 /* Field: Taxonomy term: Name */
 $handler->display->display_options['fields']['name']['id'] = 'name';
 $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
@@ -173,13 +201,19 @@ $handler->display->display_options['fields']['name']['element_label_colon'] = FA
 $handler->display->display_options['fields']['nid']['id'] = 'nid';
 $handler->display->display_options['fields']['nid']['table'] = 'node';
 $handler->display->display_options['fields']['nid']['field'] = 'nid';
-$handler->display->display_options['fields']['nid']['relationship'] = 'reverse_field_geographical_focus_node';
+$handler->display->display_options['fields']['nid']['relationship'] = 'nid';
 $handler->display->display_options['fields']['nid']['group_type'] = 'count_distinct';
 $handler->display->display_options['fields']['nid']['label'] = '';
 $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['nid']['separator'] = '';
 $handler->display->display_options['fields']['nid']['prefix'] = '(';
 $handler->display->display_options['fields']['nid']['suffix'] = ')';
+/* Field: Taxonomy term: ISO2 */
+$handler->display->display_options['fields']['field_iso2']['id'] = 'field_iso2';
+$handler->display->display_options['fields']['field_iso2']['table'] = 'field_data_field_iso2';
+$handler->display->display_options['fields']['field_iso2']['field'] = 'field_iso2';
+$handler->display->display_options['fields']['field_iso2']['label'] = '';
+$handler->display->display_options['fields']['field_iso2']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_iso2']['element_label_colon'] = FALSE;
 /* Field: Taxonomy term: ISO3 */
 $handler->display->display_options['fields']['field_iso3']['id'] = 'field_iso3';
 $handler->display->display_options['fields']['field_iso3']['table'] = 'field_data_field_iso3';
@@ -187,26 +221,6 @@ $handler->display->display_options['fields']['field_iso3']['field'] = 'field_iso
 $handler->display->display_options['fields']['field_iso3']['label'] = '';
 $handler->display->display_options['fields']['field_iso3']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_iso3']['element_label_colon'] = FALSE;
-$handler->display->display_options['defaults']['arguments'] = FALSE;
-/* Contextual filter: Content: Type */
-$handler->display->display_options['arguments']['type']['id'] = 'type';
-$handler->display->display_options['arguments']['type']['table'] = 'node';
-$handler->display->display_options['arguments']['type']['field'] = 'type';
-$handler->display->display_options['arguments']['type']['relationship'] = 'reverse_field_geographical_focus_node';
-$handler->display->display_options['arguments']['type']['default_argument_type'] = 'fixed';
-$handler->display->display_options['arguments']['type']['summary']['number_of_records'] = '0';
-$handler->display->display_options['arguments']['type']['summary']['format'] = 'default_summary';
-$handler->display->display_options['arguments']['type']['summary_options']['items_per_page'] = '25';
-$handler->display->display_options['arguments']['type']['limit'] = '0';
-/* Contextual filter: Field: Themes (field_related_themes) */
-$handler->display->display_options['arguments']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
-$handler->display->display_options['arguments']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
-$handler->display->display_options['arguments']['field_related_themes_tid']['field'] = 'field_related_themes_tid';
-$handler->display->display_options['arguments']['field_related_themes_tid']['relationship'] = 'reverse_field_geographical_focus_node';
-$handler->display->display_options['arguments']['field_related_themes_tid']['default_argument_type'] = 'fixed';
-$handler->display->display_options['arguments']['field_related_themes_tid']['summary']['number_of_records'] = '0';
-$handler->display->display_options['arguments']['field_related_themes_tid']['summary']['format'] = 'default_summary';
-$handler->display->display_options['arguments']['field_related_themes_tid']['summary_options']['items_per_page'] = '25';
 $handler->display->display_options['defaults']['filter_groups'] = FALSE;
 $handler->display->display_options['defaults']['filters'] = FALSE;
 /* Filter criterion: Taxonomy vocabulary: Machine name */
@@ -220,7 +234,7 @@ $handler->display->display_options['filters']['machine_name']['value'] = array(
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
-$handler->display->display_options['filters']['language']['relationship'] = 'reverse_field_geographical_focus_node';
+$handler->display->display_options['filters']['language']['relationship'] = 'nid';
 $handler->display->display_options['filters']['language']['value'] = array(
   '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   'und' => 'und',

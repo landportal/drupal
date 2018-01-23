@@ -645,7 +645,7 @@ $handler->display->display_options['filters']['field_related_topics_tid_entityre
   111903910 => 0,
   30037204 => 0,
 );
-$handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter']['reference_display'] = 'ldref:entityreference_1';
+$handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter']['reference_display'] = 'ldref:themes';
 $handler->display->display_options['filters']['field_related_topics_tid_entityreference_filter']['reference_arguments'] = '!2/!1';
 $handler->display->display_options['path'] = 'issues/%';
 
