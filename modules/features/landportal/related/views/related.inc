@@ -13,6 +13,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['link_display'] = 'custom_url';
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
@@ -239,19 +240,14 @@ $handler->display->display_options['filters']['type']['table'] = 'node';
 $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
   'blog_post' => 'blog_post',
-  'landbook_country' => 'landbook_country',
   'dataset' => 'dataset',
   'debate' => 'debate',
   'event' => 'event',
   'landlibrary_resource' => 'landlibrary_resource',
   'news' => 'news',
-  'organization' => 'organization',
   'page' => 'page',
-  'partners' => 'partners',
   'partners_page' => 'partners_page',
-  'project' => 'project',
   'sdgi' => 'sdgi',
-  'thematic_narrative' => 'thematic_narrative',
 );
 $handler->display->display_options['filters']['type']['exposed'] = TRUE;
 $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
@@ -265,6 +261,7 @@ $handler->display->display_options['filters']['type']['expose']['remember_roles'
   111903910 => 0,
   30037204 => 0,
 );
+$handler->display->display_options['filters']['type']['expose']['reduce'] = TRUE;
 /* Filter criterion: Content: Title */
 $handler->display->display_options['filters']['title']['id'] = 'title';
 $handler->display->display_options['filters']['title']['table'] = 'node';
@@ -286,6 +283,15 @@ $handler->display->display_options['filters']['title']['expose']['remember_roles
 $handler->display->display_options['filters']['language']['id'] = 'language';
 $handler->display->display_options['filters']['language']['table'] = 'node';
 $handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  'und' => 'und',
+  'nl' => 'nl',
+  'en' => 'en',
+  'fr' => 'fr',
+  'pt' => 'pt',
+  'ru' => 'ru',
+  'es' => 'es',
+);
 $handler->display->display_options['filters']['language']['exposed'] = TRUE;
 $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
 $handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
@@ -298,6 +304,7 @@ $handler->display->display_options['filters']['language']['expose']['remember_ro
   111903910 => 0,
   30037204 => 0,
 );
+$handler->display->display_options['filters']['language']['expose']['reduce'] = TRUE;
 /* Filter criterion: Field: Geographical focus (field_geographical_focus) */
 $handler->display->display_options['filters']['field_geographical_focus_tid']['id'] = 'field_geographical_focus_tid';
 $handler->display->display_options['filters']['field_geographical_focus_tid']['table'] = 'field_data_field_geographical_focus';
@@ -315,7 +322,9 @@ $handler->display->display_options['filters']['field_geographical_focus_tid']['e
   111903910 => 0,
   30037204 => 0,
 );
+$handler->display->display_options['filters']['field_geographical_focus_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_geographical_focus_tid']['vocabulary'] = 'regions';
+$handler->display->display_options['filters']['field_geographical_focus_tid']['error_message'] = FALSE;
 /* Filter criterion: Field: Themes (field_related_themes) */
 $handler->display->display_options['filters']['field_related_themes_tid']['id'] = 'field_related_themes_tid';
 $handler->display->display_options['filters']['field_related_themes_tid']['table'] = 'field_data_field_related_themes';
@@ -326,7 +335,6 @@ $handler->display->display_options['filters']['field_related_themes_tid']['expos
 $handler->display->display_options['filters']['field_related_themes_tid']['expose']['label'] = 'Themes';
 $handler->display->display_options['filters']['field_related_themes_tid']['expose']['operator'] = 'field_related_themes_tid_op';
 $handler->display->display_options['filters']['field_related_themes_tid']['expose']['identifier'] = 'field_related_themes_tid';
-$handler->display->display_options['filters']['field_related_themes_tid']['expose']['multiple'] = TRUE;
 $handler->display->display_options['filters']['field_related_themes_tid']['expose']['remember_roles'] = array(
   2 => '2',
   1 => 0,
@@ -354,7 +362,9 @@ $handler->display->display_options['filters']['field_related_themes_tid']['group
     'value' => '',
   ),
 );
+$handler->display->display_options['filters']['field_related_themes_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_related_themes_tid']['vocabulary'] = 'themes';
+$handler->display->display_options['filters']['field_related_themes_tid']['error_message'] = FALSE;
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
