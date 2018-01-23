@@ -695,6 +695,13 @@ function landportal_taxonomy_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
         'weight' => 2,
       ),
     ),
@@ -739,6 +746,17 @@ function landportal_taxonomy_field_default_field_instances() {
           'title_style' => 'h1',
         ),
         'type' => 'title_linked',
+        'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h1',
+        ),
+        'type' => 'title_linked',
         'weight' => 0,
       ),
     ),
@@ -774,6 +792,17 @@ function landportal_taxonomy_field_default_field_instances() {
     'description' => 'Please, enter the synonyms which should be related to this term.',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 2,
+      ),
+      'full' => array(
         'label' => 'inline',
         'module' => 'title',
         'settings' => array(

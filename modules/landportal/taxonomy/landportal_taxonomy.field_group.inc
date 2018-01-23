@@ -13,6 +13,38 @@ function landportal_taxonomy_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_header|taxonomy_term|organization_types|default';
+  $field_group->group_name = 'group_header';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'organization_types';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '0',
+    'children' => array(
+      0 => 'synonyms_synonyms',
+      1 => 'name_field',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-header field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_header|taxonomy_term|organization_types|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_header|taxonomy_term|themes|default';
   $field_group->group_name = 'group_header';
   $field_group->entity_type = 'taxonomy_term';

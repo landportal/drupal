@@ -351,7 +351,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'name' => 'Governmental institution',
     'description' => '<p>Local, provincial or national&nbsp;governmental institutions.</p>
 ',
-    'format' => 'filtered_html',
+    'format' => 'full_html',
     'weight' => 0,
     'uuid' => '36446160-b9d7-49ae-8357-03819751e8e1',
     'hweight' => 3,
@@ -367,14 +367,29 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'format' => NULL,
         ),
       ),
+      'und' => array(
+        0 => array(
+          'value' => 'Governmental institution',
+          'format' => NULL,
+        ),
+      ),
     ),
     'description_field' => array(
       'en' => array(
         0 => array(
           'value' => '<p>Local, provincial or national&nbsp;governmental institutions.</p>
 ',
+          'summary' => NULL,
+          'format' => 'full_html',
+          'safe_summary' => '',
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => '<p>Local, provincial or national&nbsp;governmental institutions.</p>
+',
           'summary' => '',
-          'format' => 'filtered_html',
+          'format' => 'full_html',
           'safe_summary' => '',
         ),
       ),
