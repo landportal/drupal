@@ -14,6 +14,7 @@ function landportal_promoted_default_fe_block_settings() {
 
   $export['views-promoted-country'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'promoted-country',
     'i18n_block_language' => array(),
@@ -33,7 +34,7 @@ function landportal_promoted_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 3,
+        'weight' => 8,
       ),
       'seven' => array(
         'region' => 'content',
@@ -48,6 +49,7 @@ function landportal_promoted_default_fe_block_settings() {
 
   $export['views-promoted-data'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'promoted-data',
     'i18n_block_language' => array(),
@@ -67,7 +69,7 @@ function landportal_promoted_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 9,
+        'weight' => 14,
       ),
       'seven' => array(
         'region' => '',
@@ -82,6 +84,7 @@ function landportal_promoted_default_fe_block_settings() {
 
   $export['views-promoted-discussions'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'promoted-discussions',
     'i18n_block_language' => array(),
@@ -101,7 +104,7 @@ function landportal_promoted_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 7,
+        'weight' => 12,
       ),
       'seven' => array(
         'region' => '',
@@ -116,6 +119,7 @@ function landportal_promoted_default_fe_block_settings() {
 
   $export['views-promoted-events'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'promoted-events',
     'i18n_block_language' => array(),
@@ -135,7 +139,7 @@ function landportal_promoted_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 8,
+        'weight' => 13,
       ),
       'seven' => array(
         'region' => '',
@@ -150,6 +154,7 @@ function landportal_promoted_default_fe_block_settings() {
 
   $export['views-promoted-front'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'promoted-front',
     'i18n_block_language' => array(),
@@ -184,6 +189,7 @@ function landportal_promoted_default_fe_block_settings() {
 
   $export['views-promoted-library'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'promoted-library',
     'i18n_block_language' => array(),
@@ -203,7 +209,7 @@ function landportal_promoted_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 12,
+        'weight' => 17,
       ),
       'seven' => array(
         'region' => 'content',
@@ -218,6 +224,7 @@ function landportal_promoted_default_fe_block_settings() {
 
   $export['views-promoted-projects'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'promoted-projects',
     'i18n_block_language' => array(),
@@ -252,6 +259,7 @@ function landportal_promoted_default_fe_block_settings() {
 
   $export['views-promoted-thematic'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'promoted-thematic',
     'i18n_block_language' => array(),
@@ -271,7 +279,7 @@ function landportal_promoted_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 6,
+        'weight' => 11,
       ),
       'seven' => array(
         'region' => 'content',
