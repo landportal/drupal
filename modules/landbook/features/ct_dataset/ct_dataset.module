@@ -94,7 +94,7 @@ function ct_dataset_preprocess(&$variables, $hook) {
   // Add short cut to edit dataset taxonomy term
   if ($hook == 'page' && (user_access('edit any dataset content') || user_access('administer nodes'))) {
     $variables['tabs']['#primary'][] = array(
-      '#markup' => '<li><a href=""><span class="glyphicon glyphicon-book"/></a></li>',
+      '#markup' => '<li><a href="/node/' . $dsid . '/edit"><span class="glyphicon glyphicon-book"/></a></li>',
     );
   }
 }
