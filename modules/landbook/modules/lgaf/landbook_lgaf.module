@@ -30,7 +30,7 @@ function landbook_lgaf_block_view($delta = '') {
   $block = array(
     'subject' => t('Land Governance Assessment Framework (LGAF)'),
     'content' => array(
-      '#markup' => '<p>Note: Some Indicators might have multiple values (e.g. Green-Orange), which might refers to different localities or categories of people. For more information please refers to specific country reports and to the methodology made available by the original data source/provider: <a href="http://go.worldbank.org/21M7S7AZO0" target="_blank" class="ext">The Land GovernanceAssessment Framework (LGAF) website of the World Bank<span class="ext"><span class="element-invisible"> (link is external)</span></span></a></p>',
+      '#markup' => '<p>Note: Some Indicators might have multiple values (e.g. Green-Orange), which might refers to different localities or categories of people. For more information please refers to specific country reports and to the methodology made available by the original data source/provider: <a href="http://go.worldbank.org/21M7S7AZO0" target="_blank" class="ext">The Land Governance Assessment Framework (LGAF) website of the World Bank<span class="ext"><span class="element-invisible"> (link is external)</span></span></a></p>',
       '#attached' => array(
         'library' => array(
           array('landbook_view_coda', 'lbvis.lgaf')
