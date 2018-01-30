@@ -46,6 +46,109 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'suelourbano_rdf_xml_importer-blank_source_3-rewrite';
+$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
+$feeds_tamper->source = 'Blank source 3';
+$feeds_tamper->plugin_id = 'rewrite';
+$feeds_tamper->settings = array(
+  'text' => '[xpathparser:2]',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Rewrite';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'suelourbano_rdf_xml_importer-blank_source_4-copy';
+$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
+$feeds_tamper->source = 'Blank source 4';
+$feeds_tamper->plugin_id = 'copy';
+$feeds_tamper->settings = array(
+  'to_from' => 'from',
+  'source' => 'xpathparser:23',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Copy source value';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'suelourbano_rdf_xml_importer-blank_source_4-efq_finder';
+$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
+$feeds_tamper->source = 'Blank source 4';
+$feeds_tamper->plugin_id = 'efq_finder';
+$feeds_tamper->settings = array(
+  'update' => 'Update',
+  'entity_type' => 'taxonomy_term',
+  'bundle' => 'regions',
+  'field' => 'field_iso3',
+  'column' => 'value',
+  'property' => FALSE,
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Get the Entity TID from ISO3 code';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'suelourbano_rdf_xml_importer-blank_source_5-copy';
+$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
+$feeds_tamper->source = 'Blank source 5';
+$feeds_tamper->plugin_id = 'copy';
+$feeds_tamper->settings = array(
+  'to_from' => 'from',
+  'source' => 'xpathparser:23',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Copy source value';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'suelourbano_rdf_xml_importer-blank_source_5-efq_finder';
+$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
+$feeds_tamper->source = 'Blank source 5';
+$feeds_tamper->plugin_id = 'efq_finder';
+$feeds_tamper->settings = array(
+  'update' => 'Update',
+  'entity_type' => 'taxonomy_term',
+  'bundle' => 'regions',
+  'field' => 'field_area_code_un_m_49',
+  'column' => 'value',
+  'property' => FALSE,
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Get the Entity TID from UN M49 code';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'suelourbano_rdf_xml_importer-blank_source_6-copy';
+$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
+$feeds_tamper->source = 'Blank source 6';
+$feeds_tamper->plugin_id = 'copy';
+$feeds_tamper->settings = array(
+  'to_from' => 'from',
+  'source' => 'xpathparser:0',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Copy source value';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_11-efq_finder';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
 $feeds_tamper->source = 'xpathparser:11';
@@ -63,9 +166,8 @@ $feeds_tamper->description = 'Get the Entity TID from ISO3 code	';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
-
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_11-php';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -94,9 +196,8 @@ $feeds_tamper->description = 'Get Term Name from Term ID (TID)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
-
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_11-unique';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -155,6 +256,7 @@ $feeds_tamper->settings = array(
       'target' => 'Land Policy & Legislation',
     ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'suelourbano.org temas to LP OverArching Categories';
@@ -274,9 +376,26 @@ $feeds_tamper->settings = array(
       'target' => 'land policies, land law',
     ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'suelourbano.org temas to LandVoc Concepts';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_15-trim';
+$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:15';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -288,7 +407,7 @@ $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
 $feeds_tamper->source = 'xpathparser:15';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 2;
+$feeds_tamper->weight = 3;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -361,7 +480,7 @@ $feeds_tamper->description = 'Trim';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_17-feeds_tamper_conditional';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -378,7 +497,7 @@ $feeds_tamper->description = 'Check that the value is "Available for download"';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_17-required';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -396,6 +515,21 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_2-rewrite';
+$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:2';
+$feeds_tamper->plugin_id = 'rewrite';
+$feeds_tamper->settings = array(
+  'text' => 'suelourbano.org:[xpathparser:2]',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Rewrite';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_21-explode';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
 $feeds_tamper->source = 'xpathparser:21';
@@ -405,7 +539,7 @@ $feeds_tamper->settings = array(
   'limit' => '',
   'real_separator' => ';',
 );
-$feeds_tamper->weight = 0;
+$feeds_tamper->weight = 1;
 $feeds_tamper->description = 'Explode (multiple values \';\' separated)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -459,9 +593,90 @@ $feeds_tamper->settings = array(
       'source' => 'Lincoln Institute of Land Policy',
       'target' => 'Lincoln Institute of Land Policy',
     ),
+    10 => array(
+      'source' => 'CEPAL; MINURVI; ONU-HABITAT',
+      'target' => 'Economic Commission for Latin America and the Caribbean; Minurvi; United Nations Human Settlements Programme',
+    ),
+    11 => array(
+      'source' => 'Congreso de la Republica de Guatemala',
+      'target' => 'Congreso de la República de Guatemala',
+    ),
+    12 => array(
+      'source' => 'Congreso Nacional Perú',
+      'target' => 'Congreso de la República del Perú',
+    ),
+    13 => array(
+      'source' => 'Congreso Nacional República Dominicana',
+      'target' => 'Congreso de la República Dominicana',
+    ),
+    14 => array(
+      'source' => 'Global Land Tools Network GLTN; ONU-HABITAT',
+      'target' => 'Global Land Tool Network;United Nations Human Settlements Programme',
+    ),
+    15 => array(
+      'source' => 'Gobierno de la República de Guatemala',
+      'target' => 'Presidencia de la República Guatemala',
+    ),
+    16 => array(
+      'source' => 'Habitat para la Humanidad',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    17 => array(
+      'source' => 'Habitat para la Humanidad Argentina',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    18 => array(
+      'source' => 'Habitat para la Humanidad Bolivia; Ciudadania; Gregoria Apaza',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    19 => array(
+      'source' => 'Habitat para la Humanidad Bolivia; Ciudadania; Gregoria Apaza',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    20 => array(
+      'source' => 'Habitat para la Humanidad El Salvador',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    21 => array(
+      'source' => 'Habitat para la Humanidad Honduras',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    22 => array(
+      'source' => 'Habitat para la Humanidad; Centro Dom Helder Câmara de Estudos e Ação Social',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    23 => array(
+      'source' => 'Habitat para la Humanidad; Cities Alliance; Federación Internacional de Sociedades de la Cruz Roja y de la Media Luna Roja; Banco Interamericano de Desarrollo BID',
+      'target' => 'Habitat for Humanity International (HFHI);Cities Alliance;Inter-American Development Bank',
+    ),
+    24 => array(
+      'source' => 'Ministério das Cidades Brasil',
+      'target' => 'Brazil Ministry of Cities',
+    ),
+    25 => array(
+      'source' => 'Ministério das Cidades Brasil; Conselho das Cidades Brasil',
+      'target' => 'Brazil Ministry of Cities',
+    ),
+    26 => array(
+      'source' => 'Observatório das Remoções',
+      'target' => 'OBSERVATÓRIO DAS REMOÇÕES',
+    ),
+    27 => array(
+      'source' => 'ONU-HABITAT',
+      'target' => 'United Nations Human Settlements Programme',
+    ),
+    28 => array(
+      'source' => 'Presidência da República Brasil',
+      'target' => 'Government of Brazil',
+    ),
+    29 => array(
+      'source' => 'World Bank',
+      'target' => 'World Bank Group',
+    ),
   ),
+  'full' => 1,
 );
-$feeds_tamper->weight = 2;
+$feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Find replace multiple (suelourbano.org Corporate authors)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -495,7 +710,7 @@ $feeds_tamper->settings = array(
   'mask' => '',
   'side' => 'trim',
 );
-$feeds_tamper->weight = 1;
+$feeds_tamper->weight = 2;
 $feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -512,7 +727,7 @@ $feeds_tamper->settings = array(
   'limit' => '',
   'real_separator' => ';',
 );
-$feeds_tamper->weight = 11;
+$feeds_tamper->weight = 1;
 $feeds_tamper->description = 'Explode (multiple values \';\' separated)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -547,28 +762,189 @@ $feeds_tamper->settings = array(
       'target' => 'UK Department for International Development',
     ),
     5 => array(
-      'source' => 'World Bank',
-      'target' => 'World Bank Group',
-    ),
-    6 => array(
-      'source' => 'International Federation of Surveyors \\(FIG\\)',
-      'target' => 'International Federation of Surveyors (FIG)',
-    ),
-    7 => array(
       'source' => 'Banco Interamericano de Desarrollo - BID',
       'target' => 'Inter-American Development Bank',
     ),
-    8 => array(
+    6 => array(
       'source' => 'ONU-Habitat',
       'target' => 'United Nations Human Settlements Programme',
     ),
-    9 => array(
+    7 => array(
       'source' => 'Lincoln Institute of Land Policy',
       'target' => 'Lincoln Institute of Land Policy',
     ),
+    8 => array(
+      'source' => 'CEPAL; MINURVI; ONU-HABITAT',
+      'target' => 'Economic Commission for Latin America and the Caribbean; Minurvi; United Nations Human Settlements Programme',
+    ),
+    9 => array(
+      'source' => 'Banco Interamericano de Desarrollo',
+      'target' => 'Inter-American Development Bank',
+    ),
+    10 => array(
+      'source' => 'Centro de Direitos Econômicos e Sociais',
+      'target' => 'Centro de Direitos Econômicos e Sociais',
+    ),
+    11 => array(
+      'source' => 'Centro de Direitos Econômicos e Sociais; Observatorio das Metrópoles; Forum Estadual de Reforma Urbana',
+      'target' => 'Centro de Direitos Econômicos e Sociais;',
+    ),
+    12 => array(
+      'source' => 'Cities Alliance; Secretaria Nacional de Programas Urbanos; Ministro das Cidades Brasil',
+      'target' => 'Cities Alliance;Government of Brazil',
+    ),
+    13 => array(
+      'source' => 'Comissão Pastoral da Terra Brasil',
+      'target' => 'Comissão Pastoral da Terra',
+    ),
+    14 => array(
+      'source' => 'Congreso de la Republica de Guatemala',
+      'target' => 'Congreso de la República de Guatemala',
+    ),
+    15 => array(
+      'source' => 'Congreso Nacional Perú',
+      'target' => 'Congreso de la República del Perú',
+    ),
+    16 => array(
+      'source' => 'Congreso Nacional República Dominicana',
+      'target' => 'Congreso de la República Dominicana',
+    ),
+    17 => array(
+      'source' => 'Earthscan',
+      'target' => 'Routledge Environment & Sustainability',
+    ),
+    18 => array(
+      'source' => 'Faculdade de Arquitetura e Urbanismo Universidade de São Paulo',
+      'target' => 'Universidade de São Paulo',
+    ),
+    19 => array(
+      'source' => 'Fundação de Direitos Humanos Bento Rubião',
+      'target' => 'Fundação Bento Rubião',
+    ),
+    20 => array(
+      'source' => 'Global Land Tools Network GLTN; ONU-HABITAT',
+      'target' => 'Global Land Tool Network;United Nations Human Settlements Programme',
+    ),
+    21 => array(
+      'source' => 'Gobierno de la República de Guatemala',
+      'target' => 'Presidencia de la República Guatemala',
+    ),
+    22 => array(
+      'source' => 'Governo Federal Brasil; Ministério da Justiça - Secretaria de Reforma do Judiciário; Programa das Nações Unidas para o Desenvolvimento PNUD',
+      'target' => 'Government of Brazil;United Nations Development Programme',
+    ),
+    23 => array(
+      'source' => 'Habitat for Humanity Haiti; Architecture for Humanity',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    24 => array(
+      'source' => 'Habitat para Humanidade Brasil',
+      'target' => 'Habitat para Humanidade Brasil',
+    ),
+    25 => array(
+      'source' => 'Habitat para la Humanidad',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    26 => array(
+      'source' => 'Habitat para la Humanidad Argentina',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    27 => array(
+      'source' => 'Habitat para la Humanidad Bolivia',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    28 => array(
+      'source' => 'Habitat para la Humanidad Bolivia; Ciudadania; Gregoria Apaza',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    29 => array(
+      'source' => 'Habitat para la Humanidad El Salvador',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    30 => array(
+      'source' => 'Habitat para la Humanidad Honduras',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    31 => array(
+      'source' => 'Habitat para la Humanidad; Centro Dom Helder Câmara de Estudos e Ação Social',
+      'target' => 'Habitat for Humanity International (HFHI)',
+    ),
+    32 => array(
+      'source' => 'Habitat para la Humanidad; Cities Alliance; Federación Internacional de Sociedades de la Cruz Roja y de la Media Luna Roja; Banco Interamericano de Desarrollo BID',
+      'target' => 'Habitat for Humanity International (HFHI);Cities Alliance;Inter-American Development Bank',
+    ),
+    33 => array(
+      'source' => 'Habitat para la Humanidad; Global Land Tools Network GLTN; ONU-HABITAT',
+      'target' => 'Global Land Tool Network;United Nations Human Settlements Programme;Habitat for Humanity International (HFHI)',
+    ),
+    34 => array(
+      'source' => 'Habitat para la Humanidad; Land Portal Foundation',
+      'target' => 'Habitat for Humanity International (HFHI);Land Portal Foundation',
+    ),
+    35 => array(
+      'source' => 'Instituto Brasileiro de Direito Urbanístico',
+      'target' => 'Instituto Brasileiro de Direito Urbanístico',
+    ),
+    36 => array(
+      'source' => 'Integração',
+      'target' => 'Rede Interação',
+    ),
+    37 => array(
+      'source' => 'IPPUR – Observatório das Cidades',
+      'target' => 'OBSERVATÓRIO DAS METRÓPOLES',
+    ),
+    38 => array(
+      'source' => 'Laboratório de Habitação e Assentamentos Humanos; Faculdade de Arquitetura e Urbanismo Universidade de São Paulo; Lincoln Institute of Land Policy; Caixa Econômica Federal',
+      'target' => 'Universidade de São Paulo;Lincoln Institute of Land Policy',
+    ),
+    39 => array(
+      'source' => 'Land Use Policy; Elsevier',
+      'target' => 'Elsevier',
+    ),
+    40 => array(
+      'source' => 'Letra Capital; Observatório das Cidades',
+      'target' => 'OBSERVATÓRIO DAS METRÓPOLES',
+    ),
+    41 => array(
+      'source' => 'Ministério das Cidades Brasil',
+      'target' => 'Brazil Ministry of Cities',
+    ),
+    42 => array(
+      'source' => 'Ministério das Cidades Brasil; Cities Alliance',
+      'target' => 'Brazil Ministry of Cities;Cities Alliance',
+    ),
+    43 => array(
+      'source' => 'Ministério das Cidades Brasil; Conselho das Cidades Brasil',
+      'target' => 'Brazil Ministry of Cities',
+    ),
+    44 => array(
+      'source' => 'Observatório das Metrópoles',
+      'target' => 'OBSERVATÓRIO DAS METRÓPOLES',
+    ),
+    45 => array(
+      'source' => 'ONU-HABITAT',
+      'target' => 'United Nations Human Settlements Programme',
+    ),
+    46 => array(
+      'source' => 'Presidência da República Brasil',
+      'target' => 'Government of Brazil',
+    ),
+    47 => array(
+      'source' => 'Terra de Direitos',
+      'target' => 'Terra de Dereitos',
+    ),
+    48 => array(
+      'source' => 'World Bank',
+      'target' => 'World Bank Group',
+    ),
+    49 => array(
+      'source' => 'World Bank; International Federation of Surveyors FIG',
+      'target' => 'World Bank Group;International Federation of Surveyors (FIG)',
+    ),
   ),
+  'full' => 1,
 );
-$feeds_tamper->weight = 14;
+$feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Find replace multiple (suelourbano.org Publishers)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -584,13 +960,33 @@ $feeds_tamper->settings = array(
   'mask' => '',
   'side' => 'trim',
 );
-$feeds_tamper->weight = 12;
+$feeds_tamper->weight = 2;
 $feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_8-efq_finder';
+$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:8';
+$feeds_tamper->plugin_id = 'efq_finder';
+$feeds_tamper->settings = array(
+  'update' => 'Update',
+  'entity_type' => 'taxonomy_term',
+  'bundle' => 'languages',
+  'field' => 'field_language_code_iso_639_1',
+  'column' => 'value',
+  'property' => FALSE,
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Get the Entity TID from ISO 639-1 code';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_8-find_replace_multiple';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -622,7 +1018,7 @@ $feeds_tamper->description = 'Language replace (ISO 639-1:2002)';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -642,9 +1038,8 @@ $feeds_tamper->description = 'Caja de Herramientas (guías, manuales, etc.) - Ma
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
-
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_2';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -665,7 +1060,7 @@ $feeds_tamper->description = 'Fotos, imágenes, Infográfico - Multimedia';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_3';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -686,7 +1081,7 @@ $feeds_tamper->description = 'Investigaciones y estudios - Reports & Research';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_4';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -707,7 +1102,7 @@ $feeds_tamper->description = 'Sistematizaciones y documentación de experiencias
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_5';
 $feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
@@ -727,7 +1122,52 @@ $feeds_tamper->description = 'Videos - Multimedia';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_multiple';
+$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:9';
+$feeds_tamper->plugin_id = 'find_replace_multiple';
+$feeds_tamper->settings = array(
+  'pairs' => array(
+    0 => array(
+      'source' => 'Caja de Herramientas (guías, manuales, etc.)',
+      'target' => 'Manuals & Guidelines',
+    ),
+    1 => array(
+      'source' => 'Fotos, imágenes, Infográfico',
+      'target' => 'Multimedia',
+    ),
+    2 => array(
+      'source' => 'Investigaciones y estudios',
+      'target' => 'Reports & Research',
+    ),
+    3 => array(
+      'source' => 'Sistematizaciones y documentación de experiencias',
+      'target' => 'Reports & Research',
+    ),
+    4 => array(
+      'source' => 'Videos',
+      'target' => 'Multimedia',
+    ),
+    5 => array(
+      'source' => 'Legislación',
+      'target' => 'Legislation',
+    ),
+    6 => array(
+      'source' => 'Estadísticas',
+      'target' => 'Reports & Research',
+    ),
+  ),
+  'full' => 1,
+);
+$feeds_tamper->weight = 5;
+$feeds_tamper->description = 'Find replace multiple';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
 
 
+/******/
   return $export;
 }
