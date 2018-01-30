@@ -147,69 +147,6 @@ $feeds_tamper->description = 'Copy source value';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_11-efq_finder';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:11';
-$feeds_tamper->plugin_id = 'efq_finder';
-$feeds_tamper->settings = array(
-  'update' => 'Update',
-  'entity_type' => 'taxonomy_term',
-  'bundle' => 'regions',
-  'field' => 'field_iso3',
-  'column' => 'value',
-  'property' => FALSE,
-);
-$feeds_tamper->weight = 18;
-$feeds_tamper->description = 'Get the Entity TID from ISO3 code	';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_11-php';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:11';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => '// field could be an item or an array
-if ($field != null) {
-    if (is_array($field)){
-       $terms = array();
-       foreach ($field as $f) {
-          $term = taxonomy_term_load($f);
-          $name = $term->name;
-          array_push($terms, $name);
-       }
-       return $terms;
-    } else {
-      $term = taxonomy_term_load($field);
-      $name = $term->name;
-      return $name;
-    }
-}',
-);
-$feeds_tamper->weight = 19;
-$feeds_tamper->description = 'Get Term Name from Term ID (TID)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_11-unique';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:11';
-$feeds_tamper->plugin_id = 'unique';
-$feeds_tamper->settings = array();
-$feeds_tamper->weight = 24;
-$feeds_tamper->description = 'Unique';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_12-explode';
@@ -272,59 +209,6 @@ $feeds_tamper->source = 'xpathparser:12';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
 $feeds_tamper->weight = 2;
-$feeds_tamper->description = 'Unique';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_14-find_replace_multiple';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:14';
-$feeds_tamper->plugin_id = 'find_replace_multiple';
-$feeds_tamper->settings = array(
-  'pairs' => array(
-    0 => array(
-      'source' => 'CivilSociety-Donors',
-      'target' => 'Land Stakeholders & Institutions',
-    ),
-    1 => array(
-      'source' => 'Conversion-FoodSecurity',
-      'target' => 'Land & Food Security',
-    ),
-    2 => array(
-      'source' => 'Dispossession-grabbing',
-      'target' => 'Commercial Pressures on Land',
-    ),
-    3 => array(
-      'source' => 'Environment',
-      'target' => 'Land, Climate change & Environment',
-    ),
-    4 => array(
-      'source' => 'FDI',
-      'target' => 'Commercial Pressures on Land',
-    ),
-    5 => array(
-      'source' => 'MigrationLabour',
-      'target' => 'Urbanization',
-    ),
-  ),
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'MLRF keyrwords to LP Themes';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_14-unique';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:14';
-$feeds_tamper->plugin_id = 'unique';
-$feeds_tamper->settings = array();
-$feeds_tamper->weight = 1;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -447,23 +331,6 @@ $feeds_tamper->description = 'One author per line';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_16-php';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:16';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => '$str_remove_comma_and_space = str_replace("; ", "\\n", $field); // remove comma and space
-$str_remove_comma  = str_replace(";", "\\n", $str_remove_comma_and_space ); // remove just comma
-return $str_remove_comma;',
-);
-$feeds_tamper->weight = 4;
-$feeds_tamper->description = 'Process string to have one author ([first name] [laste name]) per line';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_16-trim';
@@ -476,39 +343,6 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 2;
 $feeds_tamper->description = 'Trim';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_17-feeds_tamper_conditional';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:17';
-$feeds_tamper->plugin_id = 'feeds_tamper_conditional';
-$feeds_tamper->settings = array(
-  'conditional_field' => 'xpathparser:17',
-  'operator' => 'equals',
-  'value' => 'Available for download',
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Check that the value is "Available for download"';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_17-required';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:17';
-$feeds_tamper->plugin_id = 'required';
-$feeds_tamper->settings = array(
-  'invert' => 0,
-  'log' => 0,
-);
-$feeds_tamper->weight = 1;
-$feeds_tamper->description = 'This field is required (it only has value when the string is "Available for download")';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -678,24 +512,6 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Find replace multiple (suelourbano.org Corporate authors)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_21-php';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:21';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => 'if ($field != null) {
-   watchdog(\'suelourbano_rdf_xml_importer\', "end=".var_export($field, TRUE), array(), WATCHDOG_DEBUG);
-   return $field;
-}',
-);
-$feeds_tamper->weight = 3;
-$feeds_tamper->description = 'Execute php code';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -982,143 +798,6 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 1;
 $feeds_tamper->description = 'Get the Entity TID from ISO 639-1 code';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_8-find_replace_multiple';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:8';
-$feeds_tamper->plugin_id = 'find_replace_multiple';
-$feeds_tamper->settings = array(
-  'pairs' => array(
-    0 => array(
-      'source' => 'en',
-      'target' => 'English',
-    ),
-    1 => array(
-      'source' => 'es',
-      'target' => 'Español',
-    ),
-    2 => array(
-      'source' => 'fr',
-      'target' => 'Français',
-    ),
-    3 => array(
-      'source' => 'pt',
-      'target' => 'Português',
-    ),
-  ),
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Language replace (ISO 639-1:2002)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:9';
-$feeds_tamper->plugin_id = 'find_replace';
-$feeds_tamper->settings = array(
-  'find' => 'Caja de Herramientas (guías, manuales, etc.)',
-  'replace' => 'Manuals & Guidelines',
-  'case_sensitive' => 1,
-  'word_boundaries' => 1,
-  'whole' => 1,
-  'regex' => TRUE,
-  'regex_find' => '/^Caja de Herramientas \\(guías, manuales, etc\\.\\)$/u',
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Caja de Herramientas (guías, manuales, etc.) - Manuals & Guidelines';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_2';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:9';
-$feeds_tamper->plugin_id = 'find_replace';
-$feeds_tamper->settings = array(
-  'find' => 'Fotos, imágenes, Infográfico',
-  'replace' => 'Multimedia',
-  'case_sensitive' => 1,
-  'word_boundaries' => 1,
-  'whole' => 1,
-  'regex' => TRUE,
-  'regex_find' => '/^Fotos, imágenes, Infográfico$/u',
-);
-$feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Fotos, imágenes, Infográfico - Multimedia';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_3';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:9';
-$feeds_tamper->plugin_id = 'find_replace';
-$feeds_tamper->settings = array(
-  'find' => 'Investigaciones y estudios',
-  'replace' => 'Reports & Research',
-  'case_sensitive' => 1,
-  'word_boundaries' => 1,
-  'whole' => 1,
-  'regex' => TRUE,
-  'regex_find' => '/^Investigaciones y estudios$/u',
-);
-$feeds_tamper->weight = 2;
-$feeds_tamper->description = 'Investigaciones y estudios - Reports & Research';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_4';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:9';
-$feeds_tamper->plugin_id = 'find_replace';
-$feeds_tamper->settings = array(
-  'find' => 'Sistematizaciones y documentación de experiencias',
-  'replace' => 'Reports & Research',
-  'case_sensitive' => 1,
-  'word_boundaries' => 1,
-  'whole' => 1,
-  'regex' => TRUE,
-  'regex_find' => '/^Sistematizaciones y documentación de experiencias$/u',
-);
-$feeds_tamper->weight = 3;
-$feeds_tamper->description = 'Sistematizaciones y documentación de experiencias - Reports & Research';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'suelourbano_rdf_xml_importer-xpathparser_9-find_replace_5';
-$feeds_tamper->importer = 'suelourbano_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:9';
-$feeds_tamper->plugin_id = 'find_replace';
-$feeds_tamper->settings = array(
-  'find' => 'Video',
-  'replace' => 'Multimedia',
-  'case_sensitive' => 1,
-  'word_boundaries' => 1,
-  'whole' => 1,
-  'regex' => TRUE,
-  'regex_find' => '/^Video$/u',
-);
-$feeds_tamper->weight = 4;
-$feeds_tamper->description = 'Videos - Multimedia';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
