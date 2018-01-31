@@ -526,6 +526,7 @@ print render($rterm);
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -687,6 +688,7 @@ print render($rterm);
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 /* Contextual filter: Taxonomy term: Term ID */
 $handler->display->display_options['arguments']['tid']['id'] = 'tid';
