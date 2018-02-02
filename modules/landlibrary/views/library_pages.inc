@@ -41,6 +41,7 @@ $handler->display->display_options['header']['view']['inherit_arguments'] = TRUE
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
 /* No results behavior: Global: Text area */
 $handler->display->display_options['empty']['area']['id'] = 'area';
 $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -152,6 +153,7 @@ $handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
 $handler->display->display_options['defaults']['arguments'] = FALSE;
 $handler->display->display_options['path'] = 'library/browse/all';
 
@@ -169,6 +171,7 @@ $handler->display->display_options['header']['view']['inherit_arguments'] = TRUE
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
 $handler->display->display_options['path'] = 'library/browse/by/%';
 
 /* Display: Theme */
@@ -299,5 +302,5 @@ $handler->display->display_options['header']['view']['inherit_arguments'] = TRUE
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
 $handler->display->display_options['path'] = 'library/browse/regions/%';
-
