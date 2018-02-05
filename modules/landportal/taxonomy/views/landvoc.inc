@@ -304,7 +304,7 @@ $handler->display->display_options['filters']['vid']['value'] = array(
 );
 
 /* Display: Concepts + Themes + Categories */
-$handler = $view->new_display('entityreference', 'Concepts + Themes + Categories', 'entityreference_2');
+$handler = $view->new_display('entityreference', 'Concepts + Themes + Categories', 'ref_themes_oa_concepts');
 $handler->display->display_options['defaults']['title'] = FALSE;
 $handler->display->display_options['title'] = 'Ref Concepts + Themes + Categories';
 $handler->display->display_options['pager']['type'] = 'none';
