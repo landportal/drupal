@@ -35,7 +35,7 @@ function ct_thematic_narrative_field_default_field_bases() {
         ),
         'view' => array(
           'args' => array(),
-          'display_name' => 'ref_themes_oa',
+          'display_name' => 'ref_themes_oa_concepts',
           'view_name' => 'landvoc',
         ),
       ),

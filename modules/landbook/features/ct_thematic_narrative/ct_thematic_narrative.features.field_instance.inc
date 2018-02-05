@@ -310,7 +310,7 @@ function ct_thematic_narrative_field_default_field_instances() {
     'default_value' => NULL,
     'default_value_function' => '',
     'deleted' => 0,
-    'description' => 'Select a Landvoc Theme or Overarching Category this narrative is about.',
+    'description' => 'Select a LandVoc Concept, Theme or Overarching Category this narrative is about.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -632,7 +632,7 @@ function ct_thematic_narrative_field_default_field_instances() {
   t('Land Book Indicators');
   t('Narrative');
   t('Picture');
-  t('Select a Landvoc Theme or Overarching Category this narrative is about.');
+  t('Select a LandVoc Concept, Theme or Overarching Category this narrative is about.');
   t('Source');
   t('The narrative (title)');
   t('The subtitle of the narrative');
