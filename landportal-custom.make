@@ -27,10 +27,11 @@ projects:
     patch:
       - "https://github.com/landportal/drupal/files/766584/change-dc-to-dct.txt"
       - "https://github.com/landportal/drupal/files/1147954/no-callback-in-RDFa.txt"
-  entityreference_view_widget:
-    patch:
+# This path is now available under /usr/local/web/patches/ on LP servers
+#  entityreference_view_widget:
+#    patch:
 #      - "https://www.drupal.org/files/issues/entityreference_view_widget_suffix-2524296-2.patch"
-      - "https://www.drupal.org/files/issues/checkbox_titles_missing-2524296-13.patch"
+#      - "https://www.drupal.org/files/issues/checkbox_titles_missing-2524296-13.patch"
   feeds_crawler:
     version: "2.x-dev"
   feeds_fetcher_directory:
