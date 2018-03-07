@@ -135,25 +135,6 @@ $handler->display->display_options['fields']['language']['field'] = 'language';
 $handler->display->display_options['fields']['language']['label'] = '';
 $handler->display->display_options['fields']['language']['exclude'] = TRUE;
 $handler->display->display_options['fields']['language']['element_label_colon'] = FALSE;
-/* Field: Global: PHP */
-$handler->display->display_options['fields']['php']['id'] = 'php';
-$handler->display->display_options['fields']['php']['table'] = 'views';
-$handler->display->display_options['fields']['php']['field'] = 'php';
-$handler->display->display_options['fields']['php']['label'] = '';
-$handler->display->display_options['fields']['php']['exclude'] = TRUE;
-$handler->display->display_options['fields']['php']['alter']['max_length'] = '80';
-$handler->display->display_options['fields']['php']['alter']['word_boundary'] = FALSE;
-$handler->display->display_options['fields']['php']['alter']['trim'] = TRUE;
-$handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['php']['use_php_setup'] = 0;
-$handler->display->display_options['fields']['php']['php_value'] = '$url = drupal_get_path_alias(\'node/\'.$data->nid, $row->language);
-if ($row->language && $row->language != \'en\') {
-$url = $row->language . \'/\' . $url;
-}
-return url($url);';
-$handler->display->display_options['fields']['php']['php_output'] = '<?php echo $value; ?>';
-$handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
-$handler->display->display_options['fields']['php']['php_click_sortable'] = '';
 /* Field: Field: Picture */
 $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
 $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -169,9 +150,6 @@ $handler->display->display_options['fields']['field_image']['settings'] = array(
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
 $handler->display->display_options['fields']['title']['field'] = 'title';
-$handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-$handler->display->display_options['fields']['title']['alter']['text'] = '[title]<br/>
-<small>[php]</small>';
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
 /* Field: Field: Geographical focus */
