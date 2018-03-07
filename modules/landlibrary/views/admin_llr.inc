@@ -434,7 +434,7 @@ $handler->display->display_options['fields']['field_doc_people']['id'] = 'field_
 $handler->display->display_options['fields']['field_doc_people']['table'] = 'field_data_field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['field'] = 'field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['exclude'] = TRUE;
-/* Field: Field: Organization */
+/* Field: Field: Source */
 $handler->display->display_options['fields']['field_orgref']['id'] = 'field_orgref';
 $handler->display->display_options['fields']['field_orgref']['table'] = 'field_data_field_orgref';
 $handler->display->display_options['fields']['field_orgref']['field'] = 'field_orgref';
@@ -536,7 +536,7 @@ $handler->display->display_options['fields']['field_duration']['id'] = 'field_du
 $handler->display->display_options['fields']['field_duration']['table'] = 'field_data_field_duration';
 $handler->display->display_options['fields']['field_duration']['field'] = 'field_duration';
 $handler->display->display_options['fields']['field_duration']['exclude'] = TRUE;
-/* Field: Field: License */
+/* Field: Field: License of the resource */
 $handler->display->display_options['fields']['field_doc_licencing']['id'] = 'field_doc_licencing';
 $handler->display->display_options['fields']['field_doc_licencing']['table'] = 'field_data_field_doc_licencing';
 $handler->display->display_options['fields']['field_doc_licencing']['field'] = 'field_doc_licencing';
@@ -1194,3 +1194,4 @@ $handler->display->display_options['filters']['uid']['expose']['remember_roles']
   30037204 => 0,
 );
 $handler->display->display_options['path'] = 'admin/content/library';
+
