@@ -79,6 +79,5 @@ features[variable][] = pathauto_node_page_pattern
 features[variable][] = pathauto_node_page_pt_pattern
 features[variable][] = pathauto_node_page_und_pattern
 features[variable][] = xmlsitemap_settings_node_page
-features_exclude[dependencies][entityreference_view_widget] = entityreference_view_widget
 features_exclude[dependencies][landportal_multilingual] = landportal_multilingual
 project status url = https://github.com/landportal/drupal

@@ -85,7 +85,6 @@ features[variable][] = pathauto_node_news_pattern
 features[variable][] = pathauto_node_news_pt_pattern
 features[variable][] = pathauto_node_news_und_pattern
 features[variable][] = xmlsitemap_settings_node_news
-features_exclude[dependencies][entityreference_view_widget] = entityreference_view_widget
 features_exclude[dependencies][landlibrary_resource] = landlibrary_resource
 features_exclude[dependencies][landportal_related] = landportal_related
 features_exclude[field_instance][node-news-field_noderef] = node-news-field_noderef
