@@ -328,7 +328,8 @@ $handler->display->display_options['arguments']['date_argument']['default_action
 $handler->display->display_options['arguments']['date_argument']['title_enable'] = TRUE;
 $handler->display->display_options['arguments']['date_argument']['title'] = '%1 discussions archives';
 $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
-$handler->display->display_options['arguments']['date_argument']['year_range'] = '2011:+0';
+$handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['date_argument']['year_range'] = '-7:+2';
 $handler->display->display_options['arguments']['date_argument']['granularity'] = 'year';
 $handler->display->display_options['arguments']['date_argument']['granularity_reset'] = 0;
 $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(

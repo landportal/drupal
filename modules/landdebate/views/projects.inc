@@ -38,7 +38,6 @@ $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FAL
 $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'node';
 $handler->display->display_options['sorts']['created']['field'] = 'created';
-$handler->display->display_options['sorts']['created']['order'] = 'DESC';
 $handler->display->display_options['sorts']['created']['expose']['label'] = 'Post date';
 /* Filter criterion: Content: Type */
 $handler->display->display_options['filters']['type']['id'] = 'type';
@@ -47,11 +46,6 @@ $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
   'partners' => 'partners',
 );
-/* Filter criterion: Content: Promoted to front page */
-$handler->display->display_options['filters']['promote']['id'] = 'promote';
-$handler->display->display_options['filters']['promote']['table'] = 'node';
-$handler->display->display_options['filters']['promote']['field'] = 'promote';
-$handler->display->display_options['filters']['promote']['value'] = '1';
 
 /* Display: Promoted */
 $handler = $view->new_display('block', 'Promoted', 'promoted');
