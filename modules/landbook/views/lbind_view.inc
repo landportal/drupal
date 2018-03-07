@@ -39,7 +39,6 @@ $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['header']['result']['id'] = 'result';
 $handler->display->display_options['header']['result']['table'] = 'views';
 $handler->display->display_options['header']['result']['field'] = 'result';
-$handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of <span class="badge">@total</span>';
 /* Relationship: Taxonomy term: Catalog (field_dataset) */
 $handler->display->display_options['relationships']['field_dataset_tid']['id'] = 'field_dataset_tid';
 $handler->display->display_options['relationships']['field_dataset_tid']['table'] = 'field_data_field_dataset';
@@ -117,7 +116,7 @@ $handler->display->display_options['filters']['name']['expose']['remember_roles'
   111903910 => 0,
   30037204 => 0,
 );
-/* Filter criterion: Field: Organization (field_orgref) (reference filter) */
+/* Filter criterion: Field: Source (field_orgref) (reference filter) */
 $handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['id'] = 'field_orgref_target_id_entityreference_filter';
 $handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['table'] = 'field_data_field_orgref';
 $handler->display->display_options['filters']['field_orgref_target_id_entityreference_filter']['field'] = 'field_orgref_target_id_entityreference_filter';
@@ -198,3 +197,4 @@ $handler->display->display_options['sorts']['changed']['id'] = 'changed';
 $handler->display->display_options['sorts']['changed']['table'] = 'term_authoring_info';
 $handler->display->display_options['sorts']['changed']['field'] = 'changed';
 $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
+
