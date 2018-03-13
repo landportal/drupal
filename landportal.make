@@ -103,7 +103,6 @@ projects:
   - rules_autotag
   - save_draft
   - search_api
-  - search_api_solr
   - services
   - session_cache
   - sparql
