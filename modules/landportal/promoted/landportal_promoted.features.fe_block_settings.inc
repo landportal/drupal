@@ -34,7 +34,7 @@ function landportal_promoted_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 8,
+        'weight' => 6,
       ),
       'seven' => array(
         'region' => 'content',
@@ -69,7 +69,7 @@ function landportal_promoted_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 14,
+        'weight' => 16,
       ),
       'seven' => array(
         'region' => '',
@@ -139,7 +139,7 @@ function landportal_promoted_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'seven' => array(
         'region' => '',
@@ -209,7 +209,7 @@ function landportal_promoted_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 17,
+        'weight' => 20,
       ),
       'seven' => array(
         'region' => 'content',
@@ -279,7 +279,7 @@ function landportal_promoted_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'seven' => array(
         'region' => 'content',
