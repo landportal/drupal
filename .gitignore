@@ -5,6 +5,7 @@
 /*config.php
 /files
 /private
+/tmp
 
 # Ignore dev files
 .sass-cache/
