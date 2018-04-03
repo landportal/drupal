@@ -18,6 +18,7 @@ function landlibrary_search_apachesolr_environments() {
   $environment->service_class = '';
   $environment->conf = array(
     'apachesolr_direct_commit' => 1,
+    'apachesolr_last_optimize' => 1522664840,
     'apachesolr_read_only' => '0',
     'apachesolr_search_changed_boost' => '0:0',
     'apachesolr_search_comment_boost' => '0:0',
