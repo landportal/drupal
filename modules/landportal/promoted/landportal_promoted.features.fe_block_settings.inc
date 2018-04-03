@@ -209,7 +209,7 @@ function landportal_promoted_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lpbs',
-        'weight' => 20,
+        'weight' => 21,
       ),
       'seven' => array(
         'region' => 'content',
