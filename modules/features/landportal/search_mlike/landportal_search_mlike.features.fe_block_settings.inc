@@ -13,7 +13,7 @@ function landportal_search_mlike_default_fe_block_settings() {
   $export['version'] = '2.0';
 
   $export['apachesolr_search-search_form_mlike_search'] = array(
-    'cache' => -1,
+    'cache' => 4,
     'css_class' => '',
     'custom' => 0,
     'delta' => 'search_form_mlike_search',
