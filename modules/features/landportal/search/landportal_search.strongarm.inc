@@ -63,7 +63,7 @@ function landportal_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'cache_flush_cache_apachesolr';
-  $strongarm->value = 0;
+  $strongarm->value = 1522767067;
   $export['cache_flush_cache_apachesolr'] = $strongarm;
 
   $strongarm = new stdClass();

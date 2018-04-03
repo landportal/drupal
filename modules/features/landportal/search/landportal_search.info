@@ -1,7 +1,7 @@
 name = Landportal Search
 core = 7.x
 package = Landportal
-version = 7.x-2.5
+version = 7.x-2.5-sp1
 dependencies[] = apachesolr
 dependencies[] = apachesolr_search
 dependencies[] = ctools
