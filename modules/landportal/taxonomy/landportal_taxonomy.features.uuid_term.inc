@@ -238,9 +238,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description' => '<p>This license only allowing others to download your works and share them with others as long as they credit you, but they can’t change them in any way or use them commercially.</p>
 ',
     'format' => 'filtered_html',
-    'weight' => 0,
+    'weight' => 5,
     'uuid' => '2a4cb06b-c34e-46b1-89f7-34d7c9f80c8c',
-    'hweight' => 4,
+    'hweight' => 6,
     'hdepth' => 0,
     'language' => 'en',
     'i18n_tsid' => 0,
@@ -351,7 +351,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'name' => 'Governmental institution',
     'description' => '<p>Local, provincial or national&nbsp;governmental institutions.</p>
 ',
-    'format' => 'full_html',
+    'format' => 'filtered_html',
     'weight' => 0,
     'uuid' => '36446160-b9d7-49ae-8357-03819751e8e1',
     'hweight' => 3,
@@ -367,29 +367,14 @@ function landportal_taxonomy_uuid_features_default_terms() {
           'format' => NULL,
         ),
       ),
-      'und' => array(
-        0 => array(
-          'value' => 'Governmental institution',
-          'format' => NULL,
-        ),
-      ),
     ),
     'description_field' => array(
       'en' => array(
         0 => array(
           'value' => '<p>Local, provincial or national&nbsp;governmental institutions.</p>
 ',
-          'summary' => NULL,
-          'format' => 'full_html',
-          'safe_summary' => '',
-        ),
-      ),
-      'und' => array(
-        0 => array(
-          'value' => '<p>Local, provincial or national&nbsp;governmental institutions.</p>
-',
           'summary' => '',
-          'format' => 'full_html',
+          'format' => 'filtered_html',
           'safe_summary' => '',
         ),
       ),
@@ -736,9 +721,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description' => '<p>This license lets others remix, tweak, and build upon your work non-commercially, as long as they credit you and license their new creations under the identical terms.</p>
 ',
     'format' => 'filtered_html',
-    'weight' => 0,
+    'weight' => 7,
     'uuid' => '64eb8fde-3d81-4468-8e9c-d481207c3700',
-    'hweight' => 5,
+    'hweight' => 8,
     'hdepth' => 0,
     'language' => 'en',
     'i18n_tsid' => 0,
@@ -827,9 +812,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'name' => 'Creative Commons Attribution',
     'description' => '<p>This license lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. Recommended for maximum dissemination and use of licensed materials.<br></p>',
     'format' => 'full_html',
-    'weight' => 0,
+    'weight' => 3,
     'uuid' => '6fc71047-4180-4b14-8239-2c70e1ac4819',
-    'hweight' => 1,
+    'hweight' => 4,
     'hdepth' => 0,
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1026,9 +1011,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description' => '<p>This license allows for redistribution, commercial and non-commercial, as long as it is passed along unchanged and in whole, with credit to you.</p>
 ',
     'format' => 'filtered_html',
-    'weight' => 0,
+    'weight' => 2,
     'uuid' => '8be61b45-c668-43ac-ae21-113219ce189d',
-    'hweight' => 2,
+    'hweight' => 3,
     'hdepth' => 0,
     'language' => 'en',
     'i18n_tsid' => 0,
@@ -1307,9 +1292,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description' => '<p>This license lets others remix, tweak, and build upon your work non-commercially, and although their new works must also acknowledge you and be non-commercial, they don’t have to license their derivative works on the same terms.</p>
 ',
     'format' => 'full_html',
-    'weight' => 0,
+    'weight' => 4,
     'uuid' => 'a5d05b88-1783-4d86-a95f-bb203d003986',
-    'hweight' => 3,
+    'hweight' => 5,
     'hdepth' => 0,
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1453,9 +1438,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description' => '<p>This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. All new works based on yours will carry the same license, so any derivatives will also allow commercial use.</p>
 ',
     'format' => 'full_html',
-    'weight' => 0,
+    'weight' => 6,
     'uuid' => 'b340e1a0-fa8d-495d-8cc7-b4370dc746eb',
-    'hweight' => 6,
+    'hweight' => 7,
     'hdepth' => 0,
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1634,9 +1619,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'description' => '<p>Copyright is automatically granted to you when you begin creating your work. You don\'t have to file anything anywhere, or publish anything online to own the copyright of your music. By choosing All Rights Reserved, you ask that other creators not use your material.</p>
 ',
     'format' => 'filtered_html',
-    'weight' => 0,
+    'weight' => 8,
     'uuid' => 'ddd7a4db-b452-466f-b8d3-2fc5042da10d',
-    'hweight' => 0,
+    'hweight' => 9,
     'hdepth' => 0,
     'language' => 'en',
     'i18n_tsid' => 0,
@@ -1690,6 +1675,71 @@ function landportal_taxonomy_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
+    'name' => 'Open Data Commons Attribution License',
+    'description' => '<p><strong>You are free:</strong></p>
+
+<ul>
+	<li><em>To Share:</em>&nbsp;To copy, distribute and use the database.</li>
+	<li><em>To Create:</em>&nbsp;To produce works from the database.</li>
+	<li><em>To Adapt:</em>&nbsp;To modify, transform and build upon the database.</li>
+</ul>
+
+<p><strong>As long as you:</strong></p>
+
+<ul>
+	<li><em>Attribute:</em>&nbsp;You must attribute any public use of the database, or works produced from the database, in the manner specified in the license. For any use or redistribution of the database, or works produced from it, you must make clear to others the license of the database and keep intact any notices on the original database.</li>
+</ul>
+',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => 'e7af274f-44cc-4a7d-885a-90e5733dea00',
+    'hweight' => 0,
+    'hdepth' => 0,
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'licences',
+    'synonyms_synonyms' => array(),
+    'field_rdflicense_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://purl.org/NET/rdflicense/odbc-by1.0',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
+    'field_acronym' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'ODC-BY',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'name_field' => array(
+      'en' => array(
+        0 => array(
+          'value' => 'Open Data Commons Attribution License',
+          'format' => NULL,
+        ),
+      ),
+      'und' => array(
+        0 => array(
+          'value' => 'Open Data Commons Attribution License',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'translations' => array(
+      'original' => NULL,
+      'data' => array(),
+    ),
+    'entity_translation_handler_id' => 'taxonomy_term-licences-eid-8463-0',
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
     'name' => 'Open Data Commons Public Domain Dedication and License',
     'description' => '<p><strong>You are free:</strong></p>
 
@@ -1708,7 +1758,7 @@ function landportal_taxonomy_uuid_features_default_terms() {
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => 'e892afd3-889d-4cda-bbe1-a1bd4789727f',
-    'hweight' => 8,
+    'hweight' => 1,
     'hdepth' => 0,
     'language' => 'und',
     'i18n_tsid' => 0,
@@ -1761,9 +1811,9 @@ function landportal_taxonomy_uuid_features_default_terms() {
 <p>You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.&nbsp;</p>
 ',
     'format' => 'filtered_html',
-    'weight' => 0,
+    'weight' => 1,
     'uuid' => 'f1616492-a163-4382-b2d3-225cce468c4e',
-    'hweight' => 7,
+    'hweight' => 2,
     'hdepth' => 0,
     'language' => 'en',
     'i18n_tsid' => 0,
