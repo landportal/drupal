@@ -14,6 +14,7 @@ function landportal_search_mlike_default_fe_block_settings() {
 
   $export['apachesolr_search-search_form_mlike_search'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'search_form_mlike_search',
     'i18n_block_language' => array(),
@@ -33,8 +34,8 @@ function landportal_search_mlike_default_fe_block_settings() {
         'weight' => 0,
       ),
       'lpbs' => array(
-        'region' => 'navigation',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'lpbs',
         'weight' => 0,
       ),

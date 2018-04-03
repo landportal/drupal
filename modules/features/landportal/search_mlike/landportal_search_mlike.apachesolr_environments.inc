@@ -14,12 +14,11 @@ function landportal_search_mlike_apachesolr_environments() {
   $environment->api_version = 1;
   $environment->env_id = 'mlike_search';
   $environment->name = 'MLIKE search';
-  $environment->url = 'http://search.landportal.info:8983/solr/mlike';
+  $environment->url = 'http://search:8983/solr/mlike';
   $environment->service_class = '';
   $environment->conf = array(
     'apachesolr_direct_commit' => 1,
     'apachesolr_read_only' => '0',
-    'apachesolr_search_facet_pages' => '',
     'apachesolr_soft_commit' => 1,
   );
   $environment->index_bundles = array(
@@ -34,8 +33,9 @@ function landportal_search_mlike_apachesolr_environments() {
       7 => 'organization',
       8 => 'page',
       9 => 'partners_page',
-      10 => 'sdgi',
-      11 => 'thematic_narrative',
+      10 => 'project',
+      11 => 'sdgi',
+      12 => 'thematic_narrative',
     ),
   );
   $export['mlike_search'] = $environment;
