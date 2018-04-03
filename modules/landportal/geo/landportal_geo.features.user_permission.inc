@@ -15,7 +15,6 @@ function landportal_geo_user_default_permissions() {
     'name' => 'delete terms in regions',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal' => 'landportal',
     ),
     'module' => 'taxonomy',
   );
@@ -35,7 +34,6 @@ function landportal_geo_user_default_permissions() {
     'name' => 'merge regions terms',
     'roles' => array(
       'administrator' => 'administrator',
-      'landportal' => 'landportal',
     ),
     'module' => 'term_merge',
   );
