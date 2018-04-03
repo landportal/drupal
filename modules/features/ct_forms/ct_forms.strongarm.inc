@@ -159,7 +159,7 @@ function ct_forms_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_webform';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['language_content_type_webform'] = $strongarm;
 
   $strongarm = new stdClass();
