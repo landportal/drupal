@@ -126,7 +126,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'header' => array(
         'label' => 'above',
@@ -354,7 +354,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'header' => array(
         'label' => 'above',
@@ -433,7 +433,7 @@ function landbook_taxonomies_field_default_field_instances() {
         'weight' => 5,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
           'links' => 0,
@@ -447,11 +447,10 @@ function landbook_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'links' => 0,
-          'use_content_language' => 1,
-          'view_mode' => 'teaser',
+          'bypass_access' => FALSE,
+          'link' => FALSE,
         ),
-        'type' => 'entityreference_entity_view',
+        'type' => 'entityreference_label',
         'weight' => 3,
       ),
       'search_index' => array(
@@ -535,7 +534,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'header' => array(
         'label' => 'hidden',
@@ -930,7 +929,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'header' => array(
         'label' => 'above',
@@ -1035,7 +1034,7 @@ function landbook_taxonomies_field_default_field_instances() {
           'show_empty_blocks' => FALSE,
         ),
         'type' => 'blockreference_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'header' => array(
         'label' => 'hidden',
