@@ -33,7 +33,8 @@ function landportal_multilingual_preprocess_links(&$variables) {
   global $LP_LANG;
 
   if ($variables['theme_hook_original'] == 'links__locale_block') {
-    $url = $variables['links']['en']['href'];
+    // if EN is available, pick that link as a reference
+    $url = isset($variables['links']['en']['href']) ? $variables['links']['en']['href'] : NULL;
     foreach($variables['links'] as $id => $link) {
       // Hide unstranslated links
       if (in_array('locale-untranslated', $link['attributes']['class'])) {
