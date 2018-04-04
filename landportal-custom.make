@@ -54,6 +54,10 @@ projects:
     version: ~
     patch:
       - "https://www.drupal.org/files/issues/validate_url-2299657-46.patch"
+  memcache:
+    version: ~
+    patch:
+      - "https://www.drupal.org/files/issues/notice_trying_to_get-2864659-4.patch"
   og_webform:
     version: "1.x-dev"
     patch:
