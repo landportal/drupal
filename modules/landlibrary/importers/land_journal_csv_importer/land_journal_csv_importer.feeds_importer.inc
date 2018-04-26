@@ -99,7 +99,7 @@ $feeds_importer->config = array(
         9 => array(
           'source' => 'Language',
           'target' => 'field_doc_language',
-          'term_search' => '0',
+          'term_search' => '1',
           'autocreate' => 0,
           'language' => 'und',
         ),
@@ -172,19 +172,20 @@ $feeds_importer->config = array(
         21 => array(
           'source' => ' ',
           'target' => 'field_geographical_focus',
-          'unique' => FALSE,
-          'language' => 'und',
+          'term_search' => '1',
+          'autocreate' => 0,
         ),
         22 => array(
           'source' => '  ',
           'target' => 'field_geographical_focus',
-          'unique' => FALSE,
-          'language' => 'und',
+          'term_search' => '1',
+          'autocreate' => 0,
         ),
         23 => array(
           'source' => 'ID',
           'target' => 'guid',
           'unique' => 1,
+          'language' => 'und',
         ),
       ),
       'update_existing' => '2',
