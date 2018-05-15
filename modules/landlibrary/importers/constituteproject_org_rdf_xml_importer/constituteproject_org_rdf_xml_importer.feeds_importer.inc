@@ -57,6 +57,8 @@ $feeds_importer->config = array(
         'xpathparser:23' => 'dc:license/text()',
         'xpathparser:24' => 'dc:coverage',
         'xpathparser:25' => '',
+        'xpathparser:26' => 'dct:identifier/text()',
+        'xpathparser:27' => 'dct:title/text()',
       ),
       'rawXML' => array(
         'xpathparser:0' => 0,
@@ -80,10 +82,14 @@ $feeds_importer->config = array(
         'xpathparser:23' => 0,
         'xpathparser:24' => 0,
         'xpathparser:25' => 0,
+        'xpathparser:26' => 0,
+        'xpathparser:27' => 0,
       ),
       'context' => '//rdf:Description',
       'exp' => array(
         'errors' => 1,
+        'tidy' => 0,
+        'tidy_encoding' => 'UTF8',
         'debug' => array(
           'context' => 0,
           'xpathparser:0' => 0,
@@ -107,6 +113,8 @@ $feeds_importer->config = array(
           'xpathparser:23' => 0,
           'xpathparser:24' => 0,
           'xpathparser:25' => 0,
+          'xpathparser:26' => 0,
+          'xpathparser:27' => 0,
         ),
       ),
       'allow_override' => 0,
@@ -122,8 +130,7 @@ $feeds_importer->config = array(
         0 => array(
           'source' => 'xpathparser:0',
           'target' => 'title',
-          'unique' => 1,
-          'language' => 'und',
+          'unique' => 0,
         ),
         1 => array(
           'source' => 'xpathparser:1',
@@ -225,6 +232,7 @@ $feeds_importer->config = array(
           'source' => 'xpathparser:20',
           'target' => 'field_image:uri',
           'file_exists' => '5',
+          'language' => 'und',
         ),
         18 => array(
           'source' => 'xpathparser:21',
@@ -253,6 +261,17 @@ $feeds_importer->config = array(
         22 => array(
           'source' => 'xpathparser:25',
           'target' => 'field_duration',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        23 => array(
+          'source' => 'xpathparser:26',
+          'target' => 'guid',
+          'unique' => 1,
+        ),
+        24 => array(
+          'source' => 'xpathparser:27',
+          'target' => 'title_field:et:und',
           'unique' => FALSE,
           'language' => 'und',
         ),

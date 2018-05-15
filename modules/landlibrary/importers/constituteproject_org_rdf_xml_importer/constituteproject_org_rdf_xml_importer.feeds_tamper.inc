@@ -14,6 +14,22 @@ $export = array();
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'constituteproject_org_rdf_xml_importer-xpathparser_20-default_value';
+$feeds_tamper->importer = 'constituteproject_org_rdf_xml_importer';
+$feeds_tamper->source = 'xpathparser:20';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => 'private://feeds/constitute-project-thumbnail.png',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set private path for thumbnail';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'constituteproject_org_rdf_xml_importer-blank_source_1-default_value';
 $feeds_tamper->importer = 'constituteproject_org_rdf_xml_importer';
 $feeds_tamper->source = 'Blank source 1';
@@ -198,22 +214,6 @@ $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
 $feeds_tamper->weight = 16;
 $feeds_tamper->description = 'Unique';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'constituteproject_org_rdf_xml_importer-xpathparser_20-default_value';
-$feeds_tamper->importer = 'constituteproject_org_rdf_xml_importer';
-$feeds_tamper->source = 'xpathparser:20';
-$feeds_tamper->plugin_id = 'default_value';
-$feeds_tamper->settings = array(
-  'default_value' => 'private://feeds/constitute-project-thumbnail.png',
-  'only_if_empty' => 0,
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Set private path for thumbnail';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
