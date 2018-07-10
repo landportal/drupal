@@ -79,3 +79,13 @@ $handler->display->display_options['path'] = 'voc/landvoc/concept';
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block_concepts');
+$handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: Result summary */
+$handler->display->display_options['header']['result']['id'] = 'result';
+$handler->display->display_options['header']['result']['table'] = 'views';
+$handler->display->display_options['header']['result']['field'] = 'result';
+/* Header: Global: Unfiltered text */
+$handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+$handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+$handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+$handler->display->display_options['header']['area_text_custom']['content'] = '</br>This is the current list of LandVoc concepts. The number between the parenthesis indicates the number of resources on the Land Portal that are tagged with the respective concept.';
