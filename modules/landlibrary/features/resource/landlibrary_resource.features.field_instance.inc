@@ -582,7 +582,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The page on the website of the publisher where the resource is presented (e.g.: http://www.gltn.net/index.php/92-resources/publications/402-un-habitat-and-gltn-youth-led-action-research-on-land-commencement-workshop-report).',
+    'description' => 'The page on the website of the publisher where the resource is presented (e.g.: https://openknowledge.worldbank.org/handle/10986/28616).',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -658,7 +658,7 @@ function landlibrary_resource_field_default_field_instances() {
     'bundle' => 'landlibrary_resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The URL to the resource on the publisher\'s website (e.g.: http://www.gltn.net/jdownloads/GLTN%20Documents/gltn_youth_led_action_workshop_report.pdf)',
+    'description' => 'The URL to the resource on the publisher\'s website (e.g.: http://opendatatoolkit.worldbank.org/docs/world-bank-open-data-support.pdf)',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -2121,7 +2121,7 @@ function landlibrary_resource_field_default_field_instances() {
   t('Resource type');
   t('Subtitle');
   t('The Land Portal identifies certain types of resources from a set list. Please <a href="/library/resource-type/">click here</a> to find the full list and a brief description of what is meant.');
-  t('The URL to the resource on the publisher\'s website (e.g.: http://www.gltn.net/jdownloads/GLTN%20Documents/gltn_youth_led_action_workshop_report.pdf)');
+  t('The URL to the resource on the publisher\'s website (e.g.: http://opendatatoolkit.worldbank.org/docs/world-bank-open-data-support.pdf)');
   t('The abstract of the resource or a description of the resource.');
   t('The cover image (ideally portrait orientation), of the resource.
 ');
@@ -2130,7 +2130,7 @@ function landlibrary_resource_field_default_field_instances() {
   t('The location of the source.');
   t('The organization or aggregator that makes the resource available. Leave this field empty unless you have a specific agreement with the Land Portal Foundation to add many resources to the Library.');
   t('The organization(s) that published the resource. This publisher is linked to an organizational profile on the Land Portal. If this publisher is not featured in the list, you will have to create a new organizational profile. In case you have just created a new publisher and it does not show up yet in this list, this is because the cache needs to be cleared. Please check back in a few minutes, apologies for the inconvenience.');
-  t('The page on the website of the publisher where the resource is presented (e.g.: http://www.gltn.net/index.php/92-resources/publications/402-un-habitat-and-gltn-youth-led-action-research-on-land-commencement-workshop-report).');
+  t('The page on the website of the publisher where the resource is presented (e.g.: https://openknowledge.worldbank.org/handle/10986/28616).');
   t('Themes');
   t('This is a hidden field storing the value of the URL of the local file (the upload field cannot be mapped to RDF properties).');
   t('Title');
