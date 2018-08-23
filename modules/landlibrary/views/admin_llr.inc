@@ -40,7 +40,6 @@ $handler->display->display_options['style_options']['columns'] = array(
   'field_orgref' => 'field_orgref',
   'field_doc_publisher' => 'field_doc_publisher',
   'field_doc_provider' => 'field_doc_provider',
-  'nothing_2' => 'nothing_2',
   'field_image' => 'field_image',
   'field_doc_type' => 'field_doc_type',
   'field_doc_language' => 'field_doc_language',
@@ -53,12 +52,12 @@ $handler->display->display_options['style_options']['columns'] = array(
   'field_doc_licencing' => 'field_doc_licencing',
   'field_doc_creation_date' => 'field_doc_creation_date',
   'field_doc_copyrights_statement' => 'field_doc_copyrights_statement',
-  'nothing_1' => 'nothing_1',
   'field_geographical_focus' => 'field_geographical_focus',
   'field_related_domains' => 'field_related_domains',
   'field_related_themes' => 'field_related_themes',
   'field_related_topics' => 'field_related_topics',
   'nothing' => 'nothing',
+  'nothing_1' => 'nothing_1',
   'changed' => 'changed',
 );
 $handler->display->display_options['style_options']['default'] = 'nid';
@@ -144,11 +143,6 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'nothing_2' => array(
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
   'field_image' => array(
     'sortable' => 0,
     'default_sort_order' => 'asc',
@@ -227,11 +221,6 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
-  'nothing_1' => array(
-    'align' => '',
-    'separator' => '',
-    'empty_column' => 0,
-  ),
   'field_geographical_focus' => array(
     'align' => '',
     'separator' => '',
@@ -253,6 +242,11 @@ $handler->display->display_options['style_options']['info'] = array(
     'empty_column' => 0,
   ),
   'nothing' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing_1' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -653,6 +647,12 @@ $handler->display->display_options['sorts']['field_doc_creation_date_value']['fi
 $handler->display->display_options['sorts']['field_doc_creation_date_value']['order'] = 'DESC';
 $handler->display->display_options['sorts']['field_doc_creation_date_value']['exposed'] = TRUE;
 $handler->display->display_options['sorts']['field_doc_creation_date_value']['expose']['label'] = 'Date of publication';
+/* Sort criterion: Content: Title */
+$handler->display->display_options['sorts']['title']['id'] = 'title';
+$handler->display->display_options['sorts']['title']['table'] = 'node';
+$handler->display->display_options['sorts']['title']['field'] = 'title';
+$handler->display->display_options['sorts']['title']['exposed'] = TRUE;
+$handler->display->display_options['sorts']['title']['expose']['label'] = 'Title';
 $handler->display->display_options['filter_groups']['groups'] = array(
   1 => 'AND',
   2 => 'AND',
@@ -1193,5 +1193,21 @@ $handler->display->display_options['filters']['uid']['expose']['remember_roles']
   111903910 => 0,
   30037204 => 0,
 );
+/* Filter criterion: Content: Publisher(s) (field_doc_publisher) */
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['id'] = 'field_doc_publisher_target_id';
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['table'] = 'field_data_field_doc_publisher';
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['field'] = 'field_doc_publisher_target_id';
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['expose']['operator_id'] = 'field_doc_publisher_target_id_op';
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['expose']['label'] = 'Publisher(s)';
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['expose']['operator'] = 'field_doc_publisher_target_id_op';
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['expose']['identifier'] = 'field_doc_publisher_target_id';
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_doc_publisher_target_id']['type'] = 'synonyms_autocomplete';
 $handler->display->display_options['path'] = 'admin/content/library';
-
