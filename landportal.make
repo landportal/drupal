@@ -114,6 +114,7 @@ projects:
   - term_authoring_info
   - term_merge
   - term_search
+  - termstatus
   - title
   - token
   - uuid
