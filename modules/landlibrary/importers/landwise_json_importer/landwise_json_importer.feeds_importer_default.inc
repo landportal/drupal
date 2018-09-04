@@ -101,8 +101,7 @@ $feeds_importer->config = array(
         3 => array(
           'source' => 'Blank source 2',
           'target' => 'title',
-          'unique' => 1,
-          'language' => 'und',
+          'unique' => 0,
         ),
         4 => array(
           'source' => 'jsonpath_parser:2',
@@ -228,6 +227,7 @@ $feeds_importer->config = array(
           'source' => 'Blank source 12',
           'target' => 'field_image:uri',
           'file_exists' => '4',
+          'language' => 'und',
         ),
         25 => array(
           'source' => 'Blank source 13',
@@ -235,8 +235,13 @@ $feeds_importer->config = array(
           'unique' => FALSE,
           'language' => 'und',
         ),
+        26 => array(
+          'source' => 'Blank source 14',
+          'target' => 'guid',
+          'unique' => 1,
+        ),
       ),
-      'insert_new' => '0',
+      'insert_new' => '1',
       'update_existing' => '2',
       'update_non_existent' => 'skip',
       'input_format' => 'plain_text',

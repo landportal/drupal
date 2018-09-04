@@ -165,6 +165,10 @@ $feeds_tamper->settings = array(
       'source' => '31',
       'target' => 'youth; women',
     ),
+    24 => array(
+      'source' => '62',
+      'target' => 'mining',
+    ),
   ),
   'full' => 1,
 );
@@ -874,6 +878,574 @@ $feeds_tamper->settings = array(
       'source' => 'World Wildlife Fund (WWF)',
       'target' => 'World Wildlife Fund',
     ),
+    144 => array(
+      'source' => 'Andhra Pradesh State Government',
+      'target' => 'Andhra Pradesh State Government',
+    ),
+    145 => array(
+      'source' => 'Arab Republic of Egypt',
+      'target' => 'Arab Republic of Egypt',
+    ),
+    146 => array(
+      'source' => 'Republic of Austria',
+      'target' => 'Austrian Federal Government',
+    ),
+    147 => array(
+      'source' => 'CARE',
+      'target' => 'Care International',
+    ),
+    148 => array(
+      'source' => 'FAO',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    149 => array(
+      'source' => 'Government of Chile',
+      'target' => 'Gobierno de Chile',
+    ),
+    150 => array(
+      'source' => 'Republic of Chile',
+      'target' => 'Gobierno de Chile',
+    ),
+    151 => array(
+      'source' => 'Republic of Albania',
+      'target' => 'Government of Albania',
+    ),
+    152 => array(
+      'source' => 'Government of Algeria',
+      'target' => 'Government of Algeria',
+    ),
+    153 => array(
+      'source' => 'Government of Antigua and Barbuda',
+      'target' => 'Government of Antigua and Barbuda',
+    ),
+    154 => array(
+      'source' => 'Argentine Nation',
+      'target' => 'Government of Argentina',
+    ),
+    155 => array(
+      'source' => 'Republic of Armenia',
+      'target' => 'Government of Armenia',
+    ),
+    156 => array(
+      'source' => 'Commonwealth of Australia',
+      'target' => 'Government of Australia',
+    ),
+    157 => array(
+      'source' => 'Government of Belize',
+      'target' => 'Government of Belize',
+    ),
+    158 => array(
+      'source' => 'Republic of Benin',
+      'target' => 'Government of Benin',
+    ),
+    159 => array(
+      'source' => 'Government of Bermuda',
+      'target' => 'Government of Bermuda',
+    ),
+    160 => array(
+      'source' => 'Republic of Bolivia',
+      'target' => 'Government of Bolivia',
+    ),
+    161 => array(
+      'source' => 'Republic of Botswana',
+      'target' => 'Government of Botswana',
+    ),
+    162 => array(
+      'source' => 'Republic of Brazil',
+      'target' => 'Government of Brazil',
+    ),
+    163 => array(
+      'source' => 'Government of Burkina Faso',
+      'target' => 'Government of Burkina Faso',
+    ),
+    164 => array(
+      'source' => 'Republic of Burundi',
+      'target' => 'Government of Burundi',
+    ),
+    165 => array(
+      'source' => 'Government of Canada',
+      'target' => 'Government of Canada',
+    ),
+    166 => array(
+      'source' => 'Government of Cabo Verde',
+      'target' => 'Government of Cape Verde',
+    ),
+    167 => array(
+      'source' => 'Republic of Cape Verde',
+      'target' => 'Government of Cape Verde',
+    ),
+    168 => array(
+      'source' => 'Republic of Chad',
+      'target' => 'Government of Chad',
+    ),
+    169 => array(
+      'source' => 'Republic of Colombia',
+      'target' => 'Government of Colombia',
+    ),
+    170 => array(
+      'source' => 'Union of the Comoros',
+      'target' => 'Government of Comoros',
+    ),
+    171 => array(
+      'source' => 'Republic of Costa Rica',
+      'target' => 'Government of Costa Rica',
+    ),
+    172 => array(
+      'source' => 'Republic of Croatia',
+      'target' => 'Government of Croatia',
+    ),
+    173 => array(
+      'source' => 'Government of Cuba',
+      'target' => 'Government of Cuba',
+    ),
+    174 => array(
+      'source' => 'Republic of Cuba',
+      'target' => 'Government of Cuba',
+    ),
+    175 => array(
+      'source' => 'Government of the DRC',
+      'target' => 'Government of Democratic Republic of the Congo',
+    ),
+    176 => array(
+      'source' => 'Government of Denmark',
+      'target' => 'Government of Denmark',
+    ),
+    177 => array(
+      'source' => 'Republic of Djibouti',
+      'target' => 'Government of Djibouti',
+    ),
+    178 => array(
+      'source' => 'Commonwealth of Dominica',
+      'target' => 'Government of Dominica',
+    ),
+    179 => array(
+      'source' => 'Republic of Ecuador',
+      'target' => 'Government of Ecuador',
+    ),
+    180 => array(
+      'source' => 'Republic of Equatorial Guinea',
+      'target' => 'Government of Equatorial Guinea',
+    ),
+    181 => array(
+      'source' => 'Republic of Estonia',
+      'target' => 'Government of Estonia',
+    ),
+    182 => array(
+      'source' => 'Federal Democratic Republic of Ethiopia',
+      'target' => 'Government of Ethiopia',
+    ),
+    183 => array(
+      'source' => 'Republic of Finland',
+      'target' => 'Government of Finland',
+    ),
+    184 => array(
+      'source' => 'French Republic',
+      'target' => 'Government of France',
+    ),
+    185 => array(
+      'source' => 'Gabonese Republic',
+      'target' => 'Government of Gabon',
+    ),
+    186 => array(
+      'source' => 'Government of Georgia',
+      'target' => 'Government of Georgia',
+    ),
+    187 => array(
+      'source' => 'Government of Germany',
+      'target' => 'Government of Germany',
+    ),
+    188 => array(
+      'source' => 'Government of Ghana',
+      'target' => 'Government of Ghana',
+    ),
+    189 => array(
+      'source' => 'Parliament of the Republic of Ghana',
+      'target' => 'Government of Ghana',
+    ),
+    190 => array(
+      'source' => 'Hellenic Parliament',
+      'target' => 'Government of Greece',
+    ),
+    191 => array(
+      'source' => 'Government of Grenada',
+      'target' => 'Government of Grenada',
+    ),
+    192 => array(
+      'source' => 'Republic of Guinea',
+      'target' => 'Government of Guinea',
+    ),
+    193 => array(
+      'source' => 'Republic of Haiti',
+      'target' => 'Government of Haiti',
+    ),
+    194 => array(
+      'source' => 'Republic of Honduras',
+      'target' => 'Government of Honduras',
+    ),
+    195 => array(
+      'source' => 'Hungarian Government',
+      'target' => 'Government of Hungary',
+    ),
+    196 => array(
+      'source' => 'Republic of Iceland',
+      'target' => 'Government of Iceland',
+    ),
+    197 => array(
+      'source' => 'India',
+      'target' => 'Government of India',
+    ),
+    198 => array(
+      'source' => 'India\'s Ministry of Law and Justice',
+      'target' => 'Government of India',
+    ),
+    199 => array(
+      'source' => 'Government of Indonesia',
+      'target' => 'Government of Indonesia',
+    ),
+    200 => array(
+      'source' => 'Republic of Iran',
+      'target' => 'Government of Iran',
+    ),
+    201 => array(
+      'source' => 'Republic of Iraq',
+      'target' => 'Government of Iraq',
+    ),
+    202 => array(
+      'source' => 'Republic of Ireland',
+      'target' => 'Government of Ireland',
+    ),
+    203 => array(
+      'source' => 'Government of Cote d\'Ivoire',
+      'target' => 'Government of Ivory Coast',
+    ),
+    204 => array(
+      'source' => 'Republic of Cote d\'Ivoire',
+      'target' => 'Government of Ivory Coast',
+    ),
+    205 => array(
+      'source' => 'Parliament of Jamaica',
+      'target' => 'Government of Jamaica',
+    ),
+    206 => array(
+      'source' => 'Government of Jordan',
+      'target' => 'Government of Jordan',
+    ),
+    207 => array(
+      'source' => 'Karnataka State Government',
+      'target' => 'Government of Karnataka (India)',
+    ),
+    208 => array(
+      'source' => 'Government of Kenya',
+      'target' => 'Government of Kenya',
+    ),
+    209 => array(
+      'source' => 'Republic of Kenya',
+      'target' => 'Government of Kenya',
+    ),
+    210 => array(
+      'source' => 'Kyrgyz Republic',
+      'target' => 'Government of Kyrgyzstan',
+    ),
+    211 => array(
+      'source' => 'Lao People\'s Democratic Republic',
+      'target' => 'Government of Lao People\'s Democratic Republic',
+    ),
+    212 => array(
+      'source' => 'Kingdom of Lesotho',
+      'target' => 'Government of Lesotho',
+    ),
+    213 => array(
+      'source' => 'Republic of Lithuania',
+      'target' => 'Government of Lithuania',
+    ),
+    214 => array(
+      'source' => 'Republic of Macedonia',
+      'target' => 'Government of Macedonia',
+    ),
+    215 => array(
+      'source' => 'Government of Madagascar',
+      'target' => 'Government of Madagascar',
+    ),
+    216 => array(
+      'source' => 'Government of Malawi',
+      'target' => 'Government of Malawi',
+    ),
+    217 => array(
+      'source' => 'Republic of Malawi',
+      'target' => 'Government of Malawi',
+    ),
+    218 => array(
+      'source' => 'Government of Malaysia',
+      'target' => 'Government of Malaysia',
+    ),
+    219 => array(
+      'source' => 'Republic of Maldives',
+      'target' => 'Government of Maldives',
+    ),
+    220 => array(
+      'source' => 'Government of Mali',
+      'target' => 'Government of Mali',
+    ),
+    221 => array(
+      'source' => 'Republic of Mali',
+      'target' => 'Government of Mali',
+    ),
+    222 => array(
+      'source' => 'Republic of Malta',
+      'target' => 'Government of Malta',
+    ),
+    223 => array(
+      'source' => 'Government of Mauritius',
+      'target' => 'Government of Mauritius',
+    ),
+    224 => array(
+      'source' => 'Republic of Mauritius',
+      'target' => 'Government of Mauritius',
+    ),
+    225 => array(
+      'source' => 'United Mexican States',
+      'target' => 'Government of Mexico',
+    ),
+    226 => array(
+      'source' => 'Republic of Moldova',
+      'target' => 'Government of Moldova',
+    ),
+    227 => array(
+      'source' => 'Government of Mongolia',
+      'target' => 'Government of Mongolia',
+    ),
+    228 => array(
+      'source' => 'Republic of Montenegro',
+      'target' => 'Government of Montenegro',
+    ),
+    229 => array(
+      'source' => 'Government of Morocco',
+      'target' => 'Government of Morocco',
+    ),
+    230 => array(
+      'source' => 'Government of Nepal',
+      'target' => 'Government of Nepal',
+    ),
+    231 => array(
+      'source' => 'Government of New Zealand',
+      'target' => 'Government of New Zealand',
+    ),
+    232 => array(
+      'source' => 'Government of Niger',
+      'target' => 'Government of Niger',
+    ),
+    233 => array(
+      'source' => 'Federal Republic of Nigeria',
+      'target' => 'Government of Nigeria',
+    ),
+    234 => array(
+      'source' => 'Government of Nigeria',
+      'target' => 'Government of Nigeria',
+    ),
+    235 => array(
+      'source' => 'Government of Norway',
+      'target' => 'Government of Norway',
+    ),
+    236 => array(
+      'source' => 'Orissa State Government',
+      'target' => 'Government of Odisha (India)',
+    ),
+    237 => array(
+      'source' => 'Independent State of Papua New Guinea',
+      'target' => 'Government of Papua New Guinea',
+    ),
+    238 => array(
+      'source' => 'Government of Peru',
+      'target' => 'Government of Peru',
+    ),
+    239 => array(
+      'source' => 'Government of the Philippines',
+      'target' => 'Government of Philippines',
+    ),
+    240 => array(
+      'source' => 'Republic of Liberia',
+      'target' => 'Government of Republic of Liberia',
+    ),
+    241 => array(
+      'source' => 'Russian Federation',
+      'target' => 'Government of Russia',
+    ),
+    242 => array(
+      'source' => 'Government of Rwanda',
+      'target' => 'Government of Rwanda',
+    ),
+    243 => array(
+      'source' => 'Republic of Rwanda',
+      'target' => 'Government of Rwanda',
+    ),
+    244 => array(
+      'source' => 'Government of Senegal',
+      'target' => 'Government of Senegal',
+    ),
+    245 => array(
+      'source' => 'Republic of Senegal',
+      'target' => 'Government of Senegal',
+    ),
+    246 => array(
+      'source' => 'Republic of Serbia',
+      'target' => 'Government of Serbia',
+    ),
+    247 => array(
+      'source' => 'Republic of Seychelles',
+      'target' => 'Government of Seychelles',
+    ),
+    248 => array(
+      'source' => 'Government of Sierra Leone',
+      'target' => 'Government of Sierra Leone',
+    ),
+    249 => array(
+      'source' => 'Parliament of Sierra Leone',
+      'target' => 'Government of Sierra Leone',
+    ),
+    250 => array(
+      'source' => 'Republic of Singapore',
+      'target' => 'Government of Singapore',
+    ),
+    251 => array(
+      'source' => 'Government of South Africa',
+      'target' => 'Government of South Africa',
+    ),
+    252 => array(
+      'source' => 'Republic of South Africa',
+      'target' => 'Government of South Africa',
+    ),
+    253 => array(
+      'source' => 'Government of Spain',
+      'target' => 'Government of Spain',
+    ),
+    254 => array(
+      'source' => 'Democratic Socialist Republic of Sri Lanka',
+      'target' => 'Government of Sri Lanka',
+    ),
+    255 => array(
+      'source' => 'Government of Swaziland',
+      'target' => 'Government of Swaziland',
+    ),
+    256 => array(
+      'source' => 'Government of Sweden',
+      'target' => 'Government of Sweden',
+    ),
+    257 => array(
+      'source' => 'Government of Switzerland',
+      'target' => 'Government of Switzerland',
+    ),
+    258 => array(
+      'source' => 'Republic of Tajikistan',
+      'target' => 'Government of Tajikistan',
+    ),
+    259 => array(
+      'source' => 'Government of Tanzania',
+      'target' => 'Government of Tanzania',
+    ),
+    260 => array(
+      'source' => 'Parliament of Tanzania',
+      'target' => 'Government of Tanzania',
+    ),
+    261 => array(
+      'source' => 'Parliament of the United Republic of Tanzania',
+      'target' => 'Government of Tanzania',
+    ),
+    262 => array(
+      'source' => 'Government of Thailand',
+      'target' => 'Government of Thailand',
+    ),
+    263 => array(
+      'source' => 'Commonwealth of the Bahamas',
+      'target' => 'Government of the Bahamas',
+    ),
+    264 => array(
+      'source' => 'Czech Republic',
+      'target' => 'Government of the Czech Republic',
+    ),
+    265 => array(
+      'source' => 'Government of Cambodia',
+      'target' => 'Government of the Kingdom of Cambodia',
+    ),
+    266 => array(
+      'source' => 'Republic of Kazakhstan',
+      'target' => 'Government of the Republic of Kazakhstan',
+    ),
+    267 => array(
+      'source' => 'Government of Namibia',
+      'target' => 'Government of the Republic of Namibia',
+    ),
+    268 => array(
+      'source' => 'Government of Brunei',
+      'target' => 'Government of the Sultanate of Brunei Darussalam',
+    ),
+    269 => array(
+      'source' => 'Government of the Virgin Islands',
+      'target' => 'Government of the Virgin Islands',
+    ),
+    270 => array(
+      'source' => 'Republic of Trinidad and Tobago',
+      'target' => 'Government of Trinidad and Tobago',
+    ),
+    271 => array(
+      'source' => 'Tunisian Republic',
+      'target' => 'Government of Tunisia',
+    ),
+    272 => array(
+      'source' => 'Government of Uganda',
+      'target' => 'Government of Uganda',
+    ),
+    273 => array(
+      'source' => 'Republic of Uganda',
+      'target' => 'Government of Uganda',
+    ),
+    274 => array(
+      'source' => 'Parliament of Ukraine',
+      'target' => 'Government of Ukraine',
+    ),
+    275 => array(
+      'source' => 'Vietnamese Government',
+      'target' => 'Government of Vietnam',
+    ),
+    276 => array(
+      'source' => 'West Bengal State Government',
+      'target' => 'Government of West Bengal',
+    ),
+    277 => array(
+      'source' => 'Government of Zambia',
+      'target' => 'Government of Zambia',
+    ),
+    278 => array(
+      'source' => 'Republic of Zambia',
+      'target' => 'Government of Zambia',
+    ),
+    279 => array(
+      'source' => 'Government of Zimbabwe',
+      'target' => 'Government of Zimbabwe',
+    ),
+    280 => array(
+      'source' => 'Republic of Zimbabwe',
+      'target' => 'Government of Zimbabwe',
+    ),
+    281 => array(
+      'source' => 'Republic of Mozambique',
+      'target' => 'Governo da República de Moçambique',
+    ),
+    282 => array(
+      'source' => 'Republic of Guatemala',
+      'target' => 'Presidencia de la República Guatemala',
+    ),
+    283 => array(
+      'source' => 'Assembly of Republic of Kosovo',
+      'target' => 'Republic of Kosovo Assembly',
+    ),
+    284 => array(
+      'source' => 'Bolivarian Republic of Venezuela',
+      'target' => 'República Bolivariana de Venezuela',
+    ),
+    285 => array(
+      'source' => 'Royal Government of Bhutan',
+      'target' => 'Royal Government of Bhutan',
+    ),
   ),
   'full' => 1,
 );
@@ -891,6 +1463,21 @@ $feeds_tamper->source = 'Blank source 13';
 $feeds_tamper->plugin_id = 'rewrite';
 $feeds_tamper->settings = array(
   'text' => '[Blank source 4]',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Rewrite';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'landwise_json_importer-blank_source_14-rewrite';
+$feeds_tamper->importer = 'landwise_json_importer';
+$feeds_tamper->source = 'Blank source 14';
+$feeds_tamper->plugin_id = 'rewrite';
+$feeds_tamper->settings = array(
+  'text' => 'LandWise:record[[jsonpath_parser:6]]:item[[jsonpath_parser:7]]',
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Rewrite';
@@ -1553,6 +2140,574 @@ $feeds_tamper->settings = array(
       'source' => 'World Wildlife Fund (WWF)',
       'target' => 'World Wildlife Fund',
     ),
+    144 => array(
+      'source' => 'Andhra Pradesh State Government',
+      'target' => 'Andhra Pradesh State Government',
+    ),
+    145 => array(
+      'source' => 'Arab Republic of Egypt',
+      'target' => 'Arab Republic of Egypt',
+    ),
+    146 => array(
+      'source' => 'Republic of Austria',
+      'target' => 'Austrian Federal Government',
+    ),
+    147 => array(
+      'source' => 'CARE',
+      'target' => 'Care International',
+    ),
+    148 => array(
+      'source' => 'FAO',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    149 => array(
+      'source' => 'Government of Chile',
+      'target' => 'Gobierno de Chile',
+    ),
+    150 => array(
+      'source' => 'Republic of Chile',
+      'target' => 'Gobierno de Chile',
+    ),
+    151 => array(
+      'source' => 'Republic of Albania',
+      'target' => 'Government of Albania',
+    ),
+    152 => array(
+      'source' => 'Government of Algeria',
+      'target' => 'Government of Algeria',
+    ),
+    153 => array(
+      'source' => 'Government of Antigua and Barbuda',
+      'target' => 'Government of Antigua and Barbuda',
+    ),
+    154 => array(
+      'source' => 'Argentine Nation',
+      'target' => 'Government of Argentina',
+    ),
+    155 => array(
+      'source' => 'Republic of Armenia',
+      'target' => 'Government of Armenia',
+    ),
+    156 => array(
+      'source' => 'Commonwealth of Australia',
+      'target' => 'Government of Australia',
+    ),
+    157 => array(
+      'source' => 'Government of Belize',
+      'target' => 'Government of Belize',
+    ),
+    158 => array(
+      'source' => 'Republic of Benin',
+      'target' => 'Government of Benin',
+    ),
+    159 => array(
+      'source' => 'Government of Bermuda',
+      'target' => 'Government of Bermuda',
+    ),
+    160 => array(
+      'source' => 'Republic of Bolivia',
+      'target' => 'Government of Bolivia',
+    ),
+    161 => array(
+      'source' => 'Republic of Botswana',
+      'target' => 'Government of Botswana',
+    ),
+    162 => array(
+      'source' => 'Republic of Brazil',
+      'target' => 'Government of Brazil',
+    ),
+    163 => array(
+      'source' => 'Government of Burkina Faso',
+      'target' => 'Government of Burkina Faso',
+    ),
+    164 => array(
+      'source' => 'Republic of Burundi',
+      'target' => 'Government of Burundi',
+    ),
+    165 => array(
+      'source' => 'Government of Canada',
+      'target' => 'Government of Canada',
+    ),
+    166 => array(
+      'source' => 'Government of Cabo Verde',
+      'target' => 'Government of Cape Verde',
+    ),
+    167 => array(
+      'source' => 'Republic of Cape Verde',
+      'target' => 'Government of Cape Verde',
+    ),
+    168 => array(
+      'source' => 'Republic of Chad',
+      'target' => 'Government of Chad',
+    ),
+    169 => array(
+      'source' => 'Republic of Colombia',
+      'target' => 'Government of Colombia',
+    ),
+    170 => array(
+      'source' => 'Union of the Comoros',
+      'target' => 'Government of Comoros',
+    ),
+    171 => array(
+      'source' => 'Republic of Costa Rica',
+      'target' => 'Government of Costa Rica',
+    ),
+    172 => array(
+      'source' => 'Republic of Croatia',
+      'target' => 'Government of Croatia',
+    ),
+    173 => array(
+      'source' => 'Government of Cuba',
+      'target' => 'Government of Cuba',
+    ),
+    174 => array(
+      'source' => 'Republic of Cuba',
+      'target' => 'Government of Cuba',
+    ),
+    175 => array(
+      'source' => 'Government of the DRC',
+      'target' => 'Government of Democratic Republic of the Congo',
+    ),
+    176 => array(
+      'source' => 'Government of Denmark',
+      'target' => 'Government of Denmark',
+    ),
+    177 => array(
+      'source' => 'Republic of Djibouti',
+      'target' => 'Government of Djibouti',
+    ),
+    178 => array(
+      'source' => 'Commonwealth of Dominica',
+      'target' => 'Government of Dominica',
+    ),
+    179 => array(
+      'source' => 'Republic of Ecuador',
+      'target' => 'Government of Ecuador',
+    ),
+    180 => array(
+      'source' => 'Republic of Equatorial Guinea',
+      'target' => 'Government of Equatorial Guinea',
+    ),
+    181 => array(
+      'source' => 'Republic of Estonia',
+      'target' => 'Government of Estonia',
+    ),
+    182 => array(
+      'source' => 'Federal Democratic Republic of Ethiopia',
+      'target' => 'Government of Ethiopia',
+    ),
+    183 => array(
+      'source' => 'Republic of Finland',
+      'target' => 'Government of Finland',
+    ),
+    184 => array(
+      'source' => 'French Republic',
+      'target' => 'Government of France',
+    ),
+    185 => array(
+      'source' => 'Gabonese Republic',
+      'target' => 'Government of Gabon',
+    ),
+    186 => array(
+      'source' => 'Government of Georgia',
+      'target' => 'Government of Georgia',
+    ),
+    187 => array(
+      'source' => 'Government of Germany',
+      'target' => 'Government of Germany',
+    ),
+    188 => array(
+      'source' => 'Government of Ghana',
+      'target' => 'Government of Ghana',
+    ),
+    189 => array(
+      'source' => 'Parliament of the Republic of Ghana',
+      'target' => 'Government of Ghana',
+    ),
+    190 => array(
+      'source' => 'Hellenic Parliament',
+      'target' => 'Government of Greece',
+    ),
+    191 => array(
+      'source' => 'Government of Grenada',
+      'target' => 'Government of Grenada',
+    ),
+    192 => array(
+      'source' => 'Republic of Guinea',
+      'target' => 'Government of Guinea',
+    ),
+    193 => array(
+      'source' => 'Republic of Haiti',
+      'target' => 'Government of Haiti',
+    ),
+    194 => array(
+      'source' => 'Republic of Honduras',
+      'target' => 'Government of Honduras',
+    ),
+    195 => array(
+      'source' => 'Hungarian Government',
+      'target' => 'Government of Hungary',
+    ),
+    196 => array(
+      'source' => 'Republic of Iceland',
+      'target' => 'Government of Iceland',
+    ),
+    197 => array(
+      'source' => 'India',
+      'target' => 'Government of India',
+    ),
+    198 => array(
+      'source' => 'India\'s Ministry of Law and Justice',
+      'target' => 'Government of India',
+    ),
+    199 => array(
+      'source' => 'Government of Indonesia',
+      'target' => 'Government of Indonesia',
+    ),
+    200 => array(
+      'source' => 'Republic of Iran',
+      'target' => 'Government of Iran',
+    ),
+    201 => array(
+      'source' => 'Republic of Iraq',
+      'target' => 'Government of Iraq',
+    ),
+    202 => array(
+      'source' => 'Republic of Ireland',
+      'target' => 'Government of Ireland',
+    ),
+    203 => array(
+      'source' => 'Government of Cote d\'Ivoire',
+      'target' => 'Government of Ivory Coast',
+    ),
+    204 => array(
+      'source' => 'Republic of Cote d\'Ivoire',
+      'target' => 'Government of Ivory Coast',
+    ),
+    205 => array(
+      'source' => 'Parliament of Jamaica',
+      'target' => 'Government of Jamaica',
+    ),
+    206 => array(
+      'source' => 'Government of Jordan',
+      'target' => 'Government of Jordan',
+    ),
+    207 => array(
+      'source' => 'Karnataka State Government',
+      'target' => 'Government of Karnataka (India)',
+    ),
+    208 => array(
+      'source' => 'Government of Kenya',
+      'target' => 'Government of Kenya',
+    ),
+    209 => array(
+      'source' => 'Republic of Kenya',
+      'target' => 'Government of Kenya',
+    ),
+    210 => array(
+      'source' => 'Kyrgyz Republic',
+      'target' => 'Government of Kyrgyzstan',
+    ),
+    211 => array(
+      'source' => 'Lao People\'s Democratic Republic',
+      'target' => 'Government of Lao People\'s Democratic Republic',
+    ),
+    212 => array(
+      'source' => 'Kingdom of Lesotho',
+      'target' => 'Government of Lesotho',
+    ),
+    213 => array(
+      'source' => 'Republic of Lithuania',
+      'target' => 'Government of Lithuania',
+    ),
+    214 => array(
+      'source' => 'Republic of Macedonia',
+      'target' => 'Government of Macedonia',
+    ),
+    215 => array(
+      'source' => 'Government of Madagascar',
+      'target' => 'Government of Madagascar',
+    ),
+    216 => array(
+      'source' => 'Government of Malawi',
+      'target' => 'Government of Malawi',
+    ),
+    217 => array(
+      'source' => 'Republic of Malawi',
+      'target' => 'Government of Malawi',
+    ),
+    218 => array(
+      'source' => 'Government of Malaysia',
+      'target' => 'Government of Malaysia',
+    ),
+    219 => array(
+      'source' => 'Republic of Maldives',
+      'target' => 'Government of Maldives',
+    ),
+    220 => array(
+      'source' => 'Government of Mali',
+      'target' => 'Government of Mali',
+    ),
+    221 => array(
+      'source' => 'Republic of Mali',
+      'target' => 'Government of Mali',
+    ),
+    222 => array(
+      'source' => 'Republic of Malta',
+      'target' => 'Government of Malta',
+    ),
+    223 => array(
+      'source' => 'Government of Mauritius',
+      'target' => 'Government of Mauritius',
+    ),
+    224 => array(
+      'source' => 'Republic of Mauritius',
+      'target' => 'Government of Mauritius',
+    ),
+    225 => array(
+      'source' => 'United Mexican States',
+      'target' => 'Government of Mexico',
+    ),
+    226 => array(
+      'source' => 'Republic of Moldova',
+      'target' => 'Government of Moldova',
+    ),
+    227 => array(
+      'source' => 'Government of Mongolia',
+      'target' => 'Government of Mongolia',
+    ),
+    228 => array(
+      'source' => 'Republic of Montenegro',
+      'target' => 'Government of Montenegro',
+    ),
+    229 => array(
+      'source' => 'Government of Morocco',
+      'target' => 'Government of Morocco',
+    ),
+    230 => array(
+      'source' => 'Government of Nepal',
+      'target' => 'Government of Nepal',
+    ),
+    231 => array(
+      'source' => 'Government of New Zealand',
+      'target' => 'Government of New Zealand',
+    ),
+    232 => array(
+      'source' => 'Government of Niger',
+      'target' => 'Government of Niger',
+    ),
+    233 => array(
+      'source' => 'Federal Republic of Nigeria',
+      'target' => 'Government of Nigeria',
+    ),
+    234 => array(
+      'source' => 'Government of Nigeria',
+      'target' => 'Government of Nigeria',
+    ),
+    235 => array(
+      'source' => 'Government of Norway',
+      'target' => 'Government of Norway',
+    ),
+    236 => array(
+      'source' => 'Orissa State Government',
+      'target' => 'Government of Odisha (India)',
+    ),
+    237 => array(
+      'source' => 'Independent State of Papua New Guinea',
+      'target' => 'Government of Papua New Guinea',
+    ),
+    238 => array(
+      'source' => 'Government of Peru',
+      'target' => 'Government of Peru',
+    ),
+    239 => array(
+      'source' => 'Government of the Philippines',
+      'target' => 'Government of Philippines',
+    ),
+    240 => array(
+      'source' => 'Republic of Liberia',
+      'target' => 'Government of Republic of Liberia',
+    ),
+    241 => array(
+      'source' => 'Russian Federation',
+      'target' => 'Government of Russia',
+    ),
+    242 => array(
+      'source' => 'Government of Rwanda',
+      'target' => 'Government of Rwanda',
+    ),
+    243 => array(
+      'source' => 'Republic of Rwanda',
+      'target' => 'Government of Rwanda',
+    ),
+    244 => array(
+      'source' => 'Government of Senegal',
+      'target' => 'Government of Senegal',
+    ),
+    245 => array(
+      'source' => 'Republic of Senegal',
+      'target' => 'Government of Senegal',
+    ),
+    246 => array(
+      'source' => 'Republic of Serbia',
+      'target' => 'Government of Serbia',
+    ),
+    247 => array(
+      'source' => 'Republic of Seychelles',
+      'target' => 'Government of Seychelles',
+    ),
+    248 => array(
+      'source' => 'Government of Sierra Leone',
+      'target' => 'Government of Sierra Leone',
+    ),
+    249 => array(
+      'source' => 'Parliament of Sierra Leone',
+      'target' => 'Government of Sierra Leone',
+    ),
+    250 => array(
+      'source' => 'Republic of Singapore',
+      'target' => 'Government of Singapore',
+    ),
+    251 => array(
+      'source' => 'Government of South Africa',
+      'target' => 'Government of South Africa',
+    ),
+    252 => array(
+      'source' => 'Republic of South Africa',
+      'target' => 'Government of South Africa',
+    ),
+    253 => array(
+      'source' => 'Government of Spain',
+      'target' => 'Government of Spain',
+    ),
+    254 => array(
+      'source' => 'Democratic Socialist Republic of Sri Lanka',
+      'target' => 'Government of Sri Lanka',
+    ),
+    255 => array(
+      'source' => 'Government of Swaziland',
+      'target' => 'Government of Swaziland',
+    ),
+    256 => array(
+      'source' => 'Government of Sweden',
+      'target' => 'Government of Sweden',
+    ),
+    257 => array(
+      'source' => 'Government of Switzerland',
+      'target' => 'Government of Switzerland',
+    ),
+    258 => array(
+      'source' => 'Republic of Tajikistan',
+      'target' => 'Government of Tajikistan',
+    ),
+    259 => array(
+      'source' => 'Government of Tanzania',
+      'target' => 'Government of Tanzania',
+    ),
+    260 => array(
+      'source' => 'Parliament of Tanzania',
+      'target' => 'Government of Tanzania',
+    ),
+    261 => array(
+      'source' => 'Parliament of the United Republic of Tanzania',
+      'target' => 'Government of Tanzania',
+    ),
+    262 => array(
+      'source' => 'Government of Thailand',
+      'target' => 'Government of Thailand',
+    ),
+    263 => array(
+      'source' => 'Commonwealth of the Bahamas',
+      'target' => 'Government of the Bahamas',
+    ),
+    264 => array(
+      'source' => 'Czech Republic',
+      'target' => 'Government of the Czech Republic',
+    ),
+    265 => array(
+      'source' => 'Government of Cambodia',
+      'target' => 'Government of the Kingdom of Cambodia',
+    ),
+    266 => array(
+      'source' => 'Republic of Kazakhstan',
+      'target' => 'Government of the Republic of Kazakhstan',
+    ),
+    267 => array(
+      'source' => 'Government of Namibia',
+      'target' => 'Government of the Republic of Namibia',
+    ),
+    268 => array(
+      'source' => 'Government of Brunei',
+      'target' => 'Government of the Sultanate of Brunei Darussalam',
+    ),
+    269 => array(
+      'source' => 'Government of the Virgin Islands',
+      'target' => 'Government of the Virgin Islands',
+    ),
+    270 => array(
+      'source' => 'Republic of Trinidad and Tobago',
+      'target' => 'Government of Trinidad and Tobago',
+    ),
+    271 => array(
+      'source' => 'Tunisian Republic',
+      'target' => 'Government of Tunisia',
+    ),
+    272 => array(
+      'source' => 'Government of Uganda',
+      'target' => 'Government of Uganda',
+    ),
+    273 => array(
+      'source' => 'Republic of Uganda',
+      'target' => 'Government of Uganda',
+    ),
+    274 => array(
+      'source' => 'Parliament of Ukraine',
+      'target' => 'Government of Ukraine',
+    ),
+    275 => array(
+      'source' => 'Vietnamese Government',
+      'target' => 'Government of Vietnam',
+    ),
+    276 => array(
+      'source' => 'West Bengal State Government',
+      'target' => 'Government of West Bengal',
+    ),
+    277 => array(
+      'source' => 'Government of Zambia',
+      'target' => 'Government of Zambia',
+    ),
+    278 => array(
+      'source' => 'Republic of Zambia',
+      'target' => 'Government of Zambia',
+    ),
+    279 => array(
+      'source' => 'Government of Zimbabwe',
+      'target' => 'Government of Zimbabwe',
+    ),
+    280 => array(
+      'source' => 'Republic of Zimbabwe',
+      'target' => 'Government of Zimbabwe',
+    ),
+    281 => array(
+      'source' => 'Republic of Mozambique',
+      'target' => 'Governo da República de Moçambique',
+    ),
+    282 => array(
+      'source' => 'Republic of Guatemala',
+      'target' => 'Presidencia de la República Guatemala',
+    ),
+    283 => array(
+      'source' => 'Assembly of Republic of Kosovo',
+      'target' => 'Republic of Kosovo Assembly',
+    ),
+    284 => array(
+      'source' => 'Bolivarian Republic of Venezuela',
+      'target' => 'República Bolivariana de Venezuela',
+    ),
+    285 => array(
+      'source' => 'Royal Government of Bhutan',
+      'target' => 'Royal Government of Bhutan',
+    ),
   ),
   'full' => 1,
 );
@@ -1946,6 +3101,46 @@ $feeds_tamper->settings = array(
     8 => array(
       'source' => '17',
       'target' => 'de',
+    ),
+    9 => array(
+      'source' => '26',
+      'target' => 'am',
+    ),
+    10 => array(
+      'source' => '13',
+      'target' => 'ro',
+    ),
+    11 => array(
+      'source' => '14',
+      'target' => 'el',
+    ),
+    12 => array(
+      'source' => '25',
+      'target' => 'uk',
+    ),
+    13 => array(
+      'source' => '18',
+      'target' => 'da',
+    ),
+    14 => array(
+      'source' => '24',
+      'target' => 'sl',
+    ),
+    15 => array(
+      'source' => '22',
+      'target' => 'sq',
+    ),
+    16 => array(
+      'source' => '15',
+      'target' => 'it',
+    ),
+    17 => array(
+      'source' => '21',
+      'target' => 'cs',
+    ),
+    18 => array(
+      'source' => '28',
+      'target' => 'bn',
     ),
   ),
   'full' => 1,
@@ -2862,7 +4057,7 @@ $feeds_tamper->settings = array(
       'target' => 'ROU',
     ),
     193 => array(
-      'source' => '218',
+      'source' => '200',
       'target' => 'RUS',
     ),
     194 => array(
@@ -2890,8 +4085,8 @@ $feeds_tamper->settings = array(
       'target' => 'GBR',
     ),
     200 => array(
-      'source' => '',
-      'target' => '',
+      'source' => '207',
+      'target' => 'XKX',
     ),
     201 => array(
       'source' => '208',
@@ -2938,60 +4133,60 @@ $feeds_tamper->settings = array(
       'target' => 'VUT',
     ),
     212 => array(
-      'source' => '206',
-      'target' => 'GBR',
-    ),
-    213 => array(
       'source' => '221',
       'target' => 'CIV',
     ),
-    214 => array(
+    213 => array(
       'source' => '223',
       'target' => 'FJI',
     ),
-    215 => array(
+    214 => array(
       'source' => '224',
       'target' => 'KIR',
     ),
-    216 => array(
+    215 => array(
       'source' => '225',
       'target' => 'MHL',
     ),
-    217 => array(
+    216 => array(
       'source' => '226',
       'target' => 'FSM',
     ),
-    218 => array(
+    217 => array(
       'source' => '227',
       'target' => 'NRU',
     ),
-    219 => array(
+    218 => array(
       'source' => '228',
       'target' => 'PLW',
     ),
-    220 => array(
+    219 => array(
       'source' => '229',
       'target' => 'WSM',
     ),
-    221 => array(
+    220 => array(
       'source' => '230',
       'target' => 'SVK',
     ),
-    222 => array(
+    221 => array(
       'source' => '231',
       'target' => 'TON',
     ),
-    223 => array(
+    222 => array(
       'source' => '232',
       'target' => 'TUV',
     ),
-    224 => array(
+    223 => array(
       'source' => '233',
       'target' => 'USA',
     ),
-    225 => array(
+    224 => array(
       'source' => '234',
       'target' => 'PSE',
+    ),
+    225 => array(
+      'source' => '242',
+      'target' => 'GMB',
     ),
   ),
   'full' => 1,
