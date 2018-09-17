@@ -3028,12 +3028,12 @@ $feeds_tamper->source = 'jsonpath_parser:3';
 $feeds_tamper->plugin_id = 'str_pad';
 $feeds_tamper->settings = array(
   'pad_length' => 10,
-  'pad_string' => '-12-31',
+  'pad_string' => '-08-31',
   'pad_type' => '1',
-  'real_pad_string' => '-12-31',
+  'real_pad_string' => '-08-31',
 );
 $feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Add the month (12) and day (31) at the end of the string';
+$feeds_tamper->description = 'Add the previous month and the last day at the end of the string';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
