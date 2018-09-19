@@ -39,18 +39,16 @@ $feeds_importer->config = array(
         'jsonpath_parser:16' => 'name',
         'jsonpath_parser:1' => 'participation[*].company.name',
         'jsonpath_parser:2' => 'government_entity[*].name',
-        'jsonpath_parser:3' => '',
-        'jsonpath_parser:15' => '',
         'jsonpath_parser:5' => 'language',
         'jsonpath_parser:6' => 'open_contracting_id',
-        'jsonpath_parser:9' => 'country.code',
-        'jsonpath_parser:21' => 'participation[*].company.identifier.creator.spatial',
         'jsonpath_parser:14' => 'number_of_pages',
         'jsonpath_parser:19' => 'type',
         'jsonpath_parser:18' => 'resource',
         'jsonpath_parser:20' => 'contract_type',
         'jsonpath_parser:22' => 'date_signed',
         'jsonpath_parser:23' => 'year_signed',
+        'jsonpath_parser:24' => 'country.code',
+        'jsonpath_parser:25' => 'participation[*].company.identifier.creator.spatial',
       ),
       'debug' => array(
         'options' => array(
@@ -58,18 +56,16 @@ $feeds_importer->config = array(
           'jsonpath_parser:16' => 0,
           'jsonpath_parser:1' => 0,
           'jsonpath_parser:2' => 0,
-          'jsonpath_parser:3' => 0,
-          'jsonpath_parser:15' => 0,
           'jsonpath_parser:5' => 0,
           'jsonpath_parser:6' => 0,
-          'jsonpath_parser:9' => 0,
-          'jsonpath_parser:21' => 0,
           'jsonpath_parser:14' => 0,
           'jsonpath_parser:19' => 0,
           'jsonpath_parser:18' => 0,
           'jsonpath_parser:20' => 0,
           'jsonpath_parser:22' => 0,
           'jsonpath_parser:23' => 0,
+          'jsonpath_parser:24' => 0,
+          'jsonpath_parser:25' => 0,
         ),
       ),
       'allow_override' => 0,
@@ -98,7 +94,7 @@ $feeds_importer->config = array(
         2 => array(
           'source' => 'jsonpath_parser:16',
           'target' => 'title',
-          'unique' => 1,
+          'unique' => 0,
           'language' => 'und',
         ),
         3 => array(
@@ -122,7 +118,8 @@ $feeds_importer->config = array(
         6 => array(
           'source' => 'jsonpath_parser:5',
           'target' => 'field_doc_language',
-          'unique' => FALSE,
+          'term_search' => '1',
+          'autocreate' => 0,
           'language' => 'und',
         ),
         7 => array(
@@ -144,120 +141,134 @@ $feeds_importer->config = array(
           'language' => 'und',
         ),
         10 => array(
-          'source' => 'jsonpath_parser:9',
-          'target' => 'field_geographical_focus',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        11 => array(
-          'source' => 'jsonpath_parser:21',
-          'target' => 'field_geographical_focus',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        12 => array(
           'source' => 'Blank source 12',
           'target' => 'field_image:uri',
           'file_exists' => '3',
+          'language' => 'und',
         ),
-        13 => array(
+        11 => array(
           'source' => 'jsonpath_parser:14',
           'target' => 'field_doc_pagination',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        14 => array(
+        12 => array(
           'source' => 'Blank source 13',
           'target' => 'field_doc_licencing',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        15 => array(
+        13 => array(
           'source' => 'Blank source 14',
           'target' => 'field_doc_type',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        16 => array(
+        14 => array(
           'source' => 'Blank source 8',
           'target' => 'field_related_domains',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        17 => array(
+        15 => array(
           'source' => 'Blank source 10',
           'target' => 'field_related_topics',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        18 => array(
+        16 => array(
           'source' => 'Blank source 16',
           'target' => 'field_related_topics',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        19 => array(
+        17 => array(
           'source' => 'jsonpath_parser:19',
           'target' => 'Temporary target 12',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        20 => array(
+        18 => array(
           'source' => 'Blank source 17',
           'target' => 'field_related_topics',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        21 => array(
+        19 => array(
           'source' => 'jsonpath_parser:18',
           'target' => 'Temporary target 11',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        22 => array(
+        20 => array(
           'source' => 'jsonpath_parser:20',
           'target' => 'Temporary target 13',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        23 => array(
+        21 => array(
           'source' => 'Blank source 11',
           'target' => 'field_doc_description',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        24 => array(
+        22 => array(
           'source' => 'Blank source 18',
           'target' => 'field_doc_description',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        25 => array(
+        23 => array(
           'source' => 'jsonpath_parser:22',
           'target' => 'Temporary target 14',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        26 => array(
+        24 => array(
           'source' => 'jsonpath_parser:23',
           'target' => 'Temporary target 15',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        27 => array(
+        25 => array(
           'source' => 'Blank source 19',
           'target' => 'field_doc_creation_date:start',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        28 => array(
+        26 => array(
           'source' => 'Blank source 20',
           'target' => 'field_related_themes',
           'unique' => FALSE,
           'language' => 'und',
         ),
+        27 => array(
+          'source' => 'Blank source 21',
+          'target' => 'guid',
+          'unique' => 1,
+          'language' => 'und',
+        ),
+        28 => array(
+          'source' => 'jsonpath_parser:24',
+          'target' => 'Temporary target 16',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        29 => array(
+          'source' => 'jsonpath_parser:25',
+          'target' => 'Temporary target 17',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        30 => array(
+          'source' => 'Blank source 22',
+          'target' => 'field_geographical_focus',
+          'term_search' => '1',
+          'autocreate' => 0,
+          'language' => 'und',
+        ),
       ),
-      'insert_new' => '0',
+      'insert_new' => '1',
       'update_existing' => '2',
       'update_non_existent' => 'skip',
       'input_format' => 'full_html',
@@ -273,7 +284,6 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
-
 
 /************/
 

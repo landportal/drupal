@@ -51,7 +51,7 @@ $feeds_tamper->importer = 'olc_json_importer';
 $feeds_tamper->source = 'Blank source 11';
 $feeds_tamper->plugin_id = 'rewrite';
 $feeds_tamper->settings = array(
-  'text' => 'This is a [jsonpath_parser:20] posted on <a href="http://wwww.openladncontracts.org">OpenLandContracts.org</a>. It lists [jsonpath_parser:18] as the primary resource(s)',
+  'text' => 'This is a [jsonpath_parser:20] posted on <a href="http://www.openlandcontracts.org">OpenLandContracts.org</a>. It lists [jsonpath_parser:18] as the primary resource(s)',
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Rewrite (Contract)';
@@ -66,7 +66,7 @@ $feeds_tamper->importer = 'olc_json_importer';
 $feeds_tamper->source = 'Blank source 12';
 $feeds_tamper->plugin_id = 'default_value';
 $feeds_tamper->settings = array(
-  'default_value' => 'private://feeds/olc-thumbnail.png',
+  'default_value' => 'public://olc-thumbnail.png',
   'only_if_empty' => 0,
 );
 $feeds_tamper->weight = 0;
@@ -210,7 +210,7 @@ $feeds_tamper->importer = 'olc_json_importer';
 $feeds_tamper->source = 'Blank source 18';
 $feeds_tamper->plugin_id = 'rewrite';
 $feeds_tamper->settings = array(
-  'text' => 'This is a [jsonpath_parser:19] posted on <a href="http://wwww.openladncontracts.org">OpenLandContracts.org</a>. It lists [jsonpath_parser:18] as the primary resource(s)',
+  'text' => 'This is a [jsonpath_parser:19] posted on <a href="http://www.openlandcontracts.org">OpenLandContracts.org</a>. It lists [jsonpath_parser:18] as the primary resource(s)',
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Rewrite (IT is not a Contract)';
@@ -252,6 +252,99 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Set value "Land & Investments"';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-blank_source_21-rewrite';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'Blank source 21';
+$feeds_tamper->plugin_id = 'rewrite';
+$feeds_tamper->settings = array(
+  'text' => 'OLC:[jsonpath_parser:6]',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Rewrite';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-blank_source_22-array_filter';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'Blank source 22';
+$feeds_tamper->plugin_id = 'array_filter';
+$feeds_tamper->settings = array();
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Filter empty items';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-blank_source_22-efq_finder';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'Blank source 22';
+$feeds_tamper->plugin_id = 'efq_finder';
+$feeds_tamper->settings = array(
+  'update' => 'Update',
+  'entity_type' => 'taxonomy_term',
+  'bundle' => 'regions',
+  'field' => 'field_iso2',
+  'column' => 'value',
+  'property' => FALSE,
+);
+$feeds_tamper->weight = 4;
+$feeds_tamper->description = 'Entity Field Query finder (ISO2)	';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-blank_source_22-explode';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'Blank source 22';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ',',
+  'limit' => '',
+  'real_separator' => ',',
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Explode';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-blank_source_22-rewrite';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'Blank source 22';
+$feeds_tamper->plugin_id = 'rewrite';
+$feeds_tamper->settings = array(
+  'text' => '[jsonpath_parser:24],[jsonpath_parser:25]',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Rewrite (join using \',\')';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-blank_source_22-unique';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'Blank source 22';
+$feeds_tamper->plugin_id = 'unique';
+$feeds_tamper->settings = array();
+$feeds_tamper->weight = 5;
+$feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -418,7 +511,7 @@ $feeds_tamper->description = 'Implode';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'olc_json_importer-jsonpath_parser_21-efq_finder';
 $feeds_tamper->importer = 'olc_json_importer';
@@ -428,206 +521,21 @@ $feeds_tamper->settings = array(
   'update' => 'Update',
   'entity_type' => 'taxonomy_term',
   'bundle' => 'regions',
-  'field' => 'field_iso3',
+  'field' => 'field_iso2',
   'column' => 'value',
   'property' => FALSE,
 );
-$feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Entity Field Query finder';
+$feeds_tamper->weight = 4;
+$feeds_tamper->description = 'Entity Field Query finder (ISO2)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'olc_json_importer-jsonpath_parser_21-find_replace_multiple';
 $feeds_tamper->importer = 'olc_json_importer';
 $feeds_tamper->source = 'jsonpath_parser:21';
-$feeds_tamper->plugin_id = 'find_replace_multiple';
-$feeds_tamper->settings = array(
-  'pairs' => array(
-    0 => array(
-      'source' => 'BR',
-      'target' => 'BRA',
-    ),
-    1 => array(
-      'source' => 'CD',
-      'target' => 'COD',
-    ),
-    2 => array(
-      'source' => 'CI',
-      'target' => 'CIV',
-    ),
-    3 => array(
-      'source' => 'CM',
-      'target' => 'CMR',
-    ),
-    4 => array(
-      'source' => 'CN',
-      'target' => 'CHN',
-    ),
-    5 => array(
-      'source' => 'ET',
-      'target' => 'ETH',
-    ),
-    6 => array(
-      'source' => 'GH',
-      'target' => 'GHA',
-    ),
-    7 => array(
-      'source' => 'KH',
-      'target' => 'KHM',
-    ),
-    8 => array(
-      'source' => 'LR',
-      'target' => 'LBR',
-    ),
-    9 => array(
-      'source' => 'LU',
-      'target' => 'LUX',
-    ),
-    10 => array(
-      'source' => 'MG',
-      'target' => 'MDG',
-    ),
-    11 => array(
-      'source' => 'ML',
-      'target' => 'MLI',
-    ),
-    12 => array(
-      'source' => 'PE',
-      'target' => 'PER',
-    ),
-    13 => array(
-      'source' => 'SD',
-      'target' => 'SDN',
-    ),
-    14 => array(
-      'source' => 'SL',
-      'target' => 'SLE',
-    ),
-    15 => array(
-      'source' => 'SS',
-      'target' => 'SSD',
-    ),
-    16 => array(
-      'source' => 'TL',
-      'target' => 'TLS',
-    ),
-  ),
-  'full' => 1,
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Find replace multiple';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'olc_json_importer-jsonpath_parser_21-php';
-$feeds_tamper->importer = 'olc_json_importer';
-$feeds_tamper->source = 'jsonpath_parser:21';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => '// field could be an item or an array
-if ($field != null) {
-    if (is_array($field)){
-       $terms = array();
-       foreach ($field as $f) {
-          $term = taxonomy_term_load($f);
-          $name = $term->name;
-          array_push($terms, $name);
-       }
-       return $terms;
-    } else {
-      $term = taxonomy_term_load($field);
-      $name = $term->name;
-      return $name;
-    }
-}',
-);
-$feeds_tamper->weight = 2;
-$feeds_tamper->description = 'Get Term Name from Term ID (TID)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'olc_json_importer-jsonpath_parser_5-efq_finder';
-$feeds_tamper->importer = 'olc_json_importer';
-$feeds_tamper->source = 'jsonpath_parser:5';
-$feeds_tamper->plugin_id = 'efq_finder';
-$feeds_tamper->settings = array(
-  'update' => 'Update',
-  'entity_type' => 'taxonomy_term',
-  'bundle' => 'languages',
-  'field' => 'field_language_code_iso_639_1',
-  'column' => 'value',
-  'property' => FALSE,
-);
-$feeds_tamper->weight = 2;
-$feeds_tamper->description = 'Entity Field Query finder';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'olc_json_importer-jsonpath_parser_5-php';
-$feeds_tamper->importer = 'olc_json_importer';
-$feeds_tamper->source = 'jsonpath_parser:5';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => '// field could be an item or an array
-if ($field != null) {
-    if (is_array($field)){
-       $terms = array();
-       foreach ($field as $f) {
-          $term = taxonomy_term_load($f);
-          $name = $term->name;
-          array_push($terms, $name);
-       }
-       return $terms;
-    } else {
-      $term = taxonomy_term_load($field);
-      $name = $term->name;
-      return $name;
-    }
-}',
-);
-$feeds_tamper->weight = 3;
-$feeds_tamper->description = 'Get Term Name from Term ID (TID)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'olc_json_importer-jsonpath_parser_9-efq_finder';
-$feeds_tamper->importer = 'olc_json_importer';
-$feeds_tamper->source = 'jsonpath_parser:9';
-$feeds_tamper->plugin_id = 'efq_finder';
-$feeds_tamper->settings = array(
-  'update' => 'Update',
-  'entity_type' => 'taxonomy_term',
-  'bundle' => 'regions',
-  'field' => 'field_iso3',
-  'column' => 'value',
-  'property' => FALSE,
-);
-$feeds_tamper->weight = 6;
-$feeds_tamper->description = 'Entity Field Query finder';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'olc_json_importer-jsonpath_parser_9-find_replace_multiple';
-$feeds_tamper->importer = 'olc_json_importer';
-$feeds_tamper->source = 'jsonpath_parser:9';
 $feeds_tamper->plugin_id = 'find_replace_multiple';
 $feeds_tamper->settings = array(
   'pairs' => array(
@@ -708,7 +616,224 @@ $feeds_tamper->description = 'Find replace multiple';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-jsonpath_parser_21-php';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'jsonpath_parser:21';
+$feeds_tamper->plugin_id = 'php';
+$feeds_tamper->settings = array(
+  'php' => '// field could be an item or an array
+if ($field != null) {
+    if (is_array($field)){
+       $terms = array();
+       foreach ($field as $f) {
+          $term = taxonomy_term_load($f);
+          $name = $term->name;
+          array_push($terms, $name);
+       }
+       return $terms;
+    } else {
+      $term = taxonomy_term_load($field);
+      $name = $term->name;
+      return $name;
+    }
+}',
+);
+$feeds_tamper->weight = 6;
+$feeds_tamper->description = 'Get Term Name from Term ID (TID)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-jsonpath_parser_24-implode';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'jsonpath_parser:24';
+$feeds_tamper->plugin_id = 'implode';
+$feeds_tamper->settings = array(
+  'glue' => ',',
+  'real_glue' => ',',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Implode';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-jsonpath_parser_25-implode';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'jsonpath_parser:25';
+$feeds_tamper->plugin_id = 'implode';
+$feeds_tamper->settings = array(
+  'glue' => ',',
+  'real_glue' => ',',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Implode';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-jsonpath_parser_5-efq_finder';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'jsonpath_parser:5';
+$feeds_tamper->plugin_id = 'efq_finder';
+$feeds_tamper->settings = array(
+  'update' => 'Update',
+  'entity_type' => 'taxonomy_term',
+  'bundle' => 'languages',
+  'field' => 'field_language_code_iso_639_1',
+  'column' => 'value',
+  'property' => FALSE,
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Entity Field Query finder';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-jsonpath_parser_5-php';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'jsonpath_parser:5';
+$feeds_tamper->plugin_id = 'php';
+$feeds_tamper->settings = array(
+  'php' => '// field could be an item or an array
+if ($field != null) {
+    if (is_array($field)){
+       $terms = array();
+       foreach ($field as $f) {
+          $term = taxonomy_term_load($f);
+          $name = $term->name;
+          array_push($terms, $name);
+       }
+       return $terms;
+    } else {
+      $term = taxonomy_term_load($field);
+      $name = $term->name;
+      return $name;
+    }
+}',
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Get Term Name from Term ID (TID)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-jsonpath_parser_9-efq_finder';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'jsonpath_parser:9';
+$feeds_tamper->plugin_id = 'efq_finder';
+$feeds_tamper->settings = array(
+  'update' => 'Update',
+  'entity_type' => 'taxonomy_term',
+  'bundle' => 'regions',
+  'field' => 'field_iso2',
+  'column' => 'value',
+  'property' => FALSE,
+);
+$feeds_tamper->weight = 10;
+$feeds_tamper->description = 'Entity Field Query finder (ISO2)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'olc_json_importer-jsonpath_parser_9-find_replace_multiple';
+$feeds_tamper->importer = 'olc_json_importer';
+$feeds_tamper->source = 'jsonpath_parser:9';
+$feeds_tamper->plugin_id = 'find_replace_multiple';
+$feeds_tamper->settings = array(
+  'pairs' => array(
+    0 => array(
+      'source' => 'BR',
+      'target' => 'BRA',
+    ),
+    1 => array(
+      'source' => 'CD',
+      'target' => 'COD',
+    ),
+    2 => array(
+      'source' => 'CI',
+      'target' => 'CIV',
+    ),
+    3 => array(
+      'source' => 'CM',
+      'target' => 'CMR',
+    ),
+    4 => array(
+      'source' => 'CN',
+      'target' => 'CHN',
+    ),
+    5 => array(
+      'source' => 'ET',
+      'target' => 'ETH',
+    ),
+    6 => array(
+      'source' => 'GH',
+      'target' => 'GHA',
+    ),
+    7 => array(
+      'source' => 'KH',
+      'target' => 'KHM',
+    ),
+    8 => array(
+      'source' => 'LR',
+      'target' => 'LBR',
+    ),
+    9 => array(
+      'source' => 'LU',
+      'target' => 'LUX',
+    ),
+    10 => array(
+      'source' => 'MG',
+      'target' => 'MDG',
+    ),
+    11 => array(
+      'source' => 'ML',
+      'target' => 'MLI',
+    ),
+    12 => array(
+      'source' => 'PE',
+      'target' => 'PER',
+    ),
+    13 => array(
+      'source' => 'SD',
+      'target' => 'SDN',
+    ),
+    14 => array(
+      'source' => 'SL',
+      'target' => 'SLE',
+    ),
+    15 => array(
+      'source' => 'SS',
+      'target' => 'SSD',
+    ),
+    16 => array(
+      'source' => 'TL',
+      'target' => 'TLS',
+    ),
+  ),
+  'full' => 1,
+);
+$feeds_tamper->weight = 11;
+$feeds_tamper->description = 'Find replace multiple';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'olc_json_importer-jsonpath_parser_9-php';
 $feeds_tamper->importer = 'olc_json_importer';
@@ -732,7 +857,7 @@ if ($field != null) {
     }
 }',
 );
-$feeds_tamper->weight = 8;
+$feeds_tamper->weight = 12;
 $feeds_tamper->description = 'Get Term Name from Term ID (TID)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
