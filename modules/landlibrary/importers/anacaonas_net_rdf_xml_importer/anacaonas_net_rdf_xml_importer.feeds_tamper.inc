@@ -85,7 +85,7 @@ $feeds_tamper->description = 'Get the Entity TID from ISO3 code	';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'anacaonas_net_rdf_xml_importer-xpathparser_11-php';
 $feeds_tamper->importer = 'anacaonas_net_rdf_xml_importer';
@@ -164,7 +164,7 @@ $feeds_tamper->description = 'Get the Entity TID (Concept) from Agrovoc URI';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'anacaonas_net_rdf_xml_importer-xpathparser_15-php_tid';
 $feeds_tamper->importer = 'anacaonas_net_rdf_xml_importer';
@@ -795,7 +795,7 @@ $feeds_tamper->description = 'Get the Entity TID from UN M.49 code';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'anacaonas_net_rdf_xml_importer-xpathparser_24-php';
 $feeds_tamper->importer = 'anacaonas_net_rdf_xml_importer';
@@ -1659,7 +1659,7 @@ $feeds_tamper->description = 'Get the Entity TID from ISO 639-1 code';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'anacaonas_net_rdf_xml_importer-xpathparser_8-php';
 $feeds_tamper->importer = 'anacaonas_net_rdf_xml_importer';

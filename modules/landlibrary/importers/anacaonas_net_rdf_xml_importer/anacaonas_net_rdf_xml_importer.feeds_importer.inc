@@ -17,14 +17,14 @@ $feeds_importer->config = array(
   'fetcher' => array(
     'plugin_key' => 'FeedsFileFetcher',
     'config' => array(
-      'allowed_extensions' => 'rdf html htm',
+      'allowed_extensions' => 'rdf xml',
       'direct' => 0,
       'directory' => 'private://feeds',
       'allowed_schemes' => array(
         'public' => 'public',
         'private' => 'private',
       ),
-      'delete_uploaded_file' => FALSE,
+      'delete_uploaded_file' => 0,
     ),
   ),
   'parser' => array(
@@ -159,7 +159,8 @@ $feeds_importer->config = array(
         7 => array(
           'source' => 'xpathparser:8',
           'target' => 'field_doc_language',
-          'unique' => FALSE,
+          'term_search' => '1',
+          'autocreate' => 0,
           'language' => 'und',
         ),
         8 => array(
@@ -171,7 +172,8 @@ $feeds_importer->config = array(
         9 => array(
           'source' => 'xpathparser:11',
           'target' => 'field_geographical_focus',
-          'unique' => FALSE,
+          'term_search' => '1',
+          'autocreate' => 0,
           'language' => 'und',
         ),
         10 => array(
@@ -189,8 +191,8 @@ $feeds_importer->config = array(
         12 => array(
           'source' => 'xpathparser:15',
           'target' => 'field_related_topics',
-          'unique' => FALSE,
-          'language' => 'und',
+          'term_search' => '1',
+          'autocreate' => 0,
         ),
         13 => array(
           'source' => 'xpathparser:16',
@@ -220,6 +222,7 @@ $feeds_importer->config = array(
           'source' => 'xpathparser:20',
           'target' => 'field_image:uri',
           'file_exists' => '4',
+          'language' => 'und',
         ),
         18 => array(
           'source' => 'xpathparser:21',
@@ -242,7 +245,8 @@ $feeds_importer->config = array(
         21 => array(
           'source' => 'xpathparser:24',
           'target' => 'field_geographical_focus',
-          'unique' => FALSE,
+          'term_search' => '1',
+          'autocreate' => 0,
           'language' => 'und',
         ),
         22 => array(
@@ -268,7 +272,6 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
-
 
 /*****/
     $export[$feeds_importer->id] = $feeds_importer;
