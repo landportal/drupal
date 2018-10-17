@@ -14,6 +14,22 @@ $export = array();
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-blank_source_1-default_value';
+$feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
+$feeds_tamper->source = 'Blank source 1';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => 'importer_porlatierra_rdf_xml',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set fixed value "importer_porlatierra_rdf_xml"';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-blank_source_2-default_value';
 $feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
 $feeds_tamper->source = 'Blank source 2';
@@ -30,16 +46,16 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-blank_source_1-default_value';
+$feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-blank_source_3-copy';
 $feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
-$feeds_tamper->source = 'Blank source 1';
-$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->source = 'Blank source 3';
+$feeds_tamper->plugin_id = 'copy';
 $feeds_tamper->settings = array(
-  'default_value' => 'importer_porlatierra_rdf_xml',
-  'only_if_empty' => 0,
+  'to_from' => 'from',
+  'source' => 'xpathparser:2',
 );
 $feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Set fixed value "importer_porlatierra_rdf_xml"';
+$feeds_tamper->description = 'Copy source value';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -64,7 +80,7 @@ $feeds_tamper->description = 'Get the Entity TID from ISO3 code	';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_11-php';
 $feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
@@ -127,7 +143,7 @@ $feeds_tamper->description = 'Get the Entity TID (Concept) from Agrovoc URI';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_15-php_tid';
 $feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
@@ -346,7 +362,7 @@ $feeds_tamper->description = 'Get the Entity TID from UN M.49 code';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_24-php';
 $feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
@@ -382,7 +398,7 @@ $feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_24-unique';
 $feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
 $feeds_tamper->source = 'xpathparser:24';
 $feeds_tamper->plugin_id = 'unique';
-$feeds_tamper->settings = '';
+$feeds_tamper->settings = array();
 $feeds_tamper->weight = 2;
 $feeds_tamper->description = 'Unique';
 
@@ -515,7 +531,7 @@ $feeds_tamper->description = 'Get the Entity TID from ISO 639-1 code';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'porlatierra_org_rdf_xml_importer-xpathparser_8-php';
 $feeds_tamper->importer = 'porlatierra_org_rdf_xml_importer';
@@ -578,7 +594,20 @@ $feeds_tamper->settings = array(
       'source' => 'Documentos MRxT',
       'target' => 'Policy Papers & Briefs',
     ),
+    3 => array(
+      'source' => 'Documentos de conferencias y reportes',
+      'target' => 'Conference Papers & Reports',
+    ),
+    4 => array(
+      'source' => 'Materiales promocionales e institucionales',
+      'target' => 'Institutional & Promotional materials',
+    ),
+    5 => array(
+      'source' => '',
+      'target' => '',
+    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 5;
 $feeds_tamper->description = 'Find replace multiple - Resource Type (porlatierra.org)';

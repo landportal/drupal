@@ -29,6 +29,7 @@ $feeds_importer->config = array(
         'public' => 'public',
         'private' => 'private',
       ),
+      'delete_uploaded_file' => FALSE,
     ),
   ),
   'parser' => array(
@@ -118,7 +119,8 @@ $feeds_importer->config = array(
         0 => array(
           'source' => 'xpathparser:0',
           'target' => 'title',
-          'unique' => 1,
+          'unique' => 0,
+          'language' => 'und',
         ),
         1 => array(
           'source' => 'xpathparser:1',
@@ -159,7 +161,8 @@ $feeds_importer->config = array(
         7 => array(
           'source' => 'xpathparser:8',
           'target' => 'field_doc_language',
-          'unique' => FALSE,
+          'term_search' => '1',
+          'autocreate' => 0,
           'language' => 'und',
         ),
         8 => array(
@@ -171,7 +174,8 @@ $feeds_importer->config = array(
         9 => array(
           'source' => 'xpathparser:11',
           'target' => 'field_geographical_focus',
-          'unique' => FALSE,
+          'term_search' => '1',
+          'autocreate' => 0,
           'language' => 'und',
         ),
         10 => array(
@@ -189,8 +193,8 @@ $feeds_importer->config = array(
         12 => array(
           'source' => 'xpathparser:15',
           'target' => 'field_related_topics',
-          'unique' => FALSE,
-          'language' => 'und',
+          'term_search' => '1',
+          'autocreate' => 0,
         ),
         13 => array(
           'source' => 'xpathparser:16',
@@ -219,7 +223,7 @@ $feeds_importer->config = array(
         17 => array(
           'source' => 'xpathparser:20',
           'target' => 'field_image:uri',
-          'unique' => FALSE,
+          'file_exists' => '4',
           'language' => 'und',
         ),
         18 => array(
@@ -243,7 +247,14 @@ $feeds_importer->config = array(
         21 => array(
           'source' => 'xpathparser:24',
           'target' => 'field_geographical_focus',
-          'unique' => FALSE,
+          'term_search' => '1',
+          'autocreate' => 0,
+          'language' => 'und',
+        ),
+        22 => array(
+          'source' => 'Blank source 3',
+          'target' => 'guid',
+          'unique' => 1,
           'language' => 'und',
         ),
       ),
