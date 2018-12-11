@@ -98,11 +98,11 @@ $feeds_tamper->importer = 'mokoro_csv_importer';
 $feeds_tamper->source = 'Data provider';
 $feeds_tamper->plugin_id = 'default_value';
 $feeds_tamper->settings = array(
-  'default_value' => 'Mokoro',
+  'default_value' => 'Mokoro Land Rights In Africa',
   'only_if_empty' => 0,
 );
 $feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Set value "Mokoro"';
+$feeds_tamper->description = 'Set value "Mokoro Land Rights In Africa"';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
