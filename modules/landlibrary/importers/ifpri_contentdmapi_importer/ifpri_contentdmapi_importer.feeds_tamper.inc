@@ -1651,6 +1651,67 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-blank_source_12-copy';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'Blank source 12';
+$feeds_tamper->plugin_id = 'copy';
+$feeds_tamper->settings = array(
+  'to_from' => 'from',
+  'source' => 'Blank source 8',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Copy source value (from generated ID)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-blank_source_13-explode';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'Blank source 13';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ';',
+  'limit' => '',
+  'real_separator' => ';',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-blank_source_13-rewrite';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'Blank source 13';
+$feeds_tamper->plugin_id = 'rewrite';
+$feeds_tamper->settings = array(
+  'text' => '[xpathparser:22];[xpathparser:23]',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Rewrite';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-blank_source_13-unique';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'Blank source 13';
+$feeds_tamper->plugin_id = 'unique';
+$feeds_tamper->settings = array();
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Unique';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_contentdmapi_importer-blank_source_3-rewrite';
 $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
 $feeds_tamper->source = 'Blank source 3';
@@ -3437,7 +3498,7 @@ $feeds_tamper->description = 'Execute php code. Remove the list items that are n
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_contentdmapi_importer-blank_source_9-php_3';
 $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
@@ -3513,6 +3574,35 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-blank_source_9-unique_3';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'Blank source 9';
+$feeds_tamper->plugin_id = 'unique';
+$feeds_tamper->settings = array();
+$feeds_tamper->weight = 12;
+$feeds_tamper->description = 'Unique';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_10-default_value';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:10';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => 'English',
+  'only_if_empty' => 1,
+);
+$feeds_tamper->weight = 4;
+$feeds_tamper->description = 'Set value "English" if empty';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_10-efq_finder';
 $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
 $feeds_tamper->source = 'xpathparser:10';
@@ -3525,7 +3615,7 @@ $feeds_tamper->settings = array(
   'column' => 'value',
   'property' => FALSE,
 );
-$feeds_tamper->weight = 1;
+$feeds_tamper->weight = 6;
 $feeds_tamper->description = 'Get the Entity TID from ISO 639-1 code';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -3548,38 +3638,51 @@ $feeds_tamper->settings = array(
       'target' => 'zh',
     ),
     2 => array(
-      'source' => 'English',
+      'source' => 'English;',
       'target' => 'en',
     ),
     3 => array(
+      'source' => 'English',
+      'target' => 'en',
+    ),
+    4 => array(
       'source' => 'French',
       'target' => 'fr',
     ),
-    4 => array(
+    5 => array(
       'source' => 'German',
       'target' => 'de',
     ),
-    5 => array(
+    6 => array(
+      'source' => 'Italian',
+      'target' => 'it',
+    ),
+    7 => array(
       'source' => 'Portuguese',
       'target' => 'pt',
     ),
-    6 => array(
+    8 => array(
       'source' => 'Russian',
       'target' => 'ru',
     ),
-    7 => array(
+    9 => array(
       'source' => 'Spanish',
       'target' => 'es',
     ),
+    10 => array(
+      'source' => 'Japanese',
+      'target' => 'ja',
+    ),
   ),
+  'full' => 1,
 );
-$feeds_tamper->weight = 0;
+$feeds_tamper->weight = 5;
 $feeds_tamper->description = 'Find replace multiple (language label -> ISO code)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_10-php';
 $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
@@ -3603,7 +3706,7 @@ if ($field != null) {
     }
 }',
 );
-$feeds_tamper->weight = 2;
+$feeds_tamper->weight = 8;
 $feeds_tamper->description = 'Get Term Name from Term ID (TID)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -3616,7 +3719,7 @@ $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
 $feeds_tamper->source = 'xpathparser:10';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 3;
+$feeds_tamper->weight = 7;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -3668,129 +3771,144 @@ $feeds_tamper->plugin_id = 'find_replace_multiple';
 $feeds_tamper->settings = array(
   'pairs' => array(
     0 => array(
-      'source' => 'Audiovisual',
-      'target' => 'Multimedia',
+      'source' => 'Book',
+      'target' => 'Journal Articles & Books',
     ),
     1 => array(
       'source' => 'Book chapter',
-      'target' => 'JAB',
+      'target' => 'Journal Articles & Books',
     ),
     2 => array(
       'source' => 'Book review',
-      'target' => 'JAB',
+      'target' => 'Journal Articles & Books',
     ),
     3 => array(
       'source' => 'Booklet',
-      'target' => 'PPB',
+      'target' => 'Policy Papers & Briefs',
     ),
     4 => array(
       'source' => 'Brief',
-      'target' => 'PPB',
+      'target' => 'Policy Papers & Briefs',
     ),
     5 => array(
       'source' => 'Conference Paper',
-      'target' => 'CPR',
+      'target' => 'Conference Papers & Reports',
     ),
     6 => array(
       'source' => 'Conference proceeding',
-      'target' => 'CPR',
+      'target' => 'Conference Papers & Reports',
     ),
     7 => array(
       'source' => 'Data paper',
-      'target' => 'PPB',
+      'target' => 'Policy Papers & Briefs',
     ),
     8 => array(
       'source' => 'Discussion paper',
-      'target' => 'PPB',
+      'target' => 'Policy Papers & Briefs',
     ),
     9 => array(
-      'source' => 'Editorial',
-      'target' => 'PPB',
+      'source' => 'Discussion Paper',
+      'target' => 'Policy Papers & Briefs',
     ),
     10 => array(
-      'source' => 'Essay',
-      'target' => 'PPB',
+      'source' => 'Editorial',
+      'target' => 'Policy Papers & Briefs',
     ),
     11 => array(
-      'source' => 'Factsheet',
-      'target' => 'PPB',
+      'source' => 'Essay',
+      'target' => 'Policy Papers & Briefs',
     ),
     12 => array(
+      'source' => 'Factsheet',
+      'target' => 'Policy Papers & Briefs',
+    ),
+    13 => array(
       'source' => 'Infographic',
       'target' => 'Multimedia',
     ),
-    13 => array(
-      'source' => 'Journal article',
-      'target' => 'JAB',
-    ),
     14 => array(
-      'source' => 'Journal Issue',
-      'target' => 'JAB',
+      'source' => 'Journal article',
+      'target' => 'Journal Articles & Books',
     ),
     15 => array(
-      'source' => 'Magazine',
-      'target' => 'JAB',
+      'source' => 'Journal Issue',
+      'target' => 'Journal Articles & Books',
     ),
     16 => array(
+      'source' => 'Magazine',
+      'target' => 'Journal Articles & Books',
+    ),
+    17 => array(
       'source' => 'Newsletter',
       'target' => 'Institutional & Promotional Materials',
     ),
-    17 => array(
-      'source' => 'Project paper',
-      'target' => 'PPB',
-    ),
     18 => array(
+      'source' => 'Project paper',
+      'target' => 'Policy Papers & Briefs',
+    ),
+    19 => array(
+      'source' => 'Project paper;',
+      'target' => 'Policy Papers & Briefs',
+    ),
+    20 => array(
       'source' => 'Report',
       'target' => 'Reports & Research',
     ),
-    19 => array(
+    21 => array(
       'source' => 'Speech',
-      'target' => 'CPR',
+      'target' => 'Conference Papers & Reports',
     ),
-    20 => array(
+    22 => array(
       'source' => 'Thesis-dissertation',
       'target' => 'Peer-reviewed publication',
     ),
-    21 => array(
-      'source' => 'Tool',
-      'target' => 'TRT',
-    ),
-    22 => array(
-      'source' => 'Training materials',
-      'target' => 'TRT',
-    ),
     23 => array(
+      'source' => 'Tool',
+      'target' => 'Training Resources & Tools',
+    ),
+    24 => array(
+      'source' => 'Training materials',
+      'target' => 'Training Resources & Tools',
+    ),
+    25 => array(
       'source' => 'Website',
       'target' => 'Institutional & Promotional Materials',
     ),
-    24 => array(
-      'source' => 'Working paper',
-      'target' => 'PPB',
-    ),
-    25 => array(
-      'source' => 'Book',
-      'target' => 'JAB',
-    ),
     26 => array(
-      'source' => 'PPB',
+      'source' => 'Working paper',
       'target' => 'Policy Papers & Briefs',
     ),
-    27 => array(
-      'source' => 'JAB',
-      'target' => 'Journal Articles & Books',
-    ),
-    28 => array(
-      'source' => 'CPR',
-      'target' => 'Conference Papers & Reports',
-    ),
-    29 => array(
-      'source' => 'TRT',
-      'target' => 'Training Resources & Tools',
-    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Find replace multiple';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_15-keyword_filter';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:15';
+$feeds_tamper->plugin_id = 'keyword_filter';
+$feeds_tamper->settings = array(
+  'words' => 'News article
+Synopsis',
+  'word_boundaries' => 0,
+  'exact' => 0,
+  'case_sensitive' => 0,
+  'invert' => 1,
+  'word_list' => array(
+    0 => 'News article',
+    1 => 'Synopsis',
+  ),
+  'regex' => FALSE,
+  'func' => 'mb_stripos',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Keyword filter';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -3804,26 +3922,43 @@ $feeds_tamper->plugin_id = 'find_replace_multiple';
 $feeds_tamper->settings = array(
   'pairs' => array(
     0 => array(
-      'source' => 'CC BY 3.0',
+      'source' => 'CC BY 3.0 IGO',
       'target' => 'Creative Commons Attribution',
     ),
     1 => array(
-      'source' => 'CC BY 4.0',
+      'source' => 'CC BY 3.0',
       'target' => 'Creative Commons Attribution',
     ),
     2 => array(
+      'source' => 'CC BY 4.0',
+      'target' => 'Creative Commons Attribution',
+    ),
+    3 => array(
       'source' => 'CC BY-NC-ND 3.0',
       'target' => 'Creative Commons Attribution-NonCommercial-NoDerivs',
     ),
-    3 => array(
+    4 => array(
       'source' => 'CC BY-NC-ND 4.0',
       'target' => 'Creative Commons Attribution-NonCommercial-NoDerivs',
     ),
-    4 => array(
+    5 => array(
       'source' => 'CC BY-NC',
       'target' => 'Creative Commons Attribution-NonCommercial',
     ),
+    6 => array(
+      'source' => 'CC BY:NC:ND 3.0',
+      'target' => 'Creative Commons Attribution-NonCommercial-NoDerivs',
+    ),
+    7 => array(
+      'source' => 'CC BY:NC:ND 4.0',
+      'target' => 'Creative Commons Attribution-NonCommercial-NoDerivs',
+    ),
+    8 => array(
+      'source' => 'CC BY:NC',
+      'target' => 'Creative Commons Attribution-NonCommercial',
+    ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 0;
 $feeds_tamper->description = 'Find replace multiple';
@@ -3831,7 +3966,7 @@ $feeds_tamper->description = 'Find replace multiple';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_18-explode';
 $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
@@ -3848,7 +3983,7 @@ $feeds_tamper->description = 'Explode (multiple values \';\' separated)';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_18-find_replace_multiple';
 $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
@@ -3865,6 +4000,7 @@ $feeds_tamper->settings = array(
       'target' => 'United States of America',
     ),
   ),
+  'full' => 1,
 );
 $feeds_tamper->weight = 2;
 $feeds_tamper->description = 'Find replace multiple';
@@ -3872,7 +4008,7 @@ $feeds_tamper->description = 'Find replace multiple';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_18-trim';
 $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
@@ -3888,7 +4024,7 @@ $feeds_tamper->description = 'Trim';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_19-efq_finder';
 $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
@@ -3908,7 +4044,7 @@ $feeds_tamper->description = 'Get the Entity TID from UN M.49 code';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_19-explode';
 $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
@@ -3925,7 +4061,7 @@ $feeds_tamper->description = 'Explode (multiple values \';\' separated)';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_19-find_replace_multiple';
 $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
@@ -4037,7 +4173,7 @@ $feeds_tamper->description = 'Find replace multiple';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_19-php';
 $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
@@ -4067,7 +4203,7 @@ $feeds_tamper->description = 'Get Term Name from Term ID (TID)';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_19-trim';
 $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
@@ -4083,7 +4219,7 @@ $feeds_tamper->description = 'Trim';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_19-unique';
 $feeds_tamper->importer = 'ifpri_contentdmapi_importer';
@@ -4092,6 +4228,282 @@ $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
 $feeds_tamper->weight = 5;
 $feeds_tamper->description = 'Unique';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_22-efq_finder';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:22';
+$feeds_tamper->plugin_id = 'efq_finder';
+$feeds_tamper->settings = array(
+  'update' => 'Update',
+  'entity_type' => 'taxonomy_term',
+  'bundle' => 'regions',
+  'field' => 'field_area_code_un_m_49',
+  'column' => 'value',
+  'property' => FALSE,
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Get the Entity TID from UN M.49 code';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_22-explode';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:22';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ';',
+  'limit' => '',
+  'real_separator' => ';',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_22-find_replace_multiple';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:22';
+$feeds_tamper->plugin_id = 'find_replace_multiple';
+$feeds_tamper->settings = array(
+  'pairs' => array(
+    0 => array(
+      'source' => 'AFRICA  SOUTH OF SAHARA',
+      'target' => '202',
+    ),
+    1 => array(
+      'source' => 'AFRICA SOUTH OF SAHARA',
+      'target' => '202',
+    ),
+    2 => array(
+      'source' => 'AMERICAS',
+      'target' => '019',
+    ),
+    3 => array(
+      'source' => 'CARIBBEAN',
+      'target' => '029',
+    ),
+    4 => array(
+      'source' => 'CENTRAL AFRICA',
+      'target' => '017',
+    ),
+    5 => array(
+      'source' => 'CENTRAL AMERICA',
+      'target' => '013',
+    ),
+    6 => array(
+      'source' => 'CENTRAL ASIA',
+      'target' => '143',
+    ),
+    7 => array(
+      'source' => 'EAST AFRICA',
+      'target' => '014',
+    ),
+    8 => array(
+      'source' => 'EAST ASIA',
+      'target' => '030',
+    ),
+    9 => array(
+      'source' => 'EASTERN EUROPE',
+      'target' => '151',
+    ),
+    10 => array(
+      'source' => 'NORTH AFRICA',
+      'target' => '015',
+    ),
+    11 => array(
+      'source' => 'NORTH AMERICA',
+      'target' => '021',
+    ),
+    12 => array(
+      'source' => 'OCEANIA',
+      'target' => '009',
+    ),
+    13 => array(
+      'source' => 'SOUTH AMERICA',
+      'target' => '005',
+    ),
+    14 => array(
+      'source' => 'SOUTH ASIA',
+      'target' => '034',
+    ),
+    15 => array(
+      'source' => 'SOUTH EAST ASIA',
+      'target' => '035',
+    ),
+    16 => array(
+      'source' => 'SOUTHEAST ASIA',
+      'target' => '035',
+    ),
+    17 => array(
+      'source' => 'SOUTHERN AFRICA',
+      'target' => '018',
+    ),
+    18 => array(
+      'source' => 'SUB-SAHARAN AFRICA',
+      'target' => '202',
+    ),
+    19 => array(
+      'source' => 'WEST AFRICA',
+      'target' => '011',
+    ),
+    20 => array(
+      'source' => 'WESTERN ASIA',
+      'target' => '145',
+    ),
+    21 => array(
+      'source' => 'ASIA',
+      'target' => '142',
+    ),
+    22 => array(
+      'source' => 'AMERICA',
+      'target' => '019',
+    ),
+    23 => array(
+      'source' => 'AFRICA',
+      'target' => '002',
+    ),
+  ),
+  'full' => 1,
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Find replace multiple';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_22-implode';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:22';
+$feeds_tamper->plugin_id = 'implode';
+$feeds_tamper->settings = array(
+  'glue' => ';',
+  'real_glue' => ';',
+);
+$feeds_tamper->weight = 4;
+$feeds_tamper->description = 'Implode (;)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_22-trim';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:22';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_23-efq_finder';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:23';
+$feeds_tamper->plugin_id = 'efq_finder';
+$feeds_tamper->settings = array(
+  'update' => 'Update',
+  'entity_type' => 'taxonomy_term',
+  'bundle' => 'regions',
+  'field' => 'name_field',
+  'column' => 'value',
+  'property' => FALSE,
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Get the Entity TID from Name	';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_23-explode';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:23';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ';',
+  'limit' => '',
+  'real_separator' => ';',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_23-find_replace_multiple';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:23';
+$feeds_tamper->plugin_id = 'find_replace_multiple';
+$feeds_tamper->settings = array(
+  'pairs' => array(
+    0 => array(
+      'source' => 'SYRIA',
+      'target' => 'Syrian Arab Republic',
+    ),
+    1 => array(
+      'source' => 'UNITED STATES',
+      'target' => 'United States of America',
+    ),
+  ),
+  'full' => 1,
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Find replace multiple';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_23-implode';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:23';
+$feeds_tamper->plugin_id = 'implode';
+$feeds_tamper->settings = array(
+  'glue' => ';',
+  'real_glue' => ';',
+);
+$feeds_tamper->weight = 4;
+$feeds_tamper->description = 'Implode (;)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_23-trim';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:23';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -4143,15 +4555,15 @@ $feeds_tamper->plugin_id = 'find_replace_multiple';
 $feeds_tamper->settings = array(
   'pairs' => array(
     0 => array(
-      'source' => 'Agricultural and Applied Economics Association \\(AAEA\\)',
+      'source' => 'Agricultural and Applied Economics Association (AAEA)',
       'target' => 'Agricultural & Applied Economics Association',
     ),
     1 => array(
-      'source' => 'Asian Development Bank \\(ADB\\)',
+      'source' => 'Asian Development Bank (ADB)',
       'target' => 'Asian Development Bank',
     ),
     2 => array(
-      'source' => 'Australian Centre for International Agricultural Research \\(ACIAR\\)',
+      'source' => 'Australian Centre for International Agricultural Research (ACIAR)',
       'target' => 'Australian Centre for International Agricultural Research',
     ),
     3 => array(
@@ -4159,7 +4571,7 @@ $feeds_tamper->settings = array(
       'target' => 'Centre for Agriculture and Bioscience International',
     ),
     4 => array(
-      'source' => 'Center for Development Research \\(ZEF\\), University of Bonn',
+      'source' => 'Center for Development Research (ZEF), University of Bonn',
       'target' => 'Center for Development Research - University of Bonn',
     ),
     5 => array(
@@ -4175,11 +4587,11 @@ $feeds_tamper->settings = array(
       'target' => 'Centre for the Study of African Economies - Oxford University',
     ),
     8 => array(
-      'source' => 'Deutsche Welthungerhilfe \\(German AgroAction\\)',
+      'source' => 'Deutsche Welthungerhilfe (German AgroAction)',
       'target' => 'Welthungerhilfe',
     ),
     9 => array(
-      'source' => 'Eastern and Central Africa Programme for Agricultural Policy Analysis \\(ECAPAPA\\)',
+      'source' => 'Eastern and Central Africa Programme for Agricultural Policy Analysis (ECAPAPA)',
       'target' => 'Eastern and Central Africa Programme for Agricultural Policy Analysis',
     ),
     10 => array(
@@ -4187,103 +4599,147 @@ $feeds_tamper->settings = array(
       'target' => 'Elsevier',
     ),
     11 => array(
-      'source' => 'Ethiopian Development Research Institute \\(EDRI\\)',
+      'source' => 'Ethiopian Development Research Institute (EDRI)',
       'target' => 'Ethiopian Development Research Institute',
     ),
     12 => array(
-      'source' => 'Food and Agricultural Organization of the United Nations \\(FAO\\)',
-      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+      'source' => 'International Food Policy Research Institute (IFPRI) and Ethiopia Development Research Institute (EDRI)',
+      'target' => 'International Food Policy Research Institute;Ethiopian Development Research Institute',
     ),
     13 => array(
+      'source' => 'Food and Agricultural Organization of the United Nations (FAO)',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    14 => array(
       'source' => 'Frankfurter Societäts-Medien Gmbh',
       'target' => 'Frankfurter Societäts-Medien GmbH',
     ),
-    14 => array(
-      'source' => 'Institute of Fisheries, Management and Coastal Community Development, North Sea Centre\\Institute for Fisheries Management and Coastal Community Development - Aalborg University
-',
-      'target' => '',
-    ),
     15 => array(
-      'source' => 'International Center for Living Aquatic Resources Management \\(ICLARM\\)\\International Center for Living Aquatic Resources Management
-',
-      'target' => '',
+      'source' => 'Institute of Fisheries, Management and Coastal Community Development, North Sea Centre',
+      'target' => 'Institute for Fisheries Management and Coastal Community Development - Aalborg University',
     ),
     16 => array(
-      'source' => 'International Center for Tropical Agriculture \\(CIAT\\)',
-      'target' => 'International Center for Tropical Agriculture',
+      'source' => 'International Center for Living Aquatic Resources Management (ICLARM)',
+      'target' => 'International Center for Living Aquatic Resources Management',
     ),
     17 => array(
-      'source' => 'International Centre for Research in Agroforestry \\(ICRA\\), Tokyo Metropolitan University',
-      'target' => 'World Agroforestry Centre',
+      'source' => 'International Center for Tropical Agriculture (CIAT)',
+      'target' => 'International Center for Tropical Agriculture',
     ),
     18 => array(
-      'source' => 'International Centre for Trade and Sustainable Development \\(ICTSD\\)',
-      'target' => 'Tokyo Metropolitan University',
+      'source' => 'International Centre for Research in Agroforestry (ICRA), Tokyo Metropolitan University',
+      'target' => 'World Agroforestry Centre',
     ),
     19 => array(
-      'source' => 'International Food Policy Research Institute \\( IFPRI\\)',
-      'target' => 'International Food Policy Research Institute',
+      'source' => 'International Centre for Trade and Sustainable Development (ICTSD)',
+      'target' => 'Tokyo Metropolitan University',
     ),
     20 => array(
-      'source' => 'International Food Policy Research Institute \\(IFPRI\\)',
+      'source' => 'International Food Policy Research Institute ( IFPRI)',
       'target' => 'International Food Policy Research Institute',
     ),
     21 => array(
-      'source' => 'International Initiative for Impact Evaluation \\(3ie\\)',
-      'target' => 'International Initiative for Impact Evaluation',
+      'source' => 'International Food Policy Research Institute (IFPRI)',
+      'target' => 'International Food Policy Research Institute',
     ),
     22 => array(
-      'source' => 'International Institute of Fisheries Economics and Trade \\(IIFET\\)',
-      'target' => 'International Institute of Fisheries Economics and Trade - Oregon State University',
+      'source' => 'International Initiative for Impact Evaluation (3ie)',
+      'target' => 'International Initiative for Impact Evaluation',
     ),
     23 => array(
-      'source' => 'International Livestock Research Institute \\(ILRI\\)',
-      'target' => 'International Livestock Research Institute',
+      'source' => 'International Institute of Fisheries Economics and Trade (IIFET)',
+      'target' => 'International Institute of Fisheries Economics and Trade - Oregon State University',
     ),
     24 => array(
+      'source' => 'International Livestock Research Institute (ILRI)',
+      'target' => 'International Livestock Research Institute',
+    ),
+    25 => array(
       'source' => 'Istanbul Technical University (ITU)',
       'target' => 'Istanbul Technical University',
     ),
-    25 => array(
+    26 => array(
       'source' => 'Peter Lang GmbH',
       'target' => 'Peter Lang Publishing Group',
     ),
-    26 => array(
-      'source' => 'Published for the International Food Policy Research Institute \\(IFPRI\\) [by] Johns Hopkins University Press',
+    27 => array(
+      'source' => 'Published for the International Food Policy Research Institute (IFPRI) [by] Johns Hopkins University Press',
       'target' => 'International Food Policy Research Institute',
     ),
-    27 => array(
+    28 => array(
       'source' => 'Resources for the Future (RFF)',
       'target' => 'Resources for the Future',
     ),
-    28 => array(
+    29 => array(
       'source' => 'Resources for the Future Press',
       'target' => 'Resources for the Future',
     ),
-    29 => array(
+    30 => array(
       'source' => 'Springer Netherlands',
       'target' => 'Springer',
     ),
-    30 => array(
+    31 => array(
       'source' => 'The Haworth Press, Inc.',
       'target' => 'Taylor & Francis Group',
     ),
-    31 => array(
+    32 => array(
       'source' => 'The World Bank',
       'target' => 'World Bank Group',
     ),
-    32 => array(
+    33 => array(
       'source' => 'University of Bonn, Center for Development Research',
       'target' => 'Center for Development Research - University of Bonn',
     ),
-    33 => array(
+    34 => array(
       'source' => 'WorldFish Center',
       'target' => 'WorldFish',
     ),
+    35 => array(
+      'source' => 'Island Press',
+      'target' => 'Island Press',
+    ),
+    36 => array(
+      'source' => 'Multidisciplinary Digital Publishing Institute (MDPI)',
+      'target' => 'Multidisciplinary Digital Publishing Institute',
+    ),
+    37 => array(
+      'source' => 'Wageningen Academic Publishers',
+      'target' => 'Wageningen Academic Publishers',
+    ),
   ),
+  'full' => 1,
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Find replace multiple';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_9-trim';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:9';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
 );
 $feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Find replace multiple';
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'ifpri_contentdmapi_importer-xpathparser_9-unique';
+$feeds_tamper->importer = 'ifpri_contentdmapi_importer';
+$feeds_tamper->source = 'xpathparser:9';
+$feeds_tamper->plugin_id = 'unique';
+$feeds_tamper->settings = array();
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
