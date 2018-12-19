@@ -59,6 +59,8 @@ $handler->display->display_options['style_options']['columns'] = array(
   'nothing' => 'nothing',
   'nothing_1' => 'nothing_1',
   'changed' => 'changed',
+  'guid' => 'guid',
+  'created' => 'created',
 );
 $handler->display->display_options['style_options']['default'] = 'nid';
 $handler->display->display_options['style_options']['info'] = array(
@@ -258,6 +260,20 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
+  'guid' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'created' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
 );
 /* Header: Global: Result summary */
 $handler->display->display_options['header']['result']['id'] = 'result';
@@ -422,7 +438,6 @@ $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-$handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
 /* Field: Content: Author(s), editor(s), contributor(s) */
 $handler->display->display_options['fields']['field_doc_people']['id'] = 'field_doc_people';
 $handler->display->display_options['fields']['field_doc_people']['table'] = 'field_data_field_doc_people';
@@ -632,6 +647,16 @@ $handler->display->display_options['fields']['changed']['element_label_colon'] =
 $handler->display->display_options['fields']['changed']['date_format'] = 'short';
 $handler->display->display_options['fields']['changed']['custom_date_format'] = 'd/m/Y';
 $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
+/* Field: Feeds item: Item GUID */
+$handler->display->display_options['fields']['guid']['id'] = 'guid';
+$handler->display->display_options['fields']['guid']['table'] = 'feeds_item';
+$handler->display->display_options['fields']['guid']['field'] = 'guid';
+/* Field: Content: Post date */
+$handler->display->display_options['fields']['created']['id'] = 'created';
+$handler->display->display_options['fields']['created']['table'] = 'node';
+$handler->display->display_options['fields']['created']['field'] = 'created';
+$handler->display->display_options['fields']['created']['date_format'] = 'year_month_day';
+$handler->display->display_options['fields']['created']['second_date_format'] = 'long';
 /* Sort criterion: Content: Post date */
 $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -1183,7 +1208,7 @@ $handler->display->display_options['filters']['uid']['field'] = 'uid';
 $handler->display->display_options['filters']['uid']['value'] = '';
 $handler->display->display_options['filters']['uid']['exposed'] = TRUE;
 $handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
-$handler->display->display_options['filters']['uid']['expose']['label'] = 'Author';
+$handler->display->display_options['filters']['uid']['expose']['label'] = 'User';
 $handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
 $handler->display->display_options['filters']['uid']['expose']['identifier'] = 'uid';
 $handler->display->display_options['filters']['uid']['expose']['remember_roles'] = array(
@@ -1210,4 +1235,39 @@ $handler->display->display_options['filters']['field_doc_publisher_target_id']['
   30037204 => 0,
 );
 $handler->display->display_options['filters']['field_doc_publisher_target_id']['type'] = 'synonyms_autocomplete';
+/* Filter criterion: Content: Data Provider (field_doc_provider) */
+$handler->display->display_options['filters']['field_doc_provider_target_id']['id'] = 'field_doc_provider_target_id';
+$handler->display->display_options['filters']['field_doc_provider_target_id']['table'] = 'field_data_field_doc_provider';
+$handler->display->display_options['filters']['field_doc_provider_target_id']['field'] = 'field_doc_provider_target_id';
+$handler->display->display_options['filters']['field_doc_provider_target_id']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_doc_provider_target_id']['expose']['operator_id'] = 'field_doc_provider_target_id_op';
+$handler->display->display_options['filters']['field_doc_provider_target_id']['expose']['label'] = 'Data Provider';
+$handler->display->display_options['filters']['field_doc_provider_target_id']['expose']['operator'] = 'field_doc_provider_target_id_op';
+$handler->display->display_options['filters']['field_doc_provider_target_id']['expose']['identifier'] = 'field_doc_provider_target_id';
+$handler->display->display_options['filters']['field_doc_provider_target_id']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_doc_provider_target_id']['type'] = 'synonyms_autocomplete';
+/* Filter criterion: Field: Related concepts (field_related_topics) */
+$handler->display->display_options['filters']['field_related_topics_tid']['id'] = 'field_related_topics_tid';
+$handler->display->display_options['filters']['field_related_topics_tid']['table'] = 'field_data_field_related_topics';
+$handler->display->display_options['filters']['field_related_topics_tid']['field'] = 'field_related_topics_tid';
+$handler->display->display_options['filters']['field_related_topics_tid']['value'] = '';
+$handler->display->display_options['filters']['field_related_topics_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['operator_id'] = 'field_related_topics_tid_op';
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['label'] = 'LandVoc concepts';
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['operator'] = 'field_related_topics_tid_op';
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['identifier'] = 'field_related_topics_tid';
+$handler->display->display_options['filters']['field_related_topics_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  111903911 => 0,
+  111903910 => 0,
+  30037204 => 0,
+);
+$handler->display->display_options['filters']['field_related_topics_tid']['vocabulary'] = 'landvoc_concepts';
 $handler->display->display_options['path'] = 'admin/content/library';
