@@ -675,12 +675,19 @@ function ct_project_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'media',
       'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'image' => 'image',
+        ),
+        'browser_plugins' => array(),
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'media_generic',
       'weight' => 2,
     ),
   );
@@ -986,7 +993,7 @@ function ct_project_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'taxonomy',
+      'module' => 'options',
       'settings' => array(
         'apply_chosen' => '',
         'auto_creation' => 0,
@@ -997,7 +1004,7 @@ function ct_project_field_default_field_instances() {
         'suggestion_size' => 10,
         'synonyms_autocomplete_path' => 'synonyms/autocomplete-taxonomy-term',
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'options_select',
       'weight' => 13,
     ),
   );
@@ -1205,6 +1212,174 @@ function ct_project_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-currency-field_currency_symbol'.
+  $field_instances['taxonomy_term-currency-field_currency_symbol'] = array(
+    'bundle' => 'currency',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Currency symbols are used to denote that a number is a monetary value, such as the dollar sign "$", the Pound sign "£", and the Euro sign "€".',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_currency_symbol',
+    'label' => 'Currency Symbol',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 42,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-currency-field_eu_currency_nal_uri'.
+  $field_instances['taxonomy_term-currency-field_eu_currency_nal_uri'] = array(
+    'bundle' => 'currency',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'URI of the currency from the <a href="https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/currency">Currencies Named Authority List (NAL) or Common Authority Table (CAT)</a>, a controlled vocabulary listing currencies with their authority code and labels in the 24 official languages of the EU (when available). The list is based on the ISO standard ISO 4217. This NAL is maintained by the Publications Office of the EU in its Metadata Registry (MDR).
+',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_eu_currency_nal_uri',
+    'label' => 'EU Currency NAL URI',
+    'required' => 1,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 255,
+      ),
+      'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 255,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 43,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-currency-field_iso_4217_code'.
+  $field_instances['taxonomy_term-currency-field_iso_4217_code'] = array(
+    'bundle' => 'currency',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'three-letters code. See <a href="https://www.currency-iso.org/en/home/tables/table-a1.html">the official list of ISO 4217 codes</a>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_iso_4217_code',
+    'label' => 'ISO 4217 code',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 3,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 41,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('A medium sized logo or image for the project. Make sure you comply to its policies / guidelines when uploading it.');
@@ -1213,12 +1388,16 @@ function ct_project_field_default_field_instances() {
   t('Associated staff with this project');
   t('Body');
   t('Contact information');
+  t('Currency Symbol');
+  t('Currency symbols are used to denote that a number is a monetary value, such as the dollar sign "$", the Pound sign "£", and the Euro sign "€".');
   t('Data Provider');
   t('Donors');
+  t('EU Currency NAL URI');
   t('Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.');
   t('Focal point, email or telephone for contacting');
   t('Geographical focus');
   t('ID');
+  t('ISO 4217 code');
   t('Implementers');
   t('List of implementing donors/funded organizations');
   t('List of implementing organizations');
@@ -1232,8 +1411,11 @@ function ct_project_field_default_field_instances() {
   t('Starting and end date of the project');
   t('Themes');
   t('Title');
+  t('URI of the currency from the <a href="https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/currency">Currencies Named Authority List (NAL) or Common Authority Table (CAT)</a>, a controlled vocabulary listing currencies with their authority code and labels in the 24 official languages of the EU (when available). The list is based on the ISO standard ISO 4217. This NAL is maintained by the Publications Office of the EU in its Metadata Registry (MDR).
+');
   t('Valuation of the project (Number), for instance "1000000" or "549785"');
   t('Websites of the project');
+  t('three-letters code. See <a href="https://www.currency-iso.org/en/home/tables/table-a1.html">the official list of ISO 4217 codes</a>');
 
   return $field_instances;
 }

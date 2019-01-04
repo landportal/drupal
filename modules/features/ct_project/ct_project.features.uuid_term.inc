@@ -21,6 +21,31 @@ function ct_project_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'currency',
+    'field_iso_4217_code' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'EUR',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_currency_symbol' => array(
+      'und' => array(
+        0 => array(
+          'value' => '€',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_eu_currency_nal_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://publications.europa.eu/resource/authority/currency/EUR',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -28,6 +53,7 @@ function ct_project_uuid_features_default_terms() {
     'path' => array(
       'pathauto' => 1,
     ),
+    'status' => 1,
   );
   $terms[] = array(
     'name' => 'United States dollar',
@@ -40,6 +66,31 @@ function ct_project_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'currency',
+    'field_iso_4217_code' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'USD',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_currency_symbol' => array(
+      'und' => array(
+        0 => array(
+          'value' => '$',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_eu_currency_nal_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://publications.europa.eu/resource/authority/currency/USD',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -47,6 +98,7 @@ function ct_project_uuid_features_default_terms() {
     'path' => array(
       'pathauto' => 1,
     ),
+    'status' => 1,
   );
   $terms[] = array(
     'name' => 'Pound sterling',
@@ -59,6 +111,31 @@ function ct_project_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'currency',
+    'field_iso_4217_code' => array(
+      'und' => array(
+        0 => array(
+          'value' => 'GBP',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_currency_symbol' => array(
+      'und' => array(
+        0 => array(
+          'value' => '£',
+          'format' => NULL,
+        ),
+      ),
+    ),
+    'field_eu_currency_nal_uri' => array(
+      'und' => array(
+        0 => array(
+          'url' => 'http://publications.europa.eu/resource/authority/currency/GBP',
+          'title' => NULL,
+          'attributes' => array(),
+        ),
+      ),
+    ),
     'translations' => array(
       'original' => NULL,
       'data' => array(),
@@ -66,6 +143,7 @@ function ct_project_uuid_features_default_terms() {
     'path' => array(
       'pathauto' => 1,
     ),
+    'status' => 1,
   );
   return $terms;
 }
