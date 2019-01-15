@@ -9,6 +9,8 @@
  */
 function eldis_csv_importer_feeds_tamper_default() {
 
+/****************/
+
 $export = array();
 
 $feeds_tamper = new stdClass();
@@ -260,16 +262,80 @@ $feeds_tamper->settings = array(
       'target' => 'World Bank Group',
     ),
     1 => array(
+      'source' => 'Policy Research Working Papers, World Bank',
+      'target' => 'World Bank Group',
+    ),
+    2 => array(
       'source' => 'Chr. Michelsen Institute, Norway',
       'target' => 'Chr. Michelsen Institute',
     ),
-    2 => array(
+    3 => array(
       'source' => 'Pastoral Development Network, ODI',
       'target' => 'Pastoral Development Network',
     ),
-    3 => array(
+    4 => array(
       'source' => 'Southern African Resource Watch',
       'target' => 'Southern Africa Resource Watch',
+    ),
+    5 => array(
+      'source' => 'Oxfam',
+      'target' => 'Oxfam International',
+    ),
+    6 => array(
+      'source' => 'Natural Resource Perspectives, ODI',
+      'target' => 'Natural Resource Perspectives (ODI)',
+    ),
+    7 => array(
+      'source' => 'Noragric, Department of International Environment and Development Studies, Norwegian University of Life Sciences',
+      'target' => 'Department of Economics and Resource Management, Norwegian University of Life Sciences',
+    ),
+    8 => array(
+      'source' => 'Institute of Development Studies UK',
+      'target' => 'Institute of Development Studies',
+    ),
+    9 => array(
+      'source' => 'United Nations [UN] Environment Programme',
+      'target' => 'United Nations Environment Programme',
+    ),
+    10 => array(
+      'source' => 'Food and Agriculture Organization of the United Nations',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    11 => array(
+      'source' => 'Sustainable Development Department, FAO SD Dimensions',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
+    ),
+    12 => array(
+      'source' => 'Forest Peoples Programme',
+      'target' => 'Forest Peoples Programme (FPP)',
+    ),
+    13 => array(
+      'source' => 'International Fund for Agricultural Development',
+      'target' => 'International Fund for Agricultural Development (IFAD)',
+    ),
+    14 => array(
+      'source' => 'The Rights and Resources Initiative',
+      'target' => 'Rights and Resources Initiative',
+    ),
+    15 => array(
+      'source' => 'Trade and Industrial Policy Strategies, South Africa',
+      'target' => 'Trade & Industrial Policy Strategies',
+    ),
+    16 => array(
+      'source' => 'Land Rights in Africa, Oxfam',
+      'target' => 'Oxfam Great Britain',
+    ),
+    17 => array(
+      'source' => 'Drylands Coordination Group, Norway',
+      'target' => 'Drylands Coordination Group',
+    ),
+    18 => array(
+      'source' => 'Environment Team, IDS Sussex',
+      'target' => 'Institute of Development Studies',
+    ),
+    19 => array(
+      'source' => 'FAO Hypermedia Collection on Desertification',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
     ),
   ),
   'full' => 1,

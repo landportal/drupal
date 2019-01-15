@@ -17,7 +17,7 @@ $feeds_importer->api_version = 1;
 $feeds_importer->id = 'eldis_csv_importer';
 $feeds_importer->config = array(
   'name' => 'ELDIS - CSV importer',
-  'description' => 'Import ELDIS Land Library Resources from a CSV file	',
+  'description' => 'Import ELDIS Land Library Resources from a CSV file',
   'fetcher' => array(
     'plugin_key' => 'FeedsFileFetcher',
     'config' => array(
@@ -199,7 +199,7 @@ $feeds_importer->config = array(
           'unique' => FALSE,
         ),
       ),
-      'update_existing' => '2',
+      'update_existing' => '0',
       'update_non_existent' => 'skip',
       'input_format' => 'plain_text',
       'skip_hash_check' => 1,
