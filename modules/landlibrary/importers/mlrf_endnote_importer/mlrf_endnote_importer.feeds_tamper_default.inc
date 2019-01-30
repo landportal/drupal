@@ -46,6 +46,22 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-blank_source_3-default_value';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'Blank source 3';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => 'private://feeds/MLRF-thumbnail.png',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set fixed path';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_11-explode';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
 $feeds_tamper->source = 'xpathparser:11';
@@ -69,7 +85,7 @@ $feeds_tamper->source = 'xpathparser:11';
 $feeds_tamper->plugin_id = 'find_replace';
 $feeds_tamper->settings = array(
   'find' => 'Regional',
-  'replace' => 'Cambodia, Lao, Myanmar, Thailand, Vietnam',
+  'replace' => 'Cambodia, Laos, Myanmar, Thailand, Vietnam',
   'case_sensitive' => 0,
   'word_boundaries' => 0,
   'whole' => 0,
@@ -82,7 +98,7 @@ $feeds_tamper->description = 'Regional -> Cambodia, Lao, Myanmar, Thailand, Viet
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_11-find_replace_2';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -522,114 +538,134 @@ $feeds_tamper->settings = array(
       'target' => 'Blackwell Publishing Asia',
     ),
     6 => array(
+      'source' => 'Brill Nijhof',
+      'target' => 'Brill Publishers (Martinus Nijhoff)',
+    ),
+    7 => array(
       'source' => 'Cambodia Land Studies Project; OXFAM',
       'target' => 'Oxfam Great Britain',
     ),
-    7 => array(
+    8 => array(
       'source' => 'Cambridge University Press',
       'target' => 'Cambridge University Press',
     ),
-    8 => array(
+    9 => array(
       'source' => 'Center for Peacebuilding (KOFF), Swiss Peace Foundation (swisspeace)',
       'target' => 'swisspeace',
     ),
-    9 => array(
+    10 => array(
       'source' => 'Cornell University Press',
       'target' => 'Cornell University Press',
     ),
-    10 => array(
+    11 => array(
       'source' => 'Earthscan',
       'target' => 'Routledge Environment & Sustainability',
     ),
-    11 => array(
+    12 => array(
       'source' => 'Elsevier B.V.',
       'target' => 'Elsevier',
     ),
-    12 => array(
+    13 => array(
       'source' => 'Elsevier Ltd',
       'target' => 'Elsevier',
     ),
-    13 => array(
+    14 => array(
       'source' => 'Food & Agricultural Organistion of the United Nations (FAO)',
       'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
     ),
-    14 => array(
+    15 => array(
       'source' => 'Forest Peoples Programme',
       'target' => 'Forest Peoples Programme (FPP)',
     ),
-    15 => array(
+    16 => array(
       'source' => 'IIED',
       'target' => 'International Institute for Environment and Development',
     ),
-    16 => array(
+    17 => array(
       'source' => 'Institute of Developing Economies, Japan External Trade Organization',
       'target' => 'Institute of Developing Economies, Japan External Trade Organization',
     ),
-    17 => array(
+    18 => array(
       'source' => 'Institute of Southeast Asian Studies',
       'target' => 'Institute of Southeast Asian Studies',
     ),
-    18 => array(
+    19 => array(
+      'source' => 'International Institute of Social Studies (ISS)',
+      'target' => 'International Institute of Social Studies',
+    ),
+    20 => array(
       'source' => 'International Organization on Migration (IOM) and the Asia Research Center on Migration (ARCM), Institute of Asian Studies, Chulalongkorn University.',
       'target' => 'International Organization for Migration; Asian Research Center for Migration; Chulalongkorn University',
     ),
-    19 => array(
+    21 => array(
       'source' => 'IRASEC',
       'target' => 'Institut de Recherche sur l\'Asie du Sud-Est Contemporaine',
     ),
-    20 => array(
+    22 => array(
       'source' => 'Land Deals Politics Initiative (LDPI)',
       'target' => 'Land Deal Politics Initiative (LDPI)',
     ),
-    21 => array(
+    23 => array(
       'source' => 'NUS Press',
       'target' => 'NUS Press Singapore',
     ),
-    22 => array(
+    24 => array(
       'source' => 'Oxford University Press',
       'target' => 'Oxford University Press',
     ),
-    23 => array(
+    25 => array(
       'source' => 'Routledge',
       'target' => 'Routledge',
     ),
-    24 => array(
+    26 => array(
       'source' => 'SCW',
       'target' => 'Save Cambodia\'s Wildlife',
     ),
-    25 => array(
+    27 => array(
       'source' => 'Singapore University Press',
       'target' => 'NUS Press Singapore',
     ),
-    26 => array(
+    28 => array(
+      'source' => 'Taylor & Francis',
+      'target' => 'Taylor & Francis Group',
+    ),
+    29 => array(
       'source' => 'The Learning Institute (LI)',
       'target' => 'Learning Institute',
     ),
-    27 => array(
+    30 => array(
       'source' => 'The World Bank',
       'target' => 'World Bank Group',
     ),
-    28 => array(
+    31 => array(
+      'source' => 'The World Bank and Palgrave Macmillan',
+      'target' => 'World Bank Group;Palgrave Macmillan',
+    ),
+    32 => array(
       'source' => 'UBC Press',
       'target' => 'University of British Columbia Press',
     ),
-    29 => array(
+    33 => array(
       'source' => 'University of California Press',
       'target' => 'University of California Press',
     ),
-    30 => array(
+    34 => array(
       'source' => 'University of Washington Press',
       'target' => 'University of Washington Press',
     ),
-    31 => array(
+    35 => array(
+      'source' => 'World Bank and Oxford University Press',
+      'target' => 'World Bank Group;Oxford University Press',
+    ),
+    36 => array(
       'source' => 'XXIII FIG Congress',
       'target' => 'International Federation of Surveyors (FIG)',
     ),
-    32 => array(
+    37 => array(
       'source' => 'Yale University Press',
       'target' => 'Yale University Press',
     ),
-    33 => array(
+    38 => array(
       'source' => 'BRICS Initiatives for Critical Agrarian Studies (BICAS), MOSAIC Research Project, Land Deal Politics Initiative (LDPI), RCSD Chiang Mai University, Transnational Institute',
       'target' => 'BRICS Initiatives in Critical Agrarian Studies;International Institute of Social Studies;Land Deal Politics Initiative;Regional Center for Social Science and Sustainable Development - Chiang Mai University;Transnational Institute',
     ),
@@ -714,7 +750,7 @@ $feeds_tamper->description = 'Language replace (for MLRF)';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_9-find_replace';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -735,7 +771,7 @@ $feeds_tamper->description = 'Report - Reports & Research';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_9-find_replace_10';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -756,7 +792,7 @@ $feeds_tamper->description = 'Working Paper - Policy Papers & Briefs';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_9-find_replace_2';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -777,7 +813,7 @@ $feeds_tamper->description = 'Journal Article - Journal Articles & Books';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_9-find_replace_3';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -798,7 +834,7 @@ $feeds_tamper->description = 'Conference Proceedings - Institutional & promotion
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_9-find_replace_4';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -819,7 +855,7 @@ $feeds_tamper->description = 'Unpublished work - Policy Papers & Briefs';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_9-find_replace_5';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -840,7 +876,7 @@ $feeds_tamper->description = 'Book Section - Journal Articles & Books';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_9-find_replace_6';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -861,7 +897,7 @@ $feeds_tamper->description = 'Web Page - Institutional & promotional materials';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_9-find_replace_7';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -882,7 +918,7 @@ $feeds_tamper->description = 'Book - Journal Articles & Books';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_9-find_replace_8';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -903,7 +939,7 @@ $feeds_tamper->description = 'Thesis - Reports & Research';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_9-find_replace_9';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -920,6 +956,63 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 8;
 $feeds_tamper->description = 'Statute - Reports & Research';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_9-find_replace_multiple';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'xpathparser:9';
+$feeds_tamper->plugin_id = 'find_replace_multiple';
+$feeds_tamper->settings = array(
+  'pairs' => array(
+    0 => array(
+      'source' => 'Report',
+      'target' => 'Reports & Research',
+    ),
+    1 => array(
+      'source' => 'Journal Article',
+      'target' => 'Journal Articles & Books',
+    ),
+    2 => array(
+      'source' => 'Conference Proceedings',
+      'target' => 'Institutional & promotional materials',
+    ),
+    3 => array(
+      'source' => 'Unpublished work',
+      'target' => 'Policy Papers & Briefs',
+    ),
+    4 => array(
+      'source' => 'Book Section',
+      'target' => 'Journal Articles & Books',
+    ),
+    5 => array(
+      'source' => 'Web page',
+      'target' => 'Institutional & promotional materials',
+    ),
+    6 => array(
+      'source' => 'Book',
+      'target' => 'Journal Articles & Books',
+    ),
+    7 => array(
+      'source' => 'Thesis',
+      'target' => 'Reports & Research',
+    ),
+    8 => array(
+      'source' => 'Statute',
+      'target' => 'Other',
+    ),
+    9 => array(
+      'source' => 'Working Paper',
+      'target' => 'Policy Papers & Briefs',
+    ),
+  ),
+  'full' => 1,
+);
+$feeds_tamper->weight = 10;
+$feeds_tamper->description = 'Find replace multiple';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
