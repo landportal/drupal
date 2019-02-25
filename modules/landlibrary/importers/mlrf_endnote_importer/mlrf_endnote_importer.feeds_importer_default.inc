@@ -53,7 +53,7 @@ $feeds_importer->config = array(
         'xpathparser:16' => 'contributors/authors/author/style/text() | contributors/secondary-authors/author/style/text()',
         'xpathparser:17' => 'custom1/style/text()',
         'xpathparser:18' => 'pages/style/text()',
-        'xpathparser:19' => 'publisher/style/text()',
+        'xpathparser:19' => 'custom6/style/text()',
       ),
       'rawXML' => array(
         'xpathparser:0' => 0,
@@ -113,7 +113,7 @@ $feeds_importer->config = array(
         0 => array(
           'source' => 'xpathparser:0',
           'target' => 'title',
-          'unique' => 1,
+          'unique' => 0,
           'language' => 'und',
         ),
         1 => array(
@@ -228,6 +228,29 @@ $feeds_importer->config = array(
           'source' => 'Blank source 3',
           'target' => 'field_image:uri',
           'file_exists' => '4',
+          'language' => 'und',
+        ),
+        20 => array(
+          'source' => 'xpathparser:19',
+          'target' => 'Temporary target 2',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        21 => array(
+          'source' => 'Blank source 4',
+          'target' => 'guid',
+          'unique' => 1,
+        ),
+        22 => array(
+          'source' => 'Blank source 5',
+          'target' => 'field_doc_identifier',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        23 => array(
+          'source' => 'Blank source 6',
+          'target' => 'field_doc_is_shown_at:url',
+          'unique' => FALSE,
           'language' => 'und',
         ),
       ),
