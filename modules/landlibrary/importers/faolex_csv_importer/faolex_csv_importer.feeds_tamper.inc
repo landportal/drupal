@@ -61,7 +61,7 @@ $feeds_tamper->description = 'Get the Entity TID from ISO 639-1 code';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'faolex_csv_importer-language-php';
 $feeds_tamper->importer = 'faolex_csv_importer';
@@ -410,7 +410,7 @@ $feeds_tamper->description = 'Explode (multiple values \';\' separated)';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'faolex_csv_importer-_-php';
 $feeds_tamper->importer = 'faolex_csv_importer';
@@ -500,7 +500,7 @@ $feeds_tamper->settings = array(
   'property' => FALSE,
 );
 $feeds_tamper->weight = 9;
-$feeds_tamper->description = 'Get the Entity TID from ISO3 code';
+$feeds_tamper->description = 'Get the Entity TID from UN M49 code';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -522,7 +522,7 @@ $feeds_tamper->description = 'Explode (multiple values \';\' separated)';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'faolex_csv_importer-__-php';
 $feeds_tamper->importer = 'faolex_csv_importer';

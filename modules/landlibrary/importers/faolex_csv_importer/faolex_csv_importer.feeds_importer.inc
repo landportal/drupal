@@ -7,6 +7,7 @@ function faolex_csv_importer_feeds_importer_default() {
     $export = array();
 
 /******/
+
 $feeds_importer = new stdClass();
 $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
 $feeds_importer->api_version = 1;
@@ -99,7 +100,7 @@ $feeds_importer->config = array(
         9 => array(
           'source' => 'Language',
           'target' => 'field_doc_language',
-          'term_search' => '0',
+          'term_search' => '1',
           'autocreate' => 0,
           'language' => 'und',
         ),
@@ -130,8 +131,7 @@ $feeds_importer->config = array(
         14 => array(
           'source' => 'Thumbnail',
           'target' => 'field_image:uri',
-          'file_exists' => '4',
-          'language' => 'und',
+          'file_exists' => '5',
         ),
         15 => array(
           'source' => 'License',
@@ -172,19 +172,22 @@ $feeds_importer->config = array(
         21 => array(
           'source' => ' ',
           'target' => 'field_geographical_focus',
-          'unique' => FALSE,
+          'term_search' => '1',
+          'autocreate' => 0,
           'language' => 'und',
         ),
         22 => array(
           'source' => '  ',
           'target' => 'field_geographical_focus',
-          'unique' => FALSE,
+          'term_search' => '1',
+          'autocreate' => 0,
           'language' => 'und',
         ),
         23 => array(
           'source' => 'ID',
           'target' => 'guid',
           'unique' => 1,
+          'language' => 'und',
         ),
       ),
       'update_existing' => '2',
@@ -203,7 +206,6 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
-
 
 
 /*****/
