@@ -92,13 +92,13 @@ $feeds_importer->config = array(
           'language' => 'und',
         ),
         8 => array(
-          'source' => 'Publicaton date (YYYY/MM)',
+          'source' => 'Publication date',
           'target' => 'field_doc_creation_date:start',
           'unique' => FALSE,
           'language' => 'und',
         ),
         9 => array(
-          'source' => 'Language',
+          'source' => 'Languages',
           'target' => 'field_doc_language',
           'term_search' => '1',
           'autocreate' => 0,
@@ -132,6 +132,7 @@ $feeds_importer->config = array(
           'source' => 'Thumbnail',
           'target' => 'field_image:uri',
           'file_exists' => '5',
+          'language' => 'und',
         ),
         15 => array(
           'source' => 'License',

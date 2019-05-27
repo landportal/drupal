@@ -41,7 +41,7 @@ $feeds_tamper->description = 'Trim';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'faolex_csv_importer-language-efq_finder';
 $feeds_tamper->importer = 'faolex_csv_importer';
@@ -91,7 +91,7 @@ $feeds_tamper->description = 'Get Term Name from Term ID (TID)';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'faolex_csv_importer-language-unique';
 $feeds_tamper->importer = 'faolex_csv_importer';
@@ -99,6 +99,39 @@ $feeds_tamper->source = 'Language';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
 $feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Unique';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'faolex_csv_importer-languages-efq_finder';
+$feeds_tamper->importer = 'faolex_csv_importer';
+$feeds_tamper->source = 'Languages';
+$feeds_tamper->plugin_id = 'efq_finder';
+$feeds_tamper->settings = array(
+  'update' => 'Update',
+  'entity_type' => 'taxonomy_term',
+  'bundle' => 'languages',
+  'field' => 'field_language_code_iso_639_1',
+  'column' => 'value',
+  'property' => FALSE,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Get the Entity TID from ISO 639-1 code';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'faolex_csv_importer-languages-unique';
+$feeds_tamper->importer = 'faolex_csv_importer';
+$feeds_tamper->source = 'Languages';
+$feeds_tamper->plugin_id = 'unique';
+$feeds_tamper->settings = '';
+$feeds_tamper->weight = 1;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -137,7 +170,7 @@ $feeds_tamper->description = 'Trim';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'faolex_csv_importer-publicaton_date__yyyy_mm_-find_replace';
 $feeds_tamper->importer = 'faolex_csv_importer';
@@ -158,7 +191,7 @@ $feeds_tamper->description = 'Change date separator (from / to -)';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'faolex_csv_importer-publicaton_date__yyyy_mm_-str_pad';
 $feeds_tamper->importer = 'faolex_csv_importer';
