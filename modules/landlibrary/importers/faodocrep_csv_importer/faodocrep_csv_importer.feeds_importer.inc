@@ -7,6 +7,7 @@ function faodocrep_csv_importer_feeds_importer_default() {
     $export = array();
 
 /******/
+
 $feeds_importer = new stdClass();
 $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
 $feeds_importer->api_version = 1;
@@ -91,15 +92,15 @@ $feeds_importer->config = array(
           'language' => 'und',
         ),
         8 => array(
-          'source' => 'Publicaton date (YYYY/MM)',
+          'source' => 'Publication date',
           'target' => 'field_doc_creation_date:start',
           'unique' => FALSE,
           'language' => 'und',
         ),
         9 => array(
-          'source' => 'Language',
+          'source' => 'Languages',
           'target' => 'field_doc_language',
-          'term_search' => '0',
+          'term_search' => '1',
           'autocreate' => 0,
           'language' => 'und',
         ),
@@ -172,19 +173,22 @@ $feeds_importer->config = array(
         21 => array(
           'source' => ' ',
           'target' => 'field_geographical_focus',
-          'unique' => FALSE,
+          'term_search' => '1',
+          'autocreate' => 0,
           'language' => 'und',
         ),
         22 => array(
           'source' => '  ',
           'target' => 'field_geographical_focus',
-          'unique' => FALSE,
+          'term_search' => '1',
+          'autocreate' => 0,
           'language' => 'und',
         ),
         23 => array(
           'source' => 'ID',
           'target' => 'guid',
           'unique' => 1,
+          'language' => 'und',
         ),
       ),
       'update_existing' => '2',
