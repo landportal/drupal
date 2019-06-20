@@ -85,109 +85,106 @@ $feeds_importer->config = array(
           'language' => 'und',
         ),
         7 => array(
+          'source' => 'Publication date',
+          'target' => 'field_doc_creation_date:start',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
+        8 => array(
           'source' => 'Resource types',
           'target' => 'field_doc_type',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        8 => array(
-          'source' => 'Publicaton date (YYYY/MM)',
-          'target' => 'field_doc_creation_date:start',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
         9 => array(
-          'source' => 'Language',
+          'source' => 'Languages',
           'target' => 'field_doc_language',
-          'term_search' => '0',
+          'term_search' => '1',
           'autocreate' => 0,
           'language' => 'und',
         ),
         10 => array(
-          'source' => 'Overarching Categories',
-          'target' => 'field_related_domains',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        11 => array(
           'source' => 'Themes',
           'target' => 'field_related_themes',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        12 => array(
+        11 => array(
           'source' => 'Related Concepts',
           'target' => 'field_related_topics',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        13 => array(
+        12 => array(
           'source' => 'Link to the publication',
           'target' => 'field_doc_is_shown_by:url',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        14 => array(
+        13 => array(
           'source' => 'Thumbnail',
           'target' => 'field_image:uri',
           'file_exists' => '4',
           'language' => 'und',
         ),
-        15 => array(
+        14 => array(
           'source' => 'License',
           'target' => 'field_doc_licencing',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        16 => array(
+        15 => array(
           'source' => 'Copyright details',
           'target' => 'field_doc_copyrights_statement',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        17 => array(
+        16 => array(
           'source' => 'Data provider',
           'target' => 'field_doc_provider:label',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        18 => array(
+        17 => array(
           'source' => 'Username',
           'target' => 'user_name',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        19 => array(
+        18 => array(
           'source' => 'Link to the original website',
           'target' => 'field_doc_is_shown_at:url',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        20 => array(
+        19 => array(
           'source' => 'Geographical focus',
           'target' => 'Temporary target 1',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        21 => array(
+        20 => array(
           'source' => ' ',
           'target' => 'field_geographical_focus',
-          'unique' => FALSE,
+          'term_search' => '1',
+          'autocreate' => 0,
+          'language' => 'und',
+        ),
+        21 => array(
+          'source' => '  ',
+          'target' => 'field_geographical_focus',
+          'term_search' => '1',
+          'autocreate' => 0,
           'language' => 'und',
         ),
         22 => array(
-          'source' => '  ',
-          'target' => 'field_geographical_focus',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        23 => array(
           'source' => 'ID',
           'target' => 'guid',
           'unique' => 1,
+          'language' => 'und',
         ),
       ),
-      'update_existing' => '2',
+      'update_existing' => '0',
       'update_non_existent' => 'skip',
       'input_format' => 'plain_text',
       'skip_hash_check' => 0,
@@ -203,7 +200,6 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
-
 
 /*****/
     $export[$feeds_importer->id] = $feeds_importer;
