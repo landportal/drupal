@@ -91,45 +91,45 @@ $feeds_importer->config = array(
           'language' => 'und',
         ),
         8 => array(
-          'source' => 'Pages',
-          'target' => 'field_doc_pagination',
+          'source' => 'Data provider',
+          'target' => 'field_doc_provider:label',
           'unique' => FALSE,
           'language' => 'und',
         ),
         9 => array(
-          'source' => 'Resource types',
-          'target' => 'field_doc_type',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        10 => array(
-          'source' => 'Publicaton date (YYYY/MM)',
+          'source' => 'Publication date',
           'target' => 'field_doc_creation_date:start',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        11 => array(
-          'source' => 'Language',
+        10 => array(
+          'source' => 'Languages',
           'target' => 'field_doc_language',
           'term_search' => '1',
           'autocreate' => 0,
           'language' => 'und',
         ),
-        12 => array(
-          'source' => 'Overarching Categories',
-          'target' => 'field_related_domains',
+        11 => array(
+          'source' => 'Related Concepts',
+          'target' => 'field_related_topics',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        13 => array(
+        12 => array(
           'source' => 'Themes',
           'target' => 'field_related_themes',
           'unique' => FALSE,
           'language' => 'und',
         ),
+        13 => array(
+          'source' => 'Resource types',
+          'target' => 'field_doc_type',
+          'unique' => FALSE,
+          'language' => 'und',
+        ),
         14 => array(
-          'source' => 'Related Concepts',
-          'target' => 'field_related_topics',
+          'source' => 'Link to the original website',
+          'target' => 'field_doc_is_shown_at:url',
           'unique' => FALSE,
           'language' => 'und',
         ),
@@ -150,6 +150,7 @@ $feeds_importer->config = array(
           'target' => 'field_doc_licencing',
           'term_search' => '0',
           'autocreate' => 0,
+          'language' => 'und',
         ),
         18 => array(
           'source' => 'Copyright details',
@@ -158,8 +159,8 @@ $feeds_importer->config = array(
           'language' => 'und',
         ),
         19 => array(
-          'source' => 'Data provider',
-          'target' => 'field_doc_provider:label',
+          'source' => 'Pages',
+          'target' => 'field_doc_pagination',
           'unique' => FALSE,
           'language' => 'und',
         ),
@@ -170,25 +171,19 @@ $feeds_importer->config = array(
           'language' => 'und',
         ),
         21 => array(
-          'source' => 'Link to the original website',
-          'target' => 'field_doc_is_shown_at:url',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        22 => array(
           'source' => 'Geographical focus',
           'target' => 'Temporary target 1',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        23 => array(
+        22 => array(
           'source' => 'temp_geo_countries',
           'target' => 'field_geographical_focus',
           'term_search' => '1',
           'autocreate' => 0,
           'language' => 'und',
         ),
-        24 => array(
+        23 => array(
           'source' => 'temp_geo_regions',
           'target' => 'field_geographical_focus',
           'term_search' => '1',
@@ -196,7 +191,7 @@ $feeds_importer->config = array(
           'language' => 'und',
         ),
       ),
-      'update_existing' => '2',
+      'update_existing' => '0',
       'update_non_existent' => 'skip',
       'input_format' => 'plain_text',
       'skip_hash_check' => 0,
@@ -212,6 +207,7 @@ $feeds_importer->config = array(
   'import_on_create' => 1,
   'process_in_background' => 0,
 );
+
 
 
 /*****/

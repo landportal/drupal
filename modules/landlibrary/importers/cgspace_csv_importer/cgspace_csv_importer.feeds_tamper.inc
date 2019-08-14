@@ -5,6 +5,8 @@
  */
 function cgspace_csv_importer_feeds_tamper_default() {
 
+/***************/
+
 $export = array();
 
 $feeds_tamper = new stdClass();
@@ -59,9 +61,9 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'cgspace_csv_importer-language-efq_finder';
+$feeds_tamper->id = 'cgspace_csv_importer-languages-efq_finder';
 $feeds_tamper->importer = 'cgspace_csv_importer';
-$feeds_tamper->source = 'Language';
+$feeds_tamper->source = 'Languages';
 $feeds_tamper->plugin_id = 'efq_finder';
 $feeds_tamper->settings = array(
   'update' => 'Update',
@@ -79,9 +81,9 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'cgspace_csv_importer-language-explode';
+$feeds_tamper->id = 'cgspace_csv_importer-languages-explode';
 $feeds_tamper->importer = 'cgspace_csv_importer';
-$feeds_tamper->source = 'Language';
+$feeds_tamper->source = 'Languages';
 $feeds_tamper->plugin_id = 'explode';
 $feeds_tamper->settings = array(
   'separator' => ';',
@@ -94,41 +96,11 @@ $feeds_tamper->description = 'Explode (multiple values \';\' separated)';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'cgspace_csv_importer-language-php';
-$feeds_tamper->importer = 'cgspace_csv_importer';
-$feeds_tamper->source = 'Language';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => '// field could be an item or an array
-if ($field != null) {
-    if (is_array($field)){
-       $terms = array();
-       foreach ($field as $f) {
-          $term = taxonomy_term_load($f);
-          $name = $term->name;
-          array_push($terms, $name);
-       }
-       return $terms;
-    } else {
-      $term = taxonomy_term_load($field);
-      $name = $term->name;
-      return $name;
-    }
-}',
-);
-$feeds_tamper->weight = 3;
-$feeds_tamper->description = 'Get Term Name from Term ID (TID)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'cgspace_csv_importer-language-trim';
+$feeds_tamper->id = 'cgspace_csv_importer-languages-trim';
 $feeds_tamper->importer = 'cgspace_csv_importer';
-$feeds_tamper->source = 'Language';
+$feeds_tamper->source = 'Languages';
 $feeds_tamper->plugin_id = 'trim';
 $feeds_tamper->settings = array(
   'mask' => '',
@@ -142,96 +114,13 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'cgspace_csv_importer-language-unique';
+$feeds_tamper->id = 'cgspace_csv_importer-languages-unique';
 $feeds_tamper->importer = 'cgspace_csv_importer';
-$feeds_tamper->source = 'Language';
+$feeds_tamper->source = 'Languages';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 4;
+$feeds_tamper->weight = 3;
 $feeds_tamper->description = 'Unique';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'cgspace_csv_importer-license-efq_finder';
-$feeds_tamper->importer = 'cgspace_csv_importer';
-$feeds_tamper->source = 'License';
-$feeds_tamper->plugin_id = 'efq_finder';
-$feeds_tamper->settings = array(
-  'update' => 'Update',
-  'entity_type' => 'taxonomy_term',
-  'bundle' => 'licences',
-  'field' => 'field_acronym',
-  'column' => 'value',
-  'property' => FALSE,
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Get the Entity TID from License acronym';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'cgspace_csv_importer-license-php';
-$feeds_tamper->importer = 'cgspace_csv_importer';
-$feeds_tamper->source = 'License';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => '// field could be an item or an array
-if ($field != null) {
-    if (is_array($field)){
-       $terms = array();
-       foreach ($field as $f) {
-          $term = taxonomy_term_load($f);
-          $name = $term->name;
-          array_push($terms, $name);
-       }
-       return $terms;
-    } else {
-      $term = taxonomy_term_load($field);
-      $name = $term->name;
-      return $name;
-    }
-}',
-);
-$feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Get Term Name from Term ID (TID)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'cgspace_csv_importer-overarching_categories-explode';
-$feeds_tamper->importer = 'cgspace_csv_importer';
-$feeds_tamper->source = 'Overarching Categories';
-$feeds_tamper->plugin_id = 'explode';
-$feeds_tamper->settings = array(
-  'separator' => ';',
-  'limit' => '',
-  'real_separator' => ';',
-);
-$feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'cgspace_csv_importer-overarching_categories-trim';
-$feeds_tamper->importer = 'cgspace_csv_importer';
-$feeds_tamper->source = 'Overarching Categories';
-$feeds_tamper->plugin_id = 'trim';
-$feeds_tamper->settings = array(
-  'mask' => '',
-  'side' => 'trim',
-);
-$feeds_tamper->weight = 2;
-$feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -388,36 +277,6 @@ $feeds_tamper->description = 'Explode (multiple values \';\' separated)';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'cgspace_csv_importer-temp_geo_countries-php';
-$feeds_tamper->importer = 'cgspace_csv_importer';
-$feeds_tamper->source = 'temp_geo_countries';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => '// field could be an item or an array
-if ($field != null) {
-    if (is_array($field)){
-       $terms = array();
-       foreach ($field as $f) {
-          $term = taxonomy_term_load($f);
-          $name = $term->name;
-          array_push($terms, $name);
-       }
-       return $terms;
-    } else {
-      $term = taxonomy_term_load($field);
-      $name = $term->name;
-      return $name;
-    }
-}',
-);
-$feeds_tamper->weight = 4;
-$feeds_tamper->description = 'Get Term Name from Term ID (TID)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'cgspace_csv_importer-temp_geo_countries-trim';
@@ -500,36 +359,6 @@ $feeds_tamper->description = 'Explode (multiple values \';\' separated)';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'cgspace_csv_importer-temp_geo_regions-php';
-$feeds_tamper->importer = 'cgspace_csv_importer';
-$feeds_tamper->source = 'temp_geo_regions';
-$feeds_tamper->plugin_id = 'php';
-$feeds_tamper->settings = array(
-  'php' => '// field could be an item or an array
-if ($field != null) {
-    if (is_array($field)){
-       $terms = array();
-       foreach ($field as $f) {
-          $term = taxonomy_term_load($f);
-          $name = $term->name;
-          array_push($terms, $name);
-       }
-       return $terms;
-    } else {
-      $term = taxonomy_term_load($field);
-      $name = $term->name;
-      return $name;
-    }
-}',
-);
-$feeds_tamper->weight = 4;
-$feeds_tamper->description = 'Get Term Name from Term ID (TID)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'cgspace_csv_importer-temp_geo_regions-trim';
@@ -588,6 +417,22 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 2;
 $feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'cgspace_csv_importer-thumbnail-default_value';
+$feeds_tamper->importer = 'cgspace_csv_importer';
+$feeds_tamper->source = 'Thumbnail';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => 'private://feeds/cgspace-thumbnail.png',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set fixed path "private://feeds/cgspace-thumbnail.png"';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
