@@ -1,0 +1,11 @@
+name = UNECA - CSV importer
+description = Import UNECA Land Library Resources from a CSV file
+core = 7.x
+package = Landlibrary Importers
+version = 7.x-2.5
+project = uneca_csv_importer
+dependencies[] = ctools
+dependencies[] = feeds
+dependencies[] = feeds_tamper
+dependencies[] = feeds_tamper_utf8_encode
+features[features_api][] = api:2
