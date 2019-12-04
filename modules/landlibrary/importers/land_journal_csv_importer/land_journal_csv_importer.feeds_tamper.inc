@@ -5,7 +5,150 @@
  */
 function land_journal_csv_importer_feeds_tamper_default() {
 
+/************/
 $export = array();
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'land_journal_csv_importer-language-efq_finder';
+$feeds_tamper->importer = 'land_journal_csv_importer';
+$feeds_tamper->source = 'Language';
+$feeds_tamper->plugin_id = 'efq_finder';
+$feeds_tamper->settings = array(
+  'update' => 'Update',
+  'entity_type' => 'taxonomy_term',
+  'bundle' => 'languages',
+  'field' => 'field_language_code_iso_639_1',
+  'column' => 'value',
+  'property' => FALSE,
+);
+$feeds_tamper->weight = 4;
+$feeds_tamper->description = 'Get the Entity TID from ISO 639-1 code';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'land_journal_csv_importer-language-trim';
+$feeds_tamper->importer = 'land_journal_csv_importer';
+$feeds_tamper->source = 'Language';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'land_journal_csv_importer-languages-efq_finder';
+$feeds_tamper->importer = 'land_journal_csv_importer';
+$feeds_tamper->source = 'Languages';
+$feeds_tamper->plugin_id = 'efq_finder';
+$feeds_tamper->settings = array(
+  'update' => 'Update',
+  'entity_type' => 'taxonomy_term',
+  'bundle' => 'languages',
+  'field' => 'field_language_code_iso_639_1',
+  'column' => 'value',
+  'property' => FALSE,
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Get the Entity TID from ISO 639-1 code';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'land_journal_csv_importer-languages-trim';
+$feeds_tamper->importer = 'land_journal_csv_importer';
+$feeds_tamper->source = 'Languages';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'land_journal_csv_importer-overarching_categories-explode';
+$feeds_tamper->importer = 'land_journal_csv_importer';
+$feeds_tamper->source = 'Overarching Categories';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ';',
+  'limit' => '',
+  'real_separator' => ';',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'land_journal_csv_importer-overarching_categories-trim';
+$feeds_tamper->importer = 'land_journal_csv_importer';
+$feeds_tamper->source = 'Overarching Categories';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'land_journal_csv_importer-publicaton_date__yyyy_mm_-find_replace';
+$feeds_tamper->importer = 'land_journal_csv_importer';
+$feeds_tamper->source = 'Publicaton date (YYYY/MM)';
+$feeds_tamper->plugin_id = 'find_replace';
+$feeds_tamper->settings = array(
+  'find' => '/',
+  'replace' => '-',
+  'case_sensitive' => 0,
+  'word_boundaries' => 0,
+  'whole' => 0,
+  'regex' => FALSE,
+  'func' => 'str_ireplace',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Find replace';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'land_journal_csv_importer-thumbnail-default_value';
+$feeds_tamper->importer = 'land_journal_csv_importer';
+$feeds_tamper->source = 'Thumbnail';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => 'private://feeds/LandJournal-thumbnail.png',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set fixed path "private://feeds/LandJournal-thumbnail.png"';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
@@ -37,96 +180,6 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 1;
 $feeds_tamper->description = 'Trim';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'land_journal_csv_importer-language-efq_finder';
-$feeds_tamper->importer = 'land_journal_csv_importer';
-$feeds_tamper->source = 'Language';
-$feeds_tamper->plugin_id = 'efq_finder';
-$feeds_tamper->settings = array(
-  'update' => 'Update',
-  'entity_type' => 'taxonomy_term',
-  'bundle' => 'languages',
-  'field' => 'field_language_code_iso_639_1',
-  'column' => 'value',
-  'property' => FALSE,
-);
-$feeds_tamper->weight = 4;
-$feeds_tamper->description = 'Get the Entity TID from ISO 639-1 code';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'land_journal_csv_importer-language-trim';
-$feeds_tamper->importer = 'land_journal_csv_importer';
-$feeds_tamper->source = 'Language';
-$feeds_tamper->plugin_id = 'trim';
-$feeds_tamper->settings = array(
-  'mask' => '',
-  'side' => 'trim',
-);
-$feeds_tamper->weight = 3;
-$feeds_tamper->description = 'Trim';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'land_journal_csv_importer-overarching_categories-explode';
-$feeds_tamper->importer = 'land_journal_csv_importer';
-$feeds_tamper->source = 'Overarching Categories';
-$feeds_tamper->plugin_id = 'explode';
-$feeds_tamper->settings = array(
-  'separator' => ';',
-  'limit' => '',
-  'real_separator' => ';',
-);
-$feeds_tamper->weight = 1;
-$feeds_tamper->description = 'Explode (multiple values \';\' separated)';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'land_journal_csv_importer-overarching_categories-trim';
-$feeds_tamper->importer = 'land_journal_csv_importer';
-$feeds_tamper->source = 'Overarching Categories';
-$feeds_tamper->plugin_id = 'trim';
-$feeds_tamper->settings = array(
-  'mask' => '',
-  'side' => 'trim',
-);
-$feeds_tamper->weight = 2;
-$feeds_tamper->description = 'Trim';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'land_journal_csv_importer-publicaton_date__yyyy_mm_-find_replace';
-$feeds_tamper->importer = 'land_journal_csv_importer';
-$feeds_tamper->source = 'Publicaton date (YYYY/MM)';
-$feeds_tamper->plugin_id = 'find_replace';
-$feeds_tamper->settings = array(
-  'find' => '/',
-  'replace' => '-',
-  'case_sensitive' => 0,
-  'word_boundaries' => 0,
-  'whole' => 0,
-  'regex' => FALSE,
-  'func' => 'str_ireplace',
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Find replace';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -259,22 +312,6 @@ $feeds_tamper->settings = array(
 );
 $feeds_tamper->weight = 2;
 $feeds_tamper->description = 'Trim';
-
-$export[$feeds_tamper->id] = $feeds_tamper;
-
-$feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-$feeds_tamper->api_version = 2;
-$feeds_tamper->id = 'land_journal_csv_importer-thumbnail-default_value';
-$feeds_tamper->importer = 'land_journal_csv_importer';
-$feeds_tamper->source = 'Thumbnail';
-$feeds_tamper->plugin_id = 'default_value';
-$feeds_tamper->settings = array(
-  'default_value' => 'private://feeds/LandJournal-thumbnail.png',
-  'only_if_empty' => 0,
-);
-$feeds_tamper->weight = 0;
-$feeds_tamper->description = 'Set fixed path';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -474,6 +511,7 @@ $feeds_tamper->weight = 11;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
+
 /******************/
     return $export;
 }
