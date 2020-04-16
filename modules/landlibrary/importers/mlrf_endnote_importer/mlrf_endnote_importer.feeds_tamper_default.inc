@@ -119,7 +119,24 @@ $feeds_tamper->settings = array(
   'real_separator' => ',',
 );
 $feeds_tamper->weight = 5;
-$feeds_tamper->description = 'Explode';
+$feeds_tamper->description = 'Explode (multiple values \',\' separated)';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_11-explode_1';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'xpathparser:11';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ',',
+  'limit' => '',
+  'real_separator' => ',',
+);
+$feeds_tamper->weight = 7;
+$feeds_tamper->description = 'Explode (multiple values \',\' separated)';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -139,7 +156,7 @@ $feeds_tamper->settings = array(
   'regex' => FALSE,
   'func' => 'str_ireplace',
 );
-$feeds_tamper->weight = 4;
+$feeds_tamper->weight = 6;
 $feeds_tamper->description = 'Regional -> Cambodia, Lao, Myanmar, Thailand, Vietnam';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -176,7 +193,7 @@ $feeds_tamper->settings = array(
   'mask' => '',
   'side' => 'trim',
 );
-$feeds_tamper->weight = 6;
+$feeds_tamper->weight = 5;
 $feeds_tamper->description = 'Trim';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
@@ -189,13 +206,13 @@ $feeds_tamper->importer = 'mlrf_endnote_importer';
 $feeds_tamper->source = 'xpathparser:11';
 $feeds_tamper->plugin_id = 'unique';
 $feeds_tamper->settings = array();
-$feeds_tamper->weight = 7;
+$feeds_tamper->weight = 8;
 $feeds_tamper->description = 'Unique';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_12-explode';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -212,7 +229,7 @@ $feeds_tamper->description = 'Explode (multiple values \';\' separated)';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_12-find_replace_multiple';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -257,7 +274,7 @@ $feeds_tamper->description = 'MLRF keywords to LP OverArching Categories';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_12-trim';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -273,7 +290,7 @@ $feeds_tamper->description = 'Trim';
 $export[$feeds_tamper->id] = $feeds_tamper;
 
 $feeds_tamper = new stdClass();
-$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_12-unique';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
@@ -317,6 +334,14 @@ $feeds_tamper->settings = array(
     5 => array(
       'source' => 'MigrationLabour',
       'target' => 'Urban Tenure',
+    ),
+    6 => array(
+      'source' => 'Urban',
+      'target' => 'Urban Tenure',
+    ),
+    7 => array(
+      'source' => 'Gender',
+      'target' => 'Land & Gender',
     ),
   ),
   'full' => 1,
@@ -429,6 +454,14 @@ $feeds_tamper->settings = array(
       'source' => 'Policy-law',
       'target' => 'land policies; land law',
     ),
+    12 => array(
+      'source' => 'Gender',
+      'target' => 'women',
+    ),
+    13 => array(
+      'source' => 'Urban',
+      'target' => 'urban areas',
+    ),
   ),
   'full' => 1,
 );
@@ -519,6 +552,27 @@ $export[$feeds_tamper->id] = $feeds_tamper;
 $feeds_tamper = new stdClass();
 $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
 $feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_6-find_replace';
+$feeds_tamper->importer = 'mlrf_endnote_importer';
+$feeds_tamper->source = 'xpathparser:6';
+$feeds_tamper->plugin_id = 'find_replace';
+$feeds_tamper->settings = array(
+  'find' => '2020-12-31',
+  'replace' => '2020-02-29',
+  'case_sensitive' => 0,
+  'word_boundaries' => 0,
+  'whole' => 0,
+  'regex' => FALSE,
+  'func' => 'str_ireplace',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Replace current year';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
 $feeds_tamper->id = 'mlrf_endnote_importer-xpathparser_6-str_pad';
 $feeds_tamper->importer = 'mlrf_endnote_importer';
 $feeds_tamper->source = 'xpathparser:6';
@@ -601,120 +655,152 @@ $feeds_tamper->settings = array(
       'target' => 'swisspeace',
     ),
     10 => array(
+      'source' => 'Centre for Development and Environment, University of Bern and Mekong Region Land Governance',
+      'target' => 'Centre for Development and Environment;Mekong Region Land Governance',
+    ),
+    11 => array(
+      'source' => 'Cogent',
+      'target' => 'Taylor & Francis Group',
+    ),
+    12 => array(
       'source' => 'Cornell University Press',
       'target' => 'Cornell University Press',
     ),
-    11 => array(
+    13 => array(
       'source' => 'Earthscan',
       'target' => 'Routledge Environment & Sustainability',
     ),
-    12 => array(
+    14 => array(
+      'source' => 'Elsevier',
+      'target' => 'Elsevier',
+    ),
+    15 => array(
       'source' => 'Elsevier B.V.',
       'target' => 'Elsevier',
     ),
-    13 => array(
+    16 => array(
       'source' => 'Elsevier Ltd',
       'target' => 'Elsevier',
     ),
-    14 => array(
+    17 => array(
       'source' => 'Food & Agricultural Organistion of the United Nations (FAO)',
       'target' => 'Food and Agriculture Organization of the United Nations (FAO)',
     ),
-    15 => array(
+    18 => array(
       'source' => 'Forest Peoples Programme',
       'target' => 'Forest Peoples Programme (FPP)',
     ),
-    16 => array(
+    19 => array(
       'source' => 'IIED',
       'target' => 'International Institute for Environment and Development',
     ),
-    17 => array(
+    20 => array(
       'source' => 'Institute of Developing Economies, Japan External Trade Organization',
       'target' => 'Institute of Developing Economies, Japan External Trade Organization',
     ),
-    18 => array(
+    21 => array(
       'source' => 'Institute of Southeast Asian Studies',
       'target' => 'Institute of Southeast Asian Studies',
     ),
-    19 => array(
+    22 => array(
       'source' => 'International Institute of Social Studies (ISS)',
       'target' => 'International Institute of Social Studies',
     ),
-    20 => array(
+    23 => array(
       'source' => 'International Organization on Migration (IOM) and the Asia Research Center on Migration (ARCM), Institute of Asian Studies, Chulalongkorn University.',
       'target' => 'International Organization for Migration; Asian Research Center for Migration; Chulalongkorn University',
     ),
-    21 => array(
+    24 => array(
+      'source' => 'International Union of Forest Research Organizations (IUFRO)',
+      'target' => 'International Union of Forestry Research Organizations',
+    ),
+    25 => array(
+      'source' => 'International Work Group for Indigenous Affairs (IWGIA) and Promotion of Indigenous and Nature Together (POINT)',
+      'target' => 'International Work Group for Indigenous Affairs (IWGIA);Promotion of Indigenous and Nature Together',
+    ),
+    26 => array(
       'source' => 'IRASEC',
       'target' => 'Institut de Recherche sur l\'Asie du Sud-Est Contemporaine',
     ),
-    22 => array(
+    27 => array(
       'source' => 'Land Deals Politics Initiative (LDPI)',
-      'target' => 'Land Deal Politics Initiative (LDPI)',
+      'target' => 'Land Deal Politics Initiative',
     ),
-    23 => array(
+    28 => array(
       'source' => 'NUS Press',
       'target' => 'NUS Press Singapore',
     ),
-    24 => array(
+    29 => array(
       'source' => 'Oxford University Press',
       'target' => 'Oxford University Press',
     ),
-    25 => array(
+    30 => array(
       'source' => 'Routledge',
       'target' => 'Routledge',
     ),
-    26 => array(
+    31 => array(
       'source' => 'SCW',
       'target' => 'Save Cambodia\'s Wildlife',
     ),
-    27 => array(
+    32 => array(
       'source' => 'Singapore University Press',
       'target' => 'NUS Press Singapore',
     ),
-    28 => array(
+    33 => array(
+      'source' => 'Springer US',
+      'target' => 'Springer',
+    ),
+    34 => array(
       'source' => 'Taylor & Francis',
       'target' => 'Taylor & Francis Group',
     ),
-    29 => array(
+    35 => array(
       'source' => 'The Learning Institute (LI)',
       'target' => 'Learning Institute',
     ),
-    30 => array(
+    36 => array(
       'source' => 'The World Bank',
       'target' => 'World Bank Group',
     ),
-    31 => array(
+    37 => array(
       'source' => 'The World Bank and Palgrave Macmillan',
       'target' => 'World Bank Group;Palgrave Macmillan',
     ),
-    32 => array(
+    38 => array(
+      'source' => 'The World Bank, RECOFTC – The Center for People and Forests, Village Focus International – Laos',
+      'target' => 'World Bank Group;The Center for People and Forests;Village Focus International',
+    ),
+    39 => array(
       'source' => 'UBC Press',
       'target' => 'University of British Columbia Press',
     ),
-    33 => array(
+    40 => array(
       'source' => 'University of California Press',
       'target' => 'University of California Press',
     ),
-    34 => array(
+    41 => array(
       'source' => 'University of Washington Press',
       'target' => 'University of Washington Press',
     ),
-    35 => array(
+    42 => array(
       'source' => 'World Bank and Oxford University Press',
       'target' => 'World Bank Group;Oxford University Press',
     ),
-    36 => array(
+    43 => array(
       'source' => 'XXIII FIG Congress',
       'target' => 'International Federation of Surveyors (FIG)',
     ),
-    37 => array(
+    44 => array(
       'source' => 'Yale University Press',
       'target' => 'Yale University Press',
     ),
-    38 => array(
+    45 => array(
       'source' => 'BRICS Initiatives for Critical Agrarian Studies (BICAS), MOSAIC Research Project, Land Deal Politics Initiative (LDPI), RCSD Chiang Mai University, Transnational Institute',
       'target' => 'BRICS Initiatives in Critical Agrarian Studies;International Institute of Social Studies;Land Deal Politics Initiative;Regional Center for Social Science and Sustainable Development - Chiang Mai University;Transnational Institute',
+    ),
+    46 => array(
+      'source' => 'FAO, RECOFTC, SNV',
+      'target' => 'Food and Agriculture Organization of the United Nations (FAO);The Center for People and Forests;SNV',
     ),
   ),
   'full' => 1,

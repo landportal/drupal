@@ -114,140 +114,127 @@ $feeds_importer->config = array(
           'source' => 'xpathparser:0',
           'target' => 'title',
           'unique' => 0,
-          'language' => 'und',
         ),
         1 => array(
-          'source' => 'xpathparser:10',
-          'target' => 'field_doc_title',
-          'unique' => FALSE,
+          'source' => 'xpathparser:1',
+          'target' => 'field_doc_description',
+          'format' => 'full_html',
           'language' => 'und',
         ),
         2 => array(
-          'source' => 'xpathparser:1',
-          'target' => 'field_doc_description',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        3 => array(
           'source' => 'Blank source 1',
           'target' => 'user_name',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        4 => array(
+        3 => array(
           'source' => 'xpathparser:2',
           'target' => 'field_doc_identifier',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        5 => array(
+        4 => array(
           'source' => 'xpathparser:3',
           'target' => 'field_doc_identifier',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        6 => array(
+        5 => array(
           'source' => 'xpathparser:4',
           'target' => 'field_doc_is_shown_by:url',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        7 => array(
+        6 => array(
           'source' => 'xpathparser:6',
           'target' => 'field_doc_creation_date:start',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        8 => array(
+        7 => array(
           'source' => 'xpathparser:7',
           'target' => 'field_doc_publisher:label',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        9 => array(
+        8 => array(
           'source' => 'xpathparser:8',
           'target' => 'field_doc_language',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        10 => array(
+        9 => array(
           'source' => 'xpathparser:9',
           'target' => 'field_doc_type',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        11 => array(
+        10 => array(
           'source' => 'xpathparser:11',
           'target' => 'field_geographical_focus',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        12 => array(
-          'source' => 'xpathparser:12',
-          'target' => 'field_related_domains',
-          'unique' => FALSE,
-          'language' => 'und',
-        ),
-        13 => array(
+        11 => array(
           'source' => 'xpathparser:14',
           'target' => 'field_related_themes',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        14 => array(
+        12 => array(
           'source' => 'xpathparser:15',
           'target' => 'field_related_topics',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        15 => array(
+        13 => array(
           'source' => 'xpathparser:16',
           'target' => 'field_doc_people',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        16 => array(
+        14 => array(
           'source' => 'xpathparser:17',
           'target' => 'Temporary target 1',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        17 => array(
+        15 => array(
           'source' => 'Blank source 2',
           'target' => 'field_doc_provider:label',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        18 => array(
+        16 => array(
           'source' => 'xpathparser:18',
           'target' => 'field_doc_pagination',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        19 => array(
+        17 => array(
           'source' => 'Blank source 3',
           'target' => 'field_image:uri',
           'file_exists' => '4',
           'language' => 'und',
         ),
-        20 => array(
+        18 => array(
           'source' => 'xpathparser:19',
           'target' => 'Temporary target 2',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        21 => array(
+        19 => array(
           'source' => 'Blank source 4',
           'target' => 'guid',
           'unique' => 1,
         ),
-        22 => array(
+        20 => array(
           'source' => 'Blank source 5',
           'target' => 'field_doc_identifier',
           'unique' => FALSE,
           'language' => 'und',
         ),
-        23 => array(
+        21 => array(
           'source' => 'Blank source 6',
           'target' => 'field_doc_is_shown_at:url',
           'unique' => FALSE,
