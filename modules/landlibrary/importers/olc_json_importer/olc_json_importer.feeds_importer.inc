@@ -269,7 +269,7 @@ $feeds_importer->config = array(
         ),
       ),
       'insert_new' => '1',
-      'update_existing' => '2',
+      'update_existing' => '0',
       'update_non_existent' => 'skip',
       'input_format' => 'full_html',
       'skip_hash_check' => 0,

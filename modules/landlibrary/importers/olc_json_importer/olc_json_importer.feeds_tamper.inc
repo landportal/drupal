@@ -9,6 +9,8 @@
  */
 function olc_json_importer_feeds_tamper_default() {
 
+/****************/
+
 $export = array();
 
 $feeds_tamper = new stdClass();
@@ -139,11 +141,23 @@ $feeds_tamper->settings = array(
       'source' => 'Oil palm products',
       'target' => 'palm oil industries',
     ),
+    2 => array(
+      'source' => 'Livestock',
+      'target' => 'livestock',
+    ),
+    3 => array(
+      'source' => 'Cattle',
+      'target' => 'livestock',
+    ),
+    4 => array(
+      'source' => 'Timber (Wood)',
+      'target' => 'forestry',
+    ),
   ),
   'full' => 1,
 );
 $feeds_tamper->weight = 3;
-$feeds_tamper->description = 'Find replace multiple "palm oil industries"';
+$feeds_tamper->description = 'Find replace multiple "palm oil industries, livestock, timber"';
 
 $export[$feeds_tamper->id] = $feeds_tamper;
 
